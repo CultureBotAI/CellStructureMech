@@ -34,8 +34,7 @@ components:
     assembles on oriC during pre-RC formation; exact source-neutral InterPro, Pfam,
     NCBIfam or UniProt family boundaries were not curated in this pass.
   role: Replication initiator that occupies oriC recognition sites during bacterial
-    pre-RC assembly. Functions in pre-replicative complex origin licensing and helicase
-    loading in pre-replicative complex.
+    pre-RC assembly.
   evidence:
   - reference: GO:1990101
     notes: GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC
@@ -80,9 +79,7 @@ components:
   grounding_notes: oriC is the bacterial replication-origin DNA scaffold named by
     GO:0036389; no exact source-neutral SO sequence-feature CURIE was curated in this
     pass.
-  role: Bacterial chromosomal origin DNA scaffold on which the pre-RC forms. Functions
-    in pre-replicative complex origin licensing and helicase loading in pre-replicative
-    complex.
+  role: Bacterial chromosomal origin DNA scaffold on which the pre-RC forms.
   evidence:
   - reference: GO:0036389
     notes: GO:0036389 defines the bacterial pre-replicative complex as a protein-DNA
@@ -94,26 +91,21 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   presence: COMMON
-  note: Exhibits pre-replicative complex (GO:0036387) in pre-replicative complex origin
-    licensing and helicase loading. Miller et al. 2009 investigated E. coli DnaA and
-    oriC interactions during bacterial pre-RC assembly.
+  note: Miller et al. 2009 investigated E. coli DnaA and oriC interactions during
+    bacterial pre-RC assembly.
   reference: PMID:19833870
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: Characterized model system for pre-replicative complex (GO:0036387) in pre-replicative
-    complex origin licensing and helicase loading. Miller et al. 2009 used the E.
-    coli oriC system to study assembly of bacterial pre-replicative complexes from
-    high-affinity DnaA origin recognition complexes.
+  note: Miller et al. 2009 used the E. coli oriC system to study assembly of bacterial
+    pre-replicative complexes from high-affinity DnaA origin recognition complexes.
   reference: PMID:19833870
 functions:
 - function_id: dna_replication_initiation
   label: DNA replication initiation
   grounding: GO:0006270
-  description: Mediated by pre-replicative complex (GO:0036387) in pre-replicative
-    complex origin licensing and helicase loading. The bacterial pre-replicative complex
-    forms at oriC during the initial stage of DNA replication to license the origin
-    for replication.
+  description: The bacterial pre-replicative complex forms at oriC during the initial
+    stage of DNA replication to license the origin for replication.
   evidence:
   - reference: GO:0036389
     notes: GO:0036389 defines the bacterial pre-RC as forming at oriC during the initial
@@ -130,107 +122,90 @@ evidence:
     complex that forms at the origin of replication during the initial step of DNA
     replication and allows the origin to become competent, or ''licensed'', for replication.'
 - reference: GO:0036389
-  notes: Supports the context, composition, and mechanism of pre-replicative complex
-    (GO:0036387) in pre-replicative complex origin licensing and helicase loading.
-    Gene Ontology cellular-component term for the bacterial pre-replicative complex
+  notes: Gene Ontology cellular-component term for the bacterial pre-replicative complex
     and its exact bacterial pre-RC synonym.
 - reference: GO:0032993
-  notes: Supports the context, composition, and mechanism of pre-replicative complex
-    (GO:0036387) in pre-replicative complex origin licensing and helicase loading.
-    QuickGO reports GO:0032993 protein-DNA complex as an ancestor of GO:0036389.
+  notes: QuickGO reports GO:0032993 protein-DNA complex as an ancestor of GO:0036389.
 - reference: GO:1990101
-  notes: Supports the context, composition, and mechanism of pre-replicative complex
-    (GO:0036387) in pre-replicative complex origin licensing and helicase loading.
-    Gene Ontology cellular-component term for the DnaA-oriC complex, the first step
-    in bacterial pre-RC assembly.
+  notes: Gene Ontology cellular-component term for the DnaA-oriC complex, the first
+    step in bacterial pre-RC assembly.
 - reference: GO:0006270
-  notes: Supports the context, composition, and mechanism of pre-replicative complex
-    (GO:0036387) in pre-replicative complex origin licensing and helicase loading.
-    Gene Ontology biological-process term for DNA replication initiation.
+  notes: Gene Ontology biological-process term for DNA replication initiation.
 - reference: PMID:19833870
-  notes: Supports the context, composition, and mechanism of pre-replicative complex
-    (GO:0036387) in pre-replicative complex origin licensing and helicase loading.
-    PubMed identifier for Miller et al. 2009, the PNAS paper cited by GO:0036389.
+  notes: PubMed identifier for Miller et al. 2009, the PNAS paper cited by GO:0036389.
 - reference: DOI:10.1073/pnas.0909472106
-  notes: Supports the context, composition, and mechanism of pre-replicative complex
-    (GO:0036387) in pre-replicative complex origin licensing and helicase loading.
-    DOI for Miller et al. 2009, 'Bacterial origin recognition complexes direct assembly
-    of higher-order DnaA oligomeric structures', as reported by PubMed.
+  notes: DOI for Miller et al. 2009, 'Bacterial origin recognition complexes direct
+    assembly of higher-order DnaA oligomeric structures', as reported by PubMed.
 - reference: PMID:21035377
-  notes: Supports the context, composition, and mechanism of pre-replicative complex
-    (GO:0036387) in pre-replicative complex origin licensing and helicase loading.
-    PubMed identifier for Leonard and Grimwade 2010, the Current Opinion in Microbiology
+  notes: PubMed identifier for Leonard and Grimwade 2010, the Current Opinion in Microbiology
     review cited by GO:0036389.
 - reference: DOI:10.1016/j.mib.2010.10.001
-  notes: 'Supports the context, composition, and mechanism of pre-replicative complex
-    (GO:0036387) in pre-replicative complex origin licensing and helicase loading.
-    DOI for Leonard and Grimwade 2010, ''Regulating DnaA complex assembly: it is time
-    to fill the gaps'', as reported by PubMed.'
+  notes: 'DOI for Leonard and Grimwade 2010, ''Regulating DnaA complex assembly: it
+    is time to fill the gaps'', as reported by PubMed.'
 causal_graphs:
 - graph_id: pre_replicative_complex_mechanism
-  title: Pre-replicative complex assembly at chromosomal origins and helicase loading
-  description: Origin initiator ATPases bind chromosomal replication origin motifs
-    to nucleate the pre-replicative complex, unwinding the AT-rich origin region and
-    loading the ring-shaped replicative DNA helicase onto single-stranded DNA.
-  graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph records GO-level DnaA/oriC bacterial pre-RC formation without
-    resolving DnaA oligomerization, lower-affinity oriC site loading, DiaA/HU-containing
-    substates, or later DnaB-DnaC helicase loading.
+  title: Pre-replicative complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of pre-replicative complex (GO:0036387) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
   nodes:
+  - node_id: pre_replicative_complex
+    label: pre-replicative complex
+    node_type: STRUCTURE
+    grounding: GO:0036387
+    description: A protein-DNA complex that forms at the origin of replication during
+      the initial step of DNA replication and allows the origin to become competent,
+      or 'licensed', for replication.
   - node_id: dnaa_initiator
     label: DnaA replication initiation protein
     node_type: GENE_OR_PROTEIN
     component_ref: dnaa_initiator
+    description: Replication initiator that occupies oriC recognition sites during
+      bacterial pre-RC assembly.
   - node_id: oric_origin_dna
     label: oriC origin DNA
     node_type: GENETIC_ELEMENT
     component_ref: oric_origin_dna
-  - node_id: bacterial_pre_replicative_complex
-    label: pre-replicative complex
-    node_type: STRUCTURE
-    grounding: GO:0036387
-    description: Assembled and functional pre-replicative complex (GO:0036387) operating
-      in pre-replicative complex origin licensing and helicase loading.
+    description: Bacterial chromosomal origin DNA scaffold on which the pre-RC forms.
   - node_id: dna_replication_initiation
     label: DNA replication initiation
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006270
+    description: The bacterial pre-replicative complex forms at oriC during the initial
+      stage of DNA replication to license the origin for replication.
   edges:
   - subject: dnaa_initiator
-    predicate: contributes to
-    object: bacterial_pre_replicative_complex
-    description: DnaA replication initiator occupies bacterial oriC during pre-RC
-      assembly.
+    predicate: is part of
+    object: pre_replicative_complex
+    description: Replication initiator that occupies oriC recognition sites during
+      bacterial pre-RC assembly.
     evidence:
     - reference: GO:1990101
       notes: GO:1990101 defines DnaA-oriC binding as the first step in bacterial pre-RC
         assembly.
-    - reference: PMID:19833870
-      notes: Miller et al. 2009 tested DnaA loading during E. coli pre-RC assembly.
   - subject: oric_origin_dna
-    predicate: scaffolds
-    object: bacterial_pre_replicative_complex
-    description: Bacterial oriC origin DNA scaffolds pre-RC formation during the initial
-      step of replication.
+    predicate: is part of
+    object: pre_replicative_complex
+    description: Bacterial chromosomal origin DNA scaffold on which the pre-RC forms.
     evidence:
     - reference: GO:0036389
-      notes: GO:0036389 defines the bacterial pre-RC as a protein-DNA complex that
-        forms at bacterial oriC.
-  - subject: bacterial_pre_replicative_complex
-    predicate: supports
+      notes: GO:0036389 defines the bacterial pre-replicative complex as a protein-DNA
+        complex that forms at bacterial oriC.
+  - subject: pre_replicative_complex
+    predicate: mediates
     object: dna_replication_initiation
-    description: The bacterial pre-RC licenses oriC for DNA replication initiation.
+    description: The bacterial pre-replicative complex forms at oriC during the initial
+      stage of DNA replication to license the origin for replication.
     evidence:
     - reference: GO:0036389
-      notes: GO:0036389 defines the bacterial pre-RC as allowing oriC to become licensed
-        for replication.
-    - reference: GO:0006270
-      notes: GO:0006270 is the DNA replication initiation process term.
+      notes: GO:0036389 defines the bacterial pre-RC as forming at oriC during the
+        initial step of DNA replication.
 curation_history:
 - timestamp: '2026-10-19T05:27:42Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of pre-replicative complex (GO:0036387) in category OTHER
-    with verified UniProtKB protein examples and literature evidence.
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
   llm_assisted: true

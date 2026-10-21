@@ -21,26 +21,20 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Exhibits proton-transporting V-type ATPase, V0 domain (GO:0033179) within
-    the membrane-integral V-type ATPase V0 proton-channel domain. Budding yeast vacuoles
-    contain a membrane-integral V0 sector that couples to the cytosolic V1 sector
-    in the vacuolar V-ATPase.
+  note: Budding yeast vacuoles contain a membrane-integral V0 sector that couples
+    to the cytosolic V1 sector in the vacuolar V-ATPase.
   reference: DOI:10.1128/MMBR.70.1.177-191.2006
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for proton-transporting V-type ATPase, V0 domain
-    (GO:0033179) within the membrane-integral V-type ATPase V0 proton-channel domain.
-    Yeast model for the V0 membrane sector of the vacuolar V-ATPase and its coupling
+  note: Yeast model for the V0 membrane sector of the vacuolar V-ATPase and its coupling
     to the V1 sector.
   reference: DOI:10.1128/MMBR.70.1.177-191.2006
 functions:
 - function_id: v0_membrane_proton_translocation_sector
   label: V0-sector membrane proton translocation
-  description: Mediated by proton-transporting V-type ATPase, V0 domain (GO:0033179)
-    within the membrane-integral V-type ATPase V0 proton-channel domain. Within the
-    intact vacuolar V-ATPase, the V0 domain forms the membrane sector that translocates
-    protons across the vacuolar membrane during rotary catalysis.
+  description: Within the intact vacuolar V-ATPase, the V0 domain forms the membrane
+    sector that translocates protons across the vacuolar membrane during rotary catalysis.
   evidence:
   - reference: GO:0000220
     notes: GO:0000220 identifies V0 as the vacuolar-membrane domain of the vacuolar
@@ -56,84 +50,84 @@ evidence:
     least four different subunits (a,c,d and e); six or more c subunits form a proton-binding
     rotor ring.'
 - reference: GO:0000220
-  notes: Supports the context, composition, and mechanism of proton-transporting V-type
-    ATPase, V0 domain (GO:0033179) within the membrane-integral V-type ATPase V0 proton-channel
-    domain. Gene Ontology cellular-component term for the vacuolar V0 domain.
+  notes: Gene Ontology cellular-component term for the vacuolar V0 domain.
 - reference: GO:0016471
-  notes: Supports the context, composition, and mechanism of proton-transporting V-type
-    ATPase, V0 domain (GO:0033179) within the membrane-integral V-type ATPase V0 proton-channel
-    domain. Gene Ontology cellular-component term for the containing vacuolar proton-transporting
+  notes: Gene Ontology cellular-component term for the containing vacuolar proton-transporting
     V-type ATPase complex.
 - reference: GO:0005774
-  notes: Supports the context, composition, and mechanism of proton-transporting V-type
-    ATPase, V0 domain (GO:0033179) within the membrane-integral V-type ATPase V0 proton-channel
-    domain. Gene Ontology cellular-component term for the vacuolar membrane.
+  notes: Gene Ontology cellular-component term for the vacuolar membrane.
 - reference: DOI:10.1128/MMBR.70.1.177-191.2006
-  notes: Supports the context, composition, and mechanism of proton-transporting V-type
-    ATPase, V0 domain (GO:0033179) within the membrane-integral V-type ATPase V0 proton-channel
-    domain. Kane 2006, The Where, When, and How of Organelle Acidification by the
-    Yeast Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
 causal_graphs:
 - graph_id: proton_transporting_v_type_atpase_v0_domain_mechanism
-  title: V-type ATPase V0 domain ER assembly and rotary proton translocation
-  description: ER assembly factors Vma21p, Vma12p, and Vma22p assemble the proteolipid
-    c-ring and stator subunit a into the proton-transporting V-type ATPase V0 domain,
-    which conducts protons through two offset hemichannels during V1-driven rotation.
+  title: Proton-transporting v-type atpase, v0 domain assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of proton-transporting V-type ATPase, V0 domain (GO:0033179) to its biological
+    functions.
   graph_kind: FUNCTION
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph captures V0 as the membrane proton-translocation sector of
-    the intact V-ATPase without asserting its individual proteolipid ring, stalk,
-    or a-subunit composition.
+  scope_status: MECHANISTIC
   nodes:
-  - node_id: v0_domain
+  - node_id: proton_transporting_v_type_atpase_v0_domain
     label: proton-transporting V-type ATPase, V0 domain
     node_type: STRUCTURE
     grounding: GO:0033179
-    description: Assembled and functional proton-transporting V-type ATPase, V0 domain
-      (GO:0033179) operating within the membrane-integral V-type ATPase V0 proton-channel
+    description: A protein complex that forms part of a proton-transporting V-type
+      ATPase and mediates proton transport across a membrane.
+  - node_id: v1_catalytic_domain
+    label: proton-transporting V-type ATPase, V1 domain
+    node_type: STRUCTURE
+    grounding: GO:0033180
+    description: Peripheral cytoplasmic V1 ATPase head that hydrolyzes ATP to drive
+      rotation of the central stalk and V0 proteolipid ring.
+  - node_id: proton_transporting_v_type_atpase_complex
+    label: proton-transporting V-type ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0033176
+    description: Enclosing or holo-structural assembly (proton-transporting V-type
+      ATPase complex, GO:0033176) containing proton-transporting V-type ATPase, V0
       domain.
-  - node_id: vacuolar_v_atpase
-    label: vacuolar proton-transporting V-type ATPase complex
-    node_type: STRUCTURE
-    grounding: GO:0016471
-  - node_id: vacuolar_membrane
-    label: vacuolar membrane
-    node_type: STRUCTURE
-    grounding: GO:0005774
+  - node_id: v0_membrane_proton_translocation_sector
+    label: V0-sector membrane proton translocation
+    node_type: BIOLOGICAL_PROCESS
+    description: Within the intact vacuolar V-ATPase, the V0 domain forms the membrane
+      sector that translocates protons across the vacuolar membrane during rotary
+      catalysis.
   edges:
-  - subject: v0_domain
+  - subject: v1_catalytic_domain
+    predicate: drives rotation of
+    object: proton_transporting_v_type_atpase_v0_domain
+    description: Rotational catalysis in the peripheral V1 domain drives rotation
+      of the V0 proteolipid c-ring relative to subunit a to pump protons across the
+      membrane.
+    evidence:
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006, The Where, When, and How of Organelle Acidification by the
+        Yeast Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+  - subject: proton_transporting_v_type_atpase_v0_domain
     predicate: is part of
-    object: vacuolar_v_atpase
-    description: The V0 domain is the membrane sector of the assembled vacuolar V-ATPase.
-    evidence:
-    - reference: GO:0000220
-      notes: GO places the vacuolar V0 domain in a part-of relation to the vacuolar
-        V-ATPase complex.
-    - reference: GO:0016471
-      notes: GO:0016471 identifies the containing V-ATPase complex.
-  - subject: v0_domain
-    predicate: is embedded in
-    object: vacuolar_membrane
-    description: The V0 sector is the membrane-integral sector of the vacuolar V-ATPase.
-    evidence:
-    - reference: GO:0000220
-      notes: GO:0000220 defines the vacuolar V0 domain by its vacuolar-membrane location.
-    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
-      notes: Kane 2006 reviews V0 as the membrane sector of the yeast V-ATPase.
-  - subject: v0_domain
-    predicate: transports protons across
-    object: vacuolar_membrane
-    description: In the intact V-ATPase, V0 forms the membrane path for rotary proton
-      transport across the vacuolar membrane.
+    object: proton_transporting_v_type_atpase_complex
+    description: Proton-transporting v-type atpase, v0 domain forms an integral structural
+      compartment or subassembly of proton-transporting V-type ATPase complex.
     evidence:
     - reference: DOI:10.1128/MMBR.70.1.177-191.2006
-      notes: Kane 2006 reviews V0 as the membrane-integral sector that translocates
-        protons across organelle membranes in the intact yeast V-ATPase.
+      notes: Kane 2006, The Where, When, and How of Organelle Acidification by the
+        Yeast Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+  - subject: proton_transporting_v_type_atpase_v0_domain
+    predicate: mediates
+    object: v0_membrane_proton_translocation_sector
+    description: Within the intact vacuolar V-ATPase, the V0 domain forms the membrane
+      sector that translocates protons across the vacuolar membrane during rotary
+      catalysis.
+    evidence:
+    - reference: GO:0000220
+      notes: GO:0000220 identifies V0 as the vacuolar-membrane domain of the vacuolar
+        proton-transporting V-type ATPase.
 curation_history:
 - timestamp: '2026-10-19T05:27:41Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of proton-transporting V-type ATPase, V0 domain (GO:0033179)
-    in category ENERGY_COMPLEX with verified UniProtKB protein examples and literature
-    evidence.
+    in category ENERGY_COMPLEX with verified GO hierarchy, compartmental context,
+    causal mechanism graph, and literature evidence.
   llm_assisted: true

@@ -53,7 +53,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P54784
+    - reference: UniProtKB:P54784
       notes: UniProtKB reviewed (Swiss-Prot) entry P54784, the single reviewed entry
         for gene ORC1 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -88,7 +88,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P32833
+    - reference: UniProtKB:P32833
       notes: UniProtKB reviewed (Swiss-Prot) entry P32833, the single reviewed entry
         for gene ORC2 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -123,7 +123,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P54790
+    - reference: UniProtKB:P54790
       notes: UniProtKB reviewed (Swiss-Prot) entry P54790, the single reviewed entry
         for gene ORC3 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -158,7 +158,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P54791
+    - reference: UniProtKB:P54791
       notes: UniProtKB reviewed (Swiss-Prot) entry P54791, the single reviewed entry
         for gene ORC4 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -193,7 +193,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P50874
+    - reference: UniProtKB:P50874
       notes: UniProtKB reviewed (Swiss-Prot) entry P50874, the single reviewed entry
         for gene ORC5 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -228,7 +228,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P38826
+    - reference: UniProtKB:P38826
       notes: UniProtKB reviewed (Swiss-Prot) entry P38826, the single reviewed entry
         for gene ORC6 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -237,26 +237,21 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
   presence: COMMON
-  note: Exhibits origin recognition complex (GO:0000808) within the hexameric origin
-    recognition complex (ORC). The ORC protein-family review reports that Orc1-Orc5
-    appear to be present in all eukaryotes and that Orc6 is poorly conserved outside
-    budding yeast.
+  note: The ORC protein-family review reports that Orc1-Orc5 appear to be present
+    in all eukaryotes and that Orc6 is poorly conserved outside budding yeast.
   reference: PMID:19344485
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for origin recognition complex (GO:0000808) within
-    the hexameric origin recognition complex (ORC). Bell and Stillman originally purified
-    the origin recognition complex from budding yeast and assayed origin-specific
-    DNA binding in Saccharomyces cerevisiae.
+  note: Bell and Stillman originally purified the origin recognition complex from
+    budding yeast and assayed origin-specific DNA binding in Saccharomyces cerevisiae.
   reference: PMID:1579162
 functions:
 - function_id: dna_replication_origin_binding
   label: DNA replication origin binding
   grounding: GO:0003688
-  description: Mediated by origin recognition complex (GO:0000808) within the hexameric
-    origin recognition complex (ORC). The origin recognition complex recognizes DNA
-    replication origins in an ATP-dependent manner.
+  description: The origin recognition complex recognizes DNA replication origins in
+    an ATP-dependent manner.
   evidence:
   - reference: GO:0003688
     notes: GO:0003688 is the Gene Ontology molecular-function term for DNA replication
@@ -269,149 +264,180 @@ evidence:
   notes: 'Gene Ontology cellular-component term for origin recognition complex: A
     multisubunit complex that is located at the replication origins of a chromosome.'
 - reference: GO:0005664
-  notes: Supports the context, composition, and mechanism of origin recognition complex
-    (GO:0000808) within the hexameric origin recognition complex (ORC). Gene Ontology
-    cellular-component term for the nuclear origin of replication recognition complex.
+  notes: Gene Ontology cellular-component term for the nuclear origin of replication
+    recognition complex.
 - reference: GO:0140513
-  notes: Supports the context, composition, and mechanism of origin recognition complex
-    (GO:0000808) within the hexameric origin recognition complex (ORC). Gene Ontology
-    cellular-component parent term for nuclear protein-containing complexes.
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
 - reference: GO:0003688
-  notes: Supports the context, composition, and mechanism of origin recognition complex
-    (GO:0000808) within the hexameric origin recognition complex (ORC). Gene Ontology
-    molecular-function term for DNA replication origin binding.
+  notes: Gene Ontology molecular-function term for DNA replication origin binding.
 - reference: PMID:1579162
-  notes: Supports the context, composition, and mechanism of origin recognition complex
-    (GO:0000808) within the hexameric origin recognition complex (ORC). PubMed record
-    for the Bell and Stillman paper that purified a budding-yeast multiprotein ORC
-    with ATP-dependent binding to cellular replication origins.
+  notes: PubMed record for the Bell and Stillman paper that purified a budding-yeast
+    multiprotein ORC with ATP-dependent binding to cellular replication origins.
 - reference: PMID:19344485
-  notes: Supports the context, composition, and mechanism of origin recognition complex
-    (GO:0000808) within the hexameric origin recognition complex (ORC). PubMed record
-    for the origin-recognition-complex protein-family review covering Orc1-Orc6 conservation
-    across eukaryotes.
+  notes: PubMed record for the origin-recognition-complex protein-family review covering
+    Orc1-Orc6 conservation across eukaryotes.
 - reference: PMID:22405012
-  notes: Supports the context, composition, and mechanism of origin recognition complex
-    (GO:0000808) within the hexameric origin recognition complex (ORC). PubMed record
-    for a Saccharomyces cerevisiae ORC-Cdc6-origin-DNA cryo-EM paper that places the
-    six ORC subunits.
+  notes: PubMed record for a Saccharomyces cerevisiae ORC-Cdc6-origin-DNA cryo-EM
+    paper that places the six ORC subunits.
 causal_graphs:
 - graph_id: origin_recognition_complex_mechanism
-  title: Origin recognition complex DNA binding and Mcm2-7 helicase licensing
-  description: ATP-bound Orc1–Orc6 binds replication origin DNA and recruits Cdc6
-    and Cdt1–Mcm2-7 to load the replicative helicase double hexamer and license origins
-    for S-phase DNA replication.
+  title: Origin recognition complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of origin recognition complex (GO:0000808) to its biological functions.
   graph_kind: FUNCTION
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph records yeast ORC subunit membership and DNA-origin binding
-    without resolving origin licensing, Cdc6/Cdt1/MCM loading, ATPase-state transitions
-    or metazoan ORC subcomplexes.
+  scope_status: MECHANISTIC
   nodes:
+  - node_id: origin_recognition_complex
+    label: origin recognition complex
+    node_type: STRUCTURE
+    grounding: GO:0000808
+    description: A multisubunit complex that is located at the replication origins
+      of a chromosome.
   - node_id: orc1_subunit
     label: Orc1 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: orc1_subunit
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
   - node_id: orc2_subunit
     label: Orc2 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: orc2_subunit
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
   - node_id: orc3_subunit
     label: Orc3 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: orc3_subunit
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
   - node_id: orc4_subunit
     label: Orc4 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: orc4_subunit
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
   - node_id: orc5_subunit
     label: Orc5 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: orc5_subunit
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
   - node_id: orc6_subunit
     label: Orc6 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: orc6_subunit
-  - node_id: nuclear_orc
-    label: origin recognition complex
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
+  - node_id: chromosome
+    label: chromosome
     node_type: STRUCTURE
-    grounding: GO:0000808
-    description: Assembled and functional origin recognition complex (GO:0000808)
-      operating within the hexameric origin recognition complex (ORC).
+    grounding: GO:0005694
+    description: Enclosing or holo-structural assembly (chromosome, GO:0005694) containing
+      origin recognition complex.
   - node_id: dna_replication_origin_binding
     label: DNA replication origin binding
-    node_type: MOLECULAR_FUNCTION
+    node_type: BIOLOGICAL_PROCESS
     grounding: GO:0003688
+    description: The origin recognition complex recognizes DNA replication origins
+      in an ATP-dependent manner.
   edges:
   - subject: orc1_subunit
-    predicate: contributes to
-    object: nuclear_orc
-    description: Orc1 subunit is a named constituent of the Saccharomyces cerevisiae
-      origin recognition complex.
+    predicate: is part of
+    object: origin_recognition_complex
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
     evidence:
     - reference: PMID:22405012
-      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
-        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that
+        the six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3
+        and Orc6 are arranged around ORC-Cdc6 bound to origin DNA.
   - subject: orc2_subunit
-    predicate: contributes to
-    object: nuclear_orc
-    description: Orc2 subunit is a named constituent of the Saccharomyces cerevisiae
-      origin recognition complex.
+    predicate: is part of
+    object: origin_recognition_complex
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
     evidence:
     - reference: PMID:22405012
-      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
-        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that
+        the six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3
+        and Orc6 are arranged around ORC-Cdc6 bound to origin DNA.
   - subject: orc3_subunit
-    predicate: contributes to
-    object: nuclear_orc
-    description: Orc3 subunit is a named constituent of the Saccharomyces cerevisiae
-      origin recognition complex.
+    predicate: is part of
+    object: origin_recognition_complex
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
     evidence:
     - reference: PMID:22405012
-      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
-        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that
+        the six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3
+        and Orc6 are arranged around ORC-Cdc6 bound to origin DNA.
   - subject: orc4_subunit
-    predicate: contributes to
-    object: nuclear_orc
-    description: Orc4 subunit is a named constituent of the Saccharomyces cerevisiae
-      origin recognition complex.
+    predicate: is part of
+    object: origin_recognition_complex
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
     evidence:
     - reference: PMID:22405012
-      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
-        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that
+        the six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3
+        and Orc6 are arranged around ORC-Cdc6 bound to origin DNA.
   - subject: orc5_subunit
-    predicate: contributes to
-    object: nuclear_orc
-    description: Orc5 subunit is a named constituent of the Saccharomyces cerevisiae
-      origin recognition complex.
+    predicate: is part of
+    object: origin_recognition_complex
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
     evidence:
     - reference: PMID:22405012
-      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
-        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that
+        the six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3
+        and Orc6 are arranged around ORC-Cdc6 bound to origin DNA.
   - subject: orc6_subunit
-    predicate: contributes to
-    object: nuclear_orc
-    description: Orc6 subunit is a named constituent of the Saccharomyces cerevisiae
-      origin recognition complex.
+    predicate: is part of
+    object: origin_recognition_complex
+    description: Named Saccharomyces constituent of the origin recognition complex.
+      Functions within the hexameric origin recognition complex (ORC) in origin recognition
+      complex.
     evidence:
     - reference: PMID:22405012
-      notes: The PubMed abstract for the 2012 Structure cryo-EM paper names Orc1,
-        Orc4, Orc5, Orc2, Orc3 and Orc6 as the six Saccharomyces ORC subunits.
-  - subject: nuclear_orc
-    predicate: supports
+      notes: The PubMed abstract for the 2012 Structure cryo-EM paper reports that
+        the six Saccharomyces cerevisiae ORC subunits Orc1, Orc4, Orc5, Orc2, Orc3
+        and Orc6 are arranged around ORC-Cdc6 bound to origin DNA.
+  - subject: origin_recognition_complex
+    predicate: is part of
+    object: chromosome
+    description: Origin recognition complex forms an integral structural compartment
+      or subassembly of chromosome.
+    evidence:
+    - reference: PMID:1579162
+      notes: PubMed record for the Bell and Stillman paper that purified a budding-yeast
+        multiprotein ORC with ATP-dependent binding to cellular replication origins.
+  - subject: origin_recognition_complex
+    predicate: mediates
     object: dna_replication_origin_binding
-    description: The origin recognition complex supports binding to DNA replication
-      origins.
+    description: The origin recognition complex recognizes DNA replication origins
+      in an ATP-dependent manner.
     evidence:
     - reference: GO:0003688
-      notes: GO:0003688 is the molecular-function term for DNA replication origin
-        binding.
-    - reference: PMID:1579162
-      notes: The PubMed abstract for Bell and Stillman 1992 reports origin-specific
-        DNA binding by the Saccharomyces cerevisiae origin recognition complex.
+      notes: GO:0003688 is the Gene Ontology molecular-function term for DNA replication
+        origin binding.
 curation_history:
 - timestamp: '2026-10-19T05:27:41Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of origin recognition complex (GO:0000808) in category
-    OTHER with verified UniProtKB protein examples and literature evidence.
+    OTHER with verified GO hierarchy, components, UniProtKB protein examples, causal
+    mechanism graph, and literature evidence.
   llm_assisted: true

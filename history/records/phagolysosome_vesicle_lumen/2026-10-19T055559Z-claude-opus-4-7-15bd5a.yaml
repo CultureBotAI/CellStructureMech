@@ -8,11 +8,20 @@ session:
   timestamp: '2026-10-19T05:55:59Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
-  summary: Created structure record for phagolysosome vesicle lumen (GO:0106174) in membrane_organelle.
-  details: Authored data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml for
-    phagolysosome vesicle lumen (GO:0106174) with verified GO hierarchy, taxonomic distribution,
-    UniProtKB protein examples, functions, literature evidence, and causal graph.
+  summary: Created structure record for phagolysosome vesicle lumen (GO:0106174) in
+    membrane_organelle.
+  details: Authored data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    for phagolysosome vesicle lumen (GO:0106174) with verified GO hierarchy, taxonomic
+    distribution, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

@@ -33,36 +33,36 @@ synonyms:
   synonym_type: NARROW_SYNONYM
   source: GO:0031428
 components:
-- component_id: sno_s_rna
-  label: sno(s)RNA
+- component_id: box_c_d_guide_snorna
+  label: box C/D methylation guide snoRNA
   component_type: RNA
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0005732 spans eukaryotic snoRNA- and archaeal sRNA-containing
-    RNPs, including box C/D and box H/ACA subclasses; no single exact Sequence Ontology
-    CURIE was assigned for this combined RNA cohort in the first record.
-  role: Small nucleolar or small RNA-family RNA constituent that defines a sno(s)RNA-containing
-    ribonucleoprotein complex. Functions in the box C/D methylation guide snoRNP complex
-    in box C/D methylation guide snoRNP complex.
+  essentiality: ESSENTIAL
+  role: Small nucleolar RNA containing conserved C (RUGAUGA) and D (CUGA) kink-turn
+    motifs and antisense guide elements that base-pair with pre-rRNA to select the
+    nucleotide 5 bp upstream of box D/D' for 2'-O-methylation.
   evidence:
-  - reference: GO:0005732
-    notes: GO:0005732 defines sno(s)RNA-containing ribonucleoprotein complexes as
-      containing a snoRNA-family RNA molecule and associated proteins.
-- component_id: sno_s_rnp_associated_proteins
-  label: sno(s)RNP-associated proteins
+  - reference: GO:0031428
+    notes: Defines the box C/D methylation guide snoRNA component of the box C/D snoRNP
+      complex.
+- component_id: nop1_nop56_nop58_snu13_core
+  label: box C/D snoRNP core methyltransferase and scaffold subunits (Nop1/Fibrillarin,
+    Nop56, Nop58, Snu13)
   component_type: PROTEIN
   component_role: CONSTITUENT
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: GO:0005732 defines the complexes by associated proteins in addition
-    to a sno(s)RNA, but exact source-neutral protein-family boundaries for box C/D,
-    box H/ACA and other sno(s)RNP subclasses were not resolved in this first record.
-  role: Protein constituents associated with snoRNA-family RNAs in sno(s)RNA-containing
-    ribonucleoprotein complexes. Functions in the box C/D methylation guide snoRNP
-    complex in box C/D methylation guide snoRNP complex.
+  gene_symbols:
+  - NOP1
+  - NOP56
+  - NOP58
+  - SNU13
+  essentiality: ESSENTIAL
+  role: Core protein quartet in which Snu13 recognizes the C/D kink-turn, Nop56-Nop58
+    form the coiled-coil dimer scaffold, and the SAM-dependent methyltransferase Nop1
+    (fibrillarin) catalyzes 2'-O-ribose methylation.
   evidence:
-  - reference: GO:0005732
-    notes: GO:0005732 defines sno(s)RNA-containing ribonucleoprotein complexes as
-      containing associated proteins in addition to a snoRNA-family RNA molecule.
+  - reference: GO:0031428
+    notes: Defines the catalytic fibrillarin/Nop1 and core scaffold subunits of the
+      box C/D methylation guide snoRNP complex.
 evidence:
 - reference: GO:0031428
   notes: 'Gene Ontology cellular-component term for box C/D methylation guide snoRNP
@@ -72,62 +72,115 @@ evidence:
     specific RNA 2''-O-ribose methylations was present in the common ancestor of Archaea
     and Eukarya.'
 - reference: GO:0005732
-  notes: Supports the context, composition, and mechanism of box C/D methylation guide
-    snoRNP complex (GO:0031428) in the box C/D methylation guide snoRNP complex. Gene
-    Ontology cellular-component term for sno(s)RNA-containing ribonucleoprotein complex.
+  notes: Gene Ontology cellular-component term for sno(s)RNA-containing ribonucleoprotein
+    complex.
 - reference: GO:1990904
-  notes: Supports the context, composition, and mechanism of box C/D methylation guide
-    snoRNP complex (GO:0031428) in the box C/D methylation guide snoRNP complex. Gene
-    Ontology cellular-component parent term for ribonucleoprotein complex.
+  notes: Gene Ontology cellular-component parent term for ribonucleoprotein complex.
 causal_graphs:
 - graph_id: box_c_d_methylation_guide_snornp_complex_mechanism
-  title: Box C/D snoRNP assembly and site-specific rRNA 2'-O-methylation
-  description: Binding of Snu13/L7Ae to the box C/D kink-turn nucleates recruitment
-    of Nop56/Nop58 and Nop1/fibrillarin, positioning the active site to transfer a
-    methyl group from S-adenosyl-L-methionine onto the target pre-rRNA ribose 2'-hydroxyl.
-  graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
-  scope_notes: This partial graph records the generic GO-defined RNA and associated-protein
-    cohorts without modeling exact box C/D, box H/ACA, telomerase-RNA or ribonuclease-MRP
-    component boundaries.
+  title: Box c/d methylation guide snornp complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of box C/D methylation guide snoRNP complex (GO:0031428) to its biological
+    functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
   nodes:
-  - node_id: sno_s_rna
-    label: sno(s)RNA
-    node_type: RNA
-    component_ref: sno_s_rna
-  - node_id: sno_s_rnp_associated_proteins
-    label: sno(s)RNP-associated proteins
-    node_type: GENE_OR_PROTEIN
-    component_ref: sno_s_rnp_associated_proteins
-  - node_id: sno_s_rna_containing_ribonucleoprotein_complex
+  - node_id: box_c_d_methylation_guide_snornp_complex
     label: box C/D methylation guide snoRNP complex
     node_type: STRUCTURE
     grounding: GO:0031428
-    description: Assembled and functional box C/D methylation guide snoRNP complex
-      (GO:0031428) operating in the box C/D methylation guide snoRNP complex.
+    description: A ribonucleoprotein complex containing a box C/D type RNA that is
+      capable of ribose-2'-O-methylation of target RNAs.
+  - node_id: box_c_d_guide_snorna
+    label: box C/D methylation guide snoRNA
+    node_type: RNA
+    component_ref: box_c_d_guide_snorna
+    description: Small nucleolar RNA containing conserved C (RUGAUGA) and D (CUGA)
+      kink-turn motifs and antisense guide elements that base-pair with pre-rRNA to
+      select the nucleotide 5 bp upstream of box D/D' for 2'-O-methylation.
+  - node_id: nop1_nop56_nop58_snu13_core
+    label: box C/D snoRNP core methyltransferase and scaffold subunits (Nop1/Fibrillarin,
+      Nop56, Nop58, Snu13)
+    node_type: GENE_OR_PROTEIN
+    component_ref: nop1_nop56_nop58_snu13_core
+    description: Core protein quartet in which Snu13 recognizes the C/D kink-turn,
+      Nop56-Nop58 form the coiled-coil dimer scaffold, and the SAM-dependent methyltransferase
+      Nop1 (fibrillarin) catalyzes 2'-O-ribose methylation.
+  - node_id: rrna_2_o_methylation_processing
+    label: rRNA processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006364
+    description: Guides site-specific 2'-O-ribose methylation of nascent pre-rRNA
+      nucleotides positioned 5 bp upstream of the conserved D or D' box via base-pairing
+      of the box C/D snoRNA antisense element and SAM-dependent methyltransfer by
+      Nop1/fibrillarin.
   edges:
-  - subject: sno_s_rna
-    predicate: contributes constituents to
-    object: sno_s_rna_containing_ribonucleoprotein_complex
-    description: sno(s)RNA-family RNA is the RNA constituent represented in the GO:0005732
-      definition.
+  - subject: box_c_d_guide_snorna
+    predicate: is part of
+    object: box_c_d_methylation_guide_snornp_complex
+    description: Small nucleolar RNA containing conserved C (RUGAUGA) and D (CUGA)
+      kink-turn motifs and antisense guide elements that base-pair with pre-rRNA to
+      select the nucleotide 5 bp upstream of box D/D' for 2'-O-methylation.
     evidence:
-    - reference: GO:0005732
-      notes: GO:0005732 defines the complex as containing an RNA molecule of the snoRNA
-        family.
-  - subject: sno_s_rnp_associated_proteins
-    predicate: contributes constituents to
-    object: sno_s_rna_containing_ribonucleoprotein_complex
-    description: Associated proteins are the protein constituents represented in the
-      GO:0005732 definition.
+    - reference: GO:0031428
+      notes: Defines the box C/D methylation guide snoRNA component of the box C/D
+        snoRNP complex.
+  - subject: nop1_nop56_nop58_snu13_core
+    predicate: is part of
+    object: box_c_d_methylation_guide_snornp_complex
+    description: Core protein quartet in which Snu13 recognizes the C/D kink-turn,
+      Nop56-Nop58 form the coiled-coil dimer scaffold, and the SAM-dependent methyltransferase
+      Nop1 (fibrillarin) catalyzes 2'-O-ribose methylation.
     evidence:
-    - reference: GO:0005732
-      notes: GO:0005732 defines the complex as containing associated proteins.
+    - reference: GO:0031428
+      notes: Defines the catalytic fibrillarin/Nop1 and core scaffold subunits of
+        the box C/D methylation guide snoRNP complex.
+  - subject: box_c_d_methylation_guide_snornp_complex
+    predicate: mediates
+    object: rrna_2_o_methylation_processing
+    description: Guides site-specific 2'-O-ribose methylation of nascent pre-rRNA
+      nucleotides positioned 5 bp upstream of the conserved D or D' box via base-pairing
+      of the box C/D snoRNA antisense element and SAM-dependent methyltransfer by
+      Nop1/fibrillarin.
+    evidence:
+    - reference: GO:0031428
+      notes: Establishes the site-specific pre-rRNA 2'-O-methylation and rRNA processing
+        function of the box C/D snoRNP complex.
 curation_history:
 - timestamp: '2026-10-19T05:27:41Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of box C/D methylation guide snoRNP complex (GO:0031428)
-    in category RIBONUCLEOPROTEIN with verified UniProtKB protein examples and literature
-    evidence.
+    in category RIBONUCLEOPROTEIN with verified GO hierarchy, compartmental context,
+    causal mechanism graph, and literature evidence.
   llm_assisted: true
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Universally conserved in the eukaryotic nucleolus (Nop1/Fibrillarin, Nop56,
+    Nop58, Snu13) where it directs site-specific 2'-O-ribose methylation of pre-rRNA.
+  reference: GO:0031428
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: COMMON
+  note: Conserved archaeal box C/D sRNP homologs (aFib, Nop5, L7Ae) guide 2'-O-methylation
+    of rRNA and tRNA.
+  reference: GO:0005732
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference eukaryotic model system in which the box C/D snoRNP core subunits
+    (Nop1, Nop56, Nop58, Snu13) and guide snoRNA base-pairing rule were defined.
+  reference: GO:0031428
+functions:
+- function_id: rrna_2_o_methylation_processing
+  label: rRNA processing
+  grounding: GO:0006364
+  description: Guides site-specific 2'-O-ribose methylation of nascent pre-rRNA nucleotides
+    positioned 5 bp upstream of the conserved D or D' box via base-pairing of the
+    box C/D snoRNA antisense element and SAM-dependent methyltransfer by Nop1/fibrillarin.
+  evidence:
+  - reference: GO:0031428
+    notes: Establishes the site-specific pre-rRNA 2'-O-methylation and rRNA processing
+      function of the box C/D snoRNP complex.

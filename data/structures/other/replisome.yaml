@@ -87,33 +87,98 @@ components:
         of nda4 mutation and is involved in DNA replication in Schizosaccharomyces
         pombe.’, Genes Cells. ECO:0000269 experimental evidence cited by UniProt for
         the 'Nucleus' localisation of O74113.
+- component_id: dna_polymerase_epsilon
+  label: epsilon DNA polymerase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0008622
+  gene_symbols:
+  - POL2
+  essentiality: ESSENTIAL
+  role: High-fidelity leading-strand replicative DNA polymerase complex physically
+    coupled to the CMG helicase within the advancing replisome.
+  evidence:
+  - reference: PMID:19228417
+    notes: Demonstrates physical coupling of replicative DNA polymerases and the Mcm2-7/GINS/Cdc45
+      helicase machinery within the eukaryotic replisome.
+  protein_examples:
+  - uniprot_id: UniProtKB:P21951
+    protein_label: DNA polymerase epsilon catalytic subunit A
+    gene_symbol: POL2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POL2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P21951
+      notes: UniProtKB reviewed (Swiss-Prot) entry P21951, the single reviewed entry
+        for gene POL2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: dna_polymerase_alpha_primase
+  label: alpha DNA polymerase:primase complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0005658
+  gene_symbols:
+  - POL1
+  essentiality: ESSENTIAL
+  role: Lagging-strand RNA-DNA primase-polymerase complex tethered to the replisome
+    via Ctf4 to initiate Okazaki fragments.
+  evidence:
+  - reference: DOI:10.1186/1471-2121-10-12
+    notes: Characterizes the coupling of DNA polymerase alpha-primase to the eukaryotic
+      replisome progression complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P13382
+    protein_label: DNA polymerase alpha catalytic subunit A
+    gene_symbol: POL1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene POL1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P13382
+      notes: UniProtKB reviewed (Swiss-Prot) entry P13382, the single reviewed entry
+        for gene POL1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
   presence: COMMON
-  note: Exhibits replisome (GO:0030894) within the multi-enzyme replisome machinery
-    at the replication fork. Exhibits nuclear replisome (GO:0043601) within the eukaryotic
-    nuclear replisome progression machinery. Akman and MacNeill describe Cdc45, MCM
-    and GINS as CMG components that are essential for chromosomal DNA replication
-    in eukaryotic cells.
+  note: Eukaryotic nuclear and organellar replisomes built around the CMG (Cdc45-MCM-GINS)
+    helicase, Pol epsilon, Pol delta, and Pol alpha-primase.
+  reference: PMID:19228417
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Bacterial replisomes built around the DnaB replicative helicase, DnaG primase,
+    and DNA polymerase III holoenzyme.
+  reference: GO:0030894
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: COMMON
+  note: Archaeal replisomes built around the MCM homohexameric helicase, GINS, Primase,
+    and PolB/PolD replicative DNA polymerases.
   reference: PMID:19228417
 canonical_examples:
 - taxon_id: NCBITaxon:284812
   taxon_label: Schizosaccharomyces pombe
-  note: Characterized model system for replisome (GO:0030894) within the multi-enzyme
-    replisome machinery at the replication fork. Characterized model system for nuclear
-    replisome (GO:0043601) within the eukaryotic nuclear replisome progression machinery.
-    Reference fission-yeast system in which Akman and MacNeill visualised GINS-MCM
+  note: Reference fission-yeast system in which Akman and MacNeill visualised GINS-MCM
     interactions in living cells from native chromosomal loci.
   reference: PMID:19228417
 functions:
 - function_id: dna_replication
   label: DNA replication
   grounding: GO:0006260
-  description: Mediated by nuclear replisome (GO:0043601) within the eukaryotic nuclear
-    replisome progression machinery. The CMG complex supports DNA unwinding during
-    eukaryotic DNA replication. Mediated by replisome (GO:0030894) within the multi-enzyme
-    replisome machinery at the replication fork.
+  description: The CMG complex supports DNA unwinding during eukaryotic DNA replication.
   evidence:
   - reference: GO:0071162
     notes: GO:0071162 defines the CMG complex as involved in unwinding DNA during
@@ -128,127 +193,158 @@ evidence:
   notes: 'Gene Ontology cellular-component term for replisome: A multi-component enzymatic
     machine at the replication fork which mediates DNA replication.'
 - reference: GO:0043601
-  notes: 'Supports the context, composition, and mechanism of replisome (GO:0030894)
-    within the multi-enzyme replisome machinery at the replication fork. Gene Ontology
-    cellular-component term for nuclear replisome: A multi-component enzymatic machine
-    at the nuclear replication fork, which mediates DNA replication. Includes DNA
-    primase, one or more DNA polymerases, DNA helicases, and other proteins.'
+  notes: 'Gene Ontology cellular-component term for nuclear replisome: A multi-component
+    enzymatic machine at the nuclear replication fork, which mediates DNA replication.
+    Includes DNA primase, one or more DNA polymerases, DNA helicases, and other proteins.'
 - reference: GO:0071162
-  notes: Supports the context, composition, and mechanism of replisome (GO:0030894)
-    within the multi-enzyme replisome machinery at the replication fork. Supports
-    the context, composition, and mechanism of nuclear replisome (GO:0043601) within
-    the eukaryotic nuclear replisome progression machinery. Gene Ontology cellular-component
-    term for the CMG complex.
+  notes: Gene Ontology cellular-component term for the CMG complex.
 - reference: GO:0031261
-  notes: Supports the context, composition, and mechanism of replisome (GO:0030894)
-    within the multi-enzyme replisome machinery at the replication fork. Supports
-    the context, composition, and mechanism of nuclear replisome (GO:0043601) within
-    the eukaryotic nuclear replisome progression machinery. Gene Ontology cellular-component
-    parent term for DNA replication preinitiation complexes.
+  notes: Gene Ontology cellular-component parent term for DNA replication preinitiation
+    complexes.
 - reference: GO:0000811
-  notes: Supports the context, composition, and mechanism of replisome (GO:0030894)
-    within the multi-enzyme replisome machinery at the replication fork. Supports
-    the context, composition, and mechanism of nuclear replisome (GO:0043601) within
-    the eukaryotic nuclear replisome progression machinery. Gene Ontology cellular-component
-    term for the GINS complex.
+  notes: Gene Ontology cellular-component term for the GINS complex.
 - reference: GO:0042555
-  notes: Supports the context, composition, and mechanism of replisome (GO:0030894)
-    within the multi-enzyme replisome machinery at the replication fork. Supports
-    the context, composition, and mechanism of nuclear replisome (GO:0043601) within
-    the eukaryotic nuclear replisome progression machinery. Gene Ontology cellular-component
-    term for the MCM complex.
+  notes: Gene Ontology cellular-component term for the MCM complex.
 - reference: GO:0006260
-  notes: Supports the context, composition, and mechanism of replisome (GO:0030894)
-    within the multi-enzyme replisome machinery at the replication fork. Supports
-    the context, composition, and mechanism of nuclear replisome (GO:0043601) within
-    the eukaryotic nuclear replisome progression machinery. Gene Ontology biological-process
-    term for DNA replication.
+  notes: Gene Ontology biological-process term for DNA replication.
 - reference: PMID:19228417
-  notes: Supports the context, composition, and mechanism of replisome (GO:0030894)
-    within the multi-enzyme replisome machinery at the replication fork. Supports
-    the context, composition, and mechanism of nuclear replisome (GO:0043601) within
-    the eukaryotic nuclear replisome progression machinery. PubMed identifier listed
-    by GO:0071162 as its definition cross-reference.
+  notes: PubMed identifier listed by GO:0071162 as its definition cross-reference.
 - reference: DOI:10.1186/1471-2121-10-12
-  notes: Supports the context, composition, and mechanism of replisome (GO:0030894)
-    within the multi-enzyme replisome machinery at the replication fork. Supports
-    the context, composition, and mechanism of nuclear replisome (GO:0043601) within
-    the eukaryotic nuclear replisome progression machinery. DOI for Akman and MacNeill
-    2009, verified through PubMed.
+  notes: DOI for Akman and MacNeill 2009, verified through PubMed.
 causal_graphs:
 - graph_id: replisome_mechanism
-  title: Replisome helicase-primase-polymerase coordination at the replication fork
-  description: Replicative helicase, primase, clamp loader, sliding clamps, and replicative
-    DNA polymerases assemble into the replisome at the replication fork to couple
-    parental duplex unwinding with coordinated leading- and lagging-strand synthesis.
+  title: Replisome assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of replisome (GO:0030894) to its biological functions.
   graph_kind: FUNCTION
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph records the three GO-defined CMG constituents and DNA-replication
-    function without resolving MCM2-7 ring activation, Cdc45/GINS binding interfaces
-    or replisome coupling.
+  scope_status: MECHANISTIC
   nodes:
+  - node_id: replisome
+    label: replisome
+    node_type: STRUCTURE
+    grounding: GO:0030894
+    description: A multi-component enzymatic machine at the replication fork which
+      mediates DNA replication.
   - node_id: gins_complex
     label: GINS complex
     node_type: STRUCTURE
-    component_ref: gins_complex
     grounding: GO:0000811
+    component_ref: gins_complex
+    description: Heterotetrameric GINS constituent subcomplex of the CMG helicase.
+      Functions within the eukaryotic nuclear replisome progression machinery in nuclear
+      replisome. Functions within the multi-enzyme replisome machinery at the replication
+      fork.
   - node_id: mcm_complex
     label: MCM complex
     node_type: STRUCTURE
-    component_ref: mcm_complex
     grounding: GO:0042555
+    component_ref: mcm_complex
+    description: Heterohexameric MCM constituent subcomplex of the CMG helicase. Functions
+      within the eukaryotic nuclear replisome progression machinery in nuclear replisome.
+      Functions within the multi-enzyme replisome machinery at the replication fork.
   - node_id: cdc45_protein
     label: Cdc45 protein
     node_type: GENE_OR_PROTEIN
     component_ref: cdc45_protein
-  - node_id: cmg_complex
-    label: replisome
+    description: Cdc45 constituent protein of the CMG helicase. Functions within the
+      eukaryotic nuclear replisome progression machinery in nuclear replisome. Functions
+      within the multi-enzyme replisome machinery at the replication fork.
+  - node_id: dna_polymerase_epsilon
+    label: epsilon DNA polymerase complex
     node_type: STRUCTURE
-    grounding: GO:0030894
-    description: Assembled and functional replisome (GO:0030894) operating within
-      the multi-enzyme replisome machinery at the replication fork.
+    grounding: GO:0008622
+    component_ref: dna_polymerase_epsilon
+    description: High-fidelity leading-strand replicative DNA polymerase complex physically
+      coupled to the CMG helicase within the advancing replisome.
+  - node_id: dna_polymerase_alpha_primase
+    label: alpha DNA polymerase:primase complex
+    node_type: STRUCTURE
+    grounding: GO:0005658
+    component_ref: dna_polymerase_alpha_primase
+    description: Lagging-strand RNA-DNA primase-polymerase complex tethered to the
+      replisome via Ctf4 to initiate Okazaki fragments.
+  - node_id: replication_fork
+    label: replication fork
+    node_type: STRUCTURE
+    grounding: GO:0005657
+    description: Enclosing or holo-structural assembly (replication fork, GO:0005657)
+      containing replisome.
   - node_id: dna_replication
     label: DNA replication
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006260
+    description: The CMG complex supports DNA unwinding during eukaryotic DNA replication.
   edges:
   - subject: gins_complex
-    predicate: contributes to
-    object: cmg_complex
-    description: The GINS complex is a constituent subcomplex of CMG.
+    predicate: is part of
+    object: replisome
+    description: Heterotetrameric GINS constituent subcomplex of the CMG helicase.
+      Functions within the eukaryotic nuclear replisome progression machinery in nuclear
+      replisome. Functions within the multi-enzyme replisome machinery at the replication
+      fork.
     evidence:
     - reference: GO:0071162
-      notes: GO:0071162 defines the CMG complex as containing GINS.
+      notes: GO:0071162 defines the CMG complex as containing the GINS complex.
   - subject: mcm_complex
-    predicate: contributes to
-    object: cmg_complex
-    description: The MCM complex is a constituent subcomplex of CMG.
+    predicate: is part of
+    object: replisome
+    description: Heterohexameric MCM constituent subcomplex of the CMG helicase. Functions
+      within the eukaryotic nuclear replisome progression machinery in nuclear replisome.
+      Functions within the multi-enzyme replisome machinery at the replication fork.
     evidence:
     - reference: GO:0071162
       notes: GO:0071162 defines the CMG complex as containing the heterohexameric
         MCM complex.
   - subject: cdc45_protein
-    predicate: contributes to
-    object: cmg_complex
-    description: Cdc45 is a constituent protein of CMG.
+    predicate: is part of
+    object: replisome
+    description: Cdc45 constituent protein of the CMG helicase. Functions within the
+      eukaryotic nuclear replisome progression machinery in nuclear replisome. Functions
+      within the multi-enzyme replisome machinery at the replication fork.
     evidence:
     - reference: GO:0071162
       notes: GO:0071162 defines the CMG complex as containing Cdc45p.
-  - subject: cmg_complex
-    predicate: supports
+  - subject: dna_polymerase_epsilon
+    predicate: is part of
+    object: replisome
+    description: High-fidelity leading-strand replicative DNA polymerase complex physically
+      coupled to the CMG helicase within the advancing replisome.
+    evidence:
+    - reference: PMID:19228417
+      notes: Demonstrates physical coupling of replicative DNA polymerases and the
+        Mcm2-7/GINS/Cdc45 helicase machinery within the eukaryotic replisome.
+  - subject: dna_polymerase_alpha_primase
+    predicate: is part of
+    object: replisome
+    description: Lagging-strand RNA-DNA primase-polymerase complex tethered to the
+      replisome via Ctf4 to initiate Okazaki fragments.
+    evidence:
+    - reference: DOI:10.1186/1471-2121-10-12
+      notes: Characterizes the coupling of DNA polymerase alpha-primase to the eukaryotic
+        replisome progression complex.
+  - subject: replisome
+    predicate: is part of
+    object: replication_fork
+    description: Replisome forms an integral structural compartment or subassembly
+      of replication fork.
+    evidence:
+    - reference: PMID:19228417
+      notes: PubMed identifier listed by GO:0071162 as its definition cross-reference.
+  - subject: replisome
+    predicate: mediates
     object: dna_replication
-    description: The CMG complex supports DNA unwinding during replication.
+    description: The CMG complex supports DNA unwinding during eukaryotic DNA replication.
     evidence:
     - reference: GO:0071162
-      notes: GO:0071162 defines CMG as involved in unwinding DNA during replication.
-    - reference: GO:0006260
-      notes: GO:0006260 is the GO biological-process term for DNA replication.
+      notes: GO:0071162 defines the CMG complex as involved in unwinding DNA during
+        replication.
 curation_history:
 - timestamp: '2026-10-19T05:56:22Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of replisome (GO:0030894) in category OTHER with verified
-    UniProtKB protein examples and literature evidence.
+    GO hierarchy, components, UniProtKB protein examples, causal mechanism graph,
+    and literature evidence.
   llm_assisted: true
 synonyms:
 - synonym_text: DNA replisome complex

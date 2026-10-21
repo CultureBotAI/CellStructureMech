@@ -8,11 +8,20 @@ session:
   timestamp: '2026-10-19T05:27:08Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
   summary: Created structure record for early phagosome (GO:0032009) in membrane_organelle.
-  details: Authored data/structures/membrane_organelle/early_phagosome.yaml for early phagosome
-    (GO:0032009) with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
-    functions, literature evidence, and causal graph.
+  details: Authored data/structures/membrane_organelle/early_phagosome.yaml for early
+    phagosome (GO:0032009) with verified GO hierarchy, taxonomic distribution, functions,
+    literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

@@ -43,8 +43,6 @@ components:
     and C-tubule triplet blades of the ciliary basal-body cylinder. No exact source-neutral
     CURIE for basal-body triplet microtubules was curated.
   role: Nine triplet microtubule blades build the cylindrical basal-body wall in Chlamydomonas.
-    Functions in ciliary pro-basal body cartwheel assembly and maturation in ciliary
-    pro-basal body.
   evidence:
   - reference: DOI:10.1186/s13630-016-0039-z
     notes: Dutcher and O'Toole 2016 review the Chlamydomonas basal body as a cylinder
@@ -70,8 +68,7 @@ components:
     but this first record did not resolve exact source-neutral terms for its SAS-6
     hub, Bld10/CEP135 spoke-tip or associated cartwheel proteins.
   role: Proximal ninefold-symmetric scaffold that organizes basal-body assembly and
-    helps template the arrangement of triplet microtubules. Functions in ciliary pro-basal
-    body cartwheel assembly and maturation in ciliary pro-basal body.
+    helps template the arrangement of triplet microtubules.
   evidence:
   - reference: DOI:10.1083/jcb.200402022
     notes: Matsuura et al. 2004 localized Chlamydomonas Bld10p to the cartwheel and
@@ -92,25 +89,21 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
   presence: COMMON
-  note: Exhibits ciliary pro-basal body (GO:0120280) in ciliary pro-basal body cartwheel
-    assembly and maturation. Vegetative Chlamydomonas cells have two ciliary basal
-    bodies that nucleate the paired motile flagella.
+  note: Vegetative Chlamydomonas cells have two ciliary basal bodies that nucleate
+    the paired motile flagella.
   reference: DOI:10.3390/cells7070079
 canonical_examples:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii
-  note: Characterized model system for ciliary pro-basal body (GO:0120280) in ciliary
-    pro-basal body cartwheel assembly and maturation. Green-algal reference organism
-    whose basal bodies have been used to study triplet-microtubule architecture, cartwheel
-    assembly and flagellar nucleation.
+  note: Green-algal reference organism whose basal bodies have been used to study
+    triplet-microtubule architecture, cartwheel assembly and flagellar nucleation.
   reference: DOI:10.1186/s13630-016-0039-z
 functions:
 - function_id: cilium_assembly
   label: cilium assembly
   grounding: GO:0060271
-  description: Mediated by ciliary pro-basal body (GO:0120280) in ciliary pro-basal
-    body cartwheel assembly and maturation. The basal body anchors the cilium and
-    acts as the base from which axonemal microtubules are assembled.
+  description: The basal body anchors the cilium and acts as the base from which axonemal
+    microtubules are assembled.
   evidence:
   - reference: GO:0036064
     notes: GO defines the ciliary basal body as the ciliary assembly and remodeling
@@ -127,103 +120,107 @@ evidence:
     assembly will convert the pro-basal body into a mature basal body that is capable
     of nucleating a cilium.'
 - reference: GO:0036064
-  notes: Supports the context, composition, and mechanism of ciliary pro-basal body
-    (GO:0120280) in ciliary pro-basal body cartwheel assembly and maturation. Gene
-    Ontology cellular-component term for the ciliary basal body.
+  notes: Gene Ontology cellular-component term for the ciliary basal body.
 - reference: GO:0005929
-  notes: Supports the context, composition, and mechanism of ciliary pro-basal body
-    (GO:0120280) in ciliary pro-basal body cartwheel assembly and maturation. Gene
-    Ontology cellular-component term for the cilium; the term places GO:0036064 as
-    part of the cilium.
+  notes: Gene Ontology cellular-component term for the cilium; the term places GO:0036064
+    as part of the cilium.
 - reference: DOI:10.1186/s13630-016-0039-z
-  notes: Supports the context, composition, and mechanism of ciliary pro-basal body
-    (GO:0120280) in ciliary pro-basal body cartwheel assembly and maturation. Dutcher
-    and O'Toole 2016, The basal bodies of Chlamydomonas reinhardtii, Cilia.
+  notes: Dutcher and O'Toole 2016, The basal bodies of Chlamydomonas reinhardtii,
+    Cilia.
 - reference: DOI:10.3390/cells7070079
-  notes: Supports the context, composition, and mechanism of ciliary pro-basal body
-    (GO:0120280) in ciliary pro-basal body cartwheel assembly and maturation. Wingfield
-    and Lechtreck 2018, Chlamydomonas Basal Bodies as Flagella Organizing Centers,
-    Cells.
+  notes: Wingfield and Lechtreck 2018, Chlamydomonas Basal Bodies as Flagella Organizing
+    Centers, Cells.
 - reference: DOI:10.1083/jcb.200402022
-  notes: 'Supports the context, composition, and mechanism of ciliary pro-basal body
-    (GO:0120280) in ciliary pro-basal body cartwheel assembly and maturation. Matsuura
-    et al. 2004, Bld10p, a novel protein essential for basal body assembly in Chlamydomonas:
-    localization to the cartwheel, the first ninefold symmetrical structure appearing
-    during assembly, Journal of Cell Biology.'
+  notes: 'Matsuura et al. 2004, Bld10p, a novel protein essential for basal body assembly
+    in Chlamydomonas: localization to the cartwheel, the first ninefold symmetrical
+    structure appearing during assembly, Journal of Cell Biology.'
 - reference: DOI:10.1104/pp.010807
-  notes: Supports the context, composition, and mechanism of ciliary pro-basal body
-    (GO:0120280) in ciliary pro-basal body cartwheel assembly and maturation. Silflow
-    and Lefebvre 2001, Assembly and motility of eukaryotic cilia and flagella. Lessons
-    from Chlamydomonas reinhardtii, Plant Physiology.
+  notes: Silflow and Lefebvre 2001, Assembly and motility of eukaryotic cilia and
+    flagella. Lessons from Chlamydomonas reinhardtii, Plant Physiology.
 - reference: GO:0005815
-  notes: Supports the context, composition, and mechanism of ciliary pro-basal body
-    (GO:0120280) in ciliary pro-basal body cartwheel assembly and maturation. Gene
-    Ontology places GO:0036064 ciliary basal body as is_a microtubule organizing center.
-    This is a class relationship, not equivalence to the whole cytoskeleton.
+  notes: Gene Ontology places GO:0036064 ciliary basal body as is_a microtubule organizing
+    center. This is a class relationship, not equivalence to the whole cytoskeleton.
 causal_graphs:
 - graph_id: ciliary_pro_basal_body_mechanism
-  title: Ciliary pro-basal body cartwheel assembly and elongation
-  description: SAS-6 oligomers and Bld10p spokes nucleate the ninefold-symmetric cartwheel
-    of the ciliary pro-basal body, which recruits delta- and epsilon-tubulin to template
-    triplet microtubule blades prior to maturation into a ciliary basal body.
-  graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
-  scope_notes: This graph summarizes major Chlamydomonas basal-body substructures
-    and leaves cartwheel protein stoichiometry, centriole maturation, transition fibers
-    and rootlet attachments for later component-level curation. The graph describes
-    normal wild-type architecture, not an absolute substructure-essentiality claim
-    or the morphology of every mutant basal body.
+  title: Ciliary pro-basal body assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of ciliary pro-basal body (GO:0120280) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
   nodes:
-  - node_id: cartwheel
-    label: basal-body cartwheel
+  - node_id: ciliary_pro_basal_body
+    label: ciliary pro-basal body
     node_type: STRUCTURE
-    component_ref: cartwheel
+    grounding: GO:0120280
+    description: The cilary pro-basal body is an immature, partially assembled form
+      of a ciliary basal body found next to the basal body of a cilium.
   - node_id: microtubule_triplets
     label: basal-body triplet microtubules
     node_type: STRUCTURE
     component_ref: microtubule_triplets
-  - node_id: ciliary_basal_body
-    label: ciliary pro-basal body
+    description: Nine triplet microtubule blades build the cylindrical basal-body
+      wall in Chlamydomonas.
+  - node_id: cartwheel
+    label: basal-body cartwheel
     node_type: STRUCTURE
-    grounding: GO:0120280
-    description: Assembled and functional ciliary pro-basal body (GO:0120280) operating
-      in ciliary pro-basal body cartwheel assembly and maturation.
-  - node_id: axoneme
-    label: axoneme
+    component_ref: cartwheel
+    description: Proximal ninefold-symmetric scaffold that organizes basal-body assembly
+      and helps template the arrangement of triplet microtubules.
+  - node_id: mature_ciliary_basal_body
+    label: ciliary basal body
     node_type: STRUCTURE
-    grounding: GO:0005930
+    grounding: GO:0036064
+    description: Mature ninefold triplet-microtubule basal body that docks at the
+      plasma membrane and templates the ciliary axoneme.
+  - node_id: cilium_assembly
+    label: cilium assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0060271
+    description: The basal body anchors the cilium and acts as the base from which
+      axonemal microtubules are assembled.
   edges:
-  - subject: cartwheel
-    predicate: organizes
-    object: microtubule_triplets
-    description: The Chlamydomonas cartwheel is the first ninefold symmetrical basal-body
-      structure and sits where triplet microtubules elongate.
-    evidence:
-    - reference: DOI:10.1083/jcb.200402022
-      notes: Matsuura et al. 2004 localized Bld10p to the cartwheel and proposed that
-        it acts early in Chlamydomonas basal-body assembly.
   - subject: microtubule_triplets
-    predicate: form wall of
-    object: ciliary_basal_body
-    description: Nine triplet microtubule blades form the wall of the Chlamydomonas
-      basal-body cylinder.
+    predicate: is part of
+    object: ciliary_pro_basal_body
+    description: Nine triplet microtubule blades build the cylindrical basal-body
+      wall in Chlamydomonas.
     evidence:
     - reference: DOI:10.1186/s13630-016-0039-z
-      notes: Dutcher and O'Toole 2016 review the nine triplet microtubules of Chlamydomonas
-        basal bodies.
-  - subject: ciliary_basal_body
-    predicate: nucleates
-    object: axoneme
-    description: The basal body provides the ciliary base from which axonemal microtubules
-      extend.
+      notes: Dutcher and O'Toole 2016 review the Chlamydomonas basal body as a cylinder
+        made from nine triplet microtubules.
+  - subject: cartwheel
+    predicate: is part of
+    object: ciliary_pro_basal_body
+    description: Proximal ninefold-symmetric scaffold that organizes basal-body assembly
+      and helps template the arrangement of triplet microtubules.
+    evidence:
+    - reference: DOI:10.1083/jcb.200402022
+      notes: Matsuura et al. 2004 localized Chlamydomonas Bld10p to the cartwheel
+        and connected the cartwheel to the first ninefold-symmetric stage of basal-body
+        assembly.
+  - subject: ciliary_pro_basal_body
+    predicate: matures into
+    object: mature_ciliary_basal_body
+    description: During cell cycle progression, the cartwheel-assembled ciliary pro-basal
+      body elongates and matures into a docking-competent ciliary basal body.
+    evidence:
+    - reference: DOI:10.1186/s13630-016-0039-z
+      notes: Dutcher and O'Toole 2016, The basal bodies of Chlamydomonas reinhardtii,
+        Cilia.
+  - subject: ciliary_pro_basal_body
+    predicate: mediates
+    object: cilium_assembly
+    description: The basal body anchors the cilium and acts as the base from which
+      axonemal microtubules are assembled.
     evidence:
     - reference: GO:0036064
-      notes: GO defines the ciliary basal body as a ciliary base structure that nucleates
-        axoneme growth.
+      notes: GO defines the ciliary basal body as the ciliary assembly and remodeling
+        site that nucleates axoneme growth.
 curation_history:
 - timestamp: '2026-10-19T05:27:40Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of ciliary pro-basal body (GO:0120280) in category CYTOSKELETON
-    with verified UniProtKB protein examples and literature evidence.
+    with verified GO hierarchy, compartmental context, causal mechanism graph, and
+    literature evidence.
   llm_assisted: true

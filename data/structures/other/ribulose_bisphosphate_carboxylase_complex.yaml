@@ -23,259 +23,20 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GO:0048492
 components:
-- component_id: bmc_h
-  label: BMC-H shell hexamers (CcmK / CsoS1)
+- component_id: rubisco_large_subunit
+  label: ribulose-bisphosphate carboxylase large chain (RbcL / CbbL)
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
-  - ccmK
-  - csoS1
-  essentiality: ESSENTIAL
-  role: Tile the shell facets; central pores admit bicarbonate and RuBP. Functions
-    in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme in ribulose bisphosphate
-    carboxylase complex.
-  evidence:
-  - reference: DOI:10.1038/nrmicro.2018.10
-    notes: Kerfeld et al. 2018 describe BMC-H hexamers as the main facet tile.
-  protein_examples:
-  - uniprot_id: UniProtKB:Q03511
-    protein_label: Carboxysome shell protein CcmK2
-    gene_symbol: ccmK2
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-29'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Tile the shell facets; central pores admit bicarbonate and RuBP (also declared
-      as synonym ccmK).'
-    evidence:
-    - reference: PMID:17675289
-      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
-        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
-        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
-        of Q03511, as cited by UniProt.
-    - reference: PMID:20304968
-      notes: Long BM et al. 2010, ‘Functional cyanobacterial beta-carboxysomes have
-        an absolute requirement for both long and short forms of the CcmM protein’,
-        Plant Physiol. ECO:0000269 experimental evidence for the carboxysome localisation
-        of Q03511, as cited by UniProt.
-    - reference: PMID:22928045
-      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
-        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
-        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
-        of Q03511, as cited by UniProt.'
-  - uniprot_id: UniProtKB:Q31RK2
-    protein_label: Carboxysome shell protein CcmK4
-    gene_symbol: ccmK4
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-29'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Tile the shell facets; central pores admit bicarbonate and RuBP.'
-    evidence:
-    - reference: PMID:25117559
-      notes: 'Cai F et al. 2015, ‘Engineering bacterial microcompartment shells: chimeric
-        shell proteins and chimeric carboxysome shells’, ACS Synth Biol. ECO:0000269
-        experimental evidence for the carboxysome localisation of Q31RK2, as cited
-        by UniProt.'
-    - reference: PMID:28616951
-      notes: Faulkner M et al. 2017, ‘Direct characterization of the native structure
-        and mechanics of cyanobacterial carboxysomes’, Nanoscale. ECO:0000269 experimental
-        evidence for the carboxysome localisation of Q31RK2, as cited by UniProt.
-    - reference: PMID:28963440
-      notes: Niederhuber MJ et al. 2017, ‘Superresolution microscopy of the β-carboxysome
-        reveals a homogeneous matrix’, Mol Biol Cell. ECO:0000269 experimental evidence
-        for the carboxysome localisation of Q31RK2, as cited by UniProt.
-  - uniprot_id: UniProtKB:Q31RK3
-    protein_label: Carboxysome shell protein CcmK3
-    gene_symbol: ccmK3
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-29'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Tile the shell facets; central pores admit bicarbonate and RuBP.'
-    evidence:
-    - reference: PMID:30389783
-      notes: Sommer M et al. 2019, ‘Heterohexamers Formed by CcmK3 and CcmK4 Increase
-        the Complexity of Beta Carboxysome Shells’, Plant Physiol. ECO:0000269 experimental
-        evidence for the carboxysome localisation of Q31RK3, as cited by UniProt.
-    - reference: PMID:31048338
-      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
-        and Structural Variability of Carboxysomes Dependent on the Environment’,
-        Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
-        of Q31RK3, as cited by UniProt.
-  - uniprot_id: UniProtKB:P45689
-    protein_label: Major carboxysome shell protein CsoS1A
-    gene_symbol: csoS1A
-    taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus c2
-    entry_status: REVIEWED
-    retrieved_on: '2026-09-08'
-    role: The single reviewed UniProtKB entry for gene csoS1, which UniProt lists
-      under the primary name csoS1A, in Halothiobacillus neapolitanus c2, a taxon
-      this record names. Identifier for the component's declared gene symbol; it is
-      not itself evidence that the protein is part of this structure.
-    evidence:
-    - reference: PMID:18258595
-      notes: Dou Z et al. 2008, ‘CO2 fixation kinetics of Halothiobacillus neapolitanus
-        mutant carboxysomes lacking carbonic anhydrase suggest the shell acts as a
-        diffusional barrier for CO2.’, J Biol Chem. ECO:0000269 experimental evidence
-        cited by UniProt for the 'Carboxysome' localisation of P45689.
-    - reference: PMID:7934888
-      notes: English RS et al. 1994, ‘Isolation and characterization of a carboxysome
-        shell gene from Thiobacillus neapolitanus.’, Mol Microbiol. ECO:0000269 experimental
-        evidence cited by UniProt for the 'Carboxysome' localisation of P45689.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: IPR046380 exactly covers the reviewed CcmK examples, but alpha-carboxysome
-    CsoS1 proteins lack it. Their only shared family, IPR050575, is the generic bacterial
-    microcompartment shell family and also covers non-BMC-H proteins; no exact family
-    denotes the combined CcmK / CsoS1 component.
-- component_id: bmc_t
-  label: BMC-T shell pseudohexamers (CcmO, CcmP)
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  gene_symbols:
-  - ccmO
-  - ccmP
-  essentiality: CONDITIONAL
-  role: 'Tandem-BMC-domain paralogues that tile the shell alongside the BMC-H hexamers.
-    Essentiality differs within the set and the field carries the weaker value: UniProt
-    states CcmO is required for carboxysome formation and for recruiting CcmK2, while
-    CcmP is a gated dimer of stacked trimers thought to control metabolite passage
-    rather than to be required for assembly. Functions in the ribulose bisphosphate
-    carboxylase (RuBisCO) holoenzyme in ribulose bisphosphate carboxylase complex.'
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The only InterPro entry both share is the generic BMC domain (IPR000249),
-    which BMC-H proteins carry too, so no exact family term denotes the BMC-T set.
-    CcmP alone has IPR044870.
-  evidence:
-  - reference: PMID:22928045
-    notes: UniProt cites this paper (P46205) for CcmO being required to recruit the
-      major shell protein CcmK2 to the pre-carboxysome, and for its oligomerisation
-      and interaction with CcmK2.
-  - reference: PMID:24267892
-    notes: UniProt cites this paper (P46205, P46204) for CcmO's role in carboxysome
-      formation.
-  - reference: PMID:23572529
-    notes: UniProt cites this paper (Q31QW7) for CcmP forming a dimer of stacked trimers
-      in the shell and for the gating that is thought to control transport of RuBisCO
-      reactants.
-  protein_examples:
-  - uniprot_id: UniProtKB:P46205
-    protein_label: Carboxysome assembly protein CcmO
-    gene_symbol: ccmO
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-30'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Tandem-BMC-domain paralogues that tile the shell alongside the BMC-H hexamers;
-      CcmO is required to recruit CcmK2 to the pre-carboxysome, and CcmP forms a gated
-      dimer of stacked trimers thought to control metabolite passage.'
-    evidence:
-    - reference: PMID:22928045
-      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
-        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
-        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
-        of P46205, as cited by UniProt.'
-    - reference: PMID:24267892
-      notes: 'Cameron JC et al. 2013, ‘Biogenesis of a bacterial organelle: the carboxysome
-        assembly pathway’, Cell. ECO:0000269 experimental evidence for the carboxysome
-        localisation of P46205, as cited by UniProt.'
-    - reference: PMID:31048338
-      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
-        and Structural Variability of Carboxysomes Dependent on the Environment’,
-        Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
-        of P46205, as cited by UniProt.
-  - uniprot_id: UniProtKB:Q31QW7
-    protein_label: Carboxysome shell protein CcmP
-    gene_symbol: ccmP
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-30'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Tandem-BMC-domain paralogues that tile the shell alongside the BMC-H hexamers;
-      CcmO is required to recruit CcmK2 to the pre-carboxysome, and CcmP forms a gated
-      dimer of stacked trimers thought to control metabolite passage.'
-    evidence:
-    - reference: PMID:23572529
-      notes: Cai F et al. 2013, ‘The structure of CcmP, a tandem bacterial microcompartment
-        domain protein from the β-carboxysome, forms a subcompartment within a microcompartment’,
-        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
-        of Q31QW7, as cited by UniProt.
-- component_id: bmc_p
-  label: BMC-P shell pentamers (CcmL / CsoS4)
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  gene_symbols:
-  - ccmL
-  - csoS4A
-  essentiality: ESSENTIAL
-  role: Cap the vertices of the icosahedral shell. Functions in the ribulose bisphosphate
-    carboxylase (RuBisCO) holoenzyme in ribulose bisphosphate carboxylase complex.
-  evidence:
-  - reference: DOI:10.1038/nrmicro1913
-    notes: Yeates et al. 2008 assign pentamers to shell vertices.
-  protein_examples:
-  - uniprot_id: UniProtKB:Q03512
-    protein_label: Carboxysome shell vertex protein CcmL
-    gene_symbol: ccmL
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-29'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Cap the vertices of the icosahedral shell.'
-    evidence:
-    - reference: PMID:28616951
-      notes: Faulkner M et al. 2017, ‘Direct characterization of the native structure
-        and mechanics of cyanobacterial carboxysomes’, Nanoscale. ECO:0000269 experimental
-        evidence for the carboxysome localisation of Q03512, as cited by UniProt.
-    - reference: PMID:31048338
-      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
-        and Structural Variability of Carboxysomes Dependent on the Environment’,
-        Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
-        of Q03512, as cited by UniProt.
-  - uniprot_id: UniProtKB:O85043
-    protein_label: Carboxysome shell vertex protein CsoS4A
-    gene_symbol: csoS4A
-    taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus c2
-    entry_status: REVIEWED
-    retrieved_on: '2026-09-08'
-    role: The single reviewed UniProtKB entry for gene csoS4A in Halothiobacillus
-      neapolitanus c2, a taxon this record names. Identifier for the component's declared
-      gene symbol; it is not itself evidence that the protein is part of this structure.
-    evidence:
-    - reference: PMID:19844578
-      notes: Cai F et al. 2009, ‘The pentameric vertex proteins are necessary for
-        the icosahedral carboxysome shell to function as a CO2 leakage barrier.’,
-        PLoS One. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
-        localisation of O85043.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: IPR046387 exactly covers CcmL, whereas CsoS4A and CsoS4B have the
-    distinct IPR014076 and IPR014077 families. Their shared IPR004992 entry also includes
-    the ethanolamine-utilization shell protein EutN, so no exact family denotes the
-    combined carboxysome BMC-P component.
-- component_id: rubisco
-  label: ribulose-1,5-bisphosphate carboxylase/oxygenase (form I)
-  component_type: PROTEIN_COMPLEX
-  component_role: CONSTITUENT
-  gene_symbols:
-  - rbcL
-  - rbcS
   - cbbL
-  - cbbS
+  - rbcL
   essentiality: ESSENTIAL
-  role: Encapsulated cargo; fixes CO2 into 3-phosphoglycerate. Functions in the ribulose
-    bisphosphate carboxylase (RuBisCO) holoenzyme in ribulose bisphosphate carboxylase
-    complex.
+  role: Catalytic large subunit forming the octameric (L8) or dimeric (L2) active-site
+    core that binds ribulose-1,5-bisphosphate, catalytic Mg2+, and CO2/O2.
   evidence:
-  - reference: PMID:24006469
-    notes: Rae et al. 2013 review RuBisCO packaging in both carboxysome types.
+  - reference: PMID:17675289
+    notes: Long et al. 2007 characterize Form IB RuBisCO large (RbcL/CbbL) and small
+      (RbcS/CbbS) subunits in Synechococcus elongatus PCC 7942.
   protein_examples:
   - uniprot_id: UniProtKB:Q31NB3
     protein_label: Ribulose bisphosphate carboxylase large chain
@@ -303,6 +64,22 @@ components:
         in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
         PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
         of Q31NB3, as cited by UniProt.'
+- component_id: rubisco_small_subunit
+  label: ribulose-bisphosphate carboxylase small subunit (RbcS / CbbS)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - cbbS
+  - rbcS
+  essentiality: CONDITIONAL
+  role: Structural and regulatory small subunit capping both ends of the L8 catalytic
+    core in hexadecameric Form I (L8S8) RuBisCO complexes and mediating CcmM/CsoS2
+    scaffold interaction.
+  evidence:
+  - reference: PMID:17675289
+    notes: Long et al. 2007 demonstrate that RbcS/CbbS assembles with RbcL/CbbL in
+      the hexadecameric Form IB RuBisCO holoenzyme.
+  protein_examples:
   - uniprot_id: UniProtKB:Q31NB2
     protein_label: Ribulose bisphosphate carboxylase small subunit
     gene_symbol: cbbS
@@ -330,237 +107,33 @@ components:
         elongatus in carboxylation of ribulose-1,5-bisphosphate’, Photosynth Res.
         ECO:0000269 experimental evidence for the carboxysome localisation of Q31NB2,
         as cited by UniProt.
-- component_id: carbonic_anhydrase
-  label: carboxysomal carbonic anhydrase (CcaA / CsoSCA)
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  gene_symbols:
-  - ccaA
-  - csoSCA
-  essentiality: ESSENTIAL
-  role: Dehydrates bicarbonate to CO2 inside the shell. Functions in the ribulose
-    bisphosphate carboxylase (RuBisCO) holoenzyme in ribulose bisphosphate carboxylase
-    complex.
-  evidence:
-  - reference: DOI:10.1038/nrmicro.2018.10
-    notes: Kerfeld et al. 2018.
-  protein_examples:
-  - uniprot_id: UniProtKB:P27134
-    protein_label: Carbonic anhydrase
-    gene_symbol: ccaA
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-29'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Dehydrates bicarbonate to CO2 inside the shell.'
-    evidence:
-    - reference: PMID:17675289
-      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
-        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
-        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
-        of P27134, as cited by UniProt.
-    - reference: PMID:20304968
-      notes: Long BM et al. 2010, ‘Functional cyanobacterial beta-carboxysomes have
-        an absolute requirement for both long and short forms of the CcmM protein’,
-        Plant Physiol. ECO:0000269 experimental evidence for the carboxysome localisation
-        of P27134, as cited by UniProt.
-    - reference: PMID:22928045
-      notes: 'Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes
-        in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
-        PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
-        of P27134, as cited by UniProt.'
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The beta-carboxysome CcaA example has IPR045066, while alpha-carboxysome
-    CsoSCA has IPR014074; they share no integrated InterPro family, so neither lineage-specific
-    family denotes the combined component.
-- component_id: scaffold
-  label: cargo scaffold (CcmM / CsoS2)
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  gene_symbols:
-  - ccmM
-  - csoS2
-  essentiality: ESSENTIAL
-  role: Links RuBisCO to the shell and drives cargo condensation. Functions in the
-    ribulose bisphosphate carboxylase (RuBisCO) holoenzyme in ribulose bisphosphate
-    carboxylase complex.
-  evidence:
-  - reference: PMID:24006469
-    notes: Rae et al. 2013 describe CcmM and CsoS2 as the RuBisCO-organising proteins.
-  protein_examples:
-  - uniprot_id: UniProtKB:Q03513
-    protein_label: Carboxysome assembly protein CcmM
-    gene_symbol: ccmM
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-29'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Links RuBisCO to the shell and drives cargo condensation.'
-    evidence:
-    - reference: PMID:17675289
-      notes: Long BM et al. 2007, ‘Analysis of carboxysomes from Synechococcus PCC7942
-        reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA’,
-        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
-        of Q03513, as cited by UniProt.
-    - reference: PMID:20304968
-      notes: Long BM et al. 2010, ‘Functional cyanobacterial beta-carboxysomes have
-        an absolute requirement for both long and short forms of the CcmM protein’,
-        Plant Physiol. ECO:0000269 experimental evidence for the carboxysome localisation
-        of Q03513, as cited by UniProt.
-    - reference: PMID:28616951
-      notes: Faulkner M et al. 2017, ‘Direct characterization of the native structure
-        and mechanics of cyanobacterial carboxysomes’, Nanoscale. ECO:0000269 experimental
-        evidence for the carboxysome localisation of Q03513, as cited by UniProt.
-  - uniprot_id: UniProtKB:O85041
-    protein_label: Carboxysome assembly protein CsoS2B
-    gene_symbol: csoS2
-    taxon_id: NCBITaxon:555778
-    taxon_label: Halothiobacillus neapolitanus c2
-    entry_status: REVIEWED
-    retrieved_on: '2026-09-08'
-    role: The single reviewed UniProtKB entry for gene csoS2 in Halothiobacillus neapolitanus
-      c2, a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
-    evidence:
-    - reference: PMID:10525740
-      notes: Baker SH et al. 1999, ‘The correlation of the gene csoS2 of the carboxysome
-        operon with two polypeptides of the carboxysome in thiobacillus neapolitanus.’,
-        Arch Microbiol. ECO:0000269 experimental evidence cited by UniProt for the
-        'Carboxysome' localisation of O85041.
-    - reference: PMID:18258595
-      notes: Dou Z et al. 2008, ‘CO2 fixation kinetics of Halothiobacillus neapolitanus
-        mutant carboxysomes lacking carbonic anhydrase suggest the shell acts as a
-        diffusional barrier for CO2.’, J Biol Chem. ECO:0000269 experimental evidence
-        cited by UniProt for the 'Carboxysome' localisation of O85041.
-    - reference: PMID:25826651
-      notes: Cai F et al. 2015, ‘Advances in Understanding Carboxysome Assembly in
-        Prochlorococcus and Synechococcus Implicate CsoS2 as a Critical Component.’,
-        Life (Basel). ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
-        localisation of O85041.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The beta-carboxysome scaffold CcmM has IPR017156 and the alpha-carboxysome
-    scaffold CsoS2 has IPR020990. They share no integrated InterPro family, so neither
-    lineage-specific entry denotes the combined component.
-- component_id: assembly_adaptor
-  label: assembly adaptor CcmN
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  gene_symbols:
-  - ccmN
-  essentiality: ESSENTIAL
-  role: 'Bridges cargo to shell: its N-terminus binds the CcmM scaffold, which itself
-    binds RuBisCO, while its C-terminal 18 residues bind the shell protein CcmK2.
-    Functions in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme in ribulose
-    bisphosphate carboxylase complex.'
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: InterPro assigns only the fold-level LpxA-like homologous superfamily
-    IPR011004 to CcmN; no integrated family denotes this component.
-  evidence:
-  - reference: PMID:22461622
-    notes: UniProt cites this paper (P46204) for the CcmN N-terminus interacting with
-      CcmM and its C-terminal 18 residues interacting with CcmK2.
-  - reference: PMID:24267892
-    notes: UniProt cites this paper (P46204) for CcmN being required for carboxysome
-      formation.
-  protein_examples:
-  - uniprot_id: UniProtKB:P46204
-    protein_label: Carboxysome assembly protein CcmN
-    gene_symbol: ccmN
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-30'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Bridges cargo to shell: its N-terminus binds the CcmM scaffold, which itself
-      binds RuBisCO, while its C-terminal 18 residues bind the shell protein CcmK2.'
-    evidence:
-    - reference: PMID:22461622
-      notes: Kinney JN et al. 2012, ‘Elucidating essential role of conserved carboxysomal
-        protein CcmN reveals common feature of bacterial microcompartment assembly’,
-        J Biol Chem. ECO:0000269 experimental evidence for the carboxysome localisation
-        of P46204, as cited by UniProt.
-    - reference: PMID:31048338
-      notes: Sun Y et al. 2019, ‘Single-Organelle Quantification Reveals Stoichiometric
-        and Structural Variability of Carboxysomes Dependent on the Environment’,
-        Plant Cell. ECO:0000269 experimental evidence for the carboxysome localisation
-        of P46204, as cited by UniProt.
-- component_id: positioning
-  label: carboxysome positioning system (McdB, with the McdA ATPase)
-  component_type: PROTEIN
-  component_role: ASSOCIATED_MACHINERY
-  gene_symbols:
-  - mcdB
-  essentiality: DISPENSABLE
-  role: Distributes carboxysomes along the nucleoid. McdB binds the carboxysome and,
-    with the McdA ATPase, sets spacing, size and inheritance; without the system carboxysomes
-    aggregate rather than failing to form. Functions in the ribulose bisphosphate
-    carboxylase (RuBisCO) holoenzyme in ribulose bisphosphate carboxylase complex.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: InterPro assigns only the McdB C-terminal domain IPR063627 to this
-    example; no integrated family denotes the complete McdB positioning component.
-  evidence:
-  - reference: PMID:30520729
-    notes: UniProt cites this paper (Q8GJM6) for McdA and McdB together mediating
-      carboxysome spacing, and for McdB self-association and interaction with McdA.
-  - reference: PMID:34406783
-    notes: UniProt cites this paper (Q8GJM6) for the same distribution role and for
-      preventing carboxysome aggregation.
-  protein_examples:
-  - uniprot_id: UniProtKB:Q8GJM6
-    protein_label: Maintenance of carboxysome distribution protein B
-    gene_symbol: mcdB
-    taxon_id: NCBITaxon:1140
-    taxon_label: Synechococcus elongatus PCC 7942
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-30'
-    role: 'UniProt annotates this protein to SL-0034 (carboxysome); component role:
-      Distributes carboxysomes along the nucleoid. McdB binds the carboxysome and,
-      with the McdA ATPase, sets spacing, size and inheritance; without the system
-      carboxysomes aggregate rather than failing to form.'
-    evidence:
-    - reference: PMID:30520729
-      notes: MacCready JS et al. 2018, ‘Protein gradients on the nucleoid position
-        the carbon-fixing organelles of cyanobacteria’, Elife. ECO:0000269 experimental
-        evidence for the carboxysome localisation of Q8GJM6, as cited by UniProt.
-    - reference: PMID:34406783
-      notes: Hakim P et al. 2021, ‘Dissection of the ATPase active site of McdA reveals
-        the sequential steps essential for carboxysome distribution’, Mol Biol Cell.
-        ECO:0000269 experimental evidence for the carboxysome localisation of Q8GJM6,
-        as cited by UniProt.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:1117
   taxon_label: Cyanobacteriota
   presence: UNIVERSAL
-  note: Exhibits ribulose bisphosphate carboxylase complex (GO:0048492) in the ribulose
-    bisphosphate carboxylase (RuBisCO) holoenzyme. Cyanobacteria. Beta-carboxysomes
-    in most lineages; alpha-carboxysomes in marine Prochlorococcus and some Synechococcus.
+  note: Cyanobacteria. Beta-carboxysomes in most lineages; alpha-carboxysomes in marine
+    Prochlorococcus and some Synechococcus.
   reference: PMID:24006469
 - taxon_id: NCBITaxon:1224
   taxon_label: Pseudomonadota
   presence: VARIABLE
-  note: Exhibits ribulose bisphosphate carboxylase complex (GO:0048492) in the ribulose
-    bisphosphate carboxylase (RuBisCO) holoenzyme. Alpha-carboxysomes in many chemoautotrophs
-    (Halothiobacillus, Thiomicrospira, Nitrosomonas).
+  note: Alpha-carboxysomes in many chemoautotrophs (Halothiobacillus, Thiomicrospira,
+    Nitrosomonas).
   reference: PMID:24006469
 canonical_examples:
 - taxon_id: NCBITaxon:1140
   taxon_label: Synechococcus elongatus PCC 7942
-  note: Characterized model system for ribulose bisphosphate carboxylase complex (GO:0048492)
-    in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme. Model for beta-carboxysomes.
+  note: Model for beta-carboxysomes.
   reference: PMID:24006469
 - taxon_id: NCBITaxon:927
   taxon_label: Halothiobacillus neapolitanus
-  note: Characterized model system for ribulose bisphosphate carboxylase complex (GO:0048492)
-    in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme. Model for alpha-carboxysomes.
+  note: Model for alpha-carboxysomes.
   reference: PMID:24006469
 functions:
 - function_id: co2_concentration
   label: carbon dioxide concentrating mechanism
-  description: Mediated by ribulose bisphosphate carboxylase complex (GO:0048492)
-    in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme. Raises the CO2
-    concentration at RuBisCO and limits O2 access, suppressing photorespiration.
+  description: Raises the CO2 concentration at RuBisCO and limits O2 access, suppressing
+    photorespiration.
   evidence:
   - reference: DOI:10.1038/nrmicro.2018.10
     notes: Kerfeld et al. 2018.
@@ -579,231 +152,107 @@ evidence:
     subunits which carries out the activity of producing 3-phosphoglycerate from carbon
     dioxide and ribulose-1,5-bisphosphate.'
 - reference: DOI:10.1038/nrmicro.2018.10
-  notes: Supports the context, composition, and mechanism of ribulose bisphosphate
-    carboxylase complex (GO:0048492) in the ribulose bisphosphate carboxylase (RuBisCO)
-    holoenzyme. Kerfeld et al. 2018, "Bacterial microcompartments".
+  notes: Kerfeld et al. 2018, "Bacterial microcompartments".
 - reference: DOI:10.1038/nrmicro1913
-  notes: Supports the context, composition, and mechanism of ribulose bisphosphate
-    carboxylase complex (GO:0048492) in the ribulose bisphosphate carboxylase (RuBisCO)
-    holoenzyme. Yeates et al. 2008, "Protein-based organelles in bacteria".
+  notes: Yeates et al. 2008, "Protein-based organelles in bacteria".
 - reference: PMID:24006469
-  notes: Supports the context, composition, and mechanism of ribulose bisphosphate
-    carboxylase complex (GO:0048492) in the ribulose bisphosphate carboxylase (RuBisCO)
-    holoenzyme. Rae et al. 2013, "Functions, compositions, and evolution of the two
-    types of carboxysomes".
+  notes: Rae et al. 2013, "Functions, compositions, and evolution of the two types
+    of carboxysomes".
 causal_graphs:
 - graph_id: ribulose_bisphosphate_carboxylase_complex_mechanism
-  title: RuBisCO complex assembly, CO2 concentration, and ribulose-1,5-bisphosphate
-    carboxylation
+  title: Ribulose bisphosphate carboxylase complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of ribulose bisphosphate carboxylase complex (GO:0048492) to its biological
+    functions.
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
-  - node_id: shell
+  - node_id: ribulose_bisphosphate_carboxylase_complex
     label: ribulose bisphosphate carboxylase complex
     node_type: STRUCTURE
-    component_ref: bmc_h
     grounding: GO:0048492
-    description: Assembled and functional ribulose bisphosphate carboxylase complex
-      (GO:0048492) operating in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme.
-  - node_id: bicarbonate
-    label: bicarbonate
-    node_type: CHEMICAL
-    grounding: CHEBI:17544
-  - node_id: ca
-    label: carbonic anhydrase
+    description: A complex containing either both large and small subunits or just
+      small subunits which carries out the activity of producing 3-phosphoglycerate
+      from carbon dioxide and ribulose-1,5-bisphosphate.
+  - node_id: rubisco_large_subunit
+    label: ribulose-bisphosphate carboxylase large chain (RbcL / CbbL)
     node_type: GENE_OR_PROTEIN
-    component_ref: carbonic_anhydrase
-  - node_id: co2
-    label: carbon dioxide
-    node_type: CHEMICAL
-    grounding: CHEBI:16526
-  - node_id: rubisco
-    label: RuBisCO
+    component_ref: rubisco_large_subunit
+    description: Catalytic large subunit forming the octameric (L8) or dimeric (L2)
+      active-site core that binds ribulose-1,5-bisphosphate, catalytic Mg2+, and CO2/O2.
+  - node_id: rubisco_small_subunit
+    label: ribulose-bisphosphate carboxylase small subunit (RbcS / CbbS)
     node_type: GENE_OR_PROTEIN
-    component_ref: rubisco
-  - node_id: fixation
+    component_ref: rubisco_small_subunit
+    description: Structural and regulatory small subunit capping both ends of the
+      L8 catalytic core in hexadecameric Form I (L8S8) RuBisCO complexes and mediating
+      CcmM/CsoS2 scaffold interaction.
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: STRUCTURE
+    grounding: GO:0005737
+    description: Enclosing or holo-structural assembly (cytoplasm, GO:0005737) containing
+      ribulose bisphosphate carboxylase complex.
+  - node_id: co2_concentration
+    label: carbon dioxide concentrating mechanism
+    node_type: BIOLOGICAL_PROCESS
+    description: Raises the CO2 concentration at RuBisCO and limits O2 access, suppressing
+      photorespiration.
+  - node_id: carbon_fixation
     label: carbon fixation
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0015977
+    description: Mediated by ribulose bisphosphate carboxylase complex (GO:0048492)
+      in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme.
   edges:
-  - subject: shell
-    predicate: permits passage of
-    object: bicarbonate
-    description: Selective shell pores admit cytosolic bicarbonate into the carboxysome
-      lumen.
+  - subject: rubisco_large_subunit
+    predicate: is part of
+    object: ribulose_bisphosphate_carboxylase_complex
+    description: Catalytic large subunit forming the octameric (L8) or dimeric (L2)
+      active-site core that binds ribulose-1,5-bisphosphate, catalytic Mg2+, and CO2/O2.
+    evidence:
+    - reference: PMID:17675289
+      notes: Long et al. 2007 characterize Form IB RuBisCO large (RbcL/CbbL) and small
+        (RbcS/CbbS) subunits in Synechococcus elongatus PCC 7942.
+  - subject: rubisco_small_subunit
+    predicate: is part of
+    object: ribulose_bisphosphate_carboxylase_complex
+    description: Structural and regulatory small subunit capping both ends of the
+      L8 catalytic core in hexadecameric Form I (L8S8) RuBisCO complexes and mediating
+      CcmM/CsoS2 scaffold interaction.
+    evidence:
+    - reference: PMID:17675289
+      notes: Long et al. 2007 demonstrate that RbcS/CbbS assembles with RbcL/CbbL
+        in the hexadecameric Form IB RuBisCO holoenzyme.
+  - subject: ribulose_bisphosphate_carboxylase_complex
+    predicate: is part of
+    object: cytoplasm
+    description: Ribulose bisphosphate carboxylase complex forms an integral structural
+      compartment or subassembly of cytoplasm.
     evidence:
     - reference: DOI:10.1038/nrmicro.2018.10
-      notes: Shell pores are selective for small anions such as HCO3-.
-  - subject: ca
-    predicate: converts
-    object: bicarbonate
-    description: Dehydration of HCO3- to CO2 inside the lumen.
+      notes: Kerfeld et al. 2018, "Bacterial microcompartments".
+  - subject: ribulose_bisphosphate_carboxylase_complex
+    predicate: mediates
+    object: co2_concentration
+    description: Raises the CO2 concentration at RuBisCO and limits O2 access, suppressing
+      photorespiration.
     evidence:
     - reference: DOI:10.1038/nrmicro.2018.10
       notes: Kerfeld et al. 2018.
-  - subject: ca
-    predicate: elevates local concentration of
-    object: co2
-    description: Carbonic anhydrase enriches CO2 inside the shell by dehydrating imported
-      bicarbonate.
+  - subject: ribulose_bisphosphate_carboxylase_complex
+    predicate: mediates
+    object: carbon_fixation
+    description: Mediated by ribulose bisphosphate carboxylase complex (GO:0048492)
+      in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme.
     evidence:
     - reference: PMID:24006469
       notes: Rae et al. 2013.
-  - subject: shell
-    predicate: prevents loss of
-    object: co2
-    description: The protein shell slows CO2 leakage to retain substrate near the
-      encapsulated RuBisCO.
-    evidence:
-    - reference: DOI:10.1038/nrmicro.2018.10
-      notes: The shell retards CO2 efflux to the cytoplasm.
-  - subject: co2
-    predicate: substrate of
-    object: rubisco
-    description: Locally generated CO2 is the carboxylation substrate for RuBisCO
-      inside the carboxysome.
-    evidence:
-    - reference: PMID:24006469
-      notes: Rae et al. 2013.
-  - subject: rubisco
-    predicate: catalyses
-    object: fixation
-    predicate_id: RO:0002327
-    description: Encapsulated RuBisCO fixes CO2 into the Calvin-Benson-Bassham cycle.
-    evidence:
-    - reference: PMID:24006469
-      notes: Rae et al. 2013.
-  description: Scaffolded into paracrystalline arrays within carboxysomes or pyrenoids
-    alongside carbonic anhydrase, the hexadecameric ribulose bisphosphate carboxylase
-    complex fixes elevated CO2 onto ribulose-1,5-bisphosphate to drive autotrophic
-    carbon assimilation.
-- graph_id: ribulose_bisphosphate_carboxylase_complex_mechanism_2
-  title: RuBisCO complex assembly, CO2 concentration, and ribulose-1,5-bisphosphate
-    carboxylation (2)
-  description: Scaffolded into paracrystalline arrays within carboxysomes or pyrenoids
-    alongside carbonic anhydrase, the hexadecameric ribulose bisphosphate carboxylase
-    complex fixes elevated CO2 onto ribulose-1,5-bisphosphate to drive autotrophic
-    carbon assimilation.
-  graph_kind: ASSEMBLY
-  scope_status: MECHANISTIC
-  nodes:
-  - node_id: scaffold
-    label: CcmM scaffold
-    node_type: GENE_OR_PROTEIN
-    component_ref: scaffold
-  - node_id: rubisco
-    label: RuBisCO
-    node_type: GENE_OR_PROTEIN
-    component_ref: rubisco
-  - node_id: procarboxysome
-    label: ribulose bisphosphate carboxylase complex
-    node_type: STRUCTURE
-    grounding: GO:0048492
-    description: Assembled and functional ribulose bisphosphate carboxylase complex
-      (GO:0048492) operating in the ribulose bisphosphate carboxylase (RuBisCO) holoenzyme.
-  - node_id: ccmn
-    label: CcmN adaptor
-    node_type: GENE_OR_PROTEIN
-    component_ref: assembly_adaptor
-  - node_id: bmc_t
-    label: BMC-T shell pseudohexamers (CcmO, CcmP)
-    node_type: GENE_OR_PROTEIN
-    component_ref: bmc_t
-  - node_id: bmc_h
-    label: BMC-H shell hexamers
-    node_type: GENE_OR_PROTEIN
-    component_ref: bmc_h
-  - node_id: shell
-    label: carboxysome shell
-    node_type: STRUCTURE
-  - node_id: mcdb
-    label: McdB positioning system
-    node_type: GENE_OR_PROTEIN
-    component_ref: positioning
-  - node_id: spacing
-    label: carboxysome spacing along the nucleoid
-    node_type: BIOLOGICAL_PROCESS
-  edges:
-  - subject: scaffold
-    predicate: binds
-    object: rubisco
-    description: CcmM links RuBisCO into the cargo condensate that becomes the carboxysome
-      lumen.
-    evidence:
-    - reference: PMID:24006469
-      notes: Rae et al. 2013 describe CcmM and CsoS2 as the RuBisCO-organising proteins
-        of the two carboxysome types.
-  - subject: scaffold
-    predicate: forms
-    object: procarboxysome
-    description: Scaffolded RuBisCO condenses before shell recruitment to create the
-      beta-carboxysome precursor.
-    evidence:
-    - reference: PMID:24006469
-      notes: Rae et al. 2013 describe cargo condensation preceding shell encapsulation
-        in beta-carboxysomes.
-  - subject: ccmn
-    predicate: bridges
-    object: scaffold
-    description: The CcmN N-terminus binds CcmM, tying the adaptor to the cargo.
-    evidence:
-    - reference: PMID:22461622
-      notes: UniProt cites this paper (P46204) for the CcmN N-terminus interacting
-        with CcmM.
-  - subject: ccmn
-    predicate: recruits
-    object: bmc_h
-    description: The C-terminal 18 residues of CcmN bind CcmK2, bringing shell hexamers
-      to the cargo.
-    evidence:
-    - reference: PMID:22461622
-      notes: UniProt cites this paper (P46204) for the CcmN C-terminal 18 residues
-        interacting with CcmK2.
-  - subject: bmc_t
-    predicate: recruits
-    object: bmc_h
-    description: CcmO is required to recruit the major shell protein CcmK2 to the
-      pre-carboxysome.
-    evidence:
-    - reference: PMID:22928045
-      notes: UniProt cites this paper (P46205) for CcmO being required to recruit
-        CcmK2.
-  - subject: bmc_h
-    predicate: forms
-    object: shell
-    description: BMC-H hexamers tile the flat facets of the carboxysome shell.
-    evidence:
-    - reference: DOI:10.1038/nrmicro.2018.10
-      notes: Kerfeld et al. 2018 describe BMC-H hexamers tiling the shell facets.
-  - subject: bmc_t
-    predicate: forms
-    object: shell
-    description: CcmP-family BMC-T proteins contribute stacked trimer pseudohexamers
-      to the shell.
-    evidence:
-    - reference: PMID:23572529
-      notes: UniProt cites this paper (Q31QW7) for CcmP forming a dimer of stacked
-        trimers within the shell.
-  - subject: shell
-    predicate: encapsulates
-    object: procarboxysome
-    description: Shell facets assemble around the condensed cargo to close the carboxysome.
-    evidence:
-    - reference: PMID:24006469
-      notes: Rae et al. 2013 describe the shell closing around the condensed cargo.
-  - subject: mcdb
-    predicate: drives
-    object: spacing
-    description: McdB with the McdA ATPase distributes mature carboxysomes along the
-      nucleoid; without them they aggregate.
-    evidence:
-    - reference: PMID:30520729
-      notes: UniProt cites this paper (Q8GJM6) for McdA and McdB together mediating
-        carboxysome spacing.
 curation_history:
 - timestamp: '2026-10-19T05:27:40Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of ribulose bisphosphate carboxylase complex (GO:0048492)
-    in category OTHER with verified UniProtKB protein examples and literature evidence.
+    in category OTHER with verified GO hierarchy, components, UniProtKB protein examples,
+    causal mechanism graph, and literature evidence.
   llm_assisted: true

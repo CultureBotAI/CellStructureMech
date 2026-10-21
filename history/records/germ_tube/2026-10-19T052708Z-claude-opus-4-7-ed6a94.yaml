@@ -8,11 +8,18 @@ session:
   timestamp: '2026-10-19T05:27:08Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
   summary: Created structure record for germ tube (GO:0032179) in appendage.
-  details: Authored data/structures/appendage/germ_tube.yaml for germ tube (GO:0032179) with
-    verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions,
-    literature evidence, and causal graph.
+  details: Authored data/structures/appendage/germ_tube.yaml for germ tube (GO:0032179)
+    with verified GO hierarchy, taxonomic distribution, functions, literature evidence,
+    and causal graph.
+  sections:
+  - identity
+  - composition
+  - causal_graphs
+  - evidence

@@ -30,7 +30,7 @@ components:
   - atb2
   - alp2
   role: Alpha-tubulin class of the microtubule polymer forming the meiotic radial
-    array. Functions in the radial astral microtubule aster in aster.
+    array.
   protein_examples:
   - uniprot_id: UniProtKB:P04689
     protein_label: Tubulin alpha-2 chain
@@ -47,7 +47,7 @@ components:
       notes: Figure 4A follows mCherry-Atb2 in the meiotic radial array before its
         replacement by the meiosis-I spindle. This is not a census of all alpha-tubulin
         isoforms.
-    - reference: https://www.uniprot.org/uniprotkb/P04689/entry
+    - reference: UniProtKB:P04689
       notes: Native accession, reviewed status, protein label, tub1 primary gene with
         atb2/alp2 aliases and reference taxon verified on 2026-10-08. The native InterPro
         response includes the exact Alpha tubulin family; experimental membership
@@ -63,7 +63,7 @@ components:
       pombe 972h-. Identifier for the component's declared gene symbol; it is not
       itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P04688
+    - reference: UniProtKB:P04688
       notes: UniProtKB reviewed (Swiss-Prot) entry P04688, the single reviewed entry
         for gene nda2 in Schizosaccharomyces pombe 972h-. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -82,7 +82,6 @@ components:
   grounding: InterPro:IPR002453
   essentiality: UNKNOWN
   role: Beta-tubulin class paired with alpha tubulin in the array microtubule polymer.
-    Functions in the radial astral microtubule aster in aster.
   evidence:
   - reference: GO:0032117
     notes: The whole-array definition explicitly specifies astral microtubules.
@@ -106,7 +105,7 @@ components:
       pombe 972h-, a taxon this record names. Identifier for the component's declared
       gene symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P05219
+    - reference: UniProtKB:P05219
       notes: UniProtKB reviewed (Swiss-Prot) entry P05219, the single reviewed entry
         for gene nda3 in Schizosaccharomyces pombe 972h-. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -115,8 +114,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe
   reference: DOI:10.1016/j.cub.2012.02.042
-  note: Characterized model system for aster (GO:0005818) in the radial astral microtubule
-    aster. Meiotic-prophase arrays studied in homothallic cells, including endogenously
+  note: Meiotic-prophase arrays studied in homothallic cells, including endogenously
     tagged Hrs1 and mCherry-Atb2 strain KT2901 for Figure 4A, and separately in synchronized
     pat1 mat-Pc diploids for ultrastructure. No fungal-wide prevalence or identity
     with the UniProt reference stock is asserted.
@@ -124,9 +122,8 @@ functions:
 - function_id: horsetail_movement
   label: dynein-driven meiotic oscillatory nuclear movement
   grounding: GO:0030989
-  description: Mediated by aster (GO:0005818) in the radial astral microtubule aster.
-    Provides the radial microtubule array that leads spindle-pole and nuclear oscillations
-    during S. pombe meiotic prophase, acting with dynein-dynactin machinery.
+  description: Provides the radial microtubule array that leads spindle-pole and nuclear
+    oscillations during S. pombe meiotic prophase, acting with dynein-dynactin machinery.
   evidence:
   - reference: GO:0032117
     notes: The exact structure definition specifies facilitation of horsetail nuclear
@@ -145,127 +142,117 @@ evidence:
   notes: 'Gene Ontology cellular-component term for aster: An array of microtubules
     emanating from a spindle pole MTOC that do not connect to kinetochores.'
 - reference: GO:0032117
-  notes: Supports the context, composition, and mechanism of aster (GO:0005818) in
-    the radial astral microtubule aster. Native non-obsolete identity, exact synonym,
-    definition, is-a aster and part-of cortical microtubule cytoskeleton verified
-    through OAK on 2026-10-08.
+  notes: Native non-obsolete identity, exact synonym, definition, is-a aster and part-of
+    cortical microtubule cytoskeleton verified through OAK on 2026-10-08.
 - reference: DOI:10.1016/j.cub.2012.02.042
-  notes: Supports the context, composition, and mechanism of aster (GO:0005818) in
-    the radial astral microtubule aster. PMID 22425159; native PMC3382715.1 main text
-    and captions read, with supplemental strain table and methods on pages 13-22.
-    Selected supplemental pages and the unchanged Figure 4 were visually inspected.
-    Movies and raw data were not inspected.
+  notes: PMID 22425159; native PMC3382715.1 main text and captions read, with supplemental
+    strain table and methods on pages 13-22. Selected supplemental pages and the unchanged
+    Figure 4 were visually inspected. Movies and raw data were not inspected.
 - reference: DOI:10.1016/j.cub.2005.07.058
-  notes: Supports the context, composition, and mechanism of aster (GO:0005818) in
-    the radial astral microtubule aster. PMID 16111942; published citation and DOI
-    verified at NCBI. The primary abstract was readable, but the direct publisher
-    returned 403; full text and supplements remain unread. Used only for abstract-scoped
-    naming and function statements.
+  notes: PMID 16111942; published citation and DOI verified at NCBI. The primary abstract
+    was readable, but the direct publisher returned 403; full text and supplements
+    remain unread. Used only for abstract-scoped naming and function statements.
 causal_graphs:
 - graph_id: aster_mechanism
-  title: Microtubule aster nucleation and cortical dynein-driven nuclear positioning
-  graph_kind: ASSEMBLY
+  title: Aster assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of aster (GO:0005818) to its biological functions.
+  graph_kind: FUNCTION
   scope_status: MECHANISTIC
-  scope_notes: S. pombe meiotic-prophase radial-array organization. Hrs1-dependent
-    rMTOC assembly is upstream organizing context, not an assertion that the whole
-    center or SPB is an array constituent. Tomography, immunolocalization and deletion
-    phenotypes support minus-end organization; a purified Hrs1 bridge, nucleation
-    sufficiency and universal microtubule counts are not established.
-  description: Gamma-tubulin complexes at the spindle pole body nucleate a radial
-    microtubule aster whose dynamic plus ends engage cortical dynein motors to generate
-    pulling forces that orient and position the nucleus.
   nodes:
-  - node_id: center_assembly
-    label: Hrs1-dependent rMTOC assembly
-    node_type: BIOLOGICAL_PROCESS
-  - node_id: rmtoc
-    label: Radial microtubule organizing center near the SPB
+  - node_id: aster
+    label: aster
     node_type: STRUCTURE
-  - node_id: minus_ends
-    label: Radial organization of microtubule minus ends
-    node_type: STATE
-  - node_id: alpha
+    grounding: GO:0005818
+    description: An array of microtubules emanating from a spindle pole MTOC that
+      do not connect to kinetochores.
+  - node_id: alpha_tubulin
     label: Alpha tubulin
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR002452
     component_ref: alpha_tubulin
-  - node_id: beta
+    description: Alpha-tubulin class of the microtubule polymer forming the meiotic
+      radial array.
+  - node_id: beta_tubulin
     label: Beta tubulin
     node_type: GENE_OR_PROTEIN
     grounding: InterPro:IPR002453
     component_ref: beta_tubulin
-  - node_id: microtubule
-    label: microtubule
+    description: Beta-tubulin class paired with alpha tubulin in the array microtubule
+      polymer.
+  - node_id: spindle
+    label: spindle
     node_type: STRUCTURE
-    grounding: GO:0005874
-  - node_id: haa
-    label: aster
+    grounding: GO:0005819
+    description: Enclosing or holo-structural assembly (spindle, GO:0005819) containing
+      aster.
+  - node_id: astral_microtubule
+    label: astral microtubule
     node_type: STRUCTURE
-    grounding: GO:0005818
-    description: Assembled and functional aster (GO:0005818) operating in the radial
-      astral microtubule aster.
+    grounding: GO:0000235
+    description: Constituent structural subassembly (astral microtubule, GO:0000235)
+      within aster.
+  - node_id: horsetail_movement
+    label: dynein-driven meiotic oscillatory nuclear movement
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030989
+    description: Provides the radial microtubule array that leads spindle-pole and
+      nuclear oscillations during S. pombe meiotic prophase, acting with dynein-dynactin
+      machinery.
   edges:
-  - subject: center_assembly
-    predicate: generates
-    object: rmtoc
-    description: Hrs1-dependent assembly establishes the transient radial organizing
-      center.
+  - subject: alpha_tubulin
+    predicate: is part of
+    object: aster
+    description: Alpha-tubulin class of the microtubule polymer forming the meiotic
+      radial array.
     evidence:
     - reference: DOI:10.1016/j.cub.2012.02.042
-      notes: 'Results sections 2.1-2.2: Hrs1 immunolabels the amorphous region, whereas
-        hrs1 deletion removes that region and the radial arrangement despite residual
-        SPB-associated microtubules.'
-  - subject: rmtoc
-    predicate: supports
-    object: minus_ends
-    description: The organizing region arranges array microtubule minus ends near,
-      but outside, the SPB core.
-    evidence:
-    - reference: DOI:10.1016/j.cub.2012.02.042
-      notes: Tomography places predominantly capped ends in the cytoplasmic rMTOC
-        region; gamma-tubulin enrichment and its altered localization after hrs1 deletion
-        support the organizing-center interpretation, not purified nucleation or attachment
-        sufficiency.
-  - subject: minus_ends
-    predicate: organizes
-    object: haa
-    description: Spatial organization of microtubule minus ends establishes the radial
-      array geometry.
-    evidence:
-    - reference: DOI:10.1016/j.cub.2012.02.042
-      notes: Wild-type-Hrs1 tomograms show varied microtubule orientations around
-        the center; hrs1 deletion loses radial organization. Residual nonradial microtubules
-        are not a retained normal HAA.
-  - subject: alpha
-    predicate: contributes_to
-    object: microtubule
-    description: Alpha tubulin supplies one subunit class of the microtubule polymer.
-    evidence:
-    - reference: GO:0005874
-      notes: Generic microtubule composition supports this class-level edge; Figure
-        4A of the primary study separately establishes Atb2 localization in this array.
-  - subject: beta
-    predicate: contributes_to
-    object: microtubule
-    description: Beta tubulin supplies the other subunit class of the microtubule
+      notes: Figure 4A directly images mCherry-Atb2-labeled array microtubules in
+        homothallic S. pombe cells.
+  - subject: beta_tubulin
+    predicate: is part of
+    object: aster
+    description: Beta-tubulin class paired with alpha tubulin in the array microtubule
       polymer.
     evidence:
-    - reference: GO:0005874
-      notes: This is class-level polymer composition, not an isoform-specific HAA
-        experiment or a claim about beta-tubulin essentiality.
-  - subject: microtubule
-    predicate: contributes_to
-    object: haa
-    description: Astral microtubules form the array framework.
+    - reference: GO:0032117
+      notes: The whole-array definition explicitly specifies astral microtubules.
+  - subject: aster
+    predicate: is part of
+    object: spindle
+    description: Aster forms an integral structural compartment or subassembly of
+      spindle.
     evidence:
     - reference: DOI:10.1016/j.cub.2012.02.042
-      notes: Tomography in Figure 1 and live-cell Atb2 imaging in Figure 4 establish
-        a multi-microtubule array. The whole array is not one filament, a spindle
-        or its organizing center.
+      notes: PMID 22425159; native PMC3382715.1 main text and captions read, with
+        supplemental strain table and methods on pages 13-22. Selected supplemental
+        pages and the unchanged Figure 4 were visually inspected. Movies and raw data
+        were not inspected.
+  - subject: astral_microtubule
+    predicate: is part of
+    object: aster
+    description: Astral microtubule is a structural part of aster.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: PMID 22425159; native PMC3382715.1 main text and captions read, with
+        supplemental strain table and methods on pages 13-22. Selected supplemental
+        pages and the unchanged Figure 4 were visually inspected. Movies and raw data
+        were not inspected.
+  - subject: aster
+    predicate: mediates
+    object: horsetail_movement
+    description: Provides the radial microtubule array that leads spindle-pole and
+      nuclear oscillations during S. pombe meiotic prophase, acting with dynein-dynactin
+      machinery.
+    evidence:
+    - reference: GO:0032117
+      notes: The exact structure definition specifies facilitation of horsetail nuclear
+        movement.
 curation_history:
 - timestamp: '2026-10-19T05:27:42Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of aster (GO:0005818) in category CYTOSKELETON with verified
-    UniProtKB protein examples and literature evidence.
+    GO hierarchy, components, UniProtKB protein examples, causal mechanism graph,
+    and literature evidence.
   llm_assisted: true

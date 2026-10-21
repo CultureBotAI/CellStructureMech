@@ -8,12 +8,22 @@ session:
   timestamp: '2026-10-19T05:56:21Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
   summary: Created structure record for nuclear DNA replication factor C complex (GO:0043599)
     in other.
-  details: Authored data/structures/other/nuclear_dna_replication_factor_c_complex.yaml for
-    nuclear DNA replication factor C complex (GO:0043599) with verified GO hierarchy, taxonomic
-    distribution, UniProtKB protein examples, functions, literature evidence, and causal graph.
+  details: Authored data/structures/other/nuclear_dna_replication_factor_c_complex.yaml
+    for nuclear DNA replication factor C complex (GO:0043599) with verified GO hierarchy,
+    taxonomic distribution, UniProtKB protein examples, functions, literature evidence,
+    and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

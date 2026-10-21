@@ -45,7 +45,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P60010
+    - reference: UniProtKB:P60010
       notes: UniProtKB reviewed (Swiss-Prot) entry P60010, the single reviewed entry
         for gene ACT1 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -120,7 +120,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P38328
+    - reference: UniProtKB:P38328
       notes: UniProtKB reviewed (Swiss-Prot) entry P38328, the single reviewed entry
         for gene ARC40 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -136,7 +136,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P53731
+    - reference: UniProtKB:P53731
       notes: UniProtKB reviewed (Swiss-Prot) entry P53731, the single reviewed entry
         for gene ARC35 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -152,7 +152,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P33204
+    - reference: UniProtKB:P33204
       notes: UniProtKB reviewed (Swiss-Prot) entry P33204, the single reviewed entry
         for gene ARC19 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -168,7 +168,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/Q05933
+    - reference: UniProtKB:Q05933
       notes: UniProtKB reviewed (Swiss-Prot) entry Q05933, the single reviewed entry
         for gene ARC18 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -193,24 +193,21 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Exhibits endocytic patch (GO:0061645) at the plasma-membrane endocytic patch.
-    Budding yeast forms dynamic actin cortical patches at the cell cortex during endocytic
-    internalization.
+  note: Budding yeast forms dynamic actin cortical patches at the cell cortex during
+    endocytic internalization.
   reference: DOI:10.1016/S0092-8674(03)00883-3
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for endocytic patch (GO:0061645) at the plasma-membrane
-    endocytic patch. Budding-yeast model in which cortical actin patches were imaged
-    as short, branched Arp2/3-like actin-filament networks.
+  note: Budding-yeast model in which cortical actin patches were imaged as short,
+    branched Arp2/3-like actin-filament networks.
   reference: DOI:10.1083/jcb.200404159
 functions:
 - function_id: actin_cortical_patch_assembly
   label: actin cortical patch assembly
   grounding: GO:0000147
-  description: Mediated by endocytic patch (GO:0061645) at the plasma-membrane endocytic
-    patch. The actin cortical patch is produced by assembly of a branched actin network
-    at cortical endocytic sites.
+  description: The actin cortical patch is produced by assembly of a branched actin
+    network at cortical endocytic sites.
   evidence:
   - reference: GO:0000147
     notes: GO:0000147 denotes assembly of an actin cortical patch.
@@ -219,9 +216,8 @@ functions:
       in Arp2/3-regulator mutants.
 - function_id: endocytic_internalization
   label: endocytic internalization
-  description: Mediated by endocytic patch (GO:0061645) at the plasma-membrane endocytic
-    patch. Yeast actin cortical patches assemble at cortical endocytic sites and move
-    inward as internalization proceeds.
+  description: Yeast actin cortical patches assemble at cortical endocytic sites and
+    move inward as internalization proceeds.
   evidence:
   - reference: DOI:10.1016/S0092-8674(03)00883-3
     notes: Kaksonen, Sun and Drubin 2003 followed receptors, adaptors and actin during
@@ -232,101 +228,124 @@ evidence:
     cell cortex consisting of an aggregation of proteins that will give rise to an
     endocytic vesicle.'
 - reference: GO:0030479
-  notes: Supports the context, composition, and mechanism of endocytic patch (GO:0061645)
-    at the plasma-membrane endocytic patch. Gene Ontology cellular-component term
-    for the actin cortical patch.
+  notes: Gene Ontology cellular-component term for the actin cortical patch.
 - reference: GO:0015629
-  notes: Supports the context, composition, and mechanism of endocytic patch (GO:0061645)
-    at the plasma-membrane endocytic patch. Actin cytoskeleton is a containing structure,
-    not an is-a parent of the patch; the direct GO parthood relation uses cortical
-    actin cytoskeleton.
+  notes: Actin cytoskeleton is a containing structure, not an is-a parent of the patch;
+    the direct GO parthood relation uses cortical actin cytoskeleton.
 - reference: GO:0005885
-  notes: Supports the context, composition, and mechanism of endocytic patch (GO:0061645)
-    at the plasma-membrane endocytic patch. Gene Ontology cellular-component term
-    for the Arp2/3 protein complex.
+  notes: Gene Ontology cellular-component term for the Arp2/3 protein complex.
 - reference: GO:0000147
-  notes: Supports the context, composition, and mechanism of endocytic patch (GO:0061645)
-    at the plasma-membrane endocytic patch. Gene Ontology biological-process term
-    for actin cortical patch assembly.
+  notes: Gene Ontology biological-process term for actin cortical patch assembly.
 - reference: DOI:10.1016/S0092-8674(03)00883-3
-  notes: Supports the context, composition, and mechanism of endocytic patch (GO:0061645)
-    at the plasma-membrane endocytic patch. Kaksonen, Sun and Drubin 2003, A Pathway
-    for Association of Receptors, Adaptors, and Actin during Endocytic Internalization,
-    Cell.
+  notes: Kaksonen, Sun and Drubin 2003, A Pathway for Association of Receptors, Adaptors,
+    and Actin during Endocytic Internalization, Cell.
 - reference: DOI:10.1083/jcb.200404159
-  notes: Supports the context, composition, and mechanism of endocytic patch (GO:0061645)
-    at the plasma-membrane endocytic patch. Young, Cooper and Bridgman 2004, Yeast
-    actin patches are networks of branched actin filaments, Journal of Cell Biology.
+  notes: Young, Cooper and Bridgman 2004, Yeast actin patches are networks of branched
+    actin filaments, Journal of Cell Biology.
 - reference: DOI:10.1371/journal.pbio.0060001
-  notes: Supports the context, composition, and mechanism of endocytic patch (GO:0061645)
-    at the plasma-membrane endocytic patch. Galletta, Chuang and Cooper 2008, Distinct
-    Roles for Arp2/3 Regulators in Actin Assembly and Endocytosis, PLoS Biology.
+  notes: Galletta, Chuang and Cooper 2008, Distinct Roles for Arp2/3 Regulators in
+    Actin Assembly and Endocytosis, PLoS Biology.
 - reference: GO:0030864
-  notes: Supports the context, composition, and mechanism of endocytic patch (GO:0061645)
-    at the plasma-membrane endocytic patch. Cortical actin cytoskeleton contains the
-    actin cortical patch through the native GO part_of relation.
+  notes: Cortical actin cytoskeleton contains the actin cortical patch through the
+    native GO part_of relation.
 causal_graphs:
 - graph_id: endocytic_patch_mechanism
-  title: Endocytic patch coat maturation, actin-driven invagination, and vesicle scission
-  description: Early clathrin/adaptor recruitment at the plasma membrane establishes
-    the endocytic patch, which activates Las17 and the Arp2/3 complex to polymerize
-    branched actin and drive Rvs161–Rvs167-mediated vesicle scission.
-  graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph captures actin and Arp2/3 at the level of this first record
-    without modeling the full timed sequence of endocytic adaptors, nucleation-promoting
-    factors, capping proteins, and actin-filament disassembly factors.
+  title: Endocytic patch assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of endocytic patch (GO:0061645) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
   nodes:
+  - node_id: endocytic_patch
+    label: endocytic patch
+    node_type: STRUCTURE
+    grounding: GO:0061645
+    description: The part of the cell cortex consisting of an aggregation of proteins
+      that will give rise to an endocytic vesicle.
   - node_id: actin
     label: actin
     node_type: GENE_OR_PROTEIN
     component_ref: actin
+    description: Polymerizes into the short, branched filaments that form the yeast
+      actin cortical patch network. Functions at the plasma-membrane endocytic patch
+      in endocytic patch.
   - node_id: arp2_3_complex
     label: Arp2/3 protein complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0005885
     component_ref: arp2_3_complex
-  - node_id: cortical_endocytic_site
-    label: cortical endocytic site
+    description: Branch-forming actin-nucleation complex that builds the dendritic
+      actin filament network in cortical patches. Functions at the plasma-membrane
+      endocytic patch in endocytic patch.
+  - node_id: cell_cortex
+    label: cell cortex
     node_type: STRUCTURE
-  - node_id: actin_cortical_patch
-    label: endocytic patch
-    node_type: STRUCTURE
-    grounding: GO:0061645
-    description: Assembled and functional endocytic patch (GO:0061645) operating at
-      the plasma-membrane endocytic patch.
+    grounding: GO:0005938
+    description: Enclosing or holo-structural assembly (cell cortex, GO:0005938) containing
+      endocytic patch.
+  - node_id: actin_cortical_patch_assembly
+    label: actin cortical patch assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000147
+    description: The actin cortical patch is produced by assembly of a branched actin
+      network at cortical endocytic sites.
+  - node_id: endocytic_internalization
+    label: endocytic internalization
+    node_type: BIOLOGICAL_PROCESS
+    description: Yeast actin cortical patches assemble at cortical endocytic sites
+      and move inward as internalization proceeds.
   edges:
-  - subject: arp2_3_complex
-    predicate: nucleates branches in
-    object: actin_cortical_patch
-    description: Arp2/3 promotes branched actin-filament network formation within
-      yeast actin cortical patches.
-    evidence:
-    - reference: DOI:10.1083/jcb.200404159
-      notes: Young, Cooper and Bridgman 2004 linked the patch branch pattern to Arp2/3-mediated
-        actin polymerization.
   - subject: actin
-    predicate: polymerizes into
-    object: actin_cortical_patch
-    description: Actin polymerizes into the short branched filaments that make up
-      cortical patches.
+    predicate: is part of
+    object: endocytic_patch
+    description: Polymerizes into the short, branched filaments that form the yeast
+      actin cortical patch network. Functions at the plasma-membrane endocytic patch
+      in endocytic patch.
     evidence:
     - reference: DOI:10.1083/jcb.200404159
-      notes: Young, Cooper and Bridgman 2004 found networks of branched actin filaments
-        in yeast actin patches.
-  - subject: actin_cortical_patch
-    predicate: assembles at
-    object: cortical_endocytic_site
-    description: Yeast cortical actin patches assemble at cortical sites during endocytic
-      internalization.
+      notes: Young, Cooper and Bridgman 2004 examined Saccharomyces cerevisiae actin
+        patches by correlative fluorescence and electron microscopy.
+  - subject: arp2_3_complex
+    predicate: is part of
+    object: endocytic_patch
+    description: Branch-forming actin-nucleation complex that builds the dendritic
+      actin filament network in cortical patches. Functions at the plasma-membrane
+      endocytic patch in endocytic patch.
+    evidence:
+    - reference: DOI:10.1083/jcb.200404159
+      notes: Young, Cooper and Bridgman 2004 described yeast actin-patch branches
+        characteristic of the Arp2/3 complex.
+  - subject: endocytic_patch
+    predicate: is part of
+    object: cell_cortex
+    description: Endocytic patch forms an integral structural compartment or subassembly
+      of cell cortex.
     evidence:
     - reference: DOI:10.1016/S0092-8674(03)00883-3
-      notes: Kaksonen, Sun and Drubin 2003 analyzed actin recruitment during yeast
-        endocytic internalization.
+      notes: Kaksonen, Sun and Drubin 2003, A Pathway for Association of Receptors,
+        Adaptors, and Actin during Endocytic Internalization, Cell.
+  - subject: endocytic_patch
+    predicate: mediates
+    object: actin_cortical_patch_assembly
+    description: The actin cortical patch is produced by assembly of a branched actin
+      network at cortical endocytic sites.
+    evidence:
+    - reference: GO:0000147
+      notes: GO:0000147 denotes assembly of an actin cortical patch.
+  - subject: endocytic_patch
+    predicate: mediates
+    object: endocytic_internalization
+    description: Yeast actin cortical patches assemble at cortical endocytic sites
+      and move inward as internalization proceeds.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(03)00883-3
+      notes: Kaksonen, Sun and Drubin 2003 followed receptors, adaptors and actin
+        during yeast endocytic internalization.
 curation_history:
 - timestamp: '2026-10-19T05:27:42Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of endocytic patch (GO:0061645) in category CYTOSKELETON
-    with verified UniProtKB protein examples and literature evidence.
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
   llm_assisted: true

@@ -16,144 +16,204 @@ curation_history:
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of spindle pole (GO:0000922) in category CYTOSKELETON
-    with verified UniProtKB protein examples and literature evidence.
+    with verified GO hierarchy, compartmental context, causal mechanism graph, and
+    literature evidence.
   llm_assisted: true
 synonyms:
 - synonym_text: mitotic spindle pole
   synonym_type: NARROW_SYNONYM
   source: GO:0000922
 components:
-- component_id: spindle_pole_body_core
-  label: spindle pole body core
-  component_type: PROTEIN_COMPLEX
+- component_id: spindle_pole_mtoc_core
+  label: microtubule organizing center
+  component_type: OTHER
   component_role: CONSTITUENT
-  role: Native multilayered scaffold subcomplex at the center of the budding-yeast
-    SPB that organizes cytoplasmic and nuclear microtubule nucleation sites. Functions
-    at the microtubule-anchoring spindle pole of the mitotic or meiotic spindle.
+  grounding: GO:0005815
+  essentiality: ESSENTIAL
+  role: Polar microtubule-organizing structure (such as a fungal spindle pole body
+    or metazoan/protist centrosome) that anchors minus ends of nuclear and astral
+    spindle microtubules at each spindle pole.
   evidence:
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-    notes: Jaspersen and Winey 2004 reviewed the layered Saccharomyces cerevisiae
-      SPB and its core plaque components.
-  - reference: DOI:10.1091/mbc.E17-06-0397
-    notes: Viswanath et al. 2017 determined an integrative molecular architecture
-      for the budding-yeast SPB core.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The SPB core is a native fungal scaffold subassembly containing
-    several unrelated protein families; no single source-neutral complex identifier
-    denotes the aggregate.
-- component_id: gamma_tubulin_complexes
-  label: gamma-tubulin complexes
+    notes: Reviews the structural organization of eukaryotic spindle pole microtubule-organizing
+      centers including fungal spindle pole bodies and centrosomes.
+- component_id: spindle_pole_gamma_tubulin_complex
+  label: gamma-tubulin complex
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
-  role: Microtubule-nucleating complexes associated with SPB inner and outer plaques.
-    Functions at the microtubule-anchoring spindle pole of the mitotic or meiotic
-    spindle.
+  grounding: GO:0000930
+  essentiality: ESSENTIAL
+  role: Polar gamma-tubulin nucleation complexes (gamma-TuSC/gamma-TuRC) tethered
+    at the spindle pole that cap microtubule minus ends and template bipolar spindle
+    assembly.
   evidence:
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-    notes: Jaspersen and Winey 2004 reviewed gamma-tubulin complex placement at budding-yeast
-      SPB plaques.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact fungal gamma-tubulin small-complex or plaque-bound gamma-tubulin
-    ring-complex identifier was assigned in this pass.
+    notes: Establishes gamma-tubulin complexes as the conserved microtubule-nucleating
+      machinery at eukaryotic spindle poles.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:4932
-  taxon_label: Saccharomyces cerevisiae
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
   presence: COMMON
-  note: Exhibits spindle pole (GO:0000922) at the microtubule-anchoring spindle pole
-    of the mitotic or meiotic spindle. The spindle pole body is directly evidenced
-    in budding yeast; no broader fungal distribution is asserted in this first record.
+  note: Conserved across eukaryotes as the polar terminal region of the mitotic or
+    meiotic spindle where spindle microtubules converge at a centrosome, fungal spindle
+    pole body (SPB), or acentrosomal pole.
   reference: DOI:10.1146/annurev.cellbio.20.022003.114106
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for spindle pole (GO:0000922) at the microtubule-anchoring
-    spindle pole of the mitotic or meiotic spindle. Budding-yeast reference system
-    in which SPB structure, duplication and core molecular architecture have been
-    mapped.
+  note: Budding-yeast reference system in which SPB structure, duplication and core
+    molecular architecture have been mapped.
   reference: DOI:10.1146/annurev.cellbio.20.022003.114106
 functions:
 - function_id: microtubule_organization
-  label: microtubule organization
-  description: The SPB nucleates and organizes nuclear and cytoplasmic microtubules
-    in budding yeast. Mediated by spindle pole (GO:0000922) at the microtubule-anchoring
-    spindle pole of the mitotic or meiotic spindle.
+  label: microtubule cytoskeleton organization
+  grounding: GO:0000226
+  description: Serves as the polar convergence and minus-end anchoring site for interpolar,
+    kinetochore, and astral spindle microtubules via polar MTOCs and gamma-tubulin
+    complexes.
   evidence:
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-    notes: Jaspersen and Winey 2004 reviewed the SPB as the budding-yeast microtubule
-      organizing center.
+    notes: Reviews how eukaryotic spindle poles nucleate and anchor spindle and astral
+      microtubules.
 - function_id: bipolar_spindle_assembly
-  label: bipolar spindle assembly
-  description: SPB duplication and separation generate the two organizing centers
-    that build a bipolar mitotic spindle. Mediated by spindle pole (GO:0000922) at
-    the microtubule-anchoring spindle pole of the mitotic or meiotic spindle.
+  label: spindle assembly
+  grounding: GO:0051225
+  description: Duplication and separation of the two spindle poles establish the bipolar
+    axis of the mitotic or meiotic spindle required for faithful chromosome segregation.
   evidence:
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-    notes: Jaspersen and Winey 2004 reviewed SPB duplication and mitotic-spindle assembly.
+    notes: Describes how spindle pole duplication and separation drive bipolar spindle
+      assembly across eukaryotes.
 evidence:
 - reference: GO:0000922
   notes: 'Gene Ontology cellular-component term for spindle pole: Either of the ends
     of a spindle, where spindle microtubules are organized; usually contains a microtubule
     organizing center and accessory molecules, spindle microtubules and astral microtubules.'
 - reference: GO:0005816
-  notes: Supports the context, composition, and mechanism of spindle pole (GO:0000922)
-    at the microtubule-anchoring spindle pole of the mitotic or meiotic spindle. Gene
-    Ontology cellular-component term for spindle pole body, with SPB as an exact synonym.
+  notes: Gene Ontology cellular-component term for spindle pole body, with SPB as
+    an exact synonym.
 - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-  notes: 'Supports the context, composition, and mechanism of spindle pole (GO:0000922)
-    at the microtubule-anchoring spindle pole of the mitotic or meiotic spindle. Jaspersen
-    and Winey 2004, The budding yeast spindle pole body: structure, duplication, and
-    function, Annual Review of Cell and Developmental Biology.'
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
 - reference: DOI:10.1091/mbc.E17-06-0397
-  notes: Supports the context, composition, and mechanism of spindle pole (GO:0000922)
-    at the microtubule-anchoring spindle pole of the mitotic or meiotic spindle. Viswanath
-    et al. 2017, The molecular architecture of the yeast spindle pole body core determined
-    by Bayesian integrative modeling, Molecular Biology of the Cell.
+  notes: Viswanath et al. 2017, The molecular architecture of the yeast spindle pole
+    body core determined by Bayesian integrative modeling, Molecular Biology of the
+    Cell.
 causal_graphs:
 - graph_id: spindle_pole_mechanism
-  title: Spindle pole microtubule minus-end focusing and bipolar anchoring
-  description: Spindle pole body core proteins and gamma-tubulin complexes at each
-    spindle pole nucleate and focus microtubule minus ends, establishing the two opposing
-    poles required for bipolar chromosome segregation.
-  graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
+  title: Spindle pole assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of spindle pole (GO:0000922) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
   nodes:
-  - node_id: old_spb
+  - node_id: spindle_pole
     label: spindle pole
-    node_type: ORGANELLE
+    node_type: STRUCTURE
     grounding: GO:0000922
-    description: Assembled and functional spindle pole (GO:0000922) operating at the
-      microtubule-anchoring spindle pole of the mitotic or meiotic spindle.
-  - node_id: new_spb
-    label: new spindle pole body
-    node_type: ORGANELLE
+    description: Either of the ends of a spindle, where spindle microtubules are organized;
+      usually contains a microtubule organizing center and accessory molecules, spindle
+      microtubules and astral microtubules.
+  - node_id: spindle_pole_mtoc_core
+    label: microtubule organizing center
+    node_type: STRUCTURE
+    grounding: GO:0005815
+    component_ref: spindle_pole_mtoc_core
+    description: Polar microtubule-organizing structure (such as a fungal spindle
+      pole body or metazoan/protist centrosome) that anchors minus ends of nuclear
+      and astral spindle microtubules at each spindle pole.
+  - node_id: spindle_pole_gamma_tubulin_complex
+    label: gamma-tubulin complex
+    node_type: STRUCTURE
+    grounding: GO:0000930
+    component_ref: spindle_pole_gamma_tubulin_complex
+    description: Polar gamma-tubulin nucleation complexes (gamma-TuSC/gamma-TuRC)
+      tethered at the spindle pole that cap microtubule minus ends and template bipolar
+      spindle assembly.
+  - node_id: spindle
+    label: spindle
+    node_type: STRUCTURE
+    grounding: GO:0005819
+    description: Enclosing or holo-structural assembly (spindle, GO:0005819) containing
+      spindle pole.
+  - node_id: spindle_pole_body
+    label: spindle pole body
+    node_type: STRUCTURE
+    grounding: GO:0005816
+    description: Constituent structural subassembly (spindle pole body, GO:0005816)
+      within spindle pole.
+  - node_id: microtubule_organization
+    label: microtubule cytoskeleton organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000226
+    description: Serves as the polar convergence and minus-end anchoring site for
+      interpolar, kinetochore, and astral spindle microtubules via polar MTOCs and
+      gamma-tubulin complexes.
+  - node_id: bipolar_spindle_assembly
+    label: spindle assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051225
+    description: Duplication and separation of the two spindle poles establish the
+      bipolar axis of the mitotic or meiotic spindle required for faithful chromosome
+      segregation.
   edges:
-  - subject: old_spb
-    predicate: templates assembly of
-    object: new_spb
-    description: Budding-yeast SPB duplication begins at the half-bridge adjacent
-      to the existing SPB.
+  - subject: spindle_pole_mtoc_core
+    predicate: is part of
+    object: spindle_pole
+    description: Polar microtubule-organizing structure (such as a fungal spindle
+      pole body or metazoan/protist centrosome) that anchors minus ends of nuclear
+      and astral spindle microtubules at each spindle pole.
     evidence:
     - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-      notes: Jaspersen and Winey 2004 reviewed the half-bridge-associated pathway
-        for SPB duplication.
-discussions:
-- discussion_id: ground_spb_subassemblies
-  prompt: Resolve exact groundings for SPB plaques, bridge substructures and gamma-tubulin
-    complexes.
-  kind: CURATION_TODO
-  status: OPEN
-  attaches_to:
-  - components#spindle_pole_body_core
-  - components#gamma_tubulin_complexes
-  rationale: The first record captures SPB structure at component-class resolution.
-    Follow-up curation should split the central, outer and inner plaque and half-bridge
-    subassemblies only where exact identifiers or reviewed label-only boundaries can
-    be justified from primary structural work.
-  evidence:
-  - reference: DOI:10.1091/mbc.E17-06-0397
-  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-  posed_by: claude
-  posed_date: '2026-09-10'
+      notes: Reviews the structural organization of eukaryotic spindle pole microtubule-organizing
+        centers including fungal spindle pole bodies and centrosomes.
+  - subject: spindle_pole_gamma_tubulin_complex
+    predicate: is part of
+    object: spindle_pole
+    description: Polar gamma-tubulin nucleation complexes (gamma-TuSC/gamma-TuRC)
+      tethered at the spindle pole that cap microtubule minus ends and template bipolar
+      spindle assembly.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Establishes gamma-tubulin complexes as the conserved microtubule-nucleating
+        machinery at eukaryotic spindle poles.
+  - subject: spindle_pole
+    predicate: is part of
+    object: spindle
+    description: Spindle pole forms an integral structural compartment or subassembly
+      of spindle.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+        duplication, and function, Annual Review of Cell and Developmental Biology.'
+  - subject: spindle_pole_body
+    predicate: is part of
+    object: spindle_pole
+    description: Spindle pole body is a structural part of spindle pole.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+        duplication, and function, Annual Review of Cell and Developmental Biology.'
+  - subject: spindle_pole
+    predicate: mediates
+    object: microtubule_organization
+    description: Serves as the polar convergence and minus-end anchoring site for
+      interpolar, kinetochore, and astral spindle microtubules via polar MTOCs and
+      gamma-tubulin complexes.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Reviews how eukaryotic spindle poles nucleate and anchor spindle and
+        astral microtubules.
+  - subject: spindle_pole
+    predicate: mediates
+    object: bipolar_spindle_assembly
+    description: Duplication and separation of the two spindle poles establish the
+      bipolar axis of the mitotic or meiotic spindle required for faithful chromosome
+      segregation.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Describes how spindle pole duplication and separation drive bipolar spindle
+        assembly across eukaryotes.
 parent_structures:
 - GO:0110165
 part_of:

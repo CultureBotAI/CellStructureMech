@@ -8,7 +8,9 @@ session:
   timestamp: '2026-10-19T05:27:41Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
@@ -16,5 +18,11 @@ events:
     in ribonucleoprotein.
   details: Authored data/structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.yaml
     for box C/D methylation guide snoRNP complex (GO:0031428) with verified GO hierarchy,
-    taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and
-    causal graph.
+    taxonomic distribution, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

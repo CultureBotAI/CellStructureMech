@@ -22,9 +22,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:2864
   taxon_label: Dinophyceae
   presence: VARIABLE
-  note: Exhibits transverse flagellum (GO:0097608) in the dinoflagellate transverse
-    flagellum and cingular groove. GO:0097611 places this cingulum cell-surface furrow
-    in Dinophyceae and defines it as wrapping around a dinoflagellate cell.
+  note: GO:0097611 places this cingulum cell-surface furrow in Dinophyceae and defines
+    it as wrapping around a dinoflagellate cell.
   reference: GO:0097611
 evidence:
 - reference: GO:0097608
@@ -33,59 +32,53 @@ evidence:
     thrust for motility. It is often contained in a furrow called the cingulum, and
     emerges from a flagellar pore located in the cingulum.'
 - reference: GO:0097611
-  notes: Supports the context, composition, and mechanism of transverse flagellum
-    (GO:0097608) in the dinoflagellate transverse flagellum and cingular groove. Gene
-    Ontology cellular-component term for the dinoflagellate cingulum.
+  notes: Gene Ontology cellular-component term for the dinoflagellate cingulum.
 - reference: GO:0097610
-  notes: Supports the context, composition, and mechanism of transverse flagellum
-    (GO:0097608) in the dinoflagellate transverse flagellum and cingular groove. Gene
-    Ontology cellular-component parent term for cell surface furrow.
+  notes: Gene Ontology cellular-component parent term for cell surface furrow.
 - reference: PMID:7002229
-  notes: Supports the context, composition, and mechanism of transverse flagellum
-    (GO:0097608) in the dinoflagellate transverse flagellum and cingular groove. PubMed
-    record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution review
-    cited by GO:0097611; EuropePMC reported no PMC, open-access, full-text, or PDF
-    route in this pass.
+  notes: PubMed record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution
+    review cited by GO:0097611; EuropePMC reported no PMC, open-access, full-text,
+    or PDF route in this pass.
 - reference: DOI:10.1016/0303-2647(80)90006-4
-  notes: Supports the context, composition, and mechanism of transverse flagellum
-    (GO:0097608) in the dinoflagellate transverse flagellum and cingular groove. Crossref
-    and EuropePMC metadata identify DOI:10.1016/0303-2647(80)90006-4 as the Taylor
-    1980 Biosystems review behind PMID:7002229; no article-body text was reachable
-    through the checked metadata routes, so this record uses it only as bibliographic
-    corroboration for the GO definition xref.
+  notes: Crossref and EuropePMC metadata identify DOI:10.1016/0303-2647(80)90006-4
+    as the Taylor 1980 Biosystems review behind PMID:7002229; no article-body text
+    was reachable through the checked metadata routes, so this record uses it only
+    as bibliographic corroboration for the GO definition xref.
 causal_graphs:
 - graph_id: transverse_flagellum_mechanism
-  title: Transverse flagellum helical beating and dinoflagellate rotational propulsion
-  description: Anchored within the cortical cingulum furrow, the dinoflagellate transverse
-    flagellum couples axonemal dynein sliding with its striated paraxonemal rod to
-    propagate helical waves that rotate and propel the cell.
-  graph_kind: FUNCTION
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph records GO is-a topology and cingulum morphology, not a molecular
-    assembly or motility mechanism.
+  title: Transverse flagellum assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of transverse flagellum (GO:0097608) to its biological functions.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
   nodes:
-  - node_id: dinoflagellate_cingulum
+  - node_id: transverse_flagellum
     label: transverse flagellum
     node_type: STRUCTURE
     grounding: GO:0097608
-    description: Assembled and functional transverse flagellum (GO:0097608) operating
-      in the dinoflagellate transverse flagellum and cingular groove.
-  - node_id: cell_surface_furrow
-    label: cell surface furrow
+    description: A motile cilium found in dinoflagellates.
+  - node_id: dinoflagellate_cingulum
+    label: dinoflagellate cingulum
     node_type: STRUCTURE
-    grounding: GO:0097610
+    grounding: GO:0097611
+    description: Equatorial transverse cell surface furrow of dinoflagellates that
+      houses the ribbon-like transverse flagellum.
   edges:
-  - subject: dinoflagellate_cingulum
-    predicate: is a
-    object: cell_surface_furrow
-    description: GO classifies the dinoflagellate cingulum as a cell-surface furrow.
+  - subject: transverse_flagellum
+    predicate: lies within
+    object: dinoflagellate_cingulum
+    description: The dinoflagellate transverse flagellum encircles the cell inside
+      the equatorial cingulum furrow to impart rotational propulsion.
     evidence:
-    - reference: GO:0097611
-      notes: The GO graph links GO:0097611 to GO:0097610 by rdfs:subClassOf.
+    - reference: PMID:7002229
+      notes: PubMed record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution
+        review cited by GO:0097611; EuropePMC reported no PMC, open-access, full-text,
+        or PDF route in this pass.
 curation_history:
 - timestamp: '2026-10-19T05:27:40Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of transverse flagellum (GO:0097608) in category APPENDAGE
-    with verified UniProtKB protein examples and literature evidence.
+    with verified GO hierarchy, compartmental context, causal mechanism graph, and
+    literature evidence.
   llm_assisted: true

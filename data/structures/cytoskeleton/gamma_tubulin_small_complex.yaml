@@ -31,71 +31,86 @@ synonyms:
   synonym_type: NARROW_SYNONYM
   source: GO:0008275
 components:
-- component_id: spindle_pole_body_core
-  label: spindle pole body core
-  component_type: PROTEIN_COMPLEX
+- component_id: gamma_tubulin_subunit
+  label: gamma-tubulin catalytic nucleation subunit (Tub4 / Gtb1)
+  component_type: PROTEIN
   component_role: CONSTITUENT
-  role: Native multilayered scaffold subcomplex at the center of the budding-yeast
-    SPB that organizes cytoplasmic and nuclear microtubule nucleation sites. Functions
-    in gamma-tubulin small complex (gamma-TuSC) oligomerization and nucleation in
-    gamma-tubulin small complex.
+  gene_symbols:
+  - gtb1
+  - TUB4
+  essentiality: ESSENTIAL
+  role: Two copies of gamma-tubulin per heterotetrameric gamma-TuSC unit that expose
+    a minus-end longitudinal interface directly templating alpha/beta-tubulin protofilament
+    nucleation.
   evidence:
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-    notes: Jaspersen and Winey 2004 reviewed the layered Saccharomyces cerevisiae
-      SPB and its core plaque components.
+    notes: Reviews the structure and microtubule-nucleating mechanism of gamma-tubulin
+      within gamma-TuSC and gamma-TuRC.
+- component_id: gcp2_gcp3_spoke_subunits
+  label: gamma-tubulin complex spoke scaffold heterodimer (GCP2/Spc97/Alp4 and GCP3/Spc98/Alp6)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - alp4
+  - alp6
+  - SPC97
+  - SPC98
+  essentiality: ESSENTIAL
+  role: V-shaped GRIP1/GRIP2-domain spoke subunits (GCP2/Alp4/Spc97 and GCP3/Alp6/Spc98)
+    that bind one gamma-tubulin molecule each via their C-terminal GRIP2 domains and
+    dock onto MTOC receptors via their N-terminal GRIP1 domains.
+  evidence:
   - reference: DOI:10.1091/mbc.E17-06-0397
-    notes: Viswanath et al. 2017 determined an integrative molecular architecture
-      for the budding-yeast SPB core.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The SPB core is a native fungal scaffold subassembly containing
-    several unrelated protein families; no single source-neutral complex identifier
-    denotes the aggregate.
-- component_id: gamma_tubulin_complexes
-  label: gamma-tubulin complexes
-  component_type: PROTEIN_COMPLEX
-  component_role: CONSTITUENT
-  role: Microtubule-nucleating complexes associated with SPB inner and outer plaques.
-    Functions in gamma-tubulin small complex (gamma-TuSC) oligomerization and nucleation
-    in gamma-tubulin small complex.
-  evidence:
-  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-    notes: Jaspersen and Winey 2004 reviewed gamma-tubulin complex placement at budding-yeast
-      SPB plaques.
-  grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: No exact fungal gamma-tubulin small-complex or plaque-bound gamma-tubulin
-    ring-complex identifier was assigned in this pass.
+    notes: Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2)
+      and Alp6 (GCP3).
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9Y705
+    protein_label: Spindle pole body component alp4
+    gene_symbol: alp4
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-06'
+    role: Alp4 is one imaged subunit and reporter, not an accession for the entire
+      complex. Reference-sequence exemplar for species-level experiments; no assertion
+      that this exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2010.10.006
+      notes: Alp4 reports equatorial gamma-tubulin-complex recruitment. Equatorial
+        Alp4 is undetected after Myp2 deletion or truncation to Mto1(1-1051), while
+        Mto1(1-1065) supports equatorial Alp4 localization.
+    - reference: DOI:10.1242/jcs.038414
+      notes: Mto1 CM1 mutations separate gamma-tubulin-complex association from Mto1
+        localization; Mto2 loss can leave weak equatorial recruitment.
+    - reference: UniProtKB:Q9Y705
+      notes: Native accession, reviewed status, primary gene, protein label and source
+        taxon verified on 2026-10-06. Residence and function come from the cited experiments.
 taxonomic_distribution:
-- taxon_id: NCBITaxon:4932
-  taxon_label: Saccharomyces cerevisiae
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
   presence: COMMON
-  note: Exhibits gamma-tubulin small complex (GO:0008275) in gamma-tubulin small complex
-    (gamma-TuSC) oligomerization and nucleation. The spindle pole body is directly
-    evidenced in budding yeast; no broader fungal distribution is asserted in this
-    first record.
+  note: Universally conserved microtubule-nucleating complex at eukaryotic spindle
+    pole bodies, centrosomes, and non-centrosomal MTOCs.
   reference: DOI:10.1146/annurev.cellbio.20.022003.114106
 canonical_examples:
-- taxon_id: NCBITaxon:4932
-  taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for gamma-tubulin small complex (GO:0008275) in
-    gamma-tubulin small complex (gamma-TuSC) oligomerization and nucleation. Budding-yeast
-    reference system in which SPB structure, duplication and core molecular architecture
-    have been mapped.
-  reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  note: Model fission yeast in which gamma-TuSC (Gtb1/Alp4/Alp6) assembly and Mto1/Mto2-driven
+    MTOC nucleation were dissected.
+  reference: DOI:10.1091/mbc.E17-06-0397
 functions:
 - function_id: microtubule_organization
   label: microtubule organization
-  description: Mediated by gamma-tubulin small complex (GO:0008275) in gamma-tubulin
-    small complex (gamma-TuSC) oligomerization and nucleation. The SPB nucleates and
-    organizes nuclear and cytoplasmic microtubules in budding yeast.
+  description: The SPB nucleates and organizes nuclear and cytoplasmic microtubules
+    in budding yeast.
   evidence:
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
     notes: Jaspersen and Winey 2004 reviewed the SPB as the budding-yeast microtubule
       organizing center.
 - function_id: bipolar_spindle_assembly
   label: bipolar spindle assembly
-  description: Mediated by gamma-tubulin small complex (GO:0008275) in gamma-tubulin
-    small complex (gamma-TuSC) oligomerization and nucleation. SPB duplication and
-    separation generate the two organizing centers that build a bipolar mitotic spindle.
+  description: SPB duplication and separation generate the two organizing centers
+    that build a bipolar mitotic spindle.
   evidence:
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
     notes: Jaspersen and Winey 2004 reviewed SPB duplication and mitotic-spindle assembly.
@@ -106,53 +121,97 @@ evidence:
     proteins. Some gamma-tubulin small complexes are thought to be the repeating unit
     making up the core of the gamma-tubulin ring complex.'
 - reference: GO:0005816
-  notes: Supports the context, composition, and mechanism of gamma-tubulin small complex
-    (GO:0008275) in gamma-tubulin small complex (gamma-TuSC) oligomerization and nucleation.
-    Gene Ontology cellular-component term for spindle pole body, with SPB as an exact
-    synonym.
+  notes: Gene Ontology cellular-component term for spindle pole body, with SPB as
+    an exact synonym.
 - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-  notes: 'Supports the context, composition, and mechanism of gamma-tubulin small
-    complex (GO:0008275) in gamma-tubulin small complex (gamma-TuSC) oligomerization
-    and nucleation. Jaspersen and Winey 2004, The budding yeast spindle pole body:
-    structure, duplication, and function, Annual Review of Cell and Developmental
-    Biology.'
+  notes: 'Jaspersen and Winey 2004, The budding yeast spindle pole body: structure,
+    duplication, and function, Annual Review of Cell and Developmental Biology.'
 - reference: DOI:10.1091/mbc.E17-06-0397
-  notes: Supports the context, composition, and mechanism of gamma-tubulin small complex
-    (GO:0008275) in gamma-tubulin small complex (gamma-TuSC) oligomerization and nucleation.
-    Viswanath et al. 2017, The molecular architecture of the yeast spindle pole body
-    core determined by Bayesian integrative modeling, Molecular Biology of the Cell.
+  notes: Viswanath et al. 2017, The molecular architecture of the yeast spindle pole
+    body core determined by Bayesian integrative modeling, Molecular Biology of the
+    Cell.
 causal_graphs:
 - graph_id: gamma_tubulin_small_complex_mechanism
-  title: Gamma-tubulin small complex (gamma-TuSC) receptor-driven ring assembly
-  description: Phosphorylated Spc110p at the spindle pole body inner plaque binds
-    soluble gamma-tubulin small complexes (Tub4p2-Spc97p-Spc98p) and promotes their
-    lateral oligomerization into an active microtubule-nucleating template.
-  graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
+  title: Gamma-tubulin small complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of gamma-tubulin small complex (GO:0008275) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
   nodes:
-  - node_id: old_spb
+  - node_id: gamma_tubulin_small_complex
     label: gamma-tubulin small complex
-    node_type: ORGANELLE
+    node_type: STRUCTURE
     grounding: GO:0008275
-    description: Assembled and functional gamma-tubulin small complex (GO:0008275)
-      operating in gamma-tubulin small complex (gamma-TuSC) oligomerization and nucleation.
-  - node_id: new_spb
-    label: new spindle pole body
-    node_type: ORGANELLE
+    description: A complex usually comprising two gamma-tubulin molecules and two
+      conserved non-tubulin proteins.
+  - node_id: gamma_tubulin_subunit
+    label: gamma-tubulin catalytic nucleation subunit (Tub4 / Gtb1)
+    node_type: GENE_OR_PROTEIN
+    component_ref: gamma_tubulin_subunit
+    description: Two copies of gamma-tubulin per heterotetrameric gamma-TuSC unit
+      that expose a minus-end longitudinal interface directly templating alpha/beta-tubulin
+      protofilament nucleation.
+  - node_id: gcp2_gcp3_spoke_subunits
+    label: gamma-tubulin complex spoke scaffold heterodimer (GCP2/Spc97/Alp4 and GCP3/Spc98/Alp6)
+    node_type: GENE_OR_PROTEIN
+    component_ref: gcp2_gcp3_spoke_subunits
+    description: V-shaped GRIP1/GRIP2-domain spoke subunits (GCP2/Alp4/Spc97 and GCP3/Alp6/Spc98)
+      that bind one gamma-tubulin molecule each via their C-terminal GRIP2 domains
+      and dock onto MTOC receptors via their N-terminal GRIP1 domains.
+  - node_id: microtubule_organization
+    label: microtubule organization
+    node_type: BIOLOGICAL_PROCESS
+    description: The SPB nucleates and organizes nuclear and cytoplasmic microtubules
+      in budding yeast.
+  - node_id: bipolar_spindle_assembly
+    label: bipolar spindle assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: SPB duplication and separation generate the two organizing centers
+      that build a bipolar mitotic spindle.
   edges:
-  - subject: old_spb
-    predicate: templates assembly of
-    object: new_spb
-    description: Budding-yeast SPB duplication begins at the half-bridge adjacent
-      to the existing SPB.
+  - subject: gamma_tubulin_subunit
+    predicate: is part of
+    object: gamma_tubulin_small_complex
+    description: Two copies of gamma-tubulin per heterotetrameric gamma-TuSC unit
+      that expose a minus-end longitudinal interface directly templating alpha/beta-tubulin
+      protofilament nucleation.
     evidence:
     - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
-      notes: Jaspersen and Winey 2004 reviewed the half-bridge-associated pathway
-        for SPB duplication.
+      notes: Reviews the structure and microtubule-nucleating mechanism of gamma-tubulin
+        within gamma-TuSC and gamma-TuRC.
+  - subject: gcp2_gcp3_spoke_subunits
+    predicate: is part of
+    object: gamma_tubulin_small_complex
+    description: V-shaped GRIP1/GRIP2-domain spoke subunits (GCP2/Alp4/Spc97 and GCP3/Alp6/Spc98)
+      that bind one gamma-tubulin molecule each via their C-terminal GRIP2 domains
+      and dock onto MTOC receptors via their N-terminal GRIP1 domains.
+    evidence:
+    - reference: DOI:10.1091/mbc.E17-06-0397
+      notes: Characterizes the fission yeast gamma-tubulin complex containing Alp4
+        (GCP2) and Alp6 (GCP3).
+  - subject: gamma_tubulin_small_complex
+    predicate: mediates
+    object: microtubule_organization
+    description: The SPB nucleates and organizes nuclear and cytoplasmic microtubules
+      in budding yeast.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed the SPB as the budding-yeast microtubule
+        organizing center.
+  - subject: gamma_tubulin_small_complex
+    predicate: mediates
+    object: bipolar_spindle_assembly
+    description: SPB duplication and separation generate the two organizing centers
+      that build a bipolar mitotic spindle.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 reviewed SPB duplication and mitotic-spindle
+        assembly.
 curation_history:
 - timestamp: '2026-10-19T05:27:40Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of gamma-tubulin small complex (GO:0008275) in category
-    CYTOSKELETON with verified UniProtKB protein examples and literature evidence.
+    CYTOSKELETON with verified GO hierarchy, components, UniProtKB protein examples,
+    causal mechanism graph, and literature evidence.
   llm_assisted: true

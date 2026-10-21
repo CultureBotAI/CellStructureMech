@@ -29,8 +29,7 @@ components:
     source-neutral InterPro, Pfam, or NCBIfam CURIE was assigned for the complete
     filament-array-forming septin cohort.
   role: Septin GTPases that polymerize into bars or filaments and are arranged as
-    filamentous arrays. Functions in the cortical septin cytoskeleton network in septin
-    cytoskeleton.
+    filamentous arrays.
   evidence:
   - reference: GO:0032160
     notes: GO:0032160 defines septin filament arrays as arrays of septin filaments
@@ -53,7 +52,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/P32457
+    - reference: UniProtKB:P32457
       notes: UniProtKB reviewed (Swiss-Prot) entry P32457, the single reviewed entry
         for gene CDC3 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -137,30 +136,26 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: VARIABLE
-  note: Exhibits septin cytoskeleton (GO:0032156) in the cortical septin cytoskeleton
-    network. Saccharomyces cerevisiae septin filament arrays occur at the prospore
-    membrane during sporulation rather than throughout all vegetative and meiotic
-    cell-cycle states.
+  note: Saccharomyces cerevisiae septin filament arrays occur at the prospore membrane
+    during sporulation rather than throughout all vegetative and meiotic cell-cycle
+    states.
   reference: GO:0032160
 - taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   presence: VARIABLE
-  note: Exhibits septin cytoskeleton (GO:0032156) in the cortical septin cytoskeleton
-    network. Candida albicans septin filament arrays occur at the chlamydospore membrane
+  note: Candida albicans septin filament arrays occur at the chlamydospore membrane
     during chlamydospore formation.
   reference: GO:0032160
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for septin cytoskeleton (GO:0032156) in the cortical
-    septin cytoskeleton network. Budding-yeast model in which the GO definition records
-    septin filament arrays at the prospore membrane during spore formation.
+  note: Budding-yeast model in which the GO definition records septin filament arrays
+    at the prospore membrane during spore formation.
   reference: GO:0032160
 - taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
-  note: Characterized model system for septin cytoskeleton (GO:0032156) in the cortical
-    septin cytoskeleton network. Candida model in which the GO definition records
-    septin filament arrays at the chlamydospore membrane during chlamydospore formation.
+  note: Candida model in which the GO definition records septin filament arrays at
+    the chlamydospore membrane during chlamydospore formation.
   reference: GO:0032160
 evidence:
 - reference: GO:0032156
@@ -168,80 +163,80 @@ evidence:
     of the cytoskeleton (the internal framework of a cell) composed of septins and
     associated proteins. Includes septin cytoskeleton-associated complexes.'
 - reference: GO:0032160
-  notes: Supports the context, composition, and mechanism of septin cytoskeleton (GO:0032156)
-    in the cortical septin cytoskeleton network. Gene Ontology cellular-component
-    term for the septin filament array.
+  notes: Gene Ontology cellular-component term for the septin filament array.
 - reference: GO:0005856
-  notes: Supports the context, composition, and mechanism of septin cytoskeleton (GO:0032156)
-    in the cortical septin cytoskeleton network. OLS reports a direct GO:0032160 part_of
-    relation to the cytoskeleton.
+  notes: OLS reports a direct GO:0032160 part_of relation to the cytoskeleton.
 - reference: GO:0032165
-  notes: Supports the context, composition, and mechanism of septin cytoskeleton (GO:0032156)
-    in the cortical septin cytoskeleton network. Gene Ontology cellular-component
-    child term for the prospore septin filament array.
+  notes: Gene Ontology cellular-component child term for the prospore septin filament
+    array.
 - reference: GO:0032166
-  notes: Supports the context, composition, and mechanism of septin cytoskeleton (GO:0032156)
-    in the cortical septin cytoskeleton network. Gene Ontology cellular-component
-    child term for the chlamydospore septin filament array.
+  notes: Gene Ontology cellular-component child term for the chlamydospore septin
+    filament array.
 causal_graphs:
 - graph_id: septin_cytoskeleton_mechanism
-  title: Septin cytoskeleton cortical ring assembly and cytokinesis scaffolding
-  description: Cdc42-guided recruitment and Elm1/Gin4 kinase phosphorylation remodel
-    palindromic septin octamers into the higher-order rings and hourglass collars
-    of the septin cytoskeleton, scaffolding the actomyosin ring and establishing a
-    plasma-membrane diffusion barrier.
+  title: Septin cytoskeleton assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of septin cytoskeleton (GO:0032156) to its biological functions.
   graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
-  scope_notes: This graph records GO-backed septin-filament-array composition and
-    example membrane contexts without asserting a species-specific filament-array
-    recruitment mechanism.
+  scope_status: MECHANISTIC
   nodes:
+  - node_id: septin_cytoskeleton
+    label: septin cytoskeleton
+    node_type: STRUCTURE
+    grounding: GO:0032156
+    description: The part of the cytoskeleton (the internal framework of a cell) composed
+      of septins and associated proteins.
   - node_id: septin_proteins
     label: septin proteins
     node_type: GENE_OR_PROTEIN
     component_ref: septin_proteins
-  - node_id: septin_filament_array
-    label: septin cytoskeleton
+    description: Septin GTPases that polymerize into bars or filaments and are arranged
+      as filamentous arrays.
+  - node_id: septin_complex
+    label: septin complex
     node_type: STRUCTURE
-    grounding: GO:0032156
-    description: Assembled and functional septin cytoskeleton (GO:0032156) operating
-      in the cortical septin cytoskeleton network.
-  - node_id: prospore_membrane
-    label: prospore membrane
-    node_type: CELLULAR_LOCALIZATION
-  - node_id: chlamydospore_membrane
-    label: chlamydospore membrane
-    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031105
+    description: Constituent structural subassembly (septin complex, GO:0031105) within
+      septin cytoskeleton.
+  - node_id: septin_band
+    label: septin band
+    node_type: STRUCTURE
+    grounding: GO:0032158
+    description: Constituent structural subassembly (septin band, GO:0032158) within
+      septin cytoskeleton.
   edges:
   - subject: septin_proteins
-    predicate: assemble into
-    object: septin_filament_array
-    description: Septin proteins form the filament bars arranged in septin filament
-      arrays.
+    predicate: is part of
+    object: septin_cytoskeleton
+    description: Septin GTPases that polymerize into bars or filaments and are arranged
+      as filamentous arrays.
     evidence:
     - reference: GO:0032160
-      notes: GO:0032160 defines the array as septin filaments or bars.
-  - subject: septin_filament_array
-    predicate: is found at
-    object: prospore_membrane
-    description: Septin filament arrays have been observed in the prospore membrane
-      during Saccharomyces cerevisiae spore formation.
+      notes: GO:0032160 defines septin filament arrays as arrays of septin filaments
+        or bars.
+  - subject: septin_complex
+    predicate: is part of
+    object: septin_cytoskeleton
+    description: Septin complex is a structural part of septin cytoskeleton.
     evidence:
-    - reference: GO:0032160
-      notes: GO:0032160 cites prospore-membrane septin filament arrays in S. cerevisiae.
-  - subject: septin_filament_array
-    predicate: is found at
-    object: chlamydospore_membrane
-    description: Septin filament arrays have been observed in the chlamydospore membrane
-      during Candida albicans chlamydospore formation.
+    - reference: GO:0032156
+      notes: 'Gene Ontology cellular-component term for septin cytoskeleton: The part
+        of the cytoskeleton (the internal framework of a cell) composed of septins
+        and associated proteins. Includes septin cytoskeleton-associated complexes.'
+  - subject: septin_band
+    predicate: is part of
+    object: septin_cytoskeleton
+    description: Septin band is a structural part of septin cytoskeleton.
     evidence:
-    - reference: GO:0032160
-      notes: GO:0032160 cites chlamydospore-membrane septin filament arrays in C.
-        albicans.
+    - reference: GO:0032156
+      notes: 'Gene Ontology cellular-component term for septin cytoskeleton: The part
+        of the cytoskeleton (the internal framework of a cell) composed of septins
+        and associated proteins. Includes septin cytoskeleton-associated complexes.'
 curation_history:
 - timestamp: '2026-10-19T05:27:42Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of septin cytoskeleton (GO:0032156) in category CYTOSKELETON
-    with verified UniProtKB protein examples and literature evidence.
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
   llm_assisted: true

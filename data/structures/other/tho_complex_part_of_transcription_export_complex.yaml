@@ -16,7 +16,8 @@ curation_history:
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of THO complex part of transcription export complex (GO:0000445)
-    in category OTHER with verified UniProtKB protein examples and literature evidence.
+    in category OTHER with verified GO hierarchy, components, UniProtKB protein examples,
+    causal mechanism graph, and literature evidence.
   llm_assisted: true
 parent_structures:
 - GO:0000444
@@ -194,27 +195,21 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Exhibits THO complex part of transcription export complex (GO:0000445) within
-    the THO subcomplex incorporated into the transcription export (TREX) complex.
-    Budding yeast has a four-subunit THO complex containing Hpr1p, Tho2p, Mft1p and
-    Thp2p.
+  note: Budding yeast has a four-subunit THO complex containing Hpr1p, Tho2p, Mft1p
+    and Thp2p.
   reference: PMID:11060033
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for THO complex part of transcription export complex
-    (GO:0000445) within the THO subcomplex incorporated into the transcription export
-    (TREX) complex. Reference budding-yeast system in which the Hpr1p, Tho2p, Mft1p
-    and Thp2p THO complex was identified.
+  note: Reference budding-yeast system in which the Hpr1p, Tho2p, Mft1p and Thp2p
+    THO complex was identified.
   reference: PMID:11060033
 functions:
 - function_id: dna_templated_transcription_elongation
   label: DNA-templated transcription elongation
   grounding: GO:0006354
   description: The THO complex promotes transcription elongation, including transcription
-    of repeat-containing genes. Mediated by THO complex part of transcription export
-    complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex.
+    of repeat-containing genes.
   evidence:
   - reference: GO:0000347
     notes: GO:0000347 defines the THO complex as required for transcription elongation
@@ -229,9 +224,7 @@ functions:
   label: mRNA export from nucleus
   grounding: GO:0006406
   description: The THO complex acts within the transcription export complex that couples
-    transcription to mRNA export. Mediated by THO complex part of transcription export
-    complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex.
+    transcription to mRNA export.
   evidence:
   - reference: GO:0000347
     notes: GO:0000347 describes THO as part of the TREX complex that couples transcription
@@ -248,177 +241,163 @@ evidence:
     export complex: The THO complex when it is part of the TREX (TRanscription EXport)
     complex that is involved in coupling transcription to export of mRNAs to the cytoplasm.'
 - reference: GO:0000347
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. Gene Ontology cellular-component term for the THO complex.
+  notes: Gene Ontology cellular-component term for the THO complex.
 - reference: GO:0140513
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. Gene Ontology cellular-component parent term for nuclear
-    protein-containing complexes.
+  notes: Gene Ontology cellular-component parent term for nuclear protein-containing
+    complexes.
 - reference: GO:0000346
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. Gene Ontology cellular-component term for the transcription
-    export complex, which contains THO.
+  notes: Gene Ontology cellular-component term for the transcription export complex,
+    which contains THO.
 - reference: GO:0006354
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. Gene Ontology biological-process term for DNA-templated
-    transcription elongation.
+  notes: Gene Ontology biological-process term for DNA-templated transcription elongation.
 - reference: GO:0006406
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. Gene Ontology biological-process term for mRNA export from
-    nucleus.
+  notes: Gene Ontology biological-process term for mRNA export from nucleus.
 - reference: PMID:11060033
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. PubMed identifier for Chavez et al. 2000, the EMBO Journal
-    paper identifying the four-protein Saccharomyces cerevisiae THO complex.
+  notes: PubMed identifier for Chavez et al. 2000, the EMBO Journal paper identifying
+    the four-protein Saccharomyces cerevisiae THO complex.
 - reference: DOI:10.1093/emboj/19.21.5824
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. DOI for Chavez et al. 2000, verified through PubMed and
-    PMC.
+  notes: DOI for Chavez et al. 2000, verified through PubMed and PMC.
 - reference: PMID:11979277
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. PubMed identifier for Strasser et al. 2002, the Nature
-    paper identifying TREX as a conserved transcription-mRNA-export coupling complex.
+  notes: PubMed identifier for Strasser et al. 2002, the Nature paper identifying
+    TREX as a conserved transcription-mRNA-export coupling complex.
 - reference: DOI:10.1038/nature746
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. DOI for Strasser et al. 2002, verified through PubMed.
+  notes: DOI for Strasser et al. 2002, verified through PubMed.
 - reference: PMID:16983072
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. PubMed identifier for Voynov et al. 2006, the PNAS paper
-    on THO-dependent transcription of genes with internal repeats.
+  notes: PubMed identifier for Voynov et al. 2006, the PNAS paper on THO-dependent
+    transcription of genes with internal repeats.
 - reference: DOI:10.1073/pnas.0606546103
-  notes: Supports the context, composition, and mechanism of THO complex part of transcription
-    export complex (GO:0000445) within the THO subcomplex incorporated into the transcription
-    export (TREX) complex. DOI for Voynov et al. 2006, verified through PubMed and
-    PMC.
+  notes: DOI for Voynov et al. 2006, verified through PubMed and PMC.
 causal_graphs:
 - graph_id: tho_complex_part_of_transcription_export_complex_mechanism
-  title: TREX-integrated THO subcomplex recruitment of Sub2-Yra1 onto nascent mRNA
-  description: Within the transcription export (TREX) complex, the tetrameric THO
-    subcomplex (Tho2, Hpr1, Mft1, Thp2) binds the phosphorylated RNA polymerase II
-    CTD and nascent transcript, providing the structural platform that loads Sub2
-    and Yra1 for Mex67-Mtr2 recruitment.
+  title: Tho complex part of transcription export complex assembly and functional
+    mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of THO complex part of transcription export complex (GO:0000445) to its
+    biological functions.
   graph_kind: FUNCTION
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph records the four budding-yeast THO constituents and GO-level
-    transcription-elongation and mRNA-export functions without resolving nascent-RNP
-    remodeling, Sub2 and Yra1 recruitment, or repeat-associated recombination.
+  scope_status: MECHANISTIC
   nodes:
+  - node_id: tho_complex_part_of_transcription_export_complex
+    label: THO complex part of transcription export complex
+    node_type: STRUCTURE
+    grounding: GO:0000445
+    description: The THO complex when it is part of the TREX (TRanscription EXport)
+      complex that is involved in coupling transcription to export of mRNAs to the
+      cytoplasm.
   - node_id: hpr1_subunit
     label: Hpr1 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: hpr1_subunit
+    description: Named Saccharomyces cerevisiae constituent of the four-subunit THO
+      complex. Functions within the THO subcomplex incorporated into the transcription
+      export (TREX) complex.
   - node_id: tho2_subunit
     label: Tho2 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: tho2_subunit
+    description: Named Saccharomyces cerevisiae constituent of the four-subunit THO
+      complex. Functions within the THO subcomplex incorporated into the transcription
+      export (TREX) complex.
   - node_id: mft1_subunit
     label: Mft1 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: mft1_subunit
+    description: Named Saccharomyces cerevisiae constituent of the four-subunit THO
+      complex. Functions within the THO subcomplex incorporated into the transcription
+      export (TREX) complex.
   - node_id: thp2_subunit
     label: Thp2 subunit
     node_type: GENE_OR_PROTEIN
     component_ref: thp2_subunit
-  - node_id: tho_complex
-    label: THO complex part of transcription export complex
+    description: Named Saccharomyces cerevisiae constituent of the four-subunit THO
+      complex. Functions within the THO subcomplex incorporated into the transcription
+      export (TREX) complex.
+  - node_id: transcription_export_complex
+    label: transcription export complex
     node_type: STRUCTURE
-    grounding: GO:0000445
-    description: Assembled and functional THO complex part of transcription export
-      complex (GO:0000445) operating within the THO subcomplex incorporated into the
-      transcription export (TREX) complex.
+    grounding: GO:0000346
+    description: Enclosing or holo-structural assembly (transcription export complex,
+      GO:0000346) containing THO complex part of transcription export complex.
   - node_id: dna_templated_transcription_elongation
     label: DNA-templated transcription elongation
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006354
+    description: The THO complex promotes transcription elongation, including transcription
+      of repeat-containing genes.
   - node_id: mrna_export_from_nucleus
     label: mRNA export from nucleus
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006406
+    description: The THO complex acts within the transcription export complex that
+      couples transcription to mRNA export.
   edges:
   - subject: hpr1_subunit
-    predicate: contributes to
-    object: tho_complex
-    description: Hpr1 subunit is a constituent of the budding-yeast THO complex.
+    predicate: is part of
+    object: tho_complex_part_of_transcription_export_complex
+    description: Named Saccharomyces cerevisiae constituent of the four-subunit THO
+      complex. Functions within the THO subcomplex incorporated into the transcription
+      export (TREX) complex.
     evidence:
     - reference: PMID:11060033
-      notes: Chavez et al. 2000 identified a Saccharomyces cerevisiae THO complex
+      notes: Chavez et al. 2000 identified a Saccharomyces cerevisiae protein complex
         containing Tho2p, Hpr1p, Mft1p and Thp2p.
   - subject: tho2_subunit
-    predicate: contributes to
-    object: tho_complex
-    description: Tho2 subunit is a constituent of the budding-yeast THO complex.
+    predicate: is part of
+    object: tho_complex_part_of_transcription_export_complex
+    description: Named Saccharomyces cerevisiae constituent of the four-subunit THO
+      complex. Functions within the THO subcomplex incorporated into the transcription
+      export (TREX) complex.
     evidence:
     - reference: PMID:11060033
-      notes: Chavez et al. 2000 identified a Saccharomyces cerevisiae THO complex
+      notes: Chavez et al. 2000 identified a Saccharomyces cerevisiae protein complex
         containing Tho2p, Hpr1p, Mft1p and Thp2p.
   - subject: mft1_subunit
-    predicate: contributes to
-    object: tho_complex
-    description: Mft1 subunit is a constituent of the budding-yeast THO complex.
+    predicate: is part of
+    object: tho_complex_part_of_transcription_export_complex
+    description: Named Saccharomyces cerevisiae constituent of the four-subunit THO
+      complex. Functions within the THO subcomplex incorporated into the transcription
+      export (TREX) complex.
     evidence:
     - reference: PMID:11060033
-      notes: Chavez et al. 2000 identified a Saccharomyces cerevisiae THO complex
+      notes: Chavez et al. 2000 identified a Saccharomyces cerevisiae protein complex
         containing Tho2p, Hpr1p, Mft1p and Thp2p.
   - subject: thp2_subunit
-    predicate: contributes to
-    object: tho_complex
-    description: Thp2 subunit is a constituent of the budding-yeast THO complex.
+    predicate: is part of
+    object: tho_complex_part_of_transcription_export_complex
+    description: Named Saccharomyces cerevisiae constituent of the four-subunit THO
+      complex. Functions within the THO subcomplex incorporated into the transcription
+      export (TREX) complex.
     evidence:
     - reference: PMID:11060033
-      notes: Chavez et al. 2000 identified a Saccharomyces cerevisiae THO complex
+      notes: Chavez et al. 2000 identified a Saccharomyces cerevisiae protein complex
         containing Tho2p, Hpr1p, Mft1p and Thp2p.
-  - subject: tho_complex
-    predicate: supports
+  - subject: tho_complex_part_of_transcription_export_complex
+    predicate: is part of
+    object: transcription_export_complex
+    description: Tho complex part of transcription export complex forms an integral
+      structural compartment or subassembly of transcription export complex.
+    evidence:
+    - reference: PMID:11060033
+      notes: PubMed identifier for Chavez et al. 2000, the EMBO Journal paper identifying
+        the four-protein Saccharomyces cerevisiae THO complex.
+  - subject: tho_complex_part_of_transcription_export_complex
+    predicate: mediates
     object: dna_templated_transcription_elongation
-    description: The THO complex supports transcription elongation.
+    description: The THO complex promotes transcription elongation, including transcription
+      of repeat-containing genes.
     evidence:
     - reference: GO:0000347
       notes: GO:0000347 defines the THO complex as required for transcription elongation
-        through genes containing tandemly repeated DNA sequences.
-    - reference: GO:0006354
-      notes: GO:0006354 is the biological-process term for DNA-templated transcription
-        elongation.
-  - subject: tho_complex
-    predicate: supports
+        through genes containing tandem DNA repeats.
+  - subject: tho_complex_part_of_transcription_export_complex
+    predicate: mediates
     object: mrna_export_from_nucleus
-    description: The THO complex contributes to TREX-mediated coupling of transcription
-      with mRNA export.
+    description: The THO complex acts within the transcription export complex that
+      couples transcription to mRNA export.
     evidence:
     - reference: GO:0000347
-      notes: GO:0000347 defines THO as part of the TREX complex involved in coupling
-        transcription to mRNA export.
-    - reference: GO:0006406
-      notes: GO:0006406 is the biological-process term for mRNA export from nucleus.
-discussions:
-- discussion_id: resolve_tho_subunit_groundings
-  prompt: Resolve exact source-neutral family groundings for the Hpr1, Tho2, Mft1
-    and Thp2 constituents of the THO complex.
-  kind: CURATION_TODO
-  status: OPEN
-  attaches_to:
-  - components#hpr1_subunit
-  - components#tho2_subunit
-  - components#mft1_subunit
-  - components#thp2_subunit
-  rationale: PMID:11060033 identifies the four named budding-yeast constituents of
-    the THO complex, but exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB
-    family CURIEs for these subunit classes were not curated in this pass.
-  evidence:
-  - reference: PMID:11060033
-    notes: Chavez et al. 2000 identified a Saccharomyces cerevisiae THO complex containing
-      Tho2p, Hpr1p, Mft1p and Thp2p.
-  posed_by: codex
-  posed_date: '2026-09-27'
+      notes: GO:0000347 describes THO as part of the TREX complex that couples transcription
+        to mRNA export to the cytoplasm.
 part_of:
 - GO:0000346
 synonyms:

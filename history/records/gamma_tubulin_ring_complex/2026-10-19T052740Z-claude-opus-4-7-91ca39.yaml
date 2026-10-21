@@ -8,11 +8,22 @@ session:
   timestamp: '2026-10-19T05:27:40Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
-  summary: Created structure record for gamma-tubulin ring complex (GO:0000931) in cytoskeleton.
-  details: Authored data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml for gamma-tubulin
-    ring complex (GO:0000931) with verified GO hierarchy, taxonomic distribution, UniProtKB
-    protein examples, functions, literature evidence, and causal graph.
+  summary: Created structure record for gamma-tubulin ring complex (GO:0000931) in
+    cytoskeleton.
+  details: Authored data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml for
+    gamma-tubulin ring complex (GO:0000931) with verified GO hierarchy, taxonomic
+    distribution, UniProtKB protein examples, functions, literature evidence, and
+    causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

@@ -8,13 +8,22 @@ session:
   timestamp: '2026-10-19T05:27:41Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
-  summary: Created structure record for cell envelope Sec protein transport complex (GO:0031522)
-    in secretion_system.
+  summary: Created structure record for cell envelope Sec protein transport complex
+    (GO:0031522) in secretion_system.
   details: Authored data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
-    for cell envelope Sec protein transport complex (GO:0031522) with verified GO hierarchy,
-    taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and
-    causal graph.
+    for cell envelope Sec protein transport complex (GO:0031522) with verified GO
+    hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature
+    evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

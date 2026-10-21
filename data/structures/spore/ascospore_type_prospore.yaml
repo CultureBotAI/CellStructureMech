@@ -26,8 +26,7 @@ components:
   component_role: CONSTITUENT
   essentiality: ESSENTIAL
   role: Double membrane that expands from the meiotic spindle-pole body region and
-    surrounds haploid nuclei during ascospore formation. Functions in ascospore-type
-    prospore engulfment and morphogenesis in ascospore-type prospore.
+    surrounds haploid nuclei during ascospore formation.
   evidence:
   - reference: GO:0005628
     notes: GO:0005628 defines the prospore membrane as a double-membraned structure
@@ -50,8 +49,7 @@ components:
     InterPro, Pfam or NCBIfam term was chosen for the whole transient coat or for
     its individual budding-yeast subunit families.
   role: Protein coat at the lip of the growing prospore membrane that marks the leading
-    edge before membrane closure. Functions in ascospore-type prospore engulfment
-    and morphogenesis in ascospore-type prospore.
+    edge before membrane closure.
   evidence:
   - reference: GO:0070056
     notes: GO:0070056 defines the prospore membrane leading edge as the protein-coated
@@ -86,7 +84,7 @@ components:
       S288C, a taxon this record names. Identifier for the component's declared gene
       symbol; it is not itself evidence that the protein is part of this structure.
     evidence:
-    - reference: https://www.uniprot.org/uniprotkb/Q07732
+    - reference: UniProtKB:Q07732
       notes: UniProtKB reviewed (Swiss-Prot) entry Q07732, the single reviewed entry
         for gene ADY3 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
@@ -110,26 +108,22 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Exhibits ascospore-type prospore (GO:0042764) in ascospore-type prospore engulfment
-    and morphogenesis. Budding yeast builds prospore membranes during the sporulation
-    program; this species-level scope avoids asserting conservation of the membrane
-    or leading-edge protein set across all ascospore-forming fungi.
+  note: Budding yeast builds prospore membranes during the sporulation program; this
+    species-level scope avoids asserting conservation of the membrane or leading-edge
+    protein set across all ascospore-forming fungi.
   reference: DOI:10.1083/jcb.140.1.29
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for ascospore-type prospore (GO:0042764) in ascospore-type
-    prospore engulfment and morphogenesis. Budding-yeast model in which secretory
-    trafficking, meiotic outer plaques, and leading-edge coat proteins were tied to
-    prospore membrane assembly.
+  note: Budding-yeast model in which secretory trafficking, meiotic outer plaques,
+    and leading-edge coat proteins were tied to prospore membrane assembly.
   reference: DOI:10.1093/emboj/20.24.6946
 functions:
 - function_id: ascospore_type_prospore_assembly
   label: ascospore-type prospore assembly
   grounding: GO:0031321
-  description: Mediated by ascospore-type prospore (GO:0042764) in ascospore-type
-    prospore engulfment and morphogenesis. Expansion and closure of the prospore membrane
-    encapsulate haploid meiotic nuclei to create immature ascospores.
+  description: Expansion and closure of the prospore membrane encapsulate haploid
+    meiotic nuclei to create immature ascospores.
   evidence:
   - reference: GO:0031321
     notes: GO:0031321 defines ascospore-type prospore assembly as the encapsulation
@@ -141,126 +135,119 @@ evidence:
     membrane(s) that encase the nucleic acid, and ultimately a cell wall that covers
     the membrane(s). This type of spore is observed in ascospore-forming fungi.'
 - reference: GO:0005628
-  notes: Supports the context, composition, and mechanism of ascospore-type prospore
-    (GO:0042764) in ascospore-type prospore engulfment and morphogenesis. Gene Ontology
-    cellular-component term for the prospore membrane.
+  notes: Gene Ontology cellular-component term for the prospore membrane.
 - reference: GO:0070056
-  notes: Supports the context, composition, and mechanism of ascospore-type prospore
-    (GO:0042764) in ascospore-type prospore engulfment and morphogenesis. Gene Ontology
-    cellular-component term for the prospore membrane leading edge.
+  notes: Gene Ontology cellular-component term for the prospore membrane leading edge.
 - reference: GO:0070057
-  notes: Supports the context, composition, and mechanism of ascospore-type prospore
-    (GO:0042764) in ascospore-type prospore engulfment and morphogenesis. Gene Ontology
-    cellular-component term for the prospore membrane spindle pole body attachment
-    site.
+  notes: Gene Ontology cellular-component term for the prospore membrane spindle pole
+    body attachment site.
 - reference: GO:0032120
-  notes: Supports the context, composition, and mechanism of ascospore-type prospore
-    (GO:0042764) in ascospore-type prospore engulfment and morphogenesis. Gene Ontology
-    biological-process term for ascospore-type prospore membrane formation.
+  notes: Gene Ontology biological-process term for ascospore-type prospore membrane
+    formation.
 - reference: GO:0031321
-  notes: Supports the context, composition, and mechanism of ascospore-type prospore
-    (GO:0042764) in ascospore-type prospore engulfment and morphogenesis. Gene Ontology
-    biological-process term for ascospore-type prospore assembly.
+  notes: Gene Ontology biological-process term for ascospore-type prospore assembly.
 - reference: DOI:10.1083/jcb.140.1.29
-  notes: Supports the context, composition, and mechanism of ascospore-type prospore
-    (GO:0042764) in ascospore-type prospore engulfment and morphogenesis. Neiman 1998,
-    Prospore Membrane Formation Defines a Developmentally Regulated Branch of the
-    Secretory Pathway in Yeast, Journal of Cell Biology.
+  notes: Neiman 1998, Prospore Membrane Formation Defines a Developmentally Regulated
+    Branch of the Secretory Pathway in Yeast, Journal of Cell Biology.
 - reference: DOI:10.1093/emboj/19.14.3657
-  notes: Supports the context, composition, and mechanism of ascospore-type prospore
-    (GO:0042764) in ascospore-type prospore engulfment and morphogenesis. Knop and
-    Strasser 2000, Role of the spindle pole body of yeast in mediating assembly of
-    the prospore membrane during meiosis, The EMBO Journal.
+  notes: Knop and Strasser 2000, Role of the spindle pole body of yeast in mediating
+    assembly of the prospore membrane during meiosis, The EMBO Journal.
 - reference: DOI:10.1093/emboj/20.24.6946
-  notes: Supports the context, composition, and mechanism of ascospore-type prospore
-    (GO:0042764) in ascospore-type prospore engulfment and morphogenesis. Moreno-Borchart
-    et al. 2001, Prospore membrane formation linked to the leading edge protein (LEP)
-    coat assembly, The EMBO Journal.
+  notes: Moreno-Borchart et al. 2001, Prospore membrane formation linked to the leading
+    edge protein (LEP) coat assembly, The EMBO Journal.
 causal_graphs:
 - graph_id: ascospore_type_prospore_mechanism
-  title: Ascospore-type prospore formation via spindle pole body vesicle fusion
-  description: Meiotic outer plaque assembly at the spindle pole body recruits Spo20p
-    SNARE complexes, septins, and the Don1p leading-edge coat to expand the prospore
-    membrane around each haploid nucleus and close the ascospore-type prospore.
-  graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph summarizes where the membrane initiates and where the leading-edge
-    coat localizes without asserting the full SNARE, phospholipase D, septin, or spindle-pole-body
-    remodeling pathway.
+  title: Ascospore-type prospore assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of ascospore-type prospore (GO:0042764) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
   nodes:
-  - node_id: post_golgi_secretory_vesicles
-    label: post-Golgi secretory vesicles
-    node_type: STRUCTURE
-  - node_id: meiotic_outer_plaque
-    label: meiotic outer plaque
-    node_type: STRUCTURE
-  - node_id: prospore_membrane
+  - node_id: ascospore_type_prospore
     label: ascospore-type prospore
     node_type: STRUCTURE
     grounding: GO:0042764
-    description: Assembled and functional ascospore-type prospore (GO:0042764) operating
-      in ascospore-type prospore engulfment and morphogenesis.
-  - node_id: lep_coat
+    description: An immature spore undergoing development.
+  - node_id: prospore_membrane_lipid_bilayer
+    label: prospore membrane lipid bilayer
+    node_type: CHEMICAL
+    component_ref: prospore_membrane_lipid_bilayer
+    description: Double membrane that expands from the meiotic spindle-pole body region
+      and surrounds haploid nuclei during ascospore formation.
+  - node_id: leading_edge_protein_coat
     label: prospore membrane leading edge protein coat
-    node_type: STRUCTURE
+    node_type: GENE_OR_PROTEIN
     component_ref: leading_edge_protein_coat
-  - node_id: prospore_membrane_leading_edge
-    label: prospore membrane leading edge
+    description: Protein coat at the lip of the growing prospore membrane that marks
+      the leading edge before membrane closure.
+  - node_id: prospore_membrane
+    label: prospore membrane
     node_type: STRUCTURE
-    grounding: GO:0070056
-  - node_id: haploid_meiotic_nucleus
-    label: haploid meiotic nucleus
-    node_type: ORGANELLE
+    grounding: GO:0005628
+    description: Constituent structural subassembly (prospore membrane, GO:0005628)
+      within ascospore-type prospore.
+  - node_id: prospore_contractile_ring
+    label: prospore contractile ring
+    node_type: STRUCTURE
+    grounding: GO:0032157
+    description: Constituent structural subassembly (prospore contractile ring, GO:0032157)
+      within ascospore-type prospore.
+  - node_id: ascospore_type_prospore_assembly
+    label: ascospore-type prospore assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031321
+    description: Expansion and closure of the prospore membrane encapsulate haploid
+      meiotic nuclei to create immature ascospores.
   edges:
-  - subject: post_golgi_secretory_vesicles
-    predicate: supplies membrane for
-    object: prospore_membrane
-    description: Sporulation-specific post-Golgi vesicle traffic supplies membrane
-      needed for de novo prospore membrane formation.
-    evidence:
-    - reference: DOI:10.1083/jcb.140.1.29
-      notes: Neiman 1998 found that late secretory SEC1, SEC4 and SEC8 function is
-        required for prospore membrane formation in Saccharomyces cerevisiae.
-  - subject: meiotic_outer_plaque
-    predicate: anchors initiation of
-    object: prospore_membrane
-    description: The prospore membrane initiates from meiotic outer plaques on spindle
-      pole bodies.
-    evidence:
-    - reference: DOI:10.1093/emboj/19.14.3657
-      notes: Knop and Strasser 2000 studied the spindle-pole-body role in assembling
-        prospore membranes during meiosis.
-    - reference: GO:0032120
-      notes: GO:0032120 defines prospore membrane formation as nascent membrane growth
-        from the meiotic outer plaque.
-  - subject: lep_coat
-    predicate: localizes to
-    object: prospore_membrane_leading_edge
-    description: Leading-edge protein coat components mark the lip of the extending
-      prospore membrane.
-    evidence:
-    - reference: DOI:10.1093/emboj/20.24.6946
-      notes: Moreno-Borchart et al. 2001 tied LEP coat assembly to formation of the
-        growing prospore membrane.
-    - reference: GO:0070056
-      notes: GO:0070056 describes a protein-coated leading-edge region on the prospore
-        membrane.
-  - subject: prospore_membrane
-    predicate: encapsulates
-    object: haploid_meiotic_nucleus
-    description: Prospore membrane growth and closure encapsulate the haploid meiotic
-      nucleus during immature ascospore formation.
+  - subject: prospore_membrane_lipid_bilayer
+    predicate: is part of
+    object: ascospore_type_prospore
+    description: Double membrane that expands from the meiotic spindle-pole body region
+      and surrounds haploid nuclei during ascospore formation.
     evidence:
     - reference: GO:0005628
-      notes: GO:0005628 defines the prospore membrane as encompassing the nuclear
-        lobes formed during meiosis.
+      notes: GO:0005628 defines the prospore membrane as a double-membraned structure
+        that extends from the cytoplasmic face of spindle pole bodies during meiosis.
+  - subject: leading_edge_protein_coat
+    predicate: is part of
+    object: ascospore_type_prospore
+    description: Protein coat at the lip of the growing prospore membrane that marks
+      the leading edge before membrane closure.
+    evidence:
+    - reference: GO:0070056
+      notes: GO:0070056 defines the prospore membrane leading edge as the protein-coated
+        region that extends to surround the spore nucleus.
+  - subject: prospore_membrane
+    predicate: is part of
+    object: ascospore_type_prospore
+    description: Prospore membrane is a structural part of ascospore-type prospore.
+    evidence:
+    - reference: DOI:10.1083/jcb.140.1.29
+      notes: Neiman 1998, Prospore Membrane Formation Defines a Developmentally Regulated
+        Branch of the Secretory Pathway in Yeast, Journal of Cell Biology.
+  - subject: prospore_contractile_ring
+    predicate: is part of
+    object: ascospore_type_prospore
+    description: Prospore contractile ring is a structural part of ascospore-type
+      prospore.
+    evidence:
+    - reference: DOI:10.1083/jcb.140.1.29
+      notes: Neiman 1998, Prospore Membrane Formation Defines a Developmentally Regulated
+        Branch of the Secretory Pathway in Yeast, Journal of Cell Biology.
+  - subject: ascospore_type_prospore
+    predicate: mediates
+    object: ascospore_type_prospore_assembly
+    description: Expansion and closure of the prospore membrane encapsulate haploid
+      meiotic nuclei to create immature ascospores.
+    evidence:
     - reference: GO:0031321
-      notes: GO:0031321 defines ascospore-type prospore assembly as encapsulation
+      notes: GO:0031321 defines ascospore-type prospore assembly as the encapsulation
         of each haploid nucleus by a double membrane.
 curation_history:
 - timestamp: '2026-10-19T05:27:40Z'
   curator: claude-opus-4-7
   action: CREATED
   changes: Initial curation of ascospore-type prospore (GO:0042764) in category SPORE
-    with verified UniProtKB protein examples and literature evidence.
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
   llm_assisted: true

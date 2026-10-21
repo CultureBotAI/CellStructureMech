@@ -8,11 +8,20 @@ session:
   timestamp: '2026-10-19T05:27:41Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
   summary: Created structure record for box H/ACA snoRNP complex (GO:0031429) in ribonucleoprotein.
-  details: Authored data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml for box
-    H/ACA snoRNP complex (GO:0031429) with verified GO hierarchy, taxonomic distribution,
-    UniProtKB protein examples, functions, literature evidence, and causal graph.
+  details: Authored data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml
+    for box H/ACA snoRNP complex (GO:0031429) with verified GO hierarchy, taxonomic
+    distribution, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

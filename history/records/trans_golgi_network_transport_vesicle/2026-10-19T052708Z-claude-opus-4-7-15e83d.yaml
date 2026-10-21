@@ -8,12 +8,20 @@ session:
   timestamp: '2026-10-19T05:27:08Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
   summary: Created structure record for trans-Golgi network transport vesicle (GO:0030140)
     in membrane_organelle.
   details: Authored data/structures/membrane_organelle/trans_golgi_network_transport_vesicle.yaml
-    for trans-Golgi network transport vesicle (GO:0030140) with verified GO hierarchy, taxonomic
-    distribution, UniProtKB protein examples, functions, literature evidence, and causal graph.
+    for trans-Golgi network transport vesicle (GO:0030140) with verified GO hierarchy,
+    taxonomic distribution, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - causal_graphs
+  - evidence

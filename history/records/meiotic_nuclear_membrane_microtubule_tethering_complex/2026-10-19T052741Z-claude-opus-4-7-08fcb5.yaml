@@ -8,13 +8,22 @@ session:
   timestamp: '2026-10-19T05:27:41Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
-  summary: Created structure record for meiotic nuclear membrane microtubule tethering complex
-    (GO:0034993) in cytoskeleton.
+  summary: Created structure record for meiotic nuclear membrane microtubule tethering
+    complex (GO:0034993) in cytoskeleton.
   details: Authored data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml
     for meiotic nuclear membrane microtubule tethering complex (GO:0034993) with verified
     GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature
     evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

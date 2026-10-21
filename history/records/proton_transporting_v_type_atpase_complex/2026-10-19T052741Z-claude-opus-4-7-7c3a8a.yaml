@@ -8,13 +8,21 @@ session:
   timestamp: '2026-10-19T05:27:41Z'
   actors:
   - type: ai_agent
-    name: claude-opus-4-7
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
 events:
 - type: CREATE
   outcome: changed
-  summary: Created structure record for proton-transporting V-type ATPase complex (GO:0033176)
-    in energy_complex.
+  summary: Created structure record for proton-transporting V-type ATPase complex
+    (GO:0033176) in energy_complex.
   details: Authored data/structures/energy_complex/proton_transporting_v_type_atpase_complex.yaml
     for proton-transporting V-type ATPase complex (GO:0033176) with verified GO hierarchy,
-    taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and
-    causal graph.
+    taxonomic distribution, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence
