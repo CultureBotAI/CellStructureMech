@@ -1,0 +1,919 @@
+schema_version: 1.0.0
+review_id: 20261021T094812Z-gamma-tubulin-ring-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: gamma tubulin ring complex source and mechanism review
+started_at: '2026-10-21T09:24:07Z'
+finished_at: '2026-10-21T09:48:12Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact ring identity, native examples and equatorial nucleation are supported.
+  One major structural/mechanistic source-attribution finding and one minor graph-scope
+  finding require curation.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    sha256: 77875af04893db1912e05c01ece8dd67b958d77d452787639401288060226df9
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000931
+  path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+  label: gamma-tubulin ring complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Full exact record review with source-native identities and all claim-bearing
+    scientific fields; primary experiments are distinguished from secondary review,
+    native ontology and metadata-only scope.
+  selection: Exact target 3 in frozen batch16 selected-paths.json at revision 9c0446c4c0dd4b458787c43a499e4ceab5e179a6;
+    no prior-base resolver reuse.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000931
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  command: just validate data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  command: just validate-strict data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    --out /private/tmp/cellstructure-batch16-20261021-fjx428vi/gamma_tubulin_ring_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  command: /private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native read-only diagnostic passed. Coverage states do not independently
+    establish membership or mechanism.
+  evidence_ids:
+  - verify-result
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  command: /private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native read-only diagnostic passed. Coverage states do not independently
+    establish membership or mechanism.
+  evidence_ids:
+  - causal-graphs-result
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - rubric
+  - gamma-ring-agent-go
+  - gamma-ring-agent-epmc-exact
+  - gamma-ring-agent-samejima2010-jats
+  - gamma-ring-agent-samejima2008-s3
+  - gamma-ring-agent-venkatram2005-html
+  - gamma-ring-agent-jaarsma2005-html
+  - gamma-ring-agent-anders2006-html
+  - gamma-ring-agent-lynch2014-s3
+  - gamma-ring-agent-brilot2021-s3
+  - gamma-ring-agent-bellingham2023-jats
+  - gamma-ring-agent-samejima2018-s3
+  - zimmerman-abstract
+  - gamma-ring-agent-mzt-23885124-html
+  - gamma-ring-agent-uniprot-Q9Y705
+  - gamma-ring-agent-uniprot-O94488
+  - gamma-ring-agent-uniprot-Q9USP7
+  - gamma-ring-agent-taxon-284812
+  - gamma-ring-agent-taxon-4896
+  - gamma-ring-agent-named-proteins
+- check_id: target-curies
+  name: Target resolver slice with native transport-failure cross-checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  summary: 17 of 17 exact target identifiers returned OK. No target residuals. The
+    shared command exit zero is not interpreted as successful network resolution for
+    transport failures.
+  evidence_ids:
+  - target-curies-result
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000931
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+  locator: Entire maintained YAML, definition, hierarchy, component roles and essentiality,
+    every example and evidence note, all functions and graph nodes/edges, creation
+    history.
+  accessed_at: '2026-10-21T09:38:49Z'
+  support: context_only
+  summary: Exact target personally read in full. No neighboring maintained record
+    is relied upon. The record remains PROPOSED and asserts no image asset, measured-property
+    table, dataset or verbatim snippet.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Evidence placement and assembly-essentiality semantics; native source.inputs
+    includes record-review, evidence, protein and causal-graph rubrics.
+  accessed_at: '2026-10-21T09:38:49Z'
+  support: context_only
+  summary: Assembly necessity is distinct from viability, localization, nucleating
+    activity and the presence of a constituent in an intact preparation. Optional
+    omissions are not automatic findings.
+- evidence_id: gamma-ring-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000923,GO:0000930,GO:0000931,GO:0008275,GO:0051418
+  locator: results exact id/name/definition/synonyms and parent children relation.
+  accessed_at: '2026-10-21T09:27:58.663362Z'
+  support: supports
+  summary: Native GO0000931 is active and exactly gamma-tubulin ring complex, with
+    fission yeast as an example and references PMID12134075/17021256. Its twelve synonym
+    strings and scopes agree. GO0000930 has it as an is_a child; GO0008275 is TuSC.
+    GO0051418 is MTOC-mediated nucleation. GO0000923 is eMTOC, not a replacement identity
+    for the ring. Native GO does not specify 13/14 spokes, seam composition, Mzt1,
+    or an allosteric activation mechanism.
+  snapshot_sha256: f97154e924c5e034fb093dd422f197a7ae6e1131f8be6f952a6d9721eb981c85
+- evidence_id: gamma-ring-agent-epmc-exact
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.1016/j.cub.2010.10.006%22%20OR%20DOI%3A%2210.1016/j.cub.2018.04.008%22%20OR%20DOI%3A%2210.1016/s1534-5807%2804%2900096-6%22%20OR%20DOI%3A%2210.1091/mbc.E04-11-1003%22%20OR%20DOI%3A%2210.1091/mbc.E04-12-1043%22%20OR%20DOI%3A%2210.1242/jcs.038414%22%20OR%20DOI%3A%2210.3390/cells12060917%22
+  locator: resultList.result all seven exact DOI matches.
+  accessed_at: '2026-10-21T09:29:01.793542Z'
+  support: context_only
+  summary: 'The exact quoted-DOI query returns seven cited studies with matching DOI/PMID/title
+    identities: Samejima2010/2008/2005, Venkatram2005, Flor-Parra2018, Zimmerman2004
+    and Bellingham2023. Bibliographic identity does not establish ring geometry.'
+  snapshot_sha256: c091d6986c554c15cbf87963e8ca1843d95343777b327100fe967c6ebb36567d
+- evidence_id: gamma-ring-agent-samejima2010-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2989437.1/PMC2989437.1.xml
+  locator: Results/Discussion Distinct Sequences within MASC and Mto1 eMTOC Localization,
+    extracted paragraphs6–25; Fig1/3/4 context.
+  accessed_at: '2026-10-21T07:55:16.105173Z'
+  support: supports
+  summary: Primary S. pombe Mto1 MASC truncation/point mutations separate iSPB, mitotic-SPB
+    and equatorial targeting; Myp2 loss prevents detected equatorial Alp4 and PAA
+    nucleation. Mto1-427 retains spindle-pole targeting but loses PAA. This study
+    does not measure gamma-TuSC ring stoichiometry, handedness, seam architecture
+    or allosteric ring closure.
+  snapshot_sha256: 9337fd098562acbf278e8fa6b6fdb2bce9ed3f0ef1ed2bdd8cbe6d5f66e8edaa
+- evidence_id: gamma-ring-agent-samejima2008-s3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2743986.1/PMC2743986.1.xml
+  locator: Results CM1 interaction, Mto1-334, Fig2/4; Discussion cooperative binding,
+    paragraphs14–34.
+  accessed_at: '2026-10-21T09:28:41.557361Z'
+  support: supports
+  summary: Mto1 CM1 mutants lose gamma-complex association while retaining localization.
+    Mto1-334 and mto2 deletion retain restricted SPB and very limited equatorial nucleation;
+    faint Alp4 and weak biochemical association require sensitivity-qualified wording.
+    The endpoints are recruitment/nucleation, not a directly measured complete TuRC
+    assembly in the absence of the entire Mto1-Mto2 cohort.
+  snapshot_sha256: c495ac9e59ed63f5e88cc383575e83cfa34a9b0a3ffab09e30031f0520748075
+- evidence_id: gamma-ring-agent-venkatram2005-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142446/?pdf=render
+  locator: Title/authors; Results PAA formation Fig3, localization Fig4, coimmunoprecipitation
+    Fig8/9; Discussion Model for mto2p Function and Microtubule Nucleation, paragraphs53–56,63,79–99.
+  accessed_at: '2026-10-21T09:29:00.320286Z'
+  support: supports
+  summary: Despite this retrieval key, the source is Samejima et al.2005 DOI E04-11-1003,
+    Fission Yeast mto2p Regulates Microtubule Nucleation by the Centrosomin-related
+    Protein mto1p. It studies Mto2 localization, Mto1 binding, residual/unstable PAAs
+    and gamma-complex recruitment. It does not characterize Mod21/GCP5 with Gfh1/Alp16
+    as a 14-spoke asymmetric seam. Discussion explicitly labels a possible allosteric
+    role speculative.
+  snapshot_sha256: 1d7210592b0c3ee01cfc96fef86877847d98d965849c77fa9d71dc7862415693
+- evidence_id: gamma-ring-agent-jaarsma2005-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1142447/?pdf=render
+  locator: Results cold recovery and Mto1/Mto2 localization; CAR anchoring experiments
+    Fig6/7; Discussion paragraphs81–90.
+  accessed_at: '2026-10-21T09:29:00.363264Z'
+  support: context_only
+  summary: The source is Venkatram et al.2005 DOI E04-12-1043, a distinct Mto2 study.
+    It reports strong eMTOC/PAA defects and CAR maintenance defects during cps1 arrest
+    or low-dose LatA delay, while cytokinesis checkpoint arrest persists. These preparation/detection
+    contexts must not erase the residual activity seen by Samejima. Mto2 association
+    with gamma-complex was not detected in this preparation.
+  snapshot_sha256: 2ea12818a771747b3b1469aa3314f326ee46593214993bbbd0f1096ecf08c595
+- evidence_id: gamma-ring-agent-anders2006-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1679674/?pdf=render
+  locator: Introduction18–20; Results Mod21 identification and Fig2, association dependencies
+    Fig10/11, sucrose gradients Fig12; Discussion104–118.
+  accessed_at: '2026-10-21T09:29:00.350438Z'
+  support: supports
+  summary: Anders2006, the GO-linked primary source, directly identifies Mod21 as
+    a gamma-complex component, maps Gfh1/Mod21/Alp16 to GCP4/5/6 and tests physical
+    association and deletion phenotypes. It finds largely preserved qualitative nucleation
+    with reduced interphase efficiency after loss of noncore proteins. Gradient and
+    immunoprecipitation results leave the exact physical native large complex uncertain;
+    no 14-spoke seam reconstruction is provided.
+  snapshot_sha256: 87dbab897d5acf9eab2c7387afa7a0e29958604310990f28ae2b44eb21b64d4a
+- evidence_id: gamma-ring-agent-lynch2014-s3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3989768.1/PMC3989768.1.xml
+  locator: Results minimal bonsai, gamma-TuRC-specific proteins and stoichiometry
+    paragraphs8–19; Conclusions26–27; Fig1/2/3.
+  accessed_at: '2026-10-21T09:28:41.792491Z'
+  support: supports
+  summary: Primary minimal Mto1/2-bonsai experiments distinguish activation from targeting.
+    Single nucleating puncta contain measured averages of roughly13 Mto1/Mto2 and8.5/8.4
+    Alp4/Alp6; the inferred architecture is gamma-TuRC-like. Alp16 deletion has little
+    effect on bonsai nucleation. The Conclusions state conformational activation awaits
+    confirmation and the Mto1 CM1-alone mechanism was not resolved. This supports
+    nucleation activation/multimerization, not an experimentally settled Mto1 allosteric
+    ring-closure claim.
+  snapshot_sha256: c79f01751fe2552986d4dc8ff9523ebf86ad6349f546520563c06c3bf32a323b
+- evidence_id: gamma-ring-agent-brilot2021-s3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC8099430.1/PMC8099430.1.xml
+  locator: Introduction5–11; Results NCC and CM1 binding, paragraphs20–22,36–42; Fig2–4.
+  accessed_at: '2026-10-21T09:28:41.928074Z'
+  support: supports
+  summary: The primary study determines S. cerevisiae structures. Its Introduction
+    provides cited background distinguishing yeast seven-TuSC helical assemblies from
+    metazoan14-position rings with GCP4/5/6 pseudo-TuSCs; that metazoan comparison
+    is not a direct experiment of this paper. Direct structural Results resolve budding-yeast
+    Spc110 contacts across the inter-TuSC interface. These findings cannot be silently
+    assigned to native S. pombe Gfh1/Mod21/Alp16 under a 2005 Mto2 citation.
+  snapshot_sha256: 7937671cd050caa340f7deb2cf8aa17f286a7aa1039b78d93d39bd6eb09aebc0
+- evidence_id: gamma-ring-agent-bellingham2023-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC10047812.1/PMC10047812.1.xml
+  locator: Results2.1 paragraphs11–13 and2.2 paragraph15; Discussion30–32; Methods
+    strain construction38–39 and timing46.
+  accessed_at: '2026-10-21T07:55:16.094019Z'
+  support: supports
+  summary: Live-cell timing supports Myp2 arrival followed by Mto1 and PAA microtubules
+    at the equator. Spatial/intensity experiments suggest recruitment without a simple
+    direct Myp2-Mto1 complex. The paper measures PAA organization and cytokinetic
+    mechanics, not gamma-TuRC subunit geometry or assembly.
+  snapshot_sha256: 519b1918af37108acb4ae400b29e82b597cdc3e21480263bbf1041f17bf96521
+- evidence_id: gamma-ring-agent-samejima2018-s3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7263743.1/PMC7263743.1.xml
+  locator: Abstract; Introduction7–9; Results bonsai assay16, artificial targeting25,
+    Alp7 experiments33–37.
+  accessed_at: '2026-10-21T09:28:41.557254Z'
+  support: context_only
+  summary: The source is Flor-Parra et al.2018 The XMAP215 Ortholog Alp14 Promotes
+    Microtubule Nucleation in Fission Yeast. It links Alp14/Alp7 to nucleation, using
+    interphase Mto1-bonsai puncta and artificial targeting. These data distinguish
+    polymerization from nucleation but do not resolve a 14-spoke seam or Mto1 allostery.
+  snapshot_sha256: 5c6000e8b847fcdedb2b6d328d7a87e026432a1cb816daf6c5461f8cde76c9aa
+- evidence_id: zimmerman-abstract
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.1016/j.cub.2010.10.006%22%20OR%20DOI%3A%2210.1016/j.cub.2018.04.008%22%20OR%20DOI%3A%2210.1016/s1534-5807%2804%2900096-6%22%20OR%20DOI%3A%2210.1091/mbc.E04-11-1003%22%20OR%20DOI%3A%2210.1091/mbc.E04-12-1043%22%20OR%20DOI%3A%2210.1242/jcs.038414%22%20OR%20DOI%3A%2210.3390/cells12060917%22
+  locator: Matching result id15068790, DOI and abstractText only.
+  accessed_at: '2026-10-21T09:29:01.793542Z'
+  support: context_only
+  summary: Zimmerman2004 PMID15068790 is Rsp1p, a J domain protein required for disassembly
+    and assembly of MTOCs during the fission yeast cell cycle. Only its native metadata/abstract
+    is credited here; it provides no independent molecular ring reconstruction in
+    this review.
+  snapshot_sha256: c091d6986c554c15cbf87963e8ca1843d95343777b327100fe967c6ebb36567d
+- evidence_id: gamma-ring-agent-mzt-23885124-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3771951/?pdf=render
+  locator: Results Fig1C/D, Mzt1 is not required for formation of the core gamma-TuC,
+    Fig8; Discussion and Fig10 model; text32,59–60,66,70–74.
+  accessed_at: '2026-10-21T09:30:32.290910Z'
+  support: supports
+  summary: Masuda2013 provides direct fission-yeast Mzt1 membership by pull-down and
+    localization, supporting Mzt1 named in the definition. In conditional mzt1 mutants
+    at36C, Alp4 still pulls down gamma-tubulin while MTOC localization is impaired.
+    This explicitly separates core-complex assembly from recruitment and viability;
+    it is not proof of complete ring assembly or all universal essentiality labels.
+  snapshot_sha256: dd5add9f69a47223caf452e98fe5acff17961c12f536505b4b790fc100b6694d
+- evidence_id: gamma-ring-agent-uniprot-Q9Y705
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9Y705.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; SUBCELLULAR
+    LOCATION references.
+  accessed_at: '2026-10-21T09:27:59.260007Z'
+  support: supports
+  summary: Q9Y705 is the primary reviewed Swiss-Prot entry for alp4, with the target
+    protein label and organism284812. Identity and annotation provenance are verified
+    independently of the experimental role.
+  snapshot_sha256: 1735b88bbff6bce84e252460f2f8e64bb72fbe3901bd81b9f1db63cba4d23682
+- evidence_id: gamma-ring-agent-uniprot-O94488
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O94488.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; SUBCELLULAR
+    LOCATION references.
+  accessed_at: '2026-10-21T07:55:14.925744Z'
+  support: supports
+  summary: O94488 is the primary reviewed Swiss-Prot entry for mto1, with the target
+    protein label and organism284812. Identity and annotation provenance are verified
+    independently of the experimental role.
+  snapshot_sha256: 4903509b256bf5164ea7e5b80970bbb89056a71a4ea4a257e9feb8adcaf0e46b
+- evidence_id: gamma-ring-agent-uniprot-Q9USP7
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9USP7.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; SUBCELLULAR
+    LOCATION references.
+  accessed_at: '2026-10-21T07:55:15.613950Z'
+  support: supports
+  summary: Q9USP7 is the primary reviewed Swiss-Prot entry for mto2, with the target
+    protein label and organism284812. Identity and annotation provenance are verified
+    independently of the experimental role.
+  snapshot_sha256: ae275cdd142bdffa04ce4e120465b57fbd20dbe1223de0be9a72966ec6e40698
+- evidence_id: gamma-ring-agent-taxon-284812
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+  locator: taxId/scientificName/rank.
+  accessed_at: '2026-10-21T07:55:14.243431Z'
+  support: supports
+  summary: Native strain284812 is Schizosaccharomyces pombe972h-, matching all examples;
+    reference sequence is explicitly not the imaged stock.
+  snapshot_sha256: 948c040cabf6c036dff451c7b6eac22605d0ed5d60a74f471e4431e63f82f721
+- evidence_id: gamma-ring-agent-taxon-4896
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: taxId/scientificName/rank.
+  accessed_at: '2026-10-21T07:55:14.239396Z'
+  support: supports
+  summary: Species4896 is Schizosaccharomyces pombe, matching the canonical organism.
+    No cross-fungal distribution follows from this lookup.
+  snapshot_sha256: 42c5b7d3d99341137803612d6404cd3884e2d06ec8a740b1ad38163c678f6721
+- evidence_id: gamma-ring-agent-named-proteins
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28reviewed%3Atrue%29%20AND%20%28organism_id%3A284812%29%20AND%20%28gene_exact%3Agtb1%20OR%20gene_exact%3Aalp4%20OR%20gene_exact%3Aalp6%20OR%20gene_exact%3Agfh1%20OR%20gene_exact%3Amod21%20OR%20gene_exact%3Aalp16%20OR%20gene_exact%3Amzt1%20OR%20gene_exact%3Amto1%20OR%20gene_exact%3Amto2%29&format=json&size=500
+  locator: All11 returned results and each entry own primary gene/locus/protein description/taxon.
+  accessed_at: '2026-10-21T09:28:01.512263Z'
+  support: context_only
+  summary: The bounded reviewed exact-gene query returns Alp4,Alp6,Gfh1,Mod21,Alp16,Mzt1
+    and Mto2 identities, plus two distinct reviewed entries carrying gtb1 and two
+    carrying mto1. Gene-string matches alone are therefore not safe automatic seeds;
+    the already-declared O94488 Mto1 identity is supported by its full native entry
+    and primary context. No negative global absence or complete inventory conclusion
+    is drawn.
+  snapshot_sha256: 7716f6a0b85dad9860acd4865cb4f1fbb26d7dc8b458dc48cf64b394948985c9
+  search_scope: Remote UniProt query (reviewed:true) AND (organism_id:284812) AND
+    exact genes gtb1,alp4,alp6,gfh1,mod21,alp16,mzt1,mto1,mto2; size500;11 results.
+    Bounded declared-gene/reference-strain scope only; ignored files are not applicable
+    to this remote query.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:24:10Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml'
+  snapshot_sha256: 6d45441fa22e87da9f9d9d49bde7730bf544184b457db24b119619aa39f209b2
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    --out /private/tmp/cellstructure-batch16-20261021-fjx428vi/gamma_tubulin_ring_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:24:12Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch16-20261021-fjx428vi/gamma_tubulin_ring_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch16-20261021-fjx428vi/gamma_tubulin_ring_complex-strict.tsv"
+  snapshot_sha256: df3b54f3ddb3f83c6ab581089223e3d59a71a3864959e7e92dcb5929a51e1c4f
+- evidence_id: verify-result
+  kind: validation
+  reference: /private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    --verify
+  locator: Captured native focused diagnostic log
+  accessed_at: '2026-10-21T09:30:46.748353Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: causal-graphs-result
+  kind: validation
+  reference: /private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    --causal-graphs
+  locator: Captured native focused diagnostic log
+  accessed_at: '2026-10-21T09:30:48.140835Z'
+  support: supports
+  summary: "data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml  (GO:0000931)\n\
+    \  gamma_tubulin_ring_complex_mechanism\tgcp4_gcp5_gcp6_ring_subunits\tHAS_SYMBOLS_NO_EXAMPLES\t\
+    ->gcp4_gcp5_gcp6_ring_subunits (PROTEIN: gfh1, mod21, alp16)\n  gamma_tubulin_ring_complex_mechanism\t\
+    mto1_mto2_activating_tether\tCOVERED\t->mto1_mto2_activating_tether (UniProtKB:O94488,\
+    \ UniProtKB:Q9USP7)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     1  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  PARTIAL_EXAMPLES          component_ref\
+    \ target holds protein_examples but has unrepresented symbols\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     2\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: a0838fc7a86f2d4d03f1bd8c3c4a15c5dc5a774abc53272bf715817c45f69065
+- evidence_id: target-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml; exact native
+    collect() target slice of original fresh-base TSV
+  accessed_at: '2026-10-21T09:48:00.042357Z'
+  support: supports
+  summary: 17 of 17 exact target identifiers returned OK. No target residuals. The
+    shared command exit zero is not interpreted as successful network resolution for
+    transport failures.
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Ring class and hierarchy
+  outcome: supported
+  target_ids:
+  - GO:0000931
+  summary: Exact GO identity, all twelve synonym scopes, parent generic complex and
+    TuSC component grounding are sound. GO supports a fission-yeast example but not
+    the added fixed geometry or a universal combination of all MTOC locations.
+  evidence_ids:
+  - gamma-ring-agent-go
+  - gamma-ring-agent-anders2006-html
+- assessment_id: evidence
+  area: evidence
+  topic: Core, noncore and associated machinery
+  outcome: concern
+  target_ids:
+  - GO:0000931
+  summary: TuSC core and Gfh1/Mod21/Alp16 membership are supported by primary literature,
+    and Mto1/Mto2 is appropriately distinguished as associated machinery. However,
+    the exact 13-PF helical/14-spoke seam statements combine taxon/preparation-specific
+    structural models and are assigned to studies that did not determine them. Mzt1
+    definition membership is supported by an independent primary study.
+  evidence_ids:
+  - gamma-ring-agent-samejima2010-jats
+  - gamma-ring-agent-venkatram2005-html
+  - gamma-ring-agent-anders2006-html
+  - gamma-ring-agent-lynch2014-s3
+  - gamma-ring-agent-brilot2021-s3
+  - gamma-ring-agent-mzt-23885124-html
+- assessment_id: assembly-necessity
+  area: evidence
+  topic: Assembly endpoint versus viability and PAA production
+  outcome: unknown
+  target_ids:
+  - GO:0000931
+  summary: ESSENTIAL core, CONDITIONAL noncore and DISPENSABLE Mto1-Mto2 labels remain
+    independently unresolved at the exact ring-assembly level. Residual PAA formation
+    after mto2 deletion does not test removal of the entire Mto1-Mto2 cohort or intact
+    TuRC assembly. The record explicitly uses a PAA endpoint to explain initial assembly;
+    that explanation should be narrowed. Mzt1 conditional-mutant core coassociation
+    likewise cannot prove assembly of a complete14-spoke ring. No label is redefined
+    as activity or viability.
+  evidence_ids:
+  - gamma-ring-agent-samejima2008-s3
+  - gamma-ring-agent-venkatram2005-html
+  - gamma-ring-agent-anders2006-html
+  - gamma-ring-agent-lynch2014-s3
+  - gamma-ring-agent-mzt-23885124-html
+  - rubric
+- assessment_id: examples
+  area: grounding
+  topic: Native protein and taxon pairing
+  outcome: supported
+  target_ids:
+  - GO:0000931
+  summary: All three examples correctly pair primary reviewed accessions, genes, labels
+    and reference-strain taxonomy. Their residence notes are supported at the stated
+    species-level scope. Native coverage diagnostics leave optional noncore examples
+    unfilled; this alone is not a finding, and ambiguous gtb1/mto1 matches are not
+    automatically seeded.
+  evidence_ids:
+  - gamma-ring-agent-uniprot-Q9Y705
+  - gamma-ring-agent-uniprot-O94488
+  - gamma-ring-agent-uniprot-Q9USP7
+  - gamma-ring-agent-taxon-284812
+  - gamma-ring-agent-taxon-4896
+  - gamma-ring-agent-named-proteins
+- assessment_id: function
+  area: scope
+  topic: Equatorial nucleation context
+  outcome: supported
+  target_ids:
+  - GO:0000931
+  summary: Selective Mto1 targeting and live-cell timing support gamma-complex-dependent
+    equatorial PAA nucleation. This function is explicitly species/site/cell-cycle
+    scoped. Neither temporal localization nor PAA production proves precise ring seam
+    architecture or allosteric activation.
+  evidence_ids:
+  - gamma-ring-agent-samejima2010-jats
+  - gamma-ring-agent-bellingham2023-jats
+  - gamma-ring-agent-samejima2008-s3
+  - gamma-ring-agent-lynch2014-s3
+- assessment_id: mechanism
+  area: graph
+  topic: Recruitment, activation and detailed structure
+  outcome: concern
+  target_ids:
+  - GO:0000931
+  summary: Mto1/Mto2 association and nucleation activation are supported, but an experimentally
+    settled allosteric mechanism is not established by the present citations. The
+    graph repeats the structural and mechanistic overstatements; its edges otherwise
+    describe parts, association and an overall output, so its MECHANISTIC designation
+    independently needs alignment.
+  evidence_ids:
+  - gamma-ring-agent-samejima2010-jats
+  - gamma-ring-agent-venkatram2005-html
+  - gamma-ring-agent-lynch2014-s3
+  - gamma-ring-agent-brilot2021-s3
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Inventory and access boundaries
+  outcome: supported
+  target_ids:
+  - GO:0000931
+  summary: The full record, all bibliography identities and material claims were inspected.
+    A complete species-wide accessory inventory or exact family for a mixed GCP4/5/6
+    cohort was not required. Mzt1 is named in the definition and verified independently;
+    no automatic finding is made merely for lack of a separate optional component
+    row. Historical source-readability notes remain historical, including prior figure
+    inspection not repeated here.
+  evidence_ids:
+  - gamma-ring-agent-go
+  - gamma-ring-agent-epmc-exact
+  - gamma-ring-agent-anders2006-html
+  - gamma-ring-agent-mzt-23885124-html
+  - gamma-ring-agent-named-proteins
+  - record
+findings:
+- finding_id: F1
+  issue_key: ring-structure-and-allostery-source-inflation
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate ring architecture and activation claims from the cited targeting
+    studies
+  description: The record says Samejima2010 establishes TuSC assembly into a13-protofilament-matching
+    ring, and E04-11-1003 characterizes Gfh1/Mod21/Alp16 as a14-spoke asymmetric seam.
+    Their full bodies instead study Mto1 targeting and Mto2-mediated recruitment.
+    The Mto1-Mto2 role further states allosteric activation under Samejima2010, whereas
+    the later direct activation study uses bonsai puncta and explicitly leaves conformational/CM1-alone
+    activation unresolved. Basic membership and nucleation are supported; these exact
+    structural/mechanistic source attributions are not.
+  target_ids:
+  - GO:0000931
+  field_paths:
+  - components[component_id=gamma_tusc_repeating_core].role
+  - components[component_id=gamma_tusc_repeating_core].evidence
+  - components[component_id=gcp4_gcp5_gcp6_ring_subunits]
+  - components[component_id=mto1_mto2_activating_tether].role
+  - components[component_id=mto1_mto2_activating_tether].evidence
+  - causal_graphs[0].nodes
+  - causal_graphs[0].edges
+  - definition
+  evidence_ids:
+  - gamma-ring-agent-samejima2010-jats
+  - gamma-ring-agent-venkatram2005-html
+  - gamma-ring-agent-anders2006-html
+  - gamma-ring-agent-lynch2014-s3
+  - gamma-ring-agent-brilot2021-s3
+  - gamma-ring-agent-go
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    role: maintained scientific record
+  rule_id: 'review-checklist: evidence scope, taxonomic examples, components and causal
+    graphs'
+  native_severity: major
+  normalization_reason: An affirmative source attribution assigns experiments or detailed
+    mechanisms that the cited primary body did not establish.
+- finding_id: F2
+  issue_key: ring-graph-summary-scope
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Align the graph label with its represented causal detail
+  description: After correcting the source overstatements, the current graph still
+    consists of component parthood, Mto1-Mto2 association and whole-complex-to-nucleation.
+    These relationships can be supported as a functional/structural summary, but they
+    do not themselves trace a resolved molecular mechanism despite scope_status MECHANISTIC.
+  target_ids:
+  - GO:0000931
+  field_paths:
+  - causal_graphs[0].scope_status
+  - causal_graphs[0].graph_kind
+  - causal_graphs[0].edges
+  evidence_ids:
+  - gamma-ring-agent-samejima2010-jats
+  - gamma-ring-agent-lynch2014-s3
+  - gamma-ring-agent-anders2006-html
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    role: maintained scientific record
+  rule_id: 'review-checklist: evidence scope, taxonomic examples, components and causal
+    graphs'
+  native_severity: minor
+  normalization_reason: The exact complex and supported membership are retained; this
+    bounded graph/function representation needs clarification.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0000931
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    role: maintained scientific record
+  description: Retain source-backed core/noncore membership and Mto1/Mto2 recruitment/activation.
+    Remove or explicitly qualify exact geometry, asymmetric seam and allosteric claims
+    until a direct structural/mechanistic source is attached, specifying species,
+    native versus reconstituted preparation and open/closed state. Use Anders2006
+    for its actual noncore membership/phenotype results and Lynch2014 for its actual
+    bonsai activation results. Narrow the DISPENSABLE explanatory note to residual
+    Mto2-mutant PAA production; assess complete-ring assembly separately.
+  acceptance_checks:
+  - Read the replacement claim-bearing primary passage and retain its organism, experimental
+    preparation, endpoint and uncertainty.
+  - Reconcile duplicated component, definition and graph wording; do not infer assembly
+    necessity from viability or nucleation alone.
+  - After separately authorized curation, use the guarded writer/history rules and
+    rerun native focused schema, strict, identifier and evidence checks.
+  generator: Maintained target YAML; no generated or scientific source edits made
+    by this review.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0000931
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    role: maintained scientific record
+  description: Either label the supported membership/output representation appropriately
+    or add an explicitly sourced, taxon-scoped causal path from recruitment/oligomerization
+    through template organization to nucleation. Preserve proposed conformational
+    steps as hypotheses.
+  acceptance_checks:
+  - Read the replacement claim-bearing primary passage and retain its organism, experimental
+    preparation, endpoint and uncertainty.
+  - Reconcile duplicated component, definition and graph wording; do not infer assembly
+    necessity from viability or nucleation alone.
+  - After separately authorized curation, use the guarded writer/history rules and
+    rerun native focused schema, strict, identifier and evidence checks.
+  generator: Maintained target YAML; no generated or scientific source edits made
+    by this review.
+limitations:
+- Primary JATS attempts for four cited bodies returned500; S3 recovered Samejima2008
+  and Flor-Parra2018, while PMC HTML recovered both2005 studies and Anders2006. Each
+  retained response has its own raw/meta; failed routes are not evidence of global
+  unreadability.
+- The broad unquoted DOI query epmc-retry returned irrelevant hits because of parentheses;
+  only epmc-exact with seven exact DOI matches is cited. GO-linked PMID12134075/11297925
+  identities were independently retrieved; attempted Fujita2002 and Kollman2015 HTML
+  bodies were challenge pages and are not claimed as read primary text.
+- Zimmerman2004 is credited only at the native bibliographic/abstract tier. Its prior
+  publisher receipt and additional Mzt1 paper are retained as leads but not represented
+  as inspected full-body evidence.
+- 'The exact structural state of native fission-yeast complexes remains a bounded
+  uncertainty: older gradient/coassociation and newer bonsai nucleation estimates
+  do not equal a resolved14-spoke native ring. No entire-class assembly-essentiality
+  conclusion is inferred from these endpoints.'
+- The exact target resolver slice is derived from the completed fresh-base run. Any
+  PMID transport failures were checked against the separately cited native literature
+  metadata; these identity checks do not establish full-body scientific support.
+- No original microscopy pixels, movies, deposited structural coordinates or supplementary
+  datasets were independently reanalyzed. Claim-bearing body prose, indicated methods
+  and captions were inspected. No image asset is asserted by this target.
+- All 14 local scientific/rubric inputs are frozen by native inspect and rechecked.
+  No neighboring maintained record or expression-module result informs the verdict;
+  iModulonDB is not applicable to these structural claims.
+- Prior source raw/meta are reused byte-for-byte with original access timestamps.
+  Newly readable sources do not falsify historical access notes; source-packet filenames
+  are retrieval keys, not author attributions.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Unsaved draft only. Root owns finalization, persistence and shared draft indexes.
+  No repository scientific content or Git state was changed.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
