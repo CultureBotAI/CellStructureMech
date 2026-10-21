@@ -1,0 +1,762 @@
+# Stentor Km fiber: ribbon organization, extension model and tubulin perturbation
+
+- Review: 20261021T084040Z-stentor-km-fiber-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T08:24:53Z
+- Finished UTC: 2026-10-21T08:40:40Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The overlapping-microtubule-ribbon identity, exact tubulin families, scoped extension model, RNAi summary and licensed Figure8 link are supported. No concrete correction was established; molecular motor and intervention specificity remain bounded.
+
+## Scope And Provenance
+
+Whole maintained target; exact native ontology/family/taxon identities; claim-bearing1973 primary PDF and2014 publisher XML sections; complete referenced Figure8 and current package/JATS permissions.
+
+Selection: Third selected path in batch twelve, fixed maintained-path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:stentor_km_fiber | data/structures/cytoskeleton/stentor_km_fiber.yaml | maintained | Stentor Km fiber |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Expression-module applicability | not_applicable | False | cellstructuremech:stentor_km_fiber | No expression-module or transcriptional regulatory claim is asserted. |
+| Focused native schema | passed | True | cellstructuremech:stentor_km_fiber | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:stentor_km_fiber | Focused validator passed. |
+| Target resolver slice | passed | True | cellstructuremech:stentor_km_fiber | 8 identifiers OK; 1 transport/skipped residuals independently resolved. |
+| Printed Figure8 identity and link-only licence | passed | True | cellstructuremech:stentor_km_fiber | Complete PDF page8 visually inspected; printed Figure8, extended-cell caption and0.1micrometer bar agree. PDF/XML MD5 verified; JATS supports link-only CC BY-NC-SA4.0 treatment. |
+| Claim-level scientific review | passed | True | cellstructuremech:stentor_km_fiber | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | cellstructuremech:stentor_km_fiber | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:stentor_km_fiber | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:stentor_km_fiber | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:stentor_km_fiber | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | cellstructuremech:stentor_km_fiber | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Overlapping ribbon bundle
+
+identity: supported. Targets: cellstructuremech:stentor_km_fiber.
+
+The genus-qualified bundle is distinct from one microtubule, the deeper myoneme system, a basal body or a striated rootlet. Basal-body-associated ribbon origins and longitudinal overlap match primary ultrastructure. OTHER is compatible with the composite bundle; broad km-fibers synonym does not assert genus exclusivity.
+
+### Bundle is-a and cortical parthood
+
+scope: supported. Targets: cellstructuremech:stentor_km_fiber.
+
+The microtubule-bundle parent is broader and cortical-cytoskeleton parthood is supported by positional microscopy. S.coeruleus is the exact characterized species; no wider prevalence or invented strain is asserted.
+
+### Tubulin families without motor invention
+
+grounding: supported. Targets: cellstructuremech:stentor_km_fiber.
+
+Both InterPro groundings match exact family labels and microtubule material. The 2014 alpha-positive cortical rows and tubulin RNAi support general microtubule composition, while1973 microscopy supplies Km architecture. No individual paralogue, minimal assembly requirement, stoichiometry, dynein or ATPase is inferred; UNKNOWN essentiality is appropriate.
+
+### Extension inferred from structural displacement
+
+evidence: supported. Targets: cellstructuremech:stentor_km_fiber.
+
+The record says implicated and labels the bridge-driven cycle a model. Fixed-state overlap changes and opposing myoneme behavior support this bounded interpretation; selective functional disruption was unsuccessful and molecular bridge ATPase activity lacked direct evidence. Unmeasured native motor dynamics are not promoted.
+
+### Nonmechanistic tubulin-RNAi phenotype
+
+graph: supported. Targets: cellstructuremech:stentor_km_fiber.
+
+The graph accurately attributes breaks, disorientation and discontinuity of cortical rows to beta-tubulin RNAi. It explicitly excludes a native assembly pathway or Km-selective intervention and does not transfer Mob1 phenotypes to tubulin. The ASSEMBLY category is qualified by NONMECHANISTIC perturbation scope.
+
+### Morphological bridges and broadly localized regulators
+
+consistency: supported. Targets: cellstructuremech:stentor_km_fiber.
+
+Primary cortex anatomy distinguishes deeper myonemes, basal bodies, transverse microtubules and membranes. Their association is not proof of constituent identity. Mob1 diffuse cortical-row staining does not establish a Km-specific maintenance mechanism; current exclusions are scientifically bounded.
+
+### Printed figure and licensed link
+
+provenance: supported. Targets: cellstructuremech:stentor_km_fiber.
+
+Figure8 on PDF page8/printed711 is precisely the described extended-cell transverse Km fiber. The0.1micrometer bar is visibly printed, not estimated. Package checksums and JATS establish image-source/version and CC BY-NC-SA4.0. The record links the PDF page and hosts no image copy or adaptation.
+
+### Independent primary evidence and original access limits
+
+provenance: supported. Targets: cellstructuremech:stentor_km_fiber.
+
+Exact source identities match the target. The1973 primary PDF supplies morphology and model limits; the2014 publisher XML supplies tubulin perturbation, not a selective Km test. Historic minting searches are not reasserted as current exhaustive absence findings. Relevant main-text scopes are explicit.
+
+### Unresolved bridge identity and optional inventory
+
+completeness: supported. Targets: cellstructuremech:stentor_km_fiber.
+
+No concrete correction identified. Lack of a grounded bridge motor, complete paralogue inventory or measured stoichiometry reflects the evidence boundary. No exact protein-example row or mechanistic graph is mandatory from these sources, and PROPOSED status remains unchanged.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/stentor_km_fiber.yaml; Entire maintained target including definitions, components, species examples, functions, graph, discussions, image and history | context_only | Complete target read after native inspection; PROPOSED scientific status is retained. No maintained record is edited. |
+| policy | docs/CURATION.md; Structure identity, components, evidence, image and grounding rules | context_only | Family scope is separate from individual localization and essentiality. Evidence supports only its experimental scope; optional inventory gaps are not automatic defects. |
+| stentor-km-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097427,GO:0030863,GO:0035253; Exact three results, definition, name, isObsolete and synonyms | supports | Active GO0097427 is the broader arrangement of closely apposed parallel microtubules. GO0030863 denotes cortical cytoskeleton. GO0035253 denotes a typically striated ciliary rootlet, not an exact identifier for the described overlapping ribbon bundle. Parthood of the local structure is supported by microscopy, not an asserted native GO link to a minted term. |
+| stentor-km-agent-IPR002452 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002452/; metadata accession/name/type/description; family identity and alpha/beta microtubule composition | supports | IPR002452 is the Alpha tubulin family and supports alpha/beta heterodimer composition of microtubules. |
+| stentor-km-agent-IPR002453 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002453/; metadata accession/name/type/description; family identity and alpha/beta microtubule composition | supports | IPR002453 is the Beta tubulin family. It is a family-class grounding, not a native Stentor paralogue census or bridge-motor identity. |
+| stentor-km-agent-taxon-5963 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5963; taxId/scientificName/rank/lineage/otherNames | supports | NCBITaxon5963 is Stentor coeruleus at species rank; historical names and lineage are explicit. No experimental strain or genus-wide prevalence is inferred. |
+| stentor-km-agent-literature-metadata | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;pageSize=100&amp;query=DOI%3A%2210.1083/jcb.57.3.704%22%20OR%20DOI%3A%2210.1371/journal.pbio.1001861%22; Two native core result entries title/DOI/authors/year/PMID/PMCID | supports | Exact identities verified: Huang/Pitelka1973 DOI10.1083/jcb.57.3.704 PMID4633444 PMC2108994; Slabodnick et al.2014 DOI10.1371/journal.pbio.1001861 PMID24823688 PMC4019465. Both are primary studies; metadata abstracts do not replace the inspected bodies. |
+| stentor-km-agent-huang1973-pdf | https://pmc-oa-opendata.s3.amazonaws.com/PMC2108994.1/PMC2108994.1.pdf; PDF pp704–706 Introduction/Methods; pp708–715 cortical organization/Figures5–13; pp715–717 ribbon-overlap Results; pp719–724 Discussion and motor limits. Complete PDF page8 (printed711)/Figure8 visually inspected. | supports | Claim-bearing primary Methods and Results/Discussion read. Successive posterior basal-body-associated ribbons overlap along a ciliary row, distinct from deeper myonemes and neighboring transverse microtubules. Extended fixed cells show less overlap; selective disruption failed. Relative sliding/active extension is inferred from structure and physiology, while ATPase/dynein bridge identity is explicitly unproven. Figure8 is a transverse extended-cell Km fiber with numbering diagram and0.1micrometer scale bar. |
+| stentor-km-agent-huang1973-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC2108994.1/PMC2108994.1.xml; front/article-meta and permissions; current body-presence check; XML MD5 matches native package | supports | Native version-1 JATS verifies article DOI/title/authors and permissions specifying CC BY-NC-SA4.0. It contains OCR body text, but primary body assessment here used the PDF. The printed Figure8 is located by PDF page rather than an invented JATS figure identifier. |
+| stentor-km-agent-huang1973-package | https://pmc-oa-opendata.s3.amazonaws.com/PMC2108994.1/PMC2108994.1.json; pmcid/version/doi/pmid/is_retracted/license_code/pdf_url/xml_url | supports | PMC2108994 version1 identifies DOI/PMID and non-retracted flag. PDF MD5895cb427cb5cf8cc9afac7f76f59802d and XML MD580e819ecc2c76fdcf38709fe760b7d44 match downloaded bytes. Package broad licence code is CC BY-NC-SA; exact version comes from JATS. |
+| stentor-km-agent-slabodnick2014 | https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.1001861&amp;type=manuscript; Publisher full XML; Results s2b/s2c and Figures2/3 legends; Methods s4a,s4d–s4g culture/RNAi/qPCR/antibodies/immunofluorescence. No supplementary raw-data audit. | supports | Primary Results distinguish tubulin RNAi from Mob1 perturbation. Beta-tubulin transcript depletion and anti-alpha-tubulin-positive cortical-row breaks/disorientation are demonstrated, with alpha-tubulin and control experiments. This is a broad tubulin intervention, not a Km-specific knockout. Mob1 labels cortical rows diffusely and is not established as a Km constituent. Methods identify anti-acetylated-tubulin clone6-11B-1; Figure2 names the signal anti-alpha-tubulin. |
+| schema-result | just validate data/structures/cytoskeleton/stentor_km_fiber.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/stentor_km_fiber.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/stentor_km_fiber.yaml --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/stentor_km_fiber-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/stentor_km_fiber.yaml --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/stentor_km_fiber-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch12-20261021-ipvr425j/stentor_km_fiber-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/stentor_km_fiber.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 8 of9 collected target identifiers returned OK at the unchanged base. Residuals: cellstructuremech:stentor_km_fiber: SKIPPED; resolved by evidence record. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The1973 PDF was read at Introduction/Methods, cortical-organization/ribbon-overlap Results, relevant legends and Discussion through the bridge-motor limits; unrelated later filament-contraction discussion and all cited underlying studies were not independently reread.
+- Only the referenced Figure8 PDF page was visually inspected. No raw microscopy, native sliding dynamics, force measurements or scale-derived new properties were generated.
+- The2014 tubulin/Mob1 localization Results and relevant culture/RNAi/qPCR/antibody/IF Methods were read; remaining Mob1 morphogenesis experiments and supplemental datasets were not fully reanalyzed.
+- Fixed-state morphology and broad tubulin depletion do not identify a native Km motor, prove every paralogue essential or provide a selective Km intervention.
+- Historical repository/ontology searches were not repeated; no new exhaustive absence claim is made. Labels and licence are checked only to the scope asserted here.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Native inspect/schema/strict completed before assessment; twelve tracked input hashes verified. Parent audit and persistence remain pending.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T084040Z-stentor-km-fiber-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Stentor Km fiber: ribbon organization, extension model and tubulin perturbation'
+started_at: '2026-10-21T08:24:53Z'
+finished_at: '2026-10-21T08:40:40Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The overlapping-microtubule-ribbon identity, exact tubulin families, scoped
+  extension model, RNAi summary and licensed Figure8 link are supported. No concrete
+  correction was established; molecular motor and intervention specificity remain
+  bounded.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/stentor_km_fiber.yaml
+    sha256: 66b91b45477653bcafdf1f875b9820681ea1bdeddf36f9d37f74fabe9408cae6
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:stentor_km_fiber
+  path: data/structures/cytoskeleton/stentor_km_fiber.yaml
+  label: Stentor Km fiber
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/stentor_km_fiber.yaml
+    role: maintained scientific record
+scope:
+  description: Whole maintained target; exact native ontology/family/taxon identities;
+    claim-bearing1973 primary PDF and2014 publisher XML sections; complete referenced
+    Figure8 and current package/JATS permissions.
+  selection: Third selected path in batch twelve, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:stentor_km_fiber
+checks:
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: No expression-module or transcriptional regulatory claim is asserted.
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  command: just validate data/structures/cytoskeleton/stentor_km_fiber.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  command: just validate-strict data/structures/cytoskeleton/stentor_km_fiber.yaml
+    --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/stentor_km_fiber-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: 8 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: image-provenance
+  name: Printed Figure8 identity and link-only licence
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: Complete PDF page8 visually inspected; printed Figure8, extended-cell caption
+    and0.1micrometer bar agree. PDF/XML MD5 verified; JATS supports link-only CC BY-NC-SA4.0
+    treatment.
+  evidence_ids:
+  - stentor-km-agent-huang1973-pdf
+  - stentor-km-agent-huang1973-jats
+  - stentor-km-agent-huang1973-package
+  - record
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - stentor-km-agent-go
+  - stentor-km-agent-IPR002452
+  - stentor-km-agent-IPR002453
+  - stentor-km-agent-taxon-5963
+  - stentor-km-agent-literature-metadata
+  - stentor-km-agent-huang1973-pdf
+  - stentor-km-agent-huang1973-jats
+  - stentor-km-agent-huang1973-package
+  - stentor-km-agent-slabodnick2014
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/stentor_km_fiber.yaml
+  locator: Entire maintained target including definitions, components, species examples,
+    functions, graph, discussions, image and history
+  accessed_at: '2026-10-21T08:29:56Z'
+  support: context_only
+  summary: Complete target read after native inspection; PROPOSED scientific status
+    is retained. No maintained record is edited.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Structure identity, components, evidence, image and grounding rules
+  accessed_at: '2026-10-21T08:29:56Z'
+  support: context_only
+  summary: Family scope is separate from individual localization and essentiality.
+    Evidence supports only its experimental scope; optional inventory gaps are not
+    automatic defects.
+- evidence_id: stentor-km-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097427,GO:0030863,GO:0035253
+  locator: Exact three results, definition, name, isObsolete and synonyms
+  accessed_at: '2026-10-21T08:24:42.984158Z'
+  support: supports
+  summary: Active GO0097427 is the broader arrangement of closely apposed parallel
+    microtubules. GO0030863 denotes cortical cytoskeleton. GO0035253 denotes a typically
+    striated ciliary rootlet, not an exact identifier for the described overlapping
+    ribbon bundle. Parthood of the local structure is supported by microscopy, not
+    an asserted native GO link to a minted term.
+  snapshot_sha256: 45d23bce5337606a260e9596b5954b08f2e5872aa63388252921f8eea28bc485
+- evidence_id: stentor-km-agent-IPR002452
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002452/
+  locator: metadata accession/name/type/description; family identity and alpha/beta
+    microtubule composition
+  accessed_at: '2026-10-21T08:24:43.303865Z'
+  support: supports
+  summary: IPR002452 is the Alpha tubulin family and supports alpha/beta heterodimer
+    composition of microtubules.
+  snapshot_sha256: ff28f4d004d8f82a804f7263ff1df3ab78d7bdbdeee755fa924a58e872602b5a
+- evidence_id: stentor-km-agent-IPR002453
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002453/
+  locator: metadata accession/name/type/description; family identity and alpha/beta
+    microtubule composition
+  accessed_at: '2026-10-21T08:24:43.311063Z'
+  support: supports
+  summary: IPR002453 is the Beta tubulin family. It is a family-class grounding, not
+    a native Stentor paralogue census or bridge-motor identity.
+  snapshot_sha256: edbfe5509d6e568069c7105eacc2b7e296e84e0790a16a63d836c45a094d20ef
+- evidence_id: stentor-km-agent-taxon-5963
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5963
+  locator: taxId/scientificName/rank/lineage/otherNames
+  accessed_at: '2026-10-21T08:24:43.290162Z'
+  support: supports
+  summary: NCBITaxon5963 is Stentor coeruleus at species rank; historical names and
+    lineage are explicit. No experimental strain or genus-wide prevalence is inferred.
+  snapshot_sha256: e66b4bd1362354340ef4683fab0f80bead40dfcfe41f4814c3b7283f96193813
+- evidence_id: stentor-km-agent-literature-metadata
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=100&query=DOI%3A%2210.1083/jcb.57.3.704%22%20OR%20DOI%3A%2210.1371/journal.pbio.1001861%22
+  locator: Two native core result entries title/DOI/authors/year/PMID/PMCID
+  accessed_at: '2026-10-21T08:24:43.314042Z'
+  support: supports
+  summary: 'Exact identities verified: Huang/Pitelka1973 DOI10.1083/jcb.57.3.704 PMID4633444
+    PMC2108994; Slabodnick et al.2014 DOI10.1371/journal.pbio.1001861 PMID24823688
+    PMC4019465. Both are primary studies; metadata abstracts do not replace the inspected
+    bodies.'
+  snapshot_sha256: 17f687b1abc0fbf78938b6613d4d9ae26558cbfe45bfd1dc057a466c3f28690a
+- evidence_id: stentor-km-agent-huang1973-pdf
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108994.1/PMC2108994.1.pdf
+  locator: PDF pp704–706 Introduction/Methods; pp708–715 cortical organization/Figures5–13;
+    pp715–717 ribbon-overlap Results; pp719–724 Discussion and motor limits. Complete
+    PDF page8 (printed711)/Figure8 visually inspected.
+  accessed_at: '2026-10-21T08:24:43.608861Z'
+  support: supports
+  summary: Claim-bearing primary Methods and Results/Discussion read. Successive posterior
+    basal-body-associated ribbons overlap along a ciliary row, distinct from deeper
+    myonemes and neighboring transverse microtubules. Extended fixed cells show less
+    overlap; selective disruption failed. Relative sliding/active extension is inferred
+    from structure and physiology, while ATPase/dynein bridge identity is explicitly
+    unproven. Figure8 is a transverse extended-cell Km fiber with numbering diagram
+    and0.1micrometer scale bar.
+  snapshot_sha256: 61e5f2ef7e22ef22f7e1d2b2e27ecf4f58195865867356261daadaf24fe17514
+- evidence_id: stentor-km-agent-huang1973-jats
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108994.1/PMC2108994.1.xml
+  locator: front/article-meta and permissions; current body-presence check; XML MD5
+    matches native package
+  accessed_at: '2026-10-21T08:24:43.575756Z'
+  support: supports
+  summary: Native version-1 JATS verifies article DOI/title/authors and permissions
+    specifying CC BY-NC-SA4.0. It contains OCR body text, but primary body assessment
+    here used the PDF. The printed Figure8 is located by PDF page rather than an invented
+    JATS figure identifier.
+  snapshot_sha256: d8e63c325a7d4af8fdcac7a0d20769bbd3790aaa272a34240702f030150c4499
+- evidence_id: stentor-km-agent-huang1973-package
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2108994.1/PMC2108994.1.json
+  locator: pmcid/version/doi/pmid/is_retracted/license_code/pdf_url/xml_url
+  accessed_at: '2026-10-21T08:24:43.326032Z'
+  support: supports
+  summary: PMC2108994 version1 identifies DOI/PMID and non-retracted flag. PDF MD5895cb427cb5cf8cc9afac7f76f59802d
+    and XML MD580e819ecc2c76fdcf38709fe760b7d44 match downloaded bytes. Package broad
+    licence code is CC BY-NC-SA; exact version comes from JATS.
+  snapshot_sha256: 8a8fb5fd2065b9c3cdf0b1de373b3e8817e53945f308613d8a6989178a2b0e52
+- evidence_id: stentor-km-agent-slabodnick2014
+  kind: primary_source
+  reference: https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.1001861&type=manuscript
+  locator: Publisher full XML; Results s2b/s2c and Figures2/3 legends; Methods s4a,s4d–s4g
+    culture/RNAi/qPCR/antibodies/immunofluorescence. No supplementary raw-data audit.
+  accessed_at: '2026-10-21T08:24:43.663140Z'
+  support: supports
+  summary: Primary Results distinguish tubulin RNAi from Mob1 perturbation. Beta-tubulin
+    transcript depletion and anti-alpha-tubulin-positive cortical-row breaks/disorientation
+    are demonstrated, with alpha-tubulin and control experiments. This is a broad
+    tubulin intervention, not a Km-specific knockout. Mob1 labels cortical rows diffusely
+    and is not established as a Km constituent. Methods identify anti-acetylated-tubulin
+    clone6-11B-1; Figure2 names the signal anti-alpha-tubulin.
+  snapshot_sha256: ebaa941d4bafc7e757ab197bba170fcfc56ca05f8af7b3cef2b80f38b9e4aac0
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/stentor_km_fiber.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:24:55Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/stentor_km_fiber.yaml'
+  snapshot_sha256: 4c18b2e59c1ac958d16c71d43c8c37e177abdb2d534803c2e028a7ef6122bf29
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/stentor_km_fiber.yaml
+    --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/stentor_km_fiber-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:24:56Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/stentor_km_fiber.yaml\
+    \ --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/stentor_km_fiber-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch12-20261021-ipvr425j/stentor_km_fiber-strict.tsv"
+  snapshot_sha256: b9fcb48fcb5452b044d613a8e03030f160dfd162df1ea3e282d236f2a11d9fd9
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/stentor_km_fiber.yaml; exact collect() scope;
+    hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:29:56Z'
+  support: supports
+  summary: '8 of9 collected target identifiers returned OK at the unchanged base.
+    Residuals: cellstructuremech:stentor_km_fiber: SKIPPED; resolved by evidence record.
+    Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Overlapping ribbon bundle
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: The genus-qualified bundle is distinct from one microtubule, the deeper
+    myoneme system, a basal body or a striated rootlet. Basal-body-associated ribbon
+    origins and longitudinal overlap match primary ultrastructure. OTHER is compatible
+    with the composite bundle; broad km-fibers synonym does not assert genus exclusivity.
+  evidence_ids:
+  - stentor-km-agent-huang1973-pdf
+  - stentor-km-agent-go
+  - record
+- assessment_id: hierarchy
+  area: scope
+  topic: Bundle is-a and cortical parthood
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: The microtubule-bundle parent is broader and cortical-cytoskeleton parthood
+    is supported by positional microscopy. S.coeruleus is the exact characterized
+    species; no wider prevalence or invented strain is asserted.
+  evidence_ids:
+  - stentor-km-agent-go
+  - stentor-km-agent-taxon-5963
+  - stentor-km-agent-huang1973-pdf
+  - record
+- assessment_id: composition
+  area: grounding
+  topic: Tubulin families without motor invention
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: Both InterPro groundings match exact family labels and microtubule material.
+    The 2014 alpha-positive cortical rows and tubulin RNAi support general microtubule
+    composition, while1973 microscopy supplies Km architecture. No individual paralogue,
+    minimal assembly requirement, stoichiometry, dynein or ATPase is inferred; UNKNOWN
+    essentiality is appropriate.
+  evidence_ids:
+  - stentor-km-agent-IPR002452
+  - stentor-km-agent-IPR002453
+  - stentor-km-agent-huang1973-pdf
+  - stentor-km-agent-slabodnick2014
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Extension inferred from structural displacement
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: The record says implicated and labels the bridge-driven cycle a model.
+    Fixed-state overlap changes and opposing myoneme behavior support this bounded
+    interpretation; selective functional disruption was unsuccessful and molecular
+    bridge ATPase activity lacked direct evidence. Unmeasured native motor dynamics
+    are not promoted.
+  evidence_ids:
+  - stentor-km-agent-huang1973-pdf
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic tubulin-RNAi phenotype
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: The graph accurately attributes breaks, disorientation and discontinuity
+    of cortical rows to beta-tubulin RNAi. It explicitly excludes a native assembly
+    pathway or Km-selective intervention and does not transfer Mob1 phenotypes to
+    tubulin. The ASSEMBLY category is qualified by NONMECHANISTIC perturbation scope.
+  evidence_ids:
+  - stentor-km-agent-slabodnick2014
+  - record
+- assessment_id: neighbors
+  area: consistency
+  topic: Morphological bridges and broadly localized regulators
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: Primary cortex anatomy distinguishes deeper myonemes, basal bodies, transverse
+    microtubules and membranes. Their association is not proof of constituent identity.
+    Mob1 diffuse cortical-row staining does not establish a Km-specific maintenance
+    mechanism; current exclusions are scientifically bounded.
+  evidence_ids:
+  - stentor-km-agent-huang1973-pdf
+  - stentor-km-agent-slabodnick2014
+  - record
+- assessment_id: image
+  area: provenance
+  topic: Printed figure and licensed link
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: Figure8 on PDF page8/printed711 is precisely the described extended-cell
+    transverse Km fiber. The0.1micrometer bar is visibly printed, not estimated. Package
+    checksums and JATS establish image-source/version and CC BY-NC-SA4.0. The record
+    links the PDF page and hosts no image copy or adaptation.
+  evidence_ids:
+  - stentor-km-agent-huang1973-pdf
+  - stentor-km-agent-huang1973-jats
+  - stentor-km-agent-huang1973-package
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Independent primary evidence and original access limits
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: Exact source identities match the target. The1973 primary PDF supplies
+    morphology and model limits; the2014 publisher XML supplies tubulin perturbation,
+    not a selective Km test. Historic minting searches are not reasserted as current
+    exhaustive absence findings. Relevant main-text scopes are explicit.
+  evidence_ids:
+  - stentor-km-agent-literature-metadata
+  - stentor-km-agent-huang1973-pdf
+  - stentor-km-agent-slabodnick2014
+  - stentor-km-agent-huang1973-jats
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Unresolved bridge identity and optional inventory
+  outcome: supported
+  target_ids:
+  - cellstructuremech:stentor_km_fiber
+  summary: No concrete correction identified. Lack of a grounded bridge motor, complete
+    paralogue inventory or measured stoichiometry reflects the evidence boundary.
+    No exact protein-example row or mechanistic graph is mandatory from these sources,
+    and PROPOSED status remains unchanged.
+  evidence_ids:
+  - stentor-km-agent-huang1973-pdf
+  - stentor-km-agent-slabodnick2014
+  - stentor-km-agent-IPR002452
+  - stentor-km-agent-IPR002453
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- The1973 PDF was read at Introduction/Methods, cortical-organization/ribbon-overlap
+  Results, relevant legends and Discussion through the bridge-motor limits; unrelated
+  later filament-contraction discussion and all cited underlying studies were not
+  independently reread.
+- Only the referenced Figure8 PDF page was visually inspected. No raw microscopy,
+  native sliding dynamics, force measurements or scale-derived new properties were
+  generated.
+- The2014 tubulin/Mob1 localization Results and relevant culture/RNAi/qPCR/antibody/IF
+  Methods were read; remaining Mob1 morphogenesis experiments and supplemental datasets
+  were not fully reanalyzed.
+- Fixed-state morphology and broad tubulin depletion do not identify a native Km motor,
+  prove every paralogue essential or provide a selective Km intervention.
+- Historical repository/ontology searches were not repeated; no new exhaustive absence
+  claim is made. Labels and licence are checked only to the scope asserted here.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Native inspect/schema/strict completed before assessment; twelve tracked input hashes
+  verified. Parent audit and persistence remain pending.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

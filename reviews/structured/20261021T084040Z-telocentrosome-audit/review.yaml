@@ -1,0 +1,973 @@
+schema_version: 1.0.0
+review_id: 20261021T084040Z-telocentrosome-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Telocentrosome identity, recruitment and evidence review
+started_at: '2026-10-21T08:25:03Z'
+finished_at: '2026-10-21T08:40:40Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The local identity, eight constituent examples, source-bounded recruitment
+  and function graphs, species/experimental scope and original linked Figure2 are
+  supported. No concrete curation defect was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/telocentrosome.yaml
+    sha256: 05d5a42ee4b63bd62b3e8c6c0137e2268964980fcc00f27769e29498cf67dca7
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:telocentrosome
+  path: data/structures/cytoskeleton/telocentrosome.yaml
+  label: telocentrosome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/telocentrosome.yaml
+    role: maintained scientific record
+scope:
+  description: Entire maintained target; native identifiers and complete accession-specific
+    family matches; all defining-study main text and captions; relevant supplemental
+    figures and experimental-strain rows; 2025 claim-bearing Results, Discussion and
+    Methods; original Figure2 visual inspection and native hashes.
+  selection: Sixth unreviewed target in batch twelve, selected in repository path
+    order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:telocentrosome
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  command: just validate data/structures/cytoskeleton/telocentrosome.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  command: just validate-strict data/structures/cytoskeleton/telocentrosome.yaml --out
+    /private/tmp/cellstructure-batch12-20261021-ipvr425j/telocentrosome-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: 19 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: verify
+  name: Native UniProt protein-example verification
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  command: /private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/telocentrosome.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native check passed; graph coverage is four of four protein nodes
+    and does not independently validate biology.
+  evidence_ids:
+  - native-verify
+- check_id: causal-graphs
+  name: Native causal-graph protein coverage
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  command: /private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/telocentrosome.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native check passed; graph coverage is four of four protein nodes
+    and does not independently validate biology.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: The claims concern a physical meiotic assembly, imaging and recruitment
+    perturbations, not an expression-module mechanism. Native protein, family, GO
+    and taxon authorities were used for identity.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - telo-prep-go
+  - telo-prep-tax-4896
+  - telo-prep-tax-284812
+  - telo-prep-IPR045119
+  - telo-prep-IPR005334
+  - telo-prep-IPR030268
+  - telo-prep-IPR026983
+  - telo-prep-matches-P87245
+  - telo-prep-matches-O43087
+  - telo-prep-matches-O94488
+  - telo-prep-matches-O13290
+  - telo-prep-matches-O42667
+  - telo-prep-Q09825
+  - telo-prep-P87245
+  - telo-prep-O43087
+  - telo-prep-O94488
+  - telo-prep-Q9Y705
+  - telo-prep-Q9UTS6
+  - telo-prep-O13290
+  - telo-prep-O42667
+  - telo-prep-query-mto1
+  - telo-prep-query-ssm4
+  - telo-prep-yoshida2013-meta
+  - telo-prep-jimenez2025-meta
+  - telo-prep-yoshida2013-jats
+  - telo-agent-yoshida2013-supp
+  - telo-prep-jimenez2025-jats
+  - telo-agent-jimenez2025-supp
+  - telo-prep-figure2
+  - telo-prep-yoshida2013-package
+  - telo-prep-jimenez2025-package
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:telocentrosome
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: telo-prep-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000930,GO:0000931,GO:0005815,GO:0008275,GO:0034993,GO:0045141,GO:0051418
+  locator: All seven definitions, labels, aspects and obsolete flags; GO0034993 tether
+    versus GO0005815 MTOC
+  accessed_at: '2026-10-21T08:24:48.995557Z'
+  support: supports
+  summary: Seven active terms distinguish the broad MTOC parent, nucleation and meiotic
+    clustering processes, generic gamma-tubulin complex, its ring and small-complex
+    subtypes, and the meiotic membrane tether. GO0000930 does not impose the architecture
+    of GO0000931 or GO0008275.
+  snapshot_sha256: 7b670c986f89d679995093f792fdaed38fad31db155cc58ec6543ec3726a70fb
+- evidence_id: telo-prep-tax-4896
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-21T08:24:49.422793Z'
+  support: supports
+  summary: NCBITaxon4896 identifies Schizosaccharomyces pombe at species rank.
+  snapshot_sha256: 42c5b7d3d99341137803612d6404cd3884e2d06ec8a740b1ad38163c678f6721
+- evidence_id: telo-prep-tax-284812
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+  locator: taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-21T08:24:49.088287Z'
+  support: supports
+  summary: NCBITaxon284812 identifies Schizosaccharomyces pombe 972h- at strain rank.
+    This reference strain is not an assertion about every experimental stock.
+  snapshot_sha256: 948c040cabf6c036dff451c7b6eac22605d0ed5d60a74f471e4431e63f82f721
+- evidence_id: telo-prep-IPR045119
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045119/
+  locator: metadata accession, name, family type, description and hierarchy
+  accessed_at: '2026-10-21T08:24:50.832466Z'
+  support: supports
+  summary: IPR045119 is the integrated SUN domain-containing protein 1-5 family, not
+    only a SUN domain.
+  snapshot_sha256: ebf2e470f10e591fe8475c39ac5142261438a51a9bba2571c0282d80a75d359e
+- evidence_id: telo-prep-IPR005334
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005334/
+  locator: metadata accession, name, family type, description and hierarchy
+  accessed_at: '2026-10-21T08:24:49.521461Z'
+  support: supports
+  summary: IPR005334 is the integrated Dynein light chain Tctex-1-like family; the
+    homologous superfamily is separately identified.
+  snapshot_sha256: 4b3892b04229e7d051837ff2dbe657906eae401d5545f4775f47dcd41a349eae
+- evidence_id: telo-prep-IPR030268
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030268/
+  locator: metadata accession, name, family type, description and hierarchy
+  accessed_at: '2026-10-21T08:24:49.707745Z'
+  support: supports
+  summary: IPR030268 is the Nesprin-4 family. Its description is predominantly mammalian
+    and does not make it an exact synonym of the narrower Kms2-like class, despite
+    the native Kms2 match.
+  snapshot_sha256: dbb32dfc7393668c283edb648be9f69f26c050f891a4dad1e4af114825cd9850
+- evidence_id: telo-prep-IPR026983
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR026983/
+  locator: metadata accession, name, family type, description and hierarchy
+  accessed_at: '2026-10-21T08:24:49.639361Z'
+  support: supports
+  summary: IPR026983 encompasses dynein heavy chains including axonemal and cytoplasmic
+    categories; it is broader than the specified cytoplasmic heavy-chain component.
+  snapshot_sha256: d857fa548bcd6eaa39e9d4297a84a47517b89e0e7fa84d0d4ff67fb5e330531e
+- evidence_id: telo-prep-matches-P87245
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P87245/
+  locator: count, results metadata accession/name/type, and null next page
+  accessed_at: '2026-10-21T08:24:54.957964Z'
+  support: supports
+  summary: 'Complete response: one integrated entry, IPR011992 EF-hand domain-pair
+    homologous superfamily; no exact Kms1-like whole-protein family is returned.'
+  snapshot_sha256: fc2c3fa0cf4b315fd6bf85587320a1115d3db926b89531da051f9fd2c0f947b9
+- evidence_id: telo-prep-matches-O43087
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O43087/
+  locator: count, results metadata accession/name/type, and null next page
+  accessed_at: '2026-10-21T08:24:56.917143Z'
+  support: supports
+  summary: 'Complete response: one integrated entry, IPR030268 Nesprin-4; its presence
+    is retained while exact equivalence to Kms2-like is withheld.'
+  snapshot_sha256: 5a819c44321d8b1cc574c47d4a36edc32c92388cf4b7169d3c67ba2a1fbb87e3
+- evidence_id: telo-prep-matches-O94488
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O94488/
+  locator: count, results metadata accession/name/type, and null next page
+  accessed_at: '2026-10-21T08:24:57.079540Z'
+  support: supports
+  summary: 'Complete response: two domain entries, IPR012943 Centrosomin N-terminal
+    motif 1 and IPR024545 Mto1-like Mto2-binding domain; neither is a whole-protein
+    family.'
+  snapshot_sha256: 475c2fa2c23696d5933a5f8278316b1d74bb8b282f9d954daa3b084e382dd7a9
+- evidence_id: telo-prep-matches-O13290
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O13290/
+  locator: count, results metadata accession/name/type, and null next page
+  accessed_at: '2026-10-21T08:24:59.358242Z'
+  support: supports
+  summary: 'Complete response: 17 integrated entries. IPR026983 is the generic heavy-chain
+    family; other entries describe domains or homologous superfamilies, including
+    IPR054354, a dynein-2 ATPase lid domain rather than a whole-chain family.'
+  snapshot_sha256: 8c4430fa06610326b682c69c7a7e98ff7a023355a89367bd91d4f2a598390e00
+- evidence_id: telo-prep-matches-O42667
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O42667/
+  locator: count, results metadata accession/name/type, and null next page
+  accessed_at: '2026-10-21T08:24:56.367116Z'
+  support: supports
+  summary: 'Complete response: two entries, IPR000938 CAP Gly-rich domain and IPR036859
+    CAP Gly-rich domain superfamily; neither is an exact Ssm4-like p150 family.'
+  snapshot_sha256: 8fcdf617449beaa84533afde61bd15d1184f9ffc98d441d8bbd1c1fec22b0bdf
+- evidence_id: telo-prep-Q09825
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q09825.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and InterPro
+    cross-references
+  accessed_at: '2026-10-21T08:24:51.014703Z'
+  support: supports
+  summary: Q09825 is reviewed, with primary gene sad1, locus SPBC12D12.01 / SPBC16H5.01c,
+    recommended protein name Spindle pole body-associated protein sad1, and organism
+    taxon284812. Identity does not by itself establish telocentrosome residence.
+  snapshot_sha256: af97b71167c7297318086add00ac1143a9ab78a2f714035f76ff4c31bf77993d
+- evidence_id: telo-prep-P87245
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P87245.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and InterPro
+    cross-references
+  accessed_at: '2026-10-21T08:24:50.839366Z'
+  support: supports
+  summary: P87245 is reviewed, with primary gene kms1, locus SPAC3A11.05c, recommended
+    protein name Karyogamy meiotic segregation protein 1, and organism taxon284812.
+    Identity does not by itself establish telocentrosome residence.
+  snapshot_sha256: 84aa928d02abba093e6be0c791d5d9f775268e8701d7955ab7f7d7cbb36eb234
+- evidence_id: telo-prep-O43087
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O43087.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and InterPro
+    cross-references
+  accessed_at: '2026-10-21T08:24:50.330775Z'
+  support: supports
+  summary: O43087 is reviewed, with primary gene kms2, locus SPBC947.12, recommended
+    protein name Karyogamy meiotic segregation protein 2, and organism taxon284812.
+    Identity does not by itself establish telocentrosome residence.
+  snapshot_sha256: 67d61fb0efd9d0200f7a6f6b30de9e9c2f96d8f0c61e3b61f6ab87999959a280
+- evidence_id: telo-prep-O94488
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O94488.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and InterPro
+    cross-references
+  accessed_at: '2026-10-21T08:24:50.819704Z'
+  support: supports
+  summary: O94488 is reviewed, with primary gene mto1, locus SPCC417.07c, recommended
+    protein name Gamma tubulin complex adapter mto1, and organism taxon284812. Identity
+    does not by itself establish telocentrosome residence.
+  snapshot_sha256: 4903509b256bf5164ea7e5b80970bbb89056a71a4ea4a257e9feb8adcaf0e46b
+- evidence_id: telo-prep-Q9Y705
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9Y705.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and InterPro
+    cross-references
+  accessed_at: '2026-10-21T08:24:51.737994Z'
+  support: supports
+  summary: Q9Y705 is reviewed, with primary gene alp4, locus SPBC365.15, recommended
+    protein name Spindle pole body component alp4, and organism taxon284812. Identity
+    does not by itself establish telocentrosome residence.
+  snapshot_sha256: 1735b88bbff6bce84e252460f2f8e64bb72fbe3901bd81b9f1db63cba4d23682
+- evidence_id: telo-prep-Q9UTS6
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9UTS6.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and InterPro
+    cross-references
+  accessed_at: '2026-10-21T08:24:50.941294Z'
+  support: supports
+  summary: Q9UTS6 is reviewed, with primary gene dlc1, locus SPAC1805.08, recommended
+    protein name Dynein light chain Tctex-type, and organism taxon284812. Identity
+    does not by itself establish telocentrosome residence.
+  snapshot_sha256: 82b57e907d15a5005acb377ac82a69302fe87dde3ecb479fad5c1b54cdd2ec5d
+- evidence_id: telo-prep-O13290
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O13290.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and InterPro
+    cross-references
+  accessed_at: '2026-10-21T08:24:50.160481Z'
+  support: supports
+  summary: O13290 is reviewed, with primary gene dhc1, locus SPAC1093.06c / SPAC30C2.01c,
+    recommended protein name Dynein heavy chain, cytoplasmic, and organism taxon284812.
+    Identity does not by itself establish telocentrosome residence.
+  snapshot_sha256: 2888913ce8549c578a30bf4d77ce9dc77d3030e314862cd9b1b413f084831acd
+- evidence_id: telo-prep-O42667
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O42667.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and InterPro
+    cross-references
+  accessed_at: '2026-10-21T08:24:50.291559Z'
+  support: supports
+  summary: O42667 is reviewed, with primary gene ssm4, locus SPAC27D7.13c / SPAC637.01c,
+    recommended protein name Microtubule-associated protein ssm4, and organism taxon284812.
+    Identity does not by itself establish telocentrosome residence.
+  snapshot_sha256: 257dc92e69587f9cd3e2909025585c2d3593ee46a795b9812dbcd313ebd2825f
+- evidence_id: telo-prep-query-mto1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Amto1%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29
+  locator: Both returned accession, proteinDescription, gene and locus objects; query
+    URL bounds the result
+  accessed_at: '2026-10-21T08:24:51.977237Z'
+  support: context_only
+  summary: The reviewed S.pombe gene-exact query returns O94488, the SPCC417.07c nucleation
+    adaptor, and unrelated mitochondrial O13670 at SPBC30B4.06c. The maintained example
+    selects the former.
+  snapshot_sha256: 643ebc085c29c9b26ed5c571165c79adee2044c5a82cd66dc7e51a67879dc039
+  search_scope: 'UniProtKB REST query: gene_exact:mto1 AND organism_id:284812 AND
+    reviewed:true; inspected the two returned identities. This is a bounded positive
+    homonym search, not absence across all taxa or databases.'
+- evidence_id: telo-prep-query-ssm4
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Assm4%29%20AND%20%28organism_id%3A284812%29%20AND%20%28reviewed%3Atrue%29
+  locator: Both returned accession, proteinDescription, gene and locus objects; query
+    URL bounds the result
+  accessed_at: '2026-10-21T08:24:52.965353Z'
+  support: context_only
+  summary: The reviewed S.pombe gene-exact query returns O42667, the dynactin-associated
+    Ssm4, and O60103, the doa10/ssm4 ERAD ligase. The maintained example selects the
+    former.
+  snapshot_sha256: 0a8531c67b922b863beaa0de0b2d011c13809e5cbbdb2b06b9fe89ddbb708842
+  search_scope: 'UniProtKB REST query: gene_exact:ssm4 AND organism_id:284812 AND
+    reviewed:true; inspected the two returned identities. This is a bounded positive
+    homonym search, not absence across all taxa or databases.'
+- evidence_id: telo-prep-yoshida2013-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1083/jcb.201207168
+  locator: Exact DOI result bibliographic identity
+  accessed_at: '2026-10-21T08:24:57.908998Z'
+  support: supports
+  summary: The exact DOI result identifies Yoshida et al.2013, PMID23401002/PMC3575533,
+    Microtubule-organizing center formation at telomeres induces meiotic telomere
+    clustering.
+  snapshot_sha256: 168d1ee730cbd6b30d2b318eea329361ec7233caf231e800988afa15d62aacac
+- evidence_id: telo-prep-jimenez2025-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1038/s41467-025-56049-9
+  locator: Exact DOI result bibliographic identity
+  accessed_at: '2026-10-21T08:24:57.838482Z'
+  support: supports
+  summary: The exact DOI result identifies Jimenez-Martin et al.2025, PMID39833200/PMC11747273,
+    Centromere positioning orchestrates telomere bouquet formation and the initiation
+    of meiotic differentiation.
+  snapshot_sha256: 325789797eecd5b9eeed48935df51e17787ef0c6e6f55cbec5ce4ffebe708d6f
+- evidence_id: telo-prep-yoshida2013-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3575533.1/PMC3575533.1.xml
+  locator: Entire Introduction, Results and discussion, Materials and methods; Figures1-5
+    captions; permissions and article identifiers
+  accessed_at: '2026-10-21T08:24:58.783865Z'
+  support: supports
+  summary: The primary study observes telomeric microtubule regrowth, residents and
+    recruitment dependencies in zygotic and induced haploid meiosis. Alp4 reports
+    gamma-TuC; Dlc1 has stage-dependent recruitment effects independent of heavy-chain
+    motor function. Motor cross-linking arrangements remain models.
+  snapshot_sha256: 0f228ac437c8af6f3d9edc0552d70b3b15a670714423cd3d32e094ec0cc4e274
+- evidence_id: telo-agent-yoshida2013-supp
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3575533.1/supp_jcb.201207168_JCB_201207168_sm.pdf
+  locator: PDF ppS1-S3 legends; pS2 entire figure visually inspected; pS4 video legends;
+    TableS1 rows for Figures2-5 and S2
+  accessed_at: '2026-10-21T08:31:17.766988Z'
+  support: supports
+  summary: Supplement S2 distinguishes cytoplasmic regrowth near telomeres, unstable
+    mitotic contacts, preconjugation Sad1 sites and motor-independent recruitment.
+    S1 gives motor-localization limits; S3 identifies assay replication limits. TableS1
+    shows multiple engineered stocks rather than a single reference strain.
+  snapshot_sha256: d6e171a6afc45dfb5ac1e5cd7bed606d23fcd92bc34a69893ab1fae8a00d9291
+- evidence_id: telo-prep-jimenez2025-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11747273.1/PMC11747273.1.xml
+  locator: Results Sec8 and Sec9, embedded Figure6 caption; Discussion Sec12; yeast-strain/growth
+    Methods Sec14 and microscopy/quantification Sec17; identifiers and permissions
+  accessed_at: '2026-10-21T08:24:58.921258Z'
+  support: supports
+  summary: Ectopic Bqt1/Bqt2 in Rabl-deficient haploid mitotic cells recruit Sad1,
+    Kms1, Mto1 and Alp4 to telomeres without detected Dhc1 or complete bouquet formation.
+    Kms1 loss reduces migration and improves growth in that engineered setting.
+  snapshot_sha256: 1e0470a799e49976e35584be8e8449af77c2e85fd1e11576a460227cd526e4ed
+- evidence_id: telo-agent-jimenez2025-supp
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11747273.1/41467_2025_56049_MOESM1_ESM.pdf
+  locator: Supplementary Figure6 legend and adjacent panel labels; no claim of a full
+    supplement or movie audit
+  accessed_at: '2026-10-21T08:31:17.768245Z'
+  support: context_only
+  summary: Supplementary Figure6 reports Rap1 signal, protein-level and subtelomeric-position
+    measurements in Rabl-deficient cells. This is surrounding chromosome-envelope
+    context, not a direct telocentrosome composition inventory.
+  snapshot_sha256: adb86b58423a5e65ffdefe09b06fb17aba9d4acaa7f2c549197c9fd7e0c09221
+- evidence_id: telo-prep-figure2
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3575533.1/JCB_201207168_Fig2.jpg
+  locator: Native JCB_201207168_Fig2.jpg, panelsA-E; unaltered downloaded image
+  accessed_at: '2026-10-21T08:25:57.832631Z'
+  support: supports
+  summary: Visual inspection of the complete original Figure2 confirms A preconjugation
+    fluorescence series, B haploid-meiosis schematic, C MBC/control plots and cells,
+    and D-E regrowth/clustering series. Microscopy bars are 2 micrometers. The source
+    is a linked multipanel experiment, not a purified-complex image.
+  snapshot_sha256: 8d3114614d32513832bc7e63ff308e1f8a4475724af6bf9c88e80f04a2dfb1ad
+- evidence_id: telo-prep-yoshida2013-package
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC3575533.1.json
+  locator: Version, identifiers, retraction/license fields, XML and relevant media
+    MD5 entries
+  accessed_at: '2026-10-21T08:24:58.594415Z'
+  support: supports
+  summary: Version1 package matches DOI/PMID and is not marked retracted. XML, Figure2
+    and supplemental PDF MD5 values match fetched bytes. JATS explicitly grants CC
+    BY-NC-SA3.0 after six months; the link-only image accurately uses OTHER with the
+    exact license URL.
+  snapshot_sha256: f04bc9ac6054f3fdf6d9ab49b3efb9274c041a946eda5509e2943719097cd8cf
+- evidence_id: telo-prep-jimenez2025-package
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC11747273.1.json
+  locator: Version, identifiers, retraction/license fields, XML and relevant media
+    MD5 entries
+  accessed_at: '2026-10-21T08:24:58.793675Z'
+  support: supports
+  summary: Version1 package matches DOI/PMID and is not marked retracted. XML and
+    supplemental PDF MD5 values match fetched bytes. Native JATS identifies CC BY-NC-ND4.0;
+    no image from this study is included in the maintained record.
+  snapshot_sha256: 44a8e89a82129b42b2ddfeaa29a28cc95eb997f28d18338b1331492b71eaa729
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/telocentrosome.yaml
+  locator: Entire maintained YAML, both causal graphs, all discussions and link-only
+    Figure2 metadata
+  accessed_at: '2026-10-21T08:36:33Z'
+  support: context_only
+  summary: PROPOSED local identity; eight constituents and eight reference-sequence
+    examples; broad MTOC parent; five explicitly narrow label-only classes; no fixed
+    stoichiometry, broad prevalence or hosted image is asserted.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/telocentrosome.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:25:04Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/telocentrosome.yaml'
+  snapshot_sha256: c7e39589bd7542e65f9c1f071b65fe81d6678631d1d3787e85fd7712684c6999
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/telocentrosome.yaml
+    --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/telocentrosome-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:25:06Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/telocentrosome.yaml\
+    \ --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/telocentrosome-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch12-20261021-ipvr425j/telocentrosome-strict.tsv"
+  snapshot_sha256: 80f97b6231d11bf30dc917281b9f65e9fb854c240e856fc9c10c4ed10815cc4d
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/telocentrosome.yaml; exact collect() scope;
+    hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:36:33Z'
+  support: supports
+  summary: '19 of 20 collected target identifiers returned OK at the unchanged base.
+    Residuals: cellstructuremech:telocentrosome: SKIPPED; resolved by evidence record.
+    Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/telocentrosome.yaml
+    --verify
+  locator: Target-focused native log
+  accessed_at: '2026-10-21T08:31:09.004784Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/telocentrosome.yaml
+    --causal-graphs
+  locator: Target-focused native log
+  accessed_at: '2026-10-21T08:31:05.305503Z'
+  support: supports
+  summary: "data/structures/cytoskeleton/telocentrosome.yaml  (cellstructuremech:telocentrosome)\n\
+    \  telocentrosome_assembly\tkms1\tCOVERED\t->kms1 (UniProtKB:P87245)\n  telocentrosome_assembly\t\
+    mto1\tCOVERED\t->mto1 (UniProtKB:O94488)\n  telocentrosome_assembly\tdlc1\tCOVERED\t\
+    ->dlc1 (UniProtKB:Q9UTS6)\n  telocentrosome_assembly\tgamma_tuc\tCOVERED\t->gamma_tuc\
+    \ (UniProtKB:Q9Y705)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     4  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     4\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 8628be3f59c7b5f5a059ca8f539a8aca6b7c617200e3c578f4dfdf615e879807
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Telomeric nucleation center versus tether, spindle pole body and bouquet
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: The primary definition denotes a meiotic telomere-associated protein assembly
+    at the nuclear envelope. The broad GO MTOC parent fits; the narrower membrane
+    tether is not substituted for the whole center. Sid4 non-colocalization and the
+    clustering endpoint support keeping the SPB and completed bouquet distinct. The
+    local synonym is descriptive and the identity remains PROPOSED.
+  evidence_ids:
+  - telo-prep-yoshida2013-jats
+  - telo-prep-go
+  - record
+- assessment_id: families
+  area: grounding
+  topic: Exact families versus broader families and domains
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: 'SUN1-5 and Tctex-1-like are exact family-level mappings. The complete
+    five accession-specific InterPro responses support retaining the other components
+    label-only at their current narrower labels: Kms1 and Ssm4 only have domain/superfamily
+    matches, Mto1 has domains, and Nesprin-4 and generic heavy-chain families do not
+    establish exact equivalence to the specified Kms2-like and cytoplasmic-chain classes.
+    This does not assert that those proteins lack all family annotation.'
+  evidence_ids:
+  - telo-prep-IPR045119
+  - telo-prep-IPR005334
+  - telo-prep-IPR030268
+  - telo-prep-IPR026983
+  - telo-prep-matches-P87245
+  - telo-prep-matches-O43087
+  - telo-prep-matches-O94488
+  - telo-prep-matches-O13290
+  - telo-prep-matches-O42667
+  - record
+- assessment_id: protein-identities
+  area: provenance
+  topic: Eight taxon-paired sequence examples and homonyms
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: All eight accession, primary gene, recommended-name, reviewed-status and
+    taxon pairings agree with native UniProt. ENA confirms the maintained strain label.
+    The examples are explicitly reference sequences, while TableS1 lists diverse engineered
+    experimental stocks. The mto1 and ssm4 collisions are correctly resolved by protein
+    identity and locus rather than symbol alone.
+  evidence_ids:
+  - telo-prep-Q09825
+  - telo-prep-P87245
+  - telo-prep-O43087
+  - telo-prep-O94488
+  - telo-prep-Q9Y705
+  - telo-prep-Q9UTS6
+  - telo-prep-O13290
+  - telo-prep-O42667
+  - telo-prep-query-mto1
+  - telo-prep-query-ssm4
+  - telo-prep-tax-4896
+  - telo-prep-tax-284812
+  - telo-agent-yoshida2013-supp
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Resident proteins, reporter subunit and excluded candidates
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: The defining localization experiments support Sad1, Kms1/Kms2, Mto1, Dlc1/Dhc1,
+    Ssm4 and an Alp4-reported gamma-TuC at Sad1-marked telomeric foci. Alp4 is explicitly
+    one subunit, not the whole-complex accession or proof of ring/small-complex architecture.
+    Genetic effects of other kinesins do not establish their residence. Upstream tethers,
+    all other complex subunits and nucleated tubulin are not imported as an exhaustive
+    inventory.
+  evidence_ids:
+  - telo-prep-yoshida2013-jats
+  - telo-agent-yoshida2013-supp
+  - telo-prep-go
+  - telo-prep-Q09825
+  - telo-prep-P87245
+  - telo-prep-O43087
+  - telo-prep-O94488
+  - telo-prep-Q9Y705
+  - telo-prep-Q9UTS6
+  - telo-prep-O13290
+  - telo-prep-O42667
+  - record
+- assessment_id: essentiality
+  area: scope
+  topic: Recruitment requirements and stage dependence
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: UNKNOWN assignments avoid interpreting localization as universal assembly
+    necessity. Dhc1 DISPENSABLE is expressly scoped to Alp4 recruitment, supported
+    by Figure5, while the record preserves its contribution to efficient clustering.
+    Dlc1 contributes more strongly in later/haploid assays than at early preconjugation
+    sites; residual localization and maintenance uncertainty are retained.
+  evidence_ids:
+  - telo-prep-yoshida2013-jats
+  - telo-agent-yoshida2013-supp
+  - record
+- assessment_id: assembly-graph
+  area: evidence
+  topic: Perturbation-defined molecular recruitment
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: Each supports edge matches the tested Kms1-to-Mto1, Kms1-to-Dlc1 and Mto1/Dlc1-to-Alp4
+    recruitment dependencies. The final gamma-TuC-to-center edge is the source-supported
+    assembly interpretation, expressly not isolated-complex sufficiency. MECHANISTIC
+    is bounded to these molecule-specific perturbations; neither direct binding nor
+    fixed copy number is asserted.
+  evidence_ids:
+  - telo-prep-yoshida2013-jats
+  - telo-agent-yoshida2013-supp
+  - record
+- assessment_id: function-graph
+  area: evidence
+  topic: Microtubule nucleation and motor-dependent clustering
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: MBC washout, telomeric regrowth, cytoplasmic localization in S2B, live
+    clustering and motor perturbations support the two functions and supports edges.
+    Nucleation alone is not claimed sufficient for the complete bouquet. Figure5C
+    motor cross-linking and exact Dlc1 action remain proposed models, consistent with
+    the open discussion.
+  evidence_ids:
+  - telo-prep-yoshida2013-jats
+  - telo-agent-yoshida2013-supp
+  - telo-prep-figure2
+  - telo-prep-go
+  - record
+- assessment_id: taxon-context
+  area: scope
+  topic: Physiological meiosis versus engineered partial mitotic assembly
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: Only S.pombe is a canonical species. Zygotic and mat-gene-induced haploid
+    meiotic conditions agree with the defining study. The 2025 engineered mitotic
+    result is accurately restricted to partial recruitment without detectable Dhc1
+    or a complete bouquet; the record does not infer normal mitotic occurrence, broad
+    fungal prevalence or a single missing factor.
+  evidence_ids:
+  - telo-prep-yoshida2013-jats
+  - telo-agent-yoshida2013-supp
+  - telo-prep-jimenez2025-jats
+  - telo-agent-jimenez2025-supp
+  - telo-prep-tax-4896
+  - telo-prep-tax-284812
+  - record
+- assessment_id: image
+  area: provenance
+  topic: Original Figure2 identity, scale and exact license
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: The linked version1 figure, caption, taxon, attribution and experiment
+    panels agree with the native pixels and primary caption. Native MD5 ac707f2d44cf3ec1238cb1863a939c1c
+    and SHA256 8d3114614d32513832bc7e63ff308e1f8a4475724af6bf9c88e80f04a2dfb1ad match.
+    OTHER preserves the exact CC BY-NC-SA3.0 version rather than substituting a different
+    enum. No hosted-file checksum or new repository image is claimed.
+  evidence_ids:
+  - telo-prep-yoshida2013-jats
+  - telo-prep-figure2
+  - telo-prep-yoshida2013-package
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Retained experimental and authority limits
+  outcome: supported
+  target_ids:
+  - cellstructuremech:telocentrosome
+  summary: All maintained claim-bearing areas were checked. The five family TODOs
+    are supported at current narrow labels; no optional inventory gap is promoted
+    to a defect. Fixed architecture, full subunit census, purified interactions, motor
+    arrangement and broad prevalence remain unresolved. Historical absence searches
+    and original access dates remain historical statements, not newly repeated exhaustive
+    searches or a basis for scientific promotion.
+  evidence_ids:
+  - telo-prep-yoshida2013-jats
+  - telo-agent-yoshida2013-supp
+  - telo-prep-jimenez2025-jats
+  - telo-prep-IPR045119
+  - telo-prep-IPR005334
+  - telo-prep-IPR030268
+  - telo-prep-IPR026983
+  - telo-prep-matches-P87245
+  - telo-prep-matches-O43087
+  - telo-prep-matches-O94488
+  - telo-prep-matches-O13290
+  - telo-prep-matches-O42667
+  - record
+findings: []
+actions: []
+limitations:
+- The defining study establishes localization and perturbation dependencies, not a
+  purified binding pathway, complete constituent census, fixed stoichiometry or exact
+  gamma-TuC architecture. Motor cross-linking models remain open.
+- Dlc1 recruitment effects vary by meiotic stage. Dhc1 dispensability is limited to
+  the tested Alp4 recruitment, not efficient clustering or every activity of the assembled
+  structure.
+- The 2025 evidence is an engineered partial mitotic reconstitution. No broad fungal
+  prevalence or ordinary mitotic telocentrosome is inferred.
+- All Yoshida2013 main text and captions were read, with S1-S3 legends, S2 pixels,
+  video legends and relevant TableS1 rows. Movies and underlying raw imaging data
+  were not independently replayed or reanalyzed. Jimenez2025 reading was limited to
+  Sec8/9/12/14/17, Figure6 caption and supplemental Rap1 context; unrelated transcriptomic
+  and screening datasets were not independently audited.
+- Current accession-specific InterPro response completeness was checked, but no exhaustive
+  search across every family authority or historical repository state was repeated.
+  The record retains narrow label-only classes and its historical absence-search claims
+  without extending them.
+- The link-only Figure2 and supplemental S2 were visually inspected. The original
+  image/JATS/supplement MD5 values and all preserved source SHA256 receipts match;
+  no source bytes were added to the maintained corpus.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The user goal requests saving qualified passes. No finding is invented to justify
+  persistence; mapping status, history and scientific content remain unchanged.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.

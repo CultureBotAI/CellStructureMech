@@ -1,0 +1,733 @@
+schema_version: 1.0.0
+review_id: 20261021T084041Z-ventral-disc-dorsal-microribbon-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Giardia dorsal microribbon identity, composition and architectural evidence
+  review
+started_at: '2026-10-21T08:25:19Z'
+finished_at: '2026-10-21T08:40:41Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The exact GO identity, ventral-disc parthood, named microribbon constituent
+  cohort and nonmechanistic architectural graph are supported. Native family candidates
+  do not establish a common exact grounding for the complete cohort including SALP-1.
+  No concrete curation issue was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+    sha256: 6bcdbfaaf84c4b6152147340dcbb6f5958d6dc6aca2288e034c3f2c357819425
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0097594
+  path: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+  label: ventral disc dorsal microribbon
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target including all definitions, synonym scopes, component
+    claims, taxon examples, function, graph and discussion; all asserted stable identifiers
+    and cited DOI; native protein/family candidates and additional primary localization
+    evidence.
+  selection: Tenth selected target in batch twelve, following fixed repository path
+    order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0097594
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097594
+  command: just validate data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097594
+  command: just validate-strict data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+    --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_dorsal_microribbon-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097594
+  summary: 6 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0097594
+  summary: The record asserts structural localization and architecture, without an
+    expression-module or regulator claim; no iModulon result is used as structural
+    evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097594
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - microribbon-agent-go
+  - microribbon-agent-go-mt
+  - microribbon-agent-tax-5741
+  - microribbon-agent-tax-184922
+  - microribbon-agent-epmc
+  - microribbon-agent-schwartz2012-jats
+  - microribbon-agent-epmc-hagen2011
+  - microribbon-agent-hagen2011-jats
+  - microribbon-agent-ipr-008374
+  - microribbon-agent-ipr-038835
+  - microribbon-agent-pfam-06705
+  - microribbon-agent-uniprot-loci
+  - microribbon-agent-uniprot-delta
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097594
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097594
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097594
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097594
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097594
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+  locator: 'Entire maintained YAML: definition, synonyms, component, taxonomy, functions,
+    every graph node/edge, discussion and history'
+  accessed_at: '2026-10-21T08:32:20Z'
+  support: context_only
+  summary: Entire target read. The record denotes the dorsal microribbon, remains
+    PROPOSED, and is not edited.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Identifiers, Components, Causal graphs, Discussions and Status; also native
+    review checklist/profile captured in source.inputs
+  accessed_at: '2026-10-21T08:32:20Z'
+  support: context_only
+  summary: Groundings must match the asserted component scope. Family annotations
+    do not prove localization; optional protein examples, images and exhaustive inventories
+    are not required. Historical rationale and scientific status are preserved.
+- evidence_id: microribbon-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097595,GO:0097594,GO:0097597
+  locator: Native results selected by GO:0097594, GO:0097595 and GO:0097597; definition,
+    isObsolete, synonyms and GO:0097597.children relation values. Other biological
+    claims in the ventral-disc definition are not adopted.
+  accessed_at: '2026-10-21T08:25:56.720744Z'
+  support: supports
+  summary: Active GO:0097594 exactly supplies the target definition, including trilaminar
+    architecture, approximate 29–38 kDa constituents and exclusion of tubulin from
+    the microribbon. All four synonyms and their broad/related scopes match. The GO:0097597
+    result explicitly lists GO:0097594 and GO:0097595 as part_of children. GO:0097595
+    denotes horizontal links between adjacent microribbons with unresolved composition.
+  snapshot_sha256: 10c107f8bf97e296423507c9b4fb6c16e1675974af8897652a382a3d35506abe
+- evidence_id: microribbon-agent-go-mt
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097593
+  locator: Native results[0], exact id/name/isObsolete/definition/synonyms.
+  accessed_at: '2026-10-21T08:28:46.706656Z'
+  support: supports
+  summary: Active GO:0097593 denotes the ventral-disc spiral microtubule array forming
+    the base of near-perpendicular dorsal microribbons; it is distinct from the microribbons
+    themselves.
+  snapshot_sha256: 94ee5330346eb3c53b84ce94781809d3ba24d3999f3524cd2e763b8cce98fccd
+- evidence_id: microribbon-agent-tax-5741
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5741
+  locator: taxId, scientificName, rank and otherNames; synonym versus preferred-name
+    distinction.
+  accessed_at: '2026-10-21T08:25:56.730800Z'
+  support: supports
+  summary: NCBITaxon:5741 is the species Giardia duodenalis, with Giardia intestinalis
+    and Giardia lamblia explicitly listed as synonyms. The historical species label
+    in the target and cited paper therefore denotes the same taxon.
+  snapshot_sha256: 1dcdc380972a71a0a24c80755d8bbacdcb0b6d9988bb5fb1e05ba43f50580dd3
+- evidence_id: microribbon-agent-tax-184922
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/184922
+  locator: taxId, scientificName, rank and otherNames.
+  accessed_at: '2026-10-21T08:29:17.950337Z'
+  support: supports
+  summary: NCBITaxon:184922 is Giardia lamblia ATCC 50803 at strain rank, with Giardia
+    intestinalis ATCC 50803 as a synonym. This native taxonomy record establishes
+    the ATCC strain identity; the WB clone C6 wording is supplied separately by the
+    inspected protein records and primary methods.
+  snapshot_sha256: 70613bfc0044d2eb3541655411f959c563106c7b5df29e88f6606f7d51b84928
+- evidence_id: microribbon-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1371/journal.pone.0043783%22
+  locator: 'Single exact DOI result: DOI, title, authorString, pubYear, id, pmcid
+    and abstractText.'
+  accessed_at: '2026-10-21T08:25:57.030288Z'
+  support: supports
+  summary: Europe PMC resolves the exact Schwartz, Heumann, Dawson and Hoenger 2012
+    PLOS ONE article, DOI:10.1371/journal.pone.0043783, PMID:22984443, PMCID:PMC3439489.
+    Metadata and abstract establish citation identity; the separately retrieved body
+    supports detailed architecture.
+  snapshot_sha256: e57aa4be2b4da0e8c2fd4082e5f08d1cd50239a932a5c403924d3a2618bac654
+- evidence_id: microribbon-agent-schwartz2012-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3439489/fullTextXML
+  locator: 'Native Europe PMC JATS PMC3439489: entire main Introduction, Results s2a–s2h,
+    Discussion s3a–s3e, Conclusions s4 and Methods s5a–s5f read; principal claim locators
+    s2e/Table1, s2h, Figure7 legend, s3c–s3e and s5a/s5d–s5f. Relevant figure legends
+    read; no microscopy-pixel or video reanalysis.'
+  accessed_at: '2026-10-21T08:27:02.838620Z'
+  support: supports
+  summary: Primary tomography resolves three closely apposed microribbon sheets extending
+    dorsally from disc microtubules and lateral crossbridges to neighboring ribbons.
+    WBC6 trophozoites were grown at 37 C; cryo-ET used detergent-extracted, flattened
+    cytoskeletons. The selected grand average resolves architecture, not named protein
+    identities. Beta-giardin, delta-giardin and SALP-1 composition in Discussion s3d
+    is attributed to earlier work; proposed rigidity, contraction and attachment dynamics
+    remain interpretations. The within-complex bridge B is distinct from inter-ribbon
+    crossbridge CB.
+  snapshot_sha256: df4cb13cb3b12c8be3df05f99f8b97cc44951dd61a2c00a168ed8e9aedb6f9d8
+- evidence_id: microribbon-agent-epmc-hagen2011
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1371/journal.pntd.0001442%22
+  locator: 'Single exact DOI result: DOI, title, authorString, pubYear, id, pmcid
+    and abstractText.'
+  accessed_at: '2026-10-21T08:28:46.707963Z'
+  support: supports
+  summary: Exact DOI metadata identifies Hagen et al. 2011, Novel structural components
+    of the ventral disc and lateral crest in Giardia intestinalis, PMID:22206034 and
+    PMCID:PMC3243723. This is additional primary localization evidence, not a substitute
+    citation identity for Schwartz2012.
+  snapshot_sha256: 4d697d3aa6da2c815796d4c04e3eb0574812dc2e23b494b4470d9af94946f1e4
+- evidence_id: microribbon-agent-hagen2011-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3243723/fullTextXML
+  locator: 'Native Europe PMC JATS PMC3243723: Introduction claim context; Methods
+    s2a, s2d, s2f and s2g; Results s3a, s3b and s3e; Discussion s4a and relevant s4c
+    context; Table1 rows GL50803_4812, GL50803_86676, GL50803_4410; Figure2 and FigureS3
+    captions. Body/captions read; figure pixels and full supplementary datasets not
+    reanalyzed.'
+  accessed_at: '2026-10-21T08:29:17.949589Z'
+  support: supports
+  summary: Primary WBC6 GFP localization and anti-GFP immunogold/negative-stain experiments
+    support association of beta-giardin, delta-giardin and SALP-1 with microribbons.
+    Results s3b and Discussion s4a explicitly report all three; the Figure S3 caption
+    individually names beta-, delta- and gamma-giardin, not SALP-1. Table1 assigns
+    PF06705 to beta/delta but lists no domain for SALP-1. Structural-basis, assembly
+    timing and broad stability interpretations are distinguished from direct localization.
+    Gamma-giardin is an additional associated protein, not an SF-assemblin family
+    member.
+  snapshot_sha256: 4764e6ef8d323277737b63dbb374bbdb8011ff87153ed54603d74bd616b5e608
+- evidence_id: microribbon-agent-ipr-008374
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR008374/
+  locator: metadata.accession/type/name/description/member_databases/hierarchy; family
+    type and constituent scope.
+  accessed_at: '2026-10-21T08:28:46.707085Z'
+  support: context_only
+  summary: IPR008374 is an integrated family named SF-assemblin/beta-giardin, including
+    algal striated-fiber assemblins and Giardia beta-giardin. The description discusses
+    segmented coiled-coil architecture and sequence similarity. It establishes a candidate
+    family, not a microribbon-specific structure or independent localization of every
+    protein in the record cohort.
+  snapshot_sha256: 0d9ac5ff8dc1886c6b48d47528177aed2ce34400e0393f1129495cc68046fceb
+- evidence_id: microribbon-agent-ipr-038835
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR038835/
+  locator: metadata.accession/type/name/description/member_databases/hierarchy.
+  accessed_at: '2026-10-21T08:28:46.707448Z'
+  support: context_only
+  summary: IPR038835 is the Giardin subunit beta-like family, including beta-giardin
+    and related proteins. Its proposed cytoskeletal interactions do not identify all
+    microribbon constituents or establish a crossbridge-specific localization.
+  snapshot_sha256: 826d6306c2371f26731295978338f9f1f38acf7939b105c569aee13049c16b99
+- evidence_id: microribbon-agent-pfam-06705
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06705/
+  locator: metadata.accession/type/name/integrated/description.
+  accessed_at: '2026-10-21T08:28:46.707654Z'
+  support: context_only
+  summary: PF06705 is the SF-assemblin/beta giardin family integrated into IPR008374.
+    Its mitotic reorganization description concerns SF-assemblin examples and is not
+    imported as a Giardia microribbon mechanism.
+  snapshot_sha256: ff810d44cdf739fb2e1866f57bbdb9b5e7d0f2124f9fa8b128b58d5761ac42fb
+- evidence_id: microribbon-agent-uniprot-loci
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=taxonomy_id%3A5741%20AND%20%28gene%3AGL50803_004812%20OR%20gene%3AGL50803_4812%20OR%20gene%3AGL50803_086676%20OR%20gene%3AGL50803_86676%20OR%20gene%3AGL50803_004410%20OR%20gene%3AGL50803_4410%29&format=json&size=100
+  locator: 'Exact locus-alias query retained in URL; both results read: primaryAccession,
+    entryType, organism, genes, comments and entire uniProtKBCrossReferences. HTTP
+    X-Total-Results=2, no continuation link; absence statement restricted to the returned
+    SALP-1 entry.'
+  accessed_at: '2026-10-21T08:28:46.707847Z'
+  support: context_only
+  summary: The complete two-result native response identifies unreviewed WBC6 beta-giardin
+    E2RTU7 (GL50803_004812; old GiardiaDB locus GL50803_4812) and SALP-1 E2RUA1 (GL50803_004410;
+    old locus GL50803_4410), both taxon184922. Beta-giardin has IPR008374, IPR038835
+    and PF06705 cross-references; this SALP-1 entry has no InterPro/Pfam cross-reference.
+    That annotation difference does not refute the literature homology or localization
+    and does not prove that no relevant family exists elsewhere.
+  snapshot_sha256: 37bbdc9a2c8c8ce4eeffd475820627ed023a7a655ecc774b78078e38c6c5f5be
+- evidence_id: microribbon-agent-uniprot-delta
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=taxonomy_id%3A5741%20AND%20protein_name%3A%22Delta-giardin%22&format=json&size=100
+  locator: Exact taxonomy5741 plus Delta-giardin name query retained in URL; full
+    returned primaryAccession/entryType/genes/organism/comments/uniProtKBCrossReferences;
+    X-Total-Results=1, no continuation link.
+  accessed_at: '2026-10-21T08:29:17.950206Z'
+  support: context_only
+  summary: The one-result native query identifies unreviewed WBC6 delta-giardin A0A644FAT1,
+    locus GL50803_0086676, taxon184922. Its IPR008374/PF06705 annotations support
+    the candidate family for delta-giardin, while automatic cytoskeletal annotation
+    alone does not establish microribbon localization. The initial locus query did
+    not cover this current zero-padded spelling.
+  snapshot_sha256: 8907090f91024b4c024550b2d3b96d48b00fd71c7de7b21bdadf79787dd0bd11
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:25:21Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml'
+  snapshot_sha256: 72643e57ed921b2ea3ab5ff2cdaee1e96d76fd0d2d3876fff0061dac00eaede4
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+    --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_dorsal_microribbon-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:25:22Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml\
+    \ --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_dorsal_microribbon-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_dorsal_microribbon-strict.tsv"
+  snapshot_sha256: 64e0ba2224f3e505644905e8c8335076b059afd548ef2760d2ba0728575e36fc
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml; exact
+    collect() scope; hash identifies the entire original resolver TSV; original /private/tmp/cellstructure-record-reviews-UhRFh7/repo/reports/curie_check.tsv,
+    not resolver-slice.json
+  accessed_at: '2026-10-21T08:32:20Z'
+  support: supports
+  summary: '6 of 6 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact dorsal-microribbon identity
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: The identifier, definition, four synonym scopes, cytoskeleton category
+    and filament kind fit the named trilaminar Giardia trophozoite structure. It is
+    not the microtubule array, a single giardin, a crossbridge or the whole ventral
+    disc.
+  evidence_ids:
+  - microribbon-agent-go
+  - microribbon-agent-go-mt
+  - microribbon-agent-schwartz2012-jats
+  - record
+- assessment_id: hierarchy
+  area: scope
+  topic: Explicit parthood and neighboring structures
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: The sole part_of GO:0097597 relation agrees with the native GO parent children
+    list. GO:0097593 is the attached microtubule array; GO:0097595 links neighboring
+    microribbons. No is-a/parthood reversal or local-record resolution dependency
+    is present.
+  evidence_ids:
+  - microribbon-agent-go
+  - microribbon-agent-go-mt
+  - microribbon-agent-schwartz2012-jats
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Named constituents and direct localization
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: The component and constitute edge are supported at the cohort-membership
+    level. Schwartz2012 reviews the named assemblin homologs; Hagen2011 directly reports
+    microribbon association of beta-/delta-giardin and SALP-1. This does not assign
+    each protein to a particular sheet, require every detected protein, or establish
+    exclusive/sufficient composition. The target appropriately leaves essentiality
+    UNKNOWN.
+  evidence_ids:
+  - microribbon-agent-schwartz2012-jats
+  - microribbon-agent-hagen2011-jats
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Family scope across the existing cohort
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: IPR008374/PF06705 are verified candidates for beta- and delta-giardin;
+    IPR038835 covers beta-like proteins. Neither inspected database response establishes
+    an exact common family across the complete asserted cohort including SALP-1. Hagen
+    Table1 and current UniProt preserve that distinction. Retaining the acknowledged
+    label-only cohort and finer-boundary discussion is justified; the original pass-specific
+    verification note is historical, not a claim that no individual accession can
+    ever be found.
+  evidence_ids:
+  - microribbon-agent-ipr-008374
+  - microribbon-agent-ipr-038835
+  - microribbon-agent-pfam-06705
+  - microribbon-agent-uniprot-loci
+  - microribbon-agent-uniprot-delta
+  - microribbon-agent-hagen2011-jats
+  - record
+  - policy
+- assessment_id: taxon
+  area: scope
+  topic: Species synonym and experimental strain
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: Giardia intestinalis and G. lamblia are native synonyms of species5741,
+    now preferred as G. duodenalis. Schwartz2012 and Hagen2011 used WBC6 trophozoites.
+    COMMON is qualitative occurrence in the characterized species, not a prevalence
+    estimate or a claim about cysts, all strains or every Giardia species.
+  evidence_ids:
+  - microribbon-agent-tax-5741
+  - microribbon-agent-tax-184922
+  - microribbon-agent-schwartz2012-jats
+  - microribbon-agent-hagen2011-jats
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Architecture versus contractility and mechanics
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: Microribbons extend dorsally from microtubules and connect laterally through
+    crossbridges, supporting the bounded scaffold function. The record does not assert
+    an ATP/calcium-dependent contraction mechanism, measured mechanical rigidity,
+    or sufficiency for host attachment. Those stronger interpretations are not established
+    by the cited morphological work.
+  evidence_ids:
+  - microribbon-agent-go
+  - microribbon-agent-go-mt
+  - microribbon-agent-schwartz2012-jats
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic component and architectural topology
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: 'All four edges are directionally supported: the homolog cohort constitutes
+    microribbons; ribbons extend from the disc microtubule array; crossbridges link
+    neighboring ribbons; ribbons are part of the disc. The component_ref resolves
+    within this record. ASSEMBLY with NONMECHANISTIC scope records composition/topology
+    without a temporal recruitment pathway, direct binding map or identified crossbridge
+    proteins.'
+  evidence_ids:
+  - microribbon-agent-go
+  - microribbon-agent-go-mt
+  - microribbon-agent-schwartz2012-jats
+  - microribbon-agent-hagen2011-jats
+  - record
+- assessment_id: methods
+  area: scope
+  topic: Preparation, averaging and interpretation limits
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: The 2012 whole-cell/plastic-section work supplies spatial context; cryo-ET
+    and subtomogram averaging used extracted cytoskeletons with lost dome shape and
+    flexible or disrupted crossbridges. Averaging selected five tomograms from four
+    discs, excluding overlap and extreme-peripheral regions. Direct architecture should
+    not become a universal copy number or live conformational mechanism. The 2011
+    tagged-protein localization uses extracted immunolabeled preparations, not purified-protein
+    reconstitution.
+  evidence_ids:
+  - microribbon-agent-schwartz2012-jats
+  - microribbon-agent-hagen2011-jats
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Source tiers and exact native receipts
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: All asserted GO identifiers and the cited DOI have source-native support.
+    Schwartz2012 is primary for architecture and secondary for the named protein cohort;
+    Hagen2011 supplies additional primary localization. Native taxon/protein/family
+    entries supply identities and annotation scope. All receipts preserve exact raw
+    hashes and actual UTCZ access times; four reused receipts retain original timestamps.
+    No browser rendering is treated as native HTTP evidence.
+  evidence_ids:
+  - microribbon-agent-go
+  - microribbon-agent-go-mt
+  - microribbon-agent-tax-5741
+  - microribbon-agent-tax-184922
+  - microribbon-agent-epmc
+  - microribbon-agent-schwartz2012-jats
+  - microribbon-agent-epmc-hagen2011
+  - microribbon-agent-hagen2011-jats
+  - microribbon-agent-ipr-008374
+  - microribbon-agent-ipr-038835
+  - microribbon-agent-pfam-06705
+  - microribbon-agent-uniprot-loci
+  - microribbon-agent-uniprot-delta
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded inventory, discussion and maintained ownership
+  outcome: supported
+  target_ids:
+  - GO:0097594
+  summary: The record provides a supported scaffold description and graph with an
+    explicit protein-grounding TODO. Optional finer component rows, protein examples,
+    images and physical properties are not mandatory defects. The GO-derived approximate
+    constituent mass is not presented as a new experimental measurement. Historical
+    rationale, native PROPOSED status and maintained YAML ownership are preserved.
+  evidence_ids:
+  - microribbon-agent-go
+  - microribbon-agent-hagen2011-jats
+  - microribbon-agent-ipr-008374
+  - microribbon-agent-uniprot-loci
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- Schwartz2012 main text and main methods were read, including claim-bearing figure
+  legends; raw tomography, figure pixels, videos and all supplementary datasets were
+  not independently reanalyzed.
+- Hagen2011 was read at the localization, family-table, experimental-method and interpretation
+  passages identified in its evidence locator. Figure S3 caption lists beta-, delta-
+  and gamma-giardin; SALP-1 microribbon association is explicitly reported in the
+  main text and is not misattributed to that caption.
+- Hagen2011 FRAP Methods s2f names DAP5374 as the whole-disc representative, while
+  Results s3e names DAP4410/SALP-1. The report does not use this experiment to establish
+  universal turnover behavior of the entire microribbon cohort.
+- The GO-derived exclusion of tubulin and approximate 29–38 kDa constituent range
+  remain authority-backed definition claims. The 2012 tomographic density map itself
+  is not a biochemical proof of absence or a molecular-mass assay.
+- The exact sheet-specific protein architecture, complete constituent inventory and
+  crossbridge composition are unresolved in the inspected sources. Optional additions
+  are not required for this bounded record.
+- Current unreviewed UniProt annotations and the inspected InterPro/Pfam candidates
+  do not establish one exact family covering the entire named cohort. Lack of a SALP-1
+  family cross-reference is not evidence against its reported homology.
+- Microribbon rigidity, crossbridge contraction, assembly timing and the full attachment
+  mechanism remain interpretations in the cited studies; this review assesses the
+  architectural claims actually made by the record.
+- Species occurrence is supported by the characterized WBC6 trophozoite model; no
+  numerical prevalence, cyst-stage presence or universal distribution across Giardia
+  is inferred.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Native inspect and both focused validators completed before assessment. All twelve
+  input hashes were independently checked against the unchanged base; no neighboring
+  maintained record was required.
+- The explicit authorized batch task requests an unsaved draft for this target, including
+  a clean outcome. No finding is invented to justify an output; saving and finalization
+  remain with the parent/root.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
