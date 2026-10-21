@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/reservosome_membrane.yaml
+  slug: reservosome_membrane
+session:
+  id: 2026-10-19T052600Z-claude-opus-4-7-21d7f5
+  timestamp: '2026-10-19T05:26:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for reservosome membrane (GO:0106126) in membrane_organelle.
+  details: Authored data/structures/membrane_organelle/reservosome_membrane.yaml for
+    reservosome membrane (GO:0106126) with verified GO hierarchy, taxonomic distribution,
+    functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - taxonomy
+  - causal_graphs
+  - evidence

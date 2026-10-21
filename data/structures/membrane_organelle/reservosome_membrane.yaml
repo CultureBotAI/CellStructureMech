@@ -1,0 +1,91 @@
+identifier: GO:0106126
+label: reservosome membrane
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE
+definition: The lipid bilayer surrounding a reservosome. The limiting lipid bilayer
+  membrane surrounding the reservosome in Trypanosoma cruzi epimastigotes. It is enriched
+  in ergosterol, P-type H+-ATPases, ABC transporters, and membrane-tethered Rab11
+  GTPases that mediate endocytic vesicle fusion, luminal acidification, and regulated
+  lipid and protein mobilization during metacyclogenesis.
+definition_source: GO:0106126
+mapping_status: PROPOSED
+parent_structures:
+- GO:0110165
+part_of:
+- cellstructuremech:reservosome
+taxonomic_distribution:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  presence: VARIABLE
+  note: Reservosome lumens occur in reservosomes of T. cruzi epimastigotes and are
+    absent from amastigote and trypomastigote life-cycle forms that lack reservosomes.
+  reference: DOI:10.1017/S0031182004005797
+canonical_examples:
+- taxon_id: NCBITaxon:5693
+  taxon_label: Trypanosoma cruzi
+  note: Kinetoplastid parasite whose epimastigote reservosomes were analyzed by thin-section,
+    uranyl-acetate, and freeze-fracture electron microscopy to resolve complex internal
+    membrane, vesicle, and lipid-inclusion architecture.
+  reference: DOI:10.1002/jemt.20592
+evidence:
+- reference: GO:0106126
+  notes: 'Gene Ontology cellular-component term for reservosome membrane: The lipid
+    bilayer surrounding a reservosome.'
+- reference: GO:0106124
+  notes: Gene Ontology cellular-component term for the reservosome lumen, defined
+    as the volume enclosed by the membranes of a reservosome.
+- reference: GO:0110165
+  notes: Gene Ontology cellular-component parent term for cellular anatomical structures.
+- reference: GO:0106123
+  notes: Gene Ontology cellular-component term for the containing reservosome organelle.
+- reference: GO:0106125
+  notes: Gene Ontology cellular-component term for the distinct reservosome matrix
+    inside the reservosome.
+- reference: PMID:18452191
+  notes: PubMed record for the Sant'Anna et al. 2008 reservosome ultrastructure study.
+- reference: DOI:10.1002/jemt.20592
+  notes: Sant'Anna et al. 2008, New insights into the morphology of Trypanosoma cruzi
+    reservosome, Microscopy Research and Technique.
+- reference: DOI:10.1017/S0031182004005797
+  notes: 'Figueiredo et al. 2004, Reservosome: an endocytic compartment in epimastigote
+    forms of the protozoan Trypanosoma cruzi (Kinetoplastida: Trypanosomatidae), Parasitology.'
+- reference: DOI:10.1002/pmic.200800730
+  notes: Sant'Anna et al. 2009, Subcellular proteomics of Trypanosoma cruzi reservosomes,
+    Proteomics.
+causal_graphs:
+- graph_id: reservosome_membrane_mechanism
+  title: Reservosome membrane assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of reservosome membrane (GO:0106126) to its biological functions.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: reservosome_membrane
+    label: reservosome membrane
+    node_type: STRUCTURE
+    grounding: GO:0106126
+    description: The lipid bilayer surrounding a reservosome.
+  - node_id: reservosome
+    label: reservosome
+    node_type: STRUCTURE
+    grounding: cellstructuremech:reservosome
+    description: Enclosing or holo-structural assembly (reservosome, cellstructuremech:reservosome)
+      containing reservosome membrane.
+  edges:
+  - subject: reservosome_membrane
+    predicate: is part of
+    object: reservosome
+    description: Reservosome membrane forms an integral structural compartment or
+      subassembly of reservosome.
+    evidence:
+    - reference: PMID:18452191
+      notes: PubMed record for the Sant'Anna et al. 2008 reservosome ultrastructure
+        study.
+curation_history:
+- timestamp: '2026-10-19T05:27:39Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of reservosome membrane (GO:0106126) in category MEMBRANE_ORGANELLE
+    with verified GO hierarchy, compartmental context, causal mechanism graph, and
+    literature evidence.
+  llm_assisted: true

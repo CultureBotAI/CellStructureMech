@@ -1,0 +1,456 @@
+identifier: GO:0030008
+label: TRAPP complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A large complex that acts as a tethering factor involved in transporting
+  vesicles from the ER through the Golgi to the plasma membrane. A TRAPP (transport
+  protein particle) complex has a core set of proteins which are joined by specific
+  subunits depending on the cellular component where a given TRAPP complex is active.
+  The conserved eukaryotic Transport Protein Particle (TRAPP) family of multisubunit
+  vesicle-tethering and Rab guanine nucleotide exchange factor (GEF) complexes in
+  yeasts, fungi, and protists. Built around a shared heptameric core (Bet3p dimer,
+  Bet5p, Trs20p, Trs23p, Trs31p, Trs33p) that forms the catalytic GEF site, TRAPP
+  complexes (TRAPPI, TRAPPII, and TRAPPIII) activate Ypt1/Rab1 and Ypt31/32 GTPases
+  to coordinate ER-to-Golgi transport, intra-Golgi trafficking, and autophagy.
+definition_source: GO:0030008
+mapping_status: PROPOSED
+parent_structures:
+- GO:0099023
+- GO:0140535
+synonyms:
+- synonym_text: transport protein particle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030008
+- synonym_text: transport protein particle complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030008
+- synonym_text: TRAPP1
+  synonym_type: NARROW_SYNONYM
+  source: GO:0030008
+- synonym_text: TRAPP2
+  synonym_type: NARROW_SYNONYM
+  source: GO:0030008
+components:
+- component_id: bet3_trapp_core_subunit
+  label: Bet3 TRAPP core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BET3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Bet3 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core TRAPPI constituent present as the homodimeric Bet3 subunit class in the
+    yeast TRAPP core complex. Functions within the core Transport Protein Particle
+    (TRAPP) GEF and tethering complex in TRAPP complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Bet3 as a homodimeric yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Bet3 had been described previously as a TRAPP
+      subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36149
+    protein_label: Trafficking protein particle complex subunit BET3
+    gene_symbol: BET3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BET3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P36149
+      notes: UniProtKB reviewed (Swiss-Prot) entry P36149, the single reviewed entry
+        for gene BET3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: bet5_trapp_core_subunit
+  label: Bet5 TRAPP core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - BET5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Bet5 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+    within the core Transport Protein Particle (TRAPP) GEF and tethering complex in
+    TRAPP complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Bet5 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Bet5 had been described previously as a TRAPP
+      subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03630
+    protein_label: Trafficking protein particle complex subunit BET5
+    gene_symbol: BET5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene BET5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:Q03630
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03630, the single reviewed entry
+        for gene BET5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: trs20_trapp_core_subunit
+  label: Trs20 TRAPP core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS20
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs20 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+    within the core Transport Protein Particle (TRAPP) GEF and tethering complex in
+    TRAPP complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Trs20 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Trs20 had been described previously as a
+      TRAPP subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38334
+    protein_label: Trafficking protein particle complex subunit 20
+    gene_symbol: TRS20
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS20 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P38334
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38334, the single reviewed entry
+        for gene TRS20 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: trs23_trapp_core_subunit
+  label: Trs23 TRAPP core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS23
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs23 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+    within the core Transport Protein Particle (TRAPP) GEF and tethering complex in
+    TRAPP complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Trs23 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Trs23 had been described previously as a
+      TRAPP subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03784
+    protein_label: Trafficking protein particle complex subunit 23
+    gene_symbol: TRS23
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS23 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:Q03784
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03784, the single reviewed entry
+        for gene TRS23 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: trs31_trapp_core_subunit
+  label: Trs31 TRAPP core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS31
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs31 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+    within the core Transport Protein Particle (TRAPP) GEF and tethering complex in
+    TRAPP complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Trs31 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 identified Trs31 among the additional yeast TRAPP subunits.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03337
+    protein_label: Trafficking protein particle complex subunit 31
+    gene_symbol: TRS31
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS31 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:Q03337
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q03337, the single reviewed entry
+        for gene TRS31 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: trs33_trapp_core_subunit
+  label: Trs33 TRAPP core subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - TRS33
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Curated from the named Saccharomyces cerevisiae Trs33 TRAPPI core
+    subunit; no exact source-neutral InterPro or Pfam family identifier for this TRAPP
+    subunit class was curated in this pass.
+  role: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+    within the core Transport Protein Particle (TRAPP) GEF and tethering complex in
+    TRAPP complex.
+  evidence:
+  - reference: GO:1990070
+    notes: GO:1990070 names Trs33 as a yeast TRAPPI core subunit.
+  - reference: DOI:10.1078/S0171-9335(04)70009-6
+    notes: Sacher et al. 2000 noted that Trs33 had been described previously as a
+      TRAPP subunit.
+  - reference: DOI:10.1016/j.cell.2006.09.029
+    notes: Kim et al. 2006 resolved the architecture of the seven-chain yeast TRAPP
+      I vesicle-tethering factor.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q99394
+    protein_label: Trafficking protein particle complex subunit 33
+    gene_symbol: TRS33
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TRS33 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:Q99394
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q99394, the single reviewed entry
+        for gene TRS33 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a TRAPPI complex that tethers COPII vesicles during endoplasmic-reticulum-to-Golgi
+    traffic.
+  reference: DOI:10.1016/s1097-2765(01)00190-3
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which purified TRAPP I was shown to tether COPII vesicles
+    specifically in vitro.
+  reference: DOI:10.1016/s1097-2765(01)00190-3
+functions:
+- function_id: er_to_golgi_vesicle_mediated_transport
+  label: endoplasmic reticulum to Golgi vesicle-mediated transport
+  grounding: GO:0006888
+  description: TRAPPI tethers COPII vesicles at the ER-Golgi interface during anterograde
+    vesicle-mediated transport toward the Golgi.
+  evidence:
+  - reference: GO:0006888
+    notes: GO:0006888 denotes COPII-vesicle-mediated transport from the endoplasmic
+      reticulum to the Golgi.
+  - reference: DOI:10.1016/s1097-2765(01)00190-3
+    notes: Sacher et al. 2001 reconstituted COPII vesicle targeting with purified
+      TRAPP I.
+evidence:
+- reference: GO:0030008
+  notes: 'Gene Ontology cellular-component term for TRAPP complex: A large complex
+    that acts as a tethering factor involved in transporting vesicles from the ER
+    through the Golgi to the plasma membrane. A TRAPP (transport protein particle)
+    complex has a core set of proteins which are joined by specific subunits depending
+    on the cellular component where a given TRAPP complex is active.'
+- reference: GO:1990070
+  notes: Gene Ontology cellular-component term for the TRAPPI protein complex.
+- reference: GO:0006888
+  notes: Gene Ontology biological-process term for endoplasmic-reticulum-to-Golgi
+    vesicle-mediated transport.
+- reference: DOI:10.1093/emboj/17.9.2494
+  notes: Sacher et al. 1998, TRAPP, a highly conserved novel complex on the cis-Golgi
+    that mediates vesicle docking and fusion, EMBO Journal.
+- reference: DOI:10.1078/S0171-9335(04)70009-6
+  notes: Sacher et al. 2000, Identification and characterization of five new subunits
+    of TRAPP, European Journal of Cell Biology.
+- reference: DOI:10.1016/s1097-2765(01)00190-3
+  notes: Sacher et al. 2001, TRAPP I implicated in the specificity of tethering in
+    ER-to-Golgi transport, Molecular Cell.
+- reference: DOI:10.1016/j.cell.2006.09.029
+  notes: Kim et al. 2006, The architecture of the multisubunit TRAPP I complex suggests
+    a model for vesicle tethering, Cell.
+causal_graphs:
+- graph_id: trapp_complex_mechanism
+  title: Trapp complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of TRAPP complex (GO:0030008) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: trapp_complex
+    label: TRAPP complex
+    node_type: STRUCTURE
+    grounding: GO:0030008
+    description: A large complex that acts as a tethering factor involved in transporting
+      vesicles from the ER through the Golgi to the plasma membrane.
+  - node_id: bet3_trapp_core_subunit
+    label: Bet3 TRAPP core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bet3_trapp_core_subunit
+    description: Core TRAPPI constituent present as the homodimeric Bet3 subunit class
+      in the yeast TRAPP core complex. Functions within the core Transport Protein
+      Particle (TRAPP) GEF and tethering complex in TRAPP complex.
+  - node_id: bet5_trapp_core_subunit
+    label: Bet5 TRAPP core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: bet5_trapp_core_subunit
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+  - node_id: trs20_trapp_core_subunit
+    label: Trs20 TRAPP core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs20_trapp_core_subunit
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+  - node_id: trs23_trapp_core_subunit
+    label: Trs23 TRAPP core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs23_trapp_core_subunit
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+  - node_id: trs31_trapp_core_subunit
+    label: Trs31 TRAPP core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs31_trapp_core_subunit
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+  - node_id: trs33_trapp_core_subunit
+    label: Trs33 TRAPP core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: trs33_trapp_core_subunit
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+  - node_id: er_to_golgi_vesicle_mediated_transport
+    label: endoplasmic reticulum to Golgi vesicle-mediated transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006888
+    description: TRAPPI tethers COPII vesicles at the ER-Golgi interface during anterograde
+      vesicle-mediated transport toward the Golgi.
+  edges:
+  - subject: bet3_trapp_core_subunit
+    predicate: is part of
+    object: trapp_complex
+    description: Core TRAPPI constituent present as the homodimeric Bet3 subunit class
+      in the yeast TRAPP core complex. Functions within the core Transport Protein
+      Particle (TRAPP) GEF and tethering complex in TRAPP complex.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Bet3 as a homodimeric yeast TRAPPI core subunit.
+  - subject: bet5_trapp_core_subunit
+    predicate: is part of
+    object: trapp_complex
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Bet5 as a yeast TRAPPI core subunit.
+  - subject: trs20_trapp_core_subunit
+    predicate: is part of
+    object: trapp_complex
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Trs20 as a yeast TRAPPI core subunit.
+  - subject: trs23_trapp_core_subunit
+    predicate: is part of
+    object: trapp_complex
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Trs23 as a yeast TRAPPI core subunit.
+  - subject: trs31_trapp_core_subunit
+    predicate: is part of
+    object: trapp_complex
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Trs31 as a yeast TRAPPI core subunit.
+  - subject: trs33_trapp_core_subunit
+    predicate: is part of
+    object: trapp_complex
+    description: Core constituent of the yeast TRAPPI vesicle-tethering complex. Functions
+      within the core Transport Protein Particle (TRAPP) GEF and tethering complex
+      in TRAPP complex.
+    evidence:
+    - reference: GO:1990070
+      notes: GO:1990070 names Trs33 as a yeast TRAPPI core subunit.
+  - subject: trapp_complex
+    predicate: mediates
+    object: er_to_golgi_vesicle_mediated_transport
+    description: TRAPPI tethers COPII vesicles at the ER-Golgi interface during anterograde
+      vesicle-mediated transport toward the Golgi.
+    evidence:
+    - reference: GO:0006888
+      notes: GO:0006888 denotes COPII-vesicle-mediated transport from the endoplasmic
+        reticulum to the Golgi.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of TRAPP complex (GO:0030008) in category OTHER with verified
+    GO hierarchy, components, UniProtKB protein examples, causal mechanism graph,
+    and literature evidence.
+  llm_assisted: true

@@ -1,0 +1,253 @@
+identifier: GO:0042764
+label: ascospore-type prospore
+structure_category: SPORE
+structure_kind: SUBCELLULAR_REGION
+definition: An immature spore undergoing development. The spore usually consists of
+  nucleic acid, prospore membrane(s) that encase the nucleic acid, and ultimately
+  a cell wall that covers the membrane(s). This type of spore is observed in ascospore-forming
+  fungi. The nascent intracellular spore compartment formed during meiosis II in ascomycete
+  yeasts such as Saccharomyces cerevisiae and Schizosaccharomyces pombe before spore
+  wall maturation. Each ascospore-type prospore is delimited by the double-layered
+  prospore membrane that grows from the spindle pole body to engulf a haploid nucleus
+  and maternal cytoplasm.
+definition_source: GO:0042764
+mapping_status: PROPOSED
+parent_structures:
+- GO:0042763
+has_part:
+- GO:0005628
+- GO:0032157
+- GO:0032169
+- GO:1905754
+components:
+- component_id: prospore_membrane_lipid_bilayer
+  label: prospore membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Double membrane that expands from the meiotic spindle-pole body region and
+    surrounds haploid nuclei during ascospore formation.
+  evidence:
+  - reference: GO:0005628
+    notes: GO:0005628 defines the prospore membrane as a double-membraned structure
+      that extends from the cytoplasmic face of spindle pole bodies during meiosis.
+  - reference: DOI:10.1083/jcb.140.1.29
+    notes: Neiman 1998 analyzed prospore membrane formation in Saccharomyces cerevisiae
+      as a sporulation-specific branch of post-Golgi secretion.
+- component_id: leading_edge_protein_coat
+  label: prospore membrane leading edge protein coat
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SSP1
+  - ADY3
+  - DON1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The leading-edge protein coat is curated from yeast localization
+    and protein-identification studies; no exact source-neutral Complex Portal, GO,
+    InterPro, Pfam or NCBIfam term was chosen for the whole transient coat or for
+    its individual budding-yeast subunit families.
+  role: Protein coat at the lip of the growing prospore membrane that marks the leading
+    edge before membrane closure.
+  evidence:
+  - reference: GO:0070056
+    notes: GO:0070056 defines the prospore membrane leading edge as the protein-coated
+      region that extends to surround the spore nucleus.
+  - reference: DOI:10.1093/emboj/20.24.6946
+    notes: Moreno-Borchart et al. 2001 linked formation of the Saccharomyces prospore
+      membrane to leading-edge protein coat assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38871
+    protein_label: Sporulation-specific protein 1
+    gene_symbol: SSP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SSP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11742972
+      notes: Moreno-Borchart AC et al. 2001, ‘Prospore membrane formation linked to
+        the leading edge protein (LEP) coat assembly.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Prospore membrane' localisation of P38871.
+  - uniprot_id: UniProtKB:Q07732
+    protein_label: Accumulates dyads protein 3
+    gene_symbol: ADY3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ADY3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:Q07732
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q07732, the single reviewed entry
+        for gene ADY3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q05610
+    protein_label: Donuts protein 1
+    gene_symbol: DON1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene DON1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10899120
+      notes: Knop M et al. 2000, ‘Role of the spindle pole body of yeast in mediating
+        assembly of the prospore membrane during meiosis.’, EMBO J. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Prospore membrane' localisation of Q05610.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast builds prospore membranes during the sporulation program; this
+    species-level scope avoids asserting conservation of the membrane or leading-edge
+    protein set across all ascospore-forming fungi.
+  reference: DOI:10.1083/jcb.140.1.29
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which secretory trafficking, meiotic outer plaques,
+    and leading-edge coat proteins were tied to prospore membrane assembly.
+  reference: DOI:10.1093/emboj/20.24.6946
+functions:
+- function_id: ascospore_type_prospore_assembly
+  label: ascospore-type prospore assembly
+  grounding: GO:0031321
+  description: Expansion and closure of the prospore membrane encapsulate haploid
+    meiotic nuclei to create immature ascospores.
+  evidence:
+  - reference: GO:0031321
+    notes: GO:0031321 defines ascospore-type prospore assembly as the encapsulation
+      of each haploid nucleus by a double membrane.
+evidence:
+- reference: GO:0042764
+  notes: 'Gene Ontology cellular-component term for ascospore-type prospore: An immature
+    spore undergoing development. The spore usually consists of nucleic acid, prospore
+    membrane(s) that encase the nucleic acid, and ultimately a cell wall that covers
+    the membrane(s). This type of spore is observed in ascospore-forming fungi.'
+- reference: GO:0005628
+  notes: Gene Ontology cellular-component term for the prospore membrane.
+- reference: GO:0070056
+  notes: Gene Ontology cellular-component term for the prospore membrane leading edge.
+- reference: GO:0070057
+  notes: Gene Ontology cellular-component term for the prospore membrane spindle pole
+    body attachment site.
+- reference: GO:0032120
+  notes: Gene Ontology biological-process term for ascospore-type prospore membrane
+    formation.
+- reference: GO:0031321
+  notes: Gene Ontology biological-process term for ascospore-type prospore assembly.
+- reference: DOI:10.1083/jcb.140.1.29
+  notes: Neiman 1998, Prospore Membrane Formation Defines a Developmentally Regulated
+    Branch of the Secretory Pathway in Yeast, Journal of Cell Biology.
+- reference: DOI:10.1093/emboj/19.14.3657
+  notes: Knop and Strasser 2000, Role of the spindle pole body of yeast in mediating
+    assembly of the prospore membrane during meiosis, The EMBO Journal.
+- reference: DOI:10.1093/emboj/20.24.6946
+  notes: Moreno-Borchart et al. 2001, Prospore membrane formation linked to the leading
+    edge protein (LEP) coat assembly, The EMBO Journal.
+causal_graphs:
+- graph_id: ascospore_type_prospore_mechanism
+  title: Ascospore-type prospore assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of ascospore-type prospore (GO:0042764) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ascospore_type_prospore
+    label: ascospore-type prospore
+    node_type: STRUCTURE
+    grounding: GO:0042764
+    description: An immature spore undergoing development.
+  - node_id: prospore_membrane_lipid_bilayer
+    label: prospore membrane lipid bilayer
+    node_type: CHEMICAL
+    component_ref: prospore_membrane_lipid_bilayer
+    description: Double membrane that expands from the meiotic spindle-pole body region
+      and surrounds haploid nuclei during ascospore formation.
+  - node_id: leading_edge_protein_coat
+    label: prospore membrane leading edge protein coat
+    node_type: GENE_OR_PROTEIN
+    component_ref: leading_edge_protein_coat
+    description: Protein coat at the lip of the growing prospore membrane that marks
+      the leading edge before membrane closure.
+  - node_id: prospore_membrane
+    label: prospore membrane
+    node_type: STRUCTURE
+    grounding: GO:0005628
+    description: Constituent structural subassembly (prospore membrane, GO:0005628)
+      within ascospore-type prospore.
+  - node_id: prospore_contractile_ring
+    label: prospore contractile ring
+    node_type: STRUCTURE
+    grounding: GO:0032157
+    description: Constituent structural subassembly (prospore contractile ring, GO:0032157)
+      within ascospore-type prospore.
+  - node_id: ascospore_type_prospore_assembly
+    label: ascospore-type prospore assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031321
+    description: Expansion and closure of the prospore membrane encapsulate haploid
+      meiotic nuclei to create immature ascospores.
+  edges:
+  - subject: prospore_membrane_lipid_bilayer
+    predicate: is part of
+    object: ascospore_type_prospore
+    description: Double membrane that expands from the meiotic spindle-pole body region
+      and surrounds haploid nuclei during ascospore formation.
+    evidence:
+    - reference: GO:0005628
+      notes: GO:0005628 defines the prospore membrane as a double-membraned structure
+        that extends from the cytoplasmic face of spindle pole bodies during meiosis.
+  - subject: leading_edge_protein_coat
+    predicate: is part of
+    object: ascospore_type_prospore
+    description: Protein coat at the lip of the growing prospore membrane that marks
+      the leading edge before membrane closure.
+    evidence:
+    - reference: GO:0070056
+      notes: GO:0070056 defines the prospore membrane leading edge as the protein-coated
+        region that extends to surround the spore nucleus.
+  - subject: prospore_membrane
+    predicate: is part of
+    object: ascospore_type_prospore
+    description: Prospore membrane is a structural part of ascospore-type prospore.
+    evidence:
+    - reference: DOI:10.1083/jcb.140.1.29
+      notes: Neiman 1998, Prospore Membrane Formation Defines a Developmentally Regulated
+        Branch of the Secretory Pathway in Yeast, Journal of Cell Biology.
+  - subject: prospore_contractile_ring
+    predicate: is part of
+    object: ascospore_type_prospore
+    description: Prospore contractile ring is a structural part of ascospore-type
+      prospore.
+    evidence:
+    - reference: DOI:10.1083/jcb.140.1.29
+      notes: Neiman 1998, Prospore Membrane Formation Defines a Developmentally Regulated
+        Branch of the Secretory Pathway in Yeast, Journal of Cell Biology.
+  - subject: ascospore_type_prospore
+    predicate: mediates
+    object: ascospore_type_prospore_assembly
+    description: Expansion and closure of the prospore membrane encapsulate haploid
+      meiotic nuclei to create immature ascospores.
+    evidence:
+    - reference: GO:0031321
+      notes: GO:0031321 defines ascospore-type prospore assembly as the encapsulation
+        of each haploid nucleus by a double membrane.
+curation_history:
+- timestamp: '2026-10-19T05:27:40Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of ascospore-type prospore (GO:0042764) in category SPORE
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true

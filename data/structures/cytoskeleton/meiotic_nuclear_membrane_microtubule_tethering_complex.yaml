@@ -1,0 +1,301 @@
+identifier: GO:0034993
+label: meiotic nuclear membrane microtubule tethering complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A nuclear membrane protein complex which connects the nuclear outer and
+  inner membranes together, and links links the nuclear lumen to cytoplasmic microtubules
+  during meiosis. A specialized nuclear-envelope-spanning multiprotein tethering complex
+  assembled during meiotic prophase in fission yeast (Schizosaccharomyces pombe) and
+  related fungi that links clustered meiotic telomeres (via Bqt1–Bqt2) through the
+  inner nuclear membrane SUN protein Sad1 and outer nuclear membrane KASH protein
+  Kms1 to cytoplasmic dynein (Dhc1) and the hrs1/mcp6-organized horsetail microtubule
+  array.
+definition_source: GO:0034993
+mapping_status: PROPOSED
+parent_structures:
+- GO:0106094
+part_of:
+- GO:0034992
+synonyms:
+- synonym_text: LINC complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034993
+- synonym_text: LInker of Nucleoskeleton and Cytoskeleton complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034993
+- synonym_text: SUN-KASH complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034993
+components:
+- component_id: sad1_sun_protein
+  label: inner nuclear membrane SUN-domain protein Sad1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR045119
+  gene_symbols:
+  - sad1
+  essentiality: ESSENTIAL
+  role: Inner nuclear membrane SUN-domain transmembrane subunit whose lumenal SUN
+    domain binds Kms1 and whose nucleoplasmic N-terminus engages Bqt1-Bqt2 at clustered
+    telomeres.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: Chikashige et al. 2006 show that Bqt1-Bqt2 connect telomeric Rap1 to the
+      inner nuclear membrane SUN protein Sad1 during meiotic bouquet formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q09825
+    protein_label: Spindle pole body-associated protein sad1
+    gene_symbol: sad1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: The primary abstract identifies Sad1 as the envelope/SPB-side binding
+        partner of the Bqt1/Bqt2 bridge.
+    - reference: UniProtKB:Q09825
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+- component_id: kms1_kash_protein
+  label: outer nuclear membrane KASH-domain protein Kms1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - kms1
+  essentiality: ESSENTIAL
+  role: Outer nuclear membrane KASH-domain transmembrane subunit that binds Sad1 in
+    the perinuclear space and recruits cytoplasmic dynein-dynactin motors to drive
+    horsetail nuclear movement.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Describes the Sad1-Kms1 nuclear envelope LINC bridge linking meiotic telomeres
+      to cytoplasmic microtubule motors.
+  protein_examples:
+  - uniprot_id: UniProtKB:P87245
+    protein_label: Karyogamy meiotic segregation protein 1
+    gene_symbol: kms1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-56049-9
+      notes: The paper identifies Kms1 in the telomere-associated LINC system and
+        directly follows its recruitment in a partial mitotic reconstitution, not
+        a complete meiotic bouquet.
+    - reference: UniProtKB:P87245
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+- component_id: bqt1_bqt2_meiotic_connector
+  label: meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - bqt1
+  - bqt2
+  essentiality: CONDITIONAL
+  role: Meiosis-specific nuclear bridge heterodimer expressed during prophase I that
+    links Rap1-Taz1 at telomeres to the nucleoplasmic domain of Sad1.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: Chikashige et al. 2006 demonstrate that Bqt1 and Bqt2 form a meiosis-specific
+      bridge linking Rap1 at telomeres to Sad1.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q92358
+    protein_label: Telomere bouquet protein 1
+    gene_symbol: bqt1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Figure 7 follows tagged Bqt1; induced degradation releases telomeres
+        from the SPB.
+    - reference: UniProtKB:Q92358
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  - uniprot_id: UniProtKB:Q9US52
+    protein_label: Telomere bouquet protein 2
+    gene_symbol: bqt2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Primary abstract directly identifies Bqt2 together with Bqt1 as the Rap1-Sad1
+        connector; no uninspected figure-level detail is inferred.
+    - reference: UniProtKB:Q9US52
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+canonical_examples:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  note: Reference fission yeast model in which the Sad1-Kms1 LINC bridge and Bqt1-Bqt2
+    meiotic telomere bouquet tether were genetically and biochemically defined.
+  reference: DOI:10.1016/j.cell.2006.01.048
+functions:
+- function_id: horsetail_movement
+  label: dynein-driven meiotic oscillatory nuclear movement
+  grounding: GO:0030989
+  description: Provides the radial microtubule array that leads spindle-pole and nuclear
+    oscillations during S. pombe meiotic prophase, acting with dynein-dynactin machinery.
+  evidence:
+  - reference: GO:0032117
+    notes: The exact structure definition specifies facilitation of horsetail nuclear
+      movement.
+  - reference: DOI:10.1016/j.cub.2005.07.058
+    notes: 'Readable primary abstract: Hrs1 loss impairs HAA formation and compromises
+      horsetail movement; ectopic Hrs1 produces HAA-like arrays and nuclear oscillation
+      in interphase. Full text was not accessible, so no detailed motor-interface
+      or quantitative claim is extracted.'
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: The main-text study follows the Hrs1-dependent radial array during meiotic
+      prophase and its replacement at meiosis I. Chromosome pairing and recombination
+      are not asserted as directly quantified array-only outcomes here.
+evidence:
+- reference: GO:0034993
+  notes: 'Gene Ontology cellular-component term for meiotic nuclear membrane microtubule
+    tethering complex: A nuclear membrane protein complex which connects the nuclear
+    outer and inner membranes together, and links links the nuclear lumen to cytoplasmic
+    microtubules during meiosis.'
+- reference: GO:0032117
+  notes: Native non-obsolete identity, exact synonym, definition, is-a aster and part-of
+    cortical microtubule cytoskeleton verified through OAK on 2026-10-08.
+- reference: DOI:10.1016/j.cub.2012.02.042
+  notes: PMID 22425159; native PMC3382715.1 main text and captions read, with supplemental
+    strain table and methods on pages 13-22. Selected supplemental pages and the unchanged
+    Figure 4 were visually inspected. Movies and raw data were not inspected.
+- reference: DOI:10.1016/j.cub.2005.07.058
+  notes: PMID 16111942; published citation and DOI verified at NCBI. The primary abstract
+    was readable, but the direct publisher returned 403; full text and supplements
+    remain unread. Used only for abstract-scoped naming and function statements.
+causal_graphs:
+- graph_id: meiotic_nuclear_membrane_microtubule_tethering_complex_mechanism
+  title: Meiotic nuclear membrane microtubule tethering complex assembly and functional
+    mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of meiotic nuclear membrane microtubule tethering complex (GO:0034993)
+    to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: meiotic_nuclear_membrane_microtubule_tethering_complex
+    label: meiotic nuclear membrane microtubule tethering complex
+    node_type: STRUCTURE
+    grounding: GO:0034993
+    description: A nuclear membrane protein complex which connects the nuclear outer
+      and inner membranes together, and links links the nuclear lumen to cytoplasmic
+      microtubules during meiosis.
+  - node_id: sad1_sun_protein
+    label: inner nuclear membrane SUN-domain protein Sad1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR045119
+    component_ref: sad1_sun_protein
+    description: Inner nuclear membrane SUN-domain transmembrane subunit whose lumenal
+      SUN domain binds Kms1 and whose nucleoplasmic N-terminus engages Bqt1-Bqt2 at
+      clustered telomeres.
+  - node_id: kms1_kash_protein
+    label: outer nuclear membrane KASH-domain protein Kms1
+    node_type: GENE_OR_PROTEIN
+    component_ref: kms1_kash_protein
+    description: Outer nuclear membrane KASH-domain transmembrane subunit that binds
+      Sad1 in the perinuclear space and recruits cytoplasmic dynein-dynactin motors
+      to drive horsetail nuclear movement.
+  - node_id: bqt1_bqt2_meiotic_connector
+    label: meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)
+    node_type: GENE_OR_PROTEIN
+    component_ref: bqt1_bqt2_meiotic_connector
+    description: Meiosis-specific nuclear bridge heterodimer expressed during prophase
+      I that links Rap1-Taz1 at telomeres to the nucleoplasmic domain of Sad1.
+  - node_id: microtubule_organizing_center_attachment_site
+    label: microtubule organizing center attachment site
+    node_type: STRUCTURE
+    grounding: GO:0034992
+    description: Enclosing or holo-structural assembly (microtubule organizing center
+      attachment site, GO:0034992) containing meiotic nuclear membrane microtubule
+      tethering complex.
+  - node_id: horsetail_movement
+    label: dynein-driven meiotic oscillatory nuclear movement
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030989
+    description: Provides the radial microtubule array that leads spindle-pole and
+      nuclear oscillations during S. pombe meiotic prophase, acting with dynein-dynactin
+      machinery.
+  edges:
+  - subject: sad1_sun_protein
+    predicate: is part of
+    object: meiotic_nuclear_membrane_microtubule_tethering_complex
+    description: Inner nuclear membrane SUN-domain transmembrane subunit whose lumenal
+      SUN domain binds Kms1 and whose nucleoplasmic N-terminus engages Bqt1-Bqt2 at
+      clustered telomeres.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Chikashige et al. 2006 show that Bqt1-Bqt2 connect telomeric Rap1 to
+        the inner nuclear membrane SUN protein Sad1 during meiotic bouquet formation.
+  - subject: kms1_kash_protein
+    predicate: is part of
+    object: meiotic_nuclear_membrane_microtubule_tethering_complex
+    description: Outer nuclear membrane KASH-domain transmembrane subunit that binds
+      Sad1 in the perinuclear space and recruits cytoplasmic dynein-dynactin motors
+      to drive horsetail nuclear movement.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Describes the Sad1-Kms1 nuclear envelope LINC bridge linking meiotic
+        telomeres to cytoplasmic microtubule motors.
+  - subject: bqt1_bqt2_meiotic_connector
+    predicate: associates with
+    object: meiotic_nuclear_membrane_microtubule_tethering_complex
+    description: Meiosis-specific nuclear bridge heterodimer expressed during prophase
+      I that links Rap1-Taz1 at telomeres to the nucleoplasmic domain of Sad1.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Chikashige et al. 2006 demonstrate that Bqt1 and Bqt2 form a meiosis-specific
+        bridge linking Rap1 at telomeres to Sad1.
+  - subject: meiotic_nuclear_membrane_microtubule_tethering_complex
+    predicate: is part of
+    object: microtubule_organizing_center_attachment_site
+    description: Meiotic nuclear membrane microtubule tethering complex forms an integral
+      structural compartment or subassembly of microtubule organizing center attachment
+      site.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: PMID 22425159; native PMC3382715.1 main text and captions read, with
+        supplemental strain table and methods on pages 13-22. Selected supplemental
+        pages and the unchanged Figure 4 were visually inspected. Movies and raw data
+        were not inspected.
+  - subject: meiotic_nuclear_membrane_microtubule_tethering_complex
+    predicate: mediates
+    object: horsetail_movement
+    description: Provides the radial microtubule array that leads spindle-pole and
+      nuclear oscillations during S. pombe meiotic prophase, acting with dynein-dynactin
+      machinery.
+    evidence:
+    - reference: GO:0032117
+      notes: The exact structure definition specifies facilitation of horsetail nuclear
+        movement.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of meiotic nuclear membrane microtubule tethering complex
+    (GO:0034993) in category CYTOSKELETON with verified GO hierarchy, components,
+    UniProtKB protein examples, causal mechanism graph, and literature evidence.
+  llm_assisted: true
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: Conserved fungal nuclear-envelope LINC and meiotic telomere-microtubule tethering
+    complex coupling chromosomes across the nuclear membranes to cytoplasmic dynein.
+  reference: DOI:10.1016/j.cell.2006.01.048

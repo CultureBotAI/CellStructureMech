@@ -1,0 +1,332 @@
+identifier: GO:0030875
+label: rDNA protrusion
+structure_category: OTHER
+structure_kind: OTHER
+definition: Any of the tandem arrays of rDNA localized at the periphery of the nucleus
+  and protruding into the nucleolus, and associated proteins. May be visible as a
+  single or double spot by DAPI staining. In Saccharomyces cerevisiae and Schizosaccharomyces
+  pombe, the rDNA protrusion comprises the tandemly repeated 35S/37S ribosomal DNA
+  array on chromosome XII or III extending from the nuclear chromatin mass into the
+  crescent-shaped nucleolus, bound by Fob1, Sir2/RENT, Net1, Hmo1, and RNA polymerase
+  I.
+definition_source: GO:0030875
+mapping_status: PROPOSED
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0030874
+components:
+- component_id: rdna_tandem_repeat_array
+  label: ribosomal DNA (rDNA) tandem repeat chromosomal array
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Tandemly repeated ribosomal DNA transcription units (encoding 35S pre-rRNA
+    and 5S rRNA separated by NTS1/NTS2 spacers) that extend from the chromosome arm
+    into the nucleolus as the nucleolar chromatin organizer.
+  evidence:
+  - reference: DOI:10.1038/nrm2184
+    notes: Describes the organization of nucleolar rDNA tandem repeats within the
+      eukaryotic nucleolus.
+- component_id: nucleolar_chromatin_histones
+  label: nucleolar rDNA nucleosomal core histones
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HHF1
+  - HHT1
+  essentiality: ESSENTIAL
+  role: Nucleosomal core histones packaging rDNA repeats and undergoing Sir2-dependent
+    H4K16 deacetylation to regulate rDNA chromatin compaction and recombination.
+  evidence:
+  - reference: DOI:10.1146/annurev.genet.33.1.261
+    notes: Establishes nucleosomal chromatin organization and Sir2-mediated histone
+      deacetylation across nucleolar rDNA repeats.
+  protein_examples:
+  - uniprot_id: UniProtKB:P02309
+    protein_label: Histone H4
+    gene_symbol: HHF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HHF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P02309
+      notes: UniProtKB reviewed (Swiss-Prot) entry P02309, the single reviewed entry
+        for gene HHF1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P61830
+    protein_label: Histone H3
+    gene_symbol: HHT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HHT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P61830
+      notes: UniProtKB reviewed (Swiss-Prot) entry P61830, the single reviewed entry
+        for gene HHT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: rent_rdna_silencing_machinery
+  label: rDNA chromatin silencing deacetylase Sir2 (RENT complex subunit)
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - SIR2
+  essentiality: DISPENSABLE
+  role: NAD+-dependent histone deacetylase recruited to the rDNA non-transcribed spacer
+    (NTS1/NTS2) within the RENT complex to silence Pol II transcription and suppress
+    unequal rDNA sister-chromatid recombination.
+  evidence:
+  - reference: DOI:10.1146/annurev.genet.33.1.261
+    notes: Reviews the role of Sir2 and nucleolar chromatin organization in yeast
+      rDNA silencing.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06700
+    protein_label: NAD-dependent histone deacetylase SIR2
+    gene_symbol: SIR2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar; the accession does not imply that the reference
+      stock was the exact experimental strain.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Figure 1 immuno-FISH and dual-color localization identify telomere-associated
+        Sir2.
+    - reference: UniProtKB:P06700
+      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
+        Structural role is supported by the primary experiment, not inferred from
+        the sequence lookup.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Nucleoli are non-membrane-bounded bodies of eukaryotic nuclei that concentrate
+    ribosomal gene transcription and early ribosome biogenesis.
+  reference: GO:0005730
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which nucleolar ribosome synthesis includes 35S pre-rRNA
+    processing and U3-containing small-subunit processome assembly.
+  reference: DOI:10.1038/nature00769
+functions:
+- function_id: transcription_by_rna_polymerase_i
+  label: transcription by RNA polymerase I
+  grounding: GO:0006360
+  description: RNA polymerase I in the nucleolus transcribes ribosomal DNA to produce
+    the major pre-rRNA precursor.
+  evidence:
+  - reference: GO:0006360
+    notes: GO:0006360 denotes RNA synthesis from a DNA template by RNA polymerase
+      I.
+  - reference: DOI:10.1146/annurev.genet.33.1.261
+    notes: Venema and Tollervey 1999 review rDNA transcription as the first stage
+      of yeast ribosome synthesis.
+- function_id: rrna_processing
+  label: rRNA processing
+  grounding: GO:0006364
+  description: Nucleolar ribonucleoproteins process primary rRNA transcripts as part
+    of ribosome biogenesis.
+  evidence:
+  - reference: GO:0006364
+    notes: GO:0006364 denotes conversion of a primary rRNA transcript into mature
+      rRNA molecules.
+  - reference: DOI:10.1038/nature00769
+    notes: Dragon et al. 2002 identified the nucleolar U3 small-subunit processome
+      as required for 18S rRNA biogenesis.
+- function_id: ribosome_biogenesis
+  label: ribosome biogenesis
+  grounding: GO:0042254
+  description: The nucleolus organizes early transcription, rRNA processing, and preribosomal
+    assembly steps that contribute to production of cytoplasmic ribosomal subunits.
+  evidence:
+  - reference: GO:0042254
+    notes: GO:0042254 denotes the biosynthesis, assembly, and arrangement of ribosome-subunit
+      constituents.
+  - reference: DOI:10.1038/nrm2184
+    notes: Boisvert et al. 2007 review the nucleolus as a eukaryotic nuclear body
+      centered on ribosome biogenesis.
+evidence:
+- reference: GO:0030875
+  notes: 'Gene Ontology cellular-component term for rDNA protrusion: Any of the tandem
+    arrays of rDNA localized at the periphery of the nucleus and protruding into the
+    nucleolus, and associated proteins.'
+- reference: GO:0030874
+  notes: 'Gene Ontology cellular-component term for nucleolar chromatin: The portion
+    of nuclear chromatin associated with the nucleolus; includes the DNA encoding
+    the ribosomal RNA.'
+- reference: GO:0005730
+  notes: Gene Ontology cellular-component term for nucleolus.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen.
+- reference: GO:0005736
+  notes: Gene Ontology cellular-component term for RNA polymerase I complex.
+- reference: GO:0032040
+  notes: Gene Ontology cellular-component term for small-subunit processome.
+- reference: GO:0031429
+  notes: Gene Ontology cellular-component term for box H/ACA snoRNP complex.
+- reference: GO:0006360
+  notes: Gene Ontology biological-process term for transcription by RNA polymerase
+    I.
+- reference: GO:0006364
+  notes: Gene Ontology biological-process term for rRNA processing.
+- reference: GO:0042254
+  notes: Gene Ontology biological-process term for ribosome biogenesis.
+- reference: DOI:10.1038/nrm2184
+  notes: Boisvert et al. 2007, 'The multifunctional nucleolus', Nature Reviews Molecular
+    Cell Biology.
+- reference: DOI:10.1146/annurev.genet.33.1.261
+  notes: Venema and Tollervey 1999, 'Ribosome Synthesis in Saccharomyces cerevisiae',
+    Annual Review of Genetics.
+- reference: DOI:10.1038/nature00769
+  notes: Dragon et al. 2002, 'A large nucleolar U3 ribonucleoprotein required for
+    18S ribosomal RNA biogenesis', Nature.
+causal_graphs:
+- graph_id: rdna_protrusion_mechanism
+  title: Rdna protrusion assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of rDNA protrusion (GO:0030875) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: rdna_protrusion
+    label: rDNA protrusion
+    node_type: STRUCTURE
+    grounding: GO:0030875
+    description: Any of the tandem arrays of rDNA localized at the periphery of the
+      nucleus and protruding into the nucleolus, and associated proteins.
+  - node_id: rdna_tandem_repeat_array
+    label: ribosomal DNA (rDNA) tandem repeat chromosomal array
+    node_type: GENETIC_ELEMENT
+    component_ref: rdna_tandem_repeat_array
+    description: Tandemly repeated ribosomal DNA transcription units (encoding 35S
+      pre-rRNA and 5S rRNA separated by NTS1/NTS2 spacers) that extend from the chromosome
+      arm into the nucleolus as the nucleolar chromatin organizer.
+  - node_id: nucleolar_chromatin_histones
+    label: nucleolar rDNA nucleosomal core histones
+    node_type: GENE_OR_PROTEIN
+    component_ref: nucleolar_chromatin_histones
+    description: Nucleosomal core histones packaging rDNA repeats and undergoing Sir2-dependent
+      H4K16 deacetylation to regulate rDNA chromatin compaction and recombination.
+  - node_id: rent_rdna_silencing_machinery
+    label: rDNA chromatin silencing deacetylase Sir2 (RENT complex subunit)
+    node_type: GENE_OR_PROTEIN
+    component_ref: rent_rdna_silencing_machinery
+    description: NAD+-dependent histone deacetylase recruited to the rDNA non-transcribed
+      spacer (NTS1/NTS2) within the RENT complex to silence Pol II transcription and
+      suppress unequal rDNA sister-chromatid recombination.
+  - node_id: nucleolar_chromatin
+    label: nucleolar chromatin
+    node_type: STRUCTURE
+    grounding: GO:0030874
+    description: Enclosing or holo-structural assembly (nucleolar chromatin, GO:0030874)
+      containing rDNA protrusion.
+  - node_id: transcription_by_rna_polymerase_i
+    label: transcription by RNA polymerase I
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006360
+    description: RNA polymerase I in the nucleolus transcribes ribosomal DNA to produce
+      the major pre-rRNA precursor.
+  - node_id: rrna_processing
+    label: rRNA processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006364
+    description: Nucleolar ribonucleoproteins process primary rRNA transcripts as
+      part of ribosome biogenesis.
+  - node_id: ribosome_biogenesis
+    label: ribosome biogenesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042254
+    description: The nucleolus organizes early transcription, rRNA processing, and
+      preribosomal assembly steps that contribute to production of cytoplasmic ribosomal
+      subunits.
+  edges:
+  - subject: rdna_tandem_repeat_array
+    predicate: is part of
+    object: rdna_protrusion
+    description: Tandemly repeated ribosomal DNA transcription units (encoding 35S
+      pre-rRNA and 5S rRNA separated by NTS1/NTS2 spacers) that extend from the chromosome
+      arm into the nucleolus as the nucleolar chromatin organizer.
+    evidence:
+    - reference: DOI:10.1038/nrm2184
+      notes: Describes the organization of nucleolar rDNA tandem repeats within the
+        eukaryotic nucleolus.
+  - subject: nucleolar_chromatin_histones
+    predicate: is part of
+    object: rdna_protrusion
+    description: Nucleosomal core histones packaging rDNA repeats and undergoing Sir2-dependent
+      H4K16 deacetylation to regulate rDNA chromatin compaction and recombination.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.33.1.261
+      notes: Establishes nucleosomal chromatin organization and Sir2-mediated histone
+        deacetylation across nucleolar rDNA repeats.
+  - subject: rent_rdna_silencing_machinery
+    predicate: associates with
+    object: rdna_protrusion
+    description: NAD+-dependent histone deacetylase recruited to the rDNA non-transcribed
+      spacer (NTS1/NTS2) within the RENT complex to silence Pol II transcription and
+      suppress unequal rDNA sister-chromatid recombination.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.33.1.261
+      notes: Reviews the role of Sir2 and nucleolar chromatin organization in yeast
+        rDNA silencing.
+  - subject: rdna_protrusion
+    predicate: is part of
+    object: nucleolar_chromatin
+    description: Rdna protrusion forms an integral structural compartment or subassembly
+      of nucleolar chromatin.
+    evidence:
+    - reference: DOI:10.1038/nrm2184
+      notes: Boisvert et al. 2007, 'The multifunctional nucleolus', Nature Reviews
+        Molecular Cell Biology.
+  - subject: rdna_protrusion
+    predicate: mediates
+    object: transcription_by_rna_polymerase_i
+    description: RNA polymerase I in the nucleolus transcribes ribosomal DNA to produce
+      the major pre-rRNA precursor.
+    evidence:
+    - reference: GO:0006360
+      notes: GO:0006360 denotes RNA synthesis from a DNA template by RNA polymerase
+        I.
+  - subject: rdna_protrusion
+    predicate: mediates
+    object: rrna_processing
+    description: Nucleolar ribonucleoproteins process primary rRNA transcripts as
+      part of ribosome biogenesis.
+    evidence:
+    - reference: GO:0006364
+      notes: GO:0006364 denotes conversion of a primary rRNA transcript into mature
+        rRNA molecules.
+  - subject: rdna_protrusion
+    predicate: mediates
+    object: ribosome_biogenesis
+    description: The nucleolus organizes early transcription, rRNA processing, and
+      preribosomal assembly steps that contribute to production of cytoplasmic ribosomal
+      subunits.
+    evidence:
+    - reference: GO:0042254
+      notes: GO:0042254 denotes the biosynthesis, assembly, and arrangement of ribosome-subunit
+        constituents.
+curation_history:
+- timestamp: '2026-10-19T05:56:22Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of rDNA protrusion (GO:0030875) in category OTHER with
+    verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: nucleolar rDNA loop
+  synonym_type: RELATED_SYNONYM
+  source: GO:0030875

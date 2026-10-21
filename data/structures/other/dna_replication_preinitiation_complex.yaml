@@ -1,0 +1,406 @@
+identifier: GO:0031261
+label: DNA replication preinitiation complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex assembled at eukaryotic DNA replication origins
+  immediately prior to the initiation of DNA replication. The preinitiation complex
+  is formed by the assembly of additional proteins onto an existing prereplicative
+  complex. In budding yeast, the additional proteins might include Cdc45p, Sld2p,
+  Sld3p, Dpb11p, DNA polymerases, and others; in fission yeast the GINS complex is
+  present. The transient multiprotein-DNA complex assembled at licensed eukaryotic
+  replication origins at the G1-to-S phase transition when Dbf4-dependent kinase (DDK/Cdc7)
+  and S-phase cyclin-dependent kinase (S-CDK) phosphorylate the loaded Mcm2–7 double
+  hexamer and firing factors Sld2 and Sld3. In Saccharomyces cerevisiae and related
+  fungi, the DNA replication preinitiation complex recruits Dpb11, Cdc45, DNA polymerase
+  epsilon, and the GINS tetramer to convert inactive Mcm2–7 rings into active CMG
+  replicative helicases.
+definition_source: GO:0031261
+mapping_status: PROPOSED
+parent_structures:
+- GO:0032993
+- GO:0140513
+part_of:
+- GO:0005654
+synonyms:
+- synonym_text: pre-IC
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031261
+components:
+- component_id: mcm_helicase_core
+  label: MCM complex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0042555
+  essentiality: ESSENTIAL
+  role: Origin-loaded Mcm2-7 double hexamer that serves as the core helicase platform
+    converted into the active CMG replicative helicase upon preinitiation complex
+    assembly.
+  evidence:
+  - reference: PMID:12730134
+    notes: Takayama et al. 2003 demonstrate that the GINS complex and Cdc45 associate
+      with the Mcm2-7 helicase core at replication origins during preinitiation complex
+      assembly.
+- component_id: cdc45_initiation_factor
+  label: Cdc45 replication initiation protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CDC45
+  essentiality: ESSENTIAL
+  role: Essential replication initiation factor recruited to DDK-phosphorylated Mcm2-7
+    rings to bridge Mcm2-Mcm5 with the GINS complex in the preinitiation complex.
+  evidence:
+  - reference: DOI:10.1101/gad.1065903
+    notes: Establishes Cdc45 and GINS recruitment to origin-bound Mcm2-7 in the eukaryotic
+      DNA replication preinitiation complex.
+- component_id: sld5_subunit
+  label: Sld5 GINS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - SLD5
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Sld5 GINS subunit is modeled as a named budding-yeast GINS-complex
+    subunit; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE
+    was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heterotetrameric GINS complex.
+    Functions within the S-phase DNA replication preinitiation complex in DNA replication
+    preinitiation complex.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+      and replication-fork protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
+      Psf1, Psf2 and Psf3 proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03406
+    protein_label: DNA replication complex GINS protein SLD5
+    gene_symbol: SLD5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SLD5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12730134
+      notes: Takayama Y et al. 2003, ‘GINS, a novel multiprotein complex required
+        for chromosomal DNA replication in budding yeast.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q03406.
+- component_id: psf1_subunit
+  label: Psf1 GINS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PSF1
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Psf1 GINS subunit is modeled as a named budding-yeast GINS-complex
+    subunit; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE
+    was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heterotetrameric GINS complex.
+    Functions within the S-phase DNA replication preinitiation complex in DNA replication
+    preinitiation complex.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+      and replication-fork protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
+      Psf1, Psf2 and Psf3 proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12488
+    protein_label: DNA replication complex GINS protein PSF1
+    gene_symbol: PSF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PSF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12730134
+      notes: Takayama Y et al. 2003, ‘GINS, a novel multiprotein complex required
+        for chromosomal DNA replication in budding yeast.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12488.
+- component_id: psf2_subunit
+  label: Psf2 GINS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PSF2
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Psf2 GINS subunit is modeled as a named budding-yeast GINS-complex
+    subunit; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE
+    was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heterotetrameric GINS complex.
+    Functions within the S-phase DNA replication preinitiation complex in DNA replication
+    preinitiation complex.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+      and replication-fork protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
+      Psf1, Psf2 and Psf3 proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40359
+    protein_label: DNA replication complex GINS protein PSF2
+    gene_symbol: PSF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PSF2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12730134
+      notes: Takayama Y et al. 2003, ‘GINS, a novel multiprotein complex required
+        for chromosomal DNA replication in budding yeast.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of P40359.
+- component_id: psf3_subunit
+  label: Psf3 GINS subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - PSF3
+  essentiality: UNKNOWN
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Psf3 GINS subunit is modeled as a named budding-yeast GINS-complex
+    subunit; no exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIE
+    was curated in this pass.
+  role: Named Saccharomyces cerevisiae constituent of the heterotetrameric GINS complex.
+    Functions within the S-phase DNA replication preinitiation complex in DNA replication
+    preinitiation complex.
+  evidence:
+  - reference: GO:0000811
+    notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+      and replication-fork protein complex.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 described budding-yeast GINS as a complex of Sld5,
+      Psf1, Psf2 and Psf3 proteins.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12146
+    protein_label: DNA replication complex GINS protein PSF3
+    gene_symbol: PSF3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene PSF3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12730134
+      notes: Takayama Y et al. 2003, ‘GINS, a novel multiprotein complex required
+        for chromosomal DNA replication in budding yeast.’, Genes Dev. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12146.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a heterotetrameric GINS complex made of Sld5, Psf1, Psf2
+    and Psf3 that is required for chromosomal DNA replication.
+  reference: DOI:10.1101/gad.1065903
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system in which the Sld5-Psf1-Psf2-Psf3 GINS complex was discovered
+    and connected to replication origins and chromosomal DNA replication.
+  reference: DOI:10.1101/gad.1065903
+functions:
+- function_id: dna_replication
+  label: DNA replication
+  grounding: GO:0006260
+  description: The GINS complex supports chromosomal DNA replication by associating
+    with origins and replication forks.
+  evidence:
+  - reference: GO:0006260
+    notes: GO:0006260 is the biological-process term for DNA replication.
+  - reference: DOI:10.1101/gad.1065903
+    notes: Takayama et al. 2003 showed that budding-yeast GINS associates with origins
+      during S phase and is required for chromosomal DNA replication.
+evidence:
+- reference: GO:0031261
+  notes: 'Gene Ontology cellular-component term for DNA replication preinitiation
+    complex: A protein-DNA complex assembled at eukaryotic DNA replication origins
+    immediately prior to the initiation of DNA replication. The preinitiation complex
+    is formed by the assembly of additional proteins onto an existing prereplicative
+    complex. In budding yeast, the additional proteins might include Cdc45p, Sld2p,
+    Sld3p, Dpb11p, DNA polymerases, and others; in fission yeast the GINS complex
+    is present.'
+- reference: GO:0000811
+  notes: Gene Ontology cellular-component term for the GINS complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complexes.
+- reference: GO:0006260
+  notes: Gene Ontology biological-process term for DNA replication.
+- reference: PMID:12730134
+  notes: PubMed identifier for Takayama et al. 2003, the budding-yeast GINS discovery
+    and DNA-replication paper.
+- reference: DOI:10.1101/gad.1065903
+  notes: DOI for Takayama et al. 2003, 'GINS, a novel multiprotein complex required
+    for chromosomal DNA replication in budding yeast', verified through NCBI E-utilities.
+causal_graphs:
+- graph_id: dna_replication_preinitiation_complex_mechanism
+  title: Dna replication preinitiation complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of DNA replication preinitiation complex (GO:0031261) to its biological
+    functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: dna_replication_preinitiation_complex
+    label: DNA replication preinitiation complex
+    node_type: STRUCTURE
+    grounding: GO:0031261
+    description: A protein-DNA complex assembled at eukaryotic DNA replication origins
+      immediately prior to the initiation of DNA replication.
+  - node_id: mcm_helicase_core
+    label: MCM complex
+    node_type: STRUCTURE
+    grounding: GO:0042555
+    component_ref: mcm_helicase_core
+    description: Origin-loaded Mcm2-7 double hexamer that serves as the core helicase
+      platform converted into the active CMG replicative helicase upon preinitiation
+      complex assembly.
+  - node_id: cdc45_initiation_factor
+    label: Cdc45 replication initiation protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: cdc45_initiation_factor
+    description: Essential replication initiation factor recruited to DDK-phosphorylated
+      Mcm2-7 rings to bridge Mcm2-Mcm5 with the GINS complex in the preinitiation
+      complex.
+  - node_id: sld5_subunit
+    label: Sld5 GINS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sld5_subunit
+    description: Named Saccharomyces cerevisiae constituent of the heterotetrameric
+      GINS complex. Functions within the S-phase DNA replication preinitiation complex
+      in DNA replication preinitiation complex.
+  - node_id: psf1_subunit
+    label: Psf1 GINS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: psf1_subunit
+    description: Named Saccharomyces cerevisiae constituent of the heterotetrameric
+      GINS complex. Functions within the S-phase DNA replication preinitiation complex
+      in DNA replication preinitiation complex.
+  - node_id: psf2_subunit
+    label: Psf2 GINS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: psf2_subunit
+    description: Named Saccharomyces cerevisiae constituent of the heterotetrameric
+      GINS complex. Functions within the S-phase DNA replication preinitiation complex
+      in DNA replication preinitiation complex.
+  - node_id: psf3_subunit
+    label: Psf3 GINS subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: psf3_subunit
+    description: Named Saccharomyces cerevisiae constituent of the heterotetrameric
+      GINS complex. Functions within the S-phase DNA replication preinitiation complex
+      in DNA replication preinitiation complex.
+  - node_id: nucleoplasm
+    label: nucleoplasm
+    node_type: STRUCTURE
+    grounding: GO:0005654
+    description: Enclosing or holo-structural assembly (nucleoplasm, GO:0005654) containing
+      DNA replication preinitiation complex.
+  - node_id: dna_replication
+    label: DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+    description: The GINS complex supports chromosomal DNA replication by associating
+      with origins and replication forks.
+  edges:
+  - subject: mcm_helicase_core
+    predicate: is part of
+    object: dna_replication_preinitiation_complex
+    description: Origin-loaded Mcm2-7 double hexamer that serves as the core helicase
+      platform converted into the active CMG replicative helicase upon preinitiation
+      complex assembly.
+    evidence:
+    - reference: PMID:12730134
+      notes: Takayama et al. 2003 demonstrate that the GINS complex and Cdc45 associate
+        with the Mcm2-7 helicase core at replication origins during preinitiation
+        complex assembly.
+  - subject: cdc45_initiation_factor
+    predicate: is part of
+    object: dna_replication_preinitiation_complex
+    description: Essential replication initiation factor recruited to DDK-phosphorylated
+      Mcm2-7 rings to bridge Mcm2-Mcm5 with the GINS complex in the preinitiation
+      complex.
+    evidence:
+    - reference: DOI:10.1101/gad.1065903
+      notes: Establishes Cdc45 and GINS recruitment to origin-bound Mcm2-7 in the
+        eukaryotic DNA replication preinitiation complex.
+  - subject: sld5_subunit
+    predicate: is part of
+    object: dna_replication_preinitiation_complex
+    description: Named Saccharomyces cerevisiae constituent of the heterotetrameric
+      GINS complex. Functions within the S-phase DNA replication preinitiation complex
+      in DNA replication preinitiation complex.
+    evidence:
+    - reference: GO:0000811
+      notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+        and replication-fork protein complex.
+  - subject: psf1_subunit
+    predicate: is part of
+    object: dna_replication_preinitiation_complex
+    description: Named Saccharomyces cerevisiae constituent of the heterotetrameric
+      GINS complex. Functions within the S-phase DNA replication preinitiation complex
+      in DNA replication preinitiation complex.
+    evidence:
+    - reference: GO:0000811
+      notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+        and replication-fork protein complex.
+  - subject: psf2_subunit
+    predicate: is part of
+    object: dna_replication_preinitiation_complex
+    description: Named Saccharomyces cerevisiae constituent of the heterotetrameric
+      GINS complex. Functions within the S-phase DNA replication preinitiation complex
+      in DNA replication preinitiation complex.
+    evidence:
+    - reference: GO:0000811
+      notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+        and replication-fork protein complex.
+  - subject: psf3_subunit
+    predicate: is part of
+    object: dna_replication_preinitiation_complex
+    description: Named Saccharomyces cerevisiae constituent of the heterotetrameric
+      GINS complex. Functions within the S-phase DNA replication preinitiation complex
+      in DNA replication preinitiation complex.
+    evidence:
+    - reference: GO:0000811
+      notes: GO:0000811 defines the GINS complex as a heterotetrameric replication-origin
+        and replication-fork protein complex.
+  - subject: dna_replication_preinitiation_complex
+    predicate: is part of
+    object: nucleoplasm
+    description: Dna replication preinitiation complex forms an integral structural
+      compartment or subassembly of nucleoplasm.
+    evidence:
+    - reference: PMID:12730134
+      notes: PubMed identifier for Takayama et al. 2003, the budding-yeast GINS discovery
+        and DNA-replication paper.
+  - subject: dna_replication_preinitiation_complex
+    predicate: mediates
+    object: dna_replication
+    description: The GINS complex supports chromosomal DNA replication by associating
+      with origins and replication forks.
+    evidence:
+    - reference: GO:0006260
+      notes: GO:0006260 is the biological-process term for DNA replication.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of DNA replication preinitiation complex (GO:0031261)
+    in category OTHER with verified GO hierarchy, components, UniProtKB protein examples,
+    causal mechanism graph, and literature evidence.
+  llm_assisted: true

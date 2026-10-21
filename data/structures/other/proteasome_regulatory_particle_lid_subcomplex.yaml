@@ -1,0 +1,194 @@
+identifier: GO:0008541
+label: proteasome regulatory particle, lid subcomplex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The subcomplex of the proteasome regulatory particle that forms the peripheral
+  lid, which is added on top of the base subcomplex. In Saccharomyces cerevisiae and
+  other microbial eukaryotes, the nine-subunit 19S lid subcomplex comprises the PCI-domain
+  scaffolds Rpn3, Rpn5, Rpn6, Rpn7, Rpn9, and Rpn12, the MPN-domain heterodimer Rpn8-Rpn11,
+  and Sem1, positioning the Zn2+-dependent deubiquitinase Rpn11 directly above the
+  Rpt ATPase pore to cleave ubiquitin chains en bloc during translocation.
+definition_source: GO:0008541
+mapping_status: PROPOSED
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005838
+synonyms:
+- synonym_text: 19S proteasome lid subcomplex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0008541
+components:
+- component_id: rpn11_rpn8_deubiquitinase_dimer
+  label: Rpn11-Rpn8 MPN-domain deubiquitinase heterodimer
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Catalytic JAMM/MPN+ Zn2+ metalloprotease subunit Rpn11 paired with the structural
+    MPN-domain subunit Rpn8 directly over the Rpt ATPase pore to cleave polyubiquitin
+    chains from translocating substrates.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-060410-150257
+    notes: Tomko and Hochstrasser 2013 describe the Rpn11-Rpn8 MPN heterodimer as
+      the catalytic deubiquitination center of the 19S lid.
+- component_id: lid_pci_horseshoe_scaffold
+  label: 19S lid PCI-domain horseshoe scaffold (Rpn3, Rpn5, Rpn6, Rpn7, Rpn9, Rpn12,
+    Sem1)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Six winged-helix PCI-domain subunits and the Sem1/Dss1 stapler peptide that
+    assemble into a horseshoe-shaped scaffold clamping the Rpn11-Rpn8 dimer onto the
+    19S base and 20S alpha ring.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-060410-150257
+    notes: Tomko and Hochstrasser 2013 review the six PCI-domain subunits and Sem1
+      that form the structural scaffold of the 19S lid subcomplex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Conserved PCI/MPN-domain lid subcomplex of the eukaryotic 19S proteasome regulatory
+    particle.
+  reference: DOI:10.1146/annurev-biochem-060410-150257
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Model system in which hierarchical lid assembly (Module 1 plus LP3 followed
+    by Rpn12 integration) and Rpn11 deubiquitination coupling were established.
+  reference: DOI:10.1146/annurev-biochem-060410-150257
+functions:
+- function_id: proteasomal_protein_catabolism
+  label: proteasomal protein catabolic process
+  grounding: GO:0010498
+  description: Proteasome complexes couple regulated substrate access through accessory
+    complexes to proteolysis in the 20S core.
+  evidence:
+  - reference: GO:0000502
+    notes: The GO graph asserts GO:0010498 has_participant GO:0000502, connecting
+      the proteasome complex to proteasomal protein catabolism.
+  - reference: DOI:10.1042/ETLS20180025
+    notes: Maupin-Furlow 2018 reviews archaeal targeted proteolysis by proteasomes
+      associated with AAA-ATPase networks.
+  - reference: DOI:10.3389/fmolb.2019.00023
+    notes: Muller and Weber-Ban 2019 review bacterial proteasomal degradation routes
+      that combine the 20S core with alternative regulator complexes.
+evidence:
+- reference: GO:0008541
+  notes: 'Gene Ontology cellular-component term for proteasome regulatory particle,
+    lid subcomplex: The subcomplex of the proteasome regulatory particle that forms
+    the peripheral lid, which is added on top of the base subcomplex.'
+- reference: GO:0005838
+  notes: 'Gene Ontology cellular-component term for proteasome regulatory particle:
+    A multisubunit complex, which caps one or both ends of the proteasome core complex.
+    This complex recognizes and unfolds ubiquitinated proteins, and translocates them
+    to the proteasome core complex.'
+- reference: GO:0000502
+  notes: Gene Ontology cellular-component term for the proteasome complex.
+- reference: GO:0140535
+  notes: Gene Ontology cellular-component parent for intracellular protein-containing
+    complexes.
+- reference: GO:1905369
+  notes: Gene Ontology cellular-component parent for endopeptidase complexes.
+- reference: GO:0005839
+  notes: Gene Ontology cellular-component term for the proteasome core complex.
+- reference: GO:0022624
+  notes: Gene Ontology cellular-component term for the proteasome accessory complex.
+- reference: DOI:10.1042/ETLS20180025
+  notes: 'Maupin-Furlow 2018, Proteolytic systems of archaea: slicing, dicing, and
+    mincing in the extreme, Emerging Topics in Life Sciences.'
+- reference: DOI:10.3389/fmolb.2019.00023
+  notes: Muller and Weber-Ban 2019, The bacterial proteasome at the core of diverse
+    degradation pathways, Frontiers in Molecular Biosciences.
+- reference: DOI:10.1146/annurev-biochem-060410-150257
+  notes: Tomko and Hochstrasser 2013, Molecular Architecture and Assembly of the Eukaryotic
+    Proteasome, Annual Review of Biochemistry.
+causal_graphs:
+- graph_id: proteasome_regulatory_particle_lid_subcomplex_mechanism
+  title: Proteasome regulatory particle, lid subcomplex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of proteasome regulatory particle, lid subcomplex (GO:0008541) to its
+    biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: proteasome_regulatory_particle_lid_subcomplex
+    label: proteasome regulatory particle, lid subcomplex
+    node_type: STRUCTURE
+    grounding: GO:0008541
+    description: The subcomplex of the proteasome regulatory particle that forms the
+      peripheral lid, which is added on top of the base subcomplex.
+  - node_id: rpn11_rpn8_deubiquitinase_dimer
+    label: Rpn11-Rpn8 MPN-domain deubiquitinase heterodimer
+    node_type: GENE_OR_PROTEIN
+    component_ref: rpn11_rpn8_deubiquitinase_dimer
+    description: Catalytic JAMM/MPN+ Zn2+ metalloprotease subunit Rpn11 paired with
+      the structural MPN-domain subunit Rpn8 directly over the Rpt ATPase pore to
+      cleave polyubiquitin chains from translocating substrates.
+  - node_id: lid_pci_horseshoe_scaffold
+    label: 19S lid PCI-domain horseshoe scaffold (Rpn3, Rpn5, Rpn6, Rpn7, Rpn9, Rpn12,
+      Sem1)
+    node_type: GENE_OR_PROTEIN
+    component_ref: lid_pci_horseshoe_scaffold
+    description: Six winged-helix PCI-domain subunits and the Sem1/Dss1 stapler peptide
+      that assemble into a horseshoe-shaped scaffold clamping the Rpn11-Rpn8 dimer
+      onto the 19S base and 20S alpha ring.
+  - node_id: proteasome_regulatory_particle
+    label: proteasome regulatory particle
+    node_type: STRUCTURE
+    grounding: GO:0005838
+    description: Enclosing or holo-structural assembly (proteasome regulatory particle,
+      GO:0005838) containing proteasome regulatory particle, lid subcomplex.
+  - node_id: proteasomal_protein_catabolism
+    label: proteasomal protein catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0010498
+    description: Proteasome complexes couple regulated substrate access through accessory
+      complexes to proteolysis in the 20S core.
+  edges:
+  - subject: rpn11_rpn8_deubiquitinase_dimer
+    predicate: is part of
+    object: proteasome_regulatory_particle_lid_subcomplex
+    description: Catalytic JAMM/MPN+ Zn2+ metalloprotease subunit Rpn11 paired with
+      the structural MPN-domain subunit Rpn8 directly over the Rpt ATPase pore to
+      cleave polyubiquitin chains from translocating substrates.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-060410-150257
+      notes: Tomko and Hochstrasser 2013 describe the Rpn11-Rpn8 MPN heterodimer as
+        the catalytic deubiquitination center of the 19S lid.
+  - subject: lid_pci_horseshoe_scaffold
+    predicate: is part of
+    object: proteasome_regulatory_particle_lid_subcomplex
+    description: Six winged-helix PCI-domain subunits and the Sem1/Dss1 stapler peptide
+      that assemble into a horseshoe-shaped scaffold clamping the Rpn11-Rpn8 dimer
+      onto the 19S base and 20S alpha ring.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-060410-150257
+      notes: Tomko and Hochstrasser 2013 review the six PCI-domain subunits and Sem1
+        that form the structural scaffold of the 19S lid subcomplex.
+  - subject: proteasome_regulatory_particle_lid_subcomplex
+    predicate: is part of
+    object: proteasome_regulatory_particle
+    description: Proteasome regulatory particle, lid subcomplex forms an integral
+      structural compartment or subassembly of proteasome regulatory particle.
+    evidence:
+    - reference: DOI:10.1042/ETLS20180025
+      notes: 'Maupin-Furlow 2018, Proteolytic systems of archaea: slicing, dicing,
+        and mincing in the extreme, Emerging Topics in Life Sciences.'
+  - subject: proteasome_regulatory_particle_lid_subcomplex
+    predicate: mediates
+    object: proteasomal_protein_catabolism
+    description: Proteasome complexes couple regulated substrate access through accessory
+      complexes to proteolysis in the 20S core.
+    evidence:
+    - reference: GO:0000502
+      notes: The GO graph asserts GO:0010498 has_participant GO:0000502, connecting
+        the proteasome complex to proteasomal protein catabolism.
+curation_history:
+- timestamp: '2026-10-19T05:56:22Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of proteasome regulatory particle, lid subcomplex (GO:0008541)
+    in category OTHER with verified GO hierarchy, compartmental context, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true

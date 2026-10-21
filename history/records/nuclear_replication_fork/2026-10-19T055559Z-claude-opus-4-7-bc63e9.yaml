@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nuclear_replication_fork.yaml
+  slug: nuclear_replication_fork
+session:
+  id: 2026-10-19T055559Z-claude-opus-4-7-bc63e9
+  timestamp: '2026-10-19T05:55:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for nuclear replication fork (GO:0043596) in other.
+  details: Authored data/structures/other/nuclear_replication_fork.yaml for nuclear
+    replication fork (GO:0043596) with verified GO hierarchy, taxonomic distribution,
+    UniProtKB protein examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

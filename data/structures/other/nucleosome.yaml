@@ -1,0 +1,212 @@
+identifier: GO:0000786
+label: nucleosome
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A complex comprised of DNA wound around a multisubunit core and associated
+  proteins, which forms the primary packing unit of DNA into higher order structures.
+  The fundamental repeating nucleoprotein packaging unit of eukaryotic chromatin in
+  yeasts, filamentous fungi, microalgae, and protists, consisting of ~147 base pairs
+  of chromosomal DNA wrapped in 1.65 left-handed superhelical turns around a histone
+  octamer composed of a central (H3–H4)2 tetramer flanked by two H2A–H2B dimers. Nucleosome
+  positioning and post-translational histone modifications govern DNA accessibility
+  for transcription, replication, and repair.
+definition_source: GO:0000786
+mapping_status: PROPOSED
+parent_structures:
+- GO:0032993
+part_of:
+- GO:0000785
+synonyms:
+- synonym_text: cytoplasmic nucleosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000786
+- synonym_text: nuclear nucleosome
+  synonym_type: NARROW_SYNONYM
+  source: GO:0000786
+components:
+- component_id: nucleosomal_dna_segment
+  label: nucleosomal core DNA (~147 bp superhelical wrap)
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Approximately 147 base pairs of chromosomal duplex DNA wrapped in 1.65 left-handed
+    superhelical turns around the central histone octamer.
+  evidence:
+  - reference: GO:0000786
+    notes: Defines the nucleosome as the repeating chromatin unit consisting of DNA
+      wound around a multisubunit histone core.
+- component_id: histone_octamer_core
+  label: core histone octamer (H2A, H2B, H3, H4)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - HTA1
+  - HTB1
+  - HHT1
+  - HHF1
+  essentiality: ESSENTIAL
+  role: Central histone octamer composed of an (H3-H4)2 tetramer flanked by two H2A-H2B
+    dimers that electrostatically coordinates the minor grooves of superhelical nucleosomal
+    DNA.
+  evidence:
+  - reference: GO:0000786
+    notes: Establishes the core histone octamer (H2A, H2B, H3, H4) as the protein
+      core of the eukaryotic nucleosome.
+  protein_examples:
+  - uniprot_id: UniProtKB:P02309
+    protein_label: Histone H4
+    gene_symbol: HHF1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HHF1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P02309
+      notes: UniProtKB reviewed (Swiss-Prot) entry P02309, the single reviewed entry
+        for gene HHF1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P61830
+    protein_label: Histone H3
+    gene_symbol: HHT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene HHT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P61830
+      notes: UniProtKB reviewed (Swiss-Prot) entry P61830, the single reviewed entry
+        for gene HHT1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast carries its nuclear genome on chromosomes that are folded into
+    a constrained three-dimensional nuclear arrangement.
+  reference: DOI:10.1038/nature08973
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference yeast system used to model nuclear chromosome folding and spatial
+    genome organization.
+  reference: DOI:10.1038/nature08973
+functions:
+- function_id: chromosome_organization
+  label: chromosome organization
+  grounding: GO:0051276
+  description: Nuclear chromosomes package chromosomal DNA with chromatin proteins
+    and fold the nuclear genome within the nucleus.
+  evidence:
+  - reference: DOI:10.1146/annurev-genet-120116-023438
+    notes: Noma 2017 reviewed yeast genome folding and three-dimensional chromosome
+      organization.
+evidence:
+- reference: GO:0000786
+  notes: 'Gene Ontology cellular-component term for nucleosome: A complex comprised
+    of DNA wound around a multisubunit core and associated proteins, which forms the
+    primary packing unit of DNA into higher order structures.'
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for nuclear chromosome.
+- reference: GO:0005694
+  notes: Gene Ontology cellular-component parent term for chromosome.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen.
+- reference: GO:0051276
+  notes: Gene Ontology biological-process term for chromosome organization.
+- reference: DOI:10.1038/nature08973
+  notes: Duan et al. 2010, A three-dimensional model of the yeast genome, Nature.
+- reference: DOI:10.1146/annurev-genet-120116-023438
+  notes: 'Noma 2017, The Yeast Genomes in Three Dimensions: Mechanisms and Functions,
+    Annual Review of Genetics.'
+causal_graphs:
+- graph_id: nucleosome_mechanism
+  title: Nucleosome assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of nucleosome (GO:0000786) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: nucleosome
+    label: nucleosome
+    node_type: STRUCTURE
+    grounding: GO:0000786
+    description: A complex comprised of DNA wound around a multisubunit core and associated
+      proteins, which forms the primary packing unit of DNA into higher order structures.
+  - node_id: nucleosomal_dna_segment
+    label: nucleosomal core DNA (~147 bp superhelical wrap)
+    node_type: GENETIC_ELEMENT
+    component_ref: nucleosomal_dna_segment
+    description: Approximately 147 base pairs of chromosomal duplex DNA wrapped in
+      1.65 left-handed superhelical turns around the central histone octamer.
+  - node_id: histone_octamer_core
+    label: core histone octamer (H2A, H2B, H3, H4)
+    node_type: GENE_OR_PROTEIN
+    component_ref: histone_octamer_core
+    description: Central histone octamer composed of an (H3-H4)2 tetramer flanked
+      by two H2A-H2B dimers that electrostatically coordinates the minor grooves of
+      superhelical nucleosomal DNA.
+  - node_id: chromatin
+    label: chromatin
+    node_type: STRUCTURE
+    grounding: GO:0000785
+    description: Enclosing or holo-structural assembly (chromatin, GO:0000785) containing
+      nucleosome.
+  - node_id: chromosome_organization
+    label: chromosome organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051276
+    description: Nuclear chromosomes package chromosomal DNA with chromatin proteins
+      and fold the nuclear genome within the nucleus.
+  edges:
+  - subject: nucleosomal_dna_segment
+    predicate: is part of
+    object: nucleosome
+    description: Approximately 147 base pairs of chromosomal duplex DNA wrapped in
+      1.65 left-handed superhelical turns around the central histone octamer.
+    evidence:
+    - reference: GO:0000786
+      notes: Defines the nucleosome as the repeating chromatin unit consisting of
+        DNA wound around a multisubunit histone core.
+  - subject: histone_octamer_core
+    predicate: is part of
+    object: nucleosome
+    description: Central histone octamer composed of an (H3-H4)2 tetramer flanked
+      by two H2A-H2B dimers that electrostatically coordinates the minor grooves of
+      superhelical nucleosomal DNA.
+    evidence:
+    - reference: GO:0000786
+      notes: Establishes the core histone octamer (H2A, H2B, H3, H4) as the protein
+        core of the eukaryotic nucleosome.
+  - subject: nucleosome
+    predicate: is part of
+    object: chromatin
+    description: Nucleosome forms an integral structural compartment or subassembly
+      of chromatin.
+    evidence:
+    - reference: DOI:10.1038/nature08973
+      notes: Duan et al. 2010, A three-dimensional model of the yeast genome, Nature.
+  - subject: nucleosome
+    predicate: mediates
+    object: chromosome_organization
+    description: Nuclear chromosomes package chromosomal DNA with chromatin proteins
+      and fold the nuclear genome within the nucleus.
+    evidence:
+    - reference: DOI:10.1146/annurev-genet-120116-023438
+      notes: Noma 2017 reviewed yeast genome folding and three-dimensional chromosome
+        organization.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of nucleosome (GO:0000786) in category OTHER with verified
+    GO hierarchy, components, UniProtKB protein examples, causal mechanism graph,
+    and literature evidence.
+  llm_assisted: true

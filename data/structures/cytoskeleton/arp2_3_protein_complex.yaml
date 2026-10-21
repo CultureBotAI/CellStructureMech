@@ -1,0 +1,361 @@
+identifier: GO:0005885
+label: Arp2/3 protein complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A stable protein complex that contains two actin-related proteins, Arp2
+  and Arp3, and five novel proteins (ARPC1-5), and functions in the nucleation of
+  branched actin filaments. A conserved seven-subunit protein complex (comprising
+  actin-related proteins Arp2 and Arp3 together with Arc40/ARPC1, Arc35/ARPC2, Arc19/ARPC3,
+  Arc18/ARPC4, and Arc15/ARPC5) that binds to the side of a pre-existing mother actin
+  filament and nucleates a daughter filament at a characteristic 70-degree angle.
+  In yeasts, amoebae, and filamentous fungi, the Arp2/3 protein complex generates
+  branched actin networks that drive clathrin-mediated endocytosis, phagocytosis,
+  and pseudopod extension.
+definition_source: GO:0005885
+mapping_status: PROPOSED
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0015629
+components:
+- component_id: arp2_arp3_nucleation_dimer
+  label: actin-related catalytic nucleation subunits Arp2 and Arp3
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARP2
+  - ARP3
+  essentiality: ESSENTIAL
+  role: Actin-related protein subunits that rearrange into a short-pitch actin-like
+    dimer upon WASp/Las17 activation to mimic the pointed end and nucleate a new daughter
+    actin filament at a 70-degree branch angle.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(03)00883-3
+    notes: Demonstrates that the Arp2/3 complex nucleates branched actin filament
+      networks at cortical endocytic patches in yeast.
+  protein_examples:
+  - uniprot_id: UniProtKB:P32381
+    protein_label: Actin-related protein 2
+    gene_symbol: ARP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: UniProtKB:P32381
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  - uniprot_id: UniProtKB:P47117
+    protein_label: Actin-related protein 3
+    gene_symbol: ARP3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARP3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9210376
+      notes: Winter D et al. 1997, ‘The complex containing actin-related proteins
+        Arp2 and Arp3 is required for the motility and integrity of yeast actin patches.’,
+        Curr Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, actin patch' localisation of P47117.
+- component_id: arc35_arc19_clamp_subunits
+  label: Arp2/3 mother-filament clamp heterodimer (Arc35/ARPC2 and Arc19/ARPC4)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARC35
+  - ARC19
+  essentiality: ESSENTIAL
+  role: Structural core heterodimer (Arc35/ARPC2 and Arc19/ARPC4) that forms the central
+    scaffold of the 7-subunit complex and mediates side-binding to the pre-existing
+    mother actin filament.
+  evidence:
+  - reference: DOI:10.1083/jcb.200404159
+    notes: Characterizes the structural and functional requirements of the seven-subunit
+      yeast Arp2/3 complex in actin patch assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53731
+    protein_label: Actin-related protein 2/3 complex subunit 2
+    gene_symbol: ARC35
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: UniProtKB:P53731
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  - uniprot_id: UniProtKB:P33204
+    protein_label: Actin-related protein 2/3 complex subunit 4
+    gene_symbol: ARC19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARC19 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P33204
+      notes: UniProtKB reviewed (Swiss-Prot) entry P33204, the single reviewed entry
+        for gene ARC19 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: arc40_arc18_arc15_peripheral_subunits
+  label: Arp2/3 peripheral regulatory and tethering subunits (Arc40/ARPC1, Arc18/ARPC3,
+    Arc15/ARPC5)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - ARC40
+  - ARC18
+  - ARC15
+  essentiality: ESSENTIAL
+  role: WD40 beta-propeller (Arc40/ARPC1) and alpha-helical (Arc18/ARPC3, Arc15/ARPC5)
+    subunits that tether Arp2 and Arp3 to the Arc35-Arc19 clamp and transduce nucleation-promoting
+    factor activation.
+  evidence:
+  - reference: DOI:10.1083/jcb.200404159
+    notes: Defines the role of Arc40, Arc18, and Arc15 in coupling nucleation-promoting
+      factors to Arp2/3 activation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38328
+    protein_label: Actin-related protein 2/3 complex subunit 1
+    gene_symbol: ARC40
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene ARC40 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P38328
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38328, the single reviewed entry
+        for gene ARC40 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q05933
+    protein_label: Actin-related protein 2/3 complex subunit 3
+    gene_symbol: ARC18
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: UniProtKB:Q05933
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+  - uniprot_id: UniProtKB:P40518
+    protein_label: Actin-related protein 2/3 complex subunit 5
+    gene_symbol: ARC15
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level microscopy; the accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1091/mbc.E06-04-0282
+      notes: 'Results, Actin Bodies Contain Specific Actin-binding Proteins: partial
+        colocalization with bodies, not fixed occupancy or a complete Arp2/3 complex.'
+    - reference: UniProtKB:P40518
+      notes: Reviewed identity and gene verified live on 2026-10-05; localization
+        is supported by the microscopy citation, not sequence annotation alone.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast forms dynamic actin cortical patches at the cell cortex during
+    endocytic internalization.
+  reference: DOI:10.1016/S0092-8674(03)00883-3
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which cortical actin patches were imaged as short,
+    branched Arp2/3-like actin-filament networks.
+  reference: DOI:10.1083/jcb.200404159
+functions:
+- function_id: actin_cortical_patch_assembly
+  label: actin cortical patch assembly
+  grounding: GO:0000147
+  description: The actin cortical patch is produced by assembly of a branched actin
+    network at cortical endocytic sites.
+  evidence:
+  - reference: GO:0000147
+    notes: GO:0000147 denotes assembly of an actin cortical patch.
+  - reference: DOI:10.1371/journal.pbio.0060001
+    notes: Galletta, Chuang and Cooper 2008 tracked actin patch assembly and movement
+      in Arp2/3-regulator mutants.
+- function_id: endocytic_internalization
+  label: endocytic internalization
+  description: Yeast actin cortical patches assemble at cortical endocytic sites and
+    move inward as internalization proceeds.
+  evidence:
+  - reference: DOI:10.1016/S0092-8674(03)00883-3
+    notes: Kaksonen, Sun and Drubin 2003 followed receptors, adaptors and actin during
+      yeast endocytic internalization.
+evidence:
+- reference: GO:0005885
+  notes: 'Gene Ontology cellular-component term for Arp2/3 protein complex: A stable
+    protein complex that contains two actin-related proteins, Arp2 and Arp3, and five
+    novel proteins (ARPC1-5), and functions in the nucleation of branched actin filaments.'
+- reference: GO:0030479
+  notes: Gene Ontology cellular-component term for the actin cortical patch.
+- reference: GO:0015629
+  notes: Actin cytoskeleton is a containing structure, not an is-a parent of the patch;
+    the direct GO parthood relation uses cortical actin cytoskeleton.
+- reference: GO:0000147
+  notes: Gene Ontology biological-process term for actin cortical patch assembly.
+- reference: DOI:10.1016/S0092-8674(03)00883-3
+  notes: Kaksonen, Sun and Drubin 2003, A Pathway for Association of Receptors, Adaptors,
+    and Actin during Endocytic Internalization, Cell.
+- reference: DOI:10.1083/jcb.200404159
+  notes: Young, Cooper and Bridgman 2004, Yeast actin patches are networks of branched
+    actin filaments, Journal of Cell Biology.
+- reference: DOI:10.1371/journal.pbio.0060001
+  notes: Galletta, Chuang and Cooper 2008, Distinct Roles for Arp2/3 Regulators in
+    Actin Assembly and Endocytosis, PLoS Biology.
+- reference: GO:0061645
+  notes: Endocytic patch is the native GO is-a parent of GO:0030479 actin cortical
+    patch.
+- reference: GO:0030864
+  notes: Cortical actin cytoskeleton contains the actin cortical patch through the
+    native GO part_of relation.
+causal_graphs:
+- graph_id: arp2_3_protein_complex_mechanism
+  title: Arp2/3 protein complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of Arp2/3 protein complex (GO:0005885) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: arp2_3_protein_complex
+    label: Arp2/3 protein complex
+    node_type: STRUCTURE
+    grounding: GO:0005885
+    description: A stable protein complex that contains two actin-related proteins,
+      Arp2 and Arp3, and five novel proteins (ARPC1-5), and functions in the nucleation
+      of branched actin filaments.
+  - node_id: arp2_arp3_nucleation_dimer
+    label: actin-related catalytic nucleation subunits Arp2 and Arp3
+    node_type: GENE_OR_PROTEIN
+    component_ref: arp2_arp3_nucleation_dimer
+    description: Actin-related protein subunits that rearrange into a short-pitch
+      actin-like dimer upon WASp/Las17 activation to mimic the pointed end and nucleate
+      a new daughter actin filament at a 70-degree branch angle.
+  - node_id: arc35_arc19_clamp_subunits
+    label: Arp2/3 mother-filament clamp heterodimer (Arc35/ARPC2 and Arc19/ARPC4)
+    node_type: GENE_OR_PROTEIN
+    component_ref: arc35_arc19_clamp_subunits
+    description: Structural core heterodimer (Arc35/ARPC2 and Arc19/ARPC4) that forms
+      the central scaffold of the 7-subunit complex and mediates side-binding to the
+      pre-existing mother actin filament.
+  - node_id: arc40_arc18_arc15_peripheral_subunits
+    label: Arp2/3 peripheral regulatory and tethering subunits (Arc40/ARPC1, Arc18/ARPC3,
+      Arc15/ARPC5)
+    node_type: GENE_OR_PROTEIN
+    component_ref: arc40_arc18_arc15_peripheral_subunits
+    description: WD40 beta-propeller (Arc40/ARPC1) and alpha-helical (Arc18/ARPC3,
+      Arc15/ARPC5) subunits that tether Arp2 and Arp3 to the Arc35-Arc19 clamp and
+      transduce nucleation-promoting factor activation.
+  - node_id: actin_cytoskeleton
+    label: actin cytoskeleton
+    node_type: STRUCTURE
+    grounding: GO:0015629
+    description: Enclosing or holo-structural assembly (actin cytoskeleton, GO:0015629)
+      containing Arp2/3 protein complex.
+  - node_id: actin_cortical_patch_assembly
+    label: actin cortical patch assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000147
+    description: The actin cortical patch is produced by assembly of a branched actin
+      network at cortical endocytic sites.
+  - node_id: endocytic_internalization
+    label: endocytic internalization
+    node_type: BIOLOGICAL_PROCESS
+    description: Yeast actin cortical patches assemble at cortical endocytic sites
+      and move inward as internalization proceeds.
+  edges:
+  - subject: arp2_arp3_nucleation_dimer
+    predicate: is part of
+    object: arp2_3_protein_complex
+    description: Actin-related protein subunits that rearrange into a short-pitch
+      actin-like dimer upon WASp/Las17 activation to mimic the pointed end and nucleate
+      a new daughter actin filament at a 70-degree branch angle.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(03)00883-3
+      notes: Demonstrates that the Arp2/3 complex nucleates branched actin filament
+        networks at cortical endocytic patches in yeast.
+  - subject: arc35_arc19_clamp_subunits
+    predicate: is part of
+    object: arp2_3_protein_complex
+    description: Structural core heterodimer (Arc35/ARPC2 and Arc19/ARPC4) that forms
+      the central scaffold of the 7-subunit complex and mediates side-binding to the
+      pre-existing mother actin filament.
+    evidence:
+    - reference: DOI:10.1083/jcb.200404159
+      notes: Characterizes the structural and functional requirements of the seven-subunit
+        yeast Arp2/3 complex in actin patch assembly.
+  - subject: arc40_arc18_arc15_peripheral_subunits
+    predicate: is part of
+    object: arp2_3_protein_complex
+    description: WD40 beta-propeller (Arc40/ARPC1) and alpha-helical (Arc18/ARPC3,
+      Arc15/ARPC5) subunits that tether Arp2 and Arp3 to the Arc35-Arc19 clamp and
+      transduce nucleation-promoting factor activation.
+    evidence:
+    - reference: DOI:10.1083/jcb.200404159
+      notes: Defines the role of Arc40, Arc18, and Arc15 in coupling nucleation-promoting
+        factors to Arp2/3 activation.
+  - subject: arp2_3_protein_complex
+    predicate: is part of
+    object: actin_cytoskeleton
+    description: Arp2/3 protein complex forms an integral structural compartment or
+      subassembly of actin cytoskeleton.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(03)00883-3
+      notes: Kaksonen, Sun and Drubin 2003, A Pathway for Association of Receptors,
+        Adaptors, and Actin during Endocytic Internalization, Cell.
+  - subject: arp2_3_protein_complex
+    predicate: mediates
+    object: actin_cortical_patch_assembly
+    description: The actin cortical patch is produced by assembly of a branched actin
+      network at cortical endocytic sites.
+    evidence:
+    - reference: GO:0000147
+      notes: GO:0000147 denotes assembly of an actin cortical patch.
+  - subject: arp2_3_protein_complex
+    predicate: mediates
+    object: endocytic_internalization
+    description: Yeast actin cortical patches assemble at cortical endocytic sites
+      and move inward as internalization proceeds.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(03)00883-3
+      notes: Kaksonen, Sun and Drubin 2003 followed receptors, adaptors and actin
+        during yeast endocytic internalization.
+curation_history:
+- timestamp: '2026-10-19T05:27:40Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of Arp2/3 protein complex (GO:0005885) in category CYTOSKELETON
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true

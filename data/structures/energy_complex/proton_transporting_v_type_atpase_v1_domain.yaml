@@ -1,0 +1,123 @@
+identifier: GO:0033180
+label: proton-transporting V-type ATPase, V1 domain
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: 'A protein complex that forms part of a proton-transporting V-type ATPase
+  and catalyzes ATP hydrolysis. The V1 complex consists of: (1) a globular headpiece
+  with three alternating copies of subunits A and B that form a ring, (2) a central
+  rotational stalk composed of single copies of subunits D and F, and (3) a peripheral
+  stalk made of subunits C, E, G and H. Subunits A and B mediate the hydrolysis of
+  ATP at three reaction sites associated with subunit A. The peripheral cytoplasmic
+  ATP-hydrolyzing sector (V1 domain) of the proton-transporting V-type ATPase complex.
+  In yeasts, fungi, and protists, the V1 domain comprises a catalytic A3B3 hexamer
+  (Vma1p and Vma2p), a central rotor stalk (subunits D/Vma8p and F/Vma7p), and three
+  peripheral stator stalks (subunits E/Vma4p, G/Vma10p, C/Vma5p, and H/Vma13p) that
+  convert ATP hydrolysis into mechanical torque on the V0 proteolipid ring.'
+definition_source: GO:0033180
+mapping_status: PROPOSED
+parent_structures:
+- GO:0033178
+part_of:
+- GO:0033176
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast vacuoles use a cytosolic V1 sector that hydrolyzes ATP and couples
+    to the membrane V0 sector in the vacuolar V-ATPase.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Yeast model for the V1 catalytic sector of the vacuolar V-ATPase and its coupling
+    to the V0 sector.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+functions:
+- function_id: v1_atp_hydrolysis_sector
+  label: V1-sector ATP hydrolysis
+  description: Within the intact vacuolar V-ATPase, the V1 domain forms the cytosolic
+    catalytic sector that hydrolyzes ATP and drives rotation coupled to V0 proton
+    translocation.
+  evidence:
+  - reference: GO:0033180
+    notes: GO:0033180 identifies V1 domains as ATP-hydrolyzing V-ATPase sectors.
+  - reference: DOI:10.1038/nrm2272
+    notes: Forgac 2007 reviews ATP hydrolysis in V1 as the source of rotary V-ATPase
+      proton-pump activity.
+evidence:
+- reference: GO:0033180
+  notes: 'Gene Ontology cellular-component term for proton-transporting V-type ATPase,
+    V1 domain: A protein complex that forms part of a proton-transporting V-type ATPase
+    and catalyzes ATP hydrolysis. The V1 complex consists of: (1) a globular headpiece
+    with three alternating copies of subunits A and B that form a ring, (2) a central
+    rotational stalk composed of single copies of subunits D and F, and (3) a peripheral
+    stalk made of subunits C, E, G and H. Subunits A and B mediate the hydrolysis
+    of ATP at three reaction sites associated with subunit A.'
+- reference: GO:0000221
+  notes: Gene Ontology cellular-component term for the vacuolar V1 domain.
+- reference: GO:0016471
+  notes: Gene Ontology cellular-component term for the containing vacuolar proton-transporting
+    V-type ATPase complex.
+- reference: GO:0000220
+  notes: Gene Ontology cellular-component term for the complementary vacuolar V0 domain.
+- reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+- reference: DOI:10.1038/nrm2272
+  notes: 'Forgac 2007, Vacuolar ATPases: rotary proton pumps in physiology and pathophysiology,
+    Nature Reviews Molecular Cell Biology.'
+causal_graphs:
+- graph_id: proton_transporting_v_type_atpase_v1_domain_mechanism
+  title: Proton-transporting v-type atpase, v1 domain assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of proton-transporting V-type ATPase, V1 domain (GO:0033180) to its biological
+    functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: proton_transporting_v_type_atpase_v1_domain
+    label: proton-transporting V-type ATPase, V1 domain
+    node_type: STRUCTURE
+    grounding: GO:0033180
+    description: A protein complex that forms part of a proton-transporting V-type
+      ATPase and catalyzes ATP hydrolysis.
+  - node_id: proton_transporting_v_type_atpase_complex
+    label: proton-transporting V-type ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0033176
+    description: Enclosing or holo-structural assembly (proton-transporting V-type
+      ATPase complex, GO:0033176) containing proton-transporting V-type ATPase, V1
+      domain.
+  - node_id: v1_atp_hydrolysis_sector
+    label: V1-sector ATP hydrolysis
+    node_type: BIOLOGICAL_PROCESS
+    description: Within the intact vacuolar V-ATPase, the V1 domain forms the cytosolic
+      catalytic sector that hydrolyzes ATP and drives rotation coupled to V0 proton
+      translocation.
+  edges:
+  - subject: proton_transporting_v_type_atpase_v1_domain
+    predicate: is part of
+    object: proton_transporting_v_type_atpase_complex
+    description: Proton-transporting v-type atpase, v1 domain forms an integral structural
+      compartment or subassembly of proton-transporting V-type ATPase complex.
+    evidence:
+    - reference: DOI:10.1128/MMBR.70.1.177-191.2006
+      notes: Kane 2006, The Where, When, and How of Organelle Acidification by the
+        Yeast Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+  - subject: proton_transporting_v_type_atpase_v1_domain
+    predicate: mediates
+    object: v1_atp_hydrolysis_sector
+    description: Within the intact vacuolar V-ATPase, the V1 domain forms the cytosolic
+      catalytic sector that hydrolyzes ATP and drives rotation coupled to V0 proton
+      translocation.
+    evidence:
+    - reference: GO:0033180
+      notes: GO:0033180 identifies V1 domains as ATP-hydrolyzing V-ATPase sectors.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of proton-transporting V-type ATPase, V1 domain (GO:0033180)
+    in category ENERGY_COMPLEX with verified GO hierarchy, compartmental context,
+    causal mechanism graph, and literature evidence.
+  llm_assisted: true

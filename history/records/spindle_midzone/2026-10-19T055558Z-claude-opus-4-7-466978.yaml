@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/spindle_midzone.yaml
+  slug: spindle_midzone
+session:
+  id: 2026-10-19T055558Z-claude-opus-4-7-466978
+  timestamp: '2026-10-19T05:55:58Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for spindle midzone (GO:0051233) in cytoskeleton.
+  details: Authored data/structures/cytoskeleton/spindle_midzone.yaml for spindle
+    midzone (GO:0051233) with verified GO hierarchy, taxonomic distribution, UniProtKB
+    protein examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

@@ -1,0 +1,322 @@
+identifier: GO:1990612
+label: Sad1-Kms1 LINC complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A LINC complex implicated in the connection of DNA double strand breaks
+  to the cytoskeleton during DNA double-strand break repair. The canonical fission
+  yeast (Schizosaccharomyces pombe) Linker of Nucleoskeleton and Cytoskeleton (LINC)
+  complex spanning the inner and outer nuclear membranes, composed of the inner nuclear
+  membrane SUN-domain protein Sad1 and the outer nuclear membrane KASH-domain protein
+  Kms1 (and Kms2). During meiotic prophase, the Sad1–Kms1 LINC complex interacts with
+  Bqt1–Bqt2 on the nucleoplasmic side and cytoplasmic dynein motors on the cytoplasmic
+  side to gather telomeres to the spindle pole body and transmit microtubule forces
+  across the nuclear envelope.
+definition_source: GO:1990612
+mapping_status: PROPOSED
+parent_structures:
+- GO:0034993
+components:
+- component_id: sad1_sun_protein
+  label: inner nuclear membrane SUN-domain protein Sad1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR045119
+  gene_symbols:
+  - sad1
+  essentiality: ESSENTIAL
+  role: Inner nuclear membrane SUN-domain transmembrane subunit whose lumenal SUN
+    domain binds Kms1 and whose nucleoplasmic N-terminus engages Bqt1-Bqt2 at clustered
+    telomeres.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: Chikashige et al. 2006 show that Bqt1-Bqt2 connect telomeric Rap1 to the
+      inner nuclear membrane SUN protein Sad1 during meiotic bouquet formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q09825
+    protein_label: Spindle pole body-associated protein sad1
+    gene_symbol: sad1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: The primary abstract identifies Sad1 as the envelope/SPB-side binding
+        partner of the Bqt1/Bqt2 bridge.
+    - reference: UniProtKB:Q09825
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+- component_id: kms1_kash_protein
+  label: outer nuclear membrane KASH-domain protein Kms1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - kms1
+  essentiality: ESSENTIAL
+  role: Outer nuclear membrane KASH-domain transmembrane subunit that binds Sad1 in
+    the perinuclear space and recruits cytoplasmic dynein-dynactin motors to drive
+    horsetail nuclear movement.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Describes the Sad1-Kms1 nuclear envelope LINC bridge linking meiotic telomeres
+      to cytoplasmic microtubule motors.
+  protein_examples:
+  - uniprot_id: UniProtKB:P87245
+    protein_label: Karyogamy meiotic segregation protein 1
+    gene_symbol: kms1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-56049-9
+      notes: The paper identifies Kms1 in the telomere-associated LINC system and
+        directly follows its recruitment in a partial mitotic reconstitution, not
+        a complete meiotic bouquet.
+    - reference: UniProtKB:P87245
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+- component_id: bqt1_bqt2_meiotic_connector
+  label: meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - bqt1
+  - bqt2
+  essentiality: CONDITIONAL
+  role: Meiosis-specific nuclear bridge heterodimer expressed during prophase I that
+    links Rap1-Taz1 at telomeres to the nucleoplasmic domain of Sad1.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: Chikashige et al. 2006 demonstrate that Bqt1 and Bqt2 form a meiosis-specific
+      bridge linking Rap1 at telomeres to Sad1.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q92358
+    protein_label: Telomere bouquet protein 1
+    gene_symbol: bqt1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Figure 7 follows tagged Bqt1; induced degradation releases telomeres
+        from the SPB.
+    - reference: UniProtKB:Q92358
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  - uniprot_id: UniProtKB:Q9US52
+    protein_label: Telomere bouquet protein 2
+    gene_symbol: bqt2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Primary abstract directly identifies Bqt2 together with Bqt1 as the Rap1-Sad1
+        connector; no uninspected figure-level detail is inferred.
+    - reference: UniProtKB:Q9US52
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+canonical_examples:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  note: Reference fission yeast model in which the Sad1-Kms1 LINC bridge and Bqt1-Bqt2
+    meiotic telomere bouquet tether were genetically and biochemically defined.
+  reference: DOI:10.1016/j.cell.2006.01.048
+functions:
+- function_id: telomere_organization
+  label: telomere organization
+  grounding: GO:0032200
+  description: Polarized organization of chromosome ends during meiotic prophase.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Direct imaging of Rap1-marked peripheral clusters.
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Taz1-marked telomeres remain clustered near the SPB during prophase.
+- function_id: pairing_and_recombination
+  label: Support of homolog pairing and meiotic recombination
+  description: The budding-yeast tether/bouquet system supports efficient homolog
+    pairing and gene conversion, without making clustering alone the exclusive cause.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Mps2-depleted and csm4-deleted cells show delayed pairing at LYS4 and reduced
+      gene conversion at ARG4/HIS4. Tethering, motion and clustering effects are not
+      experimentally isolated from one another.
+- function_id: meiotic_spindle_support
+  label: Support of meiotic spindle formation
+  description: Maintained fission-yeast telomere-SPB attachment supports normal SPB
+    behavior and spindle formation.
+  evidence:
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Premature Bqt1 destruction increases spindle defects. Some bouquet-deficient
+      cells still divide successfully, so no absolute requirement or universal fungal
+      function is asserted.
+evidence:
+- reference: GO:1990612
+  notes: 'Gene Ontology cellular-component term for Sad1-Kms1 LINC complex: A LINC
+    complex implicated in the connection of DNA double strand breaks to the cytoskeleton
+    during DNA double-strand break repair.'
+- reference: DOI:10.26508/lsa.202000824
+  notes: Fan et al. 2020, PMID 32967926; native PMC7536833.1 Results, Discussion and
+    relevant Methods read. Direct budding-yeast tether localization, co-purification,
+    depletion, bouquet imaging and gene-conversion assays.
+- reference: DOI:10.1186/s12915-015-0149-x
+  notes: Amelina et al. 2015, PMID 26058898; native PMC4660835.1 interaction/mutagenesis
+    Results, Discussion, Methods and deposited dataset inspected.
+- reference: DOI:10.1038/celldisc.2017.41
+  notes: 2017 study, PMID 29123917; native PMC5674143.1 bouquet-maintenance/function
+    Results and Methods read. Live-cell and conditional-degradation evidence.
+- reference: DOI:10.1016/j.cub.2020.01.054
+  notes: 2020 study, PMID 32059771; native PMC7181386.1 Results, Discussion and imaging/spread
+    Methods read. Alternative Csm4 interpretation and motor-association evidence retained
+    with limits.
+- reference: DOI:10.1038/s41467-025-56049-9
+  notes: 2025 study, PMID 39833200; native PMC11747273.1 telocentrosome-recruitment
+    and natural meiotic-entry Results read. Partial mitotic recruitment is distinct
+    from complete bouquet formation.
+- reference: DOI:10.1016/j.cell.2006.01.048
+  notes: Chikashige et al. 2006, PMID 16615890; DOI/PMID and complete abstract read
+    via Europe PMC. Publisher access returned 403; Europe PMC lists subscription-only
+    access. Connector claims are limited to the abstract, corroborated by later studies.
+- reference: GO:0032993
+  notes: Native protein-DNA complex definition is broader than this named assembly.
+- reference: GO:0005634
+  notes: Native nucleus definition verifies the encompassing compartment.
+- reference: GO:0000228
+  notes: Native nuclear chromosome definition; chromosomes participate in the polarized
+    assembly.
+- reference: GO:0000781
+  notes: Native chromosome, telomeric region definition denotes the grouped ends,
+    not the whole bouquet.
+causal_graphs:
+- graph_id: sad1_kms1_linc_complex_mechanism
+  title: Sad1-kms1 linc complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of Sad1-Kms1 LINC complex (GO:1990612) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: sad1_kms1_linc_complex
+    label: Sad1-Kms1 LINC complex
+    node_type: STRUCTURE
+    grounding: GO:1990612
+    description: A LINC complex implicated in the connection of DNA double strand
+      breaks to the cytoskeleton during DNA double-strand break repair.
+  - node_id: sad1_sun_protein
+    label: inner nuclear membrane SUN-domain protein Sad1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR045119
+    component_ref: sad1_sun_protein
+    description: Inner nuclear membrane SUN-domain transmembrane subunit whose lumenal
+      SUN domain binds Kms1 and whose nucleoplasmic N-terminus engages Bqt1-Bqt2 at
+      clustered telomeres.
+  - node_id: kms1_kash_protein
+    label: outer nuclear membrane KASH-domain protein Kms1
+    node_type: GENE_OR_PROTEIN
+    component_ref: kms1_kash_protein
+    description: Outer nuclear membrane KASH-domain transmembrane subunit that binds
+      Sad1 in the perinuclear space and recruits cytoplasmic dynein-dynactin motors
+      to drive horsetail nuclear movement.
+  - node_id: bqt1_bqt2_meiotic_connector
+    label: meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)
+    node_type: GENE_OR_PROTEIN
+    component_ref: bqt1_bqt2_meiotic_connector
+    description: Meiosis-specific nuclear bridge heterodimer expressed during prophase
+      I that links Rap1-Taz1 at telomeres to the nucleoplasmic domain of Sad1.
+  - node_id: telomere_organization
+    label: telomere organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032200
+    description: Polarized organization of chromosome ends during meiotic prophase.
+  - node_id: pairing_and_recombination
+    label: Support of homolog pairing and meiotic recombination
+    node_type: BIOLOGICAL_PROCESS
+    description: The budding-yeast tether/bouquet system supports efficient homolog
+      pairing and gene conversion, without making clustering alone the exclusive cause.
+  - node_id: meiotic_spindle_support
+    label: Support of meiotic spindle formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintained fission-yeast telomere-SPB attachment supports normal
+      SPB behavior and spindle formation.
+  edges:
+  - subject: sad1_sun_protein
+    predicate: is part of
+    object: sad1_kms1_linc_complex
+    description: Inner nuclear membrane SUN-domain transmembrane subunit whose lumenal
+      SUN domain binds Kms1 and whose nucleoplasmic N-terminus engages Bqt1-Bqt2 at
+      clustered telomeres.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Chikashige et al. 2006 show that Bqt1-Bqt2 connect telomeric Rap1 to
+        the inner nuclear membrane SUN protein Sad1 during meiotic bouquet formation.
+  - subject: kms1_kash_protein
+    predicate: is part of
+    object: sad1_kms1_linc_complex
+    description: Outer nuclear membrane KASH-domain transmembrane subunit that binds
+      Sad1 in the perinuclear space and recruits cytoplasmic dynein-dynactin motors
+      to drive horsetail nuclear movement.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Describes the Sad1-Kms1 nuclear envelope LINC bridge linking meiotic
+        telomeres to cytoplasmic microtubule motors.
+  - subject: bqt1_bqt2_meiotic_connector
+    predicate: associates with
+    object: sad1_kms1_linc_complex
+    description: Meiosis-specific nuclear bridge heterodimer expressed during prophase
+      I that links Rap1-Taz1 at telomeres to the nucleoplasmic domain of Sad1.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Chikashige et al. 2006 demonstrate that Bqt1 and Bqt2 form a meiosis-specific
+        bridge linking Rap1 at telomeres to Sad1.
+  - subject: sad1_kms1_linc_complex
+    predicate: mediates
+    object: telomere_organization
+    description: Polarized organization of chromosome ends during meiotic prophase.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Direct imaging of Rap1-marked peripheral clusters.
+  - subject: sad1_kms1_linc_complex
+    predicate: mediates
+    object: pairing_and_recombination
+    description: The budding-yeast tether/bouquet system supports efficient homolog
+      pairing and gene conversion, without making clustering alone the exclusive cause.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Mps2-depleted and csm4-deleted cells show delayed pairing at LYS4 and
+        reduced gene conversion at ARG4/HIS4. Tethering, motion and clustering effects
+        are not experimentally isolated from one another.
+  - subject: sad1_kms1_linc_complex
+    predicate: mediates
+    object: meiotic_spindle_support
+    description: Maintained fission-yeast telomere-SPB attachment supports normal
+      SPB behavior and spindle formation.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Premature Bqt1 destruction increases spindle defects. Some bouquet-deficient
+        cells still divide successfully, so no absolute requirement or universal fungal
+        function is asserted.
+curation_history:
+- timestamp: '2026-10-19T05:27:41Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of Sad1-Kms1 LINC complex (GO:1990612) in category CYTOSKELETON
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: Conserved fungal nuclear-envelope LINC and meiotic telomere-microtubule tethering
+    complex coupling chromosomes across the nuclear membranes to cytoplasmic dynein.
+  reference: DOI:10.1016/j.cell.2006.01.048

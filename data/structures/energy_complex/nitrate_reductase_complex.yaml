@@ -1,0 +1,296 @@
+identifier: GO:0009325
+label: nitrate reductase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An enzyme complex that catalyzes the formation of nitrate from nitrite
+  with the concomitant reduction of an acceptor. A molybdenum-cofactor- and iron-sulfur-containing
+  multisubunit oxidoreductase complex (exemplified by the respiratory membrane-bound
+  NarGHI complex in Escherichia coli and denitrifying bacteria, periplasmic NapAB,
+  and assimilatory Nas/Nia complexes in bacteria, fungi, and microalgae) that catalyzes
+  the two-electron reduction of nitrate (NO3-) to nitrite (NO2-). In anaerobic respiration,
+  the membrane-bound nitrate reductase complex couples quinol oxidation in the cytoplasmic
+  membrane to proton-motive force generation.
+definition_source: GO:0009325
+mapping_status: PROPOSED
+parent_structures:
+- GO:1990204
+components:
+- component_id: narg_alpha_subunit
+  label: nitrate reductase alpha subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006468
+  gene_symbols:
+  - narG
+  essentiality: CONDITIONAL
+  role: Molybdenum-bis(molybdopterin guanine dinucleotide)-binding catalytic alpha
+    subunit that accepts electrons from NarH and reduces nitrate to nitrite. Functions
+    within the molybdopterin nitrate reductase respiratory/assimilatory complex in
+    nitrate reductase complex in the canonical membrane-bound respiratory NarGHI holoenzyme
+    (alongside periplasmic NapAB and soluble assimilatory isoforms across taxa).
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P09152
+    protein_label: Respiratory nitrate reductase 1 alpha chain
+    gene_symbol: narG
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P09152
+      notes: Reviewed Swiss-Prot entry NARG_ECOLI is the E. coli K-12 NarG alpha chain
+        and cross-references GO:0044799 and ComplexPortal:CPX-1974.
+  evidence:
+  - reference: InterPro:IPR006468
+    notes: InterPro IPR006468 is an exact family entry named Nitrate reductase alpha
+      subunit and integrates the NCBIfam:TIGR01580 NarG HMM.
+  - reference: ComplexPortal:CPX-1974
+    notes: Complex Portal CPX-1974 curates P09152/NarG as an E. coli K-12 Nitrate
+      reductase A complex participant.
+- component_id: narh_beta_subunit
+  label: nitrate reductase beta subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006547
+  gene_symbols:
+  - narH
+  essentiality: CONDITIONAL
+  role: Iron-sulfur beta subunit that relays electrons between the membrane NarI cytochrome
+    and the NarG molybdenum catalytic subunit. Functions within the molybdopterin
+    nitrate reductase respiratory/assimilatory complex in nitrate reductase complex
+    in the canonical membrane-bound respiratory NarGHI holoenzyme (alongside periplasmic
+    NapAB and soluble assimilatory isoforms across taxa).
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P11349
+    protein_label: Respiratory nitrate reductase 1 beta chain
+    gene_symbol: narH
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P11349
+      notes: Reviewed Swiss-Prot entry NARH_ECOLI is the E. coli K-12 NarH beta chain
+        and cross-references GO:0044799 and ComplexPortal:CPX-1974.
+  evidence:
+  - reference: InterPro:IPR006547
+    notes: InterPro IPR006547 is an exact family entry named Nitrate reductase, beta
+      subunit and integrates the NCBIfam:TIGR01660 NarH HMM.
+  - reference: ComplexPortal:CPX-1974
+    notes: Complex Portal CPX-1974 curates P11349/NarH as an E. coli K-12 Nitrate
+      reductase A complex participant.
+- component_id: nari_gamma_subunit
+  label: respiratory nitrate reductase subunit gamma
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - narI
+  essentiality: CONDITIONAL
+  role: Membrane b-type cytochrome gamma subunit that anchors the NarGHI complex and
+    transfers electrons from quinol to NarH. Functions within the molybdopterin nitrate
+    reductase respiratory/assimilatory complex in nitrate reductase complex in the
+    canonical membrane-bound respiratory NarGHI holoenzyme (alongside periplasmic
+    NapAB and soluble assimilatory isoforms across taxa).
+  protein_examples:
+  - taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    uniprot_id: UniProtKB:P11350
+    protein_label: Respiratory nitrate reductase 1 gamma chain
+    gene_symbol: narI
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-02'
+    evidence:
+    - reference: UniProtKB:P11350
+      notes: Reviewed Swiss-Prot entry NARI_ECOLI is the E. coli K-12 NarI gamma chain
+        and cross-references GO:0044799 and ComplexPortal:CPX-1974.
+  evidence:
+  - reference: ComplexPortal:CPX-1974
+    notes: Complex Portal CPX-1974 curates P11350/NarI as an E. coli K-12 Nitrate
+      reductase A complex participant.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Escherichia coli K-12 source of the CPX-1974 NarGHI heterohexamer with NarG,
+    NarH, NarI, heme, iron-sulfur, and Mo-bis(molybdopterin guanine dinucleotide)
+    participants.
+  reference: ComplexPortal:CPX-1974
+functions:
+- function_id: nitrate_reductase_quinone_activity
+  label: nitrate reductase (quinone) activity
+  grounding: GO:0160182
+  description: The NarGHI complex oxidizes quinol to quinone while reducing nitrate
+    to nitrite during anaerobic nitrate respiration.
+  evidence:
+  - reference: GO:0160182
+    notes: GO:0160182 defines quinol-dependent nitrate reductase activity as catalysis
+      of quinol plus nitrate to quinone, water, and nitrite.
+  - reference: PMID:12910261
+    notes: Bertero et al. 2003 structurally traced the NarGHI respiratory electron-transfer
+      route from NarI through NarH to the NarG Mo-bisMGD catalytic site.
+evidence:
+- reference: GO:0009325
+  notes: 'Gene Ontology cellular-component term for nitrate reductase complex: An
+    enzyme complex that catalyzes the formation of nitrate from nitrite with the concomitant
+    reduction of an acceptor.'
+- reference: GO:0044799
+  notes: Gene Ontology cellular-component term for the NarGHI complex.
+- reference: GO:0160182
+  notes: Gene Ontology molecular-function term for quinol-dependent nitrate reductase
+    activity.
+- reference: InterPro:IPR006468
+  notes: InterPro family for the NarG nitrate reductase alpha subunit.
+- reference: InterPro:IPR006547
+  notes: InterPro family for the NarH nitrate reductase beta subunit.
+- reference: UniProtKB:P09152
+  notes: Reviewed E. coli K-12 NarG alpha-chain UniProtKB entry.
+- reference: UniProtKB:P11349
+  notes: Reviewed E. coli K-12 NarH beta-chain UniProtKB entry.
+- reference: UniProtKB:P11350
+  notes: Reviewed E. coli K-12 NarI gamma-chain UniProtKB entry.
+- reference: ComplexPortal:CPX-1974
+  notes: Complex Portal entry for the E. coli K-12 Nitrate reductase A complex.
+- reference: CHEBI:21137
+  notes: ChEBI identifier for the 3Fe-4S cofactor curated as a CPX-1974 small-molecule
+    participant.
+- reference: CHEBI:49883
+  notes: ChEBI identifier for the 4Fe-4S cofactor curated as a CPX-1974 small-molecule
+    participant.
+- reference: CHEBI:60539
+  notes: ChEBI identifier for Mo-bis(molybdopterin guanine dinucleotide), the NarG
+    molybdenum cofactor curated in CPX-1974.
+- reference: CHEBI:30413
+  notes: ChEBI identifier for the CPX-1974 heme participants.
+- reference: PMID:12910261
+  notes: Bertero et al. 2003, Insights into the respiratory electron transfer pathway
+    from the structure of nitrate reductase A.
+- reference: DOI:10.1038/nsb969
+  notes: DOI for the Bertero et al. 2003 NarGHI structure paper.
+- reference: PMID:11289299
+  notes: Richardson et al. 2001, Functional, biochemical and genetic diversity of
+    prokaryotic nitrate reductases.
+- reference: DOI:10.1007/PL00000845
+  notes: DOI for the Richardson et al. 2001 nitrate reductase review.
+- reference: PMID:17964535
+  notes: Rothery, Workun and Weiner 2008, The prokaryotic complex iron-sulfur molybdoenzyme
+    family.
+- reference: DOI:10.1016/j.bbamem.2007.09.002
+  notes: DOI for the Rothery, Workun and Weiner 2008 review cited by GO:0044799.
+causal_graphs:
+- graph_id: nitrate_reductase_complex_mechanism
+  title: Nitrate reductase complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of nitrate reductase complex (GO:0009325) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: nitrate_reductase_complex
+    label: nitrate reductase complex
+    node_type: STRUCTURE
+    grounding: GO:0009325
+    description: An enzyme complex that catalyzes the formation of nitrate from nitrite
+      with the concomitant reduction of an acceptor.
+  - node_id: narg_alpha_subunit
+    label: nitrate reductase alpha subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR006468
+    component_ref: narg_alpha_subunit
+    description: Molybdenum-bis(molybdopterin guanine dinucleotide)-binding catalytic
+      alpha subunit that accepts electrons from NarH and reduces nitrate to nitrite.
+      Functions within the molybdopterin nitrate reductase respiratory/assimilatory
+      complex in nitrate reductase complex in the canonical membrane-bound respiratory
+      NarGHI holoenzyme (alongside periplasmic NapAB and soluble assimilatory isoforms
+      across taxa).
+  - node_id: narh_beta_subunit
+    label: nitrate reductase beta subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR006547
+    component_ref: narh_beta_subunit
+    description: Iron-sulfur beta subunit that relays electrons between the membrane
+      NarI cytochrome and the NarG molybdenum catalytic subunit. Functions within
+      the molybdopterin nitrate reductase respiratory/assimilatory complex in nitrate
+      reductase complex in the canonical membrane-bound respiratory NarGHI holoenzyme
+      (alongside periplasmic NapAB and soluble assimilatory isoforms across taxa).
+  - node_id: nari_gamma_subunit
+    label: respiratory nitrate reductase subunit gamma
+    node_type: GENE_OR_PROTEIN
+    component_ref: nari_gamma_subunit
+    description: Membrane b-type cytochrome gamma subunit that anchors the NarGHI
+      complex and transfers electrons from quinol to NarH. Functions within the molybdopterin
+      nitrate reductase respiratory/assimilatory complex in nitrate reductase complex
+      in the canonical membrane-bound respiratory NarGHI holoenzyme (alongside periplasmic
+      NapAB and soluble assimilatory isoforms across taxa).
+  - node_id: nitrate_reductase_quinone_activity
+    label: nitrate reductase (quinone) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0160182
+    description: The NarGHI complex oxidizes quinol to quinone while reducing nitrate
+      to nitrite during anaerobic nitrate respiration.
+  edges:
+  - subject: narg_alpha_subunit
+    predicate: is part of
+    object: nitrate_reductase_complex
+    description: Molybdenum-bis(molybdopterin guanine dinucleotide)-binding catalytic
+      alpha subunit that accepts electrons from NarH and reduces nitrate to nitrite.
+      Functions within the molybdopterin nitrate reductase respiratory/assimilatory
+      complex in nitrate reductase complex in the canonical membrane-bound respiratory
+      NarGHI holoenzyme (alongside periplasmic NapAB and soluble assimilatory isoforms
+      across taxa).
+    evidence:
+    - reference: InterPro:IPR006468
+      notes: InterPro IPR006468 is an exact family entry named Nitrate reductase alpha
+        subunit and integrates the NCBIfam:TIGR01580 NarG HMM.
+  - subject: narh_beta_subunit
+    predicate: is part of
+    object: nitrate_reductase_complex
+    description: Iron-sulfur beta subunit that relays electrons between the membrane
+      NarI cytochrome and the NarG molybdenum catalytic subunit. Functions within
+      the molybdopterin nitrate reductase respiratory/assimilatory complex in nitrate
+      reductase complex in the canonical membrane-bound respiratory NarGHI holoenzyme
+      (alongside periplasmic NapAB and soluble assimilatory isoforms across taxa).
+    evidence:
+    - reference: InterPro:IPR006547
+      notes: InterPro IPR006547 is an exact family entry named Nitrate reductase,
+        beta subunit and integrates the NCBIfam:TIGR01660 NarH HMM.
+  - subject: nari_gamma_subunit
+    predicate: is part of
+    object: nitrate_reductase_complex
+    description: Membrane b-type cytochrome gamma subunit that anchors the NarGHI
+      complex and transfers electrons from quinol to NarH. Functions within the molybdopterin
+      nitrate reductase respiratory/assimilatory complex in nitrate reductase complex
+      in the canonical membrane-bound respiratory NarGHI holoenzyme (alongside periplasmic
+      NapAB and soluble assimilatory isoforms across taxa).
+    evidence:
+    - reference: ComplexPortal:CPX-1974
+      notes: Complex Portal CPX-1974 curates P11350/NarI as an E. coli K-12 Nitrate
+        reductase A complex participant.
+  - subject: nitrate_reductase_complex
+    predicate: mediates
+    object: nitrate_reductase_quinone_activity
+    description: The NarGHI complex oxidizes quinol to quinone while reducing nitrate
+      to nitrite during anaerobic nitrate respiration.
+    evidence:
+    - reference: GO:0160182
+      notes: GO:0160182 defines quinol-dependent nitrate reductase activity as catalysis
+        of quinol plus nitrate to quinone, water, and nitrite.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of nitrate reductase complex (GO:0009325) in category
+    ENERGY_COMPLEX with verified GO hierarchy, components, UniProtKB protein examples,
+    causal mechanism graph, and literature evidence.
+  llm_assisted: true
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Widespread across facultatively anaerobic and denitrifying bacteria expressing
+    respiratory (NarGHI), periplasmic (NapAB), or assimilatory (Nas) nitrate reductase
+    complexes.
+  reference: PMID:12950096
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: VARIABLE
+  note: Present in denitrifying and nitrate-respiring haloarchaea and hyperthermophilic
+    archaea.
+  reference: PMID:12950096

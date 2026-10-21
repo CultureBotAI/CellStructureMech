@@ -1,0 +1,242 @@
+identifier: GO:0032156
+label: septin cytoskeleton
+structure_category: CYTOSKELETON
+structure_kind: FILAMENT
+definition: The part of the cytoskeleton (the internal framework of a cell) composed
+  of septins and associated proteins. Includes septin cytoskeleton-associated complexes.
+  The network of GTP-binding septin hetero-oligomeric rods (Cdc3–Cdc10–Cdc11–Cdc12–Shs1
+  in Saccharomyces cerevisiae) and higher-order filaments, rings, collars, and gauzes
+  associated with the inner face of the plasma membrane in yeasts, filamentous fungi,
+  and green algae. The septin cytoskeleton acts as a cortical diffusion barrier and
+  spatial scaffold that recruits cytokinetic, cell-wall-synthetic, and morphogenesis
+  checkpoint proteins to the bud neck, hyphal branch sites, and prospore membranes.
+definition_source: GO:0032156
+mapping_status: PROPOSED
+parent_structures:
+- GO:0005856
+has_part:
+- GO:0031105
+- GO:0032158
+- GO:0032161
+components:
+- component_id: septin_proteins
+  label: septin proteins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Septin filament arrays are built from septin GTPases, but no exact
+    source-neutral InterPro, Pfam, or NCBIfam CURIE was assigned for the complete
+    filament-array-forming septin cohort.
+  role: Septin GTPases that polymerize into bars or filaments and are arranged as
+    filamentous arrays.
+  evidence:
+  - reference: GO:0032160
+    notes: GO:0032160 defines septin filament arrays as arrays of septin filaments
+      or bars.
+  gene_symbols:
+  - CDC3
+  - CDC10
+  - CDC11
+  - CDC12
+  - SHS1
+  protein_examples:
+  - uniprot_id: UniProtKB:P32457
+    protein_label: Cell division control protein 3
+    gene_symbol: CDC3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P32457
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32457, the single reviewed entry
+        for gene CDC3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P25342
+    protein_label: Cell division control protein 10
+    gene_symbol: CDC10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Membrane' localisation of P25342.
+  - uniprot_id: UniProtKB:P32458
+    protein_label: Cell division control protein 11
+    gene_symbol: CDC11
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC11 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Membrane' localisation of P32458.
+    - reference: PMID:25971666
+      notes: Finnigan GC et al. 2015, ‘The Carboxy-Terminal Tails of Septins Cdc11
+        and Shs1 Recruit Myosin-II Binding Factor Bni5 to the Bud Neck in Saccharomyces
+        cerevisiae.’, Genetics. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Bud neck' localisation of P32458.
+  - uniprot_id: UniProtKB:P32468
+    protein_label: Cell division control protein 12
+    gene_symbol: CDC12
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene CDC12 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Membrane' localisation of P32468.
+  - uniprot_id: UniProtKB:Q07657
+    protein_label: Seventh homolog of septin 1
+    gene_symbol: SHS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene SHS1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Bud neck' localisation of Q07657.
+    - reference: PMID:25971666
+      notes: Finnigan GC et al. 2015, ‘The Carboxy-Terminal Tails of Septins Cdc11
+        and Shs1 Recruit Myosin-II Binding Factor Bni5 to the Bud Neck in Saccharomyces
+        cerevisiae.’, Genetics. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Bud neck' localisation of Q07657.
+    - reference: PMID:9790978
+      notes: 'Mino A et al. 1998, ‘Shs1p: a novel member of septin that interacts
+        with spa2p, involved in polarized growth in saccharomyces cerevisiae.’, Biochem
+        Biophys Res Commun. ECO:0000269 experimental evidence cited by UniProt for
+        the ''Bud neck'' localisation of Q07657.'
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: VARIABLE
+  note: Saccharomyces cerevisiae septin filament arrays occur at the prospore membrane
+    during sporulation rather than throughout all vegetative and meiotic cell-cycle
+    states.
+  reference: GO:0032160
+- taxon_id: NCBITaxon:5476
+  taxon_label: Candida albicans
+  presence: VARIABLE
+  note: Candida albicans septin filament arrays occur at the chlamydospore membrane
+    during chlamydospore formation.
+  reference: GO:0032160
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which the GO definition records septin filament arrays
+    at the prospore membrane during spore formation.
+  reference: GO:0032160
+- taxon_id: NCBITaxon:5476
+  taxon_label: Candida albicans
+  note: Candida model in which the GO definition records septin filament arrays at
+    the chlamydospore membrane during chlamydospore formation.
+  reference: GO:0032160
+evidence:
+- reference: GO:0032156
+  notes: 'Gene Ontology cellular-component term for septin cytoskeleton: The part
+    of the cytoskeleton (the internal framework of a cell) composed of septins and
+    associated proteins. Includes septin cytoskeleton-associated complexes.'
+- reference: GO:0032160
+  notes: Gene Ontology cellular-component term for the septin filament array.
+- reference: GO:0005856
+  notes: OLS reports a direct GO:0032160 part_of relation to the cytoskeleton.
+- reference: GO:0032165
+  notes: Gene Ontology cellular-component child term for the prospore septin filament
+    array.
+- reference: GO:0032166
+  notes: Gene Ontology cellular-component child term for the chlamydospore septin
+    filament array.
+causal_graphs:
+- graph_id: septin_cytoskeleton_mechanism
+  title: Septin cytoskeleton assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of septin cytoskeleton (GO:0032156) to its biological functions.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: septin_cytoskeleton
+    label: septin cytoskeleton
+    node_type: STRUCTURE
+    grounding: GO:0032156
+    description: The part of the cytoskeleton (the internal framework of a cell) composed
+      of septins and associated proteins.
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
+    description: Septin GTPases that polymerize into bars or filaments and are arranged
+      as filamentous arrays.
+  - node_id: septin_complex
+    label: septin complex
+    node_type: STRUCTURE
+    grounding: GO:0031105
+    description: Constituent structural subassembly (septin complex, GO:0031105) within
+      septin cytoskeleton.
+  - node_id: septin_band
+    label: septin band
+    node_type: STRUCTURE
+    grounding: GO:0032158
+    description: Constituent structural subassembly (septin band, GO:0032158) within
+      septin cytoskeleton.
+  edges:
+  - subject: septin_proteins
+    predicate: is part of
+    object: septin_cytoskeleton
+    description: Septin GTPases that polymerize into bars or filaments and are arranged
+      as filamentous arrays.
+    evidence:
+    - reference: GO:0032160
+      notes: GO:0032160 defines septin filament arrays as arrays of septin filaments
+        or bars.
+  - subject: septin_complex
+    predicate: is part of
+    object: septin_cytoskeleton
+    description: Septin complex is a structural part of septin cytoskeleton.
+    evidence:
+    - reference: GO:0032156
+      notes: 'Gene Ontology cellular-component term for septin cytoskeleton: The part
+        of the cytoskeleton (the internal framework of a cell) composed of septins
+        and associated proteins. Includes septin cytoskeleton-associated complexes.'
+  - subject: septin_band
+    predicate: is part of
+    object: septin_cytoskeleton
+    description: Septin band is a structural part of septin cytoskeleton.
+    evidence:
+    - reference: GO:0032156
+      notes: 'Gene Ontology cellular-component term for septin cytoskeleton: The part
+        of the cytoskeleton (the internal framework of a cell) composed of septins
+        and associated proteins. Includes septin cytoskeleton-associated complexes.'
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of septin cytoskeleton (GO:0032156) in category CYTOSKELETON
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/phagolysosome.yaml
+  slug: phagolysosome
+session:
+  id: 2026-10-19T052708Z-claude-opus-4-7-f0c463
+  timestamp: '2026-10-19T05:27:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for phagolysosome (GO:0032010) in membrane_organelle.
+  details: Authored data/structures/membrane_organelle/phagolysosome.yaml for phagolysosome
+    (GO:0032010) with verified GO hierarchy, taxonomic distribution, functions, literature
+    evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

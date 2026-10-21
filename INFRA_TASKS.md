@@ -1,0 +1,55 @@
+# CellStructureMech infrastructure tasks
+
+This versioned ledger collects repository requirements and upgrades discovered
+during every goal. The workflow profile and its parent govern intake, stage 6
+implementation, closure and cycle restart.
+
+## Intake protocol
+
+- Give each actionable task a stable ID such as `cellstructuremech-infra-0001` and retain it
+  across cycles. Record the originating run, cycle and goal, observation,
+  desired outcome, evidence paths, priority, dependencies and status.
+- Link each task to an actual issue in https://github.com/CultureBotAI/CellStructureMech/issues.
+  Search existing open and closed issues before creating one. If access fails,
+  retain an explicit pending-link blocker; never invent an issue number or URL.
+- Preserve resolved and deferred entries with their issue, implementation PR,
+  validation and disposition. Do not overwrite previous cycle evidence.
+- At stage 6, freeze a bounded snapshot, write a dependency-aware plan and
+  acceptance criteria, implement selected work, validate, and complete the
+  commit sequence, write the closure receipt and stop; only the supervisor
+  dispatches another goal. New arrivals after the cutoff enter the next cycle;
+  never expand the frozen task-ID scope. A new blocking prerequisite requires
+  an explicit deferred disposition for the selected task. Carry unfinished work
+  forward explicitly.
+
+## Machine-readable task inventory
+
+This fenced mapping is the inventory stage 6 freezes and reconciles. Each task
+uses `task_id`, `summary`, `status` (`note`, `open`, `deferred`, or `resolved`),
+optional `issue_url`, and optional `disposition`. Status `note` may have a
+pending issue link; all other statuses require a real issue URL. Keep richer
+notes below keyed by the same stable task ID.
+
+<!-- mech-infra-tasks:start -->
+```yaml
+schema_version: '1.0.0'
+tasks:
+  - task_id: cellstructuremech-infra-0001
+    summary: Resolve linkml-validate relative to sys.executable in scripts/validate_history.py so scripts/run_qc.py succeeds under direct .venv/bin/python invocation
+    status: note
+    disposition: Discovered during Cycle 1 Stage 1 (add_records) QC gate execution; queued for Stage 6 infrastructure implementation.
+```
+<!-- mech-infra-tasks:end -->
+
+## Tasks
+
+### `cellstructuremech-infra-0001` — Resolve `linkml-validate` relative to `sys.executable` in `scripts/validate_history.py`
+
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 1 (`add_records`)
+- **Status**: `note` (pending issue creation/triage in Stage 6)
+- **Priority**: P2
+- **Dependencies**: None
+- **Observation**: `scripts/run_qc.py` invokes `[sys.executable, "scripts/validate_history.py"]`, which in turn shells out to bare `["linkml-validate", ...]` (`scripts/validate_history.py` line 48). When `.venv/bin/python scripts/run_qc.py` is run without `.venv/bin` prepended to `PATH`, `linkml-validate` resolves to a global `pyenv` shim and fails with `pyenv: version '3.13' is not installed`.
+- **Desired outcome**: Resolve `Path(sys.executable).with_name("linkml-validate")` (falling back to `shutil.which("linkml-validate")`) in `scripts/validate_history.py` so `scripts/run_qc.py` is self-contained when invoked via `.venv/bin/python`.
+- **Evidence paths**: `scripts/run_qc.py`, `scripts/validate_history.py`
+

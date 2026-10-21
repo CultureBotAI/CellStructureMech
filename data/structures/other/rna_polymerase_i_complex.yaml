@@ -1,0 +1,268 @@
+identifier: GO:0005736
+label: RNA polymerase I complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: RNA polymerase I, one of three nuclear DNA-directed RNA polymerases found
+  in all eukaryotes, is a multisubunit complex; typically it produces rRNAs. Two large
+  subunits comprise the most conserved portion including the catalytic site and share
+  similarity with other eukaryotic and bacterial multisubunit RNA polymerases. The
+  remainder of the complex is composed of smaller subunits (generally ten or more),
+  some of which are also found in RNA polymerase III and others of which are also
+  found in RNA polymerases II and III. Although the core is competent to mediate ribonucleic
+  acid synthesis, it requires additional factors to select the appropriate template.
+  The 14-subunit DNA-directed RNA polymerase I holoenzyme localized in the eukaryotic
+  nucleolus of yeasts, fungi, and protists that exclusively transcribes ribosomal
+  DNA (rDNA) repeats into the polycistronic 35S/47S pre-rRNA precursor. In Saccharomyces
+  cerevisiae, the RNA polymerase I complex comprises the Rpa190–Rpa135 catalytic core,
+  five shared Rpb subunits, the Rpa43–Rpa14 stalk, and the TFIIF/TFIIE-like Rpa49–Rpa34
+  heterodimer.
+definition_source: GO:0005736
+mapping_status: PROPOSED
+parent_structures:
+- GO:0000428
+- GO:0140513
+part_of:
+- GO:0005730
+synonyms:
+- synonym_text: DNA-directed RNA polymerase I complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005736
+- synonym_text: DNA-directed RNA polymerase I activity
+  synonym_type: RELATED_SYNONYM
+  source: GO:0005736
+components:
+- component_id: rpa190_rpa135_catalytic_core
+  label: RNA polymerase I 10-subunit catalytic core (Rpa190, Rpa135, AC40-AC19, Rpb5/6/8/10/12)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Core DNA-directed RNA polymerase I assembly containing the active-site cleft
+    formed by Rpa190 and Rpa135, the shared Pol I/III AC40-AC19 alpha-like heterodimer,
+    and five common Rpb subunits that synthesize the 35S/47S pre-rRNA precursor.
+  evidence:
+  - reference: DOI:10.1038/nrm2184
+    notes: Reviews the subunit composition and nucleolar transcription mechanism of
+      eukaryotic RNA polymerase I.
+- component_id: rpa43_rpa14_stalk_and_rpa49_rpa34_subcomplex
+  label: RNA polymerase I stalk (Rpa43-Rpa14) and intrinsic TFIIF/TFIIE-like heterodimer
+    (Rpa49-Rpa34.5)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Pol I-specific peripheral subcomplexes where the Rpa43-Rpa14 stalk recruits
+    initiation factor Rrn3 and the Rpa49-Rpa34.5 heterodimer promotes promoter opening,
+    processive rDNA elongation, and intrinsic RNA cleavage.
+  evidence:
+  - reference: DOI:10.1146/annurev.genet.33.1.261
+    notes: Reviews the specialized initiation and elongation subcomplexes of Saccharomyces
+      cerevisiae RNA polymerase I.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Nucleoli are non-membrane-bounded bodies of eukaryotic nuclei that concentrate
+    ribosomal gene transcription and early ribosome biogenesis.
+  reference: GO:0005730
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which nucleolar ribosome synthesis includes 35S pre-rRNA
+    processing and U3-containing small-subunit processome assembly.
+  reference: DOI:10.1038/nature00769
+functions:
+- function_id: transcription_by_rna_polymerase_i
+  label: transcription by RNA polymerase I
+  grounding: GO:0006360
+  description: RNA polymerase I in the nucleolus transcribes ribosomal DNA to produce
+    the major pre-rRNA precursor.
+  evidence:
+  - reference: GO:0006360
+    notes: GO:0006360 denotes RNA synthesis from a DNA template by RNA polymerase
+      I.
+  - reference: DOI:10.1146/annurev.genet.33.1.261
+    notes: Venema and Tollervey 1999 review rDNA transcription as the first stage
+      of yeast ribosome synthesis.
+- function_id: rrna_processing
+  label: rRNA processing
+  grounding: GO:0006364
+  description: Nucleolar ribonucleoproteins process primary rRNA transcripts as part
+    of ribosome biogenesis.
+  evidence:
+  - reference: GO:0006364
+    notes: GO:0006364 denotes conversion of a primary rRNA transcript into mature
+      rRNA molecules.
+  - reference: DOI:10.1038/nature00769
+    notes: Dragon et al. 2002 identified the nucleolar U3 small-subunit processome
+      as required for 18S rRNA biogenesis.
+- function_id: ribosome_biogenesis
+  label: ribosome biogenesis
+  grounding: GO:0042254
+  description: The nucleolus organizes early transcription, rRNA processing, and preribosomal
+    assembly steps that contribute to production of cytoplasmic ribosomal subunits.
+  evidence:
+  - reference: GO:0042254
+    notes: GO:0042254 denotes the biosynthesis, assembly, and arrangement of ribosome-subunit
+      constituents.
+  - reference: DOI:10.1038/nrm2184
+    notes: Boisvert et al. 2007 review the nucleolus as a eukaryotic nuclear body
+      centered on ribosome biogenesis.
+evidence:
+- reference: GO:0005736
+  notes: 'Gene Ontology cellular-component term for RNA polymerase I complex: RNA
+    polymerase I, one of three nuclear DNA-directed RNA polymerases found in all eukaryotes,
+    is a multisubunit complex; typically it produces rRNAs. Two large subunits comprise
+    the most conserved portion including the catalytic site and share similarity with
+    other eukaryotic and bacterial multisubunit RNA polymerases. The remainder of
+    the complex is composed of smaller subunits (generally ten or more), some of which
+    are also found in RNA polymerase III and others of which are also found in RNA
+    polymerases II and III. Although the core is competent to mediate ribonucleic
+    acid synthesis, it requires additional factors to select the appropriate template.'
+- reference: GO:0005730
+  notes: Gene Ontology cellular-component term for nucleolus.
+- reference: GO:0031981
+  notes: Gene Ontology cellular-component term for nuclear lumen.
+- reference: GO:0030874
+  notes: Gene Ontology cellular-component term for nucleolar chromatin.
+- reference: GO:0032040
+  notes: Gene Ontology cellular-component term for small-subunit processome.
+- reference: GO:0031429
+  notes: Gene Ontology cellular-component term for box H/ACA snoRNP complex.
+- reference: GO:0006360
+  notes: Gene Ontology biological-process term for transcription by RNA polymerase
+    I.
+- reference: GO:0006364
+  notes: Gene Ontology biological-process term for rRNA processing.
+- reference: GO:0042254
+  notes: Gene Ontology biological-process term for ribosome biogenesis.
+- reference: DOI:10.1038/nrm2184
+  notes: Boisvert et al. 2007, 'The multifunctional nucleolus', Nature Reviews Molecular
+    Cell Biology.
+- reference: DOI:10.1146/annurev.genet.33.1.261
+  notes: Venema and Tollervey 1999, 'Ribosome Synthesis in Saccharomyces cerevisiae',
+    Annual Review of Genetics.
+- reference: DOI:10.1038/nature00769
+  notes: Dragon et al. 2002, 'A large nucleolar U3 ribonucleoprotein required for
+    18S ribosomal RNA biogenesis', Nature.
+causal_graphs:
+- graph_id: rna_polymerase_i_complex_mechanism
+  title: Rna polymerase i complex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of RNA polymerase I complex (GO:0005736) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: rna_polymerase_i_complex
+    label: RNA polymerase I complex
+    node_type: STRUCTURE
+    grounding: GO:0005736
+    description: RNA polymerase I, one of three nuclear DNA-directed RNA polymerases
+      found in all eukaryotes, is a multisubunit complex; typically it produces rRNAs.
+  - node_id: rpa190_rpa135_catalytic_core
+    label: RNA polymerase I 10-subunit catalytic core (Rpa190, Rpa135, AC40-AC19,
+      Rpb5/6/8/10/12)
+    node_type: GENE_OR_PROTEIN
+    component_ref: rpa190_rpa135_catalytic_core
+    description: Core DNA-directed RNA polymerase I assembly containing the active-site
+      cleft formed by Rpa190 and Rpa135, the shared Pol I/III AC40-AC19 alpha-like
+      heterodimer, and five common Rpb subunits that synthesize the 35S/47S pre-rRNA
+      precursor.
+  - node_id: rpa43_rpa14_stalk_and_rpa49_rpa34_subcomplex
+    label: RNA polymerase I stalk (Rpa43-Rpa14) and intrinsic TFIIF/TFIIE-like heterodimer
+      (Rpa49-Rpa34.5)
+    node_type: GENE_OR_PROTEIN
+    component_ref: rpa43_rpa14_stalk_and_rpa49_rpa34_subcomplex
+    description: Pol I-specific peripheral subcomplexes where the Rpa43-Rpa14 stalk
+      recruits initiation factor Rrn3 and the Rpa49-Rpa34.5 heterodimer promotes promoter
+      opening, processive rDNA elongation, and intrinsic RNA cleavage.
+  - node_id: nucleolus
+    label: nucleolus
+    node_type: STRUCTURE
+    grounding: GO:0005730
+    description: Enclosing or holo-structural assembly (nucleolus, GO:0005730) containing
+      RNA polymerase I complex.
+  - node_id: transcription_by_rna_polymerase_i
+    label: transcription by RNA polymerase I
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006360
+    description: RNA polymerase I in the nucleolus transcribes ribosomal DNA to produce
+      the major pre-rRNA precursor.
+  - node_id: rrna_processing
+    label: rRNA processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006364
+    description: Nucleolar ribonucleoproteins process primary rRNA transcripts as
+      part of ribosome biogenesis.
+  - node_id: ribosome_biogenesis
+    label: ribosome biogenesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042254
+    description: The nucleolus organizes early transcription, rRNA processing, and
+      preribosomal assembly steps that contribute to production of cytoplasmic ribosomal
+      subunits.
+  edges:
+  - subject: rpa190_rpa135_catalytic_core
+    predicate: is part of
+    object: rna_polymerase_i_complex
+    description: Core DNA-directed RNA polymerase I assembly containing the active-site
+      cleft formed by Rpa190 and Rpa135, the shared Pol I/III AC40-AC19 alpha-like
+      heterodimer, and five common Rpb subunits that synthesize the 35S/47S pre-rRNA
+      precursor.
+    evidence:
+    - reference: DOI:10.1038/nrm2184
+      notes: Reviews the subunit composition and nucleolar transcription mechanism
+        of eukaryotic RNA polymerase I.
+  - subject: rpa43_rpa14_stalk_and_rpa49_rpa34_subcomplex
+    predicate: is part of
+    object: rna_polymerase_i_complex
+    description: Pol I-specific peripheral subcomplexes where the Rpa43-Rpa14 stalk
+      recruits initiation factor Rrn3 and the Rpa49-Rpa34.5 heterodimer promotes promoter
+      opening, processive rDNA elongation, and intrinsic RNA cleavage.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.33.1.261
+      notes: Reviews the specialized initiation and elongation subcomplexes of Saccharomyces
+        cerevisiae RNA polymerase I.
+  - subject: rna_polymerase_i_complex
+    predicate: is part of
+    object: nucleolus
+    description: Rna polymerase i complex forms an integral structural compartment
+      or subassembly of nucleolus.
+    evidence:
+    - reference: DOI:10.1038/nrm2184
+      notes: Boisvert et al. 2007, 'The multifunctional nucleolus', Nature Reviews
+        Molecular Cell Biology.
+  - subject: rna_polymerase_i_complex
+    predicate: mediates
+    object: transcription_by_rna_polymerase_i
+    description: RNA polymerase I in the nucleolus transcribes ribosomal DNA to produce
+      the major pre-rRNA precursor.
+    evidence:
+    - reference: GO:0006360
+      notes: GO:0006360 denotes RNA synthesis from a DNA template by RNA polymerase
+        I.
+  - subject: rna_polymerase_i_complex
+    predicate: mediates
+    object: rrna_processing
+    description: Nucleolar ribonucleoproteins process primary rRNA transcripts as
+      part of ribosome biogenesis.
+    evidence:
+    - reference: GO:0006364
+      notes: GO:0006364 denotes conversion of a primary rRNA transcript into mature
+        rRNA molecules.
+  - subject: rna_polymerase_i_complex
+    predicate: mediates
+    object: ribosome_biogenesis
+    description: The nucleolus organizes early transcription, rRNA processing, and
+      preribosomal assembly steps that contribute to production of cytoplasmic ribosomal
+      subunits.
+    evidence:
+    - reference: GO:0042254
+      notes: GO:0042254 denotes the biosynthesis, assembly, and arrangement of ribosome-subunit
+        constituents.
+curation_history:
+- timestamp: '2026-10-19T05:27:40Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of RNA polymerase I complex (GO:0005736) in category OTHER
+    with verified GO hierarchy, compartmental context, causal mechanism graph, and
+    literature evidence.
+  llm_assisted: true

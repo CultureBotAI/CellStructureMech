@@ -1,0 +1,315 @@
+identifier: GO:0009521
+label: photosystem
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A complex located in a photosynthetic membrane that consists of a photoreaction
+  center associated with accessory pigments and electron carriers. Examples of this
+  component are found in Arabidopsis thaliana and in photosynthetic bacterial and
+  archaeal species. A pigment-protein supercomplex embedded in the photosynthetic
+  thylakoid or cytoplasmic membranes of cyanobacteria, phototrophic bacteria, and
+  eukaryotic microalgae that harvests light energy via chlorophyll/bacteriochlorophyll
+  and carotenoid antennas and drives photochemical charge separation across a reaction
+  center. Photosystems (including oxygenic Photosystem I and II and anoxygenic type
+  I/II reaction centers) initiate photosynthetic electron transport coupled to ATP
+  and NAD(P)H synthesis.
+definition_source: GO:0009521
+mapping_status: PROPOSED
+parent_structures:
+- GO:0098796
+part_of:
+- GO:0034357
+synonyms:
+- synonym_text: reaction center
+  synonym_type: NARROW_SYNONYM
+  source: GO:0009521
+- synonym_text: reaction centre
+  synonym_type: NARROW_SYNONYM
+  source: GO:0009521
+components:
+- component_id: type_i_reaction_center_core
+  label: Type I (Fe-S type) photosystem reaction center core (PsaA/PsaB)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - psaA
+  - psaB
+  essentiality: CONDITIONAL
+  role: Heterodimeric Type I reaction center core binding the P700 special pair and
+    iron-sulfur clusters (FX, FA, FB) to drive light-driven ferredoxin reduction.
+  evidence:
+  - reference: PMID:11418848
+    notes: Jordan et al. 2001 determine the 2.5 A crystal structure of cyanobacterial
+      Photosystem I with its PsaA/PsaB reaction center core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A406
+    protein_label: Photosystem I P700 chlorophyll a apoprotein A1
+    gene_symbol: psaA
+    taxon_id: NCBITaxon:32046
+    taxon_label: Synechococcus elongatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene psaA in Synechococcus elongatus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: UniProtKB:P0A406
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A406, the single reviewed entry
+        for gene psaA in Synechococcus elongatus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:P0A408
+    protein_label: Photosystem I P700 chlorophyll a apoprotein A2
+    gene_symbol: psaB
+    taxon_id: NCBITaxon:32046
+    taxon_label: Synechococcus elongatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene psaB in Synechococcus elongatus,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: UniProtKB:P0A408
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0A408, the single reviewed entry
+        for gene psaB in Synechococcus elongatus. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+- component_id: type_ii_reaction_center_core
+  label: Type II (pheophytin-quinone type) photosystem reaction center core (D1/PsbA
+    and D2/PsbD)
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - psbA
+  - psbD
+  essentiality: CONDITIONAL
+  role: Heterodimeric Type II reaction center core binding the P680 chlorophyll special
+    pair, pheophytin, plastoquinones QA/QB, and the Mn4CaO5 oxygen-evolving cluster.
+  evidence:
+  - reference: PMID:21499260
+    notes: Umena et al. 2011 determine the 1.9 A crystal structure of Photosystem
+      II showing the D1 (PsbA) and D2 (PsbD) reaction center heterodimer and Mn4CaO5
+      cluster.
+  protein_examples:
+  - uniprot_id: UniProtKB:P51765
+    protein_label: Photosystem II protein D1
+    gene_symbol: psbA
+    taxon_id: NCBITaxon:32053
+    taxon_label: Thermostichus vulcanus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene psbA in Thermostichus vulcanus,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12518057
+      notes: Kamiya N et al. 2003, ‘Crystal structure of oxygen-evolving photosystem
+        II from Thermosynechococcus vulcanus at 3.7-A resolution.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Cellular
+        thylakoid membrane' localisation of P51765.
+    - reference: PMID:19433803
+      notes: Kawakami K et al. 2009, ‘Location of chloride and its possible functions
+        in oxygen-evolving photosystem II revealed by X-ray crystallography.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cellular thylakoid membrane' localisation of P51765.
+    - reference: PMID:21499260
+      notes: Umena Y et al. 2011, ‘Crystal structure of oxygen-evolving photosystem
+        II at a resolution of 1.9 Å.’, Nature. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cellular thylakoid membrane' localisation of P51765.
+  - uniprot_id: UniProtKB:D0VWR8
+    protein_label: Photosystem II D2 protein
+    gene_symbol: psbD
+    taxon_id: NCBITaxon:32053
+    taxon_label: Thermostichus vulcanus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene psbD in Thermostichus vulcanus,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12518057
+      notes: Kamiya N et al. 2003, ‘Crystal structure of oxygen-evolving photosystem
+        II from Thermosynechococcus vulcanus at 3.7-A resolution.’, Proc Natl Acad
+        Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Cellular
+        thylakoid membrane' localisation of D0VWR8.
+    - reference: PMID:19433803
+      notes: Kawakami K et al. 2009, ‘Location of chloride and its possible functions
+        in oxygen-evolving photosystem II revealed by X-ray crystallography.’, Proc
+        Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cellular thylakoid membrane' localisation of D0VWR8.
+    - reference: PMID:21499260
+      notes: Umena Y et al. 2011, ‘Crystal structure of oxygen-evolving photosystem
+        II at a resolution of 1.9 Å.’, Nature. ECO:0000269 experimental evidence cited
+        by UniProt for the 'Cellular thylakoid membrane' localisation of D0VWR8.
+- component_id: photosynthetic_antenna_pigments
+  label: core antenna chlorophylls, bacteriochlorophylls, and carotenoids
+  component_type: SMALL_MOLECULE
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Bound tetrapyrrole (chlorophyll or bacteriochlorophyll) and carotenoid cofactors
+    that harvest photons, transfer excitation energy to the reaction center special
+    pair, and quench triplet states.
+  evidence:
+  - reference: PMID:11418848
+    notes: Jordan et al. 2001 resolve the network of antenna chlorophylls and carotenoids
+      coordinated within the photosystem core.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1117
+  taxon_label: Cyanobacteriota
+  presence: COMMON
+  note: Cyanobacteria use PSI as a major photosynthetic-membrane complex that receives
+    electrons from plastocyanin and passes them toward ferredoxin.
+  reference: GO:0009522
+canonical_examples:
+- taxon_id: NCBITaxon:32046
+  taxon_label: Synechococcus elongatus
+  note: Model oxygenic cyanobacterium in which the crystal structure of trimeric Photosystem
+    I (PsaA/PsaB reaction center core) was determined.
+  reference: PMID:11418848
+- taxon_id: NCBITaxon:32053
+  taxon_label: Thermostichus vulcanus
+  note: Thermophilic cyanobacterium used for atomic-resolution crystallographic determination
+    of native Photosystem II (D1/PsbA and D2/PsbD reaction center core).
+  reference: PMID:21499260
+functions:
+- function_id: photosynthetic_electron_transport
+  label: photosynthetic electron transport chain
+  grounding: GO:0009767
+  description: In oxygenic/cyanobacterial PSI, light excitation of P700 drives electron
+    transfer through iron-sulfur centers toward ferredoxin, with upstream soluble
+    donors restoring the reaction center. This P700 description does not cover all
+    bacterial type-I reaction centers included in the generic GO definition.
+  evidence:
+  - reference: GO:0009522
+    notes: GO:0009522 defines PSI as a light-dependent plastocyanin-ferredoxin oxidoreductase
+      in cyanobacteria and chloroplasts.
+  - reference: PMID:11418848
+    notes: Jordan et al. 2001 connected the cyanobacterial PSI structure to light
+      capture and electron transfer.
+evidence:
+- reference: GO:0009521
+  notes: 'Gene Ontology cellular-component term for photosystem: A complex located
+    in a photosynthetic membrane that consists of a photoreaction center associated
+    with accessory pigments and electron carriers. Examples of this component are
+    found in Arabidopsis thaliana and in photosynthetic bacterial and archaeal species.'
+- reference: GO:0009522
+  notes: Gene Ontology cellular-component term for photosystem I.
+- reference: GO:0009767
+  notes: Gene Ontology biological-process term for the photosynthetic electron transport
+    chain.
+- reference: PMID:11418848
+  notes: Jordan et al. 2001, Three-dimensional structure of cyanobacterial photosystem
+    I at 2.5 A resolution, Nature.
+causal_graphs:
+- graph_id: photosystem_mechanism
+  title: Photosystem assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of photosystem (GO:0009521) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: photosystem
+    label: photosystem
+    node_type: STRUCTURE
+    grounding: GO:0009521
+    description: A complex located in a photosynthetic membrane that consists of a
+      photoreaction center associated with accessory pigments and electron carriers.
+  - node_id: type_i_reaction_center_core
+    label: Type I (Fe-S type) photosystem reaction center core (PsaA/PsaB)
+    node_type: GENE_OR_PROTEIN
+    component_ref: type_i_reaction_center_core
+    description: Heterodimeric Type I reaction center core binding the P700 special
+      pair and iron-sulfur clusters (FX, FA, FB) to drive light-driven ferredoxin
+      reduction.
+  - node_id: type_ii_reaction_center_core
+    label: Type II (pheophytin-quinone type) photosystem reaction center core (D1/PsbA
+      and D2/PsbD)
+    node_type: GENE_OR_PROTEIN
+    component_ref: type_ii_reaction_center_core
+    description: Heterodimeric Type II reaction center core binding the P680 chlorophyll
+      special pair, pheophytin, plastoquinones QA/QB, and the Mn4CaO5 oxygen-evolving
+      cluster.
+  - node_id: photosynthetic_antenna_pigments
+    label: core antenna chlorophylls, bacteriochlorophylls, and carotenoids
+    node_type: CHEMICAL
+    component_ref: photosynthetic_antenna_pigments
+    description: Bound tetrapyrrole (chlorophyll or bacteriochlorophyll) and carotenoid
+      cofactors that harvest photons, transfer excitation energy to the reaction center
+      special pair, and quench triplet states.
+  - node_id: photosynthetic_membrane
+    label: photosynthetic membrane
+    node_type: STRUCTURE
+    grounding: GO:0034357
+    description: Enclosing or holo-structural assembly (photosynthetic membrane, GO:0034357)
+      containing photosystem.
+  - node_id: photosynthetic_electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009767
+    description: In oxygenic/cyanobacterial PSI, light excitation of P700 drives electron
+      transfer through iron-sulfur centers toward ferredoxin, with upstream soluble
+      donors restoring the reaction center. This P700 description does not cover all
+      bacterial type-I reaction centers included in the generic GO definition.
+  edges:
+  - subject: type_i_reaction_center_core
+    predicate: is part of
+    object: photosystem
+    description: Heterodimeric Type I reaction center core binding the P700 special
+      pair and iron-sulfur clusters (FX, FA, FB) to drive light-driven ferredoxin
+      reduction.
+    evidence:
+    - reference: PMID:11418848
+      notes: Jordan et al. 2001 determine the 2.5 A crystal structure of cyanobacterial
+        Photosystem I with its PsaA/PsaB reaction center core.
+  - subject: type_ii_reaction_center_core
+    predicate: is part of
+    object: photosystem
+    description: Heterodimeric Type II reaction center core binding the P680 chlorophyll
+      special pair, pheophytin, plastoquinones QA/QB, and the Mn4CaO5 oxygen-evolving
+      cluster.
+    evidence:
+    - reference: PMID:21499260
+      notes: Umena et al. 2011 determine the 1.9 A crystal structure of Photosystem
+        II showing the D1 (PsbA) and D2 (PsbD) reaction center heterodimer and Mn4CaO5
+        cluster.
+  - subject: photosynthetic_antenna_pigments
+    predicate: is part of
+    object: photosystem
+    description: Bound tetrapyrrole (chlorophyll or bacteriochlorophyll) and carotenoid
+      cofactors that harvest photons, transfer excitation energy to the reaction center
+      special pair, and quench triplet states.
+    evidence:
+    - reference: PMID:11418848
+      notes: Jordan et al. 2001 resolve the network of antenna chlorophylls and carotenoids
+        coordinated within the photosystem core.
+  - subject: photosystem
+    predicate: is part of
+    object: photosynthetic_membrane
+    description: Photosystem forms an integral structural compartment or subassembly
+      of photosynthetic membrane.
+    evidence:
+    - reference: PMID:11418848
+      notes: Jordan et al. 2001, Three-dimensional structure of cyanobacterial photosystem
+        I at 2.5 A resolution, Nature.
+  - subject: photosystem
+    predicate: mediates
+    object: photosynthetic_electron_transport
+    description: In oxygenic/cyanobacterial PSI, light excitation of P700 drives electron
+      transfer through iron-sulfur centers toward ferredoxin, with upstream soluble
+      donors restoring the reaction center. This P700 description does not cover all
+      bacterial type-I reaction centers included in the generic GO definition.
+    evidence:
+    - reference: GO:0009522
+      notes: GO:0009522 defines PSI as a light-dependent plastocyanin-ferredoxin oxidoreductase
+        in cyanobacteria and chloroplasts.
+curation_history:
+- timestamp: '2026-10-19T05:27:42Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of photosystem (GO:0009521) in category ENERGY_COMPLEX
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true
