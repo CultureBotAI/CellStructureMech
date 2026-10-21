@@ -1,0 +1,830 @@
+schema_version: 1.0.0
+review_id: 20261021T104745Z-anammoxosome-membrane-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Organelle identity, composition and evidence review
+started_at: '2026-10-21T10:27:09Z'
+finished_at: '2026-10-21T10:47:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The separate membrane identity, collective bilayer component and descriptive
+  topology graph are supported. One minor repeated bibliographic-attribution correction
+  is needed; exact lipid requirements and model-level energy context remain limited.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/anammoxosome.yaml
+    sha256: c98e06c7ce32979c1cb1a54179f4395700a59adfcc5c0a1947c5b30f9fb34b84
+    role: context
+  - path: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    sha256: 0a47b8cfa7bc71dcfc8cb69ba625087ce23025f9a1204b0fe578d185c2035f61
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/score_causal_graphs.py
+    sha256: 5ffe450c5b37c3dc3b0e62672caf0d99b358c8249fcc98a8c4fc7d78e8cd0d2f
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:anammoxosome_membrane
+  path: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+  label: anammoxosome membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single record with exact authority identities, declared source-reading
+    scopes, protein checks where applicable and component/function/graph boundaries.
+  selection: Target 7 in batch twenty; exact sorted uncovered path at frozen fresh-main
+    revision.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:anammoxosome_membrane
+checks:
+- check_id: native-verify
+  name: Native protein verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  command: /private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native command passed; identity/coverage result is distinct from
+    scientific membership.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  command: /private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native command passed; identity/coverage result is distinct from
+    scientific membership.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  command: just validate data/structures/membrane_organelle/anammoxosome_membrane.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  command: just validate-strict data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    --out /private/tmp/cellstructure-batch20-20261021-guyhe4k8/anammoxosome_membrane-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: 7 identifiers OK; 2 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - root20-sources-PMID-15098544
+  - record
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: No expression-module or transcriptomic inference is made by this structural
+    review.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - root20-sources-anammoxosome-go
+  - root20-sources-NCBITaxon-2
+  - root20-sources-NCBITaxon-203682
+  - root20-sources-NCBITaxon-174633
+  - root20-sources-doi-10.1111_1574-6976.12014
+  - root20-sources-doi-10.1128_JB.00186-15
+  - root20-sources-PMID-15098544
+  - root20-sources-PMID-25962914
+  - root20-sources-PMID-12384695
+  - root20-sources-kartal2013-repository-pdf
+  - root20-sources-legacy-PMC4524196
+  - root20-sources-kartal2013-publisher
+  - root20-sources-anammox-membrane-go
+  - root20-sources-ols-exact-anammoxosome-membrane
+  - organelle-neighbor
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+  locator: Entire maintained YAML including history, all evidence notes, components,
+    functions, graph edges and discussions
+  accessed_at: '2026-10-21T10:39:36Z'
+  support: context_only
+  summary: All maintained fields were read. No scientific edit or mapping-status promotion
+    is made.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact identity, claim-level evidence, material versus localization grounding,
+    and component assembly-essentiality contract
+  accessed_at: '2026-10-21T10:39:36Z'
+  support: context_only
+  summary: Family identity, concrete protein examples and structure membership are
+    separate; activity and viability are not by themselves formation assays. Optional
+    inventories are not mandatory.
+- evidence_id: root20-sources-anammoxosome-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043231,GO:0044222
+  locator: Exact identifiers, definitions, aspect, obsolete status and parent child-relation
+  accessed_at: '2026-10-21T10:28:24.257366Z'
+  support: supports
+  summary: Active GO0044222 denotes the complete intracytoplasmic anammox catabolic
+    compartment; the intracellular membrane-bounded organelle term lists it as an
+    is_a child.
+  snapshot_sha256: 7c2c65b9f3f110753067d98ace76756125792c0ce7ad92f80dd0e51111f49fc3
+- evidence_id: root20-sources-NCBITaxon-2
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-10-21T10:28:24.273706Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Bacteria at domain rank. Only this taxon's
+    identity and names are asserted by this row, not occurrence or experimental stock
+    identity.
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: root20-sources-NCBITaxon-203682
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/203682
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-10-21T10:28:24.920853Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Planctomycetota at phylum rank. Only this
+    taxon's identity and names are asserted by this row, not occurrence or experimental
+    stock identity.
+  snapshot_sha256: 2858782510192718f61d10dc876a64c42fa69ad1ceb48ff8e490cba666624c1b
+- evidence_id: root20-sources-NCBITaxon-174633
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/174633
+  locator: Exact taxId, scientificName, rank, lineage and relevant alternative names
+  accessed_at: '2026-10-21T10:28:24.265183Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Candidatus Kuenenia stuttgartensis at species
+    rank. Only this taxon's identity and names are asserted by this row, not occurrence
+    or experimental stock identity.
+  snapshot_sha256: 204a68fb7dc4b9162818d996da679efc81644b0d08bd29b4fb9266ebd5ad71f6
+- evidence_id: root20-sources-doi-10.1111_1574-6976.12014
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1111/1574-6976.12014
+  locator: Complete native bibliographic fields and abstract
+  accessed_at: '2026-10-21T10:28:25.606621Z'
+  support: supports
+  summary: Native MED record identifies How to make a living from anaerobic ammonium
+    oxidation. (Kartal B, de Almeida NM, Maalcke WJ, Op den Camp HJ, Jetten MS, Keltjens
+    JT., 2013), PMID 23210799, DOI 10.1111/1574-6976.12014. Complete returned abstract
+    and bibliographic fields were read; full-body extent is stated separately.
+  snapshot_sha256: 89e6211c63cded670887aedaead6359b3e8b40262176294ce9aa5e32168c299a
+- evidence_id: root20-sources-doi-10.1128_JB.00186-15
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128/JB.00186-15
+  locator: Complete native bibliographic fields and abstract
+  accessed_at: '2026-10-21T10:28:25.623845Z'
+  support: supports
+  summary: Native MED record identifies Immunogold Localization of Key Metabolic Enzymes
+    in the Anammoxosome and on the Tubule-Like Structures of Kuenenia stuttgartiensis.
+    (de Almeida NM, Neumann S, Mesman RJ, Ferousi C, Keltjens JT, Jetten MS, Kartal
+    B, van Niftrik L., 2015), PMID 25962914, DOI 10.1128/jb.00186-15. Complete returned
+    abstract and bibliographic fields were read; full-body extent is stated separately.
+  snapshot_sha256: d94cfaa7a0c53c37863179ae5930ce0eedfa7175279f278de6dae0e2dc5f4113
+- evidence_id: root20-sources-PMID-15098544
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A15098544%20AND%20SRC%3AMED
+  locator: Exact native title, authors, year, source MED, DOI/PMID and abstract fields
+  accessed_at: '2026-10-21T10:28:25.521441Z'
+  support: supports
+  summary: 'Native citation identifies The anammoxosome: an intracytoplasmic compartment
+    in anammox bacteria. PMID 15098544; DOI 10.1016/j.femsle.2004.01.044. Exact bibliographic
+    fields and the complete returned abstract were inspected; this row does not attest
+    a full-text read.'
+  snapshot_sha256: 3e14a653651c1f9fc37660cd57bca8966b40627bab708f0a40af54d084891eb6
+- evidence_id: root20-sources-PMID-25962914
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A25962914%20AND%20SRC%3AMED
+  locator: Exact native title, authors, year, source MED, DOI/PMID and abstract fields
+  accessed_at: '2026-10-21T10:28:25.531135Z'
+  support: supports
+  summary: Native citation identifies Immunogold Localization of Key Metabolic Enzymes
+    in the Anammoxosome and on the Tubule-Like Structures of Kuenenia stuttgartiensis.
+    PMID 25962914; DOI 10.1128/jb.00186-15. Exact bibliographic fields and the complete
+    returned abstract were inspected; this row does not attest a full-text read.
+  snapshot_sha256: ee212ad6a7dfca0423093b5e987c960defbf1e4eb238e920aef9b009581b550c
+- evidence_id: root20-sources-PMID-12384695
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID:12384695%20AND%20SRC:MED
+  locator: Exact native title, authors, year, source MED, DOI/PMID and abstract fields
+  accessed_at: '2026-10-21T10:29:14.381762Z'
+  support: supports
+  summary: Native citation identifies Linearly concatenated cyclobutane lipids form
+    a dense bacterial membrane. PMID 12384695; DOI 10.1038/nature01128. Exact bibliographic
+    fields and the complete returned abstract were inspected; this row does not attest
+    a full-text read.
+  snapshot_sha256: f83b7ab1a3fef6f273dc9840ef53eb9c8e8e77121f6dd0b2745e7ba216f7cc30
+- evidence_id: root20-sources-kartal2013-repository-pdf
+  kind: authority
+  reference: https://repository.tudelft.nl/file/File_d24663c8-978f-4b10-bdc0-3a2f1443989d?preview=1
+  locator: Early-online PDF The cell plan (printed4-5), nitrogen-pathway chemistry/Equations4-6
+    (printed6-7), HDH and HAO-paralog passages (printed9-10), Hydrazine synthesis/Figure5
+    (printed10-11), The anammoxosome and energy metabolism (printed14-15); no figure
+    pixels or full-review audit
+  accessed_at: '2026-10-21T10:28:27.599412Z'
+  support: supports
+  summary: The early-online review distinguishes a closed ladderane-containing compartment,
+    experimentally characterized HZS and HDH chemistry, other HAO-like paralogs, and
+    proposed membrane electron-transfer/energy models. Hydrazine oxidation supplies
+    electrons; ammonium is a substrate of synthesis. The review leaves exact carrier
+    identities and the purpose/effectiveness of the specialized lipid barrier partly
+    hypothetical.
+  snapshot_sha256: 9aaa861c1afe31ce8bab60eb361266b0233cf88653672d80505b741999744347
+- evidence_id: root20-sources-legacy-PMC4524196
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4524196/
+  locator: Complete Introduction sec1/Equations1-5, complete Results sec3.1-3.3 with
+    Figures3-8 captions, complete Discussion sec4; Methods and figure pixels not independently
+    read
+  accessed_at: '2026-10-21T10:29:14.167318Z'
+  support: supports
+  summary: de Almeida2015 distinguishes HDH/kustc0694 from NO-producing HOX/kustc1061
+    and the functionally unresolved kustc0457/58 pair. All five studied complexes
+    were localized inside the matrix, with NXR specifically at proteinaceous tubules.
+    The paper explicitly calls the studied complexes soluble; it does not localize
+    the entire hypothetical membrane quinone-carrier inventory. Reaction equations
+    and localization are different evidence types.
+  snapshot_sha256: ff2d758d0ecdd1f4d01c54c3b89ef874fe7b33e6e18aaa5734db313b6fd81727
+- evidence_id: root20-sources-kartal2013-publisher
+  kind: authority
+  reference: https://academic.oup.com/femsre/article/37/3/428/585200
+  locator: Actual source-access response, not article content
+  accessed_at: '2026-10-21T10:28:26.039656Z'
+  support: context_only
+  summary: Publisher request returned403; the genuine institution-hosted early-online
+    PDF was independently recovered and read at the declared sections.
+  snapshot_sha256: 0bdeec9ef851b9871264a1a455ddd261fc0d3c7cc22b51665d2b27349626a1d0
+- evidence_id: root20-sources-anammox-membrane-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016020,GO:0044222
+  locator: Complete native identities, definitions and relationship context
+  accessed_at: '2026-10-21T10:28:26.221537Z'
+  support: supports
+  summary: GO0016020 denotes a membrane and GO0044222 the containing anammoxosome.
+    The whole-organelle identifier is not adopted as membrane identity.
+  snapshot_sha256: 44f5cfe5d9cb0a69359c0d8a622f5f9804694212486e8d498ceb7fe9bf40f9e2
+- evidence_id: root20-sources-ols-exact-anammoxosome-membrane
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/search?ontology=go&exact=true&queryFields=label,synonym&rows=100&q=anammoxosome%20membrane
+  locator: Exact OLS query and complete numFound/docs response
+  accessed_at: '2026-10-21T10:33:53.135264Z'
+  support: supports
+  summary: The exact GO label/synonym query returns zero entries. This complete response
+    supports only the bounded exact-name query, not absence across all terminology.
+  snapshot_sha256: 8d33fdeb26a2d16294a3c5f4a7f444578bb462aa6036d45a15e9bfadfe47fbd2
+- evidence_id: organelle-neighbor
+  kind: record_content
+  reference: data/structures/membrane_organelle/anammoxosome.yaml
+  locator: Entire maintained organelle YAML read for boundary and shared-citation
+    context
+  accessed_at: '2026-10-21T10:39:36Z'
+  support: context_only
+  summary: The complete organelle owns its catalytic-enzyme claims; those defects
+    are not imported as independent membrane defects.
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    --verify
+  locator: Exact focused native output
+  accessed_at: '2026-10-21T10:28:51.667765Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    --causal-graphs
+  locator: Exact focused native output
+  accessed_at: '2026-10-21T10:28:52.461369Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/anammoxosome_membrane.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:27:11Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/anammoxosome_membrane.yaml'
+  snapshot_sha256: 8a2117f64df9af840bc8ac95914d8a48f4e515a991c354f5a61cfd0e7efef235
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    --out /private/tmp/cellstructure-batch20-20261021-guyhe4k8/anammoxosome_membrane-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:27:12Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/anammoxosome_membrane.yaml\
+    \ --out /private/tmp/cellstructure-batch20-20261021-guyhe4k8/anammoxosome_membrane-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch20-20261021-guyhe4k8/anammoxosome_membrane-strict.tsv"
+  snapshot_sha256: 02d1fc3012d22ac6536e63f00909c99d421e89120811a5124f5303a5a95ef98c
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/anammoxosome_membrane.yaml; exact collect()
+    scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T10:39:36Z'
+  support: supports
+  summary: '7 of9 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: PMID:15098544: UNREACHABLE; resolved by evidence root20-sources-PMID-15098544;
+    cellstructuremech:anammoxosome_membrane: SKIPPED; resolved by evidence record.
+    Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: A distinct membrane part of the anammoxosome
+  outcome: supported
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: The local membrane identity, generic membrane parent and explicit whole-organelle
+    parthood agree with single-bilayer topology. No stale subcellular-location identifier
+    is reinstated.
+  evidence_ids:
+  - root20-sources-anammox-membrane-go
+  - root20-sources-ols-exact-anammoxosome-membrane
+  - root20-sources-anammoxosome-go
+  - root20-sources-NCBITaxon-2
+  - root20-sources-NCBITaxon-203682
+  - root20-sources-NCBITaxon-174633
+  - root20-sources-doi-10.1111_1574-6976.12014
+  - root20-sources-doi-10.1128_JB.00186-15
+  - root20-sources-PMID-15098544
+  - root20-sources-PMID-25962914
+  - root20-sources-PMID-12384695
+  - root20-sources-kartal2013-repository-pdf
+  - root20-sources-legacy-PMC4524196
+  - organelle-neighbor
+- assessment_id: composition
+  area: grounding
+  topic: Constitutional membrane class without a fictitious exact lipid
+  outcome: supported
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: The component is the complete ladderane-containing bilayer, not a single
+    chemically invariant lipid. Source-described ladderanes vary in tails/headgroups;
+    a composite bilayer has no justified single CHEBI identity here. The explicit
+    grounding TODO is appropriate. ESSENTIAL refers to the collective bounding bilayer,
+    not each lipid molecule.
+  evidence_ids:
+  - root20-sources-anammoxosome-go
+  - root20-sources-NCBITaxon-2
+  - root20-sources-NCBITaxon-203682
+  - root20-sources-NCBITaxon-174633
+  - root20-sources-doi-10.1111_1574-6976.12014
+  - root20-sources-doi-10.1128_JB.00186-15
+  - root20-sources-PMID-15098544
+  - root20-sources-PMID-25962914
+  - root20-sources-PMID-12384695
+  - root20-sources-kartal2013-repository-pdf
+  - root20-sources-legacy-PMC4524196
+  - record
+  - policy
+- assessment_id: molecular-necessity
+  area: evidence
+  topic: Individual lipid and barrier requirements remain unresolved
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: Neither the component class nor the source establishes that each ladderane
+    species is indispensable to formation, or that the boundary perfectly prevents
+    hydrazine leakage. The maintained record describes a compartment boundary and
+    confines metabolism; it does not give a zero-permeability measurement.
+  evidence_ids:
+  - root20-sources-anammoxosome-go
+  - root20-sources-NCBITaxon-2
+  - root20-sources-NCBITaxon-203682
+  - root20-sources-NCBITaxon-174633
+  - root20-sources-doi-10.1111_1574-6976.12014
+  - root20-sources-doi-10.1128_JB.00186-15
+  - root20-sources-PMID-15098544
+  - root20-sources-PMID-25962914
+  - root20-sources-PMID-12384695
+  - root20-sources-kartal2013-repository-pdf
+  - root20-sources-legacy-PMC4524196
+  - record
+  - policy
+- assessment_id: scope
+  area: scope
+  topic: Organism-specific evidence within restricted anammox lineages
+  outcome: supported
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: Kuenenia localization and the review support the containing compartment
+    and restricted anammox occurrence. The current ENA corrected species spelling
+    and old synonym share taxon174633. The membrane does not inherit a claim of universality
+    across Planctomycetota.
+  evidence_ids:
+  - root20-sources-anammoxosome-go
+  - root20-sources-NCBITaxon-2
+  - root20-sources-NCBITaxon-203682
+  - root20-sources-NCBITaxon-174633
+  - root20-sources-doi-10.1111_1574-6976.12014
+  - root20-sources-doi-10.1128_JB.00186-15
+  - root20-sources-PMID-15098544
+  - root20-sources-PMID-25962914
+  - root20-sources-PMID-12384695
+  - root20-sources-kartal2013-repository-pdf
+  - root20-sources-legacy-PMC4524196
+- assessment_id: function-graph
+  area: graph
+  topic: Explicitly descriptive compartment topology
+  outcome: supported
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: The NONMECHANISTIC graph states membrane parthood and spatial compartmentalization.
+    The permeability-barrier function is a bounded structural interpretation, not
+    direct measurement of each lipid permeability or a fully resolved electron-pumping
+    mechanism. No additional causal edge is required merely to raise a graph score.
+  evidence_ids:
+  - root20-sources-anammoxosome-go
+  - root20-sources-NCBITaxon-2
+  - root20-sources-NCBITaxon-203682
+  - root20-sources-NCBITaxon-174633
+  - root20-sources-doi-10.1111_1574-6976.12014
+  - root20-sources-doi-10.1128_JB.00186-15
+  - root20-sources-PMID-15098544
+  - root20-sources-PMID-25962914
+  - root20-sources-PMID-12384695
+  - root20-sources-kartal2013-repository-pdf
+  - root20-sources-legacy-PMC4524196
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Correct papers with misleading author/year notes
+  outcome: concern
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: The current references substantiate the coarse membrane boundary, but the
+    repeated notes misattribute the2004 review to the2002 discovery and identify the2015
+    localization paper by the wrong first author.
+  evidence_ids:
+  - root20-sources-anammoxosome-go
+  - root20-sources-NCBITaxon-2
+  - root20-sources-NCBITaxon-203682
+  - root20-sources-NCBITaxon-174633
+  - root20-sources-doi-10.1111_1574-6976.12014
+  - root20-sources-doi-10.1128_JB.00186-15
+  - root20-sources-PMID-15098544
+  - root20-sources-PMID-25962914
+  - root20-sources-PMID-12384695
+  - root20-sources-kartal2013-repository-pdf
+  - root20-sources-legacy-PMC4524196
+- assessment_id: coverage
+  area: completeness
+  topic: Bounded record-level coverage
+  outcome: supported
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  summary: The entire maintained record and cited claim contexts were inspected at
+    the stated source scopes. Additional exhaustive component inventories, numerical
+    properties, images, traits and expanded mechanisms are optional. No verbatim quotation
+    requires repair, and no status or history rewrite is proposed. This bounded review
+    does not assert exhaustive literature completeness.
+  evidence_ids:
+  - record
+  - policy
+  - root20-sources-anammoxosome-go
+  - root20-sources-NCBITaxon-2
+  - root20-sources-NCBITaxon-203682
+  - root20-sources-NCBITaxon-174633
+  - root20-sources-doi-10.1111_1574-6976.12014
+  - root20-sources-doi-10.1128_JB.00186-15
+  - root20-sources-PMID-15098544
+  - root20-sources-PMID-25962914
+  - root20-sources-PMID-12384695
+  - root20-sources-kartal2013-repository-pdf
+  - root20-sources-legacy-PMC4524196
+  - root20-sources-kartal2013-publisher
+  - root20-sources-anammox-membrane-go
+  - root20-sources-ols-exact-anammoxosome-membrane
+  - organelle-neighbor
+findings:
+- finding_id: F1
+  issue_key: anammoxosome-membrane-ladderane-citation-attribution
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the ladderane-paper and localization-paper attribution
+  description: 'PMID15098544 is van Niftrik et al.2004, The anammoxosome: an intracytoplasmic
+    compartment in anammox bacteria, not the stated Sinninghe Damste2002 lipid-discovery
+    paper. The 2002 paper is independently identified by PMID12384695. DOI10.1128/JB.00186-15
+    is de Almeida et al.2015, not a first-author Kartal paper. Both currently cited
+    works are relevant, but their repeated author/year notes misidentify the source
+    and evidence tier.'
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  field_paths:
+  - components[].evidence[reference=PMID:15098544].notes
+  - evidence[reference=PMID:15098544].notes
+  - evidence[reference=DOI:10.1128/JB.00186-15].notes
+  - functions[].evidence[reference=PMID:15098544].notes
+  - causal_graphs[].edges[].evidence[reference=DOI:10.1128/JB.00186-15].notes
+  - discussions[].evidence[reference=PMID:15098544].notes
+  evidence_ids:
+  - root20-sources-anammoxosome-go
+  - root20-sources-NCBITaxon-2
+  - root20-sources-NCBITaxon-203682
+  - root20-sources-NCBITaxon-174633
+  - root20-sources-doi-10.1111_1574-6976.12014
+  - root20-sources-doi-10.1128_JB.00186-15
+  - root20-sources-PMID-15098544
+  - root20-sources-PMID-25962914
+  - root20-sources-PMID-12384695
+  - root20-sources-kartal2013-repository-pdf
+  - root20-sources-legacy-PMC4524196
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components; docs/record-reviews.md:Verdict And Severity
+  native_severity: minor
+  normalization_reason: A bounded provenance or scope correction preserves the structure
+    identity.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:anammoxosome_membrane
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    role: maintained scientific record
+  description: Correct repeated attribution and retain the2004 review where it actually
+    supports the claim; cite the independently verified2002 discovery paper only where
+    its inspected scope is intended. Correct the2015 first-author shorthand.
+  acceptance_checks:
+  - Every PMID/DOI and author/year/title combination agrees with native bibliographic
+    metadata.
+  - Do not replace relevant references indiscriminately or imply new full-text access
+    to the2002 paper.
+  - Use separately authorized guarded curation, append-only history, native focused/identifier/product
+    checks and regeneration.
+limitations:
+- 2013 review reading was restricted to the declared sections of a genuine institution-hosted
+  early-online PDF. The2015 study was read at Introduction/Results/Discussion scope,
+  without a new Methods or figure-pixel audit.
+- The2004 review and independently identified2002 discovery paper were read at native
+  abstract/bibliographic scope only. Exact lipid inventory, total solute permeability
+  and physical measurements are not inferred.
+- The broad QuickGO query was only inspected at its first100 of1614 results; only
+  the complete exact OLS query supports the bounded name-search statement.
+- The neighboring whole-organelle record was read for boundary/shared-citation context
+  and is reviewed separately; it does not make all enzyme claims part of this membrane
+  review.
+- No raw microscopy or quantitative datasets were reanalysed. Historical curator searches
+  and independent historical authorship are not certified.
+- The completed fresh-base batch15 global gates are attached only at finalization;
+  identifier transport and label-adapter limits remain explicit.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- The user explicitly authorized one review for every uncovered target, including
+  a review with no findings. Only this review bundle is intended for persistence.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
