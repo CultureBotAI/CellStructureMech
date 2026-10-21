@@ -33,6 +33,11 @@ curation_history:
   action: EDIT
   changes: added 4 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Grounded self-referential causal node 'linker' to cellstructuremech:basal_body_a_c_linker.
+  llm_assisted: true
 synonyms:
 - synonym_text: A-C linker
   synonym_type: EXACT_SYNONYM
@@ -266,6 +271,7 @@ causal_graphs:
     node_type: STRUCTURE
     description: Proximal form of this record's structure, not a model of the transitional
       C-link composition.
+    grounding: cellstructuremech:basal_body_a_c_linker
   edges:
   - subject: wrap73
     predicate: coordinates

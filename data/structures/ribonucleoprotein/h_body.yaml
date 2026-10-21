@@ -25,6 +25,11 @@ curation_history:
   action: EDIT
   changes: added 4 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Grounded self-referential causal node 'h_body' to cellstructuremech:h_body.
+  llm_assisted: true
 synonyms:
 - synonym_text: Hfq condensate
   synonym_type: RELATED_SYNONYM
@@ -275,6 +280,7 @@ causal_graphs:
   - node_id: h_body
     label: H-body
     node_type: STRUCTURE
+    grounding: cellstructuremech:h_body
   - node_id: rnase_e
     label: Ribonuclease E
     node_type: GENE_OR_PROTEIN

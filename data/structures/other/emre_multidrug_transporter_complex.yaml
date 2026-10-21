@@ -21,6 +21,12 @@ curation_history:
     component with an E. coli K-12 UniProt example, the PDB:3B5D homodimer, xenobiotic
     transporter function, taxonomy, and a component-grounding discussion.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'emre_efflux_function' with 3
+    nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: EmrE complex
   synonym_type: NARROW_SYNONYM
@@ -133,3 +139,52 @@ discussions:
   - reference: PDB:3B5D
   posed_by: codex
   posed_date: '2026-10-01'
+causal_graphs:
+- graph_id: emre_efflux_function
+  title: EmrE Antiparallel Homodimer Assembly and Drug Efflux
+  description: Antiparallel homodimerization of EmrE and proton-coupled export of
+    hydrophobic cationic xenobiotics.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: emre_multidrug_transporter
+    label: Multidrug transporter EmrE
+    node_type: GENE_OR_PROTEIN
+    component_ref: emre_multidrug_transporter
+  - node_id: emre_multidrug_transporter_complex
+    label: EmrE multidrug transporter complex
+    node_type: STRUCTURE
+    grounding: GO:1990207
+  - node_id: xenobiotic_transmembrane_transport
+    label: xenobiotic transmembrane transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0042910
+  edges:
+  - subject: emre_multidrug_transporter
+    predicate: forms antiparallel homodimer
+    object: emre_multidrug_transporter_complex
+    description: Two EmrE small multidrug resistance subunits assemble into an asymmetric
+      antiparallel homodimer in the inner membrane.
+    evidence:
+    - reference: GO:1990207
+      notes: GO:1990207 defines the EmrE multidrug transporter complex as a homodimer.
+    - reference: PDB:3B5D
+      notes: PDB:3B5D resolves E. coli EmrE as a homodimer.
+    - reference: PMID:18024586
+      notes: Chen et al. 2007 reported the X-ray structure of the antiparallel EmrE
+        homodimer.
+  - subject: emre_multidrug_transporter_complex
+    predicate: mediates
+    object: xenobiotic_transmembrane_transport
+    description: The EmrE homodimer exports positively charged hydrophobic drugs across
+      the plasma membrane.
+    evidence:
+    - reference: GO:1990207
+      notes: GO:1990207 defines the complex by transport of positively charged hydrophobic
+        drugs across the plasma membrane.
+    - reference: GO:0042910
+      notes: GO:0042910 is the molecular-function term for xenobiotic transmembrane
+        transporter activity.
+    - reference: PMID:18024586
+      notes: Chen et al. 2007 resolved substrate-bound EmrE dimers supporting multidrug
+        efflux.

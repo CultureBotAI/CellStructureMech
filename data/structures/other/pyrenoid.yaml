@@ -44,6 +44,11 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0043232
 part_of:
@@ -229,6 +234,15 @@ causal_graphs:
     - reference: DOI:10.1093/plcell/koad157
       notes: He, Crans, and Jonikas 2023 review pyrenoid Rubisco concentration as
         a core feature of the eukaryotic CO2-concentrating mechanism.
+  - subject: rubisco_holoenzyme
+    predicate: fixes
+    object: co2
+    description: Pyrenoid-concentrated Rubisco fixes carbon dioxide during photosynthetic
+      carbon assimilation.
+    evidence:
+    - reference: DOI:10.1093/plcell/koad157
+      notes: The pyrenoid matrix concentrates Rubisco around CO2 delivery for carbon
+        fixation.
 discussions:
 - discussion_id: ground_epyc1_linker
   prompt: Resolve an exact source-neutral grounding for the EPYC1 Rubisco-linker family

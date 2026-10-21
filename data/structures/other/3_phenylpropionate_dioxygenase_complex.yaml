@@ -21,6 +21,12 @@ curation_history:
     constituents with reviewed E. coli K-12 UniProt examples, an E. coli K-12 canonical
     example, 3-phenylpropionate dioxygenase activity, and GO/PubMed/DOI evidence.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'hca_dioxygenase_function' with
+    5 nodes and 4 edges.
+  llm_assisted: true
 parent_structures:
 - GO:1990204
 components:
@@ -216,3 +222,88 @@ evidence:
     hca cluster characterization paper cited by GO:0009334.
 - reference: DOI:10.1128/JB.180.11.2915-2923.1998
   notes: DOI for Díaz, Ferrández and García 1998, as reported by PubMed.
+causal_graphs:
+- graph_id: hca_dioxygenase_function
+  title: 3-Phenylpropionate Dioxygenase Electron Transfer and Catalysis
+  description: NADH-driven electron transfer from HcaD through HcaC to the HcaEF hydroxylase
+    core for 3-phenylpropionate dioxygenation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: hcad_ferredoxin_nad_reductase
+    label: 3-phenylpropionate/cinnamic acid dioxygenase, ferredoxin--NAD(+) reductase
+      subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023744
+    component_ref: hcad_ferredoxin_nad_reductase
+  - node_id: hcac_ferredoxin
+    label: 3-phenylpropionate/cinnamic acid dioxygenase, ferredoxin subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023739
+    component_ref: hcac_ferredoxin
+  - node_id: hcaf_hydroxylase_beta
+    label: 3-phenylpropionate/cinnamic acid dioxygenase, beta subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023712
+    component_ref: hcaf_hydroxylase_beta
+  - node_id: hcae_hydroxylase_alpha
+    label: 3-phenylpropionate/cinnamic acid dioxygenase, alpha subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR020875
+    component_ref: hcae_hydroxylase_alpha
+  - node_id: 3_phenylpropionate_dioxygenase_activity
+    label: 3-phenylpropionate dioxygenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008695
+  edges:
+  - subject: hcad_ferredoxin_nad_reductase
+    predicate: transfers electrons to
+    object: hcac_ferredoxin
+    description: The HcaD ferredoxin--NAD(+) reductase subunit oxidizes NADH and transfers
+      electrons to the HcaC ferredoxin subunit.
+    evidence:
+    - reference: GO:0009334
+      notes: GO:0009334 defines hcaD as the ferredoxin reductase and hcaC as the ferredoxin
+        in the four-protein complex.
+    - reference: PMID:9603882
+      notes: Díaz et al. 1998 characterized the E. coli K-12 hcaA1A2CD (hcaEFCD) 3-phenylpropionate
+        dioxygenase components.
+  - subject: hcac_ferredoxin
+    predicate: transfers electrons to
+    object: hcae_hydroxylase_alpha
+    description: The HcaC ferredoxin subunit delivers electrons to the HcaEF terminal
+      dioxygenase hydroxylase component.
+    evidence:
+    - reference: GO:0009334
+      notes: GO:0009334 defines hcaC as the ferredoxin electron carrier for the hcaE/hcaF
+        hydroxylase.
+    - reference: PMID:9603882
+      notes: Díaz et al. 1998 characterized the electron-transfer and hydroxylase
+        subunits of the E. coli hca dioxygenase.
+  - subject: hcaf_hydroxylase_beta
+    predicate: forms hydroxylase core with
+    object: hcae_hydroxylase_alpha
+    description: The HcaF beta subunit pairs with the HcaE alpha subunit to form the
+      terminal hydroxylase component of the 3-phenylpropionate dioxygenase.
+    evidence:
+    - reference: GO:0009334
+      notes: GO:0009334 defines hcaE and hcaF as the two subunits of the hydroxylase
+        component.
+    - reference: PMID:9603882
+      notes: Díaz et al. 1998 identified the alpha and beta terminal dioxygenase subunits
+        encoded by the E. coli hca cluster.
+  - subject: hcae_hydroxylase_alpha
+    predicate: catalyzes
+    object: 3_phenylpropionate_dioxygenase_activity
+    description: The HcaEF hydroxylase catalyzes dioxygenation of 3-phenylpropionate
+      to cis-3-(3-carboxyethyl)-3,5-cyclohexadiene-1,2-diol.
+    evidence:
+    - reference: GO:0009334
+      notes: GO:0009334 defines the complex by conversion of 3-phenylpropionic acid
+        into PP-dihydrodiol.
+    - reference: GO:0008695
+      notes: GO:0008695 is the molecular-function term for 3-phenylpropionate dioxygenase
+        activity.
+    - reference: PMID:9603882
+      notes: Díaz et al. 1998 demonstrated 3-phenylpropionate dioxygenase activity
+        of the E. coli Hca enzyme.

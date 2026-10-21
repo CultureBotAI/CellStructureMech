@@ -38,6 +38,10 @@ tasks:
     summary: Resolve linkml-validate relative to sys.executable in scripts/validate_history.py so scripts/run_qc.py succeeds under direct .venv/bin/python invocation
     status: note
     disposition: Discovered during Cycle 1 Stage 1 (add_records) QC gate execution; queued for Stage 6 infrastructure implementation.
+  - task_id: cellstructuremech-infra-0002
+    summary: Add causal-graph completeness checks in src/cellstructuremech/validation/validator.py for isolated CausalNode entries with zero incident edges and CausalEdge items lacking description
+    status: note
+    disposition: Discovered during Cycle 1 Stage 2 (causal_graphs) whole-corpus audit (17 records with isolated nodes, 9 records with 44 description-less edges); queued for Stage 6 infrastructure implementation.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -52,4 +56,14 @@ tasks:
 - **Observation**: `scripts/run_qc.py` invokes `[sys.executable, "scripts/validate_history.py"]`, which in turn shells out to bare `["linkml-validate", ...]` (`scripts/validate_history.py` line 48). When `.venv/bin/python scripts/run_qc.py` is run without `.venv/bin` prepended to `PATH`, `linkml-validate` resolves to a global `pyenv` shim and fails with `pyenv: version '3.13' is not installed`.
 - **Desired outcome**: Resolve `Path(sys.executable).with_name("linkml-validate")` (falling back to `shutil.which("linkml-validate")`) in `scripts/validate_history.py` so `scripts/run_qc.py` is self-contained when invoked via `.venv/bin/python`.
 - **Evidence paths**: `scripts/run_qc.py`, `scripts/validate_history.py`
+
+### `cellstructuremech-infra-0002` — Add causal-graph completeness checks in `src/cellstructuremech/validation/validator.py` for isolated `CausalNode` entries and `CausalEdge` items lacking `description`
+
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 2 (`causal_graphs`)
+- **Status**: `note` (pending issue creation/triage in Stage 6)
+- **Priority**: P2
+- **Dependencies**: None
+- **Observation**: `src/cellstructuremech/validation/validator.py` (`validate_causal_graphs`) validates `CausalEdge.subject`/`object` node references, `component_ref`, and `attaches_to` anchors, but does not check whether a declared `CausalNode` has zero incident `CausalEdge` items or whether a `CausalEdge` omits `description`. During the Stage 2 whole-corpus audit across 978 records, 17 records contained isolated `CausalNode` entries and 9 records contained 44 `CausalEdge` items lacking `description` despite passing `scripts/validate_strict.py` and `write_validated_structure`.
+- **Desired outcome**: Add validation checks in `src/cellstructuremech/validation/validator.py` (`validate_causal_graphs`) to flag isolated `CausalNode` entries (zero incident edges in `edges`) and `CausalEdge` entries with missing/blank `description`.
+- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `scripts/validate_structures.py`
 

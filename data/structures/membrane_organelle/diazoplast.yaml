@@ -25,6 +25,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed mechanistic descriptions to 7 causal edge(s); Grounded
+    self-referential causal node 'diazoplast' to cellstructuremech:diazoplast.
+  llm_assisted: true
 synonyms:
 - synonym_text: spheroid body
   synonym_type: RELATED_SYNONYM
@@ -172,6 +178,7 @@ causal_graphs:
   - node_id: diazoplast
     label: diazoplast
     node_type: STRUCTURE
+    grounding: cellstructuremech:diazoplast
   - node_id: nitrogenase
     label: nitrogenase complex
     node_type: GENE_OR_PROTEIN
@@ -200,42 +207,55 @@ causal_graphs:
     evidence:
     - reference: GO:0016610
       notes: Nitrogenase reaction; diazoplast membership supported in components.
+    description: The diazoplast-localized nitrogenase complex catalyzes biological
+      dinitrogen fixation.
   - subject: diazoplast
     predicate: performs
     object: fixation
     evidence:
     - reference: DOI:10.1093/ismeco/ycae055
       notes: Figures 2-3; compartment isotope enrichment and culture activity.
+    description: The Epithemia clementina diazoplast compartment performs intracellular
+      nitrogen fixation.
   - subject: fixation
     predicate: supplies
     object: host_nitrogen
     evidence:
     - reference: DOI:10.1093/ismeco/ycae055
       notes: Figure 2B supports nitrogen transfer; no export species assigned.
+    description: Diazoplast nitrogen fixation supplies fixed nitrogen that is incorporated
+      into host diatom biomass.
   - subject: photosynthesis
     predicate: produces
     object: host_carbon
     evidence:
     - reference: DOI:10.1093/ismeco/ycae055
       notes: Bicarbonate labeling and bulk IRMS distinguish daytime carbon fixation.
+    description: Daytime host photosynthesis fixes inorganic carbon into host organic
+      carbon.
   - subject: host_carbon
     predicate: is transferred into
     object: diazoplast
     evidence:
     - reference: DOI:10.1093/ismeco/ycae055
       notes: Figure 2C supports carbon transfer; wash losses limit temporal interpretation.
+    description: Host-fixed carbon is transferred into the diazoplast compartment.
   - subject: photosynthesis
     predicate: supports
     object: fixation
     evidence:
     - reference: DOI:10.1093/ismeco/ycae055
       notes: Figure 3D daytime perturbations support physiological coupling.
+    description: Daytime host photosynthetic activity physiologically supports diazoplast
+      nitrogen fixation.
   - subject: inhibition
     predicate: reduces
     object: fixation
     evidence:
     - reference: DOI:10.1093/ismeco/ycae055
       notes: Results report about 60% reduction, not complete abolition.
+    description: Daytime darkness or DCMU inhibition of photosystem II reduces diazoplast
+      nitrogen fixation by approximately 60%.
 discussions:
 - discussion_id: identity_and_organelle_boundary
   kind: CURATION_TODO

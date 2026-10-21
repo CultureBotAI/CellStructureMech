@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/starch_utilization_system_complex.yaml
+  slug: starch_utilization_system_complex
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-3d9e3c
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed FUNCTION causal graph 'sus_starch_capture_and_hydrolysis' with
+    6 nodes and 5 edges.
+  details: 'Stage 2 causal-graph curation pass for GO:0044570 (starch utilization system complex):
+    Added source-backed FUNCTION causal graph ''sus_starch_capture_and_hydrolysis'' with 6
+    nodes and 5 edges. Validated via write_validated_structure.'

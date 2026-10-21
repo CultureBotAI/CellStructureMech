@@ -24,6 +24,11 @@ curation_history:
   action: CORRECTED_ATTRIBUTION
   changes: Corrected Salin's given name from native JATS author metadata before publication.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed mechanistic descriptions to 2 causal edge(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: PSG
   synonym_type: RELATED_SYNONYM
@@ -211,12 +216,16 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.200711154
       notes: Figure 4B-C compares refeeding with and without cycloheximide; Figure
         4A supplies the water-transfer control.
+    description: Transfer to fresh nutrient medium induces clearance of cytoplasmic
+      Pre6-GFP proteasome storage granules.
   - subject: fresh_medium
     predicate: induces
     object: nuclear_return
     evidence:
     - reference: DOI:10.1083/jcb.200711154
       notes: Figure 4 follows redistribution to the nuclear periphery and nucleus.
+    description: Transfer to fresh nutrient medium induces relocalization of Pre6-GFP
+      from proteasome storage granules to the nuclear periphery and nucleus.
 evidence:
 - reference: GO:0034515
   notes: Native QuickGO verifies active cellular-component identity, related-scope

@@ -40,6 +40,11 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: exocyst complex
   synonym_type: EXACT_SYNONYM
@@ -451,6 +456,15 @@ causal_graphs:
     - reference: DOI:10.1093/emboj/18.4.1071
       notes: Guo et al. 1999 framed the exocyst as a Sec4p effector system for targeted
         secretion.
+  - subject: secretory_vesicles
+    predicate: undergo
+    object: exocytosis
+    description: Exocyst-tethered secretory vesicles fuse at polarized plasma-membrane
+      sites during exocytosis.
+    evidence:
+    - reference: DOI:10.1093/emboj/18.4.1071
+      notes: Exocyst targeting of secretory vesicles to polarized plasma-membrane
+        sites supports exocytosis.
 discussions:
 - discussion_id: resolve_exocyst_subunit_family_groundings
   prompt: Resolve exact source-neutral family groundings for the eight S. cerevisiae

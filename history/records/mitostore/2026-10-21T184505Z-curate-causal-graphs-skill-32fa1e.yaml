@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/mitostore.yaml
+  slug: mitostore
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-32fa1e
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Grounded self-referential causal node 'mitostore' to cellstructuremech:mitostore.
+  details: 'Stage 2 causal-graph curation pass for cellstructuremech:mitostore (MitoStore):
+    Grounded self-referential causal node ''mitostore'' to cellstructuremech:mitostore. Validated
+    via write_validated_structure.'

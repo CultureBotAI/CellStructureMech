@@ -25,6 +25,11 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed mechanistic descriptions to 5 causal edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:1905368
 part_of:
@@ -140,6 +145,8 @@ causal_graphs:
     - reference: DOI:10.1016/j.jbc.2022.101694
       notes: Figure 1 and structural Results identify a six-Pim1 assembly in the recombinant
         substrate-bound preparation; this does not settle all native oligomeric states.
+    description: Yeast Pim1/Lon subunits assemble into a hexameric mitochondrial Lon
+      protease complex in substrate-bound recombinant preparations.
   - subject: assembly
     predicate: catalyzes
     object: activity
@@ -150,6 +157,8 @@ causal_graphs:
         annotation.
     - reference: UniProtKB:P36775
       notes: Reviewed ATP-dependent enzyme annotation.
+    description: The assembled mitochondrial Lon protease complex catalyzes ATP-dependent
+      degradation of unfolded protein substrates such as beta-casein.
   - subject: catalytic_mutant
     predicate: impairs
     object: activity
@@ -157,6 +166,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.jbc.2022.101694
       notes: Figure 3C uses S1015A as the protease-inactive control; loss of activity
         alone does not establish loss of assembly.
+    description: Active-site substitution S1015A abolishes assayed Pim1 protease activity.
   - subject: insertion_deletion
     predicate: retains assayed activity
     object: activity
@@ -164,6 +174,8 @@ causal_graphs:
     - reference: DOI:10.1016/j.jbc.2022.101694
       notes: PIM1-INSdel retains near-WT beta-casein degradation in Figure 3C. No
         native yeast or broad substrate-dispensability claim is inferred.
+    description: Deletion of the Pim1 charged insertion (PIM1-INSdel) retains near-wild-type
+      beta-casein proteolysis in vitro.
   - subject: insertion_replacement
     predicate: retains assayed activity
     object: activity
@@ -172,6 +184,8 @@ causal_graphs:
       notes: PIM1-GSlink retains near-WT beta-casein degradation in Figure 3C. This
         separates this assay from proposed recruitment or DNA-binding roles of the
         insertion.
+    description: Replacement of the Pim1 charged insertion with a GS linker (PIM1-GSlink)
+      retains near-wild-type beta-casein proteolysis in vitro.
 evidence:
 - reference: DOI:10.1016/j.jbc.2022.101694
   notes: Yang and colleagues (2022), PMID 35143841, PMC8913295.1. Results, Discussion,

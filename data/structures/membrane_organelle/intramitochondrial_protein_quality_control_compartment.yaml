@@ -39,6 +39,11 @@ curation_history:
   changes: Addressed PR 2052 review issue 2053 by correcting the HSP78 graph evidence
     locator from Figure 6 to Figure 7A,C-D.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed mechanistic descriptions to 7 causal edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 synonyms:
@@ -209,12 +214,17 @@ causal_graphs:
     - reference: DOI:10.1091/mbc.E17-01-0027
       notes: Figure 1 contrasts targeted destabilized reporter with stable reporter
         controls.
+    description: Expression of a mitochondria-targeted destabilized GFP-DHFR reporter
+      induces formation of an intramitochondrial protein quality control compartment
+      (IMiQ).
   - subject: imiq
     predicate: exhibits
     object: perinuclear
     evidence:
     - reference: DOI:10.1091/mbc.E17-01-0027
       notes: Figure 5 uses a nuclear marker; positioning is frequent, not invariant.
+    description: The IMiQ deposit frequently localizes at a single perinuclear site
+      in budding yeast.
   - subject: imiq
     predicate: exhibits
     object: separation
@@ -222,6 +232,8 @@ causal_graphs:
     - reference: DOI:10.1091/mbc.E17-01-0027
       notes: Figures 1 and 7 distinguish large deposits from the residual tubular
         mitochondrial network; separation is not loss of all surrounding membrane.
+    description: The aggregate-bearing IMiQ compartment separates from the residual
+      tubular mitochondrial network.
   - subject: hsp78_deletion
     predicate: impairs
     object: perinuclear
@@ -229,6 +241,8 @@ causal_graphs:
     - reference: DOI:10.1091/mbc.E17-01-0027
       notes: 'Figure 7A,C-D: hsp78 deletion cells carry more small network-associated
         deposits rather than the normal large perinuclear deposit.'
+    description: Deletion of HSP78 impairs coalescence into a single large perinuclear
+      IMiQ deposit, leaving multiple smaller network-associated deposits.
   - subject: fzo1_deletion
     predicate: impairs
     object: perinuclear
@@ -237,6 +251,8 @@ causal_graphs:
       notes: 'Figure 7: fusion-deficient cells show multiple small deposits lacking
         normal perinuclear coalescence. Respiratory deficiency limits functional interpretation
         of this strain.'
+    description: Deletion of FZO1 impairs perinuclear IMiQ coalescence in fusion-deficient
+      mitochondria.
   - subject: fis1_deletion
     predicate: impairs
     object: separation
@@ -244,6 +260,8 @@ causal_graphs:
     - reference: DOI:10.1091/mbc.E17-01-0027
       notes: 'Figure 7: aggregate-bearing mitochondrial material remains associated
         with the hyperconnected network in fis1 deletion cells.'
+    description: Deletion of FIS1 impairs separation of aggregate-bearing mitochondrial
+      material from the hyperconnected mitochondrial network.
   - subject: benomyl
     predicate: reduces
     object: perinuclear
@@ -252,6 +270,8 @@ causal_graphs:
       notes: 'Figure 5: 100 micrograms/ml benomyl for 5 hours reduces perinuclear
         localization while deposits still form. This pharmacological result does not
         identify a molecular tether.'
+    description: Benomyl treatment reduces perinuclear positioning of IMiQ deposits
+      without preventing deposit formation.
 datasets:
 - accession: PXD059828
   title: Mitochondrial reporter aggregate-associated proteome

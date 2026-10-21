@@ -38,6 +38,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'bindosome_sugar_capture' with
+    3 nodes and 2 edges.
+  llm_assisted: true
 parent_structures:
 - GO:0098796
 components:
@@ -154,3 +160,46 @@ discussions:
   - reference: GO:7770042
   posed_by: codex
   posed_date: '2026-10-03'
+causal_graphs:
+- graph_id: bindosome_sugar_capture
+  title: Archaeal Bindosome Assembly and Cell-Surface Sugar Capture
+  description: Organization of archaeal sugar-binding proteins into envelope-associated
+    bindosome complexes that facilitate sugar uptake.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: sugar_binding_proteins
+    label: bindosome sugar-binding proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: sugar_binding_proteins
+  - node_id: bindosome_complex
+    label: bindosome complex
+    node_type: STRUCTURE
+  - node_id: surface_sugar_binding_protein_organization
+    label: cell-surface sugar-binding protein organization
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: sugar_binding_proteins
+    predicate: assemble into
+    object: bindosome_complex
+    description: Archaeal cell-surface sugar-binding proteins assemble into 400 and
+      600 kDa bindosome complexes in the Sulfolobus cell envelope.
+    evidence:
+    - reference: GO:7770042
+      notes: GO:7770042 defines the bindosome complex as an archaeal membrane-associated
+        complex of sugar-binding proteins.
+    - reference: DOI:10.1007/s00792-010-0353-0
+      notes: Zolghadr et al. 2011 isolated high-molecular-mass sugar-binding-protein
+        complexes from the S. solfataricus cell envelope.
+  - subject: bindosome_complex
+    predicate: facilitates
+    object: surface_sugar_binding_protein_organization
+    description: The envelope-localized bindosome positions sugar-binding proteins
+      to scavenging substrates and deliver them to cognate ABC transporters.
+    evidence:
+    - reference: GO:7770042
+      notes: GO:7770042 describes the bindosome as facilitating interaction between
+        solute-binding proteins and ABC transporters during sugar uptake.
+    - reference: DOI:10.1007/s00792-010-0353-0
+      notes: Zolghadr et al. 2011 linked bindosome surface localization to sugar uptake
+        in S. solfataricus.

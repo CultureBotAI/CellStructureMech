@@ -21,6 +21,11 @@ curation_history:
     graphs, interpretation boundaries, reference metadata and an inspected CC BY 4.0
     primary figure.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Grounded self-referential causal node 'ipod' to cellstructuremech:insoluble_protein_deposit.
+  llm_assisted: true
 synonyms:
 - synonym_text: IPOD
   synonym_type: EXACT_SYNONYM
@@ -145,6 +150,7 @@ causal_graphs:
   - node_id: ipod
     label: Insoluble protein deposit
     node_type: STRUCTURE
+    grounding: cellstructuremech:insoluble_protein_deposit
   - node_id: myo2_depletion
     label: Myo2 depletion during cargo induction
     node_type: EXPERIMENTAL_FACTOR
@@ -222,6 +228,7 @@ causal_graphs:
   - node_id: ipod
     label: PrD-GFP-containing IPOD
     node_type: STRUCTURE
+    grounding: cellstructuremech:insoluble_protein_deposit
   - node_id: hsp104
     label: Hsp104-type disaggregase
     node_type: GENE_OR_PROTEIN

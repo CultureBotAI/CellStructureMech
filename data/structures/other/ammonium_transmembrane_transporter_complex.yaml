@@ -20,6 +20,12 @@ curation_history:
     PDB:1U7G homotrimer with a reviewed UniProt example, and cited GO/InterPro/UniProt/PDB/PMID/DOI
     evidence.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'amtb_channel_function' with
+    3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: AMT1 complex
   synonym_type: NARROW_SYNONYM
@@ -109,3 +115,51 @@ evidence:
 - reference: DOI:10.1126/science.1101952
   notes: 'DOI for Khademi et al. 2004, ''Mechanism of ammonia transport by Amt/MEP/Rh:
     structure of AmtB at 1.35 A'', as reported by PubMed.'
+causal_graphs:
+- graph_id: amtb_channel_function
+  title: AmtB Ammonium Channel Assembly and Conduction
+  description: Homotrimeric Amt-family channel assembly and transmembrane ammonium
+    conduction.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ammonium_transporter
+    label: Ammonium transporter
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR001905
+    component_ref: ammonium_transporter
+  - node_id: ammonium_transmembrane_transporter_complex
+    label: ammonium transmembrane transporter complex
+    node_type: STRUCTURE
+    grounding: GO:0110067
+  - node_id: ammonium_channel_activity
+    label: ammonium channel activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008519
+  edges:
+  - subject: ammonium_transporter
+    predicate: homotrimerizes into
+    object: ammonium_transmembrane_transporter_complex
+    description: Three AmtB-family subunits assemble into the trimeric ammonium transmembrane
+      transporter complex.
+    evidence:
+    - reference: GO:0110067
+      notes: GO:0110067 defines the ammonium transmembrane transporter complex.
+    - reference: PDB:1U7G
+      notes: PDB:1U7G resolves E. coli AmtB as a homotrimeric membrane channel.
+    - reference: PMID:15361618
+      notes: Khademi et al. 2004 solved the 1.35 A trimeric crystal structure of E.
+        coli AmtB.
+  - subject: ammonium_transmembrane_transporter_complex
+    predicate: mediates
+    object: ammonium_channel_activity
+    description: Each subunit of the trimeric AmtB complex forms a hydrophobic transmembrane
+      pore that conducts ammonia/ammonium.
+    evidence:
+    - reference: GO:0110067
+      notes: GO:0110067 is capable of GO:0008519 ammonium channel activity.
+    - reference: GO:0008519
+      notes: GO:0008519 is the molecular-function term for ammonium channel activity.
+    - reference: PMID:15361618
+      notes: Khademi et al. 2004 demonstrated ammonia/ammonium conduction through
+        the AmtB channel.

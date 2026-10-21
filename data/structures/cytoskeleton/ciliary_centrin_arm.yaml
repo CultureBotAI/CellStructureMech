@@ -31,6 +31,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'ciliary_centrin_arm_function'
+    with 4 nodes and 3 edges.
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 part_of:
@@ -147,3 +153,59 @@ discussions:
   - reference: GO:0120120
   posed_by: codex
   posed_date: '2026-10-03'
+causal_graphs:
+- graph_id: ciliary_centrin_arm_function
+  title: Ciliary Centrin Arm Assembly and Flagellar Inheritance Support
+  description: Centrin4-marked ciliary centrin arm assembly beside the hook complex/FAZ
+    filament and its role in trypanosome flagellum inheritance.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: centrin4
+    label: Centrin4 ciliary centrin arm protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: centrin4
+  - node_id: ciliary_centrin_arm
+    label: ciliary centrin arm
+    node_type: STRUCTURE
+    grounding: GO:0120269
+  - node_id: hook_faz_flanking
+    label: hook-complex and FAZ filament flanking
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: flagellum_inheritance_support
+    label: flagellum inheritance support
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: centrin4
+    predicate: assembles into
+    object: ciliary_centrin_arm
+    description: Centrin4 localizes to and marks the rod-shaped ciliary centrin arm
+      in the trypanosome flagellar pocket cytoskeleton.
+    evidence:
+    - reference: GO:0120269
+      notes: GO:0120269 defines the ciliary centrin arm as a rod-shaped protein complex
+        containing Centrin4.
+    - reference: DOI:10.3390/cells4040726
+      notes: Morriswood 2015 described the TbCentrin4-positive centrin arm beside
+        the TbMORN1-positive hook complex.
+  - subject: ciliary_centrin_arm
+    predicate: mediates
+    object: hook_faz_flanking
+    description: The ciliary centrin arm aligns alongside the hook complex to flank
+      the flagellum attachment zone filament and microtubule quartet.
+    evidence:
+    - reference: GO:0120269
+      notes: GO:0120269 places the ciliary centrin arm beside the FAZ filament and
+        quartet microtubules.
+    - reference: DOI:10.3390/cells4040726
+      notes: Morriswood 2015 detailed the spatial arrangement of the centrin arm,
+        hook complex, FAZ filament, and microtubule quartet.
+  - subject: ciliary_centrin_arm
+    predicate: supports
+    object: flagellum_inheritance_support
+    description: Assembly of the ciliary centrin arm together with hook-complex integrity
+      supports new flagellum inheritance in Trypanosoma brucei.
+    evidence:
+    - reference: DOI:10.1074/jbc.RA120.014237
+      notes: Pham, Hu and Li 2020 showed that maintaining hook-complex integrity and
+        centrin arm assembly facilitates flagellum inheritance in T. brucei.

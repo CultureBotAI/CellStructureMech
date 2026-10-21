@@ -28,6 +28,11 @@ curation_history:
   changes: Preserved the JATS distinction between the copyright notice and publisher
     without assigning an unstated copyright holder.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed mechanistic descriptions to 2 causal edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0005622
 part_of:
@@ -128,6 +133,8 @@ causal_graphs:
     - reference: DOI:10.1242/bio.024273
       notes: ICL1e-family RNAi strips the wild-type mesh; the separate basal-body-associated
         complex is outside this edge.
+    description: Infraciliary-lattice centrins of the ICL1e family are required to
+      assemble the contractile cortical mesh.
   - subject: scaffolds
     predicate: are required for assembly of
     object: lattice
@@ -136,6 +143,8 @@ causal_graphs:
       notes: PtCenBP1 depletion disassembles the mesh; recovery permits reassembly.
     - reference: DOI:10.1242/jcs.019414
       notes: Abstract reports assembly requirements for both scaffold subfamilies.
+    description: Sfi1-like centrin-binding scaffold proteins (including PtCenBP1)
+      are required for assembly and reassembly of the infraciliary lattice.
 evidence:
 - reference: DOI:10.1242/bio.024273
   notes: Aubusson-Fleury et al. (2017). Read Introduction, ICL1e localization and

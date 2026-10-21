@@ -27,6 +27,11 @@ curation_history:
   action: ADDRESS_REVIEW
   changes: '#2301: Correct authorship of the two nitrate-reductase review citations.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 2 source-backed edge(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: cytoplasmic membrane-bound quinol-nitrate oxidoreductase
   synonym_type: EXACT_SYNONYM
@@ -290,6 +295,22 @@ causal_graphs:
     - reference: ComplexPortal:CPX-1974
       notes: Complex Portal CPX-1974 curates the E. coli K-12 NarGHI nitrate reductase
         A complex.
+  - subject: nitrate_reductase_quinone_activity
+    predicate: produces
+    object: quinone
+    description: Quinol oxidation at the NarI site yields quinone during nitrate reduction.
+    evidence:
+    - reference: GO:0160182
+      notes: GO:0160182 defines nitrate reductase (quinone) activity as oxidizing
+        quinol to quinone while reducing nitrate to nitrite.
+  - subject: nitrate_reductase_quinone_activity
+    predicate: produces
+    object: nitrite
+    description: Nitrate reduction at the NarG molybdenum center yields nitrite.
+    evidence:
+    - reference: GO:0160182
+      notes: GO:0160182 defines nitrate reductase (quinone) activity as reducing nitrate
+        to nitrite.
 complex_compositions:
 - composition_id: complex_portal_cpx_1974
   source: COMPLEX_PORTAL
