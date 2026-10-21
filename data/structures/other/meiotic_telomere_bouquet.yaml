@@ -22,6 +22,11 @@ curation_history:
     mechanisms, a verified proteomics dataset, two inspected CC BY figures, and explicit
     model and access limits.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Grounded self-referential causal node 'bouquet' to cellstructuremech:meiotic_telomere_bouquet.
+  llm_assisted: true
 parent_structures:
 - GO:0032993
 part_of:
@@ -468,6 +473,7 @@ causal_graphs:
   - node_id: bouquet
     label: Meiotic telomere bouquet
     node_type: STRUCTURE
+    grounding: cellstructuremech:meiotic_telomere_bouquet
   edges:
   - subject: ndj1
     predicate: supports

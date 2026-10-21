@@ -26,6 +26,12 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'mode_molybdate_dna_binding'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: ModE dimer
   synonym_type: EXACT_SYNONYM
@@ -136,3 +142,59 @@ evidence:
   notes: DOI for Schuttelkopf, Boxer and Hunter 2003, 'Crystal Structure of Activated
     ModE Reveals Conformational Changes Involving Both Oxyanion and DNA-binding Domains',
     as reported by Crossref.
+causal_graphs:
+- graph_id: mode_molybdate_dna_binding
+  title: ModE Homodimer Molybdate Sensing and Operator DNA Binding
+  description: Molybdate binding by the C-terminal oxyanion-binding domains allosterically
+    activates operator DNA binding by the N-terminal winged-helix domains.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mode_transcriptional_regulator
+    label: Molybdate-dependent transcriptional regulator ModE
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR016462
+    component_ref: mode_transcriptional_regulator
+  - node_id: molybdenum_ion_binding
+    label: molybdenum ion binding
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0030151
+  - node_id: cis_regulatory_region_sequence_specific_dna_binding
+    label: cis-regulatory region sequence-specific DNA binding
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0000987
+  edges:
+  - subject: mode_transcriptional_regulator
+    predicate: executes
+    object: molybdenum_ion_binding
+    description: The C-terminal Mop-like oxyanion-binding domains of the ModE homodimer
+      bind molybdate ions.
+    evidence:
+    - reference: GO:1990198
+      notes: GO:1990198 defines the dimeric ModE complex by its role in molybdenum
+        metabolism and transcriptional regulation.
+    - reference: GO:0030151
+      notes: GO:0030151 is the molecular-function term for molybdenum ion binding.
+    - reference: PMID:12581638
+      notes: Schuttelkopf, Boxer and Hunter 2003 solved the crystal structure of molybdate-bound
+        E. coli ModE.
+  - subject: molybdenum_ion_binding
+    predicate: allosterically promotes
+    object: cis_regulatory_region_sequence_specific_dna_binding
+    description: Molybdate binding triggers quaternary conformational changes in the
+      ModE dimer that reorient the N-terminal winged-helix domains for high-affinity
+      operator DNA binding.
+    evidence:
+    - reference: GO:1990198
+      notes: GO:1990198 defines the ModE complex as binding DNA directly to regulate
+        transcription.
+    - reference: GO:0000987
+      notes: GO:0000987 is the molecular-function term for cis-regulatory region sequence-specific
+        DNA binding.
+    - reference: PMID:12581638
+      notes: Schuttelkopf, Boxer and Hunter 2003 showed how molybdate binding induces
+        conformational changes across both the oxyanion-binding and DNA-binding domains
+        of ModE.
+    - reference: PDB:1O7L
+      notes: PDB:1O7L captures the molybdate-activated conformation of the E. coli
+        ModE homodimer.

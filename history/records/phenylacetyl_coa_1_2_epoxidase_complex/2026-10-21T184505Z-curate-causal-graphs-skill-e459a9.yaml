@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/phenylacetyl_coa_1_2_epoxidase_complex.yaml
+  slug: phenylacetyl_coa_1_2_epoxidase_complex
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-e459a9
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed FUNCTION causal graph 'paabce_epoxidase_function' with 5 nodes
+    and 4 edges.
+  details: 'Stage 2 causal-graph curation pass for GO:0062077 (phenylacetyl-CoA 1,2-epoxidase
+    complex): Added source-backed FUNCTION causal graph ''paabce_epoxidase_function'' with
+    5 nodes and 4 edges. Validated via write_validated_structure.'

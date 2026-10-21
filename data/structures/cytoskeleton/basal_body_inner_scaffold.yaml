@@ -25,6 +25,11 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Grounded self-referential causal node 'scaffold' to cellstructuremech:basal_body_inner_scaffold.
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 part_of:
@@ -155,6 +160,7 @@ causal_graphs:
   - node_id: scaffold
     label: basal body inner scaffold
     node_type: STRUCTURE
+    grounding: cellstructuremech:basal_body_inner_scaffold
   - node_id: fam161a_signal
     label: basal-body Fam161A localization signal
     node_type: STATE

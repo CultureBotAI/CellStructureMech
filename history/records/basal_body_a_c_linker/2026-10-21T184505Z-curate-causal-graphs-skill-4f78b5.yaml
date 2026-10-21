@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/basal_body_a_c_linker.yaml
+  slug: basal_body_a_c_linker
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-4f78b5
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Grounded self-referential causal node 'linker' to cellstructuremech:basal_body_a_c_linker.
+  details: 'Stage 2 causal-graph curation pass for cellstructuremech:basal_body_a_c_linker
+    (basal body A-C linker): Grounded self-referential causal node ''linker'' to cellstructuremech:basal_body_a_c_linker.
+    Validated via write_validated_structure.'

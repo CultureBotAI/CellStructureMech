@@ -33,6 +33,11 @@ curation_history:
   changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
     cyanelle evidence for #1231.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0009579
 - GO:0031976
@@ -171,3 +176,12 @@ causal_graphs:
     - reference: uniprot.location:SL-0277
       notes: UniProt SL-0277 describes the cyanelle thylakoid as an internal system
         of interconnected photosynthetic membranes.
+  - subject: cyanelle_thylakoid_membrane
+    predicate: is part of
+    object: cyanelle_thylakoid
+    description: The cyanelle thylakoid membrane is the bounding photosynthetic bilayer
+      of the cyanelle thylakoid.
+    evidence:
+    - reference: GO:0009843
+      notes: GO:0009843 and GO:0033115 link the cyanelle thylakoid membrane to the
+        cyanelle thylakoid.

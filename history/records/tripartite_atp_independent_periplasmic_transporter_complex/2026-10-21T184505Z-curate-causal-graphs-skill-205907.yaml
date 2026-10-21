@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml
+  slug: tripartite_atp_independent_periplasmic_transporter_complex
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-205907
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed FUNCTION causal graph 'trap_transporter_solute_uptake' with
+    4 nodes and 3 edges.
+  details: 'Stage 2 causal-graph curation pass for GO:0031317 (tripartite ATP-independent
+    periplasmic transporter complex): Added source-backed FUNCTION causal graph ''trap_transporter_solute_uptake''
+    with 4 nodes and 3 edges. Validated via write_validated_structure.'

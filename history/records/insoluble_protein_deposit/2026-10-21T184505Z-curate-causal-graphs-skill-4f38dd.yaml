@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/inclusion/insoluble_protein_deposit.yaml
+  slug: insoluble_protein_deposit
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-4f38dd
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Grounded self-referential causal node 'ipod' to cellstructuremech:insoluble_protein_deposit.
+  details: 'Stage 2 causal-graph curation pass for cellstructuremech:insoluble_protein_deposit
+    (insoluble protein deposit): Grounded self-referential causal node ''ipod'' to cellstructuremech:insoluble_protein_deposit.
+    Validated via write_validated_structure.'

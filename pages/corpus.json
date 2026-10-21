@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 978,
- "corpus_updated": "2026-10-19 05:56:22 UTC",
- "corpus_digest": "666dec8a09b2",
+ "corpus_updated": "2026-10-21 18:45:05 UTC",
+ "corpus_digest": "26b01b947d2d",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -30991,6 +30991,13 @@
      "action": "EDIT",
      "changes": "added 4 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Grounded self-referential causal node 'linker' to cellstructuremech:basal_body_a_c_linker.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -31237,7 +31244,8 @@
        "node_id": "linker",
        "label": "basal body A-C linker",
        "node_type": "STRUCTURE",
-       "description": "Proximal form of this record's structure, not a model of the transitional C-link composition."
+       "description": "Proximal form of this record's structure, not a model of the transitional C-link composition.",
+       "grounding": "cellstructuremech:basal_body_a_c_linker"
       }
      ],
      "edges": [
@@ -33717,6 +33725,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Grounded self-referential causal node 'scaffold' to cellstructuremech:basal_body_inner_scaffold.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -33852,7 +33867,8 @@
       {
        "node_id": "scaffold",
        "label": "basal body inner scaffold",
-       "node_type": "STRUCTURE"
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:basal_body_inner_scaffold"
       },
       {
        "node_id": "fam161a_signal",
@@ -38382,6 +38398,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'ciliary_centrin_arm_function' with 4 nodes and 3 edges.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -38526,6 +38549,85 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-03"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "ciliary_centrin_arm_function",
+     "title": "Ciliary Centrin Arm Assembly and Flagellar Inheritance Support",
+     "description": "Centrin4-marked ciliary centrin arm assembly beside the hook complex/FAZ filament and its role in trypanosome flagellum inheritance.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "centrin4",
+       "label": "Centrin4 ciliary centrin arm protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "centrin4"
+      },
+      {
+       "node_id": "ciliary_centrin_arm",
+       "label": "ciliary centrin arm",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0120269"
+      },
+      {
+       "node_id": "hook_faz_flanking",
+       "label": "hook-complex and FAZ filament flanking",
+       "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "flagellum_inheritance_support",
+       "label": "flagellum inheritance support",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "centrin4",
+       "predicate": "assembles into",
+       "object": "ciliary_centrin_arm",
+       "description": "Centrin4 localizes to and marks the rod-shaped ciliary centrin arm in the trypanosome flagellar pocket cytoskeleton.",
+       "evidence": [
+        {
+         "reference": "GO:0120269",
+         "notes": "GO:0120269 defines the ciliary centrin arm as a rod-shaped protein complex containing Centrin4."
+        },
+        {
+         "reference": "DOI:10.3390/cells4040726",
+         "notes": "Morriswood 2015 described the TbCentrin4-positive centrin arm beside the TbMORN1-positive hook complex."
+        }
+       ]
+      },
+      {
+       "subject": "ciliary_centrin_arm",
+       "predicate": "mediates",
+       "object": "hook_faz_flanking",
+       "description": "The ciliary centrin arm aligns alongside the hook complex to flank the flagellum attachment zone filament and microtubule quartet.",
+       "evidence": [
+        {
+         "reference": "GO:0120269",
+         "notes": "GO:0120269 places the ciliary centrin arm beside the FAZ filament and quartet microtubules."
+        },
+        {
+         "reference": "DOI:10.3390/cells4040726",
+         "notes": "Morriswood 2015 detailed the spatial arrangement of the centrin arm, hook complex, FAZ filament, and microtubule quartet."
+        }
+       ]
+      },
+      {
+       "subject": "ciliary_centrin_arm",
+       "predicate": "supports",
+       "object": "flagellum_inheritance_support",
+       "description": "Assembly of the ciliary centrin arm together with hook-complex integrity supports new flagellum inheritance in Trypanosoma brucei.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1074/jbc.RA120.014237",
+         "notes": "Pham, Hu and Li 2020 showed that maintaining hook-complex integrity and centrin arm assembly facilitates flagellum inheritance in T. brucei."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -47513,6 +47615,13 @@
      "action": "EDIT",
      "changes": "added 5 verified UniProtKB protein_example(s); added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed mechanistic descriptions to 2 causal edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -47718,7 +47827,8 @@
          "reference": "DOI:10.1242/bio.024273",
          "notes": "Figure 6 and interaction Results: internal basal bodies lack GFP-ICL1e after Centrin2 depletion, whereas they retain it after Centrin3 depletion."
         }
-       ]
+       ],
+       "description": "Centrin2 supports GFP-ICL1e localization at internal basal bodies in Paramecium tetraurelia."
       },
       {
        "subject": "icl1e_complex",
@@ -47729,7 +47839,8 @@
          "reference": "DOI:10.1242/bio.024273",
          "notes": "Figure 7 and interaction Results: the right-proximal Centrin3 spot is lost early after ICL1e depletion; different sites have different temporal responses."
         }
-       ]
+       ],
+       "description": "The ICL1e complex supports maintenance of the right-proximal Centrin3 spot at the basal body."
       }
      ]
     }
@@ -47900,6 +48011,13 @@
      "action": "CORRECTED_ATTRIBUTION",
      "changes": "Preserved the JATS distinction between the copyright notice and publisher without assigning an unstated copyright holder.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed mechanistic descriptions to 2 causal edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -48026,7 +48144,8 @@
          "reference": "DOI:10.1242/bio.024273",
          "notes": "ICL1e-family RNAi strips the wild-type mesh; the separate basal-body-associated complex is outside this edge."
         }
-       ]
+       ],
+       "description": "Infraciliary-lattice centrins of the ICL1e family are required to assemble the contractile cortical mesh."
       },
       {
        "subject": "scaffolds",
@@ -48041,7 +48160,8 @@
          "reference": "DOI:10.1242/jcs.019414",
          "notes": "Abstract reports assembly requirements for both scaffold subfamilies."
         }
-       ]
+       ],
+       "description": "Sfi1-like centrin-binding scaffold proteins (including PtCenBP1) are required for assembly and reassembly of the infraciliary lattice."
       }
      ]
     }
@@ -69301,6 +69421,13 @@
      "action": "CORRECTED_EVIDENCE_SCOPE",
      "changes": "Addressed issue #2002: distinguish abstract-supported stalk CCDC/EGF-like membership from CCDC-specific sheath localization; preserve the spasmoneme exclusion, discussion rationale and dates.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed mechanistic descriptions to 3 causal edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -69454,7 +69581,8 @@
          "reference": "DOI:10.1083/jcb.77.2.358",
          "notes": "Calcium-responsive glycerinated organelles; not a live-cell channel mechanism."
         }
-       ]
+       ],
+       "description": "Calcium exposure of glycerinated stalk preparations elicits rapid spasmoneme shortening."
       },
       {
        "subject": "shortening",
@@ -69465,7 +69593,8 @@
          "reference": "DOI:10.1016/j.bpj.2012.07.038",
          "notes": "Contractile stalk mechanics connect organelle shortening with cell-body displacement."
         }
-       ]
+       ],
+       "description": "Spasmoneme shortening drives helical stalk deformation and cell-body retraction in Vorticella."
       },
       {
        "subject": "viscous_resistance",
@@ -69476,7 +69605,8 @@
          "reference": "DOI:10.1016/j.bpj.2012.07.038",
          "notes": "Controlled channel-flow resistance increases contraction duration and decreases excursion."
         }
-       ]
+       ],
+       "description": "Imposed viscous channel-flow resistance slows stalk contraction and limits cell-body excursion."
       }
      ]
     }
@@ -79331,6 +79461,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -79785,6 +79922,18 @@
        "evidence": [
         {
          "reference": "PMID:36104349"
+        }
+       ]
+      },
+      {
+       "subject": "hyc_module",
+       "predicate": "reduces",
+       "object": "protons",
+       "description": "The HycB-HycG hydrogenase module transfers electrons to protons to generate H2.",
+       "evidence": [
+        {
+         "reference": "PMID:36104349",
+         "notes": "Steinhilper et al. 2022 describe proton reduction at the Hyc hydrogenase module coupled to formate oxidation."
         }
        ]
       }
@@ -81472,6 +81621,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "#2301: Correct authorship of the two nitrate-reductase review citations.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 2 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -81846,6 +82002,30 @@
         {
          "reference": "ComplexPortal:CPX-1974",
          "notes": "Complex Portal CPX-1974 curates the E. coli K-12 NarGHI nitrate reductase A complex."
+        }
+       ]
+      },
+      {
+       "subject": "nitrate_reductase_quinone_activity",
+       "predicate": "produces",
+       "object": "quinone",
+       "description": "Quinol oxidation at the NarI site yields quinone during nitrate reduction.",
+       "evidence": [
+        {
+         "reference": "GO:0160182",
+         "notes": "GO:0160182 defines nitrate reductase (quinone) activity as oxidizing quinol to quinone while reducing nitrate to nitrite."
+        }
+       ]
+      },
+      {
+       "subject": "nitrate_reductase_quinone_activity",
+       "predicate": "produces",
+       "object": "nitrite",
+       "description": "Nitrate reduction at the NarG molybdenum center yields nitrite.",
+       "evidence": [
+        {
+         "reference": "GO:0160182",
+         "notes": "GO:0160182 defines nitrate reductase (quinone) activity as reducing nitrate to nitrite."
         }
        ]
       }
@@ -92298,6 +92478,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Resolved PR #583 review issues #584, #585 and #586 by changing the Agaricomycotina distribution to VARIABLE, renaming the parenthesome component to paired septal pore caps, and softening the pore-plugging graph edge to septal pore closure.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -92488,6 +92675,18 @@
         {
          "reference": "DOI:10.1111/j.1462-2920.2009.02122.x",
          "notes": "Van Peer et al. 2010 showed that Schizophyllum commune septal pore cap loss prevents septal closure."
+        }
+       ]
+      },
+      {
+       "subject": "barrel_shaped_septal_swelling",
+       "predicate": "is part of",
+       "object": "dolipore_septum",
+       "description": "The barrel-shaped septal wall swelling around the central pore is a structural part of the basidiomycete dolipore septum.",
+       "evidence": [
+        {
+         "reference": "GO:0000937",
+         "notes": "GO:0000937 defines the dolipore septum by its barrel-shaped swelling around the central pore and paired septal pore caps."
         }
        ]
       }
@@ -98839,6 +99038,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added yeast-scoped IPOD composition, source-bounded recruitment and turnover graphs, interpretation boundaries, reference metadata and an inspected CC BY 4.0 primary figure.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Grounded self-referential causal node 'ipod' to cellstructuremech:insoluble_protein_deposit.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -98988,7 +99194,8 @@
       {
        "node_id": "ipod",
        "label": "Insoluble protein deposit",
-       "node_type": "STRUCTURE"
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:insoluble_protein_deposit"
       },
       {
        "node_id": "myo2_depletion",
@@ -99101,7 +99308,8 @@
       {
        "node_id": "ipod",
        "label": "PrD-GFP-containing IPOD",
-       "node_type": "STRUCTURE"
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:insoluble_protein_deposit"
       },
       {
        "node_id": "hsp104",
@@ -101040,6 +101248,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added source-bounded MitoStore composition, family/reference grounding, precursor recruitment and recovery graphs, dataset-conflict provenance, and an inspected CC BY 4.0 primary figure.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Grounded self-referential causal node 'mitostore' to cellstructuremech:mitostore.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -101247,7 +101462,8 @@
       {
        "node_id": "mitostore",
        "label": "MitoStore",
-       "node_type": "STRUCTURE"
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:mitostore"
       },
       {
        "node_id": "hsp42_loss",
@@ -101355,7 +101571,8 @@
       {
        "node_id": "mitostore",
        "label": "MitoStore",
-       "node_type": "STRUCTURE"
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:mitostore"
       },
       {
        "node_id": "cargo",
@@ -103471,6 +103688,13 @@
      "action": "CORRECTED_ATTRIBUTION",
      "changes": "Corrected Salin's given name from native JATS author metadata before publication.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed mechanistic descriptions to 2 causal edge(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -103726,7 +103950,8 @@
          "reference": "DOI:10.1083/jcb.200711154",
          "notes": "Figure 4B-C compares refeeding with and without cycloheximide; Figure 4A supplies the water-transfer control."
         }
-       ]
+       ],
+       "description": "Transfer to fresh nutrient medium induces clearance of cytoplasmic Pre6-GFP proteasome storage granules."
       },
       {
        "subject": "fresh_medium",
@@ -103737,7 +103962,8 @@
          "reference": "DOI:10.1083/jcb.200711154",
          "notes": "Figure 4 follows redistribution to the nuclear periphery and nucleus."
         }
-       ]
+       ],
+       "description": "Transfer to fresh nutrient medium induces relocalization of Pre6-GFP from proteasome storage granules to the nuclear periphery and nucleus."
       }
      ]
     }
@@ -109651,6 +109877,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 2 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -109939,6 +110172,18 @@
         {
          "reference": "DOI:10.1111/j.1567-1364.2006.00158.x",
          "notes": "Bartnicki-Garcia 2006 reviews chitosomes as vehicles for cell-surface construction of fungal chitin microfibrils."
+        }
+       ]
+      },
+      {
+       "subject": "chitosome",
+       "predicate": "targets cargo to",
+       "object": "plasma_membrane",
+       "description": "Chitosomes deliver latent chitin synthase enzymes to the fungal plasma membrane for cell-surface activation.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1091/mbc.9.6.1565",
+         "notes": "Chitosome microvesicles mobilize chitin synthase to the plasma membrane."
         }
        ]
       }
@@ -118104,6 +118349,13 @@
      "action": "REPLACED_UNREADABLE_EVIDENCE",
      "changes": "Resolved #1235 by replacing unreadable Serafini and Letourneur COPI citations with reachable Yu et al. 2012 Arf1-coatomer and Sandmann et al. 2003 Golgi-to-ER retrieval evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -118317,6 +118569,18 @@
         {
          "reference": "GO:0035964",
          "notes": "GO:0035964 defines COPI-coated vesicle budding as the process that yields a COPI-coated vesicle."
+        }
+       ]
+      },
+      {
+       "subject": "golgi_to_er_retrograde_transport",
+       "predicate": "delivers cargo to",
+       "object": "endoplasmic_reticulum",
+       "description": "COPI-mediated retrograde vesicle transport returns proteins and lipids from the Golgi apparatus to the endoplasmic reticulum.",
+       "evidence": [
+        {
+         "reference": "GO:0006890",
+         "notes": "GO:0006890 defines retrograde vesicle-mediated transport from the Golgi to the endoplasmic reticulum."
         }
        ]
       }
@@ -121872,6 +122136,13 @@
      "action": "REPLACED_UNREADABLE_EVIDENCE",
      "changes": "Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable cyanelle evidence for #1231.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -122058,6 +122329,18 @@
         {
          "reference": "uniprot.location:SL-0277",
          "notes": "UniProt SL-0277 describes the cyanelle thylakoid as an internal system of interconnected photosynthetic membranes."
+        }
+       ]
+      },
+      {
+       "subject": "cyanelle_thylakoid_membrane",
+       "predicate": "is part of",
+       "object": "cyanelle_thylakoid",
+       "description": "The cyanelle thylakoid membrane is the bounding photosynthetic bilayer of the cyanelle thylakoid.",
+       "evidence": [
+        {
+         "reference": "GO:0009843",
+         "notes": "GO:0009843 and GO:0033115 link the cyanelle thylakoid membrane to the cyanelle thylakoid."
         }
        ]
       }
@@ -123082,6 +123365,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed mechanistic descriptions to 7 causal edge(s); Grounded self-referential causal node 'diazoplast' to cellstructuremech:diazoplast.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -123267,7 +123557,8 @@
       {
        "node_id": "diazoplast",
        "label": "diazoplast",
-       "node_type": "STRUCTURE"
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:diazoplast"
       },
       {
        "node_id": "nitrogenase",
@@ -123313,7 +123604,8 @@
          "reference": "GO:0016610",
          "notes": "Nitrogenase reaction; diazoplast membership supported in components."
         }
-       ]
+       ],
+       "description": "The diazoplast-localized nitrogenase complex catalyzes biological dinitrogen fixation."
       },
       {
        "subject": "diazoplast",
@@ -123324,7 +123616,8 @@
          "reference": "DOI:10.1093/ismeco/ycae055",
          "notes": "Figures 2-3; compartment isotope enrichment and culture activity."
         }
-       ]
+       ],
+       "description": "The Epithemia clementina diazoplast compartment performs intracellular nitrogen fixation."
       },
       {
        "subject": "fixation",
@@ -123335,7 +123628,8 @@
          "reference": "DOI:10.1093/ismeco/ycae055",
          "notes": "Figure 2B supports nitrogen transfer; no export species assigned."
         }
-       ]
+       ],
+       "description": "Diazoplast nitrogen fixation supplies fixed nitrogen that is incorporated into host diatom biomass."
       },
       {
        "subject": "photosynthesis",
@@ -123346,7 +123640,8 @@
          "reference": "DOI:10.1093/ismeco/ycae055",
          "notes": "Bicarbonate labeling and bulk IRMS distinguish daytime carbon fixation."
         }
-       ]
+       ],
+       "description": "Daytime host photosynthesis fixes inorganic carbon into host organic carbon."
       },
       {
        "subject": "host_carbon",
@@ -123357,7 +123652,8 @@
          "reference": "DOI:10.1093/ismeco/ycae055",
          "notes": "Figure 2C supports carbon transfer; wash losses limit temporal interpretation."
         }
-       ]
+       ],
+       "description": "Host-fixed carbon is transferred into the diazoplast compartment."
       },
       {
        "subject": "photosynthesis",
@@ -123368,7 +123664,8 @@
          "reference": "DOI:10.1093/ismeco/ycae055",
          "notes": "Figure 3D daytime perturbations support physiological coupling."
         }
-       ]
+       ],
+       "description": "Daytime host photosynthetic activity physiologically supports diazoplast nitrogen fixation."
       },
       {
        "subject": "inhibition",
@@ -123379,7 +123676,8 @@
          "reference": "DOI:10.1093/ismeco/ycae055",
          "notes": "Results report about 60% reduction, not complete abolition."
         }
-       ]
+       ],
+       "description": "Daytime darkness or DCMU inhibition of photosystem II reduces diazoplast nitrogen fixation by approximately 60%."
       }
      ]
     }
@@ -126303,6 +126601,13 @@
      "action": "REPLACED_UNREADABLE_EVIDENCE",
      "changes": "Resolved #1237 by routing Matsuoka et al. 1998 COPII liposome evidence through reachable PMID:9568718 instead of the unreadable Cell DOI.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -126492,6 +126797,18 @@
         {
          "reference": "PMID:9568718",
          "notes": "Matsuoka et al. 1998 reconstituted COPII-coated vesicle formation on chemically defined liposomes."
+        }
+       ]
+      },
+      {
+       "subject": "copii_vesicle_coat",
+       "predicate": "mediates",
+       "object": "copii_coated_vesicle_budding",
+       "description": "Assembly of the COPII coat on the ER membrane drives COPII-coated vesicle budding.",
+       "evidence": [
+        {
+         "reference": "GO:0090114",
+         "notes": "GO:0090114 defines COPII-coated vesicle budding from the ER membrane."
         }
        ]
       }
@@ -127533,6 +127850,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO synonymy and plastid-membrane parentage, curated a reviewed-label-only epiplastidial lipid-bilayer constituent, added Phaeodactylum tricornutum scope, a complex-plastid boundary function, GO and DOI evidence, and open lipid-grounding and periplastidial-boundary discussions.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'epiplastidial_membrane_boundary' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -127685,6 +128009,67 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-03"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "epiplastidial_membrane_boundary",
+     "title": "Epiplastidial Membrane Outer Complex-Plastid Boundary",
+     "description": "Host-endomembrane-derived epiplastidial lipid bilayer forming the outermost membrane boundary of secondary complex plastids.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "epiplastidial_lipid_bilayer",
+       "label": "epiplastidial lipid bilayer",
+       "node_type": "STRUCTURE",
+       "component_ref": "epiplastidial_lipid_bilayer"
+      },
+      {
+       "node_id": "epiplastidial_membrane",
+       "label": "epiplastidial membrane",
+       "node_type": "STRUCTURE"
+      },
+      {
+       "node_id": "complex_plastid_outer_boundary",
+       "label": "complex-plastid outer boundary",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "epiplastidial_lipid_bilayer",
+       "predicate": "forms",
+       "object": "epiplastidial_membrane",
+       "description": "The host-endomembrane-derived lipid bilayer forms the outermost epiplastidial membrane surrounding secondary complex plastids.",
+       "evidence": [
+        {
+         "reference": "GO:7770040",
+         "notes": "GO:7770040 defines the epiplastidial membrane as the outermost lipid bilayer surrounding complex plastids."
+        },
+        {
+         "reference": "DOI:10.1016/j.protis.2016.04.001",
+         "notes": "Flori et al. 2016 characterized the membrane architecture bounding the diatom periplastidial compartment."
+        }
+       ]
+      },
+      {
+       "subject": "epiplastidial_membrane",
+       "predicate": "maintains",
+       "object": "complex_plastid_outer_boundary",
+       "description": "The epiplastidial membrane separates the periplastidial compartment from the host cytosol while maintaining continuity with the rough ER and outer nuclear envelope.",
+       "evidence": [
+        {
+         "reference": "GO:7770040",
+         "notes": "GO:7770040 describes the epiplastidial membrane as the outermost complex-plastid boundary continuous with the host ER and outer nuclear membrane."
+        },
+        {
+         "reference": "DOI:10.1007/s10265-005-0214-6",
+         "notes": "Hashimoto 2005 reviewed the four-membrane organization and outer ER-continuous membrane of secondary plastids."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -134295,6 +134680,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added the GO exact Golgi apparatus membrane synonym, generic membrane parentage, Golgi-apparatus parthood, a reviewed-label-only Golgi lipid bilayer component, Saccharomyces scope, GO/DOI evidence, a nonmechanistic Golgi membrane topology graph, and a lipid-grounding TODO.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -134466,6 +134858,18 @@
         {
          "reference": "DOI:10.1016/0092-8674(91)90176-y",
          "notes": "Serafini et al. 1991 studied coat subunits on Golgi-derived COP-coated vesicles."
+        }
+       ]
+      },
+      {
+       "subject": "copi_vesicle_coat",
+       "predicate": "mediates",
+       "object": "copi_coated_vesicle_budding",
+       "description": "Assembly of the COPI coat on the Golgi membrane drives COPI-coated vesicle budding.",
+       "evidence": [
+        {
+         "reference": "GO:0035964",
+         "notes": "GO:0035964 defines COPI-coated vesicle budding from the Golgi membrane."
         }
        ]
       }
@@ -135683,6 +136087,13 @@
      "action": "CORRECTED_EVIDENCE",
      "changes": "Addressed PR 2052 review issue 2053 by correcting the HSP78 graph evidence locator from Figure 6 to Figure 7A,C-D.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed mechanistic descriptions to 7 causal edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -135900,7 +136311,8 @@
          "reference": "DOI:10.1091/mbc.E17-01-0027",
          "notes": "Figure 1 contrasts targeted destabilized reporter with stable reporter controls."
         }
-       ]
+       ],
+       "description": "Expression of a mitochondria-targeted destabilized GFP-DHFR reporter induces formation of an intramitochondrial protein quality control compartment (IMiQ)."
       },
       {
        "subject": "imiq",
@@ -135911,7 +136323,8 @@
          "reference": "DOI:10.1091/mbc.E17-01-0027",
          "notes": "Figure 5 uses a nuclear marker; positioning is frequent, not invariant."
         }
-       ]
+       ],
+       "description": "The IMiQ deposit frequently localizes at a single perinuclear site in budding yeast."
       },
       {
        "subject": "imiq",
@@ -135922,7 +136335,8 @@
          "reference": "DOI:10.1091/mbc.E17-01-0027",
          "notes": "Figures 1 and 7 distinguish large deposits from the residual tubular mitochondrial network; separation is not loss of all surrounding membrane."
         }
-       ]
+       ],
+       "description": "The aggregate-bearing IMiQ compartment separates from the residual tubular mitochondrial network."
       },
       {
        "subject": "hsp78_deletion",
@@ -135933,7 +136347,8 @@
          "reference": "DOI:10.1091/mbc.E17-01-0027",
          "notes": "Figure 7A,C-D: hsp78 deletion cells carry more small network-associated deposits rather than the normal large perinuclear deposit."
         }
-       ]
+       ],
+       "description": "Deletion of HSP78 impairs coalescence into a single large perinuclear IMiQ deposit, leaving multiple smaller network-associated deposits."
       },
       {
        "subject": "fzo1_deletion",
@@ -135944,7 +136359,8 @@
          "reference": "DOI:10.1091/mbc.E17-01-0027",
          "notes": "Figure 7: fusion-deficient cells show multiple small deposits lacking normal perinuclear coalescence. Respiratory deficiency limits functional interpretation of this strain."
         }
-       ]
+       ],
+       "description": "Deletion of FZO1 impairs perinuclear IMiQ coalescence in fusion-deficient mitochondria."
       },
       {
        "subject": "fis1_deletion",
@@ -135955,7 +136371,8 @@
          "reference": "DOI:10.1091/mbc.E17-01-0027",
          "notes": "Figure 7: aggregate-bearing mitochondrial material remains associated with the hyperconnected network in fis1 deletion cells."
         }
-       ]
+       ],
+       "description": "Deletion of FIS1 impairs separation of aggregate-bearing mitochondrial material from the hyperconnected mitochondrial network."
       },
       {
        "subject": "benomyl",
@@ -135966,7 +136383,8 @@
          "reference": "DOI:10.1091/mbc.E17-01-0027",
          "notes": "Figure 5: 100 micrograms/ml benomyl for 5 hours reduces perinuclear localization while deposits still form. This pharmacological result does not identify a molecular tether."
         }
-       ]
+       ],
+       "description": "Benomyl treatment reduces perinuclear positioning of IMiQ deposits without preventing deposit formation."
       }
      ]
     }
@@ -140198,6 +140616,13 @@
      "action": "ADDRESSED_PR_REVIEW",
      "changes": "Resolved PR #777 review issue #778 by adding a posterior-vacuole membrane node, moving component_ref off the organelle node, adding a polar-tube-firing process node, and retargeting the expansion edge to that process.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "components": [
@@ -140377,6 +140802,18 @@
         {
          "reference": "DOI:10.1371/journal.pbio.3002533",
          "notes": "Sharma et al. 2024 imaged the sequence of microsporidian polar-tube firing and sporoplasm expulsion in Vairimorpha necatrix."
+        }
+       ]
+      },
+      {
+       "subject": "sporoplasm",
+       "predicate": "enters",
+       "object": "polar_tube",
+       "description": "Posterior vacuole expansion pushes the sporoplasm toward and through the everted polar tube during spore firing.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.fgb.2015.08.007",
+         "notes": "Posterior vacuole expansion drives sporoplasm passage through the everted polar tube."
         }
        ]
       }
@@ -141078,6 +141515,13 @@
      "action": "REFINED_MEASUREMENT_SCOPE",
      "changes": "Addressed PR 2054 review issue 2055 by restricting both diameter contexts to the spherical MDCs sampled in Figure 1C and Figure S1C; preserved values, units, sample sizes and induction conditions.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed mechanistic descriptions to 9 causal edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -141373,7 +141817,8 @@
          "reference": "DOI:10.1083/jcb.202307035",
          "notes": "Figure 1 and MDC-assay Methods: rapamycin induces Tom70-enriched, Tim50-depleted structures."
         }
-       ]
+       ],
+       "description": "Rapamycin treatment induces formation of Tom70-enriched, Tim50-depleted mitochondrial-derived compartments (MDCs) in budding yeast."
       },
       {
        "subject": "formation",
@@ -141384,7 +141829,8 @@
          "reference": "DOI:10.1083/jcb.202307036",
          "notes": "Results distinguish enriched selected outer-membrane proteins from non-enriched TOM and inner-membrane proteins."
         }
-       ]
+       ],
+       "description": "MDC formation enables selective concentration of outer-membrane cargo proteins relative to non-enriched TOM core and inner-membrane proteins."
       },
       {
        "subject": "formation",
@@ -141395,7 +141841,8 @@
          "reference": "DOI:10.1083/jcb.202307035",
          "notes": "Cytosolic reporter/degron experiments support enclosure in a subset; not every MDC is shown to be closed."
         }
-       ]
+       ],
+       "description": "MDC formation encloses cytosolic material within a subset of assembled MDC structures."
       },
       {
        "subject": "tom_double",
@@ -141406,7 +141853,8 @@
          "reference": "DOI:10.7554/eLife.13943",
          "notes": "Figure 7: combined loss of Tom70 and Tom71 blocks formation in the tested assay."
         }
-       ]
+       ],
+       "description": "Combined deletion of TOM70 and TOM71 blocks rapamycin-induced MDC formation."
       },
       {
        "subject": "mmm1_loss",
@@ -141417,7 +141865,8 @@
          "reference": "DOI:10.1083/jcb.202002144",
          "notes": "ERMES-deletion experiments impair formation under the tested induction conditions; later bypass experiments limit claims of absolute essentiality."
         }
-       ]
+       ],
+       "description": "Deletion of the ERMES subunit gene MMM1 impairs MDC formation under tested induction conditions."
       },
       {
        "subject": "gem1_loss",
@@ -141428,7 +141877,8 @@
          "reference": "DOI:10.1083/jcb.202002144",
          "notes": "Gem1-deletion experiments impair induction; the dependency is conditional, not evidence that Gem1 defines the compartment."
         }
-       ]
+       ],
+       "description": "Deletion of GEM1 impairs conditional MDC induction."
       },
       {
        "subject": "dnm1_loss",
@@ -141439,7 +141889,8 @@
          "reference": "DOI:10.7554/eLife.13943",
          "notes": "Figure 4: initial formation persists but subsequent release is impaired."
         }
-       ]
+       ],
+       "description": "Deletion of the division dynamin gene DNM1 impairs subsequent MDC release from mitochondria while permitting initial formation."
       },
       {
        "subject": "psd1_loss",
@@ -141450,7 +141901,8 @@
          "reference": "DOI:10.1083/jcb.202302069",
          "notes": "PE-biosynthesis perturbation promotes constitutive MDC formation in a subset of cells; this is not a prevalence estimate."
         }
-       ]
+       ],
+       "description": "Deletion of PSD1 perturbing phosphatidylethanolamine biosynthesis promotes constitutive MDC formation in a subset of cells."
       },
       {
        "subject": "crd1_loss",
@@ -141461,7 +141913,8 @@
          "reference": "DOI:10.1083/jcb.202302069",
          "notes": "CL-biosynthesis perturbation reduces formation without eliminating it from every cell."
         }
-       ]
+       ],
+       "description": "Deletion of CRD1 perturbing cardiolipin biosynthesis reduces MDC formation frequency."
       }
      ]
     }
@@ -146436,6 +146889,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Resolved #1372 by adding UniProt SL-0340 evidence to the MVB-lumen containment edge and resolved #1373 by removing the over-specific completed-vesicle cargo containment edge from the ILV assembly graph.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -146621,6 +147081,18 @@
         {
          "reference": "uniprot.location:SL-0340",
          "notes": "UniProt SL-0340 identifies the internal multivesicular body lumen."
+        }
+       ]
+      },
+      {
+       "subject": "multivesicular_body_membrane",
+       "predicate": "bounds",
+       "object": "multivesicular_body",
+       "description": "The multivesicular-body limiting membrane encloses the multivesicular body and its lumenal vesicles.",
+       "evidence": [
+        {
+         "reference": "GO:0005771",
+         "notes": "GO:0005771 and GO:0032585 define the limiting membrane of the multivesicular body."
         }
        ]
       }
@@ -150801,6 +151273,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Resolved #647 by citing the Paulinella chromatophora review DOI for the species-level distribution row; resolved #646 by removing the whole-chromatophore Singer et al. protein-import DOI from thylakoid record-level evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -150951,6 +151430,18 @@
         {
          "reference": "GO:0070118",
          "notes": "GO:0070118 defines the membrane as the internal system that houses light-reaction complexes."
+        }
+       ]
+      },
+      {
+       "subject": "organellar_chromatophore_thylakoid_membrane",
+       "predicate": "is part of",
+       "object": "organellar_chromatophore_thylakoid",
+       "description": "The organellar chromatophore thylakoid membrane forms the photosynthetic bilayer of the chromatophore thylakoid.",
+       "evidence": [
+        {
+         "reference": "GO:0070116",
+         "notes": "GO:0070116 and GO:0070118 link the chromatophore thylakoid membrane to the chromatophore thylakoid."
         }
        ]
       }
@@ -152187,6 +152678,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO synonymy and plastid-membrane parentage, curated a reviewed-label-only periplastidial lipid-bilayer constituent, added Phaeodactylum tricornutum scope, a periplastidial-compartment boundary function, GO and DOI evidence, and open lipid-grounding and complex-plastid membrane-boundary discussions.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'periplastidial_membrane_boundary' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -152322,6 +152820,67 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-03"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "periplastidial_membrane_boundary",
+     "title": "Periplastidial Membrane Compartment Delimitation",
+     "description": "Endosymbiont-plasma-membrane-derived lipid bilayer forming the second outermost complex-plastid membrane that delimits the periplastidial compartment.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "periplastidial_lipid_bilayer",
+       "label": "periplastidial lipid bilayer",
+       "node_type": "STRUCTURE",
+       "component_ref": "periplastidial_lipid_bilayer"
+      },
+      {
+       "node_id": "periplastidial_membrane",
+       "label": "periplastidial membrane",
+       "node_type": "STRUCTURE"
+      },
+      {
+       "node_id": "periplastidial_compartment_boundary",
+       "label": "periplastidial compartment boundary",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "periplastidial_lipid_bilayer",
+       "predicate": "forms",
+       "object": "periplastidial_membrane",
+       "description": "The endosymbiont-plasma-membrane-derived lipid bilayer forms the second outermost membrane of secondary complex plastids.",
+       "evidence": [
+        {
+         "reference": "GO:7770041",
+         "notes": "GO:7770041 defines the periplastidial membrane as the second outermost lipid bilayer surrounding four-membrane complex plastids."
+        },
+        {
+         "reference": "DOI:10.1016/j.protis.2016.04.001",
+         "notes": "Flori et al. 2016 analyzed the ultrastructure of the diatom periplastidial membrane and compartment."
+        }
+       ]
+      },
+      {
+       "subject": "periplastidial_membrane",
+       "predicate": "maintains",
+       "object": "periplastidial_compartment_boundary",
+       "description": "Together with the outer plastid envelope membrane, the periplastidial membrane encloses and defines the periplastidial compartment.",
+       "evidence": [
+        {
+         "reference": "GO:7770041",
+         "notes": "GO:7770041 states that the periplastidial membrane and outer plastid envelope membrane together define the periplastidial compartment."
+        },
+        {
+         "reference": "DOI:10.1007/s10265-005-0214-6",
+         "notes": "Hashimoto 2005 reviewed the membrane boundaries of secondary complex plastids."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -158186,6 +158745,13 @@
      "action": "REPLACED_UNREADABLE_EVIDENCE",
      "changes": "Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable cyanelle evidence for #1231.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -158363,6 +158929,18 @@
         {
          "reference": "DOI:10.1146/annurev-cellbio-120823-022747",
          "notes": "Perez-Boerema et al. 2024 review the plastid thylakoid membrane as the site of oxygenic photosynthesis."
+        }
+       ]
+      },
+      {
+       "subject": "plastid_thylakoid_membrane",
+       "predicate": "is part of",
+       "object": "plastid_thylakoid",
+       "description": "The plastid thylakoid membrane forms the lipid bilayer of the plastid thylakoid.",
+       "evidence": [
+        {
+         "reference": "GO:0031976",
+         "notes": "GO:0031976 and GO:0055035 link the plastid thylakoid membrane to the plastid thylakoid."
         }
        ]
       }
@@ -163552,6 +164130,13 @@
      "action": "ADDRESSED_REVIEW",
      "changes": "Retyped the photosystem II, cytochrome b6f, photosystem I, and ATP synthase graph nodes from GENE_OR_PROTEIN to STRUCTURE.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -163857,6 +164442,18 @@
         {
          "reference": "DOI:10.1146/annurev-cellbio-120823-022747",
          "notes": "Perez-Boerema et al. 2024 describe proton motive force generation across thylakoid membranes and ATP synthase use of that gradient."
+        }
+       ]
+      },
+      {
+       "subject": "psi",
+       "predicate": "participates in",
+       "object": "electron_transport",
+       "description": "Photosystem I, together with photosystem II and cytochrome b6f, carries out photosynthetic linear electron transport across the thylakoid membrane.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1146/annurev-cellbio-120823-022747",
+         "notes": "Photosystem II, cytochrome b6f, and photosystem I form the thylakoid photosynthetic electron transport chain."
         }
        ]
       }
@@ -171831,6 +172428,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added oxidoreductase-complex parentage, four exact InterPro-grounded Hca constituents with reviewed E. coli K-12 UniProt examples, an E. coli K-12 canonical example, 3-phenylpropionate dioxygenase activity, and GO/PubMed/DOI evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'hca_dioxygenase_function' with 5 nodes and 4 edges.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -172108,6 +172712,121 @@
     {
      "reference": "DOI:10.1128/JB.180.11.2915-2923.1998",
      "notes": "DOI for Díaz, Ferrández and García 1998, as reported by PubMed."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "hca_dioxygenase_function",
+     "title": "3-Phenylpropionate Dioxygenase Electron Transfer and Catalysis",
+     "description": "NADH-driven electron transfer from HcaD through HcaC to the HcaEF hydroxylase core for 3-phenylpropionate dioxygenation.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "hcad_ferredoxin_nad_reductase",
+       "label": "3-phenylpropionate/cinnamic acid dioxygenase, ferredoxin--NAD(+) reductase subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR023744",
+       "component_ref": "hcad_ferredoxin_nad_reductase"
+      },
+      {
+       "node_id": "hcac_ferredoxin",
+       "label": "3-phenylpropionate/cinnamic acid dioxygenase, ferredoxin subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR023739",
+       "component_ref": "hcac_ferredoxin"
+      },
+      {
+       "node_id": "hcaf_hydroxylase_beta",
+       "label": "3-phenylpropionate/cinnamic acid dioxygenase, beta subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR023712",
+       "component_ref": "hcaf_hydroxylase_beta"
+      },
+      {
+       "node_id": "hcae_hydroxylase_alpha",
+       "label": "3-phenylpropionate/cinnamic acid dioxygenase, alpha subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR020875",
+       "component_ref": "hcae_hydroxylase_alpha"
+      },
+      {
+       "node_id": "3_phenylpropionate_dioxygenase_activity",
+       "label": "3-phenylpropionate dioxygenase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0008695"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "hcad_ferredoxin_nad_reductase",
+       "predicate": "transfers electrons to",
+       "object": "hcac_ferredoxin",
+       "description": "The HcaD ferredoxin--NAD(+) reductase subunit oxidizes NADH and transfers electrons to the HcaC ferredoxin subunit.",
+       "evidence": [
+        {
+         "reference": "GO:0009334",
+         "notes": "GO:0009334 defines hcaD as the ferredoxin reductase and hcaC as the ferredoxin in the four-protein complex."
+        },
+        {
+         "reference": "PMID:9603882",
+         "notes": "Díaz et al. 1998 characterized the E. coli K-12 hcaA1A2CD (hcaEFCD) 3-phenylpropionate dioxygenase components."
+        }
+       ]
+      },
+      {
+       "subject": "hcac_ferredoxin",
+       "predicate": "transfers electrons to",
+       "object": "hcae_hydroxylase_alpha",
+       "description": "The HcaC ferredoxin subunit delivers electrons to the HcaEF terminal dioxygenase hydroxylase component.",
+       "evidence": [
+        {
+         "reference": "GO:0009334",
+         "notes": "GO:0009334 defines hcaC as the ferredoxin electron carrier for the hcaE/hcaF hydroxylase."
+        },
+        {
+         "reference": "PMID:9603882",
+         "notes": "Díaz et al. 1998 characterized the electron-transfer and hydroxylase subunits of the E. coli hca dioxygenase."
+        }
+       ]
+      },
+      {
+       "subject": "hcaf_hydroxylase_beta",
+       "predicate": "forms hydroxylase core with",
+       "object": "hcae_hydroxylase_alpha",
+       "description": "The HcaF beta subunit pairs with the HcaE alpha subunit to form the terminal hydroxylase component of the 3-phenylpropionate dioxygenase.",
+       "evidence": [
+        {
+         "reference": "GO:0009334",
+         "notes": "GO:0009334 defines hcaE and hcaF as the two subunits of the hydroxylase component."
+        },
+        {
+         "reference": "PMID:9603882",
+         "notes": "Díaz et al. 1998 identified the alpha and beta terminal dioxygenase subunits encoded by the E. coli hca cluster."
+        }
+       ]
+      },
+      {
+       "subject": "hcae_hydroxylase_alpha",
+       "predicate": "catalyzes",
+       "object": "3_phenylpropionate_dioxygenase_activity",
+       "description": "The HcaEF hydroxylase catalyzes dioxygenation of 3-phenylpropionate to cis-3-(3-carboxyethyl)-3,5-cyclohexadiene-1,2-diol.",
+       "evidence": [
+        {
+         "reference": "GO:0009334",
+         "notes": "GO:0009334 defines the complex by conversion of 3-phenylpropionic acid into PP-dihydrodiol."
+        },
+        {
+         "reference": "GO:0008695",
+         "notes": "GO:0008695 is the molecular-function term for 3-phenylpropionate dioxygenase activity."
+        },
+        {
+         "reference": "PMID:9603882",
+         "notes": "Díaz et al. 1998 demonstrated 3-phenylpropionate dioxygenase activity of the E. coli Hca enzyme."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -174262,6 +174981,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added SsuD complex synonymy, oxidoreductase-complex parentage, cytosol parthood, an InterPro-grounded SsuD constituent with an E. coli K-12 reviewed UniProt example, an E. coli canonical example, alkanesulfonate monooxygenase activity, tetrameric subunit count, and a resolved SsuE boundary discussion.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'ssud_monooxygenase_function' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -174419,6 +175145,74 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-01"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "ssud_monooxygenase_function",
+     "title": "SsuD Alkanesulfonate Monooxygenase Assembly and Catalysis",
+     "description": "Homotetrameric SsuD assembly and FMNH2-dependent monooxygenation of alkanesulfonates.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "ssud_alkanesulfonate_monooxygenase",
+       "label": "Alkanesulphonate monooxygenase, FMN-dependent",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR019911",
+       "component_ref": "ssud_alkanesulfonate_monooxygenase"
+      },
+      {
+       "node_id": "alkanesulfonate_monooxygenase_complex",
+       "label": "alkanesulfonate monooxygenase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990201"
+      },
+      {
+       "node_id": "alkanesulfonate_monooxygenase_activity",
+       "label": "alkanesulfonate monooxygenase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0008726"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "ssud_alkanesulfonate_monooxygenase",
+       "predicate": "homotetramerizes into",
+       "object": "alkanesulfonate_monooxygenase_complex",
+       "description": "Four SsuD subunits assemble into the homotetrameric alkanesulfonate monooxygenase complex.",
+       "evidence": [
+        {
+         "reference": "GO:1990201",
+         "notes": "GO:1990201 defines the E. coli alkanesulfonate monooxygenase complex as a SsuD tetramer."
+        },
+        {
+         "reference": "PMID:10480865",
+         "notes": "Eichhorn et al. 1999 purified and characterized E. coli SsuD."
+        }
+       ]
+      },
+      {
+       "subject": "alkanesulfonate_monooxygenase_complex",
+       "predicate": "catalyzes",
+       "object": "alkanesulfonate_monooxygenase_activity",
+       "description": "The SsuD tetramer catalyzes FMNH2-dependent oxygenolytic cleavage of alkanesulfonates into aldehydes and sulfite.",
+       "evidence": [
+        {
+         "reference": "GO:1990201",
+         "notes": "GO:1990201 is capable of GO:0008726 alkanesulfonate monooxygenase activity."
+        },
+        {
+         "reference": "GO:0008726",
+         "notes": "GO:0008726 is the molecular-function term for alkanesulfonate monooxygenase activity."
+        },
+        {
+         "reference": "PMID:10480865",
+         "notes": "Eichhorn et al. 1999 demonstrated FMNH2-dependent conversion of alkanesulfonates into sulfite and aldehydes by SsuD."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -174858,6 +175652,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO narrow synonymy and transmembrane-transporter parentage, grounded the Amt-family constituent to exact InterPro family IPR001905, added the E. coli PDB:1U7G homotrimer with a reviewed UniProt example, and cited GO/InterPro/UniProt/PDB/PMID/DOI evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'amtb_channel_function' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -174991,6 +175792,78 @@
     {
      "reference": "DOI:10.1126/science.1101952",
      "notes": "DOI for Khademi et al. 2004, 'Mechanism of ammonia transport by Amt/MEP/Rh: structure of AmtB at 1.35 A', as reported by PubMed."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "amtb_channel_function",
+     "title": "AmtB Ammonium Channel Assembly and Conduction",
+     "description": "Homotrimeric Amt-family channel assembly and transmembrane ammonium conduction.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "ammonium_transporter",
+       "label": "Ammonium transporter",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR001905",
+       "component_ref": "ammonium_transporter"
+      },
+      {
+       "node_id": "ammonium_transmembrane_transporter_complex",
+       "label": "ammonium transmembrane transporter complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0110067"
+      },
+      {
+       "node_id": "ammonium_channel_activity",
+       "label": "ammonium channel activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0008519"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "ammonium_transporter",
+       "predicate": "homotrimerizes into",
+       "object": "ammonium_transmembrane_transporter_complex",
+       "description": "Three AmtB-family subunits assemble into the trimeric ammonium transmembrane transporter complex.",
+       "evidence": [
+        {
+         "reference": "GO:0110067",
+         "notes": "GO:0110067 defines the ammonium transmembrane transporter complex."
+        },
+        {
+         "reference": "PDB:1U7G",
+         "notes": "PDB:1U7G resolves E. coli AmtB as a homotrimeric membrane channel."
+        },
+        {
+         "reference": "PMID:15361618",
+         "notes": "Khademi et al. 2004 solved the 1.35 A trimeric crystal structure of E. coli AmtB."
+        }
+       ]
+      },
+      {
+       "subject": "ammonium_transmembrane_transporter_complex",
+       "predicate": "mediates",
+       "object": "ammonium_channel_activity",
+       "description": "Each subunit of the trimeric AmtB complex forms a hydrophobic transmembrane pore that conducts ammonia/ammonium.",
+       "evidence": [
+        {
+         "reference": "GO:0110067",
+         "notes": "GO:0110067 is capable of GO:0008519 ammonium channel activity."
+        },
+        {
+         "reference": "GO:0008519",
+         "notes": "GO:0008519 is the molecular-function term for ammonium channel activity."
+        },
+        {
+         "reference": "PMID:15361618",
+         "notes": "Khademi et al. 2004 demonstrated ammonia/ammonium conduction through the AmtB channel."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -178938,6 +179811,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'bindosome_sugar_capture' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -179075,6 +179955,67 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-03"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "bindosome_sugar_capture",
+     "title": "Archaeal Bindosome Assembly and Cell-Surface Sugar Capture",
+     "description": "Organization of archaeal sugar-binding proteins into envelope-associated bindosome complexes that facilitate sugar uptake.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "sugar_binding_proteins",
+       "label": "bindosome sugar-binding proteins",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sugar_binding_proteins"
+      },
+      {
+       "node_id": "bindosome_complex",
+       "label": "bindosome complex",
+       "node_type": "STRUCTURE"
+      },
+      {
+       "node_id": "surface_sugar_binding_protein_organization",
+       "label": "cell-surface sugar-binding protein organization",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "sugar_binding_proteins",
+       "predicate": "assemble into",
+       "object": "bindosome_complex",
+       "description": "Archaeal cell-surface sugar-binding proteins assemble into 400 and 600 kDa bindosome complexes in the Sulfolobus cell envelope.",
+       "evidence": [
+        {
+         "reference": "GO:7770042",
+         "notes": "GO:7770042 defines the bindosome complex as an archaeal membrane-associated complex of sugar-binding proteins."
+        },
+        {
+         "reference": "DOI:10.1007/s00792-010-0353-0",
+         "notes": "Zolghadr et al. 2011 isolated high-molecular-mass sugar-binding-protein complexes from the S. solfataricus cell envelope."
+        }
+       ]
+      },
+      {
+       "subject": "bindosome_complex",
+       "predicate": "facilitates",
+       "object": "surface_sugar_binding_protein_organization",
+       "description": "The envelope-localized bindosome positions sugar-binding proteins to scavenging substrates and deliver them to cognate ABC transporters.",
+       "evidence": [
+        {
+         "reference": "GO:7770042",
+         "notes": "GO:7770042 describes the bindosome as facilitating interaction between solute-binding proteins and ABC transporters during sugar uptake."
+        },
+        {
+         "reference": "DOI:10.1007/s00792-010-0353-0",
+         "notes": "Zolghadr et al. 2011 linked bindosome surface localization to sugar uptake in S. solfataricus."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -206957,6 +207898,13 @@
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'dxr_reductoisomerase_function' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -207087,6 +208035,78 @@
     {
      "reference": "DOI:10.1016/j.jmb.2004.10.030",
      "notes": "DOI for Mac Sweeney et al. 2005, 'The crystal structure of E.coli 1-deoxy-D-xylulose-5-phosphate reductoisomerase in a ternary complex with the antimalarial compound fosmidomycin and NADPH reveals a tight-binding closed enzyme conformation', as reported by PubMed."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "dxr_reductoisomerase_function",
+     "title": "Dxr Homodimer Assembly and Reductoisomerase Catalysis",
+     "description": "Homodimeric assembly of 1-deoxy-D-xylulose 5-phosphate reductoisomerase (Dxr) and NADPH-dependent conversion of DXP to MEP.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "dxr_reductoisomerase",
+       "label": "1-deoxy-D-xylulose 5-phosphate reductoisomerase",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR003821",
+       "component_ref": "dxr_reductoisomerase"
+      },
+      {
+       "node_id": "dxr_protein_complex",
+       "label": "Dxr protein complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990065"
+      },
+      {
+       "node_id": "deoxy_d_xylulose_5_phosphate_reductoisomerase_activity",
+       "label": "1-deoxy-D-xylulose-5-phosphate reductoisomerase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0030604"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "dxr_reductoisomerase",
+       "predicate": "homodimerizes into",
+       "object": "dxr_protein_complex",
+       "description": "Two Dxr subunits assemble into the homodimeric Dxr protein complex.",
+       "evidence": [
+        {
+         "reference": "GO:1990065",
+         "notes": "GO:1990065 defines the Dxr protein complex."
+        },
+        {
+         "reference": "PDB:1Q0Q",
+         "notes": "PDB:1Q0Q resolves E. coli Dxr as a homodimer."
+        },
+        {
+         "reference": "PMID:15567415",
+         "notes": "Mac Sweeney et al. 2005 solved the crystal structure of the E. coli Dxr homodimer."
+        }
+       ]
+      },
+      {
+       "subject": "dxr_protein_complex",
+       "predicate": "catalyzes",
+       "object": "deoxy_d_xylulose_5_phosphate_reductoisomerase_activity",
+       "description": "The Dxr homodimer catalyzes the NADPH-dependent rearrangement and reduction of 1-deoxy-D-xylulose 5-phosphate to 2-C-methyl-D-erythritol 4-phosphate.",
+       "evidence": [
+        {
+         "reference": "GO:1990065",
+         "notes": "GO:1990065 defines the complex by the NADP-dependent DXP-to-MEP reaction."
+        },
+        {
+         "reference": "GO:0030604",
+         "notes": "GO:0030604 is the molecular-function term for 1-deoxy-D-xylulose-5-phosphate reductoisomerase activity."
+        },
+        {
+         "reference": "PMID:15567415",
+         "notes": "Mac Sweeney et al. 2005 characterized the active-site closure and NADPH-dependent catalysis of E. coli Dxr."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -209400,6 +210420,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO synonymy and transmembrane-transporter parentage, an EmrE reviewed-label-only component with an E. coli K-12 UniProt example, the PDB:3B5D homodimer, xenobiotic transporter function, taxonomy, and a component-grounding discussion.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'emre_efflux_function' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -209557,6 +210584,77 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-01"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "emre_efflux_function",
+     "title": "EmrE Antiparallel Homodimer Assembly and Drug Efflux",
+     "description": "Antiparallel homodimerization of EmrE and proton-coupled export of hydrophobic cationic xenobiotics.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "emre_multidrug_transporter",
+       "label": "Multidrug transporter EmrE",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "emre_multidrug_transporter"
+      },
+      {
+       "node_id": "emre_multidrug_transporter_complex",
+       "label": "EmrE multidrug transporter complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990207"
+      },
+      {
+       "node_id": "xenobiotic_transmembrane_transport",
+       "label": "xenobiotic transmembrane transporter activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0042910"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "emre_multidrug_transporter",
+       "predicate": "forms antiparallel homodimer",
+       "object": "emre_multidrug_transporter_complex",
+       "description": "Two EmrE small multidrug resistance subunits assemble into an asymmetric antiparallel homodimer in the inner membrane.",
+       "evidence": [
+        {
+         "reference": "GO:1990207",
+         "notes": "GO:1990207 defines the EmrE multidrug transporter complex as a homodimer."
+        },
+        {
+         "reference": "PDB:3B5D",
+         "notes": "PDB:3B5D resolves E. coli EmrE as a homodimer."
+        },
+        {
+         "reference": "PMID:18024586",
+         "notes": "Chen et al. 2007 reported the X-ray structure of the antiparallel EmrE homodimer."
+        }
+       ]
+      },
+      {
+       "subject": "emre_multidrug_transporter_complex",
+       "predicate": "mediates",
+       "object": "xenobiotic_transmembrane_transport",
+       "description": "The EmrE homodimer exports positively charged hydrophobic drugs across the plasma membrane.",
+       "evidence": [
+        {
+         "reference": "GO:1990207",
+         "notes": "GO:1990207 defines the complex by transport of positively charged hydrophobic drugs across the plasma membrane."
+        },
+        {
+         "reference": "GO:0042910",
+         "notes": "GO:0042910 is the molecular-function term for xenobiotic transmembrane transporter activity."
+        },
+        {
+         "reference": "PMID:18024586",
+         "notes": "Chen et al. 2007 resolved substrate-bound EmrE dimers supporting multidrug efflux."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -213002,6 +214100,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 2 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -213324,6 +214429,18 @@
          "notes": "Yang and Hurley 2010 studied Vps4 and Vta1 in the context of ESCRT-III recycling."
         }
        ]
+      },
+      {
+       "subject": "escrt_iii_complex",
+       "predicate": "is disassembled from",
+       "object": "endosome_membrane",
+       "description": "ESCRT-IV disassembles ESCRT-III polymers from the endosome membrane for subunit recycling.",
+       "evidence": [
+        {
+         "reference": "GO:1990621",
+         "notes": "GO:1990621 describes ESCRT-IV-mediated disassembly of ESCRT-III from endosomal membranes."
+        }
+       ]
       }
      ]
     }
@@ -213416,6 +214533,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
      "llm_assisted": true
     }
    ],
@@ -213907,6 +215031,18 @@
         {
          "reference": "DOI:10.1093/emboj/18.4.1071",
          "notes": "Guo et al. 1999 framed the exocyst as a Sec4p effector system for targeted secretion."
+        }
+       ]
+      },
+      {
+       "subject": "secretory_vesicles",
+       "predicate": "undergo",
+       "object": "exocytosis",
+       "description": "Exocyst-tethered secretory vesicles fuse at polarized plasma-membrane sites during exocytosis.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1093/emboj/18.4.1071",
+         "notes": "Exocyst targeting of secretory vesicles to polarized plasma-membrane sites supports exocytosis."
         }
        ]
       }
@@ -215398,6 +216534,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO exact and narrow synonymy, GO:1990204 oxidoreductase-complex parentage, an InterPro-grounded SsuE component with a reviewed E. coli K-12 UniProt example, an E. coli canonical example, NADPH-dependent FMN reductase activity, dimer subunit count, and PMID/DOI evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'ssue_fmn_reductase_function' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -215528,6 +216671,74 @@
     {
      "reference": "DOI:10.1074/jbc.274.38.26639",
      "notes": "DOI for the GO:1990202-cited SsuD/SsuE characterization paper."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "ssue_fmn_reductase_function",
+     "title": "SsuE FMN Reductase Homodimer Assembly and Flavin Reduction",
+     "description": "Homodimeric assembly of SsuE and NADPH-dependent reduction of FMN to FMNH2.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "ssue_fmn_reductase",
+       "label": "NADPH-dependent FMN reductase, SsuE",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR020048",
+       "component_ref": "ssue_fmn_reductase"
+      },
+      {
+       "node_id": "fmn_reductase_complex",
+       "label": "FMN reductase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990202"
+      },
+      {
+       "node_id": "nadph_fmn_reductase",
+       "label": "FMN reductase (NADPH) activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0052873"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "ssue_fmn_reductase",
+       "predicate": "homodimerizes into",
+       "object": "fmn_reductase_complex",
+       "description": "Two SsuE subunits assemble into the homodimeric FMN reductase complex.",
+       "evidence": [
+        {
+         "reference": "GO:1990202",
+         "notes": "GO:1990202 defines the E. coli FMN reductase complex as a SsuE dimer."
+        },
+        {
+         "reference": "PMID:10480865",
+         "notes": "Eichhorn et al. 1999 purified and characterized E. coli SsuE."
+        }
+       ]
+      },
+      {
+       "subject": "fmn_reductase_complex",
+       "predicate": "catalyzes",
+       "object": "nadph_fmn_reductase",
+       "description": "The SsuE dimer catalyzes NADPH-dependent reduction of FMN to FMNH2.",
+       "evidence": [
+        {
+         "reference": "GO:1990202",
+         "notes": "GO:1990202 defines the complex by NAD(P)H-dependent FMN reduction."
+        },
+        {
+         "reference": "GO:0052873",
+         "notes": "GO:0052873 is the molecular-function term for FMN reductase (NADPH) activity."
+        },
+        {
+         "reference": "PMID:10480865",
+         "notes": "Eichhorn et al. 1999 demonstrated NADPH-dependent FMN reduction by purified E. coli SsuE."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -219112,6 +220323,13 @@
      "action": "CORRECTED_METADATA",
      "changes": "Issue #2043: preserve 1 nonprotein Complex Portal source name(s) in source_name instead of gene_symbol; identities, labels, taxa, membership and stoichiometry unchanged.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'gltbd_glutamate_synthase_function' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -219368,6 +220586,73 @@
       }
      ]
     }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "gltbd_glutamate_synthase_function",
+     "title": "NADPH-Dependent Glutamate Synthase Subunit Coupling and Catalysis",
+     "description": "Electron transfer from the GltD small iron-sulfur flavoprotein subunit to the GltB large catalytic subunit for glutamate synthesis.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "gltd_small_chain",
+       "label": "Glutamate synthase NADPH small chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "gltd_small_chain"
+      },
+      {
+       "node_id": "gltb_large_chain",
+       "label": "Glutamate synthase NADPH large chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "gltb_large_chain"
+      },
+      {
+       "node_id": "glutamate_synthase_nadph_activity",
+       "label": "glutamate synthase (NADPH) activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0004355"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "gltd_small_chain",
+       "predicate": "transfers electrons to",
+       "object": "gltb_large_chain",
+       "description": "The small iron-sulfur flavoprotein subunit GltD oxidizes NADPH and transfers reducing equivalents to the large catalytic subunit GltB.",
+       "evidence": [
+        {
+         "reference": "PMID:4565085",
+         "notes": "Miller and Stadtman 1972 characterized E. coli glutamate synthase as a two-subunit iron-sulfur flavoprotein."
+        },
+        {
+         "reference": "ComplexPortal:CPX-5041",
+         "notes": "Complex Portal CPX-5041 curates GltB and GltD as the constituent subunits of the E. coli K-12 NADPH-dependent glutamate synthase complex."
+        }
+       ]
+      },
+      {
+       "subject": "gltb_large_chain",
+       "predicate": "catalyzes",
+       "object": "glutamate_synthase_nadph_activity",
+       "description": "The GltBD holoenzyme couples glutamine amide transfer and NADPH-derived electron transfer to convert 2-oxoglutarate and glutamine into two glutamate molecules.",
+       "evidence": [
+        {
+         "reference": "GO:0009342",
+         "notes": "GO:0009342 defines the complex by glutamate synthase (NADPH) activity."
+        },
+        {
+         "reference": "GO:0004355",
+         "notes": "GO:0004355 is the molecular-function term for glutamate synthase (NADPH) activity."
+        },
+        {
+         "reference": "PMID:4565085",
+         "notes": "Miller and Stadtman 1972 characterized the NADPH-dependent conversion of 2-oxoglutarate and glutamine to glutamate."
+        }
+       ]
+      }
+     ]
+    }
    ]
   },
   {
@@ -219398,6 +220683,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'glycine_cleavage_cycle' with 5 nodes and 4 edges.",
      "llm_assisted": true
     }
    ],
@@ -219731,6 +221023,120 @@
      "posed_by": "codex",
      "posed_date": "2026-10-02"
     }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "glycine_cleavage_cycle",
+     "title": "Glycine Cleavage System Multi-Enzyme Reaction Cycle",
+     "description": "Sequential decarboxylation, aminomethyl transfer, and lipoyl reoxidation across the P-, H-, T-, and L-protein constituents.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "gcvp_p_protein",
+       "label": "Glycine dehydrogenase (decarboxylating)",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR020581",
+       "component_ref": "gcvp_p_protein"
+      },
+      {
+       "node_id": "gcvh_h_protein",
+       "label": "Glycine cleavage system H protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR017453",
+       "component_ref": "gcvh_h_protein"
+      },
+      {
+       "node_id": "gcvt_t_protein",
+       "label": "Aminomethyltransferase",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR006223",
+       "component_ref": "gcvt_t_protein"
+      },
+      {
+       "node_id": "lpd_l_protein",
+       "label": "Dihydrolipoyl dehydrogenase",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lpd_l_protein"
+      },
+      {
+       "node_id": "glycine_dehydrogenase_decarboxylating_activity",
+       "label": "glycine dehydrogenase (decarboxylating) activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0004375"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "gcvp_p_protein",
+       "predicate": "catalyzes",
+       "object": "glycine_dehydrogenase_decarboxylating_activity",
+       "description": "The pyridoxal-phosphate-dependent P-protein (GcvP) catalyzes oxidative decarboxylation of glycine.",
+       "evidence": [
+        {
+         "reference": "GO:0005960",
+         "notes": "GO:0005960 links the glycine cleavage complex to glycine dehydrogenase (decarboxylating) activity."
+        },
+        {
+         "reference": "GO:0004375",
+         "notes": "GO:0004375 is the molecular-function term for glycine dehydrogenase (decarboxylating) activity."
+        },
+        {
+         "reference": "PMID:8375392",
+         "notes": "Okamura-Ikeda et al. 1993 characterized the E. coli gcvTHP operon encoding the P-, H-, and T-proteins."
+        }
+       ]
+      },
+      {
+       "subject": "gcvp_p_protein",
+       "predicate": "transfers aminomethyl group to",
+       "object": "gcvh_h_protein",
+       "description": "GcvP transfers the aminomethyl moiety remaining from glycine decarboxylation onto the lipoyl arm of H-protein (GcvH).",
+       "evidence": [
+        {
+         "reference": "GO:0005960",
+         "notes": "GO:0005960 defines the complex as containing P-protein and lipoyl-GcvH-protein."
+        },
+        {
+         "reference": "PMID:8375392",
+         "notes": "Okamura-Ikeda et al. 1993 characterized the functional coupling of E. coli GcvP and lipoylated GcvH."
+        }
+       ]
+      },
+      {
+       "subject": "gcvh_h_protein",
+       "predicate": "delivers aminomethyl intermediate to",
+       "object": "gcvt_t_protein",
+       "description": "Aminomethylated H-protein shuttles the intermediate to T-protein (GcvT) for tetrahydrofolate-dependent methylene transfer and ammonia release.",
+       "evidence": [
+        {
+         "reference": "GO:0005960",
+         "notes": "GO:0005960 defines the complex as containing aminomethyltransferase T-protein and H-protein."
+        },
+        {
+         "reference": "PMID:8375392",
+         "notes": "Okamura-Ikeda et al. 1993 characterized the E. coli T-protein and H-protein reaction steps."
+        }
+       ]
+      },
+      {
+       "subject": "lpd_l_protein",
+       "predicate": "reoxidizes",
+       "object": "gcvh_h_protein",
+       "description": "Dihydrolipoamide dehydrogenase L-protein (Lpd) oxidizes the dihydrolipoyl group of H-protein back to the disulfide state.",
+       "evidence": [
+        {
+         "reference": "GO:0005960",
+         "notes": "GO:0005960 defines dihydrolipoamide dehydrogenase (L-protein) as one of the four enzymes of the glycine cleavage complex."
+        },
+        {
+         "reference": "UniProtKB:P0A9P0",
+         "notes": "UniProtKB P0A9P0 curates E. coli LpdA as the L-protein component of the glycine cleavage system."
+        }
+       ]
+      }
+     ]
+    }
    ]
   },
   {
@@ -219761,6 +221167,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'glycine_reductase_catalytic_transfer' with 4 nodes and 3 edges.",
      "llm_assisted": true
     }
    ],
@@ -220030,6 +221443,101 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-02"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "glycine_reductase_catalytic_transfer",
+     "title": "Clostridial Glycine Reductase Two-Carbon Transfer and Phosphorolysis",
+     "description": "Reductive deamination of glycine and sequential two-carbon group transfer from selenoprotein B through selenoprotein A to protein C.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "grdb_selenoprotein_b",
+       "label": "Glycine reductase, selenoprotein B",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR010186",
+       "component_ref": "grdb_selenoprotein_b"
+      },
+      {
+       "node_id": "grda_selenoprotein_a",
+       "label": "Glycine reductase complex selenoprotein A",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR006812",
+       "component_ref": "grda_selenoprotein_a"
+      },
+      {
+       "node_id": "grdc_protein_c",
+       "label": "Glycine reductase protein C",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "grdc_protein_c"
+      },
+      {
+       "node_id": "glycine_reductase_activity",
+       "label": "glycine reductase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0030699"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "grdb_selenoprotein_b",
+       "predicate": "transfers carboxymethyl group to",
+       "object": "grda_selenoprotein_a",
+       "description": "Selenoprotein B (GrdB) catalyzes reductive deamination of glycine and transfers the resulting carboxymethyl group onto selenoprotein A (GrdA).",
+       "evidence": [
+        {
+         "reference": "GO:0030700",
+         "notes": "GO:0030700 defines the glycine reductase complex as containing selenoprotein A, selenoprotein B, and protein C."
+        },
+        {
+         "reference": "PMID:2963330",
+         "notes": "Sliwkowski and Stadtman 1988 characterized the carboxymethylated selenocysteine residue of selenoprotein A."
+        },
+        {
+         "reference": "PMID:11271425",
+         "notes": "Graentzdoerffer et al. 2001 characterized the Clostridium sticklandii grd operon encoding GrdA, GrdB, and GrdC."
+        }
+       ]
+      },
+      {
+       "subject": "grda_selenoprotein_a",
+       "predicate": "transfers acetyl group to",
+       "object": "grdc_protein_c",
+       "description": "Carboxymethylated selenoprotein A transfers an acetyl moiety to protein C (GrdC) to form an acetyl-enzyme intermediate.",
+       "evidence": [
+        {
+         "reference": "GO:0030700",
+         "notes": "GO:0030700 defines selenoprotein A and protein C as core constituents of the glycine reductase complex."
+        },
+        {
+         "reference": "PMID:2018775",
+         "notes": "Arkowitz and Abeles 1991 isolated the acetyl-protein C intermediate formed from selenoprotein A."
+        }
+       ]
+      },
+      {
+       "subject": "grdc_protein_c",
+       "predicate": "catalyzes",
+       "object": "glycine_reductase_activity",
+       "description": "Acetylated protein C undergoes phosphorolysis with inorganic phosphate to generate acetyl phosphate, completing glycine reduction.",
+       "evidence": [
+        {
+         "reference": "GO:0030700",
+         "notes": "GO:0030700 links the complex to glycine reductase activity."
+        },
+        {
+         "reference": "GO:0030699",
+         "notes": "GO:0030699 is the molecular-function term for glycine reductase activity."
+        },
+        {
+         "reference": "PMID:2018775",
+         "notes": "Arkowitz and Abeles 1991 showed that protein C catalyzes phosphate exchange into acetyl phosphate."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -220564,6 +222072,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO synonymy and chaperonin-ATPase parentage, GroEL and GroES components grounded to exact InterPro families with E. coli UniProt examples, an E. coli PDB:1AON canonical example, protein-folding function evidence, PDB-backed stoichiometry, and DOI/PMID/PDB evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'groel_groes_folding_cycle' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -220753,6 +222268,79 @@
     {
      "reference": "PDB:1AON",
      "notes": "RCSB Protein Data Bank entry for the asymmetric Escherichia coli GroEL-GroES-(ADP)7 crystal structure from Xu, Horwich and Sigler 1997."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "groel_groes_folding_cycle",
+     "title": "GroEL-GroES Chaperonin Cavity Encapsulation and Protein Folding",
+     "description": "GroES co-chaperonin capping of the GroEL heptameric ring and ATP-dependent substrate protein folding inside the cis cavity.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "groes_cochaperonin",
+       "label": "GroES chaperonin",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR020818",
+       "component_ref": "groes_cochaperonin"
+      },
+      {
+       "node_id": "groel_chaperonin",
+       "label": "Chaperonin Cpn60/GroEL",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR001844",
+       "component_ref": "groel_chaperonin"
+      },
+      {
+       "node_id": "protein_folding",
+       "label": "protein folding",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0006457"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "groes_cochaperonin",
+       "predicate": "caps",
+       "object": "groel_chaperonin",
+       "description": "The heptameric GroES co-chaperonin dome binds an nucleotide-bound GroEL heptameric ring to seal the central cis folding chamber.",
+       "evidence": [
+        {
+         "reference": "GO:1990220",
+         "notes": "GO:1990220 defines the GroEL-GroES complex as a tetradecameric GroEL double ring capped by a heptameric GroES ring."
+        },
+        {
+         "reference": "DOI:10.1038/41944",
+         "notes": "Xu, Horwich and Sigler 1997 resolved the asymmetric GroEL-GroES-(ADP)7 complex structure."
+        },
+        {
+         "reference": "PDB:1AON",
+         "notes": "PDB:1AON captures the seven-subunit GroES ring capping one ring of the 14-subunit GroEL cylinder."
+        }
+       ]
+      },
+      {
+       "subject": "groel_chaperonin",
+       "predicate": "promotes",
+       "object": "protein_folding",
+       "description": "Enlargement and hydrophilic remodeling of the GroES-capped GroEL cis cavity promote folding of encapsulated polypeptide substrates.",
+       "evidence": [
+        {
+         "reference": "GO:1990220",
+         "notes": "GO:1990220 defines the GroEL-GroES holoenzyme by its role in correct protein folding."
+        },
+        {
+         "reference": "GO:0006457",
+         "notes": "GO:0006457 is the biological-process term for protein folding."
+        },
+        {
+         "reference": "DOI:10.1038/41944",
+         "notes": "Xu, Horwich and Sigler 1997 showed how GroES binding doubles the volume of the GroEL cis cavity to assist protein folding."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -223373,6 +224961,13 @@
      "action": "CURATED_CAUSAL_GRAPH",
      "changes": "Addressed PR 2049 review issues 2050 and 2051: separated purified-protein and yeast-complementation graph states and attached native InterPro evidence without changing biological scope or label-only grounding.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed mechanistic descriptions to 7 causal edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -223540,7 +225135,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.102494",
          "notes": "Figure 1E-F supports oligomeric Hsp78 preparations; native-gel migration was interpreted as trimeric and hexameric species, without a universal copy count."
         }
-       ]
+       ],
+       "description": "Hsp78 subunits assemble into oligomeric (trimeric and hexameric) chaperone preparations."
       },
       {
        "subject": "assembly",
@@ -223551,7 +225147,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.102494",
          "notes": "Figure 1C measures ATP-dependent phosphate release from purified Hsp78. The active oligomeric state was not independently assigned for each assay point."
         }
-       ]
+       ],
+       "description": "Purified oligomeric Hsp78 preparations catalyze ATP hydrolysis."
       },
       {
        "subject": "purified_tr",
@@ -223562,7 +225159,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.102494",
          "notes": "Figure 1C reports approximately 70 percent lower ATPase activity of purified Hsp78TR than WT, not complete loss."
         }
-       ]
+       ],
+       "description": "Purified recombinant Walker-motif mutant Hsp78TR exhibits approximately 70% lower ATPase activity than wild-type Hsp78."
       },
       {
        "subject": "tr",
@@ -223573,7 +225171,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.102494",
          "notes": "Figure 2A-C shows reduced reporter recovery in Hsp78TR mitochondria relative to WT complementation. This does not isolate ATP hydrolysis from substrate binding, expression or assembly changes."
         }
-       ]
+       ],
+       "description": "Complementation with Hsp78TR impairs recovery of soluble mitochondrial DHFR reporter after heat stress relative to wild-type Hsp78."
       },
       {
        "subject": "deletion",
@@ -223584,7 +225183,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.102494",
          "notes": "Figure 2A-C shows reduced reporter resolubilization in hsp78 deletion mitochondria under the specified heat/recovery conditions."
         }
-       ]
+       ],
+       "description": "Deletion of HSP78 impairs resolubilization of heat-aggregated mitochondrial reporter protein during recovery."
       },
       {
        "subject": "wt_complementation",
@@ -223595,7 +225195,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.102494",
          "notes": "Figure 2A-C shows improved recovery with Hsp78WT complementation, not quantitative recovery of all substrate or demonstration of restored DHFR activity."
         }
-       ]
+       ],
+       "description": "Wild-type Hsp78 complementation restores mitochondrial reporter resolubilization relative to hsp78 deletion."
       },
       {
        "subject": "tr",
@@ -223606,7 +225207,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.102494",
          "notes": "Figure 1D compares serial dilutions on glucose and glycerol after 60 minutes at 42 C, a 30-minute 30 C regeneration step specified in Methods, and 60 minutes at 48 C. TR impairs subsequent growth on glycerol relative to WT complementation; glucose growth is similar. No direct respiration or universal heat-survival claim is inferred."
         }
-       ]
+       ],
+       "description": "Complementation with Hsp78TR impairs post-heat-shock growth on nonfermentable glycerol medium relative to wild-type Hsp78."
       }
      ]
     }
@@ -227896,6 +229498,13 @@
      "action": "EDIT",
      "changes": "added 7 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'lpt_transenvelope_lps_transport' with 8 nodes and 8 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -228321,6 +229930,194 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-01"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "lpt_transenvelope_lps_transport",
+     "title": "Trans-Envelope Lipopolysaccharide Transport across the LptABCDEFG Bridge",
+     "description": "ATP-powered extraction of LPS by inner-membrane LptB2FGC, transit across the periplasmic LptA bridge, and outer-membrane insertion by LptDE.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "lptb_cytoplasmic_atpase",
+       "label": "LptB cytoplasmic ATPase",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lptb_cytoplasmic_atpase"
+      },
+      {
+       "node_id": "lptf_inner_membrane_permease",
+       "label": "LptF inner-membrane permease",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lptf_inner_membrane_permease"
+      },
+      {
+       "node_id": "lptg_inner_membrane_permease",
+       "label": "LptG inner-membrane permease",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lptg_inner_membrane_permease"
+      },
+      {
+       "node_id": "lptc_inner_membrane_adapter",
+       "label": "LptC inner-membrane adapter",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lptc_inner_membrane_adapter"
+      },
+      {
+       "node_id": "lpta_periplasmic_bridge_protein",
+       "label": "LptA periplasmic bridge protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lpta_periplasmic_bridge_protein"
+      },
+      {
+       "node_id": "lpte_outer_membrane_lipoprotein",
+       "label": "LptE outer-membrane lipoprotein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lpte_outer_membrane_lipoprotein"
+      },
+      {
+       "node_id": "lptd_outer_membrane_beta_barrel",
+       "label": "LptD outer-membrane beta-barrel",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lptd_outer_membrane_beta_barrel"
+      },
+      {
+       "node_id": "atp_dependent_lps_transport_to_outer_membrane",
+       "label": "ATP-dependent lipopolysaccharide transport to the outer membrane",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "lptb_cytoplasmic_atpase",
+       "predicate": "energizes",
+       "object": "lptf_inner_membrane_permease",
+       "description": "Cytoplasmic LptB ATP hydrolysis powers LPS extraction by the inner-membrane LptBFGC transporter.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1126/science.1228984",
+         "notes": "Okuda, Freinkman and Kahne 2012 showed that cytoplasmic ATP hydrolysis powers LPS extraction and movement onto the Lpt bridge."
+        },
+        {
+         "reference": "DOI:10.1016/j.febslet.2009.05.051",
+         "notes": "Narita and Tokuda 2009 purified the inner-membrane LptBFGC ABC transporter complex."
+        }
+       ]
+      },
+      {
+       "subject": "lptb_cytoplasmic_atpase",
+       "predicate": "energizes",
+       "object": "lptg_inner_membrane_permease",
+       "description": "Cytoplasmic LptB ATPase dimers couple nucleotide hydrolysis to the LptF/LptG inner-membrane permease heterodimer.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1126/science.1228984",
+         "notes": "Okuda, Freinkman and Kahne 2012 demonstrated ATP-dependent LPS extraction by the LptBFGC inner-membrane complex."
+        },
+        {
+         "reference": "DOI:10.1016/j.febslet.2009.05.051",
+         "notes": "Narita and Tokuda 2009 biochemically characterized the E. coli LptB2FGC complex."
+        }
+       ]
+      },
+      {
+       "subject": "lptf_inner_membrane_permease",
+       "predicate": "transfers LPS to",
+       "object": "lptc_inner_membrane_adapter",
+       "description": "Inner-membrane permease LptF cooperates with LptG to extract LPS from the outer leaflet of the inner membrane onto LptC.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1073/pnas.0801196105",
+         "notes": "Ruiz et al. 2008 identified LptF and LptG as essential inner-membrane components for LPS transport."
+        },
+        {
+         "reference": "DOI:10.1074/jbc.R117.802512",
+         "notes": "Sperandeo, Martorana and Polissi 2017 review LPS extraction by LptBFG and transfer to LptC."
+        }
+       ]
+      },
+      {
+       "subject": "lptg_inner_membrane_permease",
+       "predicate": "transfers LPS to",
+       "object": "lptc_inner_membrane_adapter",
+       "description": "Inner-membrane permease LptG acts with LptF to hand off extracted LPS to the bitopic adapter LptC.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1073/pnas.0801196105",
+         "notes": "Ruiz et al. 2008 identified LptG and LptF as the inner-membrane permease pair of the Lpt pathway."
+        },
+        {
+         "reference": "DOI:10.1074/jbc.R117.802512",
+         "notes": "Sperandeo, Martorana and Polissi 2017 review LptFG-to-LptC LPS transfer."
+        }
+       ]
+      },
+      {
+       "subject": "lptc_inner_membrane_adapter",
+       "predicate": "delivers LPS to",
+       "object": "lpta_periplasmic_bridge_protein",
+       "description": "The periplasmic domain of LptC contacts LptA and transfers LPS onto the periplasmic LptA bridge.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1126/science.1228984",
+         "notes": "Okuda, Freinkman and Kahne 2012 demonstrated ATP-dependent transfer of LPS from LptC to LptA."
+        },
+        {
+         "reference": "DOI:10.1126/science.aar1886",
+         "notes": "Sherman et al. 2018 reconstituted membrane-to-membrane LPS transport across the LptC-LptA bridge."
+        }
+       ]
+      },
+      {
+       "subject": "lpta_periplasmic_bridge_protein",
+       "predicate": "delivers LPS to",
+       "object": "lptd_outer_membrane_beta_barrel",
+       "description": "The periplasmic LptA bridge conveys LPS across the periplasm to the N-terminal periplasmic domain of outer-membrane LptD.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1021/bi100493e",
+         "notes": "Chng, Gronenberg and Kahne 2010 showed that LptA bridges inner-membrane LptBCFG and outer-membrane LptDE."
+        },
+        {
+         "reference": "DOI:10.1126/science.aar1886",
+         "notes": "Sherman et al. 2018 reconstituted LptA-mediated LPS transport to the outer-membrane LptDE complex."
+        }
+       ]
+      },
+      {
+       "subject": "lpte_outer_membrane_lipoprotein",
+       "predicate": "complexes with",
+       "object": "lptd_outer_membrane_beta_barrel",
+       "description": "Outer-membrane lipoprotein LptE resides inside the LptD beta-barrel lumen to form the functional two-protein LptDE translocon.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1073/pnas.0604744103",
+         "notes": "Wu et al. 2006 identified the outer-membrane LptD/LptE complex required for LPS assembly."
+        },
+        {
+         "reference": "DOI:10.1073/pnas.0912872107",
+         "notes": "Chng et al. 2010 demonstrated the plug-and-barrel architecture of the LptDE complex."
+        }
+       ]
+      },
+      {
+       "subject": "lptd_outer_membrane_beta_barrel",
+       "predicate": "executes",
+       "object": "atp_dependent_lps_transport_to_outer_membrane",
+       "description": "The outer-membrane LptDE translocon inserts LPS molecules arriving from the LptA bridge into the cell-surface leaflet of the outer membrane.",
+       "evidence": [
+        {
+         "reference": "GO:0062051",
+         "notes": "GO:0062051 defines the lipopolysaccharide transport system by ATP-dependent LPS transport to the outer membrane."
+        },
+        {
+         "reference": "DOI:10.1126/science.aar1886",
+         "notes": "Sherman et al. 2018 reconstituted complete inner-to-outer-membrane LPS transport via LptBFGC, LptA, and LptDE."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -229590,6 +231387,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO synonymy and macrolide-transporter parentage, MacA/MacB/TolC components with exact InterPro groundings and reviewed E. coli K-12 UniProt examples, the PDB:5NIK hetero-11-mer, function, taxonomy, and authority evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'macab_tolc_efflux_function' with 4 nodes and 3 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -229846,6 +231650,106 @@
     {
      "reference": "PMID:18955484",
      "notes": "PubMed identifier for the 2009 Journal of Biological Chemistry paper showing that MacA regulates MacB ATPase activity and macrolide binding."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "macab_tolc_efflux_function",
+     "title": "MacAB-TolC Tripartite Efflux Pump Coupling and Export",
+     "description": "Mechanochemical coupling of the inner-membrane MacB ABC ATPase through the periplasmic MacA hexamer to the outer-membrane TolC channel.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "macb_atp_binding_permease",
+       "label": "Macrolide Exporter MacB",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR050250",
+       "component_ref": "macb_atp_binding_permease"
+      },
+      {
+       "node_id": "maca_membrane_fusion_protein",
+       "label": "Macrolide export protein MacA",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR058623",
+       "component_ref": "maca_membrane_fusion_protein"
+      },
+      {
+       "node_id": "tolc_outer_membrane_channel",
+       "label": "Outer membrane channel protein TolC",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR058622",
+       "component_ref": "tolc_outer_membrane_channel"
+      },
+      {
+       "node_id": "atp_dependent_xenobiotic_export",
+       "label": "ABC-type xenobiotic transporter activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0008559"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "macb_atp_binding_permease",
+       "predicate": "couples to",
+       "object": "maca_membrane_fusion_protein",
+       "description": "The dimeric inner-membrane ABC transporter MacB docks with the hexameric periplasmic membrane-fusion protein MacA, which stimulates MacB ATPase activity.",
+       "evidence": [
+        {
+         "reference": "GO:1990196",
+         "notes": "GO:1990196 defines MacAB-TolC as consisting of dimeric MacB, hexameric MacA, and trimeric TolC."
+        },
+        {
+         "reference": "PMID:18955484",
+         "notes": "Tikhonova et al. 2009 showed that MacA regulates MacB ATPase activity and macrolide binding."
+        },
+        {
+         "reference": "PDB:5NIK",
+         "notes": "PDB:5NIK resolves the MacB dimer docked to the MacA hexamer."
+        }
+       ]
+      },
+      {
+       "subject": "maca_membrane_fusion_protein",
+       "predicate": "bridges to",
+       "object": "tolc_outer_membrane_channel",
+       "description": "The periplasmic MacA hexameric funnel engages the periplasmic tip of the trimeric TolC outer-membrane channel to form a continuous trans-envelope conduit.",
+       "evidence": [
+        {
+         "reference": "GO:1990196",
+         "notes": "GO:1990196 defines MacA as linking inner-membrane MacB to outer-membrane TolC."
+        },
+        {
+         "reference": "PMID:28504659",
+         "notes": "Fitzpatrick et al. 2017 resolved the cryo-EM structure of the complete MacAB-TolC tripartite assembly."
+        },
+        {
+         "reference": "PDB:5NIK",
+         "notes": "PDB:5NIK captures the tip-to-tip interaction between the MacA hexamer and TolC trimer."
+        }
+       ]
+      },
+      {
+       "subject": "tolc_outer_membrane_channel",
+       "predicate": "mediates",
+       "object": "atp_dependent_xenobiotic_export",
+       "description": "The assembled MacAB-TolC channel exports macrolide antibiotics and polypeptide substrates across the outer membrane.",
+       "evidence": [
+        {
+         "reference": "GO:1990196",
+         "notes": "GO:1990196 defines the complex by export of 14- and 15-membered macrolide antibiotics."
+        },
+        {
+         "reference": "GO:0008559",
+         "notes": "GO:0008559 is the molecular-function term for ABC-type xenobiotic transporter activity."
+        },
+        {
+         "reference": "PMID:28504659",
+         "notes": "Fitzpatrick et al. 2017 described the tripartite efflux conduit formed by MacAB-TolC."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -231299,6 +233203,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO synonymy and transmembrane-transporter parentage, MdtB and MdtC components with exact InterPro groundings and reviewed E. coli K-12 UniProt examples, the B2C heterotrimer subunit count, xenobiotic transport function, taxonomy, and PMID/DOI evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'mdtbc_heterotrimer_efflux' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -231491,6 +233402,75 @@
      "reference": "DOI:10.1128/JB.01448-09",
      "notes": "DOI for the MdtBC B2C heterotrimer study as reported by PubMed."
     }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "mdtbc_heterotrimer_efflux",
+     "title": "MdtB2C Heterotrimeric RND Transporter Assembly and Drug Export",
+     "description": "Assembly of two MdtB subunits with one MdtC subunit into the functional MdtB2C inner-membrane RND multidrug efflux complex.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "mdtb_multidrug_resistance_protein",
+       "label": "Multidrug resistance protein MdtB",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR022831",
+       "component_ref": "mdtb_multidrug_resistance_protein"
+      },
+      {
+       "node_id": "mdtc_multidrug_resistance_protein",
+       "label": "Multidrug resistance protein MdtC",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR023931",
+       "component_ref": "mdtc_multidrug_resistance_protein"
+      },
+      {
+       "node_id": "xenobiotic_transmembrane_transport",
+       "label": "xenobiotic transmembrane transporter activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0042910"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "mdtb_multidrug_resistance_protein",
+       "predicate": "forms heterotrimer with",
+       "object": "mdtc_multidrug_resistance_protein",
+       "description": "Two MdtB RND permease subunits assemble with one MdtC RND permease subunit to form the active MdtB2C heterotrimer.",
+       "evidence": [
+        {
+         "reference": "GO:1990203",
+         "notes": "GO:1990203 defines the MdtBC complex as a heterotrimer composed of an MdtB dimer and one MdtC unit."
+        },
+        {
+         "reference": "PMID:20038594",
+         "notes": "Kim et al. 2010 demonstrated that functional E. coli MdtBC is a B2C heterotrimer."
+        }
+       ]
+      },
+      {
+       "subject": "mdtc_multidrug_resistance_protein",
+       "predicate": "mediates",
+       "object": "xenobiotic_transmembrane_transport",
+       "description": "Within the MdtB2C heterotrimer, MdtC and MdtB perform complementary roles in substrate recognition and proton-driven drug export across the inner membrane.",
+       "evidence": [
+        {
+         "reference": "GO:1990203",
+         "notes": "GO:1990203 defines MdtBC by drug export across the cell membrane."
+        },
+        {
+         "reference": "GO:0042910",
+         "notes": "GO:0042910 is the molecular-function term for xenobiotic transmembrane transporter activity."
+        },
+        {
+         "reference": "PMID:20038594",
+         "notes": "Kim et al. 2010 showed that both MdtB and MdtC protomers are required for MdtB2C-mediated multidrug efflux."
+        }
+       ]
+      }
+     ]
+    }
    ]
   },
   {
@@ -231514,6 +233494,13 @@
      "curator": "codex",
      "action": "EXPANDED_RECORD",
      "changes": "Added ten component classes, eleven verified protein examples, two species-scoped mechanisms, a verified proteomics dataset, two inspected CC BY figures, and explicit model and access limits.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Grounded self-referential causal node 'bouquet' to cellstructuremech:meiotic_telomere_bouquet.",
      "llm_assisted": true
     }
    ],
@@ -232096,7 +234083,8 @@
       {
        "node_id": "bouquet",
        "label": "Meiotic telomere bouquet",
-       "node_type": "STRUCTURE"
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:meiotic_telomere_bouquet"
       }
      ],
      "edges": [
@@ -233038,6 +235026,13 @@
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'metniq_methionine_import' with 5 nodes and 4 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -233365,6 +235360,122 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-01"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "metniq_methionine_import",
+     "title": "MetNIQ ABC Transporter Methionine Import Mechanism",
+     "description": "Periplasmic MetQ substrate delivery and cytoplasmic MetN ATP hydrolysis coupled to methionine translocation through the MetI permease dimer.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "metq_periplasmic_binding_protein",
+       "label": "MetQ periplasmic methionine-binding protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "metq_periplasmic_binding_protein"
+      },
+      {
+       "node_id": "metn_atp_binding_subunit",
+       "label": "ABC transporter, methionine import, ATP-binding protein MetN, proteobacteria",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR012692",
+       "component_ref": "metn_atp_binding_subunit"
+      },
+      {
+       "node_id": "meti_transmembrane_subunit",
+       "label": "MetI transmembrane subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "meti_transmembrane_subunit"
+      },
+      {
+       "node_id": "l_methionine_transmembrane_transport",
+       "label": "L-methionine transmembrane transporter activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0015191"
+      },
+      {
+       "node_id": "abc_type_d_methionine_transport",
+       "label": "ABC-type D-methionine transporter activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0033232"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "metq_periplasmic_binding_protein",
+       "predicate": "delivers substrate to",
+       "object": "meti_transmembrane_subunit",
+       "description": "The periplasmic methionine-binding lipoprotein MetQ docks onto the periplasmic face of the MetI transmembrane dimer to deliver methionine.",
+       "evidence": [
+        {
+         "reference": "GO:1990197",
+         "notes": "GO:1990197 defines MetQ as the periplasmic methionine-binding subunit of the MetNIQ importer."
+        },
+        {
+         "reference": "PDB:6CVL",
+         "notes": "PDB:6CVL captures MetQ docked onto the E. coli MetN2I2 transporter."
+        },
+        {
+         "reference": "DOI:10.1073/pnas.1811003115",
+         "notes": "Nguyen et al. 2018 characterized MetQ docking and substrate delivery to MetNI."
+        }
+       ]
+      },
+      {
+       "subject": "metn_atp_binding_subunit",
+       "predicate": "energizes",
+       "object": "meti_transmembrane_subunit",
+       "description": "The cytoplasmic MetN ATPase dimer binds and hydrolyzes ATP to drive alternating-access conformational transitions of the MetI permease dimer.",
+       "evidence": [
+        {
+         "reference": "GO:1990197",
+         "notes": "GO:1990197 defines MetN as the dimeric ATPase subunit of the methionine-importing ABC transporter."
+        },
+        {
+         "reference": "PMID:22095702",
+         "notes": "Johnson et al. 2012 analyzed the conformational coupling between the MetN nucleotide-binding domains and MetI transmembrane domains."
+        }
+       ]
+      },
+      {
+       "subject": "meti_transmembrane_subunit",
+       "predicate": "mediates",
+       "object": "l_methionine_transmembrane_transport",
+       "description": "The MetI transmembrane pathway translocates L-methionine into the bacterial cytoplasm.",
+       "evidence": [
+        {
+         "reference": "GO:1990197",
+         "notes": "GO:1990197 defines the complex by ATP-dependent methionine import."
+        },
+        {
+         "reference": "GO:0015191",
+         "notes": "GO:0015191 is the molecular-function term for L-methionine transmembrane transporter activity."
+        },
+        {
+         "reference": "PMID:22095702",
+         "notes": "Johnson et al. 2012 characterized the E. coli MetNI methionine importer."
+        }
+       ]
+      },
+      {
+       "subject": "meti_transmembrane_subunit",
+       "predicate": "mediates",
+       "object": "abc_type_d_methionine_transport",
+       "description": "The MetNIQ complex also catalyzes ATP-dependent import of D-methionine and methionine derivatives across the inner membrane.",
+       "evidence": [
+        {
+         "reference": "GO:0033232",
+         "notes": "GO:0033232 is the molecular-function term for ABC-type D-methionine transporter activity."
+        },
+        {
+         "reference": "DOI:10.1073/pnas.1811003115",
+         "notes": "Nguyen et al. 2018 demonstrated MetNIQ-mediated transport of D-methionine derivatives."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -236478,6 +238589,13 @@
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed mechanistic descriptions to 5 causal edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -236618,7 +238736,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.101694",
          "notes": "Figure 1 and structural Results identify a six-Pim1 assembly in the recombinant substrate-bound preparation; this does not settle all native oligomeric states."
         }
-       ]
+       ],
+       "description": "Yeast Pim1/Lon subunits assemble into a hexameric mitochondrial Lon protease complex in substrate-bound recombinant preparations."
       },
       {
        "subject": "assembly",
@@ -236633,7 +238752,8 @@
          "reference": "UniProtKB:P36775",
          "notes": "Reviewed ATP-dependent enzyme annotation."
         }
-       ]
+       ],
+       "description": "The assembled mitochondrial Lon protease complex catalyzes ATP-dependent degradation of unfolded protein substrates such as beta-casein."
       },
       {
        "subject": "catalytic_mutant",
@@ -236644,7 +238764,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.101694",
          "notes": "Figure 3C uses S1015A as the protease-inactive control; loss of activity alone does not establish loss of assembly."
         }
-       ]
+       ],
+       "description": "Active-site substitution S1015A abolishes assayed Pim1 protease activity."
       },
       {
        "subject": "insertion_deletion",
@@ -236655,7 +238776,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.101694",
          "notes": "PIM1-INSdel retains near-WT beta-casein degradation in Figure 3C. No native yeast or broad substrate-dispensability claim is inferred."
         }
-       ]
+       ],
+       "description": "Deletion of the Pim1 charged insertion (PIM1-INSdel) retains near-wild-type beta-casein proteolysis in vitro."
       },
       {
        "subject": "insertion_replacement",
@@ -236666,7 +238788,8 @@
          "reference": "DOI:10.1016/j.jbc.2022.101694",
          "notes": "PIM1-GSlink retains near-WT beta-casein degradation in Figure 3C. This separates this assay from proposed recruitment or DNA-binding roles of the insertion."
         }
-       ]
+       ],
+       "description": "Replacement of the Pim1 charged insertion with a GS linker (PIM1-GSlink) retains near-wild-type beta-casein proteolysis in vitro."
       }
      ]
     }
@@ -238537,6 +240660,13 @@
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'mode_molybdate_dna_binding' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -238691,6 +240821,82 @@
     {
      "reference": "DOI:10.1016/S0022-2836(02)01358-X",
      "notes": "DOI for Schuttelkopf, Boxer and Hunter 2003, 'Crystal Structure of Activated ModE Reveals Conformational Changes Involving Both Oxyanion and DNA-binding Domains', as reported by Crossref."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "mode_molybdate_dna_binding",
+     "title": "ModE Homodimer Molybdate Sensing and Operator DNA Binding",
+     "description": "Molybdate binding by the C-terminal oxyanion-binding domains allosterically activates operator DNA binding by the N-terminal winged-helix domains.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "mode_transcriptional_regulator",
+       "label": "Molybdate-dependent transcriptional regulator ModE",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR016462",
+       "component_ref": "mode_transcriptional_regulator"
+      },
+      {
+       "node_id": "molybdenum_ion_binding",
+       "label": "molybdenum ion binding",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0030151"
+      },
+      {
+       "node_id": "cis_regulatory_region_sequence_specific_dna_binding",
+       "label": "cis-regulatory region sequence-specific DNA binding",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0000987"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "mode_transcriptional_regulator",
+       "predicate": "executes",
+       "object": "molybdenum_ion_binding",
+       "description": "The C-terminal Mop-like oxyanion-binding domains of the ModE homodimer bind molybdate ions.",
+       "evidence": [
+        {
+         "reference": "GO:1990198",
+         "notes": "GO:1990198 defines the dimeric ModE complex by its role in molybdenum metabolism and transcriptional regulation."
+        },
+        {
+         "reference": "GO:0030151",
+         "notes": "GO:0030151 is the molecular-function term for molybdenum ion binding."
+        },
+        {
+         "reference": "PMID:12581638",
+         "notes": "Schuttelkopf, Boxer and Hunter 2003 solved the crystal structure of molybdate-bound E. coli ModE."
+        }
+       ]
+      },
+      {
+       "subject": "molybdenum_ion_binding",
+       "predicate": "allosterically promotes",
+       "object": "cis_regulatory_region_sequence_specific_dna_binding",
+       "description": "Molybdate binding triggers quaternary conformational changes in the ModE dimer that reorient the N-terminal winged-helix domains for high-affinity operator DNA binding.",
+       "evidence": [
+        {
+         "reference": "GO:1990198",
+         "notes": "GO:1990198 defines the ModE complex as binding DNA directly to regulate transcription."
+        },
+        {
+         "reference": "GO:0000987",
+         "notes": "GO:0000987 is the molecular-function term for cis-regulatory region sequence-specific DNA binding."
+        },
+        {
+         "reference": "PMID:12581638",
+         "notes": "Schuttelkopf, Boxer and Hunter 2003 showed how molybdate binding induces conformational changes across both the oxyanion-binding and DNA-binding domains of ModE."
+        },
+        {
+         "reference": "PDB:1O7L",
+         "notes": "PDB:1O7L captures the molybdate-activated conformation of the E. coli ModE homodimer."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -240346,6 +242552,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO exact synonyms and transmembrane-transporter parentage, an InterPro-grounded MsbA component with a reviewed E. coli K-12 UniProt example, an E. coli PDB-backed canonical example, lipopolysaccharide floppase activity, homodimer subunit count, and PMID/DOI evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'msba_lps_flippase_function' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -240480,6 +242693,78 @@
     {
      "reference": "DOI:10.1073/pnas.0709388104",
      "notes": "DOI for the PDB:3B5W primary citation as reported by RCSB and PubMed."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "msba_lps_flippase_function",
+     "title": "MsbA Homodimer Assembly and Lipid A-Core Flippase Activity",
+     "description": "Homodimerization of the MsbA half-transporter and ATP-dependent flipping of lipid A-core lipopolysaccharide across the inner membrane.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "msba_lipid_a_core_flippase",
+       "label": "ABC transporter, lipid A-core flippase, MsbA",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR011917",
+       "component_ref": "msba_lipid_a_core_flippase"
+      },
+      {
+       "node_id": "msba_transporter_complex",
+       "label": "MsbA transporter complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990199"
+      },
+      {
+       "node_id": "lipopolysaccharide_floppase",
+       "label": "lipopolysaccharide floppase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0015437"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "msba_lipid_a_core_flippase",
+       "predicate": "homodimerizes into",
+       "object": "msba_transporter_complex",
+       "description": "Two MsbA ABC half-transporter subunits assemble into the functional homodimeric MsbA transporter complex in the inner membrane.",
+       "evidence": [
+        {
+         "reference": "GO:1990199",
+         "notes": "GO:1990199 defines the MsbA transporter complex as a dimer of MsbA."
+        },
+        {
+         "reference": "PDB:3B5W",
+         "notes": "PDB:3B5W resolves E. coli MsbA as a homodimer."
+        },
+        {
+         "reference": "PMID:18024585",
+         "notes": "Ward et al. 2007 solved X-ray structures of the homodimeric MsbA lipid flippase in multiple conformations."
+        }
+       ]
+      },
+      {
+       "subject": "msba_transporter_complex",
+       "predicate": "catalyzes",
+       "object": "lipopolysaccharide_floppase",
+       "description": "The MsbA homodimer couples ATP binding and hydrolysis to translocation of lipid A-core lipopolysaccharide from the cytoplasmic to the periplasmic leaflet of the inner membrane.",
+       "evidence": [
+        {
+         "reference": "GO:1990199",
+         "notes": "GO:1990199 defines the MsbA complex by export of lipid A and lipopolysaccharide across the plasma membrane."
+        },
+        {
+         "reference": "GO:0015437",
+         "notes": "GO:0015437 is the molecular-function term for ATP-dependent lipopolysaccharide floppase activity."
+        },
+        {
+         "reference": "PMID:18024585",
+         "notes": "Ward et al. 2007 described the inward-to-outward conformational transitions that drive MsbA lipid A-core flipping."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -256774,6 +259059,13 @@
      "action": "CORRECTED_METADATA",
      "changes": "Issue #2043: preserve 3 nonprotein Complex Portal source name(s) in source_name instead of gene_symbol; identities, labels, taxa, membership and stoichiometry unchanged.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'paabce_epoxidase_function' with 5 nodes and 4 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -257179,6 +259471,125 @@
      ],
      "retrieved_on": "2026-10-01",
      "notes": "Curator-scoped import: E. coli K-12 PaaABCE phenylacetyl-CoA 1,2-epoxidase composition, equivalent to the taxon-specific assembly characterized by Grishin et al. 2011. Source evidence: inferred by curator. The accession was resolved through the Complex Portal accession endpoint; no equivalence xref was inferred."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "paabce_epoxidase_function",
+     "title": "PaaABCE Phenylacetyl-CoA 1,2-Epoxidase Electron Transfer and Catalysis",
+     "description": "Reductase electron delivery by PaaE and regulatory/structural support by PaaB and PaaC for diiron-catalyzed phenylacetyl-CoA 1,2-epoxidation at PaaA.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "paae_epoxidase_reductase",
+       "label": "1,2-phenylacetyl-CoA epoxidase, subunit E",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR011884",
+       "component_ref": "paae_epoxidase_reductase"
+      },
+      {
+       "node_id": "paac_epoxidase_beta",
+       "label": "1,2-phenylacetyl-CoA epoxidase, subunit C",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR011882",
+       "component_ref": "paac_epoxidase_beta"
+      },
+      {
+       "node_id": "paab_epoxidase_effector",
+       "label": "1,2-phenylacetyl-CoA epoxidase, subunit B",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR009359",
+       "component_ref": "paab_epoxidase_effector"
+      },
+      {
+       "node_id": "paaa_epoxidase_alpha",
+       "label": "1,2-phenylacetyl-CoA epoxidase, subunit A",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR011881",
+       "component_ref": "paaa_epoxidase_alpha"
+      },
+      {
+       "node_id": "phenylacetyl_coa_1_2_epoxidase_activity",
+       "label": "phenylacetyl-CoA 1,2-epoxidase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0097266"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "paae_epoxidase_reductase",
+       "predicate": "transfers electrons to",
+       "object": "paaa_epoxidase_alpha",
+       "description": "The iron-sulfur flavoprotein reductase subunit PaaE oxidizes NADPH and transfers electrons to the diiron catalytic center in PaaA.",
+       "evidence": [
+        {
+         "reference": "GO:0062077",
+         "notes": "GO:0062077 annotates PaaE and PaaA as subunits of the phenylacetyl-CoA 1,2-epoxidase complex."
+        },
+        {
+         "reference": "PMID:21247899",
+         "notes": "Grishin et al. 2011 demonstrated that PaaE acts as the NADPH reductase supplying electrons to the PaaAC monooxygenase core."
+        },
+        {
+         "reference": "ComplexPortal:CPX-2844",
+         "notes": "Complex Portal CPX-2844 curates the E. coli K-12 PaaABCE monooxygenase subunit composition."
+        }
+       ]
+      },
+      {
+       "subject": "paac_epoxidase_beta",
+       "predicate": "stabilizes catalytic core with",
+       "object": "paaa_epoxidase_alpha",
+       "description": "The structural beta subunit PaaC forms a heterodimer with the catalytic alpha subunit PaaA to stabilize the hydroxylase core.",
+       "evidence": [
+        {
+         "reference": "PMID:21247899",
+         "notes": "Grishin et al. 2011 solved the PaaAC heterotetramer structure and identified PaaC as the structural beta subunit."
+        },
+        {
+         "reference": "ComplexPortal:CPX-2844",
+         "notes": "Complex Portal CPX-2844 curates two copies each of PaaA and PaaC in the PaaABCE complex."
+        }
+       ]
+      },
+      {
+       "subject": "paab_epoxidase_effector",
+       "predicate": "bridges and regulates",
+       "object": "paaa_epoxidase_alpha",
+       "description": "The small effector subunit PaaB bridges PaaAC heterodimers and is essential for in vitro epoxidase turnover.",
+       "evidence": [
+        {
+         "reference": "PMID:21247899",
+         "notes": "Grishin et al. 2011 showed that PaaB is required for in vitro monooxygenase activity of the PaaABCE complex."
+        },
+        {
+         "reference": "ComplexPortal:CPX-2844",
+         "notes": "Complex Portal CPX-2844 includes two PaaB copies in the active PaaABCE monooxygenase complex."
+        }
+       ]
+      },
+      {
+       "subject": "paaa_epoxidase_alpha",
+       "predicate": "catalyzes",
+       "object": "phenylacetyl_coa_1_2_epoxidase_activity",
+       "description": "The diiron center in the PaaA alpha subunit catalyzes oxygen-dependent 1,2-epoxidation of phenylacetyl-CoA.",
+       "evidence": [
+        {
+         "reference": "GO:0062077",
+         "notes": "GO:0062077 defines the complex by its phenylacetyl-CoA 1,2-epoxidase activity."
+        },
+        {
+         "reference": "GO:0097266",
+         "notes": "GO:0097266 is the molecular-function term for phenylacetyl-CoA 1,2-epoxidase activity."
+        },
+        {
+         "reference": "PMID:21247899",
+         "notes": "Grishin et al. 2011 reconstituted phenylacetyl-CoA oxygenation by PaaABCE and localized the catalytic diiron site to PaaA."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -261530,6 +263941,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added PcaGH synonymy, oxidoreductase-complex parentage, exact InterPro-grounded PcaG and PcaH constituents with reviewed Pseudomonas putida UniProt examples, Rhodococcus jostii RHA1 and P. putida canonical examples, protocatechuate 3,4-dioxygenase activity, and GO/PubMed/DOI evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'pcagh_intradiol_cleavage' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -261726,6 +264144,79 @@
     {
      "reference": "DOI:10.1128/jb.175.19.6194-6202.1993",
      "notes": "DOI for Frazee et al. 1993, as reported by UniProtKB."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "pcagh_intradiol_cleavage",
+     "title": "PcaGH Protocatechuate 3,4-Dioxygenase Active-Site Assembly and Catalysis",
+     "description": "Assembly of PcaG alpha and PcaH beta subunits to form the interfacial non-heme ferric iron active site for intradiol ring cleavage.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "pcag_alpha",
+       "label": "Protocatechuate 3,4-dioxygenase, alpha subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR012786",
+       "component_ref": "pcag_alpha"
+      },
+      {
+       "node_id": "pcah_beta",
+       "label": "Protocatechuate 3,4-dioxygenase, beta subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR012785",
+       "component_ref": "pcah_beta"
+      },
+      {
+       "node_id": "protocatechuate_3_4_dioxygenase_activity",
+       "label": "protocatechuate 3,4-dioxygenase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0018578"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "pcag_alpha",
+       "predicate": "forms interfacial active site with",
+       "object": "pcah_beta",
+       "description": "The PcaG alpha subunit pairs with the iron-coordinating PcaH beta subunit to form the non-heme Fe(III) catalytic cleft at the alpha-beta interface.",
+       "evidence": [
+        {
+         "reference": "GO:7770085",
+         "notes": "GO:7770085 defines the protocatechuate 3,4-dioxygenase complex as composed of PcaG alpha and PcaH beta subunits."
+        },
+        {
+         "reference": "PMID:8407791",
+         "notes": "Frazee et al. 1993 characterized the pcaG and pcaH genes encoding the alpha and beta subunits of protocatechuate 3,4-dioxygenase."
+        },
+        {
+         "reference": "PMID:25558786",
+         "notes": "Yamanashi et al. 2015 reconstituted protocatechuate 3,4-dioxygenase activity from PcaHG."
+        }
+       ]
+      },
+      {
+       "subject": "pcah_beta",
+       "predicate": "catalyzes",
+       "object": "protocatechuate_3_4_dioxygenase_activity",
+       "description": "The assembled PcaGH complex catalyzes intradiol dioxygenation of 3,4-dihydroxybenzoate (protocatechuate) to 3-carboxy-cis,cis-muconate.",
+       "evidence": [
+        {
+         "reference": "GO:7770085",
+         "notes": "GO:7770085 is capable of GO:0018578 protocatechuate 3,4-dioxygenase activity."
+        },
+        {
+         "reference": "GO:0018578",
+         "notes": "GO:0018578 is the molecular-function term for protocatechuate 3,4-dioxygenase activity."
+        },
+        {
+         "reference": "PMID:25558786",
+         "notes": "Yamanashi et al. 2015 demonstrated conversion of protocatechuate by purified PcaHG."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -262407,6 +264898,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -262648,6 +265146,18 @@
         {
          "reference": "DOI:10.1093/plcell/koad157",
          "notes": "He, Crans, and Jonikas 2023 review pyrenoid Rubisco concentration as a core feature of the eukaryotic CO2-concentrating mechanism."
+        }
+       ]
+      },
+      {
+       "subject": "rubisco_holoenzyme",
+       "predicate": "fixes",
+       "object": "co2",
+       "description": "Pyrenoid-concentrated Rubisco fixes carbon dioxide during photosynthetic carbon assimilation.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1093/plcell/koad157",
+         "notes": "The pyrenoid matrix concentrates Rubisco around CO2 delivery for carbon fixation."
         }
        ]
       }
@@ -279125,6 +281635,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added the GO synonym and protein-containing-complex parent, curated SsuD and SsuE constituents with E. coli K-12 reviewed UniProt examples, grounded SsuE to InterPro, added alkanesulfonate monooxygenase function and E. coli example evidence, and recorded grounding and stoichiometry boundary decisions.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'ssud_ssue_coupled_monooxygenation' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -279355,6 +281872,78 @@
      "posed_by": "codex",
      "posed_date": "2026-10-01"
     }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "ssud_ssue_coupled_monooxygenation",
+     "title": "SsuD-SsuE Two-Component Flavin Transfer and Alkanesulfonate Monooxygenation",
+     "description": "Direct flavin transfer from the NADPH-dependent FMN reductase SsuE to the alkanesulfonate monooxygenase SsuD for sulfite release.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "ssue_fmn_reductase",
+       "label": "NADPH-dependent FMN reductase SsuE",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR020048",
+       "component_ref": "ssue_fmn_reductase"
+      },
+      {
+       "node_id": "ssud_alkanesulfonate_monooxygenase",
+       "label": "SsuD alkanesulfonate monooxygenase",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ssud_alkanesulfonate_monooxygenase"
+      },
+      {
+       "node_id": "alkanesulfonate_monooxygenase_activity",
+       "label": "alkanesulfonate monooxygenase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0008726"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "ssue_fmn_reductase",
+       "predicate": "supplies reduced FMN to",
+       "object": "ssud_alkanesulfonate_monooxygenase",
+       "description": "The FMN reductase SsuE physically complexes with SsuD and transfers reduced FMNH2 to the monooxygenase.",
+       "evidence": [
+        {
+         "reference": "GO:1990200",
+         "notes": "GO:1990200 defines the SsuD-SsuE complex as a two-component alkanesulfonate monooxygenase and flavin oxidoreductase complex."
+        },
+        {
+         "reference": "DOI:10.1074/jbc.274.38.26639",
+         "notes": "Eichhorn et al. 1999 demonstrated that SsuE reduces FMN to supply FMNH2 to SsuD."
+        },
+        {
+         "reference": "DOI:10.1128/JB.00966-06",
+         "notes": "Gao and Ellis 2006 detected direct protein-protein interactions between E. coli SsuE and SsuD."
+        }
+       ]
+      },
+      {
+       "subject": "ssud_alkanesulfonate_monooxygenase",
+       "predicate": "catalyzes",
+       "object": "alkanesulfonate_monooxygenase_activity",
+       "description": "Using FMNH2 supplied by SsuE and molecular oxygen, SsuD catalyzes oxygenolytic cleavage of alkanesulfonates into sulfite and aldehydes.",
+       "evidence": [
+        {
+         "reference": "GO:1990200",
+         "notes": "GO:1990200 defines the complex by conversion of alkanesulfonates to aldehydes and sulfite."
+        },
+        {
+         "reference": "GO:0008726",
+         "notes": "GO:0008726 is the molecular-function term for alkanesulfonate monooxygenase activity."
+        },
+        {
+         "reference": "DOI:10.1074/jbc.274.38.26639",
+         "notes": "Eichhorn et al. 1999 characterized the two-component SsuD-SsuE alkanesulfonate monooxygenase reaction."
+        }
+       ]
+      }
+     ]
+    }
    ]
   },
   {
@@ -279405,6 +281994,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'sus_starch_capture_and_hydrolysis' with 6 nodes and 5 edges.",
      "llm_assisted": true
     }
    ],
@@ -279730,6 +282326,134 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-01"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "sus_starch_capture_and_hydrolysis",
+     "title": "Bacteroides SusCDEFG Cell-Surface Starch Binding and Hydrolysis",
+     "description": "Cooperative extracellular starch binding by outer-membrane lipoproteins SusD, SusE, and SusF with the TonB-dependent receptor SusC, coupled to surface hydrolysis by SusG.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "susd_starch_binding_lipoprotein",
+       "label": "SusD starch-binding lipoprotein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "susd_starch_binding_lipoprotein"
+      },
+      {
+       "node_id": "suse_starch_binding_lipoprotein",
+       "label": "SusE starch-binding lipoprotein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "suse_starch_binding_lipoprotein"
+      },
+      {
+       "node_id": "susf_starch_binding_lipoprotein",
+       "label": "SusF starch-binding lipoprotein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "susf_starch_binding_lipoprotein"
+      },
+      {
+       "node_id": "susg_alpha_amylase",
+       "label": "SusG alpha-amylase",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "susg_alpha_amylase"
+      },
+      {
+       "node_id": "susc_tonb_dependent_transporter",
+       "label": "SusC TonB-dependent starch transporter",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "susc_tonb_dependent_transporter"
+      },
+      {
+       "node_id": "cell_surface_starch_binding_and_degradation",
+       "label": "cell-surface starch binding and degradation",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "susd_starch_binding_lipoprotein",
+       "predicate": "cooperates in starch binding with",
+       "object": "susc_tonb_dependent_transporter",
+       "description": "Surface-exposed lipoprotein SusD physically interacts with the outer-membrane TonB-dependent receptor SusC to form the minimal starch-binding unit.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/JB.182.19.5365-5372.2000",
+         "notes": "Shipman et al. 2000 demonstrated that SusC and SusD interact in the outer membrane and together mediate high-affinity starch binding."
+        },
+        {
+         "reference": "DOI:10.1074/jbc.R109.022848",
+         "notes": "Martens et al. 2009 review the SusC-SusD outer-membrane starch-binding complex."
+        }
+       ]
+      },
+      {
+       "subject": "suse_starch_binding_lipoprotein",
+       "predicate": "enhances starch binding by",
+       "object": "susc_tonb_dependent_transporter",
+       "description": "Outer-membrane lipoprotein SusE associates with the Sus complex and increases cell-surface starch-binding affinity.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/JB.182.19.5365-5372.2000",
+         "notes": "Shipman et al. 2000 showed that SusE enhances starch binding by SusC and SusD."
+        },
+        {
+         "reference": "DOI:10.1074/jbc.R109.022848",
+         "notes": "Martens et al. 2009 review the accessory starch-binding role of SusE."
+        }
+       ]
+      },
+      {
+       "subject": "susf_starch_binding_lipoprotein",
+       "predicate": "associates with starch at",
+       "object": "susc_tonb_dependent_transporter",
+       "description": "Surface-exposed lipoprotein SusF participates in the outer-membrane starch-binding apparatus and contacts bound amylopectin.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/JB.182.19.5365-5372.2000",
+         "notes": "Shipman et al. 2000 showed that SusF is surface exposed and protected from proteolysis by bound starch."
+        },
+        {
+         "reference": "DOI:10.1074/jbc.R109.022848",
+         "notes": "Martens et al. 2009 review SusF as a starch-binding outer-membrane lipoprotein in the Sus system."
+        }
+       ]
+      },
+      {
+       "subject": "susg_alpha_amylase",
+       "predicate": "hydrolyzes starch bound to",
+       "object": "susc_tonb_dependent_transporter",
+       "description": "Cell-surface outer-membrane alpha-amylase SusG cleaves bound starch polysaccharides into maltooligosaccharides for translocation through SusC.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/JB.181.23.7206-7211.1999",
+         "notes": "Shipman et al. 1999 established SusG as the surface-exposed outer-membrane alpha-amylase essential for starch utilization."
+        },
+        {
+         "reference": "DOI:10.1074/jbc.R109.022848",
+         "notes": "Martens et al. 2009 review SusG-catalyzed hydrolysis of surface-captured starch prior to SusC-mediated import."
+        }
+       ]
+      },
+      {
+       "subject": "susc_tonb_dependent_transporter",
+       "predicate": "mediates",
+       "object": "cell_surface_starch_binding_and_degradation",
+       "description": "The outer-membrane SusCDEFG apparatus coordinates cell-surface starch capture, enzymatic cleavage, and oligosaccharide import.",
+       "evidence": [
+        {
+         "reference": "GO:0044570",
+         "notes": "GO:0044570 defines the starch utilization system complex as a cell-envelope multiprotein complex that binds and degrades starch."
+        },
+        {
+         "reference": "DOI:10.1128/JB.182.19.5365-5372.2000",
+         "notes": "Shipman et al. 2000 characterized the cooperative outer-membrane Sus complex."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -282954,6 +285678,13 @@
      "action": "REFINED_GROUNDING_NOTES",
      "changes": "Narrowed TauD grounding notes to the verified broad InterPro entries found during PR review, removing unsupported Pfam and NCBIfam wording.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'taud_taurine_dioxygenase_function' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -283156,6 +285887,77 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-01"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "taud_taurine_dioxygenase_function",
+     "title": "TauD Taurine Dioxygenase Oligomerization and Sulfite Release",
+     "description": "Homooligomeric assembly of TauD and Fe(II)/2-oxoglutarate-dependent dioxygenation of taurine to release sulfite.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "taud_taurine_dioxygenase",
+       "label": "alpha-ketoglutarate-dependent taurine dioxygenase TauD",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taud_taurine_dioxygenase"
+      },
+      {
+       "node_id": "taurine_dioxygenase_complex",
+       "label": "taurine dioxygenase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990205"
+      },
+      {
+       "node_id": "taurine_dioxygenase_activity",
+       "label": "taurine dioxygenase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0000908"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "taud_taurine_dioxygenase",
+       "predicate": "oligomerizes into",
+       "object": "taurine_dioxygenase_complex",
+       "description": "TauD subunits self-associate into the functional taurine dioxygenase complex.",
+       "evidence": [
+        {
+         "reference": "GO:1990205",
+         "notes": "GO:1990205 defines the E. coli taurine dioxygenase complex as a homooligomeric TauD complex."
+        },
+        {
+         "reference": "PDB:1OS7",
+         "notes": "PDB:1OS7 resolves the homodimeric assembly of E. coli TauD."
+        },
+        {
+         "reference": "PMID:12741810",
+         "notes": "O'Brien et al. 2003 analyzed the oligomeric structure and substrate-induced conformational changes of E. coli TauD."
+        }
+       ]
+      },
+      {
+       "subject": "taurine_dioxygenase_complex",
+       "predicate": "catalyzes",
+       "object": "taurine_dioxygenase_activity",
+       "description": "The TauD complex catalyzes Fe(II)- and 2-oxoglutarate-dependent oxygenation of taurine into aminoacetaldehyde, sulfite, succinate, and CO2.",
+       "evidence": [
+        {
+         "reference": "GO:1990205",
+         "notes": "GO:1990205 defines the complex by its taurine dioxygenase activity during sulfur starvation."
+        },
+        {
+         "reference": "GO:0000908",
+         "notes": "GO:0000908 is the molecular-function term for taurine dioxygenase activity."
+        },
+        {
+         "reference": "PMID:9287300",
+         "notes": "Eichhorn et al. 1997 purified and characterized E. coli alpha-ketoglutarate-dependent taurine dioxygenase."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -291114,6 +293916,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 3 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed FUNCTION causal graph 'trap_transporter_solute_uptake' with 4 nodes and 3 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -291339,6 +294148,92 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-10-01"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "trap_transporter_solute_uptake",
+     "title": "TRAP Transporter Solute Capture and Ion-Gradient-Driven Import",
+     "description": "Extracytoplasmic DctP-type receptor solute delivery to the DctQ/DctM integral membrane complex for secondary active transport.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "trap_extracytoplasmic_solute_receptor",
+       "label": "TRAP extracytoplasmic solute receptor",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "trap_extracytoplasmic_solute_receptor"
+      },
+      {
+       "node_id": "trap_small_membrane_dctq",
+       "label": "TRAP transporter, small membrane protein DctQ",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR007387",
+       "component_ref": "trap_small_membrane_dctq"
+      },
+      {
+       "node_id": "trap_large_membrane_dctm",
+       "label": "TRAP transporter large membrane protein DctM",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR004681",
+       "component_ref": "trap_large_membrane_dctm"
+      },
+      {
+       "node_id": "ion_gradient_dependent_solute_uptake",
+       "label": "ion-gradient-dependent solute uptake",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "trap_extracytoplasmic_solute_receptor",
+       "predicate": "delivers solute to",
+       "object": "trap_large_membrane_dctm",
+       "description": "The extracytoplasmic DctP-family solute-binding receptor captures organic acid substrates and presents them to the membrane translocon.",
+       "evidence": [
+        {
+         "reference": "GO:0031317",
+         "notes": "GO:0031317 defines the TRAP transporter complex as containing an extracytoplasmic solute receptor and two membrane proteins."
+        },
+        {
+         "reference": "DOI:10.1128/JB.179.17.5482-5493.1997",
+         "notes": "Forward et al. 1997 characterized the periplasmic binding protein DctP and membrane subunits DctQ and DctM in R. capsulatus."
+        }
+       ]
+      },
+      {
+       "subject": "trap_small_membrane_dctq",
+       "predicate": "pairs with",
+       "object": "trap_large_membrane_dctm",
+       "description": "The small four-transmembrane-helix subunit DctQ forms a membrane complex with the large pore-forming subunit DctM and is required for transport.",
+       "evidence": [
+        {
+         "reference": "GO:0031317",
+         "notes": "GO:0031317 defines the two integral membrane components of disparate size in the TRAP complex."
+        },
+        {
+         "reference": "DOI:10.1128/JB.179.17.5482-5493.1997",
+         "notes": "Forward et al. 1997 demonstrated that both dctQ and dctM are essential alongside dctP for C4-dicarboxylate uptake."
+        }
+       ]
+      },
+      {
+       "subject": "trap_large_membrane_dctm",
+       "predicate": "mediates",
+       "object": "ion_gradient_dependent_solute_uptake",
+       "description": "The DctQM integral membrane translocon couples electrochemical ion gradients to unidirectional solute import across the cytoplasmic membrane without ATP hydrolysis.",
+       "evidence": [
+        {
+         "reference": "GO:0031317",
+         "notes": "GO:0031317 defines TRAP complexes by secondary active transport powered by ion gradients rather than ATP."
+        },
+        {
+         "reference": "DOI:10.1128/JB.179.17.5482-5493.1997",
+         "notes": "Forward et al. 1997 showed that DctPQM transport depends on membrane potential rather than ATP."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -299074,6 +301969,13 @@
      "action": "EDIT",
      "changes": "added 4 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Grounded self-referential causal node 'h_body' to cellstructuremech:h_body.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -299343,7 +302245,8 @@
       {
        "node_id": "h_body",
        "label": "H-body",
-       "node_type": "STRUCTURE"
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:h_body"
       },
       {
        "node_id": "rnase_e",
@@ -311605,6 +314508,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Grounded self-referential causal node 'condensate' to cellstructuremech:tmar_condensate.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -311795,7 +314705,8 @@
       {
        "node_id": "condensate",
        "label": "TmaR condensate",
-       "node_type": "STRUCTURE"
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:tmar_condensate"
       },
       {
        "node_id": "ei",
@@ -321254,6 +324165,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Bound Selkrig et al. 2012 evidence notes to the public PubMed/Europe PMC abstract and DOI metadata checked during the PR review.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added source-backed ASSEMBLY causal graph 'tam_transenvelope_assembly' with 3 nodes and 2 edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -321377,6 +324295,73 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-29"
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "tam_transenvelope_assembly",
+     "title": "Translocation and Assembly Module (TAM) Trans-Envelope Pairing",
+     "description": "Trans-periplasmic pairing of inner-membrane TamB with outer-membrane Omp85-family protein TamA to form the TAM complex.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "tamb_inner_membrane_protein",
+       "label": "TamB inner-membrane protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "tamb_inner_membrane_protein"
+      },
+      {
+       "node_id": "tama_omp85_outer_membrane_protein",
+       "label": "TamA Omp85-family outer-membrane protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "tama_omp85_outer_membrane_protein"
+      },
+      {
+       "node_id": "tam_protein_secretion_complex",
+       "label": "TAM protein secretion complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0097347"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "tamb_inner_membrane_protein",
+       "predicate": "spans periplasm to partner with",
+       "object": "tama_omp85_outer_membrane_protein",
+       "description": "Inner-membrane TamB extends across the periplasm to interact directly with the outer-membrane Omp85-family protein TamA.",
+       "evidence": [
+        {
+         "reference": "GO:0097347",
+         "notes": "GO:0097347 defines bacterial TAM as consisting of TamA in the outer membrane and TamB in the inner membrane."
+        },
+        {
+         "reference": "PMID:22466966",
+         "notes": "Selkrig et al. 2012 discovered that inner-membrane TamB and outer-membrane TamA form a trans-envelope complex."
+        },
+        {
+         "reference": "DOI:10.1038/nsmb.2261",
+         "notes": "Selkrig et al. 2012 characterized the TamA-TamB translocation and assembly module."
+        }
+       ]
+      },
+      {
+       "subject": "tama_omp85_outer_membrane_protein",
+       "predicate": "assembles into",
+       "object": "tam_protein_secretion_complex",
+       "description": "Outer-membrane TamA and inner-membrane TamB assemble into the functional TAM protein secretion complex.",
+       "evidence": [
+        {
+         "reference": "GO:0097347",
+         "notes": "GO:0097347 defines the TAM protein secretion complex by its TamA and TamB subunits."
+        },
+        {
+         "reference": "PMID:22466966",
+         "notes": "Selkrig et al. 2012 purified the TamA-TamB translocation and assembly module from Gram-negative bacteria."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -332154,6 +335139,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added polar-tube anchoring-disk synonymy, a conservative EnP1 component with a reviewed UniProtKB example, Microsporidia and Encephalitozoon scope, polar-tube attachment function, DOI/GO evidence, a nonmechanistic anchoring graph, and a component grounding TODO.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-21T18:45:05Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -332324,6 +335316,18 @@
         {
          "reference": "DOI:10.1128/EC.00113-07",
          "notes": "Southern et al. 2007 described the polar sac/anchoring disk region as the area from which the everting polar tube is released."
+        }
+       ]
+      },
+      {
+       "subject": "anchoring_disc",
+       "predicate": "attaches to",
+       "object": "spore_wall",
+       "description": "The polar tube anchoring disc tethers the anterior end of the polar tube to the inner surface of the microsporidian spore wall.",
+       "evidence": [
+        {
+         "reference": "GO:0160202",
+         "notes": "GO:0160202 defines the polar tube anchoring disc as attaching the polar tube to the spore wall."
         }
        ]
       }

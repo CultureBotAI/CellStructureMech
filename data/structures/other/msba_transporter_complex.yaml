@@ -23,6 +23,12 @@ curation_history:
     canonical example, lipopolysaccharide floppase activity, homodimer subunit count,
     and PMID/DOI evidence.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'msba_lps_flippase_function'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: MsbA complex
   synonym_type: EXACT_SYNONYM
@@ -110,3 +116,54 @@ evidence:
   notes: PubMed identifier for the PDB:3B5W MsbA flexibility study cited by GO:1990199.
 - reference: DOI:10.1073/pnas.0709388104
   notes: DOI for the PDB:3B5W primary citation as reported by RCSB and PubMed.
+causal_graphs:
+- graph_id: msba_lps_flippase_function
+  title: MsbA Homodimer Assembly and Lipid A-Core Flippase Activity
+  description: Homodimerization of the MsbA half-transporter and ATP-dependent flipping
+    of lipid A-core lipopolysaccharide across the inner membrane.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: msba_lipid_a_core_flippase
+    label: ABC transporter, lipid A-core flippase, MsbA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR011917
+    component_ref: msba_lipid_a_core_flippase
+  - node_id: msba_transporter_complex
+    label: MsbA transporter complex
+    node_type: STRUCTURE
+    grounding: GO:1990199
+  - node_id: lipopolysaccharide_floppase
+    label: lipopolysaccharide floppase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0015437
+  edges:
+  - subject: msba_lipid_a_core_flippase
+    predicate: homodimerizes into
+    object: msba_transporter_complex
+    description: Two MsbA ABC half-transporter subunits assemble into the functional
+      homodimeric MsbA transporter complex in the inner membrane.
+    evidence:
+    - reference: GO:1990199
+      notes: GO:1990199 defines the MsbA transporter complex as a dimer of MsbA.
+    - reference: PDB:3B5W
+      notes: PDB:3B5W resolves E. coli MsbA as a homodimer.
+    - reference: PMID:18024585
+      notes: Ward et al. 2007 solved X-ray structures of the homodimeric MsbA lipid
+        flippase in multiple conformations.
+  - subject: msba_transporter_complex
+    predicate: catalyzes
+    object: lipopolysaccharide_floppase
+    description: The MsbA homodimer couples ATP binding and hydrolysis to translocation
+      of lipid A-core lipopolysaccharide from the cytoplasmic to the periplasmic leaflet
+      of the inner membrane.
+    evidence:
+    - reference: GO:1990199
+      notes: GO:1990199 defines the MsbA complex by export of lipid A and lipopolysaccharide
+        across the plasma membrane.
+    - reference: GO:0015437
+      notes: GO:0015437 is the molecular-function term for ATP-dependent lipopolysaccharide
+        floppase activity.
+    - reference: PMID:18024585
+      notes: Ward et al. 2007 described the inward-to-outward conformational transitions
+        that drive MsbA lipid A-core flipping.

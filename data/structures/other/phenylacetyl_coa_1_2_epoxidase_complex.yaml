@@ -38,6 +38,12 @@ curation_history:
     instead of gene_symbol; identities, labels, taxa, membership and stoichiometry
     unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'paabce_epoxidase_function' with
+    5 nodes and 4 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: paaABCE complex
   synonym_type: NARROW_SYNONYM
@@ -339,3 +345,90 @@ complex_compositions:
     composition, equivalent to the taxon-specific assembly characterized by Grishin
     et al. 2011. Source evidence: inferred by curator. The accession was resolved
     through the Complex Portal accession endpoint; no equivalence xref was inferred.'
+causal_graphs:
+- graph_id: paabce_epoxidase_function
+  title: PaaABCE Phenylacetyl-CoA 1,2-Epoxidase Electron Transfer and Catalysis
+  description: Reductase electron delivery by PaaE and regulatory/structural support
+    by PaaB and PaaC for diiron-catalyzed phenylacetyl-CoA 1,2-epoxidation at PaaA.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: paae_epoxidase_reductase
+    label: 1,2-phenylacetyl-CoA epoxidase, subunit E
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR011884
+    component_ref: paae_epoxidase_reductase
+  - node_id: paac_epoxidase_beta
+    label: 1,2-phenylacetyl-CoA epoxidase, subunit C
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR011882
+    component_ref: paac_epoxidase_beta
+  - node_id: paab_epoxidase_effector
+    label: 1,2-phenylacetyl-CoA epoxidase, subunit B
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR009359
+    component_ref: paab_epoxidase_effector
+  - node_id: paaa_epoxidase_alpha
+    label: 1,2-phenylacetyl-CoA epoxidase, subunit A
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR011881
+    component_ref: paaa_epoxidase_alpha
+  - node_id: phenylacetyl_coa_1_2_epoxidase_activity
+    label: phenylacetyl-CoA 1,2-epoxidase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0097266
+  edges:
+  - subject: paae_epoxidase_reductase
+    predicate: transfers electrons to
+    object: paaa_epoxidase_alpha
+    description: The iron-sulfur flavoprotein reductase subunit PaaE oxidizes NADPH
+      and transfers electrons to the diiron catalytic center in PaaA.
+    evidence:
+    - reference: GO:0062077
+      notes: GO:0062077 annotates PaaE and PaaA as subunits of the phenylacetyl-CoA
+        1,2-epoxidase complex.
+    - reference: PMID:21247899
+      notes: Grishin et al. 2011 demonstrated that PaaE acts as the NADPH reductase
+        supplying electrons to the PaaAC monooxygenase core.
+    - reference: ComplexPortal:CPX-2844
+      notes: Complex Portal CPX-2844 curates the E. coli K-12 PaaABCE monooxygenase
+        subunit composition.
+  - subject: paac_epoxidase_beta
+    predicate: stabilizes catalytic core with
+    object: paaa_epoxidase_alpha
+    description: The structural beta subunit PaaC forms a heterodimer with the catalytic
+      alpha subunit PaaA to stabilize the hydroxylase core.
+    evidence:
+    - reference: PMID:21247899
+      notes: Grishin et al. 2011 solved the PaaAC heterotetramer structure and identified
+        PaaC as the structural beta subunit.
+    - reference: ComplexPortal:CPX-2844
+      notes: Complex Portal CPX-2844 curates two copies each of PaaA and PaaC in the
+        PaaABCE complex.
+  - subject: paab_epoxidase_effector
+    predicate: bridges and regulates
+    object: paaa_epoxidase_alpha
+    description: The small effector subunit PaaB bridges PaaAC heterodimers and is
+      essential for in vitro epoxidase turnover.
+    evidence:
+    - reference: PMID:21247899
+      notes: Grishin et al. 2011 showed that PaaB is required for in vitro monooxygenase
+        activity of the PaaABCE complex.
+    - reference: ComplexPortal:CPX-2844
+      notes: Complex Portal CPX-2844 includes two PaaB copies in the active PaaABCE
+        monooxygenase complex.
+  - subject: paaa_epoxidase_alpha
+    predicate: catalyzes
+    object: phenylacetyl_coa_1_2_epoxidase_activity
+    description: The diiron center in the PaaA alpha subunit catalyzes oxygen-dependent
+      1,2-epoxidation of phenylacetyl-CoA.
+    evidence:
+    - reference: GO:0062077
+      notes: GO:0062077 defines the complex by its phenylacetyl-CoA 1,2-epoxidase
+        activity.
+    - reference: GO:0097266
+      notes: GO:0097266 is the molecular-function term for phenylacetyl-CoA 1,2-epoxidase
+        activity.
+    - reference: PMID:21247899
+      notes: Grishin et al. 2011 reconstituted phenylacetyl-CoA oxygenation by PaaABCE
+        and localized the catalytic diiron site to PaaA.

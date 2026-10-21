@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  slug: intramitochondrial_protein_quality_control_compartment
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-9c82da
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed mechanistic descriptions to 7 causal edge(s).
+  details: 'Stage 2 causal-graph curation pass for cellstructuremech:intramitochondrial_protein_quality_control_compartment
+    (intramitochondrial protein quality control compartment): Added source-backed mechanistic
+    descriptions to 7 causal edge(s). Validated via write_validated_structure.'

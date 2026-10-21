@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/infraciliary_lattice.yaml
+  slug: infraciliary_lattice
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-5ec251
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed mechanistic descriptions to 2 causal edge(s).
+  details: 'Stage 2 causal-graph curation pass for cellstructuremech:infraciliary_lattice
+    (infraciliary lattice): Added source-backed mechanistic descriptions to 2 causal edge(s).
+    Validated via write_validated_structure.'

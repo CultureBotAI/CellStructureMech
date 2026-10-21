@@ -26,6 +26,12 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'dxr_reductoisomerase_function'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: 1-deoxy-D-xylulose 5-phosphate reductoisomerase complex
   synonym_type: EXACT_SYNONYM
@@ -122,3 +128,51 @@ evidence:
     reductoisomerase in a ternary complex with the antimalarial compound fosmidomycin
     and NADPH reveals a tight-binding closed enzyme conformation', as reported by
     PubMed.
+causal_graphs:
+- graph_id: dxr_reductoisomerase_function
+  title: Dxr Homodimer Assembly and Reductoisomerase Catalysis
+  description: Homodimeric assembly of 1-deoxy-D-xylulose 5-phosphate reductoisomerase
+    (Dxr) and NADPH-dependent conversion of DXP to MEP.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: dxr_reductoisomerase
+    label: 1-deoxy-D-xylulose 5-phosphate reductoisomerase
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003821
+    component_ref: dxr_reductoisomerase
+  - node_id: dxr_protein_complex
+    label: Dxr protein complex
+    node_type: STRUCTURE
+    grounding: GO:1990065
+  - node_id: deoxy_d_xylulose_5_phosphate_reductoisomerase_activity
+    label: 1-deoxy-D-xylulose-5-phosphate reductoisomerase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0030604
+  edges:
+  - subject: dxr_reductoisomerase
+    predicate: homodimerizes into
+    object: dxr_protein_complex
+    description: Two Dxr subunits assemble into the homodimeric Dxr protein complex.
+    evidence:
+    - reference: GO:1990065
+      notes: GO:1990065 defines the Dxr protein complex.
+    - reference: PDB:1Q0Q
+      notes: PDB:1Q0Q resolves E. coli Dxr as a homodimer.
+    - reference: PMID:15567415
+      notes: Mac Sweeney et al. 2005 solved the crystal structure of the E. coli Dxr
+        homodimer.
+  - subject: dxr_protein_complex
+    predicate: catalyzes
+    object: deoxy_d_xylulose_5_phosphate_reductoisomerase_activity
+    description: The Dxr homodimer catalyzes the NADPH-dependent rearrangement and
+      reduction of 1-deoxy-D-xylulose 5-phosphate to 2-C-methyl-D-erythritol 4-phosphate.
+    evidence:
+    - reference: GO:1990065
+      notes: GO:1990065 defines the complex by the NADP-dependent DXP-to-MEP reaction.
+    - reference: GO:0030604
+      notes: GO:0030604 is the molecular-function term for 1-deoxy-D-xylulose-5-phosphate
+        reductoisomerase activity.
+    - reference: PMID:15567415
+      notes: Mac Sweeney et al. 2005 characterized the active-site closure and NADPH-dependent
+        catalysis of E. coli Dxr.

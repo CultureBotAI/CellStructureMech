@@ -37,6 +37,11 @@ curation_history:
   changes: 'Resolved #1237 by routing Matsuoka et al. 1998 COPII liposome evidence
     through reachable PMID:9568718 instead of the unreadable Cell DOI.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: ER membrane
   synonym_type: EXACT_SYNONYM
@@ -171,6 +176,14 @@ causal_graphs:
     - reference: PMID:9568718
       notes: Matsuoka et al. 1998 reconstituted COPII-coated vesicle formation on
         chemically defined liposomes.
+  - subject: copii_vesicle_coat
+    predicate: mediates
+    object: copii_coated_vesicle_budding
+    description: Assembly of the COPII coat on the ER membrane drives COPII-coated
+      vesicle budding.
+    evidence:
+    - reference: GO:0090114
+      notes: GO:0090114 defines COPII-coated vesicle budding from the ER membrane.
 discussions:
 - discussion_id: ground_er_lipid_bilayer
   prompt: Resolve an exact source-neutral grounding for the lipid constituent of the

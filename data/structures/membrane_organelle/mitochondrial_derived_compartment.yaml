@@ -27,6 +27,11 @@ curation_history:
     to the spherical MDCs sampled in Figure 1C and Figure S1C; preserved values, units,
     sample sizes and induction conditions.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed mechanistic descriptions to 9 causal edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 synonyms:
@@ -244,6 +249,8 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.202307035
       notes: 'Figure 1 and MDC-assay Methods: rapamycin induces Tom70-enriched, Tim50-depleted
         structures.'
+    description: Rapamycin treatment induces formation of Tom70-enriched, Tim50-depleted
+      mitochondrial-derived compartments (MDCs) in budding yeast.
   - subject: formation
     predicate: enables
     object: cargo_capture
@@ -251,6 +258,8 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.202307036
       notes: Results distinguish enriched selected outer-membrane proteins from non-enriched
         TOM and inner-membrane proteins.
+    description: MDC formation enables selective concentration of outer-membrane cargo
+      proteins relative to non-enriched TOM core and inner-membrane proteins.
   - subject: formation
     predicate: enables
     object: cytosol_capture
@@ -258,6 +267,8 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.202307035
       notes: Cytosolic reporter/degron experiments support enclosure in a subset;
         not every MDC is shown to be closed.
+    description: MDC formation encloses cytosolic material within a subset of assembled
+      MDC structures.
   - subject: tom_double
     predicate: impairs
     object: formation
@@ -265,6 +276,8 @@ causal_graphs:
     - reference: DOI:10.7554/eLife.13943
       notes: 'Figure 7: combined loss of Tom70 and Tom71 blocks formation in the tested
         assay.'
+    description: Combined deletion of TOM70 and TOM71 blocks rapamycin-induced MDC
+      formation.
   - subject: mmm1_loss
     predicate: impairs
     object: formation
@@ -272,6 +285,8 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.202002144
       notes: ERMES-deletion experiments impair formation under the tested induction
         conditions; later bypass experiments limit claims of absolute essentiality.
+    description: Deletion of the ERMES subunit gene MMM1 impairs MDC formation under
+      tested induction conditions.
   - subject: gem1_loss
     predicate: impairs
     object: formation
@@ -279,12 +294,15 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.202002144
       notes: Gem1-deletion experiments impair induction; the dependency is conditional,
         not evidence that Gem1 defines the compartment.
+    description: Deletion of GEM1 impairs conditional MDC induction.
   - subject: dnm1_loss
     predicate: impairs
     object: release
     evidence:
     - reference: DOI:10.7554/eLife.13943
       notes: 'Figure 4: initial formation persists but subsequent release is impaired.'
+    description: Deletion of the division dynamin gene DNM1 impairs subsequent MDC
+      release from mitochondria while permitting initial formation.
   - subject: psd1_loss
     predicate: promotes
     object: formation
@@ -292,6 +310,8 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.202302069
       notes: PE-biosynthesis perturbation promotes constitutive MDC formation in a
         subset of cells; this is not a prevalence estimate.
+    description: Deletion of PSD1 perturbing phosphatidylethanolamine biosynthesis
+      promotes constitutive MDC formation in a subset of cells.
   - subject: crd1_loss
     predicate: reduces
     object: formation
@@ -299,6 +319,8 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.202302069
       notes: CL-biosynthesis perturbation reduces formation without eliminating it
         from every cell.
+    description: Deletion of CRD1 perturbing cardiolipin biosynthesis reduces MDC
+      formation frequency.
 physical_properties:
 - property: DIAMETER
   value: '0.41'
