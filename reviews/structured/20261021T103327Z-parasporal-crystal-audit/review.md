@@ -1,0 +1,1133 @@
+# Parasporal crystal cohort, historical morphology and source-tier review
+
+- Review: 20261021T103327Z-parasporal-crystal-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T10:13:35Z
+- Finished UTC: 2026-10-21T10:33:27Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The parasporal inclusion identity, mixed-family component, bounded protein examples, historical morphology and descriptive packaging graph are supported. No corrective issue was established; activity, source-tier and modern-assignment limits remain explicit.
+
+## Scope And Provenance
+
+Entire single target; native identifier/taxon/protein/family checks, exact review and chapter identities, specified review passages and complete seven-page primary microscopy paper.
+
+Selection: Tenth selected target in batch nineteen, fixed maintained-path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:parasporal_crystal | data/structures/inclusion/parasporal_crystal.yaml | maintained | parasporal crystal |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native UniProt verify | passed | False | cellstructuremech:parasporal_crystal | Native command passed; scientific membership and graph scope assessed independently. |
+| Native UniProt causal-graphs | passed | False | cellstructuremech:parasporal_crystal | Native command passed; scientific membership and graph scope assessed independently. |
+| Focused native schema | passed | True | cellstructuremech:parasporal_crystal | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:parasporal_crystal | Focused validator passed. |
+| Target resolver slice | passed | True | cellstructuremech:parasporal_crystal | 11 identifiers OK; 1 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | cellstructuremech:parasporal_crystal | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | cellstructuremech:parasporal_crystal | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:parasporal_crystal | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:parasporal_crystal | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:parasporal_crystal | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | cellstructuremech:parasporal_crystal | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Proteinaceous parasporal inclusion and bounded synonyms
+
+identity: supported. Targets: cellstructuremech:parasporal_crystal.
+
+The local identity and inclusion parent distinguish the crystalline body from an individual protein or the spore. Parasporal-body terminology is contextual and not an exact assertion about every historical preparation. Exact GO searches and local identifier uniqueness have their stated bounded scopes.
+
+### Mixed Cry/Cyt cohort is not one family
+
+grounding: supported. Targets: cellstructuremech:parasporal_crystal.
+
+The collective component spans structurally distinct Cry and Cyt families, so a single exact family mapping is appropriately unset. Native examples resolve as Cry4Aa, Cry11Aa and Cyt1Aa with the israelensis taxon; identity references do not establish a complete universal inventory. UNKNOWN formation necessity is not replaced by toxin activity or abundance.
+
+### Unresolved individual crystallization requirements
+
+evidence: unknown. Targets: cellstructuremech:parasporal_crystal.
+
+The collective protein material constitutes the crystal, but the sources do not establish each named Cry/Cyt protein or family as universally necessary for crystal formation. Variable inventories and conditional helper examples do not provide a common assembly requirement. The maintained UNKNOWN essentiality remains unresolved, separate from observed composition and packaging.
+
+### Packaging role distinct from pesticidal activity
+
+evidence: supported. Targets: cellstructuremech:parasporal_crystal.
+
+The component evidence explicitly admits varied known and unknown activities and parasporin-related members. The role says proteins can become active, while the function and graph describe packaging. Pesticidal is therefore retained as conventional Cry/Cyt cohort terminology, not evidence that every parasporin or related protein has a demonstrated pesticidal phenotype.
+
+### Variable species occurrence and historical israelensis preparation
+
+scope: supported. Targets: cellstructuremech:parasporal_crystal.
+
+Taxonomy receipts establish the species and current israelensis naming/rank only. VARIABLE occurrence and the israelensis canonical example are supported without assuming every strain has the same crystal proteins or morphology. The historical primary body directly resolves two segments in its own preparation; no exact Cry/Cyt accession assignment is imported from those older bands.
+
+### Explicitly descriptive crystallization and packaging
+
+graph: supported. Targets: cellstructuremech:parasporal_crystal.
+
+The single NONMECHANISTIC relationship records proteins crystallizing into a parasporal inclusion. It does not specify an untested nucleation pathway, common helper requirement or per-family toxin activation mechanism. The packaging function remains at the represented structural scope.
+
+### No forced subfamily inventory or activity finding
+
+completeness: supported. Targets: cellstructuremech:parasporal_crystal.
+
+No corrective issue was established. Optional splitting into individually grounded Cry/Cyt families could add detail but is not required to preserve the present aggregate class. The historical example is directly readable now, while older access notes remain historical. No maintained image or quoted snippet requires separate reuse checking.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/inclusion/parasporal_crystal.yaml; Entire maintained YAML including definition, components, functions, hierarchy, examples, graph edges, discussions, image metadata and history | context_only | All fields were read after fresh native inspection; the maintained target and PROPOSED state are unchanged. |
+| policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, CausalNode and source-specific ComplexComposition contracts; essentiality definition; docs/CURATION.md assembly-versus-function guidance and review checklist | context_only | Component family identity, concrete protein identity and source-specific assembly membership are separate. Essentiality asks whether the structure forms without the component; membership and activity do not establish it. Optional fields are not mandatory. CausalNode permits protein complexes; its xrefs contract does not inherit the top-level record equivalence restriction. |
+| parasporal-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016234; Complete native inclusion-body definition and relevant relationships | supports | GO0016234 identifies the generic inclusion-body parent; it does not collapse the parasporal crystal into an endospore or toxin molecule. |
+| parasporal-agent-local-ids | rg --no-ignore --hidden --files data/structures -g *.yaml; Exact top-level identifier comparison after parsing all 978 ignored- and hidden-inclusive maintained YAML records | supports | Each selected target and boundary-neighbor identifier resolves to exactly one maintained record in the frozen corpus. This verifies repository-local identity, not an external ontology equivalence or scientific membership. |
+| parasporal-agent-ols-exact-0 | https://www.ebi.ac.uk/ols4/api/search?ontology=go&amp;exact=true&amp;rows=100&amp;q=parasporal%20crystal; OLS native search response numFound and complete docs list; exact query is preserved in reference URL | context_only | This exact-name GO search returned zero results. The result bounds only the stated query; it is not an exhaustive synonym search or proof that no ontology representation exists. |
+| parasporal-agent-ols-exact-1 | https://www.ebi.ac.uk/ols4/api/search?ontology=go&amp;exact=true&amp;rows=100&amp;q=parasporal%20body; OLS native search response numFound and complete docs list; exact query is preserved in reference URL | context_only | This exact-name GO search returned zero results. The result bounds only the stated query; it is not an exhaustive synonym search or proof that no ontology representation exists. |
+| parasporal-agent-tax-1428 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1428; Complete taxId, scientificName, rank, lineage and relevant synonyms | supports | Native ENA taxonomy identifies Bacillus thuringiensis, species. This receipt attests that identity and rank only, not occurrence or the experimental strain. |
+| parasporal-agent-tax-1430 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1430; Complete taxId, scientificName, rank, lineage and relevant synonyms | supports | Native ENA taxonomy identifies Bacillus thuringiensis serovar israelensis, current native rank no rank. This receipt attests that identity and rank only, not occurrence or the experimental strain. |
+| parasporal-agent-P16480 | https://rest.uniprot.org/uniprotkb/P16480.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB P16480 identifies Pesticidal crystal protein Cry4Aa, gene cry4Aa, taxon1430. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| parasporal-agent-query-cry4Aa | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Acry4Aa%29%20AND%20%28organism_id%3A1430%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene cry4Aa, organism 1430, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns P16480. This checks identifier resolution only. |
+| parasporal-agent-P21256 | https://rest.uniprot.org/uniprotkb/P21256.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB P21256 identifies Pesticidal crystal protein Cry11Aa, gene cry11Aa, taxon1430. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| parasporal-agent-query-cry11Aa | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Acry11Aa%29%20AND%20%28organism_id%3A1430%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene cry11Aa, organism 1430, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns P21256. This checks identifier resolution only. |
+| parasporal-agent-P0A382 | https://rest.uniprot.org/uniprotkb/P0A382.json; primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR LOCATION comments and cited references where relevant | supports | Native reviewed UniProtKB P0A382 identifies Type-1Aa cytolytic delta-endotoxin, gene cyt1Aa, taxon1430. Concrete identity is checked independently of membership; relevant subunit/cofactor/location comments retain their own evidence scope. |
+| parasporal-agent-query-cyt1Aa | https://rest.uniprot.org/uniprotkb/search?format=json&amp;query=%28gene_exact%3Acyt1Aa%29%20AND%20%28organism_id%3A1430%29%20AND%20%28reviewed%3Atrue%29; All returned results for exact gene cyt1Aa, organism 1430, reviewed:true; bounded to this query | context_only | Exact gene/taxon/reviewed query returns P0A382. This checks identifier resolution only. |
+| parasporal-agent-matches-P16480 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P16480/?page_size=200; All returned results; native pagination next is null | context_only | Complete integrated InterPro matches for this exact reviewed example were inspected to bound candidate selection. Matching a family or domain does not alone establish exact equivalence to the maintained component. |
+| parasporal-agent-matches-P21256 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P21256/?page_size=200; All returned results; native pagination next is null | context_only | Complete integrated InterPro matches for this exact reviewed example were inspected to bound candidate selection. Matching a family or domain does not alone establish exact equivalence to the maintained component. |
+| parasporal-agent-matches-P0A382 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P0A382/?page_size=200; All returned results; native pagination next is null | context_only | Complete integrated InterPro matches for this exact reviewed example were inspected to bound candidate selection. Matching a family or domain does not alone establish exact equivalence to the maintained component. |
+| parasporal-agent-IPR038979 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR038979/; Native InterPro metadata name/type, description and membership scope; predictive description provenance retained where marked | supports | The pesticidal crystal protein family matches the two three-domain Cry examples; it does not cover every related Cry-like protein or the Cyt example. |
+| parasporal-agent-IPR001615 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001615/; Native InterPro metadata name/type, description and membership scope; predictive description provenance retained where marked | supports | The native Delta-endotoxin CytB family entry matches the Cyt1Aa concrete accession. Its family title is not a reason to rename that verified protein, nor to ground the aggregate Cry/Cyt cohort to this narrower family. |
+| parasporal-agent-doi-10.3390_toxins6123296 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.3390/toxins6123296; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies Bacillus thuringiensis toxins: an overview of their biocidal activity. Authors: Palma L, Muñoz D, Berry C, Murillo J, Caballero P.; PMID 25514092; DOI 10.3390/toxins6123296. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| parasporal-agent-doi-10.3390_toxins6041222 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.3390/toxins6041222; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies Bacillus thuringiensis subsp. israelensis and its dipteran-specific toxins. Authors: Ben-Dov E.; PMID 24686769; DOI 10.3390/toxins6041222. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| parasporal-agent-doi-10.1016_j.toxicon.2006.11.022 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.toxicon.2006.11.022; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies Mode of action of Bacillus thuringiensis Cry and Cyt toxins and their potential for insect control. Authors: Bravo A, Gill SS, Soberón M.; PMID 17198720; DOI 10.1016/j.toxicon.2006.11.022. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| parasporal-agent-doi-10.1128_aem.50.1.56-62.1985 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1128/aem.50.1.56-62.1985; Exact bibliographic fields, article type and available abstract | supports | Native metadata identifies Composition and Toxicity of the Inclusion of Bacillus thuringiensis subsp. israelensis. Authors: Insell JP, Fitz-James PC.; PMID 16346842; DOI 10.1128/aem.50.1.56-62.1985. Bibliographic identity and available abstract only; not a substitute for inspected article body. |
+| parasporal-agent-jats-PMC4280536 | https://pmc-oa-opendata.s3.amazonaws.com/PMC4280536.1/PMC4280536.1.xml; Introduction section1, nomenclature section2, section3 opening, section3.1.2 non-three-domain Cry proteins and section5.5 helper-protein paragraphs only | supports | Palma2014 is a review, not a primary crystal experiment. Its nomenclature and structural discussion distinguish diverse Cry classes, Cyt proteins, parasporins without demonstrated invertebrate targets and known/unknown activities. Conditional helper-protein examples do not establish universal crystal assembly machinery. |
+| parasporal-agent-jats-PMC4014730 | https://pmc-oa-opendata.s3.amazonaws.com/PMC4014730.1/PMC4014730.1.xml; Sections2,3 opening,3.1 major proteins and3.2 minor proteins; later toxicity/application sections not comprehensively audited | supports | Ben-Dov2014 is a review of B.thuringiensis israelensis. It distinguishes four major and two minor observed toxin proteins, notes a transcript without observed protein for Cyt1Ca, and separates three-domain Cry architecture from Cyt. This supports the bounded israelensis example rather than a uniform six-member inventory across all B.thuringiensis. |
+| parasporal-agent-legacy-PMC1857359 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1857359/; PMC1857359 sectionsS2 Introduction andS3 Diversity/structure/evolution only; later detailed toxin mechanisms not audited | supports | Bravo, Gill and Soberon2007 is review-tier synthesis. Its introduction and diversity/structure discussion distinguish parasporal inclusion packaging from protein activity and structurally different Cry/Cyt classes. It does not make all related or newly classified proteins universally pesticidal. |
+| parasporal-agent-crossref-book | https://api.crossref.org/works/10.1007/978-94-011-5967-8_3; Native DOI, title, author, publication year, container title, type and page fields | supports | Crossref identifies Federici, Lüthy and Ibarra1990, Parasporal Body of Bacillus thuringiensis israelensis, book chapter pages16-44. This title is used only for bounded terminology context. The chapter body was not recovered or read. |
+| parasporal-agent-insell1985-page56 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/264b7d322559/aem00142-0064.png; Native PMC238573 PNG; entire page visually inspected: Title/authors/abstract; Introduction; Methods strains/growth, electron-microscopy preparation and purification/solubility opening | supports | Insell and Fitz-James1985 primary scan printed page56. The primary paper identifies the israelensis strain context, culture and preparation used to investigate a two-segment parasporal body. |
+| parasporal-agent-insell1985-page57 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/af3db6766abb/aem00142-0065.png; Native PMC238573 PNG; entire page visually inspected: Methods assay/PAGE procedures; Results structure, solubility, polypeptide profiles and toxicity opening | supports | Insell and Fitz-James1985 primary scan printed page57. The inspected page describes light/dark lattice segments and their differential biochemical behavior in this historical preparation. |
+| parasporal-agent-insell1985-page58 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/031ad2528ec8/aem00142-0066.png; Native PMC238573 PNG; entire page visually inspected: Figures1-3 and complete captions | supports | Insell and Fitz-James1985 primary scan printed page58. Electron-micrograph panels and captions compare light/dark segments, associated envelope material and lattice appearances; this page alone does not identify modern Cry/Cyt proteins. |
+| parasporal-agent-insell1985-page59 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/fefc2292df2c/aem00142-0067.png; Native PMC238573 PNG; entire page visually inspected: Figure4 freeze-etch images/caption and continuing toxicity-fractionation Results | supports | Insell and Fitz-James1985 primary scan printed page59. The figure records striation/rodlet orientations in the historical crystal and the text continues fractionation measurements; it is not an atomic structure. |
+| parasporal-agent-insell1985-page60 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/3ec6bf7d3e74/aem00142-0068.png; Native PMC238573 PNG; entire page visually inspected: Figure5 proposed subunit geometry; Figure6 differential-dissolution micrographs/caption; hexose/protein analysis text | supports | Insell and Fitz-James1985 primary scan printed page60. The page distinguishes a proposed geometric model from microscopy and biochemical analysis. The model is not treated as a resolved molecular assignment. |
+| parasporal-agent-insell1985-page61 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/07117471b85b/aem00142-0069.png; Native PMC238573 PNG; entire page visually inspected: Figure7 PAGE/caption, Table1 toxicity/hemolysis and Discussion opening | supports | Insell and Fitz-James1985 primary scan printed page61. This page compares fractions and discusses two lattices, accessory material, composition and uncertain subunit/oligomer interpretation. It does not map the historical bands exactly to modern accessions. |
+| parasporal-agent-insell1985-page62 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/5eed4fa4bcd7/aem00142-0070.png; Native PMC238573 PNG; entire page visually inspected: Discussion continuation, acknowledgments and references | supports | Insell and Fitz-James1985 primary scan printed page62. The source presents a dark-segment precursor/toxin assignment as a hypothesis. That inference is not promoted to a modern family or universal segment-activity assignment. |
+| native-verify | /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/inclusion/parasporal_crystal.yaml --verify; Captured focused native verify log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/inclusion/parasporal_crystal.yaml --causal-graphs; Captured focused native causal-graphs log | supports | data/structures/inclusion/parasporal_crystal.yaml  (cellstructuremech:parasporal_crystal)<br>  cry_cyt_crystal_packaging	cry_cyt_pesticidal_crystal_proteins	COVERED	-&gt;cry_cyt_pesticidal_crystal_proteins (UniProtKB:P16480, UniProtKB:P21256, UniProtKB:P0A382)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| schema-result | just validate data/structures/inclusion/parasporal_crystal.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/inclusion/parasporal_crystal.yaml |
+| strict-result | just validate-strict data/structures/inclusion/parasporal_crystal.yaml --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/parasporal_crystal-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/inclusion/parasporal_crystal.yaml --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/parasporal_crystal-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch19-20261021-9bkzflrr/parasporal_crystal-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/inclusion/parasporal_crystal.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 11 of12 collected target identifiers returned OK in this fresh base resolver run. Residuals: cellstructuremech:parasporal_crystal: SKIPPED; resolved by evidence parasporal-agent-local-ids. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Palma2014, Ben-Dov2014 and Bravo2007 are reviews; only their specified sections were inspected, and underlying primary papers were not all reread. These evidence tiers are not presented as new experimental confirmation.
+- All seven genuine Insell/Fitz-James1985 primary scans, printed pages56-62, were visually read. Their historical morphology and polypeptide interpretation do not identify each segment as a particular modern Cry/Cyt accession.
+- The1990 book chapter is verified only through native bibliographic metadata/title; its body was not recovered. Exact-name GO queries are bounded and do not establish exhaustive ontology absence.
+- Pesticidal is conventional cohort terminology in this record, not a universal demonstrated activity for every included protein or parasporin. Known structure, family membership and measured activity remain separate.
+- Native protein identities and israelensis taxonomy do not supply universal prevalence or complete strain inventories. Formation necessity is UNKNOWN; toxin function is not a substitute for that question.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The authorized coverage task includes honest clean reviews.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T103327Z-parasporal-crystal-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Parasporal crystal cohort, historical morphology and source-tier review
+started_at: '2026-10-21T10:13:35Z'
+finished_at: '2026-10-21T10:33:27Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The parasporal inclusion identity, mixed-family component, bounded protein
+  examples, historical morphology and descriptive packaging graph are supported. No
+  corrective issue was established; activity, source-tier and modern-assignment limits
+  remain explicit.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/inclusion/parasporal_crystal.yaml
+    sha256: 59163a5ec708789816078e74a74e62fd9d3dbd38b580c40103a658e711274052
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:parasporal_crystal
+  path: data/structures/inclusion/parasporal_crystal.yaml
+  label: parasporal crystal
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/parasporal_crystal.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target; native identifier/taxon/protein/family checks,
+    exact review and chapter identities, specified review passages and complete seven-page
+    primary microscopy paper.
+  selection: Tenth selected target in batch nineteen, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:parasporal_crystal
+checks:
+- check_id: native-verify
+  name: Native UniProt verify
+  status: passed
+  required: false
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  command: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/parasporal_crystal.yaml
+    --verify
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native UniProt causal-graphs
+  status: passed
+  required: false
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  command: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/parasporal_crystal.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  command: just validate data/structures/inclusion/parasporal_crystal.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  command: just validate-strict data/structures/inclusion/parasporal_crystal.yaml
+    --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/parasporal_crystal-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  summary: 11 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - parasporal-agent-local-ids
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - parasporal-agent-go
+  - parasporal-agent-local-ids
+  - parasporal-agent-ols-exact-0
+  - parasporal-agent-ols-exact-1
+  - parasporal-agent-tax-1428
+  - parasporal-agent-tax-1430
+  - parasporal-agent-P16480
+  - parasporal-agent-query-cry4Aa
+  - parasporal-agent-P21256
+  - parasporal-agent-query-cry11Aa
+  - parasporal-agent-P0A382
+  - parasporal-agent-query-cyt1Aa
+  - parasporal-agent-matches-P16480
+  - parasporal-agent-matches-P21256
+  - parasporal-agent-matches-P0A382
+  - parasporal-agent-IPR038979
+  - parasporal-agent-IPR001615
+  - parasporal-agent-doi-10.3390_toxins6123296
+  - parasporal-agent-doi-10.3390_toxins6041222
+  - parasporal-agent-doi-10.1016_j.toxicon.2006.11.022
+  - parasporal-agent-doi-10.1128_aem.50.1.56-62.1985
+  - parasporal-agent-jats-PMC4280536
+  - parasporal-agent-jats-PMC4014730
+  - parasporal-agent-legacy-PMC1857359
+  - parasporal-agent-crossref-book
+  - parasporal-agent-insell1985-page56
+  - parasporal-agent-insell1985-page57
+  - parasporal-agent-insell1985-page58
+  - parasporal-agent-insell1985-page59
+  - parasporal-agent-insell1985-page60
+  - parasporal-agent-insell1985-page61
+  - parasporal-agent-insell1985-page62
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/inclusion/parasporal_crystal.yaml
+  locator: Entire maintained YAML including definition, components, functions, hierarchy,
+    examples, graph edges, discussions, image metadata and history
+  accessed_at: '2026-10-21T10:31:38Z'
+  support: context_only
+  summary: All fields were read after fresh native inspection; the maintained target
+    and PROPOSED state are unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, CausalNode and source-specific ComplexComposition
+    contracts; essentiality definition; docs/CURATION.md assembly-versus-function
+    guidance and review checklist
+  accessed_at: '2026-10-21T10:31:38Z'
+  support: context_only
+  summary: Component family identity, concrete protein identity and source-specific
+    assembly membership are separate. Essentiality asks whether the structure forms
+    without the component; membership and activity do not establish it. Optional fields
+    are not mandatory. CausalNode permits protein complexes; its xrefs contract does
+    not inherit the top-level record equivalence restriction.
+- evidence_id: parasporal-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0016234
+  locator: Complete native inclusion-body definition and relevant relationships
+  accessed_at: '2026-10-21T10:17:23.869472Z'
+  support: supports
+  summary: GO0016234 identifies the generic inclusion-body parent; it does not collapse
+    the parasporal crystal into an endospore or toxin molecule.
+  snapshot_sha256: f81fa199c4b5bb4fd75f51d03590dbb142f330253d43e483e2932f8d73f6af13
+- evidence_id: parasporal-agent-local-ids
+  kind: search
+  reference: rg --no-ignore --hidden --files data/structures -g *.yaml
+  locator: Exact top-level identifier comparison after parsing all 978 ignored- and
+    hidden-inclusive maintained YAML records
+  accessed_at: '2026-10-21T10:24:35.979372Z'
+  support: supports
+  summary: Each selected target and boundary-neighbor identifier resolves to exactly
+    one maintained record in the frozen corpus. This verifies repository-local identity,
+    not an external ontology equivalence or scientific membership.
+  snapshot_sha256: afe67b51186f824b76ae841e29ef66916d0bc8f9313035749ed6ba0c7d60a0e6
+  search_scope: Ignored- and hidden-inclusive maintained data/structures YAML universe;
+    parse every top-level identifier, compare exact selected identifiers. No absence
+    or broad ontology-uniqueness claim.
+- evidence_id: parasporal-agent-ols-exact-0
+  kind: search
+  reference: https://www.ebi.ac.uk/ols4/api/search?ontology=go&exact=true&rows=100&q=parasporal%20crystal
+  locator: OLS native search response numFound and complete docs list; exact query
+    is preserved in reference URL
+  accessed_at: '2026-10-21T10:25:00.362243Z'
+  support: context_only
+  summary: This exact-name GO search returned zero results. The result bounds only
+    the stated query; it is not an exhaustive synonym search or proof that no ontology
+    representation exists.
+  snapshot_sha256: 8d33fdeb26a2d16294a3c5f4a7f444578bb462aa6036d45a15e9bfadfe47fbd2
+  search_scope: https://www.ebi.ac.uk/ols4/api/search?ontology=go&exact=true&rows=100&q=parasporal%20crystal
+- evidence_id: parasporal-agent-ols-exact-1
+  kind: search
+  reference: https://www.ebi.ac.uk/ols4/api/search?ontology=go&exact=true&rows=100&q=parasporal%20body
+  locator: OLS native search response numFound and complete docs list; exact query
+    is preserved in reference URL
+  accessed_at: '2026-10-21T10:25:00.362420Z'
+  support: context_only
+  summary: This exact-name GO search returned zero results. The result bounds only
+    the stated query; it is not an exhaustive synonym search or proof that no ontology
+    representation exists.
+  snapshot_sha256: 8d33fdeb26a2d16294a3c5f4a7f444578bb462aa6036d45a15e9bfadfe47fbd2
+  search_scope: https://www.ebi.ac.uk/ols4/api/search?ontology=go&exact=true&rows=100&q=parasporal%20body
+- evidence_id: parasporal-agent-tax-1428
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1428
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:17:24.064142Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Bacillus thuringiensis, species. This receipt
+    attests that identity and rank only, not occurrence or the experimental strain.
+  snapshot_sha256: 7e39d2f8c6f6a8cbcec6d01c23dfca80a697d31be142ee3189ae3bdee81345c1
+- evidence_id: parasporal-agent-tax-1430
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1430
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:17:24.080105Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Bacillus thuringiensis serovar israelensis,
+    current native rank no rank. This receipt attests that identity and rank only,
+    not occurrence or the experimental strain.
+  snapshot_sha256: 3df9dafb0d1030c11f1728228e71a9355ae1d62caf32db7be6407eb9257671e8
+- evidence_id: parasporal-agent-P16480
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P16480.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T10:17:24.719186Z'
+  support: supports
+  summary: Native reviewed UniProtKB P16480 identifies Pesticidal crystal protein
+    Cry4Aa, gene cry4Aa, taxon1430. Concrete identity is checked independently of
+    membership; relevant subunit/cofactor/location comments retain their own evidence
+    scope.
+  snapshot_sha256: a85e173a5881d66bd084d067806109b4794b7f09eecb90eca3d865375a22e2e1
+- evidence_id: parasporal-agent-query-cry4Aa
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Acry4Aa%29%20AND%20%28organism_id%3A1430%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene cry4Aa, organism 1430, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T10:17:25.412867Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P16480. This checks identifier
+    resolution only.
+  snapshot_sha256: b1fe6c921afde1a98b0b2ee3a9f56a5efd8cd2bb608506584b7d78c85f915489
+  search_scope: UniProtKB query gene_exact:cry4Aa AND organism_id:1430 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: parasporal-agent-P21256
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P21256.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T10:17:25.124917Z'
+  support: supports
+  summary: Native reviewed UniProtKB P21256 identifies Pesticidal crystal protein
+    Cry11Aa, gene cry11Aa, taxon1430. Concrete identity is checked independently of
+    membership; relevant subunit/cofactor/location comments retain their own evidence
+    scope.
+  snapshot_sha256: 35914c4b20d4e6706569ea2e44e0fde652c13f9b1864a392db8d49de1266bc52
+- evidence_id: parasporal-agent-query-cry11Aa
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Acry11Aa%29%20AND%20%28organism_id%3A1430%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene cry11Aa, organism 1430, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T10:17:25.739081Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P21256. This checks identifier
+    resolution only.
+  snapshot_sha256: c28b5f9c7d83305f62fa1694feb2c32fb9af94185d5ebda66ec2a7ec04e2a5f9
+  search_scope: UniProtKB query gene_exact:cry11Aa AND organism_id:1430 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: parasporal-agent-P0A382
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0A382.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T10:17:24.495138Z'
+  support: supports
+  summary: Native reviewed UniProtKB P0A382 identifies Type-1Aa cytolytic delta-endotoxin,
+    gene cyt1Aa, taxon1430. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 4f0cdbd015376e14c7bd7727fe8478d0e480d9eb32ab63a4a696c9c7bdac3d8a
+- evidence_id: parasporal-agent-query-cyt1Aa
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3Acyt1Aa%29%20AND%20%28organism_id%3A1430%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene cyt1Aa, organism 1430, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T10:17:26.376035Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P0A382. This checks identifier
+    resolution only.
+  snapshot_sha256: e6443b1e92ad739aa0a71ba5537b890529a61a986f9c67d1299a3d78181f592e
+  search_scope: UniProtKB query gene_exact:cyt1Aa AND organism_id:1430 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: parasporal-agent-matches-P16480
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P16480/?page_size=200
+  locator: All returned results; native pagination next is null
+  accessed_at: '2026-10-21T10:17:24.742395Z'
+  support: context_only
+  summary: Complete integrated InterPro matches for this exact reviewed example were
+    inspected to bound candidate selection. Matching a family or domain does not alone
+    establish exact equivalence to the maintained component.
+  snapshot_sha256: 7be0ac98f6ab81cb93a887afc9e407b600131d5f3d28292f08a0841c636463cf
+- evidence_id: parasporal-agent-matches-P21256
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P21256/?page_size=200
+  locator: All returned results; native pagination next is null
+  accessed_at: '2026-10-21T10:17:25.345905Z'
+  support: context_only
+  summary: Complete integrated InterPro matches for this exact reviewed example were
+    inspected to bound candidate selection. Matching a family or domain does not alone
+    establish exact equivalence to the maintained component.
+  snapshot_sha256: a100a7dd31e693f383e5e55234cb937f3d6f09b7395a640d89c59af220031e98
+- evidence_id: parasporal-agent-matches-P0A382
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P0A382/?page_size=200
+  locator: All returned results; native pagination next is null
+  accessed_at: '2026-10-21T10:17:24.604459Z'
+  support: context_only
+  summary: Complete integrated InterPro matches for this exact reviewed example were
+    inspected to bound candidate selection. Matching a family or domain does not alone
+    establish exact equivalence to the maintained component.
+  snapshot_sha256: de4dd78a4b1081abfc8a884955f77ae56c1e55675841b79a80a90c3edf9311cb
+- evidence_id: parasporal-agent-IPR038979
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR038979/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:21:09.856709Z'
+  support: supports
+  summary: The pesticidal crystal protein family matches the two three-domain Cry
+    examples; it does not cover every related Cry-like protein or the Cyt example.
+  snapshot_sha256: c13fed07696f9c16865e27d32db314abdcd59edd7d193773ab8f495c4f59a54d
+- evidence_id: parasporal-agent-IPR001615
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001615/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:21:09.854169Z'
+  support: supports
+  summary: The native Delta-endotoxin CytB family entry matches the Cyt1Aa concrete
+    accession. Its family title is not a reason to rename that verified protein, nor
+    to ground the aggregate Cry/Cyt cohort to this narrower family.
+  snapshot_sha256: 9defe1bceddd9d1b0f01af80889fac5813be3af89524bbf37c5192f94c1f90d3
+- evidence_id: parasporal-agent-doi-10.3390_toxins6123296
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.3390/toxins6123296
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:17:28.615327Z'
+  support: supports
+  summary: 'Native metadata identifies Bacillus thuringiensis toxins: an overview
+    of their biocidal activity. Authors: Palma L, Muñoz D, Berry C, Murillo J, Caballero
+    P.; PMID 25514092; DOI 10.3390/toxins6123296. Bibliographic identity and available
+    abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: d93715fc8aacb64de5f6bc975fc077dd6617d29269d4bfa1da7be69fa654ac1c
+- evidence_id: parasporal-agent-doi-10.3390_toxins6041222
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.3390/toxins6041222
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:17:28.001835Z'
+  support: supports
+  summary: 'Native metadata identifies Bacillus thuringiensis subsp. israelensis and
+    its dipteran-specific toxins. Authors: Ben-Dov E.; PMID 24686769; DOI 10.3390/toxins6041222.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: 1c7a85baa86fdf535e8c5ea878a2223eac20abfd3ada309f61e1b56070adfe05
+- evidence_id: parasporal-agent-doi-10.1016_j.toxicon.2006.11.022
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.toxicon.2006.11.022
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:17:26.860804Z'
+  support: supports
+  summary: 'Native metadata identifies Mode of action of Bacillus thuringiensis Cry
+    and Cyt toxins and their potential for insect control. Authors: Bravo A, Gill
+    SS, Soberón M.; PMID 17198720; DOI 10.1016/j.toxicon.2006.11.022. Bibliographic
+    identity and available abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: 227559c869f4da603866b7171b38ee9fc099780208e04e277a06e537d41a3a17
+- evidence_id: parasporal-agent-doi-10.1128_aem.50.1.56-62.1985
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128/aem.50.1.56-62.1985
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:17:27.100084Z'
+  support: supports
+  summary: 'Native metadata identifies Composition and Toxicity of the Inclusion of
+    Bacillus thuringiensis subsp. israelensis. Authors: Insell JP, Fitz-James PC.;
+    PMID 16346842; DOI 10.1128/aem.50.1.56-62.1985. Bibliographic identity and available
+    abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: 17759e190a7d6527262507aa679d21d44e395d87d0a0448df700e2b484e271d6
+- evidence_id: parasporal-agent-jats-PMC4280536
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4280536.1/PMC4280536.1.xml
+  locator: Introduction section1, nomenclature section2, section3 opening, section3.1.2
+    non-three-domain Cry proteins and section5.5 helper-protein paragraphs only
+  accessed_at: '2026-10-21T10:18:31.758107Z'
+  support: supports
+  summary: Palma2014 is a review, not a primary crystal experiment. Its nomenclature
+    and structural discussion distinguish diverse Cry classes, Cyt proteins, parasporins
+    without demonstrated invertebrate targets and known/unknown activities. Conditional
+    helper-protein examples do not establish universal crystal assembly machinery.
+  snapshot_sha256: 7462136cb1b99214d5931f23a79d3031df6e1bc262d941f8fe459419ebd186c5
+- evidence_id: parasporal-agent-jats-PMC4014730
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4014730.1/PMC4014730.1.xml
+  locator: Sections2,3 opening,3.1 major proteins and3.2 minor proteins; later toxicity/application
+    sections not comprehensively audited
+  accessed_at: '2026-10-21T10:18:31.783412Z'
+  support: supports
+  summary: Ben-Dov2014 is a review of B.thuringiensis israelensis. It distinguishes
+    four major and two minor observed toxin proteins, notes a transcript without observed
+    protein for Cyt1Ca, and separates three-domain Cry architecture from Cyt. This
+    supports the bounded israelensis example rather than a uniform six-member inventory
+    across all B.thuringiensis.
+  snapshot_sha256: d7586294888069f26e7d707db2a336c4a19395970cb917f6d0639c90490b5de2
+- evidence_id: parasporal-agent-legacy-PMC1857359
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1857359/
+  locator: PMC1857359 sectionsS2 Introduction andS3 Diversity/structure/evolution
+    only; later detailed toxin mechanisms not audited
+  accessed_at: '2026-10-21T10:18:31.364798Z'
+  support: supports
+  summary: Bravo, Gill and Soberon2007 is review-tier synthesis. Its introduction
+    and diversity/structure discussion distinguish parasporal inclusion packaging
+    from protein activity and structurally different Cry/Cyt classes. It does not
+    make all related or newly classified proteins universally pesticidal.
+  snapshot_sha256: a041abc02166c03903ff4fd122903c32eb5cd2c2aab0b39a4e92627c196ab23b
+- evidence_id: parasporal-agent-crossref-book
+  kind: database
+  reference: https://api.crossref.org/works/10.1007/978-94-011-5967-8_3
+  locator: Native DOI, title, author, publication year, container title, type and
+    page fields
+  accessed_at: '2026-10-21T10:17:29.211123Z'
+  support: supports
+  summary: Crossref identifies Federici, Lüthy and Ibarra1990, Parasporal Body of
+    Bacillus thuringiensis israelensis, book chapter pages16-44. This title is used
+    only for bounded terminology context. The chapter body was not recovered or read.
+  snapshot_sha256: 01558c6de6e5579e984d5a310dc87718c1d2d5e2b39e6a45d0bc78bf06e417d1
+- evidence_id: parasporal-agent-insell1985-page56
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/264b7d322559/aem00142-0064.png
+  locator: 'Native PMC238573 PNG; entire page visually inspected: Title/authors/abstract;
+    Introduction; Methods strains/growth, electron-microscopy preparation and purification/solubility
+    opening'
+  accessed_at: '2026-10-21T10:23:24.913821Z'
+  support: supports
+  summary: Insell and Fitz-James1985 primary scan printed page56. The primary paper
+    identifies the israelensis strain context, culture and preparation used to investigate
+    a two-segment parasporal body.
+  snapshot_sha256: 0a46d1881ce7121e60c3ec3afdfe2d9979334e096288205fc37d8d5ee91db53e
+- evidence_id: parasporal-agent-insell1985-page57
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/af3db6766abb/aem00142-0065.png
+  locator: 'Native PMC238573 PNG; entire page visually inspected: Methods assay/PAGE
+    procedures; Results structure, solubility, polypeptide profiles and toxicity opening'
+  accessed_at: '2026-10-21T10:23:24.914305Z'
+  support: supports
+  summary: Insell and Fitz-James1985 primary scan printed page57. The inspected page
+    describes light/dark lattice segments and their differential biochemical behavior
+    in this historical preparation.
+  snapshot_sha256: 2ee46317de4caef8b5cb1f7f9f0977d6b2c9d6751fc22a2205ae84a8fdd57d48
+- evidence_id: parasporal-agent-insell1985-page58
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/031ad2528ec8/aem00142-0066.png
+  locator: 'Native PMC238573 PNG; entire page visually inspected: Figures1-3 and complete
+    captions'
+  accessed_at: '2026-10-21T10:23:24.914776Z'
+  support: supports
+  summary: Insell and Fitz-James1985 primary scan printed page58. Electron-micrograph
+    panels and captions compare light/dark segments, associated envelope material
+    and lattice appearances; this page alone does not identify modern Cry/Cyt proteins.
+  snapshot_sha256: 5fcf35d3c1bb5f4a4a64b7cd3f1a1c06e813a161a0631aa401b07a972bc5d857
+- evidence_id: parasporal-agent-insell1985-page59
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/fefc2292df2c/aem00142-0067.png
+  locator: 'Native PMC238573 PNG; entire page visually inspected: Figure4 freeze-etch
+    images/caption and continuing toxicity-fractionation Results'
+  accessed_at: '2026-10-21T10:23:24.915081Z'
+  support: supports
+  summary: Insell and Fitz-James1985 primary scan printed page59. The figure records
+    striation/rodlet orientations in the historical crystal and the text continues
+    fractionation measurements; it is not an atomic structure.
+  snapshot_sha256: 794f3d6385158b92cd746a77701dc383304493042db8fc73eb2e2e5739fab2a3
+- evidence_id: parasporal-agent-insell1985-page60
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/3ec6bf7d3e74/aem00142-0068.png
+  locator: 'Native PMC238573 PNG; entire page visually inspected: Figure5 proposed
+    subunit geometry; Figure6 differential-dissolution micrographs/caption; hexose/protein
+    analysis text'
+  accessed_at: '2026-10-21T10:23:24.915362Z'
+  support: supports
+  summary: Insell and Fitz-James1985 primary scan printed page60. The page distinguishes
+    a proposed geometric model from microscopy and biochemical analysis. The model
+    is not treated as a resolved molecular assignment.
+  snapshot_sha256: 89916468925d307977beb792d45cc73b831af25e6d484d5cd03505159099fa58
+- evidence_id: parasporal-agent-insell1985-page61
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/07117471b85b/aem00142-0069.png
+  locator: 'Native PMC238573 PNG; entire page visually inspected: Figure7 PAGE/caption,
+    Table1 toxicity/hemolysis and Discussion opening'
+  accessed_at: '2026-10-21T10:23:25.277574Z'
+  support: supports
+  summary: Insell and Fitz-James1985 primary scan printed page61. This page compares
+    fractions and discusses two lattices, accessory material, composition and uncertain
+    subunit/oligomer interpretation. It does not map the historical bands exactly
+    to modern accessions.
+  snapshot_sha256: 7cab38bd65a6e33e5f47a8b7e452d379bb006a67db5caac2813f85056e8e20e8
+- evidence_id: parasporal-agent-insell1985-page62
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c298/238573/5eed4fa4bcd7/aem00142-0070.png
+  locator: 'Native PMC238573 PNG; entire page visually inspected: Discussion continuation,
+    acknowledgments and references'
+  accessed_at: '2026-10-21T10:23:25.318728Z'
+  support: supports
+  summary: Insell and Fitz-James1985 primary scan printed page62. The source presents
+    a dark-segment precursor/toxin assignment as a hypothesis. That inference is not
+    promoted to a modern family or universal segment-activity assignment.
+  snapshot_sha256: 42f522497d5d19883a9e19a8343191c67583680e661ec7c419a1ea8e5eff1d04
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/parasporal_crystal.yaml
+    --verify
+  locator: Captured focused native verify log
+  accessed_at: '2026-10-21T10:18:17.732585Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/inclusion/parasporal_crystal.yaml
+    --causal-graphs
+  locator: Captured focused native causal-graphs log
+  accessed_at: '2026-10-21T10:18:19.370352Z'
+  support: supports
+  summary: "data/structures/inclusion/parasporal_crystal.yaml  (cellstructuremech:parasporal_crystal)\n\
+    \  cry_cyt_crystal_packaging\tcry_cyt_pesticidal_crystal_proteins\tCOVERED\t->cry_cyt_pesticidal_crystal_proteins\
+    \ (UniProtKB:P16480, UniProtKB:P21256, UniProtKB:P0A382)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     1  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     1  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 69cfb3a226fb5fcc7a032ceda65d5c561bbbd37b36e82b8b517d7d7c300ae6dc
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/inclusion/parasporal_crystal.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:13:36Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/inclusion/parasporal_crystal.yaml'
+  snapshot_sha256: c321ad5f7d26045304cebefce96b6f8dc109cfbbd4a5a6a13da278391dbcfb71
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/inclusion/parasporal_crystal.yaml
+    --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/parasporal_crystal-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:13:38Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/inclusion/parasporal_crystal.yaml\
+    \ --out /private/tmp/cellstructure-batch19-20261021-9bkzflrr/parasporal_crystal-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch19-20261021-9bkzflrr/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch19-20261021-9bkzflrr/parasporal_crystal-strict.tsv"
+  snapshot_sha256: 32a76985b4fbe5f6dce3964d4f298ce2e0bc77f76275361e21eb814bece2dde0
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/inclusion/parasporal_crystal.yaml; exact collect() scope;
+    hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T10:31:38Z'
+  support: supports
+  summary: '11 of12 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: cellstructuremech:parasporal_crystal: SKIPPED; resolved by evidence
+    parasporal-agent-local-ids. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Proteinaceous parasporal inclusion and bounded synonyms
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  summary: The local identity and inclusion parent distinguish the crystalline body
+    from an individual protein or the spore. Parasporal-body terminology is contextual
+    and not an exact assertion about every historical preparation. Exact GO searches
+    and local identifier uniqueness have their stated bounded scopes.
+  evidence_ids:
+  - parasporal-agent-go
+  - parasporal-agent-local-ids
+  - parasporal-agent-ols-exact-0
+  - parasporal-agent-ols-exact-1
+  - parasporal-agent-crossref-book
+  - parasporal-agent-jats-PMC4280536
+  - parasporal-agent-jats-PMC4014730
+  - parasporal-agent-insell1985-page56
+  - parasporal-agent-insell1985-page57
+  - parasporal-agent-insell1985-page58
+  - parasporal-agent-insell1985-page59
+  - parasporal-agent-insell1985-page60
+  - parasporal-agent-insell1985-page61
+  - parasporal-agent-insell1985-page62
+  - record
+- assessment_id: components
+  area: grounding
+  topic: Mixed Cry/Cyt cohort is not one family
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  summary: The collective component spans structurally distinct Cry and Cyt families,
+    so a single exact family mapping is appropriately unset. Native examples resolve
+    as Cry4Aa, Cry11Aa and Cyt1Aa with the israelensis taxon; identity references
+    do not establish a complete universal inventory. UNKNOWN formation necessity is
+    not replaced by toxin activity or abundance.
+  evidence_ids:
+  - parasporal-agent-P16480
+  - parasporal-agent-P21256
+  - parasporal-agent-P0A382
+  - parasporal-agent-matches-P16480
+  - parasporal-agent-matches-P21256
+  - parasporal-agent-matches-P0A382
+  - parasporal-agent-IPR038979
+  - parasporal-agent-IPR001615
+  - parasporal-agent-jats-PMC4280536
+  - parasporal-agent-jats-PMC4014730
+  - parasporal-agent-legacy-PMC1857359
+  - record
+  - policy
+- assessment_id: unresolved-necessity
+  area: evidence
+  topic: Unresolved individual crystallization requirements
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  summary: The collective protein material constitutes the crystal, but the sources
+    do not establish each named Cry/Cyt protein or family as universally necessary
+    for crystal formation. Variable inventories and conditional helper examples do
+    not provide a common assembly requirement. The maintained UNKNOWN essentiality
+    remains unresolved, separate from observed composition and packaging.
+  evidence_ids:
+  - parasporal-agent-jats-PMC4280536
+  - parasporal-agent-jats-PMC4014730
+  - parasporal-agent-legacy-PMC1857359
+  - parasporal-agent-insell1985-page56
+  - parasporal-agent-insell1985-page57
+  - parasporal-agent-insell1985-page58
+  - parasporal-agent-insell1985-page59
+  - parasporal-agent-insell1985-page60
+  - parasporal-agent-insell1985-page61
+  - parasporal-agent-insell1985-page62
+  - record
+  - policy
+- assessment_id: activity
+  area: evidence
+  topic: Packaging role distinct from pesticidal activity
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  summary: The component evidence explicitly admits varied known and unknown activities
+    and parasporin-related members. The role says proteins can become active, while
+    the function and graph describe packaging. Pesticidal is therefore retained as
+    conventional Cry/Cyt cohort terminology, not evidence that every parasporin or
+    related protein has a demonstrated pesticidal phenotype.
+  evidence_ids:
+  - parasporal-agent-jats-PMC4280536
+  - parasporal-agent-jats-PMC4014730
+  - parasporal-agent-legacy-PMC1857359
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Variable species occurrence and historical israelensis preparation
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  summary: Taxonomy receipts establish the species and current israelensis naming/rank
+    only. VARIABLE occurrence and the israelensis canonical example are supported
+    without assuming every strain has the same crystal proteins or morphology. The
+    historical primary body directly resolves two segments in its own preparation;
+    no exact Cry/Cyt accession assignment is imported from those older bands.
+  evidence_ids:
+  - parasporal-agent-tax-1428
+  - parasporal-agent-tax-1430
+  - parasporal-agent-doi-10.3390_toxins6123296
+  - parasporal-agent-doi-10.3390_toxins6041222
+  - parasporal-agent-doi-10.1016_j.toxicon.2006.11.022
+  - parasporal-agent-doi-10.1128_aem.50.1.56-62.1985
+  - parasporal-agent-insell1985-page56
+  - parasporal-agent-insell1985-page57
+  - parasporal-agent-insell1985-page58
+  - parasporal-agent-insell1985-page59
+  - parasporal-agent-insell1985-page60
+  - parasporal-agent-insell1985-page61
+  - parasporal-agent-insell1985-page62
+  - parasporal-agent-jats-PMC4014730
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Explicitly descriptive crystallization and packaging
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  summary: The single NONMECHANISTIC relationship records proteins crystallizing into
+    a parasporal inclusion. It does not specify an untested nucleation pathway, common
+    helper requirement or per-family toxin activation mechanism. The packaging function
+    remains at the represented structural scope.
+  evidence_ids:
+  - parasporal-agent-jats-PMC4280536
+  - parasporal-agent-jats-PMC4014730
+  - parasporal-agent-legacy-PMC1857359
+  - parasporal-agent-insell1985-page56
+  - parasporal-agent-insell1985-page57
+  - parasporal-agent-insell1985-page58
+  - parasporal-agent-insell1985-page59
+  - parasporal-agent-insell1985-page60
+  - parasporal-agent-insell1985-page61
+  - parasporal-agent-insell1985-page62
+  - record
+  - policy
+- assessment_id: coverage
+  area: completeness
+  topic: No forced subfamily inventory or activity finding
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasporal_crystal
+  summary: No corrective issue was established. Optional splitting into individually
+    grounded Cry/Cyt families could add detail but is not required to preserve the
+    present aggregate class. The historical example is directly readable now, while
+    older access notes remain historical. No maintained image or quoted snippet requires
+    separate reuse checking.
+  evidence_ids:
+  - parasporal-agent-IPR038979
+  - parasporal-agent-IPR001615
+  - parasporal-agent-jats-PMC4280536
+  - parasporal-agent-jats-PMC4014730
+  - parasporal-agent-legacy-PMC1857359
+  - parasporal-agent-crossref-book
+  - parasporal-agent-insell1985-page56
+  - parasporal-agent-insell1985-page57
+  - parasporal-agent-insell1985-page58
+  - parasporal-agent-insell1985-page59
+  - parasporal-agent-insell1985-page60
+  - parasporal-agent-insell1985-page61
+  - parasporal-agent-insell1985-page62
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- Palma2014, Ben-Dov2014 and Bravo2007 are reviews; only their specified sections
+  were inspected, and underlying primary papers were not all reread. These evidence
+  tiers are not presented as new experimental confirmation.
+- All seven genuine Insell/Fitz-James1985 primary scans, printed pages56-62, were
+  visually read. Their historical morphology and polypeptide interpretation do not
+  identify each segment as a particular modern Cry/Cyt accession.
+- The1990 book chapter is verified only through native bibliographic metadata/title;
+  its body was not recovered. Exact-name GO queries are bounded and do not establish
+  exhaustive ontology absence.
+- Pesticidal is conventional cohort terminology in this record, not a universal demonstrated
+  activity for every included protein or parasporin. Known structure, family membership
+  and measured activity remain separate.
+- Native protein identities and israelensis taxonomy do not supply universal prevalence
+  or complete strain inventories. Formation necessity is UNKNOWN; toxin function is
+  not a substitute for that question.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- The authorized coverage task includes honest clean reviews.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```
