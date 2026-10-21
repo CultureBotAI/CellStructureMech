@@ -1,0 +1,496 @@
+schema_version: 1.0.0
+review_id: 20261021T065604Z-cytoplasmic-microtubule-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cytoplasmic microtubule identity and yeast organization review
+started_at: '2026-10-21T06:53:44Z'
+finished_at: '2026-10-21T06:56:04Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact cytoplasmic-microtubule identity, hierarchy and the budding-yeast outer-plaque
+  example are supported. No concrete curation defect was established; distinct class
+  definitions are not interpreted as global disjointness.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+    sha256: 23b89e56b6a009464465814315eaa0f663df8429a15f78dc62bcc79711b82005
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0005881
+  path: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+  label: cytoplasmic microtubule
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+    role: maintained scientific record
+scope:
+  description: Complete read-only review of one YAML, all cited stable identifiers,
+    relevant GO relations and the cited manuscript sections supporting the yeast example.
+  selection: Third distinct unreviewed path in batch six, in repository path order.
+    A linked provenance correction for the first target adds a separate immutable
+    bundle without changing path coverage.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005881
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005881
+  command: just validate data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005881
+  command: just validate-strict data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+    --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/cytoplasmic_microtubule-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005881
+  summary: 8 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0005881
+  summary: No named gene, expression regulator or transcriptomic claim is asserted.
+    Ontology and cellular-source evidence address the actual target.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005881
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - microtubule-agent-go
+  - microtubule-agent-go-astral
+  - microtubule-agent-taxon
+  - microtubule-agent-crossref
+  - microtubule-agent-epmc
+  - spb-manuscript
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005881
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005881
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005881
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005881
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005881
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch6 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: microtubule-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005881,GO:0005874,GO:0015630,GO:0005879,GO:0005824,GO:0005876
+  locator: GO:0005881, GO:0005874, GO:0015630, GO:0005879, GO:0005824 and GO:0005876
+    definitions, active flags and child relations
+  accessed_at: '2026-10-21T06:52:49.278183Z'
+  support: supports
+  summary: Native GO verifies exact cytoplasmic microtubule identity/definition, the
+    narrow non-spindle-associated astral synonym, microtubule is-a parent, inherited
+    microtubule-cytoskeleton parthood, axonemal microtubule child and cytoplasmic
+    outer-plaque identity.
+  snapshot_sha256: d877ad7a4d0b5dd7d7ba5990c03da0e5488f919edd8a566a1dedc40f4b6b750c
+- evidence_id: microtubule-agent-go-astral
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000235
+  locator: Native GO:0000235 definition and relations; cytoplasmic/spindle parent
+    membership
+  accessed_at: '2026-10-21T06:53:21.905432Z'
+  support: context_only
+  summary: GO:0000235 astral microtubule is a child of both cytoplasmic microtubule
+    and spindle microtubule. The two classes have different definitions but are not
+    universally disjoint. The record’s nuclear-spindle contrast must remain scoped
+    to the budding-yeast example.
+  snapshot_sha256: 3107b8810f0a9dded127c4cf09ac5df5af0a769c48328b0ee4d99bfbd8106b51
+- evidence_id: microtubule-agent-taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: ENA scientificName and rank
+  accessed_at: '2026-10-21T06:52:49.266233Z'
+  support: supports
+  summary: Native ENA taxonomy confirms species Saccharomyces cerevisiae, NCBITaxon:4932.
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: microtubule-agent-crossref
+  kind: authority
+  reference: https://api.crossref.org/works/10.1146/annurev.cellbio.20.022003.114106
+  locator: Crossref DOI identity, authors and date
+  accessed_at: '2026-10-21T06:52:48.875278Z'
+  support: supports
+  summary: 'DOI resolves to Jaspersen and Winey 2004, The budding yeast spindle pole
+    body: structure, duplication, and function.'
+  snapshot_sha256: 2badec2138e6bcb262d3fc21b01888099bc80c6aae68ff7b17d42c5f9a855361
+- evidence_id: microtubule-agent-epmc
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.cellbio.20.022003.114106&format=json&resultType=core
+  locator: Exact DOI search record
+  accessed_at: '2026-10-21T06:52:54.628074Z'
+  support: supports
+  summary: Europe PMC metadata independently matches DOI, PMID15473833 and the 2004
+    review citation.
+  snapshot_sha256: efa766051d38f45bd9e4159bbbb7baf72a1958fd54dc81c63c488d70f1762d03
+- evidence_id: spb-manuscript
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function
+  locator: 'Public author-uploaded manuscript: Introduction/SPB Structure p. 5; Microtubule
+    Nucleation p. 24; Microtubule-dependent SPB Functions pp. 26–28'
+  accessed_at: '2026-10-21T06:53:40.936195Z'
+  support: supports
+  summary: A read-only source-review collaborator inspected the browser-exposed manuscript
+    body. Yeast SPBs organize nuclear/cytoplasmic arrays; outer plaques face the cytoplasm.
+    Alpha/beta-tubulin polymers and outer-plaque or half-bridge nucleation are described,
+    with cell-cycle-dependent Spc72 location. This supports a nonexclusive outer-plaque
+    example. Direct publisher/ResearchGate requests returned403; those bodies are
+    not treated as article text.
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+  locator: Entire maintained target
+  accessed_at: '2026-10-21T06:56:04Z'
+  support: context_only
+  summary: The broad location-defined GO identity is retained while the function and
+    two-edge graph use yeast as an explicit example. No associated-factor inventory,
+    accession, measurement, image, trait or detailed molecular mechanism is asserted.
+    The component discussion defers taxon-specific motors and nucleation machinery.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T06:53:47Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/cytoplasmic_microtubule.yaml'
+  snapshot_sha256: 36f0f5d4fcf8ce56d0d17dc64b70fcf546f009e3b37c706ff61dd63f7e28bcd3
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+    --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/cytoplasmic_microtubule-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T06:53:49Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/cytoplasmic_microtubule.yaml\
+    \ --out /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/cytoplasmic_microtubule-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch6-20261021-hj8mnf9r/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch6-20261021-hj8mnf9r/cytoplasmic_microtubule-strict.tsv"
+  snapshot_sha256: 47fd09f03582e9d0da673ead1d8f62a4131a604dc93dd2ed70bad67c72332adf
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml; exact collect()
+    scope
+  accessed_at: '2026-10-21T06:56:04Z'
+  support: supports
+  summary: '8 of8 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Location-defined microtubule class
+  outcome: supported
+  target_ids:
+  - GO:0005881
+  summary: Exact native label, definition and narrow synonym agree. The target is
+    broader than budding-yeast astral arrays and includes GO’s axonemal child class.
+  evidence_ids:
+  - microtubule-agent-go
+  - record
+- assessment_id: hierarchy
+  area: grounding
+  topic: Subtype and containing cytoskeleton
+  outcome: supported
+  target_ids:
+  - GO:0005881
+  summary: Microtubule is an is-a parent and the containing microtubule cytoskeleton
+    is part_of. The native ontology supports the target’s inherited parthood and distinguishes
+    outer plaque from the microtubule polymer.
+  evidence_ids:
+  - microtubule-agent-go
+- assessment_id: boundaries
+  area: scope
+  topic: Distinct classes can overlap
+  outcome: supported
+  target_ids:
+  - GO:0005881
+  summary: 'The record contrasts cytoplasmic with nuclear spindle microtubules in
+    a yeast context and preserves the broad axonemal child. This is supportable as
+    distinct identity, not global disjointness: astral microtubules can belong to
+    both cytoplasmic and spindle classes.'
+  evidence_ids:
+  - microtubule-agent-go
+  - microtubule-agent-go-astral
+  - record
+- assessment_id: taxon
+  area: scope
+  topic: Budding-yeast canonical example
+  outcome: supported
+  target_ids:
+  - GO:0005881
+  summary: The cited review directly supports S. cerevisiae cytoplasmic arrays organized
+    at the SPB cytoplasmic face. COMMON is qualitative occurrence in a characterized
+    organism, not a quantified prevalence claim.
+  evidence_ids:
+  - microtubule-agent-taxon
+  - spb-manuscript
+- assessment_id: function
+  area: graph
+  topic: Nonexclusive outer-plaque organization
+  outcome: supported
+  target_ids:
+  - GO:0005881
+  summary: The graph’s subtype and outer-plaque-organizes edges are supported. The
+    source also describes half-bridge nucleation; the record’s such-as wording and
+    example scope do not assert the outer plaque is the only organizer.
+  evidence_ids:
+  - microtubule-agent-go
+  - spb-manuscript
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: Core polymer and deferred associated machinery
+  outcome: supported
+  target_ids:
+  - GO:0005881
+  summary: The ontology parent and source support tubulin-polymer construction. The
+    unpopulated component inventory and open associated-factor discussion do not assert
+    a false composition or require an invented exhaustive protein list. No source-neutral
+    factor accession is guessed.
+  evidence_ids:
+  - microtubule-agent-go
+  - spb-manuscript
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Citation and status
+  outcome: supported
+  target_ids:
+  - GO:0005881
+  summary: Native citation identity is correct, assertions are placed at the relevant
+    scope and the record remains PROPOSED. Existing notes are paraphrases rather than
+    fabricated snippets.
+  evidence_ids:
+  - microtubule-agent-crossref
+  - microtubule-agent-epmc
+  - record
+findings: []
+actions: []
+limitations:
+- The 2004 source was inspected as a browser-readable public author manuscript. Direct
+  publisher and ResearchGate download routes returned403, and publisher-version byte
+  identity was not established.
+- Cytoplasmic and spindle microtubule classes overlap through astral microtubules;
+  the record’s nuclear-spindle contrast is appropriate only within its budding-yeast
+  context, not as a universal disjointness axiom.
+- The yeast outer plaque is one organizing location; half-bridge nucleation and taxon-specific
+  motors/nucleators are not exhaustively represented.
+- COMMON is qualitative example coverage, not measured population prevalence. This
+  review does not certify every cytoplasmic microtubule variant or accessory composition.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The user’s explicit save-every-target instruction supersedes the local issue-only
+  persistence preference. No finding was invented.
+- Source preparation was performed by a read-only collaborator; the complete target
+  was assessed after native input inspection.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
