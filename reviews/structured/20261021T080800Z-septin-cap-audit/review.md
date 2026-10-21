@@ -1,0 +1,944 @@
+# Septin cap identity, protein membership and generic-family review
+
+- Review: 20261021T080800Z-septin-cap-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T07:54:10Z
+- Finished UTC: 2026-10-21T08:08:00Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact apical cap identity and Candida scope are supported. One minor generic-family gap and one qualified major gap in three cap-specific protein examples remain.
+
+## Scope And Provenance
+
+Entire single target, every asserted native GO/taxon/UniProt/DOI/PMID identity, gene uniqueness checks, review body and accessible primary cap/ring localization text.
+
+Selection: Tenth selected unreviewed path in batch ten, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0032159 | data/structures/cytoskeleton/septin_cap.yaml | maintained | septin cap |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0032159 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0032159 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0032159 | 15 identifiers OK; 3 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0032159 | No expression-module or transcriptional-regulator mechanism is asserted; localized structural membership is not inferred from expression modules. |
+| Claim-level scientific review | passed | True | GO:0032159 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0032159 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0032159 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0032159 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0032159 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0032159 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Generic apical cap and narrower children
+
+identity: supported. Targets: GO:0032159.
+
+The exact definition, septin-cytoskeleton parent, cytoskeleton parthood and germ-tube/hyphal children agree with GO. The cap remains distinct from basal bands, rings and collars.
+
+### Candida example and filamentous growth state
+
+scope: supported. Targets: GO:0032159.
+
+VARIABLE occurrence is appropriately tied to induced germ-tube/hyphal growth rather than all budding or pseudohyphal cells. Species5476 and strain237561 are compatible levels of scope; all four example accession taxa and entry statuses are correct.
+
+### Apical location and sterol-domain coincidence
+
+graph: supported. Targets: GO:0032159.
+
+The assembly and localization edges are bounded descriptive statements. The sterol-region edge follows native GO and review synthesis; it does not establish simultaneous quantitative colocalization for each named protein, direct sterol binding or a recruitment mechanism. The removed indirect primary sterol citation is not silently restored.
+
+### Correct identities but incomplete cap-specific membership support
+
+grounding: concern. Targets: GO:0032159.
+
+All accession names, genes, statuses and taxa match native entries, and reviewed-symbol uniqueness checks pass. Independent apical evidence is explicit for Cdc10. The record sources do not establish a cap-specific four-gene cohort: Cdc3/Cdc12 results are neck-ring observations and the Cdc11 examples copy bud-neck evidence. This is an evidential gap, not evidence that the proteins cannot occur in caps.
+
+### Generic Septin family versus localized cohort
+
+grounding: concern. Targets: GO:0032159.
+
+The component label denotes septin proteins, but its grounding rationale waits for a family accession delimiting the full localized cohort. Verified IPR016491 matches the generic family; exact cohort and accessory membership remain independent unresolved questions.
+
+### Accession evidence and actual paper access
+
+provenance: supported. Targets: GO:0032159.
+
+All record-cited DOI/PMID identities are verified. Warenda2002 and Zhang2010 genuine article bodies were read; Douglas2005 is review-tier authority. Sudbery2001 publisher retrieval returned403, so only its abstract and native UniProt attribution support the review, not unseen body details.
+
+## Findings
+
+### F1: Localized-cohort criterion leaves the generic Septin family ungrounded
+
+minor / open / confirmed; issue key: septin-cap-generic-family-withheld.
+
+The generic septin-proteins component remains REVIEWED_LABEL_ONLY because no accession was assigned for the complete localized cohort. IPR016491 already identifies the named Septin family. Reconcile grounding, status and rationale without inferring an exhaustive localized paralog set or associated-protein inventory.
+
+### F2: Three named septin examples lack established apical-cap membership support
+
+major / open / provisional; issue key: septin-cap-protein-examples-membership-evidence.
+
+The component declares CDC3, CDC10, CDC11 and CDC12 as examples of cap-forming septins. Their accession identities are correct, and the seed notes honestly restrict their own support to identity or bud-neck localization. However, independent cap membership is explicit only for Cdc10 in the inspected record sources. Cdc3/Cdc12 comparisons concern neck rings, and Cdc11 evidence is explicitly bud-neck evidence. Qualify or substantiate the CDC3/CDC11/CDC12 cap-specific assignments; the unavailable Sudbery full body limits the CDC11 assessment. This finding does not assert biological absence.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Under separately authorized curation, ground the generic Septin component to verified IPR016491 and reconcile its status and localized-cohort rationale.
+
+- Retain separate evidence for localized membership and associated proteins.
+- Do not add a universal paralog set, stoichiometry or individual essentiality.
+- Use the guarded writer and required curation/history, schema, strict, label and generated-page checks.
+
+### A2
+
+Under separately authorized curation, obtain cap-specific evidence for CDC3/CDC11/CDC12 or restrict the declared examples to the supported cap cohort while retaining accurate accession identity information in an appropriately bounded context.
+
+- Retain the verified Cdc10 example and distinguish apical cap from neck/internal rings and basal band.
+- Do not relabel correct taxa or reviewed status, infer absence, or treat general septin membership as apical localization.
+- Resolve the Sudbery body-access limit before claiming it excludes a cap localization; preserve identity-only evidence notes.
+- Use guarded curation/history and run native schema, strict, UniProt verification, labels and rendered-page checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| septin-cap-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032159,GO:0032156,GO:0005856,GO:0032171,GO:0032164,GO:0005940,GO:0032173; All returned definitions, isObsolete flags, exact identifiers and parent-term child relations | supports | Native GO verifies the exact active target definition and each cited parent/sibling identity. Parent-term child relations distinguish is-a specialization from structural parthood. |
+| septin-cap-agent-family | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016491/; Native accession, name, type=family, description and hierarchy; original retrieval timestamp retained | supports | IPR016491 is the Septin family. It supports the generic septin-proteins class without specifying every member of a localized assembly. |
+| septin-cap-agent-douglas-metadata | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1128/EC.4.9.1503-1512.2005&amp;format=json&amp;resultType=core; Exact DOI/PMID result, authors, title, year and review publication type | supports | Native metadata verifies Douglas, Alvarez, McCreary and Konopka2005, Septin Function in Yeast Model Systems and Pathogenic Fungi, DOI10.1128/EC.4.9.1503-1512.2005, PMID16151244. |
+| record | data/structures/cytoskeleton/septin_cap.yaml; Entire target, history, component and any sequence examples, all graph edges and discussions | context_only | The complete PROPOSED target was read. The graph is explicitly NONMECHANISTIC. No scientific status or content is changed. |
+| policy | docs/CURATION.md; Components: source-neutral family grounding, membership and structure-assembly essentiality | context_only | Generic protein-family identity is separate from localized assembly membership. ESSENTIAL denotes whether the structure forms, not universal cellular viability or each individual paralog requirement. |
+| septin-cap-agent-douglas-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC1214204/; Native PMC1214204 sec17, especially the three localization patterns; review-tier synthesis, original receipt retained | supports | The review distinguishes the apical cap from the diffuse basal band and internal septation ring in C. albicans. It describes coincidence with an ergosterol-rich tip region, while mechanistic roles in lipid-domain organization remain proposed. |
+| septin-cap-agent-warenda2002 | https://pmc.ncbi.nlm.nih.gov/articles/PMC117938/?pdf=render; Native PMC117938 Results sec9/Figure2 caption and Discussion sec17/sec19; source methods and Table1 identify BWP17-derived strains | supports | Cdc10-GFP was observed at the early germ-tube tip, directly supporting a cap-localized septin example. Cdc3/Cdc12 comparisons in this body concern neck/septation rings; other septin mutant morphogenesis phenotypes do not by themselves place each protein in the apical cap. |
+| septin-cap-agent-zhang2010 | https://pmc.ncbi.nlm.nih.gov/articles/PMC2805285/?pdf=render; Native PMC2805285 complete main article body and Figures1-2 textual legends; ring selection and growth conditions | partial | This primary GFP-variant study uses Cdc11 localization at large-budded neck rings to compare fluorescence and photostability. It does not establish apical-cap localization. |
+| septin-cap-agent-primary-metadata | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:11454197%20OR%20EXT_ID:12181342%20OR%20EXT_ID:19915075&amp;format=json&amp;resultType=core; All three exact results: author list, title, DOI, PMID, year and abstracts | supports | Native metadata verifies all three cited PMIDs: Sudbery2001 PMID11454197/DOI10.1046/j.1365-2958.2001.02459.x, Warenda/Konopka2002 PMID12181342/DOI10.1091/mbc.E02-01-0013, and Zhang/Konopka2010 PMID19915075/DOI10.1128/EC.00327-09. Sudbery abstract concerns neck/internal septin rings; its full body remains inaccessible in this pass. |
+| septin-cap-agent-taxon-5476 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5476; Native ENA taxId, scientificName, rank and parent/lineage fields | supports | NCBITaxon5476 is Candida albicans at species rank. |
+| septin-cap-agent-taxon-237561 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/237561; Native ENA taxId, scientificName, rank and parent/lineage fields | supports | NCBITaxon237561 is Candida albicans SC5314, a strain under the stated species. |
+| septin-cap-agent-P39826 | https://rest.uniprot.org/uniprotkb/P39826.json; primaryAccession, entryType, proteinDescription, genes, organism and relevant subcellular-location evidence; entry-specific identity check | supports | Reviewed P39826 is CDC3, Cell division control protein3, taxon5476. Identity matches the record; this does not independently establish cap membership. |
+| septin-cap-agent-P39827 | https://rest.uniprot.org/uniprotkb/P39827.json; primaryAccession, entryType, proteinDescription, genes, organism and relevant subcellular-location evidence; entry-specific identity check | supports | Reviewed P39827 is CDC10, Cell division control protein10, taxon237561. Native accession, name, gene, status and taxon match the example; independent cap localization is assessed under the separate primary-paper evidence. |
+| septin-cap-agent-G1UB61 | https://rest.uniprot.org/uniprotkb/G1UB61.json; primaryAccession, entryType, proteinDescription, genes, organism and relevant subcellular-location evidence; entry-specific identity check | supports | Reviewed G1UB61 is Septin CDC11, taxon237561. Its copied experimental PMIDs support the location Bud neck, exactly as the example notes say; this is not apical-cap membership evidence. |
+| septin-cap-agent-G1UAV6 | https://rest.uniprot.org/uniprotkb/G1UAV6.json; primaryAccession, entryType, proteinDescription, genes, organism and relevant subcellular-location evidence; entry-specific identity check | supports | Unreviewed G1UAV6 is CDC12, named Septin, taxon5476. All identity/status fields match; its accession-only evidence does not establish cap membership. |
+| septin-cap-agent-symbol-CDC3 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC3%29+AND+%28taxonomy_id%3A5476%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=25; Exact native query, result cardinality, gene tokens, organism and reviewed entryType | context_only | The exact symbol/taxon reviewed query returns exactly the one accession stated by the record. This verifies the uniqueness wording, not structural membership. |
+| septin-cap-agent-symbol-CDC10 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC10%29+AND+%28taxonomy_id%3A237561%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=25; Exact native query, result cardinality, gene tokens, organism and reviewed entryType | context_only | The exact symbol/taxon reviewed query returns exactly the one accession stated by the record. This verifies the uniqueness wording, not structural membership. |
+| septin-cap-agent-symbol-CDC11 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC11%29+AND+%28taxonomy_id%3A237561%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=25; Exact native query, result cardinality, gene tokens, organism and reviewed entryType | context_only | The exact symbol/taxon reviewed query returns exactly the one accession stated by the record. This verifies the uniqueness wording, not structural membership. |
+| protein-example-policy | .claude/skills/uniprot-protein-examples/SKILL.md; Non-negotiable rules3-5; read as additional native inspect context input | context_only | Taxon and status must follow the native accession. Identity-only seed notes are appropriate but do not supply the independently required structure-membership evidence. |
+| schema-result | just validate data/structures/cytoskeleton/septin_cap.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/septin_cap.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/septin_cap.yaml --out /private/tmp/cellstructure-batch10-20261021-giynduuy/septin_cap-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/septin_cap.yaml --out /private/tmp/cellstructure-batch10-20261021-giynduuy/septin_cap-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch10-20261021-giynduuy/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch10-20261021-giynduuy/septin_cap-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/septin_cap.yaml; exact collect() scope; SHA-256 identifies the entire original resolver TSV at /private/tmp/cellstructure-record-reviews-UhRFh7/repo/reports/curie_check.tsv, not the derived resolver-slice.json | supports | 15 of 18 collected target identifiers returned OK at the unchanged base. Residuals: PMID:11454197: UNREACHABLE; resolved by evidence septin-cap-agent-primary-metadata; PMID:12181342: UNREACHABLE; resolved by evidence septin-cap-agent-primary-metadata; PMID:19915075: UNREACHABLE; resolved by evidence septin-cap-agent-primary-metadata. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Sudbery2001 full publisher body returned403 in native and browser attempts. Its metadata/abstract were read; no absence of cap localization in its unseen body is claimed.
+- Primary text and figure legends were read but microscopy pixels, raw images, movies and every supplement were not independently analyzed.
+- The source supports Cdc10 apical localization; exact cap composition remains unresolved. Correct native accession identity does not independently supply localized membership.
+- Ergosterol-region coincidence is supported at GO/review level; direct sterol binding, causal organization and a quantitative simultaneous colocalization assay for each listed septin are not established here.
+- ESSENTIAL concerns collective septin material required for a septin cap, not the viability or morphogenesis phenotype of each individual paralog.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Only a review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Root read the complete target and review and verified every native input/source hash; selected primary and review sections were independently inspected. The source-tier and access limitations remain explicit.
+- Only this target receives scientific review coverage. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T080800Z-septin-cap-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Septin cap identity, protein membership and generic-family review
+started_at: '2026-10-21T07:54:10Z'
+finished_at: '2026-10-21T08:08:00Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact apical cap identity and Candida scope are supported. One minor generic-family
+  gap and one qualified major gap in three cap-specific protein examples remain.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/septin_cap.yaml
+    sha256: 5dccebc18f9349148bd4ef1e64e29e42648d4df485e0f407c989be0d1b13f8ba
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0032159
+  path: data/structures/cytoskeleton/septin_cap.yaml
+  label: septin cap
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, every asserted native GO/taxon/UniProt/DOI/PMID
+    identity, gene uniqueness checks, review body and accessible primary cap/ring
+    localization text.
+  selection: Tenth selected unreviewed path in batch ten, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0032159
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  command: just validate data/structures/cytoskeleton/septin_cap.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  command: just validate-strict data/structures/cytoskeleton/septin_cap.yaml --out
+    /private/tmp/cellstructure-batch10-20261021-giynduuy/septin_cap-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  summary: 15 identifiers OK; 3 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - septin-cap-agent-primary-metadata
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0032159
+  summary: No expression-module or transcriptional-regulator mechanism is asserted;
+    localized structural membership is not inferred from expression modules.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - septin-cap-agent-go
+  - septin-cap-agent-family
+  - septin-cap-agent-douglas-metadata
+  - record
+  - policy
+  - septin-cap-agent-douglas-pmc
+  - septin-cap-agent-warenda2002
+  - septin-cap-agent-zhang2010
+  - septin-cap-agent-primary-metadata
+  - septin-cap-agent-taxon-5476
+  - septin-cap-agent-taxon-237561
+  - septin-cap-agent-P39826
+  - septin-cap-agent-P39827
+  - septin-cap-agent-G1UB61
+  - septin-cap-agent-G1UAV6
+  - septin-cap-agent-symbol-CDC3
+  - septin-cap-agent-symbol-CDC10
+  - septin-cap-agent-symbol-CDC11
+  - protein-example-policy
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032159
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: septin-cap-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032159,GO:0032156,GO:0005856,GO:0032171,GO:0032164,GO:0005940,GO:0032173
+  locator: All returned definitions, isObsolete flags, exact identifiers and parent-term
+    child relations
+  accessed_at: '2026-10-21T07:55:02.179852Z'
+  support: supports
+  summary: Native GO verifies the exact active target definition and each cited parent/sibling
+    identity. Parent-term child relations distinguish is-a specialization from structural
+    parthood.
+  snapshot_sha256: 275dd117678f386e9a4eb8976b318781e06e14f1989259474ad5ea0d21bbea3f
+- evidence_id: septin-cap-agent-family
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016491/
+  locator: Native accession, name, type=family, description and hierarchy; original
+    retrieval timestamp retained
+  accessed_at: '2026-10-21T06:58:21.193684Z'
+  support: supports
+  summary: IPR016491 is the Septin family. It supports the generic septin-proteins
+    class without specifying every member of a localized assembly.
+  snapshot_sha256: 5797c626d192b641ed5b4b2231e729f9f179bfd6bb18f911689fa08253688c4a
+- evidence_id: septin-cap-agent-douglas-metadata
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1128/EC.4.9.1503-1512.2005&format=json&resultType=core
+  locator: Exact DOI/PMID result, authors, title, year and review publication type
+  accessed_at: '2026-10-21T06:58:21.193422Z'
+  support: supports
+  summary: Native metadata verifies Douglas, Alvarez, McCreary and Konopka2005, Septin
+    Function in Yeast Model Systems and Pathogenic Fungi, DOI10.1128/EC.4.9.1503-1512.2005,
+    PMID16151244.
+  snapshot_sha256: 1c4a6be031ab36975c4a274aec9c9d0182e2928499b9ee140022a8a1a4b80d1d
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/septin_cap.yaml
+  locator: Entire target, history, component and any sequence examples, all graph
+    edges and discussions
+  accessed_at: '2026-10-21T08:00:52Z'
+  support: context_only
+  summary: The complete PROPOSED target was read. The graph is explicitly NONMECHANISTIC.
+    No scientific status or content is changed.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: 'Components: source-neutral family grounding, membership and structure-assembly
+    essentiality'
+  accessed_at: '2026-10-21T08:00:52Z'
+  support: context_only
+  summary: Generic protein-family identity is separate from localized assembly membership.
+    ESSENTIAL denotes whether the structure forms, not universal cellular viability
+    or each individual paralog requirement.
+- evidence_id: septin-cap-agent-douglas-pmc
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1214204/
+  locator: Native PMC1214204 sec17, especially the three localization patterns; review-tier
+    synthesis, original receipt retained
+  accessed_at: '2026-10-21T07:11:03.050463Z'
+  support: supports
+  summary: The review distinguishes the apical cap from the diffuse basal band and
+    internal septation ring in C. albicans. It describes coincidence with an ergosterol-rich
+    tip region, while mechanistic roles in lipid-domain organization remain proposed.
+  snapshot_sha256: 31a2dd0109697492854f84701ef3f1d1be31f62312b613ab8432223332b69dd3
+- evidence_id: septin-cap-agent-warenda2002
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC117938/?pdf=render
+  locator: Native PMC117938 Results sec9/Figure2 caption and Discussion sec17/sec19;
+    source methods and Table1 identify BWP17-derived strains
+  accessed_at: '2026-10-21T07:55:41.272909Z'
+  support: supports
+  summary: Cdc10-GFP was observed at the early germ-tube tip, directly supporting
+    a cap-localized septin example. Cdc3/Cdc12 comparisons in this body concern neck/septation
+    rings; other septin mutant morphogenesis phenotypes do not by themselves place
+    each protein in the apical cap.
+  snapshot_sha256: 7b0552af320b38fa21e9800ad0e493cf04cb5f02f85d578e45acd0340f634cdb
+- evidence_id: septin-cap-agent-zhang2010
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2805285/?pdf=render
+  locator: Native PMC2805285 complete main article body and Figures1-2 textual legends;
+    ring selection and growth conditions
+  accessed_at: '2026-10-21T07:55:41.273017Z'
+  support: partial
+  summary: This primary GFP-variant study uses Cdc11 localization at large-budded
+    neck rings to compare fluorescence and photostability. It does not establish apical-cap
+    localization.
+  snapshot_sha256: 0a4e073ba79e452eec1a9154cb8199e568175c2607782d9a7413fc9b40a07d8e
+- evidence_id: septin-cap-agent-primary-metadata
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:11454197%20OR%20EXT_ID:12181342%20OR%20EXT_ID:19915075&format=json&resultType=core
+  locator: 'All three exact results: author list, title, DOI, PMID, year and abstracts'
+  accessed_at: '2026-10-21T07:55:02.786179Z'
+  support: supports
+  summary: 'Native metadata verifies all three cited PMIDs: Sudbery2001 PMID11454197/DOI10.1046/j.1365-2958.2001.02459.x,
+    Warenda/Konopka2002 PMID12181342/DOI10.1091/mbc.E02-01-0013, and Zhang/Konopka2010
+    PMID19915075/DOI10.1128/EC.00327-09. Sudbery abstract concerns neck/internal septin
+    rings; its full body remains inaccessible in this pass.'
+  snapshot_sha256: 58f7e5efb372dd4a4ada8d719d795922ba1fd216d101f7fe33dbf9adb0a9d244
+- evidence_id: septin-cap-agent-taxon-5476
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5476
+  locator: Native ENA taxId, scientificName, rank and parent/lineage fields
+  accessed_at: '2026-10-21T07:55:02.778630Z'
+  support: supports
+  summary: NCBITaxon5476 is Candida albicans at species rank.
+  snapshot_sha256: 9e6eef28141aafa516ea380c0e73325179ce12d9ee35f7cb6f2ad2ab0cf9c275
+- evidence_id: septin-cap-agent-taxon-237561
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/237561
+  locator: Native ENA taxId, scientificName, rank and parent/lineage fields
+  accessed_at: '2026-10-21T07:55:02.785881Z'
+  support: supports
+  summary: NCBITaxon237561 is Candida albicans SC5314, a strain under the stated species.
+  snapshot_sha256: f765b6328d34d78e346056219fcc740dab702129cfae06f469c8c32e0b3f25d6
+- evidence_id: septin-cap-agent-P39826
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P39826.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and relevant
+    subcellular-location evidence; entry-specific identity check
+  accessed_at: '2026-10-21T07:55:02.179780Z'
+  support: supports
+  summary: Reviewed P39826 is CDC3, Cell division control protein3, taxon5476. Identity
+    matches the record; this does not independently establish cap membership.
+  snapshot_sha256: ac4f6745c7571bd9e13e467e99da8c6259ede11f57ccd5d717e7bfeac0889105
+- evidence_id: septin-cap-agent-P39827
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P39827.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and relevant
+    subcellular-location evidence; entry-specific identity check
+  accessed_at: '2026-10-21T07:55:02.180077Z'
+  support: supports
+  summary: Reviewed P39827 is CDC10, Cell division control protein10, taxon237561.
+    Native accession, name, gene, status and taxon match the example; independent
+    cap localization is assessed under the separate primary-paper evidence.
+  snapshot_sha256: 1b9fb055d9d16e47c579af78abbb28d8c56c53dd39242823f2b80fa4ebd0b8b8
+- evidence_id: septin-cap-agent-G1UB61
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/G1UB61.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and relevant
+    subcellular-location evidence; entry-specific identity check
+  accessed_at: '2026-10-21T07:55:02.180180Z'
+  support: supports
+  summary: Reviewed G1UB61 is Septin CDC11, taxon237561. Its copied experimental PMIDs
+    support the location Bud neck, exactly as the example notes say; this is not apical-cap
+    membership evidence.
+  snapshot_sha256: 00f243890073e302712b1abc6f56bfdb1863e67cbffdc8f88f08c7106f47dc46
+- evidence_id: septin-cap-agent-G1UAV6
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/G1UAV6.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism and relevant
+    subcellular-location evidence; entry-specific identity check
+  accessed_at: '2026-10-21T07:55:02.180243Z'
+  support: supports
+  summary: Unreviewed G1UAV6 is CDC12, named Septin, taxon5476. All identity/status
+    fields match; its accession-only evidence does not establish cap membership.
+  snapshot_sha256: d357e09bc4e6be875daf162506a82bded9c3c3841df4503ef95b922b686468c5
+- evidence_id: septin-cap-agent-symbol-CDC3
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC3%29+AND+%28taxonomy_id%3A5476%29+AND+%28reviewed%3Atrue%29&format=json&size=25
+  locator: Exact native query, result cardinality, gene tokens, organism and reviewed
+    entryType
+  accessed_at: '2026-10-21T07:59:17.871074Z'
+  support: context_only
+  summary: The exact symbol/taxon reviewed query returns exactly the one accession
+    stated by the record. This verifies the uniqueness wording, not structural membership.
+  snapshot_sha256: 2933d6c25a08557faf83a6f761af0b9c0d4824267d6af58fd6bb5be1cdeb0d7e
+- evidence_id: septin-cap-agent-symbol-CDC10
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC10%29+AND+%28taxonomy_id%3A237561%29+AND+%28reviewed%3Atrue%29&format=json&size=25
+  locator: Exact native query, result cardinality, gene tokens, organism and reviewed
+    entryType
+  accessed_at: '2026-10-21T07:59:17.874207Z'
+  support: context_only
+  summary: The exact symbol/taxon reviewed query returns exactly the one accession
+    stated by the record. This verifies the uniqueness wording, not structural membership.
+  snapshot_sha256: 4e524652f7113a0bd4b0e4d155565e1d268233edcd9ebd7bc99f9d9a21688fd4
+- evidence_id: septin-cap-agent-symbol-CDC11
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC11%29+AND+%28taxonomy_id%3A237561%29+AND+%28reviewed%3Atrue%29&format=json&size=25
+  locator: Exact native query, result cardinality, gene tokens, organism and reviewed
+    entryType
+  accessed_at: '2026-10-21T07:59:17.877238Z'
+  support: context_only
+  summary: The exact symbol/taxon reviewed query returns exactly the one accession
+    stated by the record. This verifies the uniqueness wording, not structural membership.
+  snapshot_sha256: 328c0897f75665901b0423de221ad249edfa7d289b5d7aa5bee698679415d702
+- evidence_id: protein-example-policy
+  kind: record_content
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Non-negotiable rules3-5; read as additional native inspect context input
+  accessed_at: '2026-10-21T08:00:52Z'
+  support: context_only
+  summary: Taxon and status must follow the native accession. Identity-only seed notes
+    are appropriate but do not supply the independently required structure-membership
+    evidence.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/septin_cap.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:54:11Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/septin_cap.yaml'
+  snapshot_sha256: 4616519cbfbc3cf10533a9cc7810e3e78052185ba2bd0ea3d643591c1f1ac317
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/septin_cap.yaml --out
+    /private/tmp/cellstructure-batch10-20261021-giynduuy/septin_cap-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:54:13Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/septin_cap.yaml\
+    \ --out /private/tmp/cellstructure-batch10-20261021-giynduuy/septin_cap-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch10-20261021-giynduuy/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch10-20261021-giynduuy/septin_cap-strict.tsv"
+  snapshot_sha256: e9daece00518a0e76f4243618aa5c4fab3f961c22cdff044dec844ce30250915
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/septin_cap.yaml; exact collect() scope; SHA-256
+    identifies the entire original resolver TSV at /private/tmp/cellstructure-record-reviews-UhRFh7/repo/reports/curie_check.tsv,
+    not the derived resolver-slice.json
+  accessed_at: '2026-10-21T08:00:52Z'
+  support: supports
+  summary: '15 of 18 collected target identifiers returned OK at the unchanged base.
+    Residuals: PMID:11454197: UNREACHABLE; resolved by evidence septin-cap-agent-primary-metadata;
+    PMID:12181342: UNREACHABLE; resolved by evidence septin-cap-agent-primary-metadata;
+    PMID:19915075: UNREACHABLE; resolved by evidence septin-cap-agent-primary-metadata.
+    Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Generic apical cap and narrower children
+  outcome: supported
+  target_ids:
+  - GO:0032159
+  summary: The exact definition, septin-cytoskeleton parent, cytoskeleton parthood
+    and germ-tube/hyphal children agree with GO. The cap remains distinct from basal
+    bands, rings and collars.
+  evidence_ids:
+  - septin-cap-agent-go
+  - septin-cap-agent-douglas-pmc
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Candida example and filamentous growth state
+  outcome: supported
+  target_ids:
+  - GO:0032159
+  summary: VARIABLE occurrence is appropriately tied to induced germ-tube/hyphal growth
+    rather than all budding or pseudohyphal cells. Species5476 and strain237561 are
+    compatible levels of scope; all four example accession taxa and entry statuses
+    are correct.
+  evidence_ids:
+  - septin-cap-agent-go
+  - septin-cap-agent-douglas-pmc
+  - septin-cap-agent-warenda2002
+  - septin-cap-agent-taxon-5476
+  - septin-cap-agent-taxon-237561
+  - septin-cap-agent-P39826
+  - septin-cap-agent-P39827
+  - septin-cap-agent-G1UB61
+  - septin-cap-agent-G1UAV6
+  - septin-cap-agent-symbol-CDC3
+  - septin-cap-agent-symbol-CDC10
+  - septin-cap-agent-symbol-CDC11
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Apical location and sterol-domain coincidence
+  outcome: supported
+  target_ids:
+  - GO:0032159
+  summary: The assembly and localization edges are bounded descriptive statements.
+    The sterol-region edge follows native GO and review synthesis; it does not establish
+    simultaneous quantitative colocalization for each named protein, direct sterol
+    binding or a recruitment mechanism. The removed indirect primary sterol citation
+    is not silently restored.
+  evidence_ids:
+  - septin-cap-agent-go
+  - septin-cap-agent-douglas-pmc
+  - septin-cap-agent-warenda2002
+  - record
+- assessment_id: examples
+  area: grounding
+  topic: Correct identities but incomplete cap-specific membership support
+  outcome: concern
+  target_ids:
+  - GO:0032159
+  summary: 'All accession names, genes, statuses and taxa match native entries, and
+    reviewed-symbol uniqueness checks pass. Independent apical evidence is explicit
+    for Cdc10. The record sources do not establish a cap-specific four-gene cohort:
+    Cdc3/Cdc12 results are neck-ring observations and the Cdc11 examples copy bud-neck
+    evidence. This is an evidential gap, not evidence that the proteins cannot occur
+    in caps.'
+  evidence_ids:
+  - septin-cap-agent-warenda2002
+  - septin-cap-agent-zhang2010
+  - septin-cap-agent-primary-metadata
+  - septin-cap-agent-P39826
+  - septin-cap-agent-P39827
+  - septin-cap-agent-G1UB61
+  - septin-cap-agent-G1UAV6
+  - septin-cap-agent-symbol-CDC3
+  - septin-cap-agent-symbol-CDC10
+  - septin-cap-agent-symbol-CDC11
+  - record
+  - policy
+  - protein-example-policy
+- assessment_id: family
+  area: grounding
+  topic: Generic Septin family versus localized cohort
+  outcome: concern
+  target_ids:
+  - GO:0032159
+  summary: The component label denotes septin proteins, but its grounding rationale
+    waits for a family accession delimiting the full localized cohort. Verified IPR016491
+    matches the generic family; exact cohort and accessory membership remain independent
+    unresolved questions.
+  evidence_ids:
+  - septin-cap-agent-family
+  - record
+  - policy
+- assessment_id: provenance
+  area: provenance
+  topic: Accession evidence and actual paper access
+  outcome: supported
+  target_ids:
+  - GO:0032159
+  summary: All record-cited DOI/PMID identities are verified. Warenda2002 and Zhang2010
+    genuine article bodies were read; Douglas2005 is review-tier authority. Sudbery2001
+    publisher retrieval returned403, so only its abstract and native UniProt attribution
+    support the review, not unseen body details.
+  evidence_ids:
+  - septin-cap-agent-douglas-metadata
+  - septin-cap-agent-primary-metadata
+  - septin-cap-agent-douglas-pmc
+  - septin-cap-agent-warenda2002
+  - septin-cap-agent-zhang2010
+  - septin-cap-agent-P39826
+  - septin-cap-agent-P39827
+  - septin-cap-agent-G1UB61
+  - septin-cap-agent-G1UAV6
+  - septin-cap-agent-symbol-CDC3
+  - septin-cap-agent-symbol-CDC10
+  - septin-cap-agent-symbol-CDC11
+findings:
+- finding_id: F1
+  issue_key: septin-cap-generic-family-withheld
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Localized-cohort criterion leaves the generic Septin family ungrounded
+  description: The generic septin-proteins component remains REVIEWED_LABEL_ONLY because
+    no accession was assigned for the complete localized cohort. IPR016491 already
+    identifies the named Septin family. Reconcile grounding, status and rationale
+    without inferring an exhaustive localized paralog set or associated-protein inventory.
+  target_ids:
+  - GO:0032159
+  field_paths:
+  - components[component_id=septin_proteins].grounding_status
+  - components[component_id=septin_proteins].grounding_notes
+  - discussions
+  evidence_ids:
+  - septin-cap-agent-family
+  - record
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: A bounded, resolvable generic-family mapping gap; no change
+    to exact structure identity is implied.
+- finding_id: F2
+  issue_key: septin-cap-protein-examples-membership-evidence
+  category: evidence
+  severity: major
+  status: open
+  certainty: provisional
+  title: Three named septin examples lack established apical-cap membership support
+  description: The component declares CDC3, CDC10, CDC11 and CDC12 as examples of
+    cap-forming septins. Their accession identities are correct, and the seed notes
+    honestly restrict their own support to identity or bud-neck localization. However,
+    independent cap membership is explicit only for Cdc10 in the inspected record
+    sources. Cdc3/Cdc12 comparisons concern neck rings, and Cdc11 evidence is explicitly
+    bud-neck evidence. Qualify or substantiate the CDC3/CDC11/CDC12 cap-specific assignments;
+    the unavailable Sudbery full body limits the CDC11 assessment. This finding does
+    not assert biological absence.
+  target_ids:
+  - GO:0032159
+  field_paths:
+  - components[component_id=septin_proteins].gene_symbols
+  - components[component_id=septin_proteins].protein_examples
+  evidence_ids:
+  - septin-cap-agent-warenda2002
+  - septin-cap-agent-zhang2010
+  - septin-cap-agent-primary-metadata
+  - septin-cap-agent-P39826
+  - septin-cap-agent-P39827
+  - septin-cap-agent-G1UB61
+  - septin-cap-agent-G1UAV6
+  - septin-cap-agent-symbol-CDC3
+  - septin-cap-agent-symbol-CDC10
+  - septin-cap-agent-symbol-CDC11
+  - record
+  - policy
+  - protein-example-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: major
+  normalization_reason: Structure-specific protein membership requires independent
+    source support beyond correct identity and another septin localization. The scope
+    gap affects substantive component examples; uncertainty about inaccessible primary
+    text is retained.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0032159
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, ground the generic Septin component
+    to verified IPR016491 and reconcile its status and localized-cohort rationale.
+  acceptance_checks:
+  - Retain separate evidence for localized membership and associated proteins.
+  - Do not add a universal paralog set, stoichiometry or individual essentiality.
+  - Use the guarded writer and required curation/history, schema, strict, label and
+    generated-page checks.
+  generator: Maintained structure YAML; pages derive through just render.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0032159
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, obtain cap-specific evidence
+    for CDC3/CDC11/CDC12 or restrict the declared examples to the supported cap cohort
+    while retaining accurate accession identity information in an appropriately bounded
+    context.
+  acceptance_checks:
+  - Retain the verified Cdc10 example and distinguish apical cap from neck/internal
+    rings and basal band.
+  - Do not relabel correct taxa or reviewed status, infer absence, or treat general
+    septin membership as apical localization.
+  - Resolve the Sudbery body-access limit before claiming it excludes a cap localization;
+    preserve identity-only evidence notes.
+  - Use guarded curation/history and run native schema, strict, UniProt verification,
+    labels and rendered-page checks.
+  generator: Maintained structure YAML; pages derive through just render.
+limitations:
+- Sudbery2001 full publisher body returned403 in native and browser attempts. Its
+  metadata/abstract were read; no absence of cap localization in its unseen body is
+  claimed.
+- Primary text and figure legends were read but microscopy pixels, raw images, movies
+  and every supplement were not independently analyzed.
+- The source supports Cdc10 apical localization; exact cap composition remains unresolved.
+  Correct native accession identity does not independently supply localized membership.
+- Ergosterol-region coincidence is supported at GO/review level; direct sterol binding,
+  causal organization and a quantitative simultaneous colocalization assay for each
+  listed septin are not established here.
+- ESSENTIAL concerns collective septin material required for a septin cap, not the
+  viability or morphogenesis phenotype of each individual paralog.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only a review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+- Root read the complete target and review and verified every native input/source
+  hash; selected primary and review sections were independently inspected. The source-tier
+  and access limitations remain explicit.
+- Only this target receives scientific review coverage. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```
