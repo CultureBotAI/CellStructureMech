@@ -1,0 +1,1355 @@
+# Cog complex scientific review
+
+- Review: 20261022T051656Z-cog-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T05:00:51Z
+- Finished UTC: 2026-10-22T05:16:56Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The COG octamer, yeast scope and nonmechanistic transport graph are supported. One minor finding resolves eight exact component-family identities while preserving recombinant-preparation and membrane-subcomplex limits.
+
+## Scope And Provenance
+
+Exactly one entire target reviewed for identity, source support, composition, scope, graph and completeness.
+
+Selection: Target 1 of batch48 in strict uncovered path order at fresh origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0017119 | data/structures/other/cog_complex.yaml | maintained | COG complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0017119 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0017119 | Focused validator passed. |
+| Focused native causal-graphs | passed | True | GO:0017119 | Focused native check passed; identity and biological support assessed independently. |
+| Focused native verify | passed | True | GO:0017119 | Focused native check passed; identity and biological support assessed independently. |
+| Expression-module applicability | not_applicable | False | GO:0017119 | No maintained expression-module assertion requires this resource. |
+| Claim-level scientific review | passed | True | GO:0017119 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0017119 | 18 of 22 collected target identifiers returned OK. PMID:10562277: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:10588657: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:14562095: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:9606204: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0017119 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0017119 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0017119 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0017119 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0017119 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Eight-subunit COG and neighboring trafficking machinery
+
+identity: supported. Targets: GO:0017119.
+
+GO identity, tethering-complex parent and exact/narrow synonyms agree. COPI and SNARE interactors remain outside the Cog1-Cog8 constituent inventory. Mammalian naming sources and yeast membership evidence are distinguished.
+
+### Exact Cog1-Cog8 family classes
+
+grounding: concern. Targets: GO:0017119.
+
+Eight full-protein family entries resolve the generic named subunit classes. Five are cross-referenced by maintained yeast examples. Cog1/2/7 exact class entries and reviewed ortholog membership were separately checked; no claim is made that P53079/P53271/P53195 carry those entries. Partial new terminal-domain entries are not substitutes.
+
+### Correct reference-protein identities
+
+grounding: supported. Targets: GO:0017119.
+
+All eight exact reviewed queries and names match the S288C accessions. Current COG2/COG3 localization citations agree with native annotations; abstract-level source access does not certify every detailed original assay.
+
+### Assembly necessity is not inferred from growth
+
+grounding: supported. Targets: GO:0017119.
+
+The inspected primary experiments establish composition and context-dependent association. Nonessential lobeB genes and mammalian genetic defects concern function/viability; they do not alone justify universal essentiality changes. UNKNOWN is retained.
+
+### Yeast identity versus recombinant production
+
+scope: supported. Targets: GO:0017119.
+
+S.cerevisiae is the biological source of the full octamer. E.coli expression hosts and K.lactis subcomplex experiments are not additional canonical systems for the recorded whole complex. COMMON is a bounded qualitative yeast machinery claim, independently supported by endogenous co-isolation.
+
+### Golgi transport with bounded tethering claims
+
+evidence: supported. Targets: GO:0017119.
+
+GO and primary context support Golgi trafficking involvement. The record does not claim purified COG alone is sufficient for stable tethering; Ishii explicitly limits that inference.
+
+### Constituent topology and transport involvement
+
+graph: supported. Targets: GO:0017119.
+
+The NONMECHANISTIC graph lists eight constituent relationships and a broad transport function. It does not impose a universal membrane octamer, detailed subunit assembly order or mammalian Golgi localization on a yeast experiment.
+
+### Resolve existing family TODO
+
+completeness: supported. Targets: GO:0017119.
+
+The supported eight-subunit inventory is complete at its stated level. Exact family classes are actionable; further structural geometry and isolated-particle imaging are outside this review.
+
+## Findings
+
+### F1: Ground the eight named COG subunit classes
+
+minor / open / confirmed; issue key: cog-exact-subunit-families.
+
+Current exact whole-protein families are Cog1 IPR033370, Cog2 IPR009316, Cog3 IPR007265, Cog4 IPR048682, Cog5 IPR019465, Cog6 IPR010490, Cog7 IPR019335 and Cog8 IPR007255. All remain REVIEWED_LABEL_ONLY. Historical deferred grounding is understandable, but the exact class authorities now resolve it. Generic component identity must not be confused with automatic sequence annotation of every yeast example.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Curate the eight exact class mappings after confirming the generic ortholog-class scope; retain the correct yeast examples and separately sourced memberships. Reconcile the family TODO and document that Cog1/2/7 class grounding is not a new sequence annotation of the reference examples.
+
+- Check exact source identifiers and reconcile the named current fields and associated TODO.
+- Preserve supported biology, taxon scope, assay limits and distinctions between identity and membership.
+- Use guarded curation and pass applicable schema, strict, protein and graph validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/cog_complex.yaml; Entire maintained record including history, components, evidence, graph and discussions | context_only | All maintained fields were read. Historical curation notes document earlier decisions rather than independently proving current assertions. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component grounding, formation essentiality, taxonomic presence and graph scope | context_only | Whole-protein families differ from domains and individual examples. Assembly necessity differs from viability or function. COMMON means present in most members, with losses the exception; a qualitative ordinary-machinery assertion need not imply a numerical census. |
+| curation | docs/CURATION.md; Exact identities and claim-specific evidence | context_only | A verified component identity and its membership in a complex require distinct support. Reviewed label-only status is reserved for the absence of an exact term; historical deferred searches can be revisited without alleging historical fabrication. |
+| root48-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000228,GO:0000776,GO:0000817,GO:0003689,GO:0007062,GO:0017119,GO:0031390,GO:0031464,GO:0043494,GO:0048193,GO:0070912,GO:0080008,GO:0099023,GO:0140513; Complete maintained-term identity and definition fields and relevant typed links; not every descendant | supports | All14 requested GO identities, active status, definitions, synonyms, comments and relevant maintained typed relationships were inspected. The custom WDR1-specific assembly is distinct from the broader Cul4 parent. |
+| root48-sources-doi-2 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnsmb.3263%22&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED27428773: Molecular architecture of the complete COG tethering complex. DOI 10.1038/nsmb.3263. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root48-sources-doi-4 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.M400662200%22&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED15047703: The binary interacting network of the conserved oligomeric Golgi tethering complex. DOI 10.1074/jbc.m400662200. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root48-sources-doi-5 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.200202016%22&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED11980916: Characterization of a mammalian Golgi-localized protein complex, COG, that is required for normal Golgi morphology and function. DOI 10.1083/jcb.200202016. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root48-sources-doi-6 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.200412003%22&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED15728195: Cog3p depletion blocks vesicle-mediated Golgi retrograde trafficking in HeLa cells. DOI 10.1083/jcb.200412003. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root48-sources-doi-8 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1247%2Fcsf.18014%22&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED29899178: Detailed Analysis of the Interaction of Yeast COG Complex. DOI 10.1247/csf.18014. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root48-sources-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED14562095: Global analysis of protein localization in budding yeast. DOI 10.1038/nature02026. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root48-sources-pmid-9606204 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9606204+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED9606204: Sec35p, a novel peripheral membrane protein, is required for ER to Golgi vesicle docking. DOI 10.1083/jcb.141.5.1107. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root48-sources-pmid-10562277 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10562277+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED10562277: Sec34p, a protein required for vesicle tethering to the yeast Golgi apparatus, is in a complex with Sec35p. DOI 10.1083/jcb.147.4.729. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root48-sources-pmid-10588657 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10588657+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED10588657: The yeast GRD20 gene is required for protein sorting in the trans-Golgi network/endosomal system and for polarization of the actin cytoskeleton. DOI 10.1091/mbc.10.12.4263. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root48-sources-protein-P53079 | https://rest.uniprot.org/uniprotkb/P53079.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro cross-references | supports | Native P53079 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root48-sources-protein-P53271 | https://rest.uniprot.org/uniprotkb/P53271.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro cross-references | supports | Native P53271 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root48-sources-protein-P40094 | https://rest.uniprot.org/uniprotkb/P40094.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro cross-references | supports | Native P40094 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root48-sources-protein-Q06096 | https://rest.uniprot.org/uniprotkb/Q06096.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro cross-references | supports | Native Q06096 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root48-sources-protein-P53951 | https://rest.uniprot.org/uniprotkb/P53951.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro cross-references | supports | Native P53951 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root48-sources-protein-P53959 | https://rest.uniprot.org/uniprotkb/P53959.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro cross-references | supports | Native P53959 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root48-sources-protein-P53195 | https://rest.uniprot.org/uniprotkb/P53195.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro cross-references | supports | Native P53195 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root48-sources-protein-Q04632 | https://rest.uniprot.org/uniprotkb/Q04632.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro cross-references | supports | Native Q04632 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root48-sources-gene-COG1 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG1+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=25; Complete query URL and every result accession/status/name/gene/taxon | supports | Exact reviewed gene query returns one matching yeast accession. Complete returned identity fields agree with the maintained example. |
+| root48-sources-gene-COG2 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG2+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=25; Complete query URL and every result accession/status/name/gene/taxon | supports | Exact reviewed gene query returns one matching yeast accession. Complete returned identity fields agree with the maintained example. |
+| root48-sources-gene-COG3 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG3+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=25; Complete query URL and every result accession/status/name/gene/taxon | supports | Exact reviewed gene query returns one matching yeast accession. Complete returned identity fields agree with the maintained example. |
+| root48-sources-gene-COG4 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG4+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=25; Complete query URL and every result accession/status/name/gene/taxon | supports | Exact reviewed gene query returns one matching yeast accession. Complete returned identity fields agree with the maintained example. |
+| root48-sources-gene-COG5 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG5+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=25; Complete query URL and every result accession/status/name/gene/taxon | supports | Exact reviewed gene query returns one matching yeast accession. Complete returned identity fields agree with the maintained example. |
+| root48-sources-gene-COG6 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG6+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=25; Complete query URL and every result accession/status/name/gene/taxon | supports | Exact reviewed gene query returns one matching yeast accession. Complete returned identity fields agree with the maintained example. |
+| root48-sources-gene-COG7 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG7+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=25; Complete query URL and every result accession/status/name/gene/taxon | supports | Exact reviewed gene query returns one matching yeast accession. Complete returned identity fields agree with the maintained example. |
+| root48-sources-gene-COG8 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG8+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=25; Complete query URL and every result accession/status/name/gene/taxon | supports | Exact reviewed gene query returns one matching yeast accession. Complete returned identity fields agree with the maintained example. |
+| root48-sources-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete native taxonomy response | supports | Native taxon 4932 name, rank, lineage and synonym data inspected. Reference strains are distinguished from experimental strains. |
+| root48-sources-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete native taxonomy response | supports | Native taxon 559292 name, rank, lineage and synonym data inspected. Reference strains are distinguished from experimental strains. |
+| root48-sources-ipr-IPR033370 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR033370/; Complete accession/name/type/description, hierarchy, integrated signatures and curation flags | supports | IPR033370 is classified as family and named Conserved oligomeric Golgi complex subunit 1. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root48-sources-ipr-IPR009316 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009316/; Complete accession/name/type/description, hierarchy, integrated signatures and curation flags | supports | IPR009316 is classified as family and named COG complex component, COG2. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root48-sources-ipr-IPR007265 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007265/; Complete accession/name/type/description, hierarchy, integrated signatures and curation flags | supports | IPR007265 is classified as family and named Conserved oligomeric Golgi complex, subunit 3. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root48-sources-ipr-IPR048682 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR048682/; Complete accession/name/type/description, hierarchy, integrated signatures and curation flags | supports | IPR048682 is classified as family and named Conserved oligomeric Golgi complex subunit 4. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root48-sources-ipr-IPR019465 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019465/; Complete accession/name/type/description, hierarchy, integrated signatures and curation flags | supports | IPR019465 is classified as family and named Conserved oligomeric Golgi complex subunit 5. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root48-sources-ipr-IPR010490 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR010490/; Complete accession/name/type/description, hierarchy, integrated signatures and curation flags | supports | IPR010490 is classified as family and named Conserved oligomeric Golgi complex subunit 6. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root48-sources-ipr-IPR019335 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019335/; Complete accession/name/type/description, hierarchy, integrated signatures and curation flags | supports | IPR019335 is classified as family and named Conserved oligomeric Golgi complex subunit 7. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root48-sources-ipr-IPR007255 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007255/; Complete accession/name/type/description, hierarchy, integrated signatures and curation flags | supports | IPR007255 is classified as family and named Conserved oligomeric Golgi complex subunit 8. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root48-sources-family-members-IPR033370 | https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR033370+AND+reviewed%3Atrue&amp;format=json&amp;size=100&amp;fields=accession%2Cprotein_name%2Cgene_names%2Corganism_name; Exact query and complete returned accession/protein/gene/organism identities | supports | All returned reviewed family-member identities inspected. The result establishes named ortholog classes across the returned taxa; it does not assert that the maintained S.cerevisiae example has this cross-reference. |
+| root48-sources-family-members-IPR009316 | https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR009316+AND+reviewed%3Atrue&amp;format=json&amp;size=100&amp;fields=accession%2Cprotein_name%2Cgene_names%2Corganism_name; Exact query and complete returned accession/protein/gene/organism identities | supports | All returned reviewed family-member identities inspected. The result establishes named ortholog classes across the returned taxa; it does not assert that the maintained S.cerevisiae example has this cross-reference. |
+| root48-sources-family-members-IPR019335 | https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR019335+AND+reviewed%3Atrue&amp;format=json&amp;size=100&amp;fields=accession%2Cprotein_name%2Cgene_names%2Corganism_name; Exact query and complete returned accession/protein/gene/organism identities | supports | All returned reviewed family-member identities inspected. The result establishes named ortholog classes across the returned taxa; it does not assert that the maintained S.cerevisiae example has this cross-reference. |
+| root48-sources-ha2016-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC4972656/?_escaped_fragment_=; Complete main paragraphs P2-P14, Figures1/2 captions, Methods S2/S3; no figure pixels or supplementary files | supports | The complete S.cerevisiae hetero-octamer was reconstituted from bacterially expressed yeast subassemblies, not isolated directly from yeast cells. K.lactis Cog5-8 was a distinct preparation. Negative-stain class averages show flexible legs; positions of Cog5/7 were not resolved. LobeA Cog1-4 and lobeB Cog5-8 membership is explicit. |
+| root48-sources-ishii2018-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC6116515/?_escaped_fragment_=; Complete Methods S3/S5/S6 (nested S7), Results S9-S12, Discussion S13; Figures1-4 captions; no supplementary strain tables or figure pixels | supports | Endogenous GFP-tagged yeast subunits co-isolate all eight partners from the cytosolic fraction. Membrane fractions contain differing subassemblies; ectopic mitochondrial recruitment does not establish autonomous vesicle tethering. YPH499/BY4741 manipulations and cytosol/membrane separations are explicit. |
+| schema-result | just validate data/structures/other/cog_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/cog_complex.yaml |
+| strict-result | just validate-strict data/structures/other/cog_complex.yaml --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/cog_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/cog_complex.yaml --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/cog_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch48-20261022-ppyyf64c/cog_complex-strict.tsv |
+| native-cog_complex-causal-graphs | /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cog_complex.yaml; Complete focused native report | supports | data/structures/other/cog_complex.yaml  (GO:0017119)<br>  yeast_cog_golgi_tethering	cog1_cog_subunit	COVERED	-&gt;cog1_cog_subunit (UniProtKB:P53079)<br>  yeast_cog_golgi_tethering	cog2_cog_subunit	COVERED	-&gt;cog2_cog_subunit (UniProtKB:P53271)<br>  yeast_cog_golgi_tethering	cog3_cog_subunit	COVERED	-&gt;cog3_cog_subunit (UniProtKB:P40094)<br>  yeast_cog_golgi_tethering	cog4_cog_subunit	COVERED	-&gt;cog4_cog_subunit (UniProtKB:Q06096)<br>  yeast_cog_golgi_tethering	cog5_cog_subunit	COVERED	-&gt;cog5_cog_subunit (UniProtKB:P53951)<br>  yeast_cog_golgi_tethering	cog6_cog_subunit	COVERED	-&gt;cog6_cog_subunit (UniProtKB:P53959)<br>  yeast_cog_golgi_tethering	cog7_cog_subunit	COVERED	-&gt;cog7_cog_subunit (UniProtKB:P53195)<br>  yeast_cog_golgi_tethering	cog8_cog_subunit	COVERED	-&gt;cog8_cog_subunit (UniProtKB:Q04632)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     8  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     8  total GENE_OR_PROTEIN causal nodes |
+| native-cog_complex-verify | /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/other/cog_complex.yaml; Complete focused native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/cog_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 18 of 22 collected target identifiers returned OK. PMID:10562277: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:10588657: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:14562095: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:9606204: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Primary-body reading is limited to the sections explicitly named. No raw experimental data, supplementary datasets or sequence alignments were reanalyzed.
+- Ungar2002, Loh2004, Zolov2005 and attached historical localization papers were independently checked at complete native abstract tier only. Ha2016 and Ishii2018 body scopes are explicitly recorded.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorizes all uncovered reviews, including honest zero-finding bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T051656Z-cog-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cog complex scientific review
+started_at: '2026-10-22T05:00:51Z'
+finished_at: '2026-10-22T05:16:56Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The COG octamer, yeast scope and nonmechanistic transport graph are supported.
+  One minor finding resolves eight exact component-family identities while preserving
+  recombinant-preparation and membrane-subcomplex limits.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/cog_complex.yaml
+    sha256: 63a87323bc5724de1cae502db180cb5a1cca96f62a851cb596469216865421ac
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0017119
+  path: data/structures/other/cog_complex.yaml
+  label: COG complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cog_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire target reviewed for identity, source support, composition,
+    scope, graph and completeness.
+  selection: Target 1 of batch48 in strict uncovered path order at fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0017119
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  command: just validate data/structures/other/cog_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  command: just validate-strict data/structures/other/cog_complex.yaml --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/cog_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-cog_complex-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  command: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cog_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; identity and biological support assessed independently.
+  evidence_ids:
+  - native-cog_complex-causal-graphs
+- check_id: native-cog_complex-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  command: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cog_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; identity and biological support assessed independently.
+  evidence_ids:
+  - native-cog_complex-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0017119
+  summary: No maintained expression-module assertion requires this resource.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root48-sources-go
+  - root48-sources-doi-2
+  - root48-sources-doi-4
+  - root48-sources-doi-5
+  - root48-sources-doi-6
+  - root48-sources-doi-8
+  - root48-sources-pmid-14562095
+  - root48-sources-pmid-9606204
+  - root48-sources-pmid-10562277
+  - root48-sources-pmid-10588657
+  - root48-sources-protein-P53079
+  - root48-sources-protein-P53271
+  - root48-sources-protein-P40094
+  - root48-sources-protein-Q06096
+  - root48-sources-protein-P53951
+  - root48-sources-protein-P53959
+  - root48-sources-protein-P53195
+  - root48-sources-protein-Q04632
+  - root48-sources-gene-COG1
+  - root48-sources-gene-COG2
+  - root48-sources-gene-COG3
+  - root48-sources-gene-COG4
+  - root48-sources-gene-COG5
+  - root48-sources-gene-COG6
+  - root48-sources-gene-COG7
+  - root48-sources-gene-COG8
+  - root48-sources-tax4932
+  - root48-sources-tax559292
+  - root48-sources-ipr-IPR033370
+  - root48-sources-ipr-IPR009316
+  - root48-sources-ipr-IPR007265
+  - root48-sources-ipr-IPR048682
+  - root48-sources-ipr-IPR019465
+  - root48-sources-ipr-IPR010490
+  - root48-sources-ipr-IPR019335
+  - root48-sources-ipr-IPR007255
+  - root48-sources-family-members-IPR033370
+  - root48-sources-family-members-IPR009316
+  - root48-sources-family-members-IPR019335
+  - root48-sources-ha2016-legacy
+  - root48-sources-ishii2018-legacy
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  summary: '18 of 22 collected target identifiers returned OK. PMID:10562277: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:10588657:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:14562095: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:9606204: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - root48-sources-pmid-10562277
+  - root48-sources-pmid-10588657
+  - root48-sources-pmid-14562095
+  - root48-sources-pmid-9606204
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0017119
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/cog_complex.yaml
+  locator: Entire maintained record including history, components, evidence, graph
+    and discussions
+  accessed_at: '2026-10-22T05:13:36Z'
+  support: context_only
+  summary: All maintained fields were read. Historical curation notes document earlier
+    decisions rather than independently proving current assertions.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component grounding, formation essentiality, taxonomic presence and graph
+    scope
+  accessed_at: '2026-10-22T05:13:36Z'
+  support: context_only
+  summary: Whole-protein families differ from domains and individual examples. Assembly
+    necessity differs from viability or function. COMMON means present in most members,
+    with losses the exception; a qualitative ordinary-machinery assertion need not
+    imply a numerical census.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact identities and claim-specific evidence
+  accessed_at: '2026-10-22T05:13:36Z'
+  support: context_only
+  summary: A verified component identity and its membership in a complex require distinct
+    support. Reviewed label-only status is reserved for the absence of an exact term;
+    historical deferred searches can be revisited without alleging historical fabrication.
+- evidence_id: root48-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000228,GO:0000776,GO:0000817,GO:0003689,GO:0007062,GO:0017119,GO:0031390,GO:0031464,GO:0043494,GO:0048193,GO:0070912,GO:0080008,GO:0099023,GO:0140513
+  locator: Complete maintained-term identity and definition fields and relevant typed
+    links; not every descendant
+  accessed_at: '2026-10-22T05:04:22.473075Z'
+  support: supports
+  summary: All14 requested GO identities, active status, definitions, synonyms, comments
+    and relevant maintained typed relationships were inspected. The custom WDR1-specific
+    assembly is distinct from the broader Cul4 parent.
+  snapshot_sha256: d286c944be8950cb0f8aaf019fb391dc88abed2d978bb77bf24beba14a2ea670
+- evidence_id: root48-sources-doi-2
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnsmb.3263%22&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:04:28.863278Z'
+  support: supports
+  summary: 'MED27428773: Molecular architecture of the complete COG tethering complex.
+    DOI 10.1038/nsmb.3263. Complete bibliographic identity and abstract inspected;
+    full-body access is certified only in separate evidence rows.'
+  snapshot_sha256: d63b93ff06e836d72330119148acdff98b531abb1962e4373292ee3510a92faf
+- evidence_id: root48-sources-doi-4
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.M400662200%22&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:04:29.089254Z'
+  support: supports
+  summary: 'MED15047703: The binary interacting network of the conserved oligomeric
+    Golgi tethering complex. DOI 10.1074/jbc.m400662200. Complete bibliographic identity
+    and abstract inspected; full-body access is certified only in separate evidence
+    rows.'
+  snapshot_sha256: 0cf5d5910c9ac7487a4a3d23d43661ac20d496e723e99c84469e2fb311599276
+- evidence_id: root48-sources-doi-5
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.200202016%22&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:04:29.280452Z'
+  support: supports
+  summary: 'MED11980916: Characterization of a mammalian Golgi-localized protein complex,
+    COG, that is required for normal Golgi morphology and function. DOI 10.1083/jcb.200202016.
+    Complete bibliographic identity and abstract inspected; full-body access is certified
+    only in separate evidence rows.'
+  snapshot_sha256: a9a80f8544f08863e3a42ec8f9e120de17e71fd413fb25437de1681755a033e7
+- evidence_id: root48-sources-doi-6
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.200412003%22&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:04:29.326365Z'
+  support: supports
+  summary: 'MED15728195: Cog3p depletion blocks vesicle-mediated Golgi retrograde
+    trafficking in HeLa cells. DOI 10.1083/jcb.200412003. Complete bibliographic identity
+    and abstract inspected; full-body access is certified only in separate evidence
+    rows.'
+  snapshot_sha256: d550df30602570d9747eb268d5c2d51202fa476141f5de01473aca1ffd11ff3f
+- evidence_id: root48-sources-doi-8
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1247%2Fcsf.18014%22&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:04:29.586908Z'
+  support: supports
+  summary: 'MED29899178: Detailed Analysis of the Interaction of Yeast COG Complex.
+    DOI 10.1247/csf.18014. Complete bibliographic identity and abstract inspected;
+    full-body access is certified only in separate evidence rows.'
+  snapshot_sha256: 1b7d5a0fb0c0fcd442fb2496165ed222cd7c680dd017525f66d013caca912564
+- evidence_id: root48-sources-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:04:30.598913Z'
+  support: supports
+  summary: 'MED14562095: Global analysis of protein localization in budding yeast.
+    DOI 10.1038/nature02026. Complete bibliographic identity and abstract inspected;
+    full-body access is certified only in separate evidence rows.'
+  snapshot_sha256: 8bbeed3381c96852db4221aac079da00e1bf5c50630629c24d4d9136e1645c21
+- evidence_id: root48-sources-pmid-9606204
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9606204+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:04:31.193365Z'
+  support: supports
+  summary: 'MED9606204: Sec35p, a novel peripheral membrane protein, is required for
+    ER to Golgi vesicle docking. DOI 10.1083/jcb.141.5.1107. Complete bibliographic
+    identity and abstract inspected; full-body access is certified only in separate
+    evidence rows.'
+  snapshot_sha256: e5e2a2bebe3c57659cca5e983d219dde3735497da38fc0d120a9ac462d52ddc4
+- evidence_id: root48-sources-pmid-10562277
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10562277+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:04:30.159609Z'
+  support: supports
+  summary: 'MED10562277: Sec34p, a protein required for vesicle tethering to the yeast
+    Golgi apparatus, is in a complex with Sec35p. DOI 10.1083/jcb.147.4.729. Complete
+    bibliographic identity and abstract inspected; full-body access is certified only
+    in separate evidence rows.'
+  snapshot_sha256: 912d8ad176fb9b92a667c28dbe6e8ee89ef5d6b647d1e6c24938b32e1b2db95d
+- evidence_id: root48-sources-pmid-10588657
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10588657+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:04:30.263302Z'
+  support: supports
+  summary: 'MED10588657: The yeast GRD20 gene is required for protein sorting in the
+    trans-Golgi network/endosomal system and for polarization of the actin cytoskeleton.
+    DOI 10.1091/mbc.10.12.4263. Complete bibliographic identity and abstract inspected;
+    full-body access is certified only in separate evidence rows.'
+  snapshot_sha256: dd40971864660ee3b6046e69bbc717371942f03ea7ac4f7b93ceb264e11dae92
+- evidence_id: root48-sources-protein-P53079
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53079.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro cross-references
+  accessed_at: '2026-10-22T05:04:24.811883Z'
+  support: supports
+  summary: Native P53079 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: bd09e8d4ff6869d29d8948f25eab3ed9757db6c49507233dd6f0d91bf3e8e8fe
+- evidence_id: root48-sources-protein-P53271
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53271.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro cross-references
+  accessed_at: '2026-10-22T05:04:25.452185Z'
+  support: supports
+  summary: Native P53271 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: 204b63408c020e766baabcffa7dfc529239890f177b569353f64eb6c891abcbe
+- evidence_id: root48-sources-protein-P40094
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40094.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro cross-references
+  accessed_at: '2026-10-22T05:04:24.034677Z'
+  support: supports
+  summary: Native P40094 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: 6ebc9ba3bb5efc7bb82134b0fb00a83821b8f3f3e32005ae031e27727eb81888
+- evidence_id: root48-sources-protein-Q06096
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q06096.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro cross-references
+  accessed_at: '2026-10-22T05:04:27.354284Z'
+  support: supports
+  summary: Native Q06096 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: 284fb0e937e00b2a123248c0ed9ff2bf9f9d4398dc543216be197fe4d8c3823c
+- evidence_id: root48-sources-protein-P53951
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53951.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro cross-references
+  accessed_at: '2026-10-22T05:04:25.498381Z'
+  support: supports
+  summary: Native P53951 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: 41285f2630754d46b1574a261a2e39c20b61599169cd425e9545ec9c945ddfdd
+- evidence_id: root48-sources-protein-P53959
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53959.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro cross-references
+  accessed_at: '2026-10-22T05:04:26.311114Z'
+  support: supports
+  summary: Native P53959 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: e4d318a45ded7d621bb4695a7af478dd773d3d2a0bbaf757ac43c8ee369cf1dd
+- evidence_id: root48-sources-protein-P53195
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53195.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro cross-references
+  accessed_at: '2026-10-22T05:04:25.414687Z'
+  support: supports
+  summary: Native P53195 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: b089cd2e3d3bb4d5bb6eed732190e5a5a4ce40c541f7915746ddf49553ab4236
+- evidence_id: root48-sources-protein-Q04632
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q04632.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro cross-references
+  accessed_at: '2026-10-22T05:04:26.429067Z'
+  support: supports
+  summary: Native Q04632 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: d6e9cbff9991279ae2f9d37c12741c8417cea44e9d675212c762620c15c3c43e
+- evidence_id: root48-sources-gene-COG1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=25
+  locator: Complete query URL and every result accession/status/name/gene/taxon
+  accessed_at: '2026-10-22T05:06:17.878116Z'
+  support: supports
+  summary: Exact reviewed gene query returns one matching yeast accession. Complete
+    returned identity fields agree with the maintained example.
+  snapshot_sha256: 0c5ae084b707b98b53bb3d1576dfab1f001fc5ca44fb8c1ffa058f68f0f0fe0e
+- evidence_id: root48-sources-gene-COG2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=25
+  locator: Complete query URL and every result accession/status/name/gene/taxon
+  accessed_at: '2026-10-22T05:06:17.887307Z'
+  support: supports
+  summary: Exact reviewed gene query returns one matching yeast accession. Complete
+    returned identity fields agree with the maintained example.
+  snapshot_sha256: 144f546716ef588c9fa1f5a4d26e6b42b49321aced5655b4dc454d7197d5854b
+- evidence_id: root48-sources-gene-COG3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG3+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=25
+  locator: Complete query URL and every result accession/status/name/gene/taxon
+  accessed_at: '2026-10-22T05:06:18.061183Z'
+  support: supports
+  summary: Exact reviewed gene query returns one matching yeast accession. Complete
+    returned identity fields agree with the maintained example.
+  snapshot_sha256: 85eaad6f9f4ba79e2c94708ea6bbcc03b07db6174dd5452f79a16107e8623d0c
+- evidence_id: root48-sources-gene-COG4
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG4+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=25
+  locator: Complete query URL and every result accession/status/name/gene/taxon
+  accessed_at: '2026-10-22T05:06:18.090445Z'
+  support: supports
+  summary: Exact reviewed gene query returns one matching yeast accession. Complete
+    returned identity fields agree with the maintained example.
+  snapshot_sha256: dd19839e8393dc4071e34f833f64aef67863b7c7f2c3a39b74029d8b9a702f18
+- evidence_id: root48-sources-gene-COG5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG5+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=25
+  locator: Complete query URL and every result accession/status/name/gene/taxon
+  accessed_at: '2026-10-22T05:06:18.111591Z'
+  support: supports
+  summary: Exact reviewed gene query returns one matching yeast accession. Complete
+    returned identity fields agree with the maintained example.
+  snapshot_sha256: 10098119471505718787ec4b8797d13c5daccb1c80ff247a938e5041603e5eac
+- evidence_id: root48-sources-gene-COG6
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG6+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=25
+  locator: Complete query URL and every result accession/status/name/gene/taxon
+  accessed_at: '2026-10-22T05:06:18.634676Z'
+  support: supports
+  summary: Exact reviewed gene query returns one matching yeast accession. Complete
+    returned identity fields agree with the maintained example.
+  snapshot_sha256: 1a62806961175aef6c5c95ad5e95152f6f2c515f77cf8b98ca9d10937869d670
+- evidence_id: root48-sources-gene-COG7
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG7+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=25
+  locator: Complete query URL and every result accession/status/name/gene/taxon
+  accessed_at: '2026-10-22T05:06:18.634795Z'
+  support: supports
+  summary: Exact reviewed gene query returns one matching yeast accession. Complete
+    returned identity fields agree with the maintained example.
+  snapshot_sha256: bf8f8fa8b59f2d780298bf546a5af97a2c2dce58bed08bfef5837762abaaffb8
+- evidence_id: root48-sources-gene-COG8
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACOG8+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=25
+  locator: Complete query URL and every result accession/status/name/gene/taxon
+  accessed_at: '2026-10-22T05:06:18.818761Z'
+  support: supports
+  summary: Exact reviewed gene query returns one matching yeast accession. Complete
+    returned identity fields agree with the maintained example.
+  snapshot_sha256: 5dcc2ab3928b8e70f8c4f93d8f6e5b3c67e289f40c0d2f27ef6f5b45e2a49a8a
+- evidence_id: root48-sources-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T05:04:22.473582Z'
+  support: supports
+  summary: Native taxon 4932 name, rank, lineage and synonym data inspected. Reference
+    strains are distinguished from experimental strains.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root48-sources-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T05:04:22.473700Z'
+  support: supports
+  summary: Native taxon 559292 name, rank, lineage and synonym data inspected. Reference
+    strains are distinguished from experimental strains.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root48-sources-ipr-IPR033370
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR033370/
+  locator: Complete accession/name/type/description, hierarchy, integrated signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:07:11.578928Z'
+  support: supports
+  summary: IPR033370 is classified as family and named Conserved oligomeric Golgi
+    complex subunit 1. Native metadata, full description and curation flags inspected.
+    This row supports identity scope, not an independent primary biological experiment.
+  snapshot_sha256: 0ed160e5a949d07dff0994d8c37af8a6b9d671ee7f49d0a9946d0db861ba9d61
+- evidence_id: root48-sources-ipr-IPR009316
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009316/
+  locator: Complete accession/name/type/description, hierarchy, integrated signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:07:11.579206Z'
+  support: supports
+  summary: IPR009316 is classified as family and named COG complex component, COG2.
+    Native metadata, full description and curation flags inspected. This row supports
+    identity scope, not an independent primary biological experiment.
+  snapshot_sha256: 33cff78547c21255584141a41efdb678a419e1f1592b811687715afcbfebe19f
+- evidence_id: root48-sources-ipr-IPR007265
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007265/
+  locator: Complete accession/name/type/description, hierarchy, integrated signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:06:11.702948Z'
+  support: supports
+  summary: IPR007265 is classified as family and named Conserved oligomeric Golgi
+    complex, subunit 3. Native metadata, full description and curation flags inspected.
+    This row supports identity scope, not an independent primary biological experiment.
+  snapshot_sha256: 014554c142898f542f52154612939ef60516a1e8403d3a893f5c9af393ca3490
+- evidence_id: root48-sources-ipr-IPR048682
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR048682/
+  locator: Complete accession/name/type/description, hierarchy, integrated signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:06:16.022105Z'
+  support: supports
+  summary: IPR048682 is classified as family and named Conserved oligomeric Golgi
+    complex subunit 4. Native metadata, full description and curation flags inspected.
+    This row supports identity scope, not an independent primary biological experiment.
+  snapshot_sha256: 2e3a10a15b8d671e8b49cc29ff00e901324d58ec12c47bb1ec8a7ce74203e481
+- evidence_id: root48-sources-ipr-IPR019465
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019465/
+  locator: Complete accession/name/type/description, hierarchy, integrated signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:06:13.527654Z'
+  support: supports
+  summary: IPR019465 is classified as family and named Conserved oligomeric Golgi
+    complex subunit 5. Native metadata, full description and curation flags inspected.
+    This row supports identity scope, not an independent primary biological experiment.
+  snapshot_sha256: f447786bdbc822feedc05edce5c5ee6f3920a476bb1a1dedba859bbb73773a9e
+- evidence_id: root48-sources-ipr-IPR010490
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR010490/
+  locator: Complete accession/name/type/description, hierarchy, integrated signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:06:11.722036Z'
+  support: supports
+  summary: IPR010490 is classified as family and named Conserved oligomeric Golgi
+    complex subunit 6. Native metadata, full description and curation flags inspected.
+    This row supports identity scope, not an independent primary biological experiment.
+  snapshot_sha256: 1c47891cb4254aaa8aead599bf788726831ca16e52d6a5b4b79507465436e7e2
+- evidence_id: root48-sources-ipr-IPR019335
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019335/
+  locator: Complete accession/name/type/description, hierarchy, integrated signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:07:11.579371Z'
+  support: supports
+  summary: IPR019335 is classified as family and named Conserved oligomeric Golgi
+    complex subunit 7. Native metadata, full description and curation flags inspected.
+    This row supports identity scope, not an independent primary biological experiment.
+  snapshot_sha256: 43634beb181f5f7acd1df9b629cf8a73cd2f435e54f6fff623cf584e0b7a9019
+- evidence_id: root48-sources-ipr-IPR007255
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007255/
+  locator: Complete accession/name/type/description, hierarchy, integrated signatures
+    and curation flags
+  accessed_at: '2026-10-22T05:06:11.117369Z'
+  support: supports
+  summary: IPR007255 is classified as family and named Conserved oligomeric Golgi
+    complex subunit 8. Native metadata, full description and curation flags inspected.
+    This row supports identity scope, not an independent primary biological experiment.
+  snapshot_sha256: 091980bb50afa48aa6210a2697bddca2ba93d902453ce94c3c1345006a6f8e11
+- evidence_id: root48-sources-family-members-IPR033370
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR033370+AND+reviewed%3Atrue&format=json&size=100&fields=accession%2Cprotein_name%2Cgene_names%2Corganism_name
+  locator: Exact query and complete returned accession/protein/gene/organism identities
+  accessed_at: '2026-10-22T05:08:27.501677Z'
+  support: supports
+  summary: All returned reviewed family-member identities inspected. The result establishes
+    named ortholog classes across the returned taxa; it does not assert that the maintained
+    S.cerevisiae example has this cross-reference.
+  snapshot_sha256: c514d46f02e093791c244a1b5d5de28f1a337281db6fd6c1048d94991411642a
+- evidence_id: root48-sources-family-members-IPR009316
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR009316+AND+reviewed%3Atrue&format=json&size=100&fields=accession%2Cprotein_name%2Cgene_names%2Corganism_name
+  locator: Exact query and complete returned accession/protein/gene/organism identities
+  accessed_at: '2026-10-22T05:08:27.501917Z'
+  support: supports
+  summary: All returned reviewed family-member identities inspected. The result establishes
+    named ortholog classes across the returned taxa; it does not assert that the maintained
+    S.cerevisiae example has this cross-reference.
+  snapshot_sha256: be1d1177e1ea4f7769d2e0c07a3877cacd8db5da8cfe74a1c3ebbe26363e428e
+- evidence_id: root48-sources-family-members-IPR019335
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR019335+AND+reviewed%3Atrue&format=json&size=100&fields=accession%2Cprotein_name%2Cgene_names%2Corganism_name
+  locator: Exact query and complete returned accession/protein/gene/organism identities
+  accessed_at: '2026-10-22T05:08:27.502030Z'
+  support: supports
+  summary: All returned reviewed family-member identities inspected. The result establishes
+    named ortholog classes across the returned taxa; it does not assert that the maintained
+    S.cerevisiae example has this cross-reference.
+  snapshot_sha256: 29052b672dd61fe8b00d387df3528b9d353a09d7e3809bac79ec61ed27e68586
+- evidence_id: root48-sources-ha2016-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4972656/?_escaped_fragment_=
+  locator: Complete main paragraphs P2-P14, Figures1/2 captions, Methods S2/S3; no
+    figure pixels or supplementary files
+  accessed_at: '2026-10-22T05:06:25.784063Z'
+  support: supports
+  summary: The complete S.cerevisiae hetero-octamer was reconstituted from bacterially
+    expressed yeast subassemblies, not isolated directly from yeast cells. K.lactis
+    Cog5-8 was a distinct preparation. Negative-stain class averages show flexible
+    legs; positions of Cog5/7 were not resolved. LobeA Cog1-4 and lobeB Cog5-8 membership
+    is explicit.
+  snapshot_sha256: 3bd0fb73e6f0803f9e3977fd1aae2421e3430cb828c407274f0ad9b1151344e8
+- evidence_id: root48-sources-ishii2018-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6116515/?_escaped_fragment_=
+  locator: Complete Methods S3/S5/S6 (nested S7), Results S9-S12, Discussion S13;
+    Figures1-4 captions; no supplementary strain tables or figure pixels
+  accessed_at: '2026-10-22T05:06:25.996742Z'
+  support: supports
+  summary: Endogenous GFP-tagged yeast subunits co-isolate all eight partners from
+    the cytosolic fraction. Membrane fractions contain differing subassemblies; ectopic
+    mitochondrial recruitment does not establish autonomous vesicle tethering. YPH499/BY4741
+    manipulations and cytosol/membrane separations are explicit.
+  snapshot_sha256: 67b3ebf5c99d2ac14a0b6fc10586cd1c23b449920b372c39a9cc431e9109e443
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/cog_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:00:53Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/cog_complex.yaml'
+  snapshot_sha256: d4b780534b126716ae4c2402fa012bfde87eff3f6f99dd133af150f329384f7a
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/cog_complex.yaml --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/cog_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:00:54Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/cog_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/cog_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch48-20261022-ppyyf64c/cog_complex-strict.tsv"
+  snapshot_sha256: b7fdba534c1bccd5ca0234ad1a8563aa2a9a18490ba996c5980a05a3346ab79a
+- evidence_id: native-cog_complex-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cog_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T05:06:12.458467Z'
+  support: supports
+  summary: "data/structures/other/cog_complex.yaml  (GO:0017119)\n  yeast_cog_golgi_tethering\t\
+    cog1_cog_subunit\tCOVERED\t->cog1_cog_subunit (UniProtKB:P53079)\n  yeast_cog_golgi_tethering\t\
+    cog2_cog_subunit\tCOVERED\t->cog2_cog_subunit (UniProtKB:P53271)\n  yeast_cog_golgi_tethering\t\
+    cog3_cog_subunit\tCOVERED\t->cog3_cog_subunit (UniProtKB:P40094)\n  yeast_cog_golgi_tethering\t\
+    cog4_cog_subunit\tCOVERED\t->cog4_cog_subunit (UniProtKB:Q06096)\n  yeast_cog_golgi_tethering\t\
+    cog5_cog_subunit\tCOVERED\t->cog5_cog_subunit (UniProtKB:P53951)\n  yeast_cog_golgi_tethering\t\
+    cog6_cog_subunit\tCOVERED\t->cog6_cog_subunit (UniProtKB:P53959)\n  yeast_cog_golgi_tethering\t\
+    cog7_cog_subunit\tCOVERED\t->cog7_cog_subunit (UniProtKB:P53195)\n  yeast_cog_golgi_tethering\t\
+    cog8_cog_subunit\tCOVERED\t->cog8_cog_subunit (UniProtKB:Q04632)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     8  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     8  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 825ab0ccb55c67c2e97fe7be7a80fd58d197894220e39b25c4fcbfc9941d1dd0
+- evidence_id: native-cog_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cog_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T05:06:13.653549Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/cog_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '18 of 22 collected target identifiers returned OK. PMID:10562277: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:10588657:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:14562095: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:9606204: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Eight-subunit COG and neighboring trafficking machinery
+  outcome: supported
+  target_ids:
+  - GO:0017119
+  summary: GO identity, tethering-complex parent and exact/narrow synonyms agree.
+    COPI and SNARE interactors remain outside the Cog1-Cog8 constituent inventory.
+    Mammalian naming sources and yeast membership evidence are distinguished.
+  evidence_ids:
+  - record
+  - root48-sources-go
+  - root48-sources-ha2016-legacy
+  - root48-sources-ishii2018-legacy
+  - root48-sources-doi-2
+  - root48-sources-doi-4
+  - root48-sources-doi-5
+  - root48-sources-doi-6
+  - root48-sources-doi-8
+  - root48-sources-pmid-14562095
+  - root48-sources-pmid-9606204
+  - root48-sources-pmid-10562277
+  - root48-sources-pmid-10588657
+- assessment_id: families
+  area: grounding
+  topic: Exact Cog1-Cog8 family classes
+  outcome: concern
+  target_ids:
+  - GO:0017119
+  summary: Eight full-protein family entries resolve the generic named subunit classes.
+    Five are cross-referenced by maintained yeast examples. Cog1/2/7 exact class entries
+    and reviewed ortholog membership were separately checked; no claim is made that
+    P53079/P53271/P53195 carry those entries. Partial new terminal-domain entries
+    are not substitutes.
+  evidence_ids:
+  - record
+  - curation
+  - root48-sources-ipr-IPR033370
+  - root48-sources-ipr-IPR009316
+  - root48-sources-ipr-IPR007265
+  - root48-sources-ipr-IPR048682
+  - root48-sources-ipr-IPR019465
+  - root48-sources-ipr-IPR010490
+  - root48-sources-ipr-IPR019335
+  - root48-sources-ipr-IPR007255
+  - root48-sources-protein-P53079
+  - root48-sources-protein-P53271
+  - root48-sources-protein-P40094
+  - root48-sources-protein-Q06096
+  - root48-sources-protein-P53951
+  - root48-sources-protein-P53959
+  - root48-sources-protein-P53195
+  - root48-sources-protein-Q04632
+  - root48-sources-family-members-IPR033370
+  - root48-sources-family-members-IPR009316
+  - root48-sources-family-members-IPR019335
+- assessment_id: examples
+  area: grounding
+  topic: Correct reference-protein identities
+  outcome: supported
+  target_ids:
+  - GO:0017119
+  summary: All eight exact reviewed queries and names match the S288C accessions.
+    Current COG2/COG3 localization citations agree with native annotations; abstract-level
+    source access does not certify every detailed original assay.
+  evidence_ids:
+  - record
+  - root48-sources-protein-P53079
+  - root48-sources-protein-P53271
+  - root48-sources-protein-P40094
+  - root48-sources-protein-Q06096
+  - root48-sources-protein-P53951
+  - root48-sources-protein-P53959
+  - root48-sources-protein-P53195
+  - root48-sources-protein-Q04632
+  - root48-sources-gene-COG1
+  - root48-sources-gene-COG2
+  - root48-sources-gene-COG3
+  - root48-sources-gene-COG4
+  - root48-sources-gene-COG5
+  - root48-sources-gene-COG6
+  - root48-sources-gene-COG7
+  - root48-sources-gene-COG8
+  - root48-sources-tax4932
+  - root48-sources-tax559292
+  - root48-sources-doi-2
+  - root48-sources-doi-4
+  - root48-sources-doi-5
+  - root48-sources-doi-6
+  - root48-sources-doi-8
+  - root48-sources-pmid-14562095
+  - root48-sources-pmid-9606204
+  - root48-sources-pmid-10562277
+  - root48-sources-pmid-10588657
+- assessment_id: necessity
+  area: grounding
+  topic: Assembly necessity is not inferred from growth
+  outcome: supported
+  target_ids:
+  - GO:0017119
+  summary: The inspected primary experiments establish composition and context-dependent
+    association. Nonessential lobeB genes and mammalian genetic defects concern function/viability;
+    they do not alone justify universal essentiality changes. UNKNOWN is retained.
+  evidence_ids:
+  - record
+  - schema
+  - root48-sources-ha2016-legacy
+  - root48-sources-ishii2018-legacy
+- assessment_id: scope
+  area: scope
+  topic: Yeast identity versus recombinant production
+  outcome: supported
+  target_ids:
+  - GO:0017119
+  summary: S.cerevisiae is the biological source of the full octamer. E.coli expression
+    hosts and K.lactis subcomplex experiments are not additional canonical systems
+    for the recorded whole complex. COMMON is a bounded qualitative yeast machinery
+    claim, independently supported by endogenous co-isolation.
+  evidence_ids:
+  - record
+  - root48-sources-ha2016-legacy
+  - root48-sources-ishii2018-legacy
+  - root48-sources-tax4932
+  - root48-sources-tax559292
+- assessment_id: functions
+  area: evidence
+  topic: Golgi transport with bounded tethering claims
+  outcome: supported
+  target_ids:
+  - GO:0017119
+  summary: GO and primary context support Golgi trafficking involvement. The record
+    does not claim purified COG alone is sufficient for stable tethering; Ishii explicitly
+    limits that inference.
+  evidence_ids:
+  - record
+  - root48-sources-go
+  - root48-sources-ishii2018-legacy
+  - root48-sources-doi-2
+  - root48-sources-doi-4
+  - root48-sources-doi-5
+  - root48-sources-doi-6
+  - root48-sources-doi-8
+  - root48-sources-pmid-14562095
+  - root48-sources-pmid-9606204
+  - root48-sources-pmid-10562277
+  - root48-sources-pmid-10588657
+- assessment_id: graph
+  area: graph
+  topic: Constituent topology and transport involvement
+  outcome: supported
+  target_ids:
+  - GO:0017119
+  summary: The NONMECHANISTIC graph lists eight constituent relationships and a broad
+    transport function. It does not impose a universal membrane octamer, detailed
+    subunit assembly order or mammalian Golgi localization on a yeast experiment.
+  evidence_ids:
+  - record
+  - root48-sources-go
+  - root48-sources-ha2016-legacy
+  - root48-sources-ishii2018-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Resolve existing family TODO
+  outcome: supported
+  target_ids:
+  - GO:0017119
+  summary: The supported eight-subunit inventory is complete at its stated level.
+    Exact family classes are actionable; further structural geometry and isolated-particle
+    imaging are outside this review.
+  evidence_ids:
+  - record
+  - root48-sources-ipr-IPR033370
+  - root48-sources-ipr-IPR009316
+  - root48-sources-ipr-IPR007265
+  - root48-sources-ipr-IPR048682
+  - root48-sources-ipr-IPR019465
+  - root48-sources-ipr-IPR010490
+  - root48-sources-ipr-IPR019335
+  - root48-sources-ipr-IPR007255
+findings:
+- finding_id: F1
+  issue_key: cog-exact-subunit-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the eight named COG subunit classes
+  description: Current exact whole-protein families are Cog1 IPR033370, Cog2 IPR009316,
+    Cog3 IPR007265, Cog4 IPR048682, Cog5 IPR019465, Cog6 IPR010490, Cog7 IPR019335
+    and Cog8 IPR007255. All remain REVIEWED_LABEL_ONLY. Historical deferred grounding
+    is understandable, but the exact class authorities now resolve it. Generic component
+    identity must not be confused with automatic sequence annotation of every yeast
+    example.
+  target_ids:
+  - GO:0017119
+  field_paths:
+  - components
+  - discussions#resolve_cog_subunit_family_groundings
+  evidence_ids:
+  - record
+  - curation
+  - root48-sources-ipr-IPR033370
+  - root48-sources-ipr-IPR009316
+  - root48-sources-ipr-IPR007265
+  - root48-sources-ipr-IPR048682
+  - root48-sources-ipr-IPR019465
+  - root48-sources-ipr-IPR010490
+  - root48-sources-ipr-IPR019335
+  - root48-sources-ipr-IPR007255
+  - root48-sources-family-members-IPR033370
+  - root48-sources-family-members-IPR009316
+  - root48-sources-family-members-IPR019335
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cog_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component identity and source-specific biological support
+  native_severity: minor
+  normalization_reason: Bounded curation correction supported by exact current authorities
+    or condition-scoped primary assays; structural identity is retained.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0017119
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cog_complex.yaml
+    role: maintained scientific record
+  description: Curate the eight exact class mappings after confirming the generic
+    ortholog-class scope; retain the correct yeast examples and separately sourced
+    memberships. Reconcile the family TODO and document that Cog1/2/7 class grounding
+    is not a new sequence annotation of the reference examples.
+  acceptance_checks:
+  - Check exact source identifiers and reconcile the named current fields and associated
+    TODO.
+  - Preserve supported biology, taxon scope, assay limits and distinctions between
+    identity and membership.
+  - Use guarded curation and pass applicable schema, strict, protein and graph validation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Primary-body reading is limited to the sections explicitly named. No raw experimental
+  data, supplementary datasets or sequence alignments were reanalyzed.
+- Ungar2002, Loh2004, Zolov2005 and attached historical localization papers were independently
+  checked at complete native abstract tier only. Ha2016 and Ishii2018 body scopes
+  are explicitly recorded.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorizes all uncovered reviews, including honest zero-finding bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

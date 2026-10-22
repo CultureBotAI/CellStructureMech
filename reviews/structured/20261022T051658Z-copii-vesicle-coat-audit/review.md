@@ -1,0 +1,1245 @@
+# Source-backed review of copii vesicle coat
+
+- Review: 20261022T051658Z-copii-vesicle-coat-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T05:00:59Z
+- Finished UTC: 2026-10-22T05:16:58Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+COPII identity, five examples, sequential reconstitution context and descriptive graph are supported. One minor resolves the exact SAR1 family grounding without forcing single-protein families onto heteromeric complexes.
+
+## Scope And Provenance
+
+Exactly one complete target; no neighboring scientific-record verdict is imported. Exact authority, all current component/function/graph/source placements, taxonomic scope, formation semantics, history and discussions were reviewed.
+
+Selection: Batch48 fixed strict path order, index 4; exactly one maintained target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0030127 | data/structures/other/copii_vesicle_coat.yaml | maintained | COPII vesicle coat |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0030127 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0030127 | Focused validator passed. |
+| Focused native proteins | passed | True | GO:0030127 | Read-only native check passed; claim-level protein/edge support evaluated separately. |
+| Focused native graphs | passed | True | GO:0030127 | Read-only native check passed; claim-level protein/edge support evaluated separately. |
+| Claim-level scientific review | passed | True | GO:0030127 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0030127 | 13 of 21 collected target identifiers returned OK. PMID:10684247: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:10720463: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:10753972: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:11086000: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:12235121: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:8004676: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:8548805: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:9568718: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0030127 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0030127 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0030127 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0030127 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0030127 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### COPII coat identity and topology
+
+identity: supported. Targets: GO:0030127.
+
+Active GO0030127 explicitly names the five yeast coat proteins, with vesicle-coat parentage. Coat/ER-vesicle parthood is definition-supported, not an exposed direct typed GO edge here. The coat is proteinaceous and distinct from its membrane/vesicle.
+
+### Sar1 and inner/outer coat complexes
+
+grounding: concern. Targets: GO:0030127.
+
+The Sar1, Sec23/Sec24 inner and Sec13/Sec31 outer classes are directly supported in the inspected reconstitutions. Exact IPR006687 resolves the SAR1 row’s explicit label-only gap. Individual Sec23 or Sec31 families would not identify a whole heteromeric subcomplex; bounded zero-result GO queries do not prove absence of all candidate complex groundings.
+
+### Protein examples and annotation joins
+
+grounding: supported. Targets: GO:0030127.
+
+All five reviewed S288C examples and single-hit gene queries are correct. Native SEC23/SEC24 COPII-membrane annotations join the cited Matsuoka2000, Shimoni2000, Supek2002, Bednarek1995 and Peng2000 records as appropriate. SEC13’s Rout2000 annotation is explicitly nuclear-pore localization of a shared protein; it is not misused as primary proof of COPII membership, which the coat papers independently establish.
+
+### Native ER versus synthetic coat assembly
+
+evidence: supported. Targets: GO:0030127.
+
+Barlowe’s complete abstract supports washed-ER budding with purified soluble components, and Matsuoka directly distinguishes native ER and defined-lipid reactions. Zanetti’s data are membrane-assembled in vitro coats, with a nonhydrolysable nucleotide and modeled interpretations. The record’s descriptions remain at this coarse supported level and do not export exact synthetic stoichiometry or specific lattice geometry to all living coats.
+
+### Descriptive sequential assembly graph
+
+graph: supported. Targets: GO:0030127.
+
+The seven-node/nine-edge NONMECHANISTIC ASSEMBLY graph keeps Sar1 membrane association, recruitment of Sec23/24, association with the outer coat and constituent/vesicle parthood distinct. Matsuoka directly supports sequential binding in reconstitution; Zanetti supports the layer relationship. No complete GTP hydrolysis, cargo-selection or scission cycle is asserted.
+
+### Species, reference strain and COMMON meaning
+
+scope: supported. Targets: GO:0030127.
+
+Species4932 and strain559292 identities are correct. COMMON means present in most taxon members with exceptional losses; ordinary yeast-system evidence provides qualitative support, not a measured prevalence census. Native reference accessions are not evidence that every cited experiment used S288C.
+
+### Formation necessity remains unknown
+
+grounding: unknown. Targets: GO:0030127.
+
+All current constituent essentiality labels are UNKNOWN. The inspected membership, localization, transport and reconstitution evidence is not promoted to an unqualified requirement for formation of every represented structure. No necessity finding is inferred from a missing depletion experiment.
+
+### Whole-record coverage and bounded enrichment
+
+completeness: supported. Targets: GO:0030127.
+
+All target bytes, component/examples, function/evidence placements, canonical example, graph, discussions and history were reviewed. Findings concern exact current statements or verified available mappings, not optional inventory expansion or a declaration that historical searches were false. No neighboring record’s scientific verdict is imported.
+
+## Findings
+
+### F1: Resolve the exact SAR1 family grounding
+
+minor / open / confirmed; issue key: copii.exact_sar1_family.
+
+The Sar1-family protein component remains REVIEWED_LABEL_ONLY, although native IPR006687 exactly represents the source-neutral SAR1-type family and is cross-referenced by the verified yeast P20606 example. This current mapping gap is distinct from the historical statement that an earlier pass did not curate it.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground the Sar1 component to InterPro:IPR006687 and synchronize current grounding status/notes and any linked node consistently. Preserve its component ID, UNKNOWN necessity, and the distinct unresolved heteromeric subcomplex boundaries.
+
+- Preserve exact supported identity, experimental organism and native versus recombinant context.
+- Attach source-specific evidence to each changed claim and retain historical provenance.
+- Native schema, strict, CURIE, protein and graph checks pass as applicable.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/copii_vesicle_coat.yaml; Complete maintained YAML; all components, source notes, graphs, discussions and historical entries | context_only | The entire maintained target was read; no scientific record was changed. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes | context_only | ComponentTypeEnum distinguishes LIPID from the permitted OTHER composite class. ESSENTIAL concerns failure of structure formation, not merely loss of catalytic or transport function. |
+| curation | docs/CURATION.md; Components; groundings; associated machinery and chaperone boundaries | context_only | Components are taxon-agnostic molecular families/classes; exact family grounding is preferred when verified. Mature constituents and assembled-structure maintenance machinery differ from transient preassembly chaperones. |
+| micro48-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000139,GO:0005789,GO:0006890,GO:0010008,GO:0030120,GO:0030126,GO:0030127,GO:0030134,GO:0030137,GO:0033263,GO:0035964,GO:0090114,GO:0099023; Complete id/name/isObsolete/definition/synonym/typed-children fields of all 13 returned terms; the hash identifies this combined response, not a source paper. | supports | The 13 exact active entries distinguish COPI/COPII protein coats, their vesicles and membrane locations, and CORVET from its endosome membrane. GO0030120 typed children include both coat classes; GO0099023 typed children include CORVET. Coat-to-whole-vesicle parthood is supported by the definitions, rather than an exposed direct typed relation in this response. GO0033263 explicitly names the six yeast CORVET subunits and pre-SNARE endosomal tethering. |
+| micro48-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete taxId/scientificName/rank/lineage/otherNames. | supports | ENA taxId 4932 identifies Saccharomyces cerevisiae at rank species; aliases and lineage match the record. Identity alone is not prevalence or experimental-condition evidence. |
+| micro48-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete taxId/scientificName/rank/lineage/otherNames. | supports | ENA taxId 559292 identifies Saccharomyces cerevisiae S288C at rank strain; aliases and lineage match the record. Identity alone is not prevalence or experimental-condition evidence. |
+| micro48-protein-P20606 | https://rest.uniprot.org/uniprotkb/P20606.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P20606 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SAR1']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-P15303 | https://rest.uniprot.org/uniprotkb/P15303.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P15303 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SEC23']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-P40482 | https://rest.uniprot.org/uniprotkb/P40482.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P40482 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SEC24']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-Q04491 | https://rest.uniprot.org/uniprotkb/Q04491.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | Q04491 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SEC13']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-protein-P38968 | https://rest.uniprot.org/uniprotkb/P38968.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence joins. | supports | P38968 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SEC31']. Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. |
+| micro48-gene-SAR1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASAR1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P20606. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-SEC23 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC23%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P15303. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-SEC24 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC24%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P40482. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-SEC13 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC13%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: Q04491. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-gene-SEC31 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC31%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete results for the exact gene/reviewed/taxon559292 URL. | supports | The exact reviewed S288C query returned 1 entry/entries: P38968. Primary gene names and aliases were inspected; the intended accession is correctly identified. |
+| micro48-PMID-8004676 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A8004676%20AND%20SRC%3AMED; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED8004676: COPII: a membrane coat formed by Sec proteins that drive vesicle budding from the endoplasmic reticulum. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-PMID-9568718 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A9568718%20AND%20SRC%3AMED; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED9568718: COPII-coated vesicle formation reconstituted with purified coat proteins and chemically defined liposomes. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-zanetti2013-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.7554%2Felife.00951&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED24062940: The structure of the COPII transport-vesicle coat assembled on membranes. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-pmid10684247 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10684247+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED10684247: The yeast nuclear pore complex: composition, architecture, and transport mechanism. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-pmid10720463 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10720463+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED10720463: The use of liposomes to study COPII- and COPI-coated vesicle formation and membrane protein sorting. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-pmid10753972 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10753972+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED10753972: Evidence for overlapping and distinct functions in protein transport of coat protein Sec24p family members. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-pmid11086000 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11086000+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED11086000: Lst1p and Sec24p cooperate in sorting of the plasma membrane ATPase into COPII vesicles in Saccharomyces cerevisiae. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-pmid12235121 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12235121+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED12235121: Sec16p potentiates the action of COPII proteins to bud transport vesicles. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-pmid8548805 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8548805+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED8548805: COPI- and COPII-coated vesicles bud directly from the endoplasmic reticulum in yeast. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro48-matsuoka1998-author | https://bednareklab.biochem.wisc.edu/wp-content/uploads/sites/1623/2022/02/1998_Matsuoka_etal_Cell.pdf; Genuine author PDF: printed p267 sequential binding and morphology; p269 native/synthetic comparison and integrity assay; p271/Fig7 caption; complete Experimental Procedures on p273 and p274 through Electron Microscopy. Text derivative inspected; no figure pixels. | supports | Matsuoka1998 shows sequential Sar1/Sec23–24/Sec13–31 binding and coated-bud/vesicle production with defined liposomes. Native ER-derived and synthetic vesicles are explicitly compared; their subunit ratios and size distributions differ. RSY445 supplies ER microsomes and RSY1113 supplies Sec13/31. Membrane integrity is tested with trapped aqueous dye; these data are not a universal fixed stoichiometry or an in-vivo prevalence measurement. |
+| micro48-zanetti2013-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3778437/fullTextXML; Genuine Europe PMC JATS: complete Introduction s1; Results s2 opening, s2-1 and s2-1-1 main prose; complete layer-relationship section s2-2 with Fig6/7 captions; Materials/Methods s3-1 sample preparation and s3-2 EM. Other data-processing subsections/supplements/pixels were not inspected. | supports | Zanetti2013 images complete yeast COPII coats reconstituted on giant unilamellar vesicles with Sec12 and GMP-PNP, using cryo-electron tomography and subtomogram averaging. Inner/outer layers have constrained but unfixed relative positions. Binding-site/lattice docking supports their arrangement; large-cargo accommodation and in-vivo implications remain qualified, and the authors acknowledge that absence of GTP hydrolysis may promote lattice order. |
+| micro48-IPR006687 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006687/; Native metadata accession/name/type and complete description, compared with the exact corresponding protein cross-reference. | supports | IPR006687 is type family, Small GTPase superfamily SAR1-type. Its complete description identifies the conserved Sar1 COPII GTPase class, and native P20606 carries that exact family cross-reference. This is not the broader ARF/SAR superfamily or a partial domain. |
+| micro48-go-search-Sec23-Sec24 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Sec23%20Sec24&amp;limit=25; Complete numberOfHits/results/pageInfo response. | context_only | The exact bounded QuickGO query returned zero results; this does not establish that no complex identity exists under any terminology or in another resource. |
+| micro48-go-search-Sec13-Sec31 | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Sec13%20Sec31&amp;limit=25; Complete numberOfHits/results/pageInfo response. | context_only | The exact bounded QuickGO query returned zero results; this does not establish that no complex identity exists under any terminology or in another resource. |
+| schema-result | just validate data/structures/other/copii_vesicle_coat.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/copii_vesicle_coat.yaml |
+| strict-result | just validate-strict data/structures/other/copii_vesicle_coat.yaml --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/copii_vesicle_coat-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/copii_vesicle_coat.yaml --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/copii_vesicle_coat-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch48-20261022-ppyyf64c/copii_vesicle_coat-strict.tsv |
+| native-proteins | /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/other/copii_vesicle_coat.yaml; Complete read-only focused native proteins log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-graphs | /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/copii_vesicle_coat.yaml; Complete read-only focused native graphs log | supports | data/structures/other/copii_vesicle_coat.yaml  (GO:0030127)<br>  yeast_copii_coat_assembly	sar1_gtpase	COVERED	-&gt;sar1_gtpase (UniProtKB:P20606)<br>  yeast_copii_coat_assembly	sec23_sec24_inner_coat	COVERED	-&gt;sec23_sec24_inner_coat (UniProtKB:P15303, UniProtKB:P40482)<br>  yeast_copii_coat_assembly	sec13_sec31_outer_coat	COVERED	-&gt;sec13_sec31_outer_coat (UniProtKB:Q04491, UniProtKB:P38968)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     3  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     3  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/other/copii_vesicle_coat.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 13 of 21 collected target identifiers returned OK. PMID:10684247: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:10720463: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:10753972: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:11086000: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:12235121: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:8004676: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:8548805: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:9568718: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- COMMON retains its schema meaning present in most members with exceptional losses. Yeast experiments support ordinary species-level occurrence qualitatively, without measuring a species-wide prevalence census.
+- Reference-entry S288C identity is distinguished from experimental strains, tagged constructs, purified fragments and reconstitution conditions.
+- No microscopy pixels, videos or supplementary files were inspected. Primary text and embedded captions were read only at the explicitly named extents.
+- All constituent essentiality values are UNKNOWN. Membership, protein function, transport phenotype and necessity for formation of the entire structure are separate claims.
+- Barlowe1994 and the six localization-annotation papers were read at complete native abstract tier only; no detailed unseen experiments or protein-specific primary panels are certified.
+- Barlowe publisher and ScienceDirect attempts are retained HTTP403 failures; Matsuoka’s genuinely recovered author PDF is a separate directly read primary source.
+- Zanetti data-processing subsections, supplementary material and images were not inspected. No exact source-neutral GO or Complex Portal mapping for the two heteromeric subcomplexes was established by the bounded searches.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User expressly requests one review for every unreviewed record, including scientifically clean records.
+- iModulonDB is not applicable to these vesicle-coat and CORVET identity, molecular-family, localization and formation claims.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T051658Z-copii-vesicle-coat-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of copii vesicle coat
+started_at: '2026-10-22T05:00:59Z'
+finished_at: '2026-10-22T05:16:58Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: COPII identity, five examples, sequential reconstitution context and descriptive
+  graph are supported. One minor resolves the exact SAR1 family grounding without
+  forcing single-protein families onto heteromeric complexes.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/copii_vesicle_coat.yaml
+    sha256: 3b7c89b408581ddfd7f40203a1810eda738e87b1d2457812209b8586abbb0ef2
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0030127
+  path: data/structures/other/copii_vesicle_coat.yaml
+  label: COPII vesicle coat
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/copii_vesicle_coat.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target; no neighboring scientific-record verdict
+    is imported. Exact authority, all current component/function/graph/source placements,
+    taxonomic scope, formation semantics, history and discussions were reviewed.
+  selection: Batch48 fixed strict path order, index 4; exactly one maintained target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030127
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  command: just validate data/structures/other/copii_vesicle_coat.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  command: just validate-strict data/structures/other/copii_vesicle_coat.yaml --out
+    /private/tmp/cellstructure-batch48-20261022-ppyyf64c/copii_vesicle_coat-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-proteins
+  name: Focused native proteins
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  command: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/copii_vesicle_coat.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-proteins
+- check_id: native-graphs
+  name: Focused native graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  command: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/copii_vesicle_coat.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - micro48-go
+  - micro48-tax4932
+  - micro48-tax559292
+  - micro48-protein-P20606
+  - micro48-protein-P15303
+  - micro48-protein-P40482
+  - micro48-protein-Q04491
+  - micro48-protein-P38968
+  - micro48-gene-SAR1
+  - micro48-gene-SEC23
+  - micro48-gene-SEC24
+  - micro48-gene-SEC13
+  - micro48-gene-SEC31
+  - micro48-PMID-8004676
+  - micro48-PMID-9568718
+  - micro48-zanetti2013-meta
+  - micro48-pmid10684247
+  - micro48-pmid10720463
+  - micro48-pmid10753972
+  - micro48-pmid11086000
+  - micro48-pmid12235121
+  - micro48-pmid8548805
+  - micro48-matsuoka1998-author
+  - micro48-zanetti2013-xml
+  - micro48-IPR006687
+  - micro48-go-search-Sec23-Sec24
+  - micro48-go-search-Sec13-Sec31
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  summary: '13 of 21 collected target identifiers returned OK. PMID:10684247: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:10720463:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:10753972: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:11086000: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force.; PMID:12235121: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:8004676:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:8548805: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:9568718: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro48-pmid10684247
+  - micro48-pmid10720463
+  - micro48-pmid10753972
+  - micro48-pmid11086000
+  - micro48-pmid12235121
+  - micro48-PMID-8004676
+  - micro48-pmid8548805
+  - micro48-PMID-9568718
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030127
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch48 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/copii_vesicle_coat.yaml
+  locator: Complete maintained YAML; all components, source notes, graphs, discussions
+    and historical entries
+  accessed_at: '2026-10-22T05:08:31Z'
+  support: context_only
+  summary: The entire maintained target was read; no scientific record was changed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes
+  accessed_at: '2026-10-22T05:08:31Z'
+  support: context_only
+  summary: ComponentTypeEnum distinguishes LIPID from the permitted OTHER composite
+    class. ESSENTIAL concerns failure of structure formation, not merely loss of catalytic
+    or transport function.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components; groundings; associated machinery and chaperone boundaries
+  accessed_at: '2026-10-22T05:08:31Z'
+  support: context_only
+  summary: Components are taxon-agnostic molecular families/classes; exact family
+    grounding is preferred when verified. Mature constituents and assembled-structure
+    maintenance machinery differ from transient preassembly chaperones.
+- evidence_id: micro48-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000139,GO:0005789,GO:0006890,GO:0010008,GO:0030120,GO:0030126,GO:0030127,GO:0030134,GO:0030137,GO:0033263,GO:0035964,GO:0090114,GO:0099023
+  locator: Complete id/name/isObsolete/definition/synonym/typed-children fields of
+    all 13 returned terms; the hash identifies this combined response, not a source
+    paper.
+  accessed_at: '2026-10-22T05:02:32.410565Z'
+  support: supports
+  summary: The 13 exact active entries distinguish COPI/COPII protein coats, their
+    vesicles and membrane locations, and CORVET from its endosome membrane. GO0030120
+    typed children include both coat classes; GO0099023 typed children include CORVET.
+    Coat-to-whole-vesicle parthood is supported by the definitions, rather than an
+    exposed direct typed relation in this response. GO0033263 explicitly names the
+    six yeast CORVET subunits and pre-SNARE endosomal tethering.
+  snapshot_sha256: 7169ecfe80eda6fc5cc8b61c60a3d9b2bd09a42c1fe2bfbcb3ae7a42259a994f
+- evidence_id: micro48-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T04:15:34.948894Z'
+  support: supports
+  summary: ENA taxId 4932 identifies Saccharomyces cerevisiae at rank species; aliases
+    and lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: micro48-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T04:15:34.948991Z'
+  support: supports
+  summary: ENA taxId 559292 identifies Saccharomyces cerevisiae S288C at rank strain;
+    aliases and lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: micro48-protein-P20606
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P20606.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:33.030206Z'
+  support: supports
+  summary: P20606 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SAR1'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: b357bd5a974f24c0409bf017765b03d59132ea51bcd07912699b22356faee9cc
+- evidence_id: micro48-protein-P15303
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P15303.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:32.411487Z'
+  support: supports
+  summary: P15303 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SEC23'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 13181465e32452a91853f6b16daf92a2d67f378a9dabcb9d19e84585bc1168cf
+- evidence_id: micro48-protein-P40482
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40482.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:33.985765Z'
+  support: supports
+  summary: P40482 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SEC24'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 364fe7b7178611824e4035d3300302e3e97e8e5a87934557bbf966f0507e4817
+- evidence_id: micro48-protein-Q04491
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q04491.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:36.215361Z'
+  support: supports
+  summary: Q04491 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SEC13'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 5ea1f9385e1989653cc9b1251babdb2a1e325e72d3b3617590028f3fca38207c
+- evidence_id: micro48-protein-P38968
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38968.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBUNIT/SUBCELLULAR
+    LOCATION comments and their evidence joins.
+  accessed_at: '2026-10-22T05:02:33.869514Z'
+  support: supports
+  summary: P38968 is UniProtKB reviewed (Swiss-Prot), taxon 559292, genes ['SEC31'].
+    Recommended identity, gene aliases, full SUBUNIT/SUBCELLULAR LOCATION comments
+    and their evidence codes/PMIDs were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 3cd679eb515caf22dceb7f5a2b97bb726ea5a88379f3117f90f10ab06364d1fc
+- evidence_id: micro48-gene-SAR1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASAR1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:38.562448Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P20606. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 4fde95272e65ad8006acb9e1adb75c26a8ed2b97b8cd24d6c47082800a39caab
+  search_scope: Remote UniProt query for exact gene SAR1, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-SEC23
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC23%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:39.515874Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P15303. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 48d1d820864e58d7b8ec091b4e2c252d5c32aa77f0c4757a2921094deb3d4329
+  search_scope: Remote UniProt query for exact gene SEC23, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-SEC24
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC24%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:39.573158Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P40482. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 3c767a3b3ae12aeb87128c4be82c30332fb471e6fcb0d6788bc9157d6ef0c2c8
+  search_scope: Remote UniProt query for exact gene SEC24, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-SEC13
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC13%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:38.593837Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: Q04491. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 8967ba9e2ec39d6cb3ef7e6da9e8cd5ceb82f150094d58f932574e30155b6cba
+  search_scope: Remote UniProt query for exact gene SEC13, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-gene-SEC31
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC31%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete results for the exact gene/reviewed/taxon559292 URL.
+  accessed_at: '2026-10-22T05:02:40.591527Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returned 1 entry/entries: P38968. Primary
+    gene names and aliases were inspected; the intended accession is correctly identified.'
+  snapshot_sha256: 9860d546b4ea67784200cb6bee02e10605b6e5674b9827ce546fa20eecfaf685
+  search_scope: Remote UniProt query for exact gene SEC31, reviewed entries, organism_id559292;
+    complete returned result set inspected. Local ignored files are not applicable
+    to this remote search.
+- evidence_id: micro48-PMID-8004676
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A8004676%20AND%20SRC%3AMED
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-21T10:57:49.986369Z'
+  support: supports
+  summary: 'Unique MED8004676: COPII: a membrane coat formed by Sec proteins that
+    drive vesicle budding from the endoplasmic reticulum. Authors/year/DOI and the
+    complete native abstract were inspected. This row establishes bibliographic identity
+    and abstract-level content only; detailed experiments require separately specified
+    body evidence.'
+  snapshot_sha256: f3ff438cc130518602efe6aa0252c6d5634fafad949d62cf23e3a6e837819fc7
+- evidence_id: micro48-PMID-9568718
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A9568718%20AND%20SRC%3AMED
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-21T10:57:50.349730Z'
+  support: supports
+  summary: 'Unique MED9568718: COPII-coated vesicle formation reconstituted with purified
+    coat proteins and chemically defined liposomes. Authors/year/DOI and the complete
+    native abstract were inspected. This row establishes bibliographic identity and
+    abstract-level content only; detailed experiments require separately specified
+    body evidence.'
+  snapshot_sha256: 0cdaf91dc4f4bf9261f55530522a8ed41116b930c39ac656de0d729c318bf1c0
+- evidence_id: micro48-zanetti2013-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.7554%2Felife.00951&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T05:02:43.427016Z'
+  support: supports
+  summary: 'Unique MED24062940: The structure of the COPII transport-vesicle coat
+    assembled on membranes. Authors/year/DOI and the complete native abstract were
+    inspected. This row establishes bibliographic identity and abstract-level content
+    only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: e8c9639b0de0ac2072b80af9a0ba793969f923ea0b7560f6d0fbddb0266a54c5
+- evidence_id: micro48-pmid10684247
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10684247+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T05:02:42.353974Z'
+  support: supports
+  summary: 'Unique MED10684247: The yeast nuclear pore complex: composition, architecture,
+    and transport mechanism. Authors/year/DOI and the complete native abstract were
+    inspected. This row establishes bibliographic identity and abstract-level content
+    only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 396890291e0e08a1cd3edd1e908a21b784188ee72528b3f59607336b6e1cf750
+- evidence_id: micro48-pmid10720463
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10720463+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T05:02:42.452038Z'
+  support: supports
+  summary: 'Unique MED10720463: The use of liposomes to study COPII- and COPI-coated
+    vesicle formation and membrane protein sorting. Authors/year/DOI and the complete
+    native abstract were inspected. This row establishes bibliographic identity and
+    abstract-level content only; detailed experiments require separately specified
+    body evidence.'
+  snapshot_sha256: b24bdf90814a9de96a86e840ef1407c98a01edf8803fc4c114910e4813554711
+- evidence_id: micro48-pmid10753972
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10753972+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T05:02:42.462962Z'
+  support: supports
+  summary: 'Unique MED10753972: Evidence for overlapping and distinct functions in
+    protein transport of coat protein Sec24p family members. Authors/year/DOI and
+    the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 86fcad32aff4723b08e942eb9d630ce97079e08e5ac034991794e20ff46d9a8e
+- evidence_id: micro48-pmid11086000
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11086000+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T05:02:42.965995Z'
+  support: supports
+  summary: 'Unique MED11086000: Lst1p and Sec24p cooperate in sorting of the plasma
+    membrane ATPase into COPII vesicles in Saccharomyces cerevisiae. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 021b9dbbabb9f95cd83705a6512dc0a72547ed171d855f23febee687f1fe5405
+- evidence_id: micro48-pmid12235121
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12235121+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T05:02:43.060258Z'
+  support: supports
+  summary: 'Unique MED12235121: Sec16p potentiates the action of COPII proteins to
+    bud transport vesicles. Authors/year/DOI and the complete native abstract were
+    inspected. This row establishes bibliographic identity and abstract-level content
+    only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: acf82dd7657ed8bb493ed0aceb699b0d9d446ac9e9ff01640290b22b37992648
+- evidence_id: micro48-pmid8548805
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8548805+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T05:02:43.095943Z'
+  support: supports
+  summary: 'Unique MED8548805: COPI- and COPII-coated vesicles bud directly from the
+    endoplasmic reticulum in yeast. Authors/year/DOI and the complete native abstract
+    were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 571bfae6970e90a8c874c9d9baf0d38c70514bd9e9ee39feced9f988753b4ce3
+- evidence_id: micro48-matsuoka1998-author
+  kind: primary_source
+  reference: https://bednareklab.biochem.wisc.edu/wp-content/uploads/sites/1623/2022/02/1998_Matsuoka_etal_Cell.pdf
+  locator: 'Genuine author PDF: printed p267 sequential binding and morphology; p269
+    native/synthetic comparison and integrity assay; p271/Fig7 caption; complete Experimental
+    Procedures on p273 and p274 through Electron Microscopy. Text derivative inspected;
+    no figure pixels.'
+  accessed_at: '2026-10-21T11:10:08.369823Z'
+  support: supports
+  summary: Matsuoka1998 shows sequential Sar1/Sec23–24/Sec13–31 binding and coated-bud/vesicle
+    production with defined liposomes. Native ER-derived and synthetic vesicles are
+    explicitly compared; their subunit ratios and size distributions differ. RSY445
+    supplies ER microsomes and RSY1113 supplies Sec13/31. Membrane integrity is tested
+    with trapped aqueous dye; these data are not a universal fixed stoichiometry or
+    an in-vivo prevalence measurement.
+  snapshot_sha256: 4c7e8eafea53f213b25b339d684115bd65a1af9e79d86b9e1222050aa52b0efa
+- evidence_id: micro48-zanetti2013-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3778437/fullTextXML
+  locator: 'Genuine Europe PMC JATS: complete Introduction s1; Results s2 opening,
+    s2-1 and s2-1-1 main prose; complete layer-relationship section s2-2 with Fig6/7
+    captions; Materials/Methods s3-1 sample preparation and s3-2 EM. Other data-processing
+    subsections/supplements/pixels were not inspected.'
+  accessed_at: '2026-10-22T05:04:38.856736Z'
+  support: supports
+  summary: Zanetti2013 images complete yeast COPII coats reconstituted on giant unilamellar
+    vesicles with Sec12 and GMP-PNP, using cryo-electron tomography and subtomogram
+    averaging. Inner/outer layers have constrained but unfixed relative positions.
+    Binding-site/lattice docking supports their arrangement; large-cargo accommodation
+    and in-vivo implications remain qualified, and the authors acknowledge that absence
+    of GTP hydrolysis may promote lattice order.
+  snapshot_sha256: 02cf4079e133401cbd71097fdc31db209d9d7d916c3d54dab30a2ac68e3d5e5f
+- evidence_id: micro48-IPR006687
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006687/
+  locator: Native metadata accession/name/type and complete description, compared
+    with the exact corresponding protein cross-reference.
+  accessed_at: '2026-10-22T05:04:38.857434Z'
+  support: supports
+  summary: IPR006687 is type family, Small GTPase superfamily SAR1-type. Its complete
+    description identifies the conserved Sar1 COPII GTPase class, and native P20606
+    carries that exact family cross-reference. This is not the broader ARF/SAR superfamily
+    or a partial domain.
+  snapshot_sha256: bcf949d7092e1b0ed46413b8ea6557355dbe34a4fc375e3c7767c5da6b62bd41
+- evidence_id: micro48-go-search-Sec23-Sec24
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Sec23%20Sec24&limit=25
+  locator: Complete numberOfHits/results/pageInfo response.
+  accessed_at: '2026-10-22T05:04:40.104465Z'
+  support: context_only
+  summary: The exact bounded QuickGO query returned zero results; this does not establish
+    that no complex identity exists under any terminology or in another resource.
+  snapshot_sha256: 4f0027cdf6df79bb6d4e90297666e971eb23ca7cfa19fc11fb9c9931fd5f1004
+  search_scope: Remote QuickGO ontology search query Sec23 Sec24, limit25, complete
+    zero-result response. Local ignored files are not applicable; no general absence
+    claim.
+- evidence_id: micro48-go-search-Sec13-Sec31
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Sec13%20Sec31&limit=25
+  locator: Complete numberOfHits/results/pageInfo response.
+  accessed_at: '2026-10-22T05:04:40.109373Z'
+  support: context_only
+  summary: The exact bounded QuickGO query returned zero results; this does not establish
+    that no complex identity exists under any terminology or in another resource.
+  snapshot_sha256: 4f0027cdf6df79bb6d4e90297666e971eb23ca7cfa19fc11fb9c9931fd5f1004
+  search_scope: Remote QuickGO ontology search query Sec13 Sec31, limit25, complete
+    zero-result response. Local ignored files are not applicable; no general absence
+    claim.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/copii_vesicle_coat.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:01:00Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/copii_vesicle_coat.yaml'
+  snapshot_sha256: ea661a896a49fdae4b6d39205ce3a5f737d530853f07fe2684e01fce61cb7a13
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/copii_vesicle_coat.yaml --out
+    /private/tmp/cellstructure-batch48-20261022-ppyyf64c/copii_vesicle_coat-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:01:01Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/copii_vesicle_coat.yaml\
+    \ --out /private/tmp/cellstructure-batch48-20261022-ppyyf64c/copii_vesicle_coat-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch48-20261022-ppyyf64c/copii_vesicle_coat-strict.tsv"
+  snapshot_sha256: 6786b828ef05266e3c015195743813646b3a4d280e409e7d5e3016ac90e07139
+- evidence_id: native-proteins
+  kind: validation
+  reference: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/copii_vesicle_coat.yaml
+  locator: Complete read-only focused native proteins log
+  accessed_at: '2026-10-22T05:02:34.516536Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch48-20261022-ppyyf64c/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/copii_vesicle_coat.yaml
+  locator: Complete read-only focused native graphs log
+  accessed_at: '2026-10-22T05:02:34.986833Z'
+  support: supports
+  summary: "data/structures/other/copii_vesicle_coat.yaml  (GO:0030127)\n  yeast_copii_coat_assembly\t\
+    sar1_gtpase\tCOVERED\t->sar1_gtpase (UniProtKB:P20606)\n  yeast_copii_coat_assembly\t\
+    sec23_sec24_inner_coat\tCOVERED\t->sec23_sec24_inner_coat (UniProtKB:P15303, UniProtKB:P40482)\n\
+    \  yeast_copii_coat_assembly\tsec13_sec31_outer_coat\tCOVERED\t->sec13_sec31_outer_coat\
+    \ (UniProtKB:Q04491, UniProtKB:P38968)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n\
+    \     3  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     0  PARTIAL_EXAMPLES          component_ref\
+    \ target holds protein_examples but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols\
+    \ and holds no protein_examples\n     0  DANGLING_COMPONENT_REF    component_ref\
+    \ names a component_id that does not exist on the record\n     0  UNANCHORED_WITH_UNIPROT\
+    \   no component_ref, but node carries a UniProtKB grounding or xref\n     0 \
+    \ UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref\
+    \ on the node\n     3  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 7571c7db8734ce15009e2ddbae753cc8f2630ee35f7d15d5b98f6eab28929f55
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/copii_vesicle_coat.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '13 of 21 collected target identifiers returned OK. PMID:10684247: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:10720463:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:10753972: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:11086000: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force.; PMID:12235121: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:8004676:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:8548805: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:9568718: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: COPII coat identity and topology
+  outcome: supported
+  target_ids:
+  - GO:0030127
+  summary: Active GO0030127 explicitly names the five yeast coat proteins, with vesicle-coat
+    parentage. Coat/ER-vesicle parthood is definition-supported, not an exposed direct
+    typed GO edge here. The coat is proteinaceous and distinct from its membrane/vesicle.
+  evidence_ids:
+  - micro48-go
+  - record
+- assessment_id: components
+  area: grounding
+  topic: Sar1 and inner/outer coat complexes
+  outcome: concern
+  target_ids:
+  - GO:0030127
+  summary: The Sar1, Sec23/Sec24 inner and Sec13/Sec31 outer classes are directly
+    supported in the inspected reconstitutions. Exact IPR006687 resolves the SAR1
+    row’s explicit label-only gap. Individual Sec23 or Sec31 families would not identify
+    a whole heteromeric subcomplex; bounded zero-result GO queries do not prove absence
+    of all candidate complex groundings.
+  evidence_ids:
+  - micro48-go
+  - micro48-PMID-8004676
+  - micro48-PMID-9568718
+  - micro48-zanetti2013-meta
+  - micro48-matsuoka1998-author
+  - micro48-zanetti2013-xml
+  - micro48-IPR006687
+  - micro48-go-search-Sec23-Sec24
+  - micro48-go-search-Sec13-Sec31
+  - micro48-protein-P20606
+  - micro48-protein-P15303
+  - micro48-protein-P40482
+  - micro48-protein-Q04491
+  - micro48-protein-P38968
+  - record
+  - curation
+- assessment_id: proteins
+  area: grounding
+  topic: Protein examples and annotation joins
+  outcome: supported
+  target_ids:
+  - GO:0030127
+  summary: All five reviewed S288C examples and single-hit gene queries are correct.
+    Native SEC23/SEC24 COPII-membrane annotations join the cited Matsuoka2000, Shimoni2000,
+    Supek2002, Bednarek1995 and Peng2000 records as appropriate. SEC13’s Rout2000
+    annotation is explicitly nuclear-pore localization of a shared protein; it is
+    not misused as primary proof of COPII membership, which the coat papers independently
+    establish.
+  evidence_ids:
+  - micro48-protein-P20606
+  - micro48-protein-P15303
+  - micro48-protein-P40482
+  - micro48-protein-Q04491
+  - micro48-protein-P38968
+  - micro48-gene-SAR1
+  - micro48-gene-SEC23
+  - micro48-gene-SEC24
+  - micro48-gene-SEC13
+  - micro48-gene-SEC31
+  - micro48-pmid10684247
+  - micro48-pmid10720463
+  - micro48-pmid10753972
+  - micro48-pmid11086000
+  - micro48-pmid12235121
+  - micro48-pmid8548805
+  - micro48-matsuoka1998-author
+  - micro48-zanetti2013-xml
+- assessment_id: sources
+  area: evidence
+  topic: Native ER versus synthetic coat assembly
+  outcome: supported
+  target_ids:
+  - GO:0030127
+  summary: Barlowe’s complete abstract supports washed-ER budding with purified soluble
+    components, and Matsuoka directly distinguishes native ER and defined-lipid reactions.
+    Zanetti’s data are membrane-assembled in vitro coats, with a nonhydrolysable nucleotide
+    and modeled interpretations. The record’s descriptions remain at this coarse supported
+    level and do not export exact synthetic stoichiometry or specific lattice geometry
+    to all living coats.
+  evidence_ids:
+  - micro48-PMID-8004676
+  - micro48-PMID-9568718
+  - micro48-zanetti2013-meta
+  - micro48-matsuoka1998-author
+  - micro48-zanetti2013-xml
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Descriptive sequential assembly graph
+  outcome: supported
+  target_ids:
+  - GO:0030127
+  summary: The seven-node/nine-edge NONMECHANISTIC ASSEMBLY graph keeps Sar1 membrane
+    association, recruitment of Sec23/24, association with the outer coat and constituent/vesicle
+    parthood distinct. Matsuoka directly supports sequential binding in reconstitution;
+    Zanetti supports the layer relationship. No complete GTP hydrolysis, cargo-selection
+    or scission cycle is asserted.
+  evidence_ids:
+  - micro48-go
+  - micro48-matsuoka1998-author
+  - micro48-zanetti2013-xml
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Species, reference strain and COMMON meaning
+  outcome: supported
+  target_ids:
+  - GO:0030127
+  summary: Species4932 and strain559292 identities are correct. COMMON means present
+    in most taxon members with exceptional losses; ordinary yeast-system evidence
+    provides qualitative support, not a measured prevalence census. Native reference
+    accessions are not evidence that every cited experiment used S288C.
+  evidence_ids:
+  - micro48-tax4932
+  - micro48-tax559292
+  - schema
+  - micro48-PMID-8004676
+  - micro48-PMID-9568718
+  - micro48-zanetti2013-meta
+  - micro48-matsuoka1998-author
+  - micro48-zanetti2013-xml
+- assessment_id: necessity
+  area: grounding
+  topic: Formation necessity remains unknown
+  outcome: unknown
+  target_ids:
+  - GO:0030127
+  summary: All current constituent essentiality labels are UNKNOWN. The inspected
+    membership, localization, transport and reconstitution evidence is not promoted
+    to an unqualified requirement for formation of every represented structure. No
+    necessity finding is inferred from a missing depletion experiment.
+  evidence_ids:
+  - micro48-go
+  - schema
+  - record
+  - micro48-PMID-8004676
+  - micro48-PMID-9568718
+  - micro48-zanetti2013-meta
+  - micro48-matsuoka1998-author
+  - micro48-zanetti2013-xml
+- assessment_id: coverage
+  area: completeness
+  topic: Whole-record coverage and bounded enrichment
+  outcome: supported
+  target_ids:
+  - GO:0030127
+  summary: All target bytes, component/examples, function/evidence placements, canonical
+    example, graph, discussions and history were reviewed. Findings concern exact
+    current statements or verified available mappings, not optional inventory expansion
+    or a declaration that historical searches were false. No neighboring record’s
+    scientific verdict is imported.
+  evidence_ids:
+  - micro48-go
+  - record
+  - curation
+  - micro48-PMID-8004676
+  - micro48-PMID-9568718
+  - micro48-zanetti2013-meta
+  - micro48-matsuoka1998-author
+  - micro48-zanetti2013-xml
+findings:
+- finding_id: F1
+  issue_key: copii.exact_sar1_family
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the exact SAR1 family grounding
+  description: The Sar1-family protein component remains REVIEWED_LABEL_ONLY, although
+    native IPR006687 exactly represents the source-neutral SAR1-type family and is
+    cross-referenced by the verified yeast P20606 example. This current mapping gap
+    is distinct from the historical statement that an earlier pass did not curate
+    it.
+  target_ids:
+  - GO:0030127
+  field_paths:
+  - components[0].grounding
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  evidence_ids:
+  - micro48-IPR006687
+  - micro48-protein-P20606
+  - record
+  - curation
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/copii_vesicle_coat.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: minor
+  normalization_reason: 'Minor: protein identity, coat membership and biology are
+    correct; an exact verified family resolves a bounded non-blocking label-only grounding
+    gap.'
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030127
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/copii_vesicle_coat.yaml
+    role: maintained scientific record
+  description: Ground the Sar1 component to InterPro:IPR006687 and synchronize current
+    grounding status/notes and any linked node consistently. Preserve its component
+    ID, UNKNOWN necessity, and the distinct unresolved heteromeric subcomplex boundaries.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+limitations:
+- COMMON retains its schema meaning present in most members with exceptional losses.
+  Yeast experiments support ordinary species-level occurrence qualitatively, without
+  measuring a species-wide prevalence census.
+- Reference-entry S288C identity is distinguished from experimental strains, tagged
+  constructs, purified fragments and reconstitution conditions.
+- No microscopy pixels, videos or supplementary files were inspected. Primary text
+  and embedded captions were read only at the explicitly named extents.
+- All constituent essentiality values are UNKNOWN. Membership, protein function, transport
+  phenotype and necessity for formation of the entire structure are separate claims.
+- Barlowe1994 and the six localization-annotation papers were read at complete native
+  abstract tier only; no detailed unseen experiments or protein-specific primary panels
+  are certified.
+- Barlowe publisher and ScienceDirect attempts are retained HTTP403 failures; Matsuoka’s
+  genuinely recovered author PDF is a separate directly read primary source.
+- Zanetti data-processing subsections, supplementary material and images were not
+  inspected. No exact source-neutral GO or Complex Portal mapping for the two heteromeric
+  subcomplexes was established by the bounded searches.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User expressly requests one review for every unreviewed record, including scientifically
+  clean records.
+- iModulonDB is not applicable to these vesicle-coat and CORVET identity, molecular-family,
+  localization and formation claims.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
