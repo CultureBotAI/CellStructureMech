@@ -1,0 +1,2065 @@
+schema_version: 1.0.0
+review_id: 20261022T041113Z-carboxysome-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of carboxysome
+started_at: '2026-10-22T03:46:58Z'
+finished_at: '2026-10-22T04:11:13Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Two major corrections address formation-essentiality and categorical RbcX
+  exclusion; two minors correct its unrelated PMID and the whole-shell/facet-component
+  graph join. Core organelle identity, coarse composition, model-specific assembly,
+  protein identities and image provenance are supported.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/microcompartment/carboxysome/carboxysomes_em.jpg
+    sha256: 92ffd40eccbe10c71b6aa4d5d0cd94c8322f98e2bf76d5c92b6991702e5b931e
+    role: context
+  - path: data/structures/microcompartment/bacterial_microcompartment.yaml
+    sha256: 744baee4509a2d6c59e951bf107ec3730a2576b7c084d239569913389b1a3321
+    role: context
+  - path: data/structures/microcompartment/carboxysome.yaml
+    sha256: cdb55020f01fc187a13bdecb69c982a747dfb27fd2fa2e341c288a0cb56bdcd6
+    role: target
+  - path: data/structures/microcompartment/carboxysome_shell.yaml
+    sha256: a732afb9239cc57b69ff7d4ca75700b4f2b3fb682837b1be799376d12acb7762
+    role: context
+  - path: data/structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.yaml
+    sha256: 67b4280a4ef1837e40fe65ac0ed67e263b95339d1b364a976ee1110c2440029f
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0031470
+  path: data/structures/microcompartment/carboxysome.yaml
+  label: carboxysome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained scientific record
+scope:
+  description: One complete target, with the other three BMC/carboxysome/shell/Eut
+    records frozen as boundary context. Exact authority, all current component/function/graph/source
+    placements, taxonomic scope, formation semantics, history and discussions were
+    reviewed.
+  selection: Batch42 fixed strict path order, index 7; exactly one maintained target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0031470
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  command: just validate data/structures/microcompartment/carboxysome.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  command: just validate-strict data/structures/microcompartment/carboxysome.yaml
+    --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/carboxysome-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-proteins
+  name: Focused native proteins
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  command: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/microcompartment/carboxysome.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-proteins
+- check_id: native-graphs
+  name: Focused native graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  command: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/microcompartment/carboxysome.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - neighbor-bacterial_microcompartment
+  - neighbor-carboxysome_shell
+  - neighbor-ethanolamine_degradation_polyhedral_organelle
+  - micro42-go
+  - micro42-SL0034
+  - micro42-tax1117
+  - micro42-tax1140
+  - micro42-tax1224
+  - micro42-tax555778
+  - micro42-tax927
+  - micro42-up-O85041
+  - micro42-up-O85043
+  - micro42-up-P27134
+  - micro42-up-P45689
+  - micro42-up-P46204
+  - micro42-up-P46205
+  - micro42-up-Q03511
+  - micro42-up-Q03512
+  - micro42-up-Q03513
+  - micro42-up-Q31NB2
+  - micro42-up-Q31NB3
+  - micro42-up-Q31QW7
+  - micro42-up-Q31RK2
+  - micro42-up-Q31RK3
+  - micro42-up-Q8GJM6
+  - micro42-pmid10525740
+  - micro42-pmid17675289
+  - micro42-pmid18258595
+  - micro42-pmid19844578
+  - micro42-pmid20080631
+  - micro42-pmid20304968
+  - micro42-pmid22461622
+  - micro42-pmid22928045
+  - micro42-pmid23572529
+  - micro42-pmid24006469
+  - micro42-pmid24267892
+  - micro42-pmid24585024
+  - micro42-pmid25117559
+  - micro42-pmid25826651
+  - micro42-pmid28616951
+  - micro42-pmid28963440
+  - micro42-pmid30389783
+  - micro42-pmid30520729
+  - micro42-pmid31048338
+  - micro42-pmid34406783
+  - micro42-pmid7934888
+  - micro42-legacy-PMC6022854
+  - micro42-legacy-PMC3811607
+  - micro42-body-PMC2760150
+  - micro42-legacy-PMC3425506
+  - micro42-legacy-PMC3668761
+  - micro42-body-PMC3272956
+  - micro42-body-PMC1872035
+  - micro42-IPR000249
+  - micro42-IPR004992
+  - micro42-IPR014076
+  - micro42-IPR014077
+  - micro42-IPR046380
+  - micro42-IPR046387
+  - micro42-IPR050575
+  - micro42-IPR044870
+  - micro42-PF00936
+  - micro42-PF03319
+  - micro42-doi2
+  - micro42-doi3
+  - micro42-doi13
+  - micro42-huang2019-xml
+  - micro42-pmid30389782
+  - micro42-up-Q31N04
+  - micro42-legacy-PMC6635877
+  - micro42-legacy-PMC3366800
+  - micro42-IPR011004
+  - micro42-IPR014074
+  - micro42-IPR017156
+  - micro42-IPR020990
+  - micro42-IPR045066
+  - micro42-IPR063627
+  - micro42-chebi17544
+  - micro42-chebi16526
+  - micro42-uo0000018
+  - micro42-trait-graph
+  - image
+  - micro42-image-commons
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  summary: '31 of 53 collected target identifiers returned OK. PMID:10525740: UNREACHABLE;
+    Exact native MED identity/title/DOI and returned PMC field were reviewed after
+    bulk eutils414 transport failure. Resolving an identifier does not certify attached
+    biology; the unrelated Ras PMID20080631 remains an explicit wrong-source finding.;
+    PMID:17675289: UNREACHABLE; Exact native MED identity/title/DOI and returned PMC
+    field were reviewed after bulk eutils414 transport failure. Resolving an identifier
+    does not certify attached biology; the unrelated Ras PMID20080631 remains an explicit
+    wrong-source finding.; PMID:18258595: UNREACHABLE; Exact native MED identity/title/DOI
+    and returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:19844578: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:20080631:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:20304968: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:22461622: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:22928045:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:23572529: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:24006469: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:24267892:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:24585024: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:25117559: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:25826651:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:28616951: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:28963440: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:30389783:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:30520729: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:31048338: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:34406783:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:7934888: UNREACHABLE; Exact native MED identity/title/DOI and returned
+    PMC field were reviewed after bulk eutils414 transport failure. Resolving an identifier
+    does not certify attached biology; the unrelated Ras PMID20080631 remains an explicit
+    wrong-source finding.; traitmech:000072: SKIPPED; Exact published TraitMech graph
+    row verifies id/label/category and parent_proxy mapping, corroborated by the unchanged
+    same-base trait gate. No experimental possession phenotype is inferred. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro42-pmid10525740
+  - micro42-pmid17675289
+  - micro42-pmid18258595
+  - micro42-pmid19844578
+  - micro42-pmid20080631
+  - micro42-pmid20304968
+  - micro42-pmid22461622
+  - micro42-pmid22928045
+  - micro42-pmid23572529
+  - micro42-pmid24006469
+  - micro42-pmid24267892
+  - micro42-pmid24585024
+  - micro42-pmid25117559
+  - micro42-pmid25826651
+  - micro42-pmid28616951
+  - micro42-pmid28963440
+  - micro42-pmid30389783
+  - micro42-pmid30520729
+  - micro42-pmid31048338
+  - micro42-pmid34406783
+  - micro42-pmid7934888
+  - micro42-trait-graph
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031470
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/microcompartment/carboxysome.yaml
+  locator: Complete maintained YAML; all components, source notes, graphs, discussions
+    and historical entries
+  accessed_at: '2026-10-22T04:01:29Z'
+  support: context_only
+  summary: The entire maintained target was read; no scientific record was changed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes
+  accessed_at: '2026-10-22T04:01:29Z'
+  support: context_only
+  summary: Protein-family identity is distinct from an assembled complex. ESSENTIAL
+    concerns failure of structure formation, not loss of catalytic function or ambient-CO2
+    growth.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components; groundings; associated machinery and chaperone boundaries
+  accessed_at: '2026-10-22T04:01:29Z'
+  support: context_only
+  summary: Components are taxon-agnostic molecular families/classes; exact family
+    grounding is preferred when verified. Mature constituents and assembled-structure
+    maintenance machinery differ from transient preassembly chaperones.
+- evidence_id: neighbor-bacterial_microcompartment
+  kind: record_content
+  reference: data/structures/microcompartment/bacterial_microcompartment.yaml
+  locator: Complete frozen BMC/carboxysome/shell/Eut boundary neighbor
+  accessed_at: '2026-10-22T04:01:29Z'
+  support: context_only
+  summary: Frozen neighboring record read for class, family and boundary context;
+    its scientific verdict is not imported.
+- evidence_id: neighbor-carboxysome_shell
+  kind: record_content
+  reference: data/structures/microcompartment/carboxysome_shell.yaml
+  locator: Complete frozen BMC/carboxysome/shell/Eut boundary neighbor
+  accessed_at: '2026-10-22T04:01:29Z'
+  support: context_only
+  summary: Frozen neighboring record read for class, family and boundary context;
+    its scientific verdict is not imported.
+- evidence_id: neighbor-ethanolamine_degradation_polyhedral_organelle
+  kind: record_content
+  reference: data/structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.yaml
+  locator: Complete frozen BMC/carboxysome/shell/Eut boundary neighbor
+  accessed_at: '2026-10-22T04:01:29Z'
+  support: context_only
+  summary: Frozen neighboring record read for class, family and boundary context;
+    its scientific verdict is not imported.
+- evidence_id: micro42-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0015977,GO:0031469,GO:0031470,GO:0031471,GO:0043232,GO:0046336
+  locator: Complete requested term identities, definitions, obsolescence and typed
+    child relations.
+  accessed_at: '2026-10-22T03:50:27.488533Z'
+  support: supports
+  summary: The requested active GO entries distinguish the whole carboxysome GO0031470,
+    its BMC parent GO0031469 and the carbon-fixation process GO0015977. Typed children
+    were read; this is not an asserted exact GO shell term.
+  snapshot_sha256: 7d520adef79917ad67a8d84c30d00d98c1bd17c20957615036f09416a50f15a1
+- evidence_id: micro42-SL0034
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0034.json
+  locator: Complete definition, GO mapping and isA object; native counts not used
+    as completeness evidence.
+  accessed_at: '2026-10-22T03:50:28.112492Z'
+  support: supports
+  summary: SL-0034 identifies the carboxysome, maps GO0031470 and places it under
+    bacterial microcompartment SL-0544. Its definition supports protein coat, Rubisco
+    and carbonic-anhydrase carbon concentration.
+  snapshot_sha256: 29e0329bec73c800ab336f0676f35834dc67a4f7a6e19d2bb81ad19a9f40d6bd
+- evidence_id: micro42-tax1117
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1117
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T03:49:51.982607Z'
+  support: supports
+  summary: ENA taxId 1117 identifies Cyanobacteriota at rank phylum; aliases and lineage
+    match the record. Identity alone is not prevalence or experimental-condition evidence.
+  snapshot_sha256: d69b72930e4bf41457d04a91c313170637d9bc5723d4378f057fdc380c67019c
+- evidence_id: micro42-tax1140
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1140
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T03:49:52.867893Z'
+  support: supports
+  summary: ENA taxId 1140 identifies Synechococcus elongatus PCC 7942 = FACHB-805
+    at rank strain; aliases and lineage match the record. Identity alone is not prevalence
+    or experimental-condition evidence.
+  snapshot_sha256: 70bf02b8ca783e9afbd060d6c098a79cec71954ea2d64a270fc130481a63cb2b
+- evidence_id: micro42-tax1224
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1224
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T03:49:52.982158Z'
+  support: supports
+  summary: ENA taxId 1224 identifies Pseudomonadota at rank phylum; aliases and lineage
+    match the record. Identity alone is not prevalence or experimental-condition evidence.
+  snapshot_sha256: b32cf977ba8d8e01104d88bf3175a57ebfa713dc0d0749ed0a2aaf803111468d
+- evidence_id: micro42-tax555778
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/555778
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T03:49:53.064797Z'
+  support: supports
+  summary: ENA taxId 555778 identifies Halothiobacillus neapolitanus c2 at rank strain;
+    aliases and lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: 8f62a0778e6500581adfb9880ed654a7c8bf642e9c12d9cb0948a1423069ea1f
+- evidence_id: micro42-tax927
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/927
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T03:49:53.728108Z'
+  support: supports
+  summary: ENA taxId 927 identifies Halothiobacillus neapolitanus at rank species;
+    aliases and lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: 90c2235cf96f6b99ac73674d561b86090ac8e059e4d6981ed09ca244ab67bd90
+- evidence_id: micro42-up-O85041
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O85041.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:47.337156Z'
+  support: supports
+  summary: O85041 is UniProtKB reviewed (Swiss-Prot), taxon 555778, genes ['csoS2'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 0f10a4fbd6c8708118ce66c0afb5699c41da7be0176b0b96f208d00fabc42271
+- evidence_id: micro42-up-O85043
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O85043.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:47.659953Z'
+  support: supports
+  summary: O85043 is UniProtKB reviewed (Swiss-Prot), taxon 555778, genes ['csoS4A'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 9fee67e162991078ba3a2bf368848b0afb508579c0a96092e2279b0bbc7780b4
+- evidence_id: micro42-up-P27134
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P27134.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:48.392413Z'
+  support: supports
+  summary: P27134 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['ccaA'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: cd60d36ea9619975dd72cdb869b9ce010b47741791aeb1699a204ec1a73504fc
+- evidence_id: micro42-up-P45689
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P45689.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:48.943404Z'
+  support: supports
+  summary: P45689 is UniProtKB reviewed (Swiss-Prot), taxon 555778, genes ['csoS1A'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 72e1c7f661583c36b401d51f42d203de0a8dd988eb90428b7ae83bee6f5ec7c0
+- evidence_id: micro42-up-P46204
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P46204.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:49.039466Z'
+  support: supports
+  summary: P46204 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['ccmN'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: a186e9e7df0e32a99c3ab5797f51259ee6cf8f0eb3ede64ea494a9ec2b6afb6c
+- evidence_id: micro42-up-P46205
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P46205.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:49.053396Z'
+  support: supports
+  summary: P46205 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['ccmO'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 483d0e740d1701ec0ecd17fedf2cd27a2d89724108efd1956f1197207317f6c1
+- evidence_id: micro42-up-Q03511
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q03511.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:49.209838Z'
+  support: supports
+  summary: Q03511 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['ccmK2'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: e03170ddd15e23f7594be9c1f46838487b1855624aa39763a58d405ef7061bbb
+- evidence_id: micro42-up-Q03512
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q03512.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:49.937278Z'
+  support: supports
+  summary: Q03512 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['ccmL'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 1237cf2534382c045d3fd7ef1952c7457fde8296980a23f8102f3a0a5885f5f7
+- evidence_id: micro42-up-Q03513
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q03513.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:50.003719Z'
+  support: supports
+  summary: Q03513 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['ccmM'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: bbf58e1d979618d843b1426b62c67eef896f1b6cb60dc245cc9f21041127b377
+- evidence_id: micro42-up-Q31NB2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q31NB2.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:50.106820Z'
+  support: supports
+  summary: Q31NB2 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['cbbS'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 88c406ac9b46f4f221e0c23fbdcc8bd9a205545e3cc51e26d29d75dbc8cb0ef7
+- evidence_id: micro42-up-Q31NB3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q31NB3.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:50.203023Z'
+  support: supports
+  summary: Q31NB3 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['cbbL'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 9210f64add99ba2249b485eb6de2760666e86a6454fcda6282ee0b7daa8928a1
+- evidence_id: micro42-up-Q31QW7
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q31QW7.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:50.934653Z'
+  support: supports
+  summary: Q31QW7 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['ccmP'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: fb89b777434d141599507638b7349cba93af480f0809db802e6325b8f5716af6
+- evidence_id: micro42-up-Q31RK2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q31RK2.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:51.094913Z'
+  support: supports
+  summary: Q31RK2 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['ccmK4'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 11ae8f52d23a0cea4ae8cb04b06f94230446b936be22a6c0f738353c5ae15fd7
+- evidence_id: micro42-up-Q31RK3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q31RK3.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:51.111356Z'
+  support: supports
+  summary: Q31RK3 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['ccmK3'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: b6123083facdcc2240f78d0053a3658f62e7d8e4c3588f66334d7c54324ba46e
+- evidence_id: micro42-up-Q8GJM6
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q8GJM6.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:49:51.130810Z'
+  support: supports
+  summary: Q8GJM6 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['mcdB'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 823e946a1cca2f40d68a97541124b9fbffe231bd494da16b0e62ef4f15008f7c
+- evidence_id: micro42-pmid10525740
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10525740%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:40.713454Z'
+  support: supports
+  summary: 'Unique MED10525740: The correlation of the gene csoS2 of the carboxysome
+    operon with two polypeptides of the carboxysome in thiobacillus neapolitanus Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: ce840036f291065d59c5a15d7392e53f4de004d603d752eaf15d8a5c17a2dc58
+- evidence_id: micro42-pmid17675289
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17675289%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:40.714107Z'
+  support: supports
+  summary: 'Unique MED17675289: Analysis of carboxysomes from Synechococcus PCC7942
+    reveals multiple Rubisco complexes with carboxysomal proteins CcmM and CcaA. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: ef9469b046197d96f494b9830367d27dbb1a53ed8c5419291e4cf8b0b49a3141
+- evidence_id: micro42-pmid18258595
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18258595%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:40.713839Z'
+  support: supports
+  summary: 'Unique MED18258595: CO2 fixation kinetics of Halothiobacillus neapolitanus
+    mutant carboxysomes lacking carbonic anhydrase suggest the shell acts as a diffusional
+    barrier for CO2. Authors/year/DOI and the complete native abstract were inspected.
+    This row establishes bibliographic identity and abstract-level content only; detailed
+    experiments require separately specified body evidence.'
+  snapshot_sha256: 1b8fad2f552448cbbb4f25fead285cd9c1561a79fc810794ea129b9482f52e6c
+- evidence_id: micro42-pmid19844578
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19844578%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:40.714381Z'
+  support: supports
+  summary: 'Unique MED19844578: The pentameric vertex proteins are necessary for the
+    icosahedral carboxysome shell to function as a CO2 leakage barrier. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 796d432f24f46f3130a9c4038afa6412ee060a7e8c1ebdc4a2dc16ce25de52ba
+- evidence_id: micro42-pmid20080631
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20080631%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:41.468500Z'
+  support: supports
+  summary: 'Unique MED20080631: Ras membrane orientation and nanodomain localization
+    generate isoform diversity. Authors/year/DOI and the complete native abstract
+    were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 3ae62854bbd56ae96c40893835b032b738b6203482e3eba382a776dc1e6ad14e
+- evidence_id: micro42-pmid20304968
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20304968%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:41.484071Z'
+  support: supports
+  summary: 'Unique MED20304968: Functional cyanobacterial beta-carboxysomes have an
+    absolute requirement for both long and short forms of the CcmM protein. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 3ae3717b15e082d0fae56431455bc913eb0c8d59e3c783b0b93b1b0460a98e7a
+- evidence_id: micro42-pmid22461622
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22461622%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:41.546750Z'
+  support: supports
+  summary: 'Unique MED22461622: Elucidating essential role of conserved carboxysomal
+    protein CcmN reveals common feature of bacterial microcompartment assembly. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 3fe4cbfe1b7c8a454f0ec99be9fb1c2a2e37baa9527be05eeec8aa01769e9631
+- evidence_id: micro42-pmid22928045
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22928045%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:41.558423Z'
+  support: supports
+  summary: 'Unique MED22928045: Structural determinants of the outer shell of β-carboxysomes
+    in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: df7ba5ed9c21d3f19f06d9e13fe6fbee677b6450a341bd580c1d6fb3789bf809
+- evidence_id: micro42-pmid23572529
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A23572529%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:42.095327Z'
+  support: supports
+  summary: 'Unique MED23572529: The structure of CcmP, a tandem bacterial microcompartment
+    domain protein from the β-carboxysome, forms a subcompartment within a microcompartment.
+    Authors/year/DOI and the complete native abstract were inspected. This row establishes
+    bibliographic identity and abstract-level content only; detailed experiments require
+    separately specified body evidence.'
+  snapshot_sha256: 3b5bfa6a4c08941b1c66d45d1bcfc1cd7158749018b26c21c185bef29e3eaa5f
+- evidence_id: micro42-pmid24006469
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24006469%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:42.190858Z'
+  support: supports
+  summary: 'Unique MED24006469: Functions, compositions, and evolution of the two
+    types of carboxysomes: polyhedral microcompartments that facilitate CO2 fixation
+    in cyanobacteria and some proteobacteria. Authors/year/DOI and the complete native
+    abstract were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 742e4edc3eb312d88d24332994f6dd52ffdc1780c6290071172fa23d888aea9c
+- evidence_id: micro42-pmid24267892
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24267892%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:42.196543Z'
+  support: supports
+  summary: 'Unique MED24267892: Biogenesis of a bacterial organelle: the carboxysome
+    assembly pathway. Authors/year/DOI and the complete native abstract were inspected.
+    This row establishes bibliographic identity and abstract-level content only; detailed
+    experiments require separately specified body evidence.'
+  snapshot_sha256: 6605b1a2d8fce06e213eaefdc19a68e81b0cd1962062180fcfd2408763bb715b
+- evidence_id: micro42-pmid24585024
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24585024%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:42.234059Z'
+  support: supports
+  summary: 'Unique MED24585024: In vitro and in vivo analyses of the role of the carboxysomal
+    β-type carbonic anhydrase of the cyanobacterium Synechococcus elongatus in carboxylation
+    of ribulose-1,5-bisphosphate. Authors/year/DOI and the complete native abstract
+    were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: e768ad229dfca1f6360b282a9a5b69e2c5246677d41e81e04803dc71518fa2d9
+- evidence_id: micro42-pmid25117559
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A25117559%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:42.313852Z'
+  support: supports
+  summary: 'Unique MED25117559: Engineering bacterial microcompartment shells: chimeric
+    shell proteins and chimeric carboxysome shells. Authors/year/DOI and the complete
+    native abstract were inspected. This row establishes bibliographic identity and
+    abstract-level content only; detailed experiments require separately specified
+    body evidence.'
+  snapshot_sha256: 44dbad007010fb94537115bd4c596a8268443c53e07e274cb1c7c4bef5a7bad0
+- evidence_id: micro42-pmid25826651
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A25826651%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:43.093318Z'
+  support: supports
+  summary: 'Unique MED25826651: Advances in Understanding Carboxysome Assembly in
+    Prochlorococcus and Synechococcus Implicate CsoS2 as a Critical Component. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 2a88a08d48cd808c16b8027acb1edfb761f1c93863ab3055478aecd77ebb69da
+- evidence_id: micro42-pmid28616951
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28616951%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:43.188137Z'
+  support: supports
+  summary: 'Unique MED28616951: Direct characterization of the native structure and
+    mechanics of cyanobacterial carboxysomes. Authors/year/DOI and the complete native
+    abstract were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 0cc0255449a6983017f13fa10a4820c7b09dbe75250328dbcbe04b3af5cb479f
+- evidence_id: micro42-pmid28963440
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28963440%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:43.194861Z'
+  support: supports
+  summary: 'Unique MED28963440: Superresolution microscopy of the β-carboxysome reveals
+    a homogeneous matrix. Authors/year/DOI and the complete native abstract were inspected.
+    This row establishes bibliographic identity and abstract-level content only; detailed
+    experiments require separately specified body evidence.'
+  snapshot_sha256: e91d2ef9c523cc1775bee743dd23761bb52c56ef39e7d2ac6fe4d8946016d69b
+- evidence_id: micro42-pmid30389783
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A30389783%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:43.834425Z'
+  support: supports
+  summary: 'Unique MED30389783: Heterohexamers Formed by CcmK3 and CcmK4 Increase
+    the Complexity of Beta Carboxysome Shells. Authors/year/DOI and the complete native
+    abstract were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 3df09a47f1f67590f6f9e09493fca8b87b6014f9562ad9a6357333563df86a61
+- evidence_id: micro42-pmid30520729
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A30520729%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:43.855293Z'
+  support: supports
+  summary: 'Unique MED30520729: Protein gradients on the nucleoid position the carbon-fixing
+    organelles of cyanobacteria. Authors/year/DOI and the complete native abstract
+    were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: b3d5d1cbc7c7a45df1fc2bdfabdc79ce13485988fdfc163a55994a42181bcada
+- evidence_id: micro42-pmid31048338
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A31048338%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:43.926450Z'
+  support: supports
+  summary: 'Unique MED31048338: Single-Organelle Quantification Reveals Stoichiometric
+    and Structural Variability of Carboxysomes Dependent on the Environment. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: dd02a54f554c0d21eb014d0f204e2dff5126713fd4c51d69eb3cd86ab01ee827
+- evidence_id: micro42-pmid34406783
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A34406783%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:43.970340Z'
+  support: supports
+  summary: 'Unique MED34406783: Dissection of the ATPase active site of McdA reveals
+    the sequential steps essential for carboxysome distribution. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 3358fa059326a7ada22069f8a546f175f7eac583630eb02192be7e97c6221955
+- evidence_id: micro42-pmid7934888
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A7934888%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:43.975037Z'
+  support: supports
+  summary: 'Unique MED7934888: Isolation and characterization of a carboxysome shell
+    gene from Thiobacillus neapolitanus. Authors/year/DOI and the complete native
+    abstract were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 3fe182a5b1309bf9e99409562f6cd217d08d95b893b18a92060624a424117e39
+- evidence_id: micro42-legacy-PMC6022854
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6022854/
+  locator: 'Genuine review HTML: Introduction P1–6, timeline P8–46, shell/assembly/diversity
+    P47–72 and associated main captions.'
+  accessed_at: '2026-10-22T03:50:50.533150Z'
+  support: supports
+  summary: This secondary synthesis supports H/T/P shell architecture, alpha/beta
+    core organization and established carbon-concentrating function; it distinguishes
+    shell/core assembly models and incomplete mechanistic knowledge.
+  snapshot_sha256: 4d4c6458a485c328fdf9f64c005c464dbcb2c9866cd8236374995ece391db05d
+- evidence_id: micro42-legacy-PMC3811607
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3811607/
+  locator: Genuine secondary full HTML; independently read sec3-2, sec3-4, sec3-5,
+    sec3-7, sec8-1 and sec8-2; complete native abstract separately.
+  accessed_at: '2026-10-22T03:50:51.119229Z'
+  support: supports
+  summary: The review distinguishes alpha and beta components and evolution; carbonic-anhydrase
+    deletion can leave normal-looking carboxysomes while abolishing efficient ambient-CO2
+    function. CcmM chemistry and CcaA occurrence differ among beta lineages. Shell-permeability
+    and evolutionary arguments remain models, not a directly measured universal oxygen-exclusion
+    rate.
+  snapshot_sha256: 025eef543848d674ea088d5f94e210c6011ddd2abe7bd957ed2e7c233e9c8c54
+- evidence_id: micro42-body-PMC2760150
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/2760150/
+  locator: 'Genuine primary HTML: complete Introduction s1, Results s2a–f, Discussion
+    s3, Methods s4a–g and Fig1–7 captions. Native H. neapolitanus c2/ATCC23641; high-CO2
+    culture context preserved. No new pixel quantification.'
+  accessed_at: '2026-10-22T03:50:10.723977Z'
+  support: supports
+  summary: Native H. neapolitanus csoS4AB double mutants still form mostly normal-looking
+    carboxysomes, with a minority elongated, yet require high CO2 and show a compromised
+    CO2 barrier. Absence was checked immunologically; subtle geometric deviations
+    were not excluded. This directly separates formation from functional closure.
+  snapshot_sha256: ed4b9e04cbf950a05dff636695de32a84046abbe5d24fce85360c72e375311c6
+- evidence_id: micro42-legacy-PMC3425506
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3425506/
+  locator: 'Genuine primary HTML: Results s2a/s2c/s2d; Discussion s3a; Methods s4a/s4d/s4e;
+    complete native abstract. Enriched fractions and nonspecific CcmM carryover are
+    explicitly distinguished.'
+  accessed_at: '2026-10-22T03:50:50.875597Z'
+  support: supports
+  summary: Native Syn7942 deletion/complementation, TEM and carboxysome-enriched fractions
+    support distinct CcmK2/CcmO requirements and their interaction; K3/K4 deletions
+    differ. The work does not establish every H/T/P individual as universally essential
+    across alpha and beta carboxysomes.
+  snapshot_sha256: 90c0f1ec81ae14a57b002a6af10ce5cfe8764eccc8be5216943372db0c673e26
+- evidence_id: micro42-legacy-PMC3668761
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3668761/
+  locator: 'Genuine primary HTML: Methods sec3/sec4; Results sec13 (nested Results
+    text through sec20, including Fig1–5 captions); complete Discussion direct paragraphs
+    sec21. Supplemental figures/data were not independently read.'
+  accessed_at: '2026-10-22T03:50:49.599660Z'
+  support: supports
+  summary: Native Syn7942 colocalization establishes CcmP association. Recombinant
+    E. coli-expressed purified CcmP crystallography resolves stacked trimers and open/closed
+    pore states; docking proposes incorporation into shell models. It does not resolve
+    CcmP within an intact native shell or measure dynamic passage directly.
+  snapshot_sha256: a33e5646bf7d4c78e0d0db45dd065b23557649aedd670a52f8ddf9100807c8d8
+- evidence_id: micro42-body-PMC3272956
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/3272956/
+  locator: 'Genuine primary HTML: Methods sec3–6; Results sec10 and sec12, their Fig1/2/4/5
+    captions and Table1.'
+  accessed_at: '2026-10-22T03:50:10.281127Z'
+  support: supports
+  summary: Native P. marinus MED4 carboxysomes were isolated; CsoS1D copurified and
+    remained in the shell-enriched fraction after disruption. This is direct Prochlorococcus
+    membership evidence, not direct localization of the independently identified H.
+    neapolitanus accession. Some other low-abundance bands could not be conclusively
+    identified.
+  snapshot_sha256: 2c111dcf86c1916859514e858651c5f276217f3b7626cf14ac84aac15e1125ff
+- evidence_id: micro42-body-PMC1872035
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/1872035/
+  locator: 'Genuine primary HTML: Introduction s1; Results s2a–d; Discussion s3 direct
+    paragraphs; Methods s4a/s4b/s4g; complete Fig1 caption. The maintained Fig1 image
+    is independently viewed only for the whole target.'
+  accessed_at: '2026-10-22T03:50:10.689644Z'
+  support: supports
+  summary: The primary study resolves recombinant H. neapolitanus CsoS1A hexamers
+    and crystal layers; pore electrostatics/sulfate binding and diffusion calculations
+    motivate a selective-permeability model. It explicitly does not directly measure
+    natural metabolite transport. Fig1 depicts native H. neapolitanus cells and isolated
+    carboxysomes with 100-nm bars.
+  snapshot_sha256: 8d2fad5081043094b5468996d1f643cd4791c07950c825cd2451507faa709c93
+- evidence_id: micro42-IPR000249
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR000249/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:49:53.814276Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: a803c78897d7650014ec5c4b3404b8ea98b98c7e6879286566526675fb0bf103
+- evidence_id: micro42-IPR004992
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004992/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:49:54.003619Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: e74c5aa30d022cec998d439ed5406764b62db0f8572dbda2a505255421d76c88
+- evidence_id: micro42-IPR014076
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014076/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:49:55.279151Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: 950ab813aa5719021e2979c6c2284b461fb57abe9e987ab38ff437c701626fbb
+- evidence_id: micro42-IPR014077
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014077/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:50:08.757861Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: a512302003b951a71d4c914811d84fddd2fb9b8d6f2f5b151a8da9d05bd4a65f
+- evidence_id: micro42-IPR046380
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR046380/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:50:18.504332Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: a37c31f836716d4e799ff63bd53449e76187812dac10bf92f1b678fd155b79a2
+- evidence_id: micro42-IPR046387
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR046387/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:50:22.103532Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: f1643b74366e1266370860d8e04318897616bc329ee5f97863437226d4079079
+- evidence_id: micro42-IPR050575
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050575/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:50:23.719950Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: c10a875a9b33d2ea782ada989c7d0e4047cf5a90fd2cb68a77430189eb130d12
+- evidence_id: micro42-IPR044870
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR044870/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:50:12.244909Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: ea9d3be2d8b421f5fe80535a4a43a5e82b164a6761578d282c3bc7d962f4b62e
+- evidence_id: micro42-PF00936
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00936/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:50:12.001189Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: 88a3c70d733d57424d141f6922140d963d8b905db3c6195b6ff0966a5174aca5
+- evidence_id: micro42-PF03319
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03319/
+  locator: Complete native metadata identity/type/member description and integration,
+    cross-checked against the named protein entries.
+  accessed_at: '2026-10-22T03:50:11.940521Z'
+  support: supports
+  summary: Native identity/type and member coverage were inspected. Domain/family
+    scope is broader or narrower than the combined carboxysome architectural cohort;
+    no single near-match is imposed as exact H/T/P identity. IPR050575 generated description
+    is not treated as primary experimental evidence.
+  snapshot_sha256: ad23273fdf50fc94344313209a5b93f784650f2cc77658c99ccae660b546c569
+- evidence_id: micro42-doi2
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038/nrmicro.2018.10%22&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:44.622347Z'
+  support: supports
+  summary: 'Unique MED29503457: Bacterial microcompartments. Authors/year/DOI and
+    the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 2a201c7ad09e400058b0e169914d5d0b828ef4af6d8ec642fcb41e1d373b42e6
+- evidence_id: micro42-doi3
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038/nrmicro1913%22&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:44.647105Z'
+  support: supports
+  summary: 'Unique MED18679172: Protein-based organelles in bacteria: carboxysomes
+    and related microcompartments. Authors/year/DOI and the complete native abstract
+    were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 6bb042c06a9bbb5d1961baebe71616ab752cdd07c9e64b731d2beddb0364396e
+- evidence_id: micro42-doi13
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1371/journal.pbio.0050144%22&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:49:46.395617Z'
+  support: supports
+  summary: 'Unique MED17518518: Structural analysis of CsoS1A and the protein shell
+    of the Halothiobacillus neapolitanus carboxysome. Authors/year/DOI and the complete
+    native abstract were inspected. This row establishes bibliographic identity and
+    abstract-level content only; detailed experiments require separately specified
+    body evidence.'
+  snapshot_sha256: d0d776049743f73c89410d29a3e312cf939c2cc5b17ea52d5bc7bb903be3fd53
+- evidence_id: micro42-huang2019-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6324234/fullTextXML
+  locator: 'Genuine primary JATS: Results s05/s06, Discussion s07/Conclusion s08,
+    Methods s10/s14/s15/s17/s18; Fig4–6 captions. No supplementary or raw-pixel reanalysis.'
+  accessed_at: '2026-10-22T03:55:59.581261Z'
+  support: supports
+  summary: In native Syn7942, tagged RbcX colocalizes with static, newly formed and
+    moving carboxysomes. Deletion changes number/size/distribution while carboxysomes
+    still form. The paper proposes later packing/stabilization roles and explicitly
+    distinguishes native observations from heterologous Rubisco-folding systems; universal
+    membership or essentiality is not established.
+  snapshot_sha256: 426742046a1b0c8dc262888afcf1acc8c899d875d3d2d81db6dd07a714a16617
+- evidence_id: micro42-pmid30389782
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:30389782%20AND%20SRC:MED&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T03:55:22.872417Z'
+  support: supports
+  summary: 'Unique MED30389782: Roles of RbcX in Carboxysome Biosynthesis in the Cyanobacterium
+    <i>Synechococcus elongatus</i> PCC7942. Authors/year/DOI and the complete native
+    abstract were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: f2c6b00612ddd8ff82652cfdb00b3a610f4c6698213bdb60a2ae29bbc9b53688
+- evidence_id: micro42-up-Q31N04
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q31N04.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references.
+  accessed_at: '2026-10-22T03:52:39.478139Z'
+  support: supports
+  summary: Q31N04 is UniProtKB reviewed (Swiss-Prot), taxon 1140, genes ['rbcX'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge.
+  snapshot_sha256: 8b2f6319476b64b231f6cd8e71c4d3b5bbe11a3e00b4850486902954dd1ea598
+- evidence_id: micro42-legacy-PMC6635877
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6635877/
+  locator: 'Genuine primary HTML: Introduction s01; Results s03/s04; Discussion s07;
+    Methods s09/s11/s12/s16 and associated main captions. No independent reanalysis
+    of imaging, calibration or supplemental data.'
+  accessed_at: '2026-10-22T03:50:49.599314Z'
+  support: supports
+  summary: Native functional Syn7942 carboxysomes were quantified by calibrated single-organelle
+    fluorescence, including RbcX as a minor associated component; stoichiometries
+    vary with environmental conditions. RbcX was not detected in the earlier purified-carboxysome
+    MS, a limitation the discussion relates to low abundance or loss. These data contradict
+    categorical exclusion solely as a transient folding chaperone.
+  snapshot_sha256: d74ac59cd649672e8825ce2341e285ea705faf0b5dd37f308ab96d09756501f9
+- evidence_id: micro42-legacy-PMC3366800
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3366800/
+  locator: 'Genuine primary HTML: Results sec15 nested paragraphs describing localization,
+    knockouts/rescue and affinity co-purification; complete native abstract. Methods
+    and supplements not independently read.'
+  accessed_at: '2026-10-22T03:50:49.599942Z'
+  support: supports
+  summary: Native Syn7942 CcmN deletion and C-terminal peptide deletions impair normal
+    carboxysomes; localization, CcmM association and C-terminal CcmK2 interaction
+    support the adaptor mechanism, within beta-carboxysomes.
+  snapshot_sha256: ff622d737e684457b21459bf16a93bf244e05b27100e0beba013de2afe6a3a5e
+- evidence_id: micro42-IPR011004
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR011004/
+  locator: Native metadata identity/type and complete description, joined to UniProt
+    cross-references.
+  accessed_at: '2026-10-22T03:49:54.413645Z'
+  support: supports
+  summary: The exact native protein-family/domain identity was checked against the
+    relevant component. Family specificity, alternative enzyme folds, multidomain
+    proteins and whole complexes remain distinct; domain-only matches do not automatically
+    ground the entire combined row.
+  snapshot_sha256: aa25c2ef66221932299d0263a3ac03994b2a6fa577a1211958095e7c48c87945
+- evidence_id: micro42-IPR014074
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014074/
+  locator: Native metadata identity/type and complete description, joined to UniProt
+    cross-references.
+  accessed_at: '2026-10-22T03:49:55.278396Z'
+  support: supports
+  summary: The exact native protein-family/domain identity was checked against the
+    relevant component. Family specificity, alternative enzyme folds, multidomain
+    proteins and whole complexes remain distinct; domain-only matches do not automatically
+    ground the entire combined row.
+  snapshot_sha256: 1077cd7ed70e7e97d93134af3619a3583e91bb35da82758ed8e0185d7b896a5c
+- evidence_id: micro42-IPR017156
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR017156/
+  locator: Native metadata identity/type and complete description, joined to UniProt
+    cross-references.
+  accessed_at: '2026-10-22T03:50:09.442400Z'
+  support: supports
+  summary: The exact native protein-family/domain identity was checked against the
+    relevant component. Family specificity, alternative enzyme folds, multidomain
+    proteins and whole complexes remain distinct; domain-only matches do not automatically
+    ground the entire combined row.
+  snapshot_sha256: 2cb79297b23e7c9539462194c6c04265485260624da950c2a87f954007ccdb8f
+- evidence_id: micro42-IPR020990
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020990/
+  locator: Native metadata identity/type and complete description, joined to UniProt
+    cross-references.
+  accessed_at: '2026-10-22T03:50:11.250661Z'
+  support: supports
+  summary: The exact native protein-family/domain identity was checked against the
+    relevant component. Family specificity, alternative enzyme folds, multidomain
+    proteins and whole complexes remain distinct; domain-only matches do not automatically
+    ground the entire combined row.
+  snapshot_sha256: 7449b71c5598a8f74d1bb10cb537f02b9d50b9a770986e42dfeea24bde007c8e
+- evidence_id: micro42-IPR045066
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045066/
+  locator: Native metadata identity/type and complete description, joined to UniProt
+    cross-references.
+  accessed_at: '2026-10-22T03:50:15.807932Z'
+  support: supports
+  summary: The exact native protein-family/domain identity was checked against the
+    relevant component. Family specificity, alternative enzyme folds, multidomain
+    proteins and whole complexes remain distinct; domain-only matches do not automatically
+    ground the entire combined row.
+  snapshot_sha256: b650a201a02dc472f72675e71765e53cea7e4142879dc437d476233617b6687c
+- evidence_id: micro42-IPR063627
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR063627/
+  locator: Native metadata identity/type and complete description, joined to UniProt
+    cross-references.
+  accessed_at: '2026-10-22T03:50:26.207963Z'
+  support: supports
+  summary: The exact native protein-family/domain identity was checked against the
+    relevant component. Family specificity, alternative enzyme folds, multidomain
+    proteins and whole complexes remain distinct; domain-only matches do not automatically
+    ground the entire combined row.
+  snapshot_sha256: 1f4c286b63ede85ef4f636b5351955876d9da070608689794b7807e856375966
+- evidence_id: micro42-chebi17544
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_17544
+  locator: OLS exact obo_id, label and definition.
+  accessed_at: '2026-10-22T03:55:59.581549Z'
+  support: supports
+  summary: 'The exact native chemical or unit identity matches the graph/measurement:
+    hydrogencarbonate, carbon dioxide or nanometer respectively.'
+  snapshot_sha256: c6e2939c81f01bd3ecb0f66c9b1d49c8e79c3c57d8000f46fc53cd6aeb6fb877
+- evidence_id: micro42-chebi16526
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_16526
+  locator: OLS exact obo_id, label and definition.
+  accessed_at: '2026-10-22T03:55:59.581617Z'
+  support: supports
+  summary: 'The exact native chemical or unit identity matches the graph/measurement:
+    hydrogencarbonate, carbon dioxide or nanometer respectively.'
+  snapshot_sha256: 19b976653e14322f23a21b90b537bfcd19bb4e73d8d0de96446a25888cd3caf6
+- evidence_id: micro42-uo0000018
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/uo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUO_0000018
+  locator: OLS exact obo_id, label and definition.
+  accessed_at: '2026-10-22T03:55:59.582250Z'
+  support: supports
+  summary: 'The exact native chemical or unit identity matches the graph/measurement:
+    hydrogencarbonate, carbon dioxide or nanometer respectively.'
+  snapshot_sha256: 5aa4d11cd0f398ac65be12b58f91295efae620bb2e5c345bd0fd81c6f0e09c5c
+- evidence_id: micro42-trait-graph
+  kind: database
+  reference: https://culturebotai.github.io/TraitMech/pages/data/trait_graph.json
+  locator: Exact traits row id traitmech:000072; label/category/match_method.
+  accessed_at: '2026-10-22T03:55:22.872750Z'
+  support: supports
+  summary: The published TraitMech graph contains traitmech000072, label carboxysome,
+    category morphology, with parent_proxy mapping. This verifies the external trait
+    identity, not a new experimental possession phenotype.
+  snapshot_sha256: bdd3ee3c4f3db4e6b73aa25d87da7dfeb179d056154e491a7abc3d643c6847d8
+- evidence_id: image
+  kind: record_content
+  reference: data/images/microcompartment/carboxysome/carboxysomes_em.jpg
+  locator: Complete maintained image pixels, both panels and 100-nm scale bars; SHA256
+    92ffd40eccbe10c71b6aa4d5d0cd94c8322f98e2bf76d5c92b6991702e5b931e
+  accessed_at: '2026-10-22T04:01:29Z'
+  support: context_only
+  summary: Visually inspected thin-section cells and negatively stained isolated particles
+    match the caption and Tsai Fig1; no new quantitative diameter measurement.
+- evidence_id: micro42-image-commons
+  kind: database
+  reference: https://commons.wikimedia.org/w/api.php?action=query&titles=File:Carboxysomes_EM.jpg&prop=imageinfo&iiprop=url%7Csha1%7Cextmetadata&format=json
+  locator: Complete imageinfo URL/SHA1 and extmetadata credit/license/description.
+  accessed_at: '2026-10-22T03:50:51.578166Z'
+  support: supports
+  summary: Native Commons page4508748 identifies the exact image URL/SHA1, Tsai2007
+    authors, H. neapolitanus panels and CC BY3.0 license. Maintained SHA256 and native
+    SHA1 match the frozen pixels.
+  snapshot_sha256: 81cc4b4de733687c3fcf4b9795d314cd9592949558905f4018c1eb934abcc601
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/microcompartment/carboxysome.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:46:59Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/microcompartment/carboxysome.yaml'
+  snapshot_sha256: ca76b3850a2d51a072eab58277120d52856f39d465fb528ce0023f1b2eb45f3b
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/microcompartment/carboxysome.yaml
+    --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/carboxysome-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:47:00Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/microcompartment/carboxysome.yaml\
+    \ --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/carboxysome-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch42-20261022-q4522lvm/carboxysome-strict.tsv"
+  snapshot_sha256: 924374cc68252fdd2a7759f47085950a9d732425c4d4327efbe05c09ab2a6f6c
+- evidence_id: native-proteins
+  kind: validation
+  reference: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/microcompartment/carboxysome.yaml
+  locator: Complete read-only focused native proteins log
+  accessed_at: '2026-10-22T03:50:30.758991Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/microcompartment/carboxysome.yaml
+  locator: Complete read-only focused native graphs log
+  accessed_at: '2026-10-22T03:50:31.428450Z'
+  support: supports
+  summary: "data/structures/microcompartment/carboxysome.yaml  (GO:0031470)\n  carboxysome_co2_concentrating\t\
+    ca\tPARTIAL_EXAMPLES\t->carbonic_anhydrase (have: UniProtKB:P27134; missing: csoSCA)\n\
+    \  carboxysome_co2_concentrating\trubisco\tCOVERED\t->rubisco (UniProtKB:Q31NB3,\
+    \ UniProtKB:Q31NB2)\n  carboxysome_assembly\tscaffold\tCOVERED\t->scaffold (UniProtKB:Q03513,\
+    \ UniProtKB:O85041)\n  carboxysome_assembly\trubisco\tCOVERED\t->rubisco (UniProtKB:Q31NB3,\
+    \ UniProtKB:Q31NB2)\n  carboxysome_assembly\tccmn\tCOVERED\t->assembly_adaptor\
+    \ (UniProtKB:P46204)\n  carboxysome_assembly\tbmc_t\tCOVERED\t->bmc_t (UniProtKB:P46205,\
+    \ UniProtKB:Q31QW7)\n  carboxysome_assembly\tbmc_h\tCOVERED\t->bmc_h (UniProtKB:Q03511,\
+    \ UniProtKB:Q31RK2, UniProtKB:Q31RK3, UniProtKB:P45689)\n  carboxysome_assembly\t\
+    mcdb\tCOVERED\t->positioning (UniProtKB:Q8GJM6)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     7  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     1  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     8  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 1cc2a17f90ea8997a0ded9f5d4ce80518dde27889ef6eaadf6df5e423a3cfeee
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/microcompartment/carboxysome.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '31 of 53 collected target identifiers returned OK. PMID:10525740: UNREACHABLE;
+    Exact native MED identity/title/DOI and returned PMC field were reviewed after
+    bulk eutils414 transport failure. Resolving an identifier does not certify attached
+    biology; the unrelated Ras PMID20080631 remains an explicit wrong-source finding.;
+    PMID:17675289: UNREACHABLE; Exact native MED identity/title/DOI and returned PMC
+    field were reviewed after bulk eutils414 transport failure. Resolving an identifier
+    does not certify attached biology; the unrelated Ras PMID20080631 remains an explicit
+    wrong-source finding.; PMID:18258595: UNREACHABLE; Exact native MED identity/title/DOI
+    and returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:19844578: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:20080631:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:20304968: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:22461622: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:22928045:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:23572529: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:24006469: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:24267892:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:24585024: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:25117559: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:25826651:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:28616951: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:28963440: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:30389783:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:30520729: UNREACHABLE; Exact native MED identity/title/DOI and
+    returned PMC field were reviewed after bulk eutils414 transport failure. Resolving
+    an identifier does not certify attached biology; the unrelated Ras PMID20080631
+    remains an explicit wrong-source finding.; PMID:31048338: UNREACHABLE; Exact native
+    MED identity/title/DOI and returned PMC field were reviewed after bulk eutils414
+    transport failure. Resolving an identifier does not certify attached biology;
+    the unrelated Ras PMID20080631 remains an explicit wrong-source finding.; PMID:34406783:
+    UNREACHABLE; Exact native MED identity/title/DOI and returned PMC field were reviewed
+    after bulk eutils414 transport failure. Resolving an identifier does not certify
+    attached biology; the unrelated Ras PMID20080631 remains an explicit wrong-source
+    finding.; PMID:7934888: UNREACHABLE; Exact native MED identity/title/DOI and returned
+    PMC field were reviewed after bulk eutils414 transport failure. Resolving an identifier
+    does not certify attached biology; the unrelated Ras PMID20080631 remains an explicit
+    wrong-source finding.; traitmech:000072: SKIPPED; Exact published TraitMech graph
+    row verifies id/label/category and parent_proxy mapping, corroborated by the unchanged
+    same-base trait gate. No experimental possession phenotype is inferred. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Whole organelle and alpha/beta boundaries
+  outcome: supported
+  target_ids:
+  - GO:0031470
+  summary: The GO/SL identity, BMC parent, shell parthood and alpha/beta context are
+    supported; shell-only proteins are not confused with the enzyme-loaded organelle.
+  evidence_ids:
+  - record
+  - micro42-go
+  - micro42-SL0034
+  - micro42-legacy-PMC6022854
+  - micro42-legacy-PMC3811607
+- assessment_id: composition
+  area: grounding
+  topic: Coarse cohorts and exact family scopes
+  outcome: concern
+  target_ids:
+  - GO:0031470
+  summary: The known shell, Rubisco, CA, scaffold, beta CcmN and associated McdB roles
+    are supported. Label-only combined-family groundings remain justified by inspected
+    specific family/domain scope. The categorical RbcX exclusion requires reassessment
+    against native Syn7942 evidence; this is not a general demand to list all chaperones.
+  evidence_ids:
+  - record
+  - curation
+  - micro42-huang2019-xml
+  - micro42-legacy-PMC6635877
+  - micro42-up-Q31N04
+  - micro42-legacy-PMC3366800
+  - micro42-IPR000249
+  - micro42-IPR004992
+  - micro42-IPR014076
+  - micro42-IPR014077
+  - micro42-IPR046380
+  - micro42-IPR046387
+  - micro42-IPR050575
+  - micro42-IPR044870
+  - micro42-PF00936
+  - micro42-PF03319
+  - micro42-IPR011004
+  - micro42-IPR014074
+  - micro42-IPR017156
+  - micro42-IPR020990
+  - micro42-IPR045066
+  - micro42-IPR063627
+- assessment_id: necessity
+  area: grounding
+  topic: Formation is distinct from carbon-concentrating physiology
+  outcome: concern
+  target_ids:
+  - GO:0031470
+  summary: Unqualified BMC-P and CA ESSENTIAL labels conflict with retained carboxysomes
+    in the native deletion studies. Other labels cannot be generalized to each individual
+    paralog or all taxa solely from intact-particle composition; beta CcmN/CcmO experiments
+    and grouped weaker T value remain contextual.
+  evidence_ids:
+  - record
+  - schema
+  - micro42-body-PMC2760150
+  - micro42-pmid18258595
+  - micro42-legacy-PMC3811607
+  - micro42-legacy-PMC3425506
+  - micro42-legacy-PMC3366800
+- assessment_id: remaining-necessity
+  area: grounding
+  topic: Bounded untested assembly dependencies
+  outcome: unknown
+  target_ids:
+  - GO:0031470
+  summary: This review does not establish a deletion-based necessity claim for every
+    H paralog, Rubisco subunit or scaffold in every alpha/beta lineage. Their defining
+    collective roles and reported native assembly experiments are preserved; no additional
+    finding is inferred solely from unavailable depletion evidence.
+  evidence_ids:
+  - record
+  - schema
+  - micro42-legacy-PMC6022854
+  - micro42-legacy-PMC3811607
+  - micro42-legacy-PMC3366800
+- assessment_id: proteins
+  area: grounding
+  topic: Accession, gene, taxon and annotation-source joins
+  outcome: concern
+  target_ids:
+  - GO:0031470
+  summary: All current protein examples have the correct reviewed identity, gene aliases
+    and taxon. Native annotation PMIDs resolve, and direct versus inferred localization
+    remains distinct. The same Sun2019 source cited for existing proteins also measures
+    RbcX; the resolved discussion instead cites an unrelated Ras paper.
+  evidence_ids:
+  - record
+  - micro42-legacy-PMC6635877
+  - micro42-huang2019-xml
+  - micro42-up-Q31N04
+  - micro42-up-O85041
+  - micro42-up-O85043
+  - micro42-up-P27134
+  - micro42-up-P45689
+  - micro42-up-P46204
+  - micro42-up-P46205
+  - micro42-up-Q03511
+  - micro42-up-Q03512
+  - micro42-up-Q03513
+  - micro42-up-Q31NB2
+  - micro42-up-Q31NB3
+  - micro42-up-Q31QW7
+  - micro42-up-Q31RK2
+  - micro42-up-Q31RK3
+  - micro42-up-Q8GJM6
+  - micro42-pmid10525740
+  - micro42-pmid17675289
+  - micro42-pmid18258595
+  - micro42-pmid19844578
+  - micro42-pmid20080631
+  - micro42-pmid20304968
+  - micro42-pmid22461622
+  - micro42-pmid22928045
+  - micro42-pmid23572529
+  - micro42-pmid24006469
+  - micro42-pmid24267892
+  - micro42-pmid24585024
+  - micro42-pmid25117559
+  - micro42-pmid25826651
+  - micro42-pmid28616951
+  - micro42-pmid28963440
+  - micro42-pmid30389783
+  - micro42-pmid30520729
+  - micro42-pmid31048338
+  - micro42-pmid34406783
+  - micro42-pmid7934888
+- assessment_id: scope
+  area: scope
+  topic: Distribution and native model strains
+  outcome: supported
+  target_ids:
+  - GO:0031470
+  summary: Native taxon IDs match labels/aliases and the secondary literature supports
+    alpha/beta model organisms and broad distribution statements. The cyanobacterial
+    UNIVERSAL statement is literature-level generalization, not an independently recomputed
+    current census. Native strain-specific assembly and tagged imaging results are
+    not exported as universal stoichiometry.
+  evidence_ids:
+  - record
+  - micro42-legacy-PMC3811607
+  - micro42-legacy-PMC6022854
+  - micro42-legacy-PMC6635877
+  - micro42-tax1117
+  - micro42-tax1140
+  - micro42-tax1224
+  - micro42-tax555778
+  - micro42-tax927
+- assessment_id: function-graphs
+  area: graph
+  topic: Carbon concentration and beta assembly
+  outcome: concern
+  target_ids:
+  - GO:0031470
+  summary: The whole-shell STRUCTURE node incorrectly joins the bmc_h facet-protein
+    component alone; the mechanistic biology remains supported after correcting this
+    reference. Chemical identities and directed CA/Rubisco chemistry are correct.
+    The first graph is a coarse source-based concentration/permeability model; no
+    direct universal oxygen-exclusion rate or dynamic pore gating is established.
+    The second graph explicitly restricts CcmM/CcmN/CcmO/McdB steps to beta carboxysomes;
+    the McdB edge specifies binding/positioning rather than construction-essentiality.
+  evidence_ids:
+  - record
+  - micro42-legacy-PMC6022854
+  - micro42-legacy-PMC3811607
+  - micro42-body-PMC1872035
+  - micro42-legacy-PMC3668761
+  - micro42-legacy-PMC3425506
+  - micro42-legacy-PMC3366800
+  - micro42-trait-graph
+  - micro42-chebi17544
+  - micro42-chebi16526
+  - micro42-uo0000018
+- assessment_id: image
+  area: evidence
+  topic: Image and size provenance
+  outcome: supported
+  target_ids:
+  - GO:0031470
+  summary: The retained image, native Commons metadata and primary Fig1 caption agree
+    on author attribution, license, organism, preparation and scale. The 100–200-nm
+    field is a representative literature range, not a universal size limit; native
+    physiological and mutant variability is documented.
+  evidence_ids:
+  - record
+  - image
+  - micro42-image-commons
+  - micro42-body-PMC1872035
+  - micro42-legacy-PMC6635877
+  - micro42-huang2019-xml
+  - micro42-legacy-PMC6022854
+- assessment_id: coverage
+  area: completeness
+  topic: Complete record and current versus historical claims
+  outcome: supported
+  target_ids:
+  - GO:0031470
+  summary: All fields, graphs, source annotations, image, history and active resolved
+    discussion were read. Historical action text is preserved, but the active categorical
+    RbcX rationale and incorrect PMID are current claims requiring correction. Optional
+    exhaustive protein inventory is not required.
+  evidence_ids:
+  - record
+  - micro42-huang2019-xml
+  - micro42-legacy-PMC6635877
+  - micro42-pmid20080631
+findings:
+- finding_id: F1
+  issue_key: carboxysome-formation-essentiality
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate vertex/CA functional requirement from structure formation
+  description: BMC-P and carbonic-anhydrase cohorts are labelled ESSENTIAL under the
+    schema rule that the structure cannot form without the component. Native H. neapolitanus
+    vertex double mutants still produce mostly normal-looking carboxysomes (some elongated),
+    and CA-deficient carboxysomes are isolated despite severe physiological defects.
+    Those observations directly contradict unqualified formation necessity.
+  target_ids:
+  - GO:0031470
+  field_paths:
+  - components[2].essentiality
+  - components[4].essentiality
+  evidence_ids:
+  - record
+  - schema
+  - micro42-body-PMC2760150
+  - micro42-pmid18258595
+  - micro42-legacy-PMC3811607
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: major
+  normalization_reason: The claim changes a formal assembly dependency and is contradicted
+    by actual native structures, not merely missing an experiment or conflating a
+    subtle shape defect with complete loss.
+- finding_id: F2
+  issue_key: carboxysome-rbcx-categorical-exclusion
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Reassess categorical RbcX exclusion against native carboxysome evidence
+  description: The active resolved discussion categorically states that RbcX is not
+    part of the assembled structure and declines it as only cargo-folding machinery.
+    Native Syn7942 colocalization through static/mobile/new particles and the record-cited
+    Sun2019 single-organelle quantification support a carboxysome-associated RbcX
+    population. Proposed precise packing roles and universal membership remain uncertain,
+    but the categorical exclusion is not sustainable.
+  target_ids:
+  - GO:0031470
+  field_paths:
+  - discussions[0].rationale
+  - discussions[0].resolution_note
+  evidence_ids:
+  - record
+  - curation
+  - micro42-huang2019-xml
+  - micro42-legacy-PMC6635877
+  - micro42-up-Q31N04
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: major
+  normalization_reason: This is an affirmative, scientifically consequential exclusion
+    contradicted by organism-matched primary observations, not an optional protein-example
+    gap or a requirement to include every transient chaperone.
+- finding_id: F3
+  issue_key: carboxysome-rbcx-wrong-pmid
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the RbcX discussion citation
+  description: PMID20080631 resolves to Abankwa et al. on Ras membrane orientation
+    and nanoclustering, not the stated RbcX chaperone claim. The identifier resolves
+    successfully but does not support the attached assertion.
+  target_ids:
+  - GO:0031470
+  field_paths:
+  - discussions[0].evidence[0].reference
+  - discussions[0].evidence[0].notes
+  evidence_ids:
+  - record
+  - micro42-pmid20080631
+  - micro42-up-Q31N04
+  - micro42-huang2019-xml
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: minor
+  normalization_reason: This is a bounded wrong-source attribution separate from the
+    biological exclusion; identifier transport success cannot repair source relevance.
+- finding_id: F4
+  issue_key: carboxysome-whole-shell-component-join
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Keep whole-shell actor distinct from facet protein cohort
+  description: The FUNCTION graph labels a STRUCTURE node as the whole carboxysome
+    shell but component_ref binds only bmc_h, one molecular facet cohort. The record
+    separately recognizes T and P shell classes and an exact local shell record. This
+    reference narrows the actor incorrectly even though the shell permeability mechanism
+    is supported.
+  target_ids:
+  - GO:0031470
+  field_paths:
+  - causal_graphs[0].nodes[0].component_ref
+  evidence_ids:
+  - record
+  - schema
+  - micro42-legacy-PMC6022854
+  - micro42-body-PMC1872035
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: minor
+  normalization_reason: This is a bounded graph identity/reference mismatch, not rejection
+    of shell permeability or a new molecular-identity requirement for all graph nodes.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0031470
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained scientific record
+  description: Recalibrate formation labels and taxon/condition qualifications using
+    the deletion evidence; retain the distinct importance of vertex closure and CA
+    for efficient carbon concentration. Do not describe residual particles as fully
+    normal or fully functional.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0031470
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained scientific record
+  description: Reopen or qualify the current RbcX decision, retain native Syn7942
+    evidence and its mechanistic limits, and determine an appropriate constituent/associated-machinery
+    representation without rewriting historical events.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0031470
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained scientific record
+  description: Replace the attached source with the exact relevant RbcX native annotation/primary
+    study and revise the evidence note to its actual experimental scope.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+- action_id: A4
+  finding_ids:
+  - F4
+  target_ids:
+  - GO:0031470
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained scientific record
+  description: Use the whole shell identity/related record for the structural actor
+    and retain H as a distinct protein cohort if needed; preserve the supported transport
+    edges.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+limitations:
+- Primary source reading is confined to the specified body sections/captions. Other
+  protein-annotation citations were checked at complete native abstract and annotation
+  level; no unread body or supplemental dataset is certified.
+- Dou2008 complete native abstract supports isolated CA-deficient carboxysomes; its
+  DOI response is a redirect/locator, not a readable article body. Yeates2008 is complete-abstract
+  only.
+- RbcX association and effects are native Syn7942 findings; detailed molecular packing
+  roles are proposed, and neither universal carboxysome membership nor formation necessity
+  is inferred.
+- Shell metabolite permeability and oxygen restriction are literature/model-level;
+  no independent transport-rate measurement or exhaustive modern taxon census was
+  performed. Only the maintained Tsai Fig1 pixels were visually assessed.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User expressly requests one review for every unreviewed record, including scientifically
+  clean records.
+- iModulonDB is not applicable to these protein-shell identity, assembly and compartmentalized-enzyme
+  claims.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
