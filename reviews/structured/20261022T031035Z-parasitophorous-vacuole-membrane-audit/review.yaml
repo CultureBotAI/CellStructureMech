@@ -1,0 +1,720 @@
+schema_version: 1.0.0
+review_id: 20261022T031035Z-parasitophorous-vacuole-membrane-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Parasitophorous vacuole membrane scientific review
+started_at: '2026-10-22T02:58:36Z'
+finished_at: '2026-10-22T03:10:35Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: PVM identity, boundary hierarchy, qualitative scope, collective bilayer and
+  descriptive topology are supported. One major finding concerns the P. berghei BioID
+  experiment misattributed to P. falciparum.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+    sha256: bc5b288dc20d549717192249a6d0889856bdaf66fe33b61cd213b503f4d6f610
+    role: context
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole_lumen.yaml
+    sha256: 4a2a0820584215f4a76152f44d66e365ed67a663527da333d2e6c00d24bc244f
+    role: context
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    sha256: fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:parasitophorous_vacuole_membrane
+  path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  label: parasitophorous vacuole membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire single target and its explicitly frozen boundary neighbors:
+    native identity/hierarchy, collective molecular material and individual necessity,
+    taxon/examples, all functions/edges, evidence, history and discussions. Source
+    read extents are exact per evidence locator.'
+  selection: Batch37 exact path-ordered target1; initial native inspection/schema/strict
+    passed on fresh f97b1abe before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: just validate data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: just validate-strict data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    --out /private/tmp/cellstructure-batch37-20261022-offjkz5m/parasitophorous_vacuole_membrane-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: causal-graphs
+  name: Native protein-node graph coverage
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: /private/tmp/cellstructure-batch37-20261022-offjkz5m/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  exit_code: 0
+  summary: Zero GENE_OR_PROTEIN nodes; scientific edge scope independently assessed.
+  evidence_ids:
+  - pvm-causal-graphs
+- check_id: protein-applicability
+  name: Protein-instance verification applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: No individual protein accession or GENE_OR_PROTEIN node is asserted in
+    the target.
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - neighbor-parasitophorous_vacuole
+  - neighbor-parasitophorous_vacuole_lumen
+  - pvm-agent-go
+  - pvm-agent-SL0193
+  - pvm-agent-SL0194
+  - pvm-agent-tax5794
+  - pvm-agent-tax5811
+  - pvm-agent-tax5833
+  - pvm-agent-tax5821
+  - pvm-agent-lingelbach1998-meta
+  - pvm-agent-clough2017-meta
+  - pvm-agent-schnider2018-meta
+  - pvm-agent-schnider2018-xml
+  - local-id-search
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: '9 of 11 collected target identifiers returned OK. cellstructuremech:parasitophorous_vacuole:
+    SKIPPED; Exact locally minted identifier occurs once in ignored-inclusive top-level
+    identifier search; its maintained whole/membrane record is a frozen input. Local
+    identity verified without claiming external resolution.; cellstructuremech:parasitophorous_vacuole_membrane:
+    SKIPPED; Exact locally minted identifier occurs once in ignored-inclusive top-level
+    identifier search; its maintained whole/membrane record is a frozen input. Local
+    identity verified without claiming external resolution. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - neighbor-parasitophorous_vacuole
+  - local-id-search
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch37 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch37 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch37 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch37 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch37 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  locator: Entire maintained YAML including all graphs, evidence, history and discussion
+  accessed_at: '2026-10-22T03:04:57Z'
+  support: context_only
+  summary: The entire target was read; scientific content and PROPOSED status remain
+    unchanged.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent lines391–448 and causal graph/node/scope contracts
+  accessed_at: '2026-10-22T03:04:57Z'
+  support: context_only
+  summary: A label-only collective lipid constituent differs from a whole-membrane
+    CURIE used as chemical grounding. Essentiality concerns formation, not merely
+    localization or catalytic function. Graph scope must match what its edges explain.
+- evidence_id: neighbor-parasitophorous_vacuole
+  kind: record_content
+  reference: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+  locator: Entire frozen boundary neighbor; maintained context only
+  accessed_at: '2026-10-22T03:04:57Z'
+  support: context_only
+  summary: The complete adjacent boundary record was read and frozen to distinguish
+    whole organelle, membrane and lumen identities. It is not independent experimental
+    evidence and its other scientific assertions are not certified by this review.
+- evidence_id: neighbor-parasitophorous_vacuole_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/parasitophorous_vacuole_lumen.yaml
+  locator: Entire frozen boundary neighbor; maintained context only
+  accessed_at: '2026-10-22T03:04:57Z'
+  support: context_only
+  summary: The complete adjacent boundary record was read and frozen to distinguish
+    whole organelle, membrane and lumen identities. It is not independent experimental
+    evidence and its other scientific assertions are not certified by this review.
+- evidence_id: pvm-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020003,GO:0020004,GO:0020005
+  locator: Complete three native entries, definitions, synonyms, comments and typed
+    child relations
+  accessed_at: '2026-10-22T02:47:24.900882Z'
+  support: supports
+  summary: GO0020005 is the broader symbiont-containing vacuole membrane, with a lipid-bilayer
+    definition and exact lexical parasitophorous vacuolar membrane synonym. GO0020003
+    supplies explicit part_of children0020005/0020004. Definitions are not confined
+    to apicomplexans; lexical overlap does not force exact equivalence to the narrower
+    maintained identity.
+  snapshot_sha256: 0c5e6827975c9cf92d329fd907dd1635e5ab83f0608f42002ae34233bcb609c2
+- evidence_id: pvm-agent-SL0193
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0193.json
+  locator: Complete native name/id/definition, synonyms, isA/partOf and GO map
+  accessed_at: '2026-10-22T02:47:24.901278Z'
+  support: supports
+  summary: SL0193 names the PVM, gives parasitophorous vacuolar membrane as a synonym,
+    maps it to GO0020005 and places it part_of SL0194. Its nested membrane definition
+    supports collective bilayer constitution.
+  snapshot_sha256: cb9c8cc4e3f7cd3af9100ecc94eab5c05ba6eedd56c152d10301377e82642988
+- evidence_id: pvm-agent-SL0194
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0194.json
+  locator: Complete native location entry and GO mapping
+  accessed_at: '2026-10-22T02:47:24.901589Z'
+  support: supports
+  summary: SL0194 defines the PV as the host-cell compartment where most apicomplexan
+    parasites reside and develop and describes invasion-initiated surrounding membrane
+    formation. This supports the declared qualitative context, not every life stage.
+  snapshot_sha256: 4bf6005753182d32a68bbb20ed4d7e75a92745c7f24d7ecdf19d78b23465fc28
+- evidence_id: pvm-agent-tax5794
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5794
+  locator: Complete native taxId/scientificName/rank/lineage
+  accessed_at: '2026-10-22T02:47:24.901531Z'
+  support: supports
+  summary: ENA confirms Apicomplexa at phylum rank for taxId5794. The taxonomy response
+    itself does not establish localization or abundance.
+  snapshot_sha256: 617b42c27ae95a801b69abf63e1a545eff8565fd0af2f4a81be359d3fb6b3cbf
+- evidence_id: pvm-agent-tax5811
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5811
+  locator: Complete native taxId/scientificName/rank/lineage
+  accessed_at: '2026-10-22T02:47:25.631005Z'
+  support: supports
+  summary: ENA confirms Toxoplasma gondii at species rank for taxId5811. The taxonomy
+    response itself does not establish localization or abundance.
+  snapshot_sha256: cbb209002c87051ce78d0a34bc169d2f6623f6bbfbb21edad170d43eb16d4032
+- evidence_id: pvm-agent-tax5833
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833
+  locator: Complete native taxId/scientificName/rank/lineage
+  accessed_at: '2026-10-22T02:47:25.631195Z'
+  support: supports
+  summary: ENA confirms Plasmodium falciparum at species rank for taxId5833. The taxonomy
+    response itself does not establish localization or abundance.
+  snapshot_sha256: 47c9da135299ea0515b9cbddde80166e0e7256bcf1daac4cdf87f8ae3e0ecd11
+- evidence_id: pvm-agent-tax5821
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5821
+  locator: Complete native taxId/scientificName/rank/lineage
+  accessed_at: '2026-10-22T02:50:18.419639Z'
+  support: supports
+  summary: ENA confirms Plasmodium berghei at species rank for taxId5821. The taxonomy
+    response itself does not establish localization or abundance.
+  snapshot_sha256: b0491db442378c1d00975990420c6b2ac5d551752d1af21f2b02f199ddf3244e
+- evidence_id: pvm-agent-lingelbach1998-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1242/jcs.111.11.1467%22
+  locator: Unique MED result, exact title/authors/year/DOI and complete review abstract
+  accessed_at: '2026-10-22T02:47:25.634592Z'
+  support: supports
+  summary: DOI10.1242/jcs.111.11.1467/PMID9580555 exactly identifies Lingelbach and
+    Joiner1998. The complete secondary-review abstract describes invasion-initiated
+    PVM formation and compares Plasmodium/Toxoplasma membrane maintenance and roles.
+  snapshot_sha256: 44fc4a33ed68a99e1bbc7a1c3ef2df29b9be6adef6c6f8ef4a401db83c4ba21a
+- evidence_id: pvm-agent-clough2017-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1016/j.pt.2017.02.007%22
+  locator: Unique MED result and complete review abstract
+  accessed_at: '2026-10-22T02:47:25.645245Z'
+  support: supports
+  summary: DOI10.1016/j.pt.2017.02.007/PMID28330745 exactly identifies Clough and
+    Frickel2017. The complete secondary-review abstract supports Toxoplasma host-interface
+    remodeling and its replicative niche.
+  snapshot_sha256: 0b0685884bc32321186981725b894246b202c88ae06b607fac71e8139976d81a
+- evidence_id: pvm-agent-schnider2018-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1128/mSphere.00522-17%22
+  locator: Unique MED result, exact metadata and complete primary abstract
+  accessed_at: '2026-10-22T02:47:25.648509Z'
+  support: supports
+  summary: DOI10.1128/mSphere.00522-17/PMID29404413 identifies the Schnider2018 primary
+    study. Its complete abstract explicitly identifies P. berghei blood-stage BioID,
+    not a P. falciparum experiment.
+  snapshot_sha256: 9900df2cc7121899912d85ef554c80cbd1fc7e720f48ae4b2b48701640468993
+- evidence_id: pvm-agent-schnider2018-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5784244/fullTextXML
+  locator: 'Genuine PMC5784244 JATS: Introduction s0, Results s1 with embedded captions,
+    Discussion s2 and Methods s3.3–s3.11; prior exact-byte read retained and claim-bearing
+    Results s1.1/s1.2, Discussion and Methods independently reread for this target.
+    No pixels or supplementary datasets.'
+  accessed_at: '2026-10-22T02:47:50.428241Z'
+  support: supports
+  summary: The primary experiment uses P. berghei ANKA mCherryHsp70, EXP1-BirA*-V5
+    and18-hour biotin labeling of cultured blood-stage schizonts, followed by affinity
+    purification and LC-MS/MS. P. falciparum orthologs and prior studies are distinguished
+    from this experiment. Subsequent endogenous GFP localization separates PVM, PV
+    and parasite plasma membrane; the Discussion explicitly warns that many BioID
+    candidates are off-target.
+  snapshot_sha256: 24181a156e904a7981e409c7de955d57faa0e83d9ec437681077ecc43c4feb6b
+- evidence_id: local-id-search
+  kind: search
+  reference: 'rg --no-ignore --hidden -n ^identifier: cellstructuremech:parasitophorous_vacuole(_lumen|_membrane)?$
+    data/structures'
+  locator: Complete ignored-inclusive exact top-level identifier matches
+  accessed_at: '2026-10-22T03:01:13.801535Z'
+  support: supports
+  summary: Each named PV whole/lumen/membrane local ID occurs exactly once in data/structures;
+    all three matched maintained records are frozen inputs.
+  snapshot_sha256: 51c79ef89ee1b16e362469081f9642c6a5fee31f95c5506f57cfa6aa3024f5e4
+  search_scope: All data/structures including hidden and ignored files; exact top-level
+    identifiers of the three named PV boundary records only.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:58:37Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml'
+  snapshot_sha256: f044be2cf13f7fc5159e044cb95c0890cde884141e4805853617bfdb9db6c11b
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    --out /private/tmp/cellstructure-batch37-20261022-offjkz5m/parasitophorous_vacuole_membrane-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:58:38Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml\
+    \ --out /private/tmp/cellstructure-batch37-20261022-offjkz5m/parasitophorous_vacuole_membrane-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch37-20261022-offjkz5m/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch37-20261022-offjkz5m/parasitophorous_vacuole_membrane-strict.tsv"
+  snapshot_sha256: 93380c866817b8dc2e9aad85d43861c107e6ec70bb73541bf85763c522908adb
+- evidence_id: pvm-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch37-20261022-offjkz5m/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  locator: Complete native read-only GENE_OR_PROTEIN coverage log
+  accessed_at: '2026-10-22T03:02:32.984109Z'
+  support: supports
+  summary: Native coverage command exited0 and reports zero GENE_OR_PROTEIN nodes;
+    no accession-specific protein verification is applicable.
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '9 of 11 collected target identifiers returned OK. cellstructuremech:parasitophorous_vacuole:
+    SKIPPED; Exact locally minted identifier occurs once in ignored-inclusive top-level
+    identifier search; its maintained whole/membrane record is a frozen input. Local
+    identity verified without claiming external resolution.; cellstructuremech:parasitophorous_vacuole_membrane:
+    SKIPPED; Exact locally minted identifier occurs once in ignored-inclusive top-level
+    identifier search; its maintained whole/membrane record is a frozen input. Local
+    identity verified without claiming external resolution. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact narrower PVM identity and boundary hierarchy
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: The local Apicomplexa-scoped identity, SL0193 xref, exact synonym, broader
+    GO0020005 parent and local PV parthood are consistent. The resolved scope discussion
+    distinguishes a broader GO class from the explicitly narrower location context.
+  evidence_ids:
+  - record
+  - pvm-agent-go
+  - pvm-agent-SL0193
+  - pvm-agent-SL0194
+  - local-id-search
+- assessment_id: material
+  area: grounding
+  topic: Collective lipid material and topology
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: The label-only LIPID row does not use a whole-membrane CURIE as molecular
+    grounding. Its collective bilayer role and graph component_ref are appropriate
+    in this membrane-only target. The sole NONMECHANISTIC bounds edge and current
+    grounding TODO are supported without requiring a particular lipid species or mandatory
+    protein inventory.
+  evidence_ids:
+  - record
+  - schema
+  - pvm-agent-SL0193
+  - pvm-agent-go
+  - pvm-agent-lingelbach1998-meta
+- assessment_id: necessity
+  area: evidence
+  topic: Individual formation requirement
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: Bilayer material is constitutive of the membrane identity, but retained
+    sources do not establish experimental formation necessity for an individual lipid
+    or protein species. ESSENTIAL is not a measured depletion result for every membrane
+    constituent.
+  evidence_ids:
+  - record
+  - schema
+  - pvm-agent-SL0193
+  - pvm-agent-schnider2018-xml
+- assessment_id: scope
+  area: scope
+  topic: Qualitative occurrence and Toxoplasma example
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: The Apicomplexa COMMON row explicitly inherits the most-apicomplexan location
+    scope and is not an all-stage frequency claim. The exact Toxoplasma taxon and
+    review example are supported.
+  evidence_ids:
+  - record
+  - pvm-agent-SL0194
+  - pvm-agent-tax5794
+  - pvm-agent-tax5811
+  - pvm-agent-clough2017-meta
+- assessment_id: example
+  area: evidence
+  topic: Species of the PVM BioID experiment
+  outcome: concern
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: The canonical P. falciparum row specifically assigns Schnider2018 proximity
+    labeling to that species. The actual primary experiment used P. berghei; discussed
+    orthologs and earlier falciparum studies do not support the maintained experimental
+    attribution.
+  evidence_ids:
+  - record
+  - pvm-agent-schnider2018-meta
+  - pvm-agent-schnider2018-xml
+  - pvm-agent-tax5833
+  - pvm-agent-tax5821
+- assessment_id: provenance
+  area: provenance
+  topic: Bounded source tiers and unchanged status
+  outcome: supported
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  summary: Every maintained claim was assessed against native identities, the inspected
+    literature scope and frozen boundaries. Positive identity and constituent observations
+    are separated from experimental formation requirements and unsupported extensions.
+    No scientific edit, status promotion or persistence is implied.
+  evidence_ids:
+  - record
+  - pvm-agent-go
+  - pvm-agent-SL0193
+  - pvm-agent-SL0194
+  - pvm-agent-tax5794
+  - pvm-agent-tax5811
+  - pvm-agent-tax5833
+  - pvm-agent-tax5821
+  - pvm-agent-lingelbach1998-meta
+  - pvm-agent-clough2017-meta
+  - pvm-agent-schnider2018-meta
+  - pvm-agent-schnider2018-xml
+findings:
+- finding_id: F1
+  issue_key: parasitophorous-vacuole-membrane-bioid-canonical-species-misattribution
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct the species attached to the PVM BioID example
+  description: canonical_examples[1] calls the cited BioID survey a P. falciparum
+    intraerythrocytic PVM experiment. Schnider2018 explicitly performed that experiment
+    in P. berghei ANKA blood-stage parasites. The falciparum comparisons are orthology
+    and prior-literature context, not this study's experimental organism.
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  field_paths:
+  - canonical_examples[1].taxon_id
+  - canonical_examples[1].taxon_label
+  - canonical_examples[1].note
+  - canonical_examples[1].reference
+  evidence_ids:
+  - record
+  - pvm-agent-schnider2018-meta
+  - pvm-agent-schnider2018-xml
+  - pvm-agent-tax5833
+  - pvm-agent-tax5821
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    role: maintained scientific record
+  rule_id: Source-specific claim support, biological scope and graph contract
+  native_severity: major
+  normalization_reason: This corrupts the concrete experimental species/evidence link,
+    not merely author metadata; correct broad PVM identity and occurrence in both
+    species remain intact.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    role: maintained scientific record
+  description: Align the example with verified P. berghei5821 and the actual study
+    background, or supply independently inspected P. falciparum-specific experimental
+    evidence. Preserve the PVM identity and Toxoplasma example.
+  acceptance_checks:
+  - Example taxon and claimed experiment name the same species.
+  - No orthology comparison is relabeled as a performed BioID experiment.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+limitations:
+- Lingelbach1998 and Clough2017 were read only at complete native-abstract scope.
+  The retained Lingelbach publisher request returned403; Clough failed TLS certificate
+  verification (CERTIFICATE_VERIFY_FAILED). Neither response was treated as a full
+  body.
+- The BioID candidate set is not a universal PVM component census or proof of individual
+  formation necessity. No image pixels, supplementary datasets or raw mass spectra
+  were reanalyzed.
+- The local-ID search covers the three named identities including ignored files; it
+  is not a comprehensive ontology-equivalence search.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes clean reviews without invented findings. Parent
+  owns finalization and persistence. Five same-base full-corpus gates are staged for
+  guarded finalization.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
