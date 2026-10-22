@@ -1,0 +1,1079 @@
+schema_version: 1.0.0
+review_id: 20261022T090912Z-mlafedb-lipid-transport-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-grounded review of MlaFEDB lipid transport complex
+started_at: '2026-10-22T08:39:47Z'
+finished_at: '2026-10-22T09:09:12Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One bounded minor finding concerns the now-verifiable MlaF family grounding.
+  Exact MlaFEDB identity, reference stoichiometry, external MlaC boundary and nonmechanistic
+  transport graph are supported. Stable partial MlaFEB does not establish formation
+  of the defined complete transporter without MlaD.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/mlafedb_lipid_transport_complex.yaml
+    sha256: 3e88d2cee61abdf443a914f7dca5285893316b27865374233b729a48baf68bf3
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:mlafedb_lipid_transport_complex
+  path: data/structures/other/mlafedb_lipid_transport_complex.yaml
+  label: MlaFEDB lipid transport complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mlafedb_lipid_transport_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target, with source tiers and experimental
+    limits stated separately.
+  selection: One complete record in strict-path batch61 of the explicit all-unreviewed-record
+    goal.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  command: just validate data/structures/other/mlafedb_lipid_transport_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  command: just validate-strict data/structures/other/mlafedb_lipid_transport_complex.yaml
+    --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mlafedb_lipid_transport_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native focused causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  command: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mlafedb_lipid_transport_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native focused verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  command: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mlafedb_lipid_transport_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  summary: No expression-module membership claim is assessed. Native protein/complex
+    authorities and primary structure or binding evidence address these records; transcriptomic
+    co-membership would not establish their assembly.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - protein-guidance
+  - root61-sources-go
+  - root61-sources-pmid-32884137
+  - root61-sources-pmid-27529189-native
+  - root61-sources-tax-562
+  - root61-sources-tax-83333
+  - root61-sources-protein-P64606
+  - root61-sources-gene-mlaE-83333
+  - root61-sources-protein-P63386
+  - root61-sources-gene-mlaF-83333
+  - root61-sources-protein-P64604
+  - root61-sources-gene-mlaD-83333
+  - root61-sources-protein-P64602
+  - root61-sources-gene-mlaB-83333
+  - root61-sources-protein-P0ADV7
+  - root61-sources-ipr-IPR053408
+  - root61-sources-ipr-IPR030970
+  - root61-sources-ipr-IPR049743
+  - root61-sources-doi-10.1038_s41422-020-00404-6
+  - root61-sources-pdb-7CGE
+  - root61-sources-pdb-7CGE-assembly1
+  - root61-sources-pdb-7CGE-entity1
+  - root61-sources-pdb-7CGE-entity2
+  - root61-sources-pdb-7CGE-entity3
+  - root61-sources-pdb-7CGE-entity4
+  - root61-sources-cpx-3464
+  - root61-sources-ECO0000353
+  - root61-sources-PMC7784689-xml
+  - root61-sources-PMC5016091-xml
+  - root61-sources-ncbifam-NF008809
+  - root61-sources-ncbifam-NF008809-member-P63386-native
+  - access-ncbifam-NF008809-native-native
+  - local-identity
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  summary: '13 of 17 collected target identifiers returned OK. ECO:0000353: SKIPPED;
+    Native ECO0000353 is active physical interaction evidence used in manual assertion.
+    Identity and definition are verified; the code alone does not prove a particular
+    component formation requirement.; PDB:7CGE: SKIPPED; Released PDB:7CGE: The overall
+    structure of nucleotide free MlaFEDB complex; primary DOI10.1038/s41422-020-00404-6,
+    PMID32884137. Native identity, release, experimental method and citation checked;
+    no coordinate reanalysis.; PMID:32884137: UNREACHABLE; Native Europe PMC uniquely
+    identifies PMID:32884137: Structural mechanism of phospholipids translocation
+    by MlaFEDB complex. (2020), DOI10.1038/s41422-020-00404-6. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope.; cellstructuremech:mlafedb_lipid_transport_complex: SKIPPED; Exact local
+    identifier uniquely resolves to the maintained target in the complete978-record
+    data/structures traversal, including ignored files. This is local identity verification,
+    not external ontology resolution. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root61-sources-ECO0000353
+  - root61-sources-pdb-7CGE
+  - root61-sources-pmid-32884137
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/mlafedb_lipid_transport_complex.yaml
+  locator: Entire maintained YAML, history, evidence and discussions
+  accessed_at: '2026-10-22T08:54:24Z'
+  support: context_only
+  summary: The full target was read after native inspection. This maintained YAML
+    owns any scientific correction.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent grounding and essentiality, EssentialityEnum, graph
+    scope
+  accessed_at: '2026-10-22T08:54:24Z'
+  support: context_only
+  summary: Exact class grounding can use InterPro, Pfam or NCBIfam. REVIEWED_LABEL_ONLY
+    means no exact family can be asserted. Formation necessity differs from activity;
+    DISPENSABLE permits defective assembly. Optional empty fields alone are not defects.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact component identity and evidence placement
+  accessed_at: '2026-10-22T08:54:24Z'
+  support: context_only
+  summary: Taxon-neutral constituent classes, reference proteins and physical assembly
+    evidence are separate claims. Source scope and real uncertainty must be retained.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Actor, direction, mechanistic status and evidence scope
+  accessed_at: '2026-10-22T08:54:24Z'
+  support: context_only
+  summary: Direct binding, static structure, functional perturbation and proposed
+    conformational mechanisms provide distinct levels of evidence.
+- evidence_id: protein-guidance
+  kind: record_content
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Exact gene match, reviewed entry, native taxonomy and external graph actor
+    rules
+  accessed_at: '2026-10-22T08:54:24Z'
+  support: context_only
+  summary: Each selected accession is paired with its own taxon and gene tokens. A
+    reviewed entry does not independently prove complex membership.
+- evidence_id: root61-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000987,GO:0001682,GO:0004526,GO:0005667,GO:0005739,GO:0015914,GO:0030151,GO:0030677,GO:0030678,GO:0043190,GO:0098798,GO:1990198
+  locator: All12 exact identities, definitions, synonyms, aspects, comments and typed
+    children
+  accessed_at: '2026-10-22T08:29:00.675261Z'
+  support: supports
+  summary: The exact active GO definitions, synonym qualifiers and typed children
+    support the declared complex identities, functions and parentage. GO0043190 is
+    a broader ABC transporter class rather than an exact MlaFEDB identity; mitochondrial
+    RNase P has both declared is_a parents and mitochondrial parthood.
+  snapshot_sha256: 5d713c2404c3cdfab2cb949ad07b8dba27fbfc24e80b2bf6cce22e4878cf5726
+- evidence_id: root61-sources-pmid-32884137
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A32884137+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:29:04.587427Z'
+  support: supports
+  summary: 'Unique MED32884137: Structural mechanism of phospholipids translocation
+    by MlaFEDB complex. (2020); DOI10.1038/s41422-020-00404-6. Complete available
+    abstract and native bibliography were read. Primary-body inspection is limited
+    to separately declared sources.'
+  snapshot_sha256: f978b74cffa707c5eff463bf9d8a6bc1bcdeea76462024819d6f5a94db883dd1
+- evidence_id: root61-sources-pmid-27529189-native
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27529189+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText
+  accessed_at: '2026-10-22T08:45:39.662211Z'
+  support: supports
+  summary: 'Unique MED27529189: Defining key roles for auxiliary proteins in an ABC
+    transporter that maintains bacterial outer membrane lipid asymmetry. (2016); DOI10.7554/elife.19042.
+    Complete available abstract and native bibliography were read. Primary-body inspection
+    is limited to separately declared sources.'
+  snapshot_sha256: abcb2419026f0ff88e103dd54c34c9ca49bbe6767045a3d028a53f95afdb3bd8
+- evidence_id: root61-sources-tax-562
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete taxonomy response
+  accessed_at: '2026-10-22T08:29:00.675508Z'
+  support: supports
+  summary: Native taxonomy identifies Escherichia coli, taxon562, rankspecies.
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: root61-sources-tax-83333
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete taxonomy response
+  accessed_at: '2026-10-22T08:29:01.284065Z'
+  support: supports
+  summary: Native taxonomy identifies Escherichia coli K-12, taxon83333, rankstrain.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: root61-sources-protein-P64606
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P64606.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/NCBIfam/PANTHER crossreferences
+  accessed_at: '2026-10-22T08:29:03.257328Z'
+  support: supports
+  summary: Reviewed P64606 identifies mlaE in E. coli K-12. Native names/genes/status,
+    full function/subunit/location comments and family crossreferences were inspected.
+    Transport function and curated membership remain separate from formation necessity.
+  snapshot_sha256: 93c6b742650e8fc061b98ee603fc8c76e9a4ad6c8c3cacbd052599d96d883b51
+- evidence_id: root61-sources-gene-mlaE-83333
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmlaE%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:29:07.354992Z'
+  support: supports
+  summary: Exact reviewed mlaE query at taxon83333 returns onlyP64606; the entry's
+    own gene token agrees.
+  snapshot_sha256: 3450718ac826d903f15cbd6728db02f8eb0d392c955b277efa9975649a263cbb
+- evidence_id: root61-sources-protein-P63386
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P63386.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/NCBIfam/PANTHER crossreferences
+  accessed_at: '2026-10-22T08:29:02.177565Z'
+  support: supports
+  summary: Reviewed P63386 identifies mlaF in E. coli K-12. Native names/genes/status,
+    full function/subunit/location comments and family crossreferences were inspected.
+    Transport function and curated membership remain separate from formation necessity.
+  snapshot_sha256: c9987d53b5f4b53afdab6541070b9919f64d704b3e56964fe83d8a8e806624cb
+- evidence_id: root61-sources-gene-mlaF-83333
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmlaF%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:29:08.120656Z'
+  support: supports
+  summary: Exact reviewed mlaF query at taxon83333 returns onlyP63386; the entry's
+    own gene token agrees.
+  snapshot_sha256: 2a48c9d9a2e7d340bdacab924e1bfef4a393f60b580661ed37c666f15ff2b5a0
+- evidence_id: root61-sources-protein-P64604
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P64604.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/NCBIfam/PANTHER crossreferences
+  accessed_at: '2026-10-22T08:29:02.897493Z'
+  support: supports
+  summary: Reviewed P64604 identifies mlaD in E. coli K-12. Native names/genes/status,
+    full function/subunit/location comments and family crossreferences were inspected.
+    Transport function and curated membership remain separate from formation necessity.
+    The SUBUNIT comment reports interaction with MlaC.
+  snapshot_sha256: 9bf161f5519857c24f6acfb341d0c7ecddd4e60bef394f11b9195a2afc49c47d
+- evidence_id: root61-sources-gene-mlaD-83333
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmlaD%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:29:07.312607Z'
+  support: supports
+  summary: Exact reviewed mlaD query at taxon83333 returns onlyP64604; the entry's
+    own gene token agrees.
+  snapshot_sha256: c54b3b91bfb1e4b721323582526828586741e8135101a3c3af2b5ea6c9636256
+- evidence_id: root61-sources-protein-P64602
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P64602.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/NCBIfam/PANTHER crossreferences
+  accessed_at: '2026-10-22T08:29:02.537869Z'
+  support: supports
+  summary: Reviewed P64602 identifies mlaB in E. coli K-12. Native names/genes/status,
+    full function/subunit/location comments and family crossreferences were inspected.
+    Transport function and curated membership remain separate from formation necessity.
+  snapshot_sha256: a9ff83b78d8dfec5f08b563f02afb51c66e2c39d6e29dbba4b6039d82bd259e7
+- evidence_id: root61-sources-gene-mlaB-83333
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmlaB%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and original exact query URL
+  accessed_at: '2026-10-22T08:29:06.394753Z'
+  support: supports
+  summary: Exact reviewed mlaB query at taxon83333 returns onlyP64602; the entry's
+    own gene token agrees.
+  snapshot_sha256: 80c587f9961dcaad67587df0324c6c906a792c41945c03d192db252e03d1aca0
+- evidence_id: root61-sources-protein-P0ADV7
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0ADV7.json
+  locator: Identity/status/names/genes/taxon, complete FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY/MISCELLANEOUS comments and InterPro/NCBIfam/PANTHER crossreferences
+  accessed_at: '2026-10-22T08:29:01.884489Z'
+  support: supports
+  summary: Reviewed P0ADV7 identifies mlaC in E. coli K-12. Native names/genes/status,
+    full function/subunit/location comments and family crossreferences were inspected.
+    Transport function and curated membership remain separate from formation necessity;
+    MlaC is a shuttling interaction partner.
+  snapshot_sha256: 9aac668f7a0e84a7c4605c92c622e16d6064efd76af9a1bf14874c65a1d881d3
+- evidence_id: root61-sources-ipr-IPR053408
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR053408/
+  locator: Complete metadata name/type/descriptions/hierarchy/signatures/literature
+    and quality flags
+  accessed_at: '2026-10-22T08:29:05.812385Z'
+  support: supports
+  summary: 'Native IPR053408: MlaE Permease, type family. The exact family metadata
+    and integrated signature were inspected; its unchecked LLM-written functional
+    description is not independent primary evidence. Protein membership is assessed
+    separately using the UniProt response.'
+  snapshot_sha256: 6df4a6ec8e690e36be012bc695d88f971e354d48c3e4b4fb64700a1e55ad828f
+- evidence_id: root61-sources-ipr-IPR030970
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030970/
+  locator: Complete metadata name/type/descriptions/hierarchy/signatures/literature
+    and quality flags
+  accessed_at: '2026-10-22T08:29:05.208261Z'
+  support: supports
+  summary: 'Native IPR030970: Probable phospholipid ABC transporter-binding protein
+    MlaD, typefamily. The MlaD family is distinguished from the broader MCE domain.'
+  snapshot_sha256: 3b91a76ad2dfd51fb15c6795bb1b4f7c11df182d6774aee1f41fac84ee57ed53
+- evidence_id: root61-sources-ipr-IPR049743
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR049743/
+  locator: Complete metadata name/type/descriptions/hierarchy/signatures/literature
+    and quality flags
+  accessed_at: '2026-10-22T08:29:05.451973Z'
+  support: supports
+  summary: 'Native IPR049743: Intermembrane phospholipid transport system binding
+    protein MlaB, typefamily. This family includes E. coli MlaB and related enterobacterial
+    proteins. Its malformed PUB00153124 bibliographic crossreference is not adopted;
+    the correct Thong2016 paper is separately verified.'
+  snapshot_sha256: df3f4eafffe90fa8a2152f60d985a9d0dde23bafc5ea86dbf6409d7448d55a8f
+- evidence_id: root61-sources-doi-10.1038_s41422-020-00404-6
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41422-020-00404-6%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique DOI-to-MED match and complete abstractText
+  accessed_at: '2026-10-22T08:35:29.928606Z'
+  support: supports
+  summary: Exact DOI resolves to MED32884137, Structural mechanism of phospholipids
+    translocation by MlaFEDB complex. (2020); native complete abstract and bibliography
+    inspected.
+  snapshot_sha256: 0ceb6aa722cc8b0742261e325b67baa1cfd78c5015a62099b9bf4f4f0310ba4f
+- evidence_id: root61-sources-pdb-7CGE
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/7CGE
+  locator: Complete entry identity/release, title, citation and experimental summary
+  accessed_at: '2026-10-22T08:29:09.161049Z'
+  support: supports
+  summary: 'Released PDB7CGE: The overall structure of nucleotide free MlaFEDB complex.
+    The entry identifies the Chi2020 primary citation, electron-microscopy method
+    and 2.9-Angstrom resolution for the nucleotide-free model.'
+  snapshot_sha256: a49fde4bebacd08070307d8e4a64cf7a0053862c136853376dc3d7b35b59c7c8
+- evidence_id: root61-sources-pdb-7CGE-assembly1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/7CGE/1
+  locator: Complete assembly generation, composition counts and symmetry fields
+  accessed_at: '2026-10-22T08:29:09.177810Z'
+  support: supports
+  summary: Biological assembly1 is a twelve-protein MlaFEDB assembly with six MlaD,
+    two MlaE, two MlaF and two MlaB chains, independent of nonpolymer ligands.
+  snapshot_sha256: e5d00e86d12aa8e3c534bd7f92c61ed930b3b2c9e8f0ee7050e1d39fe94b5fdc
+- evidence_id: root61-sources-pdb-7CGE-entity1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7CGE/1
+  locator: Entity identity/names, chain identifiers, source/host organisms, sequence-length/mutation
+    metadata and UniProt mapping; no coordinate reanalysis
+  accessed_at: '2026-10-22T08:29:44.680941Z'
+  support: supports
+  summary: Entity1 maps chainsA,D to UniProtP64606. Names, reference-sequence coverage
+    and mutation metadata were inspected. This deposited entity response labels both
+    the source organism and expression host as E. coli K-12, taxon83333.
+  snapshot_sha256: c2ef039d08116b3a713519ef306822c5932824bfef232c80c033f64af9c33c23
+- evidence_id: root61-sources-pdb-7CGE-entity2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7CGE/2
+  locator: Entity identity/names, chain identifiers, source/host organisms, sequence-length/mutation
+    metadata and UniProt mapping; no coordinate reanalysis
+  accessed_at: '2026-10-22T08:29:44.765589Z'
+  support: supports
+  summary: Entity2 maps chainsB,E to UniProtP63386. Names, reference-sequence coverage
+    and mutation metadata were inspected. This deposited entity response labels both
+    the source organism and expression host as E. coli K-12, taxon83333.
+  snapshot_sha256: c20c13e2e6327541df4623bbfefca130316d2d11794e78ce1e4ed942d2d72761
+- evidence_id: root61-sources-pdb-7CGE-entity3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7CGE/3
+  locator: Entity identity/names, chain identifiers, source/host organisms, sequence-length/mutation
+    metadata and UniProt mapping; no coordinate reanalysis
+  accessed_at: '2026-10-22T08:29:44.849300Z'
+  support: supports
+  summary: Entity3 maps chainsC,F to UniProtP64602. Names, reference-sequence coverage
+    and mutation metadata were inspected. This deposited entity response labels both
+    the source organism and expression host as E. coli K-12, taxon83333.
+  snapshot_sha256: 8fa9d5ca483721dc979a4edf7f32dd150209da4188924cd92d7913e8f5a5248d
+- evidence_id: root61-sources-pdb-7CGE-entity4
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7CGE/4
+  locator: Entity identity/names, chain identifiers, source/host organisms, sequence-length/mutation
+    metadata and UniProt mapping; no coordinate reanalysis
+  accessed_at: '2026-10-22T08:29:44.921344Z'
+  support: supports
+  summary: Entity4 maps chainsG,H,I,J,K,L to UniProtP64604. Names, reference-sequence
+    coverage and mutation metadata were inspected. This deposited entity response
+    labels both the source organism and expression host as E. coli K-12, taxon83333.
+  snapshot_sha256: 8cd2d87cc58ec107f95479f500b2d0e373b5e7dc2cda3b5589dfa28248a83f7b
+- evidence_id: root61-sources-cpx-3464
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-3464
+  locator: Complete native complex identity/taxon/synonyms/function/properties/participants/xrefs/evidence
+    type
+  accessed_at: '2026-10-22T08:29:09.238231Z'
+  support: supports
+  summary: 'CPX3464 is the E. coli K-12 MlaFEDB complex: exact four participants,
+    six MlaD copies, physical-interaction evidence, and shuttling MlaC outside its
+    constituent list. The function text describes ATP hydrolysis as a possible facilitator
+    of handoff/translocation, not direct measurement of every transport step.'
+  snapshot_sha256: c249e543f5fa0e2371f269f988e75eb51bfa92441400e4dd55577dfb0f256943
+- evidence_id: root61-sources-ECO0000353
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/eco/terms?obo_id=ECO%3A0000353
+  locator: Complete exact native term response
+  accessed_at: '2026-10-22T08:51:03.546619Z'
+  support: supports
+  summary: Active ECO0000353 is physical interaction evidence used in manual assertion.
+    This source code is not itself proof of universal assembly necessity.
+  snapshot_sha256: f660342998c2f3b13b1b99735b15fc773e5304a7265fc891637b5cb9644ad003
+- evidence_id: root61-sources-PMC7784689-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7784689/fullTextXML
+  locator: Genuine JATS Sec3-7,Sec9-11,Sec13 fully read, including embedded Figures2-6
+    captions and full permissions. No Figure1 caption/pixels, videos, supplemental
+    files, remaining Methods or raw maps.
+  accessed_at: '2026-10-22T08:29:44.027762Z'
+  support: supports
+  summary: Chi2020 directly establishes purified K-12-derived MlaFEDB2:2:6:2 composition
+    and biochemical contacts; MlaC association is transient. C43(DE3) expression,
+    DDM/POPG nanodiscs, ATPase assays and SDS/EDTA complementation are distinct contexts.
+    Nucleotide-free and E170Q states support proposed extrusion rearrangements, while
+    the destination/direction of lipid transfer remains unresolved in this paper.
+  snapshot_sha256: 296f536945609c242ffd86ddf90662730bb96b3d138350b14681b3554f56251b
+- evidence_id: root61-sources-PMC5016091-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5016091/fullTextXML
+  locator: Genuine JATS s2-1,s2-2,s2-4,s2-5,s3,s4-1,s4-3,s4-4,s4-10,s4-11 fully read,
+    including embedded main/supplement captions and full permissions. No s2-3,other
+    Methods,pixels,source-data sheets or unlisted supplements.
+  accessed_at: '2026-10-22T08:46:55.254673Z'
+  support: supports
+  summary: Thong2016 purifies MlaFEB without MlaD and measures ATPase activity, whereas
+    loss of MlaB prevents stable MlaF association with MlaE under the tested purification
+    conditions. MlaBT52A separates assembly from ATPase activity. MlaED can also be
+    isolated. These are bounded partial-complex results, not a claim that an intact
+    twelve-subunit MlaFEDB complex forms without its MlaD ring.
+  snapshot_sha256: 01279a664818a4946283a749e61c2b8b6d9fe8af16e25e3d679de7ce5cb9090d
+- evidence_id: root61-sources-ncbifam-NF008809
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF008809/
+  locator: 'Complete native NCBIfam metadata through InterPro API: name/type/integration/counters/description
+    status'
+  accessed_at: '2026-10-22T08:35:29.325708Z'
+  support: supports
+  summary: Native familyNF008809 is phospholipid ABC transporter ATP-binding protein
+    MlaF, short name mlaF, unintegrated in InterPro. The family identity is narrower
+    than broad ABC/AAA+/P-loop signatures; no functional mechanism is inferred from
+    the profile alone.
+  snapshot_sha256: e045f4a29d6a9f345c606f9f78a8eb56444dbe3d68ed6699939f98ce5e97a6ab
+- evidence_id: root61-sources-ncbifam-NF008809-member-P63386-native
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P63386/entry/ncbifam/NF008809/
+  locator: Complete native protein/member response including identity/taxon/gene and
+    profile locations
+  accessed_at: '2026-10-22T08:45:40.328877Z'
+  support: supports
+  summary: The reciprocal native membership response places reviewed E. coli K-12
+    MlaF P63386 in familyNF008809 over residues1-268 of269. UniProt independently
+    lists this NCBIfam accession, closing exact protein-to-family correspondence.
+  snapshot_sha256: 2bcfe20bf303554f8153ed65d4d9aa8cf27e6934707d640083b8a480e17a24b5
+- evidence_id: access-ncbifam-NF008809-native-native
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/NF008809/
+  locator: Transport/access response only; no primary-body evidence
+  accessed_at: '2026-10-22T08:45:41.029198Z'
+  support: context_only
+  summary: The official NCBI URL resolves to an accession-specific JavaScript page
+    shell, with data-load placeholders; no loaded family details are claimed from
+    that HTML. Exact family metadata and membership were read through the native InterPro
+    adapter.
+  snapshot_sha256: ba61d0955f3cc52789b5daf72f038a2193fb661457a8a2e3ce9835155f2150b2
+- evidence_id: local-identity
+  kind: record_content
+  reference: data/structures/other/mlafedb_lipid_transport_complex.yaml
+  locator: Exact identifier and retained local-identity-search.json
+  accessed_at: '2026-10-22T08:54:31Z'
+  support: context_only
+  summary: The ignored-inclusive full978-record traversal finds this local identifier
+    exactly once, at this target. This is not a claim that no synonymous structures
+    occur elsewhere.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/mlafedb_lipid_transport_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:39:48Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/mlafedb_lipid_transport_complex.yaml'
+  snapshot_sha256: 9a2c6453982f2797a372c70a62bd74c8a4933234817ed9c4e334559b45069e08
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/mlafedb_lipid_transport_complex.yaml
+    --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mlafedb_lipid_transport_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:39:49Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/mlafedb_lipid_transport_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mlafedb_lipid_transport_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch61-20261022-t_eoxa78/mlafedb_lipid_transport_complex-strict.tsv"
+  snapshot_sha256: ed16f46e3465e5b42673b13381c531594e6bfc95ead6530f899cb4edffdbc804
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mlafedb_lipid_transport_complex.yaml
+    --causal-graphs
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T08:46:27.007400Z'
+  support: supports
+  summary: "data/structures/other/mlafedb_lipid_transport_complex.yaml  (cellstructuremech:mlafedb_lipid_transport_complex)\n\
+    \  mlafedb_phospholipid_transport\tmlae\tCOVERED\t->mlae_permease_subunit (UniProtKB:P64606)\n\
+    \  mlafedb_phospholipid_transport\tmlaf\tCOVERED\t->mlaf_atp_binding_subunit (UniProtKB:P63386)\n\
+    \  mlafedb_phospholipid_transport\tmlad\tCOVERED\t->mlad_binding_subunit (UniProtKB:P64604)\n\
+    \  mlafedb_phospholipid_transport\tmlab\tCOVERED\t->mlab_binding_subunit (UniProtKB:P64602)\n\
+    \  mlafedb_phospholipid_transport\tmlac\tUNANCHORED_WITH_UNIPROT\tIntermembrane\
+    \ phospholipid transport system MlaC (UniProtKB:P0ADV7)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     4  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     1  UNANCHORED_WITH_UNIPROT\
+    \   no component_ref, but node carries a UniProtKB grounding or xref\n     0 \
+    \ PARTIAL_EXAMPLES          component_ref target holds protein_examples but has\
+    \ unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target\
+    \ declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_NO_UNIPROT     no component_ref\
+    \ and no UniProtKB grounding or xref on the node\n     5  total GENE_OR_PROTEIN\
+    \ causal nodes"
+  snapshot_sha256: cab9ff06d8d02faa2cf5929ccd79407bf898b3af0af177826d242be51fd2e9ce
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mlafedb_lipid_transport_complex.yaml
+    --verify
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T08:46:28.282587Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/mlafedb_lipid_transport_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '13 of 17 collected target identifiers returned OK. ECO:0000353: SKIPPED;
+    Native ECO0000353 is active physical interaction evidence used in manual assertion.
+    Identity and definition are verified; the code alone does not prove a particular
+    component formation requirement.; PDB:7CGE: SKIPPED; Released PDB:7CGE: The overall
+    structure of nucleotide free MlaFEDB complex; primary DOI10.1038/s41422-020-00404-6,
+    PMID32884137. Native identity, release, experimental method and citation checked;
+    no coordinate reanalysis.; PMID:32884137: UNREACHABLE; Native Europe PMC uniquely
+    identifies PMID:32884137: Structural mechanism of phospholipids translocation
+    by MlaFEDB complex. (2020), DOI10.1038/s41422-020-00404-6. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope.; cellstructuremech:mlafedb_lipid_transport_complex: SKIPPED; Exact local
+    identifier uniquely resolves to the maintained target in the complete978-record
+    data/structures traversal, including ignored files. This is local identity verification,
+    not external ontology resolution. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Four-component inner-membrane transporter boundary
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  summary: The local identity is more specific than the broad ABC GO parent. CPX3464,
+    primary structures and the graph all keep transient MlaC and the outer-membrane
+    machinery outside the four constituent classes.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - protein-guidance
+  - root61-sources-go
+  - root61-sources-cpx-3464
+  - root61-sources-PMC7784689-xml
+  - root61-sources-PMC5016091-xml
+  - root61-sources-pdb-7CGE
+  - root61-sources-pdb-7CGE-assembly1
+  - root61-sources-pdb-7CGE-entity1
+  - root61-sources-pdb-7CGE-entity2
+  - root61-sources-pdb-7CGE-entity3
+  - root61-sources-pdb-7CGE-entity4
+- assessment_id: grounding
+  area: grounding
+  topic: Exact families and reviewed reference proteins
+  outcome: concern
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  summary: MlaE, MlaD and enterobacterial MlaB groundings match the represented classes.
+    MlaF is correctly identified but still label-only although exact NCBIfamNF008809
+    is now verified. Its earlier InterPro-only rationale is not described as false;
+    the resolvable status is the bounded gap.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - protein-guidance
+  - root61-sources-go
+  - root61-sources-ipr-IPR053408
+  - root61-sources-ipr-IPR030970
+  - root61-sources-ipr-IPR049743
+  - root61-sources-protein-P64606
+  - root61-sources-gene-mlaE-83333
+  - root61-sources-protein-P63386
+  - root61-sources-gene-mlaF-83333
+  - root61-sources-protein-P64604
+  - root61-sources-gene-mlaD-83333
+  - root61-sources-protein-P64602
+  - root61-sources-gene-mlaB-83333
+  - root61-sources-protein-P0ADV7
+  - root61-sources-ncbifam-NF008809
+  - root61-sources-ncbifam-NF008809-member-P63386-native
+- assessment_id: assembly
+  area: evidence
+  topic: Complete composition and condition-scoped assembly observations
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  summary: The 2:2:6:2 count is directly supported for 7CGE. Thong2016 directly supports
+    MlaB-dependent MlaF association with MlaE under the tested purification conditions
+    and separately isolates ATPase-active MlaFEB without MlaD. That partial core is
+    distinct from the defined complete four-class MlaFEDB dodecamer. Chi Methods identify
+    K-12 source DNA and C43(DE3) expression, whereas the deposited entity metadata
+    labels both source and host K-12; this discrepancy does not change the maintained
+    source-strain example.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - protein-guidance
+  - root61-sources-go
+  - root61-sources-PMC7784689-xml
+  - root61-sources-PMC5016091-xml
+  - root61-sources-cpx-3464
+  - root61-sources-pdb-7CGE
+  - root61-sources-pdb-7CGE-assembly1
+  - root61-sources-pdb-7CGE-entity1
+  - root61-sources-pdb-7CGE-entity2
+  - root61-sources-pdb-7CGE-entity3
+  - root61-sources-pdb-7CGE-entity4
+- assessment_id: formation-scope
+  area: evidence
+  topic: Individual formation necessity beyond the tested partial assemblies
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - protein-guidance
+  - root61-sources-go
+  - root61-sources-PMC7784689-xml
+  - root61-sources-PMC5016091-xml
+  - root61-sources-cpx-3464
+  - root61-sources-pdb-7CGE
+  - root61-sources-pdb-7CGE-assembly1
+  - root61-sources-pdb-7CGE-entity1
+  - root61-sources-pdb-7CGE-entity2
+  - root61-sources-pdb-7CGE-entity3
+  - root61-sources-pdb-7CGE-entity4
+  summary: The inspected assays do not establish universal formation necessity for
+    every constituent under every condition. MlaB has direct condition-scoped association
+    evidence. Persistence of MlaFEB or MlaED does not demonstrate assembly of the
+    defined complete MlaFEDB structure without its missing classes and does not justify
+    a forced change to the MlaD label.
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic component relations and lipid handoff
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  summary: The graph preserves four constituent relationships, external MlaC and whole-complex
+    transport without assigning a resolved nucleotide cycle or universal transport
+    direction. The proposed directional mechanism in Chi is not promoted to established
+    fact.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - protein-guidance
+  - root61-sources-go
+  - root61-sources-PMC7784689-xml
+  - root61-sources-PMC5016091-xml
+  - root61-sources-cpx-3464
+  - root61-sources-protein-P64606
+  - root61-sources-gene-mlaE-83333
+  - root61-sources-protein-P63386
+  - root61-sources-gene-mlaF-83333
+  - root61-sources-protein-P64604
+  - root61-sources-gene-mlaD-83333
+  - root61-sources-protein-P64602
+  - root61-sources-gene-mlaB-83333
+  - root61-sources-protein-P0ADV7
+- assessment_id: coverage
+  area: completeness
+  topic: Complete target and explicit access limits
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  summary: Every maintained field, history entry, discussion and graph edge was read.
+    Optional empty slots and acknowledged scientific uncertainty alone do not generate
+    findings. Source claims remain limited to their declared reading scopes.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - protein-guidance
+  - root61-sources-go
+  - root61-sources-PMC7784689-xml
+  - root61-sources-PMC5016091-xml
+  - root61-sources-cpx-3464
+findings:
+- finding_id: F1
+  issue_key: mlaf-exact-ncbifam-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the verified MlaF family grounding
+  description: The represented MlaF class remains REVIEWED_LABEL_ONLY, supported by
+    a discussion limited to broad InterPro crossreferences. Native NCBIfamNF008809
+    metadata and reciprocal P63386 membership now identify an exact MlaF family. This
+    is a localized, actionable grounding gap without challenging the correct component
+    identity or claiming the dated search was false.
+  field_paths:
+  - components[1].grounding_status
+  - components[1].grounding_notes
+  - discussions[0]
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mlafedb_lipid_transport_complex.yaml
+    role: maintained scientific record
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - protein-guidance
+  - root61-sources-go
+  - root61-sources-ncbifam-NF008809
+  - root61-sources-ncbifam-NF008809-member-P63386-native
+  - root61-sources-protein-P64606
+  - root61-sources-gene-mlaE-83333
+  - root61-sources-protein-P63386
+  - root61-sources-gene-mlaF-83333
+  - root61-sources-protein-P64604
+  - root61-sources-gene-mlaD-83333
+  - root61-sources-protein-P64602
+  - root61-sources-gene-mlaB-83333
+  - root61-sources-protein-P0ADV7
+  rule_id: Exact class grounding and component-specific physical formation evidence
+  native_severity: minor
+  normalization_reason: A bounded class-identifier or evidentiary-scope correction
+    leaves the established complex identity, composition and transport function intact.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  description: Add the exact NCBIfam grounding after native correspondence validation,
+    replacing the label-only state and updating its bounded discussion. Retain protein/taxon
+    identity and avoid using broad ABC domains as exact alternatives.
+  target_ids:
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mlafedb_lipid_transport_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Exact class identity or physical-formation scope is supported by the cited native
+    family/primary source, separately from activity or viability.
+  - Schema, strict, product correspondence and focused protein/graph checks pass after
+    separately authorized curation.
+limitations:
+- All five same-base batch26 corpus gates and exact target resolver rows are integrated
+  with every manifested input hash verified.
+- Only the listed primary sections and embedded captions were read; no figure pixels,
+  videos, raw cryo-EM maps, mass spectra or source-data tables were reanalysed.
+- MlaFEB and MlaED are partial assemblies, not an intact twelve-subunit MlaFEDB complex.
+  Purified ATPase activity is not evidence that physiological lipid transport or envelope
+  integrity is preserved. These partial assemblies do not contradict MlaD membership
+  or, by themselves, require an essentiality correction for the complete four-class
+  structure.
+- The NCBI HTML response contains a data-loading shell; exact NF008809 identity/membership
+  was instead verified through native InterPro responses and reciprocal UniProt linkage.
+  Unchecked InterPro functional prose and its malformed MlaB bibliography are not
+  primary evidence.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- Explicit all-record goal authorizes issue-bearing and qualified clean observations.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
