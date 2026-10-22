@@ -1,0 +1,1133 @@
+# Gpi anchor transamidase complex scientific review
+
+- Review: 20261022T072029Z-gpi-anchor-transamidase-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T06:59:50Z
+- Finished UTC: 2026-10-22T07:20:29Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+GPIT identity, five yeast members and coarse ER/GPI-attachment graph are supported. Two minors resolve five exact families and the cited reciprocal Gpi8/Gpi16 stability dependency with experimental limits intact.
+
+## Scope And Provenance
+
+Exactly one whole maintained target plus frozen guidance and protein-example skill. Source-read extents are enumerated per evidence row; no maintained neighboring record supplies biological evidence.
+
+Selection: Target 8 of batch56, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0042765 | data/structures/other/gpi_anchor_transamidase_complex.yaml | maintained | GPI-anchor transamidase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0042765 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0042765 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0042765 | Native focused check passed; scientific claims assessed separately. |
+| Native verify | passed | True | GO:0042765 | Native focused check passed; scientific claims assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0042765 | No expression-module inference is used. |
+| Claim-level scientific review | passed | True | GO:0042765 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0042765 | 13 of 14 collected target identifiers returned OK. PMID:11598210: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0042765 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0042765 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0042765 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0042765 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0042765 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Five yeast GPIT constituents and ER boundary
+
+identity: supported. Targets: GO:0042765.
+
+Exact GO identity/synonym/parent and ER-membrane localization agree. The maintained five yeast constituent classes and Gab1/CDC91 alias are supported by native identities and source-specific biochemical/counterpart evidence. The three-name2001 title is not treated as an exhaustive final inventory.
+
+### Five exact full-family mappings
+
+grounding: concern. Targets: GO:0042765.
+
+All five label-only rows now have exact native full-family candidates, independently joined through their correct reviewed proteins. Generic protease domains or human-only paralog assertions are not substituted for the yeast classes.
+
+### Yeast biochemistry, CHO counterparts and reference strain
+
+scope: supported. Targets: GO:0042765.
+
+Taxa4932 and559292 are correct. Fraering uses specified W303/BY-derived conditional strains; Hong uses CHO cells and heterologous yeast Cdc91. COMMON retains majority/losses-exception meaning, supported qualitatively by the conserved yeast-system synthesis, not a measured population census. Reference S288C accessions are not asserted to be every experimental culture.
+
+### Membership, ER localization and GPI attachment
+
+graph: supported. Targets: GO:0042765.
+
+The NONMECHANISTIC graph correctly summarizes constituent membership and whole-complex GPI-anchor attachment. It does not claim atomic catalysis or assign the human PIG-U omission result to yeast Gab1.
+
+### Direct reciprocal protein-stability evidence
+
+completeness: concern. Targets: GO:0042765.
+
+The current constituent-only Gpi8/Gpi16 roles and blanket UNKNOWN fields omit Fraering Fig8 reciprocal depletion/stability results. The assay establishes a condition-scoped stability dependency, not universal abolition of every partial complex or a viability definition of essentiality.
+
+### Remaining whole-complex formation limits
+
+grounding: unknown. Targets: GO:0042765.
+
+No blanket formation requirement for all five yeast classes follows from the inspected activity/viability assays or human counterpart experiments. Stable four-component human complexes without PIG-U particularly caution against such a generalization.
+
+### Complete maintained target and bounded evidence coverage
+
+completeness: supported. Targets: GO:0042765.
+
+Every maintained field, evidence note, graph statement and discussion was inspected at the declared source extents. Optional inventories and unmeasured formation requirements are not invented from native validation.
+
+## Findings
+
+### F1: Ground all five exact GPIT constituent families
+
+minor / open / confirmed; issue key: gpit-exact-subunit-families.
+
+The maintained label-only notes defer exact mapping for this first record. Native full-family metadata and independent accession membership resolve Gaa1, Gpi8, Gpi16, Gpi17 and Gab1.
+
+### F2: Record the tested Gpi8–Gpi16 stability dependency
+
+minor / open / confirmed; issue key: gpit-tested-reciprocal-stability.
+
+Fraering2001 Fig8 directly measures reciprocal loss of Gpi8/Gpi16 protein after conditional depletion. Current roles only state membership, while all formation fields remain UNKNOWN, leaving this cited physical stability result unrepresented.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Use IPR007246, IPR028361, IPR007245, IPR019540 and IPR009600 respectively; preserve the five yeast classes and Gab1/CDC91 alias.
+
+- Do not replace Gpi8 with an undifferentiated C13 protease domain.
+- Preserve supported identities and source scope; pass applicable native gates.
+
+### A2
+
+Add the reciprocal stability result with the30C galactose-to-glucose depletion context; resolve or explicitly qualify formation fields only to the extent that readout supports.
+
+- Distinguish protein stability from complete complex abolition and Fig9 viability/anchoring assays.
+- Do not generalize the result to all five classes or import the CHO PIG-U omission assay as a yeast experiment.
+- Preserve supported identities and source scope; pass applicable native gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/gpi_anchor_transamidase_complex.yaml; Entire maintained record, including all evidence, examples, graphs, history and discussions | context_only | The entire maintained target was read. Dated curation history is not independent biological evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, ProteinExample, essentiality, PresenceEnum and graph-scope contracts | context_only | Formation necessity differs from activity or viability. COMMON means present in most members, with losses the exception; VARIABLE means patchy lineage- or strain-level presence. Neither enum is redefined as merely observed occurrence. |
+| curation | docs/CURATION.md; Component grounding, including REVIEWED_LABEL_ONLY at159–160 | context_only | A verified exact full-protein family is distinct from a shared domain or a broader class. Label-only does not mean simply that an available exact mapping was not curated this pass. |
+| complex56-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030700,GO:1990204,GO:0030699,GO:0042765,GO:0032991,GO:0005789,GO:0016255,GO:1990220,GO:0016465,GO:0006457,GO:1990131,GO:0038202,GO:0000329,GO:0071986,GO:1990130,GO:0061700; Complete target-relevant definitions/synonyms and typed relationships in combined response; no unrelated child or definition attributed to this target | supports | GO0042765 identifies GPIT and its exact synonym, names the five yeast constituent classes and distinguishes the GPI-GnT complex. GO0032991,0005789 and0016255 supply protein-complex, ER-membrane and GPI-anchor-attachment identities. |
+| complex56-agent-GO0042765-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042765/ancestors?relations=is_a; Complete is_a-only ancestor response | supports | The is_a-only ancestor response contains the maintained parent class. It does not establish parthood or taxonomic frequency. |
+| complex56-agent-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete ENA taxonomy identity, names and lineage | supports | Taxon4932 is Saccharomyces cerevisiae, rank species; the native names and lineage identify this exact organism. |
+| complex56-agent-tax-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete ENA taxonomy identity, names and lineage | supports | Taxon559292 is Saccharomyces cerevisiae S288C, rank strain; the native names and lineage identify this exact organism. |
+| complex56-agent-protein-P38875 | https://rest.uniprot.org/uniprotkb/P38875.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P38875, GPI transamidase component GPI16; primary genes GPI16, synonyms none, taxon559292. Native annotation evidence distinguishes measured and inferred claims. This protein response independently supplies its own family cross-references. |
+| complex56-agent-protein-P39012 | https://rest.uniprot.org/uniprotkb/P39012.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P39012, GPI transamidase component GAA1; primary genes GAA1, synonyms END2, taxon559292. Native annotation evidence distinguishes measured and inferred claims. This protein response independently supplies its own family cross-references. |
+| complex56-agent-protein-P41733 | https://rest.uniprot.org/uniprotkb/P41733.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P41733, GPI transamidase component GAB1; primary genes GAB1, synonyms CDC91, taxon559292. Native annotation evidence distinguishes measured and inferred claims. This protein response independently supplies its own family cross-references. |
+| complex56-agent-protein-P49018 | https://rest.uniprot.org/uniprotkb/P49018.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P49018, GPI-anchor transamidase; primary genes GPI8, synonyms none, taxon559292. Native annotation evidence distinguishes measured and inferred claims. This protein response independently supplies its own family cross-references. |
+| complex56-agent-protein-Q04080 | https://rest.uniprot.org/uniprotkb/Q04080.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): Q04080, GPI transamidase component GPI17; primary genes GPI17, synonyms none, taxon559292. Native annotation evidence distinguishes measured and inferred claims. This protein response independently supplies its own family cross-references. |
+| complex56-agent-gene-GAA1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGAA1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; All returned accession/name/gene/organism fields | supports | Exact reviewed-organism query returns 1 entry: P39012. All returned gene tokens distinguish primary names from aliases. |
+| complex56-agent-gene-GPI8 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGPI8%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; All returned accession/name/gene/organism fields | supports | Exact reviewed-organism query returns 1 entry: P49018. All returned gene tokens distinguish primary names from aliases. |
+| complex56-agent-gene-GPI16 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGPI16%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; All returned accession/name/gene/organism fields | supports | Exact reviewed-organism query returns 1 entry: P38875. All returned gene tokens distinguish primary names from aliases. |
+| complex56-agent-gene-GPI17 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGPI17%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; All returned accession/name/gene/organism fields | supports | Exact reviewed-organism query returns 1 entry: Q04080. All returned gene tokens distinguish primary names from aliases. |
+| complex56-agent-gene-GAB1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGAB1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; All returned accession/name/gene/organism fields | supports | Exact reviewed-organism query returns 1 entry: P41733. All returned gene tokens distinguish primary names from aliases. |
+| complex56-agent-gene-CDC91 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC91%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; All returned accession/name/gene/organism fields | supports | Exact reviewed-organism query returns 1 entry: P41733. All returned gene tokens distinguish primary names from aliases. |
+| complex56-agent-pmid-11598210 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11598210+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete MED identity and available abstract | supports | MED11598210: The GPI transamidase complex of Saccharomyces cerevisiae contains Gaa1p, Gpi8p, and Gpi16p. Fraering P, Imhof I, Meyer U, Strub JM, van Dorsselaer A, Vionnet C, Conzelmann A. (2001), DOI10.1091/mbc.12.10.3295. Exact metadata and the entire available native abstract read; primary-body access is not implied. |
+| complex56-agent-doi-10.1091_mbc.e02-12-0794 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.e02-12-0794%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native bibliographic identity and abstract | supports | Exact DOI/MED identity: Human PIG-U and yeast Cdc91p are the fifth subunit of GPI transamidase that attaches GPI-anchors to proteins. Hong Y, Ohishi K, Kang JY, Tanaka S, Inoue N, Nishimura J, Maeda Y, Kinoshita T. (2003), PMID12802054. Complete native abstract read. |
+| complex56-agent-primary-PMC60174-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC60174/; Methods sec3/8/9; Results sec14/15/18 with embedded Fig1/3/4/8/9 captions; complete Discussion sec21. No figure pixels or supplements. | supports | Fraering2001 purifies a Gaa1/Gpi8/Gpi16 complex and tests reciprocal Gpi8/Gpi16 stability after conditional depletion. Fig8 measures protein abundance after galactose-to-glucose shifts at30C; Fig9 tests growth/anchoring rescue, a distinct functional readout. Overexpressed Gpi8 outside the high-mass complex turns over faster. |
+| complex56-agent-primary-PMC165076-modern | https://pmc.ncbi.nlm.nih.gov/articles/PMC165076/; Methods sec9; Results sec14/15 with Fig7/8 captions; Discussion sec18/19. No figure pixels. | supports | Hong2003 identifies human PIG-U and relates yeast Cdc91/Gab1 to the fifth constituent. CHO PA16.1 experiments show the other four human components can remain a stable complex without PIG-U; heterologous yeast Cdc91 partially rescues CHO surface markers. These are not native yeast five-subunit omission assays. |
+| complex56-agent-ipr-IPR007246 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007246/; Native family name/type, descriptions/curation flags and signatures; protein membership is supplied independently by UniProt | supports | IPR007246 identifies the full GPI transamidase component Gaa1 family. |
+| complex56-agent-ipr-IPR028361 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR028361/; Native family name/type, descriptions/curation flags and signatures; protein membership is supplied independently by UniProt | supports | IPR028361 identifies the full Gpi8/PIG-K transamidase class, rather than the broader peptidase C13 class. |
+| complex56-agent-ipr-IPR007245 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007245/; Native family name/type, descriptions/curation flags and signatures; protein membership is supplied independently by UniProt | supports | IPR007245 identifies the full PIG-T/Gpi16 family. |
+| complex56-agent-ipr-IPR019540 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019540/; Native family name/type, descriptions/curation flags and signatures; protein membership is supplied independently by UniProt | supports | IPR019540 identifies the full PIG-S/Gpi17 family. |
+| complex56-agent-ipr-IPR009600 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009600/; Native family name/type, descriptions/curation flags and signatures; protein membership is supplied independently by UniProt | supports | IPR009600 identifies the full PIG-U/Gab1 family. |
+| schema-result | just validate data/structures/other/gpi_anchor_transamidase_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/gpi_anchor_transamidase_complex.yaml |
+| strict-result | just validate-strict data/structures/other/gpi_anchor_transamidase_complex.yaml --out /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/gpi_anchor_transamidase_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/gpi_anchor_transamidase_complex.yaml --out /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/gpi_anchor_transamidase_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/gpi_anchor_transamidase_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/gpi_anchor_transamidase_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/gpi_anchor_transamidase_complex.yaml  (GO:0042765)<br>  gpit_gpi_anchor_attachment	gaa1_subunit	COVERED	-&gt;gaa1_subunit (UniProtKB:P39012)<br>  gpit_gpi_anchor_attachment	gpi8_subunit	COVERED	-&gt;gpi8_subunit (UniProtKB:P49018)<br>  gpit_gpi_anchor_attachment	gpi16_subunit	COVERED	-&gt;gpi16_subunit (UniProtKB:P38875)<br>  gpit_gpi_anchor_attachment	gpi17_subunit	COVERED	-&gt;gpi17_subunit (UniProtKB:Q04080)<br>  gpit_gpi_anchor_attachment	gab1_subunit	COVERED	-&gt;gab1_subunit (UniProtKB:P41733)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     5  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     5  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/gpi_anchor_transamidase_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/gpi_anchor_transamidase_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 13 of 14 collected target identifiers returned OK. PMID:11598210: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log hashes verified. The sparse B56 checkout was not used to claim a new full-site QC run.
+- No supplements or atomic coordinates were independently analyzed. Actual source reading is limited to the exact locators below.
+- No GPIT figure pixels or supplements were inspected. Native query uniqueness is current evidence, not a claim about every historical release.
+- Hong2003 legacy route returned CAPTCHA; the independently retained modern PMC body was genuine and read at the specified sections.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T072029Z-gpi-anchor-transamidase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Gpi anchor transamidase complex scientific review
+started_at: '2026-10-22T06:59:50Z'
+finished_at: '2026-10-22T07:20:29Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: GPIT identity, five yeast members and coarse ER/GPI-attachment graph are
+  supported. Two minors resolve five exact families and the cited reciprocal Gpi8/Gpi16
+  stability dependency with experimental limits intact.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+    sha256: 34aa791d0757c8844c6c8bf61a743e7860f48e6d35ba78971d608a6bbee51764
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0042765
+  path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+  label: GPI-anchor transamidase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one whole maintained target plus frozen guidance and protein-example
+    skill. Source-read extents are enumerated per evidence row; no maintained neighboring
+    record supplies biological evidence.
+  selection: Target 8 of batch56, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0042765
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  command: just validate data/structures/other/gpi_anchor_transamidase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  command: just validate-strict data/structures/other/gpi_anchor_transamidase_complex.yaml
+    --out /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/gpi_anchor_transamidase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  command: /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/gpi_anchor_transamidase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  command: /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/gpi_anchor_transamidase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0042765
+  summary: No expression-module inference is used.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex56-agent-go
+  - complex56-agent-GO0042765-ancestors
+  - complex56-agent-tax-4932
+  - complex56-agent-tax-559292
+  - complex56-agent-protein-P38875
+  - complex56-agent-protein-P39012
+  - complex56-agent-protein-P41733
+  - complex56-agent-protein-P49018
+  - complex56-agent-protein-Q04080
+  - complex56-agent-gene-GAA1
+  - complex56-agent-gene-GPI8
+  - complex56-agent-gene-GPI16
+  - complex56-agent-gene-GPI17
+  - complex56-agent-gene-GAB1
+  - complex56-agent-gene-CDC91
+  - complex56-agent-pmid-11598210
+  - complex56-agent-doi-10.1091_mbc.e02-12-0794
+  - complex56-agent-primary-PMC60174-legacy
+  - complex56-agent-primary-PMC165076-modern
+  - complex56-agent-ipr-IPR007246
+  - complex56-agent-ipr-IPR028361
+  - complex56-agent-ipr-IPR007245
+  - complex56-agent-ipr-IPR019540
+  - complex56-agent-ipr-IPR009600
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  summary: '13 of 14 collected target identifiers returned OK. PMID:11598210: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex56-agent-pmid-11598210
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042765
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/gpi_anchor_transamidase_complex.yaml
+  locator: Entire maintained record, including all evidence, examples, graphs, history
+    and discussions
+  accessed_at: '2026-10-22T07:11:05Z'
+  support: context_only
+  summary: The entire maintained target was read. Dated curation history is not independent
+    biological evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ProteinExample, essentiality, PresenceEnum and graph-scope
+    contracts
+  accessed_at: '2026-10-22T07:11:05Z'
+  support: context_only
+  summary: Formation necessity differs from activity or viability. COMMON means present
+    in most members, with losses the exception; VARIABLE means patchy lineage- or
+    strain-level presence. Neither enum is redefined as merely observed occurrence.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component grounding, including REVIEWED_LABEL_ONLY at159–160
+  accessed_at: '2026-10-22T07:11:05Z'
+  support: context_only
+  summary: A verified exact full-protein family is distinct from a shared domain or
+    a broader class. Label-only does not mean simply that an available exact mapping
+    was not curated this pass.
+- evidence_id: complex56-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030700,GO:1990204,GO:0030699,GO:0042765,GO:0032991,GO:0005789,GO:0016255,GO:1990220,GO:0016465,GO:0006457,GO:1990131,GO:0038202,GO:0000329,GO:0071986,GO:1990130,GO:0061700
+  locator: Complete target-relevant definitions/synonyms and typed relationships in
+    combined response; no unrelated child or definition attributed to this target
+  accessed_at: '2026-10-22T06:56:23.574147Z'
+  support: supports
+  summary: GO0042765 identifies GPIT and its exact synonym, names the five yeast constituent
+    classes and distinguishes the GPI-GnT complex. GO0032991,0005789 and0016255 supply
+    protein-complex, ER-membrane and GPI-anchor-attachment identities.
+  snapshot_sha256: 47442ac474d759525b8a001d355e3e4db9a53b9c5c0389770a0b1f4a3bd9cd6c
+- evidence_id: complex56-agent-GO0042765-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042765/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor response
+  accessed_at: '2026-10-22T07:04:03.646695Z'
+  support: supports
+  summary: The is_a-only ancestor response contains the maintained parent class. It
+    does not establish parthood or taxonomic frequency.
+  snapshot_sha256: f3e11f7cdb47f0ccc1a4818005bce9dad6d1ebc2fe0ec9418c4e335677f7e6f9
+- evidence_id: complex56-agent-tax-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete ENA taxonomy identity, names and lineage
+  accessed_at: '2026-10-22T06:55:10.749010Z'
+  support: supports
+  summary: Taxon4932 is Saccharomyces cerevisiae, rank species; the native names and
+    lineage identify this exact organism.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: complex56-agent-tax-559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete ENA taxonomy identity, names and lineage
+  accessed_at: '2026-10-22T06:55:11.406635Z'
+  support: supports
+  summary: Taxon559292 is Saccharomyces cerevisiae S288C, rank strain; the native
+    names and lineage identify this exact organism.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: complex56-agent-protein-P38875
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38875.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T06:56:25.031176Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P38875, GPI transamidase component GPI16;
+    primary genes GPI16, synonyms none, taxon559292. Native annotation evidence distinguishes
+    measured and inferred claims. This protein response independently supplies its
+    own family cross-references.'
+  snapshot_sha256: 2f344a006d8a5eef9494f58296f0bba92d3c810559b353223cbf9393e874c7df
+- evidence_id: complex56-agent-protein-P39012
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P39012.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T06:56:24.533585Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P39012, GPI transamidase component GAA1;
+    primary genes GAA1, synonyms END2, taxon559292. Native annotation evidence distinguishes
+    measured and inferred claims. This protein response independently supplies its
+    own family cross-references.'
+  snapshot_sha256: a7b5d5c776fcc680e3320281a90abaa076792d6c8ae164addfd955552b47b4e3
+- evidence_id: complex56-agent-protein-P41733
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P41733.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T06:56:25.661337Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P41733, GPI transamidase component GAB1;
+    primary genes GAB1, synonyms CDC91, taxon559292. Native annotation evidence distinguishes
+    measured and inferred claims. This protein response independently supplies its
+    own family cross-references.'
+  snapshot_sha256: 642766f3945d212f325c9b7b6ff2f1735122feed23bf6b49284f9acaff50ded9
+- evidence_id: complex56-agent-protein-P49018
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P49018.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T06:56:24.904300Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P49018, GPI-anchor transamidase; primary
+    genes GPI8, synonyms none, taxon559292. Native annotation evidence distinguishes
+    measured and inferred claims. This protein response independently supplies its
+    own family cross-references.'
+  snapshot_sha256: e47f1ff4a6de35ce2d23ea22fe6c798f5e94603723544428cb0a2218c7c75778
+- evidence_id: complex56-agent-protein-Q04080
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q04080.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T06:56:25.175960Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q04080, GPI transamidase component GPI17;
+    primary genes GPI17, synonyms none, taxon559292. Native annotation evidence distinguishes
+    measured and inferred claims. This protein response independently supplies its
+    own family cross-references.'
+  snapshot_sha256: 71420e399b85fc148123334462f5c1c378855925c99024c7539f6c4e7122597e
+- evidence_id: complex56-agent-gene-GAA1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGAA1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: All returned accession/name/gene/organism fields
+  accessed_at: '2026-10-22T06:57:15.930156Z'
+  support: supports
+  summary: 'Exact reviewed-organism query returns 1 entry: P39012. All returned gene
+    tokens distinguish primary names from aliases.'
+  snapshot_sha256: 545978b8abeead018b320d08fbf6f46a0a7717c84a47161323a7e03b28dca9c3
+  search_scope: UniProt gene_exact:GAA1, organism_id:559292, reviewed:true; every
+    returned identity inspected.
+- evidence_id: complex56-agent-gene-GPI8
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGPI8%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: All returned accession/name/gene/organism fields
+  accessed_at: '2026-10-22T06:57:15.951386Z'
+  support: supports
+  summary: 'Exact reviewed-organism query returns 1 entry: P49018. All returned gene
+    tokens distinguish primary names from aliases.'
+  snapshot_sha256: d1393f6aeba08d65a7495b9ddc475bbff27cf4065b80ee799119f16c3f009869
+  search_scope: UniProt gene_exact:GPI8, organism_id:559292, reviewed:true; every
+    returned identity inspected.
+- evidence_id: complex56-agent-gene-GPI16
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGPI16%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: All returned accession/name/gene/organism fields
+  accessed_at: '2026-10-22T06:57:16.003162Z'
+  support: supports
+  summary: 'Exact reviewed-organism query returns 1 entry: P38875. All returned gene
+    tokens distinguish primary names from aliases.'
+  snapshot_sha256: bbb769c1b1963351cff3f8b41710a3f29f3913e67581414f9d8846d75592a014
+  search_scope: UniProt gene_exact:GPI16, organism_id:559292, reviewed:true; every
+    returned identity inspected.
+- evidence_id: complex56-agent-gene-GPI17
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGPI17%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: All returned accession/name/gene/organism fields
+  accessed_at: '2026-10-22T06:57:16.654379Z'
+  support: supports
+  summary: 'Exact reviewed-organism query returns 1 entry: Q04080. All returned gene
+    tokens distinguish primary names from aliases.'
+  snapshot_sha256: 7bdca2ec5fb6da297a8b5682331405d676018a38153a5dec8342c008ba0d9ba0
+  search_scope: UniProt gene_exact:GPI17, organism_id:559292, reviewed:true; every
+    returned identity inspected.
+- evidence_id: complex56-agent-gene-GAB1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGAB1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: All returned accession/name/gene/organism fields
+  accessed_at: '2026-10-22T06:57:16.709207Z'
+  support: supports
+  summary: 'Exact reviewed-organism query returns 1 entry: P41733. All returned gene
+    tokens distinguish primary names from aliases.'
+  snapshot_sha256: a1ae91e58997c5d666c42edf4f89d217e2d8bc1c36684399d7e269f9bbd8ecd7
+  search_scope: UniProt gene_exact:GAB1, organism_id:559292, reviewed:true; every
+    returned identity inspected.
+- evidence_id: complex56-agent-gene-CDC91
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC91%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: All returned accession/name/gene/organism fields
+  accessed_at: '2026-10-22T06:57:16.841453Z'
+  support: supports
+  summary: 'Exact reviewed-organism query returns 1 entry: P41733. All returned gene
+    tokens distinguish primary names from aliases.'
+  snapshot_sha256: a1ae91e58997c5d666c42edf4f89d217e2d8bc1c36684399d7e269f9bbd8ecd7
+  search_scope: UniProt gene_exact:CDC91, organism_id:559292, reviewed:true; every
+    returned identity inspected.
+- evidence_id: complex56-agent-pmid-11598210
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11598210+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete MED identity and available abstract
+  accessed_at: '2026-10-22T06:56:28.740157Z'
+  support: supports
+  summary: 'MED11598210: The GPI transamidase complex of Saccharomyces cerevisiae
+    contains Gaa1p, Gpi8p, and Gpi16p. Fraering P, Imhof I, Meyer U, Strub JM, van
+    Dorsselaer A, Vionnet C, Conzelmann A. (2001), DOI10.1091/mbc.12.10.3295. Exact
+    metadata and the entire available native abstract read; primary-body access is
+    not implied.'
+  snapshot_sha256: 026e3d82106f843fe65ae5390ce362945f77f9f086572bc9ca61b3867a0e93d2
+- evidence_id: complex56-agent-doi-10.1091_mbc.e02-12-0794
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.e02-12-0794%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native bibliographic identity and abstract
+  accessed_at: '2026-10-22T06:56:29.828786Z'
+  support: supports
+  summary: 'Exact DOI/MED identity: Human PIG-U and yeast Cdc91p are the fifth subunit
+    of GPI transamidase that attaches GPI-anchors to proteins. Hong Y, Ohishi K, Kang
+    JY, Tanaka S, Inoue N, Nishimura J, Maeda Y, Kinoshita T. (2003), PMID12802054.
+    Complete native abstract read.'
+  snapshot_sha256: 504f0dcbb46fd71d13b7b6cf7767c77566c07b84f280fe4e3a1c5569aceb9800
+- evidence_id: complex56-agent-primary-PMC60174-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC60174/
+  locator: Methods sec3/8/9; Results sec14/15/18 with embedded Fig1/3/4/8/9 captions;
+    complete Discussion sec21. No figure pixels or supplements.
+  accessed_at: '2026-10-22T06:57:17.601818Z'
+  support: supports
+  summary: Fraering2001 purifies a Gaa1/Gpi8/Gpi16 complex and tests reciprocal Gpi8/Gpi16
+    stability after conditional depletion. Fig8 measures protein abundance after galactose-to-glucose
+    shifts at30C; Fig9 tests growth/anchoring rescue, a distinct functional readout.
+    Overexpressed Gpi8 outside the high-mass complex turns over faster.
+  snapshot_sha256: 45f0467245a7df2059f76c60d57f08a45a313d393f19a696eef90fe8861f43f8
+- evidence_id: complex56-agent-primary-PMC165076-modern
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC165076/
+  locator: Methods sec9; Results sec14/15 with Fig7/8 captions; Discussion sec18/19.
+    No figure pixels.
+  accessed_at: '2026-10-22T06:58:08.523032Z'
+  support: supports
+  summary: Hong2003 identifies human PIG-U and relates yeast Cdc91/Gab1 to the fifth
+    constituent. CHO PA16.1 experiments show the other four human components can remain
+    a stable complex without PIG-U; heterologous yeast Cdc91 partially rescues CHO
+    surface markers. These are not native yeast five-subunit omission assays.
+  snapshot_sha256: 8d8152046074bcc4481f382d443ab023e13a56501ab3e36abfe333457642616a
+- evidence_id: complex56-agent-ipr-IPR007246
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007246/
+  locator: Native family name/type, descriptions/curation flags and signatures; protein
+    membership is supplied independently by UniProt
+  accessed_at: '2026-10-22T06:57:14.081899Z'
+  support: supports
+  summary: IPR007246 identifies the full GPI transamidase component Gaa1 family.
+  snapshot_sha256: b3b7c47cbea512969dcfc316bcb9801c14f06647aee9da72b9aae0ae86a950a8
+- evidence_id: complex56-agent-ipr-IPR028361
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR028361/
+  locator: Native family name/type, descriptions/curation flags and signatures; protein
+    membership is supplied independently by UniProt
+  accessed_at: '2026-10-22T06:57:14.081662Z'
+  support: supports
+  summary: IPR028361 identifies the full Gpi8/PIG-K transamidase class, rather than
+    the broader peptidase C13 class.
+  snapshot_sha256: 0df0731d5c700863401c76c8d38f6107a193c80e23ea8680ee280212b1969de8
+- evidence_id: complex56-agent-ipr-IPR007245
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007245/
+  locator: Native family name/type, descriptions/curation flags and signatures; protein
+    membership is supplied independently by UniProt
+  accessed_at: '2026-10-22T06:57:14.082017Z'
+  support: supports
+  summary: IPR007245 identifies the full PIG-T/Gpi16 family.
+  snapshot_sha256: b0e8e5f3b47fcc1193dbe861c404ccadd2f65118d3919f69929034f34bcc47b9
+- evidence_id: complex56-agent-ipr-IPR019540
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019540/
+  locator: Native family name/type, descriptions/curation flags and signatures; protein
+    membership is supplied independently by UniProt
+  accessed_at: '2026-10-22T06:57:14.735424Z'
+  support: supports
+  summary: IPR019540 identifies the full PIG-S/Gpi17 family.
+  snapshot_sha256: 0fd23a6b60bdf7afd0845fb6e814d787ef50da90831bc6579b0c0b04a2c3ac8c
+- evidence_id: complex56-agent-ipr-IPR009600
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009600/
+  locator: Native family name/type, descriptions/curation flags and signatures; protein
+    membership is supplied independently by UniProt
+  accessed_at: '2026-10-22T06:57:14.745430Z'
+  support: supports
+  summary: IPR009600 identifies the full PIG-U/Gab1 family.
+  snapshot_sha256: f6015e6074f7436e03cbf239729123d29535c23eb6c2d94d385928bc825b42cb
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/gpi_anchor_transamidase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:59:51Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/gpi_anchor_transamidase_complex.yaml'
+  snapshot_sha256: ab5fd3d3f0ec1b06c87c00b881a0a1007cf711ea725d79cf1f3b5f6f79ab2e28
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/gpi_anchor_transamidase_complex.yaml
+    --out /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/gpi_anchor_transamidase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:59:52Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/gpi_anchor_transamidase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/gpi_anchor_transamidase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/gpi_anchor_transamidase_complex-strict.tsv"
+  snapshot_sha256: 17b249d5dbb627ee07602c8267188019c696da0d0ad4a0f44a278dc7e91948a2
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/gpi_anchor_transamidase_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T07:03:38.135650Z'
+  support: supports
+  summary: "data/structures/other/gpi_anchor_transamidase_complex.yaml  (GO:0042765)\n\
+    \  gpit_gpi_anchor_attachment\tgaa1_subunit\tCOVERED\t->gaa1_subunit (UniProtKB:P39012)\n\
+    \  gpit_gpi_anchor_attachment\tgpi8_subunit\tCOVERED\t->gpi8_subunit (UniProtKB:P49018)\n\
+    \  gpit_gpi_anchor_attachment\tgpi16_subunit\tCOVERED\t->gpi16_subunit (UniProtKB:P38875)\n\
+    \  gpit_gpi_anchor_attachment\tgpi17_subunit\tCOVERED\t->gpi17_subunit (UniProtKB:Q04080)\n\
+    \  gpit_gpi_anchor_attachment\tgab1_subunit\tCOVERED\t->gab1_subunit (UniProtKB:P41733)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     5  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     5\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 162b5d1dd20c404b2375fee9f3f919ad25b25978fb2cd3cc9dbcd953ea7a5219
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/gpi_anchor_transamidase_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T07:03:39.462960Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/gpi_anchor_transamidase_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '13 of 14 collected target identifiers returned OK. PMID:11598210: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Five yeast GPIT constituents and ER boundary
+  outcome: supported
+  target_ids:
+  - GO:0042765
+  summary: Exact GO identity/synonym/parent and ER-membrane localization agree. The
+    maintained five yeast constituent classes and Gab1/CDC91 alias are supported by
+    native identities and source-specific biochemical/counterpart evidence. The three-name2001
+    title is not treated as an exhaustive final inventory.
+  evidence_ids:
+  - record
+  - complex56-agent-go
+  - complex56-agent-GO0042765-ancestors
+  - complex56-agent-primary-PMC60174-legacy
+  - complex56-agent-primary-PMC165076-modern
+  - complex56-agent-protein-P38875
+  - complex56-agent-protein-P39012
+  - complex56-agent-protein-P41733
+  - complex56-agent-protein-P49018
+  - complex56-agent-protein-Q04080
+  - complex56-agent-gene-GAA1
+  - complex56-agent-gene-GPI8
+  - complex56-agent-gene-GPI16
+  - complex56-agent-gene-GPI17
+  - complex56-agent-gene-GAB1
+  - complex56-agent-gene-CDC91
+- assessment_id: grounding
+  area: grounding
+  topic: Five exact full-family mappings
+  outcome: concern
+  target_ids:
+  - GO:0042765
+  summary: All five label-only rows now have exact native full-family candidates,
+    independently joined through their correct reviewed proteins. Generic protease
+    domains or human-only paralog assertions are not substituted for the yeast classes.
+  evidence_ids:
+  - record
+  - curation
+  - complex56-agent-ipr-IPR007246
+  - complex56-agent-ipr-IPR028361
+  - complex56-agent-ipr-IPR007245
+  - complex56-agent-ipr-IPR019540
+  - complex56-agent-ipr-IPR009600
+  - complex56-agent-protein-P38875
+  - complex56-agent-protein-P39012
+  - complex56-agent-protein-P41733
+  - complex56-agent-protein-P49018
+  - complex56-agent-protein-Q04080
+  - complex56-agent-gene-GAA1
+  - complex56-agent-gene-GPI8
+  - complex56-agent-gene-GPI16
+  - complex56-agent-gene-GPI17
+  - complex56-agent-gene-GAB1
+  - complex56-agent-gene-CDC91
+- assessment_id: scope
+  area: scope
+  topic: Yeast biochemistry, CHO counterparts and reference strain
+  outcome: supported
+  target_ids:
+  - GO:0042765
+  summary: Taxa4932 and559292 are correct. Fraering uses specified W303/BY-derived
+    conditional strains; Hong uses CHO cells and heterologous yeast Cdc91. COMMON
+    retains majority/losses-exception meaning, supported qualitatively by the conserved
+    yeast-system synthesis, not a measured population census. Reference S288C accessions
+    are not asserted to be every experimental culture.
+  evidence_ids:
+  - record
+  - schema
+  - complex56-agent-primary-PMC60174-legacy
+  - complex56-agent-primary-PMC165076-modern
+  - complex56-agent-tax-4932
+  - complex56-agent-tax-559292
+- assessment_id: graph
+  area: graph
+  topic: Membership, ER localization and GPI attachment
+  outcome: supported
+  target_ids:
+  - GO:0042765
+  summary: The NONMECHANISTIC graph correctly summarizes constituent membership and
+    whole-complex GPI-anchor attachment. It does not claim atomic catalysis or assign
+    the human PIG-U omission result to yeast Gab1.
+  evidence_ids:
+  - record
+  - complex56-agent-go
+  - complex56-agent-primary-PMC60174-legacy
+  - complex56-agent-primary-PMC165076-modern
+  - complex56-agent-protein-P38875
+  - complex56-agent-protein-P39012
+  - complex56-agent-protein-P41733
+  - complex56-agent-protein-P49018
+  - complex56-agent-protein-Q04080
+- assessment_id: formation-tested
+  area: completeness
+  topic: Direct reciprocal protein-stability evidence
+  outcome: concern
+  target_ids:
+  - GO:0042765
+  summary: The current constituent-only Gpi8/Gpi16 roles and blanket UNKNOWN fields
+    omit Fraering Fig8 reciprocal depletion/stability results. The assay establishes
+    a condition-scoped stability dependency, not universal abolition of every partial
+    complex or a viability definition of essentiality.
+  evidence_ids:
+  - record
+  - schema
+  - complex56-agent-primary-PMC60174-legacy
+  - complex56-agent-primary-PMC165076-modern
+- assessment_id: formation-unknown
+  area: grounding
+  topic: Remaining whole-complex formation limits
+  outcome: unknown
+  target_ids:
+  - GO:0042765
+  summary: No blanket formation requirement for all five yeast classes follows from
+    the inspected activity/viability assays or human counterpart experiments. Stable
+    four-component human complexes without PIG-U particularly caution against such
+    a generalization.
+  evidence_ids:
+  - record
+  - schema
+  - complex56-agent-primary-PMC60174-legacy
+  - complex56-agent-primary-PMC165076-modern
+- assessment_id: coverage
+  area: completeness
+  topic: Complete maintained target and bounded evidence coverage
+  outcome: supported
+  target_ids:
+  - GO:0042765
+  summary: Every maintained field, evidence note, graph statement and discussion was
+    inspected at the declared source extents. Optional inventories and unmeasured
+    formation requirements are not invented from native validation.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex56-agent-go
+findings:
+- finding_id: F1
+  issue_key: gpit-exact-subunit-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground all five exact GPIT constituent families
+  description: The maintained label-only notes defer exact mapping for this first
+    record. Native full-family metadata and independent accession membership resolve
+    Gaa1, Gpi8, Gpi16, Gpi17 and Gab1.
+  target_ids:
+  - GO:0042765
+  field_paths:
+  - components[*].grounding_status
+  - discussions#gpit_subunit_family_boundaries
+  evidence_ids:
+  - record
+  - curation
+  - complex56-agent-ipr-IPR007246
+  - complex56-agent-ipr-IPR028361
+  - complex56-agent-ipr-IPR007245
+  - complex56-agent-ipr-IPR019540
+  - complex56-agent-ipr-IPR009600
+  - complex56-agent-protein-P38875
+  - complex56-agent-protein-P39012
+  - complex56-agent-protein-P41733
+  - complex56-agent-protein-P49018
+  - complex56-agent-protein-Q04080
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component grounding and source-backed completeness
+  native_severity: minor
+  normalization_reason: The complex identity and constituent roles remain correct;
+    the issue is a bounded existing grounding deferral, not a changed biological class.
+- finding_id: F2
+  issue_key: gpit-tested-reciprocal-stability
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Record the tested Gpi8–Gpi16 stability dependency
+  description: Fraering2001 Fig8 directly measures reciprocal loss of Gpi8/Gpi16 protein
+    after conditional depletion. Current roles only state membership, while all formation
+    fields remain UNKNOWN, leaving this cited physical stability result unrepresented.
+  target_ids:
+  - GO:0042765
+  field_paths:
+  - components#gpi8_subunit.role
+  - components#gpi16_subunit.role
+  - components#gpi8_subunit.essentiality
+  - components#gpi16_subunit.essentiality
+  evidence_ids:
+  - record
+  - schema
+  - complex56-agent-primary-PMC60174-legacy
+  - complex56-agent-primary-PMC165076-modern
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component grounding and source-backed completeness
+  native_severity: minor
+  normalization_reason: A directly measured, localized stability dependency is omitted
+    from otherwise correct constituent roles. The source does not justify universal
+    ESSENTIAL assignments.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0042765
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+    role: maintained scientific record
+  description: Use IPR007246, IPR028361, IPR007245, IPR019540 and IPR009600 respectively;
+    preserve the five yeast classes and Gab1/CDC91 alias.
+  acceptance_checks:
+  - Do not replace Gpi8 with an undifferentiated C13 protease domain.
+  - Preserve supported identities and source scope; pass applicable native gates.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0042765
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+    role: maintained scientific record
+  description: Add the reciprocal stability result with the30C galactose-to-glucose
+    depletion context; resolve or explicitly qualify formation fields only to the
+    extent that readout supports.
+  acceptance_checks:
+  - Distinguish protein stability from complete complex abolition and Fig9 viability/anchoring
+    assays.
+  - Do not generalize the result to all five classes or import the CHO PIG-U omission
+    assay as a yeast experiment.
+  - Preserve supported identities and source scope; pass applicable native gates.
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified. The sparse B56 checkout was not used to claim a new full-site QC
+  run.
+- No supplements or atomic coordinates were independently analyzed. Actual source
+  reading is limited to the exact locators below.
+- No GPIT figure pixels or supplements were inspected. Native query uniqueness is
+  current evidence, not a claim about every historical release.
+- Hong2003 legacy route returned CAPTCHA; the independently retained modern PMC body
+  was genuine and read at the specified sections.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
