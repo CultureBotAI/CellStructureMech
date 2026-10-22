@@ -1,0 +1,848 @@
+schema_version: 1.0.0
+review_id: 20261022T054335Z-dna-polymerase-iii-clamp-loader-chi-psi-subcomplex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Dna polymerase iii clamp loader chi psi subcomplex scientific review
+started_at: '2026-10-22T05:31:37Z'
+finished_at: '2026-10-22T05:43:35Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Chi/psi identity, correct K12 proteins,1:1 composition and scoped biochemical
+  graph are supported. One grouped minor supplies the exact available HolC and HolD
+  families; access and experimental formation limits remain explicit.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    sha256: ae7299b0c7b889f3f035fe582e2b6c8fddb1a507dd0e1ceadda8c1d8e73a60cb
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0043847
+  path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+  label: DNA polymerase III, clamp loader chi/psi subcomplex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained record and the native/primary source
+    passages identified in each locator; no scientific record changed.
+  selection: Target 10 of batch50, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0043847
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  command: just validate data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  command: just validate-strict data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    --out /private/tmp/cellstructure-batch50-20261022-3ro2vlsx/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  command: /private/tmp/cellstructure-batch50-20261022-3ro2vlsx/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native read-only focused check passed; scientific support assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  command: /private/tmp/cellstructure-batch50-20261022-3ro2vlsx/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    --verify
+  exit_code: 0
+  summary: Native read-only focused check passed; scientific support assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0043847
+  summary: No expression-module or transcriptomic claim requires this resource.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - replication50-agent-go
+  - replication50-agent-tax562
+  - replication50-agent-tax83333
+  - replication50-agent-protein-P28905
+  - replication50-agent-gene-holC-83333
+  - replication50-agent-protein-P28632
+  - replication50-agent-gene-holD-83333
+  - replication50-agent-pmid-12940977
+  - replication50-agent-pmid-7494000
+  - replication50-agent-pmid-8389364
+  - replication50-agent-pmid-8505305
+  - replication50-agent-chi-psi-is_a
+  - replication50-agent-olson1995-pdf
+  - replication50-agent-xiao1993iii-publisher
+  - replication50-agent-xiao1993iv-publisher
+  - replication50-agent-ipr-IPR007459
+  - replication50-agent-ipr-IPR004615
+  - replication50-agent-ipr-IPR018382
+  - replication50-agent-protein-P06710
+  - replication50-agent-protein-P0AGE0
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  summary: '11 of 15 collected target identifiers returned OK. PMID:12940977: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:7494000:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:8389364: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:8505305: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - replication50-agent-pmid-12940977
+  - replication50-agent-pmid-7494000
+  - replication50-agent-pmid-8389364
+  - replication50-agent-pmid-8505305
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch50 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch50 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch50 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch50 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043847
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch50 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+  locator: Entire target, including all components/examples, graph, evidence, discussions
+    and history
+  accessed_at: '2026-10-22T05:37:29Z'
+  support: context_only
+  summary: The full maintained record was read. Historical curation notes are not
+    independent biological evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ProteinExample, EssentialityEnum and NONMECHANISTIC
+    graph scope
+  accessed_at: '2026-10-22T05:37:29Z'
+  support: context_only
+  summary: Family identity is separate from a taxon-specific example. Assembly necessity
+    differs from composition, catalytic requirement and viability.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact family mapping and REVIEWED_LABEL_ONLY contract, especially159–160
+  accessed_at: '2026-10-22T05:37:29Z'
+  support: context_only
+  summary: Reviewed label-only status requires an unresolved exact mapping, rather
+    than simply deferring a verified available family.
+- evidence_id: replication50-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0003918,GO:0006260,GO:0009330,GO:0009360,GO:0032991,GO:0034335,GO:0043846,GO:0043847,GO:0044775,GO:0044776,GO:0120217
+  locator: Relevant complete identity/definition/active-status/synonyms and typed
+    parent child links in the11-term native response; no unrelated descendants promoted
+  accessed_at: '2026-10-22T05:30:55.931295Z'
+  support: supports
+  summary: GO0043847 exactly defines the chi/psi dimer, its exact DnaX synonym and
+    SSB-bridge role; GO0043846 lists it as a part_of child. GO0006260 identifies replication.
+    The general complex parent is separately verified by is-a closure.
+  snapshot_sha256: 78c81c7a8592b89cd060d4a7121e6954b1fb57e2470ea40413dc05efd6f1029a
+- evidence_id: replication50-agent-tax562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T05:30:55.931807Z'
+  support: supports
+  summary: ENA taxon562 is Escherichia coli, rank species; exact names, synonyms and
+    available lineage read.
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: replication50-agent-tax83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T05:30:55.931959Z'
+  support: supports
+  summary: ENA taxon83333 is Escherichia coli K-12, rank strain; exact names, synonyms
+    and available lineage read.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: replication50-agent-protein-P28905
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P28905.json
+  locator: Accession/status/protein name/genes/organism, function/subunit/similarity
+    comments and InterPro xrefs
+  accessed_at: '2026-10-22T05:30:57.624445Z'
+  support: supports
+  summary: Reviewed P28905 is the declared holC protein in E.coli K12 taxon83333.
+    Native function/subunit/similarity annotations and InterPro links support the
+    identity; underlying experiments are certified only where separately read.
+  snapshot_sha256: 7b36f4f87de6692ef228e17ced56294a628188d88a248f1debd62a912eef5f57
+- evidence_id: replication50-agent-gene-holC-83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AholC%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: All returned identities/aliases in gene_exact AND taxonomy_id:83333 AND
+    reviewed:true, size500
+  accessed_at: '2026-10-22T05:30:58.061109Z'
+  support: supports
+  summary: The complete current reviewed exact-gene query for holC and taxonomy83333
+    returns one entry, P28905, with matching gene and organism.
+  snapshot_sha256: 9ffe9c8d9221032fc7915464e2c8e9e9ab26683e7b264268b35ffe517dc856f0
+  search_scope: UniProt gene_exact:holC AND taxonomy_id:83333 AND reviewed:true; size500;
+    complete one-result identity read. This bounded query is not gene-absence evidence.
+- evidence_id: replication50-agent-protein-P28632
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P28632.json
+  locator: Accession/status/protein name/genes/organism, function/subunit/similarity
+    comments and InterPro xrefs
+  accessed_at: '2026-10-22T05:30:57.250592Z'
+  support: supports
+  summary: Reviewed P28632 is the declared holD protein in E.coli K12 taxon83333.
+    Native function/subunit/similarity annotations and InterPro links support the
+    identity; underlying experiments are certified only where separately read.
+  snapshot_sha256: 5b0d2927c696ac3aee8304d1e0bca6ff313e6655c90a21fa618a247a7e1dc7b2
+- evidence_id: replication50-agent-gene-holD-83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AholD%29+AND+%28taxonomy_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: All returned identities/aliases in gene_exact AND taxonomy_id:83333 AND
+    reviewed:true, size500
+  accessed_at: '2026-10-22T05:30:58.577035Z'
+  support: supports
+  summary: The complete current reviewed exact-gene query for holD and taxonomy83333
+    returns one entry, P28632, with matching gene and organism.
+  snapshot_sha256: 7a9744a2b70bad7c77358c27cbde2c7602185f088d552801264210ebf52453c5
+  search_scope: UniProt gene_exact:holD AND taxonomy_id:83333 AND reviewed:true; size500;
+    complete one-result identity read. This bounded query is not gene-absence evidence.
+- evidence_id: replication50-agent-pmid-12940977
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12940977+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and entire native abstract
+  accessed_at: '2026-10-22T05:30:58.901770Z'
+  support: supports
+  summary: 'Native MED12940977: Chromosomal replicases as asymmetric dimers: studies
+    of subunit arrangement and functional consequences. Authors McHenry CS.; DOI 10.1046/j.1365-2958.2003.03645.x.
+    Complete abstract read at secondary-review abstract tier; metadata is not a claim
+    of full-body access.'
+  snapshot_sha256: d6944d21e628ce577fa14f58e5a0a8675007915e9e8ae133d0f2984dc0c17083
+- evidence_id: replication50-agent-pmid-7494000
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A7494000+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and entire native abstract
+  accessed_at: '2026-10-22T05:30:59.540347Z'
+  support: supports
+  summary: 'Native MED7494000: DnaX complex of Escherichia coli DNA polymerase III
+    holoenzyme. The chi psi complex functions by increasing the affinity of tau and
+    gamma for delta.delta'' to a physiologically relevant range. Authors Olson MW,
+    Dallmann HG, McHenry CS.; DOI 10.1074/jbc.270.49.29570. Complete abstract read
+    at primary-study abstract tier; metadata is not a claim of full-body access.'
+  snapshot_sha256: 8ae72658092bb95a140eac1f8e45395a3ccd26de035a0b7538b95588193075ef
+- evidence_id: replication50-agent-pmid-8389364
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8389364+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and entire native abstract
+  accessed_at: '2026-10-22T05:30:59.631547Z'
+  support: supports
+  summary: 'Native MED8389364: DNA polymerase III accessory proteins. III. holC and
+    holD encoding chi and psi. Authors Xiao H, Crombie R, Dong Z, Onrust R, O''Donnell
+    M.; DOI 10.1016/s0021-9258(19)50266-6. Complete abstract read at primary-study
+    abstract tier; metadata is not a claim of full-body access.'
+  snapshot_sha256: c05a1ef07e83a3620a92e03d53333ae8971c421069ae2674e06a005adc7246f5
+- evidence_id: replication50-agent-pmid-8505305
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8505305+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact title/authors/year/DOI/PMID and entire native abstract
+  accessed_at: '2026-10-22T05:30:59.708478Z'
+  support: supports
+  summary: 'Native MED8505305: DNA polymerase III accessory proteins. IV. Characterization
+    of chi and psi. Authors Xiao H, Dong Z, O''Donnell M.; DOI 10.1016/s0021-9258(19)50267-8.
+    Complete abstract read at primary-study abstract tier; metadata is not a claim
+    of full-body access.'
+  snapshot_sha256: 1f8d28e1289863035ef109db142fa586fac09519bc7c8cf7333c15e6320e8518
+- evidence_id: replication50-agent-chi-psi-is_a
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043847/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor response
+  accessed_at: '2026-10-22T05:34:55.920009Z'
+  support: supports
+  summary: The is_a-only ancestor response includes GO0032991, supporting the general
+    protein-complex parent.
+  snapshot_sha256: 2be25b17d48731416570f9873998e7dd67798ca005af84bd899e3132c0f10e8a
+- evidence_id: replication50-agent-olson1995-pdf
+  kind: primary_source
+  reference: https://www.colorado.edu/lab/mchenry/sites/default/files/attached-files/1995_14285_jbc_270_29570.pdf
+  locator: 'Genuine author-hosted JBC270:29570–29577 PDF: entire Introduction, Experimental
+    Procedures, Results and Discussion pp29570–29576, TablesI/II and Fig1–7 captions;
+    reference page identity read. No pixels or raw data reanalysis.'
+  accessed_at: '2026-10-22T05:32:49.580507Z'
+  support: supports
+  summary: The purified chi/psi complex is a1:1 heterodimer by sedimentation equilibrium.
+    SPR directly measures binding to gamma or tau and enhanced delta/delta-prime association.
+    Methods use K12MC1061 carrying a tandem holC-holD expression construct. The Discussion
+    distinguishes enhanced physiological-range function from synthesis possible without
+    chi/psi at elevated other-subunit concentrations.
+  snapshot_sha256: 89c7a5c87c99d9152214217dac917db605f5a14bc6f1b6e9e5f10354a8592c23
+- evidence_id: replication50-agent-xiao1993iii-publisher
+  kind: database
+  reference: https://www.jbc.org/article/S0021-9258(19)50266-6/fulltext
+  locator: Retained publisher access response
+  accessed_at: '2026-10-22T05:33:26.898984Z'
+  support: context_only
+  summary: Publisher fulltext request returned HTTP403; no primary body was obtained
+    from this route.
+  snapshot_sha256: fa8dd2ccea114dc31a3ec23e71fd13fc732805c61ff6a261ad518478f9c736b5
+- evidence_id: replication50-agent-xiao1993iv-publisher
+  kind: database
+  reference: https://www.jbc.org/article/S0021-9258(19)50267-8/fulltext
+  locator: Retained publisher access response
+  accessed_at: '2026-10-22T05:33:26.898919Z'
+  support: context_only
+  summary: Publisher fulltext request returned HTTP403; no primary body was obtained
+    from this route.
+  snapshot_sha256: 285983a1306bb443abb0730572e6b0e5a298c7b950ae474020f46e76b3f05f23
+- evidence_id: replication50-agent-ipr-IPR007459
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007459/
+  locator: Native name/type, complete description, hierarchy/signatures and curation
+    flags
+  accessed_at: '2026-10-22T05:32:49.783248Z'
+  support: supports
+  summary: IPR007459 is the exact full-protein HolC chi family, with PF04364/PTHR38767;
+    its description preserves the chi/psi1:1 role and mainly proteobacterial scope.
+  snapshot_sha256: 5f9af2b066940512eac57ef0e983bf79616c8e00846a7fdaf4ac3eeacc116d12
+- evidence_id: replication50-agent-ipr-IPR004615
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004615/
+  locator: Native name/type, complete description, hierarchy/signatures and curation
+    flags
+  accessed_at: '2026-10-22T05:32:50.011370Z'
+  support: supports
+  summary: IPR004615 is the full psi/HolD family, with PF03603/PIRSF029225. Its child
+    IPR018382 is a narrower subgroup, and its dated unknown-function prose is not
+    used to override the directly read biochemical paper.
+  snapshot_sha256: 2c70542817958052c37c630066b6135d817759e1421ab5d91b21e0af5118a654
+- evidence_id: replication50-agent-ipr-IPR018382
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018382/
+  locator: Native name/type, complete description, hierarchy/signatures and curation
+    flags
+  accessed_at: '2026-10-22T05:32:50.126124Z'
+  support: supports
+  summary: IPR018382 is explicitly a psi-family subgroup under IPR004615, not a reason
+    to narrow the generic HolD component to a subgroup.
+  snapshot_sha256: e1010a989bf869c59bdd15abe4642337b9952b7a0597c4ac6581ef9b11c2a1d6
+- evidence_id: replication50-agent-protein-P06710
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P06710.json
+  locator: Identity/genes/organism and full ALTERNATIVE PRODUCTS/SUBUNIT comments
+  accessed_at: '2026-10-22T05:30:55.932093Z'
+  support: supports
+  summary: P06710 is reviewed K12 dnaX and explicitly includes tau and gamma isoforms
+    produced by programmed ribosomal frameshifting. The combined DnaX graph node can
+    legitimately use this accession; the psi edge text remains gamma-specific.
+  snapshot_sha256: 9dda9544a27ae2699f7d77382a528089a2ff9fff43ab2d5106c4b1817d3db291
+- evidence_id: replication50-agent-protein-P0AGE0
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0AGE0.json
+  locator: Identity/genes/organism and FUNCTION/SUBUNIT comments
+  accessed_at: '2026-10-22T05:30:57.224354Z'
+  support: supports
+  summary: P0AGE0 is reviewed K12 ssb, the single-stranded DNA-binding protein; its
+    SUBUNIT annotation includes interaction with HolC. It is an external graph partner,
+    not a missing constituent of the chi/psi dimer.
+  snapshot_sha256: 9cc7842d10fb4d4084cc8d8a6c64e7a053dd441120a2c3676b7e5acac7835711
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:31:39Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml'
+  snapshot_sha256: 7b575594b2bf082de4d830e5b4f8dad5e57ccbe9bd5164a94ae2b24d3a9efc4e
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    --out /private/tmp/cellstructure-batch50-20261022-3ro2vlsx/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:31:42Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml\
+    \ --out /private/tmp/cellstructure-batch50-20261022-3ro2vlsx/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch50-20261022-3ro2vlsx/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch50-20261022-3ro2vlsx/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex-strict.tsv"
+  snapshot_sha256: c83dae6e5bd6b34ae777d302ab452970b032ab13daa37a911a3ec31483eb34df
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch50-20261022-3ro2vlsx/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T05:33:06.216716Z'
+  support: supports
+  summary: "data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml\
+    \  (GO:0043847)\n  chi_psi_clamp_loader_adaptor\tchi_subunit\tCOVERED\t->chi_subunit\
+    \ (UniProtKB:P28905)\n  chi_psi_clamp_loader_adaptor\tpsi_subunit\tCOVERED\t->psi_subunit\
+    \ (UniProtKB:P28632)\n  chi_psi_clamp_loader_adaptor\ttau_gamma_dnax_products\t\
+    UNANCHORED_WITH_UNIPROT\tDnaX tau/gamma products (UniProtKB:P06710)\n  chi_psi_clamp_loader_adaptor\t\
+    single_stranded_dna_binding_protein\tUNANCHORED_WITH_UNIPROT\tsingle-stranded\
+    \ DNA-binding protein (UniProtKB:P0AGE0)\n\ncausal_graphs GENE_OR_PROTEIN node\
+    \ summary:\n     2  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     2  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or\
+    \ xref on the node\n     4  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: b18c6192090adcab5331b9e6ba8404fd4684eab9585b0e5b5e6f36d94b560551
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch50-20261022-3ro2vlsx/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T05:33:08.204648Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '11 of 15 collected target identifiers returned OK. PMID:12940977: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:7494000:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:8389364: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:8505305: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Chi/psi subcomplex and clamp-loader boundary
+  outcome: supported
+  target_ids:
+  - GO:0043847
+  summary: Native identity, exact synonym, protein-complex parent and clamp-loader
+    parthood agree. The1:1 dimer is independently measured by Olson; DnaX and SSB
+    are appropriate external partners rather than mandatory additional dimer constituents.
+  evidence_ids:
+  - record
+  - replication50-agent-go
+  - replication50-agent-chi-psi-is_a
+  - replication50-agent-olson1995-pdf
+  - replication50-agent-protein-P06710
+  - replication50-agent-protein-P0AGE0
+- assessment_id: composition
+  area: grounding
+  topic: Correct examples and two exact families
+  outcome: concern
+  target_ids:
+  - GO:0043847
+  summary: HolC/P28905 and HolD/P28632 are correct reviewed K12 identities. XiaoIII
+    complete abstract establishes the genes, XiaoIV complete abstract establishes1:1
+    and psi-mediated gamma connection, and Olson full body independently supports
+    the dimer. Exact IPR007459/IPR004615 are available despite the current label-only
+    deferral; psi subgroup IPR018382 need not replace its broader exact family.
+  evidence_ids:
+  - record
+  - curation
+  - replication50-agent-olson1995-pdf
+  - replication50-agent-ipr-IPR007459
+  - replication50-agent-ipr-IPR004615
+  - replication50-agent-ipr-IPR018382
+  - replication50-agent-pmid-8389364
+  - replication50-agent-pmid-8505305
+  - replication50-agent-protein-P28905
+  - replication50-agent-protein-P28632
+  - replication50-agent-gene-holC-83333
+  - replication50-agent-gene-holD-83333
+- assessment_id: scope
+  area: scope
+  topic: Species example and experimental context
+  outcome: supported
+  target_ids:
+  - GO:0043847
+  summary: E.coli562 and K1283333 identifiers are correct. The Xiao canonical statement
+    is directly supported by its complete abstract; exact Xiao strain/method details
+    remain access-limited. Olson uses a K12MC1061 overexpression derivative, so its
+    preparation is not represented as an unmodified reference strain. No taxonomic-prevalence
+    assertion is present.
+  evidence_ids:
+  - record
+  - replication50-agent-olson1995-pdf
+  - replication50-agent-pmid-8505305
+  - replication50-agent-tax562
+  - replication50-agent-tax83333
+- assessment_id: graph
+  area: graph
+  topic: Gamma-specific bridge and separately tested tau/gamma interaction
+  outcome: supported
+  target_ids:
+  - GO:0043847
+  summary: The maintained psi edge explicitly specifies gamma as in XiaoIV, while
+    the dimer-to-DnaX edge correctly cites Olson binding to either product. SSB bridging
+    remains native GO/database-supported at coarse NONMECHANISTIC scope; Olson1995
+    is not misrepresented as directly establishing that SSB interaction. The McHenry2003
+    citation is verified as a review abstract, not a primary experiment.
+  evidence_ids:
+  - record
+  - schema
+  - replication50-agent-go
+  - replication50-agent-olson1995-pdf
+  - replication50-agent-protein-P06710
+  - replication50-agent-protein-P0AGE0
+  - replication50-agent-pmid-8505305
+  - replication50-agent-pmid-12940977
+- assessment_id: formation
+  area: grounding
+  topic: Dimer definition versus functional requirements
+  outcome: unknown
+  target_ids:
+  - GO:0043847
+  summary: Two constituents define the heterodimer. Olson shows soluble coexpression
+    and tight association, but psi aggregation when overexpressed alone does not constitute
+    a universal native loss-of-assembly experiment. Its functional reconstitution
+    without chi/psi concerns the larger holoenzyme under particular concentrations.
+    Neither observation is promoted to universal formation necessity of this scoped
+    dimer; current UNKNOWN remains explicit.
+  evidence_ids:
+  - record
+  - schema
+  - replication50-agent-olson1995-pdf
+  - replication50-agent-pmid-8505305
+- assessment_id: coverage
+  area: completeness
+  topic: Entire maintained target audited
+  outcome: supported
+  target_ids:
+  - GO:0043847
+  summary: All maintained fields, discussions and historical entries were read. Source
+    identity, experimental scope, molecular class and graph roles were checked separately;
+    no optional inventory or uninspected mechanism was invented.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - replication50-agent-go
+findings:
+- finding_id: F1
+  issue_key: chi-psi-exact-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground HolC and HolD with their exact families
+  description: The two named rows remain REVIEWED_LABEL_ONLY despite native full-protein
+    families IPR007459 for HolC and IPR004615 for HolD and matching reviewed-example
+    xrefs. The narrower psi subgroup is not required to map the generic psi class.
+  target_ids:
+  - GO:0043847
+  field_paths:
+  - components#chi_subunit.grounding_status
+  - components#psi_subunit.grounding_status
+  - discussions#resolve_pol_iii_chi_psi_groundings
+  evidence_ids:
+  - record
+  - curation
+  - replication50-agent-ipr-IPR007459
+  - replication50-agent-ipr-IPR004615
+  - replication50-agent-ipr-IPR018382
+  - replication50-agent-protein-P28905
+  - replication50-agent-protein-P28632
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    role: maintained scientific record
+  rule_id: Source-specific identity, scope and exact component grounding
+  native_severity: minor
+  normalization_reason: The maintained complex identity, correct protein examples
+    and supported coarse function remain intact; the defect is localized source precision
+    or exact family grounding.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0043847
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    role: maintained scientific record
+  description: Use the two verified exact families and update current grounding status/notes/TODO,
+    preserving correct proteins,1:1 stoichiometry and gamma-versus-tau edge scope.
+  acceptance_checks:
+  - Check native whole-family type/name/signature and example xrefs.
+  - Do not use a broad superfamily or promote stale family functional prose over primary
+    experiments.
+  - Preserve supported identifiers, examples and biological scope; pass applicable
+    native validation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, supplementary experimental data, sequence alignments or coordinate
+  geometry were independently reanalyzed. Exact text and native metadata scopes are
+  identified per evidence row.
+- Both Xiao1993 publisher fulltext routes returned403; those papers are certified
+  at complete native abstract tier only. McHenry2003 is likewise complete review-abstract
+  only. Olson1995 genuine full scientific text provides independent biochemical support
+  within its stated conditions.
+- The SSB bridge is supported by native GO and reviewed annotations; its underlying
+  original interaction experiments were not independently reread. No microscopic structure,
+  complete modern replisome stoichiometry or universal assembly necessity is inferred.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes qualified clean reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
