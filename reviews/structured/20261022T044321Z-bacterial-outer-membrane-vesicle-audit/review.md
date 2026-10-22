@@ -1,0 +1,937 @@
+# Source-backed review of bacterial outer membrane vesicle
+
+- Review: 20261022T044321Z-bacterial-outer-membrane-vesicle-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T04:25:32Z
+- Finished UTC: 2026-10-22T04:43:21Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact OMV identity, Gram-negative scope, cargo export and nonmechanistic budding topology are supported. Two minor corrections concern the whole proteolipid component type and canonical proteome-versus-inflammation source placement.
+
+## Scope And Provenance
+
+Exactly one complete target; no neighboring scientific-record verdict is imported. Exact authority, all current component/function/graph/source placements, taxonomic scope, formation semantics, history and discussions were reviewed.
+
+Selection: Batch45 fixed strict path order, index 5; exactly one maintained target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0061701 | data/structures/other/bacterial_outer_membrane_vesicle.yaml | maintained | bacterial outer membrane vesicle |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0061701 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0061701 | Focused validator passed. |
+| Focused native graphs | passed | True | GO:0061701 | Read-only native check passed; claim-level protein/edge support evaluated separately. |
+| Claim-level scientific review | passed | True | GO:0061701 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0061701 | 9 of 9 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0061701 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0061701 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0061701 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0061701 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0061701 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Outer-membrane-only vesicle boundary
+
+identity: supported. Targets: GO:0061701.
+
+The exact GO:0061701 definition and GO:1903561 parent identify Gram-negative outer-membrane vesicles. The record explicitly excludes Gram-positive cytoplasmic-membrane vesicles and OIMVs; it does not silently equate them with this exact OMV class. GO:0009279 supplies the outer membrane graph actor.
+
+### Complete proteolipid mixture and lumen cargo
+
+grounding: concern. Targets: GO:0061701.
+
+The boundary row is explicitly a complete mixed LPS/phospholipid/protein membrane, but types that entire object LIPID (F1). No false exact molecular CURIE is asserted. OTHER cargo is appropriately heterogeneous; REVIEWED_LABEL_ONLY and the specific grounding TODO do not require one molecular identifier to denote the entire mixture.
+
+### Collective membrane constitution
+
+scope: supported. Targets: GO:0061701.
+
+The collective bounding bilayer is constitutional to an OMV; ESSENTIAL here does not establish necessity of every protein/lipid. Cargo UNKNOWN correctly leaves individual formation requirements unresolved.
+
+### Variable Gram-negative scope and E. coli example
+
+scope: concern. Targets: GO:0061701.
+
+Taxon2 and species562 identities are correct. VARIABLE is explicitly constrained to Gram-negative outer-membrane vesicles, with other envelope architectures outside the class. Park2010 supports the E. coli OMV inflammatory model; Lee2007 supports the catalog of native OMV proteins. The sole canonical Park citation currently combines both claims without the source distinction (F2).
+
+### Export and delivery
+
+evidence: supported. Targets: GO:0061701.
+
+The broad export/intercellular-delivery statements fit the inspected review sections and Toyofuku abstract. Detected proteins alone do not establish each protein as luminal or demonstrate every delivery mechanism; the record retains variable cargo and an explicit lumen-focused row.
+
+### Three-edge nonmechanistic budding diagram
+
+graph: supported. Targets: GO:0061701.
+
+The graph describes outward budding, cargo enclosure and membrane parthood, explicitly avoiding one universal scission mechanism. Whole OMV, membrane and heterogeneous lumen actors remain distinct. Its membrane component reference inherits F1 typing, but the topology itself is supported and is not an additional finding. Lee2007 profiling supports protein association, with the physical enclosure interpretation jointly supplied by bilayered-vesicle identity and origin reviews.
+
+### Full record and source-specific evidence
+
+completeness: supported. Targets: GO:0061701.
+
+All current fields/history/discussions were assessed. Optional lipid/protein-specific inventories and images are not mandatory solely because richer catalogs exist. Park and the complete review body were read only at the listed sections; Lee and Toyofuku remain abstract-only. Historical first-record/TODO wording is not treated as a current false absence claim.
+
+## Findings
+
+### F1: Type the complete proteolipid membrane as a composite constituent
+
+minor / open / confirmed; issue key: CellStructureMech-bacterial_outer_membrane_vesicle-composite-proteolipid-type.
+
+components[0] explicitly denotes the complete OMV bilayer mixture including outer-membrane proteins, LPS and phospholipids, yet component_type is LIPID. The label, role and graph refer to the whole composite membrane, not merely its lipid fraction. OTHER is available and the frozen BEV neighbor uses it for exactly this mixed-membrane distinction.
+
+### F2: Separate the OMV proteome source from the inflammatory-model source
+
+minor / open / confirmed; issue key: CellStructureMech-bacterial_outer_membrane_vesicle-canonical-proteome-source-placement.
+
+The canonical E. coli note attributes native OMV proteomes and host inflammatory responses to Park2010 alone. Park reports the injection model and comparative protein/LPS profiles; the already cited Lee2007 paper explicitly supplies global proteomic profiling (141 proteins in its complete abstract). The broader biological example is supported, but the two experimental claims need their respective sources.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Retype the explicitly whole proteolipid boundary as OTHER, or deliberately restrict the component to its lipid fraction and separately preserve the whole-membrane actor. Keep the correctly scoped OMV identity and cargo topology.
+
+- Preserve exact supported identity, experimental organism and native versus recombinant context.
+- Attach source-specific evidence to each changed claim and retain historical provenance.
+- Native schema, strict, CURIE, protein and graph checks pass as applicable.
+
+### A2
+
+Attach Lee2007 to the proteomic clause using the supported schema/evidence placement, or narrow the Park-only canonical note to its OMV characterization and host-response experiment. Preserve the mouse-isolate/injection context.
+
+- Preserve exact supported identity, experimental organism and native versus recombinant context.
+- Attach source-specific evidence to each changed claim and retain historical provenance.
+- Native schema, strict, CURIE, protein and graph checks pass as applicable.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/bacterial_outer_membrane_vesicle.yaml; Complete maintained YAML; all components, source notes, graphs, discussions and historical entries | context_only | The entire maintained target was read; no scientific record was changed. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes | context_only | ComponentTypeEnum distinguishes LIPID from the permitted OTHER composite class. ESSENTIAL concerns failure of structure formation, not merely loss of catalytic or transport function. |
+| curation | docs/CURATION.md; Components; groundings; associated machinery and chaperone boundaries | context_only | Components are taxon-agnostic molecular families/classes; exact family grounding is preferred when verified. Mature constituents and assembled-structure maintenance machinery differ from transient preassembly chaperones. |
+| neighbor-bacterial_extracellular_vesicle | data/structures/other/bacterial_extracellular_vesicle.yaml; Complete frozen boundary neighbor | context_only | Frozen neighboring record read for boundary context; its scientific verdict is not imported. |
+| micro45-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097691,GO:0061701,GO:1903561,GO:0009279,GO:1990063,GO:0106234; results: exact id/name/isObsolete/definition/synonyms/children for GO:0097691, GO:0061701, GO:1903561 and GO:0009279; other returned terms are not used here. | supports | Active GO:0097691 and GO:0061701 match the two distinct bacterial-vesicle labels/definitions; GO:1903561 lists both as is_a children. GO:0009279 identifies the Gram-negative outer membrane. The native BEV definition specifically says plasma-membrane budding; it does not itself express the broader literature origins. |
+| micro45-tax2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; Complete taxId/scientificName/rank/lineage/otherNames. | supports | ENA taxId 2 identifies Bacteria at rank domain; aliases and lineage match the record. Identity alone is not prevalence or experimental-condition evidence. |
+| micro45-tax562 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; Complete taxId/scientificName/rank/lineage/otherNames. | supports | ENA taxId 562 identifies Escherichia coli at rank species; aliases and lineage match the record. Identity alone is not prevalence or experimental-condition evidence. |
+| micro45-toyofuku2019-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41579-018-0112-2%22&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED30397270: Types and origins of bacterial membrane vesicles. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. Its complete review abstract explicitly distinguishes outer-membrane blebbing, Gram-positive/other vesicle types and endolysin-triggered lysis; this is secondary synthesis, not a new experiment. |
+| micro45-lee2007-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Fpmic.200700196%22&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED17787032: Global proteomic profiling of native outer membrane vesicles derived from Escherichia coli. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro45-park2010-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1371%2Fjournal.pone.0011334%22&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED20596524: Outer membrane vesicles derived from Escherichia coli induce systemic inflammatory response syndrome. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro45-schwechheimer2015-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnrmicro3525%22&amp;format=json&amp;resultType=core; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED26373371: Outer-membrane vesicles from Gram-negative bacteria: biogenesis and functions. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro45-schwechheimer2015-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC5308417/?report=xml; Genuine full HTML: S1/S4 direct introductory paragraphs; S6 complete direct paragraphs; BX1 entire; S14 complete direct paragraphs; P3 envelope architecture and complete Fig1 caption; P22 external virulence cargo. No figure pixels. | supports | The review describes OMV composition/biogenesis and delivery; S4 cautions that purification and noncanonical membrane/cytoplasmic proteins affect localization interpretation, S6 distinguishes proposed cargo-selection mechanisms, Box1 covers other bacterial vesicle types, and S14 discusses cargo delivery. Composite outer-membrane material includes lipids and proteins; not all detected vesicle proteins are demonstrated lumen contents. |
+| micro45-park2010-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC2893157/?report=xml; Genuine full HTML: complete Results and Discussion s2 direct paragraphs; complete Methods s3a/s3b/s3c/s3e. Figure6A is discussed in text; no image pixels, other Methods or supplements inspected. | supports | E. coli OMVs purified from an intestinal mouse isolate induced inflammatory phenotypes in an intraperitoneal injection model. Results compare OMV protein/LPS patterns in Fig6A and report morphology/dose/host-response experiments. These inspected sections provide protein profiles, not a global mass-spectrometric proteome catalog. The isolate is not assumed to be K-12 and injection results are not treated as universal natural host disease. |
+| micro45-toyofuku2019-publisher | https://doi.org/10.1038/s41579-018-0112-2; Complete retained response; status/content inspected against receipt. | context_only | HTTP 200 returned a 3038-byte Client Challenge HTML page, not the paper body. Metadata/abstract or a separately specified genuine body is used instead. |
+| micro45-toyofuku2019-nature | https://www.nature.com/articles/s41579-018-0112-2; Complete retained response; status/content inspected against receipt. | context_only | HTTP 200 returned a 3038-byte Client Challenge HTML page, not the paper body. Metadata/abstract or a separately specified genuine body is used instead. |
+| micro45-lee2007-publisher | https://doi.org/10.1002/pmic.200700196; Complete retained response; status/content inspected against receipt. | context_only | HTTP 403 returned an access-denied HTML response, not an inspected paper body. Metadata/abstract or a separately specified genuine body is used instead. |
+| schema-result | just validate data/structures/other/bacterial_outer_membrane_vesicle.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/bacterial_outer_membrane_vesicle.yaml |
+| strict-result | just validate-strict data/structures/other/bacterial_outer_membrane_vesicle.yaml --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/bacterial_outer_membrane_vesicle-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/bacterial_outer_membrane_vesicle.yaml --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/bacterial_outer_membrane_vesicle-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch45-20261022-mptgrq24/bacterial_outer_membrane_vesicle-strict.tsv |
+| native-graphs | /private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/bacterial_outer_membrane_vesicle.yaml; Complete read-only focused native graphs log | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/other/bacterial_outer_membrane_vesicle.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 9 of 9 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Lee2007 and Toyofuku2019 were inspected through complete native MED abstracts only; publisher responses were403 or HTTP200 Client Challenge pages. Schwechheimer2015 is secondary review evidence, not a primary experiment.
+- Park2010 body scope is limited to complete Results/Discussion and Methods3a/b/c/e; no figure pixels, remaining Methods or supplements were read. Protein profiling is not itself proof that every detected protein is inside the lumen.
+- No taxon-wide occurrence census or individual membrane constituent formation necessity was established.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User expressly requests one review for every unreviewed record, including scientifically clean records.
+- iModulonDB is not applicable to these complex identity, protein family, assembly, vesicle carriage and enzyme or transport claims.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T044321Z-bacterial-outer-membrane-vesicle-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of bacterial outer membrane vesicle
+started_at: '2026-10-22T04:25:32Z'
+finished_at: '2026-10-22T04:43:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact OMV identity, Gram-negative scope, cargo export and nonmechanistic
+  budding topology are supported. Two minor corrections concern the whole proteolipid
+  component type and canonical proteome-versus-inflammation source placement.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/bacterial_extracellular_vesicle.yaml
+    sha256: 43f0f6e0dfef8fc8533bbbac4c5a1583adc6626873f52b92f2edbc32560137d2
+    role: context
+  - path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    sha256: ae635da7dc9351f59de2b4283aa2d572b200cf9eba187147c027e5e86b445a34
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0061701
+  path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+  label: bacterial outer membrane vesicle
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target; no neighboring scientific-record verdict
+    is imported. Exact authority, all current component/function/graph/source placements,
+    taxonomic scope, formation semantics, history and discussions were reviewed.
+  selection: Batch45 fixed strict path order, index 5; exactly one maintained target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0061701
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  command: just validate data/structures/other/bacterial_outer_membrane_vesicle.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  command: just validate-strict data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/bacterial_outer_membrane_vesicle-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-graphs
+  name: Focused native graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  command: /private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/bacterial_outer_membrane_vesicle.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - neighbor-bacterial_extracellular_vesicle
+  - micro45-go
+  - micro45-tax2
+  - micro45-tax562
+  - micro45-toyofuku2019-meta
+  - micro45-lee2007-meta
+  - micro45-park2010-meta
+  - micro45-schwechheimer2015-meta
+  - micro45-schwechheimer2015-legacy
+  - micro45-park2010-legacy
+  - micro45-toyofuku2019-publisher
+  - micro45-toyofuku2019-nature
+  - micro45-lee2007-publisher
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  summary: 9 of 9 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061701
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch45 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+  locator: Complete maintained YAML; all components, source notes, graphs, discussions
+    and historical entries
+  accessed_at: '2026-10-22T04:39:50Z'
+  support: context_only
+  summary: The entire maintained target was read; no scientific record was changed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes
+  accessed_at: '2026-10-22T04:39:50Z'
+  support: context_only
+  summary: ComponentTypeEnum distinguishes LIPID from the permitted OTHER composite
+    class. ESSENTIAL concerns failure of structure formation, not merely loss of catalytic
+    or transport function.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components; groundings; associated machinery and chaperone boundaries
+  accessed_at: '2026-10-22T04:39:50Z'
+  support: context_only
+  summary: Components are taxon-agnostic molecular families/classes; exact family
+    grounding is preferred when verified. Mature constituents and assembled-structure
+    maintenance machinery differ from transient preassembly chaperones.
+- evidence_id: neighbor-bacterial_extracellular_vesicle
+  kind: record_content
+  reference: data/structures/other/bacterial_extracellular_vesicle.yaml
+  locator: Complete frozen boundary neighbor
+  accessed_at: '2026-10-22T04:39:50Z'
+  support: context_only
+  summary: Frozen neighboring record read for boundary context; its scientific verdict
+    is not imported.
+- evidence_id: micro45-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097691,GO:0061701,GO:1903561,GO:0009279,GO:1990063,GO:0106234
+  locator: 'results: exact id/name/isObsolete/definition/synonyms/children for GO:0097691,
+    GO:0061701, GO:1903561 and GO:0009279; other returned terms are not used here.'
+  accessed_at: '2026-10-22T04:32:21.376534Z'
+  support: supports
+  summary: Active GO:0097691 and GO:0061701 match the two distinct bacterial-vesicle
+    labels/definitions; GO:1903561 lists both as is_a children. GO:0009279 identifies
+    the Gram-negative outer membrane. The native BEV definition specifically says
+    plasma-membrane budding; it does not itself express the broader literature origins.
+  snapshot_sha256: 7039eee9ee3550641584f881c521a22795fc64a1b2b73b12b977d3eb9a8329ba
+- evidence_id: micro45-tax2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T04:32:21.376961Z'
+  support: supports
+  summary: ENA taxId 2 identifies Bacteria at rank domain; aliases and lineage match
+    the record. Identity alone is not prevalence or experimental-condition evidence.
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: micro45-tax562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T04:32:21.378577Z'
+  support: supports
+  summary: ENA taxId 562 identifies Escherichia coli at rank species; aliases and
+    lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: micro45-toyofuku2019-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41579-018-0112-2%22&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:32:24.609739Z'
+  support: supports
+  summary: 'Unique MED30397270: Types and origins of bacterial membrane vesicles.
+    Authors/year/DOI and the complete native abstract were inspected. This row establishes
+    bibliographic identity and abstract-level content only; detailed experiments require
+    separately specified body evidence. Its complete review abstract explicitly distinguishes
+    outer-membrane blebbing, Gram-positive/other vesicle types and endolysin-triggered
+    lysis; this is secondary synthesis, not a new experiment.'
+  snapshot_sha256: c4b47a43c972278d37cd87a70e6ded33d5975974952f841fc79f154f49dfe1f3
+- evidence_id: micro45-lee2007-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Fpmic.200700196%22&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:32:25.305332Z'
+  support: supports
+  summary: 'Unique MED17787032: Global proteomic profiling of native outer membrane
+    vesicles derived from Escherichia coli. Authors/year/DOI and the complete native
+    abstract were inspected. This row establishes bibliographic identity and abstract-level
+    content only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 80547e079a3efc9b8c80bab0890891537080f3b67e923506073bffc0fab26602
+- evidence_id: micro45-park2010-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1371%2Fjournal.pone.0011334%22&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:32:25.362278Z'
+  support: supports
+  summary: 'Unique MED20596524: Outer membrane vesicles derived from Escherichia coli
+    induce systemic inflammatory response syndrome. Authors/year/DOI and the complete
+    native abstract were inspected. This row establishes bibliographic identity and
+    abstract-level content only; detailed experiments require separately specified
+    body evidence.'
+  snapshot_sha256: a29381369175f58f8d96cdc3ea3764f2e87c98fd2204e1176f14729aa5a7a140
+- evidence_id: micro45-schwechheimer2015-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnrmicro3525%22&format=json&resultType=core
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:32:25.325101Z'
+  support: supports
+  summary: 'Unique MED26373371: Outer-membrane vesicles from Gram-negative bacteria:
+    biogenesis and functions. Authors/year/DOI and the complete native abstract were
+    inspected. This row establishes bibliographic identity and abstract-level content
+    only; detailed experiments require separately specified body evidence.'
+  snapshot_sha256: 90693e5c60ece66218601af351671e45730e3e62e11c2d7162148d2b38d11710
+- evidence_id: micro45-schwechheimer2015-legacy
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5308417/?report=xml
+  locator: 'Genuine full HTML: S1/S4 direct introductory paragraphs; S6 complete direct
+    paragraphs; BX1 entire; S14 complete direct paragraphs; P3 envelope architecture
+    and complete Fig1 caption; P22 external virulence cargo. No figure pixels.'
+  accessed_at: '2026-10-22T04:32:50.332879Z'
+  support: supports
+  summary: The review describes OMV composition/biogenesis and delivery; S4 cautions
+    that purification and noncanonical membrane/cytoplasmic proteins affect localization
+    interpretation, S6 distinguishes proposed cargo-selection mechanisms, Box1 covers
+    other bacterial vesicle types, and S14 discusses cargo delivery. Composite outer-membrane
+    material includes lipids and proteins; not all detected vesicle proteins are demonstrated
+    lumen contents.
+  snapshot_sha256: a47da1fd7bd72822c463645fb687da745b3c465b9b7c0bee3895e8f312e7bebd
+- evidence_id: micro45-park2010-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2893157/?report=xml
+  locator: 'Genuine full HTML: complete Results and Discussion s2 direct paragraphs;
+    complete Methods s3a/s3b/s3c/s3e. Figure6A is discussed in text; no image pixels,
+    other Methods or supplements inspected.'
+  accessed_at: '2026-10-22T04:32:50.332603Z'
+  support: supports
+  summary: E. coli OMVs purified from an intestinal mouse isolate induced inflammatory
+    phenotypes in an intraperitoneal injection model. Results compare OMV protein/LPS
+    patterns in Fig6A and report morphology/dose/host-response experiments. These
+    inspected sections provide protein profiles, not a global mass-spectrometric proteome
+    catalog. The isolate is not assumed to be K-12 and injection results are not treated
+    as universal natural host disease.
+  snapshot_sha256: 6514d5f04ffe041d8e5b4c0ea2515475062be231d6c7d7f7c68c28f248cee6b0
+- evidence_id: micro45-toyofuku2019-publisher
+  kind: authority
+  reference: https://doi.org/10.1038/s41579-018-0112-2
+  locator: Complete retained response; status/content inspected against receipt.
+  accessed_at: '2026-10-22T04:32:50.863934Z'
+  support: context_only
+  summary: HTTP 200 returned a 3038-byte Client Challenge HTML page, not the paper
+    body. Metadata/abstract or a separately specified genuine body is used instead.
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+- evidence_id: micro45-toyofuku2019-nature
+  kind: authority
+  reference: https://www.nature.com/articles/s41579-018-0112-2
+  locator: Complete retained response; status/content inspected against receipt.
+  accessed_at: '2026-10-22T04:33:37.075077Z'
+  support: context_only
+  summary: HTTP 200 returned a 3038-byte Client Challenge HTML page, not the paper
+    body. Metadata/abstract or a separately specified genuine body is used instead.
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+- evidence_id: micro45-lee2007-publisher
+  kind: authority
+  reference: https://doi.org/10.1002/pmic.200700196
+  locator: Complete retained response; status/content inspected against receipt.
+  accessed_at: '2026-10-22T04:32:50.924294Z'
+  support: context_only
+  summary: HTTP 403 returned an access-denied HTML response, not an inspected paper
+    body. Metadata/abstract or a separately specified genuine body is used instead.
+  snapshot_sha256: 294da81c3e6439180c3d2e6de396717be9b12b61a94477396255d55ac2af8c39
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/bacterial_outer_membrane_vesicle.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:25:33Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/bacterial_outer_membrane_vesicle.yaml'
+  snapshot_sha256: d354c0a6dea400497d04c17c908ea2e5dba6514f4c8066365d5708c41f6b3c2e
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/bacterial_outer_membrane_vesicle-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:25:35Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/bacterial_outer_membrane_vesicle.yaml\
+    \ --out /private/tmp/cellstructure-batch45-20261022-mptgrq24/bacterial_outer_membrane_vesicle-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch45-20261022-mptgrq24/bacterial_outer_membrane_vesicle-strict.tsv"
+  snapshot_sha256: 4146cedefbf756e60d806db2379ab6edefcf14e41eb4a2f757d8d713721e376a
+- evidence_id: native-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch45-20261022-mptgrq24/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/bacterial_outer_membrane_vesicle.yaml
+  locator: Complete read-only focused native graphs log
+  accessed_at: '2026-10-22T04:32:57.855955Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/bacterial_outer_membrane_vesicle.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 9 of 9 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Outer-membrane-only vesicle boundary
+  outcome: supported
+  target_ids:
+  - GO:0061701
+  summary: The exact GO:0061701 definition and GO:1903561 parent identify Gram-negative
+    outer-membrane vesicles. The record explicitly excludes Gram-positive cytoplasmic-membrane
+    vesicles and OIMVs; it does not silently equate them with this exact OMV class.
+    GO:0009279 supplies the outer membrane graph actor.
+  evidence_ids:
+  - micro45-go
+  - micro45-toyofuku2019-meta
+  - micro45-schwechheimer2015-legacy
+  - record
+- assessment_id: materials
+  area: grounding
+  topic: Complete proteolipid mixture and lumen cargo
+  outcome: concern
+  target_ids:
+  - GO:0061701
+  summary: The boundary row is explicitly a complete mixed LPS/phospholipid/protein
+    membrane, but types that entire object LIPID (F1). No false exact molecular CURIE
+    is asserted. OTHER cargo is appropriately heterogeneous; REVIEWED_LABEL_ONLY and
+    the specific grounding TODO do not require one molecular identifier to denote
+    the entire mixture.
+  evidence_ids:
+  - micro45-go
+  - micro45-schwechheimer2015-legacy
+  - micro45-lee2007-meta
+  - schema
+  - record
+  - neighbor-bacterial_extracellular_vesicle
+- assessment_id: necessity
+  area: scope
+  topic: Collective membrane constitution
+  outcome: supported
+  target_ids:
+  - GO:0061701
+  summary: The collective bounding bilayer is constitutional to an OMV; ESSENTIAL
+    here does not establish necessity of every protein/lipid. Cargo UNKNOWN correctly
+    leaves individual formation requirements unresolved.
+  evidence_ids:
+  - micro45-go
+  - schema
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Variable Gram-negative scope and E. coli example
+  outcome: concern
+  target_ids:
+  - GO:0061701
+  summary: Taxon2 and species562 identities are correct. VARIABLE is explicitly constrained
+    to Gram-negative outer-membrane vesicles, with other envelope architectures outside
+    the class. Park2010 supports the E. coli OMV inflammatory model; Lee2007 supports
+    the catalog of native OMV proteins. The sole canonical Park citation currently
+    combines both claims without the source distinction (F2).
+  evidence_ids:
+  - micro45-tax2
+  - micro45-tax562
+  - micro45-park2010-legacy
+  - micro45-park2010-meta
+  - micro45-lee2007-meta
+  - micro45-toyofuku2019-meta
+- assessment_id: function
+  area: evidence
+  topic: Export and delivery
+  outcome: supported
+  target_ids:
+  - GO:0061701
+  summary: The broad export/intercellular-delivery statements fit the inspected review
+    sections and Toyofuku abstract. Detected proteins alone do not establish each
+    protein as luminal or demonstrate every delivery mechanism; the record retains
+    variable cargo and an explicit lumen-focused row.
+  evidence_ids:
+  - micro45-schwechheimer2015-legacy
+  - micro45-toyofuku2019-meta
+  - micro45-lee2007-meta
+  - micro45-park2010-legacy
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Three-edge nonmechanistic budding diagram
+  outcome: supported
+  target_ids:
+  - GO:0061701
+  summary: The graph describes outward budding, cargo enclosure and membrane parthood,
+    explicitly avoiding one universal scission mechanism. Whole OMV, membrane and
+    heterogeneous lumen actors remain distinct. Its membrane component reference inherits
+    F1 typing, but the topology itself is supported and is not an additional finding.
+    Lee2007 profiling supports protein association, with the physical enclosure interpretation
+    jointly supplied by bilayered-vesicle identity and origin reviews.
+  evidence_ids:
+  - micro45-go
+  - micro45-schwechheimer2015-legacy
+  - micro45-toyofuku2019-meta
+  - micro45-lee2007-meta
+  - record
+- assessment_id: coverage
+  area: completeness
+  topic: Full record and source-specific evidence
+  outcome: supported
+  target_ids:
+  - GO:0061701
+  summary: All current fields/history/discussions were assessed. Optional lipid/protein-specific
+    inventories and images are not mandatory solely because richer catalogs exist.
+    Park and the complete review body were read only at the listed sections; Lee and
+    Toyofuku remain abstract-only. Historical first-record/TODO wording is not treated
+    as a current false absence claim.
+  evidence_ids:
+  - micro45-park2010-legacy
+  - micro45-schwechheimer2015-legacy
+  - micro45-lee2007-meta
+  - micro45-toyofuku2019-meta
+  - record
+findings:
+- finding_id: F1
+  issue_key: CellStructureMech-bacterial_outer_membrane_vesicle-composite-proteolipid-type
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Type the complete proteolipid membrane as a composite constituent
+  description: components[0] explicitly denotes the complete OMV bilayer mixture including
+    outer-membrane proteins, LPS and phospholipids, yet component_type is LIPID. The
+    label, role and graph refer to the whole composite membrane, not merely its lipid
+    fraction. OTHER is available and the frozen BEV neighbor uses it for exactly this
+    mixed-membrane distinction.
+  target_ids:
+  - GO:0061701
+  field_paths:
+  - components[0].component_type
+  - components[0].grounding_notes
+  - causal_graphs[0].nodes[1].component_ref
+  evidence_ids:
+  - schema
+  - record
+  - neighbor-bacterial_extracellular_vesicle
+  - micro45-go
+  - micro45-schwechheimer2015-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: minor
+  normalization_reason: Minor because biological identity, label, composition and
+    topology are correct and no wrong exact chemical CURIE is asserted; this is a
+    bounded classification inconsistency rather than a membrane-location-as-lipid
+    grounding error.
+- finding_id: F2
+  issue_key: CellStructureMech-bacterial_outer_membrane_vesicle-canonical-proteome-source-placement
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate the OMV proteome source from the inflammatory-model source
+  description: The canonical E. coli note attributes native OMV proteomes and host
+    inflammatory responses to Park2010 alone. Park reports the injection model and
+    comparative protein/LPS profiles; the already cited Lee2007 paper explicitly supplies
+    global proteomic profiling (141 proteins in its complete abstract). The broader
+    biological example is supported, but the two experimental claims need their respective
+    sources.
+  target_ids:
+  - GO:0061701
+  field_paths:
+  - canonical_examples[0].note
+  - canonical_examples[0].reference
+  evidence_ids:
+  - micro45-park2010-legacy
+  - micro45-park2010-meta
+  - micro45-lee2007-meta
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: minor
+  normalization_reason: Minor source placement because both claims are supported elsewhere
+    in the existing cited literature; the fix neither changes organism identity nor
+    rejects OMV inflammatory activity.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0061701
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    role: maintained scientific record
+  description: Retype the explicitly whole proteolipid boundary as OTHER, or deliberately
+    restrict the component to its lipid fraction and separately preserve the whole-membrane
+    actor. Keep the correctly scoped OMV identity and cargo topology.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0061701
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    role: maintained scientific record
+  description: Attach Lee2007 to the proteomic clause using the supported schema/evidence
+    placement, or narrow the Park-only canonical note to its OMV characterization
+    and host-response experiment. Preserve the mouse-isolate/injection context.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+limitations:
+- Lee2007 and Toyofuku2019 were inspected through complete native MED abstracts only;
+  publisher responses were403 or HTTP200 Client Challenge pages. Schwechheimer2015
+  is secondary review evidence, not a primary experiment.
+- Park2010 body scope is limited to complete Results/Discussion and Methods3a/b/c/e;
+  no figure pixels, remaining Methods or supplements were read. Protein profiling
+  is not itself proof that every detected protein is inside the lumen.
+- No taxon-wide occurrence census or individual membrane constituent formation necessity
+  was established.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User expressly requests one review for every unreviewed record, including scientifically
+  clean records.
+- iModulonDB is not applicable to these complex identity, protein family, assembly,
+  vesicle carriage and enzyme or transport claims.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
