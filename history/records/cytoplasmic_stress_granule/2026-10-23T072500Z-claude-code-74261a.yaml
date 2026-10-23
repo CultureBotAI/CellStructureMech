@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/cytoplasmic_stress_granule.yaml
+  slug: cytoplasmic_stress_granule
+session:
+  id: 2026-10-23T072500Z-claude-code-74261a
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Seeded reviewed Saccharomyces cerevisiae S288C protein_example UniProtKB:P38249
+    (RPG1/TIF32) on eif3_40s_translation_initiation_cohort
+  details: Resolved declared gene symbol TIF32 (primary UniProt symbol RPG1) on eif3_40s_translation_initiation_cohort
+    to reviewed UniProtKB:P38249 (Eukaryotic translation initiation factor 3 subunit A) in
+    Saccharomyces cerevisiae S288C (NCBITaxon:559292) while preserving component_type OTHER.

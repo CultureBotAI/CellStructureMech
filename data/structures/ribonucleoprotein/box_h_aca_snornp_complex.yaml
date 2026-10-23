@@ -57,6 +57,83 @@ components:
   - reference: GO:0031429
     notes: Defines the catalytic Cbf5 pseudouridine synthase and core subunits of
       the box H/ACA snoRNP complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33322
+    protein_label: H/ACA ribonucleoprotein complex subunit CBF5
+    gene_symbol: CBF5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene CBF5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P33322.
+  - uniprot_id: UniProtKB:P28007
+    protein_label: H/ACA ribonucleoprotein complex subunit GAR1
+    gene_symbol: GAR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene GAR1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12756332
+      notes: Xu C et al. 2003, ‘In vivo analysis of nucleolar proteins modified by
+        the yeast arginine methyltransferase Hmt1/Rmt1p.’, RNA. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P28007.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P28007.
+    - reference: PMID:9843512
+      notes: Henras A et al. 1998, ‘Nhp2p and Nop10p are essential for the function
+        of H/ACA snoRNPs.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus, nucleolus' localisation of P28007.
+  - uniprot_id: UniProtKB:P32495
+    protein_label: H/ACA ribonucleoprotein complex subunit NHP2
+    gene_symbol: NHP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene NHP2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P32495.
+    - reference: PMID:9843512
+      notes: Henras A et al. 1998, ‘Nhp2p and Nop10p are essential for the function
+        of H/ACA snoRNPs.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus, nucleolus' localisation of P32495.
+  - uniprot_id: UniProtKB:Q6Q547
+    protein_label: H/ACA ribonucleoprotein complex subunit NOP10
+    gene_symbol: NOP10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene NOP10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of Q6Q547.
+    - reference: PMID:9843512
+      notes: Henras A et al. 1998, ‘Nhp2p and Nop10p are essential for the function
+        of H/ACA snoRNPs.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Nucleus, nucleolus' localisation of Q6Q547.
 evidence:
 - reference: GO:0031429
   notes: 'Gene Ontology cellular-component term for box H/ACA snoRNP complex: A box
@@ -163,6 +240,13 @@ curation_history:
     with verified GO hierarchy, compartmental context, causal mechanism graph, and
     literature evidence.
   llm_assisted: true
+- timestamp: '2026-10-23T07:14:22Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

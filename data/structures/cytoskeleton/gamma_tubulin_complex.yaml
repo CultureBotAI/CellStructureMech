@@ -34,6 +34,25 @@ components:
   - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
     notes: Reviews the structure and microtubule-nucleating mechanism of gamma-tubulin
       within gamma-TuSC and gamma-TuRC.
+  protein_examples:
+  - uniprot_id: UniProtKB:P25295
+    protein_label: Tubulin gamma chain
+    gene_symbol: gtb1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: Reviewed UniProtKB entry for fission-yeast gamma-tubulin gene gtb1 (synonym
+      tug1, ORF SPBC32F12.04) in Schizosaccharomyces pombe 972h-, disambiguated from
+      the unrelated endoplasmic-reticulum glucosidase II beta subunit Q9USH8 that
+      shares the symbol gtb1. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P25295
+      notes: UniProtKB reviewed (Swiss-Prot) entry P25295 for Tubulin gamma chain
+        (gene gtb1 / tug1, SPBC32F12.04) in Schizosaccharomyces pombe 972h-. Establishes
+        the accession and gene identity only; the component's membership in this structure
+        rests on the record's own sources.
 - component_id: gcp2_gcp3_spoke_subunits
   label: gamma-tubulin complex spoke scaffold heterodimer (GCP2/Spc97/Alp4 and GCP3/Spc98/Alp6)
   component_type: PROTEIN
@@ -73,6 +92,23 @@ components:
     - reference: UniProtKB:Q9Y705
       notes: Native accession, reviewed status, primary gene, protein label and source
         taxon verified on 2026-10-06. Residence and function come from the cited experiments.
+  - uniprot_id: UniProtKB:Q9USQ2
+    protein_label: Spindle pole body component alp6
+    gene_symbol: alp6
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene alp6 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11080156
+      notes: Vardy L et al. 2000, ‘The fission yeast gamma-tubulin complex is required
+        in G(1) phase and is a component of the spindle assembly checkpoint.’, EMBO
+        J. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm,
+        cytoskeleton, microtubule organizing center, spindle pole body' localisation
+        of Q9USQ2.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
@@ -218,4 +254,18 @@ curation_history:
   changes: Initial curation of gamma-tubulin complex (GO:0000930) in category CYTOSKELETON
     with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
     graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:13:45Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T07:27:48Z'
+  curator: uniprot-protein-examples-skill
+  action: CURATED_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) in Schizosaccharomyces
+    pombe 972h- (NCBITaxon:284812) to gamma_tubulin_subunit, disambiguating gamma-tubulin
+    P25295 from the homonymous ER glucosidase II beta subunit Q9USH8.
   llm_assisted: true

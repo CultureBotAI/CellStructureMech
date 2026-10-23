@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/tam_protein_secretion_complex.yaml
+  slug: tam_protein_secretion_complex
+session:
+  id: 2026-10-23T072500Z-claude-code-d0bfab
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - canonical_examples
+  - curation_history
+  summary: Added Escherichia coli K-12 canonical_examples entry and seeded reviewed UniProtKB:P0ADE4
+    (tamA) and UniProtKB:P39321 (tamB) protein_examples
+  details: Added Escherichia coli K-12 (NCBITaxon:83333) to canonical_examples citing PMID:22466966
+    (Selkrig et al. 2012) and resolved tamA (UniProtKB:P0ADE4) and tamB (UniProtKB:P39321)
+    to reviewed UniProtKB entries in Escherichia coli K-12.

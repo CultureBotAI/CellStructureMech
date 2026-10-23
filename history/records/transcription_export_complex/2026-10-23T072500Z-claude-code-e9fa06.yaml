@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/transcription_export_complex.yaml
+  slug: transcription_export_complex
+session:
+  id: 2026-10-23T072500Z-claude-code-e9fa06
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Added source-backed SUB2 and YRA1 subunit gene_symbols and reviewed Saccharomyces
+    cerevisiae S288C protein_examples (Q07478, Q12159)
+  details: Added source-backed gene_symbols SUB2 and YRA1 to sub2_yra1_mrna_export_module
+    (citing PMID:11979277) and resolved SUB2 (UniProtKB:Q07478) and YRA1 (UniProtKB:Q12159)
+    in Saccharomyces cerevisiae S288C (NCBITaxon:559292).

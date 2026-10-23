@@ -99,6 +99,27 @@ components:
       notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
         envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
         for the 'Cell inner membrane' localisation of P0ABA6.
+  - uniprot_id: UniProtKB:P0A6E6
+    protein_label: ATP synthase epsilon chain
+    gene_symbol: atpC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene atpC in Escherichia coli K-12,
+      a taxon this record names; other reviewed entries for this symbol exist on sub-strain
+      nodes and this is the one at the taxon the record names. Identifier for the
+      component's declared gene symbol; it is not itself evidence that the protein
+      is part of this structure.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell
+        envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt
+        for the 'Cell inner membrane' localisation of P0A6E6.
+    - reference: PMID:21778229
+      notes: Fontaine F et al. 2011, ‘Membrane localization of small proteins in Escherichia
+        coli.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for
+        the 'Cell inner membrane' localisation of P0A6E6.
 - component_id: c_ring
   label: Fo c-ring
   component_type: PROTEIN_COMPLEX
@@ -376,6 +397,13 @@ curation_history:
   action: EDIT
   changes: removed 1 non-matching protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T07:18:59Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 datasets:
 - accession: PDB:6OQR
   title: E. coli ATP Synthase ADP State 1a

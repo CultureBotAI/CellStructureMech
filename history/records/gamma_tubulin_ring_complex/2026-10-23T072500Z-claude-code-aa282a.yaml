@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+  slug: gamma_tubulin_ring_complex
+session:
+  id: 2026-10-23T072500Z-claude-code-aa282a
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Seeded and curated 5 reviewed Schizosaccharomyces pombe 972h- protein_examples
+    across gamma_tusc_repeating_core and gcp4_gcp5_gcp6_ring_subunits
+  details: Resolved alp6 (UniProtKB:Q9USQ2) on gamma_tusc_repeating_core and gfh1 (UniProtKB:Q9P7R5),
+    mod21 (UniProtKB:Q9UT52), and alp16 (UniProtKB:P87244) on gcp4_gcp5_gcp6_ring_subunits
+    via scripts/uniprot_genes.py --include-complexes, and curated UniProtKB:P25295 (Tubulin
+    gamma chain, gtb1/tug1) on gamma_tusc_repeating_core in Schizosaccharomyces pombe 972h-
+    (NCBITaxon:284812).

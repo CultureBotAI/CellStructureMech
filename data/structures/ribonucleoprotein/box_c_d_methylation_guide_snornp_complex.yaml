@@ -63,6 +63,80 @@ components:
   - reference: GO:0031428
     notes: Defines the catalytic fibrillarin/Nop1 and core scaffold subunits of the
       box C/D methylation guide snoRNP complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P15646
+    protein_label: rRNA 2'-O-methyltransferase fibrillarin
+    gene_symbol: NOP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene NOP1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:12756332
+      notes: Xu C et al. 2003, ‘In vivo analysis of nucleolar proteins modified by
+        the yeast arginine methyltransferase Hmt1/Rmt1p.’, RNA. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P15646.
+    - reference: PMID:2298745
+      notes: Henríquez R et al. 1990, ‘Isolation and sequencing of NOP1. A yeast gene
+        encoding a nucleolar protein homologous to a human autoimmune antigen.’, J
+        Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nucleolus' localisation of P15646.
+    - reference: PMID:2686980
+      notes: Schimmang T et al. 1989, ‘A yeast nucleolar protein related to mammalian
+        fibrillarin is associated with small nucleolar RNA and is essential for viability.’,
+        EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus,
+        nucleolus' localisation of P15646.
+  - uniprot_id: UniProtKB:Q12460
+    protein_label: Nucleolar protein 56
+    gene_symbol: NOP56
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene NOP56 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9372940
+      notes: Gautier T et al. 1997, ‘Nucleolar KKE/D repeat proteins Nop56p and Nop58p
+        interact with Nop1p and are required for ribosome biogenesis.’, Mol Cell Biol.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus'
+        localisation of Q12460.
+  - uniprot_id: UniProtKB:Q12499
+    protein_label: Nucleolar protein 58
+    gene_symbol: NOP58
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene NOP58 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9632712
+      notes: Wu P et al. 1998, ‘Nop5p is a small nucleolar ribonucleoprotein component
+        required for pre-18 S rRNA processing in yeast.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation
+        of Q12499.
+  - uniprot_id: UniProtKB:P39990
+    protein_label: 13 kDa ribonucleoprotein-associated protein
+    gene_symbol: SNU13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene SNU13 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39990
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39990, the single reviewed entry
+        for gene SNU13 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 evidence:
 - reference: GO:0031428
   notes: 'Gene Ontology cellular-component term for box C/D methylation guide snoRNP
@@ -154,6 +228,13 @@ curation_history:
     in category RIBONUCLEOPROTEIN with verified GO hierarchy, compartmental context,
     causal mechanism graph, and literature evidence.
   llm_assisted: true
+- timestamp: '2026-10-23T07:14:19Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 4 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

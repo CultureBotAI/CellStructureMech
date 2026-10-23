@@ -23,6 +23,9 @@ components:
   label: Rpn11-Rpn8 MPN-domain deubiquitinase heterodimer
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
+  gene_symbols:
+  - RPN11
+  - RPN8
   essentiality: ESSENTIAL
   role: Catalytic JAMM/MPN+ Zn2+ metalloprotease subunit Rpn11 paired with the structural
     MPN-domain subunit Rpn8 directly over the Rpt ATPase pore to cleave polyubiquitin
@@ -31,11 +34,52 @@ components:
   - reference: DOI:10.1146/annurev-biochem-060410-150257
     notes: Tomko and Hochstrasser 2013 describe the Rpn11-Rpn8 MPN heterodimer as
       the catalytic deubiquitination center of the 19S lid.
+  protein_examples:
+  - uniprot_id: UniProtKB:P43588
+    protein_label: Ubiquitin C-terminal hydrolase RPN11
+    gene_symbol: RPN11
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN11 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P43588
+      notes: UniProtKB reviewed (Swiss-Prot) entry P43588, the single reviewed entry
+        for gene RPN11 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q08723
+    protein_label: 26S proteasome regulatory subunit RPN8
+    gene_symbol: RPN8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q08723
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q08723, the single reviewed entry
+        for gene RPN8 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 - component_id: lid_pci_horseshoe_scaffold
   label: 19S lid PCI-domain horseshoe scaffold (Rpn3, Rpn5, Rpn6, Rpn7, Rpn9, Rpn12,
     Sem1)
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
+  gene_symbols:
+  - RPN3
+  - RPN5
+  - RPN6
+  - RPN7
+  - RPN9
+  - RPN12
+  - SEM1
   essentiality: ESSENTIAL
   role: Six winged-helix PCI-domain subunits and the Sem1/Dss1 stapler peptide that
     assemble into a horseshoe-shaped scaffold clamping the Rpn11-Rpn8 dimer onto the
@@ -44,6 +88,122 @@ components:
   - reference: DOI:10.1146/annurev-biochem-060410-150257
     notes: Tomko and Hochstrasser 2013 review the six PCI-domain subunits and Sem1
       that form the structural scaffold of the 19S lid subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40016
+    protein_label: 26S proteasome regulatory subunit RPN3
+    gene_symbol: RPN3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40016
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40016, the single reviewed entry
+        for gene RPN3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q12250
+    protein_label: 26S proteasome regulatory subunit RPN5
+    gene_symbol: RPN5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12250
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12250, the single reviewed entry
+        for gene RPN5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q12377
+    protein_label: 26S proteasome regulatory subunit RPN6
+    gene_symbol: RPN6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12377
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12377, the single reviewed entry
+        for gene RPN6 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q06103
+    protein_label: 26S proteasome regulatory subunit RPN7
+    gene_symbol: RPN7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN7 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q06103.
+    - reference: PMID:19446323
+      notes: Saeki Y et al. 2009, ‘Multiple proteasome-interacting proteins assist
+        the assembly of the yeast 19S regulatory particle.’, Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus' localisation of Q06103.
+  - uniprot_id: UniProtKB:Q04062
+    protein_label: 26S proteasome regulatory subunit RPN9
+    gene_symbol: RPN9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN9 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q04062
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q04062, the single reviewed entry
+        for gene RPN9 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P32496
+    protein_label: 26S proteasome regulatory subunit RPN12
+    gene_symbol: RPN12
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN12 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32496
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32496, the single reviewed entry
+        for gene RPN12 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:O94742
+    protein_label: 26S proteasome complex subunit SEM1
+    gene_symbol: SEM1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene SEM1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O94742
+      notes: UniProtKB reviewed (Swiss-Prot) entry O94742, the single reviewed entry
+        for gene SEM1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
@@ -191,4 +351,19 @@ curation_history:
   changes: Initial curation of proteasome regulatory particle, lid subcomplex (GO:0008541)
     in category OTHER with verified GO hierarchy, compartmental context, causal mechanism
     graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:14:06Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 9 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T07:27:49Z'
+  curator: uniprot-protein-examples-skill
+  action: CURATED_GENE_SYMBOLS_AND_PROTEIN_EXAMPLES
+  changes: Added source-backed subunit gene_symbols (RPN11, RPN8 on rpn11_rpn8_deubiquitinase_dimer;
+    RPN3, RPN5, RPN6, RPN7, RPN9, RPN12, SEM1 on lid_pci_horseshoe_scaffold) prior
+    to seeding 9 reviewed Saccharomyces cerevisiae S288C and Schizosaccharomyces pombe
+    972h- protein_examples.
   llm_assisted: true

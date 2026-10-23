@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/proton_transporting_atp_synthase_complex.yaml
+  slug: proton_transporting_atp_synthase_complex
+session:
+  id: 2026-10-23T072500Z-claude-code-039445
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Seeded reviewed Escherichia coli K-12 protein_example UniProtKB:P0A6E6 (atpC) on
+    central_stalk
+  details: Resolved declared subunit symbol atpC on PROTEIN_COMPLEX component central_stalk
+    to reviewed UniProtKB:P0A6E6 (ATP synthase epsilon chain) in Escherichia coli K-12 (NCBITaxon:83333)
+    via scripts/uniprot_genes.py --include-complexes.

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml
+  slug: box_h_aca_snornp_complex
+session:
+  id: 2026-10-23T072500Z-claude-code-fb01d9
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Seeded 4 reviewed Saccharomyces cerevisiae S288C protein_examples (CBF5, GAR1,
+    NHP2, NOP10) on cbf5_nop10_nhp2_gar1_protein_tetramer
+  details: Resolved declared subunit symbols CBF5, GAR1, NHP2, and NOP10 on PROTEIN_COMPLEX
+    component cbf5_nop10_nhp2_gar1_protein_tetramer to reviewed UniProtKB entries P33322,
+    P28007, P32495, and Q6Q547 in Saccharomyces cerevisiae S288C (NCBITaxon:559292) via scripts/uniprot_genes.py
+    --include-complexes.

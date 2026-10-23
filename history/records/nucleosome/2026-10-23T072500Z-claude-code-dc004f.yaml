@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/nucleosome.yaml
+  slug: nucleosome
+session:
+  id: 2026-10-23T072500Z-claude-code-dc004f
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Seeded reviewed Saccharomyces cerevisiae S288C protein_examples UniProtKB:P04911
+    (HTA1) and UniProtKB:P02293 (HTB1) on histone_octamer_core
+  details: Resolved declared subunit symbols HTA1 and HTB1 on PROTEIN_COMPLEX component histone_octamer_core
+    to reviewed UniProtKB:P04911 (Histone H2A.1) and UniProtKB:P02293 (Histone H2B.1) in Saccharomyces
+    cerevisiae S288C (NCBITaxon:559292) via scripts/uniprot_genes.py --include-complexes.

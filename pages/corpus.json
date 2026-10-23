@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 978,
- "corpus_updated": "2026-10-21 18:45:05 UTC",
- "corpus_digest": "26b01b947d2d",
+ "corpus_updated": "2026-10-23 07:27:49 UTC",
+ "corpus_digest": "18996b1bc76e",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -44482,6 +44482,24 @@
        "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
        "notes": "Reviews the structure and microtubule-nucleating mechanism of gamma-tubulin within gamma-TuSC and gamma-TuRC."
       }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P25295",
+       "protein_label": "Tubulin gamma chain",
+       "gene_symbol": "gtb1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Reviewed UniProtKB entry for fission-yeast gamma-tubulin gene gtb1 (synonym tug1, ORF SPBC32F12.04) in Schizosaccharomyces pombe 972h-, disambiguated from the unrelated endoplasmic-reticulum glucosidase II beta subunit Q9USH8 that shares the symbol gtb1. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P25295",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P25295 for Tubulin gamma chain (gene gtb1 / tug1, SPBC32F12.04) in Schizosaccharomyces pombe 972h-. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      }
      ]
     },
     {
@@ -44525,6 +44543,22 @@
         {
          "reference": "UniProtKB:Q9Y705",
          "notes": "Native accession, reviewed status, primary gene, protein label and source taxon verified on 2026-10-06. Residence and function come from the cited experiments."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q9USQ2",
+       "protein_label": "Spindle pole body component alp6",
+       "gene_symbol": "alp6",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene alp6 in Schizosaccharomyces pombe 972h-, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:11080156",
+         "notes": "Vardy L et al. 2000, ‘The fission yeast gamma-tubulin complex is required in G(1) phase and is a component of the spindle assembly checkpoint.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of Q9USQ2."
         }
        ]
       }
@@ -44710,6 +44744,19 @@
      "action": "CREATED",
      "changes": "Initial curation of gamma-tubulin complex (GO:0000930) in category CYTOSKELETON with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:13:45Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:27:48Z",
+     "curator": "uniprot-protein-examples-skill",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Added reviewed UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) in Schizosaccharomyces pombe 972h- (NCBITaxon:284812) to gamma_tubulin_subunit, disambiguating gamma-tubulin P25295 from the homonymous ER glucosidase II beta subunit Q9USH8.",
+     "llm_assisted": true
     }
    ]
   },
@@ -44830,6 +44877,38 @@
          "notes": "Native accession, reviewed status, primary gene, protein label and source taxon verified on 2026-10-06. Residence and function come from the cited experiments."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q9USQ2",
+       "protein_label": "Spindle pole body component alp6",
+       "gene_symbol": "alp6",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene alp6 in Schizosaccharomyces pombe 972h-, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:11080156",
+         "notes": "Vardy L et al. 2000, ‘The fission yeast gamma-tubulin complex is required in G(1) phase and is a component of the spindle assembly checkpoint.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of Q9USQ2."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P25295",
+       "protein_label": "Tubulin gamma chain",
+       "gene_symbol": "gtb1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Reviewed UniProtKB entry for fission-yeast gamma-tubulin gene gtb1 (synonym tug1, ORF SPBC32F12.04) in Schizosaccharomyces pombe 972h-, disambiguated from the unrelated endoplasmic-reticulum glucosidase II beta subunit Q9USH8 that shares the symbol gtb1. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P25295",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P25295 for Tubulin gamma chain (gene gtb1 / tug1, SPBC32F12.04) in Schizosaccharomyces pombe 972h-. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     },
@@ -44849,6 +44928,64 @@
       {
        "reference": "DOI:10.1091/mbc.E04-11-1003",
        "notes": "Characterizes the fission yeast GCP4/5/6-family subunits (Gfh1, Mod21, Alp16) that associate with the gamma-TuSC core to form the gamma-TuRC."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q9P7R5",
+       "protein_label": "Gamma-tubulin complex component gfh1",
+       "gene_symbol": "gfh1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene gfh1 in Schizosaccharomyces pombe 972h-, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:15004232",
+         "notes": "Venkatram S et al. 2004, ‘Identification and characterization of two novel proteins affecting fission yeast gamma-tubulin complex function.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of Q9P7R5."
+        },
+        {
+         "reference": "PMID:16823372",
+         "notes": "Matsuyama A et al. 2006, ‘ORFeome cloning and global analysis of protein localization in the fission yeast Schizosaccharomyces pombe.’, Nat Biotechnol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of Q9P7R5."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q9UT52",
+       "protein_label": "Gamma-tubulin complex subunit mod21",
+       "gene_symbol": "mod21",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene mod21 in Schizosaccharomyces pombe 972h-, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:16823372",
+         "notes": "Matsuyama A et al. 2006, ‘ORFeome cloning and global analysis of protein localization in the fission yeast Schizosaccharomyces pombe.’, Nat Biotechnol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of Q9UT52."
+        },
+        {
+         "reference": "PMID:17021256",
+         "notes": "Anders A et al. 2006, ‘Noncore components of the fission yeast gamma-tubulin complex.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of Q9UT52."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P87244",
+       "protein_label": "Spindle pole body component alp16",
+       "gene_symbol": "alp16",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene alp16 in Schizosaccharomyces pombe 972h-, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:12134075",
+         "notes": "Fujita A et al. 2002, ‘A fourth component of the fission yeast gamma-tubulin complex, Alp16, is required for cytoplasmic microtubule integrity and becomes indispensable when gamma-tubulin function is compromised.’, Mol Biol Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of P87244."
+        }
+       ]
       }
      ]
     },
@@ -45085,6 +45222,19 @@
      "action": "CREATED",
      "changes": "Initial curation of gamma-tubulin ring complex (GO:0000931) in category CYTOSKELETON with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:13:49Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 4 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:27:48Z",
+     "curator": "uniprot-protein-examples-skill",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Added reviewed UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) in Schizosaccharomyces pombe 972h- (NCBITaxon:284812) to gamma_tusc_repeating_core, disambiguating gamma-tubulin P25295 from the homonymous ER glucosidase II beta subunit Q9USH8.",
+     "llm_assisted": true
     }
    ]
   },
@@ -45143,6 +45293,24 @@
        "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
        "notes": "Reviews the structure and microtubule-nucleating mechanism of gamma-tubulin within gamma-TuSC and gamma-TuRC."
       }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P25295",
+       "protein_label": "Tubulin gamma chain",
+       "gene_symbol": "gtb1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Reviewed UniProtKB entry for fission-yeast gamma-tubulin gene gtb1 (synonym tug1, ORF SPBC32F12.04) in Schizosaccharomyces pombe 972h-, disambiguated from the unrelated endoplasmic-reticulum glucosidase II beta subunit Q9USH8 that shares the symbol gtb1. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P25295",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P25295 for Tubulin gamma chain (gene gtb1 / tug1, SPBC32F12.04) in Schizosaccharomyces pombe 972h-. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      }
      ]
     },
     {
@@ -45186,6 +45354,22 @@
         {
          "reference": "UniProtKB:Q9Y705",
          "notes": "Native accession, reviewed status, primary gene, protein label and source taxon verified on 2026-10-06. Residence and function come from the cited experiments."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q9USQ2",
+       "protein_label": "Spindle pole body component alp6",
+       "gene_symbol": "alp6",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene alp6 in Schizosaccharomyces pombe 972h-, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:11080156",
+         "notes": "Vardy L et al. 2000, ‘The fission yeast gamma-tubulin complex is required in G(1) phase and is a component of the spindle assembly checkpoint.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of Q9USQ2."
         }
        ]
       }
@@ -45351,6 +45535,19 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of gamma-tubulin small complex (GO:0008275) in category CYTOSKELETON with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:13:49Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:27:48Z",
+     "curator": "uniprot-protein-examples-skill",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Added reviewed UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) in Schizosaccharomyces pombe 972h- (NCBITaxon:284812) to gamma_tubulin_subunit, disambiguating gamma-tubulin P25295 from the homonymous ER glucosidase II beta subunit Q9USH8.",
      "llm_assisted": true
     }
    ]
@@ -86001,6 +86198,26 @@
          "notes": "Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane' localisation of P0ABA6."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P0A6E6",
+       "protein_label": "ATP synthase epsilon chain",
+       "gene_symbol": "atpC",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene atpC in Escherichia coli K-12, a taxon this record names; other reviewed entries for this symbol exist on sub-strain nodes and this is the one at the taxon the record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:16079137",
+         "notes": "Stenberg F et al. 2005, ‘Protein complexes of the Escherichia coli cell envelope.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane' localisation of P0A6E6."
+        },
+        {
+         "reference": "PMID:21778229",
+         "notes": "Fontaine F et al. 2011, ‘Membrane localization of small proteins in Escherichia coli.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane' localisation of P0A6E6."
+        }
+       ]
       }
      ]
     },
@@ -86353,6 +86570,12 @@
      "action": "EDIT",
      "changes": "removed 1 non-matching protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:18:59Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
     }
    ],
    "datasets": [
@@ -201419,6 +201642,24 @@
        "reference": "DOI:10.1101/gad.1065903",
        "notes": "Establishes Cdc45 and GINS recruitment to origin-bound Mcm2-7 in the eukaryotic DNA replication preinitiation complex."
       }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q08032",
+       "protein_label": "Cell division control protein 45",
+       "gene_symbol": "CDC45",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene CDC45 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:8901577",
+         "notes": "Hopwood B et al. 1996, ‘Cdc45p assembles into a complex with Cdc46p/Mcm5p, is required for minichromosome maintenance, and is essential for chromosomal DNA replication.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q08032."
+        }
+       ]
+      }
      ]
     },
     {
@@ -201827,6 +202068,12 @@
      "action": "CREATED",
      "changes": "Initial curation of DNA replication preinitiation complex (GO:0031261) in category OTHER with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:13:50Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
     }
    ]
   },
@@ -228504,6 +228751,12 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 12 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:13:51Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
     }
    ],
    "synonyms": [
@@ -228544,6 +228797,24 @@
       {
        "reference": "DOI:10.1083/jcb.200305100",
        "notes": "Westermann et al. 2003 identified CENP-A/Cse4-linked inner kinetochore proteins in the conserved budding-yeast molecular core."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P36012",
+       "protein_label": "Histone H3-like centromeric protein CSE4",
+       "gene_symbol": "CSE4",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene CSE4 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14581449",
+         "notes": "Westermann S et al. 2003, ‘Architecture of the budding yeast kinetochore reveals a conserved molecular core.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of P36012."
+        }
+       ]
       }
      ]
     },
@@ -254972,6 +255243,38 @@
          "notes": "UniProtKB reviewed (Swiss-Prot) entry P61830, the single reviewed entry for gene HHT1 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P04911",
+       "protein_label": "Histone H2A.1",
+       "gene_symbol": "HTA1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene HTA1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P04911",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P04911, the single reviewed entry for gene HTA1 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P02293",
+       "protein_label": "Histone H2B.1",
+       "gene_symbol": "HTB1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene HTB1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P02293",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P02293, the single reviewed entry for gene HTB1 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -255140,6 +255443,12 @@
      "action": "CREATED",
      "changes": "Initial curation of nucleosome (GO:0000786) in category OTHER with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:19:01Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 2 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
     }
    ]
   },
@@ -263470,12 +263779,118 @@
      "label": "19S base AAA+ ATPase heterohexameric ring (Rpt1-Rpt6)",
      "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "RPT1",
+      "RPT2",
+      "RPT3",
+      "RPT4",
+      "RPT5",
+      "RPT6"
+     ],
      "essentiality": "ESSENTIAL",
      "role": "Heterohexameric AAA+ ATPase motor ring (Rpt1-Rpt6) whose C-terminal HbYX tails dock into pockets of the 20S alpha ring to open the proteolytic gate while aromatic pore loops mechanically unfold and translocate substrates.",
      "evidence": [
       {
        "reference": "DOI:10.1146/annurev-biochem-060410-150257",
        "notes": "Tomko and Hochstrasser 2013 describe the ordered Rpt1-Rpt6 AAA+ heterohexamer at the core of the 19S base subcomplex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P33299",
+       "protein_label": "26S proteasome regulatory subunit 7 homolog",
+       "gene_symbol": "RPT1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPT1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of P33299."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P40327",
+       "protein_label": "26S proteasome regulatory subunit 4 homolog",
+       "gene_symbol": "RPT2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPT2 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P40327",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P40327, the single reviewed entry for gene RPT2 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P33298",
+       "protein_label": "26S proteasome regulatory subunit 6B homolog",
+       "gene_symbol": "RPT3",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPT3 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P33298",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P33298, the single reviewed entry for gene RPT3 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P53549",
+       "protein_label": "26S proteasome subunit RPT4",
+       "gene_symbol": "RPT4",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPT4 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P53549",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P53549, the single reviewed entry for gene RPT4 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P33297",
+       "protein_label": "26S proteasome regulatory subunit 6A",
+       "gene_symbol": "RPT5",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPT5 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P33297",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P33297, the single reviewed entry for gene RPT5 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q01939",
+       "protein_label": "26S proteasome regulatory subunit 8 homolog",
+       "gene_symbol": "RPT6",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPT6 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q01939",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q01939, the single reviewed entry for gene RPT6 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     },
@@ -263484,12 +263899,84 @@
      "label": "19S base non-ATPase scaffold and ubiquitin receptor module (Rpn1, Rpn2, Rpn10, Rpn13)",
      "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "RPN1",
+      "RPN2",
+      "RPN10",
+      "RPN13"
+     ],
      "essentiality": "ESSENTIAL",
      "role": "Toroidal PC-repeat scaffold subunits (Rpn1, Rpn2) and intrinsic ubiquitin receptors (Rpn10, Rpn13) that capture polyubiquitinated proteins and recruit shuttle factors and Ubp6 to the base.",
      "evidence": [
       {
        "reference": "DOI:10.1146/annurev-biochem-060410-150257",
        "notes": "Tomko and Hochstrasser 2013 review the non-ATPase Rpn1/Rpn2 scaffolds and Rpn10/Rpn13 ubiquitin receptors of the 19S base."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P38764",
+       "protein_label": "26S proteasome regulatory subunit RPN1",
+       "gene_symbol": "RPN1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P38764",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P38764, the single reviewed entry for gene RPN1 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P32565",
+       "protein_label": "26S proteasome regulatory subunit RPN2",
+       "gene_symbol": "RPN2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN2 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P32565",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P32565, the single reviewed entry for gene RPN2 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P38886",
+       "protein_label": "26S proteasome regulatory subunit RPN10",
+       "gene_symbol": "RPN10",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN10 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P38886",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P38886, the single reviewed entry for gene RPN10 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:O13563",
+       "protein_label": "26S proteasome regulatory subunit RPN13",
+       "gene_symbol": "RPN13",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN13 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm' localisation of O13563."
+        }
+       ]
       }
      ]
     }
@@ -263678,6 +264165,19 @@
      "action": "CREATED",
      "changes": "Initial curation of proteasome regulatory particle, base subcomplex (GO:0008540) in category OTHER with verified GO hierarchy, compartmental context, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:13:59Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 10 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:27:49Z",
+     "curator": "uniprot-protein-examples-skill",
+     "action": "CURATED_GENE_SYMBOLS_AND_PROTEIN_EXAMPLES",
+     "changes": "Added source-backed subunit gene_symbols (RPT1-6 on rpt_atpase_ring; RPN1, RPN2, RPN10, RPN13 on rpn1_rpn2_receptor_scaffold) prior to seeding 10 reviewed Saccharomyces cerevisiae S288C protein_examples.",
+     "llm_assisted": true
     }
    ]
   },
@@ -263708,12 +264208,50 @@
      "label": "Rpn11-Rpn8 MPN-domain deubiquitinase heterodimer",
      "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "RPN11",
+      "RPN8"
+     ],
      "essentiality": "ESSENTIAL",
      "role": "Catalytic JAMM/MPN+ Zn2+ metalloprotease subunit Rpn11 paired with the structural MPN-domain subunit Rpn8 directly over the Rpt ATPase pore to cleave polyubiquitin chains from translocating substrates.",
      "evidence": [
       {
        "reference": "DOI:10.1146/annurev-biochem-060410-150257",
        "notes": "Tomko and Hochstrasser 2013 describe the Rpn11-Rpn8 MPN heterodimer as the catalytic deubiquitination center of the 19S lid."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P43588",
+       "protein_label": "Ubiquitin C-terminal hydrolase RPN11",
+       "gene_symbol": "RPN11",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN11 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P43588",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P43588, the single reviewed entry for gene RPN11 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q08723",
+       "protein_label": "26S proteasome regulatory subunit RPN8",
+       "gene_symbol": "RPN8",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN8 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q08723",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q08723, the single reviewed entry for gene RPN8 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     },
@@ -263722,12 +264260,139 @@
      "label": "19S lid PCI-domain horseshoe scaffold (Rpn3, Rpn5, Rpn6, Rpn7, Rpn9, Rpn12, Sem1)",
      "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "RPN3",
+      "RPN5",
+      "RPN6",
+      "RPN7",
+      "RPN9",
+      "RPN12",
+      "SEM1"
+     ],
      "essentiality": "ESSENTIAL",
      "role": "Six winged-helix PCI-domain subunits and the Sem1/Dss1 stapler peptide that assemble into a horseshoe-shaped scaffold clamping the Rpn11-Rpn8 dimer onto the 19S base and 20S alpha ring.",
      "evidence": [
       {
        "reference": "DOI:10.1146/annurev-biochem-060410-150257",
        "notes": "Tomko and Hochstrasser 2013 review the six PCI-domain subunits and Sem1 that form the structural scaffold of the 19S lid subcomplex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P40016",
+       "protein_label": "26S proteasome regulatory subunit RPN3",
+       "gene_symbol": "RPN3",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN3 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P40016",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P40016, the single reviewed entry for gene RPN3 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q12250",
+       "protein_label": "26S proteasome regulatory subunit RPN5",
+       "gene_symbol": "RPN5",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN5 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q12250",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q12250, the single reviewed entry for gene RPN5 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q12377",
+       "protein_label": "26S proteasome regulatory subunit RPN6",
+       "gene_symbol": "RPN6",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN6 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q12377",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q12377, the single reviewed entry for gene RPN6 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q06103",
+       "protein_label": "26S proteasome regulatory subunit RPN7",
+       "gene_symbol": "RPN7",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN7 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q06103."
+        },
+        {
+         "reference": "PMID:19446323",
+         "notes": "Saeki Y et al. 2009, ‘Multiple proteasome-interacting proteins assist the assembly of the yeast 19S regulatory particle.’, Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q06103."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q04062",
+       "protein_label": "26S proteasome regulatory subunit RPN9",
+       "gene_symbol": "RPN9",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN9 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q04062",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q04062, the single reviewed entry for gene RPN9 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P32496",
+       "protein_label": "26S proteasome regulatory subunit RPN12",
+       "gene_symbol": "RPN12",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPN12 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P32496",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P32496, the single reviewed entry for gene RPN12 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:O94742",
+       "protein_label": "26S proteasome complex subunit SEM1",
+       "gene_symbol": "SEM1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene SEM1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/O94742",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry O94742, the single reviewed entry for gene SEM1 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -263915,6 +264580,19 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of proteasome regulatory particle, lid subcomplex (GO:0008541) in category OTHER with verified GO hierarchy, compartmental context, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:14:06Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 9 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:27:49Z",
+     "curator": "uniprot-protein-examples-skill",
+     "action": "CURATED_GENE_SYMBOLS_AND_PROTEIN_EXAMPLES",
+     "changes": "Added source-backed subunit gene_symbols (RPN11, RPN8 on rpn11_rpn8_deubiquitinase_dimer; RPN3, RPN5, RPN6, RPN7, RPN9, RPN12, SEM1 on lid_pci_horseshoe_scaffold) prior to seeding 9 reviewed Saccharomyces cerevisiae S288C and Schizosaccharomyces pombe 972h- protein_examples.",
      "llm_assisted": true
     }
    ]
@@ -270694,12 +271372,177 @@
      "label": "RNA polymerase I 10-subunit catalytic core (Rpa190, Rpa135, AC40-AC19, Rpb5/6/8/10/12)",
      "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "RPA190",
+      "RPA135",
+      "RPC40",
+      "RPC19",
+      "RPB5",
+      "RPB6",
+      "RPB8",
+      "RPB10",
+      "RPB12"
+     ],
      "essentiality": "ESSENTIAL",
      "role": "Core DNA-directed RNA polymerase I assembly containing the active-site cleft formed by Rpa190 and Rpa135, the shared Pol I/III AC40-AC19 alpha-like heterodimer, and five common Rpb subunits that synthesize the 35S/47S pre-rRNA precursor.",
      "evidence": [
       {
        "reference": "DOI:10.1038/nrm2184",
        "notes": "Reviews the subunit composition and nucleolar transcription mechanism of eukaryotic RNA polymerase I."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P10964",
+       "protein_label": "DNA-directed RNA polymerase I subunit RPA190",
+       "gene_symbol": "RPA190",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPA190 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P10964."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P22138",
+       "protein_label": "DNA-directed RNA polymerase I subunit RPA135",
+       "gene_symbol": "RPA135",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPA135 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14555487",
+         "notes": "Naryshkina T et al. 2003, ‘Role of second-largest RNA polymerase I subunit Zn-binding domain in enzyme assembly.’, Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P22138."
+        },
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P22138."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P07703",
+       "protein_label": "DNA-directed RNA polymerases I and III subunit RPAC1",
+       "gene_symbol": "RPC40",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPC40 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P07703."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P28000",
+       "protein_label": "DNA-directed RNA polymerases I and III subunit RPAC2",
+       "gene_symbol": "RPC19",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPC19 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P28000."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P20434",
+       "protein_label": "DNA-directed RNA polymerases I, II, and III subunit RPABC1",
+       "gene_symbol": "RPB5",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPB5 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P20434",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P20434, the single reviewed entry for gene RPB5 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P20435",
+       "protein_label": "DNA-directed RNA polymerases I, II, and III subunit RPABC2",
+       "gene_symbol": "RPO26",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPB6, which UniProt lists under the primary name RPO26, in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm' localisation of P20435."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P20436",
+       "protein_label": "DNA-directed RNA polymerases I, II, and III subunit RPABC3",
+       "gene_symbol": "RPB8",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPB8 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of P20436."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P22139",
+       "protein_label": "DNA-directed RNA polymerases I, II, and III subunit RPABC5",
+       "gene_symbol": "RPB10",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPB10 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P22139."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P40422",
+       "protein_label": "DNA-directed RNA polymerases I, II, and III subunit RPABC4",
+       "gene_symbol": "RPC10",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPB12, which UniProt lists under the primary name RPC10, in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P40422."
+        },
+        {
+         "reference": "PMID:35563734",
+         "notes": "David Y et al. 2022, ‘Pls1 Is a Peroxisomal Matrix Protein with a Role in Regulating Lysine Biosynthesis.’, Cells. ECO:0000269 experimental evidence cited by UniProt for the 'Peroxisome' localisation of P40422."
+        }
+       ]
       }
      ]
     },
@@ -270708,12 +271551,84 @@
      "label": "RNA polymerase I stalk (Rpa43-Rpa14) and intrinsic TFIIF/TFIIE-like heterodimer (Rpa49-Rpa34.5)",
      "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "RPA43",
+      "RPA14",
+      "RPA49",
+      "RPA34"
+     ],
      "essentiality": "ESSENTIAL",
      "role": "Pol I-specific peripheral subcomplexes where the Rpa43-Rpa14 stalk recruits initiation factor Rrn3 and the Rpa49-Rpa34.5 heterodimer promotes promoter opening, processive rDNA elongation, and intrinsic RNA cleavage.",
      "evidence": [
       {
        "reference": "DOI:10.1146/annurev.genet.33.1.261",
        "notes": "Reviews the specialized initiation and elongation subcomplexes of Saccharomyces cerevisiae RNA polymerase I."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P46669",
+       "protein_label": "DNA-directed RNA polymerase I subunit RPA43",
+       "gene_symbol": "RPA43",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPA43 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P46669."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P50106",
+       "protein_label": "DNA-directed RNA polymerase I subunit RPA14",
+       "gene_symbol": "RPA14",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPA14 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P50106."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q01080",
+       "protein_label": "DNA-directed RNA polymerase I subunit RPA49",
+       "gene_symbol": "RPA49",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPA49 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of Q01080."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P47006",
+       "protein_label": "DNA-directed RNA polymerase I subunit RPA34",
+       "gene_symbol": "RPA34",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene RPA34 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P47006."
+        }
+       ]
       }
      ]
     }
@@ -270975,6 +271890,19 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of RNA polymerase I complex (GO:0005736) in category OTHER with verified GO hierarchy, compartmental context, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:14:15Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 13 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:27:49Z",
+     "curator": "uniprot-protein-examples-skill",
+     "action": "CURATED_GENE_SYMBOLS_AND_PROTEIN_EXAMPLES",
+     "changes": "Added source-backed subunit gene_symbols (RPA190, RPA135, RPC40, RPC19, RPB5, RPB6, RPB8, RPB10, RPB12 on rpa190_rpa135_catalytic_core; RPA43, RPA14, RPA49, RPA34 on rpa43_rpa14_stalk_and_rpa49_rpa34_subcomplex) prior to seeding 13 reviewed Saccharomyces cerevisiae S288C protein_examples.",
      "llm_assisted": true
     }
    ]
@@ -289758,12 +290686,50 @@
      "label": "Sub2 DEAD-box RNA helicase and Yra1 mRNA export adaptor module",
      "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "SUB2",
+      "YRA1"
+     ],
      "essentiality": "ESSENTIAL",
      "role": "ATP-dependent RNA helicase Sub2 (UAP56) and RNA-binding export adaptor Yra1 (ALYREF) that assemble with the four-subunit THO core complex to form the holo-TREX transcription-export complex and hand mRNPs to Mex67-Mtr2.",
      "evidence": [
       {
        "reference": "PMID:11979277",
        "notes": "Strasser et al. 2002 demonstrate that the four-subunit THO complex associates with Sub2 and Yra1 to form the conserved TREX (transcription-export) complex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q07478",
+       "protein_label": "ATP-dependent RNA helicase SUB2",
+       "gene_symbol": "SUB2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative reviewed UniProtKB entry for gene SUB2 in the reference strain Saccharomyces cerevisiae S288C (NCBITaxon:559292), matching the reference proteome used for the other TREX subunits on this record. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q07478."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q12159",
+       "protein_label": "RNA annealing protein YRA1",
+       "gene_symbol": "YRA1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene YRA1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q12159",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q12159, the single reviewed entry for gene YRA1 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -290051,6 +291017,19 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of transcription export complex (GO:0000346) in category OTHER with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:14:16Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:27:48Z",
+     "curator": "uniprot-protein-examples-skill",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Added source-backed gene_symbols (SUB2, YRA1) and reviewed Saccharomyces cerevisiae S288C protein_examples UniProtKB:Q07478 (SUB2) and UniProtKB:Q12159 (YRA1) to sub2_yra1_mrna_export_module.",
      "llm_assisted": true
     }
    ]
@@ -298093,6 +299072,80 @@
        "reference": "GO:0031428",
        "notes": "Defines the catalytic fibrillarin/Nop1 and core scaffold subunits of the box C/D methylation guide snoRNP complex."
       }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P15646",
+       "protein_label": "rRNA 2'-O-methyltransferase fibrillarin",
+       "gene_symbol": "NOP1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene NOP1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:12756332",
+         "notes": "Xu C et al. 2003, ‘In vivo analysis of nucleolar proteins modified by the yeast arginine methyltransferase Hmt1/Rmt1p.’, RNA. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P15646."
+        },
+        {
+         "reference": "PMID:2298745",
+         "notes": "Henríquez R et al. 1990, ‘Isolation and sequencing of NOP1. A yeast gene encoding a nucleolar protein homologous to a human autoimmune antigen.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P15646."
+        },
+        {
+         "reference": "PMID:2686980",
+         "notes": "Schimmang T et al. 1989, ‘A yeast nucleolar protein related to mammalian fibrillarin is associated with small nucleolar RNA and is essential for viability.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P15646."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q12460",
+       "protein_label": "Nucleolar protein 56",
+       "gene_symbol": "NOP56",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene NOP56 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:9372940",
+         "notes": "Gautier T et al. 1997, ‘Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p and are required for ribosome biogenesis.’, Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of Q12460."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q12499",
+       "protein_label": "Nucleolar protein 58",
+       "gene_symbol": "NOP58",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene NOP58 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:9632712",
+         "notes": "Wu P et al. 1998, ‘Nop5p is a small nucleolar ribonucleoprotein component required for pre-18 S rRNA processing in yeast.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of Q12499."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P39990",
+       "protein_label": "13 kDa ribonucleoprotein-associated protein",
+       "gene_symbol": "SNU13",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene SNU13 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P39990",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P39990, the single reviewed entry for gene SNU13 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      }
      ]
     }
    ],
@@ -298194,6 +299247,12 @@
      "action": "CREATED",
      "changes": "Initial curation of box C/D methylation guide snoRNP complex (GO:0031428) in category RIBONUCLEOPROTEIN with verified GO hierarchy, compartmental context, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:14:19Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 4 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
     }
    ],
    "taxonomic_distribution": [
@@ -298295,6 +299354,88 @@
       {
        "reference": "GO:0031429",
        "notes": "Defines the catalytic Cbf5 pseudouridine synthase and core subunits of the box H/ACA snoRNP complex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P33322",
+       "protein_label": "H/ACA ribonucleoprotein complex subunit CBF5",
+       "gene_symbol": "CBF5",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene CBF5 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P33322."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P28007",
+       "protein_label": "H/ACA ribonucleoprotein complex subunit GAR1",
+       "gene_symbol": "GAR1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene GAR1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:12756332",
+         "notes": "Xu C et al. 2003, ‘In vivo analysis of nucleolar proteins modified by the yeast arginine methyltransferase Hmt1/Rmt1p.’, RNA. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P28007."
+        },
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P28007."
+        },
+        {
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998, ‘Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P28007."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P32495",
+       "protein_label": "H/ACA ribonucleoprotein complex subunit NHP2",
+       "gene_symbol": "NHP2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene NHP2 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P32495."
+        },
+        {
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998, ‘Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P32495."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q6Q547",
+       "protein_label": "H/ACA ribonucleoprotein complex subunit NOP10",
+       "gene_symbol": "NOP10",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene NOP10 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of Q6Q547."
+        },
+        {
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998, ‘Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of Q6Q547."
+        }
+       ]
       }
      ]
     }
@@ -298416,6 +299557,12 @@
      "action": "CREATED",
      "changes": "Initial curation of box H/ACA snoRNP complex (GO:0031429) in category RIBONUCLEOPROTEIN with verified GO hierarchy, compartmental context, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:14:22Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 4 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
     }
    ],
    "taxonomic_distribution": [
@@ -299955,6 +301102,12 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 3 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:14:23Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
     }
    ],
    "synonyms": [
@@ -300093,6 +301246,24 @@
       {
        "reference": "DOI:10.1242/jcs.045104",
        "notes": "Grousl et al. 2009 showed that robust heat-shock stress granules in Saccharomyces contain eIF3 and small but not large ribosomal subunits."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P38249",
+       "protein_label": "Eukaryotic translation initiation factor 3 subunit A",
+       "gene_symbol": "RPG1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TIF32, which UniProt lists under the primary name RPG1, in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P38249",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P38249, the single reviewed entry for gene TIF32 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -324172,6 +325343,19 @@
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Added source-backed ASSEMBLY causal graph 'tam_transenvelope_assembly' with 3 nodes and 2 edges.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T07:14:25Z",
+     "curator": "uniprot_genes",
+     "action": "SEED_PROTEIN_EXAMPLES",
+     "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T07:27:49Z",
+     "curator": "uniprot-protein-examples-skill",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Added Escherichia coli K-12 (NCBITaxon:83333) canonical_examples entry citing PMID:22466966 and seeded reviewed UniProtKB:P0ADE4 (tamA) and UniProtKB:P39321 (tamB) protein_examples.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -324205,6 +325389,24 @@
        "reference": "PMID:22466966",
        "notes": "The PubMed/Europe PMC abstract for Selkrig et al. 2012 reports TamA as TAM's Omp85-family outer-membrane protein partner."
       }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0ADE4",
+       "protein_label": "Translocation and assembly module subunit TamA",
+       "gene_symbol": "tamA",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene tamA in Escherichia coli K-12, a taxon this record names; other reviewed entries for this symbol exist on sibling strain nodes and this is the one at the reference K-12 taxon. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:22466966",
+         "notes": "Selkrig J et al. 2012, ‘Discovery of an archetypal protein transport system in bacterial outer membranes.’, Nat Struct Mol Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cell outer membrane' localisation of P0ADE4."
+        }
+       ]
+      }
      ]
     },
     {
@@ -324227,6 +325429,24 @@
        "reference": "PMID:22466966",
        "notes": "The PubMed/Europe PMC abstract for Selkrig et al. 2012 reports TamB as TAM's inner-membrane protein partner."
       }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P39321",
+       "protein_label": "Translocation and assembly module subunit TamB",
+       "gene_symbol": "tamB",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene tamB in Escherichia coli K-12, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:22466966",
+         "notes": "Selkrig J et al. 2012, ‘Discovery of an archetypal protein transport system in bacterial outer membranes.’, Nat Struct Mol Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cell inner membrane' localisation of P39321."
+        }
+       ]
+      }
      ]
     }
    ],
@@ -324237,6 +325457,14 @@
      "presence": "VARIABLE",
      "note": "GO:0097347 scopes TAM to Gram-negative bacteria, so the periplasm-spanning TamA/TamB complex is represented as a variable bacterial secretion complex rather than a universal bacterial structure.",
      "reference": "GO:0097347"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference Gram-negative model bacterium in which Selkrig et al. 2012 characterized the periplasm-spanning TamA-TamB translocation and assembly module and GO:0097347 defines TAM composition.",
+     "reference": "PMID:22466966"
     }
    ],
    "evidence": [

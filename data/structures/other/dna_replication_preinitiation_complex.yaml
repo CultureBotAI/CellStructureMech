@@ -53,6 +53,23 @@ components:
   - reference: DOI:10.1101/gad.1065903
     notes: Establishes Cdc45 and GINS recruitment to origin-bound Mcm2-7 in the eukaryotic
       DNA replication preinitiation complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q08032
+    protein_label: Cell division control protein 45
+    gene_symbol: CDC45
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene CDC45 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:8901577
+      notes: Hopwood B et al. 1996, ‘Cdc45p assembles into a complex with Cdc46p/Mcm5p,
+        is required for minichromosome maintenance, and is essential for chromosomal
+        DNA replication.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Nucleus' localisation of Q08032.
 - component_id: sld5_subunit
   label: Sld5 GINS subunit
   component_type: PROTEIN
@@ -404,3 +421,10 @@ curation_history:
     in category OTHER with verified GO hierarchy, components, UniProtKB protein examples,
     causal mechanism graph, and literature evidence.
   llm_assisted: true
+- timestamp: '2026-10-23T07:13:50Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
