@@ -62,6 +62,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 3 same-gene synonym/locus-tag
+    mapping(s) on existing protein_examples.'
+  llm_assisted: true
 synonyms:
 - synonym_text: terminal organelle
   synonym_type: EXACT_SYNONYM
@@ -233,7 +239,7 @@ components:
     retrieved_on: '2026-09-08'
     role: 'UniProt annotates this protein to SL-0020 (attachment organelle); component
       role: Acts as the length-setting internal-core scaffold of the paired plates
-      in the polar extension.'
+      in the polar extension (also declared as locus tag mpn310).'
     evidence:
     - reference: PMID:15466048
       notes: Kenri T et al. 2004, ‘Use of fluorescent-protein tagging to determine
@@ -271,7 +277,7 @@ components:
     retrieved_on: '2026-09-08'
     role: 'UniProt annotates this protein to SL-0020 (attachment organelle); component
       role: Localizes to the front terminal-button substructure that caps the paired
-      plates within the electron-dense internal core.'
+      plates within the electron-dense internal core (also declared as locus tag mpn309).'
     evidence:
     - reference: PMID:15466048
       notes: Kenri T et al. 2004, ‘Use of fluorescent-protein tagging to determine
@@ -309,7 +315,7 @@ components:
     retrieved_on: '2026-09-08'
     role: 'UniProt annotates this protein to SL-0020 (attachment organelle); component
       role: Localizes to the terminal-button boundary with the paired plates in the
-      electron-dense internal core.'
+      electron-dense internal core (also declared as locus tag mpn452).'
     evidence:
     - reference: PMID:26633540
       notes: Nakane D et al. 2015, ‘Systematic Structural Analyses of Attachment Organelle

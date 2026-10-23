@@ -29,6 +29,12 @@ curation_history:
     Archaea and Eukaryota cytoophidium distribution rows and narrowing broad CTP synthase
     essentiality to UNKNOWN.'
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag
+    mapping(s) on existing protein_examples.'
+  llm_assisted: true
 parent_structures:
 - GO:0099512
 synonyms:
@@ -63,7 +69,7 @@ components:
     retrieved_on: '2026-09-11'
     role: Reviewed Caulobacter CB15 CTP synthase encoded by pyrG/CC_1720, the CtpS
       homolog identified as the inner-curvature filament constituent in the discovery
-      paper.
+      paper (also declared as synonym ctpS).
     evidence:
     - reference: DOI:10.1038/ncb2087
       notes: Ingerson-Mahar et al. 2010 identified the Caulobacter CtpS homolog CC1720

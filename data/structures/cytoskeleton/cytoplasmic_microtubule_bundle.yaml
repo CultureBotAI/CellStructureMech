@@ -17,6 +17,12 @@ curation_history:
     CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB protein
     examples, functions, literature evidence, and causal mechanism graph.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag
+    mapping(s) on existing protein_examples.'
+  llm_assisted: true
 parent_structures:
 - GO:0097427
 part_of:
@@ -237,7 +243,8 @@ components:
     entry_status: REVIEWED
     retrieved_on: '2026-10-05'
     role: Reference-sequence exemplar for the species-level experiment; this accession
-      does not assert that the exact reference stock was imaged.
+      does not assert that the exact reference stock was imaged (also declared as
+      synonym cls1).
     evidence:
     - reference: DOI:10.1083/jcb.201502025
       notes: 'Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day

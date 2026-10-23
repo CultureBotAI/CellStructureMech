@@ -32,6 +32,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag
+    mapping(s) on existing protein_examples.'
+  llm_assisted: true
 parent_structures:
 - GO:0043232
 synonyms:
@@ -76,7 +82,7 @@ components:
     role: Representative reviewed UniProtKB entry for gene chmA, which UniProt lists
       under the primary name 201phi2-1p105, in Pseudomonas phage 201phi2-1. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
-      protein is part of this structure.
+      protein is part of this structure (also declared as synonym gp105).
     evidence:
     - reference: PMID:28082593
       notes: Chaikeeratisak V et al. 2017, ‘Assembly of a nucleus-like structure during

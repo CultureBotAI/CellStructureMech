@@ -38,6 +38,12 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: Grounded self-referential causal node 'linker' to cellstructuremech:basal_body_a_c_linker.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 3 same-gene synonym/locus-tag
+    mapping(s) on existing protein_examples.'
+  llm_assisted: true
 synonyms:
 - synonym_text: A-C linker
   synonym_type: EXACT_SYNONYM
@@ -79,7 +85,8 @@ components:
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene WRAP73, which
       UniProt lists under the primary name TTHERM_00614690, in Tetrahymena thermophila
       SB210. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+      evidence that the protein is part of this structure (also declared as synonym
+      WDR8).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/I7MIG5
       notes: UniProtKB unreviewed (TrEMBL) entry I7MIG5 for gene WRAP73 in Tetrahymena
@@ -119,7 +126,8 @@ components:
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP135, which
       UniProt lists under the primary name TTHERM_01457090, in Tetrahymena thermophila
       SB210. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+      evidence that the protein is part of this structure (also declared as synonym
+      BLD10).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q24GZ2
       notes: UniProtKB unreviewed (TrEMBL) entry Q24GZ2 for gene CEP135 in Tetrahymena
@@ -161,7 +169,8 @@ components:
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene TBC1D31, which
       UniProt lists under the primary name TTHERM_00193630, in Tetrahymena thermophila
       SB210. Identifier for the component's declared gene symbol; it is not itself
-      evidence that the protein is part of this structure.
+      evidence that the protein is part of this structure (also declared as synonym
+      TBC1D31A, TBC1D31B, WDR67).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q23KH2
       notes: UniProtKB unreviewed (TrEMBL) entry Q23KH2 for gene TBC1D31 in Tetrahymena

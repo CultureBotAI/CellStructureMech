@@ -51,6 +51,13 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 2 verified UniProtKB
+    xref(s) to GENE_OR_PROTEIN causal_graphs node(s); disclosed 1 same-gene synonym/locus-tag
+    mapping(s) on existing protein_examples.'
+  llm_assisted: true
 synonyms:
 - synonym_text: PFR
   synonym_type: RELATED_SYNONYM
@@ -95,7 +102,8 @@ components:
     role: Reviewed UniProtKB entry for the PFRC/PFRD-encoded 73 kDa protein in Trypanosoma
       brucei brucei, assigned to consolidated PFR1 by Gadelha et al. 2004. The source
       protein name and historical UniProt mnemonic PFR2_TRYBB are not a cross-species
-      orthology assertion (also declared as synonym PFRD).
+      orthology assertion (also declared as synonym PFRD) (also declared as synonym
+      PFR1, PFRD).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q26789
       notes: UniProtKB reviewed entry Q26789 verifies the source-native 73 kDa protein
@@ -293,9 +301,13 @@ causal_graphs:
   - node_id: pfr_af1
     label: PFR assembly factor 1
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q38A87
   - node_id: pfr_af2
     label: PFR assembly factor 2
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:Q57WR4
   edges:
   - subject: pfr1
     predicate: co-assembles into

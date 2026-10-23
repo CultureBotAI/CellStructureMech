@@ -50,6 +50,12 @@ curation_history:
   action: EDIT
   changes: added 5 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 parent_structures:
 - GO:0009536
 has_part:
@@ -226,6 +232,23 @@ components:
     - reference: https://www.uniprot.org/uniprotkb/Q965D7
       notes: UniProtKB unreviewed (TrEMBL) entry Q965D7 for gene fabZ in Plasmodium
         falciparum. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q8IJH7
+    protein_label: 4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (ferredoxin),
+      chloroplastic
+    gene_symbol: PF3D7_1022800
+    taxon_id: NCBITaxon:36329
+    taxon_label: Plasmodium falciparum 3D7
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-23'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene ispG, which
+      UniProt lists under the primary name PF3D7_1022800, in Plasmodium falciparum
+      3D7. Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8IJH7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8IJH7 for gene ispG in Plasmodium
+        falciparum 3D7. Establishes the accession and gene identity only; the component's
         membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5794
