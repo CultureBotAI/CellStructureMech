@@ -15,10 +15,9 @@ events:
 - type: CREATE
   outcome: changed
   summary: Created structure record for cortical actin cytoskeleton (GO:0030864) in cytoskeleton.
-  details: Authored data/structures/cytoskeleton/cortical_actin_cytoskeleton.yaml for
-    cortical actin cytoskeleton (GO:0030864) with verified GO hierarchy, taxonomic
-    distribution, UniProtKB protein examples, functions, literature evidence, and causal
-    graph.
+  details: Authored data/structures/cytoskeleton/cortical_actin_cytoskeleton.yaml for cortical actin cytoskeleton
+    (GO:0030864) with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions,
+    literature evidence, and causal graph.
   sections:
   - identity
   - composition

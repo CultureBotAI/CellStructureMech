@@ -1746,7 +1746,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.html",
-  "definition": "A nuclear membrane protein complex that connects the nuclear inner and outer membranes and links nuclear structures across the nuclear envelope to cytoplasmic microtubules. In yeasts and other fungi (such as Schizosaccharomyces pombe and Saccharomyces cerevisiae), nuclear membrane microtubule tethering complexes composed of inner-membrane SUN-domain proteins (Sad1, Mps3) and outer-membrane KASH-like linkers (Kms1, Kms2, Mps2) couple chromosomes and spindle pole body attachment sites to cytoplasmic microtubule motors.",
+  "definition": "A nuclear membrane protein complex that connects the nuclear inner and outer membranes and links nuclear structures across the nuclear envelope to cytoplasmic microtubules. In Schizosaccharomyces pombe and other fungi, nuclear membrane microtubule tethering complexes composed of the inner nuclear membrane SUN-domain protein Sad1 and outer nuclear membrane KASH-domain linker Kms1 (bridged during meiosis to telomeres by Bqt1-Bqt2) couple chromosomes and spindle pole body attachment sites across the nuclear envelope to cytoplasmic microtubule motors.",
   "synonyms": "nuclear envelope microtubule tethering complex"
  },
  {
@@ -5866,7 +5866,7 @@
   "kind": "NUCLEOPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/other/chromosome_subtelomeric_region.html",
-  "definition": "The chromosomal region immediately adjacent to a telomere, including subtelomeric DNA elements (such as X and Y' repeats in budding yeast) and associated nucleosomal heterochromatin. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the subtelomeric region is packaged into silent chromatin by histone H4 K16 deacetylation and Sir2-Sir3-Sir4 or Swi6/HP1 complexes and participates in peripheral nuclear anchoring and quiescent telomere hyperclustering.",
+  "definition": "The chromosomal region immediately adjacent to a telomere, including subtelomeric DNA elements (such as X and Y' repeats in budding yeast) and associated nucleosomal heterochromatin. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the chromosome, subtelomeric region is packaged into silent chromatin by histone H4 K16 deacetylation and Sir2-Sir3-Sir4 or Swi6/HP1 complexes.",
   "synonyms": "subtelomere subtelomeric chromatin"
  },
  {
@@ -5876,7 +5876,7 @@
   "kind": "NUCLEOPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/other/chromosome_telomeric_region.html",
-  "definition": "The terminal region of a linear chromosome that includes the telomeric DNA repeats and associated proteins, required for replication and stability of the chromosome end. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the telomeric region is bound by sequence-specific duplex and single-strand repeat-binding proteins (Rap1, Taz1, Cdc13/Pot1) and nuclear-envelope tethering factors (Ndj1, Bqt1-Bqt2, SUN-KASH complexes) that protect chromosome ends from fusion and mediate nuclear positioning.",
+  "definition": "The terminal region of a linear chromosome that includes the telomeric DNA repeats and associated proteins, required for replication and stability of the chromosome end. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the chromosome, telomeric region comprises terminal telomeric DNA repeats bound by sequence-specific duplex repeat-binding and telomere-associated proteins (such as Rap1 and Taz1) that form a protective nucleoprotein cap at chromosome ends and mediate telomere organization.",
   "synonyms": "telomere telomeric chromatin"
  },
  {

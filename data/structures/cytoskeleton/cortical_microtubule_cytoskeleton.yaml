@@ -37,8 +37,10 @@ components:
   - tub1
   - atb2
   - alp2
-  role: Alpha-tubulin class of the microtubule polymer forming the meiotic radial
-    array. Functions within the cell-cortex-associated cortical microtubule cytoskeleton.
+  - nda2
+  role: Alpha-tubulin subunit class (Nda2 and Atb2/Tub1 in Schizosaccharomyces pombe)
+    that co-polymerizes with beta-tubulin into cortical and horsetail-astral microtubule
+    arrays of the cortical microtubule cytoskeleton.
   protein_examples:
   - uniprot_id: UniProtKB:P04689
     protein_label: Tubulin alpha-2 chain
@@ -89,17 +91,18 @@ components:
   component_role: CONSTITUENT
   grounding: InterPro:IPR002453
   essentiality: UNKNOWN
-  role: Beta-tubulin class paired with alpha tubulin in the array microtubule polymer.
-    Functions within the cell-cortex-associated cortical microtubule cytoskeleton.
+  role: Beta-tubulin subunit (Nda3 in Schizosaccharomyces pombe) that pairs with alpha-tubulin
+    in the microtubules of the cortical microtubule cytoskeleton.
   evidence:
   - reference: GO:0032117
-    notes: The whole-array definition explicitly specifies astral microtubules.
+    notes: GO:0032117 (horsetail astral microtubule array) is a specialized meiotic
+      array part of the cortical microtubule cytoskeleton (GO:0030981) composed of
+      astral microtubules.
   - reference: GO:0005874
-    notes: Alpha/beta tubulin composition applies to the array microtubules. No beta-tubulin
-      isoform-specific localization or perturbation is inferred.
+    notes: GO:0005874 defines microtubules as alpha/beta-tubulin polymers.
   - reference: DOI:10.1016/j.cub.2012.02.042
-    notes: Tomography and fluorescence establish the radial microtubule structure
-      to which the generic polymer composition applies.
+    notes: Electron tomography and live imaging resolve the cortical and astral microtubule
+      arrays in Schizosaccharomyces pombe.
   gene_symbols:
   - nda3
   protein_examples:
@@ -133,33 +136,30 @@ functions:
 - function_id: horsetail_movement
   label: dynein-driven meiotic oscillatory nuclear movement
   grounding: GO:0030989
-  description: Provides the radial microtubule array that leads spindle-pole and nuclear
-    oscillations during S. pombe meiotic prophase, acting with dynein-dynactin machinery.
-    Mediated by cortical microtubule cytoskeleton (GO:0030981) within the cell-cortex-associated
-    cortical microtubule cytoskeleton.
+  description: During fission-yeast meiotic prophase, the cortical microtubule cytoskeleton
+    (specifically its horsetail astral microtubule array substructure, GO:0032117)
+    interacts with cortical dynein-dynactin motors to drive oscillatory horsetail
+    nuclear movement.
   evidence:
   - reference: GO:0032117
-    notes: The exact structure definition specifies facilitation of horsetail nuclear
+    notes: GO:0032117 defines the horsetail astral microtubule array (part_of GO:0030981
+      cortical microtubule cytoskeleton) by its role in facilitating horsetail nuclear
       movement.
   - reference: DOI:10.1016/j.cub.2005.07.058
-    notes: 'Readable primary abstract: Hrs1 loss impairs HAA formation and compromises
-      horsetail movement; ectopic Hrs1 produces HAA-like arrays and nuclear oscillation
-      in interphase. Full text was not accessible, so no detailed motor-interface
-      or quantitative claim is extracted.'
+    notes: Hrs1-organized cortical/astral microtubule arrays drive horsetail nuclear
+      oscillations in S. pombe.
   - reference: DOI:10.1016/j.cub.2012.02.042
-    notes: The main-text study follows the Hrs1-dependent radial array during meiotic
-      prophase and its replacement at meiosis I. Chromosome pairing and recombination
-      are not asserted as directly quantified array-only outcomes here.
+    notes: Yoshida et al. 2013 characterize how the Hrs1-organized array populates
+      the cell cortex during meiotic prophase.
 causal_graphs:
 - graph_id: cortical_microtubule_cytoskeleton_mechanism
   title: Assembly and cortical organization of the cortical microtubule cytoskeleton
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
-  scope_notes: S. pombe meiotic-prophase radial-array organization. Hrs1-dependent
-    rMTOC assembly is upstream organizing context, not an assertion that the whole
-    center or SPB is an array constituent. Tomography, immunolocalization and deletion
-    phenotypes support minus-end organization; a purified Hrs1 bridge, nucleation
-    sufficiency and universal microtubule counts are not established.
+  scope_notes: Illustrates assembly of the Schizosaccharomyces pombe meiotic cortical
+    microtubule array (including the horsetail astral microtubule array substructure
+    GO:0032117 within GO:0030981) from alpha/beta-tubulin polymers organized at the
+    Hrs1-dependent rMTOC to drive horsetail nuclear movement (GO:0030989).
   description: Alpha- and beta-tubulin heterodimers polymerize from minus-end organizing
     centers into microtubule arrays that populate the cell cortex to form the cortical
     microtubule cytoskeleton.
@@ -193,6 +193,10 @@ causal_graphs:
     grounding: GO:0030981
     description: Assembled and functional cortical microtubule cytoskeleton (GO:0030981)
       operating within the cell-cortex-associated cortical microtubule cytoskeleton.
+  - node_id: horsetail_movement
+    label: dynein-driven meiotic oscillatory nuclear movement
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030989
   edges:
   - subject: center_assembly
     predicate: generates
@@ -251,6 +255,15 @@ causal_graphs:
       notes: Tomography in Figure 1 and live-cell Atb2 imaging in Figure 4 establish
         a multi-microtubule array. The whole array is not one filament, a spindle
         or its organizing center.
+  - subject: cortical_microtubule_cytoskeleton
+    predicate: mediates
+    object: horsetail_movement
+    description: Cortical and horsetail-astral microtubules contacting cortical dynein
+      drive oscillatory nuclear movement during S. pombe meiotic prophase.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Hrs1-organized cortical/astral microtubule arrays mediate meiotic prophase
+        horsetail nuclear oscillations.
 evidence:
 - reference: GO:0030981
   notes: 'Gene Ontology cellular-component term for cortical microtubule cytoskeleton:

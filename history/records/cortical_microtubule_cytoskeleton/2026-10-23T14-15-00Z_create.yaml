@@ -15,10 +15,9 @@ events:
 - type: CREATE
   outcome: changed
   summary: Created structure record for cortical microtubule cytoskeleton (GO:0030981) in cytoskeleton.
-  details: Authored data/structures/cytoskeleton/cortical_microtubule_cytoskeleton.yaml
-    for cortical microtubule cytoskeleton (GO:0030981) with verified GO hierarchy,
-    taxonomic distribution, UniProtKB protein examples, functions, literature evidence,
-    and causal graph.
+  details: Authored data/structures/cytoskeleton/cortical_microtubule_cytoskeleton.yaml for cortical microtubule
+    cytoskeleton (GO:0030981) with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal graph.
   sections:
   - identity
   - composition

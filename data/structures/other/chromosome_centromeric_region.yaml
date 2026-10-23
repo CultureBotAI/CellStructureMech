@@ -30,6 +30,23 @@ has_part:
 - GO:0000776
 - GO:0031518
 components:
+- component_id: centromeric_dna
+  label: centromere
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding: SO:0000577
+  grounding_notes: Sequence Ontology term SO:0000577 (centromere) denotes the chromosomal
+    centromeric DNA sequence locus (such as the ~125 bp CDEI-CDEII-CDEIII point centromere
+    in Saccharomyces cerevisiae) that specifies assembly of centromeric chromatin.
+  role: Chromosomal centromeric DNA sequence locus that specifies assembly of the
+    Cse4/CENP-A centromeric nucleosome and the overlying kinetochore within the chromosome,
+    centromeric region.
+  evidence:
+  - reference: DOI:10.1534/genetics.112.145276
+    notes: Biggins 2013 reviews how the Saccharomyces cerevisiae point centromeric
+      DNA locus nucleates the Cse4 centromeric nucleosome and kinetochore within the
+      chromosome, centromeric region.
 - component_id: centromeric_cse4_nucleosome
   label: centromeric Cse4/CENP-A nucleosome platform
   component_type: OTHER
@@ -38,12 +55,10 @@ components:
   gene_symbols:
   - CSE4
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: The budding-yeast Cse4-containing centromeric nucleosome is modeled
-    as the inner DNA-proximal platform for kinetochore assembly; no exact source-neutral
-    CURIE for the Cse4 nucleosome state was curated in this first record.
-  role: Centromeric chromatin platform that specifies the site of budding-yeast kinetochore
-    assembly. Functions within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region.
+  grounding_notes: Represents the budding-yeast Cse4-containing centromeric nucleosome
+    assembled at the centromeric DNA locus within GO:0000775.
+  role: Specialized CenH3 (Cse4/CENP-A) centromeric nucleosome assembled on centromeric
+    DNA that forms the inner chromatin foundation of the chromosome, centromeric region.
   evidence:
   - reference: DOI:10.1534/genetics.112.145276
     notes: Biggins 2013 reviewed the Cse4-containing centromeric chromatin foundation
@@ -78,9 +93,8 @@ components:
   - MCM21
   - AME1
   essentiality: CONDITIONAL
-  role: Inner kinetochore protein complex that bridges centromeric DNA-proximal subunits
-    to microtubule-binding outer kinetochore modules during assembly. Functions within
-    the specialized chromatin and kinetochore platform of the chromosome, centromeric
+  role: Inner kinetochore protein complex (Ctf19-Okp1-Mcm21-Ame1) that bridges Cse4
+    centromeric chromatin to outer kinetochore modules within the chromosome, centromeric
     region.
   evidence:
   - reference: GO:0000817
@@ -170,9 +184,9 @@ components:
   - NSL1
   - NNF1
   essentiality: UNKNOWN
-  role: Kinetochore subcomplex that binds centromeric chromatin proximal modules and
-    helps recruit outer microtubule-binding subunits. Functions within the specialized
-    chromatin and kinetochore platform of the chromosome, centromeric region.
+  role: Core kinetochore subcomplex (Mtw1-Dsn1-Nsl1-Nnf1) that links inner centromeric
+    chromatin complexes to the outer Ndc80 microtubule-binding module within the chromosome,
+    centromeric region.
   evidence:
   - reference: GO:0000444
     notes: Gene Ontology cellular-component term for the MIS12/MIND type kinetochore
@@ -275,9 +289,8 @@ components:
   - SPC24
   - SPC25
   essentiality: UNKNOWN
-  role: Outer kinetochore complex that couples kinetochores to spindle microtubule
-    plus ends. Functions within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region.
+  role: Outer kinetochore complex (Ndc80-Nuf2-Spc24-Spc25) that couples the chromosome,
+    centromeric region to spindle microtubule plus ends.
   evidence:
   - reference: GO:0031262
     notes: Gene Ontology cellular-component term for the Ndc80 complex.
@@ -368,92 +381,61 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Exhibits chromosome, centromeric region (GO:0000775) within the specialized
-    chromatin and kinetochore platform of the chromosome, centromeric region. Budding
-    yeast has a point-centromere kinetochore built from multiple inner and outer kinetochore
-    protein complexes.
+  note: Budding yeast chromosomes contain a point centromeric DNA locus wrapped in
+    a Cse4 nucleosome and bound by hierarchical inner and outer kinetochore subcomplexes.
   reference: DOI:10.1534/genetics.112.145276
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for chromosome, centromeric region (GO:0000775)
-    within the specialized chromatin and kinetochore platform of the chromosome, centromeric
-    region. Reference budding-yeast system in which kinetochore subcomplex composition
-    and assembly hierarchy were dissected genetically and biochemically.
+  note: Reference budding-yeast system in which the centromeric DNA locus, Cse4 centromeric
+    chromatin, and hierarchical kinetochore subcomplexes of the chromosome, centromeric
+    region were dissected.
   reference: DOI:10.1101/gad.1144403
 functions:
 - function_id: chromosome_segregation
   label: chromosome segregation
   grounding: GO:0007059
-  description: Kinetochores connect centromeric chromatin to spindle microtubules
-    so duplicated chromosomes can segregate. Mediated by chromosome, centromeric region
-    (GO:0000775) within the specialized chromatin and kinetochore platform of the
-    chromosome, centromeric region.
+  description: Centromeric DNA, Cse4 centromeric chromatin, and the assembled kinetochore
+    within the chromosome, centromeric region attach chromosomes to spindle microtubules
+    to drive faithful chromosome segregation.
   evidence:
-  - reference: GO:0000776
-    notes: GO:0000776 defines the kinetochore by its role as a centromeric complex
-      that provides a spindle-microtubule attachment point.
   - reference: DOI:10.1534/genetics.112.145276
-    notes: Biggins 2013 reviewed budding-yeast kinetochore functions in chromosome
-      segregation.
+    notes: Biggins 2013 reviews how centromeric chromatin and kinetochore subcomplexes
+      of the chromosome, centromeric region mediate chromosome segregation.
 evidence:
 - reference: GO:0000775
   notes: 'Gene Ontology cellular-component term for chromosome, centromeric region:
     The region of a chromosome that includes the centromeric DNA and associated proteins.'
-- reference: GO:0000776
-  notes: Supports the context, composition, and mechanism of chromosome, centromeric
-    region (GO:0000775) within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region. Gene Ontology cellular-component term for
-    kinetochore.
-- reference: GO:0000817
-  notes: Supports the context, composition, and mechanism of chromosome, centromeric
-    region (GO:0000775) within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region. Gene Ontology cellular-component term for
-    COMA complex.
-- reference: GO:0000444
-  notes: Supports the context, composition, and mechanism of chromosome, centromeric
-    region (GO:0000775) within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region. Gene Ontology cellular-component term for
-    MIS12/MIND type complex.
-- reference: GO:0031262
-  notes: Supports the context, composition, and mechanism of chromosome, centromeric
-    region (GO:0000775) within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region. Gene Ontology cellular-component term for
-    Ndc80 complex.
-- reference: GO:0007059
-  notes: Supports the context, composition, and mechanism of chromosome, centromeric
-    region (GO:0000775) within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region. Gene Ontology biological-process term for
-    chromosome segregation.
 - reference: DOI:10.1534/genetics.112.145276
-  notes: Supports the context, composition, and mechanism of chromosome, centromeric
-    region (GO:0000775) within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region. Biggins 2013, The composition, functions,
-    and regulation of the budding yeast kinetochore, Genetics.
+  notes: Biggins 2013 (Genetics) reviews the centromeric DNA, Cse4 chromatin foundation,
+    and kinetochore subcomplexes comprising the budding-yeast chromosome, centromeric
+    region.
 - reference: DOI:10.1083/jcb.200305100
-  notes: Supports the context, composition, and mechanism of chromosome, centromeric
-    region (GO:0000775) within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region. Westermann et al. 2003, Architecture of
-    the budding yeast kinetochore reveals a conserved molecular core, Journal of Cell
-    Biology.
+  notes: Westermann et al. 2003 (J Cell Biol) define the conserved molecular core
+    linking Cse4 centromeric chromatin to inner and outer kinetochore complexes at
+    the budding-yeast centromeric region.
 - reference: DOI:10.1101/gad.1144403
-  notes: Supports the context, composition, and mechanism of chromosome, centromeric
-    region (GO:0000775) within the specialized chromatin and kinetochore platform
-    of the chromosome, centromeric region. De Wulf, McAinsh and Sorger 2003, Hierarchical
-    assembly of the budding yeast kinetochore from multiple subcomplexes, Genes &
-    Development.
+  notes: De Wulf, McAinsh and Sorger 2003 (Genes Dev) establish the hierarchical assembly
+    of COMA, MIND/Mtw1, and Ndc80 subcomplexes on centromeric chromatin.
 causal_graphs:
 - graph_id: chromosome_centromeric_region_mechanism
-  title: Centromeric chromatin specification and kinetochore platform assembly
-  description: Cse4/CENP-A centromeric nucleosomes and inner kinetochore complexes
-    (COMA, MIS12/MIND) organize the chromosomal centromeric region and recruit the
-    outer Ndc80 microtubule-binding module for mitotic and meiotic chromosome segregation.
+  title: Centromeric DNA specification, Cse4 chromatin assembly, and kinetochore incorporation
+    in the chromosome, centromeric region
+  description: Centromeric DNA (SO:0000577) specifies assembly of the Cse4/CENP-A
+    centromeric nucleosome platform, which recruits inner (COMA, MIS12/MIND) and outer
+    (Ndc80) kinetochore subcomplexes to form the chromosome, centromeric region (GO:0000775)
+    and mediate chromosome segregation (GO:0007059).
   graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
-  scope_notes: This graph places core Saccharomyces kinetochore subcomplexes in an
-    inner-to-outer assembly hierarchy without enumerating every CBF3, Mif2, Ctf19,
-    Dam1/DASH or regulatory input.
+  scope_status: MECHANISTIC
+  scope_notes: Covers the core Saccharomyces cerevisiae centromeric DNA, Cse4 nucleosome,
+    and inner-to-outer kinetochore assembly hierarchy within the chromosome, centromeric
+    region (GO:0000775).
   nodes:
+  - node_id: centromeric_dna
+    label: centromere
+    node_type: GENETIC_ELEMENT
+    grounding: SO:0000577
+    component_ref: centromeric_dna
   - node_id: centromeric_cse4_nucleosome
     label: centromeric Cse4/CENP-A nucleosome platform
     node_type: GENE_OR_PROTEIN
@@ -477,48 +459,76 @@ causal_graphs:
     label: chromosome, centromeric region
     node_type: STRUCTURE
     grounding: GO:0000775
-    description: Assembled and functional chromosome, centromeric region (GO:0000775)
-      operating within the specialized chromatin and kinetochore platform of the chromosome,
-      centromeric region.
+    description: Assembled chromosome, centromeric region (GO:0000775) encompassing
+      centromeric DNA, Cse4 centromeric chromatin, and associated kinetochore complexes.
+  - node_id: chromosome_segregation
+    label: chromosome segregation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007059
   edges:
-  - subject: centromeric_cse4_nucleosome
-    predicate: anchors assembly of
-    object: chromosome_centromeric_region
-    description: Cse4-containing centromeric chromatin forms the inner platform on
-      which budding-yeast kinetochores assemble.
+  - subject: centromeric_dna
+    predicate: recruits
+    object: centromeric_cse4_nucleosome
+    description: The chromosomal centromeric DNA locus specifies deposition and wrapping
+      of the Cse4/CENP-A centromeric nucleosome.
     evidence:
     - reference: DOI:10.1534/genetics.112.145276
-      notes: Biggins 2013 reviewed Cse4/CENP-A as the centromeric chromatin foundation
-        for budding-yeast kinetochore assembly.
-  - subject: coma_complex
-    predicate: bridges inner and outer modules of
-    object: chromosome_centromeric_region
-    description: The COMA complex bridges DNA-proximal kinetochore subunits and outer
-      microtubule-binding modules.
+      notes: Biggins 2013 reviews Cse4 nucleosome specification at the budding-yeast
+        centromeric DNA locus.
+  - subject: centromeric_cse4_nucleosome
+    predicate: recruits
+    object: coma_complex
+    description: Cse4-containing centromeric chromatin provides the inner platform
+      that recruits the COMA complex.
     evidence:
-    - reference: GO:0000817
-      notes: GO:0000817 defines COMA as a kinetochore complex bridging centromeric-DNA-proximal
-        and microtubule-bound subunits.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf et al. 2003 demonstrate assembly of the COMA subcomplex on centromeric
+        chromatin.
+  - subject: coma_complex
+    predicate: recruits
+    object: mis12_mind_type_complex
+    description: The inner COMA complex bridges centromeric chromatin to the MIS12/MIND
+      (Mtw1) complex.
+    evidence:
+    - reference: DOI:10.1101/gad.1144403
+      notes: Hierarchical kinetochore dissection places COMA upstream of inner-to-outer
+        Mtw1/MIND bridging.
   - subject: mis12_mind_type_complex
     predicate: recruits
     object: ndc80_complex
-    description: MIS12/MIND-type complexes help recruit outer kinetochore subunits
-      that bind to microtubules.
+    description: The MIS12/MIND complex recruits the outer microtubule-binding Ndc80
+      complex.
     evidence:
-    - reference: GO:0000444
-      notes: GO:0000444 defines the MIS12/MIND type complex as helping recruit outer
-        microtubule-binding kinetochore subunits.
-  - subject: ndc80_complex
-    predicate: forms outer microtubule-binding module of
-    object: chromosome_centromeric_region
-    description: The Ndc80 complex forms a conserved outer-kinetochore module of the
-      budding-yeast kinetochore.
-    evidence:
-    - reference: GO:0031262
-      notes: GO:0031262 defines the Ndc80 complex as an outer kinetochore subcomplex.
     - reference: DOI:10.1083/jcb.200305100
-      notes: Westermann et al. 2003 placed Ndc80 in the budding-yeast kinetochore
-        molecular core.
+      notes: Westermann et al. 2003 define the conserved core linking MIND/Mtw1 to
+        the outer Ndc80 complex.
+  - subject: centromeric_dna
+    predicate: is part of
+    object: chromosome_centromeric_region
+    description: Centromeric DNA forms the chromosomal nucleic-acid core of the chromosome,
+      centromeric region.
+    evidence:
+    - reference: GO:0000775
+      notes: GO:0000775 defines the chromosome, centromeric region as including the
+        centromeric DNA and associated proteins.
+  - subject: ndc80_complex
+    predicate: assembles into
+    object: chromosome_centromeric_region
+    description: Incorporation of the outer Ndc80 complex completes the microtubule-binding
+      kinetochore architecture of the chromosome, centromeric region.
+    evidence:
+    - reference: DOI:10.1083/jcb.200305100
+      notes: Westermann et al. 2003 establish Ndc80 as the outer microtubule-binding
+        module assembled at the centromeric region.
+  - subject: chromosome_centromeric_region
+    predicate: mediates
+    object: chromosome_segregation
+    description: The assembled chromosome, centromeric region couples chromosomes
+      to spindle microtubules to drive chromosome segregation.
+    evidence:
+    - reference: DOI:10.1534/genetics.112.145276
+      notes: Biggins 2013 reviews how the centromeric region mediates mitotic and
+        meiotic chromosome segregation.
 parent_structures:
 - GO:0000785
 part_of:

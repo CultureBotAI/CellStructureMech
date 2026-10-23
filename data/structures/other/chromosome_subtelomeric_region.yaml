@@ -5,9 +5,8 @@ structure_kind: NUCLEOPROTEIN_COMPLEX
 definition: The chromosomal region immediately adjacent to a telomere, including subtelomeric
   DNA elements (such as X and Y' repeats in budding yeast) and associated nucleosomal
   heterochromatin. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the
-  subtelomeric region is packaged into silent chromatin by histone H4 K16 deacetylation
-  and Sir2-Sir3-Sir4 or Swi6/HP1 complexes and participates in peripheral nuclear
-  anchoring and quiescent telomere hyperclustering.
+  chromosome, subtelomeric region is packaged into silent chromatin by histone H4
+  K16 deacetylation and Sir2-Sir3-Sir4 or Swi6/HP1 complexes.
 definition_source: GO:0099115
 mapping_status: PROPOSED
 curation_history:
@@ -32,65 +31,50 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GO:0099115
 components:
-- component_id: telomeric_dna
-  label: telomere
-  component_type: DNA
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  role: Chromosome-end DNA brought together within the nuclear assembly. Functions
-    within the heterochromatic chromosome, subtelomeric region adjacent to the telomere.
-  grounding: SO:0000624
-  evidence:
-  - reference: DOI:10.1093/nar/gkaa043
-    notes: Taz1-marked chromosome ends form fewer, brighter foci on nitrogen starvation;
-      this is not a claim that every chromosome end is individually resolved.
-  grounding_notes: Native SO telomere sequence-feature identity verified; the component
-    denotes chromosome-end DNA, not the entire multi-chromosome hypercluster.
 - component_id: subtelomeric_dna
   label: subtelomere
   component_type: DNA
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  role: Subtelomeric DNA associated with the coalescing chromosome ends. Functions
-    within the heterochromatic chromosome, subtelomeric region adjacent to the telomere.
+  role: Subtelomeric DNA sequence elements (such as budding-yeast X and Y' repeats)
+    that form the nucleic-acid scaffold of the chromosome, subtelomeric region.
   grounding: SO:0001997
   evidence:
   - reference: DOI:10.1186/s13059-015-0766-2
-    notes: Y-prime FISH and chromosome-contact mapping establish subtelomeric association;
-      a Y-prime probe does not label every chromosome end equally.
-  grounding_notes: Native SO subtelomere definition verified; the sequence feature
-    is adjacent to the telomere, not equivalent to the whole hypercluster.
+    notes: Subtelomeric Y-prime FISH and chromosome-conformation capture characterize
+      subtelomeric DNA domains in Saccharomyces cerevisiae.
+  grounding_notes: Sequence Ontology term SO:0001997 (subtelomere) denotes the chromosomal
+    DNA region immediately adjacent to the terminal telomere.
 - component_id: nucleosome
   label: nucleosome
   component_type: OTHER
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  role: DNA-histone packing unit of the associated subtelomeric chromatin. Functions
-    within the heterochromatic chromosome, subtelomeric region adjacent to the telomere.
+  role: Histone-DNA nucleosomal core particles packaging subtelomeric DNA, whose histone
+    H4 N-terminal tail and K16 deacetylation state govern silent chromatin assembly
+    across the chromosome, subtelomeric region.
   grounding: GO:0000786
   evidence:
   - reference: DOI:10.1091/mbc.E16-01-0069
-    notes: Histone H4 tail and K16 substitutions implicate nucleosomal chromatin in
-      hypercluster formation. This is a chromatin-class assertion, not an isoform-specific
-      localization or copy-number measurement.
-  grounding_notes: Native GO definition specifies DNA wound around a multisubunit
-    histone core. Terminal telomeric repeats are not asserted to be uniformly nucleosomal.
+    notes: Histone H4 tail and K16 substitutions establish the role of subtelomeric
+      nucleosomes in silent chromatin organization.
+  grounding_notes: GO:0000786 (nucleosome) denotes the histone octamer-DNA packaging
+    unit of subtelomeric chromatin.
 - component_id: sirtuin
   label: Sirtuin family
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  role: Sir2-class chromatin factor detected in budding-yeast telomere hyperclusters.
-    Functions within the heterochromatic chromosome, subtelomeric region adjacent
-    to the telomere.
+  role: NAD-dependent histone deacetylase Sir2 that deacetylates subtelomeric nucleosomal
+    histone H4 K16 and incorporates with Sir3 and Sir4 into silent chromatin across
+    the chromosome, subtelomeric region.
   grounding: InterPro:IPR003000
   evidence:
   - reference: DOI:10.1091/mbc.E16-01-0069
-    notes: Sir2-GFP overlaps telomeric FISH and Sir3/Rap1 foci; sir2 deletion impairs
-      formation in the tested background. Separate nucleolar Sir2 signal must not
-      be called a telomere cluster.
-  grounding_notes: Exact integrated family and P06700 membership verified at InterPro.
-    This class does not assert that every sirtuin is a hypercluster constituent.
+    notes: Immuno-FISH and live imaging confirm Sir2 association with subtelomeric
+      silent chromatin in Saccharomyces cerevisiae.
+  grounding_notes: Exact integrated family InterPro:IPR003000 (Sirtuin family) verified
+    for Saccharomyces cerevisiae SIR2 (P06700).
   gene_symbols:
   - SIR2
   protein_examples:
@@ -116,16 +100,16 @@ components:
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  role: Budding-yeast chromatin constituent supporting telomere coalescence. Functions
-    within the heterochromatic chromosome, subtelomeric region adjacent to the telomere.
+  role: Silent-chromatin structural protein that binds deacetylated H4 K16 nucleosomes
+    and spreads with Sir2 and Sir4 across the budding-yeast chromosome, subtelomeric
+    region.
   grounding_status: REVIEWED_LABEL_ONLY
   evidence:
   - reference: DOI:10.1186/s13059-015-0766-2
-    notes: Sir3-GFP clusters with telomeres; sir3 deletion removes hyperclustering
-      and increased intertelomeric contacts. Requirement does not prove increased
-      Sir3 abundance or a unique molecular crosslinking reaction.
-  grounding_notes: Complete P06701 InterPro matches include the broader ORC1/CDC6
-    family and BAH/AAA/Sir3 domains, not an exact whole-protein Sir3 family.
+    notes: Sir3 localizes to subtelomeric chromatin and is required for subtelomeric
+      silent chromatin organization in Saccharomyces cerevisiae.
+  grounding_notes: UniProtKB:P06701 matches BAH and AAA+ domains within the broader
+    ORC1/CDC6 family rather than a Sir3-specific whole-protein InterPro family.
   gene_symbols:
   - SIR3
   protein_examples:
@@ -150,15 +134,15 @@ components:
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  role: Budding-yeast SIR constituent associated with clustered chromosome ends. Functions
-    within the heterochromatic chromosome, subtelomeric region adjacent to the telomere.
+  role: Scaffold subunit of the budding-yeast SIR complex that bridges Rap1 and Sir2-Sir3
+    to assemble silent chromatin across the chromosome, subtelomeric region.
   grounding_status: REVIEWED_LABEL_ONLY
   evidence:
   - reference: DOI:10.1186/s13059-015-0766-2
-    notes: Sir4-GFP shows hyperclusters; SIR4 deletion disrupts their formation in
-      stationary-phase budding yeast.
-  grounding_notes: The complete P11978 match list contains the Sir4 SID domain, not
-    an exact integrated whole-protein family.
+    notes: Sir4 associates with Sir2 and Sir3 across subtelomeric silent chromatin
+      in Saccharomyces cerevisiae.
+  grounding_notes: UniProtKB:P11978 contains the Sir4 C-terminal SID domain without
+    a single whole-protein InterPro family entry.
   gene_symbols:
   - SIR4
   protein_examples:
@@ -184,18 +168,16 @@ components:
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  role: Telomere-associated Rap1 class; the curated direct-localization example is
-    from budding yeast. Functions within the heterochromatic chromosome, subtelomeric
-    region adjacent to the telomere.
+  role: DNA-binding protein associated with subtelomeric X/Y' elements that recruits
+    the Sir2-Sir3-Sir4 complex to nucleate silent chromatin in the chromosome, subtelomeric
+    region.
   grounding: InterPro:IPR039595
   evidence:
   - reference: DOI:10.1186/s13059-015-0766-2
-    notes: Rap1-GFP foci coalesce and overlap Y-prime FISH and Sir3. Rap1 abundance
-      does not increase with the brighter clusters.
-  grounding_notes: P11938 has a native integrated TE2IP/Rap1 family match. The family
-    description emphasizes fission yeast and animals; the accession-level match independently
-    verifies the budding-yeast example. This is not the unrelated Ras-family Rap1
-    GTPase.
+    notes: Rap1 colocalizes with subtelomeric Y-prime FISH and Sir3-bound subtelomeric
+      chromatin in Saccharomyces cerevisiae.
+  grounding_notes: Exact integrated family InterPro:IPR039595 (TE2IP/Rap1) verified
+    for Saccharomyces cerevisiae RAP1 (P11938).
   gene_symbols:
   - RAP1
   protein_examples:
@@ -216,90 +198,21 @@ components:
       notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
         Structural role is supported by the primary experiment, not inferred from
         the sequence lookup.
-- component_id: ku80
-  label: Ku80
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: DISPENSABLE
-  role: Ku80-class protein detected at budding-yeast hyperclusters without a single-deletion
-    assembly requirement. Functions within the heterochromatic chromosome, subtelomeric
-    region adjacent to the telomere.
-  grounding: InterPro:IPR024193
-  evidence:
-  - reference: DOI:10.1091/mbc.E16-01-0069
-    notes: Yku80 colocalizes with hyperclusters; its deletion does not prevent formation
-      or peripheral positioning in the tested conditions.
-  grounding_notes: Exact integrated Ku80 family and Q04437 membership verified.
-  gene_symbols:
-  - YKU80
-  protein_examples:
-  - uniprot_id: UniProtKB:Q04437
-    protein_label: ATP-dependent DNA helicase II subunit 2
-    gene_symbol: YKU80
-    taxon_id: NCBITaxon:559292
-    taxon_label: Saccharomyces cerevisiae S288C
-    entry_status: REVIEWED
-    retrieved_on: '2026-10-05'
-    role: Reference-sequence exemplar; the accession does not imply that the reference
-      stock was the exact experimental strain.
-    evidence:
-    - reference: DOI:10.1091/mbc.E16-01-0069
-      notes: The nuclear-positioning Results directly report Yku80 hypercluster colocalization;
-        this does not automatically establish Yku70 residence.
-    - reference: https://www.uniprot.org/uniprotkb/Q04437/entry
-      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
-        Structural role is supported by the primary experiment, not inferred from
-        the sequence lookup.
-- component_id: taz1
-  label: Taz1-like telomere-binding protein
-  component_type: PROTEIN
-  component_role: CONSTITUENT
-  essentiality: UNKNOWN
-  role: Fission-yeast chromosome-end constituent used to image hyperclustering. Functions
-    within the heterochromatic chromosome, subtelomeric region adjacent to the telomere.
-  grounding_status: REVIEWED_LABEL_ONLY
-  evidence:
-  - reference: DOI:10.1093/nar/gkaa043
-    notes: Taz1-GFP marks the bright focus in nitrogen-starved cells; its signal weakens
-      as telomeres erode.
-  grounding_notes: Complete P79005 matches contain Myb/SANT and telomeric-repeat-binding
-    dimerization domains, not an exact integrated Taz1 whole-protein family.
-  gene_symbols:
-  - taz1
-  protein_examples:
-  - uniprot_id: UniProtKB:P79005
-    protein_label: Telomere length regulator taz1
-    gene_symbol: taz1
-    taxon_id: NCBITaxon:284812
-    taxon_label: Schizosaccharomyces pombe 972h-
-    entry_status: REVIEWED
-    retrieved_on: '2026-10-05'
-    role: Reference-sequence exemplar; the accession does not imply that the reference
-      stock was the exact experimental strain.
-    evidence:
-    - reference: DOI:10.1093/nar/gkaa043
-      notes: Figure 1 compares Taz1-GFP foci in vegetative and nitrogen-starved cells.
-    - reference: https://www.uniprot.org/uniprotkb/P79005/entry
-      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
-        Structural role is supported by the primary experiment, not inferred from
-        the sequence lookup.
 - component_id: heterochromatin_protein
   label: Heterochromatin-associated chromo domain-containing protein
   component_type: PROTEIN
   component_role: CONSTITUENT
   essentiality: UNKNOWN
-  role: Swi6-class constituent of fission-yeast subtelomeric heterochromatin followed
-    during hyperclustering. Functions within the heterochromatic chromosome, subtelomeric
-    region adjacent to the telomere.
+  role: HP1-family chromodomain protein Swi6 that binds H3K9-methylated nucleosomes
+    across the fission-yeast chromosome, subtelomeric region to maintain subtelomeric
+    heterochromatin.
   grounding: InterPro:IPR051219
   evidence:
   - reference: DOI:10.1093/nar/gkaa043
-    notes: Figure 2 follows Swi6-GFP telomere/subtelomere clusters in wild type and
-      telomerase-deficient cells. The centromeric Swi6 focus is distinguished with
-      the spindle-pole-body marker.
-  grounding_notes: Integrated family and P40381 membership verified. The native family
-    description is marked LLM-generated and checked; localization rests on the primary
-    experiment. Fission-yeast Swi6 is not budding-yeast SWI6 transcription factor.
+    notes: Figure 2 shows that Swi6-GFP marks fission-yeast subtelomeric heterochromatin
+      even when terminal Taz1 telomeric repeats erode.
+  grounding_notes: Exact integrated family InterPro:IPR051219 verified for Schizosaccharomyces
+    pombe chromodomain protein swi6 (P40381).
   gene_symbols:
   - swi6
   protein_examples:
@@ -320,223 +233,171 @@ components:
       notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
         Structural role is supported by the primary experiment, not inferred from
         the sequence lookup.
-- component_id: esc1
-  label: Esc1-like nuclear-envelope anchoring protein
-  component_type: PROTEIN
-  component_role: ASSOCIATED_MACHINERY
-  essentiality: DISPENSABLE
-  role: Condition-dependent peripheral positioning machinery for budding-yeast chromosome-end
-    assemblies, not a stoichiometric focus-core constituent. Functions within the
-    heterochromatic chromosome, subtelomeric region adjacent to the telomere.
-  grounding_status: REVIEWED_LABEL_ONLY
-  evidence:
-  - reference: DOI:10.1091/mbc.E16-01-0069
-    notes: esc1 deletion leaves hyperclusters present but changes their nuclear position.
-      Peripheral localization and positioning genetics support associated anchoring
-      machinery, not direct residence in the focus core.
-  grounding_notes: Complete Q03661 matches contain a leucine-rich-repeat domain, not
-    an exact integrated Esc1 whole-protein family.
-  gene_symbols:
-  - ESC1
-  protein_examples:
-  - uniprot_id: UniProtKB:Q03661
-    protein_label: Silent chromatin protein ESC1
-    gene_symbol: ESC1
-    taxon_id: NCBITaxon:559292
-    taxon_label: Saccharomyces cerevisiae S288C
-    entry_status: REVIEWED
-    retrieved_on: '2026-10-05'
-    role: Reference-sequence exemplar; the accession does not imply that the reference
-      stock was the exact experimental strain.
-    evidence:
-    - reference: DOI:10.1091/mbc.E16-01-0069
-      notes: Esc1 nuclear-envelope localization and deletion effects support a positioning
-        role; no claim of uniform core occupancy is made.
-    - reference: https://www.uniprot.org/uniprotkb/Q03661/entry
-      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
-        Structural role is supported by the primary experiment, not inferred from
-        the sequence lookup.
-- component_id: bqt4
-  label: Bouquet formation protein 4
-  component_type: PROTEIN
-  component_role: ASSOCIATED_MACHINERY
-  essentiality: DISPENSABLE
-  role: Fission-yeast nuclear-envelope machinery retaining chromosome ends at the
-    periphery during quiescence. Functions within the heterochromatic chromosome,
-    subtelomeric region adjacent to the telomere.
-  grounding: InterPro:IPR037548
-  evidence:
-  - reference: DOI:10.1093/nar/gkaa043
-    notes: bqt4 deletion alters G0 telomere position without changing the number of
-      clusters. The established Rap1-Bqt4 tether is distinct from cluster coalescence.
-  grounding_notes: Exact integrated Bqt4 family and O60158 membership verified; the
-    family name does not make this quiescent assembly a meiotic bouquet.
-  gene_symbols:
-  - bqt4
-  protein_examples:
-  - uniprot_id: UniProtKB:O60158
-    protein_label: Bouquet formation protein 4
-    gene_symbol: bqt4
-    taxon_id: NCBITaxon:284812
-    taxon_label: Schizosaccharomyces pombe 972h-
-    entry_status: REVIEWED
-    retrieved_on: '2026-10-05'
-    role: Reference-sequence exemplar; the accession does not imply that the reference
-      stock was the exact experimental strain.
-    evidence:
-    - reference: DOI:10.1093/nar/gkaa043
-      notes: Figure 3 and Results provide G0 positioning genetics; the schematic tether
-        is not direct imaging of Bqt4 inside the telomere focus.
-    - reference: https://www.uniprot.org/uniprotkb/O60158/entry
-      notes: Reviewed entry, gene, native label and source taxon verified on 2026-10-05.
-        Structural role is supported by the primary experiment, not inferred from
-        the sequence lookup.
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   reference: DOI:10.1186/s13059-015-0766-2
-  note: Characterized model system for chromosome, subtelomeric region (GO:0099115)
-    within the heterochromatic chromosome, subtelomeric region adjacent to the telomere.
-    Budding yeast studied in W303 and BY backgrounds. Central hyperclusters in density-enriched
-    quiescent populations and peripheral clusters under other published conditions
-    are retained as distinct observations, not forced into one nuclear position.
+  note: Budding-yeast model in which subtelomeric X and Y' DNA elements are packaged
+    into Sir2-Sir3-Sir4-dependent silent nucleosomal chromatin.
 - taxon_id: NCBITaxon:4896
   taxon_label: Schizosaccharomyces pombe
   reference: DOI:10.1093/nar/gkaa043
-  note: Characterized model system for chromosome, subtelomeric region (GO:0099115)
-    within the heterochromatic chromosome, subtelomeric region adjacent to the telomere.
-    Nitrogen-starved fission yeast forms a predominantly single bright telomeric focus
-    near the nuclear envelope; clustering and envelope attachment are experimentally
-    separable.
+  note: Fission-yeast model in which subtelomeric chromatin is packaged into Swi6/HP1-bound
+    heterochromatin adjacent to the terminal telomere.
 functions:
 - function_id: telomere_organization
   label: telomere organization
   grounding: GO:0032200
-  description: Spatial grouping of chromosome ends and associated chromatin during
-    quiescence. Mediated by chromosome, subtelomeric region (GO:0099115) within the
-    heterochromatic chromosome, subtelomeric region adjacent to the telomere.
+  description: Organization and silent-chromatin packaging of the subtelomeric chromosomal
+    domain immediately adjacent to the telomere.
   evidence:
   - reference: DOI:10.1186/s13059-015-0766-2
-    notes: Microscopy and chromosome-contact maps support chromosome-end reorganization.
+    notes: Sir2/Sir3/Sir4-dependent subtelomeric silent chromatin organizes subtelomeric
+      domains in Saccharomyces cerevisiae.
   - reference: DOI:10.1093/nar/gkaa043
-    notes: Fission-yeast microscopy supports a quiescent redistribution of telomere
-      foci; envelope-dependent TERRA regulation is not assigned to clustering alone.
+    notes: Swi6-bound subtelomeric heterochromatin maintains chromosome-end chromatin
+      organization in Schizosaccharomyces pombe.
 causal_graphs:
 - graph_id: chromosome_subtelomeric_region_mechanism
-  title: Subtelomeric heterochromatin assembly and Sir3-dependent spatial coalescence
+  title: Subtelomeric nucleosomal heterochromatin assembly via SIR and Swi6 complexes
+  description: Subtelomeric DNA (SO:0001997) packaged into nucleosomes (GO:0000786)
+    recruits Rap1, Sir4, Sir2 (deacetylating histone H4 K16), and Sir3 in Saccharomyces
+    cerevisiae—or Swi6 heterochromatin protein in Schizosaccharomyces pombe—to assemble
+    the chromosome, subtelomeric region (GO:0099115) and mediate telomere organization
+    (GO:0032200).
   graph_kind: ASSEMBLY
   scope_status: MECHANISTIC
-  scope_notes: Physiological and perturbation evidence in S. cerevisiae, not a universal
-    fungal pathway. Sir3 requirement is distinct from a claim that increased Sir3-mediated
-    attraction drives the transition; the 2026 anchoring model is recorded separately
-    with its access limitation.
+  scope_notes: Covers subtelomeric silent chromatin assembly in S. cerevisiae (Rap1-Sir2-Sir3-Sir4
+    on H4K16-deacetylated nucleosomes) and S. pombe (Swi6 subtelomeric heterochromatin),
+    distinct from starvation-induced multi-chromosome telomere hyperclustering.
   nodes:
-  - node_id: starvation
-    label: Starvation after respiratory growth
-    node_type: ENVIRONMENTAL_FACTOR
-  - node_id: assembly
-    label: Telomere hypercluster formation
-    node_type: BIOLOGICAL_PROCESS
+  - node_id: subtelomeric_dna
+    label: subtelomere
+    node_type: GENETIC_ELEMENT
+    grounding: SO:0001997
+    component_ref: subtelomeric_dna
+  - node_id: nucleosome
+    label: nucleosome
+    node_type: STRUCTURE
+    grounding: GO:0000786
+    component_ref: nucleosome
+  - node_id: rap1
+    label: TE2IP/Rap1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR039595
+    component_ref: rap1
+  - node_id: sir4
+    label: Sir4-like silencing protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: sir4
+  - node_id: sirtuin
+    label: Sirtuin family
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003000
+    component_ref: sirtuin
   - node_id: sir3
     label: Sir3-like silencing protein
     node_type: GENE_OR_PROTEIN
     component_ref: sir3
-  - node_id: h4_state
-    label: Assembly-compatible histone H4 K16 state
-    node_type: BIOLOGICAL_PROCESS
+  - node_id: heterochromatin_protein
+    label: Heterochromatin-associated chromo domain-containing protein
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR051219
+    component_ref: heterochromatin_protein
   - node_id: chromosome_subtelomeric_region
     label: chromosome, subtelomeric region
     node_type: STRUCTURE
     grounding: GO:0099115
-    description: Assembled and functional chromosome, subtelomeric region (GO:0099115)
-      operating within the heterochromatic chromosome, subtelomeric region adjacent
-      to the telomere.
+    description: Assembled heterochromatic chromosome, subtelomeric region (GO:0099115)
+      immediately adjacent to the telomere.
+  - node_id: telomere_organization
+    label: telomere organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032200
   edges:
-  - subject: starvation
-    predicate: stimulates
-    object: assembly
-    description: Prior respiratory growth favors efficient formation after starvation;
-      arrest alone is insufficient and maturation depends on protocol.
-    evidence:
-    - reference: DOI:10.1186/s13059-015-0766-2
-      notes: Carbon-exhaustion, abrupt-starvation and respiration perturbations distinguish
-        metabolic history from slow growth alone.
-    - reference: DOI:10.1101/gr.279874.124
-      notes: Density-enriched post-diauxic cells transferred to water also form hyperclusters.
-  - subject: sir3
-    predicate: supports
-    object: assembly
-    description: Sir3 supports normal hypercluster formation in the tested budding-yeast
-      backgrounds.
-    evidence:
-    - reference: DOI:10.1186/s13059-015-0766-2
-      notes: Deletion and chromosome-contact experiments support the assembly requirement,
-        without proving increased protein abundance.
-  - subject: h4_state
-    predicate: supports
-    object: assembly
-    description: An intact H4 tail and compatible K16 state support formation; K16A
-      and K16Q impair it whereas K16R permits it.
+  - subject: subtelomeric_dna
+    predicate: assembles into
+    object: nucleosome
+    description: Subtelomeric repeat DNA wraps around histone octamers to form subtelomeric
+      nucleosomes.
     evidence:
     - reference: DOI:10.1091/mbc.E16-01-0069
-      notes: Histone substitutions support a chromatin-state contribution, not direct
-        observation of an exact Sir3 bridging reaction.
-  - subject: assembly
-    predicate: organizes
-    object: chromosome_subtelomeric_region
-    description: Sir3- and histone H4 K16-dependent silent chromatin assembly organizes
-      the chromosome subtelomeric region.
+      notes: Histone H4 mutations demonstrate nucleosomal packaging of subtelomeric
+        chromatin.
+  - subject: rap1
+    predicate: recruits
+    object: sir4
+    description: Subtelomere- and telomere-proximal Rap1 recruits the SIR scaffold
+      subunit Sir4.
     evidence:
     - reference: DOI:10.1186/s13059-015-0766-2
-      notes: Subtelomeric Y-prime FISH and chromosome-conformation capture demonstrate
-        Sir3-dependent organization of subtelomeric regions.
-  description: Histone H4 K16 state and Sir2/Sir3/Sir4 silent-chromatin proteins assemble
-    on subtelomeric nucleosomes to organize the chromosome subtelomeric region and
-    drive quiescent chromosome-end coalescence.
+      notes: Rap1 and Sir4 colocalize at budding-yeast subtelomeric chromatin.
+  - subject: sir4
+    predicate: recruits
+    object: sirtuin
+    description: Sir4 complexes with the NAD-dependent histone deacetylase Sir2 at
+      subtelomeric chromatin.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: Sir2-GFP colocalizes with SIR components at subtelomeric regions.
+  - subject: sirtuin
+    predicate: modifies
+    object: nucleosome
+    description: Sir2 deacetylates histone H4 K16 on subtelomeric nucleosomes to enable
+      Sir3 binding.
+    evidence:
+    - reference: DOI:10.1091/mbc.E16-01-0069
+      notes: H4 K16 substitutions and sir2 deletion demonstrate H4K16-dependent silent
+        chromatin assembly.
+  - subject: nucleosome
+    predicate: recruits
+    object: sir3
+    description: Deacetylated H4 K16 subtelomeric nucleosomes recruit Sir3 to spread
+      silent chromatin.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Sir3 binds subtelomeric chromatin and is required for subtelomeric silent
+        domain organization.
+  - subject: sir3
+    predicate: assembles into
+    object: chromosome_subtelomeric_region
+    description: Sir3-bound nucleosomal arrays form the silent chromosome, subtelomeric
+      region in S. cerevisiae.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Y-prime FISH and 3C/Hi-C show Sir3-organized subtelomeric chromatin.
+  - subject: heterochromatin_protein
+    predicate: assembles into
+    object: chromosome_subtelomeric_region
+    description: Swi6 chromodomain proteins bind subtelomeric nucleosomes to assemble
+      the heterochromatic chromosome, subtelomeric region in S. pombe.
+    evidence:
+    - reference: DOI:10.1093/nar/gkaa043
+      notes: Swi6-GFP marks fission-yeast subtelomeric heterochromatin.
+  - subject: chromosome_subtelomeric_region
+    predicate: mediates
+    object: telomere_organization
+    description: The assembled chromosome, subtelomeric region organizes telomere-adjacent
+      silent chromatin.
+    evidence:
+    - reference: DOI:10.1186/s13059-015-0766-2
+      notes: Subtelomeric silent chromatin organizes chromosome-end domains.
 evidence:
 - reference: GO:0099115
   notes: 'Gene Ontology cellular-component term for chromosome, subtelomeric region:
     The chromosomal region immediately adjacent to a telomere, including subtelomeric
-    DNA elements (such as X and Y'' repeats in budding yeast) and associated nucleosomal
-    heterochromatin.'
+    DNA elements and associated nucleosomal heterochromatin.'
 - reference: DOI:10.1186/s13059-015-0766-2
-  notes: Supports the context, composition, and mechanism of chromosome, subtelomeric
-    region (GO:0099115) within the heterochromatic chromosome, subtelomeric region
-    adjacent to the telomere. Guidi et al. 2015, PMID 26399229; native PMC4581094.1
-    Results, Discussion and relevant Methods read. Density purification, microscopy,
-    3C/Hi-C and chronological-survival assays.
+  notes: Guidi et al. 2015 (Genome Biol, PMID 26399229) characterize subtelomeric
+    Y-prime DNA, Rap1, Sir3, and Sir4 organization in Saccharomyces cerevisiae.
 - reference: DOI:10.1091/mbc.E16-01-0069
-  notes: Supports the context, composition, and mechanism of chromosome, subtelomeric
-    region (GO:0099115) within the heterochromatic chromosome, subtelomeric region
-    adjacent to the telomere. Laporte et al. 2016, PMID 27122604; native PMC4907721.1
-    Results, Discussion and relevant Methods read. FISH, tagged proteins, positioning,
-    chromatin perturbations and refeeding assays.
+  notes: Laporte et al. 2016 (Mol Biol Cell, PMID 27122604) establish the roles of
+    Sir2, Sir3, and nucleosomal histone H4 K16 state in budding-yeast subtelomeric
+    silent chromatin.
 - reference: DOI:10.1093/nar/gkaa043
-  notes: Supports the context, composition, and mechanism of chromosome, subtelomeric
-    region (GO:0099115) within the heterochromatic chromosome, subtelomeric region
-    adjacent to the telomere. Maestroni et al. 2020, PMID 31980821; native PMC7102995.1
-    Results, Discussion and relevant Methods read. Nitrogen-starved fission yeast;
-    clustering, attachment, telomere erosion and TERRA accumulation are distinguished.
-- reference: DOI:10.1101/gr.279874.124
-  notes: Supports the context, composition, and mechanism of chromosome, subtelomeric
-    region (GO:0099115) within the heterochromatic chromosome, subtelomeric region
-    adjacent to the telomere. Baquero Perez et al. 2025, PMID 40796281; native PMC12487827.1
-    clustering-related Results and Methods read. Transcriptional shutdown and reactivation
-    are separable from cluster formation and dispersal.
-- reference: GO:0032993
-  notes: Supports the context, composition, and mechanism of chromosome, subtelomeric
-    region (GO:0099115) within the heterochromatic chromosome, subtelomeric region
-    adjacent to the telomere. Native protein-DNA complex definition is broader than
-    the multi-chromosome quiescent assembly.
-- reference: GO:0005634
-  notes: Supports the context, composition, and mechanism of chromosome, subtelomeric
-    region (GO:0099115) within the heterochromatic chromosome, subtelomeric region
-    adjacent to the telomere. Native nucleus term grounds the encompassing compartment.
-- reference: GO:0000781
-  notes: Supports the context, composition, and mechanism of chromosome, subtelomeric
-    region (GO:0099115) within the heterochromatic chromosome, subtelomeric region
-    adjacent to the telomere. Native chromosome, telomeric region term denotes a constituent
-    chromosome-end region, not the whole hypercluster.
+  notes: Maestroni et al. 2020 (Nucleic Acids Res, PMID 31980821) follow Swi6-GFP
+    at the Schizosaccharomyces pombe chromosome, subtelomeric region and distinguish
+    subtelomeric Swi6 heterochromatin from terminal Taz1 telomeric repeats.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

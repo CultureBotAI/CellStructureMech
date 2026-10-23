@@ -15,9 +15,9 @@ events:
 - type: CREATE
   outcome: changed
   summary: Created structure record for chromosome, subtelomeric region (GO:0099115) in other.
-  details: Authored data/structures/other/chromosome_subtelomeric_region.yaml for chromosome,
-    subtelomeric region (GO:0099115) with verified GO hierarchy, taxonomic distribution,
-    UniProtKB protein examples, functions, literature evidence, and causal graph.
+  details: Authored data/structures/other/chromosome_subtelomeric_region.yaml for chromosome, subtelomeric
+    region (GO:0099115) with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal graph.
   sections:
   - identity
   - composition

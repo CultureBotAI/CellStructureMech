@@ -15,9 +15,9 @@ events:
 - type: CREATE
   outcome: changed
   summary: Created structure record for chromosome, centromeric region (GO:0000775) in other.
-  details: Authored data/structures/other/chromosome_centromeric_region.yaml for chromosome,
-    centromeric region (GO:0000775) with verified GO hierarchy, taxonomic distribution,
-    UniProtKB protein examples, functions, literature evidence, and causal graph.
+  details: Authored data/structures/other/chromosome_centromeric_region.yaml for chromosome, centromeric
+    region (GO:0000775) with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal graph.
   sections:
   - identity
   - composition

@@ -35,11 +35,11 @@ components:
   - ACT1
   essentiality: UNKNOWN
   grounding_status: REVIEWED_LABEL_ONLY
-  grounding_notes: Curated from Saccharomyces cerevisiae ACT1 cortical actin-patch
-    studies; no exact source-neutral InterPro, Pfam, or NCBIfam identifier was curated
-    for the whole actin protein family in this pass.
-  role: Polymerizes into the short, branched filaments that form the yeast actin cortical
-    patch network. Functions within the plasma-membrane-proximal cortical actin cytoskeleton.
+  grounding_notes: Curated from Saccharomyces cerevisiae ACT1 cortical actin cytoskeleton
+    studies; no single whole-protein InterPro family CURIE was assigned in this pass.
+  role: Monomeric subunit that polymerizes into the branched cortical actin filament
+    networks and cortical patches of the cortical actin cytoskeleton beneath the plasma
+    membrane.
   evidence:
   - reference: DOI:10.1083/jcb.200404159
     notes: Young, Cooper and Bridgman 2004 examined Saccharomyces cerevisiae actin
@@ -67,9 +67,9 @@ components:
   component_role: CONSTITUENT
   grounding: GO:0005885
   essentiality: UNKNOWN
-  role: Branch-forming actin-nucleation complex that builds the dendritic actin filament
-    network in cortical patches. Functions within the plasma-membrane-proximal cortical
-    actin cytoskeleton.
+  role: Seven-subunit actin-nucleation complex (Arp2, Arp3, Arc40, Arc35, Arc19, Arc18,
+    Arc15) that nucleates branched actin filament networks within the cortical actin
+    cytoskeleton.
   evidence:
   - reference: DOI:10.1083/jcb.200404159
     notes: Young, Cooper and Bridgman 2004 described yeast actin-patch branches characteristic
@@ -204,90 +204,59 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   presence: COMMON
-  note: Exhibits cortical actin cytoskeleton (GO:0030864) within the plasma-membrane-proximal
-    cortical actin cytoskeleton. Budding yeast forms dynamic actin cortical patches
-    at the cell cortex during endocytic internalization.
+  note: Budding yeast organizes a dynamic Arp2/3-nucleated cortical actin cytoskeleton
+    beneath the plasma membrane that drives endocytic internalization.
   reference: DOI:10.1016/S0092-8674(03)00883-3
 canonical_examples:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  note: Characterized model system for cortical actin cytoskeleton (GO:0030864) within
-    the plasma-membrane-proximal cortical actin cytoskeleton. Budding-yeast model
-    in which cortical actin patches were imaged as short, branched Arp2/3-like actin-filament
-    networks.
+  note: Reference budding-yeast system in which the cortical actin cytoskeleton beneath
+    the plasma membrane was resolved as Arp2/3-branched Act1 filament networks driving
+    endocytosis.
   reference: DOI:10.1083/jcb.200404159
 functions:
-- function_id: actin_cortical_patch_assembly
-  label: actin cortical patch assembly
-  grounding: GO:0000147
-  description: The actin cortical patch is produced by assembly of a branched actin
-    network at cortical endocytic sites. Mediated by cortical actin cytoskeleton (GO:0030864)
-    within the plasma-membrane-proximal cortical actin cytoskeleton.
-  evidence:
-  - reference: GO:0000147
-    notes: GO:0000147 denotes assembly of an actin cortical patch.
-  - reference: DOI:10.1371/journal.pbio.0060001
-    notes: Galletta, Chuang and Cooper 2008 tracked actin patch assembly and movement
-      in Arp2/3-regulator mutants.
 - function_id: endocytic_internalization
   label: endocytic internalization
-  description: Yeast actin cortical patches assemble at cortical endocytic sites and
-    move inward as internalization proceeds. Mediated by cortical actin cytoskeleton
-    (GO:0030864) within the plasma-membrane-proximal cortical actin cytoskeleton.
+  description: Arp2/3-nucleated branched actin filament networks of the cortical actin
+    cytoskeleton assemble beneath the plasma membrane at endocytic sites and generate
+    force for vesicle internalization.
   evidence:
   - reference: DOI:10.1016/S0092-8674(03)00883-3
-    notes: Kaksonen, Sun and Drubin 2003 followed receptors, adaptors and actin during
-      yeast endocytic internalization.
+    notes: Kaksonen, Sun and Drubin 2003 tracked cortical actin assembly and inward
+      movement during yeast endocytic internalization.
+  - reference: DOI:10.1371/journal.pbio.0060001
+    notes: Galletta, Chuang and Cooper 2008 dissected Arp2/3-regulated cortical actin
+      network assembly and motility during endocytosis.
 evidence:
 - reference: GO:0030864
   notes: 'Gene Ontology cellular-component term for cortical actin cytoskeleton: The
     part of the actin cytoskeleton that lies just beneath the plasma membrane.'
 - reference: GO:0030479
-  notes: Supports the context, composition, and mechanism of cortical actin cytoskeleton
-    (GO:0030864) within the plasma-membrane-proximal cortical actin cytoskeleton.
-    Gene Ontology cellular-component term for the actin cortical patch.
-- reference: GO:0015629
-  notes: Supports the context, composition, and mechanism of cortical actin cytoskeleton
-    (GO:0030864) within the plasma-membrane-proximal cortical actin cytoskeleton.
-    Actin cytoskeleton is a containing structure, not an is-a parent of the patch;
-    the direct GO parthood relation uses cortical actin cytoskeleton.
+  notes: Gene Ontology term for actin cortical patch, a major Arp2/3-nucleated substructure
+    (has_part) of the cortical actin cytoskeleton in fungi.
 - reference: GO:0005885
-  notes: Supports the context, composition, and mechanism of cortical actin cytoskeleton
-    (GO:0030864) within the plasma-membrane-proximal cortical actin cytoskeleton.
-    Gene Ontology cellular-component term for the Arp2/3 protein complex.
-- reference: GO:0000147
-  notes: Supports the context, composition, and mechanism of cortical actin cytoskeleton
-    (GO:0030864) within the plasma-membrane-proximal cortical actin cytoskeleton.
-    Gene Ontology biological-process term for actin cortical patch assembly.
+  notes: Gene Ontology term for the Arp2/3 protein complex, a constituent branch-nucleating
+    complex of the cortical actin cytoskeleton.
 - reference: DOI:10.1016/S0092-8674(03)00883-3
-  notes: Supports the context, composition, and mechanism of cortical actin cytoskeleton
-    (GO:0030864) within the plasma-membrane-proximal cortical actin cytoskeleton.
-    Kaksonen, Sun and Drubin 2003, A Pathway for Association of Receptors, Adaptors,
-    and Actin during Endocytic Internalization, Cell.
+  notes: Kaksonen, Sun and Drubin 2003 (Cell) dissect how the budding-yeast cortical
+    actin cytoskeleton assembles at plasma-membrane endocytic sites to drive internalization.
 - reference: DOI:10.1083/jcb.200404159
-  notes: Supports the context, composition, and mechanism of cortical actin cytoskeleton
-    (GO:0030864) within the plasma-membrane-proximal cortical actin cytoskeleton.
-    Young, Cooper and Bridgman 2004, Yeast actin patches are networks of branched
-    actin filaments, Journal of Cell Biology.
+  notes: Young, Cooper and Bridgman 2004 (J Cell Biol) resolve the branched actin
+    filament architecture of the yeast cortical actin cytoskeleton.
 - reference: DOI:10.1371/journal.pbio.0060001
-  notes: Supports the context, composition, and mechanism of cortical actin cytoskeleton
-    (GO:0030864) within the plasma-membrane-proximal cortical actin cytoskeleton.
-    Galletta, Chuang and Cooper 2008, Distinct Roles for Arp2/3 Regulators in Actin
-    Assembly and Endocytosis, PLoS Biology.
-- reference: GO:0061645
-  notes: Supports the context, composition, and mechanism of cortical actin cytoskeleton
-    (GO:0030864) within the plasma-membrane-proximal cortical actin cytoskeleton.
-    Endocytic patch is the native GO is-a parent of GO:0030479 actin cortical patch.
+  notes: Galletta, Chuang and Cooper 2008 (PLoS Biol) analyze Arp2/3 regulators in
+    cortical actin assembly and endocytosis.
 causal_graphs:
 - graph_id: cortical_actin_cytoskeleton_mechanism
-  title: Arp2/3-dependent branched actin assembly in the cortical actin cytoskeleton
-  description: The Arp2/3 complex nucleates branched Act1 filaments beneath the plasma
-    membrane to assemble the cortical actin cytoskeleton at cortical endocytic sites.
+  title: Arp2/3-mediated branched actin assembly and endocytic function of the cortical
+    actin cytoskeleton
+  description: The Arp2/3 complex (GO:0005885) nucleates branched Act1 filaments beneath
+    the plasma membrane to assemble the cortical actin cytoskeleton (GO:0030864),
+    which mediates endocytic internalization.
   graph_kind: ASSEMBLY
-  scope_status: NONMECHANISTIC
-  scope_notes: The graph captures actin and Arp2/3 at the level of this first record
-    without modeling the full timed sequence of endocytic adaptors, nucleation-promoting
-    factors, capping proteins, and actin-filament disassembly factors.
+  scope_status: MECHANISTIC
+  scope_notes: Captures core Act1 and Arp2/3 assembly into the Saccharomyces cerevisiae
+    cortical actin cytoskeleton and its role in endocytic internalization.
   nodes:
   - node_id: actin
     label: actin
@@ -298,43 +267,45 @@ causal_graphs:
     node_type: STRUCTURE
     grounding: GO:0005885
     component_ref: arp2_3_complex
-  - node_id: cortical_endocytic_site
-    label: cortical endocytic site
-    node_type: STRUCTURE
   - node_id: cortical_actin_cytoskeleton
     label: cortical actin cytoskeleton
     node_type: STRUCTURE
     grounding: GO:0030864
-    description: Assembled and functional cortical actin cytoskeleton (GO:0030864)
-      operating within the plasma-membrane-proximal cortical actin cytoskeleton.
+    description: Assembled plasma-membrane-proximal cortical actin cytoskeleton (GO:0030864).
+  - node_id: endocytic_internalization
+    label: endocytic internalization
+    node_type: BIOLOGICAL_PROCESS
   edges:
   - subject: arp2_3_complex
     predicate: nucleates branches in
     object: cortical_actin_cytoskeleton
-    description: Arp2/3 promotes branched actin-filament network formation within
-      yeast actin cortical patches.
+    description: The Arp2/3 complex nucleates dendritic actin filament branches within
+      the cortical actin cytoskeleton.
     evidence:
     - reference: DOI:10.1083/jcb.200404159
-      notes: Young, Cooper and Bridgman 2004 linked the patch branch pattern to Arp2/3-mediated
-        actin polymerization.
+      notes: Young, Cooper and Bridgman 2004 resolved branched actin filament networks
+        characteristic of Arp2/3 nucleation in the yeast cell cortex.
   - subject: actin
     predicate: polymerizes into
     object: cortical_actin_cytoskeleton
-    description: Actin polymerizes into the short branched filaments that make up
-      cortical patches.
+    description: Act1 monomers polymerize into the branched cortical filament networks
+      of the cortical actin cytoskeleton.
     evidence:
     - reference: DOI:10.1083/jcb.200404159
-      notes: Young, Cooper and Bridgman 2004 found networks of branched actin filaments
-        in yeast actin patches.
+      notes: Correlative light and electron microscopy demonstrates short branched
+        Act1 filaments in the cortical actin cytoskeleton.
   - subject: cortical_actin_cytoskeleton
-    predicate: assembles at
-    object: cortical_endocytic_site
-    description: Yeast cortical actin patches assemble at cortical sites during endocytic
-      internalization.
+    predicate: mediates
+    object: endocytic_internalization
+    description: Dynamic assembly and inward movement of the cortical actin cytoskeleton
+      drive endocytic vesicle internalization.
     evidence:
     - reference: DOI:10.1016/S0092-8674(03)00883-3
-      notes: Kaksonen, Sun and Drubin 2003 analyzed actin recruitment during yeast
-        endocytic internalization.
+      notes: Kaksonen, Sun and Drubin 2003 established the pathway coupling cortical
+        actin assembly to endocytic internalization.
+    - reference: DOI:10.1371/journal.pbio.0060001
+      notes: Galletta, Chuang and Cooper 2008 showed that Arp2/3 regulation of cortical
+        actin networks controls endocytic internalization.
 has_part:
 - GO:0030479
 - GO:0005885
