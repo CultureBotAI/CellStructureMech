@@ -1,0 +1,387 @@
+# Record review of methyl-accepting chemotaxis protein complex (GO:0098561): stale unquotable-phosphotransfer notes and prose-only discussion issue link
+
+- Review: 20261023T091802Z-chemoreceptor-array-signalling-consistency
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-23T09:10:05Z
+- Finished UTC: 2026-10-23T09:18:02Z
+- Reviewer: antigravity-stage4-record-review (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Methyl-accepting chemotaxis protein complex (GO:0098561, data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml) has an internal contradiction in causal_graphs[0] (chemoreceptor_signalling): when discussion phosphotransfer_step_unquotable was resolved by adding edge[6] (chea -&gt; transfers phosphoryl group to -&gt; phospho_chey, supported by DOI:10.1021/bi962261k), the earlier workaround caveats in causal_graphs[0].description (lines 286-290) and causal_graphs[0].edges[5].notes (lines 382-386) were left behind, still claiming that the CheA-to-CheY phosphotransfer step is not quotably stated and not drawn as an edge. In addition, discussions[0] cites issue #161 and DOI:10.1021/bi962261k in rationale prose without a structured evidence list.
+
+## Scope And Provenance
+
+Single-record review of methyl-accepting chemotaxis protein complex (GO:0098561) covering identity, components, signalling/assembly causal graphs, and discussion evidence.
+
+Selection: Targeted single-record review after whole-corpus audit detected contradictory phosphotransfer claims within causal_graphs[0].
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base 13c6b0d85338aa96d330b8d699587dfe270a21f9.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0098561 | data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml | maintained | methyl accepting chemotaxis protein complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| LinkML schema validation on methyl_accepting_chemotaxis_protein_complex.yaml | passed | True | GO:0098561 | No LinkML schema issues found for methyl_accepting_chemotaxis_protein_complex.yaml. |
+| Strict instance validator on methyl_accepting_chemotaxis_protein_complex.yaml | passed | True | GO:0098561 | Zero strict validator errors on methyl_accepting_chemotaxis_protein_complex.yaml. |
+
+## Scientific And Domain Assessments
+
+### Internal consistency of causal_graphs[0] (chemoreceptor_signalling) phosphotransfer descriptions and edges
+
+consistency: concern. Targets: GO:0098561.
+
+causal_graphs[0].description and edges[5].notes contradict edges[6] and resolved discussion phosphotransfer_step_unquotable by claiming the CheA-to-CheY phosphotransfer edge is not drawn.
+
+### Structured evidence links on discussions[0] (phosphotransfer_step_unquotable)
+
+evidence: concern. Targets: GO:0098561.
+
+discussions[0] cites #161 and DOI:10.1021/bi962261k only in rationale prose without an evidence list.
+
+## Findings
+
+### F1: Stale unquotable-phosphotransfer caveats in causal_graphs[0] contradict resolved edge chea -&gt; transfers phosphoryl group to -&gt; phospho_chey
+
+major / open / confirmed; issue key: chemoreceptor-array-stale-unquotable-phosphotransfer-note.
+
+In data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml, causal_graphs[0].description (lines 286-290) and causal_graphs[0].edges[5].notes (array -&gt; produces -&gt; phospho_chey, lines 382-386) state that the CheA-to-CheY phosphotransfer step is not quotably stated in the cited abstracts and is tracked as an open discussion rather than drawn as an edge. That caveat was superseded when discussions[0] (phosphotransfer_step_unquotable) was resolved by adding causal_graphs[0].edges[6] (chea -&gt; transfers phosphoryl group to -&gt; phospho_chey) backed by a verbatim snippet from DOI:10.1021/bi962261k.
+
+### F2: discussions[0] (phosphotransfer_step_unquotable) cites issue #161 and DOI:10.1021/bi962261k in prose without structured evidence entries
+
+minor / open / confirmed; issue key: chemoreceptor-array-discussion-issue-evidence.
+
+In data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml, discussions[0] (phosphotransfer_step_unquotable, lines 466-479) references issue #161 and DOI:10.1021/bi962261k in rationale prose, but lacks an evidence list containing https://github.com/CultureBotAI/CellStructureMech/issues/161 and DOI:10.1021/bi962261k per docs/CURATION.md ('Every #NNN issue mention in discussions prose must be backed by a full GitHub issue URL in that discussion's evidence list').
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Update causal_graphs[0].description and causal_graphs[0].edges[5].notes in data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml so they accurately describe the direct CheA -&gt; phospho-CheY phosphotransfer edge (edges[6]) alongside the array-level summary edge (edges[5]), and record the change in history/records/.
+
+- .venv/bin/python scripts/validate_strict.py data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml --out /tmp/mcp_failures.tsv
+- .venv/bin/python scripts/validate_history.py
+
+### A2
+
+Add structured evidence entries for https://github.com/CultureBotAI/CellStructureMech/issues/161 and DOI:10.1021/bi962261k on discussions[0] (phosphotransfer_step_unquotable) in data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml.
+
+- .venv/bin/python scripts/validate_strict.py data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml --out /tmp/mcp_failures.tsv
+- .venv/bin/python scripts/validate_history.py
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev_mcp_contradiction | data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml; causal_graphs[0].description (lines 286-290), edges[5].notes (lines 382-386), edges[6] (lines 387-395), discussions[0] (lines 466-479) | supports | causal_graphs[0].description and edges[5].notes state that the CheA-to-CheY phosphotransfer step is not quotably stated in the five cited abstracts and is not drawn as an edge, contradicting edges[6] (chea -&gt; transfers phosphoryl group to -&gt; phospho_chey) and resolved discussions[0]. |
+| ev_mcp_discussion_issue | data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml; discussions[0] (lines 466-479) | supports | discussions[0] (phosphotransfer_step_unquotable) cites #161 and DOI:10.1021/bi962261k in rationale prose without a structured evidence list containing the full GitHub issue URL and DOI. |
+| ev_schema_mcp | scripts/validate_strict.py; schema_mcp receipt | supports | linkml-validate exited 0 on methyl_accepting_chemotaxis_protein_complex.yaml. |
+| ev_strict_mcp | scripts/validate_strict.py; strict_mcp receipt | supports | validate_strict.py exited 0 on methyl_accepting_chemotaxis_protein_complex.yaml. |
+
+## Limits And Additional Notes
+
+- Record edits are deferred to Cycle 1 Stage 5 (record_review_remediation) per the Stage 4 review-only workflow contract.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261023T091802Z-chemoreceptor-array-signalling-consistency
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Record review of methyl-accepting chemotaxis protein complex (GO:0098561):
+  stale unquotable-phosphotransfer notes and prose-only discussion issue link'
+started_at: '2026-10-23T09:10:05Z'
+finished_at: '2026-10-23T09:18:02Z'
+reviewer:
+  identity: antigravity-stage4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 1 Stage 4 record_review against committed
+    git revision 13c6b0d85338aa96d330b8d699587dfe270a21f9 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'Methyl-accepting chemotaxis protein complex (GO:0098561, data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml)
+  has an internal contradiction in causal_graphs[0] (chemoreceptor_signalling): when
+  discussion phosphotransfer_step_unquotable was resolved by adding edge[6] (chea
+  -> transfers phosphoryl group to -> phospho_chey, supported by DOI:10.1021/bi962261k),
+  the earlier workaround caveats in causal_graphs[0].description (lines 286-290) and
+  causal_graphs[0].edges[5].notes (lines 382-386) were left behind, still claiming
+  that the CheA-to-CheY phosphotransfer step is not quotably stated and not drawn
+  as an edge. In addition, discussions[0] cites issue #161 and DOI:10.1021/bi962261k
+  in rationale prose without a structured evidence list.'
+source:
+  git_revision: 13c6b0d85338aa96d330b8d699587dfe270a21f9
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    sha256: 9f67d7f92daa2bb5c36c906457c0f507cd529c925a934af10661cfd33cb8c819
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Single-record review of methyl-accepting chemotaxis protein complex
+    (GO:0098561) covering identity, components, signalling/assembly causal graphs,
+    and discussion evidence.
+  selection: Targeted single-record review after whole-corpus audit detected contradictory
+    phosphotransfer claims within causal_graphs[0].
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0098561
+targets:
+- target_id: GO:0098561
+  path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+  label: methyl accepting chemotaxis protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9f67d7f92daa2bb5c36c906457c0f507cd529c925a934af10661cfd33cb8c819
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    role: maintained_record
+checks:
+- check_id: schema_mcp
+  name: LinkML schema validation on methyl_accepting_chemotaxis_protein_complex.yaml
+  status: passed
+  required: true
+  summary: No LinkML schema issues found for methyl_accepting_chemotaxis_protein_complex.yaml.
+  target_ids:
+  - GO:0098561
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_schema_mcp
+- check_id: strict_mcp
+  name: Strict instance validator on methyl_accepting_chemotaxis_protein_complex.yaml
+  status: passed
+  required: true
+  summary: Zero strict validator errors on methyl_accepting_chemotaxis_protein_complex.yaml.
+  target_ids:
+  - GO:0098561
+  command: .venv/bin/python scripts/validate_strict.py data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    --out /tmp/mcp_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_mcp
+evidence:
+- evidence_id: ev_mcp_contradiction
+  kind: record_content
+  reference: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+  locator: causal_graphs[0].description (lines 286-290), edges[5].notes (lines 382-386),
+    edges[6] (lines 387-395), discussions[0] (lines 466-479)
+  accessed_at: '2026-10-23T09:14:00Z'
+  support: supports
+  summary: causal_graphs[0].description and edges[5].notes state that the CheA-to-CheY
+    phosphotransfer step is not quotably stated in the five cited abstracts and is
+    not drawn as an edge, contradicting edges[6] (chea -> transfers phosphoryl group
+    to -> phospho_chey) and resolved discussions[0].
+  quote: The CheA-to-CheY phosphotransfer step is not quotably stated in the five
+    abstracts cited on this record and is tracked as an open discussion rather than
+    drawn as an unsupported edge.
+  snapshot_sha256: 9f67d7f92daa2bb5c36c906457c0f507cd529c925a934af10661cfd33cb8c819
+- evidence_id: ev_mcp_discussion_issue
+  kind: record_content
+  reference: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+  locator: discussions[0] (lines 466-479)
+  accessed_at: '2026-10-23T09:14:00Z'
+  support: supports
+  summary: 'discussions[0] (phosphotransfer_step_unquotable) cites #161 and DOI:10.1021/bi962261k
+    in rationale prose without a structured evidence list containing the full GitHub
+    issue URL and DOI.'
+  quote: 'rationale: Resolved under #161 by adding DOI:10.1021/bi962261k (Stewart
+    1997, PMID:9398196), whose abstract verbatim states the CheA -> CheY phosphoryl
+    transfer.'
+  snapshot_sha256: 9f67d7f92daa2bb5c36c906457c0f507cd529c925a934af10661cfd33cb8c819
+- evidence_id: ev_schema_mcp
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: schema_mcp receipt
+  accessed_at: '2026-10-23T09:14:02Z'
+  support: supports
+  summary: linkml-validate exited 0 on methyl_accepting_chemotaxis_protein_complex.yaml.
+  snapshot_sha256: de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- evidence_id: ev_strict_mcp
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_mcp receipt
+  accessed_at: '2026-10-23T09:16:07Z'
+  support: supports
+  summary: validate_strict.py exited 0 on methyl_accepting_chemotaxis_protein_complex.yaml.
+  snapshot_sha256: eb895d97d6ec022597836f0f57567fd844232c5d1fd33c5ea256eab35837ab35
+assessments:
+- assessment_id: assess_mcp_consistency
+  area: consistency
+  topic: Internal consistency of causal_graphs[0] (chemoreceptor_signalling) phosphotransfer
+    descriptions and edges
+  outcome: concern
+  summary: causal_graphs[0].description and edges[5].notes contradict edges[6] and
+    resolved discussion phosphotransfer_step_unquotable by claiming the CheA-to-CheY
+    phosphotransfer edge is not drawn.
+  target_ids:
+  - GO:0098561
+  evidence_ids:
+  - ev_mcp_contradiction
+- assessment_id: assess_mcp_discussion_evidence
+  area: evidence
+  topic: Structured evidence links on discussions[0] (phosphotransfer_step_unquotable)
+  outcome: concern
+  summary: 'discussions[0] cites #161 and DOI:10.1021/bi962261k only in rationale
+    prose without an evidence list.'
+  target_ids:
+  - GO:0098561
+  evidence_ids:
+  - ev_mcp_discussion_issue
+findings:
+- finding_id: F1
+  issue_key: chemoreceptor-array-stale-unquotable-phosphotransfer-note
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Stale unquotable-phosphotransfer caveats in causal_graphs[0] contradict resolved
+    edge chea -> transfers phosphoryl group to -> phospho_chey
+  description: In data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml,
+    causal_graphs[0].description (lines 286-290) and causal_graphs[0].edges[5].notes
+    (array -> produces -> phospho_chey, lines 382-386) state that the CheA-to-CheY
+    phosphotransfer step is not quotably stated in the cited abstracts and is tracked
+    as an open discussion rather than drawn as an edge. That caveat was superseded
+    when discussions[0] (phosphotransfer_step_unquotable) was resolved by adding causal_graphs[0].edges[6]
+    (chea -> transfers phosphoryl group to -> phospho_chey) backed by a verbatim snippet
+    from DOI:10.1021/bi962261k.
+  target_ids:
+  - GO:0098561
+  field_paths:
+  - causal_graphs[0].description
+  - causal_graphs[0].edges[5].notes
+  evidence_ids:
+  - ev_mcp_contradiction
+  rule_id: docs/CURATION.md:evidence-scope
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    role: maintained_record
+  tags:
+  - causal-graphs
+  - consistency
+  - stage4-record-review
+- finding_id: F2
+  issue_key: chemoreceptor-array-discussion-issue-evidence
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: 'discussions[0] (phosphotransfer_step_unquotable) cites issue #161 and DOI:10.1021/bi962261k
+    in prose without structured evidence entries'
+  description: 'In data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml,
+    discussions[0] (phosphotransfer_step_unquotable, lines 466-479) references issue
+    #161 and DOI:10.1021/bi962261k in rationale prose, but lacks an evidence list
+    containing https://github.com/CultureBotAI/CellStructureMech/issues/161 and DOI:10.1021/bi962261k
+    per docs/CURATION.md (''Every #NNN issue mention in discussions prose must be
+    backed by a full GitHub issue URL in that discussion''s evidence list'').'
+  target_ids:
+  - GO:0098561
+  field_paths:
+  - discussions[0].evidence
+  evidence_ids:
+  - ev_mcp_discussion_issue
+  rule_id: docs/CURATION.md:issue-links-in-evidence
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    role: maintained_record
+  tags:
+  - discussions
+  - evidence
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: Update causal_graphs[0].description and causal_graphs[0].edges[5].notes
+    in data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml so they
+    accurately describe the direct CheA -> phospho-CheY phosphotransfer edge (edges[6])
+    alongside the array-level summary edge (edges[5]), and record the change in history/records/.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0098561
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    --out /tmp/mcp_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+- action_id: A2
+  description: Add structured evidence entries for https://github.com/CultureBotAI/CellStructureMech/issues/161
+    and DOI:10.1021/bi962261k on discussions[0] (phosphotransfer_step_unquotable)
+    in data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml.
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0098561
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    --out /tmp/mcp_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+limitations:
+- Record edits are deferred to Cycle 1 Stage 5 (record_review_remediation) per the
+  Stage 4 review-only workflow contract.
+tags:
+- stage4
+- record-review
+- chemoreceptor-array
+```

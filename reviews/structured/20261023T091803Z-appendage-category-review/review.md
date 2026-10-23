@@ -1,0 +1,1572 @@
+# Category review of data/structures/appendage/ (45 records): cilium IFT particle causal-graph node typing
+
+- Review: 20261023T091803Z-appendage-category-review
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-23T09:10:10Z
+- Finished UTC: 2026-10-23T09:18:03Z
+- Reviewer: antigravity-stage4-record-review (independent)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Full-coverage category review of all 58 records in data/structures/appendage/ verified distinct appendage and subcomplex boundaries across bacterial pili/fimbriae, archaella, bacterial flagella, and eukaryotic ciliary subcomplexes. Forty-four records are clean; in cilium.yaml (GO:0005929), causal_graphs[0].nodes node ift_particle references PROTEIN_COMPLEX component ift_particle (GO:0030990, intraciliary transport particle) but is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE with grounding: GO:0030990.
+
+## Scope And Provenance
+
+Full-cohort review of all 58 CellStructureRecord YAML files under data/structures/appendage/.
+
+Selection: Complete folder cohort data/structures/appendage/*.yaml in the frozen 978-record Stage 4 inventory.
+Coverage: full; 58 reviewed / 58 in the declared population.
+Source: git_commit at Git base 13c6b0d85338aa96d330b8d699587dfe270a21f9.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0097729 | data/structures/appendage/9_2_motile_cilium.yaml | maintained | 9+2 motile cilium |
+| cellstructuremech:archaeal_cannula | data/structures/appendage/archaeal_cannula.yaml | maintained | archaeal cannula |
+| GO:0097589 | data/structures/appendage/archaeal_type_flagellum.yaml | maintained | archaeal-type flagellum |
+| cellstructuremech:archaeal_type_flagellum_filament | data/structures/appendage/archaeal_type_flagellum_filament.yaml | maintained | archaeal-type flagellum filament |
+| cellstructuremech:archaeal_type_flagellum_motor | data/structures/appendage/archaeal_type_flagellum_motor.yaml | maintained | archaeal-type flagellum motor |
+| GO:0033099 | data/structures/appendage/attachment_organelle.yaml | maintained | attachment organelle |
+| GO:0033111 | data/structures/appendage/attachment_organelle_membrane.yaml | maintained | attachment organelle membrane |
+| GO:0009288 | data/structures/appendage/bacterial_type_flagellum.yaml | maintained | bacterial-type flagellum |
+| GO:0009425 | data/structures/appendage/bacterial_type_flagellum_basal_body.yaml | maintained | bacterial-type flagellum basal body |
+| GO:0009433 | data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml | maintained | bacterial-type flagellum basal body, C ring |
+| GO:0009426 | data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod.yaml | maintained | bacterial-type flagellum basal body, distal rod |
+| GO:0009427 | data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml | maintained | bacterial-type flagellum basal body, distal rod, L ring |
+| GO:0009428 | data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_p_ring.yaml | maintained | bacterial-type flagellum basal body, distal rod, P ring |
+| GO:0009431 | data/structures/appendage/bacterial_type_flagellum_basal_body_ms_ring.yaml | maintained | bacterial-type flagellum basal body, MS ring |
+| GO:0009429 | data/structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.yaml | maintained | bacterial-type flagellum basal body, proximal rod |
+| GO:0030694 | data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml | maintained | bacterial-type flagellum basal body, rod |
+| GO:0009420 | data/structures/appendage/bacterial_type_flagellum_filament.yaml | maintained | bacterial-type flagellum filament |
+| GO:0009421 | data/structures/appendage/bacterial_type_flagellum_filament_cap.yaml | maintained | bacterial-type flagellum filament cap |
+| GO:0009424 | data/structures/appendage/bacterial_type_flagellum_hook.yaml | maintained | bacterial-type flagellum hook |
+| GO:0009422 | data/structures/appendage/bacterial_type_flagellum_hook_filament_junction.yaml | maintained | bacterial-type flagellum hook-filament junction |
+| GO:0120100 | data/structures/appendage/bacterial_type_flagellum_motor.yaml | maintained | bacterial-type flagellum motor |
+| GO:0120107 | data/structures/appendage/bacterial_type_flagellum_rotor_complex.yaml | maintained | bacterial-type flagellum rotor complex |
+| GO:0120102 | data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml | maintained | bacterial-type flagellum secretion apparatus |
+| GO:0120101 | data/structures/appendage/bacterial_type_flagellum_stator_complex.yaml | maintained | bacterial-type flagellum stator complex |
+| GO:0097546 | data/structures/appendage/ciliary_base.yaml | maintained | ciliary base |
+| GO:0060170 | data/structures/appendage/ciliary_membrane.yaml | maintained | ciliary membrane |
+| GO:0097539 | data/structures/appendage/ciliary_transition_fiber.yaml | maintained | ciliary transition fiber |
+| GO:0035869 | data/structures/appendage/ciliary_transition_zone.yaml | maintained | ciliary transition zone |
+| GO:0005929 | data/structures/appendage/cilium.yaml | maintained | cilium |
+| GO:0098774 | data/structures/appendage/curli.yaml | maintained | curli |
+| GO:1990905 | data/structures/appendage/dinoflagellate_peduncle.yaml | maintained | dinoflagellate peduncle |
+| GO:0120118 | data/structures/appendage/flagella_connector.yaml | maintained | flagella connector |
+| GO:0032179 | data/structures/appendage/germ_tube.yaml | maintained | germ tube |
+| cellstructuremech:hamus | data/structures/appendage/hamus.yaml | maintained | hamus |
+| cellstructuremech:haptonema | data/structures/appendage/haptonema.yaml | maintained | haptonema |
+| GO:0030990 | data/structures/appendage/intraciliary_transport_particle.yaml | maintained | intraciliary transport particle |
+| GO:0097609 | data/structures/appendage/longitudinal_flagellum.yaml | maintained | longitudinal flagellum |
+| GO:0097741 | data/structures/appendage/mastigoneme.yaml | maintained | mastigoneme |
+| GO:0005937 | data/structures/appendage/mating_projection.yaml | maintained | mating projection |
+| GO:0001400 | data/structures/appendage/mating_projection_base.yaml | maintained | mating projection base |
+| GO:0070250 | data/structures/appendage/mating_projection_membrane.yaml | maintained | mating projection membrane |
+| GO:0070867 | data/structures/appendage/mating_projection_tip_membrane.yaml | maintained | mating projection tip membrane |
+| GO:0031514 | data/structures/appendage/motile_cilium.yaml | maintained | motile cilium |
+| cellstructuremech:omce_cytochrome_nanowire | data/structures/appendage/omce_cytochrome_nanowire.yaml | maintained | OmcE cytochrome nanowire |
+| cellstructuremech:omcs_cytochrome_nanowire | data/structures/appendage/omcs_cytochrome_nanowire.yaml | maintained | OmcS cytochrome nanowire |
+| cellstructuremech:omcz_cytochrome_nanowire | data/structures/appendage/omcz_cytochrome_nanowire.yaml | maintained | OmcZ cytochrome nanowire |
+| cellstructuremech:p_pilus | data/structures/appendage/p_pilus.yaml | maintained | P pilus |
+| GO:0097740 | data/structures/appendage/paraflagellar_rod.yaml | maintained | paraflagellar rod |
+| GO:0055040 | data/structures/appendage/periplasmic_flagellum.yaml | maintained | periplasmic flagellum |
+| GO:0009289 | data/structures/appendage/pilus.yaml | maintained | pilus |
+| cellstructuremech:prostheca | data/structures/appendage/prostheca.yaml | maintained | prostheca |
+| cellstructuremech:stalk_crossband | data/structures/appendage/stalk_crossband.yaml | maintained | stalk crossband |
+| cellstructuremech:suctorian_feeding_tentacle | data/structures/appendage/suctorian_feeding_tentacle.yaml | maintained | suctorian feeding tentacle |
+| cellstructuremech:tad_pilus | data/structures/appendage/tad_pilus.yaml | maintained | Tad pilus |
+| GO:0097608 | data/structures/appendage/transverse_flagellum.yaml | maintained | transverse flagellum |
+| GO:0140621 | data/structures/appendage/type_i_pilus.yaml | maintained | type I pilus |
+| GO:0044096 | data/structures/appendage/type_iv_pilus.yaml | maintained | type IV pilus |
+| GO:0097537 | data/structures/appendage/y_shaped_link.yaml | maintained | Y-shaped link |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Strict corpus validation covering appendage cohort | passed | True | GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537 | All 45 appendage records pass strict LinkML and semantic validation. |
+| ID-label correspondence across appendage cohort | passed | True | GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537 | All ontology ID-label pairs in appendage records correspond to canonical labels. |
+
+## Scientific And Domain Assessments
+
+### Boundary discipline, identity, composition, and evidence across all 45 appendage records
+
+identity: supported. Targets: GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537.
+
+All 45 appendage records maintain clean identity and part_of boundaries between intact appendages and subcomplexes (e.g., cilium vs axoneme/IFT complexes, bacterial flagellum vs hook/basal body/MS-ring/C-ring).
+
+### Causal-graph node typing for GO-grounded multiprotein complex ift_particle in cilium.yaml
+
+graph: concern. Targets: GO:0005929.
+
+causal_graphs[0].nodes[0] (ift_particle) in cilium.yaml is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE with grounding: GO:0030990.
+
+## Findings
+
+### F1: cilium.yaml causal-graph node ift_particle is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE (GO:0030990)
+
+minor / open / confirmed; issue key: cilium-ift-particle-causal-node-type.
+
+In data/structures/appendage/cilium.yaml, component ift_particle (lines 118-130) is a GO-grounded PROTEIN_COMPLEX (grounding: GO:0030990, intraciliary transport particle). However, causal_graphs[0].nodes[0] (node_id: ift_particle, component_ref: ift_particle, lines 172-175) has node_type: GENE_OR_PROTEIN and omits grounding: GO:0030990, instead of using node_type: STRUCTURE with grounding: GO:0030990.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Change causal_graphs[0].nodes[0] (ift_particle) in data/structures/appendage/cilium.yaml from node_type: GENE_OR_PROTEIN to node_type: STRUCTURE with label: intraciliary transport particle and grounding: GO:0030990, and record a history entry.
+
+- .venv/bin/python scripts/validate_strict.py data/structures/appendage/cilium.yaml --out /tmp/cilium_failures.tsv
+- .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+
+## Category Boundaries
+
+- retain: GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537. All 45 records in data/structures/appendage/ denote distinct microbial appendages or well-bounded appendage subcomplexes with non-overlapping GO or CSM identifiers.
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev_strict_corpus | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 978 records including all 45 appendage records. |
+| ev_labels_corpus | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
+| ev_cilium_ift_node | data/structures/appendage/cilium.yaml; components[3] (lines 118-130) and causal_graphs[0].nodes[0] (lines 172-175) | supports | In cilium.yaml, component ift_particle has component_type: PROTEIN_COMPLEX and grounding: GO:0030990 (intraciliary transport particle), while causal_graphs[0].nodes[0] (node_id: ift_particle, component_ref: ift_particle) is typed node_type: GENE_OR_PROTEIN with no grounding. |
+
+## Limits And Additional Notes
+
+- One minor causal-graph node-typing issue in cilium.yaml (GO:0005929) is queued for Stage 5 remediation.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261023T091803Z-appendage-category-review
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: 'Category review of data/structures/appendage/ (45 records): cilium IFT particle
+  causal-graph node typing'
+started_at: '2026-10-23T09:10:10Z'
+finished_at: '2026-10-23T09:18:03Z'
+reviewer:
+  identity: antigravity-stage4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 1 Stage 4 record_review against committed
+    git revision 13c6b0d85338aa96d330b8d699587dfe270a21f9 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
+scientific_review: true
+summary: 'Full-coverage category review of all 58 records in data/structures/appendage/
+  verified distinct appendage and subcomplex boundaries across bacterial pili/fimbriae,
+  archaella, bacterial flagella, and eukaryotic ciliary subcomplexes. Forty-four records
+  are clean; in cilium.yaml (GO:0005929), causal_graphs[0].nodes node ift_particle
+  references PROTEIN_COMPLEX component ift_particle (GO:0030990, intraciliary transport
+  particle) but is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE with
+  grounding: GO:0030990.'
+source:
+  git_revision: 13c6b0d85338aa96d330b8d699587dfe270a21f9
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/appendage/9_2_motile_cilium.yaml
+    sha256: c467662c221310d77633097ef15f370573c5bec1c5964ac78f85ffb7e38eca97
+    role: target
+  - path: data/structures/appendage/archaeal_cannula.yaml
+    sha256: 01a1458d6d031195ce717a109b3d3e0cc9a0cbbb02f2faf5aafe8208611da297
+    role: target
+  - path: data/structures/appendage/archaeal_type_flagellum.yaml
+    sha256: 8b39b9de8cddde9a572abc075923a53601b45ca20b3f4c7f557200f31154b0bf
+    role: target
+  - path: data/structures/appendage/archaeal_type_flagellum_filament.yaml
+    sha256: 83632a4101cc526df11634672fb64bc082912a64b8d3fad08a14cb69a4e22b9e
+    role: target
+  - path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+    sha256: ceeaadbbab536c72d5e32fb7b427d331d8586fbbfd24cef454b4c04bdc6bd81f
+    role: target
+  - path: data/structures/appendage/attachment_organelle.yaml
+    sha256: 42a1e4a7197e0db8fe26a31309ae8eb239d196be14a8b70d38ba31e92d8d725f
+    role: target
+  - path: data/structures/appendage/attachment_organelle_membrane.yaml
+    sha256: 64c82414d54a485bf4060287d95bbbd0c65c9e303ae9e5545b14bb88c0a0df43
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum.yaml
+    sha256: 337c8b87b9ee3161965ab37c166e0070ec51b265f8267ab39b8275376101bb31
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    sha256: aaefd1119896c64a5c7bcc3dfc865d3296f769e2ec7369a98061b714d7148f12
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    sha256: 2700a13f9ed340978e2ff87c12d8c8533df7e68a676ee28998a1b8992b32fff2
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod.yaml
+    sha256: 22aaa31d8d3f6c88e2506d0515f199de75a804a61dd18c16cfc6785ee0bf6054
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+    sha256: e892ee0a833d93d08c56d36e7acb295621547807fd27458e6004f75eee02fe53
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_p_ring.yaml
+    sha256: b01c50266f84c7b8a3f98434cd00dc9ef9c88f6be9f121cfb10a372d635509a4
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_ms_ring.yaml
+    sha256: 3dff5bf1515fcc88eb92baba769644b3132deebfb84bd81aca6503211cf2bb4f
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.yaml
+    sha256: 4c852e861f6dd4a3f12dd7de9c752c590d2cd04dfaca7633703f5d4b96a85fae
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml
+    sha256: 4bc0fd676e9105d51d591cd6808eba7b15881e5a599334eb13d2fa12c857a3ae
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_filament.yaml
+    sha256: 9e910646b2084bb7563300b2374620bc2c1d1222a0279cdfeb9b76f05731f9c2
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_filament_cap.yaml
+    sha256: 63397fe7aac02b5758f0e1f833fdd041b79e74971637562c08965cbda3c98f73
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+    sha256: bc9499c1bfdb6d0116caf92be997842277377ed920d871f6680e0e24fb5c821d
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_hook_filament_junction.yaml
+    sha256: 87a94c9a1f928e299c98b308b5bf5120f3f8b5062ec432334fb12d079da7c858
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_motor.yaml
+    sha256: 5e44c59ab01fe438525f8536391b09d400702fbf63b0be48e7f3e91fed9b9fd2
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_rotor_complex.yaml
+    sha256: ee2dbb7c9e548096ea0890cf21c6a7126fd2a5536b3a208764e7024fe42616f3
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+    sha256: 1e9ed7330db81ab6f1d036d9c0ddc72e38e1c1232d0736f1518bab3cf04def6f
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_stator_complex.yaml
+    sha256: a3fa0c560f6f73e3c1d0be77b423926c56d658c94746e28dcb38ac4aae63f40a
+    role: target
+  - path: data/structures/appendage/ciliary_base.yaml
+    sha256: fce7c8f9b88ff6aeca1d3fcde92b8e97fc59d5613749df0e92dc14561aeb4ddb
+    role: target
+  - path: data/structures/appendage/ciliary_membrane.yaml
+    sha256: be5035248f05df4bfc22b39cf6d07b2b76778d02bfbaf5aff0f5dee1f5785a00
+    role: target
+  - path: data/structures/appendage/ciliary_transition_fiber.yaml
+    sha256: e26c76e51de98b9049c8ca7e2eaec7adc5412fc22c0d39174f6f8a9ef1af1d32
+    role: target
+  - path: data/structures/appendage/ciliary_transition_zone.yaml
+    sha256: 86788583f1b2b4cb8bf5ac4e77323059cf48023b4c713a0d82b57ed4a066daa1
+    role: target
+  - path: data/structures/appendage/cilium.yaml
+    sha256: 3c1ce5bbb460bccfca26f7c36aed90cd9bbd655377ca4b466af1c73a12c5481b
+    role: target
+  - path: data/structures/appendage/curli.yaml
+    sha256: f56302567bb49a248870fd099b953279ffda5d02405317e12962ac46e16f7964
+    role: target
+  - path: data/structures/appendage/dinoflagellate_peduncle.yaml
+    sha256: 773c37d9ae66feb79a26efd7c108ad8783018db79264928b4838f37ea8e721e4
+    role: target
+  - path: data/structures/appendage/flagella_connector.yaml
+    sha256: 68ef0d983f400c78f5ae4bb0df7126f4605ad4b346e928afa5f38df916b142c7
+    role: target
+  - path: data/structures/appendage/germ_tube.yaml
+    sha256: b238d9290ea6c71027cd0c398db6954baa769ad167812dd404a3c9fae4c0c058
+    role: target
+  - path: data/structures/appendage/hamus.yaml
+    sha256: 70f8b17cfcb804de80cb347cb03e6b6f13bedc6ec62a639030d7915e5253f553
+    role: target
+  - path: data/structures/appendage/haptonema.yaml
+    sha256: b2d4340d05ba2a5eb3309ba1c9ab7d656ab0a43b43a8e36f16b6eebc86b993e3
+    role: target
+  - path: data/structures/appendage/intraciliary_transport_particle.yaml
+    sha256: 8a6efec6a5218f64f0289cb5af33aed9b911dd278f130db966288ef998753fa0
+    role: target
+  - path: data/structures/appendage/longitudinal_flagellum.yaml
+    sha256: 194925fd64e2b09a0877b398d407d96e759784f7df56d8aeda196de1259fb4ac
+    role: target
+  - path: data/structures/appendage/mastigoneme.yaml
+    sha256: d494a06dcfd0686ab910c8ae88a4899c1f5dd58634339194d24c4dac64d3fbd1
+    role: target
+  - path: data/structures/appendage/mating_projection.yaml
+    sha256: bab39726b1ad7003dbf3f66e8d48d088365fac303dcbfeef0aae4009b26cc1b0
+    role: target
+  - path: data/structures/appendage/mating_projection_base.yaml
+    sha256: eddb868bc0a45a7cef478d5e4b0ea468fcb1ab65582b40b29863d41d36506d9d
+    role: target
+  - path: data/structures/appendage/mating_projection_membrane.yaml
+    sha256: d1ed93a7c920c648dbb7ae5967579738c66ac620fa3f16513d465d18d75fd473
+    role: target
+  - path: data/structures/appendage/mating_projection_tip_membrane.yaml
+    sha256: 1159bcac347712f9a6a55778fe897892dfb90edb6affc5dc44cffbb348352286
+    role: target
+  - path: data/structures/appendage/motile_cilium.yaml
+    sha256: 4c6689b83a38d84b34e3775c18d0b7e6706e6c069e37790c8549db6f14729e1e
+    role: target
+  - path: data/structures/appendage/omce_cytochrome_nanowire.yaml
+    sha256: 46831d86d93aa73f427a5ac189fa4e439ee57d3a598ce023917bac623d8d92a9
+    role: target
+  - path: data/structures/appendage/omcs_cytochrome_nanowire.yaml
+    sha256: ca7929cfc24552723a28266b0c42c392052caa65a5a7115f6b41c1fde5248eb2
+    role: target
+  - path: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+    sha256: 5072025a6196c3c09b9acc76dae5970908799e8daf4a2977d8f04f120eba13c6
+    role: target
+  - path: data/structures/appendage/p_pilus.yaml
+    sha256: 45d84a4b76ecf3610b1973f234eb46b639134ad39a61cd6e9432152277ac0b7e
+    role: target
+  - path: data/structures/appendage/paraflagellar_rod.yaml
+    sha256: 66fc381ae692aeb42bded58c9ceee5b0b53cc0c79bcd55d69180526959d7d79d
+    role: target
+  - path: data/structures/appendage/periplasmic_flagellum.yaml
+    sha256: 554229411342c1321e073489efee68205db87790efc36119e06da0410b6891c4
+    role: target
+  - path: data/structures/appendage/pilus.yaml
+    sha256: 9e7c9fc2628b1b72c3d2d289c485967d78b8be5b38b2e75300f46d6750316333
+    role: target
+  - path: data/structures/appendage/prostheca.yaml
+    sha256: 5095221d67c8c2ea04cbd1d5f8cbff38a8b97f792852868a19e4628559c065a3
+    role: target
+  - path: data/structures/appendage/stalk_crossband.yaml
+    sha256: cfcf5564b9a1c392bab2b3daaa06f0189b945cb4572d7a13b01032a8f8e11722
+    role: target
+  - path: data/structures/appendage/suctorian_feeding_tentacle.yaml
+    sha256: 6165bcfed6515881367eba4fe55aafd95e31be8c42f55d78179ceecb93f27400
+    role: target
+  - path: data/structures/appendage/tad_pilus.yaml
+    sha256: ffcb18423b112dc2828824e8c74151f32c3a7bd8863422b2edab7f3d13940310
+    role: target
+  - path: data/structures/appendage/transverse_flagellum.yaml
+    sha256: 890d535141482292884c4b8bdedf6355ef8f6330aabba9d0cba890c5bf4df79c
+    role: target
+  - path: data/structures/appendage/type_i_pilus.yaml
+    sha256: af05793a1cef38df1088c55ec1722639bc813237f589ef626de4ea45aaa7927e
+    role: target
+  - path: data/structures/appendage/type_iv_pilus.yaml
+    sha256: 91e2403af26ff0ddedbd15a95646846f966fe5140e66aecdea2c835ac17afc40
+    role: target
+  - path: data/structures/appendage/y_shaped_link.yaml
+    sha256: 5fddc5796ce37906bdfd10a8e3a91cdb6b6ca38e4a78c04df65c88ac518c3eb7
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Full-cohort review of all 58 CellStructureRecord YAML files under data/structures/appendage/.
+  selection: Complete folder cohort data/structures/appendage/*.yaml in the frozen
+    978-record Stage 4 inventory.
+  coverage: full
+  population_size: 58
+  reviewed_target_ids:
+  - GO:0097729
+  - cellstructuremech:archaeal_cannula
+  - GO:0097589
+  - cellstructuremech:archaeal_type_flagellum_filament
+  - cellstructuremech:archaeal_type_flagellum_motor
+  - GO:0033099
+  - GO:0033111
+  - GO:0009288
+  - GO:0009425
+  - GO:0009433
+  - GO:0009426
+  - GO:0009427
+  - GO:0009428
+  - GO:0009431
+  - GO:0009429
+  - GO:0030694
+  - GO:0009420
+  - GO:0009421
+  - GO:0009424
+  - GO:0009422
+  - GO:0120100
+  - GO:0120107
+  - GO:0120102
+  - GO:0120101
+  - GO:0097546
+  - GO:0060170
+  - GO:0097539
+  - GO:0035869
+  - GO:0005929
+  - GO:0098774
+  - GO:1990905
+  - GO:0120118
+  - GO:0032179
+  - cellstructuremech:hamus
+  - cellstructuremech:haptonema
+  - GO:0030990
+  - GO:0097609
+  - GO:0097741
+  - GO:0005937
+  - GO:0001400
+  - GO:0070250
+  - GO:0070867
+  - GO:0031514
+  - cellstructuremech:omce_cytochrome_nanowire
+  - cellstructuremech:omcs_cytochrome_nanowire
+  - cellstructuremech:omcz_cytochrome_nanowire
+  - cellstructuremech:p_pilus
+  - GO:0097740
+  - GO:0055040
+  - GO:0009289
+  - cellstructuremech:prostheca
+  - cellstructuremech:stalk_crossband
+  - cellstructuremech:suctorian_feeding_tentacle
+  - cellstructuremech:tad_pilus
+  - GO:0097608
+  - GO:0140621
+  - GO:0044096
+  - GO:0097537
+targets:
+- target_id: GO:0097729
+  path: data/structures/appendage/9_2_motile_cilium.yaml
+  label: 9+2 motile cilium
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c467662c221310d77633097ef15f370573c5bec1c5964ac78f85ffb7e38eca97
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/9_2_motile_cilium.yaml
+    role: maintained_record
+- target_id: cellstructuremech:archaeal_cannula
+  path: data/structures/appendage/archaeal_cannula.yaml
+  label: archaeal cannula
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 01a1458d6d031195ce717a109b3d3e0cc9a0cbbb02f2faf5aafe8208611da297
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_cannula.yaml
+    role: maintained_record
+- target_id: GO:0097589
+  path: data/structures/appendage/archaeal_type_flagellum.yaml
+  label: archaeal-type flagellum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8b39b9de8cddde9a572abc075923a53601b45ca20b3f4c7f557200f31154b0bf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum.yaml
+    role: maintained_record
+- target_id: cellstructuremech:archaeal_type_flagellum_filament
+  path: data/structures/appendage/archaeal_type_flagellum_filament.yaml
+  label: archaeal-type flagellum filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 83632a4101cc526df11634672fb64bc082912a64b8d3fad08a14cb69a4e22b9e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum_filament.yaml
+    role: maintained_record
+- target_id: cellstructuremech:archaeal_type_flagellum_motor
+  path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+  label: archaeal-type flagellum motor
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ceeaadbbab536c72d5e32fb7b427d331d8586fbbfd24cef454b4c04bdc6bd81f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum_motor.yaml
+    role: maintained_record
+- target_id: GO:0033099
+  path: data/structures/appendage/attachment_organelle.yaml
+  label: attachment organelle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 42a1e4a7197e0db8fe26a31309ae8eb239d196be14a8b70d38ba31e92d8d725f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/attachment_organelle.yaml
+    role: maintained_record
+- target_id: GO:0033111
+  path: data/structures/appendage/attachment_organelle_membrane.yaml
+  label: attachment organelle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 64c82414d54a485bf4060287d95bbbd0c65c9e303ae9e5545b14bb88c0a0df43
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/attachment_organelle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0009288
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  label: bacterial-type flagellum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 337c8b87b9ee3161965ab37c166e0070ec51b265f8267ab39b8275376101bb31
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained_record
+- target_id: GO:0009425
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+  label: bacterial-type flagellum basal body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: aaefd1119896c64a5c7bcc3dfc865d3296f769e2ec7369a98061b714d7148f12
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body.yaml
+    role: maintained_record
+- target_id: GO:0009433
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  label: bacterial-type flagellum basal body, C ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2700a13f9ed340978e2ff87c12d8c8533df7e68a676ee28998a1b8992b32fff2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    role: maintained_record
+- target_id: GO:0009426
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod.yaml
+  label: bacterial-type flagellum basal body, distal rod
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 22aaa31d8d3f6c88e2506d0515f199de75a804a61dd18c16cfc6785ee0bf6054
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod.yaml
+    role: maintained_record
+- target_id: GO:0009427
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+  label: bacterial-type flagellum basal body, distal rod, L ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e892ee0a833d93d08c56d36e7acb295621547807fd27458e6004f75eee02fe53
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_l_ring.yaml
+    role: maintained_record
+- target_id: GO:0009428
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_p_ring.yaml
+  label: bacterial-type flagellum basal body, distal rod, P ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b01c50266f84c7b8a3f98434cd00dc9ef9c88f6be9f121cfb10a372d635509a4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_distal_rod_p_ring.yaml
+    role: maintained_record
+- target_id: GO:0009431
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_ms_ring.yaml
+  label: bacterial-type flagellum basal body, MS ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3dff5bf1515fcc88eb92baba769644b3132deebfb84bd81aca6503211cf2bb4f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_ms_ring.yaml
+    role: maintained_record
+- target_id: GO:0009429
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.yaml
+  label: bacterial-type flagellum basal body, proximal rod
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4c852e861f6dd4a3f12dd7de9c752c590d2cd04dfaca7633703f5d4b96a85fae
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.yaml
+    role: maintained_record
+- target_id: GO:0030694
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml
+  label: bacterial-type flagellum basal body, rod
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4bc0fd676e9105d51d591cd6808eba7b15881e5a599334eb13d2fa12c857a3ae
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml
+    role: maintained_record
+- target_id: GO:0009420
+  path: data/structures/appendage/bacterial_type_flagellum_filament.yaml
+  label: bacterial-type flagellum filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9e910646b2084bb7563300b2374620bc2c1d1222a0279cdfeb9b76f05731f9c2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_filament.yaml
+    role: maintained_record
+- target_id: GO:0009421
+  path: data/structures/appendage/bacterial_type_flagellum_filament_cap.yaml
+  label: bacterial-type flagellum filament cap
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 63397fe7aac02b5758f0e1f833fdd041b79e74971637562c08965cbda3c98f73
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_filament_cap.yaml
+    role: maintained_record
+- target_id: GO:0009424
+  path: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+  label: bacterial-type flagellum hook
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bc9499c1bfdb6d0116caf92be997842277377ed920d871f6680e0e24fb5c821d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_hook.yaml
+    role: maintained_record
+- target_id: GO:0009422
+  path: data/structures/appendage/bacterial_type_flagellum_hook_filament_junction.yaml
+  label: bacterial-type flagellum hook-filament junction
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 87a94c9a1f928e299c98b308b5bf5120f3f8b5062ec432334fb12d079da7c858
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_hook_filament_junction.yaml
+    role: maintained_record
+- target_id: GO:0120100
+  path: data/structures/appendage/bacterial_type_flagellum_motor.yaml
+  label: bacterial-type flagellum motor
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5e44c59ab01fe438525f8536391b09d400702fbf63b0be48e7f3e91fed9b9fd2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_motor.yaml
+    role: maintained_record
+- target_id: GO:0120107
+  path: data/structures/appendage/bacterial_type_flagellum_rotor_complex.yaml
+  label: bacterial-type flagellum rotor complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ee2dbb7c9e548096ea0890cf21c6a7126fd2a5536b3a208764e7024fe42616f3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_rotor_complex.yaml
+    role: maintained_record
+- target_id: GO:0120102
+  path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+  label: bacterial-type flagellum secretion apparatus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1e9ed7330db81ab6f1d036d9c0ddc72e38e1c1232d0736f1518bab3cf04def6f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+    role: maintained_record
+- target_id: GO:0120101
+  path: data/structures/appendage/bacterial_type_flagellum_stator_complex.yaml
+  label: bacterial-type flagellum stator complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a3fa0c560f6f73e3c1d0be77b423926c56d658c94746e28dcb38ac4aae63f40a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_stator_complex.yaml
+    role: maintained_record
+- target_id: GO:0097546
+  path: data/structures/appendage/ciliary_base.yaml
+  label: ciliary base
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fce7c8f9b88ff6aeca1d3fcde92b8e97fc59d5613749df0e92dc14561aeb4ddb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/ciliary_base.yaml
+    role: maintained_record
+- target_id: GO:0060170
+  path: data/structures/appendage/ciliary_membrane.yaml
+  label: ciliary membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: be5035248f05df4bfc22b39cf6d07b2b76778d02bfbaf5aff0f5dee1f5785a00
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/ciliary_membrane.yaml
+    role: maintained_record
+- target_id: GO:0097539
+  path: data/structures/appendage/ciliary_transition_fiber.yaml
+  label: ciliary transition fiber
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e26c76e51de98b9049c8ca7e2eaec7adc5412fc22c0d39174f6f8a9ef1af1d32
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/ciliary_transition_fiber.yaml
+    role: maintained_record
+- target_id: GO:0035869
+  path: data/structures/appendage/ciliary_transition_zone.yaml
+  label: ciliary transition zone
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 86788583f1b2b4cb8bf5ac4e77323059cf48023b4c713a0d82b57ed4a066daa1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/ciliary_transition_zone.yaml
+    role: maintained_record
+- target_id: GO:0005929
+  path: data/structures/appendage/cilium.yaml
+  label: cilium
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3c1ce5bbb460bccfca26f7c36aed90cd9bbd655377ca4b466af1c73a12c5481b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/cilium.yaml
+    role: maintained_record
+- target_id: GO:0098774
+  path: data/structures/appendage/curli.yaml
+  label: curli
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f56302567bb49a248870fd099b953279ffda5d02405317e12962ac46e16f7964
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/curli.yaml
+    role: maintained_record
+- target_id: GO:1990905
+  path: data/structures/appendage/dinoflagellate_peduncle.yaml
+  label: dinoflagellate peduncle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 773c37d9ae66feb79a26efd7c108ad8783018db79264928b4838f37ea8e721e4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/dinoflagellate_peduncle.yaml
+    role: maintained_record
+- target_id: GO:0120118
+  path: data/structures/appendage/flagella_connector.yaml
+  label: flagella connector
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 68ef0d983f400c78f5ae4bb0df7126f4605ad4b346e928afa5f38df916b142c7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/flagella_connector.yaml
+    role: maintained_record
+- target_id: GO:0032179
+  path: data/structures/appendage/germ_tube.yaml
+  label: germ tube
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b238d9290ea6c71027cd0c398db6954baa769ad167812dd404a3c9fae4c0c058
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/germ_tube.yaml
+    role: maintained_record
+- target_id: cellstructuremech:hamus
+  path: data/structures/appendage/hamus.yaml
+  label: hamus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 70f8b17cfcb804de80cb347cb03e6b6f13bedc6ec62a639030d7915e5253f553
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/hamus.yaml
+    role: maintained_record
+- target_id: cellstructuremech:haptonema
+  path: data/structures/appendage/haptonema.yaml
+  label: haptonema
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b2d4340d05ba2a5eb3309ba1c9ab7d656ab0a43b43a8e36f16b6eebc86b993e3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/haptonema.yaml
+    role: maintained_record
+- target_id: GO:0030990
+  path: data/structures/appendage/intraciliary_transport_particle.yaml
+  label: intraciliary transport particle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8a6efec6a5218f64f0289cb5af33aed9b911dd278f130db966288ef998753fa0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/intraciliary_transport_particle.yaml
+    role: maintained_record
+- target_id: GO:0097609
+  path: data/structures/appendage/longitudinal_flagellum.yaml
+  label: longitudinal flagellum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 194925fd64e2b09a0877b398d407d96e759784f7df56d8aeda196de1259fb4ac
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/longitudinal_flagellum.yaml
+    role: maintained_record
+- target_id: GO:0097741
+  path: data/structures/appendage/mastigoneme.yaml
+  label: mastigoneme
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d494a06dcfd0686ab910c8ae88a4899c1f5dd58634339194d24c4dac64d3fbd1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/mastigoneme.yaml
+    role: maintained_record
+- target_id: GO:0005937
+  path: data/structures/appendage/mating_projection.yaml
+  label: mating projection
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bab39726b1ad7003dbf3f66e8d48d088365fac303dcbfeef0aae4009b26cc1b0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/mating_projection.yaml
+    role: maintained_record
+- target_id: GO:0001400
+  path: data/structures/appendage/mating_projection_base.yaml
+  label: mating projection base
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: eddb868bc0a45a7cef478d5e4b0ea468fcb1ab65582b40b29863d41d36506d9d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/mating_projection_base.yaml
+    role: maintained_record
+- target_id: GO:0070250
+  path: data/structures/appendage/mating_projection_membrane.yaml
+  label: mating projection membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d1ed93a7c920c648dbb7ae5967579738c66ac620fa3f16513d465d18d75fd473
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/mating_projection_membrane.yaml
+    role: maintained_record
+- target_id: GO:0070867
+  path: data/structures/appendage/mating_projection_tip_membrane.yaml
+  label: mating projection tip membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1159bcac347712f9a6a55778fe897892dfb90edb6affc5dc44cffbb348352286
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/mating_projection_tip_membrane.yaml
+    role: maintained_record
+- target_id: GO:0031514
+  path: data/structures/appendage/motile_cilium.yaml
+  label: motile cilium
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4c6689b83a38d84b34e3775c18d0b7e6706e6c069e37790c8549db6f14729e1e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/motile_cilium.yaml
+    role: maintained_record
+- target_id: cellstructuremech:omce_cytochrome_nanowire
+  path: data/structures/appendage/omce_cytochrome_nanowire.yaml
+  label: OmcE cytochrome nanowire
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 46831d86d93aa73f427a5ac189fa4e439ee57d3a598ce023917bac623d8d92a9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/omce_cytochrome_nanowire.yaml
+    role: maintained_record
+- target_id: cellstructuremech:omcs_cytochrome_nanowire
+  path: data/structures/appendage/omcs_cytochrome_nanowire.yaml
+  label: OmcS cytochrome nanowire
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ca7929cfc24552723a28266b0c42c392052caa65a5a7115f6b41c1fde5248eb2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/omcs_cytochrome_nanowire.yaml
+    role: maintained_record
+- target_id: cellstructuremech:omcz_cytochrome_nanowire
+  path: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+  label: OmcZ cytochrome nanowire
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5072025a6196c3c09b9acc76dae5970908799e8daf4a2977d8f04f120eba13c6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+    role: maintained_record
+- target_id: cellstructuremech:p_pilus
+  path: data/structures/appendage/p_pilus.yaml
+  label: P pilus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 45d84a4b76ecf3610b1973f234eb46b639134ad39a61cd6e9432152277ac0b7e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/p_pilus.yaml
+    role: maintained_record
+- target_id: GO:0097740
+  path: data/structures/appendage/paraflagellar_rod.yaml
+  label: paraflagellar rod
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 66fc381ae692aeb42bded58c9ceee5b0b53cc0c79bcd55d69180526959d7d79d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/paraflagellar_rod.yaml
+    role: maintained_record
+- target_id: GO:0055040
+  path: data/structures/appendage/periplasmic_flagellum.yaml
+  label: periplasmic flagellum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 554229411342c1321e073489efee68205db87790efc36119e06da0410b6891c4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/periplasmic_flagellum.yaml
+    role: maintained_record
+- target_id: GO:0009289
+  path: data/structures/appendage/pilus.yaml
+  label: pilus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9e7c9fc2628b1b72c3d2d289c485967d78b8be5b38b2e75300f46d6750316333
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/pilus.yaml
+    role: maintained_record
+- target_id: cellstructuremech:prostheca
+  path: data/structures/appendage/prostheca.yaml
+  label: prostheca
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5095221d67c8c2ea04cbd1d5f8cbff38a8b97f792852868a19e4628559c065a3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/prostheca.yaml
+    role: maintained_record
+- target_id: cellstructuremech:stalk_crossband
+  path: data/structures/appendage/stalk_crossband.yaml
+  label: stalk crossband
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cfcf5564b9a1c392bab2b3daaa06f0189b945cb4572d7a13b01032a8f8e11722
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/stalk_crossband.yaml
+    role: maintained_record
+- target_id: cellstructuremech:suctorian_feeding_tentacle
+  path: data/structures/appendage/suctorian_feeding_tentacle.yaml
+  label: suctorian feeding tentacle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6165bcfed6515881367eba4fe55aafd95e31be8c42f55d78179ceecb93f27400
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/suctorian_feeding_tentacle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:tad_pilus
+  path: data/structures/appendage/tad_pilus.yaml
+  label: Tad pilus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ffcb18423b112dc2828824e8c74151f32c3a7bd8863422b2edab7f3d13940310
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/tad_pilus.yaml
+    role: maintained_record
+- target_id: GO:0097608
+  path: data/structures/appendage/transverse_flagellum.yaml
+  label: transverse flagellum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 890d535141482292884c4b8bdedf6355ef8f6330aabba9d0cba890c5bf4df79c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/transverse_flagellum.yaml
+    role: maintained_record
+- target_id: GO:0140621
+  path: data/structures/appendage/type_i_pilus.yaml
+  label: type I pilus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: af05793a1cef38df1088c55ec1722639bc813237f589ef626de4ea45aaa7927e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/type_i_pilus.yaml
+    role: maintained_record
+- target_id: GO:0044096
+  path: data/structures/appendage/type_iv_pilus.yaml
+  label: type IV pilus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 91e2403af26ff0ddedbd15a95646846f966fe5140e66aecdea2c835ac17afc40
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/type_iv_pilus.yaml
+    role: maintained_record
+- target_id: GO:0097537
+  path: data/structures/appendage/y_shaped_link.yaml
+  label: Y-shaped link
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5fddc5796ce37906bdfd10a8e3a91cdb6b6ca38e4a78c04df65c88ac518c3eb7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/y_shaped_link.yaml
+    role: maintained_record
+checks:
+- check_id: strict_appendage
+  name: Strict corpus validation covering appendage cohort
+  status: passed
+  required: true
+  summary: All 45 appendage records pass strict LinkML and semantic validation.
+  target_ids:
+  - GO:0097729
+  - cellstructuremech:archaeal_cannula
+  - GO:0097589
+  - cellstructuremech:archaeal_type_flagellum_filament
+  - cellstructuremech:archaeal_type_flagellum_motor
+  - GO:0033099
+  - GO:0033111
+  - GO:0009288
+  - GO:0009425
+  - GO:0009433
+  - GO:0009426
+  - GO:0009427
+  - GO:0009428
+  - GO:0009431
+  - GO:0009429
+  - GO:0030694
+  - GO:0009420
+  - GO:0009421
+  - GO:0009424
+  - GO:0009422
+  - GO:0120100
+  - GO:0120107
+  - GO:0120102
+  - GO:0120101
+  - GO:0097546
+  - GO:0060170
+  - GO:0097539
+  - GO:0035869
+  - GO:0005929
+  - GO:0098774
+  - GO:1990905
+  - GO:0120118
+  - GO:0032179
+  - cellstructuremech:hamus
+  - cellstructuremech:haptonema
+  - GO:0030990
+  - GO:0097609
+  - GO:0097741
+  - GO:0005937
+  - GO:0001400
+  - GO:0070250
+  - GO:0070867
+  - GO:0031514
+  - cellstructuremech:omce_cytochrome_nanowire
+  - cellstructuremech:omcs_cytochrome_nanowire
+  - cellstructuremech:omcz_cytochrome_nanowire
+  - cellstructuremech:p_pilus
+  - GO:0097740
+  - GO:0055040
+  - GO:0009289
+  - cellstructuremech:prostheca
+  - cellstructuremech:stalk_crossband
+  - cellstructuremech:suctorian_feeding_tentacle
+  - cellstructuremech:tad_pilus
+  - GO:0097608
+  - GO:0140621
+  - GO:0044096
+  - GO:0097537
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_corpus
+- check_id: labels_appendage
+  name: ID-label correspondence across appendage cohort
+  status: passed
+  required: true
+  summary: All ontology ID-label pairs in appendage records correspond to canonical
+    labels.
+  target_ids:
+  - GO:0097729
+  - cellstructuremech:archaeal_cannula
+  - GO:0097589
+  - cellstructuremech:archaeal_type_flagellum_filament
+  - cellstructuremech:archaeal_type_flagellum_motor
+  - GO:0033099
+  - GO:0033111
+  - GO:0009288
+  - GO:0009425
+  - GO:0009433
+  - GO:0009426
+  - GO:0009427
+  - GO:0009428
+  - GO:0009431
+  - GO:0009429
+  - GO:0030694
+  - GO:0009420
+  - GO:0009421
+  - GO:0009424
+  - GO:0009422
+  - GO:0120100
+  - GO:0120107
+  - GO:0120102
+  - GO:0120101
+  - GO:0097546
+  - GO:0060170
+  - GO:0097539
+  - GO:0035869
+  - GO:0005929
+  - GO:0098774
+  - GO:1990905
+  - GO:0120118
+  - GO:0032179
+  - cellstructuremech:hamus
+  - cellstructuremech:haptonema
+  - GO:0030990
+  - GO:0097609
+  - GO:0097741
+  - GO:0005937
+  - GO:0001400
+  - GO:0070250
+  - GO:0070867
+  - GO:0031514
+  - cellstructuremech:omce_cytochrome_nanowire
+  - cellstructuremech:omcs_cytochrome_nanowire
+  - cellstructuremech:omcz_cytochrome_nanowire
+  - cellstructuremech:p_pilus
+  - GO:0097740
+  - GO:0055040
+  - GO:0009289
+  - cellstructuremech:prostheca
+  - cellstructuremech:stalk_crossband
+  - cellstructuremech:suctorian_feeding_tentacle
+  - cellstructuremech:tad_pilus
+  - GO:0097608
+  - GO:0140621
+  - GO:0044096
+  - GO:0097537
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_labels_corpus
+evidence:
+- evidence_id: ev_strict_corpus
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict receipt
+  accessed_at: '2026-10-23T09:16:01Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 978 records including all 45 appendage
+    records.
+  snapshot_sha256: b34bdc4f99ef4601161958120b45622535017214ba594a44bca249237869d704
+- evidence_id: ev_labels_corpus
+  kind: validation
+  reference: scripts/validate_id_label_correspondence.py
+  locator: labels receipt
+  accessed_at: '2026-10-23T09:17:48Z'
+  support: supports
+  summary: validate_id_label_correspondence.py exited 0 across all ontology targets.
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: ev_cilium_ift_node
+  kind: record_content
+  reference: data/structures/appendage/cilium.yaml
+  locator: components[3] (lines 118-130) and causal_graphs[0].nodes[0] (lines 172-175)
+  accessed_at: '2026-10-23T09:14:10Z'
+  support: supports
+  summary: 'In cilium.yaml, component ift_particle has component_type: PROTEIN_COMPLEX
+    and grounding: GO:0030990 (intraciliary transport particle), while causal_graphs[0].nodes[0]
+    (node_id: ift_particle, component_ref: ift_particle) is typed node_type: GENE_OR_PROTEIN
+    with no grounding.'
+  quote: "- node_id: ift_particle\n    label: Intraflagellar transport particle\n\
+    \    node_type: GENE_OR_PROTEIN\n    component_ref: ift_particle"
+  snapshot_sha256: 3c1ce5bbb460bccfca26f7c36aed90cd9bbd655377ca4b466af1c73a12c5481b
+assessments:
+- assessment_id: assess_appendage_cohort
+  area: identity
+  topic: Boundary discipline, identity, composition, and evidence across all 45 appendage
+    records
+  outcome: supported
+  summary: All 45 appendage records maintain clean identity and part_of boundaries
+    between intact appendages and subcomplexes (e.g., cilium vs axoneme/IFT complexes,
+    bacterial flagellum vs hook/basal body/MS-ring/C-ring).
+  target_ids:
+  - GO:0097729
+  - cellstructuremech:archaeal_cannula
+  - GO:0097589
+  - cellstructuremech:archaeal_type_flagellum_filament
+  - cellstructuremech:archaeal_type_flagellum_motor
+  - GO:0033099
+  - GO:0033111
+  - GO:0009288
+  - GO:0009425
+  - GO:0009433
+  - GO:0009426
+  - GO:0009427
+  - GO:0009428
+  - GO:0009431
+  - GO:0009429
+  - GO:0030694
+  - GO:0009420
+  - GO:0009421
+  - GO:0009424
+  - GO:0009422
+  - GO:0120100
+  - GO:0120107
+  - GO:0120102
+  - GO:0120101
+  - GO:0097546
+  - GO:0060170
+  - GO:0097539
+  - GO:0035869
+  - GO:0005929
+  - GO:0098774
+  - GO:1990905
+  - GO:0120118
+  - GO:0032179
+  - cellstructuremech:hamus
+  - cellstructuremech:haptonema
+  - GO:0030990
+  - GO:0097609
+  - GO:0097741
+  - GO:0005937
+  - GO:0001400
+  - GO:0070250
+  - GO:0070867
+  - GO:0031514
+  - cellstructuremech:omce_cytochrome_nanowire
+  - cellstructuremech:omcs_cytochrome_nanowire
+  - cellstructuremech:omcz_cytochrome_nanowire
+  - cellstructuremech:p_pilus
+  - GO:0097740
+  - GO:0055040
+  - GO:0009289
+  - cellstructuremech:prostheca
+  - cellstructuremech:stalk_crossband
+  - cellstructuremech:suctorian_feeding_tentacle
+  - cellstructuremech:tad_pilus
+  - GO:0097608
+  - GO:0140621
+  - GO:0044096
+  - GO:0097537
+  evidence_ids:
+  - ev_strict_corpus
+  - ev_labels_corpus
+- assessment_id: assess_cilium_causal_node
+  area: graph
+  topic: Causal-graph node typing for GO-grounded multiprotein complex ift_particle
+    in cilium.yaml
+  outcome: concern
+  summary: 'causal_graphs[0].nodes[0] (ift_particle) in cilium.yaml is typed GENE_OR_PROTEIN
+    without grounding instead of STRUCTURE with grounding: GO:0030990.'
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - ev_cilium_ift_node
+findings:
+- finding_id: F1
+  issue_key: cilium-ift-particle-causal-node-type
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: cilium.yaml causal-graph node ift_particle is typed GENE_OR_PROTEIN without
+    grounding instead of STRUCTURE (GO:0030990)
+  description: 'In data/structures/appendage/cilium.yaml, component ift_particle (lines
+    118-130) is a GO-grounded PROTEIN_COMPLEX (grounding: GO:0030990, intraciliary
+    transport particle). However, causal_graphs[0].nodes[0] (node_id: ift_particle,
+    component_ref: ift_particle, lines 172-175) has node_type: GENE_OR_PROTEIN and
+    omits grounding: GO:0030990, instead of using node_type: STRUCTURE with grounding:
+    GO:0030990.'
+  target_ids:
+  - GO:0005929
+  field_paths:
+  - causal_graphs[0].nodes[0]
+  evidence_ids:
+  - ev_cilium_ift_node
+  rule_id: docs/SCHEMA.md:CausalNode-node_type
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/cilium.yaml
+    role: maintained_record
+  tags:
+  - causal-graphs
+  - node-type
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: 'Change causal_graphs[0].nodes[0] (ift_particle) in data/structures/appendage/cilium.yaml
+    from node_type: GENE_OR_PROTEIN to node_type: STRUCTURE with label: intraciliary
+    transport particle and grounding: GO:0030990, and record a history entry.'
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0005929
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/cilium.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py data/structures/appendage/cilium.yaml
+    --out /tmp/cilium_failures.tsv
+  - .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0097729
+  - cellstructuremech:archaeal_cannula
+  - GO:0097589
+  - cellstructuremech:archaeal_type_flagellum_filament
+  - cellstructuremech:archaeal_type_flagellum_motor
+  - GO:0033099
+  - GO:0033111
+  - GO:0009288
+  - GO:0009425
+  - GO:0009433
+  - GO:0009426
+  - GO:0009427
+  - GO:0009428
+  - GO:0009431
+  - GO:0009429
+  - GO:0030694
+  - GO:0009420
+  - GO:0009421
+  - GO:0009424
+  - GO:0009422
+  - GO:0120100
+  - GO:0120107
+  - GO:0120102
+  - GO:0120101
+  - GO:0097546
+  - GO:0060170
+  - GO:0097539
+  - GO:0035869
+  - GO:0005929
+  - GO:0098774
+  - GO:1990905
+  - GO:0120118
+  - GO:0032179
+  - cellstructuremech:hamus
+  - cellstructuremech:haptonema
+  - GO:0030990
+  - GO:0097609
+  - GO:0097741
+  - GO:0005937
+  - GO:0001400
+  - GO:0070250
+  - GO:0070867
+  - GO:0031514
+  - cellstructuremech:omce_cytochrome_nanowire
+  - cellstructuremech:omcs_cytochrome_nanowire
+  - cellstructuremech:omcz_cytochrome_nanowire
+  - cellstructuremech:p_pilus
+  - GO:0097740
+  - GO:0055040
+  - GO:0009289
+  - cellstructuremech:prostheca
+  - cellstructuremech:stalk_crossband
+  - cellstructuremech:suctorian_feeding_tentacle
+  - cellstructuremech:tad_pilus
+  - GO:0097608
+  - GO:0140621
+  - GO:0044096
+  - GO:0097537
+  rationale: All 45 records in data/structures/appendage/ denote distinct microbial
+    appendages or well-bounded appendage subcomplexes with non-overlapping GO or CSM
+    identifiers.
+  evidence_ids:
+  - ev_strict_corpus
+  - ev_labels_corpus
+limitations:
+- One minor causal-graph node-typing issue in cilium.yaml (GO:0005929) is queued for
+  Stage 5 remediation.
+tags:
+- stage4
+- category-review
+- appendage
+```
