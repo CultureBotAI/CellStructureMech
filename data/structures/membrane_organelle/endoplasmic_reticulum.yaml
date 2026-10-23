@@ -42,6 +42,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T11:08:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2404 (Stage 4 finding membrane-organelle-go-subcomplex-causal-node-types):
+    retyped GO-grounded PROTEIN_COMPLEX causal-graph node sec61_translocon_complex
+    (GO:0005784) from GENE_OR_PROTEIN to STRUCTURE.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -218,7 +225,7 @@ causal_graphs:
     grounding: GO:0005788
   - node_id: sec61_translocon_complex
     label: Sec61 translocon complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0005784
     component_ref: sec61_translocon_complex
   - node_id: protein_translocation_into_er

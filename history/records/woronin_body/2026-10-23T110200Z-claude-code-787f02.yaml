@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/woronin_body.yaml
+  slug: woronin_body
+session:
+  id: 2026-10-23T110200Z-claude-code-787f02
+  timestamp: '2026-10-23T11:02:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2402
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Backfilled repository history ledger for woronin_body (#2402)
+  details: 'Backfilled missing repository-level history records under history/records/woronin_body/
+    from inline curation_history and git provenance (PR #348, issue #349, PR #2328) to resolve
+    Stage 4 finding woronin-body-missing-history (#2402).'

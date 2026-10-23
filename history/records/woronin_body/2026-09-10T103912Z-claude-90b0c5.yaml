@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/woronin_body.yaml
+  slug: woronin_body
+session:
+  id: 2026-09-10T103912Z-claude-90b0c5
+  timestamp: '2026-09-10T10:39:12Z'
+  actors:
+  - type: ai_agent
+    name: claude
+links:
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/348
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added the GO-grounded Woronin body structure record
+  details: 'Created data/structures/membrane_organelle/woronin_body.yaml for GO:0140266 Woronin
+    body, including a bounding membrane and reviewed-label-only Hex1 crystalline core, Pezizomycotina
+    taxonomic scope, a Neurospora crassa canonical example, a septal-pore sealing function,
+    record-level evidence, a nonmechanistic pore-plugging graph, and a grounding TODO for
+    Woronin body biogenesis factors (PR #348; backfilled under #2402).'
