@@ -36,20 +36,24 @@ schema_version: '1.0.0'
 tasks:
   - task_id: cellstructuremech-infra-0001
     summary: Resolve linkml-validate relative to sys.executable in scripts/validate_history.py so scripts/run_qc.py succeeds under direct .venv/bin/python invocation
-    status: note
-    disposition: Discovered during Cycle 1 Stage 1 (add_records) QC gate execution; queued for Stage 6 infrastructure implementation.
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2407
+    disposition: Implemented resolve_linkml_validate() in scripts/validate_history.py (preferring Path(sys.executable).with_name('linkml-validate') before shutil.which('linkml-validate')) and covered with unit tests in tests/test_new_history_record.py.
   - task_id: cellstructuremech-infra-0002
     summary: Add causal-graph completeness checks in src/cellstructuremech/validation/validator.py for isolated CausalNode entries with zero incident edges and CausalEdge items lacking description
-    status: note
-    disposition: Discovered during Cycle 1 Stage 2 (causal_graphs) whole-corpus audit (17 records with isolated nodes, 9 records with 44 description-less edges); queued for Stage 6 infrastructure implementation.
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2408
+    disposition: Created src/cellstructuremech/validation/validator.py (validate_causal_graphs) and wired validate_record_semantics into write_validated_structure and scripts/validate_strict.py; verified 0 isolated nodes and 0 description-less edges across all 978 records and added unit tests in tests/test_validator.py and tests/test_corpus_integrity.py.
   - task_id: cellstructuremech-infra-0003
     summary: Allow scripts/uniprot_genes.py seeding mode to inspect components of any component_type that declare gene_symbols when --include-complexes is passed
-    status: note
-    disposition: Discovered during Cycle 1 Stage 3 (protein_examples) audit where OTHER components with declared gene_symbols referenced by GENE_OR_PROTEIN causal-graph nodes (centromeric_cse4_nucleosome in kinetochore.yaml and eif3_40s_translation_initiation_cohort in cytoplasmic_stress_granule.yaml) were skipped by seed_records; queued for Stage 6 infrastructure implementation.
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2409
+    disposition: Added _component_in_scope(), --include-non-protein, and seed_records() in scripts/uniprot_genes.py so --include-complexes inspects composite protein-bearing components (e.g. OTHER) declaring gene_symbols while preserving component_type; covered in tests/test_uniprot_genes.py.
   - task_id: cellstructuremech-infra-0004
     summary: Extend scripts/validate_history.py to enforce 1:1 record-to-history coverage and extend src/cellstructuremech/validation/validator.py to enforce structured issue links on discussions prose mentions
-    status: note
-    disposition: Discovered during Cycle 1 Stage 4 (record_review) whole-corpus audit (woronin_body.yaml missing history/records/woronin_body/ ledger; 7 records with #NNN issue mentions in discussions prose lacking structured evidence links); queued for Stage 6 infrastructure implementation.
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2410
+    disposition: Added check_structure_history_coverage() in scripts/validate_history.py (enforcing 1:1 coverage across all 978 structure records and history/records/<slug>/) and validate_discussion_issue_links() in src/cellstructuremech/validation/validator.py; covered in tests/test_new_history_record.py, tests/test_validator.py, and tests/test_corpus_integrity.py.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -58,41 +62,49 @@ tasks:
 ### `cellstructuremech-infra-0001` — Resolve `linkml-validate` relative to `sys.executable` in `scripts/validate_history.py`
 
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 1 (`add_records`)
-- **Status**: `note` (pending issue creation/triage in Stage 6)
+- **Issue**: https://github.com/CultureBotAI/CellStructureMech/issues/2407
+- **Status**: `resolved` (Cycle 1, Stage 6)
 - **Priority**: P2
 - **Dependencies**: None
 - **Observation**: `scripts/run_qc.py` invokes `[sys.executable, "scripts/validate_history.py"]`, which in turn shells out to bare `["linkml-validate", ...]` (`scripts/validate_history.py` line 48). When `.venv/bin/python scripts/run_qc.py` is run without `.venv/bin` prepended to `PATH`, `linkml-validate` resolves to a global `pyenv` shim and fails with `pyenv: version '3.13' is not installed`.
 - **Desired outcome**: Resolve `Path(sys.executable).with_name("linkml-validate")` (falling back to `shutil.which("linkml-validate")`) in `scripts/validate_history.py` so `scripts/run_qc.py` is self-contained when invoked via `.venv/bin/python`.
-- **Evidence paths**: `scripts/run_qc.py`, `scripts/validate_history.py`
+- **Resolution**: Added `resolve_linkml_validate()` in `scripts/validate_history.py` to prefer the sibling `linkml-validate` executable beside `sys.executable` before falling back to `shutil.which("linkml-validate")`, and added unit tests in `tests/test_new_history_record.py`.
+- **Evidence paths**: `scripts/run_qc.py`, `scripts/validate_history.py`, `tests/test_new_history_record.py`
 
 ### `cellstructuremech-infra-0002` — Add causal-graph completeness checks in `src/cellstructuremech/validation/validator.py` for isolated `CausalNode` entries and `CausalEdge` items lacking `description`
 
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 2 (`causal_graphs`)
-- **Status**: `note` (pending issue creation/triage in Stage 6)
+- **Issue**: https://github.com/CultureBotAI/CellStructureMech/issues/2408
+- **Status**: `resolved` (Cycle 1, Stage 6)
 - **Priority**: P2
 - **Dependencies**: None
 - **Observation**: `src/cellstructuremech/validation/validator.py` (`validate_causal_graphs`) validates `CausalEdge.subject`/`object` node references, `component_ref`, and `attaches_to` anchors, but does not check whether a declared `CausalNode` has zero incident `CausalEdge` items or whether a `CausalEdge` omits `description`. During the Stage 2 whole-corpus audit across 978 records, 17 records contained isolated `CausalNode` entries and 9 records contained 44 `CausalEdge` items lacking `description` despite passing `scripts/validate_strict.py` and `write_validated_structure`.
 - **Desired outcome**: Add validation checks in `src/cellstructuremech/validation/validator.py` (`validate_causal_graphs`) to flag isolated `CausalNode` entries (zero incident edges in `edges`) and `CausalEdge` entries with missing/blank `description`.
-- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `scripts/validate_structures.py`
+- **Resolution**: Created `src/cellstructuremech/validation/validator.py` with `validate_causal_graphs()` and `validate_record_semantics()`, integrated into `src/cellstructuremech/validation/write_validated.py` and `scripts/validate_strict.py`, and added unit and corpus-integrity tests in `tests/test_validator.py` and `tests/test_corpus_integrity.py`.
+- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `src/cellstructuremech/validation/write_validated.py`, `scripts/validate_strict.py`, `tests/test_validator.py`, `tests/test_corpus_integrity.py`
 
 ### `cellstructuremech-infra-0003` — Allow `scripts/uniprot_genes.py` seeding mode to inspect components of any `component_type` that declare `gene_symbols` when `--include-complexes` is passed
 
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 3 (`protein_examples`)
-- **Status**: `note` (pending issue creation/triage in Stage 6)
+- **Issue**: https://github.com/CultureBotAI/CellStructureMech/issues/2409
+- **Status**: `resolved` (Cycle 1, Stage 6)
 - **Priority**: P2
 - **Dependencies**: None
 - **Observation**: In `scripts/uniprot_genes.py`, `verify_records` checks `protein_examples` across all components regardless of `component_type`, whereas `seed_records` restricts seeding to `allowed_types = {"PROTEIN", "PROTEIN_COMPLEX"} if include_complexes else {"PROTEIN"}` (`scripts/uniprot_genes.py` line 675). Consequently, composite nucleoprotein or ribonucleoprotein components typed `OTHER` that legitimately declare `gene_symbols` and are referenced by `GENE_OR_PROTEIN` causal-graph nodes (`centromeric_cse4_nucleosome` with `CSE4` in `data/structures/other/kinetochore.yaml` and `eif3_40s_translation_initiation_cohort` with `TIF32` in `data/structures/ribonucleoprotein/cytoplasmic_stress_granule.yaml`) are silently skipped by `scripts/uniprot_genes.py --include-complexes`.
 - **Desired outcome**: Allow `scripts/uniprot_genes.py` (`seed_records`) to seed `protein_examples` on any component with non-empty `gene_symbols` when `--include-complexes` (or an explicit `--include-non-protein` flag) is passed, while preserving `component_type`.
-- **Evidence paths**: `scripts/uniprot_genes.py`, `data/structures/other/kinetochore.yaml`, `data/structures/ribonucleoprotein/cytoplasmic_stress_granule.yaml`
+- **Resolution**: Added `_component_in_scope()`, `--include-non-protein`, and `seed_records()` in `scripts/uniprot_genes.py` so `--include-complexes` inspects protein-bearing composite components (e.g. `OTHER`) declaring `gene_symbols` while excluding explicitly non-protein molecule types unless `--include-non-protein` is passed, and preserving `component_type`; covered in `tests/test_uniprot_genes.py`.
+- **Evidence paths**: `scripts/uniprot_genes.py`, `tests/test_uniprot_genes.py`, `data/structures/other/kinetochore.yaml`, `data/structures/ribonucleoprotein/cytoplasmic_stress_granule.yaml`
 
 ### `cellstructuremech-infra-0004` — Extend `scripts/validate_history.py` to enforce 1:1 record-to-history coverage and extend `src/cellstructuremech/validation/validator.py` to enforce structured issue links on `discussions` prose mentions
 
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 4 (`record_review`)
-- **Status**: `note` (pending issue creation/triage in Stage 6)
+- **Issue**: https://github.com/CultureBotAI/CellStructureMech/issues/2410
+- **Status**: `resolved` (Cycle 1, Stage 6)
 - **Priority**: P2
 - **Dependencies**: None
 - **Observation**: During the Stage 4 whole-corpus audit of all 978 records: (1) `scripts/validate_history.py` checks that every existing `history/records/<stem>/*.yaml` file points to a valid `data/structures/` record, but does not check the inverse direction (whether every `data/structures/**/*.yaml` record has at least one `history/records/<stem>/*.yaml` ledger), allowing `data/structures/membrane_organelle/woronin_body.yaml` to lack a `history/records/woronin_body/` directory silently; and (2) `src/cellstructuremech/validation/validator.py` does not verify the `docs/CURATION.md` rule that every `#NNN` issue mention in `discussions` prose (`prompt`, `rationale`, `resolution_note`) is backed by a full GitHub issue URL in that discussion's `evidence` list (affecting 7 records across `other`, `cytoskeleton`, `division_machinery`, and `secretion_system`).
 - **Desired outcome**: Extend `scripts/validate_history.py` to verify that every `data/structures/**/*.yaml` record has at least one valid `history/records/<stem>/*.yaml` file, and add a check in `src/cellstructuremech/validation/validator.py` flagging `#NNN` issue mentions in `discussions` prose that lack a matching GitHub issue URL in `discussion.evidence`.
-- **Evidence paths**: `scripts/validate_history.py`, `src/cellstructuremech/validation/validator.py`, `reviews/structured/20261023T091801Z-woronin-body-missing-history/review.yaml`, `reviews/structured/20261023T091804Z-cytoskeleton-category-review/review.yaml`
+- **Resolution**: Added `check_structure_history_coverage()` in `scripts/validate_history.py` and `validate_discussion_issue_links()` in `src/cellstructuremech/validation/validator.py`, wired into `write_validated_structure` and `scripts/validate_strict.py`, and added unit and corpus-integrity tests in `tests/test_new_history_record.py`, `tests/test_validator.py`, and `tests/test_corpus_integrity.py`.
+- **Evidence paths**: `scripts/validate_history.py`, `src/cellstructuremech/validation/validator.py`, `tests/test_new_history_record.py`, `tests/test_validator.py`, `tests/test_corpus_integrity.py`, `reviews/structured/20261023T091801Z-woronin-body-missing-history/review.yaml`, `reviews/structured/20261023T091804Z-cytoskeleton-category-review/review.yaml`
 
 

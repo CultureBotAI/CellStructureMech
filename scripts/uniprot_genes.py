@@ -310,11 +310,62 @@ def missing_symbols(component: dict) -> list[str]:
     return [s for s in component.get("gene_symbols") or [] if s.lower() not in have]
 
 
-def candidates(doc: dict, include_complexes: bool = False) -> list[dict]:
-    """Components this route could reach: PROTEIN (or PROTEIN_COMPLEX) with missing symbols."""
-    allowed = {"PROTEIN", "PROTEIN_COMPLEX"} if include_complexes else {"PROTEIN"}
-    return [c for c in doc.get("components") or []
-            if c.get("component_type") in allowed and missing_symbols(c)]
+NON_PROTEIN_COMPONENT_TYPES = frozenset({
+    "RNA",
+    "DNA",
+    "LIPID",
+    "POLYSACCHARIDE",
+    "PEPTIDOGLYCAN",
+    "SMALL_MOLECULE",
+})
+
+
+def _component_in_scope(
+    component: dict,
+    *,
+    include_complexes: bool = False,
+    include_non_protein: bool = False,
+    require_declared_symbols_for_non_standard: bool = True,
+) -> bool:
+    """Return whether ``component`` is eligible for gene-symbol resolution (#2409).
+
+    - Default (`include_complexes=False`, `include_non_protein=False`): only
+      ``PROTEIN`` components.
+    - ``include_complexes=True``: ``PROTEIN``, ``PROTEIN_COMPLEX``, plus any other
+      protein-bearing composite component type (e.g. ``OTHER``) that declares
+      ``gene_symbols`` (excluding explicitly non-protein molecule types unless
+      ``include_non_protein=True``).
+    - ``include_non_protein=True``: any component declaring ``gene_symbols``
+      regardless of ``component_type``.
+    """
+    ctype = component.get("component_type")
+    if ctype == "PROTEIN":
+        return True
+    if include_complexes and ctype == "PROTEIN_COMPLEX":
+        return True
+    has_symbols = bool(component.get("gene_symbols"))
+    if require_declared_symbols_for_non_standard and not has_symbols:
+        return False
+    if include_non_protein and ctype:
+        return True
+    return bool(include_complexes and ctype and ctype not in NON_PROTEIN_COMPONENT_TYPES)
+
+
+def candidates(
+    doc: dict,
+    include_complexes: bool = False,
+    include_non_protein: bool = False,
+) -> list[dict]:
+    """Components in scope that still have unresolved gene symbols."""
+    return [
+        c for c in doc.get("components") or []
+        if _component_in_scope(
+            c,
+            include_complexes=include_complexes,
+            include_non_protein=include_non_protein,
+        )
+        and missing_symbols(c)
+    ]
 
 
 def per_taxon(symbol: str, taxa: list[tuple[int, str]]):
@@ -408,8 +459,12 @@ GAP_MEANING = {
 }
 
 
-def gap_report(doc: dict, include_complexes: bool = False) -> list[tuple[str, str, str]]:
-    """``(component_id, category, detail)`` for every PROTEIN symbol still unresolved.
+def gap_report(
+    doc: dict,
+    include_complexes: bool = False,
+    include_non_protein: bool = False,
+) -> list[tuple[str, str, str]]:
+    """``(component_id, category, detail)`` for every eligible symbol still unresolved.
 
     A row per **component**, but candidacy is per **symbol**, matching
     ``candidates()``. A component holding one accession and four unrepresented
@@ -426,10 +481,13 @@ def gap_report(doc: dict, include_complexes: bool = False) -> list[tuple[str, st
     """
     taxa = [(int(t["taxon_id"].split(":")[1]), t["taxon_label"])
             for t in doc.get("canonical_examples") or [] if t.get("taxon_id")]
-    allowed = {"PROTEIN", "PROTEIN_COMPLEX"} if include_complexes else {"PROTEIN"}
     rows = []
     for component in doc.get("components") or []:
-        if component.get("component_type") not in allowed:
+        if not _component_in_scope(
+            component,
+            include_complexes=include_complexes,
+            include_non_protein=include_non_protein,
+        ):
             continue
         held = len(component.get("protein_examples") or [])
         symbols = missing_symbols(component)
@@ -484,11 +542,19 @@ def gap_report(doc: dict, include_complexes: bool = False) -> list[tuple[str, st
     return rows
 
 
-def cmd_gaps(records, include_complexes: bool = False) -> int:
+def cmd_gaps(
+    records,
+    include_complexes: bool = False,
+    include_non_protein: bool = False,
+) -> int:
     counts: dict[str, int] = dict.fromkeys(GAP_MEANING, 0)
     partial = 0
     for path, doc in records:
-        rows = gap_report(doc, include_complexes=include_complexes)
+        rows = gap_report(
+            doc,
+            include_complexes=include_complexes,
+            include_non_protein=include_non_protein,
+        )
         if not rows:
             continue
         print(f"\n{path.relative_to(REPO_ROOT)}  ({doc['identifier']})")
@@ -496,7 +562,12 @@ def cmd_gaps(records, include_complexes: bool = False) -> int:
             counts[category] += 1
             partial += detail.startswith("[")
             print(f"  {cid}\t{category}\t{detail}")
-    kind_label = "PROTEIN / PROTEIN_COMPLEX" if include_complexes else "PROTEIN"
+    if include_non_protein:
+        kind_label = "All symbol-bearing"
+    elif include_complexes:
+        kind_label = "PROTEIN / PROTEIN_COMPLEX / symbol-bearing"
+    else:
+        kind_label = "PROTEIN"
     print(f"\n{kind_label} components with an unresolved gene symbol:")
     for category, n in sorted(counts.items(), key=lambda kv: -kv[1]):
         print(f"  {n:3}  {category:20} {GAP_MEANING[category]}")
@@ -801,14 +872,22 @@ def build_example(hit: dict, today: str, citations: dict[str, str],
     }
 
 
-def plan_record(doc: dict, today: str, include_complexes: bool = False) -> list[tuple[str, str, list[dict]]]:
+def plan_record(
+    doc: dict,
+    today: str,
+    include_complexes: bool = False,
+    include_non_protein: bool = False,
+) -> list[tuple[str, str, list[dict]]]:
     taxa = [(int(t["taxon_id"].split(":")[1]), t["taxon_label"])
             for t in doc.get("canonical_examples") or [] if t.get("taxon_id")]
+    eligible = candidates(
+        doc,
+        include_complexes=include_complexes,
+        include_non_protein=include_non_protein,
+    )
     if not taxa:
-        return [(c["component_id"], "no canonical taxon on the record", [])
-                for c in candidates(doc, include_complexes=include_complexes)]
-    resolved = [(component, *resolve(component, taxa))
-                for component in candidates(doc, include_complexes=include_complexes)]
+        return [(c["component_id"], "no canonical taxon on the record", []) for c in eligible]
+    resolved = [(component, *resolve(component, taxa)) for component in eligible]
     citations = pubmed_citations(
         [p for _, hits, _ in resolved for hit in hits
          for _, pmids in localisations(hit["entry"]) for p in pmids[:MAX_EVIDENCE]])
@@ -838,12 +917,77 @@ def _write(doc: dict, path: Path) -> None:
         raise SystemExit(1) from exc
 
 
-def main() -> int:
+def seed_records(
+    records: list[tuple[Path, dict]],
+    *,
+    include_complexes: bool = False,
+    include_non_protein: bool = False,
+    apply: bool = False,
+    today: str | None = None,
+) -> int:
+    """Plan and optionally write ``protein_examples`` across ``records`` (#2409)."""
+    resolved_today = today or datetime.date.today().isoformat()
+    total = 0
+    for path, doc in records:
+        rows = plan_record(
+            doc,
+            resolved_today,
+            include_complexes=include_complexes,
+            include_non_protein=include_non_protein,
+        )
+        if not rows:
+            continue
+        try:
+            rel_path = path.relative_to(REPO_ROOT)
+        except ValueError:
+            rel_path = path
+        print(f"\n{rel_path}  ({doc['identifier']})")
+        added = 0
+        for component_id, why, examples in rows:
+            for example in examples:
+                print(f"  {component_id}\t{example['uniprot_id']}\t{example['taxon_label']}"
+                      f"\t{len(example['evidence'])} evidence\t{example['protein_label']}")
+            if not examples:
+                print(f"  {component_id}\t-\t{why}")
+            if examples and apply:
+                component = next(c for c in doc["components"] if c["component_id"] == component_id)
+                component.setdefault("protein_examples", []).extend(examples)
+                added += len(examples)
+        if added:
+            record_curation_event(
+                doc, curator="uniprot_genes", action="SEED_PROTEIN_EXAMPLES", llm_assisted=False,
+                changes=f"#183: added {added} protein example(s) by resolving each of the component's "
+                        f"declared gene symbols to the single reviewed UniProtKB entry for that symbol "
+                        f"in a taxon this record names, deduplicated by accession. Symbols resolving to "
+                        f"more than one reviewed entry were skipped rather than chosen between.",
+            )
+            _write(doc, path)
+            print(f"  wrote {added} protein example(s)")
+            total += added
+    if not apply:
+        print("\ndry run; pass --apply to write the rows with an accession")
+    else:
+        print(f"\nwrote {total} protein example(s)")
+    return total
+
+
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--record", help="One record; default is every record.")
-    parser.add_argument("--include-complexes", action="store_true",
-                        help="Also resolve PROTEIN_COMPLEX components that declare subunit gene_symbols.")
+    parser.add_argument(
+        "--include-complexes",
+        action="store_true",
+        help=(
+            "Also resolve PROTEIN_COMPLEX and other non-PROTEIN protein-bearing "
+            "components (such as OTHER) that declare gene_symbols."
+        ),
+    )
+    parser.add_argument(
+        "--include-non-protein",
+        action="store_true",
+        help="Also inspect explicitly non-protein component types (e.g. RNA, DNA) that declare gene_symbols.",
+    )
     # --gaps, --causal-graphs, and --verify read; --apply writes; asking for more
     # than one is a contradiction to reject, not one to resolve by precedence (#300).
     mode = parser.add_mutually_exclusive_group()
@@ -861,7 +1005,7 @@ def main() -> int:
             "against live UniProt/NCBI. Read-only."
         ),
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     if args.record:
         path = Path(args.record).resolve()
@@ -878,41 +1022,18 @@ def main() -> int:
     _load_cache()
     try:
         if args.gaps:
-            return cmd_gaps(records, include_complexes=args.include_complexes)
+            return cmd_gaps(
+                records,
+                include_complexes=args.include_complexes,
+                include_non_protein=args.include_non_protein,
+            )
 
-        today = datetime.date.today().isoformat()
-        total = 0
-        for path, doc in records:
-            rows = plan_record(doc, today, include_complexes=args.include_complexes)
-            if not rows:
-                continue
-            print(f"\n{path.relative_to(REPO_ROOT)}  ({doc['identifier']})")
-            added = 0
-            for component_id, why, examples in rows:
-                for example in examples:
-                    print(f"  {component_id}\t{example['uniprot_id']}\t{example['taxon_label']}"
-                          f"\t{len(example['evidence'])} evidence\t{example['protein_label']}")
-                if not examples:
-                    print(f"  {component_id}\t-\t{why}")
-                if examples and args.apply:
-                    component = next(c for c in doc["components"] if c["component_id"] == component_id)
-                    component.setdefault("protein_examples", []).extend(examples)
-                    added += len(examples)
-            if added:
-                record_curation_event(
-                    doc, curator="uniprot_genes", action="SEED_PROTEIN_EXAMPLES", llm_assisted=False,
-                    changes=f"#183: added {added} protein example(s) by resolving each of the component's "
-                            f"declared gene symbols to the single reviewed UniProtKB entry for that symbol "
-                            f"in a taxon this record names, deduplicated by accession. Symbols resolving to "
-                            f"more than one reviewed entry were skipped rather than chosen between.",
-                )
-                _write(doc, path)
-                print(f"  wrote {added} protein example(s)")
-                total += added
-        if not args.apply:
-            print("\ndry run; pass --apply to write the rows with an accession")
-        else:
-            print(f"\nwrote {total} protein example(s)")
+        seed_records(
+            records,
+            include_complexes=args.include_complexes,
+            include_non_protein=args.include_non_protein,
+            apply=args.apply,
+        )
         return 0
     finally:
         _save_cache()
