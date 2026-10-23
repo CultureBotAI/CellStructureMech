@@ -40,6 +40,12 @@ curation_history:
   changes: '#2402: backfilled missing repository history ledger under history/records/woronin_body/
     from inline curation_history and git provenance (PR #348, issue #349).'
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag
+    mapping(s) on existing protein_examples.'
+  llm_assisted: true
 components:
 - component_id: woronin_body_membrane
   label: Woronin body membrane
@@ -83,7 +89,8 @@ components:
     retrieved_on: '2026-10-17'
     role: The single reviewed UniProtKB entry for gene hex-1 in Neurospora crassa
       OR74A, a taxon this record names. Identifier for the component's declared gene
-      symbol; it is not itself evidence that the protein is part of this structure.
+      symbol; it is not itself evidence that the protein is part of this structure
+      (also declared as synonym HEX1).
     evidence:
     - reference: PMID:10783241
       notes: Jedd G et al. 2000, ‘A new self-assembled peroxisomal vesicle required

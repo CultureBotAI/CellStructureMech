@@ -34,6 +34,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 2 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 parent_structures:
 - GO:0005858
 part_of:
@@ -192,6 +198,40 @@ components:
         conformational switch for flagellar motility.’, J Cell Biol. ECO:0000269 experimental
         evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, flagellum axoneme'
         localisation of Q9XHH2.
+  - uniprot_id: UniProtKB:Q39584
+    protein_label: Dynein 18 kDa light chain, flagellar outer arm
+    gene_symbol: LC2
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene LC2, which UniProt lists without
+      a gene symbol, in Chlamydomonas reinhardtii, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q39584
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q39584, the single reviewed entry
+        for gene LC2 in Chlamydomonas reinhardtii. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
+  - uniprot_id: UniProtKB:Q39580
+    protein_label: Dynein 8 kDa light chain, flagellar outer arm
+    gene_symbol: LC8
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene LC8, which UniProt lists without
+      a gene symbol, in Chlamydomonas reinhardtii, a taxon this record names. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q39580
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q39580, the single reviewed entry
+        for gene LC8 in Chlamydomonas reinhardtii. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:3055
   taxon_label: Chlamydomonas reinhardtii

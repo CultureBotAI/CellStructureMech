@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 985,
- "corpus_updated": "2026-10-23 19:30:57 UTC",
- "corpus_digest": "cc450e286f5e",
+ "corpus_updated": "2026-10-23 21:49:20 UTC",
+ "corpus_digest": "108232aff549",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -818,6 +818,13 @@
      "action": "EDIT",
      "changes": "added 4 verified UniProtKB protein_example(s); added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:54Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s); disclosed 6 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -870,7 +877,7 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB, which UniProt lists under the primary name Saci_1178, in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB, which UniProt lists under the primary name Saci_1178, in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlB).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q4J9K5",
@@ -926,7 +933,7 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "The single reviewed UniProtKB entry for gene flaI in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "The single reviewed UniProtKB entry for gene flaI in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlI).",
        "evidence": [
         {
          "reference": "PMID:23129770",
@@ -950,7 +957,7 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaJ in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaJ in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlJ).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q4J9L1",
@@ -986,7 +993,7 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-09-08",
-       "role": "The single reviewed UniProtKB entry for gene flaH in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "The single reviewed UniProtKB entry for gene flaH in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlH).",
        "evidence": [
         {
          "reference": "PMID:24103130",
@@ -1028,11 +1035,27 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaG, which UniProt lists under the primary name Saci_1176, in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaG, which UniProt lists under the primary name Saci_1176, in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlG).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q4J9K7",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q4J9K7 for gene flaG in Sulfolobus acidocaldarius DSM 639. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q4J9K8",
+       "protein_label": "Conserved flagellar protein F",
+       "gene_symbol": "Saci_1175",
+       "taxon_id": "NCBITaxon:330779",
+       "taxon_label": "Sulfolobus acidocaldarius DSM 639",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaF, which UniProt lists under the primary name Saci_1175, in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlF).",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q4J9K8",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q4J9K8 for gene flaF in Sulfolobus acidocaldarius DSM 639. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -1077,7 +1100,7 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "The single reviewed UniProtKB entry for gene flaX in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "The single reviewed UniProtKB entry for gene flaX in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlX).",
        "evidence": [
         {
          "reference": "PMID:23129770",
@@ -1400,6 +1423,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s); added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:54Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -1450,7 +1480,7 @@
        "taxon_label": "Methanocaldococcus villosus",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB, which UniProt lists without a gene symbol, in Methanocaldococcus villosus. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB, which UniProt lists without a gene symbol, in Methanocaldococcus villosus. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlB).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/A0A8X6EH07",
@@ -1741,6 +1771,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:54Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s); disclosed 5 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -1796,7 +1833,7 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "The single reviewed UniProtKB entry for gene flaI in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "The single reviewed UniProtKB entry for gene flaI in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlI).",
        "evidence": [
         {
          "reference": "PMID:23129770",
@@ -1820,7 +1857,7 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaJ in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaJ in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlJ).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q4J9L1",
@@ -1862,7 +1899,7 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "The single reviewed UniProtKB entry for gene flaH in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "The single reviewed UniProtKB entry for gene flaH in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlH).",
        "evidence": [
         {
          "reference": "PMID:24103130",
@@ -1906,11 +1943,27 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaG, which UniProt lists under the primary name Saci_1176, in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaG, which UniProt lists under the primary name Saci_1176, in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlG).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q4J9K7",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q4J9K7 for gene flaG in Sulfolobus acidocaldarius DSM 639. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q4J9K8",
+       "protein_label": "Conserved flagellar protein F",
+       "gene_symbol": "Saci_1175",
+       "taxon_id": "NCBITaxon:330779",
+       "taxon_label": "Sulfolobus acidocaldarius DSM 639",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene flaF, which UniProt lists under the primary name Saci_1175, in Sulfolobus acidocaldarius DSM 639. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlF).",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q4J9K8",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q4J9K8 for gene flaF in Sulfolobus acidocaldarius DSM 639. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -1951,7 +2004,7 @@
        "taxon_label": "Sulfolobus acidocaldarius DSM 639",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "The single reviewed UniProtKB entry for gene flaX in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "The single reviewed UniProtKB entry for gene flaX in Sulfolobus acidocaldarius DSM 639, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym arlX).",
        "evidence": [
         {
          "reference": "PMID:23129770",
@@ -2282,6 +2335,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 3 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -2458,7 +2518,7 @@
        "taxon_label": "Mycoplasmoides pneumoniae M129",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-09-08",
-       "role": "UniProt annotates this protein to SL-0020 (attachment organelle); component role: Acts as the length-setting internal-core scaffold of the paired plates in the polar extension.",
+       "role": "UniProt annotates this protein to SL-0020 (attachment organelle); component role: Acts as the length-setting internal-core scaffold of the paired plates in the polar extension (also declared as locus tag mpn310).",
        "evidence": [
         {
          "reference": "PMID:15466048",
@@ -2499,7 +2559,7 @@
        "taxon_label": "Mycoplasmoides pneumoniae M129",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-09-08",
-       "role": "UniProt annotates this protein to SL-0020 (attachment organelle); component role: Localizes to the front terminal-button substructure that caps the paired plates within the electron-dense internal core.",
+       "role": "UniProt annotates this protein to SL-0020 (attachment organelle); component role: Localizes to the front terminal-button substructure that caps the paired plates within the electron-dense internal core (also declared as locus tag mpn309).",
        "evidence": [
         {
          "reference": "PMID:15466048",
@@ -2540,7 +2600,7 @@
        "taxon_label": "Mycoplasmoides pneumoniae M129",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-09-08",
-       "role": "UniProt annotates this protein to SL-0020 (attachment organelle); component role: Localizes to the terminal-button boundary with the paired plates in the electron-dense internal core.",
+       "role": "UniProt annotates this protein to SL-0020 (attachment organelle); component role: Localizes to the terminal-button boundary with the paired plates in the electron-dense internal core (also declared as locus tag mpn452).",
        "evidence": [
         {
          "reference": "PMID:26633540",
@@ -14806,6 +14866,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -14939,6 +15006,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q9FPW0",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q9FPW0 for gene IFT88 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q944U2",
+       "protein_label": "Intraflagellar transport protein component IFT52",
+       "gene_symbol": "IFT52",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene IFT52, which UniProt lists without a gene symbol, in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q944U2",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q944U2 for gene IFT52 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -18297,6 +18380,20 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s); disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T21:49:20Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Consolidate duplicate (also declared as synonym PFR1, PFRD) suffix on UniProtKB:Q26789 in pfr1 (#2415).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -18350,7 +18447,7 @@
        "taxon_label": "Trypanosoma brucei brucei",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-09-08",
-       "role": "Reviewed UniProtKB entry for the PFRC/PFRD-encoded 73 kDa protein in Trypanosoma brucei brucei, assigned to consolidated PFR1 by Gadelha et al. 2004. The source protein name and historical UniProt mnemonic PFR2_TRYBB are not a cross-species orthology assertion (also declared as synonym PFRD).",
+       "role": "Reviewed UniProtKB entry for the PFRC/PFRD-encoded 73 kDa protein in Trypanosoma brucei brucei, assigned to consolidated PFR1 by Gadelha et al. 2004. The source protein name and historical UniProt mnemonic PFR2_TRYBB are not a cross-species orthology assertion (also declared as synonym PFR1, PFRD).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q26789",
@@ -18584,12 +18681,18 @@
       {
        "node_id": "pfr_af1",
        "label": "PFR assembly factor 1",
-       "node_type": "GENE_OR_PROTEIN"
+       "node_type": "GENE_OR_PROTEIN",
+       "xrefs": [
+        "UniProtKB:Q38A87"
+       ]
       },
       {
        "node_id": "pfr_af2",
        "label": "PFR assembly factor 2",
-       "node_type": "GENE_OR_PROTEIN"
+       "node_type": "GENE_OR_PROTEIN",
+       "xrefs": [
+        "UniProtKB:Q57WR4"
+       ]
       }
      ],
      "edges": [
@@ -18776,6 +18879,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
     }
    ],
@@ -18978,6 +19088,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q57371",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q57371 for gene motB in Borreliella burgdorferi. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P52610",
+       "protein_label": "Flagellar motor switch protein FliG",
+       "gene_symbol": "fliG",
+       "taxon_id": "NCBITaxon:224326",
+       "taxon_label": "Borreliella burgdorferi B31",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene fliG2, which UniProt lists under the primary name fliG, in Borreliella burgdorferi B31, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P52610",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P52610, the single reviewed entry for gene fliG2 in Borreliella burgdorferi B31. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -21962,6 +22088,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -22040,7 +22173,7 @@
        "taxon_label": "Chlamydomonas reinhardtii",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP290, which UniProt lists under the primary name CHLRE_03g167550v5, in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP290, which UniProt lists under the primary name CHLRE_03g167550v5, in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym POC3).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/A0A2K3DWT6",
@@ -26652,6 +26785,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "part_of": [
@@ -26712,6 +26852,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q6J4H1",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q6J4H1 for gene CPC1 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q9ATK5",
+       "protein_label": "PF6 protein",
+       "gene_symbol": "PF6",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene PF6, which UniProt lists without a gene symbol, in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q9ATK5",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q9ATK5 for gene PF6 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -26979,6 +27135,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 2 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -27063,6 +27226,38 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q6SPP7",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q6SPP7 for gene TUA2 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P09204",
+       "protein_label": "Tubulin alpha-1 chain",
+       "gene_symbol": "TUBA1",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TUA1, which UniProt lists under the primary name TUBA1, in Chlamydomonas reinhardtii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P09204",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P09204, the single reviewed entry for gene TUA1 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P04690",
+       "protein_label": "Tubulin beta-1/beta-2 chain",
+       "gene_symbol": "TUBB1",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TUB1, which UniProt lists under the primary name TUBB1, in Chlamydomonas reinhardtii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym TUB2).",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P04690",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P04690, the single reviewed entry for gene TUB1 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -28830,6 +29025,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 3 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "part_of": [
@@ -28877,6 +29079,38 @@
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q6SPP7 for gene TUA2 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P09204",
+       "protein_label": "Tubulin alpha-1 chain",
+       "gene_symbol": "TUBA1",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TUA1, which UniProt lists under the primary name TUBA1, in Chlamydomonas reinhardtii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P09204",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P09204, the single reviewed entry for gene TUA1 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P04690",
+       "protein_label": "Tubulin beta-1/beta-2 chain",
+       "gene_symbol": "TUBB1",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TUB1, which UniProt lists under the primary name TUBB1, in Chlamydomonas reinhardtii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym TUB2).",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P04690",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P04690, the single reviewed entry for gene TUB1 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     },
@@ -28921,6 +29155,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q9M6B0",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q9M6B0 for gene RIB43a in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q8LKK4",
+       "protein_label": "RIB72 protein",
+       "gene_symbol": "RIB72",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene RIB72, which UniProt lists without a gene symbol, in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q8LKK4",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q8LKK4 for gene RIB72 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -31012,6 +31262,20 @@
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Grounded self-referential causal node 'linker' to cellstructuremech:basal_body_a_c_linker.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 3 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T21:49:20Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Restrict synonym disclosure on UniProtKB:Q23KH2 in tbc1d31 to WDR67 so distinct paralogs TBC1D31A/TBC1D31B are not conflated with TTHERM_00193630 (#2416).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -31056,7 +31320,7 @@
        "taxon_label": "Tetrahymena thermophila SB210",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene WRAP73, which UniProt lists under the primary name TTHERM_00614690, in Tetrahymena thermophila SB210. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene WRAP73, which UniProt lists under the primary name TTHERM_00614690, in Tetrahymena thermophila SB210. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym WDR8).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/I7MIG5",
@@ -31094,7 +31358,7 @@
        "taxon_label": "Tetrahymena thermophila SB210",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP135, which UniProt lists under the primary name TTHERM_01457090, in Tetrahymena thermophila SB210. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP135, which UniProt lists under the primary name TTHERM_01457090, in Tetrahymena thermophila SB210. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym BLD10).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q24GZ2",
@@ -31134,7 +31398,7 @@
        "taxon_label": "Tetrahymena thermophila SB210",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene TBC1D31, which UniProt lists under the primary name TTHERM_00193630, in Tetrahymena thermophila SB210. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene TBC1D31, which UniProt lists under the primary name TTHERM_00193630, in Tetrahymena thermophila SB210. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym WDR67).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q23KH2",
@@ -41515,6 +41779,13 @@
      "action": "REVIEW_FIX",
      "changes": "Addressed PR #515 review issues #516 and #517 by adding variable Bacteria, Archaea and Eukaryota cytoophidium distribution rows and narrowing broad CTP synthase essentiality to UNKNOWN.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -41555,7 +41826,7 @@
        "taxon_label": "Caulobacter vibrioides CB15",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-09-11",
-       "role": "Reviewed Caulobacter CB15 CTP synthase encoded by pyrG/CC_1720, the CtpS homolog identified as the inner-curvature filament constituent in the discovery paper.",
+       "role": "Reviewed Caulobacter CB15 CTP synthase encoded by pyrG/CC_1720, the CtpS homolog identified as the inner-curvature filament constituent in the discovery paper (also declared as synonym ctpS).",
        "evidence": [
         {
          "reference": "DOI:10.1038/ncb2087",
@@ -42004,6 +42275,13 @@
      "action": "CREATED",
      "changes": "Initial curation of cytoplasmic microtubule bundle (GO:1905720) in category CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and causal mechanism graph.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -42267,7 +42545,7 @@
        "taxon_label": "Schizosaccharomyces pombe 972h-",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-05",
-       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged (also declared as synonym cls1).",
        "evidence": [
         {
          "reference": "DOI:10.1083/jcb.201502025",
@@ -48537,6 +48815,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -48621,6 +48906,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/G4N7W8",
          "notes": "UniProtKB unreviewed (TrEMBL) entry G4N7W8 for gene SEP5 in Pyricularia oryzae 70-15. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:G4N184",
+       "protein_label": "Cell division control protein 12",
+       "gene_symbol": "MGG_07466",
+       "taxon_id": "NCBITaxon:242507",
+       "taxon_label": "Pyricularia oryzae 70-15",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene SEP6, which UniProt lists under the primary name MGG_07466, in Pyricularia oryzae 70-15. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/G4N184",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry G4N184 for gene SEP6 in Pyricularia oryzae 70-15. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -52353,6 +52654,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -52399,6 +52707,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/A0A125YQG0",
          "notes": "UniProtKB unreviewed (TrEMBL) entry A0A125YQG0 for gene TUBA1 in Toxoplasma gondii ME49. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P10878",
+       "protein_label": "Tubulin beta chain",
+       "gene_symbol": "TUBB1",
+       "taxon_id": "NCBITaxon:5811",
+       "taxon_label": "Toxoplasma gondii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TUBB1, which UniProt lists without a gene symbol, in Toxoplasma gondii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P10878",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P10878, the single reviewed entry for gene TUBB1 in Toxoplasma gondii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -55554,6 +55878,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 2 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -55619,6 +55950,38 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q6SPP7",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q6SPP7 for gene TUA2 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P09204",
+       "protein_label": "Tubulin alpha-1 chain",
+       "gene_symbol": "TUBA1",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TUA1, which UniProt lists under the primary name TUBA1, in Chlamydomonas reinhardtii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P09204",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P09204, the single reviewed entry for gene TUA1 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P04690",
+       "protein_label": "Tubulin beta-1/beta-2 chain",
+       "gene_symbol": "TUBB1",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TUB1, which UniProt lists under the primary name TUBB1, in Chlamydomonas reinhardtii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym TUB2).",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P04690",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P04690, the single reviewed entry for gene TUB1 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -58853,6 +59216,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 6 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 2 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -59025,6 +59395,38 @@
         {
          "reference": "PMID:19620633",
          "notes": "Patel-King RS et al. 2009, ‘An outer arm dynein light chain acts in a conformational switch for flagellar motility.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, flagellum axoneme' localisation of Q9XHH2."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q39584",
+       "protein_label": "Dynein 18 kDa light chain, flagellar outer arm",
+       "gene_symbol": "LC2",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene LC2, which UniProt lists without a gene symbol, in Chlamydomonas reinhardtii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q39584",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q39584, the single reviewed entry for gene LC2 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q39580",
+       "protein_label": "Dynein 8 kDa light chain, flagellar outer arm",
+       "gene_symbol": "LC8",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene LC8, which UniProt lists without a gene symbol, in Chlamydomonas reinhardtii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q39580",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q39580, the single reviewed entry for gene LC8 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -65357,6 +65759,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -65404,6 +65813,22 @@
         {
          "reference": "PMID:16507594",
          "notes": "Yang P et al. 2006, ‘Radial spoke proteins of Chlamydomonas flagella.’, J Cell Sci. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, flagellum axoneme' localisation of Q6UBQ3."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q5MJ90",
+       "protein_label": "Radial spoke protein 16",
+       "gene_symbol": "RSP16",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene RSP16, which UniProt lists without a gene symbol, in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q5MJ90",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q5MJ90 for gene RSP16 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -65663,6 +66088,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -65777,6 +66209,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q27YU2",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q27YU2 for gene RSP12 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q27YU3",
+       "protein_label": "Radial spoke protein 11",
+       "gene_symbol": "PF25",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene RSP11, which UniProt lists under the primary name PF25, in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q27YU3",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q27YU3 for gene RSP11 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -72726,6 +73174,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -72772,6 +73227,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/A0A125YQG0",
          "notes": "UniProtKB unreviewed (TrEMBL) entry A0A125YQG0 for gene TUBA1 in Toxoplasma gondii ME49. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P10878",
+       "protein_label": "Tubulin beta chain",
+       "gene_symbol": "TUBB1",
+       "taxon_id": "NCBITaxon:5811",
+       "taxon_label": "Toxoplasma gondii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TUBB1, which UniProt lists without a gene symbol, in Toxoplasma gondii, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P10878",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P10878, the single reviewed entry for gene TUBB1 in Toxoplasma gondii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -87230,6 +87701,13 @@
      "action": "EDIT",
      "changes": "added 4 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -87350,6 +87828,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/A0ABT0C7D6",
          "notes": "UniProtKB unreviewed (TrEMBL) entry A0ABT0C7D6 for gene cpcC in Thermostichus vulcanus str. 'Rupite'. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:A0ABT0CFU3",
+       "protein_label": "CpcD phycobilisome linker protein",
+       "gene_symbol": "JX360_17400",
+       "taxon_id": "NCBITaxon:2813851",
+       "taxon_label": "Thermostichus vulcanus str. 'Rupite'",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene cpcD, which UniProt lists under the primary name JX360_17400, in Thermostichus vulcanus str. 'Rupite'. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/A0ABT0CFU3",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry A0ABT0CFU3 for gene cpcD in Thermostichus vulcanus str. 'Rupite'. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -109507,6 +110001,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -109650,6 +110151,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/A0A125YME4",
          "notes": "UniProtKB unreviewed (TrEMBL) entry A0A125YME4 for gene GRA23 in Toxoplasma gondii ME49. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:S8GTZ8",
+       "protein_label": "Dense-granule antigen DG32",
+       "gene_symbol": "TGME49_222170",
+       "taxon_id": "NCBITaxon:508771",
+       "taxon_label": "Toxoplasma gondii ME49",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene GRA17, which UniProt lists under the primary name TGME49_222170, in Toxoplasma gondii ME49. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/S8GTZ8",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry S8GTZ8 for gene GRA17 in Toxoplasma gondii ME49. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -110175,6 +110692,13 @@
      "action": "EDIT",
      "changes": "added 5 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -110364,6 +110888,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q965D7",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q965D7 for gene fabZ in Plasmodium falciparum. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q8IJH7",
+       "protein_label": "4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (ferredoxin), chloroplastic",
+       "gene_symbol": "PF3D7_1022800",
+       "taxon_id": "NCBITaxon:36329",
+       "taxon_label": "Plasmodium falciparum 3D7",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene ispG, which UniProt lists under the primary name PF3D7_1022800, in Plasmodium falciparum 3D7. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q8IJH7",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q8IJH7 for gene ispG in Plasmodium falciparum 3D7. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -131639,6 +132179,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -131711,6 +132258,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q8RUT8",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q8RUT8 for gene COP4 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q93WP2",
+       "protein_label": "Archaeal-type opsin 1",
+       "gene_symbol": "acop1",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene COP3, which UniProt lists under the primary name acop1, in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q93WP2",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q93WP2 for gene COP3 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -133626,6 +134189,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -133760,6 +134330,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q4GZG4",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q4GZG4 for gene PGKC in Trypanosoma brucei brucei TREU927. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P04789",
+       "protein_label": "Triosephosphate isomerase, glycosomal",
+       "gene_symbol": "TIM",
+       "taxon_id": "NCBITaxon:5702",
+       "taxon_label": "Trypanosoma brucei brucei",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene TIM, which UniProt lists without a gene symbol, in Trypanosoma brucei brucei, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P04789",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P04789, the single reviewed entry for gene TIM in Trypanosoma brucei brucei. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -141066,6 +141652,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -141129,6 +141722,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q6V0W9",
          "notes": "UniProtKB unreviewed (TrEMBL) entry Q6V0W9 for gene MAHRP1 in Plasmodium falciparum. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q8I2G1",
+       "protein_label": "Ring-exported protein 1",
+       "gene_symbol": "PF3D7_0935900",
+       "taxon_id": "NCBITaxon:36329",
+       "taxon_label": "Plasmodium falciparum 3D7",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene REX1, which UniProt lists under the primary name PF3D7_0935900, in Plasmodium falciparum 3D7. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q8I2G1",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q8I2G1 for gene REX1 in Plasmodium falciparum 3D7. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -141423,6 +142032,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 2 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -141525,6 +142141,22 @@
         {
          "reference": "PMID:15674245",
          "notes": "Lieberman RL et al. 2005, ‘Crystal structure of a membrane-bound metalloenzyme that catalyses the biological oxidation of methane.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Membrane' localisation of G1UBD1."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q603F1",
+       "protein_label": "Ammonia monooxygenase/methane monooxygenase, subunit C family protein",
+       "gene_symbol": "pmoC1",
+       "taxon_id": "NCBITaxon:243233",
+       "taxon_label": "Methylococcus capsulatus str. Bath",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene pmoC, which UniProt lists under the primary name pmoC1, in Methylococcus capsulatus str. Bath. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q603F1",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q603F1 for gene pmoC in Methylococcus capsulatus str. Bath. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -141769,6 +142401,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -141932,6 +142571,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/S8F9G8",
          "notes": "UniProtKB unreviewed (TrEMBL) entry S8F9G8 for gene MIC2 in Toxoplasma gondii ME49. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:S8GDJ1",
+       "protein_label": "MIC2-associated protein M2AP",
+       "gene_symbol": "TGME49_214940",
+       "taxon_id": "NCBITaxon:508771",
+       "taxon_label": "Toxoplasma gondii ME49",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene M2AP, which UniProt lists under the primary name TGME49_214940, in Toxoplasma gondii ME49. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/S8GDJ1",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry S8GDJ1 for gene M2AP in Toxoplasma gondii ME49. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -168140,6 +168795,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "components": [
@@ -168212,6 +168874,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/A0C767",
          "notes": "UniProtKB reviewed (Swiss-Prot) entry A0C767, the single reviewed entry for gene TMP4 in Paramecium tetraurelia. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q27180",
+       "protein_label": "Trichocyst matrix protein T1-B",
+       "gene_symbol": "T1B",
+       "taxon_id": "NCBITaxon:5888",
+       "taxon_label": "Paramecium tetraurelia",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Representative reviewed UniProtKB entry for gene TMP1, which UniProt lists under the primary name T1B, in Paramecium tetraurelia. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q27180",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q27180, the single reviewed entry for gene TMP1 in Paramecium tetraurelia. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -169286,6 +169964,13 @@
      "action": "BACKFILL_HISTORY",
      "changes": "#2402: backfilled missing repository history ledger under history/records/woronin_body/ from inline curation_history and git provenance (PR #348, issue #349).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "components": [
@@ -169335,7 +170020,7 @@
        "taxon_label": "Neurospora crassa OR74A",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "The single reviewed UniProtKB entry for gene hex-1 in Neurospora crassa OR74A, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "The single reviewed UniProtKB entry for gene hex-1 in Neurospora crassa OR74A, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym HEX1).",
        "evidence": [
         {
          "reference": "PMID:10783241",
@@ -170175,6 +170860,30 @@
          "notes": "Rae BD et al. 2012, ‘Structural determinants of the outer shell of β-carboxysomes in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’, PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation of P27134, as cited by UniProt."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:O85042",
+       "protein_label": "Carboxysome shell carbonic anhydrase",
+       "gene_symbol": "csoS3",
+       "taxon_id": "NCBITaxon:555778",
+       "taxon_label": "Halothiobacillus neapolitanus c2",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene csoSCA, which UniProt lists under the primary name csoS3, in Halothiobacillus neapolitanus c2, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:10816046",
+         "notes": "Baker SH et al. 2000, ‘Identification and localization of the carboxysome peptide Csos3 and its corresponding gene in Thiobacillus neapolitanus.’, Arch Microbiol. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome' localisation of O85042."
+        },
+        {
+         "reference": "PMID:14729686",
+         "notes": "So AK et al. 2004, ‘A novel evolutionary lineage of carbonic anhydrase (epsilon class) is a component of the carboxysome shell.’, J Bacteriol. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome' localisation of O85042."
+        },
+        {
+         "reference": "PMID:17012396",
+         "notes": "Heinhorst S et al. 2006, ‘Characterization of the carboxysomal carbonic anhydrase CsoSCA from Halothiobacillus neapolitanus.’, J Bacteriol. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome' localisation of O85042."
+        }
+       ]
       }
      ],
      "grounding_status": "REVIEWED_LABEL_ONLY",
@@ -170890,6 +171599,13 @@
      "curator": "curate-causal-graphs-skill",
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Added BMC-P shell pentamers node (bmc_p, component_ref: bmc_p) and vertex-capping edge to carboxysome_assembly.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
     }
    ],
@@ -185524,6 +186240,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -185679,6 +186402,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/P71143",
          "notes": "UniProtKB unreviewed (TrEMBL) entry P71143 for gene sdbA in Acetivibrio thermocellus. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q06853",
+       "protein_label": "Cell surface glycoprotein 2",
+       "gene_symbol": "Cthe_3079",
+       "taxon_id": "NCBITaxon:203119",
+       "taxon_label": "Acetivibrio thermocellus ATCC 27405",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene orf2p, which UniProt lists under the primary name Cthe_3079, in Acetivibrio thermocellus ATCC 27405, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q06853",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q06853, the single reviewed entry for gene orf2p in Acetivibrio thermocellus ATCC 27405. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -262260,6 +262999,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -262315,7 +263061,7 @@
        "taxon_label": "Pseudomonas phage 201phi2-1",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative reviewed UniProtKB entry for gene chmA, which UniProt lists under the primary name 201phi2-1p105, in Pseudomonas phage 201phi2-1. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative reviewed UniProtKB entry for gene chmA, which UniProt lists under the primary name 201phi2-1p105, in Pseudomonas phage 201phi2-1. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym gp105).",
        "evidence": [
         {
          "reference": "PMID:28082593",
@@ -329961,6 +330707,13 @@
      "action": "EDIT",
      "changes": "added 9 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -330246,7 +330999,7 @@
        "taxon_label": "Vibrio cholerae O1 biovar El Tor str. N16961",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-09-08",
-       "role": "The single reviewed UniProtKB entry for gene epsE in Vibrio cholerae O1 biovar El Tor str. N16961, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "The single reviewed UniProtKB entry for gene epsE in Vibrio cholerae O1 biovar El Tor str. N16961, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym gspE).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/P37093",
@@ -331778,6 +332531,13 @@
      "action": "EDIT",
      "changes": "added 6 verified UniProtKB protein_example(s); added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -331949,7 +332709,7 @@
        "taxon_label": "Porphyromonas gingivalis ATCC 33277",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene sov in Porphyromonas gingivalis ATCC 33277. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene sov in Porphyromonas gingivalis ATCC 33277. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym sprA).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/B2RJ06",
@@ -332405,6 +333165,13 @@
      "action": "EDIT",
      "changes": "added 14 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -332783,7 +333550,7 @@
        "taxon_label": "Vibrio cholerae O1 biovar El Tor str. N16961",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene clpV, which UniProt lists under the primary name VC_A0116, in Vibrio cholerae O1 biovar El Tor str. N16961. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene clpV, which UniProt lists under the primary name VC_A0116, in Vibrio cholerae O1 biovar El Tor str. N16961. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym tssH).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q9KN49",
@@ -333589,6 +334356,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T20:51:55Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 3 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -333647,7 +334421,7 @@
        "taxon_label": "Vibrio cholerae O1 biovar El Tor str. N16961",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene vipA, which UniProt lists under the primary name VC_A0107, in Vibrio cholerae O1 biovar El Tor str. N16961. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene vipA, which UniProt lists under the primary name VC_A0107, in Vibrio cholerae O1 biovar El Tor str. N16961. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym tssB).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q9KN58",
@@ -333689,7 +334463,7 @@
        "taxon_label": "Vibrio cholerae O1 biovar El Tor str. N16961",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene vipB, which UniProt lists under the primary name VC_A0108, in Vibrio cholerae O1 biovar El Tor str. N16961. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene vipB, which UniProt lists under the primary name VC_A0108, in Vibrio cholerae O1 biovar El Tor str. N16961. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym tssC).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q9KN57",
@@ -333731,7 +334505,7 @@
        "taxon_label": "Vibrio cholerae O1 biovar El Tor str. N16961",
        "entry_status": "UNREVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene clpV, which UniProt lists under the primary name VC_A0116, in Vibrio cholerae O1 biovar El Tor str. N16961. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene clpV, which UniProt lists under the primary name VC_A0116, in Vibrio cholerae O1 biovar El Tor str. N16961. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure (also declared as synonym tssH).",
        "evidence": [
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q9KN49",

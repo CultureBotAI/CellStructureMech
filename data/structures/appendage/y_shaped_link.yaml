@@ -26,6 +26,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag
+    mapping(s) on existing protein_examples.'
+  llm_assisted: true
 synonyms:
 - synonym_text: membrane-microtubule complex
   synonym_type: RELATED_SYNONYM
@@ -89,7 +95,7 @@ components:
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene CEP290, which
       UniProt lists under the primary name CHLRE_03g167550v5, in Chlamydomonas reinhardtii.
       Identifier for the component's declared gene symbol; it is not itself evidence
-      that the protein is part of this structure.
+      that the protein is part of this structure (also declared as synonym POC3).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/A0A2K3DWT6
       notes: UniProtKB unreviewed (TrEMBL) entry A0A2K3DWT6 for gene CEP290 in Chlamydomonas

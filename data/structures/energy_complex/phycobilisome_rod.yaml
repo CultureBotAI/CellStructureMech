@@ -40,6 +40,12 @@ curation_history:
   action: EDIT
   changes: added 4 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 synonyms:
 - synonym_text: phycobilisome peripheral rod
   synonym_type: EXACT_SYNONYM
@@ -152,6 +158,22 @@ components:
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/A0ABT0C7D6
       notes: UniProtKB unreviewed (TrEMBL) entry A0ABT0C7D6 for gene cpcC in Thermostichus
+        vulcanus str. 'Rupite'. Establishes the accession and gene identity only;
+        the component's membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:A0ABT0CFU3
+    protein_label: CpcD phycobilisome linker protein
+    gene_symbol: JX360_17400
+    taxon_id: NCBITaxon:2813851
+    taxon_label: Thermostichus vulcanus str. 'Rupite'
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-23'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene cpcD, which
+      UniProt lists under the primary name JX360_17400, in Thermostichus vulcanus
+      str. 'Rupite'. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0ABT0CFU3
+      notes: UniProtKB unreviewed (TrEMBL) entry A0ABT0CFU3 for gene cpcD in Thermostichus
         vulcanus str. 'Rupite'. Establishes the accession and gene identity only;
         the component's membership in this structure rests on the record's own sources.
 - component_id: rod_phycobilin_chromophores

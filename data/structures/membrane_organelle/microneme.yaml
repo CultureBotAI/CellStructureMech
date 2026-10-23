@@ -55,6 +55,12 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -204,6 +210,22 @@ components:
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/S8F9G8
       notes: UniProtKB unreviewed (TrEMBL) entry S8F9G8 for gene MIC2 in Toxoplasma
+        gondii ME49. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
+  - uniprot_id: UniProtKB:S8GDJ1
+    protein_label: MIC2-associated protein M2AP
+    gene_symbol: TGME49_214940
+    taxon_id: NCBITaxon:508771
+    taxon_label: Toxoplasma gondii ME49
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-23'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene M2AP, which
+      UniProt lists under the primary name TGME49_214940, in Toxoplasma gondii ME49.
+      Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/S8GDJ1
+      notes: UniProtKB unreviewed (TrEMBL) entry S8GDJ1 for gene M2AP in Toxoplasma
         gondii ME49. Establishes the accession and gene identity only; the component's
         membership in this structure rests on the record's own sources.
 taxonomic_distribution:

@@ -354,6 +354,33 @@ components:
         in Synechococcus elongatus PCC 7942: roles for CcmK2, K3-K4, CcmO, and CcmL’,
         PLoS One. ECO:0000269 experimental evidence for the carboxysome localisation
         of P27134, as cited by UniProt.'
+  - uniprot_id: UniProtKB:O85042
+    protein_label: Carboxysome shell carbonic anhydrase
+    gene_symbol: csoS3
+    taxon_id: NCBITaxon:555778
+    taxon_label: Halothiobacillus neapolitanus c2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene csoSCA, which UniProt lists
+      under the primary name csoS3, in Halothiobacillus neapolitanus c2, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:10816046
+      notes: Baker SH et al. 2000, ‘Identification and localization of the carboxysome
+        peptide Csos3 and its corresponding gene in Thiobacillus neapolitanus.’, Arch
+        Microbiol. ECO:0000269 experimental evidence cited by UniProt for the 'Carboxysome'
+        localisation of O85042.
+    - reference: PMID:14729686
+      notes: So AK et al. 2004, ‘A novel evolutionary lineage of carbonic anhydrase
+        (epsilon class) is a component of the carboxysome shell.’, J Bacteriol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Carboxysome' localisation
+        of O85042.
+    - reference: PMID:17012396
+      notes: Heinhorst S et al. 2006, ‘Characterization of the carboxysomal carbonic
+        anhydrase CsoSCA from Halothiobacillus neapolitanus.’, J Bacteriol. ECO:0000269
+        experimental evidence cited by UniProt for the 'Carboxysome' localisation
+        of O85042.
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: The beta-carboxysome CcaA example has IPR045066, while alpha-carboxysome
     CsoSCA has IPR014074; they share no integrated InterPro family, so neither lineage-specific
@@ -929,6 +956,12 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: 'Added BMC-P shell pentamers node (bmc_p, component_ref: bmc_p) and vertex-capping
     edge to carboxysome_assembly.'
+  llm_assisted: true
+- timestamp: '2026-10-23T20:51:55Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example(s).'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034
