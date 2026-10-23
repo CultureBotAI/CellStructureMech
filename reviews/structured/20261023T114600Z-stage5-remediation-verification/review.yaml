@@ -1,0 +1,545 @@
+schema_version: 1.0.0
+review_id: 20261023T114600Z-stage5-remediation-verification
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: 'Post-remediation verification review of all 16 CellStructureRecord files remediated
+  in Cycle 1 Stage 5 (#2402, #2403, #2404, #2405)'
+started_at: '2026-10-23T11:42:00Z'
+finished_at: '2026-10-23T11:46:00Z'
+reviewer:
+  identity: antigravity-stage5-remediation-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: 'Post-remediation verification review against committed git
+    revision 9dd9935ee1cf1d85454d42df0cec7da12f550a79 covering all 16 records modified
+    to resolve the 9 Stage 4 review findings across GitHub issues #2402, #2403, #2404,
+    and #2405.'
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: true
+summary: 'Post-remediation verification of all 16 CellStructureRecord YAML files modified
+  in Cycle 1 Stage 5 confirms that all 9 Stage 4 findings across 4 repair groups (#2402
+  history ledger backfill for woronin_body, #2403 CheA-to-CheY phosphotransfer narrative
+  sync in methyl_accepting_chemotaxis_protein_complex, #2404 STRUCTURE typing and
+  GO grounding on 10 subcomplex causal-graph nodes across 8 records, and #2405 structured
+  GitHub issue evidence links on 8 discussions threads across 7 records) are fully
+  resolved with 0 open findings.'
+source:
+  git_revision: 9dd9935ee1cf1d85454d42df0cec7da12f550a79
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/appendage/cilium.yaml
+    sha256: 529db9c189bbe89b920d50a08208c692a28d73038940922897d3750fb6dd7262
+    role: target
+  - path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    sha256: 595b2fa8e39b9993b34bde4f2102dadcb72ae99e6a18a28160f82537a7ea46cd
+    role: target
+  - path: data/structures/cytoskeleton/crescentin_filament.yaml
+    sha256: 0664231e5020673ef694490db53b85f340f6eb1efd85e1c09a3f8190b1626db7
+    role: target
+  - path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+    sha256: 26bd7de69933174332da78d7a19cb4b196af4354de44e56efe78a4258f68e59b
+    role: target
+  - path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+    sha256: 5ef265cc6fcc3c2c281479cd4aeacaa5d770d1f3a4a682a37a2d897e1562ba75
+    role: target
+  - path: data/structures/cytoskeleton/mreb_filament.yaml
+    sha256: 1133efe4361d35b4b82ab6ca05241eca7dc6b894064d484a508d172cb397127e
+    role: target
+  - path: data/structures/cytoskeleton/phuz_spindle.yaml
+    sha256: 5ca807c30f30ab3cc2e5eacb7035a229d6193dbf304dcc5b44e52b2ef4e4ae93
+    role: target
+  - path: data/structures/cytoskeleton/radial_spoke.yaml
+    sha256: 68b0664e9de437d32f85b8b53e3b312ef49cc77c67c1593cfd468a94c3c6c70a
+    role: target
+  - path: data/structures/cytoskeleton/telocentrosome.yaml
+    sha256: 7eb101d943b736d756d5ea90d304e6cc2b6dc59a11224203f2c5e7ea30cabc8b
+    role: target
+  - path: data/structures/division_machinery/divisome_complex.yaml
+    sha256: b4f4919cc610dcb396b0646a715c51b071b0d7c05674b8f93e533130d225ac59
+    role: target
+  - path: data/structures/division_machinery/elongasome.yaml
+    sha256: bafc63e73078c23097d76b329b9c2122e48a650616fb07529958f4fe33deb1d4
+    role: target
+  - path: data/structures/membrane_organelle/diazoplast.yaml
+    sha256: fd3948e827eb4a9870bc4eccb09689dd5c82f5caef443f1e319daabbf21bb038
+    role: target
+  - path: data/structures/membrane_organelle/endoplasmic_reticulum.yaml
+    sha256: 3e7c22c86e29207632f95ab47dbc3f13cedcdcbc7d1062a496789ed3082b143c
+    role: target
+  - path: data/structures/membrane_organelle/woronin_body.yaml
+    sha256: 17ea2992ce36746e91cb56a9a61091c1512f3d80c6659907c13e88537a2830cb
+    role: target
+  - path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    sha256: 7f6f49e960cabe5c4f6f4346e73f877cc8786bd5b29a8f9472aec97ede4e1dad
+    role: target
+  - path: data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+    sha256: 23b0a0c7ee687a7ee8e1eb121c19a0c7726cc21a339e560de5cf8ebdd6678fd2
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Complete cohort of all 16 CellStructureRecord YAML files remediated
+    in Cycle 1 Stage 5 to resolve the 9 carried-forward Stage 4 findings.
+  selection: 'All 16 records modified in commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79
+    for issues #2402, #2403, #2404, and #2405.'
+  coverage: full
+  population_size: 16
+  reviewed_target_ids:
+  - GO:0005929
+  - GO:0030479
+  - cellstructuremech:crescentin_filament
+  - GO:0000923
+  - GO:0031021
+  - cellstructuremech:mreb_filament
+  - cellstructuremech:phuz_spindle
+  - GO:0001534
+  - cellstructuremech:telocentrosome
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - cellstructuremech:diazoplast
+  - GO:0005783
+  - GO:0140266
+  - GO:0098561
+  - GO:0030257
+targets:
+- target_id: GO:0005929
+  path: data/structures/appendage/cilium.yaml
+  label: cilium
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 529db9c189bbe89b920d50a08208c692a28d73038940922897d3750fb6dd7262
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/cilium.yaml
+    role: maintained_record
+- target_id: GO:0030479
+  path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+  label: actin cortical patch
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 595b2fa8e39b9993b34bde4f2102dadcb72ae99e6a18a28160f82537a7ea46cd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    role: maintained_record
+- target_id: cellstructuremech:crescentin_filament
+  path: data/structures/cytoskeleton/crescentin_filament.yaml
+  label: crescentin filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0664231e5020673ef694490db53b85f340f6eb1efd85e1c09a3f8190b1626db7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/crescentin_filament.yaml
+    role: maintained_record
+- target_id: GO:0000923
+  path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  label: equatorial microtubule organizing center
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 26bd7de69933174332da78d7a19cb4b196af4354de44e56efe78a4258f68e59b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+    role: maintained_record
+- target_id: GO:0031021
+  path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+  label: interphase microtubule organizing center
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5ef265cc6fcc3c2c281479cd4aeacaa5d770d1f3a4a682a37a2d897e1562ba75
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mreb_filament
+  path: data/structures/cytoskeleton/mreb_filament.yaml
+  label: MreB filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1133efe4361d35b4b82ab6ca05241eca7dc6b894064d484a508d172cb397127e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mreb_filament.yaml
+    role: maintained_record
+- target_id: cellstructuremech:phuz_spindle
+  path: data/structures/cytoskeleton/phuz_spindle.yaml
+  label: PhuZ spindle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5ca807c30f30ab3cc2e5eacb7035a229d6193dbf304dcc5b44e52b2ef4e4ae93
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/phuz_spindle.yaml
+    role: maintained_record
+- target_id: GO:0001534
+  path: data/structures/cytoskeleton/radial_spoke.yaml
+  label: radial spoke
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 68b0664e9de437d32f85b8b53e3b312ef49cc77c67c1593cfd468a94c3c6c70a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke.yaml
+    role: maintained_record
+- target_id: cellstructuremech:telocentrosome
+  path: data/structures/cytoskeleton/telocentrosome.yaml
+  label: telocentrosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7eb101d943b736d756d5ea90d304e6cc2b6dc59a11224203f2c5e7ea30cabc8b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/telocentrosome.yaml
+    role: maintained_record
+- target_id: GO:1990586
+  path: data/structures/division_machinery/divisome_complex.yaml
+  label: divisome complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b4f4919cc610dcb396b0646a715c51b071b0d7c05674b8f93e533130d225ac59
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/divisome_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:elongasome
+  path: data/structures/division_machinery/elongasome.yaml
+  label: elongasome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bafc63e73078c23097d76b329b9c2122e48a650616fb07529958f4fe33deb1d4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/elongasome.yaml
+    role: maintained_record
+- target_id: cellstructuremech:diazoplast
+  path: data/structures/membrane_organelle/diazoplast.yaml
+  label: diazoplast
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fd3948e827eb4a9870bc4eccb09689dd5c82f5caef443f1e319daabbf21bb038
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/diazoplast.yaml
+    role: maintained_record
+- target_id: GO:0005783
+  path: data/structures/membrane_organelle/endoplasmic_reticulum.yaml
+  label: endoplasmic reticulum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3e7c22c86e29207632f95ab47dbc3f13cedcdcbc7d1062a496789ed3082b143c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endoplasmic_reticulum.yaml
+    role: maintained_record
+- target_id: GO:0140266
+  path: data/structures/membrane_organelle/woronin_body.yaml
+  label: Woronin body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 17ea2992ce36746e91cb56a9a61091c1512f3d80c6659907c13e88537a2830cb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/woronin_body.yaml
+    role: maintained_record
+- target_id: GO:0098561
+  path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+  label: methyl accepting chemotaxis protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7f6f49e960cabe5c4f6f4346e73f877cc8786bd5b29a8f9472aec97ede4e1dad
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:0030257
+  path: data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+  label: type III protein secretion system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 23b0a0c7ee687a7ee8e1eb121c19a0c7726cc21a339e560de5cf8ebdd6678fd2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+    role: maintained_record
+checks:
+- check_id: strict_remediated_cohort
+  name: Strict corpus validation covering all 16 remediated records
+  status: passed
+  required: true
+  summary: All 978 corpus records including the 16 remediated records pass strict
+    LinkML and semantic validation with 0 errors.
+  target_ids:
+  - GO:0005929
+  - GO:0030479
+  - cellstructuremech:crescentin_filament
+  - GO:0000923
+  - GO:0031021
+  - cellstructuremech:mreb_filament
+  - cellstructuremech:phuz_spindle
+  - GO:0001534
+  - cellstructuremech:telocentrosome
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - cellstructuremech:diazoplast
+  - GO:0005783
+  - GO:0140266
+  - GO:0098561
+  - GO:0030257
+  command: .venv/bin/python scripts/validate_strict.py --quiet --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_stage5
+- check_id: labels_remediated_cohort
+  name: ID-label correspondence across corpus and generated products
+  status: passed
+  required: true
+  summary: All ontology ID-label pairs across the corpus (3982 canonical, 50 synonym,
+    6 exception) correspond to authoritative ontology labels.
+  target_ids:
+  - GO:0005929
+  - GO:0030479
+  - cellstructuremech:crescentin_filament
+  - GO:0000923
+  - GO:0031021
+  - cellstructuremech:mreb_filament
+  - cellstructuremech:phuz_spindle
+  - GO:0001534
+  - cellstructuremech:telocentrosome
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - cellstructuremech:diazoplast
+  - GO:0005783
+  - GO:0140266
+  - GO:0098561
+  - GO:0030257
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_labels_stage5
+- check_id: history_remediated_cohort
+  name: Repository history link and LinkML HistoryRecord validation
+  status: passed
+  required: true
+  summary: All 1921 repository history files (including the 18 newly added Stage 5
+    history ledger records) pass link and LinkML HistoryRecord schema validation.
+  target_ids:
+  - GO:0005929
+  - GO:0030479
+  - cellstructuremech:crescentin_filament
+  - GO:0000923
+  - GO:0031021
+  - cellstructuremech:mreb_filament
+  - cellstructuremech:phuz_spindle
+  - GO:0001534
+  - cellstructuremech:telocentrosome
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - cellstructuremech:diazoplast
+  - GO:0005783
+  - GO:0140266
+  - GO:0098561
+  - GO:0030257
+  command: .venv/bin/python scripts/validate_history_links.py history
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_stage5
+evidence:
+- evidence_id: ev_strict_stage5
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict validation summary
+  accessed_at: '2026-10-23T11:39:30Z'
+  support: supports
+  summary: validate_strict.py scanned 978 files with 0 ERROR rows.
+  snapshot_sha256: 2820feeeeab9c92b239b9831b0406f8d9001e9c72c3617970a0324ce41f9685c
+- evidence_id: ev_labels_stage5
+  kind: validation
+  reference: scripts/validate_id_label_correspondence.py
+  locator: id-label correspondence summary
+  accessed_at: '2026-10-23T11:42:09Z'
+  support: supports
+  summary: validate_id_label_correspondence.py verified 3982 canonical, 50 synonym,
+    and 6 exception pairs with 0 mismatches.
+  snapshot_sha256: b5ff41bb52d24f5d7819fb12769e216440f75ec3fb3df3e3cb2c5082fffb40e0
+- evidence_id: ev_history_stage5
+  kind: validation
+  reference: scripts/validate_history_links.py
+  locator: history link and schema validation
+  accessed_at: '2026-10-23T11:40:24Z'
+  support: supports
+  summary: 1921 history records validated with 0 invalid links and 0 HistoryRecord
+    schema errors.
+  snapshot_sha256: 9df29f52842bb7a7413fa95f8789a61235a05810bc5c666ef519dbed8ac03010
+assessments:
+- assessment_id: assess_group1_woronin_history
+  area: completeness
+  topic: Repository history ledger completeness for woronin_body.yaml (#2402)
+  outcome: supported
+  summary: history/records/woronin_body/ now contains 3 valid HistoryRecord YAML files
+    covering the 2026-09-10 curation sessions and the 2026-10-23 Stage 5 audit entry.
+  target_ids:
+  - GO:0140266
+  evidence_ids:
+  - ev_history_stage5
+- assessment_id: assess_group2_chemoreceptor_narrative
+  area: consistency
+  topic: Chemoreceptor array signalling narrative consistency (#2403)
+  outcome: supported
+  summary: methyl_accepting_chemotaxis_protein_complex.yaml causal_graphs[0].description
+    and edges[5].notes accurately describe the Stewart 1997 (DOI:10.1021/bi962261k)
+    CheA-to-phospho-CheY phosphotransfer edge (edges[6]).
+  target_ids:
+  - GO:0098561
+  evidence_ids:
+  - ev_strict_stage5
+- assessment_id: assess_group3_subcomplex_node_types
+  area: graph
+  topic: Causal-graph STRUCTURE typing and GO grounding for subcomplex nodes (#2404)
+  outcome: supported
+  summary: 'All 10 GO-grounded PROTEIN_COMPLEX subcomplex nodes across cilium, actin_cortical_patch,
+    equatorial_microtubule_organizing_center, interphase_microtubule_organizing_center,
+    radial_spoke, telocentrosome, diazoplast, and endoplasmic_reticulum now use node_type:
+    STRUCTURE with canonical GO grounding.'
+  target_ids:
+  - GO:0005929
+  - GO:0030479
+  - GO:0000923
+  - GO:0031021
+  - GO:0001534
+  - cellstructuremech:telocentrosome
+  - cellstructuremech:diazoplast
+  - GO:0005783
+  evidence_ids:
+  - ev_strict_stage5
+  - ev_labels_stage5
+- assessment_id: assess_group4_discussion_issue_links
+  area: evidence
+  topic: Structured GitHub issue URLs in discussions evidence (#2405)
+  outcome: supported
+  summary: All 8 discussions threads across methyl_accepting_chemotaxis_protein_complex,
+    crescentin_filament, mreb_filament, phuz_spindle, divisome_complex, elongasome,
+    and type_iii_protein_secretion_system_complex now include structured GitHub issue
+    URLs in their evidence lists.
+  target_ids:
+  - GO:0098561
+  - cellstructuremech:crescentin_filament
+  - cellstructuremech:mreb_filament
+  - cellstructuremech:phuz_spindle
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - GO:0030257
+  evidence_ids:
+  - ev_strict_stage5
+findings: []
+actions: []
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0005929
+  - GO:0030479
+  - cellstructuremech:crescentin_filament
+  - GO:0000923
+  - GO:0031021
+  - cellstructuremech:mreb_filament
+  - cellstructuremech:phuz_spindle
+  - GO:0001534
+  - cellstructuremech:telocentrosome
+  - GO:1990586
+  - cellstructuremech:elongasome
+  - cellstructuremech:diazoplast
+  - GO:0005783
+  - GO:0140266
+  - GO:0098561
+  - GO:0030257
+  rationale: All 16 remediated records preserve their existing structure boundaries
+    and canonical GO/CSM identifiers while resolving the 9 Stage 4 review findings.
+  evidence_ids:
+  - ev_strict_stage5
+  - ev_labels_stage5
+  - ev_history_stage5
+limitations: []
+tags:
+- stage5
+- post-remediation
+- verification-review

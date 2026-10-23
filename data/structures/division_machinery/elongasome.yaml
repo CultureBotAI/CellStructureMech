@@ -309,6 +309,13 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-23T11:10:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2405 (Stage 4 finding division-machinery-discussion-prose-issue-links):
+    added structured evidence references to discussions guided_by_mreb (DOI:10.1016/j.cell.2018.02.050
+    and GitHub issue #119) and definition_source_predates_roda (GitHub issue #161).'
+  llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
   trait_label: rod shaped
@@ -332,6 +339,13 @@ discussions:
   rationale: The partner statement to the discussion on the MreB filament record (#119).
     RodZ couples the two, which is recorded in that component's role, but the structure-to-structure
     relationship has no field.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2018.02.050
+    notes: Shi et al. 2018 describe RodZ-mediated coupling between MreB filaments
+      and the elongasome.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/119
+    notes: Repository issue recording removal of the non-equivalent MreB/elongasome
+      xref.
   posed_by: claude
   posed_date: '2026-09-02'
 - discussion_id: definition_source_predates_roda
@@ -359,6 +373,9 @@ discussions:
     notes: Primary RodA polymerase evidence in B. subtilis.
   - reference: DOI:10.1038/nrmicro2677
     notes: Table1 includes RodA with a proposed flippase assignment.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/161
+    notes: Repository issue tracking verbatim evidence verification for the RodA component
+      and definition source.
   resolution_note: Rebased the bounded definition on Cho et al.2016 and the Rod-complex
     synonym on Meeske et al.2016. Typas2011 predates the polymerase discovery but
     does mention RodA; the historical prompt and history overstated absence of the

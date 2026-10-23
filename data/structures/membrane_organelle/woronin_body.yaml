@@ -34,6 +34,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T11:02:00Z'
+  curator: claude-code
+  action: BACKFILL_HISTORY
+  changes: '#2402: backfilled missing repository history ledger under history/records/woronin_body/
+    from inline curation_history and git provenance (PR #348, issue #349).'
+  llm_assisted: true
 components:
 - component_id: woronin_body_membrane
   label: Woronin body membrane

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/radial_spoke.yaml
+session:
+  id: 2026-10-23T110800Z-claude-code-c4da55
+  timestamp: '2026-10-23T11:08:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2404
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Addressed #2404: retyped GO-grounded PROTEIN_COMPLEX causal-graph nodes radial_spoke_head
+    (GO:0001535), radial_spoke_neck (GO:0120343), and radial_spoke_stalk (GO:0001536)
+    from GENE_OR_PROTEIN to STRUCTURE.'
+  details: 'Stage 5 review remediation (#2404, finding cytoskeleton-go-subcomplex-causal-node-types):
+    retyped GO-grounded PROTEIN_COMPLEX subcomplex nodes radial_spoke_head (GO:0001535),
+    radial_spoke_neck (GO:0120343), and radial_spoke_stalk (GO:0001536) in causal_graphs[0]
+    from GENE_OR_PROTEIN to STRUCTURE.'

@@ -22,6 +22,13 @@ curation_history:
     assembly and function graphs, a link-only inspected primary figure, and explicit
     identity, evidence and family-grounding limits.
   llm_assisted: true
+- timestamp: '2026-10-23T11:08:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2404 (Stage 4 finding cytoskeleton-go-subcomplex-causal-node-types):
+    retyped GO-grounded PROTEIN_COMPLEX causal-graph node gamma_tuc (GO:0000930) from
+    GENE_OR_PROTEIN to STRUCTURE.'
+  llm_assisted: true
 parent_structures:
 - GO:0005815
 synonyms:
@@ -368,7 +375,7 @@ causal_graphs:
     grounding: InterPro:IPR005334
   - node_id: gamma_tuc
     label: gamma-tubulin complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: gamma_tuc
     grounding: GO:0000930
   - node_id: telocentrosome

@@ -1,0 +1,58 @@
+authority: verified_closure
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+latest:
+  cycle: 1
+  stage: 4
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+    sha256: e8bddc4fab1e4fec6f1f08b9a6add66e309ea063b53a5098ab2a6c032ad6707f
+  receipt_sha256: 13a230bf4cf5f808f90f2d4f6cafb6550dd924e590f09e69b16f7722fe6159a9
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 2302933b4098abb18db3f4500e103c695229f891
+    merge_commit_sha: da6cead403f9cb770073a4b2bd29726175a3be34
+    merged_at: '2026-10-23T10:43:13Z'
+    pr_number: 2400
+    status: merged
+    verified_at: '2026-10-23T10:49:30.036243+00:00'
+entries:
+- cycle: 1
+  stage: 4
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+    sha256: e8bddc4fab1e4fec6f1f08b9a6add66e309ea063b53a5098ab2a6c032ad6707f
+  receipt_sha256: 13a230bf4cf5f808f90f2d4f6cafb6550dd924e590f09e69b16f7722fe6159a9
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 2302933b4098abb18db3f4500e103c695229f891
+    merge_commit_sha: da6cead403f9cb770073a4b2bd29726175a3be34
+    merged_at: '2026-10-23T10:43:13Z'
+    pr_number: 2400
+    status: merged
+    verified_at: '2026-10-23T10:49:30.036243+00:00'

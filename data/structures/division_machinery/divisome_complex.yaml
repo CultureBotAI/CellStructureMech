@@ -485,6 +485,13 @@ curation_history:
     date and all previous history; the pre-edit prompt remains in Git and the immutable
     observation.'
   llm_assisted: true
+- timestamp: '2026-10-23T11:10:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2405 (Stage 4 finding division-machinery-discussion-prose-issue-links):
+    added structured evidence references for GitHub issues #65 and #91 to discussion
+    ring_dimensions_unsourced.'
+  llm_assisted: true
 part_of:
 - GO:0032153
 discussions:
@@ -520,6 +527,11 @@ discussions:
   - reference: DOI:10.1038/sj.emboj.7601895
     notes: Figure6 density-profile spacing is a different quantity from ring radial
       thickness.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/65
+    notes: Repository issue tracking verbatim physical-property curation for FtsZ
+      protofilament length and diameter.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/91
+    notes: Repository issue tracking removal of unsourced filament and ring dimensions.
   resolution_note: 'The original no-number premise is corrected: McQuillen and Xiao2020
     report approximately40-60nm radial thickness from E. coli single-molecule localization
     studies and discuss their disagreement with single-layer cryo-ECT observations.
