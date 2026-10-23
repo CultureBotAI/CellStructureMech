@@ -1,0 +1,294 @@
+identifier: GO:0106094
+label: nuclear membrane microtubule tethering complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A nuclear membrane protein complex that connects the nuclear inner and
+  outer membranes and links nuclear structures across the nuclear envelope to cytoplasmic
+  microtubules. In Schizosaccharomyces pombe and other fungi, nuclear membrane microtubule
+  tethering complexes composed of the inner nuclear membrane SUN-domain protein Sad1
+  and outer nuclear membrane KASH-domain linker Kms1 (bridged during meiosis to telomeres
+  by Bqt1-Bqt2) couple chromosomes and spindle pole body attachment sites across the
+  nuclear envelope to cytoplasmic microtubule motors.
+definition_source: GO:0106094
+mapping_status: PROPOSED
+parent_structures:
+- GO:0098796
+components:
+- component_id: sad1_sun_protein
+  label: inner nuclear membrane SUN-domain protein Sad1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR045119
+  gene_symbols:
+  - sad1
+  essentiality: ESSENTIAL
+  role: Inner nuclear membrane SUN-domain transmembrane subunit whose lumenal SUN
+    domain binds Kms1 and whose nucleoplasmic N-terminus engages Bqt1-Bqt2 at clustered
+    telomeres. Functions within the nuclear-envelope-spanning nuclear membrane microtubule
+    tethering complex.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: Chikashige et al. 2006 show that Bqt1-Bqt2 connect telomeric Rap1 to the
+      inner nuclear membrane SUN protein Sad1 during meiotic bouquet formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q09825
+    protein_label: Spindle pole body-associated protein sad1
+    gene_symbol: sad1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: The primary abstract identifies Sad1 as the envelope/SPB-side binding
+        partner of the Bqt1/Bqt2 bridge.
+    - reference: UniProtKB:Q09825
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+- component_id: kms1_kash_protein
+  label: outer nuclear membrane KASH-domain protein Kms1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - kms1
+  essentiality: ESSENTIAL
+  role: Outer nuclear membrane KASH-domain transmembrane subunit that binds Sad1 in
+    the perinuclear space and recruits cytoplasmic dynein-dynactin motors to drive
+    horsetail nuclear movement. Functions within the nuclear-envelope-spanning nuclear
+    membrane microtubule tethering complex.
+  evidence:
+  - reference: DOI:10.1016/j.cub.2012.02.042
+    notes: Describes the Sad1-Kms1 nuclear envelope LINC bridge linking meiotic telomeres
+      to cytoplasmic microtubule motors.
+  protein_examples:
+  - uniprot_id: UniProtKB:P87245
+    protein_label: Karyogamy meiotic segregation protein 1
+    gene_symbol: kms1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Yoshida et al. 2013 describe the Sad1-Kms1 nuclear-envelope tethering
+        complex coupling meiotic chromosomes to cytoplasmic dynein-driven microtubules
+        in S. pombe.
+    - reference: DOI:10.1038/s41467-025-56049-9
+      notes: Tracks Kms1 recruitment within the fission-yeast Sad1-Kms1 nuclear membrane
+        microtubule tethering system.
+    - reference: UniProtKB:P87245
+      notes: Reviewed Swiss-Prot entry verifying protein label, gene symbol kms1,
+        and source taxon.
+- component_id: bqt1_bqt2_meiotic_connector
+  label: meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  gene_symbols:
+  - bqt1
+  - bqt2
+  essentiality: CONDITIONAL
+  role: Meiosis-specific nuclear bridge heterodimer expressed during prophase I that
+    links Rap1-Taz1 at telomeres to the nucleoplasmic domain of Sad1. Functions within
+    the nuclear-envelope-spanning nuclear membrane microtubule tethering complex.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: Chikashige et al. 2006 demonstrate that Bqt1 and Bqt2 form a meiosis-specific
+      bridge linking Rap1 at telomeres to Sad1.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q92358
+    protein_label: Telomere bouquet protein 1
+    gene_symbol: bqt1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Figure 7 follows tagged Bqt1; induced degradation releases telomeres
+        from the SPB.
+    - reference: UniProtKB:Q92358
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  - uniprot_id: UniProtKB:Q9US52
+    protein_label: Telomere bouquet protein 2
+    gene_symbol: bqt2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Primary abstract directly identifies Bqt2 together with Bqt1 as the Rap1-Sad1
+        connector; no uninspected figure-level detail is inferred.
+    - reference: UniProtKB:Q9US52
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+canonical_examples:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  note: Characterized model system for nuclear membrane microtubule tethering complex
+    (GO:0106094) within the nuclear-envelope-spanning nuclear membrane microtubule
+    tethering complex. Reference fission yeast model in which the Sad1-Kms1 LINC bridge
+    and Bqt1-Bqt2 meiotic telomere bouquet tether were genetically and biochemically
+    defined.
+  reference: DOI:10.1016/j.cell.2006.01.048
+functions:
+- function_id: telomere_organization
+  label: telomere organization
+  grounding: GO:0032200
+  description: Tethers telomere-bound Bqt1-Bqt2 connectors to the inner nuclear membrane
+    SUN protein Sad1 and outer membrane KASH protein Kms1, clustering chromosome ends
+    at the nuclear envelope during meiotic prophase in Schizosaccharomyces pombe.
+  evidence:
+  - reference: DOI:10.1016/j.cell.2006.01.048
+    notes: Chikashige et al. 2006 show that Bqt1-Bqt2 connect telomeric Rap1 to Sad1
+      to tether telomeres to the nuclear envelope.
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Live-cell imaging and conditional Bqt1 degradation show that the Bqt1-Bqt2-Sad1
+      tether maintains telomere attachment at the nuclear envelope.
+- function_id: meiotic_spindle_support
+  label: Support of meiotic spindle formation
+  description: Maintained fission-yeast telomere-nuclear envelope tethering via Bqt1-Bqt2
+    and Sad1-Kms1 supports normal spindle pole body behavior and meiotic spindle formation.
+  evidence:
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Premature Bqt1 degradation disrupts telomere-envelope tethering and increases
+      meiotic spindle defects in S. pombe.
+evidence:
+- reference: GO:0106094
+  notes: 'Gene Ontology cellular-component term for nuclear membrane microtubule tethering
+    complex: A nuclear membrane protein complex that connects the nuclear inner and
+    outer membranes and links nuclear structures across the nuclear envelope to cytoplasmic
+    microtubules.'
+- reference: GO:1990612
+  notes: Gene Ontology cellular-component term for the Sad1-Kms1 LINC complex, the
+    canonical fission-yeast nuclear membrane microtubule tethering complex.
+- reference: DOI:10.1016/j.cell.2006.01.048
+  notes: Chikashige et al. 2006 (Cell, PMID 16615890) identify the Bqt1-Bqt2 meiotic
+    connector bridging telomeric Rap1 to the inner nuclear membrane SUN protein Sad1
+    in S. pombe.
+- reference: DOI:10.1016/j.cub.2012.02.042
+  notes: Yoshida et al. 2013 (Curr Biol, PMID 22425159) characterize the fission-yeast
+    Sad1-Kms1 nuclear-envelope tethering system and cytoplasmic microtubule organization.
+- reference: DOI:10.1038/celldisc.2017.41
+  notes: Moiseeva et al. 2017 (Cell Discov, PMID 29123917) demonstrate by live-cell
+    imaging and conditional Bqt1 degradation that the Sad1-associated tether maintains
+    telomere attachment and meiotic spindle integrity.
+- reference: DOI:10.1038/s41467-025-56049-9
+  notes: 2025 study (Nat Commun, PMID 39833200) tracking Sad1-Kms1 recruitment in
+    the fission-yeast nuclear membrane microtubule tethering complex.
+causal_graphs:
+- graph_id: nuclear_membrane_microtubule_tethering_complex_mechanism
+  title: Sad1-Kms1 nuclear membrane microtubule tethering complex assembly and meiotic
+    chromosome-envelope coupling
+  description: Inner nuclear membrane SUN protein Sad1 and outer nuclear membrane
+    KASH protein Kms1 form the nuclear membrane microtubule tethering complex (GO:0106094)
+    spanning the nuclear envelope and engage the meiotic connector Bqt1-Bqt2 to mediate
+    telomere organization (GO:0032200) and support meiotic spindle formation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Covers the Schizosaccharomyces pombe Sad1-Kms1 nuclear membrane microtubule
+    tethering complex and its meiotic Bqt1-Bqt2 connector.
+  nodes:
+  - node_id: nuclear_membrane_microtubule_tethering_complex
+    label: nuclear membrane microtubule tethering complex
+    node_type: STRUCTURE
+    grounding: GO:0106094
+    description: Assembled nuclear-envelope-spanning Sad1-Kms1 microtubule tethering
+      complex (GO:0106094).
+  - node_id: sad1_sun_protein
+    label: inner nuclear membrane SUN-domain protein Sad1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR045119
+    component_ref: sad1_sun_protein
+  - node_id: kms1_kash_protein
+    label: outer nuclear membrane KASH-domain protein Kms1
+    node_type: GENE_OR_PROTEIN
+    component_ref: kms1_kash_protein
+  - node_id: bqt1_bqt2_meiotic_connector
+    label: meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)
+    node_type: GENE_OR_PROTEIN
+    component_ref: bqt1_bqt2_meiotic_connector
+  - node_id: telomere_organization
+    label: telomere organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032200
+  - node_id: meiotic_spindle_support
+    label: Support of meiotic spindle formation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: sad1_sun_protein
+    predicate: is part of
+    object: nuclear_membrane_microtubule_tethering_complex
+    description: Inner nuclear membrane SUN-domain protein Sad1 forms the nucleoplasmic
+      and perinuclear foundation of the tethering complex.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Chikashige et al. 2006 identify Sad1 as the inner membrane SUN subunit
+        of the nuclear-envelope tether.
+  - subject: kms1_kash_protein
+    predicate: is part of
+    object: nuclear_membrane_microtubule_tethering_complex
+    description: Outer nuclear membrane KASH-domain protein Kms1 binds Sad1 across
+      the perinuclear space and couples the complex to cytoplasmic microtubules.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2012.02.042
+      notes: Describes the Sad1-Kms1 nuclear-envelope bridge coupling chromosomes
+        to cytoplasmic microtubule motors.
+  - subject: bqt1_bqt2_meiotic_connector
+    predicate: associates with
+    object: nuclear_membrane_microtubule_tethering_complex
+    description: The meiosis-specific Bqt1-Bqt2 heterodimer links telomeric Rap1 to
+      the nucleoplasmic domain of Sad1.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2006.01.048
+      notes: Chikashige et al. 2006 demonstrate that Bqt1-Bqt2 bridge Rap1 to Sad1.
+  - subject: nuclear_membrane_microtubule_tethering_complex
+    predicate: mediates
+    object: telomere_organization
+    description: The assembled tethering complex anchors clustered chromosome ends
+      at the nuclear envelope during fission-yeast meiotic prophase.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Taz1-marked telomeres remain tethered at the SPB/nuclear envelope via
+        Bqt1-Sad1-Kms1.
+  - subject: nuclear_membrane_microtubule_tethering_complex
+    predicate: mediates
+    object: meiotic_spindle_support
+    description: Maintained chromosome-nuclear envelope tethering supports normal
+      SPB behavior and meiotic spindle formation.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Premature Bqt1 destruction disrupts tethering and increases spindle defects.
+curation_history:
+- timestamp: '2026-10-23T14:36:26Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of nuclear membrane microtubule tethering complex (GO:0106094)
+    in category CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB
+    protein examples, functions, literature evidence, and causal mechanism graph.
+  llm_assisted: true
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: Exhibits nuclear membrane microtubule tethering complex (GO:0106094) within
+    the nuclear-envelope-spanning nuclear membrane microtubule tethering complex.
+    Conserved fungal nuclear-envelope LINC and meiotic telomere-microtubule tethering
+    complex coupling chromosomes across the nuclear membranes to cytoplasmic dynein.
+  reference: DOI:10.1016/j.cell.2006.01.048
+part_of:
+- GO:0005635
+- GO:0034992
+synonyms:
+- synonym_text: nuclear envelope microtubule tethering complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0106094

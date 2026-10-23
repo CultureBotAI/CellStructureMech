@@ -1,0 +1,286 @@
+identifier: GO:0000781
+label: chromosome, telomeric region
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: The terminal region of a linear chromosome that includes the telomeric
+  DNA repeats and associated proteins, required for replication and stability of the
+  chromosome end. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other
+  microbial eukaryotes, the chromosome, telomeric region comprises terminal telomeric
+  DNA repeats bound by sequence-specific duplex repeat-binding and telomere-associated
+  proteins (such as Rap1 and Taz1) that form a protective nucleoprotein cap at chromosome
+  ends and mediate telomere organization.
+definition_source: GO:0000781
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-23T14:36:25Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of chromosome, telomeric region (GO:0000781) in category
+    OTHER with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples,
+    functions, literature evidence, and causal mechanism graph.
+  llm_assisted: true
+parent_structures:
+- GO:0000785
+part_of:
+- GO:0005694
+has_part:
+- GO:0000786
+synonyms:
+- synonym_text: telomere
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000781
+- synonym_text: telomeric chromatin
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000781
+components:
+- component_id: telomeric_dna
+  label: telomere
+  component_type: DNA
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  grounding: SO:0000624
+  grounding_notes: Sequence Ontology term SO:0000624 (telomere) denotes the terminal
+    repeat DNA sequence feature at linear chromosome ends that forms the nucleic-acid
+    core of the chromosome, telomeric region.
+  role: Terminal repeat DNA sequence at the ends of linear nuclear chromosomes that
+    nucleates assembly of the telomeric nucleoprotein cap.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Terminal telomeric repeat DNA at linear chromosome ends is bound by Rap1
+      within the budding-yeast chromosome, telomeric region.
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Terminal telomeric DNA repeats at fission-yeast chromosome ends are bound
+      by Taz1 and Rap1.
+- component_id: rap1
+  label: TE2IP/Rap1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Conserved telomere-associated scaffold protein that binds directly to TG1-3
+    telomeric repeats in Saccharomyces cerevisiae and is recruited by Taz1 to telomeric
+    repeats in Schizosaccharomyces pombe within the chromosome, telomeric region.
+  grounding: InterPro:IPR039595
+  grounding_notes: Exact integrated family InterPro:IPR039595 (TE2IP/Rap1) verified
+    for both Saccharomyces cerevisiae RAP1 (P11938) and Schizosaccharomyces pombe
+    rap1 (Q96TL7). Denotes telomeric Rap1, distinct from the Ras-family Rap1 GTPase.
+  gene_symbols:
+  - RAP1
+  - rap1
+  protein_examples:
+  - uniprot_id: UniProtKB:P11938
+    protein_label: DNA-binding protein RAP1
+    gene_symbol: RAP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Figure 4 uses Rap1-GFP at clustered meiotic chromosome ends.
+    - reference: https://www.uniprot.org/uniprotkb/P11938/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  - uniprot_id: UniProtKB:Q96TL7
+    protein_label: DNA-binding protein rap1
+    gene_symbol: rap1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1186/s12915-015-0149-x
+      notes: Figure 4 directly images meiotic Rap1-YFP and compares a Bqt1/2-binding-defective
+        mutant.
+    - reference: https://www.uniprot.org/uniprotkb/Q96TL7/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Rap1-GFP directly marks the chromosome, telomeric region at budding-yeast
+      chromosome ends.
+  - reference: DOI:10.1186/s12915-015-0149-x
+    notes: Amelina et al. 2015 show that Rap1-YFP constitutively localizes to the
+      fission-yeast chromosome, telomeric region, including in separation-of-function
+      mutants defective for meiotic Bqt1/2 binding.
+- component_id: taz1
+  label: Taz1-like telomere-binding protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Duplex telomeric-repeat DNA-binding protein in Schizosaccharomyces pombe that
+    binds terminal telomeric DNA repeats and recruits Rap1 to assemble the chromosome,
+    telomeric region.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: UniProtKB:P79005 contains Myb/SANT DNA-binding and telomeric-repeat
+    dimerization domains without a single whole-protein InterPro family entry.
+  gene_symbols:
+  - taz1
+  protein_examples:
+  - uniprot_id: UniProtKB:P79005
+    protein_label: Telomere length regulator taz1
+    gene_symbol: taz1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar, not a claim that the reference strain was the
+      exact experimental stock.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Taz1-YFP tracks telomeres throughout live meiotic imaging.
+    - reference: https://www.uniprot.org/uniprotkb/P79005/entry
+      notes: Reviewed identity, native protein label, gene and source taxon verified.
+        Structural role comes from the cited experiment.
+  evidence:
+  - reference: DOI:10.1038/celldisc.2017.41
+    notes: Taz1-YFP directly labels the terminal chromosome, telomeric region at fission-yeast
+      chromosome ends.
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  reference: DOI:10.26508/lsa.202000824
+  note: Budding-yeast model in which terminal TG1-3 telomeric DNA repeats bound by
+    Rap1 form the chromosome, telomeric region.
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1186/s12915-015-0149-x
+  note: Fission-yeast model in which duplex telomeric repeats bound by Taz1 recruit
+    Rap1 to form the chromosome, telomeric region.
+functions:
+- function_id: telomere_organization
+  label: telomere organization
+  grounding: GO:0032200
+  description: Organization and structural capping of the terminal telomeric DNA-protein
+    complex at linear chromosome ends.
+  evidence:
+  - reference: DOI:10.1186/s12915-015-0149-x
+    notes: Taz1- and Rap1-bound telomeric regions maintain chromosome-end organization
+      in Schizosaccharomyces pombe.
+  - reference: DOI:10.26508/lsa.202000824
+    notes: Rap1-bound telomeric repeats organize chromosome ends in Saccharomyces
+      cerevisiae.
+causal_graphs:
+- graph_id: chromosome_telomeric_region_mechanism
+  title: Telomeric DNA repeat recognition and nucleoprotein assembly of the chromosome,
+    telomeric region
+  description: Terminal telomeric repeat DNA (SO:0000624) recruits duplex telomere-binding
+    protein Taz1 in Schizosaccharomyces pombe and TE2IP/Rap1 (directly in Saccharomyces
+    cerevisiae and via Taz1 in S. pombe) to assemble the chromosome, telomeric region
+    (GO:0000781) and mediate telomere organization (GO:0032200).
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Covers the conserved core telomeric DNA-protein cap in S. cerevisiae
+    (Rap1-bound TG1-3 repeats) and S. pombe (Taz1-Rap1-bound terminal repeats), distinct
+    from transient meiotic nuclear-envelope bouquet tethering complexes.
+  nodes:
+  - node_id: telomeric_dna
+    label: telomere
+    node_type: GENETIC_ELEMENT
+    grounding: SO:0000624
+    component_ref: telomeric_dna
+    description: Terminal telomeric repeat DNA at linear chromosome ends.
+  - node_id: taz1
+    label: Taz1-like telomere-binding protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: taz1
+    description: Fission-yeast duplex telomeric-repeat DNA-binding protein.
+  - node_id: rap1
+    label: TE2IP/Rap1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR039595
+    component_ref: rap1
+    description: Telomere-associated Rap1 protein bound to telomeric repeats directly
+      in S. cerevisiae or via Taz1 in S. pombe.
+  - node_id: chromosome_telomeric_region
+    label: chromosome, telomeric region
+    node_type: STRUCTURE
+    grounding: GO:0000781
+    description: Assembled terminal nucleoprotein cap of a linear chromosome (GO:0000781).
+  - node_id: telomere_organization
+    label: telomere organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0032200
+    description: Organization and capping of chromosome ends.
+  edges:
+  - subject: telomeric_dna
+    predicate: recruits
+    object: taz1
+    description: In S. pombe, terminal telomeric DNA repeats recruit the duplex telomere-binding
+      protein Taz1.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Taz1 binds terminal telomeric repeats at fission-yeast chromosome ends.
+  - subject: telomeric_dna
+    predicate: recruits
+    object: rap1
+    description: In S. cerevisiae, terminal TG1-3 telomeric DNA repeats directly bind
+      Rap1.
+    evidence:
+    - reference: DOI:10.26508/lsa.202000824
+      notes: Rap1 binds budding-yeast telomeric DNA repeats at chromosome ends.
+  - subject: taz1
+    predicate: recruits
+    object: rap1
+    description: In S. pombe, telomere-bound Taz1 recruits Rap1 to the chromosome,
+      telomeric region.
+    evidence:
+    - reference: DOI:10.1186/s12915-015-0149-x
+      notes: Amelina et al. 2015 characterize Rap1 recruitment to Taz1-bound telomeres
+        in fission yeast.
+  - subject: taz1
+    predicate: assembles into
+    object: chromosome_telomeric_region
+    description: Taz1 bound to telomeric DNA forms the core duplex repeat cap of the
+      fission-yeast chromosome, telomeric region.
+    evidence:
+    - reference: DOI:10.1038/celldisc.2017.41
+      notes: Taz1-YFP marks the assembled chromosome, telomeric region.
+  - subject: rap1
+    predicate: assembles into
+    object: chromosome_telomeric_region
+    description: Rap1 incorporates with telomeric repeat chromatin to form the chromosome,
+      telomeric region.
+    evidence:
+    - reference: DOI:10.1186/s12915-015-0149-x
+      notes: Rap1-YFP is a constitutive component of the chromosome, telomeric region.
+  - subject: chromosome_telomeric_region
+    predicate: mediates
+    object: telomere_organization
+    description: The assembled chromosome, telomeric region maintains chromosome-end
+      organization and protection.
+    evidence:
+    - reference: DOI:10.1186/s12915-015-0149-x
+      notes: Telomeric Rap1-Taz1 complexes organize fission-yeast chromosome ends.
+evidence:
+- reference: GO:0000781
+  notes: 'Gene Ontology cellular-component term for chromosome, telomeric region:
+    The terminal region of a linear chromosome that includes the telomeric DNA repeats
+    and associated proteins, required for replication and stability of the chromosome
+    end.'
+- reference: DOI:10.1186/s12915-015-0149-x
+  notes: Amelina et al. 2015 (BMC Biol, PMID 26058898) demonstrate constitutive telomeric
+    localization of Rap1 at S. pombe chromosome ends and dissect its domains separately
+    from meiotic Bqt1/2 binding.
+- reference: DOI:10.26508/lsa.202000824
+  notes: Fan et al. 2020 (Life Sci Alliance, PMID 32967926) image Rap1-GFP at the
+    S. cerevisiae chromosome, telomeric region.
+- reference: DOI:10.1038/celldisc.2017.41
+  notes: Moiseeva et al. 2017 (Cell Discov, PMID 29123917) track Taz1-YFP at the S.
+    pombe chromosome, telomeric region.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Linear nuclear chromosomes terminate in TG1-3 telomeric repeats bound by Rap1
+    and associated tethering factors.
+  reference: DOI:10.26508/lsa.202000824
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast chromosome ends assemble Taz1-Rap1 telomeric nucleoprotein complexes
+    that tether to the nuclear envelope.
+  reference: DOI:10.1038/celldisc.2017.41

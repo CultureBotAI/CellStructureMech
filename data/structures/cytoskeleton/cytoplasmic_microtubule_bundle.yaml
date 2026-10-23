@@ -1,0 +1,618 @@
+identifier: GO:1905720
+label: cytoplasmic microtubule bundle
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A microtubule bundle located in the cytoplasm. In fission yeast (Schizosaccharomyces
+  pombe) and other microbial eukaryotes, cytoplasmic microtubule bundles consist of
+  parallel or antiparallel alpha/beta-tubulin polymers nucleated by gamma-tubulin
+  adaptor complexes (Mto1-Mto2) and crosslinked by Ase1/MAP65 family proteins and
+  CLASP (Cls1/Peg1) to maintain cytoplasmic organization and cell-tip polarity.
+definition_source: GO:1905720
+mapping_status: PROPOSED
+curation_history:
+- timestamp: '2026-10-23T14:36:26Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of cytoplasmic microtubule bundle (GO:1905720) in category
+    CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB protein
+    examples, functions, literature evidence, and causal mechanism graph.
+  llm_assisted: true
+parent_structures:
+- GO:0097427
+part_of:
+- GO:0015630
+- GO:0005737
+has_part:
+- GO:0005881
+synonyms:
+- synonym_text: cytoplasmic MT bundle
+  synonym_type: EXACT_SYNONYM
+  source: GO:1905720
+components:
+- component_id: alpha_tubulin
+  label: Alpha tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Alpha subunit of the bundle microtubules; Atb2 is the fluorescent scaffold
+    reporter. Functions within the crosslinked cytoplasmic microtubule bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Figures 1-2 identify the stable bundle with GFP-Atb2, TEM and tomography.
+  - reference: InterPro:IPR002452
+    notes: Complete native InterPro matches verified on 2026-10-05; integrated type=family
+      and scope checked, not inferred from a domain.
+  gene_symbols:
+  - atb2
+  protein_examples:
+  - uniprot_id: UniProtKB:P04689
+    protein_label: Tubulin alpha-2 chain
+    gene_symbol: atb2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figures 1-2: GFP-Atb2 labels the bundle. UniProt names this alpha-2
+        protein tub1 and retains atb2/alp2 aliases.'
+    - reference: https://www.uniprot.org/uniprotkb/P04689/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  grounding: InterPro:IPR002452
+  grounding_notes: Exact Alpha tubulin family for the verified Atb2 exemplar; not
+    the broader all-tubulin family.
+- component_id: beta_tubulin
+  label: Beta tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Partner tubulin class in the microtubules resolved by TEM; no particular beta-tubulin
+    isoform is assigned from these images. Functions within the crosslinked cytoplasmic
+    microtubule bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Figure 1D-G resolves microtubules, whose alpha/beta polymer composition
+      is independently defined by GO:0005874.
+  - reference: InterPro:IPR002453
+    notes: Complete native InterPro matches verified on 2026-10-05; integrated type=family
+      and scope checked, not inferred from a domain.
+  - reference: GO:0005874
+    notes: Native definition specifies alpha/beta tubulin subunits in microtubules;
+      this supports a polymer-class assertion, not an unobserved Nda3 localization
+      assay.
+  grounding: InterPro:IPR002453
+  grounding_notes: Exact Beta tubulin family verified using the reviewed S. pombe
+    Nda3 entry P05219. That lookup checks family identity, not an isoform-specific
+    localization experiment.
+  gene_symbols:
+  - nda3
+  protein_examples:
+  - uniprot_id: UniProtKB:P05219
+    protein_label: Tubulin beta chain
+    gene_symbol: nda3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene nda3 in Schizosaccharomyces
+      pombe 972h-, a taxon this record names. Identifier for the component's declared
+      gene symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P05219
+      notes: UniProtKB reviewed (Swiss-Prot) entry P05219, the single reviewed entry
+        for gene nda3 in Schizosaccharomyces pombe 972h-. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: mto1
+  label: Mto1-like microtubule nucleation adaptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Gamma-tubulin complex nucleation adaptor localized to cytoplasmic microtubule
+    bundles and required for stable bundle architecture in Schizosaccharomyces pombe.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Laporte et al. 2015 (Figure 7E-F) show Mto1 localization on cytoplasmic
+      microtubule bundles in quiescent S. pombe and demonstrate that mto1 deletion
+      abolishes stable bundle formation.
+  gene_symbols:
+  - mto1
+  protein_examples:
+  - uniprot_id: UniProtKB:O94488
+    protein_label: Gamma tubulin complex adapter mto1
+    gene_symbol: mto1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: MAP-localization Results and Figure 7E-F establish localization and the
+        deletion phenotype. The cytoplasmic adapter is O94488/SPCC417.07c, not the
+        homonymous mitochondrial O13670.
+    - reference: https://www.uniprot.org/uniprotkb/O94488/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Complete O94488 InterPro matches have domain annotations, including
+    Cnn1 N-terminal and Mto1-like Mto2-binding regions, but no integrated whole-protein
+    family. The mitochondrial MTO1 homonym is excluded.
+- component_id: mto2
+  label: Mto2-like microtubule nucleation adaptor
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident nucleation adaptor redistributed from the nuclear envelope to bundle-associated
+    puncta; proposed nucleation activity is not a directly demonstrated assembly sequence.
+    Functions within the crosslinked cytoplasmic microtubule bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Figure 4A-B and line scans show Mto2 on the bundle and near constituent
+      microtubule extremities; Figure 5 Results report retained puncta during elongation.
+  gene_symbols:
+  - mto2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9USP7
+    protein_label: Gamma tubulin complex adapter mto2
+    gene_symbol: mto2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figure 4A-B: Mto2-GFP redistributes onto RFP-Atb2-positive bundles.'
+    - reference: https://www.uniprot.org/uniprotkb/Q9USP7/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Complete native InterPro lookup for Q9USP7 returned no integrated
+    entries; no family CURIE can be asserted from this bounded lookup.
+- component_id: ase1
+  label: Microtubule-associated protein, MAP65/Ase1/PRC1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: DISPENSABLE
+  role: Resident microtubule crosslinker; Ase1 contributes to bundle thickness but
+    is not required for a bundle to form in the tested deletion. Functions within
+    the crosslinked cytoplasmic microtubule bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: 'Figure 4C-F: Ase1 localizes along the bundle; ase1 deletion leaves a thinner
+      bundle. Its established bundling activity supports the crosslinker interpretation,
+      not a measured fixed stoichiometry.'
+  - reference: InterPro:IPR007145
+    notes: Complete native InterPro matches verified on 2026-10-05; integrated type=family
+      and scope checked, not inferred from a domain.
+  gene_symbols:
+  - ase1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9HDY1
+    protein_label: Anaphase spindle elongation protein 1
+    gene_symbol: ase1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day
+        cultures. Figure 4D-F shows retained bundles after ase1 deletion.'
+    - reference: https://www.uniprot.org/uniprotkb/Q9HDY1/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  grounding: InterPro:IPR007145
+  grounding_notes: Exact integrated MAP65/Ase1/PRC1 family (InterPro:IPR007145) verified
+    for S. pombe Ase1 (Q9HDY1).
+- component_id: clasp
+  label: CLASP-like microtubule-associated protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident microtubule-associated protein enriched in the dense bundle region;
+    a specific stabilization mechanism remains unresolved. Functions within the crosslinked
+    cytoplasmic microtubule bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Figure 4C and MAP-localization Results place Cls1/Peg1 in the denser bundle
+      region; no bundle-formation necessity is inferred.
+  gene_symbols:
+  - peg1
+  - cls1
+  protein_examples:
+  - uniprot_id: UniProtKB:O42874
+    protein_label: Protein peg1
+    gene_symbol: peg1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day
+        cultures. The paper calls this protein Cls1/Peg1.'
+    - reference: https://www.uniprot.org/uniprotkb/O42874/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Complete O42874 matches are domains or superfamilies, including
+    CLASP N-terminal and TOG-related annotations; none is an exact integrated whole-protein
+    CLASP family.
+- component_id: alp7
+  label: Alp7-like microtubule-associated protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: DISPENSABLE
+  role: Resident microtubule-associated protein affecting bundle dimensions; deletion
+    does not abolish bundle formation. Functions within the crosslinked cytoplasmic
+    microtubule bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: 'Figure 4C-F: Alp7 localizes to the bundle, and alp7 deletion leaves longer
+      bundles with altered fluorescence intensity.'
+  gene_symbols:
+  - alp7
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9URY2
+    protein_label: Microtubule protein alp7
+    gene_symbol: alp7
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day
+        cultures. Figure 4D-F documents bundles in alp7 deletion cells.'
+    - reference: https://www.uniprot.org/uniprotkb/Q9URY2/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Complete Q9URY2 matches include a fungal TACC C-terminal domain,
+    not an exact whole-protein Alp7 family.
+- component_id: xmap215
+  label: XMAP215
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Resident TOG-domain microtubule regulators. Alp14 is required for elongation
+    after refeeding; individual alp14 and dis1 deletions still permit quiescent bundles.
+    Functions within the crosslinked cytoplasmic microtubule bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Figure 4C-F localizes Alp14 and Dis1 and shows bundles in each single deletion.
+      Figure 7C-D establishes an Alp14 requirement for exit-associated elongation,
+      not bundle formation. No double-deletion or whole-family assembly requirement
+      is asserted.
+  - reference: InterPro:IPR045110
+    notes: Complete native InterPro matches verified on 2026-10-05; integrated type=family
+      and scope checked, not inferred from a domain.
+  gene_symbols:
+  - alp14
+  - dis1
+  protein_examples:
+  - uniprot_id: UniProtKB:O94534
+    protein_label: Spindle pole body component alp14
+    gene_symbol: alp14
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day
+        cultures. Figures 5B and 7C-D link Alp14 to elongating tips and the exit defect.'
+    - reference: https://www.uniprot.org/uniprotkb/O94534/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  - uniprot_id: UniProtKB:Q09933
+    protein_label: Phosphoprotein p93
+    gene_symbol: dis1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day
+        cultures. Figure 4D-F shows longer bundles in dis1 deletion cells.'
+    - reference: https://www.uniprot.org/uniprotkb/Q09933/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  grounding: InterPro:IPR045110
+  grounding_notes: The same integrated XMAP215 family was verified in complete native
+    matches for both Alp14 and Dis1; shared identity does not imply interchangeable
+    activities.
+- component_id: klp2
+  label: Klp2-like kinesin-14 motor
+  component_type: PROTEIN
+  component_role: ASSOCIATED_MACHINERY
+  essentiality: DISPENSABLE
+  role: Motor associated with the assembled bundle at faint puncta; a specific quiescent
+    motor-driven sliding activity is not established. Functions within the crosslinked
+    cytoplasmic microtubule bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Figure 4C detects Klp2 at a few bundle-associated puncta; inspected Figure
+      4D-F includes klp2 deletion cells that retain bundles.
+  gene_symbols:
+  - klp2
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9US03
+    protein_label: Kinesin-like protein 2
+    gene_symbol: klp2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day
+        cultures. Figure 4D-F includes klp2 deletion bundles.'
+    - reference: https://www.uniprot.org/uniprotkb/Q9US03/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Complete Q9US03 matches include the broader Kinesin-like protein
+    family IPR027640 and motor domains; these do not exactly identify the narrower
+    Klp2-like kinesin-14 class.
+- component_id: tea1
+  label: Tea1-like polarity landmark protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: UNKNOWN
+  role: Cell-tip polarity landmark protein that associates with cytoplasmic microtubule
+    bundles during quiescence and redistributes to cell tips upon bundle elongation.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Figures 6A and 7A show Tea1-GFP localization along the cytoplasmic microtubule
+      bundle in quiescent S. pombe and its return to cell tips upon refeeding.
+  gene_symbols:
+  - tea1
+  protein_examples:
+  - uniprot_id: UniProtKB:P87061
+    protein_label: Tip elongation aberrant protein 1
+    gene_symbol: tea1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: Reference-sequence exemplar for the species-level experiment; this accession
+      does not assert that the exact reference stock was imaged.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: 'Figures 6A and 7A: Tea1-GFP redistribution onto the quiescent bundle
+        and back to cell tips.'
+    - reference: https://www.uniprot.org/uniprotkb/P87061/entry
+      notes: Reviewed entry, gene aliases and source taxon verified live on 2026-10-05;
+        localization comes from the primary experiment.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Complete P87061 matches contain Kelch repeat and superfamily annotations,
+    not an exact integrated whole-protein Tea1 family.
+canonical_examples:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  reference: DOI:10.1083/jcb.201502025
+  note: Characterized model system for cytoplasmic microtubule bundle (GO:1905720)
+    within the crosslinked cytoplasmic microtubule bundle. Species examined by GFP-Atb2
+    microscopy, freeze-substitution TEM and serial electron tomography after nutrient
+    exhaustion. ENA confirms the species identifier; no all-fungi prevalence or exact
+    stock identity is asserted.
+functions:
+- function_id: polarity_reestablishment
+  label: Polarity reestablishment after quiescence
+  description: Elongation of the pre-existing bundle and restoration of microtubule
+    dynamics support timely return of polarity factors and actin organization to cell
+    tips in refed S. pombe. Mediated by cytoplasmic microtubule bundle (GO:1905720)
+    within the crosslinked cytoplasmic microtubule bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: 'Figures 5 and 7: refeeding, MBC treatment, alp14 deletion and cold-treated
+      mto1 deletion distinguish regrowth and polarity defects. The interventions also
+      affect new microtubules, so they do not isolate an exclusive bundle-only pathway.'
+causal_graphs:
+- graph_id: cytoplasmic_microtubule_bundle_mechanism
+  title: Cytoplasmic microtubule bundle nucleation, MAP crosslinking, and cell-tip
+    polarity maintenance
+  description: Alpha- and beta-tubulin polymers nucleated by Mto1-Mto2 adaptors, crosslinked
+    by Ase1, and regulated by Cls1/Peg1, Alp7, XMAP215 (Alp14/Dis1), Klp2, and Tea1
+    assemble into cytoplasmic microtubule bundles (GO:1905720) that support cell-tip
+    polarity reestablishment.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  scope_notes: Characterized in Schizosaccharomyces pombe cytoplasmic microtubule
+    bundles (including the stationary-phase/quiescent cytoplasmic bundle subtype dissected
+    in Laporte et al. 2015, DOI:10.1083/jcb.201502025).
+  nodes:
+  - node_id: alpha_tubulin
+    label: Alpha tubulin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002452
+    component_ref: alpha_tubulin
+  - node_id: beta_tubulin
+    label: Beta tubulin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002453
+    component_ref: beta_tubulin
+  - node_id: mto1
+    label: Mto1-like microtubule nucleation adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: mto1
+  - node_id: mto2
+    label: Mto2-like microtubule nucleation adaptor
+    node_type: GENE_OR_PROTEIN
+    component_ref: mto2
+  - node_id: ase1
+    label: Microtubule-associated protein, MAP65/Ase1/PRC1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR007145
+    component_ref: ase1
+  - node_id: clasp
+    label: CLASP-like microtubule-associated protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: clasp
+  - node_id: alp7
+    label: Alp7-like microtubule-associated protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: alp7
+  - node_id: xmap215
+    label: XMAP215
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR045110
+    component_ref: xmap215
+  - node_id: klp2
+    label: Klp2-like kinesin-14 motor
+    node_type: GENE_OR_PROTEIN
+    component_ref: klp2
+  - node_id: tea1
+    label: Tea1-like polarity landmark protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: tea1
+  - node_id: cytoplasmic_microtubule_bundle
+    label: cytoplasmic microtubule bundle
+    node_type: STRUCTURE
+    grounding: GO:1905720
+    description: Assembled crosslinked cytoplasmic microtubule bundle (GO:1905720).
+  - node_id: repolarization
+    label: Cell-tip polarity reestablishment
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: alpha_tubulin
+    predicate: assembles into
+    object: cytoplasmic_microtubule_bundle
+    description: Alpha-tubulin subunits polymerize into the bundled cytoplasmic microtubules.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figures 1-2 resolve GFP-Atb2-labeled cytoplasmic microtubule bundles
+        by fluorescence, TEM, and tomography.
+  - subject: beta_tubulin
+    predicate: assembles into
+    object: cytoplasmic_microtubule_bundle
+    description: Beta-tubulin subunits co-polymerize with alpha-tubulin to form bundled
+      cytoplasmic microtubules.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figure 1D-G resolves tightly packed cytoplasmic microtubules composed
+        of alpha/beta-tubulin polymers.
+  - subject: mto1
+    predicate: nucleates and stabilizes
+    object: cytoplasmic_microtubule_bundle
+    description: Mto1 localizes to cytoplasmic microtubule bundles and is required
+      for their stable bundled architecture.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figure 7E-F shows that mto1 deletion abolishes stable cytoplasmic microtubule
+        bundles.
+  - subject: mto2
+    predicate: associates with
+    object: cytoplasmic_microtubule_bundle
+    description: Mto2 redistributes onto cytoplasmic microtubule bundle puncta.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figure 4A-B demonstrates Mto2-GFP localization along the cytoplasmic
+        microtubule bundle.
+  - subject: ase1
+    predicate: crosslinks filaments in
+    object: cytoplasmic_microtubule_bundle
+    description: Ase1 localizes along cytoplasmic microtubule bundles and crosslinks
+      antiparallel microtubules to maintain bundle thickness.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figure 4C-F demonstrates Ase1 localization and reduced bundle thickness
+        in ase1 deletion cells.
+  - subject: clasp
+    predicate: associates with
+    object: cytoplasmic_microtubule_bundle
+    description: Cls1/Peg1 (CLASP) enriches in the dense overlap region of cytoplasmic
+      microtubule bundles.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figure 4C shows Cls1/Peg1-GFP enrichment along the cytoplasmic bundle.
+  - subject: alp7
+    predicate: regulates morphology of
+    object: cytoplasmic_microtubule_bundle
+    description: Alp7 localizes to cytoplasmic microtubule bundles and modulates bundle
+      length and intensity.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figure 4C-F shows Alp7 colocalization and altered bundle dimensions in
+        alp7 deletion cells.
+  - subject: xmap215
+    predicate: promotes elongation of
+    object: cytoplasmic_microtubule_bundle
+    description: XMAP215-family polymerase Alp14/Dis1 localizes to cytoplasmic bundles
+      and promotes bundle elongation.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figures 4C-F, 5B, and 7C-D demonstrate Alp14/Dis1 bundle localization
+        and Alp14-dependent elongation.
+  - subject: klp2
+    predicate: associates with
+    object: cytoplasmic_microtubule_bundle
+    description: Kinesin-14 motor Klp2 associates with puncta along the cytoplasmic
+      microtubule bundle.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figure 4C detects Klp2-GFP puncta on the cytoplasmic microtubule bundle.
+  - subject: tea1
+    predicate: localizes to
+    object: cytoplasmic_microtubule_bundle
+    description: Polarity landmark protein Tea1 associates with the cytoplasmic microtubule
+      bundle before returning to cell tips.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figures 6A and 7A track Tea1-GFP on the cytoplasmic bundle and its return
+        to cell tips.
+  - subject: cytoplasmic_microtubule_bundle
+    predicate: supports
+    object: repolarization
+    description: Elongation and dynamic recovery of the cytoplasmic microtubule bundle
+      support timely cell-tip polarity reestablishment.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Figures 5 and 7 show that perturbing cytoplasmic microtubule bundle recovery
+        delays cell-tip repolarization.
+evidence:
+- reference: GO:1905720
+  notes: 'Gene Ontology cellular-component term for cytoplasmic microtubule bundle:
+    A microtubule bundle located in the cytoplasm.'
+- reference: DOI:10.1083/jcb.201502025
+  notes: Laporte et al. 2015 (J Cell Biol, PMID 26124291) characterize the ultrastructure,
+    MAP composition (Atb2, Mto1, Mto2, Ase1, Cls1/Peg1, Alp7, Alp14, Dis1, Klp2, Tea1),
+    and polarity-recovery function of cytoplasmic microtubule bundles in Schizosaccharomyces
+    pombe.
+- reference: GO:0015630
+  notes: Gene Ontology term for microtubule cytoskeleton, the encompassing cytoskeletal
+    system.
+- reference: GO:0005737
+  notes: Gene Ontology term for cytoplasm, verifying the compartment localization
+    of the bundle.
+- reference: GO:0005881
+  notes: Gene Ontology term for cytoplasmic microtubule, the constituent polymer of
+    the cytoplasmic microtubule bundle.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Fission yeast organizes interphase and quiescent cytoplasmic microtubules
+    into Ase1-crosslinked antiparallel bundles.
+  reference: DOI:10.1083/jcb.201502025

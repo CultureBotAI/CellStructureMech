@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
- "record_count": 978,
- "corpus_updated": "2026-10-23 11:10:00 UTC",
- "corpus_digest": "f6e25438d424",
+ "record_count": 985,
+ "corpus_updated": "2026-10-23 14:36:26 UTC",
+ "corpus_digest": "3aa4d84f8b89",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -40243,6 +40243,710 @@
    ]
   },
   {
+   "identifier": "GO:0030864",
+   "label": "cortical actin cytoskeleton",
+   "structure_category": "CYTOSKELETON",
+   "structure_kind": "FILAMENT",
+   "definition": "The part of the actin cytoskeleton that lies just beneath the plasma membrane. In budding yeast (Saccharomyces cerevisiae), fission yeast, and other fungi and protists, the cortical actin cytoskeleton comprises Arp2/3-nucleated branched actin cortical patches and cortical actin filaments that drive endocytic vesicle internalization and cell-cortex remodeling.",
+   "definition_source": "GO:0030864",
+   "mapping_status": "PROPOSED",
+   "curation_history": [
+    {
+     "timestamp": "2026-10-23T14:36:26Z",
+     "curator": "claude-opus-4-7",
+     "action": "CREATED",
+     "changes": "Initial curation of cortical actin cytoskeleton (GO:0030864) in category CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and causal mechanism graph.",
+     "llm_assisted": true
+    }
+   ],
+   "parent_structures": [
+    "GO:0030863"
+   ],
+   "part_of": [
+    "GO:0015629",
+    "GO:0005938"
+   ],
+   "synonyms": [
+    {
+     "synonym_text": "submembranous actin cytoskeleton",
+     "synonym_type": "RELATED_SYNONYM",
+     "source": "GO:0030864"
+    }
+   ],
+   "components": [
+    {
+     "component_id": "actin",
+     "label": "actin",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "ACT1"
+     ],
+     "essentiality": "UNKNOWN",
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "Curated from Saccharomyces cerevisiae ACT1 cortical actin cytoskeleton studies; no single whole-protein InterPro family CURIE was assigned in this pass.",
+     "role": "Monomeric subunit that polymerizes into the branched cortical actin filament networks and cortical patches of the cortical actin cytoskeleton beneath the plasma membrane.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.200404159",
+       "notes": "Young, Cooper and Bridgman 2004 examined Saccharomyces cerevisiae actin patches by correlative fluorescence and electron microscopy."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P60010",
+       "protein_label": "Actin",
+       "gene_symbol": "ACT1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene ACT1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P60010",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P60010, the single reviewed entry for gene ACT1 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "arp2_3_complex",
+     "label": "Arp2/3 protein complex",
+     "component_type": "PROTEIN_COMPLEX",
+     "component_role": "CONSTITUENT",
+     "grounding": "GO:0005885",
+     "essentiality": "UNKNOWN",
+     "role": "Seven-subunit actin-nucleation complex (Arp2, Arp3, Arc40, Arc35, Arc19, Arc18, Arc15) that nucleates branched actin filament networks within the cortical actin cytoskeleton.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.200404159",
+       "notes": "Young, Cooper and Bridgman 2004 described yeast actin-patch branches characteristic of the Arp2/3 complex."
+      }
+     ],
+     "gene_symbols": [
+      "ARP2",
+      "ARP3",
+      "ARC40",
+      "ARC35",
+      "ARC19",
+      "ARC18",
+      "ARC15"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P32381",
+       "protein_label": "Actin-related protein 2",
+       "gene_symbol": "ARP2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene ARP2 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:11248049",
+         "notes": "Boldogh IR et al. 2001, ‘Arp2/3 complex and actin dynamics are required for actin-based mitochondrial motility in yeast.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, actin patch' localisation of P32381."
+        },
+        {
+         "reference": "PMID:9210376",
+         "notes": "Winter D et al. 1997, ‘The complex containing actin-related proteins Arp2 and Arp3 is required for the motility and integrity of yeast actin patches.’, Curr Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, actin patch' localisation of P32381."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P47117",
+       "protein_label": "Actin-related protein 3",
+       "gene_symbol": "ARP3",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene ARP3 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:9210376",
+         "notes": "Winter D et al. 1997, ‘The complex containing actin-related proteins Arp2 and Arp3 is required for the motility and integrity of yeast actin patches.’, Curr Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, actin patch' localisation of P47117."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P38328",
+       "protein_label": "Actin-related protein 2/3 complex subunit 1",
+       "gene_symbol": "ARC40",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene ARC40 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P38328",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P38328, the single reviewed entry for gene ARC40 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P53731",
+       "protein_label": "Actin-related protein 2/3 complex subunit 2",
+       "gene_symbol": "ARC35",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene ARC35 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P53731",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P53731, the single reviewed entry for gene ARC35 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P33204",
+       "protein_label": "Actin-related protein 2/3 complex subunit 4",
+       "gene_symbol": "ARC19",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene ARC19 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P33204",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P33204, the single reviewed entry for gene ARC19 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q05933",
+       "protein_label": "Actin-related protein 2/3 complex subunit 3",
+       "gene_symbol": "ARC18",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene ARC18 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q05933",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q05933, the single reviewed entry for gene ARC18 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P40518",
+       "protein_label": "Actin-related protein 2/3 complex subunit 5",
+       "gene_symbol": "ARC15",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene ARC15 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:11248049",
+         "notes": "Boldogh IR et al. 2001, ‘Arp2/3 complex and actin dynamics are required for actin-based mitochondrial motility in yeast.’, Proc Natl Acad Sci U S A. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, actin patch' localisation of P40518."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Budding yeast organizes a dynamic Arp2/3-nucleated cortical actin cytoskeleton beneath the plasma membrane that drives endocytic internalization.",
+     "reference": "DOI:10.1016/S0092-8674(03)00883-3"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "note": "Reference budding-yeast system in which the cortical actin cytoskeleton beneath the plasma membrane was resolved as Arp2/3-branched Act1 filament networks driving endocytosis.",
+     "reference": "DOI:10.1083/jcb.200404159"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "endocytic_internalization",
+     "label": "endocytic internalization",
+     "description": "Arp2/3-nucleated branched actin filament networks of the cortical actin cytoskeleton assemble beneath the plasma membrane at endocytic sites and generate force for vesicle internalization.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1016/S0092-8674(03)00883-3",
+       "notes": "Kaksonen, Sun and Drubin 2003 tracked cortical actin assembly and inward movement during yeast endocytic internalization."
+      },
+      {
+       "reference": "DOI:10.1371/journal.pbio.0060001",
+       "notes": "Galletta, Chuang and Cooper 2008 dissected Arp2/3-regulated cortical actin network assembly and motility during endocytosis."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0030864",
+     "notes": "Gene Ontology cellular-component term for cortical actin cytoskeleton: The part of the actin cytoskeleton that lies just beneath the plasma membrane."
+    },
+    {
+     "reference": "GO:0030479",
+     "notes": "Gene Ontology term for actin cortical patch, a major Arp2/3-nucleated substructure (has_part) of the cortical actin cytoskeleton in fungi."
+    },
+    {
+     "reference": "GO:0005885",
+     "notes": "Gene Ontology term for the Arp2/3 protein complex, a constituent branch-nucleating complex of the cortical actin cytoskeleton."
+    },
+    {
+     "reference": "DOI:10.1016/S0092-8674(03)00883-3",
+     "notes": "Kaksonen, Sun and Drubin 2003 (Cell) dissect how the budding-yeast cortical actin cytoskeleton assembles at plasma-membrane endocytic sites to drive internalization."
+    },
+    {
+     "reference": "DOI:10.1083/jcb.200404159",
+     "notes": "Young, Cooper and Bridgman 2004 (J Cell Biol) resolve the branched actin filament architecture of the yeast cortical actin cytoskeleton."
+    },
+    {
+     "reference": "DOI:10.1371/journal.pbio.0060001",
+     "notes": "Galletta, Chuang and Cooper 2008 (PLoS Biol) analyze Arp2/3 regulators in cortical actin assembly and endocytosis."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "cortical_actin_cytoskeleton_mechanism",
+     "title": "Arp2/3-mediated branched actin assembly and endocytic function of the cortical actin cytoskeleton",
+     "description": "The Arp2/3 complex (GO:0005885) nucleates branched Act1 filaments beneath the plasma membrane to assemble the cortical actin cytoskeleton (GO:0030864), which mediates endocytic internalization.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Captures core Act1 and Arp2/3 assembly into the Saccharomyces cerevisiae cortical actin cytoskeleton and its role in endocytic internalization.",
+     "nodes": [
+      {
+       "node_id": "actin",
+       "label": "actin",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "actin"
+      },
+      {
+       "node_id": "arp2_3_complex",
+       "label": "Arp2/3 protein complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0005885",
+       "component_ref": "arp2_3_complex"
+      },
+      {
+       "node_id": "cortical_actin_cytoskeleton",
+       "label": "cortical actin cytoskeleton",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0030864",
+       "description": "Assembled plasma-membrane-proximal cortical actin cytoskeleton (GO:0030864)."
+      },
+      {
+       "node_id": "endocytic_internalization",
+       "label": "endocytic internalization",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "arp2_3_complex",
+       "predicate": "nucleates branches in",
+       "object": "cortical_actin_cytoskeleton",
+       "description": "The Arp2/3 complex nucleates dendritic actin filament branches within the cortical actin cytoskeleton.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.200404159",
+         "notes": "Young, Cooper and Bridgman 2004 resolved branched actin filament networks characteristic of Arp2/3 nucleation in the yeast cell cortex."
+        }
+       ]
+      },
+      {
+       "subject": "actin",
+       "predicate": "polymerizes into",
+       "object": "cortical_actin_cytoskeleton",
+       "description": "Act1 monomers polymerize into the branched cortical filament networks of the cortical actin cytoskeleton.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.200404159",
+         "notes": "Correlative light and electron microscopy demonstrates short branched Act1 filaments in the cortical actin cytoskeleton."
+        }
+       ]
+      },
+      {
+       "subject": "cortical_actin_cytoskeleton",
+       "predicate": "mediates",
+       "object": "endocytic_internalization",
+       "description": "Dynamic assembly and inward movement of the cortical actin cytoskeleton drive endocytic vesicle internalization.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/S0092-8674(03)00883-3",
+         "notes": "Kaksonen, Sun and Drubin 2003 established the pathway coupling cortical actin assembly to endocytic internalization."
+        },
+        {
+         "reference": "DOI:10.1371/journal.pbio.0060001",
+         "notes": "Galletta, Chuang and Cooper 2008 showed that Arp2/3 regulation of cortical actin networks controls endocytic internalization."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "has_part": [
+    "GO:0030479",
+    "GO:0005885"
+   ]
+  },
+  {
+   "identifier": "GO:0030981",
+   "label": "cortical microtubule cytoskeleton",
+   "structure_category": "CYTOSKELETON",
+   "structure_kind": "OTHER",
+   "definition": "The part of the microtubule cytoskeleton that lies just beneath the plasma membrane in the cell cortex. In fission yeast (Schizosaccharomyces pombe), ciliates, apicomplexans, and microalgae, the cortical microtubule cytoskeleton includes astral and cortical microtubule arrays that interact with cortical dynein and plus-end capture factors to drive nuclear movement and maintain cell-cortex polarity.",
+   "definition_source": "GO:0030981",
+   "mapping_status": "PROPOSED",
+   "curation_history": [
+    {
+     "timestamp": "2026-10-23T14:36:26Z",
+     "curator": "claude-opus-4-7",
+     "action": "CREATED",
+     "changes": "Initial curation of cortical microtubule cytoskeleton (GO:0030981) in category CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and causal mechanism graph.",
+     "llm_assisted": true
+    }
+   ],
+   "parent_structures": [
+    "GO:0030863"
+   ],
+   "part_of": [
+    "GO:0015630",
+    "GO:0005938"
+   ],
+   "synonyms": [
+    {
+     "synonym_text": "cortical microtubule array",
+     "synonym_type": "RELATED_SYNONYM",
+     "source": "GO:0030981"
+    }
+   ],
+   "components": [
+    {
+     "component_id": "alpha_tubulin",
+     "label": "Alpha tubulin",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR002452",
+     "essentiality": "UNKNOWN",
+     "gene_symbols": [
+      "tub1",
+      "atb2",
+      "alp2",
+      "nda2"
+     ],
+     "role": "Alpha-tubulin subunit class (Nda2 and Atb2/Tub1 in Schizosaccharomyces pombe) that co-polymerizes with beta-tubulin into cortical and horsetail-astral microtubule arrays of the cortical microtubule cytoskeleton.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P04689",
+       "protein_label": "Tubulin alpha-2 chain",
+       "gene_symbol": "tub1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-08",
+       "role": "Reference-sequence exemplar for species-level Atb2 imaging; the exact reference stock is not asserted to be the experimental strain (also declared as synonym atb2, alp2).",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cub.2012.02.042",
+         "notes": "Figure 4A follows mCherry-Atb2 in the meiotic radial array before its replacement by the meiosis-I spindle. This is not a census of all alpha-tubulin isoforms."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P04689/entry",
+         "notes": "Native accession, reviewed status, protein label, tub1 primary gene with atb2/alp2 aliases and reference taxon verified on 2026-10-08. The native InterPro response includes the exact Alpha tubulin family; experimental membership comes from the primary study."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P04688",
+       "protein_label": "Tubulin alpha-1 chain",
+       "gene_symbol": "nda2",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "Representative reviewed UniProtKB entry for gene nda2 in Schizosaccharomyces pombe 972h-. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P04688",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P04688, the single reviewed entry for gene nda2 in Schizosaccharomyces pombe 972h-. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "DOI:10.1016/j.cub.2012.02.042",
+       "notes": "Figure 4A directly images mCherry-Atb2-labeled array microtubules in homothallic S. pombe cells."
+      },
+      {
+       "reference": "GO:0005874",
+       "notes": "The microtubule definition supplies alpha/beta polymer composition, not HAA-specific dimensions or an isoform deletion phenotype."
+      }
+     ]
+    },
+    {
+     "component_id": "beta_tubulin",
+     "label": "Beta tubulin",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR002453",
+     "essentiality": "UNKNOWN",
+     "role": "Beta-tubulin subunit (Nda3 in Schizosaccharomyces pombe) that pairs with alpha-tubulin in the microtubules of the cortical microtubule cytoskeleton.",
+     "evidence": [
+      {
+       "reference": "GO:0032117",
+       "notes": "GO:0032117 (horsetail astral microtubule array) is a specialized meiotic array part of the cortical microtubule cytoskeleton (GO:0030981) composed of astral microtubules."
+      },
+      {
+       "reference": "GO:0005874",
+       "notes": "GO:0005874 defines microtubules as alpha/beta-tubulin polymers."
+      },
+      {
+       "reference": "DOI:10.1016/j.cub.2012.02.042",
+       "notes": "Electron tomography and live imaging resolve the cortical and astral microtubule arrays in Schizosaccharomyces pombe."
+      }
+     ],
+     "gene_symbols": [
+      "nda3"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P05219",
+       "protein_label": "Tubulin beta chain",
+       "gene_symbol": "nda3",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene nda3 in Schizosaccharomyces pombe 972h-, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P05219",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P05219, the single reviewed entry for gene nda3 in Schizosaccharomyces pombe 972h-. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:4896",
+     "taxon_label": "Schizosaccharomyces pombe",
+     "reference": "DOI:10.1016/j.cub.2012.02.042",
+     "note": "Characterized model system for cortical microtubule cytoskeleton (GO:0030981) within the cell-cortex-associated cortical microtubule cytoskeleton. Meiotic-prophase arrays studied in homothallic cells, including endogenously tagged Hrs1 and mCherry-Atb2 strain KT2901 for Figure 4A, and separately in synchronized pat1 mat-Pc diploids for ultrastructure. No fungal-wide prevalence or identity with the UniProt reference stock is asserted."
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "horsetail_movement",
+     "label": "dynein-driven meiotic oscillatory nuclear movement",
+     "grounding": "GO:0030989",
+     "description": "During fission-yeast meiotic prophase, the cortical microtubule cytoskeleton (specifically its horsetail astral microtubule array substructure, GO:0032117) interacts with cortical dynein-dynactin motors to drive oscillatory horsetail nuclear movement.",
+     "evidence": [
+      {
+       "reference": "GO:0032117",
+       "notes": "GO:0032117 defines the horsetail astral microtubule array (part_of GO:0030981 cortical microtubule cytoskeleton) by its role in facilitating horsetail nuclear movement."
+      },
+      {
+       "reference": "DOI:10.1016/j.cub.2005.07.058",
+       "notes": "Hrs1-organized cortical/astral microtubule arrays drive horsetail nuclear oscillations in S. pombe."
+      },
+      {
+       "reference": "DOI:10.1016/j.cub.2012.02.042",
+       "notes": "Yoshida et al. 2013 characterize how the Hrs1-organized array populates the cell cortex during meiotic prophase."
+      }
+     ]
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "cortical_microtubule_cytoskeleton_mechanism",
+     "title": "Assembly and cortical organization of the cortical microtubule cytoskeleton",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Illustrates assembly of the Schizosaccharomyces pombe meiotic cortical microtubule array (including the horsetail astral microtubule array substructure GO:0032117 within GO:0030981) from alpha/beta-tubulin polymers organized at the Hrs1-dependent rMTOC to drive horsetail nuclear movement (GO:0030989).",
+     "description": "Alpha- and beta-tubulin heterodimers polymerize from minus-end organizing centers into microtubule arrays that populate the cell cortex to form the cortical microtubule cytoskeleton.",
+     "nodes": [
+      {
+       "node_id": "center_assembly",
+       "label": "Hrs1-dependent rMTOC assembly",
+       "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "rmtoc",
+       "label": "Radial microtubule organizing center near the SPB",
+       "node_type": "STRUCTURE"
+      },
+      {
+       "node_id": "minus_ends",
+       "label": "Radial organization of microtubule minus ends",
+       "node_type": "STATE"
+      },
+      {
+       "node_id": "alpha",
+       "label": "Alpha tubulin",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR002452",
+       "component_ref": "alpha_tubulin"
+      },
+      {
+       "node_id": "beta",
+       "label": "Beta tubulin",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR002453",
+       "component_ref": "beta_tubulin"
+      },
+      {
+       "node_id": "microtubule",
+       "label": "microtubule",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0005874"
+      },
+      {
+       "node_id": "cortical_microtubule_cytoskeleton",
+       "label": "cortical microtubule cytoskeleton",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0030981",
+       "description": "Assembled and functional cortical microtubule cytoskeleton (GO:0030981) operating within the cell-cortex-associated cortical microtubule cytoskeleton."
+      },
+      {
+       "node_id": "horsetail_movement",
+       "label": "dynein-driven meiotic oscillatory nuclear movement",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0030989"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "center_assembly",
+       "predicate": "generates",
+       "object": "rmtoc",
+       "description": "Hrs1-dependent assembly establishes the transient radial organizing center.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cub.2012.02.042",
+         "notes": "Results sections 2.1-2.2: Hrs1 immunolabels the amorphous region, whereas hrs1 deletion removes that region and the radial arrangement despite residual SPB-associated microtubules."
+        }
+       ]
+      },
+      {
+       "subject": "rmtoc",
+       "predicate": "supports",
+       "object": "minus_ends",
+       "description": "The organizing region arranges array microtubule minus ends near, but outside, the SPB core.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cub.2012.02.042",
+         "notes": "Tomography places predominantly capped ends in the cytoplasmic rMTOC region; gamma-tubulin enrichment and its altered localization after hrs1 deletion support the organizing-center interpretation, not purified nucleation or attachment sufficiency."
+        }
+       ]
+      },
+      {
+       "subject": "minus_ends",
+       "predicate": "organizes",
+       "object": "cortical_microtubule_cytoskeleton",
+       "description": "Spatial organization of microtubule minus ends establishes the radial array geometry.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cub.2012.02.042",
+         "notes": "Wild-type-Hrs1 tomograms show varied microtubule orientations around the center; hrs1 deletion loses radial organization. Residual nonradial microtubules are not a retained normal HAA."
+        }
+       ]
+      },
+      {
+       "subject": "alpha",
+       "predicate": "contributes_to",
+       "object": "microtubule",
+       "description": "Alpha tubulin supplies one subunit class of the microtubule polymer.",
+       "evidence": [
+        {
+         "reference": "GO:0005874",
+         "notes": "Generic microtubule composition supports this class-level edge; Figure 4A of the primary study separately establishes Atb2 localization in this array."
+        }
+       ]
+      },
+      {
+       "subject": "beta",
+       "predicate": "contributes_to",
+       "object": "microtubule",
+       "description": "Beta tubulin supplies the other subunit class of the microtubule polymer.",
+       "evidence": [
+        {
+         "reference": "GO:0005874",
+         "notes": "This is class-level polymer composition, not an isoform-specific HAA experiment or a claim about beta-tubulin essentiality."
+        }
+       ]
+      },
+      {
+       "subject": "microtubule",
+       "predicate": "contributes_to",
+       "object": "cortical_microtubule_cytoskeleton",
+       "description": "Astral microtubules form the array framework.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cub.2012.02.042",
+         "notes": "Tomography in Figure 1 and live-cell Atb2 imaging in Figure 4 establish a multi-microtubule array. The whole array is not one filament, a spindle or its organizing center."
+        }
+       ]
+      },
+      {
+       "subject": "cortical_microtubule_cytoskeleton",
+       "predicate": "mediates",
+       "object": "horsetail_movement",
+       "description": "Cortical and horsetail-astral microtubules contacting cortical dynein drive oscillatory nuclear movement during S. pombe meiotic prophase.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cub.2012.02.042",
+         "notes": "Hrs1-organized cortical/astral microtubule arrays mediate meiotic prophase horsetail nuclear oscillations."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0030981",
+     "notes": "Gene Ontology cellular-component term for cortical microtubule cytoskeleton: The part of the microtubule cytoskeleton that lies just beneath the plasma membrane in the cell cortex."
+    },
+    {
+     "reference": "GO:0032117",
+     "notes": "Supports the context, composition, and mechanism of cortical microtubule cytoskeleton (GO:0030981) within the cell-cortex-associated cortical microtubule cytoskeleton. Native non-obsolete identity, exact synonym, definition, is-a aster and part-of cortical microtubule cytoskeleton verified through OAK on 2026-10-08."
+    },
+    {
+     "reference": "DOI:10.1016/j.cub.2012.02.042",
+     "notes": "Supports the context, composition, and mechanism of cortical microtubule cytoskeleton (GO:0030981) within the cell-cortex-associated cortical microtubule cytoskeleton. PMID 22425159; native PMC3382715.1 main text and captions read, with supplemental strain table and methods on pages 13-22. Selected supplemental pages and the unchanged Figure 4 were visually inspected. Movies and raw data were not inspected."
+    },
+    {
+     "reference": "DOI:10.1016/j.cub.2005.07.058",
+     "notes": "Supports the context, composition, and mechanism of cortical microtubule cytoskeleton (GO:0030981) within the cell-cortex-associated cortical microtubule cytoskeleton. PMID 16111942; published citation and DOI verified at NCBI. The primary abstract was readable, but the direct publisher returned 403; full text and supplements remain unread. Used only for abstract-scoped naming and function statements."
+    }
+   ],
+   "has_part": [
+    "GO:0032117",
+    "GO:0005874"
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4896",
+     "taxon_label": "Schizosaccharomyces pombe",
+     "presence": "COMMON",
+     "note": "Fission yeast assembles cortical and horsetail-astral microtubule arrays that contact the cell cortex during interphase and meiosis.",
+     "reference": "DOI:10.1016/j.cub.2012.02.042"
+    }
+   ]
+  },
+  {
    "identifier": "cellstructuremech:crescentin_filament",
    "label": "crescentin filament",
    "structure_category": "CYTOSKELETON",
@@ -41282,6 +41986,765 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-29"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:1905720",
+   "label": "cytoplasmic microtubule bundle",
+   "structure_category": "CYTOSKELETON",
+   "structure_kind": "OTHER",
+   "definition": "A microtubule bundle located in the cytoplasm. In fission yeast (Schizosaccharomyces pombe) and other microbial eukaryotes, cytoplasmic microtubule bundles consist of parallel or antiparallel alpha/beta-tubulin polymers nucleated by gamma-tubulin adaptor complexes (Mto1-Mto2) and crosslinked by Ase1/MAP65 family proteins and CLASP (Cls1/Peg1) to maintain cytoplasmic organization and cell-tip polarity.",
+   "definition_source": "GO:1905720",
+   "mapping_status": "PROPOSED",
+   "curation_history": [
+    {
+     "timestamp": "2026-10-23T14:36:26Z",
+     "curator": "claude-opus-4-7",
+     "action": "CREATED",
+     "changes": "Initial curation of cytoplasmic microtubule bundle (GO:1905720) in category CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and causal mechanism graph.",
+     "llm_assisted": true
+    }
+   ],
+   "parent_structures": [
+    "GO:0097427"
+   ],
+   "part_of": [
+    "GO:0015630",
+    "GO:0005737"
+   ],
+   "has_part": [
+    "GO:0005881"
+   ],
+   "synonyms": [
+    {
+     "synonym_text": "cytoplasmic MT bundle",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1905720"
+    }
+   ],
+   "components": [
+    {
+     "component_id": "alpha_tubulin",
+     "label": "Alpha tubulin",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Alpha subunit of the bundle microtubules; Atb2 is the fluorescent scaffold reporter. Functions within the crosslinked cytoplasmic microtubule bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figures 1-2 identify the stable bundle with GFP-Atb2, TEM and tomography."
+      },
+      {
+       "reference": "InterPro:IPR002452",
+       "notes": "Complete native InterPro matches verified on 2026-10-05; integrated type=family and scope checked, not inferred from a domain."
+      }
+     ],
+     "gene_symbols": [
+      "atb2"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P04689",
+       "protein_label": "Tubulin alpha-2 chain",
+       "gene_symbol": "atb2",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figures 1-2: GFP-Atb2 labels the bundle. UniProt names this alpha-2 protein tub1 and retains atb2/alp2 aliases."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P04689/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      }
+     ],
+     "grounding": "InterPro:IPR002452",
+     "grounding_notes": "Exact Alpha tubulin family for the verified Atb2 exemplar; not the broader all-tubulin family."
+    },
+    {
+     "component_id": "beta_tubulin",
+     "label": "Beta tubulin",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Partner tubulin class in the microtubules resolved by TEM; no particular beta-tubulin isoform is assigned from these images. Functions within the crosslinked cytoplasmic microtubule bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figure 1D-G resolves microtubules, whose alpha/beta polymer composition is independently defined by GO:0005874."
+      },
+      {
+       "reference": "InterPro:IPR002453",
+       "notes": "Complete native InterPro matches verified on 2026-10-05; integrated type=family and scope checked, not inferred from a domain."
+      },
+      {
+       "reference": "GO:0005874",
+       "notes": "Native definition specifies alpha/beta tubulin subunits in microtubules; this supports a polymer-class assertion, not an unobserved Nda3 localization assay."
+      }
+     ],
+     "grounding": "InterPro:IPR002453",
+     "grounding_notes": "Exact Beta tubulin family verified using the reviewed S. pombe Nda3 entry P05219. That lookup checks family identity, not an isoform-specific localization experiment.",
+     "gene_symbols": [
+      "nda3"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P05219",
+       "protein_label": "Tubulin beta chain",
+       "gene_symbol": "nda3",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene nda3 in Schizosaccharomyces pombe 972h-, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P05219",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P05219, the single reviewed entry for gene nda3 in Schizosaccharomyces pombe 972h-. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "mto1",
+     "label": "Mto1-like microtubule nucleation adaptor",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "ESSENTIAL",
+     "role": "Gamma-tubulin complex nucleation adaptor localized to cytoplasmic microtubule bundles and required for stable bundle architecture in Schizosaccharomyces pombe.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Laporte et al. 2015 (Figure 7E-F) show Mto1 localization on cytoplasmic microtubule bundles in quiescent S. pombe and demonstrate that mto1 deletion abolishes stable bundle formation."
+      }
+     ],
+     "gene_symbols": [
+      "mto1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O94488",
+       "protein_label": "Gamma tubulin complex adapter mto1",
+       "gene_symbol": "mto1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "MAP-localization Results and Figure 7E-F establish localization and the deletion phenotype. The cytoplasmic adapter is O94488/SPCC417.07c, not the homonymous mitochondrial O13670."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/O94488/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      }
+     ],
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "Complete O94488 InterPro matches have domain annotations, including Cnn1 N-terminal and Mto1-like Mto2-binding regions, but no integrated whole-protein family. The mitochondrial MTO1 homonym is excluded."
+    },
+    {
+     "component_id": "mto2",
+     "label": "Mto2-like microtubule nucleation adaptor",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Resident nucleation adaptor redistributed from the nuclear envelope to bundle-associated puncta; proposed nucleation activity is not a directly demonstrated assembly sequence. Functions within the crosslinked cytoplasmic microtubule bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figure 4A-B and line scans show Mto2 on the bundle and near constituent microtubule extremities; Figure 5 Results report retained puncta during elongation."
+      }
+     ],
+     "gene_symbols": [
+      "mto2"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q9USP7",
+       "protein_label": "Gamma tubulin complex adapter mto2",
+       "gene_symbol": "mto2",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4A-B: Mto2-GFP redistributes onto RFP-Atb2-positive bundles."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q9USP7/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      }
+     ],
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "Complete native InterPro lookup for Q9USP7 returned no integrated entries; no family CURIE can be asserted from this bounded lookup."
+    },
+    {
+     "component_id": "ase1",
+     "label": "Microtubule-associated protein, MAP65/Ase1/PRC1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "DISPENSABLE",
+     "role": "Resident microtubule crosslinker; Ase1 contributes to bundle thickness but is not required for a bundle to form in the tested deletion. Functions within the crosslinked cytoplasmic microtubule bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figure 4C-F: Ase1 localizes along the bundle; ase1 deletion leaves a thinner bundle. Its established bundling activity supports the crosslinker interpretation, not a measured fixed stoichiometry."
+      },
+      {
+       "reference": "InterPro:IPR007145",
+       "notes": "Complete native InterPro matches verified on 2026-10-05; integrated type=family and scope checked, not inferred from a domain."
+      }
+     ],
+     "gene_symbols": [
+      "ase1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q9HDY1",
+       "protein_label": "Anaphase spindle elongation protein 1",
+       "gene_symbol": "ase1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day cultures. Figure 4D-F shows retained bundles after ase1 deletion."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q9HDY1/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      }
+     ],
+     "grounding": "InterPro:IPR007145",
+     "grounding_notes": "Exact integrated MAP65/Ase1/PRC1 family (InterPro:IPR007145) verified for S. pombe Ase1 (Q9HDY1)."
+    },
+    {
+     "component_id": "clasp",
+     "label": "CLASP-like microtubule-associated protein",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Resident microtubule-associated protein enriched in the dense bundle region; a specific stabilization mechanism remains unresolved. Functions within the crosslinked cytoplasmic microtubule bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figure 4C and MAP-localization Results place Cls1/Peg1 in the denser bundle region; no bundle-formation necessity is inferred."
+      }
+     ],
+     "gene_symbols": [
+      "peg1",
+      "cls1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O42874",
+       "protein_label": "Protein peg1",
+       "gene_symbol": "peg1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day cultures. The paper calls this protein Cls1/Peg1."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/O42874/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      }
+     ],
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "Complete O42874 matches are domains or superfamilies, including CLASP N-terminal and TOG-related annotations; none is an exact integrated whole-protein CLASP family."
+    },
+    {
+     "component_id": "alp7",
+     "label": "Alp7-like microtubule-associated protein",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "DISPENSABLE",
+     "role": "Resident microtubule-associated protein affecting bundle dimensions; deletion does not abolish bundle formation. Functions within the crosslinked cytoplasmic microtubule bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figure 4C-F: Alp7 localizes to the bundle, and alp7 deletion leaves longer bundles with altered fluorescence intensity."
+      }
+     ],
+     "gene_symbols": [
+      "alp7"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q9URY2",
+       "protein_label": "Microtubule protein alp7",
+       "gene_symbol": "alp7",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day cultures. Figure 4D-F documents bundles in alp7 deletion cells."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q9URY2/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      }
+     ],
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "Complete Q9URY2 matches include a fungal TACC C-terminal domain, not an exact whole-protein Alp7 family."
+    },
+    {
+     "component_id": "xmap215",
+     "label": "XMAP215",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Resident TOG-domain microtubule regulators. Alp14 is required for elongation after refeeding; individual alp14 and dis1 deletions still permit quiescent bundles. Functions within the crosslinked cytoplasmic microtubule bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figure 4C-F localizes Alp14 and Dis1 and shows bundles in each single deletion. Figure 7C-D establishes an Alp14 requirement for exit-associated elongation, not bundle formation. No double-deletion or whole-family assembly requirement is asserted."
+      },
+      {
+       "reference": "InterPro:IPR045110",
+       "notes": "Complete native InterPro matches verified on 2026-10-05; integrated type=family and scope checked, not inferred from a domain."
+      }
+     ],
+     "gene_symbols": [
+      "alp14",
+      "dis1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O94534",
+       "protein_label": "Spindle pole body component alp14",
+       "gene_symbol": "alp14",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day cultures. Figures 5B and 7C-D link Alp14 to elongating tips and the exit defect."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/O94534/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q09933",
+       "protein_label": "Phosphoprotein p93",
+       "gene_symbol": "dis1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day cultures. Figure 4D-F shows longer bundles in dis1 deletion cells."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q09933/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      }
+     ],
+     "grounding": "InterPro:IPR045110",
+     "grounding_notes": "The same integrated XMAP215 family was verified in complete native matches for both Alp14 and Dis1; shared identity does not imply interchangeable activities."
+    },
+    {
+     "component_id": "klp2",
+     "label": "Klp2-like kinesin-14 motor",
+     "component_type": "PROTEIN",
+     "component_role": "ASSOCIATED_MACHINERY",
+     "essentiality": "DISPENSABLE",
+     "role": "Motor associated with the assembled bundle at faint puncta; a specific quiescent motor-driven sliding activity is not established. Functions within the crosslinked cytoplasmic microtubule bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figure 4C detects Klp2 at a few bundle-associated puncta; inspected Figure 4D-F includes klp2 deletion cells that retain bundles."
+      }
+     ],
+     "gene_symbols": [
+      "klp2"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q9US03",
+       "protein_label": "Kinesin-like protein 2",
+       "gene_symbol": "klp2",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C: GFP-tagged protein colocalizes with RFP-Atb2 in five-day cultures. Figure 4D-F includes klp2 deletion bundles."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q9US03/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      }
+     ],
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "Complete Q9US03 matches include the broader Kinesin-like protein family IPR027640 and motor domains; these do not exactly identify the narrower Klp2-like kinesin-14 class."
+    },
+    {
+     "component_id": "tea1",
+     "label": "Tea1-like polarity landmark protein",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Cell-tip polarity landmark protein that associates with cytoplasmic microtubule bundles during quiescence and redistributes to cell tips upon bundle elongation.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figures 6A and 7A show Tea1-GFP localization along the cytoplasmic microtubule bundle in quiescent S. pombe and its return to cell tips upon refeeding."
+      }
+     ],
+     "gene_symbols": [
+      "tea1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P87061",
+       "protein_label": "Tip elongation aberrant protein 1",
+       "gene_symbol": "tea1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figures 6A and 7A: Tea1-GFP redistribution onto the quiescent bundle and back to cell tips."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P87061/entry",
+         "notes": "Reviewed entry, gene aliases and source taxon verified live on 2026-10-05; localization comes from the primary experiment."
+        }
+       ]
+      }
+     ],
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "Complete P87061 matches contain Kelch repeat and superfamily annotations, not an exact integrated whole-protein Tea1 family."
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:4896",
+     "taxon_label": "Schizosaccharomyces pombe",
+     "reference": "DOI:10.1083/jcb.201502025",
+     "note": "Characterized model system for cytoplasmic microtubule bundle (GO:1905720) within the crosslinked cytoplasmic microtubule bundle. Species examined by GFP-Atb2 microscopy, freeze-substitution TEM and serial electron tomography after nutrient exhaustion. ENA confirms the species identifier; no all-fungi prevalence or exact stock identity is asserted."
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "polarity_reestablishment",
+     "label": "Polarity reestablishment after quiescence",
+     "description": "Elongation of the pre-existing bundle and restoration of microtubule dynamics support timely return of polarity factors and actin organization to cell tips in refed S. pombe. Mediated by cytoplasmic microtubule bundle (GO:1905720) within the crosslinked cytoplasmic microtubule bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Figures 5 and 7: refeeding, MBC treatment, alp14 deletion and cold-treated mto1 deletion distinguish regrowth and polarity defects. The interventions also affect new microtubules, so they do not isolate an exclusive bundle-only pathway."
+      }
+     ]
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "cytoplasmic_microtubule_bundle_mechanism",
+     "title": "Cytoplasmic microtubule bundle nucleation, MAP crosslinking, and cell-tip polarity maintenance",
+     "description": "Alpha- and beta-tubulin polymers nucleated by Mto1-Mto2 adaptors, crosslinked by Ase1, and regulated by Cls1/Peg1, Alp7, XMAP215 (Alp14/Dis1), Klp2, and Tea1 assemble into cytoplasmic microtubule bundles (GO:1905720) that support cell-tip polarity reestablishment.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Characterized in Schizosaccharomyces pombe cytoplasmic microtubule bundles (including the stationary-phase/quiescent cytoplasmic bundle subtype dissected in Laporte et al. 2015, DOI:10.1083/jcb.201502025).",
+     "nodes": [
+      {
+       "node_id": "alpha_tubulin",
+       "label": "Alpha tubulin",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR002452",
+       "component_ref": "alpha_tubulin"
+      },
+      {
+       "node_id": "beta_tubulin",
+       "label": "Beta tubulin",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR002453",
+       "component_ref": "beta_tubulin"
+      },
+      {
+       "node_id": "mto1",
+       "label": "Mto1-like microtubule nucleation adaptor",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "mto1"
+      },
+      {
+       "node_id": "mto2",
+       "label": "Mto2-like microtubule nucleation adaptor",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "mto2"
+      },
+      {
+       "node_id": "ase1",
+       "label": "Microtubule-associated protein, MAP65/Ase1/PRC1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR007145",
+       "component_ref": "ase1"
+      },
+      {
+       "node_id": "clasp",
+       "label": "CLASP-like microtubule-associated protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "clasp"
+      },
+      {
+       "node_id": "alp7",
+       "label": "Alp7-like microtubule-associated protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "alp7"
+      },
+      {
+       "node_id": "xmap215",
+       "label": "XMAP215",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR045110",
+       "component_ref": "xmap215"
+      },
+      {
+       "node_id": "klp2",
+       "label": "Klp2-like kinesin-14 motor",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "klp2"
+      },
+      {
+       "node_id": "tea1",
+       "label": "Tea1-like polarity landmark protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "tea1"
+      },
+      {
+       "node_id": "cytoplasmic_microtubule_bundle",
+       "label": "cytoplasmic microtubule bundle",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1905720",
+       "description": "Assembled crosslinked cytoplasmic microtubule bundle (GO:1905720)."
+      },
+      {
+       "node_id": "repolarization",
+       "label": "Cell-tip polarity reestablishment",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "alpha_tubulin",
+       "predicate": "assembles into",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "Alpha-tubulin subunits polymerize into the bundled cytoplasmic microtubules.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figures 1-2 resolve GFP-Atb2-labeled cytoplasmic microtubule bundles by fluorescence, TEM, and tomography."
+        }
+       ]
+      },
+      {
+       "subject": "beta_tubulin",
+       "predicate": "assembles into",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "Beta-tubulin subunits co-polymerize with alpha-tubulin to form bundled cytoplasmic microtubules.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 1D-G resolves tightly packed cytoplasmic microtubules composed of alpha/beta-tubulin polymers."
+        }
+       ]
+      },
+      {
+       "subject": "mto1",
+       "predicate": "nucleates and stabilizes",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "Mto1 localizes to cytoplasmic microtubule bundles and is required for their stable bundled architecture.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 7E-F shows that mto1 deletion abolishes stable cytoplasmic microtubule bundles."
+        }
+       ]
+      },
+      {
+       "subject": "mto2",
+       "predicate": "associates with",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "Mto2 redistributes onto cytoplasmic microtubule bundle puncta.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4A-B demonstrates Mto2-GFP localization along the cytoplasmic microtubule bundle."
+        }
+       ]
+      },
+      {
+       "subject": "ase1",
+       "predicate": "crosslinks filaments in",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "Ase1 localizes along cytoplasmic microtubule bundles and crosslinks antiparallel microtubules to maintain bundle thickness.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C-F demonstrates Ase1 localization and reduced bundle thickness in ase1 deletion cells."
+        }
+       ]
+      },
+      {
+       "subject": "clasp",
+       "predicate": "associates with",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "Cls1/Peg1 (CLASP) enriches in the dense overlap region of cytoplasmic microtubule bundles.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C shows Cls1/Peg1-GFP enrichment along the cytoplasmic bundle."
+        }
+       ]
+      },
+      {
+       "subject": "alp7",
+       "predicate": "regulates morphology of",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "Alp7 localizes to cytoplasmic microtubule bundles and modulates bundle length and intensity.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C-F shows Alp7 colocalization and altered bundle dimensions in alp7 deletion cells."
+        }
+       ]
+      },
+      {
+       "subject": "xmap215",
+       "predicate": "promotes elongation of",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "XMAP215-family polymerase Alp14/Dis1 localizes to cytoplasmic bundles and promotes bundle elongation.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figures 4C-F, 5B, and 7C-D demonstrate Alp14/Dis1 bundle localization and Alp14-dependent elongation."
+        }
+       ]
+      },
+      {
+       "subject": "klp2",
+       "predicate": "associates with",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "Kinesin-14 motor Klp2 associates with puncta along the cytoplasmic microtubule bundle.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figure 4C detects Klp2-GFP puncta on the cytoplasmic microtubule bundle."
+        }
+       ]
+      },
+      {
+       "subject": "tea1",
+       "predicate": "localizes to",
+       "object": "cytoplasmic_microtubule_bundle",
+       "description": "Polarity landmark protein Tea1 associates with the cytoplasmic microtubule bundle before returning to cell tips.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figures 6A and 7A track Tea1-GFP on the cytoplasmic bundle and its return to cell tips."
+        }
+       ]
+      },
+      {
+       "subject": "cytoplasmic_microtubule_bundle",
+       "predicate": "supports",
+       "object": "repolarization",
+       "description": "Elongation and dynamic recovery of the cytoplasmic microtubule bundle support timely cell-tip polarity reestablishment.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Figures 5 and 7 show that perturbing cytoplasmic microtubule bundle recovery delays cell-tip repolarization."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:1905720",
+     "notes": "Gene Ontology cellular-component term for cytoplasmic microtubule bundle: A microtubule bundle located in the cytoplasm."
+    },
+    {
+     "reference": "DOI:10.1083/jcb.201502025",
+     "notes": "Laporte et al. 2015 (J Cell Biol, PMID 26124291) characterize the ultrastructure, MAP composition (Atb2, Mto1, Mto2, Ase1, Cls1/Peg1, Alp7, Alp14, Dis1, Klp2, Tea1), and polarity-recovery function of cytoplasmic microtubule bundles in Schizosaccharomyces pombe."
+    },
+    {
+     "reference": "GO:0015630",
+     "notes": "Gene Ontology term for microtubule cytoskeleton, the encompassing cytoskeletal system."
+    },
+    {
+     "reference": "GO:0005737",
+     "notes": "Gene Ontology term for cytoplasm, verifying the compartment localization of the bundle."
+    },
+    {
+     "reference": "GO:0005881",
+     "notes": "Gene Ontology term for cytoplasmic microtubule, the constituent polymer of the cytoplasmic microtubule bundle."
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4896",
+     "taxon_label": "Schizosaccharomyces pombe",
+     "presence": "COMMON",
+     "note": "Fission yeast organizes interphase and quiescent cytoplasmic microtubules into Ase1-crosslinked antiparallel bundles.",
+     "reference": "DOI:10.1083/jcb.201502025"
     }
    ]
   },
@@ -56193,6 +57656,366 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-29"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0106094",
+   "label": "nuclear membrane microtubule tethering complex",
+   "structure_category": "CYTOSKELETON",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A nuclear membrane protein complex that connects the nuclear inner and outer membranes and links nuclear structures across the nuclear envelope to cytoplasmic microtubules. In Schizosaccharomyces pombe and other fungi, nuclear membrane microtubule tethering complexes composed of the inner nuclear membrane SUN-domain protein Sad1 and outer nuclear membrane KASH-domain linker Kms1 (bridged during meiosis to telomeres by Bqt1-Bqt2) couple chromosomes and spindle pole body attachment sites across the nuclear envelope to cytoplasmic microtubule motors.",
+   "definition_source": "GO:0106094",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0098796"
+   ],
+   "components": [
+    {
+     "component_id": "sad1_sun_protein",
+     "label": "inner nuclear membrane SUN-domain protein Sad1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR045119",
+     "gene_symbols": [
+      "sad1"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Inner nuclear membrane SUN-domain transmembrane subunit whose lumenal SUN domain binds Kms1 and whose nucleoplasmic N-terminus engages Bqt1-Bqt2 at clustered telomeres. Functions within the nuclear-envelope-spanning nuclear membrane microtubule tethering complex.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1016/j.cell.2006.01.048",
+       "notes": "Chikashige et al. 2006 show that Bqt1-Bqt2 connect telomeric Rap1 to the inner nuclear membrane SUN protein Sad1 during meiotic bouquet formation."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q09825",
+       "protein_label": "Spindle pole body-associated protein sad1",
+       "gene_symbol": "sad1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar, not a claim that the reference strain was the exact experimental stock.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cell.2006.01.048",
+         "notes": "The primary abstract identifies Sad1 as the envelope/SPB-side binding partner of the Bqt1/Bqt2 bridge."
+        },
+        {
+         "reference": "UniProtKB:Q09825",
+         "notes": "Reviewed identity, native protein label, gene and source taxon verified. Structural role comes from the cited experiment."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "kms1_kash_protein",
+     "label": "outer nuclear membrane KASH-domain protein Kms1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "kms1"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Outer nuclear membrane KASH-domain transmembrane subunit that binds Sad1 in the perinuclear space and recruits cytoplasmic dynein-dynactin motors to drive horsetail nuclear movement. Functions within the nuclear-envelope-spanning nuclear membrane microtubule tethering complex.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1016/j.cub.2012.02.042",
+       "notes": "Describes the Sad1-Kms1 nuclear envelope LINC bridge linking meiotic telomeres to cytoplasmic microtubule motors."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P87245",
+       "protein_label": "Karyogamy meiotic segregation protein 1",
+       "gene_symbol": "kms1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar, not a claim that the reference strain was the exact experimental stock.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cub.2012.02.042",
+         "notes": "Yoshida et al. 2013 describe the Sad1-Kms1 nuclear-envelope tethering complex coupling meiotic chromosomes to cytoplasmic dynein-driven microtubules in S. pombe."
+        },
+        {
+         "reference": "DOI:10.1038/s41467-025-56049-9",
+         "notes": "Tracks Kms1 recruitment within the fission-yeast Sad1-Kms1 nuclear membrane microtubule tethering system."
+        },
+        {
+         "reference": "UniProtKB:P87245",
+         "notes": "Reviewed Swiss-Prot entry verifying protein label, gene symbol kms1, and source taxon."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "bqt1_bqt2_meiotic_connector",
+     "label": "meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)",
+     "component_type": "PROTEIN",
+     "component_role": "ASSOCIATED_MACHINERY",
+     "gene_symbols": [
+      "bqt1",
+      "bqt2"
+     ],
+     "essentiality": "CONDITIONAL",
+     "role": "Meiosis-specific nuclear bridge heterodimer expressed during prophase I that links Rap1-Taz1 at telomeres to the nucleoplasmic domain of Sad1. Functions within the nuclear-envelope-spanning nuclear membrane microtubule tethering complex.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1016/j.cell.2006.01.048",
+       "notes": "Chikashige et al. 2006 demonstrate that Bqt1 and Bqt2 form a meiosis-specific bridge linking Rap1 at telomeres to Sad1."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q92358",
+       "protein_label": "Telomere bouquet protein 1",
+       "gene_symbol": "bqt1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar, not a claim that the reference strain was the exact experimental stock.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/celldisc.2017.41",
+         "notes": "Figure 7 follows tagged Bqt1; induced degradation releases telomeres from the SPB."
+        },
+        {
+         "reference": "UniProtKB:Q92358",
+         "notes": "Reviewed identity, native protein label, gene and source taxon verified. Structural role comes from the cited experiment."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q9US52",
+       "protein_label": "Telomere bouquet protein 2",
+       "gene_symbol": "bqt2",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar, not a claim that the reference strain was the exact experimental stock.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cell.2006.01.048",
+         "notes": "Primary abstract directly identifies Bqt2 together with Bqt1 as the Rap1-Sad1 connector; no uninspected figure-level detail is inferred."
+        },
+        {
+         "reference": "UniProtKB:Q9US52",
+         "notes": "Reviewed identity, native protein label, gene and source taxon verified. Structural role comes from the cited experiment."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:284812",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
+     "note": "Characterized model system for nuclear membrane microtubule tethering complex (GO:0106094) within the nuclear-envelope-spanning nuclear membrane microtubule tethering complex. Reference fission yeast model in which the Sad1-Kms1 LINC bridge and Bqt1-Bqt2 meiotic telomere bouquet tether were genetically and biochemically defined.",
+     "reference": "DOI:10.1016/j.cell.2006.01.048"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "telomere_organization",
+     "label": "telomere organization",
+     "grounding": "GO:0032200",
+     "description": "Tethers telomere-bound Bqt1-Bqt2 connectors to the inner nuclear membrane SUN protein Sad1 and outer membrane KASH protein Kms1, clustering chromosome ends at the nuclear envelope during meiotic prophase in Schizosaccharomyces pombe.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1016/j.cell.2006.01.048",
+       "notes": "Chikashige et al. 2006 show that Bqt1-Bqt2 connect telomeric Rap1 to Sad1 to tether telomeres to the nuclear envelope."
+      },
+      {
+       "reference": "DOI:10.1038/celldisc.2017.41",
+       "notes": "Live-cell imaging and conditional Bqt1 degradation show that the Bqt1-Bqt2-Sad1 tether maintains telomere attachment at the nuclear envelope."
+      }
+     ]
+    },
+    {
+     "function_id": "meiotic_spindle_support",
+     "label": "Support of meiotic spindle formation",
+     "description": "Maintained fission-yeast telomere-nuclear envelope tethering via Bqt1-Bqt2 and Sad1-Kms1 supports normal spindle pole body behavior and meiotic spindle formation.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1038/celldisc.2017.41",
+       "notes": "Premature Bqt1 degradation disrupts telomere-envelope tethering and increases meiotic spindle defects in S. pombe."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0106094",
+     "notes": "Gene Ontology cellular-component term for nuclear membrane microtubule tethering complex: A nuclear membrane protein complex that connects the nuclear inner and outer membranes and links nuclear structures across the nuclear envelope to cytoplasmic microtubules."
+    },
+    {
+     "reference": "GO:1990612",
+     "notes": "Gene Ontology cellular-component term for the Sad1-Kms1 LINC complex, the canonical fission-yeast nuclear membrane microtubule tethering complex."
+    },
+    {
+     "reference": "DOI:10.1016/j.cell.2006.01.048",
+     "notes": "Chikashige et al. 2006 (Cell, PMID 16615890) identify the Bqt1-Bqt2 meiotic connector bridging telomeric Rap1 to the inner nuclear membrane SUN protein Sad1 in S. pombe."
+    },
+    {
+     "reference": "DOI:10.1016/j.cub.2012.02.042",
+     "notes": "Yoshida et al. 2013 (Curr Biol, PMID 22425159) characterize the fission-yeast Sad1-Kms1 nuclear-envelope tethering system and cytoplasmic microtubule organization."
+    },
+    {
+     "reference": "DOI:10.1038/celldisc.2017.41",
+     "notes": "Moiseeva et al. 2017 (Cell Discov, PMID 29123917) demonstrate by live-cell imaging and conditional Bqt1 degradation that the Sad1-associated tether maintains telomere attachment and meiotic spindle integrity."
+    },
+    {
+     "reference": "DOI:10.1038/s41467-025-56049-9",
+     "notes": "2025 study (Nat Commun, PMID 39833200) tracking Sad1-Kms1 recruitment in the fission-yeast nuclear membrane microtubule tethering complex."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "nuclear_membrane_microtubule_tethering_complex_mechanism",
+     "title": "Sad1-Kms1 nuclear membrane microtubule tethering complex assembly and meiotic chromosome-envelope coupling",
+     "description": "Inner nuclear membrane SUN protein Sad1 and outer nuclear membrane KASH protein Kms1 form the nuclear membrane microtubule tethering complex (GO:0106094) spanning the nuclear envelope and engage the meiotic connector Bqt1-Bqt2 to mediate telomere organization (GO:0032200) and support meiotic spindle formation.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Covers the Schizosaccharomyces pombe Sad1-Kms1 nuclear membrane microtubule tethering complex and its meiotic Bqt1-Bqt2 connector.",
+     "nodes": [
+      {
+       "node_id": "nuclear_membrane_microtubule_tethering_complex",
+       "label": "nuclear membrane microtubule tethering complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0106094",
+       "description": "Assembled nuclear-envelope-spanning Sad1-Kms1 microtubule tethering complex (GO:0106094)."
+      },
+      {
+       "node_id": "sad1_sun_protein",
+       "label": "inner nuclear membrane SUN-domain protein Sad1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR045119",
+       "component_ref": "sad1_sun_protein"
+      },
+      {
+       "node_id": "kms1_kash_protein",
+       "label": "outer nuclear membrane KASH-domain protein Kms1",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "kms1_kash_protein"
+      },
+      {
+       "node_id": "bqt1_bqt2_meiotic_connector",
+       "label": "meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "bqt1_bqt2_meiotic_connector"
+      },
+      {
+       "node_id": "telomere_organization",
+       "label": "telomere organization",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0032200"
+      },
+      {
+       "node_id": "meiotic_spindle_support",
+       "label": "Support of meiotic spindle formation",
+       "node_type": "BIOLOGICAL_PROCESS"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "sad1_sun_protein",
+       "predicate": "is part of",
+       "object": "nuclear_membrane_microtubule_tethering_complex",
+       "description": "Inner nuclear membrane SUN-domain protein Sad1 forms the nucleoplasmic and perinuclear foundation of the tethering complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cell.2006.01.048",
+         "notes": "Chikashige et al. 2006 identify Sad1 as the inner membrane SUN subunit of the nuclear-envelope tether."
+        }
+       ]
+      },
+      {
+       "subject": "kms1_kash_protein",
+       "predicate": "is part of",
+       "object": "nuclear_membrane_microtubule_tethering_complex",
+       "description": "Outer nuclear membrane KASH-domain protein Kms1 binds Sad1 across the perinuclear space and couples the complex to cytoplasmic microtubules.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cub.2012.02.042",
+         "notes": "Describes the Sad1-Kms1 nuclear-envelope bridge coupling chromosomes to cytoplasmic microtubule motors."
+        }
+       ]
+      },
+      {
+       "subject": "bqt1_bqt2_meiotic_connector",
+       "predicate": "associates with",
+       "object": "nuclear_membrane_microtubule_tethering_complex",
+       "description": "The meiosis-specific Bqt1-Bqt2 heterodimer links telomeric Rap1 to the nucleoplasmic domain of Sad1.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.cell.2006.01.048",
+         "notes": "Chikashige et al. 2006 demonstrate that Bqt1-Bqt2 bridge Rap1 to Sad1."
+        }
+       ]
+      },
+      {
+       "subject": "nuclear_membrane_microtubule_tethering_complex",
+       "predicate": "mediates",
+       "object": "telomere_organization",
+       "description": "The assembled tethering complex anchors clustered chromosome ends at the nuclear envelope during fission-yeast meiotic prophase.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/celldisc.2017.41",
+         "notes": "Taz1-marked telomeres remain tethered at the SPB/nuclear envelope via Bqt1-Sad1-Kms1."
+        }
+       ]
+      },
+      {
+       "subject": "nuclear_membrane_microtubule_tethering_complex",
+       "predicate": "mediates",
+       "object": "meiotic_spindle_support",
+       "description": "Maintained chromosome-nuclear envelope tethering supports normal SPB behavior and meiotic spindle formation.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/celldisc.2017.41",
+         "notes": "Premature Bqt1 destruction disrupts tethering and increases spindle defects."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-23T14:36:26Z",
+     "curator": "claude-opus-4-7",
+     "action": "CREATED",
+     "changes": "Initial curation of nuclear membrane microtubule tethering complex (GO:0106094) in category CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and causal mechanism graph.",
+     "llm_assisted": true
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4751",
+     "taxon_label": "Fungi",
+     "presence": "COMMON",
+     "note": "Exhibits nuclear membrane microtubule tethering complex (GO:0106094) within the nuclear-envelope-spanning nuclear membrane microtubule tethering complex. Conserved fungal nuclear-envelope LINC and meiotic telomere-microtubule tethering complex coupling chromosomes across the nuclear membranes to cytoplasmic dynein.",
+     "reference": "DOI:10.1016/j.cell.2006.01.048"
+    }
+   ],
+   "part_of": [
+    "GO:0005635",
+    "GO:0034992"
+   ],
+   "synonyms": [
+    {
+     "synonym_text": "nuclear envelope microtubule tethering complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0106094"
     }
    ]
   },
@@ -185475,6 +187298,1479 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-27"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0000775",
+   "label": "chromosome, centromeric region",
+   "structure_category": "OTHER",
+   "structure_kind": "NUCLEOPROTEIN_COMPLEX",
+   "definition": "The region of a chromosome that includes the centromeric DNA and associated proteins. In mitosis or meiosis II, this region connects the chromosome to spindle microtubules via the kinetochore. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the centromeric region comprises specialized CenH3 (Cse4/Cnp1) centromeric nucleosomes, point- or regional-centromere DNA-binding factors (such as the CBF3 complex), pericentromeric cohesin/heterochromatin, and the assembled inner and outer kinetochore complexes.",
+   "definition_source": "GO:0000775",
+   "mapping_status": "PROPOSED",
+   "curation_history": [
+    {
+     "timestamp": "2026-10-23T14:36:25Z",
+     "curator": "claude-opus-4-7",
+     "action": "CREATED",
+     "changes": "Initial curation of chromosome, centromeric region (GO:0000775) in category OTHER with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and causal mechanism graph.",
+     "llm_assisted": true
+    }
+   ],
+   "synonyms": [
+    {
+     "synonym_text": "centromere",
+     "synonym_type": "NARROW_SYNONYM",
+     "source": "GO:0000775"
+    },
+    {
+     "synonym_text": "chromosomal centromeric region",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0000775"
+    }
+   ],
+   "has_part": [
+    "GO:0000776",
+    "GO:0031518"
+   ],
+   "components": [
+    {
+     "component_id": "centromeric_dna",
+     "label": "centromere",
+     "component_type": "DNA",
+     "component_role": "CONSTITUENT",
+     "essentiality": "ESSENTIAL",
+     "grounding": "SO:0000577",
+     "grounding_notes": "Sequence Ontology term SO:0000577 (centromere) denotes the chromosomal centromeric DNA sequence locus (such as the ~125 bp CDEI-CDEII-CDEIII point centromere in Saccharomyces cerevisiae) that specifies assembly of centromeric chromatin.",
+     "role": "Chromosomal centromeric DNA sequence locus that specifies assembly of the Cse4/CENP-A centromeric nucleosome and the overlying kinetochore within the chromosome, centromeric region.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1534/genetics.112.145276",
+       "notes": "Biggins 2013 reviews how the Saccharomyces cerevisiae point centromeric DNA locus nucleates the Cse4 centromeric nucleosome and kinetochore within the chromosome, centromeric region."
+      }
+     ]
+    },
+    {
+     "component_id": "centromeric_cse4_nucleosome",
+     "label": "centromeric Cse4/CENP-A nucleosome platform",
+     "component_type": "OTHER",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "gene_symbols": [
+      "CSE4"
+     ],
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "Represents the budding-yeast Cse4-containing centromeric nucleosome assembled at the centromeric DNA locus within GO:0000775.",
+     "role": "Specialized CenH3 (Cse4/CENP-A) centromeric nucleosome assembled on centromeric DNA that forms the inner chromatin foundation of the chromosome, centromeric region.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1534/genetics.112.145276",
+       "notes": "Biggins 2013 reviewed the Cse4-containing centromeric chromatin foundation for the budding-yeast kinetochore."
+      },
+      {
+       "reference": "DOI:10.1083/jcb.200305100",
+       "notes": "Westermann et al. 2003 identified CENP-A/Cse4-linked inner kinetochore proteins in the conserved budding-yeast molecular core."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P36012",
+       "protein_label": "Histone H3-like centromeric protein CSE4",
+       "gene_symbol": "CSE4",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "The single reviewed UniProtKB entry for gene CSE4 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14581449",
+         "notes": "Westermann S et al. 2003, ‘Architecture of the budding yeast kinetochore reveals a conserved molecular core.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of P36012."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "coma_complex",
+     "label": "COMA complex",
+     "component_type": "PROTEIN_COMPLEX",
+     "component_role": "CONSTITUENT",
+     "grounding": "GO:0000817",
+     "gene_symbols": [
+      "CTF19",
+      "OKP1",
+      "MCM21",
+      "AME1"
+     ],
+     "essentiality": "CONDITIONAL",
+     "role": "Inner kinetochore protein complex (Ctf19-Okp1-Mcm21-Ame1) that bridges Cse4 centromeric chromatin to outer kinetochore modules within the chromosome, centromeric region.",
+     "evidence": [
+      {
+       "reference": "GO:0000817",
+       "notes": "Gene Ontology cellular-component term for the COMA complex."
+      },
+      {
+       "reference": "DOI:10.1101/gad.1144403",
+       "notes": "De Wulf, McAinsh and Sorger 2003 analyzed hierarchical assembly of the budding-yeast kinetochore from multiple subcomplexes, including COMA."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q02732",
+       "protein_label": "Inner kinetochore subunit CTF19",
+       "gene_symbol": "CTF19",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene CTF19 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:29046335",
+         "notes": "Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q02732."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P53298",
+       "protein_label": "Inner kinetochore subunit OKP1",
+       "gene_symbol": "OKP1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene OKP1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of P53298."
+        },
+        {
+         "reference": "PMID:10323865",
+         "notes": "Ortiz J et al. 1999, ‘A putative protein complex consisting of Ctf19, Mcm21, and Okp1 represents a missing link in the budding yeast kinetochore.’, Genes Dev. ECO:0000269 experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore' localisation of P53298."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q06675",
+       "protein_label": "Inner kinetochore subunit MCM21",
+       "gene_symbol": "MCM21",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene MCM21 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:29046335",
+         "notes": "Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q06675."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P38313",
+       "protein_label": "Inner kinetochore subunit AME1",
+       "gene_symbol": "AME1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene AME1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of P38313."
+        },
+        {
+         "reference": "PMID:29046335",
+         "notes": "Schmitzberger F et al. 2017, ‘Molecular basis for inner kinetochore configuration through RWD domain-peptide interactions.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore' localisation of P38313."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "mis12_mind_type_complex",
+     "label": "MIS12/MIND type complex",
+     "component_type": "PROTEIN_COMPLEX",
+     "component_role": "CONSTITUENT",
+     "grounding": "GO:0000444",
+     "gene_symbols": [
+      "MTW1",
+      "DSN1",
+      "NSL1",
+      "NNF1"
+     ],
+     "essentiality": "UNKNOWN",
+     "role": "Core kinetochore subcomplex (Mtw1-Dsn1-Nsl1-Nnf1) that links inner centromeric chromatin complexes to the outer Ndc80 microtubule-binding module within the chromosome, centromeric region.",
+     "evidence": [
+      {
+       "reference": "GO:0000444",
+       "notes": "Gene Ontology cellular-component term for the MIS12/MIND type kinetochore subcomplex."
+      },
+      {
+       "reference": "DOI:10.1101/gad.1144403",
+       "notes": "De Wulf, McAinsh and Sorger 2003 placed the Mtw1/MIND complex within the budding-yeast kinetochore hierarchy."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P39731",
+       "protein_label": "Kinetochore-associated protein MTW1",
+       "gene_symbol": "MTW1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene MTW1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14602074",
+         "notes": "Pinsky BA et al. 2003, ‘An Mtw1 complex promotes kinetochore biorientation that is monitored by the Ipl1/Aurora protein kinase.’, Dev Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore' localisation of P39731."
+        },
+        {
+         "reference": "PMID:14657030",
+         "notes": "Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore' localisation of P39731."
+        },
+        {
+         "reference": "PMID:12455957",
+         "notes": "Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of proteins important for chromosome segregation in Saccharomyces cerevisiae.’, Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, spindle pole' localisation of P39731."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P40568",
+       "protein_label": "Kinetochore-associated protein DSN1",
+       "gene_symbol": "DSN1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene DSN1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P40568",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P40568, the single reviewed entry for gene DSN1 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q12143",
+       "protein_label": "Kinetochore-associated protein NSL1",
+       "gene_symbol": "NSL1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene NSL1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:12455957",
+         "notes": "Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of proteins important for chromosome segregation in Saccharomyces cerevisiae.’, Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12143."
+        },
+        {
+         "reference": "PMID:14657030",
+         "notes": "Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q12143."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P47149",
+       "protein_label": "Kinetochore-associated protein NNF1",
+       "gene_symbol": "NNF1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene NNF1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:12455957",
+         "notes": "Euskirchen GM 2002, ‘Nnf1p, Dsn1p, Mtw1p, and Nsl1p: a new group of proteins important for chromosome segregation in Saccharomyces cerevisiae.’, Eukaryot Cell. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of P47149."
+        },
+        {
+         "reference": "PMID:14657030",
+         "notes": "Scharfenberger M et al. 2003, ‘Nsl1p is essential for the establishment of bipolarity and the localization of the Dam-Duo complex.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore' localisation of P47149."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "ndc80_complex",
+     "label": "Ndc80 complex",
+     "component_type": "PROTEIN_COMPLEX",
+     "component_role": "CONSTITUENT",
+     "grounding": "GO:0031262",
+     "gene_symbols": [
+      "NDC80",
+      "NUF2",
+      "SPC24",
+      "SPC25"
+     ],
+     "essentiality": "UNKNOWN",
+     "role": "Outer kinetochore complex (Ndc80-Nuf2-Spc24-Spc25) that couples the chromosome, centromeric region to spindle microtubule plus ends.",
+     "evidence": [
+      {
+       "reference": "GO:0031262",
+       "notes": "Gene Ontology cellular-component term for the Ndc80 complex."
+      },
+      {
+       "reference": "DOI:10.1083/jcb.200305100",
+       "notes": "Westermann et al. 2003 identified Ndc80 among the budding-yeast kinetochore proteins forming a conserved molecular core."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P40460",
+       "protein_label": "Kinetochore protein NDC80",
+       "gene_symbol": "NDC80",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene NDC80 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P40460",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P40460, the single reviewed entry for gene NDC80 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P33895",
+       "protein_label": "Kinetochore protein NUF2",
+       "gene_symbol": "NUF2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene NUF2 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P33895",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P33895, the single reviewed entry for gene NUF2 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q04477",
+       "protein_label": "Kinetochore protein SPC24",
+       "gene_symbol": "SPC24",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene SPC24 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:11179222",
+         "notes": "Janke C et al. 2001, ‘The budding yeast proteins Spc24p and Spc25p interact with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore clustering and checkpoint control.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q04477."
+        },
+        {
+         "reference": "PMID:11266451",
+         "notes": "Wigge PA et al. 2001, ‘The Ndc80p complex from Saccharomyces cerevisiae contains conserved centromere components and has a function in chromosome segregation.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q04477."
+        },
+        {
+         "reference": "PMID:11952896",
+         "notes": "Le Masson I et al. 2002, ‘Spc24 interacts with Mps2 and is required for chromosome segregation, but is not implicated in spindle pole body duplication.’, Mol Microbiol. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of Q04477."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P40014",
+       "protein_label": "Kinetochore protein SPC25",
+       "gene_symbol": "SPC25",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "The single reviewed UniProtKB entry for gene SPC25 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:11179222",
+         "notes": "Janke C et al. 2001, ‘The budding yeast proteins Spc24p and Spc25p interact with Ndc80p and Nuf2p at the kinetochore and are important for kinetochore clustering and checkpoint control.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus' localisation of P40014."
+        },
+        {
+         "reference": "PMID:11266451",
+         "notes": "Wigge PA et al. 2001, ‘The Ndc80p complex from Saccharomyces cerevisiae contains conserved centromere components and has a function in chromosome segregation.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Chromosome, centromere, kinetochore' localisation of P40014."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Budding yeast chromosomes contain a point centromeric DNA locus wrapped in a Cse4 nucleosome and bound by hierarchical inner and outer kinetochore subcomplexes.",
+     "reference": "DOI:10.1534/genetics.112.145276"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "note": "Reference budding-yeast system in which the centromeric DNA locus, Cse4 centromeric chromatin, and hierarchical kinetochore subcomplexes of the chromosome, centromeric region were dissected.",
+     "reference": "DOI:10.1101/gad.1144403"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "chromosome_segregation",
+     "label": "chromosome segregation",
+     "grounding": "GO:0007059",
+     "description": "Centromeric DNA, Cse4 centromeric chromatin, and the assembled kinetochore within the chromosome, centromeric region attach chromosomes to spindle microtubules to drive faithful chromosome segregation.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1534/genetics.112.145276",
+       "notes": "Biggins 2013 reviews how centromeric chromatin and kinetochore subcomplexes of the chromosome, centromeric region mediate chromosome segregation."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0000775",
+     "notes": "Gene Ontology cellular-component term for chromosome, centromeric region: The region of a chromosome that includes the centromeric DNA and associated proteins."
+    },
+    {
+     "reference": "DOI:10.1534/genetics.112.145276",
+     "notes": "Biggins 2013 (Genetics) reviews the centromeric DNA, Cse4 chromatin foundation, and kinetochore subcomplexes comprising the budding-yeast chromosome, centromeric region."
+    },
+    {
+     "reference": "DOI:10.1083/jcb.200305100",
+     "notes": "Westermann et al. 2003 (J Cell Biol) define the conserved molecular core linking Cse4 centromeric chromatin to inner and outer kinetochore complexes at the budding-yeast centromeric region."
+    },
+    {
+     "reference": "DOI:10.1101/gad.1144403",
+     "notes": "De Wulf, McAinsh and Sorger 2003 (Genes Dev) establish the hierarchical assembly of COMA, MIND/Mtw1, and Ndc80 subcomplexes on centromeric chromatin."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "chromosome_centromeric_region_mechanism",
+     "title": "Centromeric DNA specification, Cse4 chromatin assembly, and kinetochore incorporation in the chromosome, centromeric region",
+     "description": "Centromeric DNA (SO:0000577) specifies assembly of the Cse4/CENP-A centromeric nucleosome platform, which recruits inner (COMA, MIS12/MIND) and outer (Ndc80) kinetochore subcomplexes to form the chromosome, centromeric region (GO:0000775) and mediate chromosome segregation (GO:0007059).",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Covers the core Saccharomyces cerevisiae centromeric DNA, Cse4 nucleosome, and inner-to-outer kinetochore assembly hierarchy within the chromosome, centromeric region (GO:0000775).",
+     "nodes": [
+      {
+       "node_id": "centromeric_dna",
+       "label": "centromere",
+       "node_type": "GENETIC_ELEMENT",
+       "grounding": "SO:0000577",
+       "component_ref": "centromeric_dna"
+      },
+      {
+       "node_id": "centromeric_cse4_nucleosome",
+       "label": "centromeric Cse4/CENP-A nucleosome platform",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "centromeric_cse4_nucleosome"
+      },
+      {
+       "node_id": "coma_complex",
+       "label": "COMA complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0000817",
+       "component_ref": "coma_complex"
+      },
+      {
+       "node_id": "mis12_mind_type_complex",
+       "label": "MIS12/MIND type complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0000444",
+       "component_ref": "mis12_mind_type_complex"
+      },
+      {
+       "node_id": "ndc80_complex",
+       "label": "Ndc80 complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0031262",
+       "component_ref": "ndc80_complex"
+      },
+      {
+       "node_id": "chromosome_centromeric_region",
+       "label": "chromosome, centromeric region",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0000775",
+       "description": "Assembled chromosome, centromeric region (GO:0000775) encompassing centromeric DNA, Cse4 centromeric chromatin, and associated kinetochore complexes."
+      },
+      {
+       "node_id": "chromosome_segregation",
+       "label": "chromosome segregation",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0007059"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "centromeric_dna",
+       "predicate": "recruits",
+       "object": "centromeric_cse4_nucleosome",
+       "description": "The chromosomal centromeric DNA locus specifies deposition and wrapping of the Cse4/CENP-A centromeric nucleosome.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1534/genetics.112.145276",
+         "notes": "Biggins 2013 reviews Cse4 nucleosome specification at the budding-yeast centromeric DNA locus."
+        }
+       ]
+      },
+      {
+       "subject": "centromeric_cse4_nucleosome",
+       "predicate": "recruits",
+       "object": "coma_complex",
+       "description": "Cse4-containing centromeric chromatin provides the inner platform that recruits the COMA complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "De Wulf et al. 2003 demonstrate assembly of the COMA subcomplex on centromeric chromatin."
+        }
+       ]
+      },
+      {
+       "subject": "coma_complex",
+       "predicate": "recruits",
+       "object": "mis12_mind_type_complex",
+       "description": "The inner COMA complex bridges centromeric chromatin to the MIS12/MIND (Mtw1) complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "Hierarchical kinetochore dissection places COMA upstream of inner-to-outer Mtw1/MIND bridging."
+        }
+       ]
+      },
+      {
+       "subject": "mis12_mind_type_complex",
+       "predicate": "recruits",
+       "object": "ndc80_complex",
+       "description": "The MIS12/MIND complex recruits the outer microtubule-binding Ndc80 complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.200305100",
+         "notes": "Westermann et al. 2003 define the conserved core linking MIND/Mtw1 to the outer Ndc80 complex."
+        }
+       ]
+      },
+      {
+       "subject": "centromeric_dna",
+       "predicate": "is part of",
+       "object": "chromosome_centromeric_region",
+       "description": "Centromeric DNA forms the chromosomal nucleic-acid core of the chromosome, centromeric region.",
+       "evidence": [
+        {
+         "reference": "GO:0000775",
+         "notes": "GO:0000775 defines the chromosome, centromeric region as including the centromeric DNA and associated proteins."
+        }
+       ]
+      },
+      {
+       "subject": "ndc80_complex",
+       "predicate": "assembles into",
+       "object": "chromosome_centromeric_region",
+       "description": "Incorporation of the outer Ndc80 complex completes the microtubule-binding kinetochore architecture of the chromosome, centromeric region.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.200305100",
+         "notes": "Westermann et al. 2003 establish Ndc80 as the outer microtubule-binding module assembled at the centromeric region."
+        }
+       ]
+      },
+      {
+       "subject": "chromosome_centromeric_region",
+       "predicate": "mediates",
+       "object": "chromosome_segregation",
+       "description": "The assembled chromosome, centromeric region couples chromosomes to spindle microtubules to drive chromosome segregation.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1534/genetics.112.145276",
+         "notes": "Biggins 2013 reviews how the centromeric region mediates mitotic and meiotic chromosome segregation."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "parent_structures": [
+    "GO:0000785"
+   ],
+   "part_of": [
+    "GO:0005694"
+   ]
+  },
+  {
+   "identifier": "GO:0099115",
+   "label": "chromosome, subtelomeric region",
+   "structure_category": "OTHER",
+   "structure_kind": "NUCLEOPROTEIN_COMPLEX",
+   "definition": "The chromosomal region immediately adjacent to a telomere, including subtelomeric DNA elements (such as X and Y' repeats in budding yeast) and associated nucleosomal heterochromatin. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the chromosome, subtelomeric region is packaged into silent chromatin by histone H4 K16 deacetylation and Sir2-Sir3-Sir4 or Swi6/HP1 complexes.",
+   "definition_source": "GO:0099115",
+   "mapping_status": "PROPOSED",
+   "curation_history": [
+    {
+     "timestamp": "2026-10-23T14:36:25Z",
+     "curator": "claude-opus-4-7",
+     "action": "CREATED",
+     "changes": "Initial curation of chromosome, subtelomeric region (GO:0099115) in category OTHER with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and causal mechanism graph.",
+     "llm_assisted": true
+    }
+   ],
+   "parent_structures": [
+    "GO:0000785"
+   ],
+   "part_of": [
+    "GO:0005694"
+   ],
+   "has_part": [
+    "GO:0000786"
+   ],
+   "synonyms": [
+    {
+     "synonym_text": "subtelomere",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0099115"
+    },
+    {
+     "synonym_text": "subtelomeric chromatin",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0099115"
+    }
+   ],
+   "components": [
+    {
+     "component_id": "subtelomeric_dna",
+     "label": "subtelomere",
+     "component_type": "DNA",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Subtelomeric DNA sequence elements (such as budding-yeast X and Y' repeats) that form the nucleic-acid scaffold of the chromosome, subtelomeric region.",
+     "grounding": "SO:0001997",
+     "evidence": [
+      {
+       "reference": "DOI:10.1186/s13059-015-0766-2",
+       "notes": "Subtelomeric Y-prime FISH and chromosome-conformation capture characterize subtelomeric DNA domains in Saccharomyces cerevisiae."
+      }
+     ],
+     "grounding_notes": "Sequence Ontology term SO:0001997 (subtelomere) denotes the chromosomal DNA region immediately adjacent to the terminal telomere."
+    },
+    {
+     "component_id": "nucleosome",
+     "label": "nucleosome",
+     "component_type": "OTHER",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Histone-DNA nucleosomal core particles packaging subtelomeric DNA, whose histone H4 N-terminal tail and K16 deacetylation state govern silent chromatin assembly across the chromosome, subtelomeric region.",
+     "grounding": "GO:0000786",
+     "evidence": [
+      {
+       "reference": "DOI:10.1091/mbc.E16-01-0069",
+       "notes": "Histone H4 tail and K16 substitutions establish the role of subtelomeric nucleosomes in silent chromatin organization."
+      }
+     ],
+     "grounding_notes": "GO:0000786 (nucleosome) denotes the histone octamer-DNA packaging unit of subtelomeric chromatin."
+    },
+    {
+     "component_id": "sirtuin",
+     "label": "Sirtuin family",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "NAD-dependent histone deacetylase Sir2 that deacetylates subtelomeric nucleosomal histone H4 K16 and incorporates with Sir3 and Sir4 into silent chromatin across the chromosome, subtelomeric region.",
+     "grounding": "InterPro:IPR003000",
+     "evidence": [
+      {
+       "reference": "DOI:10.1091/mbc.E16-01-0069",
+       "notes": "Immuno-FISH and live imaging confirm Sir2 association with subtelomeric silent chromatin in Saccharomyces cerevisiae."
+      }
+     ],
+     "grounding_notes": "Exact integrated family InterPro:IPR003000 (Sirtuin family) verified for Saccharomyces cerevisiae SIR2 (P06700).",
+     "gene_symbols": [
+      "SIR2"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P06700",
+       "protein_label": "NAD-dependent histone deacetylase SIR2",
+       "gene_symbol": "SIR2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar; the accession does not imply that the reference stock was the exact experimental strain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1091/mbc.E16-01-0069",
+         "notes": "Figure 1 immuno-FISH and dual-color localization identify telomere-associated Sir2."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P06700/entry",
+         "notes": "Reviewed entry, gene, native label and source taxon verified on 2026-10-05. Structural role is supported by the primary experiment, not inferred from the sequence lookup."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "sir3",
+     "label": "Sir3-like silencing protein",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Silent-chromatin structural protein that binds deacetylated H4 K16 nucleosomes and spreads with Sir2 and Sir4 across the budding-yeast chromosome, subtelomeric region.",
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "evidence": [
+      {
+       "reference": "DOI:10.1186/s13059-015-0766-2",
+       "notes": "Sir3 localizes to subtelomeric chromatin and is required for subtelomeric silent chromatin organization in Saccharomyces cerevisiae."
+      }
+     ],
+     "grounding_notes": "UniProtKB:P06701 matches BAH and AAA+ domains within the broader ORC1/CDC6 family rather than a Sir3-specific whole-protein InterPro family.",
+     "gene_symbols": [
+      "SIR3"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P06701",
+       "protein_label": "Regulatory protein SIR3",
+       "gene_symbol": "SIR3",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar; the accession does not imply that the reference stock was the exact experimental strain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1091/mbc.E16-01-0069",
+         "notes": "Figure 1 directly colocalizes Sir3-RFP with Sir2-marked telomeric foci."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P06701/entry",
+         "notes": "Reviewed entry, gene, native label and source taxon verified on 2026-10-05. Structural role is supported by the primary experiment, not inferred from the sequence lookup."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "sir4",
+     "label": "Sir4-like silencing protein",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Scaffold subunit of the budding-yeast SIR complex that bridges Rap1 and Sir2-Sir3 to assemble silent chromatin across the chromosome, subtelomeric region.",
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "evidence": [
+      {
+       "reference": "DOI:10.1186/s13059-015-0766-2",
+       "notes": "Sir4 associates with Sir2 and Sir3 across subtelomeric silent chromatin in Saccharomyces cerevisiae."
+      }
+     ],
+     "grounding_notes": "UniProtKB:P11978 contains the Sir4 C-terminal SID domain without a single whole-protein InterPro family entry.",
+     "gene_symbols": [
+      "SIR4"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P11978",
+       "protein_label": "Regulatory protein SIR4",
+       "gene_symbol": "SIR4",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar; the accession does not imply that the reference stock was the exact experimental strain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s13059-015-0766-2",
+         "notes": "Results report Sir4-GFP localization with the other SIR factors; SIR4 deletion impairs hyperclustering."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P11978/entry",
+         "notes": "Reviewed entry, gene, native label and source taxon verified on 2026-10-05. Structural role is supported by the primary experiment, not inferred from the sequence lookup."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "rap1",
+     "label": "TE2IP/Rap1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "DNA-binding protein associated with subtelomeric X/Y' elements that recruits the Sir2-Sir3-Sir4 complex to nucleate silent chromatin in the chromosome, subtelomeric region.",
+     "grounding": "InterPro:IPR039595",
+     "evidence": [
+      {
+       "reference": "DOI:10.1186/s13059-015-0766-2",
+       "notes": "Rap1 colocalizes with subtelomeric Y-prime FISH and Sir3-bound subtelomeric chromatin in Saccharomyces cerevisiae."
+      }
+     ],
+     "grounding_notes": "Exact integrated family InterPro:IPR039595 (TE2IP/Rap1) verified for Saccharomyces cerevisiae RAP1 (P11938).",
+     "gene_symbols": [
+      "RAP1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P11938",
+       "protein_label": "DNA-binding protein RAP1",
+       "gene_symbol": "RAP1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar; the accession does not imply that the reference stock was the exact experimental strain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s13059-015-0766-2",
+         "notes": "Figure 1 tracks Rap1 foci and verifies telomeric/subtelomeric association by FISH."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P11938/entry",
+         "notes": "Reviewed entry, gene, native label and source taxon verified on 2026-10-05. Structural role is supported by the primary experiment, not inferred from the sequence lookup."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "heterochromatin_protein",
+     "label": "Heterochromatin-associated chromo domain-containing protein",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "HP1-family chromodomain protein Swi6 that binds H3K9-methylated nucleosomes across the fission-yeast chromosome, subtelomeric region to maintain subtelomeric heterochromatin.",
+     "grounding": "InterPro:IPR051219",
+     "evidence": [
+      {
+       "reference": "DOI:10.1093/nar/gkaa043",
+       "notes": "Figure 2 shows that Swi6-GFP marks fission-yeast subtelomeric heterochromatin even when terminal Taz1 telomeric repeats erode."
+      }
+     ],
+     "grounding_notes": "Exact integrated family InterPro:IPR051219 verified for Schizosaccharomyces pombe chromodomain protein swi6 (P40381).",
+     "gene_symbols": [
+      "swi6"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P40381",
+       "protein_label": "Chromatin-associated protein swi6",
+       "gene_symbol": "swi6",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar; the accession does not imply that the reference stock was the exact experimental strain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1093/nar/gkaa043",
+         "notes": "Figure 2 uses Swi6-GFP to retain visibility of subtelomeric chromatin when terminal-repeat Taz1 signal declines."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P40381/entry",
+         "notes": "Reviewed entry, gene, native label and source taxon verified on 2026-10-05. Structural role is supported by the primary experiment, not inferred from the sequence lookup."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "reference": "DOI:10.1186/s13059-015-0766-2",
+     "note": "Budding-yeast model in which subtelomeric X and Y' DNA elements are packaged into Sir2-Sir3-Sir4-dependent silent nucleosomal chromatin."
+    },
+    {
+     "taxon_id": "NCBITaxon:4896",
+     "taxon_label": "Schizosaccharomyces pombe",
+     "reference": "DOI:10.1093/nar/gkaa043",
+     "note": "Fission-yeast model in which subtelomeric chromatin is packaged into Swi6/HP1-bound heterochromatin adjacent to the terminal telomere."
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "telomere_organization",
+     "label": "telomere organization",
+     "grounding": "GO:0032200",
+     "description": "Organization and silent-chromatin packaging of the subtelomeric chromosomal domain immediately adjacent to the telomere.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1186/s13059-015-0766-2",
+       "notes": "Sir2/Sir3/Sir4-dependent subtelomeric silent chromatin organizes subtelomeric domains in Saccharomyces cerevisiae."
+      },
+      {
+       "reference": "DOI:10.1093/nar/gkaa043",
+       "notes": "Swi6-bound subtelomeric heterochromatin maintains chromosome-end chromatin organization in Schizosaccharomyces pombe."
+      }
+     ]
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "chromosome_subtelomeric_region_mechanism",
+     "title": "Subtelomeric nucleosomal heterochromatin assembly via SIR and Swi6 complexes",
+     "description": "Subtelomeric DNA (SO:0001997) packaged into nucleosomes (GO:0000786) recruits Rap1, Sir4, Sir2 (deacetylating histone H4 K16), and Sir3 in Saccharomyces cerevisiae—or Swi6 heterochromatin protein in Schizosaccharomyces pombe—to assemble the chromosome, subtelomeric region (GO:0099115) and mediate telomere organization (GO:0032200).",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Covers subtelomeric silent chromatin assembly in S. cerevisiae (Rap1-Sir2-Sir3-Sir4 on H4K16-deacetylated nucleosomes) and S. pombe (Swi6 subtelomeric heterochromatin), distinct from starvation-induced multi-chromosome telomere hyperclustering.",
+     "nodes": [
+      {
+       "node_id": "subtelomeric_dna",
+       "label": "subtelomere",
+       "node_type": "GENETIC_ELEMENT",
+       "grounding": "SO:0001997",
+       "component_ref": "subtelomeric_dna"
+      },
+      {
+       "node_id": "nucleosome",
+       "label": "nucleosome",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0000786",
+       "component_ref": "nucleosome"
+      },
+      {
+       "node_id": "rap1",
+       "label": "TE2IP/Rap1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR039595",
+       "component_ref": "rap1"
+      },
+      {
+       "node_id": "sir4",
+       "label": "Sir4-like silencing protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sir4"
+      },
+      {
+       "node_id": "sirtuin",
+       "label": "Sirtuin family",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR003000",
+       "component_ref": "sirtuin"
+      },
+      {
+       "node_id": "sir3",
+       "label": "Sir3-like silencing protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sir3"
+      },
+      {
+       "node_id": "heterochromatin_protein",
+       "label": "Heterochromatin-associated chromo domain-containing protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR051219",
+       "component_ref": "heterochromatin_protein"
+      },
+      {
+       "node_id": "chromosome_subtelomeric_region",
+       "label": "chromosome, subtelomeric region",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0099115",
+       "description": "Assembled heterochromatic chromosome, subtelomeric region (GO:0099115) immediately adjacent to the telomere."
+      },
+      {
+       "node_id": "telomere_organization",
+       "label": "telomere organization",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0032200"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "subtelomeric_dna",
+       "predicate": "assembles into",
+       "object": "nucleosome",
+       "description": "Subtelomeric repeat DNA wraps around histone octamers to form subtelomeric nucleosomes.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1091/mbc.E16-01-0069",
+         "notes": "Histone H4 mutations demonstrate nucleosomal packaging of subtelomeric chromatin."
+        }
+       ]
+      },
+      {
+       "subject": "rap1",
+       "predicate": "recruits",
+       "object": "sir4",
+       "description": "Subtelomere- and telomere-proximal Rap1 recruits the SIR scaffold subunit Sir4.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s13059-015-0766-2",
+         "notes": "Rap1 and Sir4 colocalize at budding-yeast subtelomeric chromatin."
+        }
+       ]
+      },
+      {
+       "subject": "sir4",
+       "predicate": "recruits",
+       "object": "sirtuin",
+       "description": "Sir4 complexes with the NAD-dependent histone deacetylase Sir2 at subtelomeric chromatin.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1091/mbc.E16-01-0069",
+         "notes": "Sir2-GFP colocalizes with SIR components at subtelomeric regions."
+        }
+       ]
+      },
+      {
+       "subject": "sirtuin",
+       "predicate": "modifies",
+       "object": "nucleosome",
+       "description": "Sir2 deacetylates histone H4 K16 on subtelomeric nucleosomes to enable Sir3 binding.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1091/mbc.E16-01-0069",
+         "notes": "H4 K16 substitutions and sir2 deletion demonstrate H4K16-dependent silent chromatin assembly."
+        }
+       ]
+      },
+      {
+       "subject": "nucleosome",
+       "predicate": "recruits",
+       "object": "sir3",
+       "description": "Deacetylated H4 K16 subtelomeric nucleosomes recruit Sir3 to spread silent chromatin.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s13059-015-0766-2",
+         "notes": "Sir3 binds subtelomeric chromatin and is required for subtelomeric silent domain organization."
+        }
+       ]
+      },
+      {
+       "subject": "sir3",
+       "predicate": "assembles into",
+       "object": "chromosome_subtelomeric_region",
+       "description": "Sir3-bound nucleosomal arrays form the silent chromosome, subtelomeric region in S. cerevisiae.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s13059-015-0766-2",
+         "notes": "Y-prime FISH and 3C/Hi-C show Sir3-organized subtelomeric chromatin."
+        }
+       ]
+      },
+      {
+       "subject": "heterochromatin_protein",
+       "predicate": "assembles into",
+       "object": "chromosome_subtelomeric_region",
+       "description": "Swi6 chromodomain proteins bind subtelomeric nucleosomes to assemble the heterochromatic chromosome, subtelomeric region in S. pombe.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1093/nar/gkaa043",
+         "notes": "Swi6-GFP marks fission-yeast subtelomeric heterochromatin."
+        }
+       ]
+      },
+      {
+       "subject": "chromosome_subtelomeric_region",
+       "predicate": "mediates",
+       "object": "telomere_organization",
+       "description": "The assembled chromosome, subtelomeric region organizes telomere-adjacent silent chromatin.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s13059-015-0766-2",
+         "notes": "Subtelomeric silent chromatin organizes chromosome-end domains."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0099115",
+     "notes": "Gene Ontology cellular-component term for chromosome, subtelomeric region: The chromosomal region immediately adjacent to a telomere, including subtelomeric DNA elements and associated nucleosomal heterochromatin."
+    },
+    {
+     "reference": "DOI:10.1186/s13059-015-0766-2",
+     "notes": "Guidi et al. 2015 (Genome Biol, PMID 26399229) characterize subtelomeric Y-prime DNA, Rap1, Sir3, and Sir4 organization in Saccharomyces cerevisiae."
+    },
+    {
+     "reference": "DOI:10.1091/mbc.E16-01-0069",
+     "notes": "Laporte et al. 2016 (Mol Biol Cell, PMID 27122604) establish the roles of Sir2, Sir3, and nucleosomal histone H4 K16 state in budding-yeast subtelomeric silent chromatin."
+    },
+    {
+     "reference": "DOI:10.1093/nar/gkaa043",
+     "notes": "Maestroni et al. 2020 (Nucleic Acids Res, PMID 31980821) follow Swi6-GFP at the Schizosaccharomyces pombe chromosome, subtelomeric region and distinguish subtelomeric Swi6 heterochromatin from terminal Taz1 telomeric repeats."
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Budding yeast chromosomes contain X and Y' subtelomeric repeats packaged into Sir2/Sir3/Sir4-dependent silent chromatin.",
+     "reference": "DOI:10.1186/s13059-015-0766-2"
+    },
+    {
+     "taxon_id": "NCBITaxon:4896",
+     "taxon_label": "Schizosaccharomyces pombe",
+     "presence": "COMMON",
+     "note": "Fission yeast subtelomeric chromatin is enriched in Swi6 heterochromatin and clusters near the nuclear envelope.",
+     "reference": "DOI:10.1093/nar/gkaa043"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0000781",
+   "label": "chromosome, telomeric region",
+   "structure_category": "OTHER",
+   "structure_kind": "NUCLEOPROTEIN_COMPLEX",
+   "definition": "The terminal region of a linear chromosome that includes the telomeric DNA repeats and associated proteins, required for replication and stability of the chromosome end. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the chromosome, telomeric region comprises terminal telomeric DNA repeats bound by sequence-specific duplex repeat-binding and telomere-associated proteins (such as Rap1 and Taz1) that form a protective nucleoprotein cap at chromosome ends and mediate telomere organization.",
+   "definition_source": "GO:0000781",
+   "mapping_status": "PROPOSED",
+   "curation_history": [
+    {
+     "timestamp": "2026-10-23T14:36:25Z",
+     "curator": "claude-opus-4-7",
+     "action": "CREATED",
+     "changes": "Initial curation of chromosome, telomeric region (GO:0000781) in category OTHER with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and causal mechanism graph.",
+     "llm_assisted": true
+    }
+   ],
+   "parent_structures": [
+    "GO:0000785"
+   ],
+   "part_of": [
+    "GO:0005694"
+   ],
+   "has_part": [
+    "GO:0000786"
+   ],
+   "synonyms": [
+    {
+     "synonym_text": "telomere",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0000781"
+    },
+    {
+     "synonym_text": "telomeric chromatin",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0000781"
+    }
+   ],
+   "components": [
+    {
+     "component_id": "telomeric_dna",
+     "label": "telomere",
+     "component_type": "DNA",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "grounding": "SO:0000624",
+     "grounding_notes": "Sequence Ontology term SO:0000624 (telomere) denotes the terminal repeat DNA sequence feature at linear chromosome ends that forms the nucleic-acid core of the chromosome, telomeric region.",
+     "role": "Terminal repeat DNA sequence at the ends of linear nuclear chromosomes that nucleates assembly of the telomeric nucleoprotein cap.",
+     "evidence": [
+      {
+       "reference": "DOI:10.26508/lsa.202000824",
+       "notes": "Terminal telomeric repeat DNA at linear chromosome ends is bound by Rap1 within the budding-yeast chromosome, telomeric region."
+      },
+      {
+       "reference": "DOI:10.1038/celldisc.2017.41",
+       "notes": "Terminal telomeric DNA repeats at fission-yeast chromosome ends are bound by Taz1 and Rap1."
+      }
+     ]
+    },
+    {
+     "component_id": "rap1",
+     "label": "TE2IP/Rap1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Conserved telomere-associated scaffold protein that binds directly to TG1-3 telomeric repeats in Saccharomyces cerevisiae and is recruited by Taz1 to telomeric repeats in Schizosaccharomyces pombe within the chromosome, telomeric region.",
+     "grounding": "InterPro:IPR039595",
+     "grounding_notes": "Exact integrated family InterPro:IPR039595 (TE2IP/Rap1) verified for both Saccharomyces cerevisiae RAP1 (P11938) and Schizosaccharomyces pombe rap1 (Q96TL7). Denotes telomeric Rap1, distinct from the Ras-family Rap1 GTPase.",
+     "gene_symbols": [
+      "RAP1",
+      "rap1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P11938",
+       "protein_label": "DNA-binding protein RAP1",
+       "gene_symbol": "RAP1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar, not a claim that the reference strain was the exact experimental stock.",
+       "evidence": [
+        {
+         "reference": "DOI:10.26508/lsa.202000824",
+         "notes": "Figure 4 uses Rap1-GFP at clustered meiotic chromosome ends."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P11938/entry",
+         "notes": "Reviewed identity, native protein label, gene and source taxon verified. Structural role comes from the cited experiment."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q96TL7",
+       "protein_label": "DNA-binding protein rap1",
+       "gene_symbol": "rap1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar, not a claim that the reference strain was the exact experimental stock.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s12915-015-0149-x",
+         "notes": "Figure 4 directly images meiotic Rap1-YFP and compares a Bqt1/2-binding-defective mutant."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q96TL7/entry",
+         "notes": "Reviewed identity, native protein label, gene and source taxon verified. Structural role comes from the cited experiment."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "DOI:10.26508/lsa.202000824",
+       "notes": "Rap1-GFP directly marks the chromosome, telomeric region at budding-yeast chromosome ends."
+      },
+      {
+       "reference": "DOI:10.1186/s12915-015-0149-x",
+       "notes": "Amelina et al. 2015 show that Rap1-YFP constitutively localizes to the fission-yeast chromosome, telomeric region, including in separation-of-function mutants defective for meiotic Bqt1/2 binding."
+      }
+     ]
+    },
+    {
+     "component_id": "taz1",
+     "label": "Taz1-like telomere-binding protein",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "essentiality": "UNKNOWN",
+     "role": "Duplex telomeric-repeat DNA-binding protein in Schizosaccharomyces pombe that binds terminal telomeric DNA repeats and recruits Rap1 to assemble the chromosome, telomeric region.",
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "UniProtKB:P79005 contains Myb/SANT DNA-binding and telomeric-repeat dimerization domains without a single whole-protein InterPro family entry.",
+     "gene_symbols": [
+      "taz1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P79005",
+       "protein_label": "Telomere length regulator taz1",
+       "gene_symbol": "taz1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-05",
+       "role": "Reference-sequence exemplar, not a claim that the reference strain was the exact experimental stock.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/celldisc.2017.41",
+         "notes": "Taz1-YFP tracks telomeres throughout live meiotic imaging."
+        },
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P79005/entry",
+         "notes": "Reviewed identity, native protein label, gene and source taxon verified. Structural role comes from the cited experiment."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "DOI:10.1038/celldisc.2017.41",
+       "notes": "Taz1-YFP directly labels the terminal chromosome, telomeric region at fission-yeast chromosome ends."
+      }
+     ]
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "reference": "DOI:10.26508/lsa.202000824",
+     "note": "Budding-yeast model in which terminal TG1-3 telomeric DNA repeats bound by Rap1 form the chromosome, telomeric region."
+    },
+    {
+     "taxon_id": "NCBITaxon:4896",
+     "taxon_label": "Schizosaccharomyces pombe",
+     "reference": "DOI:10.1186/s12915-015-0149-x",
+     "note": "Fission-yeast model in which duplex telomeric repeats bound by Taz1 recruit Rap1 to form the chromosome, telomeric region."
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "telomere_organization",
+     "label": "telomere organization",
+     "grounding": "GO:0032200",
+     "description": "Organization and structural capping of the terminal telomeric DNA-protein complex at linear chromosome ends.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1186/s12915-015-0149-x",
+       "notes": "Taz1- and Rap1-bound telomeric regions maintain chromosome-end organization in Schizosaccharomyces pombe."
+      },
+      {
+       "reference": "DOI:10.26508/lsa.202000824",
+       "notes": "Rap1-bound telomeric repeats organize chromosome ends in Saccharomyces cerevisiae."
+      }
+     ]
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "chromosome_telomeric_region_mechanism",
+     "title": "Telomeric DNA repeat recognition and nucleoprotein assembly of the chromosome, telomeric region",
+     "description": "Terminal telomeric repeat DNA (SO:0000624) recruits duplex telomere-binding protein Taz1 in Schizosaccharomyces pombe and TE2IP/Rap1 (directly in Saccharomyces cerevisiae and via Taz1 in S. pombe) to assemble the chromosome, telomeric region (GO:0000781) and mediate telomere organization (GO:0032200).",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Covers the conserved core telomeric DNA-protein cap in S. cerevisiae (Rap1-bound TG1-3 repeats) and S. pombe (Taz1-Rap1-bound terminal repeats), distinct from transient meiotic nuclear-envelope bouquet tethering complexes.",
+     "nodes": [
+      {
+       "node_id": "telomeric_dna",
+       "label": "telomere",
+       "node_type": "GENETIC_ELEMENT",
+       "grounding": "SO:0000624",
+       "component_ref": "telomeric_dna",
+       "description": "Terminal telomeric repeat DNA at linear chromosome ends."
+      },
+      {
+       "node_id": "taz1",
+       "label": "Taz1-like telomere-binding protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taz1",
+       "description": "Fission-yeast duplex telomeric-repeat DNA-binding protein."
+      },
+      {
+       "node_id": "rap1",
+       "label": "TE2IP/Rap1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR039595",
+       "component_ref": "rap1",
+       "description": "Telomere-associated Rap1 protein bound to telomeric repeats directly in S. cerevisiae or via Taz1 in S. pombe."
+      },
+      {
+       "node_id": "chromosome_telomeric_region",
+       "label": "chromosome, telomeric region",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0000781",
+       "description": "Assembled terminal nucleoprotein cap of a linear chromosome (GO:0000781)."
+      },
+      {
+       "node_id": "telomere_organization",
+       "label": "telomere organization",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0032200",
+       "description": "Organization and capping of chromosome ends."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "telomeric_dna",
+       "predicate": "recruits",
+       "object": "taz1",
+       "description": "In S. pombe, terminal telomeric DNA repeats recruit the duplex telomere-binding protein Taz1.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/celldisc.2017.41",
+         "notes": "Taz1 binds terminal telomeric repeats at fission-yeast chromosome ends."
+        }
+       ]
+      },
+      {
+       "subject": "telomeric_dna",
+       "predicate": "recruits",
+       "object": "rap1",
+       "description": "In S. cerevisiae, terminal TG1-3 telomeric DNA repeats directly bind Rap1.",
+       "evidence": [
+        {
+         "reference": "DOI:10.26508/lsa.202000824",
+         "notes": "Rap1 binds budding-yeast telomeric DNA repeats at chromosome ends."
+        }
+       ]
+      },
+      {
+       "subject": "taz1",
+       "predicate": "recruits",
+       "object": "rap1",
+       "description": "In S. pombe, telomere-bound Taz1 recruits Rap1 to the chromosome, telomeric region.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s12915-015-0149-x",
+         "notes": "Amelina et al. 2015 characterize Rap1 recruitment to Taz1-bound telomeres in fission yeast."
+        }
+       ]
+      },
+      {
+       "subject": "taz1",
+       "predicate": "assembles into",
+       "object": "chromosome_telomeric_region",
+       "description": "Taz1 bound to telomeric DNA forms the core duplex repeat cap of the fission-yeast chromosome, telomeric region.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/celldisc.2017.41",
+         "notes": "Taz1-YFP marks the assembled chromosome, telomeric region."
+        }
+       ]
+      },
+      {
+       "subject": "rap1",
+       "predicate": "assembles into",
+       "object": "chromosome_telomeric_region",
+       "description": "Rap1 incorporates with telomeric repeat chromatin to form the chromosome, telomeric region.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s12915-015-0149-x",
+         "notes": "Rap1-YFP is a constitutive component of the chromosome, telomeric region."
+        }
+       ]
+      },
+      {
+       "subject": "chromosome_telomeric_region",
+       "predicate": "mediates",
+       "object": "telomere_organization",
+       "description": "The assembled chromosome, telomeric region maintains chromosome-end organization and protection.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1186/s12915-015-0149-x",
+         "notes": "Telomeric Rap1-Taz1 complexes organize fission-yeast chromosome ends."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0000781",
+     "notes": "Gene Ontology cellular-component term for chromosome, telomeric region: The terminal region of a linear chromosome that includes the telomeric DNA repeats and associated proteins, required for replication and stability of the chromosome end."
+    },
+    {
+     "reference": "DOI:10.1186/s12915-015-0149-x",
+     "notes": "Amelina et al. 2015 (BMC Biol, PMID 26058898) demonstrate constitutive telomeric localization of Rap1 at S. pombe chromosome ends and dissect its domains separately from meiotic Bqt1/2 binding."
+    },
+    {
+     "reference": "DOI:10.26508/lsa.202000824",
+     "notes": "Fan et al. 2020 (Life Sci Alliance, PMID 32967926) image Rap1-GFP at the S. cerevisiae chromosome, telomeric region."
+    },
+    {
+     "reference": "DOI:10.1038/celldisc.2017.41",
+     "notes": "Moiseeva et al. 2017 (Cell Discov, PMID 29123917) track Taz1-YFP at the S. pombe chromosome, telomeric region."
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Linear nuclear chromosomes terminate in TG1-3 telomeric repeats bound by Rap1 and associated tethering factors.",
+     "reference": "DOI:10.26508/lsa.202000824"
+    },
+    {
+     "taxon_id": "NCBITaxon:4896",
+     "taxon_label": "Schizosaccharomyces pombe",
+     "presence": "COMMON",
+     "note": "Fission yeast chromosome ends assemble Taz1-Rap1 telomeric nucleoprotein complexes that tether to the nuclear envelope.",
+     "reference": "DOI:10.1038/celldisc.2017.41"
     }
    ]
   },
