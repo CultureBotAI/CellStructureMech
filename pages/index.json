@@ -1160,6 +1160,26 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0030864",
+  "label": "cortical actin cytoskeleton",
+  "category": "CYTOSKELETON",
+  "kind": "FILAMENT",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/cortical_actin_cytoskeleton.html",
+  "definition": "The part of the actin cytoskeleton that lies just beneath the plasma membrane. In budding yeast (Saccharomyces cerevisiae), fission yeast, and other fungi and protists, the cortical actin cytoskeleton comprises Arp2/3-nucleated branched actin cortical patches and cortical actin filaments that drive endocytic vesicle internalization and cell-cortex remodeling.",
+  "synonyms": "submembranous actin cytoskeleton"
+ },
+ {
+  "identifier": "GO:0030981",
+  "label": "cortical microtubule cytoskeleton",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/cortical_microtubule_cytoskeleton.html",
+  "definition": "The part of the microtubule cytoskeleton that lies just beneath the plasma membrane in the cell cortex. In fission yeast (Schizosaccharomyces pombe), ciliates, apicomplexans, and microalgae, the cortical microtubule cytoskeleton includes astral and cortical microtubule arrays that interact with cortical dynein and plus-end capture factors to drive nuclear movement and maintain cell-cortex polarity.",
+  "synonyms": "cortical microtubule array"
+ },
+ {
   "identifier": "cellstructuremech:crescentin_filament",
   "label": "crescentin filament",
   "category": "CYTOSKELETON",
@@ -1198,6 +1218,16 @@
   "page": "structures/cytoskeleton/cytoplasmic_microtubule.html",
   "definition": "Any microtubule in the cytoplasm of a cell.",
   "synonyms": "non-spindle-associated astral microtubule"
+ },
+ {
+  "identifier": "GO:1905720",
+  "label": "cytoplasmic microtubule bundle",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/cytoplasmic_microtubule_bundle.html",
+  "definition": "A microtubule bundle located in the cytoplasm. In fission yeast (Schizosaccharomyces pombe) and other microbial eukaryotes, cytoplasmic microtubule bundles consist of parallel or antiparallel alpha/beta-tubulin polymers nucleated by gamma-tubulin adaptor complexes (Mto1-Mto2) and crosslinked by Ase1/MAP65 family proteins and CLASP (Cls1/Peg1) to maintain cytoplasmic organization and cell-tip polarity.",
+  "synonyms": "cytoplasmic MT bundle"
  },
  {
   "identifier": "cellstructuremech:cytostomal_cord",
@@ -1708,6 +1738,16 @@
   "page": "structures/cytoskeleton/new_spindle_pole_body_sin_signaling_complex.html",
   "definition": "A SIN signaling complex associated with the new mitotic spindle pole body during anaphase and characterized by the presence activated (GTP bound) GTPase (Spg1 in fission yeast) to activate SIN signaling.",
   "synonyms": "new spindle pole body SIN signalling complex"
+ },
+ {
+  "identifier": "GO:0106094",
+  "label": "nuclear membrane microtubule tethering complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.html",
+  "definition": "A nuclear membrane protein complex that connects the nuclear inner and outer membranes and links nuclear structures across the nuclear envelope to cytoplasmic microtubules. In yeasts and other fungi (such as Schizosaccharomyces pombe and Saccharomyces cerevisiae), nuclear membrane microtubule tethering complexes composed of inner-membrane SUN-domain proteins (Sad1, Mps3) and outer-membrane KASH-like linkers (Kms1, Kms2, Mps2) couple chromosomes and spindle pole body attachment sites to cytoplasmic microtubule motors.",
+  "synonyms": "nuclear envelope microtubule tethering complex"
  },
  {
   "identifier": "GO:0005880",
@@ -5808,6 +5848,36 @@
   "page": "structures/other/chrac.html",
   "definition": "An ISWI complex that contains an ATPase subunit of the ISWI family (SNF2H in mammals, Isw2 in S. cerevisiae), an ACF1 homolog, and additional small histone fold subunits (generally two of these, but Xenopus has only one and some additional non-conserved subunits). CHRAC plays roles in the regulation of RNA polymerase II transcription and in DNA replication and repair.",
   "synonyms": "chromatin accessibility complex ISW2 complex"
+ },
+ {
+  "identifier": "GO:0000775",
+  "label": "chromosome, centromeric region",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chromosome_centromeric_region.html",
+  "definition": "The region of a chromosome that includes the centromeric DNA and associated proteins. In mitosis or meiosis II, this region connects the chromosome to spindle microtubules via the kinetochore. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the centromeric region comprises specialized CenH3 (Cse4/Cnp1) centromeric nucleosomes, point- or regional-centromere DNA-binding factors (such as the CBF3 complex), pericentromeric cohesin/heterochromatin, and the assembled inner and outer kinetochore complexes.",
+  "synonyms": "centromere chromosomal centromeric region"
+ },
+ {
+  "identifier": "GO:0099115",
+  "label": "chromosome, subtelomeric region",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chromosome_subtelomeric_region.html",
+  "definition": "The chromosomal region immediately adjacent to a telomere, including subtelomeric DNA elements (such as X and Y' repeats in budding yeast) and associated nucleosomal heterochromatin. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the subtelomeric region is packaged into silent chromatin by histone H4 K16 deacetylation and Sir2-Sir3-Sir4 or Swi6/HP1 complexes and participates in peripheral nuclear anchoring and quiescent telomere hyperclustering.",
+  "synonyms": "subtelomere subtelomeric chromatin"
+ },
+ {
+  "identifier": "GO:0000781",
+  "label": "chromosome, telomeric region",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chromosome_telomeric_region.html",
+  "definition": "The terminal region of a linear chromosome that includes the telomeric DNA repeats and associated proteins, required for replication and stability of the chromosome end. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the telomeric region is bound by sequence-specific duplex and single-strand repeat-binding proteins (Rap1, Taz1, Cdc13/Pot1) and nuclear-envelope tethering factors (Ndj1, Bqt1-Bqt2, SUN-KASH complexes) that protect chromosome ends from fusion and mediate nuclear positioning.",
+  "synonyms": "telomere telomeric chromatin"
  },
  {
   "identifier": "GO:0030118",

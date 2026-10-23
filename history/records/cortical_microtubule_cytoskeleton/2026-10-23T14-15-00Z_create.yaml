@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/cortical_microtubule_cytoskeleton.yaml
+  slug: cortical_microtubule_cytoskeleton
+session:
+  id: 2026-10-23T141500Z-claude-opus-4-7-c2s107
+  timestamp: '2026-10-23T14:15:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for cortical microtubule cytoskeleton (GO:0030981) in cytoskeleton.
+  details: Authored data/structures/cytoskeleton/cortical_microtubule_cytoskeleton.yaml
+    for cortical microtubule cytoskeleton (GO:0030981) with verified GO hierarchy,
+    taxonomic distribution, UniProtKB protein examples, functions, literature evidence,
+    and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

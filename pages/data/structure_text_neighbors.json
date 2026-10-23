@@ -1847,6 +1847,11 @@
           "cosine_similarity": 0.84179393
         },
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.81904251
+        },
+        {
           "identifier": "GO:0061645",
           "label": "endocytic patch",
           "cosine_similarity": 0.81432871
@@ -1860,11 +1865,6 @@
           "identifier": "GO:1990819",
           "label": "mating projection actin fusion focus",
           "cosine_similarity": 0.75804179
-        },
-        {
-          "identifier": "GO:0000133",
-          "label": "polarisome",
-          "cosine_similarity": 0.75355237
         }
       ]
     },
@@ -1872,6 +1872,11 @@
       "identifier": "GO:0030479",
       "label": "actin cortical patch",
       "neighbors": [
+        {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.93484422
+        },
         {
           "identifier": "GO:0061645",
           "label": "endocytic patch",
@@ -1891,11 +1896,6 @@
           "identifier": "GO:0110085",
           "label": "mitotic actomyosin contractile ring",
           "cosine_similarity": 0.80170607
-        },
-        {
-          "identifier": "GO:0099079",
-          "label": "actin body",
-          "cosine_similarity": 0.79720876
         }
       ]
     },
@@ -1924,9 +1924,9 @@
           "cosine_similarity": 0.88622944
         },
         {
-          "identifier": "GO:0030479",
-          "label": "actin cortical patch",
-          "cosine_similarity": 0.81573999
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.85530329
         }
       ]
     },
@@ -1976,6 +1976,11 @@
           "cosine_similarity": 0.85765354
         },
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.85127775
+        },
+        {
           "identifier": "GO:0099079",
           "label": "actin body",
           "cosine_similarity": 0.84179393
@@ -1984,11 +1989,6 @@
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.77610611
-        },
-        {
-          "identifier": "GO:0000133",
-          "label": "polarisome",
-          "cosine_similarity": 0.76898399
         }
       ]
     },
@@ -2007,6 +2007,11 @@
           "cosine_similarity": 0.90225778
         },
         {
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.85655979
+        },
+        {
           "identifier": "GO:1990295",
           "label": "post-anaphase microtubule array",
           "cosine_similarity": 0.84817983
@@ -2015,11 +2020,6 @@
           "identifier": "GO:0005876",
           "label": "spindle microtubule",
           "cosine_similarity": 0.84093492
-        },
-        {
-          "identifier": "GO:0005819",
-          "label": "spindle",
-          "cosine_similarity": 0.82062811
         }
       ]
     },
@@ -2043,14 +2043,14 @@
           "cosine_similarity": 0.88214648
         },
         {
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.85866719
+        },
+        {
           "identifier": "GO:0005876",
           "label": "spindle microtubule",
           "cosine_similarity": 0.85850037
-        },
-        {
-          "identifier": "GO:1990295",
-          "label": "post-anaphase microtubule array",
-          "cosine_similarity": 0.84014968
         }
       ]
     },
@@ -3605,6 +3605,68 @@
       ]
     },
     {
+      "identifier": "GO:0030864",
+      "label": "cortical actin cytoskeleton",
+      "neighbors": [
+        {
+          "identifier": "GO:0030479",
+          "label": "actin cortical patch",
+          "cosine_similarity": 0.93484422
+        },
+        {
+          "identifier": "GO:0061645",
+          "label": "endocytic patch",
+          "cosine_similarity": 0.89965953
+        },
+        {
+          "identifier": "GO:0110085",
+          "label": "mitotic actomyosin contractile ring",
+          "cosine_similarity": 0.86083811
+        },
+        {
+          "identifier": "GO:0005826",
+          "label": "actomyosin contractile ring",
+          "cosine_similarity": 0.85530329
+        },
+        {
+          "identifier": "GO:0110086",
+          "label": "meiotic actomyosin contractile ring",
+          "cosine_similarity": 0.85261481
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030981",
+      "label": "cortical microtubule cytoskeleton",
+      "neighbors": [
+        {
+          "identifier": "GO:0032117",
+          "label": "horsetail-astral microtubule array",
+          "cosine_similarity": 0.86212914
+        },
+        {
+          "identifier": "GO:0000235",
+          "label": "astral microtubule",
+          "cosine_similarity": 0.85866719
+        },
+        {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.85829216
+        },
+        {
+          "identifier": "GO:0005818",
+          "label": "aster",
+          "cosine_similarity": 0.85655979
+        },
+        {
+          "identifier": "GO:0005876",
+          "label": "spindle microtubule",
+          "cosine_similarity": 0.85205346
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:crescentin_filament",
       "label": "crescentin filament",
       "neighbors": [
@@ -3725,6 +3787,37 @@
           "identifier": "GO:0020025",
           "label": "subpellicular microtubule",
           "cosine_similarity": 0.87154353
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1905720",
+      "label": "cytoplasmic microtubule bundle",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
+          "label": "quiescent cell microtubule bundle",
+          "cosine_similarity": 0.95793072
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
+          "label": "quiescent nuclear microtubule bundle",
+          "cosine_similarity": 0.89450907
+        },
+        {
+          "identifier": "GO:0000923",
+          "label": "equatorial microtubule organizing center",
+          "cosine_similarity": 0.86423397
+        },
+        {
+          "identifier": "GO:0031021",
+          "label": "interphase microtubule organizing center",
+          "cosine_similarity": 0.85444413
+        },
+        {
+          "identifier": "GO:0005881",
+          "label": "cytoplasmic microtubule",
+          "cosine_similarity": 0.83198736
         }
       ]
     },
@@ -3862,6 +3955,11 @@
           "cosine_similarity": 0.92954585
         },
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.89965953
+        },
+        {
           "identifier": "GO:0005885",
           "label": "Arp2/3 protein complex",
           "cosine_similarity": 0.86605159
@@ -3875,11 +3973,6 @@
           "identifier": "GO:0005938",
           "label": "cell cortex",
           "cosine_similarity": 0.81042948
-        },
-        {
-          "identifier": "GO:0110085",
-          "label": "mitotic actomyosin contractile ring",
-          "cosine_similarity": 0.77157044
         }
       ]
     },
@@ -3929,6 +4022,11 @@
           "cosine_similarity": 0.8663443
         },
         {
+          "identifier": "GO:1905720",
+          "label": "cytoplasmic microtubule bundle",
+          "cosine_similarity": 0.86423397
+        },
+        {
           "identifier": "GO:1990295",
           "label": "post-anaphase microtubule array",
           "cosine_similarity": 0.84822566
@@ -3937,11 +4035,6 @@
           "identifier": "GO:0000931",
           "label": "gamma-tubulin ring complex",
           "cosine_similarity": 0.84661765
-        },
-        {
-          "identifier": "cellstructuremech:radial_microtubule_organizing_center",
-          "label": "radial microtubule organizing center",
-          "cosine_similarity": 0.83202051
         }
       ]
     },
@@ -4275,14 +4368,14 @@
           "cosine_similarity": 0.87168976
         },
         {
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.86212914
+        },
+        {
           "identifier": "GO:0005881",
           "label": "cytoplasmic microtubule",
           "cosine_similarity": 0.82251792
-        },
-        {
-          "identifier": "GO:0005876",
-          "label": "spindle microtubule",
-          "cosine_similarity": 0.82222626
         }
       ]
     },
@@ -4642,6 +4735,11 @@
           "cosine_similarity": 0.85571694
         },
         {
+          "identifier": "GO:1905720",
+          "label": "cytoplasmic microtubule bundle",
+          "cosine_similarity": 0.85444413
+        },
+        {
           "identifier": "GO:0000931",
           "label": "gamma-tubulin ring complex",
           "cosine_similarity": 0.84049555
@@ -4650,11 +4748,6 @@
           "identifier": "cellstructuremech:radial_microtubule_organizing_center",
           "label": "radial microtubule organizing center",
           "cosine_similarity": 0.82858164
-        },
-        {
-          "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
-          "label": "quiescent nuclear microtubule bundle",
-          "cosine_similarity": 0.82398854
         }
       ]
     },
@@ -4756,6 +4849,11 @@
       "label": "mating projection actin fusion focus",
       "neighbors": [
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.79954023
+        },
+        {
           "identifier": "GO:0030479",
           "label": "actin cortical patch",
           "cosine_similarity": 0.79074028
@@ -4774,11 +4872,6 @@
           "identifier": "GO:0061645",
           "label": "endocytic patch",
           "cosine_similarity": 0.75977247
-        },
-        {
-          "identifier": "GO:0099079",
-          "label": "actin body",
-          "cosine_similarity": 0.75804179
         }
       ]
     },
@@ -4926,14 +5019,14 @@
           "cosine_similarity": 0.91355416
         },
         {
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.85261481
+        },
+        {
           "identifier": "GO:0000142",
           "label": "cellular bud neck contractile ring",
           "cosine_similarity": 0.84506932
-        },
-        {
-          "identifier": "GO:0035974",
-          "label": "meiotic spindle pole body",
-          "cosine_similarity": 0.79995799
         }
       ]
     },
@@ -4945,6 +5038,11 @@
           "identifier": "GO:1990612",
           "label": "Sad1-Kms1 LINC complex",
           "cosine_similarity": 0.94346415
+        },
+        {
+          "identifier": "GO:0106094",
+          "label": "nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.92744532
         },
         {
           "identifier": "GO:0035974",
@@ -4960,11 +5058,6 @@
           "identifier": "GO:0044732",
           "label": "mitotic spindle pole body",
           "cosine_similarity": 0.84405063
-        },
-        {
-          "identifier": "GO:0008275",
-          "label": "gamma-tubulin small complex",
-          "cosine_similarity": 0.80983607
         }
       ]
     },
@@ -5117,9 +5210,9 @@
           "cosine_similarity": 0.86923078
         },
         {
-          "identifier": "GO:0030479",
-          "label": "actin cortical patch",
-          "cosine_similarity": 0.80170607
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.86083811
         }
       ]
     },
@@ -5306,6 +5399,37 @@
           "identifier": "GO:0071957",
           "label": "old mitotic spindle pole body",
           "cosine_similarity": 0.81793228
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0106094",
+      "label": "nuclear membrane microtubule tethering complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0034993",
+          "label": "meiotic nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.92744532
+        },
+        {
+          "identifier": "GO:1990612",
+          "label": "Sad1-Kms1 LINC complex",
+          "cosine_similarity": 0.87525428
+        },
+        {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.82888147
+        },
+        {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.8207862
+        },
+        {
+          "identifier": "GO:0000930",
+          "label": "gamma-tubulin complex",
+          "cosine_similarity": 0.8037009
         }
       ]
     },
@@ -5779,6 +5903,11 @@
       "label": "quiescent cell microtubule bundle",
       "neighbors": [
         {
+          "identifier": "GO:1905720",
+          "label": "cytoplasmic microtubule bundle",
+          "cosine_similarity": 0.95793072
+        },
+        {
           "identifier": "cellstructuremech:quiescent_nuclear_microtubule_bundle",
           "label": "quiescent nuclear microtubule bundle",
           "cosine_similarity": 0.93343159
@@ -5797,11 +5926,6 @@
           "identifier": "GO:1990295",
           "label": "post-anaphase microtubule array",
           "cosine_similarity": 0.81356791
-        },
-        {
-          "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
-          "label": "basal body A-B inner junction",
-          "cosine_similarity": 0.79615281
         }
       ]
     },
@@ -5813,6 +5937,11 @@
           "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
           "label": "quiescent cell microtubule bundle",
           "cosine_similarity": 0.93343159
+        },
+        {
+          "identifier": "GO:1905720",
+          "label": "cytoplasmic microtubule bundle",
+          "cosine_similarity": 0.89450907
         },
         {
           "identifier": "GO:0031021",
@@ -5828,11 +5957,6 @@
           "identifier": "cellstructuremech:basal_body_a_b_inner_junction",
           "label": "basal body A-B inner junction",
           "cosine_similarity": 0.81851054
-        },
-        {
-          "identifier": "GO:0000930",
-          "label": "gamma-tubulin complex",
-          "cosine_similarity": 0.80071815
         }
       ]
     },
@@ -6006,19 +6130,19 @@
           "cosine_similarity": 0.87542364
         },
         {
+          "identifier": "GO:0106094",
+          "label": "nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.87525428
+        },
+        {
+          "identifier": "GO:0000781",
+          "label": "chromosome, telomeric region",
+          "cosine_similarity": 0.8437606
+        },
+        {
           "identifier": "GO:0035974",
           "label": "meiotic spindle pole body",
           "cosine_similarity": 0.8398523
-        },
-        {
-          "identifier": "cellstructuremech:telocentrosome",
-          "label": "telocentrosome",
-          "cosine_similarity": 0.82786948
-        },
-        {
-          "identifier": "GO:0044732",
-          "label": "mitotic spindle pole body",
-          "cosine_similarity": 0.79794846
         }
       ]
     },
@@ -6652,6 +6776,11 @@
           "cosine_similarity": 0.79173136
         },
         {
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.77773839
+        },
+        {
           "identifier": "GO:0160115",
           "label": "axonemal microtubule doublet ribbon",
           "cosine_similarity": 0.77692086
@@ -6665,11 +6794,6 @@
           "identifier": "cellstructuremech:quiescent_cell_microtubule_bundle",
           "label": "quiescent cell microtubule bundle",
           "cosine_similarity": 0.77377982
-        },
-        {
-          "identifier": "GO:0005881",
-          "label": "cytoplasmic microtubule",
-          "cosine_similarity": 0.77327717
         }
       ]
     },
@@ -6709,6 +6833,11 @@
       "label": "Stentor perialgal microtubule meshwork",
       "neighbors": [
         {
+          "identifier": "GO:0030981",
+          "label": "cortical microtubule cytoskeleton",
+          "cosine_similarity": 0.81979296
+        },
+        {
           "identifier": "cellstructuremech:stentor_km_fiber",
           "label": "Stentor Km fiber",
           "cosine_similarity": 0.79173136
@@ -6727,11 +6856,6 @@
           "identifier": "cellstructuremech:tubulin_spool",
           "label": "tubulin spool",
           "cosine_similarity": 0.7832951
-        },
-        {
-          "identifier": "GO:0032117",
-          "label": "horsetail-astral microtubule array",
-          "cosine_similarity": 0.77884859
         }
       ]
     },
@@ -6807,6 +6931,11 @@
           "cosine_similarity": 0.84642184
         },
         {
+          "identifier": "GO:0106094",
+          "label": "nuclear membrane microtubule tethering complex",
+          "cosine_similarity": 0.82888147
+        },
+        {
           "identifier": "cellstructuremech:meiotic_telomere_bouquet",
           "label": "meiotic telomere bouquet",
           "cosine_similarity": 0.82795996
@@ -6817,14 +6946,9 @@
           "cosine_similarity": 0.82786948
         },
         {
-          "identifier": "GO:0031021",
-          "label": "interphase microtubule organizing center",
-          "cosine_similarity": 0.78798931
-        },
-        {
-          "identifier": "GO:0000923",
-          "label": "equatorial microtubule organizing center",
-          "cosine_similarity": 0.78185016
+          "identifier": "GO:0000781",
+          "label": "chromosome, telomeric region",
+          "cosine_similarity": 0.81214584
         }
       ]
     },
@@ -16799,14 +16923,14 @@
           "cosine_similarity": 0.74831633
         },
         {
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.73552189
+        },
+        {
           "identifier": "GO:0042645",
           "label": "mitochondrial nucleoid",
           "cosine_similarity": 0.731822
-        },
-        {
-          "identifier": "GO:0042646",
-          "label": "plastid nucleoid",
-          "cosine_similarity": 0.7278067
         }
       ]
     },
@@ -17703,9 +17827,9 @@
           "cosine_similarity": 0.80396383
         },
         {
-          "identifier": "GO:0106176",
-          "label": "clathrin-coated endocytic vesicle lumen",
-          "cosine_similarity": 0.78821309
+          "identifier": "GO:0030864",
+          "label": "cortical actin cytoskeleton",
+          "cosine_similarity": 0.79328478
         }
       ]
     },
@@ -18020,6 +18144,99 @@
       ]
     },
     {
+      "identifier": "GO:0000775",
+      "label": "chromosome, centromeric region",
+      "neighbors": [
+        {
+          "identifier": "GO:0000776",
+          "label": "kinetochore",
+          "cosine_similarity": 0.93858819
+        },
+        {
+          "identifier": "GO:0000940",
+          "label": "outer kinetochore",
+          "cosine_similarity": 0.86870358
+        },
+        {
+          "identifier": "GO:0000817",
+          "label": "COMA complex",
+          "cosine_similarity": 0.80165141
+        },
+        {
+          "identifier": "GO:0000444",
+          "label": "MIS12/MIND type complex",
+          "cosine_similarity": 0.79453773
+        },
+        {
+          "identifier": "GO:0044732",
+          "label": "mitotic spindle pole body",
+          "cosine_similarity": 0.78907004
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0099115",
+      "label": "chromosome, subtelomeric region",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+          "label": "quiescent telomere hypercluster",
+          "cosine_similarity": 0.95151614
+        },
+        {
+          "identifier": "GO:0000781",
+          "label": "chromosome, telomeric region",
+          "cosine_similarity": 0.88882982
+        },
+        {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.82671009
+        },
+        {
+          "identifier": "GO:0000228",
+          "label": "nuclear chromosome",
+          "cosine_similarity": 0.81545767
+        },
+        {
+          "identifier": "GO:0000786",
+          "label": "nucleosome",
+          "cosine_similarity": 0.79278701
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0000781",
+      "label": "chromosome, telomeric region",
+      "neighbors": [
+        {
+          "identifier": "cellstructuremech:meiotic_telomere_bouquet",
+          "label": "meiotic telomere bouquet",
+          "cosine_similarity": 0.95469078
+        },
+        {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.88882982
+        },
+        {
+          "identifier": "cellstructuremech:quiescent_telomere_hypercluster",
+          "label": "quiescent telomere hypercluster",
+          "cosine_similarity": 0.88411225
+        },
+        {
+          "identifier": "GO:1990612",
+          "label": "Sad1-Kms1 LINC complex",
+          "cosine_similarity": 0.8437606
+        },
+        {
+          "identifier": "cellstructuremech:telocentrosome",
+          "label": "telocentrosome",
+          "cosine_similarity": 0.81214584
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030118",
       "label": "clathrin coat",
       "neighbors": [
@@ -18318,14 +18535,14 @@
           "cosine_similarity": 0.80295729
         },
         {
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.80165141
+        },
+        {
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.7825671
-        },
-        {
-          "identifier": "GO:0000444",
-          "label": "MIS12/MIND type complex",
-          "cosine_similarity": 0.78215721
         }
       ]
     },
@@ -21465,6 +21682,11 @@
       "label": "kinetochore",
       "neighbors": [
         {
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.93858819
+        },
+        {
           "identifier": "GO:0000940",
           "label": "outer kinetochore",
           "cosine_similarity": 0.9309768
@@ -21483,11 +21705,6 @@
           "identifier": "GO:0005819",
           "label": "spindle",
           "cosine_similarity": 0.80887312
-        },
-        {
-          "identifier": "GO:0020023",
-          "label": "kinetoplast",
-          "cosine_similarity": 0.79700616
         }
       ]
     },
@@ -21837,6 +22054,11 @@
       "label": "meiotic telomere bouquet",
       "neighbors": [
         {
+          "identifier": "GO:0000781",
+          "label": "chromosome, telomeric region",
+          "cosine_similarity": 0.95469078
+        },
+        {
           "identifier": "GO:1990612",
           "label": "Sad1-Kms1 LINC complex",
           "cosine_similarity": 0.87542364
@@ -21852,14 +22074,9 @@
           "cosine_similarity": 0.82795996
         },
         {
-          "identifier": "GO:0034993",
-          "label": "meiotic nuclear membrane microtubule tethering complex",
-          "cosine_similarity": 0.79076184
-        },
-        {
-          "identifier": "GO:0035974",
-          "label": "meiotic spindle pole body",
-          "cosine_similarity": 0.72408078
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.82671009
         }
       ]
     },
@@ -22126,6 +22343,11 @@
           "cosine_similarity": 0.82069473
         },
         {
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.79453773
+        },
+        {
           "identifier": "GO:0031262",
           "label": "Ndc80 complex",
           "cosine_similarity": 0.78490996
@@ -22134,11 +22356,6 @@
           "identifier": "GO:0000817",
           "label": "COMA complex",
           "cosine_similarity": 0.78215721
-        },
-        {
-          "identifier": "GO:0070939",
-          "label": "Dsl1/NZR complex",
-          "cosine_similarity": 0.71845081
         }
       ]
     },
@@ -22989,6 +23206,11 @@
           "cosine_similarity": 0.88868179
         },
         {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.81545767
+        },
+        {
           "identifier": "GO:0009295",
           "label": "nucleoid",
           "cosine_similarity": 0.81081038
@@ -22999,14 +23221,9 @@
           "cosine_similarity": 0.79336625
         },
         {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.76987047
-        },
-        {
-          "identifier": "GO:0042645",
-          "label": "mitochondrial nucleoid",
-          "cosine_similarity": 0.76276185
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.77263993
         }
       ]
     },
@@ -23469,9 +23686,9 @@
           "cosine_similarity": 0.79770825
         },
         {
-          "identifier": "GO:0009295",
-          "label": "nucleoid",
-          "cosine_similarity": 0.78234222
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.79278701
         }
       ]
     },
@@ -23702,6 +23919,11 @@
           "cosine_similarity": 0.9309768
         },
         {
+          "identifier": "GO:0000775",
+          "label": "chromosome, centromeric region",
+          "cosine_similarity": 0.86870358
+        },
+        {
           "identifier": "GO:0000444",
           "label": "MIS12/MIND type complex",
           "cosine_similarity": 0.82069473
@@ -23715,11 +23937,6 @@
           "identifier": "GO:0005819",
           "label": "spindle",
           "cosine_similarity": 0.79603452
-        },
-        {
-          "identifier": "GO:0051233",
-          "label": "spindle midzone",
-          "cosine_similarity": 0.7910129
         }
       ]
     },
@@ -24379,6 +24596,16 @@
       "label": "quiescent telomere hypercluster",
       "neighbors": [
         {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.95151614
+        },
+        {
+          "identifier": "GO:0000781",
+          "label": "chromosome, telomeric region",
+          "cosine_similarity": 0.88411225
+        },
+        {
           "identifier": "cellstructuremech:meiotic_telomere_bouquet",
           "label": "meiotic telomere bouquet",
           "cosine_similarity": 0.86691408
@@ -24392,16 +24619,6 @@
           "identifier": "GO:0000228",
           "label": "nuclear chromosome",
           "cosine_similarity": 0.79336625
-        },
-        {
-          "identifier": "GO:1990612",
-          "label": "Sad1-Kms1 LINC complex",
-          "cosine_similarity": 0.77942997
-        },
-        {
-          "identifier": "GO:0035101",
-          "label": "FACT complex",
-          "cosine_similarity": 0.77025985
         }
       ]
     },
