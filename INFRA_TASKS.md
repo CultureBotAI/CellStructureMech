@@ -46,6 +46,10 @@ tasks:
     summary: Allow scripts/uniprot_genes.py seeding mode to inspect components of any component_type that declare gene_symbols when --include-complexes is passed
     status: note
     disposition: Discovered during Cycle 1 Stage 3 (protein_examples) audit where OTHER components with declared gene_symbols referenced by GENE_OR_PROTEIN causal-graph nodes (centromeric_cse4_nucleosome in kinetochore.yaml and eif3_40s_translation_initiation_cohort in cytoplasmic_stress_granule.yaml) were skipped by seed_records; queued for Stage 6 infrastructure implementation.
+  - task_id: cellstructuremech-infra-0004
+    summary: Extend scripts/validate_history.py to enforce 1:1 record-to-history coverage and extend src/cellstructuremech/validation/validator.py to enforce structured issue links on discussions prose mentions
+    status: note
+    disposition: Discovered during Cycle 1 Stage 4 (record_review) whole-corpus audit (woronin_body.yaml missing history/records/woronin_body/ ledger; 7 records with #NNN issue mentions in discussions prose lacking structured evidence links); queued for Stage 6 infrastructure implementation.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -80,4 +84,15 @@ tasks:
 - **Observation**: In `scripts/uniprot_genes.py`, `verify_records` checks `protein_examples` across all components regardless of `component_type`, whereas `seed_records` restricts seeding to `allowed_types = {"PROTEIN", "PROTEIN_COMPLEX"} if include_complexes else {"PROTEIN"}` (`scripts/uniprot_genes.py` line 675). Consequently, composite nucleoprotein or ribonucleoprotein components typed `OTHER` that legitimately declare `gene_symbols` and are referenced by `GENE_OR_PROTEIN` causal-graph nodes (`centromeric_cse4_nucleosome` with `CSE4` in `data/structures/other/kinetochore.yaml` and `eif3_40s_translation_initiation_cohort` with `TIF32` in `data/structures/ribonucleoprotein/cytoplasmic_stress_granule.yaml`) are silently skipped by `scripts/uniprot_genes.py --include-complexes`.
 - **Desired outcome**: Allow `scripts/uniprot_genes.py` (`seed_records`) to seed `protein_examples` on any component with non-empty `gene_symbols` when `--include-complexes` (or an explicit `--include-non-protein` flag) is passed, while preserving `component_type`.
 - **Evidence paths**: `scripts/uniprot_genes.py`, `data/structures/other/kinetochore.yaml`, `data/structures/ribonucleoprotein/cytoplasmic_stress_granule.yaml`
+
+### `cellstructuremech-infra-0004` — Extend `scripts/validate_history.py` to enforce 1:1 record-to-history coverage and extend `src/cellstructuremech/validation/validator.py` to enforce structured issue links on `discussions` prose mentions
+
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 4 (`record_review`)
+- **Status**: `note` (pending issue creation/triage in Stage 6)
+- **Priority**: P2
+- **Dependencies**: None
+- **Observation**: During the Stage 4 whole-corpus audit of all 978 records: (1) `scripts/validate_history.py` checks that every existing `history/records/<stem>/*.yaml` file points to a valid `data/structures/` record, but does not check the inverse direction (whether every `data/structures/**/*.yaml` record has at least one `history/records/<stem>/*.yaml` ledger), allowing `data/structures/membrane_organelle/woronin_body.yaml` to lack a `history/records/woronin_body/` directory silently; and (2) `src/cellstructuremech/validation/validator.py` does not verify the `docs/CURATION.md` rule that every `#NNN` issue mention in `discussions` prose (`prompt`, `rationale`, `resolution_note`) is backed by a full GitHub issue URL in that discussion's `evidence` list (affecting 7 records across `other`, `cytoskeleton`, `division_machinery`, and `secretion_system`).
+- **Desired outcome**: Extend `scripts/validate_history.py` to verify that every `data/structures/**/*.yaml` record has at least one valid `history/records/<stem>/*.yaml` file, and add a check in `src/cellstructuremech/validation/validator.py` flagging `#NNN` issue mentions in `discussions` prose that lack a matching GitHub issue URL in `discussion.evidence`.
+- **Evidence paths**: `scripts/validate_history.py`, `src/cellstructuremech/validation/validator.py`, `reviews/structured/20261023T091801Z-woronin-body-missing-history/review.yaml`, `reviews/structured/20261023T091804Z-cytoskeleton-category-review/review.yaml`
+
 

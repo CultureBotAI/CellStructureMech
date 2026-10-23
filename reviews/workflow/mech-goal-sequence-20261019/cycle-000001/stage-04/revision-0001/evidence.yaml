@@ -1,0 +1,100 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 4
+revision: 1
+outcome: completed
+summary: Reviewed all 978 eligible CellStructureRecord YAML files across all 13 category
+  folders at frozen git revision 13c6b0d85338aa96d330b8d699587dfe270a21f9 (100% full
+  coverage). Saved 7 native structured RecordReview bundles under reviews/structured/
+  (2 single-record reviews and 5 category reviews; 262 total valid bundles) and recorded
+  9 open findings (1 major, 8 minor across 16 records) in carry_forward_ids for Stage
+  5 grouped remediation, plus infrastructure note cellstructuremech-infra-0004 in
+  INFRA_TASKS.md.
+source_revision: 13c6b0d85338aa96d330b8d699587dfe270a21f9
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_report.md
+  sha256: ea281a6802b154d68ac4a0dfedad8999d60a0ed9c66052ad36d2009f1f79d72d
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_findings.md
+  sha256: 3113f1c288e50adaf51ff667e06a652f2c0d85472053d50129f6190ad67a8ca3
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/validation.md
+  sha256: a8fbc86da40fbab9a5ab311a5b30c5a7d1de22bd3503913da5e89d3ab2700dae
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/coverage_inventory.json
+  sha256: 3e05ecdfc2f0a13ec9fdcb0c260d558f385c990ff5032ae4179a24cd8e4d402a
+  kind: supporting
+findings:
+- finding_id: woronin-body-missing-history
+  status: open
+  summary: 'data/structures/membrane_organelle/woronin_body.yaml (GO:0140266) has
+    4 inline curation_history events since 2026-09-12 but lacks a repository-level
+    history/records/woronin_body/ ledger directory (native review: 20261023T091801Z-woronin-body-missing-history,
+    finding F1, severity minor).'
+- finding_id: chemoreceptor-array-stale-unquotable-phosphotransfer-note
+  status: open
+  summary: 'data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    (GO:0098561) causal_graphs[0].description and edges[5].notes still claim the CheA-to-CheY
+    phosphotransfer step is unquotable and not drawn as an edge, contradicting resolved
+    discussions[0] and edges[6] (native review: 20261023T091802Z-chemoreceptor-array-signalling-consistency,
+    finding F1, severity major).'
+- finding_id: chemoreceptor-array-discussion-issue-evidence
+  status: open
+  summary: 'data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    (GO:0098561) discussions[0] (phosphotransfer_step_unquotable) cites #161 and DOI:10.1021/bi962261k
+    in rationale prose without structured evidence entries (native review: 20261023T091802Z-chemoreceptor-array-signalling-consistency,
+    finding F2, severity minor).'
+- finding_id: cilium-ift-particle-causal-node-type
+  status: open
+  summary: 'data/structures/appendage/cilium.yaml (GO:0005929) causal_graphs[0].nodes[0]
+    (ift_particle) references GO-grounded PROTEIN_COMPLEX component ift_particle (GO:0030990)
+    but is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE (native review:
+    20261023T091803Z-appendage-category-review, finding F1, severity minor).'
+- finding_id: cytoskeleton-go-subcomplex-causal-node-types
+  status: open
+  summary: 'Seven causal_graphs nodes across 5 cytoskeleton records (actin_cortical_patch.yaml,
+    equatorial_microtubule_organizing_center.yaml, interphase_microtubule_organizing_center.yaml,
+    radial_spoke.yaml, telocentrosome.yaml) reference GO-grounded PROTEIN_COMPLEX
+    subcomplex components (GO:0005885, GO:0000930, GO:0001535, GO:0120343, GO:0001536)
+    using node_type GENE_OR_PROTEIN without grounding instead of STRUCTURE (native
+    review: 20261023T091804Z-cytoskeleton-category-review, finding F1, severity minor).'
+- finding_id: cytoskeleton-discussion-prose-issue-links
+  status: open
+  summary: 'Three cytoskeleton records (crescentin_filament.yaml, mreb_filament.yaml,
+    phuz_spindle.yaml) cite repository issues (#1260, #119, #481, #482) in discussions
+    prose without structured GitHub issue URLs in evidence (native review: 20261023T091804Z-cytoskeleton-category-review,
+    finding F2, severity minor).'
+- finding_id: division-machinery-discussion-prose-issue-links
+  status: open
+  summary: 'Two division_machinery records (divisome_complex.yaml, elongasome.yaml)
+    cite repository issues (#65, #91, #119, #161) in 3 discussions threads without
+    structured GitHub issue URLs in evidence (native review: 20261023T091805Z-division-machinery-category-review,
+    finding F1, severity minor).'
+- finding_id: membrane-organelle-go-subcomplex-causal-node-types
+  status: open
+  summary: 'Two membrane_organelle records (diazoplast.yaml CSM:0000005, endoplasmic_reticulum.yaml
+    GO:0005783) type causal-graph nodes for GO-grounded PROTEIN_COMPLEX subcomplexes
+    (nitrogenase GO:0016610, Sec61 translocon complex GO:0005784) as GENE_OR_PROTEIN
+    without grounding instead of STRUCTURE (native review: 20261023T091806Z-membrane-organelle-category-review,
+    finding F1, severity minor).'
+- finding_id: t3ss-complex-discussion-issue-evidence
+  status: open
+  summary: 'data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+    (GO:0030257) discussions[0] (needle_dimensions_unsourced) cites #65 and #91 in
+    rationale prose without structured GitHub issue URLs in evidence (native review:
+    20261023T091807Z-secretion-system-category-review, finding F1, severity minor).'
+groups: []
+carry_forward_ids:
+- woronin-body-missing-history
+- chemoreceptor-array-stale-unquotable-phosphotransfer-note
+- chemoreceptor-array-discussion-issue-evidence
+- cilium-ift-particle-causal-node-type
+- cytoskeleton-go-subcomplex-causal-node-types
+- cytoskeleton-discussion-prose-issue-links
+- division-machinery-discussion-prose-issue-links
+- membrane-organelle-go-subcomplex-causal-node-types
+- t3ss-complex-discussion-issue-evidence
+infra_tasks: []
