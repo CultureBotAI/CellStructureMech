@@ -1,0 +1,178 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Grouped all 9 open Stage 4 review findings across 15 unique CellStructureRecord
+  YAML files into 4 real GitHub issues (#2402, #2403, #2404, #2405) by shared root
+  cause and repair ownership, implemented the fixes through write_validated_structure
+  with full repository history ledger entries (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79),
+  regenerated derived pages, passed all corpus quality gates, and obtained a fresh
+  post-remediation structured RecordReview bundle (20261023T114600Z-stage5-remediation-verification,
+  verdict pass, 0 open findings) while preserving immutable Stage 4 review bundles.'
+source_revision: 9dd9935ee1cf1d85454d42df0cec7da12f550a79
+scope_frozen_at: '2026-10-23T10:52:00Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+  sha256: e8bddc4fab1e4fec6f1f08b9a6add66e309ea063b53a5098ab2a6c032ad6707f
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  sha256: 616c5313d7b096e684cb318bd791fffc46dad8281ab67d9232c1f7f5e833ce29
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  sha256: c7e356e1d739d3fdc613136d292c2d11130c6701bab8dab6a570384e7248d4aa
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/resolution_summary.json
+  sha256: 3c50fecadc8121314dfb2b2219cc580acde3f865fe98e66aa464e0f173dd26c7
+  kind: supporting
+findings:
+- finding_id: woronin-body-missing-history
+  carried_from: woronin-body-missing-history
+  group_id: history-ledger-completeness
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2402
+  status: resolved
+  summary: 'Backfilled history/records/woronin_body/ ledger files for data/structures/membrane_organelle/woronin_body.yaml
+    (GO:0140266).'
+  disposition: 'Reconstructed history/records/woronin_body/2026-09-10T103912Z-claude-90b0c5.yaml
+    and 2026-09-10T104642Z-claude-d2bf78.yaml from git history and recorded the Stage
+    5 audit in 2026-10-23T110200Z-claude-code-787f02.yaml (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79).'
+- finding_id: chemoreceptor-array-stale-unquotable-phosphotransfer-note
+  carried_from: chemoreceptor-array-stale-unquotable-phosphotransfer-note
+  group_id: chemoreceptor-array-phosphotransfer-narrative-sync
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2403
+  status: resolved
+  summary: 'Synchronized causal_graphs[0].description and edges[5].notes with the Stewart
+    1997 CheA-to-phospho-CheY phosphotransfer edge in methyl_accepting_chemotaxis_protein_complex.yaml.'
+  disposition: 'Updated causal_graphs[0].description and edges[5].notes in data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    to reference the Stewart 1997 (DOI:10.1021/bi962261k) CheA-to-CheY phosphotransfer
+    edge (edges[6]) (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79).'
+- finding_id: chemoreceptor-array-discussion-issue-evidence
+  carried_from: chemoreceptor-array-discussion-issue-evidence
+  group_id: discussion-evidence-structured-issue-links
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2405
+  status: resolved
+  summary: 'Added structured evidence entries for DOI:10.1021/bi962261k and GitHub
+    issue #161 to discussions[0] in methyl_accepting_chemotaxis_protein_complex.yaml.'
+  disposition: 'Added structured evidence entries for DOI:10.1021/bi962261k and https://github.com/CultureBotAI/CellStructureMech/issues/161
+    to discussions[0] (phosphotransfer_step_unquotable) in data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79).'
+- finding_id: cilium-ift-particle-causal-node-type
+  carried_from: cilium-ift-particle-causal-node-type
+  group_id: causal-graph-subcomplex-structure-node-typing
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2404
+  status: resolved
+  summary: 'Typed causal_graphs[0].nodes[0] (ift_particle) as STRUCTURE with GO:0030990
+    grounding in cilium.yaml.'
+  disposition: 'Updated causal_graphs[0].nodes[0] (ift_particle) in data/structures/appendage/cilium.yaml
+    to node_type STRUCTURE with grounding GO:0030990 (intraciliary transport particle)
+    (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79).'
+- finding_id: cytoskeleton-go-subcomplex-causal-node-types
+  carried_from: cytoskeleton-go-subcomplex-causal-node-types
+  group_id: causal-graph-subcomplex-structure-node-typing
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2404
+  status: resolved
+  summary: 'Typed 7 GO-grounded PROTEIN_COMPLEX subcomplex causal-graph nodes across
+    5 cytoskeleton records as STRUCTURE with canonical GO grounding.'
+  disposition: 'Updated arp2_3_complex (GO:0005885), gamma_turc (GO:0000930 across
+    3 records), radial_spoke_head (GO:0001535), radial_spoke_neck (GO:0120343), and
+    radial_spoke_stalk (GO:0001536) across 5 cytoskeleton records to node_type STRUCTURE
+    with canonical GO grounding (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79).'
+- finding_id: cytoskeleton-discussion-prose-issue-links
+  carried_from: cytoskeleton-discussion-prose-issue-links
+  group_id: discussion-evidence-structured-issue-links
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2405
+  status: resolved
+  summary: 'Added structured GitHub issue URLs (#1260, #119, #481, #482) to discussions[0].evidence
+    in crescentin_filament.yaml, mreb_filament.yaml, and phuz_spindle.yaml.'
+  disposition: 'Added structured GitHub issue URLs to discussions[0].evidence in data/structures/cytoskeleton/{crescentin_filament,mreb_filament,phuz_spindle}.yaml
+    (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79).'
+- finding_id: division-machinery-discussion-prose-issue-links
+  carried_from: division-machinery-discussion-prose-issue-links
+  group_id: discussion-evidence-structured-issue-links
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2405
+  status: resolved
+  summary: 'Added structured GitHub issue URLs (#65, #91, #119, #161) to 3 discussions
+    threads in divisome_complex.yaml and elongasome.yaml.'
+  disposition: 'Added structured GitHub issue URLs to discussions[0].evidence in divisome_complex.yaml
+    and discussions[0..1].evidence in elongasome.yaml (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79).'
+- finding_id: membrane-organelle-go-subcomplex-causal-node-types
+  carried_from: membrane-organelle-go-subcomplex-causal-node-types
+  group_id: causal-graph-subcomplex-structure-node-typing
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2404
+  status: resolved
+  summary: 'Typed nitrogenase (GO:0016610) in diazoplast.yaml and sec61 (GO:0005784)
+    in endoplasmic_reticulum.yaml as STRUCTURE with canonical GO grounding.'
+  disposition: 'Updated causal_graphs[0].nodes[0] in data/structures/membrane_organelle/{diazoplast,endoplasmic_reticulum}.yaml
+    to node_type STRUCTURE with GO:0016610 and GO:0005784 grounding (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79).'
+- finding_id: t3ss-complex-discussion-issue-evidence
+  carried_from: t3ss-complex-discussion-issue-evidence
+  group_id: discussion-evidence-structured-issue-links
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2405
+  status: resolved
+  summary: 'Added structured GitHub issue URLs (#65, #91) to discussions[0].evidence
+    in type_iii_protein_secretion_system_complex.yaml.'
+  disposition: 'Added structured GitHub issue URLs for #65 and #91 to discussions[0].evidence
+    (needle_dimensions_unsourced) in data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+    (commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79).'
+groups:
+- group_id: history-ledger-completeness
+  finding_ids:
+  - woronin-body-missing-history
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2402
+  status: resolved
+  summary: 'Backfill missing repository history ledger for woronin_body.yaml (#2402).'
+  disposition: 'Resolved in commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79 and verified
+    in structured review bundle 20261023T114600Z-stage5-remediation-verification.'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/resolution_summary.json
+- group_id: chemoreceptor-array-phosphotransfer-narrative-sync
+  finding_ids:
+  - chemoreceptor-array-stale-unquotable-phosphotransfer-note
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2403
+  status: resolved
+  summary: 'Remove stale unquotable CheA-to-CheY phosphotransfer notes in chemoreceptor
+    array record (#2403).'
+  disposition: 'Resolved in commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79 and verified
+    in structured review bundle 20261023T114600Z-stage5-remediation-verification.'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/resolution_summary.json
+- group_id: causal-graph-subcomplex-structure-node-typing
+  finding_ids:
+  - cilium-ift-particle-causal-node-type
+  - cytoskeleton-go-subcomplex-causal-node-types
+  - membrane-organelle-go-subcomplex-causal-node-types
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2404
+  status: resolved
+  summary: 'Type GO-grounded PROTEIN_COMPLEX subcomplex causal-graph nodes as STRUCTURE
+    across 8 records (#2404).'
+  disposition: 'Resolved in commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79 and verified
+    in structured review bundle 20261023T114600Z-stage5-remediation-verification.'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/resolution_summary.json
+- group_id: discussion-evidence-structured-issue-links
+  finding_ids:
+  - chemoreceptor-array-discussion-issue-evidence
+  - cytoskeleton-discussion-prose-issue-links
+  - division-machinery-discussion-prose-issue-links
+  - t3ss-complex-discussion-issue-evidence
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2405
+  status: resolved
+  summary: 'Add structured GitHub issue URLs to discussions.evidence across 7 records
+    (#2405).'
+  disposition: 'Resolved in commit 9dd9935ee1cf1d85454d42df0cec7da12f550a79 and verified
+    in structured review bundle 20261023T114600Z-stage5-remediation-verification.'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/resolution_summary.json
+carry_forward_ids: []
+infra_tasks: []
