@@ -1,0 +1,428 @@
+# Category review of data/structures/microcompartment/ (6 records): BMC-H paralogue gene_symbols alignment in carboxysome.yaml
+
+- Review: 20261023T230506Z-microcompartment-category-review
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-23T22:50:50Z
+- Finished UTC: 2026-10-23T23:05:06Z
+- Reviewer: antigravity-c2s4-record-review (independent)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Full-coverage category review of all 6 records in data/structures/microcompartment/ (alpha-carboxysome, beta-carboxysome, carboxysome, carboxysome shell, bacterial microcompartment, metabolosome) verified distinct BMC boundaries and shell/core compositions. 5 records are clean; in carboxysome.yaml (GO:0031470), components#bmc_h declares gene_symbols: [ccmK, csoS1] while protein_examples[1] (UniProtKB:Q31RK2, gene_symbol: ccmK4) and protein_examples[2] (UniProtKB:Q31RK3, gene_symbol: ccmK3) use paralogue gene symbols ccmK4 and ccmK3 that are omitted from gene_symbols.
+
+## Scope And Provenance
+
+Full-cohort review of all 6 CellStructureRecord YAML files under data/structures/microcompartment/.
+
+Selection: Complete folder cohort data/structures/microcompartment/*.yaml in the frozen 985-record Cycle 2 Stage 4 inventory.
+Coverage: full; 6 reviewed / 6 in the declared population.
+Source: git_commit at Git base af168704d9999acd544d1f9434c0e87e3fec349f.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0031469 | data/structures/microcompartment/bacterial_microcompartment.yaml | maintained | bacterial microcompartment |
+| GO:0031470 | data/structures/microcompartment/carboxysome.yaml | maintained | carboxysome |
+| cellstructuremech:carboxysome_shell | data/structures/microcompartment/carboxysome_shell.yaml | maintained | carboxysome shell |
+| GO:0140737 | data/structures/microcompartment/encapsulin_nanocompartment.yaml | maintained | encapsulin nanocompartment |
+| GO:0031471 | data/structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.yaml | maintained | ethanolamine degradation polyhedral organelle |
+| GO:0031472 | data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml | maintained | propanediol degradation polyhedral organelle |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Strict corpus validation covering microcompartment cohort | passed | True | GO:0031469, GO:0031470, cellstructuremech:carboxysome_shell, GO:0140737, GO:0031471, GO:0031472 | All 6 microcompartment records pass strict LinkML and semantic validation. |
+| ID-label correspondence across microcompartment cohort | passed | True | GO:0031469, GO:0031470, cellstructuremech:carboxysome_shell, GO:0140737, GO:0031471, GO:0031472 | All ontology ID-label pairs in microcompartment records correspond to canonical labels. |
+
+## Scientific And Domain Assessments
+
+### Identity, boundaries, causal graphs, and ontology grounding across data/structures/microcompartment/
+
+scope: supported. Targets: GO:0031469, GO:0031470, cellstructuremech:carboxysome_shell, GO:0140737, GO:0031471, GO:0031472.
+
+All 6 records in data/structures/microcompartment/ represent distinct bacterial microcompartments or shell subcomplexes with valid hierarchy links and verified UniProtKB protein examples.
+
+### Alignment between components#bmc_h.gene_symbols and protein_examples[].gene_symbol in carboxysome.yaml
+
+consistency: concern. Targets: GO:0031470.
+
+components#bmc_h in carboxysome.yaml declares gene_symbols: [ccmK, csoS1] while protein_examples[1..2] use paralogue gene symbols ccmK4 and ccmK3.
+
+## Findings
+
+### F1: carboxysome.yaml (GO:0031470) omits ccmK3 and ccmK4 from components#bmc_h.gene_symbols despite listing UniProtKB:Q31RK2 (ccmK4) and UniProtKB:Q31RK3 (ccmK3) in protein_examples
+
+minor / open / confirmed; issue key: carboxysome-bmc-h-paralogue-gene-symbols.
+
+In data/structures/microcompartment/carboxysome.yaml (GO:0031470), components#bmc_h (label: 'BMC-H hexameric shell protein (CsoS1A/B/C; CcmK1/2/3/4)') declares gene_symbols: [ccmK, csoS1], whereas protein_examples[1] (UniProtKB:Q31RK2 in Synechococcus elongatus PCC 7942, gene_symbol: ccmK4) and protein_examples[2] (UniProtKB:Q31RK3 in S. elongatus PCC 7942, gene_symbol: ccmK3) use paralogue gene symbols ccmK4 and ccmK3 that are neither listed in gene_symbols nor disclosed in role.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Add ccmK3 and ccmK4 to components#bmc_h.gene_symbols in data/structures/microcompartment/carboxysome.yaml and record the update in history/records/.
+
+- .venv/bin/python scripts/validate_strict.py data/structures/microcompartment/carboxysome.yaml --out /tmp/cbx_failures.tsv
+- .venv/bin/python scripts/uniprot_genes.py --verify
+
+## Category Boundaries
+
+- retain: GO:0031469, GO:0031470, cellstructuremech:carboxysome_shell, GO:0140737, GO:0031471, GO:0031472. All 6 records in data/structures/microcompartment/ represent distinct bacterial microcompartment classes or shell subcomplexes.
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev_strict_mc | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 985 records including all 6 microcompartment records. |
+| ev_labels_mc | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
+| ev_carboxysome_bmc_h | data/structures/microcompartment/carboxysome.yaml; components#bmc_h (lines 147-180) | supports | In carboxysome.yaml, components#bmc_h (label: 'BMC-H hexameric shell protein (CsoS1A/B/C; CcmK1/2/3/4)') declares gene_symbols: [ccmK, csoS1] while protein_examples[1] (UniProtKB:Q31RK2, gene_symbol: ccmK4) and protein_examples[2] (UniProtKB:Q31RK3, gene_symbol: ccmK3) use paralogue gene symbols ccmK4 and ccmK3. |
+
+## Limits And Additional Notes
+
+- One minor gene_symbols alignment finding on carboxysome.yaml is queued for Stage 5 remediation.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261023T230506Z-microcompartment-category-review
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: 'Category review of data/structures/microcompartment/ (6 records): BMC-H paralogue
+  gene_symbols alignment in carboxysome.yaml'
+started_at: '2026-10-23T22:50:50Z'
+finished_at: '2026-10-23T23:05:06Z'
+reviewer:
+  identity: antigravity-c2s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 2 Stage 4 record_review against committed
+    git revision af168704d9999acd544d1f9434c0e87e3fec349f without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
+scientific_review: true
+summary: 'Full-coverage category review of all 6 records in data/structures/microcompartment/
+  (alpha-carboxysome, beta-carboxysome, carboxysome, carboxysome shell, bacterial
+  microcompartment, metabolosome) verified distinct BMC boundaries and shell/core
+  compositions. 5 records are clean; in carboxysome.yaml (GO:0031470), components#bmc_h
+  declares gene_symbols: [ccmK, csoS1] while protein_examples[1] (UniProtKB:Q31RK2,
+  gene_symbol: ccmK4) and protein_examples[2] (UniProtKB:Q31RK3, gene_symbol: ccmK3)
+  use paralogue gene symbols ccmK4 and ccmK3 that are omitted from gene_symbols.'
+source:
+  git_revision: af168704d9999acd544d1f9434c0e87e3fec349f
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/microcompartment/bacterial_microcompartment.yaml
+    sha256: 744baee4509a2d6c59e951bf107ec3730a2576b7c084d239569913389b1a3321
+    role: target
+  - path: data/structures/microcompartment/carboxysome.yaml
+    sha256: acb79ca86a8af896e0d5b5e185a8f7f109a43f2dc9045b65e1cf099d7c198e8a
+    role: target
+  - path: data/structures/microcompartment/carboxysome_shell.yaml
+    sha256: a732afb9239cc57b69ff7d4ca75700b4f2b3fb682837b1be799376d12acb7762
+    role: target
+  - path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    sha256: 9c18ca6df3185b48f8755d7f53857234df1955a0f48ffc0fb1199793b3b6b9d8
+    role: target
+  - path: data/structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.yaml
+    sha256: 67b4280a4ef1837e40fe65ac0ed67e263b95339d1b364a976ee1110c2440029f
+    role: target
+  - path: data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml
+    sha256: 6be0e75f5fb1ffa1081869af24522c1c2864d31090832eacb2f920b3dec3d443
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Full-cohort review of all 6 CellStructureRecord YAML files under data/structures/microcompartment/.
+  selection: Complete folder cohort data/structures/microcompartment/*.yaml in the
+    frozen 985-record Cycle 2 Stage 4 inventory.
+  coverage: full
+  population_size: 6
+  reviewed_target_ids:
+  - GO:0031469
+  - GO:0031470
+  - cellstructuremech:carboxysome_shell
+  - GO:0140737
+  - GO:0031471
+  - GO:0031472
+targets:
+- target_id: GO:0031469
+  path: data/structures/microcompartment/bacterial_microcompartment.yaml
+  label: bacterial microcompartment
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 744baee4509a2d6c59e951bf107ec3730a2576b7c084d239569913389b1a3321
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/bacterial_microcompartment.yaml
+    role: maintained_record
+- target_id: GO:0031470
+  path: data/structures/microcompartment/carboxysome.yaml
+  label: carboxysome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: acb79ca86a8af896e0d5b5e185a8f7f109a43f2dc9045b65e1cf099d7c198e8a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained_record
+- target_id: cellstructuremech:carboxysome_shell
+  path: data/structures/microcompartment/carboxysome_shell.yaml
+  label: carboxysome shell
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a732afb9239cc57b69ff7d4ca75700b4f2b3fb682837b1be799376d12acb7762
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome_shell.yaml
+    role: maintained_record
+- target_id: GO:0140737
+  path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  label: encapsulin nanocompartment
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9c18ca6df3185b48f8755d7f53857234df1955a0f48ffc0fb1199793b3b6b9d8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    role: maintained_record
+- target_id: GO:0031471
+  path: data/structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.yaml
+  label: ethanolamine degradation polyhedral organelle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 67b4280a4ef1837e40fe65ac0ed67e263b95339d1b364a976ee1110c2440029f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/ethanolamine_degradation_polyhedral_organelle.yaml
+    role: maintained_record
+- target_id: GO:0031472
+  path: data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml
+  label: propanediol degradation polyhedral organelle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6be0e75f5fb1ffa1081869af24522c1c2864d31090832eacb2f920b3dec3d443
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml
+    role: maintained_record
+checks:
+- check_id: strict_microcompartment
+  name: Strict corpus validation covering microcompartment cohort
+  status: passed
+  required: true
+  summary: All 6 microcompartment records pass strict LinkML and semantic validation.
+  target_ids:
+  - GO:0031469
+  - GO:0031470
+  - cellstructuremech:carboxysome_shell
+  - GO:0140737
+  - GO:0031471
+  - GO:0031472
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_mc
+- check_id: labels_microcompartment
+  name: ID-label correspondence across microcompartment cohort
+  status: passed
+  required: true
+  summary: All ontology ID-label pairs in microcompartment records correspond to canonical
+    labels.
+  target_ids:
+  - GO:0031469
+  - GO:0031470
+  - cellstructuremech:carboxysome_shell
+  - GO:0140737
+  - GO:0031471
+  - GO:0031472
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_labels_mc
+evidence:
+- evidence_id: ev_strict_mc
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict receipt
+  accessed_at: '2026-10-23T22:58:29Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 985 records including all 6 microcompartment
+    records.
+  snapshot_sha256: ab27748db5b0ab3955007d97c702855de750f3c1a292739eb560b154f26b6296
+- evidence_id: ev_labels_mc
+  kind: validation
+  reference: scripts/validate_id_label_correspondence.py
+  locator: labels receipt
+  accessed_at: '2026-10-23T23:05:06Z'
+  support: supports
+  summary: validate_id_label_correspondence.py exited 0 across all ontology targets.
+  snapshot_sha256: 663ed2ae8cbe6b853f0f152874b967ab54422dac46172ce7145697eebc3e15b5
+- evidence_id: ev_carboxysome_bmc_h
+  kind: record_content
+  reference: data/structures/microcompartment/carboxysome.yaml
+  locator: components#bmc_h (lines 147-180)
+  accessed_at: '2026-10-23T22:53:50Z'
+  support: supports
+  summary: 'In carboxysome.yaml, components#bmc_h (label: ''BMC-H hexameric shell
+    protein (CsoS1A/B/C; CcmK1/2/3/4)'') declares gene_symbols: [ccmK, csoS1] while
+    protein_examples[1] (UniProtKB:Q31RK2, gene_symbol: ccmK4) and protein_examples[2]
+    (UniProtKB:Q31RK3, gene_symbol: ccmK3) use paralogue gene symbols ccmK4 and ccmK3.'
+  quote: "component_id: bmc_h\n  label: BMC-H hexameric shell protein (CsoS1A/B/C;\
+    \ CcmK1/2/3/4)\n  component_type: PROTEIN\n  ...\n  gene_symbols:\n  - ccmK\n\
+    \  - csoS1"
+  snapshot_sha256: acb79ca86a8af896e0d5b5e185a8f7f109a43f2dc9045b65e1cf099d7c198e8a
+assessments:
+- assessment_id: assess_mc_cohort
+  area: scope
+  topic: Identity, boundaries, causal graphs, and ontology grounding across data/structures/microcompartment/
+  outcome: supported
+  summary: All 6 records in data/structures/microcompartment/ represent distinct bacterial
+    microcompartments or shell subcomplexes with valid hierarchy links and verified
+    UniProtKB protein examples.
+  target_ids:
+  - GO:0031469
+  - GO:0031470
+  - cellstructuremech:carboxysome_shell
+  - GO:0140737
+  - GO:0031471
+  - GO:0031472
+  evidence_ids:
+  - ev_strict_mc
+  - ev_labels_mc
+- assessment_id: assess_carboxysome_bmc_h
+  area: consistency
+  topic: Alignment between components#bmc_h.gene_symbols and protein_examples[].gene_symbol
+    in carboxysome.yaml
+  outcome: concern
+  summary: 'components#bmc_h in carboxysome.yaml declares gene_symbols: [ccmK, csoS1]
+    while protein_examples[1..2] use paralogue gene symbols ccmK4 and ccmK3.'
+  target_ids:
+  - GO:0031470
+  evidence_ids:
+  - ev_carboxysome_bmc_h
+findings:
+- finding_id: F1
+  issue_key: carboxysome-bmc-h-paralogue-gene-symbols
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: carboxysome.yaml (GO:0031470) omits ccmK3 and ccmK4 from components#bmc_h.gene_symbols
+    despite listing UniProtKB:Q31RK2 (ccmK4) and UniProtKB:Q31RK3 (ccmK3) in protein_examples
+  description: 'In data/structures/microcompartment/carboxysome.yaml (GO:0031470),
+    components#bmc_h (label: ''BMC-H hexameric shell protein (CsoS1A/B/C; CcmK1/2/3/4)'')
+    declares gene_symbols: [ccmK, csoS1], whereas protein_examples[1] (UniProtKB:Q31RK2
+    in Synechococcus elongatus PCC 7942, gene_symbol: ccmK4) and protein_examples[2]
+    (UniProtKB:Q31RK3 in S. elongatus PCC 7942, gene_symbol: ccmK3) use paralogue
+    gene symbols ccmK4 and ccmK3 that are neither listed in gene_symbols nor disclosed
+    in role.'
+  target_ids:
+  - GO:0031470
+  field_paths:
+  - components[0].gene_symbols
+  evidence_ids:
+  - ev_carboxysome_bmc_h
+  rule_id: docs/CURATION.md:protein-examples-gene-symbol-alignment
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained_record
+  tags:
+  - components
+  - gene-symbols
+  - protein-examples
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: Add ccmK3 and ccmK4 to components#bmc_h.gene_symbols in data/structures/microcompartment/carboxysome.yaml
+    and record the update in history/records/.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0031470
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py data/structures/microcompartment/carboxysome.yaml
+    --out /tmp/cbx_failures.tsv
+  - .venv/bin/python scripts/uniprot_genes.py --verify
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0031469
+  - GO:0031470
+  - cellstructuremech:carboxysome_shell
+  - GO:0140737
+  - GO:0031471
+  - GO:0031472
+  rationale: All 6 records in data/structures/microcompartment/ represent distinct
+    bacterial microcompartment classes or shell subcomplexes.
+  evidence_ids:
+  - ev_strict_mc
+  - ev_labels_mc
+limitations:
+- One minor gene_symbols alignment finding on carboxysome.yaml is queued for Stage
+  5 remediation.
+tags:
+- stage4
+- category-review
+- microcompartment
+```
