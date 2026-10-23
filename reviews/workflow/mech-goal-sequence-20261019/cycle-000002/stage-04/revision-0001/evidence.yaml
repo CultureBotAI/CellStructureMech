@@ -1,0 +1,91 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 2
+stage: 4
+revision: 1
+outcome: completed
+summary: Reviewed all 985 eligible CellStructureRecord YAML files across all 13 category
+  folders at frozen git revision af168704d9999acd544d1f9434c0e87e3fec349f (100% full
+  coverage). Saved 6 native structured RecordReview bundles under reviews/structured/
+  (1 single-record review and 5 category reviews; 269 total valid bundles) and recorded
+  7 open findings (all minor across 19 unique records) in carry_forward_ids for Stage
+  5 grouped remediation, plus infrastructure note cellstructuremech-infra-0005 (#2417)
+  in INFRA_TASKS.md.
+source_revision: af168704d9999acd544d1f9434c0e87e3fec349f
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/evidence.yaml
+  sha256: 5cf3cac693cdddfb058eea9edaddbe48e0c63cfd9cec7205852bac95afbaf762
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/review_report.md
+  sha256: f2e3fd6c19b9c9c4535ddf9038285334356a8d204ad1e191422fc1b16bb514d5
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/review_findings.md
+  sha256: b6cc390921c3db1464c23c2299ddae683e669c5cbc4d1fa71c3899a860d7cf20
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/validation.md
+  sha256: b6804c99e1ced8b24f4306970b1db2f32ec9b5e943bf3416cfc5e3c568079f5f
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/coverage_inventory.json
+  sha256: 06d69bf8291109358818bb99c9196ab90f6829c9813d1be38bd2efb00046a74c
+  kind: supporting
+findings:
+- finding_id: clathrin-coat-ap2-adaptor-causal-node-type
+  status: open
+  summary: 'data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml (GO:0030128)
+    causal_graphs[0].nodes[1] (ap2_adaptor_complex, grounded to GO:0030122) is typed
+    GENE_OR_PROTEIN instead of STRUCTURE (native review: 20261023T230501Z-clathrin-coat-ap2-causal-node-type,
+    finding F1, severity minor).'
+- finding_id: appendage-bacterial-flagellum-gene-symbol-mismatch
+  status: open
+  summary: 'data/structures/appendage/bacterial_type_flagellum.yaml (GO:0009288) omits
+    hag from components#flagellin.gene_symbols ([fliC, fljB]) and fliY from components#c_ring.gene_symbols
+    ([fliG, fliM, fliN]) despite listing Bacillus subtilis 168 protein_examples UniProtKB:P02968
+    (hag) and UniProtKB:P24073 (fliY) (native review: 20261023T230502Z-appendage-category-review,
+    finding F1, severity minor).'
+- finding_id: cytoskeleton-subcomplex-component-types
+  status: open
+  summary: 'Eight heterodimeric or multiprotein subcomplex components across 7 cytoskeleton
+    records (arp2_3_protein_complex.yaml, gamma_tubulin_complex.yaml, gamma_tubulin_ring_complex.yaml,
+    gamma_tubulin_small_complex.yaml, meiotic_nuclear_membrane_microtubule_tethering_complex.yaml,
+    nuclear_membrane_microtubule_tethering_complex.yaml, sad1_kms1_linc_complex.yaml)
+    are typed component_type: PROTEIN instead of PROTEIN_COMPLEX (native review: 20261023T230503Z-cytoskeleton-category-review,
+    finding F1, severity minor).'
+- finding_id: cytoskeleton-fission-yeast-nda2-gene-symbol-omission
+  status: open
+  summary: 'Four fission-yeast microtubule array records in data/structures/cytoskeleton/
+    (aster.yaml, astral_microtubule.yaml, horsetail_astral_microtubule_array.yaml,
+    post_anaphase_microtubule_array.yaml) omit nda2 from components#alpha_tubulin.gene_symbols
+    ([tub1, atb2, alp2]) despite listing UniProtKB:P04688 (nda2) in protein_examples
+    (native review: 20261023T230503Z-cytoskeleton-category-review, finding F2, severity
+    minor).'
+- finding_id: photosystem-reaction-center-core-component-types
+  status: open
+  summary: 'data/structures/energy_complex/photosystem.yaml (GO:0009521) types heterodimeric
+    reaction-center cores type_i_reaction_center_core (PsaA/PsaB) and type_ii_reaction_center_core
+    (PsbA/PsbD) as component_type: PROTEIN instead of PROTEIN_COMPLEX (native review:
+    20261023T230504Z-energy-complex-category-review, finding F1, severity minor).'
+- finding_id: membrane-organelle-subcomplex-causal-node-types
+  status: open
+  summary: 'Four causal-graph nodes across 4 membrane_organelle records (chlorosome.yaml
+    csma_baseplate, chlorosome_envelope.yaml csma_baseplate, mitochondrial_crista_junction.yaml
+    micos_complex GO:0061617, mitochondrial_outer_membrane.yaml tom_complex GO:0005742)
+    are typed GENE_OR_PROTEIN instead of STRUCTURE (native review: 20261023T230505Z-membrane-organelle-category-review,
+    finding F1, severity minor).'
+- finding_id: carboxysome-bmc-h-paralogue-gene-symbols
+  status: open
+  summary: 'data/structures/microcompartment/carboxysome.yaml (GO:0031470) omits ccmK3
+    and ccmK4 from components#bmc_h.gene_symbols ([ccmK, csoS1]) despite listing UniProtKB:Q31RK2
+    (ccmK4) and UniProtKB:Q31RK3 (ccmK3) in protein_examples (native review: 20261023T230506Z-microcompartment-category-review,
+    finding F1, severity minor).'
+groups: []
+carry_forward_ids:
+- clathrin-coat-ap2-adaptor-causal-node-type
+- appendage-bacterial-flagellum-gene-symbol-mismatch
+- cytoskeleton-subcomplex-component-types
+- cytoskeleton-fission-yeast-nda2-gene-symbol-omission
+- photosystem-reaction-center-core-component-types
+- membrane-organelle-subcomplex-causal-node-types
+- carboxysome-bmc-h-paralogue-gene-symbols
+infra_tasks: []
