@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 20 records in data/structures/secretion_system/ verified distinct T1SS-T11SS, Sec, Tat, Bam, Lol, and TAM secretion/translocation complex boundaries. Twenty records are clean; in type_iii_protein_secretion_system_complex.yaml (GO:0030257), discussions[0] (needle_dimensions_unsourced) cites repository issues #65 and #91 in rationale prose without a structured evidence list.
+Full-coverage category review of all 20 records in data/structures/secretion_system/ verified distinct T1SS-T11SS, Sec, Tat, Bam, Lol, and TAM secretion/translocation complex boundaries. 19 records are clean; in type_iii_protein_secretion_system_complex.yaml (GO:0030257), discussions[0] (needle_dimensions_unsourced) cites repository issues #65 and #91 in rationale prose without a structured evidence list.
 
 ## Scope And Provenance
 
@@ -54,11 +54,11 @@ Working-tree hashes do not imply those bytes were committed.
 
 ## Scientific And Domain Assessments
 
-### Boundary discipline, identity, composition, and evidence across all 21 secretion_system records
+### Boundary discipline, identity, composition, and evidence across all 20 secretion_system records
 
 identity: supported. Targets: GO:0031522, GO:0062155, cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex, cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex, cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex, cellstructuremech:secyeg_translocon_complex, GO:0097347, GO:0033281, GO:0030256, GO:0015627, GO:0030257, GO:0043684, cellstructuremech:type_ix_protein_secretion_system_complex, GO:0098046, GO:0033104, cellstructuremech:type_vi_secretion_system_baseplate, cellstructuremech:type_vi_secretion_system_contractile_sheath, cellstructuremech:type_vi_secretion_system_hcp_tube, cellstructuremech:type_vi_secretion_system_membrane_complex, cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex.
 
-All 21 secretion_system records maintain clean boundaries across T1SS-T11SS, Sec, Tat, Bam, Lol, and TAM translocation complexes.
+All 20 secretion_system records maintain clean boundaries across T1SS-T11SS, Sec, Tat, Bam, Lol, and TAM translocation complexes.
 
 ### Structured GitHub issue URLs for #NNN mentions in discussions[0] of type_iii_protein_secretion_system_complex.yaml
 
@@ -85,13 +85,13 @@ Add structured GitHub issue URLs for #65 and #91 to discussions[0].evidence in d
 
 ## Category Boundaries
 
-- retain: GO:0031522, GO:0062155, cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex, cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex, cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex, cellstructuremech:secyeg_translocon_complex, GO:0097347, GO:0033281, GO:0030256, GO:0015627, GO:0030257, GO:0043684, cellstructuremech:type_ix_protein_secretion_system_complex, GO:0098046, GO:0033104, cellstructuremech:type_vi_secretion_system_baseplate, cellstructuremech:type_vi_secretion_system_contractile_sheath, cellstructuremech:type_vi_secretion_system_hcp_tube, cellstructuremech:type_vi_secretion_system_membrane_complex, cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex. All 21 records in data/structures/secretion_system/ represent distinct secretion or membrane-translocation systems with non-overlapping GO/CSM identifiers.
+- retain: GO:0031522, GO:0062155, cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex, cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex, cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex, cellstructuremech:secyeg_translocon_complex, GO:0097347, GO:0033281, GO:0030256, GO:0015627, GO:0030257, GO:0043684, cellstructuremech:type_ix_protein_secretion_system_complex, GO:0098046, GO:0033104, cellstructuremech:type_vi_secretion_system_baseplate, cellstructuremech:type_vi_secretion_system_contractile_sheath, cellstructuremech:type_vi_secretion_system_hcp_tube, cellstructuremech:type_vi_secretion_system_membrane_complex, cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex. All 20 records in data/structures/secretion_system/ represent distinct secretion or membrane-translocation systems with non-overlapping GO/CSM identifiers.
 
 ## Evidence
 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
-| ev_strict_sec | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 978 records including all 21 secretion_system records. |
+| ev_strict_sec | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 978 records including all 20 secretion_system records. |
 | ev_labels_sec | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
 | ev_t3ss_discussion_issue | data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml; discussions[0] (lines 482-490) | supports | In type_iii_protein_secretion_system_complex.yaml, discussions[0] (needle_dimensions_unsourced) cites #65 and #91 in rationale prose without a structured evidence list. |
 
@@ -127,7 +127,7 @@ native_verdict: PASS_WITH_FOLLOW_UP
 scientific_review: true
 summary: 'Full-coverage category review of all 20 records in data/structures/secretion_system/
   verified distinct T1SS-T11SS, Sec, Tat, Bam, Lol, and TAM secretion/translocation
-  complex boundaries. Twenty records are clean; in type_iii_protein_secretion_system_complex.yaml
+  complex boundaries. 19 records are clean; in type_iii_protein_secretion_system_complex.yaml
   (GO:0030257), discussions[0] (needle_dimensions_unsourced) cites repository issues
   #65 and #91 in rationale prose without a structured evidence list.'
 source:
@@ -580,7 +580,7 @@ evidence:
   locator: strict receipt
   accessed_at: '2026-10-23T09:16:01Z'
   support: supports
-  summary: validate_strict.py exited 0 across all 978 records including all 21 secretion_system
+  summary: validate_strict.py exited 0 across all 978 records including all 20 secretion_system
     records.
   snapshot_sha256: b34bdc4f99ef4601161958120b45622535017214ba594a44bca249237869d704
 - evidence_id: ev_labels_sec
@@ -605,10 +605,10 @@ evidence:
 assessments:
 - assessment_id: assess_sec_cohort
   area: identity
-  topic: Boundary discipline, identity, composition, and evidence across all 21 secretion_system
+  topic: Boundary discipline, identity, composition, and evidence across all 20 secretion_system
     records
   outcome: supported
-  summary: All 21 secretion_system records maintain clean boundaries across T1SS-T11SS,
+  summary: All 20 secretion_system records maintain clean boundaries across T1SS-T11SS,
     Sec, Tat, Bam, Lol, and TAM translocation complexes.
   target_ids:
   - GO:0031522
@@ -711,7 +711,7 @@ boundary_decisions:
   - cellstructuremech:type_vi_secretion_system_hcp_tube
   - cellstructuremech:type_vi_secretion_system_membrane_complex
   - cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex
-  rationale: All 21 records in data/structures/secretion_system/ represent distinct
+  rationale: All 20 records in data/structures/secretion_system/ represent distinct
     secretion or membrane-translocation systems with non-overlapping GO/CSM identifiers.
   evidence_ids:
   - ev_strict_sec

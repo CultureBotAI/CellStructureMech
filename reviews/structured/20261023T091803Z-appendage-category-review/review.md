@@ -1,4 +1,4 @@
-# Category review of data/structures/appendage/ (45 records): cilium IFT particle causal-graph node typing
+# Category review of data/structures/appendage/ (58 records): cilium IFT particle causal-graph node typing
 
 - Review: 20261023T091803Z-appendage-category-review
 - Repository: CultureBotAI/CellStructureMech
@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 58 records in data/structures/appendage/ verified distinct appendage and subcomplex boundaries across bacterial pili/fimbriae, archaella, bacterial flagella, and eukaryotic ciliary subcomplexes. Forty-four records are clean; in cilium.yaml (GO:0005929), causal_graphs[0].nodes node ift_particle references PROTEIN_COMPLEX component ift_particle (GO:0030990, intraciliary transport particle) but is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE with grounding: GO:0030990.
+Full-coverage category review of all 58 records in data/structures/appendage/ verified distinct appendage and subcomplex boundaries across bacterial pili/fimbriae, archaella, bacterial flagella, and eukaryotic ciliary subcomplexes. 57 records are clean; in cilium.yaml (GO:0005929), causal_graphs[0].nodes node ift_particle references PROTEIN_COMPLEX component ift_particle (GO:0030990, intraciliary transport particle) but is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE with grounding: GO:0030990.
 
 ## Scope And Provenance
 
@@ -87,16 +87,16 @@ Working-tree hashes do not imply those bytes were committed.
 
 | Check | Status | Required | Targets | Result |
 | --- | --- | --- | --- | --- |
-| Strict corpus validation covering appendage cohort | passed | True | GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537 | All 45 appendage records pass strict LinkML and semantic validation. |
+| Strict corpus validation covering appendage cohort | passed | True | GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537 | All 58 appendage records pass strict LinkML and semantic validation. |
 | ID-label correspondence across appendage cohort | passed | True | GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537 | All ontology ID-label pairs in appendage records correspond to canonical labels. |
 
 ## Scientific And Domain Assessments
 
-### Boundary discipline, identity, composition, and evidence across all 45 appendage records
+### Boundary discipline, identity, composition, and evidence across all 58 appendage records
 
 identity: supported. Targets: GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537.
 
-All 45 appendage records maintain clean identity and part_of boundaries between intact appendages and subcomplexes (e.g., cilium vs axoneme/IFT complexes, bacterial flagellum vs hook/basal body/MS-ring/C-ring).
+All 58 appendage records maintain clean identity and part_of boundaries between intact appendages and subcomplexes (e.g., cilium vs axoneme/IFT complexes, bacterial flagellum vs hook/basal body/MS-ring/C-ring).
 
 ### Causal-graph node typing for GO-grounded multiprotein complex ift_particle in cilium.yaml
 
@@ -123,13 +123,13 @@ Change causal_graphs[0].nodes[0] (ift_particle) in data/structures/appendage/cil
 
 ## Category Boundaries
 
-- retain: GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537. All 45 records in data/structures/appendage/ denote distinct microbial appendages or well-bounded appendage subcomplexes with non-overlapping GO or CSM identifiers.
+- retain: GO:0097729, cellstructuremech:archaeal_cannula, GO:0097589, cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor, GO:0033099, GO:0033111, GO:0009288, GO:0009425, GO:0009433, GO:0009426, GO:0009427, GO:0009428, GO:0009431, GO:0009429, GO:0030694, GO:0009420, GO:0009421, GO:0009424, GO:0009422, GO:0120100, GO:0120107, GO:0120102, GO:0120101, GO:0097546, GO:0060170, GO:0097539, GO:0035869, GO:0005929, GO:0098774, GO:1990905, GO:0120118, GO:0032179, cellstructuremech:hamus, cellstructuremech:haptonema, GO:0030990, GO:0097609, GO:0097741, GO:0005937, GO:0001400, GO:0070250, GO:0070867, GO:0031514, cellstructuremech:omce_cytochrome_nanowire, cellstructuremech:omcs_cytochrome_nanowire, cellstructuremech:omcz_cytochrome_nanowire, cellstructuremech:p_pilus, GO:0097740, GO:0055040, GO:0009289, cellstructuremech:prostheca, cellstructuremech:stalk_crossband, cellstructuremech:suctorian_feeding_tentacle, cellstructuremech:tad_pilus, GO:0097608, GO:0140621, GO:0044096, GO:0097537. All 58 records in data/structures/appendage/ denote distinct microbial appendages or well-bounded appendage subcomplexes with non-overlapping GO or CSM identifiers.
 
 ## Evidence
 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
-| ev_strict_corpus | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 978 records including all 45 appendage records. |
+| ev_strict_corpus | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 978 records including all 58 appendage records. |
 | ev_labels_corpus | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
 | ev_cilium_ift_node | data/structures/appendage/cilium.yaml; components[3] (lines 118-130) and causal_graphs[0].nodes[0] (lines 172-175) | supports | In cilium.yaml, component ift_particle has component_type: PROTEIN_COMPLEX and grounding: GO:0030990 (intraciliary transport particle), while causal_graphs[0].nodes[0] (node_id: ift_particle, component_ref: ift_particle) is typed node_type: GENE_OR_PROTEIN with no grounding. |
 
@@ -146,7 +146,7 @@ schema_version: 1.0.0
 review_id: 20261023T091803Z-appendage-category-review
 kind: category
 repository: CultureBotAI/CellStructureMech
-title: 'Category review of data/structures/appendage/ (45 records): cilium IFT particle
+title: 'Category review of data/structures/appendage/ (58 records): cilium IFT particle
   causal-graph node typing'
 started_at: '2026-10-23T09:10:10Z'
 finished_at: '2026-10-23T09:18:03Z'
@@ -165,11 +165,11 @@ native_verdict: PASS_WITH_FOLLOW_UP
 scientific_review: true
 summary: 'Full-coverage category review of all 58 records in data/structures/appendage/
   verified distinct appendage and subcomplex boundaries across bacterial pili/fimbriae,
-  archaella, bacterial flagella, and eukaryotic ciliary subcomplexes. Forty-four records
-  are clean; in cilium.yaml (GO:0005929), causal_graphs[0].nodes node ift_particle
-  references PROTEIN_COMPLEX component ift_particle (GO:0030990, intraciliary transport
-  particle) but is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE with
-  grounding: GO:0030990.'
+  archaella, bacterial flagella, and eukaryotic ciliary subcomplexes. 57 records are
+  clean; in cilium.yaml (GO:0005929), causal_graphs[0].nodes node ift_particle references
+  PROTEIN_COMPLEX component ift_particle (GO:0030990, intraciliary transport particle)
+  but is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE with grounding:
+  GO:0030990.'
 source:
   git_revision: 13c6b0d85338aa96d330b8d699587dfe270a21f9
   state: git_commit
@@ -1200,7 +1200,7 @@ checks:
   name: Strict corpus validation covering appendage cohort
   status: passed
   required: true
-  summary: All 45 appendage records pass strict LinkML and semantic validation.
+  summary: All 58 appendage records pass strict LinkML and semantic validation.
   target_ids:
   - GO:0097729
   - cellstructuremech:archaeal_cannula
@@ -1342,7 +1342,7 @@ evidence:
   locator: strict receipt
   accessed_at: '2026-10-23T09:16:01Z'
   support: supports
-  summary: validate_strict.py exited 0 across all 978 records including all 45 appendage
+  summary: validate_strict.py exited 0 across all 978 records including all 58 appendage
     records.
   snapshot_sha256: b34bdc4f99ef4601161958120b45622535017214ba594a44bca249237869d704
 - evidence_id: ev_labels_corpus
@@ -1369,10 +1369,10 @@ evidence:
 assessments:
 - assessment_id: assess_appendage_cohort
   area: identity
-  topic: Boundary discipline, identity, composition, and evidence across all 45 appendage
+  topic: Boundary discipline, identity, composition, and evidence across all 58 appendage
     records
   outcome: supported
-  summary: All 45 appendage records maintain clean identity and part_of boundaries
+  summary: All 58 appendage records maintain clean identity and part_of boundaries
     between intact appendages and subcomplexes (e.g., cilium vs axoneme/IFT complexes,
     bacterial flagellum vs hook/basal body/MS-ring/C-ring).
   target_ids:
@@ -1556,7 +1556,7 @@ boundary_decisions:
   - GO:0140621
   - GO:0044096
   - GO:0097537
-  rationale: All 45 records in data/structures/appendage/ denote distinct microbial
+  rationale: All 58 records in data/structures/appendage/ denote distinct microbial
     appendages or well-bounded appendage subcomplexes with non-overlapping GO or CSM
     identifiers.
   evidence_ids:

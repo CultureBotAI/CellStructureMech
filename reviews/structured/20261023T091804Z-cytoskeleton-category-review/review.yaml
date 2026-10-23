@@ -3386,7 +3386,7 @@ evidence:
   locator: strict receipt
   accessed_at: '2026-10-23T09:16:01Z'
   support: supports
-  summary: validate_strict.py exited 0 across all 978 records including all 117 cytoskeleton
+  summary: validate_strict.py exited 0 across all 978 records including all 173 cytoskeleton
     records.
   snapshot_sha256: b34bdc4f99ef4601161958120b45622535017214ba594a44bca249237869d704
 - evidence_id: ev_labels_cyto
@@ -3426,10 +3426,10 @@ evidence:
 assessments:
 - assessment_id: assess_cyto_cohort
   area: identity
-  topic: Boundary discipline, identity, composition, and evidence across all 117 cytoskeleton
+  topic: Boundary discipline, identity, composition, and evidence across all 173 cytoskeleton
     records
   outcome: supported
-  summary: All 117 cytoskeleton records have distinct GO/CSM identities, valid ontology
+  summary: All 173 cytoskeleton records have distinct GO/CSM identities, valid ontology
     label correspondence, and clear boundaries between polymers, organizing centers,
     and subcomplexes.
   target_ids:
@@ -3953,7 +3953,7 @@ boundary_decisions:
   - GO:0097593
   - GO:0097592
   - GO:0097596
-  rationale: All 117 records in data/structures/cytoskeleton/ represent distinct cytoskeletal
+  rationale: All 173 records in data/structures/cytoskeleton/ represent distinct cytoskeletal
     filaments, MTOCs, septin assemblies, eisosome/MCC complexes, or motor/adaptor
     subcomplexes.
   evidence_ids:

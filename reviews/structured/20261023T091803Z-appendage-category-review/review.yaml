@@ -2,7 +2,7 @@ schema_version: 1.0.0
 review_id: 20261023T091803Z-appendage-category-review
 kind: category
 repository: CultureBotAI/CellStructureMech
-title: 'Category review of data/structures/appendage/ (45 records): cilium IFT particle
+title: 'Category review of data/structures/appendage/ (58 records): cilium IFT particle
   causal-graph node typing'
 started_at: '2026-10-23T09:10:10Z'
 finished_at: '2026-10-23T09:18:03Z'
@@ -21,11 +21,11 @@ native_verdict: PASS_WITH_FOLLOW_UP
 scientific_review: true
 summary: 'Full-coverage category review of all 58 records in data/structures/appendage/
   verified distinct appendage and subcomplex boundaries across bacterial pili/fimbriae,
-  archaella, bacterial flagella, and eukaryotic ciliary subcomplexes. Forty-four records
-  are clean; in cilium.yaml (GO:0005929), causal_graphs[0].nodes node ift_particle
-  references PROTEIN_COMPLEX component ift_particle (GO:0030990, intraciliary transport
-  particle) but is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE with
-  grounding: GO:0030990.'
+  archaella, bacterial flagella, and eukaryotic ciliary subcomplexes. 57 records are
+  clean; in cilium.yaml (GO:0005929), causal_graphs[0].nodes node ift_particle references
+  PROTEIN_COMPLEX component ift_particle (GO:0030990, intraciliary transport particle)
+  but is typed GENE_OR_PROTEIN without grounding instead of STRUCTURE with grounding:
+  GO:0030990.'
 source:
   git_revision: 13c6b0d85338aa96d330b8d699587dfe270a21f9
   state: git_commit
@@ -1056,7 +1056,7 @@ checks:
   name: Strict corpus validation covering appendage cohort
   status: passed
   required: true
-  summary: All 45 appendage records pass strict LinkML and semantic validation.
+  summary: All 58 appendage records pass strict LinkML and semantic validation.
   target_ids:
   - GO:0097729
   - cellstructuremech:archaeal_cannula
@@ -1198,7 +1198,7 @@ evidence:
   locator: strict receipt
   accessed_at: '2026-10-23T09:16:01Z'
   support: supports
-  summary: validate_strict.py exited 0 across all 978 records including all 45 appendage
+  summary: validate_strict.py exited 0 across all 978 records including all 58 appendage
     records.
   snapshot_sha256: b34bdc4f99ef4601161958120b45622535017214ba594a44bca249237869d704
 - evidence_id: ev_labels_corpus
@@ -1225,10 +1225,10 @@ evidence:
 assessments:
 - assessment_id: assess_appendage_cohort
   area: identity
-  topic: Boundary discipline, identity, composition, and evidence across all 45 appendage
+  topic: Boundary discipline, identity, composition, and evidence across all 58 appendage
     records
   outcome: supported
-  summary: All 45 appendage records maintain clean identity and part_of boundaries
+  summary: All 58 appendage records maintain clean identity and part_of boundaries
     between intact appendages and subcomplexes (e.g., cilium vs axoneme/IFT complexes,
     bacterial flagellum vs hook/basal body/MS-ring/C-ring).
   target_ids:
@@ -1412,7 +1412,7 @@ boundary_decisions:
   - GO:0140621
   - GO:0044096
   - GO:0097537
-  rationale: All 45 records in data/structures/appendage/ denote distinct microbial
+  rationale: All 58 records in data/structures/appendage/ denote distinct microbial
     appendages or well-bounded appendage subcomplexes with non-overlapping GO or CSM
     identifiers.
   evidence_ids:

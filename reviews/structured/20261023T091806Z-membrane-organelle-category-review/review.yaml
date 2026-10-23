@@ -4354,7 +4354,7 @@ evidence:
   locator: strict receipt
   accessed_at: '2026-10-23T09:16:01Z'
   support: supports
-  summary: validate_strict.py exited 0 across all 978 records including all 59 membrane_organelle
+  summary: validate_strict.py exited 0 across all 978 records including all 224 membrane_organelle
     records.
   snapshot_sha256: b34bdc4f99ef4601161958120b45622535017214ba594a44bca249237869d704
 - evidence_id: ev_labels_mem
@@ -4384,10 +4384,10 @@ evidence:
 assessments:
 - assessment_id: assess_mem_cohort
   area: identity
-  topic: Boundary discipline, identity, composition, and evidence across all 59 membrane_organelle
+  topic: Boundary discipline, identity, composition, and evidence across all 224 membrane_organelle
     records
   outcome: supported
-  summary: All 59 membrane_organelle records maintain distinct organelle and subcompartment
+  summary: All 224 membrane_organelle records maintain distinct organelle and subcompartment
     identities with verified GO/CSM groundings.
   target_ids:
   - GO:0020022
@@ -4914,7 +4914,7 @@ boundary_decisions:
   - GO:0005774
   - GO:0005773
   - GO:0140266
-  rationale: All 59 records in data/structures/membrane_organelle/ represent distinct
+  rationale: All 224 records in data/structures/membrane_organelle/ represent distinct
     membrane-bounded organelles, endosymbiont-derived organelles (nitroplast, diazoplast,
     chromatophore), or specialized subcompartments.
   evidence_ids:

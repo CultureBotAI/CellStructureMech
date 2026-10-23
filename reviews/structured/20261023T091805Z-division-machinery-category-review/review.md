@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 2 records in data/structures/division_machinery/ verified distinct bacterial/archaeal/eukaryotic division and cell-wall elongation machinery boundaries. Thirty-one records are clean; in divisome_complex.yaml (GO:0032153) and elongasome.yaml (GO:0110164), 3 discussions entries cite repository issues (#65, #91, #119, #161) in prose without structured GitHub issue URLs in their evidence lists.
+Full-coverage category review of all 2 records in data/structures/division_machinery/ verified distinct bacterial division and cell-wall elongation machinery boundaries. Both records are scientifically sound; in divisome_complex.yaml (GO:0032153) and elongasome.yaml (GO:0110164), 3 discussions entries cite repository issues (#65, #91, #119, #161) in prose without structured GitHub issue URLs in their evidence lists.
 
 ## Scope And Provenance
 
@@ -36,11 +36,11 @@ Working-tree hashes do not imply those bytes were committed.
 
 ## Scientific And Domain Assessments
 
-### Boundary discipline, identity, composition, and evidence across all 33 division_machinery records
+### Boundary discipline, identity, composition, and evidence across all 2 division_machinery records
 
 identity: supported. Targets: GO:1990586, cellstructuremech:elongasome.
 
-All 33 division_machinery records maintain distinct identity and parthood boundaries across divisome, elongasome, Z-ring, Cdv, ESCRT, and septation complexes.
+All 2 division_machinery records maintain distinct identity and parthood boundaries across divisome and elongasome complexes.
 
 ### Structured GitHub issue URLs for #NNN mentions in discussions prose
 
@@ -67,13 +67,13 @@ Add structured GitHub issue URLs (and cited DOIs) to discussions[].evidence in d
 
 ## Category Boundaries
 
-- retain: GO:1990586, cellstructuremech:elongasome. All 33 records in data/structures/division_machinery/ represent distinct cell-division, cell-wall elongation, or cytokinesis complexes with non-overlapping GO/CSM identifiers.
+- retain: GO:1990586, cellstructuremech:elongasome. All 2 records in data/structures/division_machinery/ represent distinct cell-division or cell-wall elongation complexes with non-overlapping GO/CSM identifiers.
 
 ## Evidence
 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
-| ev_strict_div | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 978 records including all 33 division_machinery records. |
+| ev_strict_div | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 978 records including all 2 division_machinery records. |
 | ev_labels_div | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
 | ev_div_discussion_issues | data/structures/division_machinery/divisome_complex.yaml; divisome_complex.yaml discussions[0..1] (lines 410-436, #65, #91, #161) and elongasome.yaml discussions[0] (lines 299-313, #119) | supports | divisome_complex.yaml discussions[0] (z_ring_diameter_unsourced, citing #65 and #91) and discussions[1] (ftsz_treadmilling_velocity_unsourced, citing #65, #91, #161), plus elongasome.yaml discussions[0] (mreb_filament_orientation_scope, citing #119), reference repository issues in prose without structured evidence lists. |
 
@@ -108,9 +108,9 @@ verdict: pass_with_limitations
 native_verdict: PASS_WITH_FOLLOW_UP
 scientific_review: true
 summary: 'Full-coverage category review of all 2 records in data/structures/division_machinery/
-  verified distinct bacterial/archaeal/eukaryotic division and cell-wall elongation
-  machinery boundaries. Thirty-one records are clean; in divisome_complex.yaml (GO:0032153)
-  and elongasome.yaml (GO:0110164), 3 discussions entries cite repository issues (#65,
+  verified distinct bacterial division and cell-wall elongation machinery boundaries.
+  Both records are scientifically sound; in divisome_complex.yaml (GO:0032153) and
+  elongasome.yaml (GO:0110164), 3 discussions entries cite repository issues (#65,
   #91, #119, #161) in prose without structured GitHub issue URLs in their evidence
   lists.'
 source:
@@ -221,7 +221,7 @@ evidence:
   locator: strict receipt
   accessed_at: '2026-10-23T09:16:01Z'
   support: supports
-  summary: validate_strict.py exited 0 across all 978 records including all 33 division_machinery
+  summary: validate_strict.py exited 0 across all 978 records including all 2 division_machinery
     records.
   snapshot_sha256: b34bdc4f99ef4601161958120b45622535017214ba594a44bca249237869d704
 - evidence_id: ev_labels_div
@@ -250,11 +250,11 @@ evidence:
 assessments:
 - assessment_id: assess_div_cohort
   area: identity
-  topic: Boundary discipline, identity, composition, and evidence across all 33 division_machinery
+  topic: Boundary discipline, identity, composition, and evidence across all 2 division_machinery
     records
   outcome: supported
-  summary: All 33 division_machinery records maintain distinct identity and parthood
-    boundaries across divisome, elongasome, Z-ring, Cdv, ESCRT, and septation complexes.
+  summary: All 2 division_machinery records maintain distinct identity and parthood
+    boundaries across divisome and elongasome complexes.
   target_ids:
   - GO:1990586
   - cellstructuremech:elongasome
@@ -332,9 +332,8 @@ boundary_decisions:
   target_ids:
   - GO:1990586
   - cellstructuremech:elongasome
-  rationale: All 33 records in data/structures/division_machinery/ represent distinct
-    cell-division, cell-wall elongation, or cytokinesis complexes with non-overlapping
-    GO/CSM identifiers.
+  rationale: All 2 records in data/structures/division_machinery/ represent distinct
+    cell-division or cell-wall elongation complexes with non-overlapping GO/CSM identifiers.
   evidence_ids:
   - ev_strict_div
   - ev_labels_div

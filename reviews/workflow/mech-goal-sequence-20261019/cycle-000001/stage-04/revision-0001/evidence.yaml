@@ -16,7 +16,7 @@ summary: Reviewed all 978 eligible CellStructureRecord YAML files across all 13 
 source_revision: 13c6b0d85338aa96d330b8d699587dfe270a21f9
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_report.md
-  sha256: 051b226b82db8c858c44299861e8353f98cc27ac91e4eb4b667a4c19b406fb70
+  sha256: ea281a6802b154d68ac4a0dfedad8999d60a0ed9c66052ad36d2009f1f79d72d
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_findings.md
   sha256: 3113f1c288e50adaf51ff667e06a652f2c0d85472053d50129f6190ad67a8ca3
@@ -25,7 +25,7 @@ artifacts:
   sha256: a8fbc86da40fbab9a5ab311a5b30c5a7d1de22bd3503913da5e89d3ab2700dae
   kind: validation
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/coverage_inventory.json
-  sha256: e2de4c04242bc8446a4d232a656a5bfeccb6d8fa7ae52d1321c9315917b742b1
+  sha256: 3e05ecdfc2f0a13ec9fdcb0c260d558f385c990ff5032ae4179a24cd8e4d402a
   kind: supporting
 findings:
 - finding_id: woronin-body-missing-history

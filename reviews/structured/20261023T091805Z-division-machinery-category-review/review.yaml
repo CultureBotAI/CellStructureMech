@@ -20,9 +20,9 @@ verdict: pass_with_limitations
 native_verdict: PASS_WITH_FOLLOW_UP
 scientific_review: true
 summary: 'Full-coverage category review of all 2 records in data/structures/division_machinery/
-  verified distinct bacterial/archaeal/eukaryotic division and cell-wall elongation
-  machinery boundaries. Thirty-one records are clean; in divisome_complex.yaml (GO:0032153)
-  and elongasome.yaml (GO:0110164), 3 discussions entries cite repository issues (#65,
+  verified distinct bacterial division and cell-wall elongation machinery boundaries.
+  Both records are scientifically sound; in divisome_complex.yaml (GO:0032153) and
+  elongasome.yaml (GO:0110164), 3 discussions entries cite repository issues (#65,
   #91, #119, #161) in prose without structured GitHub issue URLs in their evidence
   lists.'
 source:
@@ -133,7 +133,7 @@ evidence:
   locator: strict receipt
   accessed_at: '2026-10-23T09:16:01Z'
   support: supports
-  summary: validate_strict.py exited 0 across all 978 records including all 33 division_machinery
+  summary: validate_strict.py exited 0 across all 978 records including all 2 division_machinery
     records.
   snapshot_sha256: b34bdc4f99ef4601161958120b45622535017214ba594a44bca249237869d704
 - evidence_id: ev_labels_div
@@ -162,11 +162,11 @@ evidence:
 assessments:
 - assessment_id: assess_div_cohort
   area: identity
-  topic: Boundary discipline, identity, composition, and evidence across all 33 division_machinery
+  topic: Boundary discipline, identity, composition, and evidence across all 2 division_machinery
     records
   outcome: supported
-  summary: All 33 division_machinery records maintain distinct identity and parthood
-    boundaries across divisome, elongasome, Z-ring, Cdv, ESCRT, and septation complexes.
+  summary: All 2 division_machinery records maintain distinct identity and parthood
+    boundaries across divisome and elongasome complexes.
   target_ids:
   - GO:1990586
   - cellstructuremech:elongasome
@@ -244,9 +244,8 @@ boundary_decisions:
   target_ids:
   - GO:1990586
   - cellstructuremech:elongasome
-  rationale: All 33 records in data/structures/division_machinery/ represent distinct
-    cell-division, cell-wall elongation, or cytokinesis complexes with non-overlapping
-    GO/CSM identifiers.
+  rationale: All 2 records in data/structures/division_machinery/ represent distinct
+    cell-division or cell-wall elongation complexes with non-overlapping GO/CSM identifiers.
   evidence_ids:
   - ev_strict_div
   - ev_labels_div
