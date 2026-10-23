@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 985,
- "corpus_updated": "2026-10-23 14:36:26 UTC",
- "corpus_digest": "3aa4d84f8b89",
+ "corpus_updated": "2026-10-23 19:30:57 UTC",
+ "corpus_digest": "cc450e286f5e",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -88357,6 +88357,12 @@
        "component_ref": "f1_head"
       },
       {
+       "node_id": "peripheral_stalk",
+       "label": "F-type ATP synthase peripheral stalk",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "peripheral_stalk"
+      },
+      {
        "node_id": "atp",
        "label": "ATP",
        "node_type": "CHEMICAL",
@@ -88415,6 +88421,22 @@
         {
          "reference": "DOI:10.1146/annurev-biochem-013118-110903",
          "notes": "Kuehlbrandt 2019 describes the asymmetric gamma subunit imposing the catalytic cycle on the beta subunits."
+        }
+       ]
+      },
+      {
+       "subject": "peripheral_stalk",
+       "predicate": "resists co-rotation of",
+       "object": "head",
+       "description": "The peripheral stalk acts as a stator connecting the membrane sector to the catalytic head, resisting co-rotation of the alpha3beta3 head while the central stalk rotates inside it.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "notes": "Kuehlbrandt 2019 describes the peripheral stalk as the stator resisting rotation of the head."
+        },
+        {
+         "reference": "DOI:10.1038/s41467-020-16387-2",
+         "notes": "Sobti et al. 2020 describe the E. coli b2 peripheral stalk and delta attachment to the catalytic head."
         }
        ]
       },
@@ -88520,6 +88542,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T19:30:57Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added peripheral stalk stator node (peripheral_stalk, component_ref: peripheral_stalk) and stator resistance edge to rotary_catalysis.",
+     "llm_assisted": true
     }
    ],
    "datasets": [
@@ -140275,6 +140304,13 @@
        "component_ref": "magnetite"
       },
       {
+       "node_id": "mamj",
+       "label": "MamJ connector",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR060787",
+       "component_ref": "mamj_connector"
+      },
+      {
        "node_id": "mamk",
        "label": "MamK filament",
        "node_type": "STRUCTURE",
@@ -140326,6 +140362,22 @@
         {
          "reference": "DOI:10.1038/nrmicro.2016.99",
          "notes": "Uebe & Schüler 2016 describe magnetite biomineralisation within the vesicle."
+        }
+       ]
+      },
+      {
+       "subject": "mamj",
+       "predicate": "connects magnetosome vesicles to",
+       "object": "mamk",
+       "description": "MamJ connects magnetosome vesicles to the MamK filament so the vesicles can be organised into a linear chain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nrmicro.2016.99",
+         "notes": "Uebe and Schuler 2016 review MamJ as a connector between magnetosome vesicles and MamK filaments."
+        },
+        {
+         "reference": "DOI:10.1002/pro.2827",
+         "notes": "Barber-Zucker and Zarivach 2015 describe MamJ connecting magnetosome membranes to the MamK filament."
         }
        ]
       },
@@ -140499,6 +140551,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-23T19:30:57Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added MamJ connector node (mamj, component_ref: mamj_connector, InterPro:IPR060787) and vesicle-to-MamK attachment edge to magnetosome_chain_alignment.",
+     "llm_assisted": true
     }
    ],
    "xrefs": [
@@ -170556,6 +170615,12 @@
        "component_ref": "bmc_h"
       },
       {
+       "node_id": "bmc_p",
+       "label": "BMC-P shell pentamers (CcmL / CsoS4)",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "bmc_p"
+      },
+      {
        "node_id": "shell",
        "label": "carboxysome shell",
        "node_type": "STRUCTURE"
@@ -170654,6 +170719,22 @@
         {
          "reference": "PMID:23572529",
          "notes": "UniProt cites this paper (Q31QW7) for CcmP forming a dimer of stacked trimers within the shell."
+        }
+       ]
+      },
+      {
+       "subject": "bmc_p",
+       "predicate": "caps vertices of",
+       "object": "shell",
+       "description": "BMC-P pentamers (CcmL or CsoS4) cap the vertices of the icosahedral carboxysome shell so it functions as a CO2 leakage barrier.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nrmicro1913",
+         "notes": "Yeates et al. 2008 describe BMC-P pentamers capping the vertices of the icosahedral shell."
+        },
+        {
+         "reference": "PMID:19844578",
+         "notes": "Cai F et al. 2009 show that the pentameric vertex proteins are necessary for the icosahedral carboxysome shell to function as a CO2 leakage barrier."
         }
        ]
       },
@@ -170802,6 +170883,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T19:30:57Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added BMC-P shell pentamers node (bmc_p, component_ref: bmc_p) and vertex-capping edge to carboxysome_assembly.",
      "llm_assisted": true
     }
    ],
@@ -306602,6 +306690,13 @@
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Grounded self-referential causal node 'h_body' to cellstructuremech:h_body.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-23T19:30:57Z",
+     "curator": "curate-causal-graphs-skill",
+     "action": "UPDATED_CAUSAL_GRAPHS",
+     "changes": "Added ATP-dependent RNA helicase RhlB type node (rhlb, component_ref: rhlb, InterPro:IPR023554) and H-body client enrichment edge to polyp_modulated_h_body_assembly.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -306882,6 +306977,13 @@
        "component_ref": "rnase_e"
       },
       {
+       "node_id": "rhlb",
+       "label": "ATP-dependent RNA helicase RhlB type",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR023554",
+       "component_ref": "rhlb"
+      },
+      {
        "node_id": "mrna",
        "label": "mRNA",
        "node_type": "RNA",
@@ -306959,6 +307061,18 @@
         {
          "reference": "DOI:10.1371/journal.pbio.3003775",
          "notes": "Figure 4G-I combines HMW-complex association with live-cell RNase E/Hfq colocalization. These experiments do not establish whether the sequestered enzyme is catalytically inactive."
+        }
+       ]
+      },
+      {
+       "subject": "h_body",
+       "predicate": "concentrates",
+       "object": "rhlb",
+       "description": "Nitrogen-starvation H-bodies enrich the RNA helicase RhlB as an RNA-processing client in the presence of polyphosphate.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1371/journal.pbio.3003775",
+         "notes": "Figure 5C directly images endogenous RhlB/Hfq colocalization in nitrogen-starved WT cells and loss of RhlB foci in the ppk deletion background."
         }
        ]
       },

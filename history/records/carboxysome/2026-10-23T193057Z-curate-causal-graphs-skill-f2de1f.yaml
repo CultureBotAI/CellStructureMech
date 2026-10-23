@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/carboxysome.yaml
+  slug: carboxysome
+session:
+  id: 2026-10-23T193057Z-curate-causal-graphs-skill-f2de1f
+  timestamp: '2026-10-23T19:30:57Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Added BMC-P shell pentamers node (bmc_p, component_ref: bmc_p) and vertex-capping
+    edge to carboxysome_assembly.'
+  details: 'Cycle 2 Stage 2 causal-graph curation pass for GO:0031470 (carboxysome):
+    Added BMC-P shell pentamers node (bmc_p, component_ref: bmc_p) and vertex-capping
+    edge to carboxysome_assembly. Validated via write_validated_structure.'

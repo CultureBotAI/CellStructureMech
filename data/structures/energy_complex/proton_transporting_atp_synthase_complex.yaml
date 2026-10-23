@@ -268,6 +268,10 @@ causal_graphs:
     label: alpha3beta3 catalytic head
     node_type: GENE_OR_PROTEIN
     component_ref: f1_head
+  - node_id: peripheral_stalk
+    label: F-type ATP synthase peripheral stalk
+    node_type: GENE_OR_PROTEIN
+    component_ref: peripheral_stalk
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -312,6 +316,19 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-biochem-013118-110903
       notes: Kuehlbrandt 2019 describes the asymmetric gamma subunit imposing the
         catalytic cycle on the beta subunits.
+  - subject: peripheral_stalk
+    predicate: resists co-rotation of
+    object: head
+    description: The peripheral stalk acts as a stator connecting the membrane sector
+      to the catalytic head, resisting co-rotation of the alpha3beta3 head while the
+      central stalk rotates inside it.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 describes the peripheral stalk as the stator resisting
+        rotation of the head.
+    - reference: DOI:10.1038/s41467-020-16387-2
+      notes: Sobti et al. 2020 describe the E. coli b2 peripheral stalk and delta
+        attachment to the catalytic head.
   - subject: head
     predicate: catalyses formation of
     object: atp
@@ -404,6 +421,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T19:30:57Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: 'Added peripheral stalk stator node (peripheral_stalk, component_ref: peripheral_stalk)
+    and stator resistance edge to rotary_catalysis.'
+  llm_assisted: true
 datasets:
 - accession: PDB:6OQR
   title: E. coli ATP Synthase ADP State 1a

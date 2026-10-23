@@ -702,6 +702,10 @@ causal_graphs:
     label: BMC-H shell hexamers
     node_type: GENE_OR_PROTEIN
     component_ref: bmc_h
+  - node_id: bmc_p
+    label: BMC-P shell pentamers (CcmL / CsoS4)
+    node_type: GENE_OR_PROTEIN
+    component_ref: bmc_p
   - node_id: shell
     label: carboxysome shell
     node_type: STRUCTURE
@@ -773,6 +777,18 @@ causal_graphs:
     - reference: PMID:23572529
       notes: UniProt cites this paper (Q31QW7) for CcmP forming a dimer of stacked
         trimers within the shell.
+  - subject: bmc_p
+    predicate: caps vertices of
+    object: shell
+    description: BMC-P pentamers (CcmL or CsoS4) cap the vertices of the icosahedral
+      carboxysome shell so it functions as a CO2 leakage barrier.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1913
+      notes: Yeates et al. 2008 describe BMC-P pentamers capping the vertices of the
+        icosahedral shell.
+    - reference: PMID:19844578
+      notes: Cai F et al. 2009 show that the pentameric vertex proteins are necessary
+        for the icosahedral carboxysome shell to function as a CO2 leakage barrier.
   - subject: shell
     predicate: encapsulates
     object: procarboxysome
@@ -907,6 +923,12 @@ curation_history:
   curator: claude-opus-4-7
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
+  llm_assisted: true
+- timestamp: '2026-10-23T19:30:57Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: 'Added BMC-P shell pentamers node (bmc_p, component_ref: bmc_p) and vertex-capping
+    edge to carboxysome_assembly.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034
