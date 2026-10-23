@@ -44,6 +44,12 @@ curation_history:
   changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 3 same-gene synonym/locus-tag
     mapping(s) on existing protein_examples.'
   llm_assisted: true
+- timestamp: '2026-10-23T21:49:20Z'
+  curator: antigravity
+  action: EDIT
+  changes: Restrict synonym disclosure on UniProtKB:Q23KH2 in tbc1d31 to WDR67 so
+    distinct paralogs TBC1D31A/TBC1D31B are not conflated with TTHERM_00193630 (#2416).
+  llm_assisted: true
 synonyms:
 - synonym_text: A-C linker
   synonym_type: EXACT_SYNONYM
@@ -170,7 +176,7 @@ components:
       UniProt lists under the primary name TTHERM_00193630, in Tetrahymena thermophila
       SB210. Identifier for the component's declared gene symbol; it is not itself
       evidence that the protein is part of this structure (also declared as synonym
-      TBC1D31A, TBC1D31B, WDR67).
+      WDR67).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/Q23KH2
       notes: UniProtKB unreviewed (TrEMBL) entry Q23KH2 for gene TBC1D31 in Tetrahymena
