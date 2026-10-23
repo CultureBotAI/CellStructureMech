@@ -352,6 +352,11 @@ causal_graphs:
     label: magnetite
     node_type: CHEMICAL
     component_ref: magnetite
+  - node_id: mamj
+    label: MamJ connector
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR060787
+    component_ref: mamj_connector
   - node_id: mamk
     label: MamK filament
     node_type: STRUCTURE
@@ -386,6 +391,18 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro.2016.99
       notes: Uebe & Schüler 2016 describe magnetite biomineralisation within the vesicle.
+  - subject: mamj
+    predicate: connects magnetosome vesicles to
+    object: mamk
+    description: MamJ connects magnetosome vesicles to the MamK filament so the vesicles
+      can be organised into a linear chain.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe and Schuler 2016 review MamJ as a connector between magnetosome
+        vesicles and MamK filaments.
+    - reference: DOI:10.1002/pro.2827
+      notes: Barber-Zucker and Zarivach 2015 describe MamJ connecting magnetosome
+        membranes to the MamK filament.
   - subject: mamk
     predicate: aligns
     object: chain
@@ -547,6 +564,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T19:30:57Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: 'Added MamJ connector node (mamj, component_ref: mamj_connector, InterPro:IPR060787)
+    and vesicle-to-MamK attachment edge to magnetosome_chain_alignment.'
+  llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510
 - MICRO:0000216

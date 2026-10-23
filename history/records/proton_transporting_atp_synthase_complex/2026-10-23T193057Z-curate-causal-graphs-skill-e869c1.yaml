@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/proton_transporting_atp_synthase_complex.yaml
+  slug: proton_transporting_atp_synthase_complex
+session:
+  id: 2026-10-23T193057Z-curate-causal-graphs-skill-e869c1
+  timestamp: '2026-10-23T19:30:57Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Added peripheral stalk stator node (peripheral_stalk, component_ref: peripheral_stalk)
+    and stator resistance edge to rotary_catalysis.'
+  details: 'Cycle 2 Stage 2 causal-graph curation pass for GO:0045259 (proton-transporting
+    ATP synthase complex): Added peripheral stalk stator node (peripheral_stalk, component_ref:
+    peripheral_stalk) and stator resistance edge to rotary_catalysis. Validated via
+    write_validated_structure.'
