@@ -35,6 +35,16 @@ components:
   label: RNA polymerase I 10-subunit catalytic core (Rpa190, Rpa135, AC40-AC19, Rpb5/6/8/10/12)
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
+  gene_symbols:
+  - RPA190
+  - RPA135
+  - RPC40
+  - RPC19
+  - RPB5
+  - RPB6
+  - RPB8
+  - RPB10
+  - RPB12
   essentiality: ESSENTIAL
   role: Core DNA-directed RNA polymerase I assembly containing the active-site cleft
     formed by Rpa190 and Rpa135, the shared Pol I/III AC40-AC19 alpha-like heterodimer,
@@ -43,11 +53,163 @@ components:
   - reference: DOI:10.1038/nrm2184
     notes: Reviews the subunit composition and nucleolar transcription mechanism of
       eukaryotic RNA polymerase I.
+  protein_examples:
+  - uniprot_id: UniProtKB:P10964
+    protein_label: DNA-directed RNA polymerase I subunit RPA190
+    gene_symbol: RPA190
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPA190 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P10964.
+  - uniprot_id: UniProtKB:P22138
+    protein_label: DNA-directed RNA polymerase I subunit RPA135
+    gene_symbol: RPA135
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPA135 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14555487
+      notes: Naryshkina T et al. 2003, ‘Role of second-largest RNA polymerase I subunit
+        Zn-binding domain in enzyme assembly.’, Eukaryot Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P22138.
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P22138.
+  - uniprot_id: UniProtKB:P07703
+    protein_label: DNA-directed RNA polymerases I and III subunit RPAC1
+    gene_symbol: RPC40
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPC40 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P07703.
+  - uniprot_id: UniProtKB:P28000
+    protein_label: DNA-directed RNA polymerases I and III subunit RPAC2
+    gene_symbol: RPC19
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPC19 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P28000.
+  - uniprot_id: UniProtKB:P20434
+    protein_label: DNA-directed RNA polymerases I, II, and III subunit RPABC1
+    gene_symbol: RPB5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPB5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P20434
+      notes: UniProtKB reviewed (Swiss-Prot) entry P20434, the single reviewed entry
+        for gene RPB5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P20435
+    protein_label: DNA-directed RNA polymerases I, II, and III subunit RPABC2
+    gene_symbol: RPO26
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPB6, which UniProt lists under
+      the primary name RPO26, in Saccharomyces cerevisiae S288C, a taxon this record
+      names. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of P20435.
+  - uniprot_id: UniProtKB:P20436
+    protein_label: DNA-directed RNA polymerases I, II, and III subunit RPABC3
+    gene_symbol: RPB8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPB8 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P20436.
+  - uniprot_id: UniProtKB:P22139
+    protein_label: DNA-directed RNA polymerases I, II, and III subunit RPABC5
+    gene_symbol: RPB10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPB10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P22139.
+  - uniprot_id: UniProtKB:P40422
+    protein_label: DNA-directed RNA polymerases I, II, and III subunit RPABC4
+    gene_symbol: RPC10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPB12, which UniProt lists
+      under the primary name RPC10, in Saccharomyces cerevisiae S288C, a taxon this
+      record names. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P40422.
+    - reference: PMID:35563734
+      notes: David Y et al. 2022, ‘Pls1 Is a Peroxisomal Matrix Protein with a Role
+        in Regulating Lysine Biosynthesis.’, Cells. ECO:0000269 experimental evidence
+        cited by UniProt for the 'Peroxisome' localisation of P40422.
 - component_id: rpa43_rpa14_stalk_and_rpa49_rpa34_subcomplex
   label: RNA polymerase I stalk (Rpa43-Rpa14) and intrinsic TFIIF/TFIIE-like heterodimer
     (Rpa49-Rpa34.5)
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
+  gene_symbols:
+  - RPA43
+  - RPA14
+  - RPA49
+  - RPA34
   essentiality: ESSENTIAL
   role: Pol I-specific peripheral subcomplexes where the Rpa43-Rpa14 stalk recruits
     initiation factor Rrn3 and the Rpa49-Rpa34.5 heterodimer promotes promoter opening,
@@ -56,6 +218,67 @@ components:
   - reference: DOI:10.1146/annurev.genet.33.1.261
     notes: Reviews the specialized initiation and elongation subcomplexes of Saccharomyces
       cerevisiae RNA polymerase I.
+  protein_examples:
+  - uniprot_id: UniProtKB:P46669
+    protein_label: DNA-directed RNA polymerase I subunit RPA43
+    gene_symbol: RPA43
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPA43 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P46669.
+  - uniprot_id: UniProtKB:P50106
+    protein_label: DNA-directed RNA polymerase I subunit RPA14
+    gene_symbol: RPA14
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPA14 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P50106.
+  - uniprot_id: UniProtKB:Q01080
+    protein_label: DNA-directed RNA polymerase I subunit RPA49
+    gene_symbol: RPA49
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPA49 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of Q01080.
+  - uniprot_id: UniProtKB:P47006
+    protein_label: DNA-directed RNA polymerase I subunit RPA34
+    gene_symbol: RPA34
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPA34 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus, nucleolus' localisation of P47006.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota
@@ -265,4 +488,19 @@ curation_history:
   changes: Initial curation of RNA polymerase I complex (GO:0005736) in category OTHER
     with verified GO hierarchy, compartmental context, causal mechanism graph, and
     literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:14:15Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 13 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T07:27:49Z'
+  curator: uniprot-protein-examples-skill
+  action: CURATED_GENE_SYMBOLS_AND_PROTEIN_EXAMPLES
+  changes: Added source-backed subunit gene_symbols (RPA190, RPA135, RPC40, RPC19,
+    RPB5, RPB6, RPB8, RPB10, RPB12 on rpa190_rpa135_catalytic_core; RPA43, RPA14,
+    RPA49, RPA34 on rpa43_rpa14_stalk_and_rpa49_rpa34_subcomplex) prior to seeding
+    13 reviewed Saccharomyces cerevisiae S288C protein_examples.
   llm_assisted: true

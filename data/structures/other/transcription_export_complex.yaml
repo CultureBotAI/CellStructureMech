@@ -197,6 +197,9 @@ components:
   label: Sub2 DEAD-box RNA helicase and Yra1 mRNA export adaptor module
   component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
+  gene_symbols:
+  - SUB2
+  - YRA1
   essentiality: ESSENTIAL
   role: ATP-dependent RNA helicase Sub2 (UAP56) and RNA-binding export adaptor Yra1
     (ALYREF) that assemble with the four-subunit THO core complex to form the holo-TREX
@@ -205,6 +208,40 @@ components:
   - reference: PMID:11979277
     notes: Strasser et al. 2002 demonstrate that the four-subunit THO complex associates
       with Sub2 and Yra1 to form the conserved TREX (transcription-export) complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07478
+    protein_label: ATP-dependent RNA helicase SUB2
+    gene_symbol: SUB2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: Representative reviewed UniProtKB entry for gene SUB2 in the reference strain
+      Saccharomyces cerevisiae S288C (NCBITaxon:559292), matching the reference proteome
+      used for the other TREX subunits on this record. Identifier for the component's
+      declared gene symbol; it is not itself evidence that the protein is part of
+      this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of Q07478.
+  - uniprot_id: UniProtKB:Q12159
+    protein_label: RNA annealing protein YRA1
+    gene_symbol: YRA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene YRA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q12159
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q12159, the single reviewed entry
+        for gene YRA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -434,4 +471,18 @@ curation_history:
   changes: Initial curation of transcription export complex (GO:0000346) in category
     OTHER with verified GO hierarchy, components, UniProtKB protein examples, causal
     mechanism graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:14:16Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 1 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T07:27:48Z'
+  curator: uniprot-protein-examples-skill
+  action: CURATED_PROTEIN_EXAMPLES
+  changes: Added source-backed gene_symbols (SUB2, YRA1) and reviewed Saccharomyces
+    cerevisiae S288C protein_examples UniProtKB:Q07478 (SUB2) and UniProtKB:Q12159
+    (YRA1) to sub2_yra1_mrna_export_module.
   llm_assisted: true

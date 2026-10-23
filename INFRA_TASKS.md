@@ -42,6 +42,10 @@ tasks:
     summary: Add causal-graph completeness checks in src/cellstructuremech/validation/validator.py for isolated CausalNode entries with zero incident edges and CausalEdge items lacking description
     status: note
     disposition: Discovered during Cycle 1 Stage 2 (causal_graphs) whole-corpus audit (17 records with isolated nodes, 9 records with 44 description-less edges); queued for Stage 6 infrastructure implementation.
+  - task_id: cellstructuremech-infra-0003
+    summary: Allow scripts/uniprot_genes.py seeding mode to inspect components of any component_type that declare gene_symbols when --include-complexes is passed
+    status: note
+    disposition: Discovered during Cycle 1 Stage 3 (protein_examples) audit where OTHER components with declared gene_symbols referenced by GENE_OR_PROTEIN causal-graph nodes (centromeric_cse4_nucleosome in kinetochore.yaml and eif3_40s_translation_initiation_cohort in cytoplasmic_stress_granule.yaml) were skipped by seed_records; queued for Stage 6 infrastructure implementation.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -66,4 +70,14 @@ tasks:
 - **Observation**: `src/cellstructuremech/validation/validator.py` (`validate_causal_graphs`) validates `CausalEdge.subject`/`object` node references, `component_ref`, and `attaches_to` anchors, but does not check whether a declared `CausalNode` has zero incident `CausalEdge` items or whether a `CausalEdge` omits `description`. During the Stage 2 whole-corpus audit across 978 records, 17 records contained isolated `CausalNode` entries and 9 records contained 44 `CausalEdge` items lacking `description` despite passing `scripts/validate_strict.py` and `write_validated_structure`.
 - **Desired outcome**: Add validation checks in `src/cellstructuremech/validation/validator.py` (`validate_causal_graphs`) to flag isolated `CausalNode` entries (zero incident edges in `edges`) and `CausalEdge` entries with missing/blank `description`.
 - **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `scripts/validate_structures.py`
+
+### `cellstructuremech-infra-0003` — Allow `scripts/uniprot_genes.py` seeding mode to inspect components of any `component_type` that declare `gene_symbols` when `--include-complexes` is passed
+
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 3 (`protein_examples`)
+- **Status**: `note` (pending issue creation/triage in Stage 6)
+- **Priority**: P2
+- **Dependencies**: None
+- **Observation**: In `scripts/uniprot_genes.py`, `verify_records` checks `protein_examples` across all components regardless of `component_type`, whereas `seed_records` restricts seeding to `allowed_types = {"PROTEIN", "PROTEIN_COMPLEX"} if include_complexes else {"PROTEIN"}` (`scripts/uniprot_genes.py` line 675). Consequently, composite nucleoprotein or ribonucleoprotein components typed `OTHER` that legitimately declare `gene_symbols` and are referenced by `GENE_OR_PROTEIN` causal-graph nodes (`centromeric_cse4_nucleosome` with `CSE4` in `data/structures/other/kinetochore.yaml` and `eif3_40s_translation_initiation_cohort` with `TIF32` in `data/structures/ribonucleoprotein/cytoplasmic_stress_granule.yaml`) are silently skipped by `scripts/uniprot_genes.py --include-complexes`.
+- **Desired outcome**: Allow `scripts/uniprot_genes.py` (`seed_records`) to seed `protein_examples` on any component with non-empty `gene_symbols` when `--include-complexes` (or an explicit `--include-non-protein` flag) is passed, while preserving `component_type`.
+- **Evidence paths**: `scripts/uniprot_genes.py`, `data/structures/other/kinetochore.yaml`, `data/structures/ribonucleoprotein/cytoplasmic_stress_granule.yaml`
 

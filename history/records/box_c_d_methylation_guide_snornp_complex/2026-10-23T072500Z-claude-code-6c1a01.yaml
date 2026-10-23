@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.yaml
+  slug: box_c_d_methylation_guide_snornp_complex
+session:
+  id: 2026-10-23T072500Z-claude-code-6c1a01
+  timestamp: '2026-10-23T07:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: uniprot-protein-examples
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Seeded 4 reviewed Saccharomyces cerevisiae S288C protein_examples (NOP1, NOP56,
+    NOP58, SNU13) on nop1_nop56_nop58_snu13_protein_core
+  details: Resolved declared subunit symbols NOP1, NOP56, NOP58, and SNU13 on PROTEIN_COMPLEX
+    component nop1_nop56_nop58_snu13_protein_core to reviewed UniProtKB entries P15646, Q12460,
+    Q12499, and P39990 in Saccharomyces cerevisiae S288C (NCBITaxon:559292) via scripts/uniprot_genes.py
+    --include-complexes.

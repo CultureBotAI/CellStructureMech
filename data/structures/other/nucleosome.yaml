@@ -85,6 +85,38 @@ components:
         for gene HHT1 in Saccharomyces cerevisiae S288C. Establishes the accession
         and gene identity only; the component's membership in this structure rests
         on the record's own sources.
+  - uniprot_id: UniProtKB:P04911
+    protein_label: Histone H2A.1
+    gene_symbol: HTA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene HTA1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P04911
+      notes: UniProtKB reviewed (Swiss-Prot) entry P04911, the single reviewed entry
+        for gene HTA1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P02293
+    protein_label: Histone H2B.1
+    gene_symbol: HTB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene HTB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P02293
+      notes: UniProtKB reviewed (Swiss-Prot) entry P02293, the single reviewed entry
+        for gene HTB1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
@@ -210,3 +242,10 @@ curation_history:
     GO hierarchy, components, UniProtKB protein examples, causal mechanism graph,
     and literature evidence.
   llm_assisted: true
+- timestamp: '2026-10-23T07:19:01Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 2 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
