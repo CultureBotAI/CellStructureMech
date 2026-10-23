@@ -491,9 +491,54 @@ def test_include_complexes_reaches_protein_complex_components_with_symbols(fake_
     doc = _doc([
         {"component_id": "ring", "component_type": "PROTEIN_COMPLEX", "gene_symbols": ["fliF"]},
         {"component_id": "hook", "component_type": "PROTEIN", "gene_symbols": ["flgE"]},
+        {"component_id": "nucleosome", "component_type": "OTHER", "gene_symbols": ["CSE4"]},
+        {"component_id": "scaffold_region", "component_type": "OTHER", "label": "untyped region"},
+        {"component_id": "rrna", "component_type": "RNA", "gene_symbols": ["rrs"]},
     ])
     assert [c["component_id"] for c in G.candidates(doc)] == ["hook"]
-    assert [c["component_id"] for c in G.candidates(doc, include_complexes=True)] == ["ring", "hook"]
+    assert [c["component_id"] for c in G.candidates(doc, include_complexes=True)] == [
+        "ring",
+        "hook",
+        "nucleosome",
+    ]
+    assert [
+        c["component_id"]
+        for c in G.candidates(doc, include_complexes=True, include_non_protein=True)
+    ] == ["ring", "hook", "nucleosome", "rrna"]
+
+
+def test_seed_records_applies_to_other_components_with_gene_symbols_when_include_complexes(
+    fake_search, monkeypatch, tmp_path
+):
+    fake_search[("CSE4", 559292)] = [
+        entry("P36012", ["CSE4"], 559292, organism="Saccharomyces cerevisiae S288C", label="Histone H3-like")
+    ]
+    monkeypatch.setattr(G, "pubmed_citations", lambda pmids: {})
+    monkeypatch.setattr(G, "ncbi_taxon_names", lambda tids: {"559292": "Saccharomyces cerevisiae S288C"})
+    written_paths = []
+    monkeypatch.setattr(G, "_write", lambda d, p: written_paths.append(p))
+
+    doc = {
+        "identifier": "GO:0000776",
+        "canonical_examples": [
+            {"taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae S288C"}
+        ],
+        "components": [
+            {
+                "component_id": "centromeric_cse4_nucleosome",
+                "component_type": "OTHER",
+                "gene_symbols": ["CSE4"],
+            }
+        ],
+    }
+    rec_path = tmp_path / "kinetochore.yaml"
+    assert G.seed_records([(rec_path, doc)], include_complexes=False, apply=True, today="2026-10-23") == 0
+    assert "protein_examples" not in doc["components"][0]
+
+    added = G.seed_records([(rec_path, doc)], include_complexes=True, apply=True, today="2026-10-23")
+    assert added == 1
+    assert written_paths == [rec_path]
+    assert doc["components"][0]["protein_examples"][0]["uniprot_id"] == "UniProtKB:P36012"
 
 
 def test_causal_graph_report_classifies_gene_or_protein_nodes():

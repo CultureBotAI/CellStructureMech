@@ -5,6 +5,10 @@ from __future__ import annotations
 import hashlib
 from collections import Counter
 
+from cellstructuremech.validation.validator import (
+    validate_causal_graphs,
+    validate_discussion_issue_links,
+)
 from cellstructuremech.validation.write_validated import validate_structure
 from scripts.corpus import record_path
 
@@ -62,6 +66,27 @@ def test_graph_node_component_refs_resolve(records):
                 if ref and ref not in comp_ids:
                     bad.append(f"{path.name}:{g['graph_id']}:{n['node_id']}->{ref}")
     assert not bad, f"component_ref pointing at no component: {bad}"
+
+
+def test_causal_graphs_have_no_isolated_nodes_or_undescribed_edges(records):
+    """Every CausalNode participates in at least one directed edge and every
+    CausalEdge carries a non-empty mechanistic description (#2408)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_causal_graphs(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"causal graph completeness violations: {bad}"
+
+
+def test_discussions_referencing_issues_carry_structured_issue_links(records):
+    """Any `#NNN` issue mention in `discussions` prose (`prompt`, `rationale`,
+    `resolution_note`) must be backed by a structured GitHub issue URL in
+    `discussions[].evidence` (#2410)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_discussion_issue_links(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"discussion prose issue mentions missing structured issue links: {bad}"
 
 
 def test_local_ids_are_unique_within_record(records):
