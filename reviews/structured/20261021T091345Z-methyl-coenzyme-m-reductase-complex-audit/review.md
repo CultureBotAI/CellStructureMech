@@ -1,0 +1,848 @@
+# Methyl coenzyme M reductase complex source audit
+
+- Review: 20261021T091345Z-methyl-coenzyme-m-reductase-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T08:50:00Z
+- Finished UTC: 2026-10-21T09:13:45Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The MCR identity, alpha2 beta2 gamma2 composition, exact family/protein mappings and net reaction are supported; no concrete correction established.
+
+## Scope And Provenance
+
+Entire record reviewed against native GO, InterPro, taxonomy, PDB, UniProt and primary MCR text.
+
+Selection: Batch14 strict path-order target1; one maintained record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0044674 | data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml | maintained | methyl coenzyme M reductase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native read-only protein verify | passed | True | GO:0044674 | Native command passed; role-level biological interpretation was checked separately. |
+| Native read-only protein causal-graphs | passed | True | GO:0044674 | Native command passed; role-level biological interpretation was checked separately. |
+| Focused native schema | passed | True | GO:0044674 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0044674 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0044674 | 11 identifiers OK; 3 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | GO:0044674 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0044674 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0044674 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0044674 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0044674 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0044674 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Exact complex and parent
+
+identity: supported. Targets: GO:0044674.
+
+GO, the primary text and deposited biological assembly converge on one hexameric MCR complex. Transferase parentage is native GO rather than an inference from historical oxidoreductase terminology.
+
+### Three exact families, two copies each
+
+quantity: supported. Targets: GO:0044674.
+
+The alpha/beta/gamma families and two copies of each are directly grounded. The paper places active-site residues across subunit interfaces; this establishes canonical composition and catalytic architecture, not a depletion test of assembly necessity.
+
+### Assembly necessity remains untested by these sources
+
+scope: unknown. Targets: GO:0044674.
+
+ESSENTIAL retains the schema meaning of assembly necessity. The inspected intact hexamer, family annotations and cross-subunit active-site architecture do not directly test assembly after removal of each subunit. This review does not redefine essentiality as membership, catalysis or viability and has not independently established a contradictory assembly experiment.
+
+### Exact reviewed examples and source strain
+
+grounding: supported. Targets: GO:0044674.
+
+All three named genes resolve uniquely within the bounded reviewed Marburg query. Taxon aliases and PDB source agree. Localization citations describe the assembled MCR antigen under explicit growth conditions and are not used as sole membership proof.
+
+### Net reaction and all eight graph edges
+
+graph: supported. Targets: GO:0044674.
+
+GO0050524 supports both substrates and both products; family contributions are contributions to the whole enzyme. The NONMECHANISTIC graph does not assert observed radical intermediates, active-state crystallography or direct catalysis by individual subunits.
+
+### Bounded complex representation
+
+completeness: supported. Targets: GO:0044674.
+
+Three defining protein classes, stoichiometry, verified example and net function are represented. The F430 cofactor and detailed chemistry are explicitly outside graph scope; no optional inventory or new property/image row is required merely to fill a slot. No transcriptomic claim calls for iModulonDB.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml; Entire maintained YAML, including history, nested evidence, all components/examples, graph and discussions | context_only | The entire exact target was read before assessment; source.inputs hashes bind this review. No scientific record edits were made. |
+| policy | docs/CURATION.md; Components; evidence and essentiality rules | context_only | Components are taxon-agnostic classes; examples require exact gene and taxon identity. Essentiality concerns assembly, not cell viability or catalytic activity. Optional fields do not automatically require population. |
+| protein-policy | .claude/skills/uniprot-protein-examples/SKILL.md; Rules 2–5; ORF-only identifiers and literature-symbol mapping | context_only | An ORF token is permitted as gene_symbol, but the literature-symbol mapping in role still requires verification. A matching accession and ORF do not by themselves establish exact orthology or membership. |
+| protein-verify | /private/tmp/cellstructure-batch14-20261021-g0felisv/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml --verify; /private/tmp/cellstructure-batch14-20261021-g0felisv/mcr-agent/native-verify.log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| protein-causal-graphs | /private/tmp/cellstructure-batch14-20261021-g0felisv/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml --causal-graphs; /private/tmp/cellstructure-batch14-20261021-g0felisv/mcr-agent/native-causal-graphs.log | supports | data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml  (GO:0044674)<br>  methyl_coenzyme_m_reduction_to_methane	mcr_alpha_subunit	COVERED	-&gt;mcr_alpha_subunit (UniProtKB:P11558)<br>  methyl_coenzyme_m_reduction_to_methane	mcr_beta_subunit	COVERED	-&gt;mcr_beta_subunit (UniProtKB:P11560)<br>  methyl_coenzyme_m_reduction_to_methane	mcr_gamma_subunit	COVERED	-&gt;mcr_gamma_subunit (UniProtKB:P11562)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     3  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     3  total GENE_OR_PROTEIN causal nodes |
+| mcr-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0044674,GO:1990234,GO:0050524; results GO:0044674, GO:1990234 children is_a GO:0044674, GO:0050524 definition/EC/RHEA | supports | Native GO identifies the alpha2 beta2 gamma2 complex, its direct transferase-complex parent and the net coenzyme-B sulfoethylthiotransferase reaction. |
+| mcr-agent-tax-79929 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/79929; scientificName, rank, otherNames | supports | Taxon79929 is the Marburg strain; historical Methanobacterium thermoautotrophicum/DSM2133 names are compatible. |
+| mcr-agent-IPR016212 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016212/; metadata accession/name/type/description/go_terms | supports | Native InterPro family identity matches the named MCR subunit and carries GO:0050524; this is family annotation, not isolated-subunit catalysis. |
+| mcr-agent-IPR003179 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003179/; metadata accession/name/type/description/go_terms | supports | Native InterPro family identity matches the named MCR subunit and carries GO:0050524; this is family annotation, not isolated-subunit catalysis. |
+| mcr-agent-IPR003178 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003178/; metadata accession/name/type/description/go_terms | supports | Native InterPro family identity matches the named MCR subunit and carries GO:0050524; this is family annotation, not isolated-subunit catalysis. |
+| mcr-agent-pdb-1mro | https://data.rcsb.org/rest/v1/core/entry/1MRO; struct, rcsb_primary_citation, rcsb_entry_info | supports | Native deposited MCR structure identifies source/citation and inactive ox-silent substrate-complex context; current resolution1.16Å differs from original publication1.45Å without conflicting with any target resolution claim. |
+| mcr-agent-pdb-1mro-assembly1 | https://data.rcsb.org/rest/v1/core/assembly/1MRO/1; pdbx_struct_assembly oligomeric_count; assembly identifiers | supports | Biological assembly1 is a six-chain heterohexamer. |
+| mcr-agent-pdb-1mro-entity1 | https://data.rcsb.org/rest/v1/core/polymer_entity/1MRO/1; entity_src_nat, rcsb_polymer_entity_container_identifiers, pdbx_number_of_molecules | supports | Alpha entity1 maps P11558, Marburg79929, chainsA/D, two copies. |
+| mcr-agent-pdb-1mro-entity2 | https://data.rcsb.org/rest/v1/core/polymer_entity/1MRO/2; entity_src_nat, rcsb_polymer_entity_container_identifiers, pdbx_number_of_molecules | supports | Beta entity2 maps P11560, Marburg79929, chainsB/E, two copies. |
+| mcr-agent-pdb-1mro-entity3 | https://data.rcsb.org/rest/v1/core/polymer_entity/1MRO/3; entity_src_nat, rcsb_polymer_entity_container_identifiers, pdbx_number_of_molecules | supports | Gamma entity3 maps P11562, Marburg79929, chainsC/F, two copies. |
+| mcr-agent-P11558 | https://rest.uniprot.org/uniprotkb/P11558.json; primaryAccession, entryType, genes, organism, proteinDescription, SUBUNIT and SUBCELLULAR LOCATION comments | supports | Reviewed exact MCR I subunit/gene/taxon identity and experimental cytoplasm citation23533332 verified. Native note allows enhanced membrane proximity under nickel-limited growth. |
+| mcr-agent-P11560 | https://rest.uniprot.org/uniprotkb/P11560.json; primaryAccession, entryType, genes, organism, proteinDescription, SUBUNIT and SUBCELLULAR LOCATION comments | supports | Reviewed exact MCR I subunit/gene/taxon identity and experimental cytoplasm citation23533332 verified. Native note allows enhanced membrane proximity under nickel-limited growth. |
+| mcr-agent-P11562 | https://rest.uniprot.org/uniprotkb/P11562.json; primaryAccession, entryType, genes, organism, proteinDescription, SUBUNIT and SUBCELLULAR LOCATION comments | supports | Reviewed exact MCR I subunit/gene/taxon identity and experimental cytoplasm citation23533332 verified. Native note allows enhanced membrane proximity under nickel-limited growth. |
+| mcr-agent-uniprot-unique | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue%20AND%20taxonomy_id%3A79929%20AND%20%28gene_exact%3AmcrA%20OR%20gene_exact%3AmcrB%20OR%20gene_exact%3AmcrG%29&amp;format=json&amp;size=100; Complete bounded query response; inspect metadata total-results and pagination | supports | The bounded reviewed Marburg mcrA/B/G query returns exactly P11558/P11560/P11562 (3 total, no next-page link). |
+| mcr-agent-wrede2013-jats | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3596918/fullTextXML; Abstract; Methods DSM2133/isoenzymeI serum and25nm marker criterion; Table1; Results/Discussion; Fig3 legend | supports | Primary immunolocalization shows cytoplasmic MCR under standard conditions and increased membrane proximity under nickel limitation plus levulinic acid; the assay uses MCR polyclonal serum, not independent localization of each isolated subunit. |
+| mcr-ermler-primary-text | https://go.gale.com/ps/i.do?asid=294e1b4d&amp;id=GALE%7CA20105096&amp;it=r&amp;p=AONE&amp;u=googlescholar&amp;v=2.1; Gale primary-article transcription, Full Text paragraphs36–77 and notes12/50; serialized web.run view in mcr-agent/ermler1997-browser.raw, not native HTTP bytes; Table1 and figure images omitted | supports | Primary text supports the six-subunit architecture and net methane-forming reaction. The crystals are inactive ox1-silent/silent states; proposed radical chemistry is not direct observation of active turnover. |
+| mcr-agent-ermler1997-pdf | https://citeseerx.ist.psu.edu/document?doi=b93442d124303508828fcc988451b574967a85e0&amp;repid=rep1&amp;type=pdf; Captured access response only; not article content | context_only | The direct Citeseer PDF attempt returned HTTP404; readable primary transcription was recovered separately and is identified as a browser artifact. |
+| mcr-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A9367957%20OR%20EXT_ID%3A23533332; resultList.result IDs/title/DOI/abstractText | supports | Native primary bibliographic metadata resolves Ermler1997 PMID9367957 and Wrede2013 PMID23533332; full text is supplied separately. |
+| schema-result | just validate data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml |
+| strict-result | just validate-strict data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml --out /private/tmp/cellstructure-batch14-20261021-g0felisv/methyl_coenzyme_m_reductase_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml --out /private/tmp/cellstructure-batch14-20261021-g0felisv/methyl_coenzyme_m_reductase_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch14-20261021-g0felisv/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch14-20261021-g0felisv/methyl_coenzyme_m_reductase_complex-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 11 of14 collected target identifiers returned OK at the unchanged base. Residuals: PDB:1MRO: SKIPPED; resolved by evidence mcr-agent-pdb-1mro; PMID:23533332: UNREACHABLE; resolved by evidence mcr-agent-epmc; PMID:9367957: UNREACHABLE; resolved by evidence mcr-agent-epmc. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Ermler1997 was read as a primary-text transcription; figure pixels and Table1 were not available in that artifact. The failed direct PDF attempt is retained.
+- The crystallized states are inactive; mechanistic proposals and F430 details are not experimentally resolved by the target graph.
+- Wrede2013 immunolocalizes MCR antigen under specified conditions; it does not independently establish each isolated subunit localization or universal membrane exclusion.
+- The intact hexamer and cross-subunit active-site architecture establish canonical composition; they are not depletion/reconstitution tests of assembly necessity for isolated subunits. Essentiality is not inferred from catalytic activity or cell viability.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T091345Z-methyl-coenzyme-m-reductase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Methyl coenzyme M reductase complex source audit
+started_at: '2026-10-21T08:50:00Z'
+finished_at: '2026-10-21T09:13:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The MCR identity, alpha2 beta2 gamma2 composition, exact family/protein mappings
+  and net reaction are supported; no concrete correction established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    sha256: ef43ab9df3e0a3d8ed86e0347c9801db59ced9efd1d0313f8ab2a9b3b1420338
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0044674
+  path: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+  label: methyl coenzyme M reductase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Entire record reviewed against native GO, InterPro, taxonomy, PDB,
+    UniProt and primary MCR text.
+  selection: Batch14 strict path-order target1; one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0044674
+checks:
+- check_id: protein-verify
+  name: Native read-only protein verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  command: /private/tmp/cellstructure-batch14-20261021-g0felisv/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native command passed; role-level biological interpretation was checked
+    separately.
+  evidence_ids:
+  - protein-verify
+- check_id: protein-causal-graphs
+  name: Native read-only protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  command: /private/tmp/cellstructure-batch14-20261021-g0felisv/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native command passed; role-level biological interpretation was checked
+    separately.
+  evidence_ids:
+  - protein-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  command: just validate data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  command: just validate-strict data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    --out /private/tmp/cellstructure-batch14-20261021-g0felisv/methyl_coenzyme_m_reductase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  summary: 11 identifiers OK; 3 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - mcr-agent-pdb-1mro
+  - mcr-agent-epmc
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - protein-policy
+  - mcr-agent-go
+  - mcr-agent-tax-79929
+  - mcr-agent-IPR016212
+  - mcr-agent-IPR003179
+  - mcr-agent-IPR003178
+  - mcr-agent-pdb-1mro
+  - mcr-agent-pdb-1mro-assembly1
+  - mcr-agent-pdb-1mro-entity1
+  - mcr-agent-pdb-1mro-entity2
+  - mcr-agent-pdb-1mro-entity3
+  - mcr-agent-P11558
+  - mcr-agent-P11560
+  - mcr-agent-P11562
+  - mcr-agent-uniprot-unique
+  - mcr-agent-wrede2013-jats
+  - mcr-ermler-primary-text
+  - mcr-agent-ermler1997-pdf
+  - mcr-agent-epmc
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044674
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+  locator: Entire maintained YAML, including history, nested evidence, all components/examples,
+    graph and discussions
+  accessed_at: '2026-10-21T09:02:01Z'
+  support: context_only
+  summary: The entire exact target was read before assessment; source.inputs hashes
+    bind this review. No scientific record edits were made.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components; evidence and essentiality rules
+  accessed_at: '2026-10-21T09:02:01Z'
+  support: context_only
+  summary: Components are taxon-agnostic classes; examples require exact gene and
+    taxon identity. Essentiality concerns assembly, not cell viability or catalytic
+    activity. Optional fields do not automatically require population.
+- evidence_id: protein-policy
+  kind: record_content
+  reference: .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Rules 2–5; ORF-only identifiers and literature-symbol mapping
+  accessed_at: '2026-10-21T09:02:01Z'
+  support: context_only
+  summary: An ORF token is permitted as gene_symbol, but the literature-symbol mapping
+    in role still requires verification. A matching accession and ORF do not by themselves
+    establish exact orthology or membership.
+- evidence_id: protein-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch14-20261021-g0felisv/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    --verify
+  locator: /private/tmp/cellstructure-batch14-20261021-g0felisv/mcr-agent/native-verify.log
+  accessed_at: '2026-10-21T08:57:02.742444Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: protein-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch14-20261021-g0felisv/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    --causal-graphs
+  locator: /private/tmp/cellstructure-batch14-20261021-g0felisv/mcr-agent/native-causal-graphs.log
+  accessed_at: '2026-10-21T08:57:03.375789Z'
+  support: supports
+  summary: "data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml\
+    \  (GO:0044674)\n  methyl_coenzyme_m_reduction_to_methane\tmcr_alpha_subunit\t\
+    COVERED\t->mcr_alpha_subunit (UniProtKB:P11558)\n  methyl_coenzyme_m_reduction_to_methane\t\
+    mcr_beta_subunit\tCOVERED\t->mcr_beta_subunit (UniProtKB:P11560)\n  methyl_coenzyme_m_reduction_to_methane\t\
+    mcr_gamma_subunit\tCOVERED\t->mcr_gamma_subunit (UniProtKB:P11562)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     3  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     3  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 8076de7f3af7f26f94f4ebdd894d164d3ffff744f5afc092ba8cd60e97cc1798
+- evidence_id: mcr-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0044674,GO:1990234,GO:0050524
+  locator: results GO:0044674, GO:1990234 children is_a GO:0044674, GO:0050524 definition/EC/RHEA
+  accessed_at: '2026-10-21T08:50:43.942412Z'
+  support: supports
+  summary: Native GO identifies the alpha2 beta2 gamma2 complex, its direct transferase-complex
+    parent and the net coenzyme-B sulfoethylthiotransferase reaction.
+  snapshot_sha256: 66c04b751e4d3928e4df616e36a07256f2031bb160f7b1f3ef5a1480db2e7208
+- evidence_id: mcr-agent-tax-79929
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/79929
+  locator: scientificName, rank, otherNames
+  accessed_at: '2026-10-21T08:50:43.943048Z'
+  support: supports
+  summary: Taxon79929 is the Marburg strain; historical Methanobacterium thermoautotrophicum/DSM2133
+    names are compatible.
+  snapshot_sha256: c523c797d7333f99abc7a89439b81df8e7efa5fd247d757cf6d7609c64fc3eda
+- evidence_id: mcr-agent-IPR016212
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016212/
+  locator: metadata accession/name/type/description/go_terms
+  accessed_at: '2026-10-21T08:50:44.046043Z'
+  support: supports
+  summary: Native InterPro family identity matches the named MCR subunit and carries
+    GO:0050524; this is family annotation, not isolated-subunit catalysis.
+  snapshot_sha256: ad31c23e114a38e4ee38a2a989d209b1fbf6988a16a9ff522fc72ec3cebf4215
+- evidence_id: mcr-agent-IPR003179
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003179/
+  locator: metadata accession/name/type/description/go_terms
+  accessed_at: '2026-10-21T08:50:44.046807Z'
+  support: supports
+  summary: Native InterPro family identity matches the named MCR subunit and carries
+    GO:0050524; this is family annotation, not isolated-subunit catalysis.
+  snapshot_sha256: df4e03d663e0db1ed327e4cef550c892f82f8dcc4dc241591c0f9d735ce43906
+- evidence_id: mcr-agent-IPR003178
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003178/
+  locator: metadata accession/name/type/description/go_terms
+  accessed_at: '2026-10-21T08:50:44.592662Z'
+  support: supports
+  summary: Native InterPro family identity matches the named MCR subunit and carries
+    GO:0050524; this is family annotation, not isolated-subunit catalysis.
+  snapshot_sha256: 238db841c9851499923ea9e44034ae800965432cbdec3bd39deef91e14879263
+- evidence_id: mcr-agent-pdb-1mro
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/1MRO
+  locator: struct, rcsb_primary_citation, rcsb_entry_info
+  accessed_at: '2026-10-21T08:50:43.943263Z'
+  support: supports
+  summary: Native deposited MCR structure identifies source/citation and inactive
+    ox-silent substrate-complex context; current resolution1.16Å differs from original
+    publication1.45Å without conflicting with any target resolution claim.
+  snapshot_sha256: 5807d47fc6fd7be596356718e306c1ee5cdffe4a8125c67051f4bcf57f66b0b3
+- evidence_id: mcr-agent-pdb-1mro-assembly1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/1MRO/1
+  locator: pdbx_struct_assembly oligomeric_count; assembly identifiers
+  accessed_at: '2026-10-21T08:50:43.943796Z'
+  support: supports
+  summary: Biological assembly1 is a six-chain heterohexamer.
+  snapshot_sha256: f75edadb28e52764ac745ae7e46b5f6f75834b3071112adc9aea5f5a6fb3973d
+- evidence_id: mcr-agent-pdb-1mro-entity1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1MRO/1
+  locator: entity_src_nat, rcsb_polymer_entity_container_identifiers, pdbx_number_of_molecules
+  accessed_at: '2026-10-21T08:50:44.713266Z'
+  support: supports
+  summary: Alpha entity1 maps P11558, Marburg79929, chainsA/D, two copies.
+  snapshot_sha256: 0e0489fbc208301ad85b0b0787ba81286d52645e0744a9919676fb3b461b04a9
+- evidence_id: mcr-agent-pdb-1mro-entity2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1MRO/2
+  locator: entity_src_nat, rcsb_polymer_entity_container_identifiers, pdbx_number_of_molecules
+  accessed_at: '2026-10-21T08:50:44.805137Z'
+  support: supports
+  summary: Beta entity2 maps P11560, Marburg79929, chainsB/E, two copies.
+  snapshot_sha256: fa9d58629b9f58853fe35ff34c477b9ecdd8e44022714a4ada024bc8e21be7b6
+- evidence_id: mcr-agent-pdb-1mro-entity3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/1MRO/3
+  locator: entity_src_nat, rcsb_polymer_entity_container_identifiers, pdbx_number_of_molecules
+  accessed_at: '2026-10-21T08:50:45.006647Z'
+  support: supports
+  summary: Gamma entity3 maps P11562, Marburg79929, chainsC/F, two copies.
+  snapshot_sha256: b3a9b16d0226a7f79efbd855fa836f16596ff7dbe0ab2612b926af84cbfd9a06
+- evidence_id: mcr-agent-P11558
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P11558.json
+  locator: primaryAccession, entryType, genes, organism, proteinDescription, SUBUNIT
+    and SUBCELLULAR LOCATION comments
+  accessed_at: '2026-10-21T08:50:44.612894Z'
+  support: supports
+  summary: Reviewed exact MCR I subunit/gene/taxon identity and experimental cytoplasm
+    citation23533332 verified. Native note allows enhanced membrane proximity under
+    nickel-limited growth.
+  snapshot_sha256: a050e39a361a6cc0adbd3444033066d9a325d93ecffe60012d99a731a415e5b1
+- evidence_id: mcr-agent-P11560
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P11560.json
+  locator: primaryAccession, entryType, genes, organism, proteinDescription, SUBUNIT
+    and SUBCELLULAR LOCATION comments
+  accessed_at: '2026-10-21T08:50:44.692599Z'
+  support: supports
+  summary: Reviewed exact MCR I subunit/gene/taxon identity and experimental cytoplasm
+    citation23533332 verified. Native note allows enhanced membrane proximity under
+    nickel-limited growth.
+  snapshot_sha256: 373e288ecb275c113a75ab9ac2cce9c25992366ec8e6db84c1cd3be95b4cd0e9
+- evidence_id: mcr-agent-P11562
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P11562.json
+  locator: primaryAccession, entryType, genes, organism, proteinDescription, SUBUNIT
+    and SUBCELLULAR LOCATION comments
+  accessed_at: '2026-10-21T08:50:44.704988Z'
+  support: supports
+  summary: Reviewed exact MCR I subunit/gene/taxon identity and experimental cytoplasm
+    citation23533332 verified. Native note allows enhanced membrane proximity under
+    nickel-limited growth.
+  snapshot_sha256: a66aa1a2bb69cac4b2faaa70f03d4207ca07d09e3cccf45bce23a4f8890c7384
+- evidence_id: mcr-agent-uniprot-unique
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue%20AND%20taxonomy_id%3A79929%20AND%20%28gene_exact%3AmcrA%20OR%20gene_exact%3AmcrB%20OR%20gene_exact%3AmcrG%29&format=json&size=100
+  locator: Complete bounded query response; inspect metadata total-results and pagination
+  accessed_at: '2026-10-21T08:52:48.354786Z'
+  support: supports
+  summary: The bounded reviewed Marburg mcrA/B/G query returns exactly P11558/P11560/P11562
+    (3 total, no next-page link).
+  snapshot_sha256: 060953d2d172766d47f3f9f19686f761eae33e39be88addb296d3439240ae5c3
+  search_scope: Remote UniProtKB reviewed:true AND taxonomy_id:79929 AND (gene_exact:mcrA
+    OR gene_exact:mcrB OR gene_exact:mcrG), size100; all3 results inspected. Ignored
+    local files are not applicable to this remote query; no wider absence claim.
+- evidence_id: mcr-agent-wrede2013-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3596918/fullTextXML
+  locator: Abstract; Methods DSM2133/isoenzymeI serum and25nm marker criterion; Table1;
+    Results/Discussion; Fig3 legend
+  accessed_at: '2026-10-21T08:52:47.346734Z'
+  support: supports
+  summary: Primary immunolocalization shows cytoplasmic MCR under standard conditions
+    and increased membrane proximity under nickel limitation plus levulinic acid;
+    the assay uses MCR polyclonal serum, not independent localization of each isolated
+    subunit.
+  snapshot_sha256: 54db6f8f1cacc65e7d138456bcd0a5b6a5d4cb0b3bad12f8768eaa03890fded9
+- evidence_id: mcr-ermler-primary-text
+  kind: primary_source
+  reference: https://go.gale.com/ps/i.do?asid=294e1b4d&id=GALE%7CA20105096&it=r&p=AONE&u=googlescholar&v=2.1
+  locator: Gale primary-article transcription, Full Text paragraphs36–77 and notes12/50;
+    serialized web.run view in mcr-agent/ermler1997-browser.raw, not native HTTP bytes;
+    Table1 and figure images omitted
+  accessed_at: '2026-10-21T08:57:11Z'
+  support: supports
+  summary: Primary text supports the six-subunit architecture and net methane-forming
+    reaction. The crystals are inactive ox1-silent/silent states; proposed radical
+    chemistry is not direct observation of active turnover.
+  snapshot_sha256: 41ab302abce6cb8f529458fbe1b51dde8cd4e0f1eb5118f055fe871d3be44084
+- evidence_id: mcr-agent-ermler1997-pdf
+  kind: authority
+  reference: https://citeseerx.ist.psu.edu/document?doi=b93442d124303508828fcc988451b574967a85e0&repid=rep1&type=pdf
+  locator: Captured access response only; not article content
+  accessed_at: '2026-10-21T08:52:47.345394Z'
+  support: context_only
+  summary: The direct Citeseer PDF attempt returned HTTP404; readable primary transcription
+    was recovered separately and is identified as a browser artifact.
+  snapshot_sha256: 0db85fbbdc7acd5c339db564a61357440786b45b685c81bcfbd62da391d3f268
+- evidence_id: mcr-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A9367957%20OR%20EXT_ID%3A23533332
+  locator: resultList.result IDs/title/DOI/abstractText
+  accessed_at: '2026-10-21T08:50:43.944736Z'
+  support: supports
+  summary: Native primary bibliographic metadata resolves Ermler1997 PMID9367957 and
+    Wrede2013 PMID23533332; full text is supplied separately.
+  snapshot_sha256: 0fe7a61ea1fb1b31112408923937d2d900231ae43ef032000f937edf7eee739f
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:50:05Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml'
+  snapshot_sha256: b2a2e1e0505b919efed05ad27b819b58ae1d65b57923537172c02bcd6290f3b2
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    --out /private/tmp/cellstructure-batch14-20261021-g0felisv/methyl_coenzyme_m_reductase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:50:07Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch14-20261021-g0felisv/methyl_coenzyme_m_reductase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch14-20261021-g0felisv/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch14-20261021-g0felisv/methyl_coenzyme_m_reductase_complex-strict.tsv"
+  snapshot_sha256: aa96a4ca2b0ed6d8a1a3c46154c13c0283094df0639a8cf43ff530311c37ff0b
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml;
+    exact collect() scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T09:02:01Z'
+  support: supports
+  summary: '11 of14 collected target identifiers returned OK at the unchanged base.
+    Residuals: PDB:1MRO: SKIPPED; resolved by evidence mcr-agent-pdb-1mro; PMID:23533332:
+    UNREACHABLE; resolved by evidence mcr-agent-epmc; PMID:9367957: UNREACHABLE; resolved
+    by evidence mcr-agent-epmc. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact complex and parent
+  outcome: supported
+  target_ids:
+  - GO:0044674
+  summary: GO, the primary text and deposited biological assembly converge on one
+    hexameric MCR complex. Transferase parentage is native GO rather than an inference
+    from historical oxidoreductase terminology.
+  evidence_ids:
+  - mcr-agent-go
+  - mcr-ermler-primary-text
+  - mcr-agent-pdb-1mro
+  - mcr-agent-pdb-1mro-assembly1
+- assessment_id: composition
+  area: quantity
+  topic: Three exact families, two copies each
+  outcome: supported
+  target_ids:
+  - GO:0044674
+  summary: The alpha/beta/gamma families and two copies of each are directly grounded.
+    The paper places active-site residues across subunit interfaces; this establishes
+    canonical composition and catalytic architecture, not a depletion test of assembly
+    necessity.
+  evidence_ids:
+  - mcr-agent-IPR016212
+  - mcr-agent-IPR003179
+  - mcr-agent-IPR003178
+  - mcr-agent-pdb-1mro
+  - mcr-agent-pdb-1mro-assembly1
+  - mcr-agent-pdb-1mro-entity1
+  - mcr-agent-pdb-1mro-entity2
+  - mcr-agent-pdb-1mro-entity3
+  - mcr-ermler-primary-text
+- assessment_id: assembly-necessity
+  area: scope
+  topic: Assembly necessity remains untested by these sources
+  outcome: unknown
+  target_ids:
+  - GO:0044674
+  summary: ESSENTIAL retains the schema meaning of assembly necessity. The inspected
+    intact hexamer, family annotations and cross-subunit active-site architecture
+    do not directly test assembly after removal of each subunit. This review does
+    not redefine essentiality as membership, catalysis or viability and has not independently
+    established a contradictory assembly experiment.
+  evidence_ids:
+  - mcr-ermler-primary-text
+  - mcr-agent-pdb-1mro-assembly1
+  - policy
+- assessment_id: proteins
+  area: grounding
+  topic: Exact reviewed examples and source strain
+  outcome: supported
+  target_ids:
+  - GO:0044674
+  summary: All three named genes resolve uniquely within the bounded reviewed Marburg
+    query. Taxon aliases and PDB source agree. Localization citations describe the
+    assembled MCR antigen under explicit growth conditions and are not used as sole
+    membership proof.
+  evidence_ids:
+  - mcr-agent-tax-79929
+  - mcr-agent-uniprot-unique
+  - mcr-agent-wrede2013-jats
+  - protein-verify
+  - mcr-agent-P11558
+  - mcr-agent-P11560
+  - mcr-agent-P11562
+  - mcr-agent-pdb-1mro-entity1
+  - mcr-agent-pdb-1mro-entity2
+  - mcr-agent-pdb-1mro-entity3
+- assessment_id: function
+  area: graph
+  topic: Net reaction and all eight graph edges
+  outcome: supported
+  target_ids:
+  - GO:0044674
+  summary: GO0050524 supports both substrates and both products; family contributions
+    are contributions to the whole enzyme. The NONMECHANISTIC graph does not assert
+    observed radical intermediates, active-state crystallography or direct catalysis
+    by individual subunits.
+  evidence_ids:
+  - mcr-agent-go
+  - mcr-ermler-primary-text
+  - mcr-agent-wrede2013-jats
+  - mcr-agent-IPR016212
+  - mcr-agent-IPR003179
+  - mcr-agent-IPR003178
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded complex representation
+  outcome: supported
+  target_ids:
+  - GO:0044674
+  summary: Three defining protein classes, stoichiometry, verified example and net
+    function are represented. The F430 cofactor and detailed chemistry are explicitly
+    outside graph scope; no optional inventory or new property/image row is required
+    merely to fill a slot. No transcriptomic claim calls for iModulonDB.
+  evidence_ids:
+  - mcr-ermler-primary-text
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- Ermler1997 was read as a primary-text transcription; figure pixels and Table1 were
+  not available in that artifact. The failed direct PDF attempt is retained.
+- The crystallized states are inactive; mechanistic proposals and F430 details are
+  not experimentally resolved by the target graph.
+- Wrede2013 immunolocalizes MCR antigen under specified conditions; it does not independently
+  establish each isolated subunit localization or universal membrane exclusion.
+- The intact hexamer and cross-subunit active-site architecture establish canonical
+  composition; they are not depletion/reconstitution tests of assembly necessity for
+  isolated subunits. Essentiality is not inferred from catalytic activity or cell
+  viability.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```
