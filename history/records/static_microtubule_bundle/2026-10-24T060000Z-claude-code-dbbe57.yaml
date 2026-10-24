@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+  slug: static_microtubule_bundle
+session:
+  id: 2026-10-24T060000Z-claude-code-dbbe57
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added alpha/beta-tubulin heterodimerization edge to static microtubule bundle causal
+    graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added directed edge from alpha_tubulin
+    to beta_tubulin in static_bundle_stabilization.'

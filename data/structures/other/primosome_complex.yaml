@@ -243,6 +243,26 @@ causal_graphs:
     - reference: PMID:8663105
       notes: Tougu and Marians 1996 demonstrated coupled unwinding and RNA primer
         synthesis by the primosome.
+  - subject: replicative_dna_helicase
+    predicate: unwinds
+    object: template_dna
+    description: The hexameric replicative DNA helicase (DnaB) translocates along
+      the lagging-strand template to unwind duplex DNA ahead of primer synthesis.
+    evidence:
+    - reference: GO:1990077
+    - reference: PMID:8663105
+      notes: Reconstitution of E. coli primosome assembly and DnaB helicase translocation
+        on template DNA.
+  - subject: replicative_dna_helicase
+    predicate: recruits
+    object: dna_primase
+    description: The translocating DnaB replicative helicase transiently recruits
+      DnaG primase to initiate distributive synthesis of short RNA primers on the
+      unwound single-stranded DNA template.
+    evidence:
+    - reference: PMID:8663105
+      notes: Demonstrates DnaB-dependent recruitment of DnaG primase for primer synthesis
+        within the primosome.
 curation_history:
 - timestamp: '2026-10-24T03:15:00Z'
   curator: add-cell-structure
@@ -250,4 +270,11 @@ curation_history:
   changes: Create new CellStructureRecord GO:1990077 (primosome complex) with verified
     GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
     distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added direct mechanistic edges from replicative_dna_helicase to template_dna
+    (unwinds) and dna_primase (recruits) in primosome_assembly_and_priming (GO:1990077,
+    PMID:8663105).
   llm_assisted: true

@@ -187,6 +187,20 @@ causal_graphs:
     grounding: GO:0046961
   edges:
   - subject: central_rotational_stalk
+    predicate: drives conformational cycling of
+    object: catalytic_hexamer_head
+    description: Rotation of the asymmetric central-stalk axle inside the catalytic
+      hexamer drives sequential open, loose, and tight conformational transitions
+      across the three catalytic nucleotide-binding sites.
+    evidence:
+    - reference: GO:0033178
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      snippet: ATP synthases are rotary molecular motors that couple transmembrane
+        ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis
+        in the soluble F1 sector.
+      notes: Supports rotational driving of catalytic-hexamer conformational cycling
+        by the central stalk.
+  - subject: central_rotational_stalk
     predicate: is part of
     object: catalytic_domain
     description: The central rotational stalk forms the asymmetric rotor shaft inside
@@ -223,4 +237,10 @@ curation_history:
     ATPase complex, catalytic domain) with verified GO identity, source-backed components,
     reviewed UniProtKB protein examples, taxonomic distribution, canonical examples,
     functions, and mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added direct rotary-coupling edge from central_rotational_stalk to catalytic_hexamer_head
+    in catalytic_sector_rotary_catalysis (GO:0033178, DOI:10.1146/annurev-biochem-013118-110903).
   llm_assisted: true

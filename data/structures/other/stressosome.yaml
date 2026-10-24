@@ -34,6 +34,14 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added ASSEMBLY causal graph stressosome_core_and_partner_assembly covering
+    RsbR-RsbS core assembly, RsbT recruitment, and Listeria monocytogenes Prli42 membrane
+    tethering of RsbR (DOI:10.1038/s41467-019-10782-0, DOI:10.1107/S205225251900945X,
+    DOI:10.1038/nmicrobiol.2017.5).
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 components:
@@ -220,6 +228,105 @@ functions:
       ethanol response that remains RsbT dependent. Salt responses were also observed;
       the weak acid-stress response was inconclusive.
 causal_graphs:
+- graph_id: stressosome_core_and_partner_assembly
+  title: Stressosome core assembly and Prli42 membrane tethering
+  description: Assembly of the pseudo-icosahedral RsbR-RsbS core, recruitment of the
+    switch kinase RsbT, and membrane tethering of RsbR by the miniprotein Prli42.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: rsbr
+    label: Stressosome sensor-core protein RsbR
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsbr
+  - node_id: rsbs
+    label: Stressosome scaffold antagonist RsbS
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsbs
+  - node_id: rsbr_rsbs_core
+    label: Pseudo-icosahedral 20-RsbR2:10-RsbS2 stressosome core
+    node_type: STATE
+  - node_id: rsbt
+    label: Serine/threonine protein kinase RsbT
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsbt
+  - node_id: stressosome
+    label: stressosome
+    node_type: STRUCTURE
+    grounding: cellstructuremech:stressosome
+  - node_id: prli42
+    label: Small membrane protein Prli42
+    node_type: GENE_OR_PROTEIN
+    component_ref: prli42
+    grounding: InterPro:IPR049722
+  - node_id: membrane_associated_rsbr
+    label: Membrane-tethered RsbR sensor pool
+    node_type: STATE
+  edges:
+  - subject: rsbr
+    predicate: co-assembles with
+    object: rsbs
+    description: Twenty RsbR dimers and ten RsbS dimers co-assemble via conserved
+      C-terminal STAS domains into the pseudo-icosahedral stressosome core.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-10782-0
+      snippet: The stressosome is a 1.8 MDa cytoplasmic complex that integrates environmental
+        signals to control the general stress response (GSR) in several bacteria.
+      notes: Supports assembly of RsbR and RsbS into the 1.8 MDa stressosome core.
+  - subject: rsbs
+    predicate: forms
+    object: rsbr_rsbs_core
+    description: RsbS and RsbR STAS domains form the 60-protomer pseudo-icosahedral
+      core scaffold displaying 20 sensory N-terminal turrets.
+    evidence:
+    - reference: DOI:10.1107/S205225251900945X
+      snippet: 'The stressosome is a 1.8 MDa complex composed of multiple copies of
+        three proteins: RsbR, RsbS and RsbT.'
+      notes: Supports formation of the multimeric RsbR-RsbS stressosome scaffold.
+  - subject: rsbr_rsbs_core
+    predicate: sequesters
+    object: rsbt
+    description: Unphosphorylated RsbS in the resting RsbR-RsbS core binds up to 20
+      copies of the switch kinase RsbT on the outer surface of the cage.
+    evidence:
+    - reference: DOI:10.1107/S205225251900945X
+      snippet: 'The stressosome is a 1.8 MDa complex composed of multiple copies of
+        three proteins: RsbR, RsbS and RsbT.'
+      notes: Supports recruitment of RsbT to the RsbR-RsbS core to form the resting
+        stressosome.
+  - subject: rsbt
+    predicate: completes assembly of
+    object: stressosome
+    description: Binding of RsbT to the RsbR-RsbS STAS core completes the resting
+      1.8 MDa stressosome signaling complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-10782-0
+      snippet: The stressosome is a 1.8 MDa cytoplasmic complex that integrates environmental
+        signals to control the general stress response (GSR) in several bacteria.
+      notes: Supports assembly of the intact 1.8 MDa RsbR-RsbS-RsbT stressosome complex.
+  - subject: prli42
+    predicate: tethers
+    object: membrane_associated_rsbr
+    description: In Listeria monocytogenes, the 31-residue tail-anchored membrane
+      miniprotein Prli42 interacts with RsbR and tethers a subpopulation of stressosomes
+      to the cytoplasmic membrane during oxidative stress.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2017.5
+      snippet: Here, we characterize the first bacterial tail-anchored membrane protein,
+        Prli42, in the pathogen Listeria monocytogenes and establish that it interacts
+        with the stressosome component RsbR
+      notes: Supports Prli42 binding RsbR and tethering it to the membrane.
+  - subject: rsbr
+    predicate: participates in
+    object: membrane_associated_rsbr
+    description: RsbR binds Prli42 to form a membrane-tethered stressosome sensor
+      pool in Listeria monocytogenes.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2017.5
+      snippet: Here, we characterize the first bacterial tail-anchored membrane protein,
+        Prli42, in the pathogen Listeria monocytogenes and establish that it interacts
+        with the stressosome component RsbR
+      notes: Demonstrates interaction between RsbR and Prli42 at the membrane.
 - graph_id: bacillus_core_independent_response
   title: Bacillus core-independent stress response
   graph_kind: FUNCTION

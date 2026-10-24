@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex.yaml
+  slug: proton_transporting_two_sector_atpase_complex
+session:
+  id: 2026-10-24T060000Z-claude-code-a07e00
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Enriched two-sector ATPase complex causal graph with proton transmembrane transport
+    coupling edges.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added BIOLOGICAL_PROCESS node proton_transmembrane_transport
+    (GO:1902600) and mechanistic edges coupling the proton-transporting and catalytic domains.'
