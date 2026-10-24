@@ -1,0 +1,748 @@
+# Mitotic outer plaque identity, nucleation-site and remodeling-boundary review
+
+- Review: 20261021T074815Z-outer-plaque-of-mitotic-spindle-pole-body-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T07:37:02Z
+- Finished UTC: 2026-10-21T07:48:15Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact mitotic outer-plaque specialization, cytoplasmic nucleation-site topology and budding-yeast scope are supported. The optional constituent inventory remains incomplete; no concrete curation defect was established.
+
+## Scope And Provenance
+
+Entire single target; all asserted native GO, taxon and DOI identities; relevant review body, primary structural context and Knop remodeling experiments; scoped optional native composition candidates.
+
+Selection: Ninth selected unreviewed path in batch nine, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0061499 | data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml | maintained | outer plaque of mitotic spindle pole body |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0061499 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0061499 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0061499 | 6 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0061499 | No transcriptional-regulator or expression-module mechanism is asserted. Structural localization and optional constituent candidates are not inferred from expression modules. |
+| Claim-level scientific review | passed | True | GO:0061499 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0061499 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0061499 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0061499 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0061499 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0061499 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Cytoplasmic plaque and whole-SPB boundary
+
+identity: supported. Targets: GO:0061499.
+
+The definition and general-plaque specialization plus mitotic-SPB parthood agree with GO. Three named plaques and additional intermediate layers are compatible descriptions, not conflicting plaque counts. The target remains a substructure rather than a protein, nucleation complex or membrane region.
+
+### Budding-yeast example and cell-cycle interpretation
+
+scope: supported. Targets: GO:0061499.
+
+The named species is supported without asserting exhaustive fungal distribution. COMMON is qualitative species occurrence, not a measured population fraction. The mitotic specialization follows the mitotic-cell-cycle SPB class; the record supplies no evidence for existence only during M phase. Meiotic Mpc54/Mpc70 components are outside this subtype.
+
+### Cytoplasmic microtubule organization
+
+evidence: supported. Targets: GO:0061499.
+
+The review and corroborating primary structural context support the plaque as the cytoplasmic nucleation-organizing site. This does not mean every plaque protein is an autonomous nucleator or that identical nucleation activity persists after meiotic remodeling.
+
+### Nonmechanistic topology and organization edges
+
+graph: supported. Targets: GO:0061499.
+
+The is-a, parthood and cytoplasmic-microtubule organization edges are supported at their stated descriptive level. GO0005881 denotes the microtubule itself. The graph claims no complete recruitment order, direct protein interaction or fixed molecular stoichiometry.
+
+### Outer plaque, meiotic remodeling and membrane attachment
+
+identity: supported. Targets: GO:0061499.
+
+The record correctly keeps the sporulation-specific remodeled MOP outside the mitotic subtype. Knop primary text supports the remodeling distinction; its membrane-assembly model is not promoted into a mechanism asserted by this target.
+
+### Bounded constituents and acknowledged inventory gap
+
+completeness: supported. Targets: GO:0061499.
+
+Nud1 and Spc72 are supported outer-plaque candidates, while gamma-TuSC is associated nucleation machinery and Cnm67 spans layer connections. Gamma-tubulin/GCP families are partly resolvable; an exact Nud1/Spc72/Cnm67 inventory and family boundary are not settled here. No erroneous accession or universal essentiality is asserted. The optional inventory TODO remains a limitation.
+
+### Source identity, tiers and actual body access
+
+provenance: supported. Targets: GO:0061499.
+
+The principal 2004 citation is a literature review. Viswanath2017 supplies bounded structural context; Knop2000 supplies the primary remodeling boundary. Bibliographic identities and body access are verified without treating review statements as newly reproduced experiments.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml; Entire maintained YAML, including definition, history, species examples, all evidence, graph if present, and discussions | context_only | The complete PROPOSED record was read. Its scope and open composition discussion are assessed separately from optional future enrichment. No scientific content or status is changed. |
+| policy | docs/CURATION.md; Structure identity, hierarchy, component grounding, evidence and scientific-status rules | context_only | Whole structures, substructures, constituent protein families and transient regulatory localization require distinct scope. Empty optional component inventories do not by themselves establish a defect. |
+| mitotic-outer-plaque-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0061499%2CGO%3A0005824%2CGO%3A0044732%2CGO%3A0005881; All four returned definitions, active flags, synonyms where relevant and parent-term child relations | supports | GO0061499 is the active mitotic outer-plaque class, with is-a parent GO0005824 and parthood in GO0044732. GO0005881 is the exact cytoplasmic-microtubule identity used in the graph. |
+| mitotic-outer-plaque-agent-taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; taxId, scientificName, rank and lineage | supports | ENA confirms Saccharomyces cerevisiae, NCBITaxon4932, at species rank. |
+| mitotic-outer-plaque-agent-strain | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; taxId, scientificName and strain rank; original retrieval timestamp retained | context_only | Native candidate protein entries use S. cerevisiae S288C, NCBITaxon559292. This strain context is narrower than the species example in the target. |
+| mitotic-outer-plaque-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:10899120%20OR%20EXT_ID:15473833%20OR%20EXT_ID:28814505&amp;format=json&amp;resultType=core; All three returned title, author, DOI, PMID, year and journal records | supports | Native metadata verifies Jaspersen/Winey2004 DOI10.1146/annurev.cellbio.20.022003.114106 / PMID15473833; Knop/Strasser2000 DOI10.1093/emboj/19.14.3657 / PMID10899120; and corroborating Viswanath2017 DOI10.1091/mbc.E17-06-0397 / PMID28814505. |
+| mitotic-outer-plaque-agent-jaspersen-browser | https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function; Public author-manuscript pp5-6, pp9-10 Core SPB and pp12-13 Meiotic SPBs; browser access2026-10-21T07:24:18Z to07:24:19Z. Serialized extracted manuscript text, not native PDF bytes; literature-review tier. | supports | The cited review places the outer plaque in the cytoplasm and describes Nud1/Spc72 with associated gamma-tubulin machinery. Cnm67 connects layers through a spacer architecture. It also describes meiotic replacement of Spc72 by Mpc54/Spo21 and notes strain-dependent viability for cnm67/spc72 deletions. |
+| mitotic-outer-plaque-agent-viswanath2017 | https://pmc-oa-opendata.s3.amazonaws.com/PMC5687031.1/PMC5687031.1.xml; Native JATS Introduction, Figure1 caption and scope of the Results/core model; original receipt retained | supports | The Introduction and Figure1 describe cytoplasmic nucleation through outer-plaque gamma-tubulin complexes anchored by Spc72. The primary integrative modeling concerns the SPB core and does not supply a fully resolved outer-plaque molecular reconstruction. |
+| mitotic-outer-plaque-agent-knop2000-full | https://pmc.ncbi.nlm.nih.gov/articles/PMC313968/?pdf=render; Native PMC313968 HTML, Results sec4 and sec7-sec9; Discussion sec11-sec12; figure legends as text; recovered full article rather than the separately retained failed routes | supports | The primary body distinguishes the meiotic remodeled plaque from the prior cytoplasmic microtubule-organizing surface. Spc72 is removed; Mpc54/Mpc70 support plaque and continuous membrane assembly. Precursor targeting can remain without a mature plaque, and the proposed fusion-machinery explanation is not direct proof of autonomous plaque catalysis. |
+| mitotic-outer-plaque-agent-candidate-proteins | https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A559292%20AND%20%28gene_exact%3ASPC110%20OR%20gene_exact%3ATUB4%20OR%20gene_exact%3ASPC97%20OR%20gene_exact%3ASPC98%20OR%20gene_exact%3ACMD1%20OR%20gene_exact%3ASPC42%20OR%20gene_exact%3ACNM67%20OR%20gene_exact%3ASPC29%20OR%20gene_exact%3ANUD1%20OR%20gene_exact%3ASPC72%29&amp;format=json&amp;size=50; Relevant accession, reviewed status, recommended name, genes, taxon and native cross-references; original receipt retained | context_only | Reviewed S288C entries provide optional Nud1 P32336, Spc72 P39723, Cnm67 P53865, Tub4 P53378, Spc97 P38863 and Spc98 P53540 candidates. Sequence identity does not alone prove layer localization. The historical TRM2/NUD1 alias hit is not adopted as Nud1. |
+| mitotic-outer-plaque-agent-IPR002454 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002454/; Native metadata accession, name, type=family and description | context_only | Gamma tubulin is an appropriate family-level candidate for a separately supported Tub4 component; it does not identify the whole plaque. |
+| mitotic-outer-plaque-agent-IPR007259 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007259/; Native metadata accession, name, type=family and GCP-paralogue description | context_only | Gamma-tubulin complex component protein is broader than any individual Spc97/Spc98 paralog and cannot establish an exact individual family or complete plaque cohort. |
+| mitotic-outer-plaque-agent-IPR021750 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021750/; Native metadata accession, name, type=family and description | context_only | Septation initiation Sid4-like includes Sid4, Ady3 and Cnm67. Its scope is broader than Cnm67 alone and is not an exact Cnm67-specific family mapping. |
+| schema-result | just validate data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/outer_plaque_of_mitotic_spindle_pole_body-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/outer_plaque_of_mitotic_spindle_pole_body-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch9-20261021-t98tzqpa/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch9-20261021-t98tzqpa/outer_plaque_of_mitotic_spindle_pole_body-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml; exact collect() scope; SHA-256 identifies the entire original resolver TSV at /private/tmp/cellstructure-record-reviews-UhRFh7/repo/reports/curie_check.tsv, not derived resolver-slice.json | supports | 6 of 6 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The cited 2004 review was read through browser-extracted author-manuscript text, not verified publisher PDF bytes. Its underlying primary studies were not all independently reread.
+- Primary article text and relevant figure legends were inspected, but microscopy pixels, modeling inputs, movies and all supplements were not independently reanalyzed.
+- The composition TODO remains open. Family-level candidates do not establish a complete plaque inventory, exclusive localization of layer-spanning Cnm67 or universal individual-protein essentiality.
+- The 2017 integrative model addresses the SPB core rather than reconstructing the whole outer plaque. Associated gamma-tubulin machinery is not equivalent to the plaque itself.
+- Knop full body was recovered as genuine PMC313968 HTML. Earlier failed PDF/JATS routes do not represent a remaining absence of full-text evidence.
+- No image, quantitative plaque dimension or fixed molecular copy count is asserted or added by this review.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The explicit user goal requests a review for every selected target, including records without a concrete issue. No finding was invented to satisfy that persistence instruction.
+- Only a review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Parent reviewed the full target, draft, claim-specific source packet, native input/source hashes and selected supporting source sections. Independent source collaborators checked remaining cited sections and source attribution. Parent accepts the bounded assessments before persistence.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T074815Z-outer-plaque-of-mitotic-spindle-pole-body-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mitotic outer plaque identity, nucleation-site and remodeling-boundary review
+started_at: '2026-10-21T07:37:02Z'
+finished_at: '2026-10-21T07:48:15Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact mitotic outer-plaque specialization, cytoplasmic nucleation-site topology
+  and budding-yeast scope are supported. The optional constituent inventory remains
+  incomplete; no concrete curation defect was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+    sha256: 9197bc8f9b1fed339d56314bb682274576fa41bb94b26e2d09823e14a26ec226
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0061499
+  path: data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+  label: outer plaque of mitotic spindle pole body
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target; all asserted native GO, taxon and DOI identities;
+    relevant review body, primary structural context and Knop remodeling experiments;
+    scoped optional native composition candidates.
+  selection: Ninth selected unreviewed path in batch nine, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0061499
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061499
+  command: just validate data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061499
+  command: just validate-strict data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+    --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/outer_plaque_of_mitotic_spindle_pole_body-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061499
+  summary: 6 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0061499
+  summary: No transcriptional-regulator or expression-module mechanism is asserted.
+    Structural localization and optional constituent candidates are not inferred from
+    expression modules.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061499
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - mitotic-outer-plaque-agent-go
+  - mitotic-outer-plaque-agent-taxon
+  - mitotic-outer-plaque-agent-strain
+  - mitotic-outer-plaque-agent-epmc
+  - mitotic-outer-plaque-agent-jaspersen-browser
+  - mitotic-outer-plaque-agent-viswanath2017
+  - mitotic-outer-plaque-agent-knop2000-full
+  - mitotic-outer-plaque-agent-candidate-proteins
+  - mitotic-outer-plaque-agent-IPR002454
+  - mitotic-outer-plaque-agent-IPR007259
+  - mitotic-outer-plaque-agent-IPR021750
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061499
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061499
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061499
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061499
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061499
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+  locator: Entire maintained YAML, including definition, history, species examples,
+    all evidence, graph if present, and discussions
+  accessed_at: '2026-10-21T07:47:08Z'
+  support: context_only
+  summary: The complete PROPOSED record was read. Its scope and open composition discussion
+    are assessed separately from optional future enrichment. No scientific content
+    or status is changed.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Structure identity, hierarchy, component grounding, evidence and scientific-status
+    rules
+  accessed_at: '2026-10-21T07:47:08Z'
+  support: context_only
+  summary: Whole structures, substructures, constituent protein families and transient
+    regulatory localization require distinct scope. Empty optional component inventories
+    do not by themselves establish a defect.
+- evidence_id: mitotic-outer-plaque-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0061499%2CGO%3A0005824%2CGO%3A0044732%2CGO%3A0005881
+  locator: All four returned definitions, active flags, synonyms where relevant and
+    parent-term child relations
+  accessed_at: '2026-10-21T07:36:58.709781Z'
+  support: supports
+  summary: GO0061499 is the active mitotic outer-plaque class, with is-a parent GO0005824
+    and parthood in GO0044732. GO0005881 is the exact cytoplasmic-microtubule identity
+    used in the graph.
+  snapshot_sha256: e417bee78c2a7bc5fa54be56cebb82a642f00cd4441d64e7af28d92542755837
+- evidence_id: mitotic-outer-plaque-agent-taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-21T07:36:58.725684Z'
+  support: supports
+  summary: ENA confirms Saccharomyces cerevisiae, NCBITaxon4932, at species rank.
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: mitotic-outer-plaque-agent-strain
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: taxId, scientificName and strain rank; original retrieval timestamp retained
+  accessed_at: '2026-10-21T07:24:55.988431Z'
+  support: context_only
+  summary: Native candidate protein entries use S. cerevisiae S288C, NCBITaxon559292.
+    This strain context is narrower than the species example in the target.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: mitotic-outer-plaque-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:10899120%20OR%20EXT_ID:15473833%20OR%20EXT_ID:28814505&format=json&resultType=core
+  locator: All three returned title, author, DOI, PMID, year and journal records
+  accessed_at: '2026-10-21T07:37:21.648301Z'
+  support: supports
+  summary: Native metadata verifies Jaspersen/Winey2004 DOI10.1146/annurev.cellbio.20.022003.114106
+    / PMID15473833; Knop/Strasser2000 DOI10.1093/emboj/19.14.3657 / PMID10899120;
+    and corroborating Viswanath2017 DOI10.1091/mbc.E17-06-0397 / PMID28814505.
+  snapshot_sha256: 90a5e7efb7dc487beffe75340c9474e7cf83e3dfc21cb9b45ec0f080e228c486
+- evidence_id: mitotic-outer-plaque-agent-jaspersen-browser
+  kind: authority
+  reference: https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function
+  locator: Public author-manuscript pp5-6, pp9-10 Core SPB and pp12-13 Meiotic SPBs;
+    browser access2026-10-21T07:24:18Z to07:24:19Z. Serialized extracted manuscript
+    text, not native PDF bytes; literature-review tier.
+  accessed_at: '2026-10-21T07:24:18Z'
+  support: supports
+  summary: The cited review places the outer plaque in the cytoplasm and describes
+    Nud1/Spc72 with associated gamma-tubulin machinery. Cnm67 connects layers through
+    a spacer architecture. It also describes meiotic replacement of Spc72 by Mpc54/Spo21
+    and notes strain-dependent viability for cnm67/spc72 deletions.
+  snapshot_sha256: 8aa2398ded5512b2450c936e832c11bc46d77ac317e4c01a2f7a6b9f1a4fce4e
+- evidence_id: mitotic-outer-plaque-agent-viswanath2017
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5687031.1/PMC5687031.1.xml
+  locator: Native JATS Introduction, Figure1 caption and scope of the Results/core
+    model; original receipt retained
+  accessed_at: '2026-10-20T07:38:52.830471Z'
+  support: supports
+  summary: The Introduction and Figure1 describe cytoplasmic nucleation through outer-plaque
+    gamma-tubulin complexes anchored by Spc72. The primary integrative modeling concerns
+    the SPB core and does not supply a fully resolved outer-plaque molecular reconstruction.
+  snapshot_sha256: 004836a027b7fad21def4f6e9eebc94ec5f1e07679d123407a062241f6edb580
+- evidence_id: mitotic-outer-plaque-agent-knop2000-full
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC313968/?pdf=render
+  locator: Native PMC313968 HTML, Results sec4 and sec7-sec9; Discussion sec11-sec12;
+    figure legends as text; recovered full article rather than the separately retained
+    failed routes
+  accessed_at: '2026-10-21T07:37:23.466715Z'
+  support: supports
+  summary: The primary body distinguishes the meiotic remodeled plaque from the prior
+    cytoplasmic microtubule-organizing surface. Spc72 is removed; Mpc54/Mpc70 support
+    plaque and continuous membrane assembly. Precursor targeting can remain without
+    a mature plaque, and the proposed fusion-machinery explanation is not direct proof
+    of autonomous plaque catalysis.
+  snapshot_sha256: 89e24f8eb71ab8a06baee2867ccd1df6f6ac0b12a25289ce4c076cb851e1721c
+- evidence_id: mitotic-outer-plaque-agent-candidate-proteins
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A559292%20AND%20%28gene_exact%3ASPC110%20OR%20gene_exact%3ATUB4%20OR%20gene_exact%3ASPC97%20OR%20gene_exact%3ASPC98%20OR%20gene_exact%3ACMD1%20OR%20gene_exact%3ASPC42%20OR%20gene_exact%3ACNM67%20OR%20gene_exact%3ASPC29%20OR%20gene_exact%3ANUD1%20OR%20gene_exact%3ASPC72%29&format=json&size=50
+  locator: Relevant accession, reviewed status, recommended name, genes, taxon and
+    native cross-references; original receipt retained
+  accessed_at: '2026-10-21T07:24:14.422164Z'
+  support: context_only
+  summary: Reviewed S288C entries provide optional Nud1 P32336, Spc72 P39723, Cnm67
+    P53865, Tub4 P53378, Spc97 P38863 and Spc98 P53540 candidates. Sequence identity
+    does not alone prove layer localization. The historical TRM2/NUD1 alias hit is
+    not adopted as Nud1.
+  snapshot_sha256: 773c38e1acac076de463c8ca995c32fde95d19a569acc8605352db6fa2134126
+- evidence_id: mitotic-outer-plaque-agent-IPR002454
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002454/
+  locator: Native metadata accession, name, type=family and description
+  accessed_at: '2026-10-21T07:24:55.984750Z'
+  support: context_only
+  summary: Gamma tubulin is an appropriate family-level candidate for a separately
+    supported Tub4 component; it does not identify the whole plaque.
+  snapshot_sha256: 0cc07ff810e7acb2b8d24c24597c1bcabf177adb7e06ae6ddfabbb352fe0c668
+- evidence_id: mitotic-outer-plaque-agent-IPR007259
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007259/
+  locator: Native metadata accession, name, type=family and GCP-paralogue description
+  accessed_at: '2026-10-21T07:24:55.983561Z'
+  support: context_only
+  summary: Gamma-tubulin complex component protein is broader than any individual
+    Spc97/Spc98 paralog and cannot establish an exact individual family or complete
+    plaque cohort.
+  snapshot_sha256: 35abdb19f33d76f750dba5e51b97017071754f6c4def2ee06df37f41b461a389
+- evidence_id: mitotic-outer-plaque-agent-IPR021750
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021750/
+  locator: Native metadata accession, name, type=family and description
+  accessed_at: '2026-10-21T07:24:55.986765Z'
+  support: context_only
+  summary: Septation initiation Sid4-like includes Sid4, Ady3 and Cnm67. Its scope
+    is broader than Cnm67 alone and is not an exact Cnm67-specific family mapping.
+  snapshot_sha256: f1fe20d4b8df21ce0b199b723bafd32ae02fce926221a25124470b9b93f07def
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:37:07Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml'
+  snapshot_sha256: 496cf1306f74791bb46f8da6052cd553220099c44480de1de8e8d87edbe7ed61
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+    --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/outer_plaque_of_mitotic_spindle_pole_body-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:37:10Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml\
+    \ --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/outer_plaque_of_mitotic_spindle_pole_body-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch9-20261021-t98tzqpa/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch9-20261021-t98tzqpa/outer_plaque_of_mitotic_spindle_pole_body-strict.tsv"
+  snapshot_sha256: c83ed618b8bc647312f5165fafb244ecac2d6a396bac2ac86f4b130b30fba9be
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml;
+    exact collect() scope; SHA-256 identifies the entire original resolver TSV at
+    /private/tmp/cellstructure-record-reviews-UhRFh7/repo/reports/curie_check.tsv,
+    not derived resolver-slice.json
+  accessed_at: '2026-10-21T07:47:08Z'
+  support: supports
+  summary: '6 of 6 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Cytoplasmic plaque and whole-SPB boundary
+  outcome: supported
+  target_ids:
+  - GO:0061499
+  summary: The definition and general-plaque specialization plus mitotic-SPB parthood
+    agree with GO. Three named plaques and additional intermediate layers are compatible
+    descriptions, not conflicting plaque counts. The target remains a substructure
+    rather than a protein, nucleation complex or membrane region.
+  evidence_ids:
+  - mitotic-outer-plaque-agent-go
+  - mitotic-outer-plaque-agent-jaspersen-browser
+  - mitotic-outer-plaque-agent-viswanath2017
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast example and cell-cycle interpretation
+  outcome: supported
+  target_ids:
+  - GO:0061499
+  summary: The named species is supported without asserting exhaustive fungal distribution.
+    COMMON is qualitative species occurrence, not a measured population fraction.
+    The mitotic specialization follows the mitotic-cell-cycle SPB class; the record
+    supplies no evidence for existence only during M phase. Meiotic Mpc54/Mpc70 components
+    are outside this subtype.
+  evidence_ids:
+  - mitotic-outer-plaque-agent-go
+  - mitotic-outer-plaque-agent-taxon
+  - mitotic-outer-plaque-agent-strain
+  - mitotic-outer-plaque-agent-jaspersen-browser
+  - mitotic-outer-plaque-agent-knop2000-full
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Cytoplasmic microtubule organization
+  outcome: supported
+  target_ids:
+  - GO:0061499
+  summary: The review and corroborating primary structural context support the plaque
+    as the cytoplasmic nucleation-organizing site. This does not mean every plaque
+    protein is an autonomous nucleator or that identical nucleation activity persists
+    after meiotic remodeling.
+  evidence_ids:
+  - mitotic-outer-plaque-agent-jaspersen-browser
+  - mitotic-outer-plaque-agent-viswanath2017
+  - mitotic-outer-plaque-agent-knop2000-full
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic topology and organization edges
+  outcome: supported
+  target_ids:
+  - GO:0061499
+  summary: The is-a, parthood and cytoplasmic-microtubule organization edges are supported
+    at their stated descriptive level. GO0005881 denotes the microtubule itself. The
+    graph claims no complete recruitment order, direct protein interaction or fixed
+    molecular stoichiometry.
+  evidence_ids:
+  - mitotic-outer-plaque-agent-go
+  - mitotic-outer-plaque-agent-jaspersen-browser
+  - mitotic-outer-plaque-agent-viswanath2017
+  - record
+- assessment_id: remodeling
+  area: identity
+  topic: Outer plaque, meiotic remodeling and membrane attachment
+  outcome: supported
+  target_ids:
+  - GO:0061499
+  summary: The record correctly keeps the sporulation-specific remodeled MOP outside
+    the mitotic subtype. Knop primary text supports the remodeling distinction; its
+    membrane-assembly model is not promoted into a mechanism asserted by this target.
+  evidence_ids:
+  - mitotic-outer-plaque-agent-go
+  - mitotic-outer-plaque-agent-knop2000-full
+  - mitotic-outer-plaque-agent-jaspersen-browser
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: Bounded constituents and acknowledged inventory gap
+  outcome: supported
+  target_ids:
+  - GO:0061499
+  summary: Nud1 and Spc72 are supported outer-plaque candidates, while gamma-TuSC
+    is associated nucleation machinery and Cnm67 spans layer connections. Gamma-tubulin/GCP
+    families are partly resolvable; an exact Nud1/Spc72/Cnm67 inventory and family
+    boundary are not settled here. No erroneous accession or universal essentiality
+    is asserted. The optional inventory TODO remains a limitation.
+  evidence_ids:
+  - mitotic-outer-plaque-agent-candidate-proteins
+  - mitotic-outer-plaque-agent-IPR002454
+  - mitotic-outer-plaque-agent-IPR007259
+  - mitotic-outer-plaque-agent-IPR021750
+  - mitotic-outer-plaque-agent-strain
+  - mitotic-outer-plaque-agent-jaspersen-browser
+  - mitotic-outer-plaque-agent-viswanath2017
+  - record
+  - policy
+- assessment_id: provenance
+  area: provenance
+  topic: Source identity, tiers and actual body access
+  outcome: supported
+  target_ids:
+  - GO:0061499
+  summary: The principal 2004 citation is a literature review. Viswanath2017 supplies
+    bounded structural context; Knop2000 supplies the primary remodeling boundary.
+    Bibliographic identities and body access are verified without treating review
+    statements as newly reproduced experiments.
+  evidence_ids:
+  - mitotic-outer-plaque-agent-epmc
+  - mitotic-outer-plaque-agent-jaspersen-browser
+  - mitotic-outer-plaque-agent-viswanath2017
+  - mitotic-outer-plaque-agent-knop2000-full
+  dimensions:
+  - name: principal_cited_source_type
+    value: Literature review
+    definition: Jaspersen/Winey2004 synthesizes prior studies; primary corroboration
+      is identified separately.
+    evidence_ids:
+    - mitotic-outer-plaque-agent-epmc
+    - mitotic-outer-plaque-agent-jaspersen-browser
+findings: []
+actions: []
+limitations:
+- The cited 2004 review was read through browser-extracted author-manuscript text,
+  not verified publisher PDF bytes. Its underlying primary studies were not all independently
+  reread.
+- Primary article text and relevant figure legends were inspected, but microscopy
+  pixels, modeling inputs, movies and all supplements were not independently reanalyzed.
+- The composition TODO remains open. Family-level candidates do not establish a complete
+  plaque inventory, exclusive localization of layer-spanning Cnm67 or universal individual-protein
+  essentiality.
+- The 2017 integrative model addresses the SPB core rather than reconstructing the
+  whole outer plaque. Associated gamma-tubulin machinery is not equivalent to the
+  plaque itself.
+- Knop full body was recovered as genuine PMC313968 HTML. Earlier failed PDF/JATS
+  routes do not represent a remaining absence of full-text evidence.
+- No image, quantitative plaque dimension or fixed molecular copy count is asserted
+  or added by this review.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The explicit user goal requests a review for every selected target, including records
+  without a concrete issue. No finding was invented to satisfy that persistence instruction.
+- Only a review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+- Parent reviewed the full target, draft, claim-specific source packet, native input/source
+  hashes and selected supporting source sections. Independent source collaborators
+  checked remaining cited sections and source attribution. Parent accepts the bounded
+  assessments before persistence.
+```
