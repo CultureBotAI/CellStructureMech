@@ -68,7 +68,7 @@ components:
         cytoskeleton, actin patch' localisation of P47117.
 - component_id: arc35_arc19_clamp_subunits
   label: Arp2/3 mother-filament clamp heterodimer (Arc35/ARPC2 and Arc19/ARPC4)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - ARC35
@@ -117,7 +117,7 @@ components:
 - component_id: arc40_arc18_arc15_peripheral_subunits
   label: Arp2/3 peripheral regulatory and tethering subunits (Arc40/ARPC1, Arc18/ARPC3,
     Arc15/ARPC5)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - ARC40
@@ -358,4 +358,10 @@ curation_history:
   changes: Initial curation of Arp2/3 protein complex (GO:0005885) in category CYTOSKELETON
     with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
     graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2420: Updated components#arc35_arc19_clamp_subunits, components#arc40_arc18_arc15_peripheral_subunits
+    from component_type PROTEIN to PROTEIN_COMPLEX.'
   llm_assisted: true

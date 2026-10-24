@@ -27,6 +27,7 @@ components:
   gene_symbols:
   - fliC
   - fljB
+  - hag
   stoichiometry: ~20,000 subunits per filament; 11 protofilaments
   essentiality: ESSENTIAL
   role: Polymerises into the helical propeller filament.
@@ -164,6 +165,7 @@ components:
   - fliG
   - fliM
   - fliN
+  - fliY
   essentiality: CONDITIONAL
   role: Cytoplasmic rotor ring; FliG engages the stator and the complex sets rotational
     direction in response to CheY-P. Normally supports assembly; FliI overproduction
@@ -907,6 +909,12 @@ curation_history:
   curator: claude-opus-4-7
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s); removed 2 non-matching protein_example(s).
+  llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2421: Added hag to components#flagellin.gene_symbols and fliY
+    to components#c_ring.gene_symbols to match curated Bacillus subtilis protein_examples.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

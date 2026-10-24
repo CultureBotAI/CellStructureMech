@@ -1,0 +1,54 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 2,
+  "stage": 5,
+  "revision": 1,
+  "source_revision": "99e590eb7afb0e8251f6e81183e59ca1119987b9",
+  "stage4_source_revision": "af168704d9999acd544d1f9434c0e87e3fec349f",
+  "stage4_evidence_sha256": "d82e8d95fbabf37450deff6a3de9169f52b4e6b6af66536d101b5abf3673f945",
+  "remediated_record_count": 19,
+  "findings_consumed": 7,
+  "findings_resolved": 7,
+  "findings_carried_forward": 0,
+  "verification_review_bundle": "reviews/structured/20261024T004000Z-c2-stage5-remediation-verification/review.yaml",
+  "verification_review_sha256": "5514524580af505a0bbb6d81ac038b31d0447995399e5cc019167ce05295de0a",
+  "issues": [
+    {
+      "number": 2419,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2419",
+      "action": "created",
+      "state": "closed",
+      "group_id": "causal-node-subcomplex-structure-typing",
+      "finding_ids": [
+        "clathrin-coat-ap2-adaptor-causal-node-type",
+        "membrane-organelle-subcomplex-causal-node-types"
+      ],
+      "resolution_commit_sha": "99e590eb7afb0e8251f6e81183e59ca1119987b9"
+    },
+    {
+      "number": 2420,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2420",
+      "action": "created",
+      "state": "closed",
+      "group_id": "subcomplex-component-type-protein-complex",
+      "finding_ids": [
+        "cytoskeleton-subcomplex-component-types",
+        "photosystem-reaction-center-core-component-types"
+      ],
+      "resolution_commit_sha": "99e590eb7afb0e8251f6e81183e59ca1119987b9"
+    },
+    {
+      "number": 2421,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2421",
+      "action": "created",
+      "state": "closed",
+      "group_id": "component-gene-symbols-protein-examples-sync",
+      "finding_ids": [
+        "appendage-bacterial-flagellum-gene-symbol-mismatch",
+        "cytoskeleton-fission-yeast-nda2-gene-symbol-omission",
+        "carboxysome-bmc-h-paralogue-gene-symbols"
+      ],
+      "resolution_commit_sha": "99e590eb7afb0e8251f6e81183e59ca1119987b9"
+    }
+  ]
+}

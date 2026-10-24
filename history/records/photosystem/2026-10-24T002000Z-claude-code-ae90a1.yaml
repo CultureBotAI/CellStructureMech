@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/photosystem.yaml
+  slug: photosystem
+session:
+  id: 2026-10-24T002000Z-claude-code-ae90a1
+  timestamp: '2026-10-24T00:20:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2420
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Addressed #2420: Updated components#type_i_reaction_center_core and components#type_ii_reaction_center_core
+    from component_type PROTEIN to PROTEIN_COMPLEX.'
+  details: 'Original finding F1 (photosystem-reaction-center-core-component-types)
+    saved before mutation in reviews/structured/20261023T230504Z-energy-secretion-gpcr-cohorts-review/review.yaml.
+    Addresses #2420.'

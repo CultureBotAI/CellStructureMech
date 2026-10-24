@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 985,
- "corpus_updated": "2026-10-23 21:49:20 UTC",
- "corpus_digest": "108232aff549",
+ "corpus_updated": "2026-10-24 00:20:00 UTC",
+ "corpus_digest": "51f1fccb3cc1",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -3134,7 +3134,8 @@
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "fliC",
-      "fljB"
+      "fljB",
+      "hag"
      ],
      "stoichiometry": "~20,000 subunits per filament; 11 protofilaments",
      "essentiality": "ESSENTIAL",
@@ -3287,7 +3288,8 @@
      "gene_symbols": [
       "fliG",
       "fliM",
-      "fliN"
+      "fliN",
+      "fliY"
      ],
      "essentiality": "CONDITIONAL",
      "role": "Cytoplasmic rotor ring; FliG engages the stator and the complex sets rotational direction in response to CheY-P. Normally supports assembly; FliI overproduction can bypass an intact C ring in engineered Salmonella mutants, producing rare, nonmotile flagella with defective C-ring structures.",
@@ -4149,6 +4151,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s); removed 2 non-matching protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2421: Added hag to components#flagellin.gene_symbols and fliY to components#c_ring.gene_symbols to match curated Bacillus subtilis protein_examples.",
      "llm_assisted": true
     }
    ],
@@ -24610,7 +24619,7 @@
     {
      "component_id": "arc35_arc19_clamp_subunits",
      "label": "Arp2/3 mother-filament clamp heterodimer (Arc35/ARPC2 and Arc19/ARPC4)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "ARC35",
@@ -24666,7 +24675,7 @@
     {
      "component_id": "arc40_arc18_arc15_peripheral_subunits",
      "label": "Arp2/3 peripheral regulatory and tethering subunits (Arc40/ARPC1, Arc18/ARPC3, Arc15/ARPC5)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "ARC40",
@@ -24965,6 +24974,13 @@
      "action": "CREATED",
      "changes": "Initial curation of Arp2/3 protein complex (GO:0005885) in category CYTOSKELETON with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2420: Updated components#arc35_arc19_clamp_subunits, components#arc40_arc18_arc15_peripheral_subunits from component_type PROTEIN to PROTEIN_COMPLEX.",
+     "llm_assisted": true
     }
    ]
   },
@@ -24997,7 +25013,8 @@
      "gene_symbols": [
       "tub1",
       "atb2",
-      "alp2"
+      "alp2",
+      "nda2"
      ],
      "role": "Alpha-tubulin class of the microtubule polymer forming the meiotic radial array.",
      "protein_examples": [
@@ -25266,6 +25283,13 @@
      "action": "CREATED",
      "changes": "Initial curation of aster (GO:0005818) in category CYTOSKELETON with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2421: Added S. pombe alpha-1 tubulin gene symbol nda2 to components#alpha_tubulin.gene_symbols to match UniProtKB:P04688 in protein_examples.",
+     "llm_assisted": true
     }
    ]
   },
@@ -25295,7 +25319,8 @@
      "gene_symbols": [
       "tub1",
       "atb2",
-      "alp2"
+      "alp2",
+      "nda2"
      ],
      "role": "Alpha-tubulin class of the microtubule polymer forming the meiotic radial array. Functions in the radial astral microtubule aster in aster. Functions within the cytoplasmic astral microtubule array radiating from the spindle pole.",
      "protein_examples": [
@@ -25548,6 +25573,13 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of astral microtubule (GO:0000235) in category CYTOSKELETON with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2421: Added S. pombe alpha-1 tubulin gene symbol nda2 to components#alpha_tubulin.gene_symbols to match UniProtKB:P04688 in protein_examples.",
      "llm_assisted": true
     }
    ],
@@ -46278,7 +46310,7 @@
     {
      "component_id": "gcp2_gcp3_spoke_subunits",
      "label": "gamma-tubulin complex spoke scaffold heterodimer (GCP2/Spc97/Alp4 and GCP3/Spc98/Alp6)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "alp4",
@@ -46530,6 +46562,13 @@
      "action": "CURATED_PROTEIN_EXAMPLES",
      "changes": "Added reviewed UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) in Schizosaccharomyces pombe 972h- (NCBITaxon:284812) to gamma_tubulin_subunit, disambiguating gamma-tubulin P25295 from the homonymous ER glucosidase II beta subunit Q9USH8.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2420: Updated components#gcp2_gcp3_spoke_subunits from component_type PROTEIN to PROTEIN_COMPLEX.",
+     "llm_assisted": true
     }
    ]
   },
@@ -46765,7 +46804,7 @@
     {
      "component_id": "mto1_mto2_activating_tether",
      "label": "CM1-motif gamma-TuRC activator complex (Mto1-Mto2)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "ASSOCIATED_MACHINERY",
      "gene_symbols": [
       "mto1",
@@ -47008,6 +47047,13 @@
      "action": "CURATED_PROTEIN_EXAMPLES",
      "changes": "Added reviewed UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) in Schizosaccharomyces pombe 972h- (NCBITaxon:284812) to gamma_tusc_repeating_core, disambiguating gamma-tubulin P25295 from the homonymous ER glucosidase II beta subunit Q9USH8.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2420: Updated components#mto1_mto2_activating_tether from component_type PROTEIN to PROTEIN_COMPLEX.",
+     "llm_assisted": true
     }
    ]
   },
@@ -47089,7 +47135,7 @@
     {
      "component_id": "gcp2_gcp3_spoke_subunits",
      "label": "gamma-tubulin complex spoke scaffold heterodimer (GCP2/Spc97/Alp4 and GCP3/Spc98/Alp6)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "alp4",
@@ -47321,6 +47367,13 @@
      "curator": "uniprot-protein-examples-skill",
      "action": "CURATED_PROTEIN_EXAMPLES",
      "changes": "Added reviewed UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) in Schizosaccharomyces pombe 972h- (NCBITaxon:284812) to gamma_tubulin_subunit, disambiguating gamma-tubulin P25295 from the homonymous ER glucosidase II beta subunit Q9USH8.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2420: Updated components#gcp2_gcp3_spoke_subunits from component_type PROTEIN to PROTEIN_COMPLEX.",
      "llm_assisted": true
     }
    ]
@@ -48359,6 +48412,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2421: Added S. pombe alpha-1 tubulin gene symbol nda2 to components#alpha_tubulin.gene_symbols to match UniProtKB:P04688 in protein_examples.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -48385,7 +48445,8 @@
      "gene_symbols": [
       "tub1",
       "atb2",
-      "alp2"
+      "alp2",
+      "nda2"
      ],
      "role": "Alpha-tubulin class of the microtubule polymer forming the meiotic radial array.",
      "protein_examples": [
@@ -54916,7 +54977,7 @@
     {
      "component_id": "bqt1_bqt2_meiotic_connector",
      "label": "meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "ASSOCIATED_MACHINERY",
      "gene_symbols": [
       "bqt1",
@@ -55144,6 +55205,13 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of meiotic nuclear membrane microtubule tethering complex (GO:0034993) in category CYTOSKELETON with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2420: Updated components#bqt1_bqt2_meiotic_connector from component_type PROTEIN to PROTEIN_COMPLEX.",
      "llm_assisted": true
     }
    ],
@@ -58120,7 +58188,7 @@
     {
      "component_id": "bqt1_bqt2_meiotic_connector",
      "label": "meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "ASSOCIATED_MACHINERY",
      "gene_symbols": [
       "bqt1",
@@ -58358,6 +58426,13 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of nuclear membrane microtubule tethering complex (GO:0106094) in category CYTOSKELETON with verified GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature evidence, and causal mechanism graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2420: Updated components#bqt1_bqt2_meiotic_connector from component_type PROTEIN to PROTEIN_COMPLEX.",
      "llm_assisted": true
     }
    ],
@@ -61245,6 +61320,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2421: Added S. pombe alpha-1 tubulin gene symbol nda2 to components#alpha_tubulin.gene_symbols to match UniProtKB:P04688 in protein_examples.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -61279,7 +61361,8 @@
      "gene_symbols": [
       "tub1",
       "atb2",
-      "alp2"
+      "alp2",
+      "nda2"
      ],
      "role": "Alpha-tubulin class of the microtubule polymer forming the equatorial and longitudinal array.",
      "protein_examples": [
@@ -66531,7 +66614,7 @@
     {
      "component_id": "bqt1_bqt2_meiotic_connector",
      "label": "meiosis-specific telomere-LINC connector heterodimer (Bqt1-Bqt2)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "ASSOCIATED_MACHINERY",
      "gene_symbols": [
       "bqt1",
@@ -66822,6 +66905,13 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of Sad1-Kms1 LINC complex (GO:1990612) in category CYTOSKELETON with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2420: Updated components#bqt1_bqt2_meiotic_connector from component_type PROTEIN to PROTEIN_COMPLEX.",
      "llm_assisted": true
     }
    ],
@@ -85525,7 +85615,7 @@
     {
      "component_id": "type_i_reaction_center_core",
      "label": "Type I (Fe-S type) photosystem reaction center core (PsaA/PsaB)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "psaA",
@@ -85577,7 +85667,7 @@
     {
      "component_id": "type_ii_reaction_center_core",
      "label": "Type II (pheophytin-quinone type) photosystem reaction center core (D1/PsbA and D2/PsbD)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "psbA",
@@ -85837,6 +85927,13 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of photosystem (GO:0009521) in category ENERGY_COMPLEX with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2420: Updated components#type_i_reaction_center_core and components#type_ii_reaction_center_core from component_type PROTEIN to PROTEIN_COMPLEX.",
      "llm_assisted": true
     }
    ]
@@ -115764,6 +115861,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2419: Typed causal-graph node csma_baseplate as STRUCTURE grounded to cellstructuremech:chlorosome_baseplate_antenna_complex in pigment_baseplate_energy_transfer.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -116097,9 +116201,10 @@
       },
       {
        "node_id": "csma_baseplate",
-       "label": "CsmA baseplate antenna",
-       "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "csma_baseplate"
+       "label": "chlorosome baseplate antenna complex",
+       "node_type": "STRUCTURE",
+       "component_ref": "csma_baseplate",
+       "grounding": "cellstructuremech:chlorosome_baseplate_antenna_complex"
       },
       {
        "node_id": "chlorosome",
@@ -116269,6 +116374,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2419: Typed causal-graph node csma_baseplate as STRUCTURE grounded to cellstructuremech:chlorosome_baseplate_antenna_complex in chlorosome_envelope_light_harvesting_topology.",
      "llm_assisted": true
     }
    ],
@@ -116637,9 +116749,10 @@
       },
       {
        "node_id": "csma_baseplate",
-       "label": "CsmA bacteriochlorophyll a baseplate",
-       "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "csma_baseplate"
+       "label": "chlorosome baseplate antenna complex",
+       "node_type": "STRUCTURE",
+       "component_ref": "csma_baseplate",
+       "grounding": "cellstructuremech:chlorosome_baseplate_antenna_complex"
       },
       {
        "node_id": "bchl_aggregate",
@@ -144165,6 +144278,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2419: Typed causal-graph node micos_complex (GO:0061617) as STRUCTURE in yeast_crista_junction_topology.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -144289,7 +144409,7 @@
       {
        "node_id": "micos_complex",
        "label": "MICOS complex",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "grounding": "GO:0061617",
        "xrefs": [
         "UniProtKB:P36112"
@@ -146554,6 +146674,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2419: Typed causal-graph node tom_complex (GO:0005742) as STRUCTURE in mitochondrial_outer_membrane_topology.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -146725,7 +146852,7 @@
       {
        "node_id": "tom_complex",
        "label": "mitochondrial outer membrane translocase complex",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "grounding": "GO:0005742",
        "xrefs": [
         "UniProtKB:P23644"
@@ -170518,7 +170645,9 @@
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "ccmK",
-      "csoS1"
+      "csoS1",
+      "ccmK3",
+      "ccmK4"
      ],
      "essentiality": "ESSENTIAL",
      "role": "Tile the shell facets; central pores admit bicarbonate and RuBP.",
@@ -171606,6 +171735,13 @@
      "curator": "antigravity",
      "action": "EDIT",
      "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2421: Added beta-carboxysome hexamer paralogue symbols ccmK3 and ccmK4 to components#bmc_h.gene_symbols to match Synechococcus elongatus PCC 7942 protein_examples.",
      "llm_assisted": true
     }
    ],
@@ -190380,6 +190516,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T00:20:00Z",
+     "curator": "claude-code",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2419: Typed causal-graph node ap2_adaptor_complex (GO:0030122) as STRUCTURE in endocytic_clathrin_coat_topology.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -190659,7 +190802,7 @@
       {
        "node_id": "ap2_adaptor_complex",
        "label": "AP-2 adaptor complex",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "grounding": "GO:0030122",
        "xrefs": [
         "UniProtKB:P27351"

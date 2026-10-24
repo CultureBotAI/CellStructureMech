@@ -22,6 +22,8 @@ components:
   gene_symbols:
   - ccmK
   - csoS1
+  - ccmK3
+  - ccmK4
   essentiality: ESSENTIAL
   role: Tile the shell facets; central pores admit bicarbonate and RuBP.
   evidence:
@@ -962,6 +964,13 @@ curation_history:
   action: EDIT
   changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
     protein_example(s).'
+  llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2421: Added beta-carboxysome hexamer paralogue symbols ccmK3
+    and ccmK4 to components#bmc_h.gene_symbols to match Synechococcus elongatus PCC
+    7942 protein_examples.'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034

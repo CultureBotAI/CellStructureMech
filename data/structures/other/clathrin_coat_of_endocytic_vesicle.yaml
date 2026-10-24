@@ -37,6 +37,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2419: Typed causal-graph node ap2_adaptor_complex (GO:0030122)
+    as STRUCTURE in endocytic_clathrin_coat_topology.'
+  llm_assisted: true
 parent_structures:
 - GO:0030125
 part_of:
@@ -272,7 +278,7 @@ causal_graphs:
     component_ref: endocytic_clathrin_adaptors
   - node_id: ap2_adaptor_complex
     label: AP-2 adaptor complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0030122
     xrefs:
     - UniProtKB:P27351
