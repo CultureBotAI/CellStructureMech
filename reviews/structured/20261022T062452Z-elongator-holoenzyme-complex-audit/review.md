@@ -1,0 +1,1413 @@
+# Elongator holoenzyme complex scientific review
+
+- Review: 20261022T062452Z-elongator-holoenzyme-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T06:03:48Z
+- Finished UTC: 2026-10-22T06:24:52Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Correct ontology/protein identities and tRNA function are retained. One major corrects the six-copy defining architecture; two minors resolve exact families and the measured condition-specific Elp1 assembly requirement.
+
+## Scope And Provenance
+
+Exactly one complete maintained target and frozen guidance; source-specific actual read scopes enumerated per evidence locator. No maintained neighboring record supplied scientific evidence.
+
+Selection: Target 7 of batch53, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0033588 | data/structures/other/elongator_holoenzyme_complex.yaml | maintained | elongator holoenzyme complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0033588 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0033588 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0033588 | Native focused check passed; biological validity is separately assessed. |
+| Native verify | passed | True | GO:0033588 | Native focused check passed; biological validity is separately assessed. |
+| Expression-module applicability | not_applicable | False | GO:0033588 | No expression-module inference is required for these identity/assembly/transport claims. |
+| Claim-level scientific review | passed | True | GO:0033588 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0033588 | 15 of 22 collected target identifiers returned OK. PMID:10024884: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:11435442: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:11689709: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:14562095: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:15769872: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:15780940: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:24750273: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0033588 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0033588 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0033588 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0033588 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0033588 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Correct GO identity with obsolete copy-number definition
+
+identity: concern. Targets: GO:0033588.
+
+The identifier, parent classes and source-based synonyms are correct. The explicit heterohexamer/two-heterotrimer definition and six constituent roles contradict the yeast architecture resolved by two later primary studies and summarized in the native proteins. Six unique subunit classes must be separated from total molecular copy number.
+
+### Six exact full-protein family mappings
+
+grounding: concern. Targets: GO:0033588.
+
+The correct reference accessions and alias-sensitive single hits are retained. Elp1/2/3/4/5/6 match IPR006849/IPR037289/IPR034687/IPR008728/IPR019519/IPR018627, respectively, using family metadata plus separate native protein xrefs. Domain and broad-parent alternatives are excluded.
+
+### Yeast preparations and reference strain identity
+
+scope: supported. Targets: GO:0033588.
+
+Species4932 and S288C559292 identities are correct, with W303 and named experimental strains distinguished from reference protein accessions. COMMON retains present-in-most-members meaning; source synthesis supports ordinary species occurrence but does not measure population prevalence.
+
+### Constituent graph and early tRNA-modification output
+
+graph: concern. Targets: GO:0033588.
+
+The seven-edge NONMECHANISTIC graph preserves valid six-class membership and broad wobble-modification output. Huang supports the early modification step, not a complete catalytic cycle. Current heterotrimer terminology in component roles/discussion and the graph description should be aligned with corrected architecture; historical study titles remain unchanged.
+
+### Condition-specific Elp1 scaffold requirement
+
+grounding: concern. Targets: GO:0033588.
+
+Setiaputra directly tests complex association after elp1 deletion: Elp2/3 no longer associate with the surviving Elp456 ring. This supports a condition-scoped Elp1 requirement for complete holoassembly. It is not cell viability, nor proof that Elp456 formation requires Elp1. Other subunit deletions and functional modification defects are not promoted to blanket formation necessity.
+
+### Full maintained record and scoped unresolved claims
+
+completeness: supported. Targets: GO:0033588.
+
+All maintained fields, evidence notes, discussions and graph claims were checked at the stated source extents. Unresolved assembly, taxonomic prevalence and preparation details remain explicit rather than being inferred from identifiers or validation success.
+
+## Findings
+
+### F1: Separate six subunit identities from holoenzyme stoichiometry
+
+major / open / confirmed; issue key: elongator-copy-number.
+
+The current definition calls the whole complex a heterohexamer of two heterotrimers, and all six roles/discussion repeat the trimer architecture. Later yeast primary structures resolve a dodecameric assembly: two Elp123 units plus a hexameric Elp456 ring. Native GO preserves the old wording, so matching GO does not resolve this biological conflict.
+
+### F2: Resolve the six exact Elongator protein families
+
+minor / open / confirmed; issue key: elongator-exact-families.
+
+All six rows remain label-only merely because exact full-class mappings were deferred. Current native family records and independent protein memberships resolve those mappings without using WD, GNAT, radical-SAM or RecA-like domains.
+
+### F3: Record the measured Elp1 assembly requirement
+
+minor / open / confirmed; issue key: elongator-elp1-formation.
+
+The Elp1 row remains UNKNOWN although the primary elp1-deletion association experiment demonstrates loss of Elp2/3 recruitment to the Elp456-containing assembly. The condition and surviving Elp456 ring must remain explicit.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Retain GO0033588 and the six constituent identities, but replace the fixed six-copy/two-trimer definition with an architecture consistent with the primary studies. Distinguish six distinct proteins from condition-specific oligomeric occupancy and update associated role/discussion wording.
+
+- Do not rewrite historical titles or make a universal occupancy claim beyond the characterized yeast assembly.
+- Keep the valid tRNA function and reference protein identities.
+- Preserve correct identities and supported biology; pass applicable native validation.
+
+### A2
+
+Use the six verified full-protein families and align current grounding notes/TODO.
+
+- Treat IPR034687 as Elp3 protein identity, not evidence that every microbial homolog joins a yeast-type complex.
+- Preserve correct identities and supported biology; pass applicable native validation.
+
+### A3
+
+Replace blanket unknown for Elp1 with the experimentally scoped formation requirement and attach the primary deletion/pull-down evidence; retain uncertainty outside that preparation.
+
+- Do not equate formation with growth or tRNA catalytic output.
+- Preserve independent Elp456 assembly and do not promote all six component enums.
+- Preserve correct identities and supported biology; pass applicable native validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/elongator_holoenzyme_complex.yaml; Entire maintained target, all components/examples/evidence/graph/discussions/history | context_only | The complete target was read. Historical curation claims are not independent scientific evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, ProteinExample, essentiality, taxonomic presence and graph scope | context_only | Formation necessity differs from activity and membership. COMMON means present in most members, losses the exception; VARIABLE does not assert universality. |
+| curation | docs/CURATION.md; Exact component grounding, label-only contract159–160 and formation semantics | context_only | REVIEWED_LABEL_ONLY means no exact class term exists after review. A known protein constituent can be represented with a label while exact family mapping remains unresolved. |
+| complex53-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0002097,GO:0005784,GO:0005789,GO:0033588,GO:0042910,GO:0045048,GO:0072546,GO:0098796,GO:0140330,GO:0140535,GO:1902494,GO:1902495,GO:1990207,GO:1990281; Complete target-relevant active definitions, synonym types and typed child links within combined response; other terms are not attributed to this target | supports | GO0033588 preserves the maintained identity and outdated heterohexamer/two-heterotrimer definition. Its exact typed links support intracellular/catalytic parents and capable_of_part_of wobble modification. The native text is compared with primary architecture separately. |
+| complex53-agent-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete native taxon response | supports | ENA 4932: Saccharomyces cerevisiae, rank species; names and lineage support this exact taxon identity. |
+| complex53-agent-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete native taxon response | supports | ENA 559292: Saccharomyces cerevisiae S288C, rank strain; names and lineage support this exact taxon identity. |
+| complex53-agent-protein-Q06706 | https://rest.uniprot.org/uniprotkb/Q06706.json; Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs | supports | Reviewed Q06706 identifies Elongator complex protein 1 in taxon559292; gene IKI3 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership comes from this protein response, independently of family-entry metadata. |
+| complex53-agent-gene-ELP1-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned accession/name/gene-alias/organism identities | supports | The complete exact reviewed-organism query returns 1 identity: Q06706. The maintained example is correctly disambiguated; aliases were read. |
+| complex53-agent-protein-P42935 | https://rest.uniprot.org/uniprotkb/P42935.json; Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs | supports | Reviewed P42935 identifies Elongator complex protein 2 in taxon559292; gene ELP2 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership comes from this protein response, independently of family-entry metadata. |
+| complex53-agent-gene-ELP2-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned accession/name/gene-alias/organism identities | supports | The complete exact reviewed-organism query returns 1 identity: P42935. The maintained example is correctly disambiguated; aliases were read. |
+| complex53-agent-protein-Q02908 | https://rest.uniprot.org/uniprotkb/Q02908.json; Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs | supports | Reviewed Q02908 identifies Elongator complex protein 3 in taxon559292; gene ELP3 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership comes from this protein response, independently of family-entry metadata. |
+| complex53-agent-gene-ELP3-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned accession/name/gene-alias/organism identities | supports | The complete exact reviewed-organism query returns 1 identity: Q02908. The maintained example is correctly disambiguated; aliases were read. |
+| complex53-agent-protein-Q02884 | https://rest.uniprot.org/uniprotkb/Q02884.json; Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs | supports | Reviewed Q02884 identifies Elongator complex protein 4 in taxon559292; gene ELP4 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership comes from this protein response, independently of family-entry metadata. |
+| complex53-agent-gene-ELP4-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned accession/name/gene-alias/organism identities | supports | The complete exact reviewed-organism query returns 1 identity: Q02884. The maintained example is correctly disambiguated; aliases were read. |
+| complex53-agent-protein-P38874 | https://rest.uniprot.org/uniprotkb/P38874.json; Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs | supports | Reviewed P38874 identifies Elongator complex protein 5 in taxon559292; gene IKI1 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership comes from this protein response, independently of family-entry metadata. |
+| complex53-agent-gene-ELP5-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP5%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned accession/name/gene-alias/organism identities | supports | The complete exact reviewed-organism query returns 1 identity: P38874. The maintained example is correctly disambiguated; aliases were read. |
+| complex53-agent-protein-Q04868 | https://rest.uniprot.org/uniprotkb/Q04868.json; Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs | supports | Reviewed Q04868 identifies Elongator complex protein 6 in taxon559292; gene ELP6 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership comes from this protein response, independently of family-entry metadata. |
+| complex53-agent-gene-ELP6-559292 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP6%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned accession/name/gene-alias/organism identities | supports | The complete exact reviewed-organism query returns 1 identity: Q04868. The maintained example is correctly disambiguated; aliases were read. |
+| complex53-agent-pmid-10024884 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10024884+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and complete native abstract | supports | MED10024884: Elongator, a multisubunit component of a novel RNA polymerase II holoenzyme for transcriptional elongation. Authors Otero G, Fellows J, Li Y, de Bizemont T, Dirac AM, Gustafsson CM, Erdjument-Bromage H, Tempst P, Svejstrup JQ.; year1999, DOI10.1016/s1097-2765(00)80179-3. Complete abstract read; metadata is not full-body evidence. |
+| complex53-agent-pmid-11435442 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11435442+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and complete native abstract | supports | MED11435442: RNA polymerase II elongator holoenzyme is composed of two discrete subcomplexes. Authors Winkler GS, Petrakis TG, Ethelberg S, Tokunaga M, Erdjument-Bromage H, Tempst P, Svejstrup JQ.; year2001, DOI10.1074/jbc.m105303200. Complete abstract read; metadata is not full-body evidence. |
+| complex53-agent-pmid-11689709 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11689709+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and complete native abstract | supports | MED11689709: Characterization of a six-subunit holo-elongator complex required for the regulated expression of a group of genes in Saccharomyces cerevisiae. Authors Krogan NJ, Greenblatt JF.; year2001, DOI10.1128/mcb.21.23.8203-8212.2001. Complete abstract read; metadata is not full-body evidence. |
+| complex53-agent-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and complete native abstract | supports | MED14562095: Global analysis of protein localization in budding yeast. Authors Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O'Shea EK.; year2003, DOI10.1038/nature02026. Complete abstract read; metadata is not full-body evidence. |
+| complex53-agent-pmid-15769872 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15769872+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and complete native abstract | supports | MED15769872: An early step in wobble uridine tRNA modification requires the Elongator complex. Authors Huang B, Johansson MJ, Byström AS.; year2005, DOI10.1261/rna.7247705. Complete abstract read; metadata is not full-body evidence. |
+| complex53-agent-pmid-15780940 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15780940+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and complete native abstract | supports | MED15780940: Elp1p, the yeast homolog of the FD disease syndrome protein, negatively regulates exocytosis independently of transcriptional elongation. Authors Rahl PB, Chen CZ, Collins RN.; year2005, DOI10.1016/j.molcel.2005.02.018. Complete abstract read; metadata is not full-body evidence. |
+| complex53-agent-pmid-24750273 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24750273+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and complete native abstract | supports | MED24750273: A conserved and essential basic region mediates tRNA binding to the Elp1 subunit of the Saccharomyces cerevisiae Elongator complex. Authors Di Santo R, Bandau S, Stark MJ.; year2014, DOI10.1111/mmi.12624. Complete abstract read; metadata is not full-body evidence. |
+| complex53-agent-doi-jbc_M105303200 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.M105303200%22&amp;format=json&amp;resultType=core; Exact DOI/title/authors/PMID/year and complete native abstract | supports | Native DOI/MED identity: RNA polymerase II elongator holoenzyme is composed of two discrete subcomplexes. Authors Winkler GS, Petrakis TG, Ethelberg S, Tokunaga M, Erdjument-Bromage H, Tempst P, Svejstrup JQ.; year2001, PMID11435442. Complete abstract inspected; independently recovered primary bodies are separate evidence rows. |
+| complex53-agent-doi-MCB_21_23_8203-8212_2001 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FMCB.21.23.8203-8212.2001%22&amp;format=json&amp;resultType=core; Exact DOI/title/authors/PMID/year and complete native abstract | supports | Native DOI/MED identity: Characterization of a six-subunit holo-elongator complex required for the regulated expression of a group of genes in Saccharomyces cerevisiae. Authors Krogan NJ, Greenblatt JF.; year2001, PMID11689709. Complete abstract inspected; independently recovered primary bodies are separate evidence rows. |
+| complex53-agent-doi-rna_7247705 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1261%2Frna.7247705%22&amp;format=json&amp;resultType=core; Exact DOI/title/authors/PMID/year and complete native abstract | supports | Native DOI/MED identity: An early step in wobble uridine tRNA modification requires the Elongator complex. Authors Huang B, Johansson MJ, Byström AS.; year2005, PMID15769872. Complete abstract inspected; independently recovered primary bodies are separate evidence rows. |
+| complex53-agent-krogan2001-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC99985/; Abstract; Methods sec2/3 including Table1; Results sec7/8 with Fig1/2 captions. Other phenotype/transcriptome sections not independently used. | supports | Krogan/Greenblatt2001 purifies six distinct polypeptide classes from W303-1A-congenic strains; any TAP tag recovers all six under low salt, and higher salt separates Elp123/Elp456. Six distinct bands do not establish one copy of each. Elp2 deletion leaves an Elp1/3-containing assembly with substoichiometric smaller subunits. |
+| complex53-agent-huang2005-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1370732/; Abstract; Results sec5/7/8, Table1/Fig3/4 captions; Discussion sec11/15; Methods sec21/22. No separate strain-table read or supplemental data reanalysis. | supports | Huang2005 shows all six ELP genes are required for early mcm5/ncm5 wobble-uridine modification, with Elp1/3 tRNA co-IP. Functional defects and KTI regulators are not proof that every deletion prevents Elongator assembly. |
+| complex53-agent-setiaputra2016-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC5286391/?pdf=render; Introduction sec0001; Results sec0003/0004 with Fig1/2 and embedded EV captions; Methods sec0010/0011. IDs prefixed embr201642548-. Strain list is deferred to uninspected TableEV4. No pixels. | supports | Setiaputra etal2017 (online2016) explicitly describes two copies of six proteins, a dodecamer, and resolves a bilobed Elp123 scaffold plus one Elp456 hexamer. FLAG-Elp4 pull-down/MS after elp1 deletion loses Elp2/3 association with Elp456 while the latter remains assembled; elp2 deletion retains other interactions. |
+| complex53-agent-dauden2016-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC5286394/?pdf=render; Results sec0003/0004/0005 and embedded Fig1/2/EV captions; Methods sec0012/0013, IDs prefixed embr201643353-. No pixels or separate supplementary files. | supports | Dauden etal2017 (online2016) independently resolves two copies of Elp1/2/3 and an asymmetric Elp456 hexamer. TAP purification uses named BS1173/BSY2369 yeast strains; recombinant E.coli expression is distinct from endogenous yeast preparations. |
+| complex53-agent-ipr-IPR006849 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006849/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | IPR006849 is the full Elp1 protein family, supported by native family type and specific member signatures rather than one shared domain. Its class identity is separately joined to the correct reviewed yeast example. |
+| complex53-agent-ipr-IPR037289 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037289/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | IPR037289 is the full Elp2 protein family, supported by native family type and specific member signatures rather than one shared domain. Its class identity is separately joined to the correct reviewed yeast example. |
+| complex53-agent-ipr-IPR034687 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR034687/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | IPR034687 is the full Elp3 protein family, supported by native family type and specific member signatures rather than one shared domain. The ELP3-like class includes archaeal/bacterial homologous enzymes, not the separate YhcC or archaeosine branch; mapping protein identity does not assign those homologs to yeast holo-Elongator. Its older functional prose is not adopted as primary mechanism evidence. |
+| complex53-agent-ipr-IPR008728 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR008728/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | IPR008728 is the full Elp4 protein family, supported by native family type and specific member signatures rather than one shared domain. Its class identity is separately joined to the correct reviewed yeast example. |
+| complex53-agent-ipr-IPR019519 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019519/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | IPR019519 is the full Elp5 protein family, supported by native family type and specific member signatures rather than one shared domain. Its class identity is separately joined to the correct reviewed yeast example. |
+| complex53-agent-ipr-IPR018627 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018627/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | IPR018627 is the full Elp6 protein family, supported by native family type and specific member signatures rather than one shared domain. Its class identity is separately joined to the correct reviewed yeast example. |
+| complex53-agent-ipr-IPR039661 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039661/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | IPR039661 is the broader ELP3/YhcC parent with distinct Elp3-like, YhcC and archaeosine-synthase children; it is not used as exact Elp3 grounding. |
+| schema-result | just validate data/structures/other/elongator_holoenzyme_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/elongator_holoenzyme_complex.yaml |
+| strict-result | just validate-strict data/structures/other/elongator_holoenzyme_complex.yaml --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/elongator_holoenzyme_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/elongator_holoenzyme_complex.yaml --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/elongator_holoenzyme_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch53-20261022-kx679dvh/elongator_holoenzyme_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/elongator_holoenzyme_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/elongator_holoenzyme_complex.yaml  (GO:0033588)<br>  yeast_elongator_trna_wobble_modification	elp1_elongator_subunit	COVERED	-&gt;elp1_elongator_subunit (UniProtKB:Q06706)<br>  yeast_elongator_trna_wobble_modification	elp2_elongator_subunit	COVERED	-&gt;elp2_elongator_subunit (UniProtKB:P42935)<br>  yeast_elongator_trna_wobble_modification	elp3_elongator_subunit	COVERED	-&gt;elp3_elongator_subunit (UniProtKB:Q02908)<br>  yeast_elongator_trna_wobble_modification	elp4_elongator_subunit	COVERED	-&gt;elp4_elongator_subunit (UniProtKB:Q02884)<br>  yeast_elongator_trna_wobble_modification	elp5_elongator_subunit	COVERED	-&gt;elp5_elongator_subunit (UniProtKB:P38874)<br>  yeast_elongator_trna_wobble_modification	elp6_elongator_subunit	COVERED	-&gt;elp6_elongator_subunit (UniProtKB:Q04868)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     6  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     6  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/elongator_holoenzyme_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/elongator_holoenzyme_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 15 of 22 collected target identifiers returned OK. PMID:10024884: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:11435442: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:11689709: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:14562095: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:15769872: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:15780940: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force.; PMID:24750273: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- No figure pixels, supplemental datasets or atomic coordinates were reanalyzed. Embedded caption text is distinguished from independently inspected images and supplements.
+- Winkler2001 is complete-abstract only; its retained DOI route failed TLS certificate verification, not a verified lack of public full text. Otero/Huh/Rahl/DiSanto are used at native-abstract identity/context scope, with individual protein annotations separately checked.
+- The primary architecture papers are 2017 journal articles first published online in2016. Their complete bodies were retained but only the stated sections were read.
+- Native GO remains inconsistent with later yeast architecture. Modern occupancy outside the characterized preparations was not exhaustively surveyed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T062452Z-elongator-holoenzyme-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Elongator holoenzyme complex scientific review
+started_at: '2026-10-22T06:03:48Z'
+finished_at: '2026-10-22T06:24:52Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Correct ontology/protein identities and tRNA function are retained. One major
+  corrects the six-copy defining architecture; two minors resolve exact families and
+  the measured condition-specific Elp1 assembly requirement.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/elongator_holoenzyme_complex.yaml
+    sha256: 3071ca4a7c4adde264f84e0613da05118ef23a2d9ffcfbdd74a37897ba8f3c1d
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0033588
+  path: data/structures/other/elongator_holoenzyme_complex.yaml
+  label: elongator holoenzyme complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/elongator_holoenzyme_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target and frozen guidance; source-specific
+    actual read scopes enumerated per evidence locator. No maintained neighboring
+    record supplied scientific evidence.
+  selection: Target 7 of batch53, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0033588
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  command: just validate data/structures/other/elongator_holoenzyme_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  command: just validate-strict data/structures/other/elongator_holoenzyme_complex.yaml
+    --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/elongator_holoenzyme_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  command: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/elongator_holoenzyme_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological validity is separately assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  command: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/elongator_holoenzyme_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; biological validity is separately assessed.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0033588
+  summary: No expression-module inference is required for these identity/assembly/transport
+    claims.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex53-agent-go
+  - complex53-agent-tax4932
+  - complex53-agent-tax559292
+  - complex53-agent-protein-Q06706
+  - complex53-agent-gene-ELP1-559292
+  - complex53-agent-protein-P42935
+  - complex53-agent-gene-ELP2-559292
+  - complex53-agent-protein-Q02908
+  - complex53-agent-gene-ELP3-559292
+  - complex53-agent-protein-Q02884
+  - complex53-agent-gene-ELP4-559292
+  - complex53-agent-protein-P38874
+  - complex53-agent-gene-ELP5-559292
+  - complex53-agent-protein-Q04868
+  - complex53-agent-gene-ELP6-559292
+  - complex53-agent-pmid-10024884
+  - complex53-agent-pmid-11435442
+  - complex53-agent-pmid-11689709
+  - complex53-agent-pmid-14562095
+  - complex53-agent-pmid-15769872
+  - complex53-agent-pmid-15780940
+  - complex53-agent-pmid-24750273
+  - complex53-agent-doi-jbc_M105303200
+  - complex53-agent-doi-MCB_21_23_8203-8212_2001
+  - complex53-agent-doi-rna_7247705
+  - complex53-agent-krogan2001-legacy
+  - complex53-agent-huang2005-legacy
+  - complex53-agent-setiaputra2016-legacy
+  - complex53-agent-dauden2016-legacy
+  - complex53-agent-ipr-IPR006849
+  - complex53-agent-ipr-IPR037289
+  - complex53-agent-ipr-IPR034687
+  - complex53-agent-ipr-IPR008728
+  - complex53-agent-ipr-IPR019519
+  - complex53-agent-ipr-IPR018627
+  - complex53-agent-ipr-IPR039661
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  summary: '15 of 22 collected target identifiers returned OK. PMID:10024884: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:11435442: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:11689709: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:14562095: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:15769872: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:15780940: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:24750273: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex53-agent-pmid-10024884
+  - complex53-agent-pmid-11435442
+  - complex53-agent-pmid-11689709
+  - complex53-agent-pmid-14562095
+  - complex53-agent-pmid-15769872
+  - complex53-agent-pmid-15780940
+  - complex53-agent-pmid-24750273
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033588
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/elongator_holoenzyme_complex.yaml
+  locator: Entire maintained target, all components/examples/evidence/graph/discussions/history
+  accessed_at: '2026-10-22T06:14:49Z'
+  support: context_only
+  summary: The complete target was read. Historical curation claims are not independent
+    scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ProteinExample, essentiality, taxonomic presence and
+    graph scope
+  accessed_at: '2026-10-22T06:14:49Z'
+  support: context_only
+  summary: Formation necessity differs from activity and membership. COMMON means
+    present in most members, losses the exception; VARIABLE does not assert universality.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact component grounding, label-only contract159–160 and formation semantics
+  accessed_at: '2026-10-22T06:14:49Z'
+  support: context_only
+  summary: REVIEWED_LABEL_ONLY means no exact class term exists after review. A known
+    protein constituent can be represented with a label while exact family mapping
+    remains unresolved.
+- evidence_id: complex53-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0002097,GO:0005784,GO:0005789,GO:0033588,GO:0042910,GO:0045048,GO:0072546,GO:0098796,GO:0140330,GO:0140535,GO:1902494,GO:1902495,GO:1990207,GO:1990281
+  locator: Complete target-relevant active definitions, synonym types and typed child
+    links within combined response; other terms are not attributed to this target
+  accessed_at: '2026-10-22T06:04:56.005634Z'
+  support: supports
+  summary: GO0033588 preserves the maintained identity and outdated heterohexamer/two-heterotrimer
+    definition. Its exact typed links support intracellular/catalytic parents and
+    capable_of_part_of wobble modification. The native text is compared with primary
+    architecture separately.
+  snapshot_sha256: ff946a7735c549a3a05a73c3dfaaaa7d501546c65d21a07ca7e5e8474cb827b2
+- evidence_id: complex53-agent-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T06:04:56.005874Z'
+  support: supports
+  summary: 'ENA 4932: Saccharomyces cerevisiae, rank species; names and lineage support
+    this exact taxon identity.'
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: complex53-agent-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T06:04:56.006129Z'
+  support: supports
+  summary: 'ENA 559292: Saccharomyces cerevisiae S288C, rank strain; names and lineage
+    support this exact taxon identity.'
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: complex53-agent-protein-Q06706
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q06706.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:58.250853Z'
+  support: supports
+  summary: Reviewed Q06706 identifies Elongator complex protein 1 in taxon559292;
+    gene IKI3 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: ed56b6004eaf9bf52b23861b9d2f69e3082c16ab8c1f63d0f91a84900c036062
+- evidence_id: complex53-agent-gene-ELP1-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:04:58.727643Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: Q06706.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: a6e6a3a1ba2f3a565750ac4a18c998265059a993118ce58de41efb6afa5af238
+  search_scope: UniProt gene_exact:ELP1, organism_id:559292, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-protein-P42935
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P42935.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:57.631109Z'
+  support: supports
+  summary: Reviewed P42935 identifies Elongator complex protein 2 in taxon559292;
+    gene ELP2 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: f8112e6f19eca34cc83885fa7bd02a8e0395e2f1f44468086f63cf23baf26491
+- evidence_id: complex53-agent-gene-ELP2-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:04:58.832952Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: P42935.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: b4202c8b44f7d33276db97da7dd2fd75dbb0decf1932e82921758facf67656c2
+  search_scope: UniProt gene_exact:ELP2, organism_id:559292, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-protein-Q02908
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q02908.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:57.708179Z'
+  support: supports
+  summary: Reviewed Q02908 identifies Elongator complex protein 3 in taxon559292;
+    gene ELP3 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: e08c72b12b04708161c0088483f93b49e4969cc2ca5e8950b304df093a7555c4
+- evidence_id: complex53-agent-gene-ELP3-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:04:58.840725Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: Q02908.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: 0a7a5842879210a2d085bad21aea480ec09423091679f85e11a664bbc411a784
+  search_scope: UniProt gene_exact:ELP3, organism_id:559292, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-protein-Q02884
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q02884.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:57.677979Z'
+  support: supports
+  summary: Reviewed Q02884 identifies Elongator complex protein 4 in taxon559292;
+    gene ELP4 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: 154d952b5407aae5695092525b624b93255182bfb80b92cb518cdecd617dfc81
+- evidence_id: complex53-agent-gene-ELP4-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:04:59.051838Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: Q02884.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: 613dc657d854da99ba0656f663477e1ce712b05d697d680756c4a2ad52f21c56
+  search_scope: UniProt gene_exact:ELP4, organism_id:559292, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-protein-P38874
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38874.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:57.491508Z'
+  support: supports
+  summary: Reviewed P38874 identifies Elongator complex protein 5 in taxon559292;
+    gene IKI1 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: 3f8b3fd0ad4c2933dcd6ff52628428ee6a51999725295d97f1a1e01499fd7062
+- evidence_id: complex53-agent-gene-ELP5-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP5%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:04:59.784334Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: P38874.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: 1d48c1cf088376671e6b0173fd323c2b52eefb23acb8646e4846b1d35487c178
+  search_scope: UniProt gene_exact:ELP5, organism_id:559292, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-protein-Q04868
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q04868.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:57.828855Z'
+  support: supports
+  summary: Reviewed Q04868 identifies Elongator complex protein 6 in taxon559292;
+    gene ELP6 is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: 57a867a3e9e2c007ddc68ed402b1c12037d930c0c98a9d44b052cd4e0a896e88
+- evidence_id: complex53-agent-gene-ELP6-559292
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AELP6%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:04:59.912014Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: Q04868.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: 450213b9dbab635de9129bb07b5a96b17af0f73ac853dfe62eedb8a7845204ea
+  search_scope: UniProt gene_exact:ELP6, organism_id:559292, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-pmid-10024884
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10024884+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:00.991878Z'
+  support: supports
+  summary: 'MED10024884: Elongator, a multisubunit component of a novel RNA polymerase
+    II holoenzyme for transcriptional elongation. Authors Otero G, Fellows J, Li Y,
+    de Bizemont T, Dirac AM, Gustafsson CM, Erdjument-Bromage H, Tempst P, Svejstrup
+    JQ.; year1999, DOI10.1016/s1097-2765(00)80179-3. Complete abstract read; metadata
+    is not full-body evidence.'
+  snapshot_sha256: 1b33774c1d732561f30fc7047e1b2ee79faab44403d049dda9edf2cb6287578a
+- evidence_id: complex53-agent-pmid-11435442
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11435442+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:01.026234Z'
+  support: supports
+  summary: 'MED11435442: RNA polymerase II elongator holoenzyme is composed of two
+    discrete subcomplexes. Authors Winkler GS, Petrakis TG, Ethelberg S, Tokunaga
+    M, Erdjument-Bromage H, Tempst P, Svejstrup JQ.; year2001, DOI10.1074/jbc.m105303200.
+    Complete abstract read; metadata is not full-body evidence.'
+  snapshot_sha256: bcfc92ca4a9553e1a0929d46d341553f026d8d13b7cc4a007a68789905ddf4e7
+- evidence_id: complex53-agent-pmid-11689709
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11689709+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:01.605191Z'
+  support: supports
+  summary: 'MED11689709: Characterization of a six-subunit holo-elongator complex
+    required for the regulated expression of a group of genes in Saccharomyces cerevisiae.
+    Authors Krogan NJ, Greenblatt JF.; year2001, DOI10.1128/mcb.21.23.8203-8212.2001.
+    Complete abstract read; metadata is not full-body evidence.'
+  snapshot_sha256: fb90874032711be71258d9694b523f94db5a359bfaa933696decdcd49a3458c3
+- evidence_id: complex53-agent-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:01.857430Z'
+  support: supports
+  summary: 'MED14562095: Global analysis of protein localization in budding yeast.
+    Authors Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O''Shea
+    EK.; year2003, DOI10.1038/nature02026. Complete abstract read; metadata is not
+    full-body evidence.'
+  snapshot_sha256: 8bbeed3381c96852db4221aac079da00e1bf5c50630629c24d4d9136e1645c21
+- evidence_id: complex53-agent-pmid-15769872
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15769872+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:01.928712Z'
+  support: supports
+  summary: 'MED15769872: An early step in wobble uridine tRNA modification requires
+    the Elongator complex. Authors Huang B, Johansson MJ, Byström AS.; year2005, DOI10.1261/rna.7247705.
+    Complete abstract read; metadata is not full-body evidence.'
+  snapshot_sha256: f8b0940b810c6cd7d0cb6c12ff7cf458a57fa1073001ef7c864b563516c8d6b8
+- evidence_id: complex53-agent-pmid-15780940
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15780940+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:02.027528Z'
+  support: supports
+  summary: 'MED15780940: Elp1p, the yeast homolog of the FD disease syndrome protein,
+    negatively regulates exocytosis independently of transcriptional elongation. Authors
+    Rahl PB, Chen CZ, Collins RN.; year2005, DOI10.1016/j.molcel.2005.02.018. Complete
+    abstract read; metadata is not full-body evidence.'
+  snapshot_sha256: 18d9ee617c106d2f7a40838308bb41d6912a2ce5f0b34f0496e082c5f7d6171d
+- evidence_id: complex53-agent-pmid-24750273
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24750273+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:02.255184Z'
+  support: supports
+  summary: 'MED24750273: A conserved and essential basic region mediates tRNA binding
+    to the Elp1 subunit of the Saccharomyces cerevisiae Elongator complex. Authors
+    Di Santo R, Bandau S, Stark MJ.; year2014, DOI10.1111/mmi.12624. Complete abstract
+    read; metadata is not full-body evidence.'
+  snapshot_sha256: 25ce6d3b77e879048d2fa7825cb90208b9bee205146794607bbd190214fac177
+- evidence_id: complex53-agent-doi-jbc_M105303200
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.M105303200%22&format=json&resultType=core
+  locator: Exact DOI/title/authors/PMID/year and complete native abstract
+  accessed_at: '2026-10-22T06:05:03.460988Z'
+  support: supports
+  summary: 'Native DOI/MED identity: RNA polymerase II elongator holoenzyme is composed
+    of two discrete subcomplexes. Authors Winkler GS, Petrakis TG, Ethelberg S, Tokunaga
+    M, Erdjument-Bromage H, Tempst P, Svejstrup JQ.; year2001, PMID11435442. Complete
+    abstract inspected; independently recovered primary bodies are separate evidence
+    rows.'
+  snapshot_sha256: 532e261e3cc5afe6b2e8b9d2ce4072c66e9f5532207bb13809f3ba7e855a54a2
+- evidence_id: complex53-agent-doi-MCB_21_23_8203-8212_2001
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2FMCB.21.23.8203-8212.2001%22&format=json&resultType=core
+  locator: Exact DOI/title/authors/PMID/year and complete native abstract
+  accessed_at: '2026-10-22T06:05:03.881320Z'
+  support: supports
+  summary: 'Native DOI/MED identity: Characterization of a six-subunit holo-elongator
+    complex required for the regulated expression of a group of genes in Saccharomyces
+    cerevisiae. Authors Krogan NJ, Greenblatt JF.; year2001, PMID11689709. Complete
+    abstract inspected; independently recovered primary bodies are separate evidence
+    rows.'
+  snapshot_sha256: 9e5d48303c41475c11c99bdfb9e2d546195ef7dd67bb70c221da81c7a62c3324
+- evidence_id: complex53-agent-doi-rna_7247705
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1261%2Frna.7247705%22&format=json&resultType=core
+  locator: Exact DOI/title/authors/PMID/year and complete native abstract
+  accessed_at: '2026-10-22T06:05:03.900368Z'
+  support: supports
+  summary: 'Native DOI/MED identity: An early step in wobble uridine tRNA modification
+    requires the Elongator complex. Authors Huang B, Johansson MJ, Byström AS.; year2005,
+    PMID15769872. Complete abstract inspected; independently recovered primary bodies
+    are separate evidence rows.'
+  snapshot_sha256: 0667388a9b0b6fc6a649f52c811a1a7f6ed0f8f2c517b458df716bbf67a5c541
+- evidence_id: complex53-agent-krogan2001-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC99985/
+  locator: Abstract; Methods sec2/3 including Table1; Results sec7/8 with Fig1/2 captions.
+    Other phenotype/transcriptome sections not independently used.
+  accessed_at: '2026-10-22T06:05:50.462032Z'
+  support: supports
+  summary: Krogan/Greenblatt2001 purifies six distinct polypeptide classes from W303-1A-congenic
+    strains; any TAP tag recovers all six under low salt, and higher salt separates
+    Elp123/Elp456. Six distinct bands do not establish one copy of each. Elp2 deletion
+    leaves an Elp1/3-containing assembly with substoichiometric smaller subunits.
+  snapshot_sha256: a82b9d6f1147ec75f522df56f188c887ad9b99e7062183438903fdbcb3537aae
+- evidence_id: complex53-agent-huang2005-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1370732/
+  locator: Abstract; Results sec5/7/8, Table1/Fig3/4 captions; Discussion sec11/15;
+    Methods sec21/22. No separate strain-table read or supplemental data reanalysis.
+  accessed_at: '2026-10-22T06:05:50.462419Z'
+  support: supports
+  summary: Huang2005 shows all six ELP genes are required for early mcm5/ncm5 wobble-uridine
+    modification, with Elp1/3 tRNA co-IP. Functional defects and KTI regulators are
+    not proof that every deletion prevents Elongator assembly.
+  snapshot_sha256: 298cc0587f5f9d0f41f1ecd55aa3bb4a3b52664089f0fceafef66c08dee71ac8
+- evidence_id: complex53-agent-setiaputra2016-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5286391/?pdf=render
+  locator: Introduction sec0001; Results sec0003/0004 with Fig1/2 and embedded EV
+    captions; Methods sec0010/0011. IDs prefixed embr201642548-. Strain list is deferred
+    to uninspected TableEV4. No pixels.
+  accessed_at: '2026-10-22T06:10:57.145143Z'
+  support: supports
+  summary: Setiaputra etal2017 (online2016) explicitly describes two copies of six
+    proteins, a dodecamer, and resolves a bilobed Elp123 scaffold plus one Elp456
+    hexamer. FLAG-Elp4 pull-down/MS after elp1 deletion loses Elp2/3 association with
+    Elp456 while the latter remains assembled; elp2 deletion retains other interactions.
+  snapshot_sha256: ff84d69f6552a3dd57e1c21470efdb5e46880e57ca43824f2ba8d6e3fff1639b
+- evidence_id: complex53-agent-dauden2016-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5286394/?pdf=render
+  locator: Results sec0003/0004/0005 and embedded Fig1/2/EV captions; Methods sec0012/0013,
+    IDs prefixed embr201643353-. No pixels or separate supplementary files.
+  accessed_at: '2026-10-22T06:10:57.145406Z'
+  support: supports
+  summary: Dauden etal2017 (online2016) independently resolves two copies of Elp1/2/3
+    and an asymmetric Elp456 hexamer. TAP purification uses named BS1173/BSY2369 yeast
+    strains; recombinant E.coli expression is distinct from endogenous yeast preparations.
+  snapshot_sha256: 291c98b1818be8f86b180f2ecb4c5ad22b9b0c4c7e6770ea3941567303ea94f6
+- evidence_id: complex53-agent-ipr-IPR006849
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006849/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:51.422546Z'
+  support: supports
+  summary: IPR006849 is the full Elp1 protein family, supported by native family type
+    and specific member signatures rather than one shared domain. Its class identity
+    is separately joined to the correct reviewed yeast example.
+  snapshot_sha256: 76382506dc8a8f7ef5c21c1b759f75faa5f9cd0115dc4be0426615686ad1398b
+- evidence_id: complex53-agent-ipr-IPR037289
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037289/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:51.470304Z'
+  support: supports
+  summary: IPR037289 is the full Elp2 protein family, supported by native family type
+    and specific member signatures rather than one shared domain. Its class identity
+    is separately joined to the correct reviewed yeast example.
+  snapshot_sha256: 2c97a32ff23da0f1c8286371f5476c7b7db57d88bbfb5262b623da87d9c2d979
+- evidence_id: complex53-agent-ipr-IPR034687
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR034687/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:51.633530Z'
+  support: supports
+  summary: IPR034687 is the full Elp3 protein family, supported by native family type
+    and specific member signatures rather than one shared domain. The ELP3-like class
+    includes archaeal/bacterial homologous enzymes, not the separate YhcC or archaeosine
+    branch; mapping protein identity does not assign those homologs to yeast holo-Elongator.
+    Its older functional prose is not adopted as primary mechanism evidence.
+  snapshot_sha256: 6597b4b1e49df7e9f2df978867aa55068660cf5115686914698bac1ccf01cade
+- evidence_id: complex53-agent-ipr-IPR008728
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR008728/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:51.641319Z'
+  support: supports
+  summary: IPR008728 is the full Elp4 protein family, supported by native family type
+    and specific member signatures rather than one shared domain. Its class identity
+    is separately joined to the correct reviewed yeast example.
+  snapshot_sha256: 40a1c831e0b195a3e412fb98b798e22ee45d19d8d0012f3feb59c374e5145d35
+- evidence_id: complex53-agent-ipr-IPR019519
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019519/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:52.154955Z'
+  support: supports
+  summary: IPR019519 is the full Elp5 protein family, supported by native family type
+    and specific member signatures rather than one shared domain. Its class identity
+    is separately joined to the correct reviewed yeast example.
+  snapshot_sha256: 3fffeb698c8df6a5bdc80119fd3f1b546d1c82803e5552aa2dbb61010a56f0b1
+- evidence_id: complex53-agent-ipr-IPR018627
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018627/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:52.241663Z'
+  support: supports
+  summary: IPR018627 is the full Elp6 protein family, supported by native family type
+    and specific member signatures rather than one shared domain. Its class identity
+    is separately joined to the correct reviewed yeast example.
+  snapshot_sha256: 4c47036ce43070e3555ca723507f0f45a873380139cb70999c9ab3db4a7292e7
+- evidence_id: complex53-agent-ipr-IPR039661
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR039661/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:51.532953Z'
+  support: supports
+  summary: IPR039661 is the broader ELP3/YhcC parent with distinct Elp3-like, YhcC
+    and archaeosine-synthase children; it is not used as exact Elp3 grounding.
+  snapshot_sha256: 65404b7adca1b549577d3f3a8727c6d990537ccdd524028733dbad4520134a23
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/elongator_holoenzyme_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:03:49Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/elongator_holoenzyme_complex.yaml'
+  snapshot_sha256: cc7343f536c68653fe3ec80af652922c63f984d94341520e78f37bac2f32e270
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/elongator_holoenzyme_complex.yaml
+    --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/elongator_holoenzyme_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:03:51Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/elongator_holoenzyme_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/elongator_holoenzyme_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch53-20261022-kx679dvh/elongator_holoenzyme_complex-strict.tsv"
+  snapshot_sha256: ed44baf8fe26871a783494a5f189b908499e40a2a3decd6365e9874e53d10025
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/elongator_holoenzyme_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T06:10:32.217254Z'
+  support: supports
+  summary: "data/structures/other/elongator_holoenzyme_complex.yaml  (GO:0033588)\n\
+    \  yeast_elongator_trna_wobble_modification\telp1_elongator_subunit\tCOVERED\t\
+    ->elp1_elongator_subunit (UniProtKB:Q06706)\n  yeast_elongator_trna_wobble_modification\t\
+    elp2_elongator_subunit\tCOVERED\t->elp2_elongator_subunit (UniProtKB:P42935)\n\
+    \  yeast_elongator_trna_wobble_modification\telp3_elongator_subunit\tCOVERED\t\
+    ->elp3_elongator_subunit (UniProtKB:Q02908)\n  yeast_elongator_trna_wobble_modification\t\
+    elp4_elongator_subunit\tCOVERED\t->elp4_elongator_subunit (UniProtKB:Q02884)\n\
+    \  yeast_elongator_trna_wobble_modification\telp5_elongator_subunit\tCOVERED\t\
+    ->elp5_elongator_subunit (UniProtKB:P38874)\n  yeast_elongator_trna_wobble_modification\t\
+    elp6_elongator_subunit\tCOVERED\t->elp6_elongator_subunit (UniProtKB:Q04868)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     6  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     6\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 29a516440ea13c22756b229da3ae60ec5478f31193cc9d8912c5317484dd5a63
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/elongator_holoenzyme_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T06:10:33.372572Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/elongator_holoenzyme_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '15 of 22 collected target identifiers returned OK. PMID:10024884: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:11435442: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:11689709: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:14562095: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:15769872: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:15780940: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:24750273: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Correct GO identity with obsolete copy-number definition
+  outcome: concern
+  target_ids:
+  - GO:0033588
+  summary: The identifier, parent classes and source-based synonyms are correct. The
+    explicit heterohexamer/two-heterotrimer definition and six constituent roles contradict
+    the yeast architecture resolved by two later primary studies and summarized in
+    the native proteins. Six unique subunit classes must be separated from total molecular
+    copy number.
+  evidence_ids:
+  - record
+  - complex53-agent-go
+  - complex53-agent-krogan2001-legacy
+  - complex53-agent-setiaputra2016-legacy
+  - complex53-agent-dauden2016-legacy
+  - complex53-agent-protein-Q06706
+  - complex53-agent-protein-P42935
+  - complex53-agent-protein-Q02908
+  - complex53-agent-protein-Q02884
+  - complex53-agent-protein-P38874
+  - complex53-agent-protein-Q04868
+- assessment_id: grounding
+  area: grounding
+  topic: Six exact full-protein family mappings
+  outcome: concern
+  target_ids:
+  - GO:0033588
+  summary: The correct reference accessions and alias-sensitive single hits are retained.
+    Elp1/2/3/4/5/6 match IPR006849/IPR037289/IPR034687/IPR008728/IPR019519/IPR018627,
+    respectively, using family metadata plus separate native protein xrefs. Domain
+    and broad-parent alternatives are excluded.
+  evidence_ids:
+  - record
+  - curation
+  - complex53-agent-ipr-IPR006849
+  - complex53-agent-ipr-IPR037289
+  - complex53-agent-ipr-IPR034687
+  - complex53-agent-ipr-IPR008728
+  - complex53-agent-ipr-IPR019519
+  - complex53-agent-ipr-IPR018627
+  - complex53-agent-ipr-IPR039661
+  - complex53-agent-protein-Q06706
+  - complex53-agent-protein-P42935
+  - complex53-agent-protein-Q02908
+  - complex53-agent-protein-Q02884
+  - complex53-agent-protein-P38874
+  - complex53-agent-protein-Q04868
+  - complex53-agent-gene-ELP1-559292
+  - complex53-agent-gene-ELP2-559292
+  - complex53-agent-gene-ELP3-559292
+  - complex53-agent-gene-ELP4-559292
+  - complex53-agent-gene-ELP5-559292
+  - complex53-agent-gene-ELP6-559292
+- assessment_id: scope
+  area: scope
+  topic: Yeast preparations and reference strain identity
+  outcome: supported
+  target_ids:
+  - GO:0033588
+  summary: Species4932 and S288C559292 identities are correct, with W303 and named
+    experimental strains distinguished from reference protein accessions. COMMON retains
+    present-in-most-members meaning; source synthesis supports ordinary species occurrence
+    but does not measure population prevalence.
+  evidence_ids:
+  - record
+  - schema
+  - complex53-agent-krogan2001-legacy
+  - complex53-agent-setiaputra2016-legacy
+  - complex53-agent-dauden2016-legacy
+  - complex53-agent-tax4932
+  - complex53-agent-tax559292
+  - complex53-agent-protein-Q06706
+  - complex53-agent-protein-P42935
+  - complex53-agent-protein-Q02908
+  - complex53-agent-protein-Q02884
+  - complex53-agent-protein-P38874
+  - complex53-agent-protein-Q04868
+- assessment_id: function-graph
+  area: graph
+  topic: Constituent graph and early tRNA-modification output
+  outcome: concern
+  target_ids:
+  - GO:0033588
+  summary: The seven-edge NONMECHANISTIC graph preserves valid six-class membership
+    and broad wobble-modification output. Huang supports the early modification step,
+    not a complete catalytic cycle. Current heterotrimer terminology in component
+    roles/discussion and the graph description should be aligned with corrected architecture;
+    historical study titles remain unchanged.
+  evidence_ids:
+  - record
+  - complex53-agent-go
+  - complex53-agent-krogan2001-legacy
+  - complex53-agent-huang2005-legacy
+  - complex53-agent-setiaputra2016-legacy
+  - complex53-agent-dauden2016-legacy
+- assessment_id: formation
+  area: grounding
+  topic: Condition-specific Elp1 scaffold requirement
+  outcome: concern
+  target_ids:
+  - GO:0033588
+  summary: 'Setiaputra directly tests complex association after elp1 deletion: Elp2/3
+    no longer associate with the surviving Elp456 ring. This supports a condition-scoped
+    Elp1 requirement for complete holoassembly. It is not cell viability, nor proof
+    that Elp456 formation requires Elp1. Other subunit deletions and functional modification
+    defects are not promoted to blanket formation necessity.'
+  evidence_ids:
+  - record
+  - schema
+  - complex53-agent-setiaputra2016-legacy
+  - complex53-agent-krogan2001-legacy
+  - complex53-agent-huang2005-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Full maintained record and scoped unresolved claims
+  outcome: supported
+  target_ids:
+  - GO:0033588
+  summary: All maintained fields, evidence notes, discussions and graph claims were
+    checked at the stated source extents. Unresolved assembly, taxonomic prevalence
+    and preparation details remain explicit rather than being inferred from identifiers
+    or validation success.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex53-agent-go
+findings:
+- finding_id: F1
+  issue_key: elongator-copy-number
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate six subunit identities from holoenzyme stoichiometry
+  description: 'The current definition calls the whole complex a heterohexamer of
+    two heterotrimers, and all six roles/discussion repeat the trimer architecture.
+    Later yeast primary structures resolve a dodecameric assembly: two Elp123 units
+    plus a hexameric Elp456 ring. Native GO preserves the old wording, so matching
+    GO does not resolve this biological conflict.'
+  target_ids:
+  - GO:0033588
+  field_paths:
+  - definition
+  - components[*].role
+  - causal_graphs#yeast_elongator_trna_wobble_modification.description
+  - discussions#resolve_elongator_family_groundings.rationale
+  evidence_ids:
+  - record
+  - complex53-agent-go
+  - complex53-agent-krogan2001-legacy
+  - complex53-agent-setiaputra2016-legacy
+  - complex53-agent-dauden2016-legacy
+  - complex53-agent-protein-Q06706
+  - complex53-agent-protein-P42935
+  - complex53-agent-protein-Q02908
+  - complex53-agent-protein-Q02884
+  - complex53-agent-protein-P38874
+  - complex53-agent-protein-Q04868
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/elongator_holoenzyme_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-specific biological scope and exact component grounding
+  native_severity: major
+  normalization_reason: The defining molecular architecture assigns the wrong total
+    copy number and subassembly stoichiometry. This changes the described physical
+    assembly even though its ontology identifier remains correct.
+- finding_id: F2
+  issue_key: elongator-exact-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the six exact Elongator protein families
+  description: All six rows remain label-only merely because exact full-class mappings
+    were deferred. Current native family records and independent protein memberships
+    resolve those mappings without using WD, GNAT, radical-SAM or RecA-like domains.
+  target_ids:
+  - GO:0033588
+  field_paths:
+  - components[*].grounding_status
+  - discussions#resolve_elongator_family_groundings
+  evidence_ids:
+  - record
+  - curation
+  - complex53-agent-ipr-IPR006849
+  - complex53-agent-ipr-IPR037289
+  - complex53-agent-ipr-IPR034687
+  - complex53-agent-ipr-IPR008728
+  - complex53-agent-ipr-IPR019519
+  - complex53-agent-ipr-IPR018627
+  - complex53-agent-ipr-IPR039661
+  - complex53-agent-protein-Q06706
+  - complex53-agent-protein-P42935
+  - complex53-agent-protein-Q02908
+  - complex53-agent-protein-Q02884
+  - complex53-agent-protein-P38874
+  - complex53-agent-protein-Q04868
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/elongator_holoenzyme_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-specific biological scope and exact component grounding
+  native_severity: minor
+  normalization_reason: The complex identity and correctly identified proteins remain
+    intact; this is a bounded actionable grounding, inventory or condition-specific
+    annotation correction.
+- finding_id: F3
+  issue_key: elongator-elp1-formation
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Record the measured Elp1 assembly requirement
+  description: The Elp1 row remains UNKNOWN although the primary elp1-deletion association
+    experiment demonstrates loss of Elp2/3 recruitment to the Elp456-containing assembly.
+    The condition and surviving Elp456 ring must remain explicit.
+  target_ids:
+  - GO:0033588
+  field_paths:
+  - components#elp1_elongator_subunit.essentiality
+  - components#elp1_elongator_subunit.evidence
+  evidence_ids:
+  - record
+  - schema
+  - complex53-agent-setiaputra2016-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/elongator_holoenzyme_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-specific biological scope and exact component grounding
+  native_severity: minor
+  normalization_reason: The complex identity and correctly identified proteins remain
+    intact; this is a bounded actionable grounding, inventory or condition-specific
+    annotation correction.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0033588
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/elongator_holoenzyme_complex.yaml
+    role: maintained scientific record
+  description: Retain GO0033588 and the six constituent identities, but replace the
+    fixed six-copy/two-trimer definition with an architecture consistent with the
+    primary studies. Distinguish six distinct proteins from condition-specific oligomeric
+    occupancy and update associated role/discussion wording.
+  acceptance_checks:
+  - Do not rewrite historical titles or make a universal occupancy claim beyond the
+    characterized yeast assembly.
+  - Keep the valid tRNA function and reference protein identities.
+  - Preserve correct identities and supported biology; pass applicable native validation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0033588
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/elongator_holoenzyme_complex.yaml
+    role: maintained scientific record
+  description: Use the six verified full-protein families and align current grounding
+    notes/TODO.
+  acceptance_checks:
+  - Treat IPR034687 as Elp3 protein identity, not evidence that every microbial homolog
+    joins a yeast-type complex.
+  - Preserve correct identities and supported biology; pass applicable native validation.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0033588
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/elongator_holoenzyme_complex.yaml
+    role: maintained scientific record
+  description: Replace blanket unknown for Elp1 with the experimentally scoped formation
+    requirement and attach the primary deletion/pull-down evidence; retain uncertainty
+    outside that preparation.
+  acceptance_checks:
+  - Do not equate formation with growth or tRNA catalytic output.
+  - Preserve independent Elp456 assembly and do not promote all six component enums.
+  - Preserve correct identities and supported biology; pass applicable native validation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, supplemental datasets or atomic coordinates were reanalyzed. Embedded
+  caption text is distinguished from independently inspected images and supplements.
+- Winkler2001 is complete-abstract only; its retained DOI route failed TLS certificate
+  verification, not a verified lack of public full text. Otero/Huh/Rahl/DiSanto are
+  used at native-abstract identity/context scope, with individual protein annotations
+  separately checked.
+- The primary architecture papers are 2017 journal articles first published online
+  in2016. Their complete bodies were retained but only the stated sections were read.
+- Native GO remains inconsistent with later yeast architecture. Modern occupancy outside
+  the characterized preparations was not exhaustively surveyed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
