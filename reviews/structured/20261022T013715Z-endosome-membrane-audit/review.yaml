@@ -1,0 +1,719 @@
+schema_version: 1.0.0
+review_id: 20261022T013715Z-endosome-membrane-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Endosome membrane identity, evidence and boundary review
+started_at: '2026-10-22T01:18:29Z'
+finished_at: '2026-10-22T01:37:15Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No concrete curation defect observed in the endosome membrane record within
+  the explicitly bounded evidence scope.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/endosome.yaml
+    sha256: 7eb3c5b8022e63698365a49990831c7609d649c6024002eb19f6a28cdfff38a8
+    role: context
+  - path: data/structures/membrane_organelle/endosome_lumen.yaml
+    sha256: 7522ffb363729241f2263bef6ebf96cb135a807c677df546e0b4ae92fe2bc604
+    role: context
+  - path: data/structures/membrane_organelle/endosome_membrane.yaml
+    sha256: 564b0ecf02448e0dab2210a213597b20b57ebfe09bf7637dfe2bed79a1b95270
+    role: target
+  - path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    sha256: 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0010008
+  path: data/structures/membrane_organelle/endosome_membrane.yaml
+  label: endosome membrane
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endosome_membrane.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire single target: identity, hierarchy, component/protein scope,
+    organisms, cited source claims and every graph edge.'
+  selection: Target 2 of batch twenty-eight, strict uncovered path order at fresh
+    origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0010008
+checks:
+- check_id: native-verify
+  name: Native protein verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  command: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/endosome_membrane.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; biological membership is assessed from sources
+    separately.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  command: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/endosome_membrane.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological membership is assessed from sources
+    separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  command: just validate data/structures/membrane_organelle/endosome_membrane.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  command: just validate-strict data/structures/membrane_organelle/endosome_membrane.yaml
+    --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/endosome_membrane-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0010008
+  summary: No expression-module dataset or inference is used; protein identity and
+    the cited physical/localization experiments provide the relevant evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - protein-contract
+  - root28-sources-go
+  - root28-sources-tax4932
+  - root28-sources-katzmann2001-meta
+  - root28-sources-katzmann2003-meta
+  - root28-sources-babst2002-meta
+  - root28-sources-henne2011-meta
+  - neighbor-multivesicular_body_intraluminal_vesicle
+  - root28-sources-tax559292
+  - root28-sources-protein-P40343
+  - root28-sources-katzmann2003-pmc
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  summary: '12 of 15 collected target identifiers returned OK. PMID:11511343: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID11511343, DOI10.1016/s0092-8674(01)00434-2 and Ubiquitin-dependent
+    sorting into the multivesicular body pathway requires the function of a conserved
+    endosomal protein sorting complex, ESCRT-I. Bibliographic identity is resolved;
+    scientific scope remains restricted to the separately documented abstract/body
+    inspections.; PMID:12194857: UNREACHABLE; The bulk PMID transport returned414;
+    the independently retrieved exact MED record verifies PMID12194857, DOI10.1016/s1534-5807(02)00220-4
+    and Escrt-III: an endosome-associated heterooligomeric protein complex required
+    for mvb sorting. Bibliographic identity is resolved; scientific scope remains
+    restricted to the separately documented abstract/body inspections.; cellstructuremech:multivesicular_body_intraluminal_vesicle:
+    SKIPPED; Repository-minted identifier resolves to the frozen maintained multivesicular
+    body intraluminal vesicle record at data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml.
+    Root repeated an ignored-inclusive anchored corpus search and verified its exact
+    identifier/input hash. This verifies the reference, not all neighboring biology.
+    Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root28-sources-katzmann2001-meta
+  - root28-sources-babst2002-meta
+  - neighbor-multivesicular_body_intraluminal_vesicle
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0010008
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch28 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/endosome_membrane.yaml
+  locator: Entire maintained target including history, evidence, components, every
+    graph node and edge, discussions
+  accessed_at: '2026-10-22T01:25:02Z'
+  support: context_only
+  summary: Full target was read; no scientific record, status, history or generated
+    page is changed.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Identity, hierarchy, parthood, component and evidence rules
+  accessed_at: '2026-10-22T01:25:02Z'
+  support: context_only
+  summary: Whole structure, boundary material and enclosed region are distinguished.
+    Associated machinery is not automatically a constituent, and functional necessity
+    is distinct from structure formation.
+- evidence_id: protein-contract
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component essentiality and protein_examples; ProteinExample lines440–468
+  accessed_at: '2026-10-22T01:25:02Z'
+  support: context_only
+  summary: A protein example is a taxon-paired instance whose structure role must
+    have source support. Accession identity alone is insufficient. Collective bilayer
+    constitution does not prove individual lipid-species necessity.
+- evidence_id: root28-sources-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031904,GO:0070013,GO:0005768,GO:0010008,GO:0005771,GO:0071985,GO:0016020,GO:0000813,GO:0000815,GO:0012507,GO:0030658,GO:0030662,GO:0030134,GO:0005789,GO:0090114,GO:0030127,GO:1990413
+  locator: 'Complete17-term JSON: identifiers, active flags, names, definitions, synonyms
+    and returned child relations'
+  accessed_at: '2026-10-22T01:21:55.127008Z'
+  support: supports
+  summary: All17 returned active GO terms were directly read. Exact endosome lumen/membrane,
+    transport-vesicle membrane and eyespot definitions and declared synonyms agree.
+    GO0070013 explicitly lists endosome lumen as an is-a child; GO0005768 lists lumen/membrane
+    as parts. GO0030658/0030662 list GO0012507 as is-a child, while GO0030134 lists
+    it as part. Exact MVB and ESCRT definitions support the limited process context.
+    Broad membrane hierarchy is definition-based where no direct child was returned.
+  snapshot_sha256: 196c0eb6263923cb4c06c3050858f88ab320a65b4a9504075dfc5796e203a956
+- evidence_id: root28-sources-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Exact taxId, scientificName, rank, lineage and alternate names
+  accessed_at: '2026-10-22T01:10:58.502766Z'
+  support: supports
+  summary: Native ENA exact species identity and lineage agree with Saccharomyces
+    cerevisiae4932. This is taxonomic identity, not a measured population prevalence
+    or an experimental strain assignment.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root28-sources-katzmann2001-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A11511343%20AND%20SRC%3AMED
+  locator: Single-result bibliography and complete abstract; full-body inspection
+    scope separately specified
+  accessed_at: '2026-10-22T01:10:57.861587Z'
+  support: supports
+  summary: Native MED matches Ubiquitin-dependent sorting into the multivesicular
+    body pathway requires the function of a conserved endosomal protein sorting complex,
+    ESCRT-I., Katzmann DJ, Babst M, Emr SD., PMID11511343, DOI10.1016/s0092-8674(01)00434-2.
+    Complete primary abstract identifies ESCRT-I and ubiquitin-dependent MVB cargo
+    sorting in yeast. It supports sorting into internal vesicles, not a universal
+    property of every endosome.
+  snapshot_sha256: 89b0ab16f1c997094ab3253063701f5097b815c030e16320d5d41f485e3d50a9
+- evidence_id: root28-sources-katzmann2003-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1083/jcb.200302136
+  locator: Single-result bibliography and complete abstract; full-body inspection
+    scope separately specified
+  accessed_at: '2026-10-22T01:10:57.875261Z'
+  support: supports
+  summary: Native MED matches Vps27 recruits ESCRT machinery to endosomes during MVB
+    sorting., Katzmann DJ, Stefan CJ, Babst M, Emr SD., PMID12900393, DOI10.1083/jcb.200302136.
+    Complete primary abstract supports Vps27/PI(3)P-dependent ESCRT-I recruitment
+    and association at yeast endosomal membranes. The relevant original Results and
+    Methods were read separately.
+  snapshot_sha256: 7db90817ea355af4a50a7af4ff871e6469a57ef9b2c9e03388f6d02e8c202720
+- evidence_id: root28-sources-babst2002-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A12194857%20AND%20SRC%3AMED
+  locator: Single-result bibliography and complete abstract; full-body inspection
+    scope separately specified
+  accessed_at: '2026-10-22T01:10:58.446989Z'
+  support: supports
+  summary: 'Native MED matches Escrt-III: an endosome-associated heterooligomeric
+    protein complex required for mvb sorting., Babst M, Katzmann DJ, Estepa-Sabal
+    EJ, Meerloo T, Emr SD., PMID12194857, DOI10.1016/s1534-5807(02)00220-4. Complete
+    primary abstract supports cytosolic ESCRT-III recruitment, membrane oligomerization
+    and cargo sorting/concentration. It does not independently establish the precise
+    scission chemistry.'
+  snapshot_sha256: 154c66e5c81005bcb646718e07a114e6c610e20c4a80803a5505061f4c107317
+- evidence_id: root28-sources-henne2011-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.devcel.2011.05.015
+  locator: Single-result bibliography and complete abstract; full-body inspection
+    scope separately specified
+  accessed_at: '2026-10-22T01:10:57.861442Z'
+  support: supports
+  summary: Native MED matches The ESCRT pathway., Henne WM, Buchkovich NJ, Emr SD.,
+    PMID21763610, DOI10.1016/j.devcel.2011.05.015. Explicit review article; complete
+    abstract describes the ESCRT cargo-recognition and membrane-deformation overview.
+    It is not treated as a primary intervention experiment.
+  snapshot_sha256: 460a530ee4c6be779250900ab8aa406f9e827f57f923f35fbf21cc507303cb55
+- evidence_id: neighbor-multivesicular_body_intraluminal_vesicle
+  kind: record_content
+  reference: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+  locator: Lines1–85, identity, definition, hierarchy and initial component/source
+    context
+  accessed_at: '2026-10-22T01:25:02Z'
+  support: context_only
+  summary: Local identifier resolves to its intended MVB compartment or individual
+    intraluminal vesicle. This boundary inspection is not a full review of the neighboring
+    record.
+- evidence_id: root28-sources-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Exact taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T01:10:58.507227Z'
+  support: supports
+  summary: Native ENA strain559292 is Saccharomyces cerevisiae S288C. The reference-strain
+    VPS27 accession does not silently rename the primary experimental strain.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root28-sources-protein-P40343
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40343.json
+  locator: Primary accession, entryType, protein names, genes, organism and FUNCTION/SUBCELLULAR
+    LOCATION comments
+  accessed_at: '2026-10-22T01:10:59.091462Z'
+  support: supports
+  summary: Reviewed primary P40343 is VPS27/YNR006W in taxon559292. Its native FUNCTION
+    and endosome membrane annotations cite PMID12900393 for ESCRT-I recruitment. This
+    confirms the graph xref identity and annotation linkage, with the experiment interpreted
+    from its original source.
+  snapshot_sha256: 9722b86a9641dd5d053f0babc34f530ea7656e19571069c2eb081537e836c344
+- evidence_id: root28-sources-katzmann2003-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2172707/
+  locator: Original primary HTML sec5/6/12 and associated captions, read in this review
+    session; no figure-pixel or quantitative reanalysis
+  accessed_at: '2026-10-22T01:12:25.464014Z'
+  support: supports
+  summary: Directly read complete Results sec5 and sec6 and Methods sec12, including
+    Fig3/4 captions. Vps23-GFP localization and reciprocal membrane-fraction association
+    support Vps27-dependent ESCRT-I recruitment. Methods list SEY6210 derivatives;
+    reference-strain accession and study strain are kept distinct. Original body bytes
+    and original access time are reused unchanged from batch27; no new retrieval is
+    implied.
+  snapshot_sha256: d4bc3fc8fd5cbf98c1b88722373dbd34c271f2df8da4bbb78d4f808dc7197233
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/endosome_membrane.yaml
+    --verify
+  locator: Entire native focused output
+  accessed_at: '2026-10-22T01:22:04.600193Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/endosome_membrane.yaml
+    --causal-graphs
+  locator: Entire native focused output
+  accessed_at: '2026-10-22T01:22:06.054974Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/endosome_membrane.yaml  (GO:0010008)\n\
+    \  endosome_membrane_mvb_sorting\tvps27_endosomal_recruiter\tUNANCHORED_WITH_UNIPROT\t\
+    Vps27 endosomal ESCRT-I recruiter (UniProtKB:P40343)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     1  UNANCHORED_WITH_UNIPROT   no component_ref, but node\
+    \ carries a UniProtKB grounding or xref\n     0  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or\
+    \ xref on the node\n     1  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 60d9577c6bd0ff53005e8d24b45f7e18b9e281ee0d37fa082241f0743244897d
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/endosome_membrane.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:18:31Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/endosome_membrane.yaml'
+  snapshot_sha256: bc9e1892a796263aae883ca6fa050b1103de474e96831ca311bf634bbbc7375d
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/endosome_membrane.yaml
+    --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/endosome_membrane-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:18:32Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/endosome_membrane.yaml\
+    \ --out /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/endosome_membrane-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch28-20261022-rd3g_t6z/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch28-20261022-rd3g_t6z/endosome_membrane-strict.tsv"
+  snapshot_sha256: 010b57f02fdeca5a229bc691d6b6d060d8418d314d6ca713299301eacf0c2578
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/endosome_membrane.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '12 of 15 collected target identifiers returned OK. PMID:11511343: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID11511343, DOI10.1016/s0092-8674(01)00434-2 and Ubiquitin-dependent
+    sorting into the multivesicular body pathway requires the function of a conserved
+    endosomal protein sorting complex, ESCRT-I. Bibliographic identity is resolved;
+    scientific scope remains restricted to the separately documented abstract/body
+    inspections.; PMID:12194857: UNREACHABLE; The bulk PMID transport returned414;
+    the independently retrieved exact MED record verifies PMID12194857, DOI10.1016/s1534-5807(02)00220-4
+    and Escrt-III: an endosome-associated heterooligomeric protein complex required
+    for mvb sorting. Bibliographic identity is resolved; scientific scope remains
+    restricted to the separately documented abstract/body inspections.; cellstructuremech:multivesicular_body_intraluminal_vesicle:
+    SKIPPED; Repository-minted identifier resolves to the frozen maintained multivesicular
+    body intraluminal vesicle record at data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml.
+    Root repeated an ignored-inclusive anchored corpus search and verified its exact
+    identifier/input hash. This verifies the reference, not all neighboring biology.
+    Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Endosome compartment boundaries
+  outcome: supported
+  target_ids:
+  - GO:0010008
+  summary: Exact GO identity denotes the limiting endosomal lipid bilayer, with endosome
+    parthood and broader membrane class by definition. The MVB and individual ILV
+    are separate entities; their local identifiers are correctly targeted.
+  evidence_ids:
+  - record
+  - root28-sources-go
+  - policy
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast MVB context
+  outcome: supported
+  target_ids:
+  - GO:0010008
+  summary: The taxon4932 species label is exact. Existing primary sources support
+    yeast MVB sorting, and COMMON is qualitative occurrence rather than measured prevalence.
+    The canonical example is explicitly Vps27/ESCRT-I recruitment; SEY6210 experiment
+    backgrounds are not confused with S288C accession identity.
+  evidence_ids:
+  - record
+  - root28-sources-tax4932
+  - root28-sources-katzmann2001-meta
+  - root28-sources-katzmann2003-meta
+  - root28-sources-babst2002-meta
+  - root28-sources-henne2011-meta
+  - root28-sources-katzmann2003-pmc
+  - root28-sources-tax559292
+  - root28-sources-protein-P40343
+- assessment_id: composition
+  area: grounding
+  topic: Region, boundary and associated machinery
+  outcome: supported
+  target_ids:
+  - GO:0010008
+  summary: The single REVIEWED_LABEL_ONLY LIPID row denotes collective bilayer material.
+    Transient Vps27/ESCRT actors remain graph nodes, and the open grounding discussion
+    makes the generic material scope explicit. The sole protein xref matches VPS27;
+    no missing protein example is fabricated.
+  evidence_ids:
+  - record
+  - root28-sources-go
+  - protein-contract
+  - root28-sources-tax559292
+  - root28-sources-protein-P40343
+- assessment_id: function
+  area: evidence
+  topic: MVB sorting context
+  outcome: supported
+  target_ids:
+  - GO:0010008
+  summary: GO0071985 and the complete Katzmann2001 abstract support ubiquitinated
+    cargo entry into internal MVB vesicles. Henne is a contextual review. This specialized
+    function does not make ILVs obligatory in all endosomes.
+  evidence_ids:
+  - record
+  - root28-sources-go
+  - root28-sources-katzmann2001-meta
+  - root28-sources-katzmann2003-meta
+  - root28-sources-babst2002-meta
+  - root28-sources-henne2011-meta
+- assessment_id: graph
+  area: graph
+  topic: Every endosomal graph edge
+  outcome: supported
+  target_ids:
+  - GO:0010008
+  summary: All seven NONMECHANISTIC edges preserve membrane parthood/enclosure, Vps27-dependent
+    ESCRT-I recruitment, ubiquitin cargo sorting, ESCRT-III remodeling and ILV formation/containment.
+    Katzmann2003 supports recruitment; Babst abstract supports recruitment/oligomerization
+    and cargo sorting, while modern GO corroborates the broad scission/remodeling
+    activity. Detailed scission chemistry or a complete ESCRT cycle is not asserted.
+  evidence_ids:
+  - record
+  - root28-sources-go
+  - root28-sources-katzmann2001-meta
+  - root28-sources-katzmann2003-meta
+  - root28-sources-babst2002-meta
+  - root28-sources-henne2011-meta
+  - root28-sources-katzmann2003-pmc
+- assessment_id: limits
+  area: evidence
+  topic: Molecular necessity and mechanistic detail
+  outcome: unknown
+  target_ids:
+  - GO:0010008
+  summary: Individual lipid-species necessity, exhaustive cargo/constituent inventories
+    and exact membrane-scission mechanics are not independently established. The collective
+    bilayer ESSENTIAL row expresses defining constitution, not a knockout result for
+    each lipid.
+  evidence_ids:
+  - record
+  - root28-sources-go
+  - protein-contract
+- assessment_id: coverage
+  area: completeness
+  topic: Full maintained target and honest scope
+  outcome: supported
+  target_ids:
+  - GO:0010008
+  summary: Entire target and every graph edge were read. There are no target image
+    assets, measurements, trait links or verbatim evidence snippets to verify. Optional
+    molecular inventories and family groundings remain acknowledged; no finding is
+    invented from an empty optional slot. PROPOSED status and historical events are
+    retained.
+  evidence_ids:
+  - record
+  - policy
+  - root28-sources-go
+  - root28-sources-katzmann2001-meta
+  - root28-sources-katzmann2003-meta
+  - root28-sources-babst2002-meta
+  - root28-sources-henne2011-meta
+findings: []
+actions: []
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Source identity is not proof of experimental membership. Taxonomic labels do not
+  silently assign study strains, and qualitative COMMON does not encode a prevalence
+  survey. Historical authorship, prior searches and previous dispositions are not
+  independently recertified.
+- Katzmann2001 and Henne2011 were read as complete abstracts only; Henne is a review.
+  Katzmann2003 original sec5/6/12 and captions were read; Babst2002 is complete-abstract
+  only. Detailed scission chemistry and figure/data reanalysis are outside this scope.
+  Reused source bytes retain their actual original URLs/access times/hashes.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user explicitly authorizes review bundles for every uncovered record, including
+  honest no-finding reviews. Scientific records are not edited.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
