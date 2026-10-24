@@ -1,0 +1,634 @@
+# Ventral-disc crossbridge architecture and composition-boundary review
+
+- Review: 20261021T084041Z-ventral-disc-crossbridge-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T08:25:16Z
+- Finished UTC: 2026-10-21T08:40:41Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The exact crossbridge identity, ventral-disc parthood, observed lattice linkage and nonmechanistic graph are supported. Exact protein composition and stronger mechanical interpretations remain unresolved as stated. No concrete curation issue was established.
+
+## Scope And Provenance
+
+Entire single target, all taxon/function/graph/discussion fields and native identifiers; primary cryo-ET architecture, preparation, averaging and interpretation boundaries.
+
+Selection: Ninth selected target in batch twelve, fixed repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0097595 | data/structures/cytoskeleton/ventral_disc_crossbridge.yaml | maintained | ventral disc crossbridge |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0097595 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0097595 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0097595 | 5 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | GO:0097595 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0097595 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0097595 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0097595 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0097595 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0097595 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Exact crossbridge term and assembly boundary
+
+identity: supported. Targets: GO:0097595.
+
+GO:0097595, its definition and OTHER kind correctly describe a horizontal fibrous link. It is distinct from the microribbon itself, disc microtubules, the intra-complex B bridge and the whole ventral disc.
+
+### Direct ventral-disc parthood
+
+scope: supported. Targets: GO:0097595.
+
+The native ventral-disc children list explicitly supplies part_of GO:0097595/GO:0097594. The record and graph use correct direction and distinguish the connected microribbon from the enclosing disc; no neighboring maintained record is needed.
+
+### Species aliases and characterized trophozoites
+
+scope: supported. Targets: GO:0097595.
+
+The taxon identifier and Giardia intestinalis label are consistent with native synonyms. WBC6 trophozoites are the studied material. COMMON is read qualitatively for the characterized species, not as numerical prevalence, cyst-stage occurrence or universal distribution across all Giardia.
+
+### Observed lateral linkage
+
+evidence: supported. Targets: GO:0097595.
+
+The function describes the directly mapped linkage between neighboring microribbons above the microtubule spiral. Crossbridge flexibility and variable length do not establish calcium/ATP-driven contraction, specific motor composition or sufficiency for host attachment, none of which the record asserts.
+
+### Nonmechanistic architectural edges
+
+graph: supported. Targets: GO:0097595.
+
+Both graph edges are supported: crossbridges link adjacent dorsal microribbons and form part of the ventral disc. ASSEMBLY/NONMECHANISTIC records topology rather than temporal recruitment, biochemical reconstitution or a contractile pathway.
+
+### Isolation and averaging limits
+
+scope: supported. Targets: GO:0097595.
+
+Whole-cell/plastic-section observations supply context; the high-resolution cryo-ET and averaging used extracted cytoskeletons with flattened discs and flexible/disrupted crossbridges. Five tomograms from four discs supported the4700-subvolume grand average, excluding overlap/extreme-periphery. These constraints do not undermine the bounded linkage claim.
+
+### Unresolved proteins and justified empty components
+
+completeness: supported. Targets: GO:0097595.
+
+The native GO term and primary density map leave exact crossbridge composition unresolved. Microribbon beta-/delta-giardin and SALP1 assignments do not transfer to crossbridges. The record already removed an unsupported generic-protein row and retains the graph-scoped grounding TODO; no exact verified crossbridge family has been established by the inspected sources.
+
+### Primary source scope and maintained ownership
+
+provenance: supported. Targets: GO:0097595.
+
+The cited DOI and all asserted GO/taxon identifiers have native support. The source is primary for architecture and interpretive for contraction. Historical curation, PROPOSED status and maintained YAML remain unchanged; optional images, numeric properties and protein examples are not automatic requirements.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/ventral_disc_crossbridge.yaml; Entire maintained YAML, all fields and discussions read | context_only | Complete target content defines the claims reviewed; historical curation statements are distinguished from current observations. |
+| policy | docs/record-review-profile.md; Full record-review profile and governing review/evidence skills in native source inputs | context_only | Review-only, claim-level assessment; optional empty fields are not automatic defects and historical access notes are not rewritten as current absence claims. |
+| crossbridge-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097595,GO:0097594,GO:0097597; Complete three native results including definitions/status; GO:0097597 children relation entries | supports | Active GO:0097595 defines horizontal links between adjacent microribbons with unknown composition. GO:0097594 defines the neighboring microribbon; GO:0097597 lists both as part_of children. |
+| crossbridge-agent-tax-5741 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5741; Full native taxon result names/rank/lineage | supports | Native species5741 is currently preferred as Giardia duodenalis and explicitly includes Giardia intestinalis and Giardia lamblia synonyms; the record label is valid. |
+| crossbridge-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1371/journal.pone.0043783%22; Native exact-DOI result identity and bibliographic fields | supports | The exact DOI resolves to Schwartz, Heumann, Dawson and Hoenger2012, PMID22984443/PMC3439489 with the cited PLOS ONE title. |
+| crossbridge-agent-schwartz2012-jats | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3439489/fullTextXML; Native JATS s2b cryo-ET, s2e averaging/Table1/Figure4 description, s2h microribbons/crossbridges, s3d microribbon Discussion, s3e crossbridge Discussion, s4 Conclusions and all s5 Methods (s5a–f); figure pixels/raw tomography not inspected | supports | Primary cryo-ET maps16nm-spaced crossbridges between adjacent microribbon sheets. Extracted-cytoskeleton averaging establishes structural linkage but does not assign crossbridge proteins or directly demonstrate contraction. Methods identify WBC6 trophozoites and distinguish whole-cell structural context from isolated preparations. |
+| schema-result | just validate data/structures/cytoskeleton/ventral_disc_crossbridge.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/ventral_disc_crossbridge.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/ventral_disc_crossbridge.yaml --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_crossbridge-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/ventral_disc_crossbridge.yaml --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_crossbridge-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_crossbridge-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/ventral_disc_crossbridge.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 5 of5 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The specified primary JATS sections and all main Methods were read; figure pixels, raw tomography, videos and unlisted supplements were not independently examined.
+- High-resolution tomography/averaging used detergent-extracted WBC6 trophozoite cytoskeletons with lost dome shape; the map is not a live conformational assay.
+- Crossbridge composition, a proposed contractile function and complete attachment mechanism remain unresolved. Neighboring microribbon protein identities are not evidence for crossbridge constituents.
+- COMMON is a qualitative occurrence statement for the characterized species; no numerical prevalence or universal stage/strain/species distribution is inferred.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- All12 native input hashes verified after focused inspect/schema/strict completion. Judgment depends on the target, native authorities and primary paper, with no neighboring maintained-record input.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T084041Z-ventral-disc-crossbridge-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Ventral-disc crossbridge architecture and composition-boundary review
+started_at: '2026-10-21T08:25:16Z'
+finished_at: '2026-10-21T08:40:41Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The exact crossbridge identity, ventral-disc parthood, observed lattice linkage
+  and nonmechanistic graph are supported. Exact protein composition and stronger mechanical
+  interpretations remain unresolved as stated. No concrete curation issue was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+    sha256: bb35ddad7c8b15916d19fa6e5ad334ca3476221330372020fdf4adc8565db67b
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0097595
+  path: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+  label: ventral disc crossbridge
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, all taxon/function/graph/discussion fields and
+    native identifiers; primary cryo-ET architecture, preparation, averaging and interpretation
+    boundaries.
+  selection: Ninth selected target in batch twelve, fixed repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0097595
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097595
+  command: just validate data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097595
+  command: just validate-strict data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+    --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_crossbridge-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097595
+  summary: 5 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097595
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - crossbridge-agent-go
+  - crossbridge-agent-tax-5741
+  - crossbridge-agent-epmc
+  - crossbridge-agent-schwartz2012-jats
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097595
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097595
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097595
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097595
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097595
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch12 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+  locator: Entire maintained YAML, all fields and discussions read
+  accessed_at: '2026-10-21T08:36:28Z'
+  support: context_only
+  summary: Complete target content defines the claims reviewed; historical curation
+    statements are distinguished from current observations.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/record-review-profile.md
+  locator: Full record-review profile and governing review/evidence skills in native
+    source inputs
+  accessed_at: '2026-10-21T08:36:28Z'
+  support: context_only
+  summary: Review-only, claim-level assessment; optional empty fields are not automatic
+    defects and historical access notes are not rewritten as current absence claims.
+- evidence_id: crossbridge-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097595,GO:0097594,GO:0097597
+  locator: Complete three native results including definitions/status; GO:0097597
+    children relation entries
+  accessed_at: '2026-10-21T08:25:56.720744Z'
+  support: supports
+  summary: Active GO:0097595 defines horizontal links between adjacent microribbons
+    with unknown composition. GO:0097594 defines the neighboring microribbon; GO:0097597
+    lists both as part_of children.
+  snapshot_sha256: 10c107f8bf97e296423507c9b4fb6c16e1675974af8897652a382a3d35506abe
+- evidence_id: crossbridge-agent-tax-5741
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5741
+  locator: Full native taxon result names/rank/lineage
+  accessed_at: '2026-10-21T08:25:56.730800Z'
+  support: supports
+  summary: Native species5741 is currently preferred as Giardia duodenalis and explicitly
+    includes Giardia intestinalis and Giardia lamblia synonyms; the record label is
+    valid.
+  snapshot_sha256: 1dcdc380972a71a0a24c80755d8bbacdcb0b6d9988bb5fb1e05ba43f50580dd3
+- evidence_id: crossbridge-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1371/journal.pone.0043783%22
+  locator: Native exact-DOI result identity and bibliographic fields
+  accessed_at: '2026-10-21T08:25:57.030288Z'
+  support: supports
+  summary: The exact DOI resolves to Schwartz, Heumann, Dawson and Hoenger2012, PMID22984443/PMC3439489
+    with the cited PLOS ONE title.
+  snapshot_sha256: e57aa4be2b4da0e8c2fd4082e5f08d1cd50239a932a5c403924d3a2618bac654
+- evidence_id: crossbridge-agent-schwartz2012-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3439489/fullTextXML
+  locator: Native JATS s2b cryo-ET, s2e averaging/Table1/Figure4 description, s2h
+    microribbons/crossbridges, s3d microribbon Discussion, s3e crossbridge Discussion,
+    s4 Conclusions and all s5 Methods (s5a–f); figure pixels/raw tomography not inspected
+  accessed_at: '2026-10-21T08:27:02.838620Z'
+  support: supports
+  summary: Primary cryo-ET maps16nm-spaced crossbridges between adjacent microribbon
+    sheets. Extracted-cytoskeleton averaging establishes structural linkage but does
+    not assign crossbridge proteins or directly demonstrate contraction. Methods identify
+    WBC6 trophozoites and distinguish whole-cell structural context from isolated
+    preparations.
+  snapshot_sha256: df4cb13cb3b12c8be3df05f99f8b97cc44951dd61a2c00a168ed8e9aedb6f9d8
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:25:17Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/ventral_disc_crossbridge.yaml'
+  snapshot_sha256: 47e967f77dabfae3698fc0ca65d312b99321caa04eaea85d3bce750b99ee040a
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+    --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_crossbridge-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:25:19Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/ventral_disc_crossbridge.yaml\
+    \ --out /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_crossbridge-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch12-20261021-ipvr425j/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch12-20261021-ipvr425j/ventral_disc_crossbridge-strict.tsv"
+  snapshot_sha256: 2f959c017393263816c287dfe722407c1a97c95f0d46441f9a07f92e2e3a483a
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml; exact collect()
+    scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:36:28Z'
+  support: supports
+  summary: '5 of5 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact crossbridge term and assembly boundary
+  outcome: supported
+  target_ids:
+  - GO:0097595
+  summary: GO:0097595, its definition and OTHER kind correctly describe a horizontal
+    fibrous link. It is distinct from the microribbon itself, disc microtubules, the
+    intra-complex B bridge and the whole ventral disc.
+  evidence_ids:
+  - crossbridge-agent-go
+  - crossbridge-agent-schwartz2012-jats
+  - record
+- assessment_id: hierarchy
+  area: scope
+  topic: Direct ventral-disc parthood
+  outcome: supported
+  target_ids:
+  - GO:0097595
+  summary: The native ventral-disc children list explicitly supplies part_of GO:0097595/GO:0097594.
+    The record and graph use correct direction and distinguish the connected microribbon
+    from the enclosing disc; no neighboring maintained record is needed.
+  evidence_ids:
+  - crossbridge-agent-go
+  - crossbridge-agent-schwartz2012-jats
+  - record
+- assessment_id: taxon
+  area: scope
+  topic: Species aliases and characterized trophozoites
+  outcome: supported
+  target_ids:
+  - GO:0097595
+  summary: The taxon identifier and Giardia intestinalis label are consistent with
+    native synonyms. WBC6 trophozoites are the studied material. COMMON is read qualitatively
+    for the characterized species, not as numerical prevalence, cyst-stage occurrence
+    or universal distribution across all Giardia.
+  evidence_ids:
+  - crossbridge-agent-tax-5741
+  - crossbridge-agent-schwartz2012-jats
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Observed lateral linkage
+  outcome: supported
+  target_ids:
+  - GO:0097595
+  summary: The function describes the directly mapped linkage between neighboring
+    microribbons above the microtubule spiral. Crossbridge flexibility and variable
+    length do not establish calcium/ATP-driven contraction, specific motor composition
+    or sufficiency for host attachment, none of which the record asserts.
+  evidence_ids:
+  - crossbridge-agent-go
+  - crossbridge-agent-schwartz2012-jats
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic architectural edges
+  outcome: supported
+  target_ids:
+  - GO:0097595
+  summary: 'Both graph edges are supported: crossbridges link adjacent dorsal microribbons
+    and form part of the ventral disc. ASSEMBLY/NONMECHANISTIC records topology rather
+    than temporal recruitment, biochemical reconstitution or a contractile pathway.'
+  evidence_ids:
+  - crossbridge-agent-go
+  - crossbridge-agent-schwartz2012-jats
+  - record
+- assessment_id: preparation
+  area: scope
+  topic: Isolation and averaging limits
+  outcome: supported
+  target_ids:
+  - GO:0097595
+  summary: Whole-cell/plastic-section observations supply context; the high-resolution
+    cryo-ET and averaging used extracted cytoskeletons with flattened discs and flexible/disrupted
+    crossbridges. Five tomograms from four discs supported the4700-subvolume grand
+    average, excluding overlap/extreme-periphery. These constraints do not undermine
+    the bounded linkage claim.
+  evidence_ids:
+  - crossbridge-agent-schwartz2012-jats
+  - record
+- assessment_id: inventory
+  area: completeness
+  topic: Unresolved proteins and justified empty components
+  outcome: supported
+  target_ids:
+  - GO:0097595
+  summary: The native GO term and primary density map leave exact crossbridge composition
+    unresolved. Microribbon beta-/delta-giardin and SALP1 assignments do not transfer
+    to crossbridges. The record already removed an unsupported generic-protein row
+    and retains the graph-scoped grounding TODO; no exact verified crossbridge family
+    has been established by the inspected sources.
+  evidence_ids:
+  - crossbridge-agent-go
+  - crossbridge-agent-schwartz2012-jats
+  - record
+  - policy
+- assessment_id: provenance
+  area: provenance
+  topic: Primary source scope and maintained ownership
+  outcome: supported
+  target_ids:
+  - GO:0097595
+  summary: The cited DOI and all asserted GO/taxon identifiers have native support.
+    The source is primary for architecture and interpretive for contraction. Historical
+    curation, PROPOSED status and maintained YAML remain unchanged; optional images,
+    numeric properties and protein examples are not automatic requirements.
+  evidence_ids:
+  - crossbridge-agent-go
+  - crossbridge-agent-tax-5741
+  - crossbridge-agent-epmc
+  - crossbridge-agent-schwartz2012-jats
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- The specified primary JATS sections and all main Methods were read; figure pixels,
+  raw tomography, videos and unlisted supplements were not independently examined.
+- High-resolution tomography/averaging used detergent-extracted WBC6 trophozoite cytoskeletons
+  with lost dome shape; the map is not a live conformational assay.
+- Crossbridge composition, a proposed contractile function and complete attachment
+  mechanism remain unresolved. Neighboring microribbon protein identities are not
+  evidence for crossbridge constituents.
+- COMMON is a qualitative occurrence statement for the characterized species; no numerical
+  prevalence or universal stage/strain/species distribution is inferred.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- All12 native input hashes verified after focused inspect/schema/strict completion.
+  Judgment depends on the target, native authorities and primary paper, with no neighboring
+  maintained-record input.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```
