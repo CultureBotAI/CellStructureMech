@@ -1,0 +1,592 @@
+# Mitotic spindle-pole-body half-bridge identity and duplication-site review
+
+- Review: 20261021T071135Z-half-bridge-of-mitotic-spindle-pole-body-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T07:09:33Z
+- Finished UTC: 2026-10-21T07:11:35Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact half-bridge identity, hierarchy and budding-yeast duplication-site topology are supported. The component TODO remains explicit and no concrete curation defect was established.
+
+## Scope And Provenance
+
+Entire single target, all cited GO/taxon/DOI identities, the relevant2004 manuscript body and scoped2017 structural context.
+
+Selection: Second unreviewed path in batch seven, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0061496 | data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml | maintained | half bridge of mitotic spindle pole body |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0061496 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0061496 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0061496 | 6 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0061496 | No gene/regulator or expression-module assertion is present in the target. Candidate constituent identities are optional source context, not a transcriptional mechanism. |
+| Claim-level scientific review | passed | True | GO:0061496 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0061496 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0061496 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0061496 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0061496 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0061496 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Named SPB substructure
+
+identity: supported. Targets: GO:0061496.
+
+Native identity and general-subtype/mitotic-SPB relations agree with the record. The half-bridge is neither the entire SPB nor one of its plaque layers.
+
+### Budding-yeast example through the cell cycle
+
+scope: supported. Targets: GO:0061496.
+
+The source supports S. cerevisiae as a characterized example. Mitotic is interpreted as mitotic-cell-cycle context, explicitly including G1 satellite initiation, rather than an assertion of M-phase-only presence.
+
+### Bounded daughter-assembly site
+
+graph: supported. Targets: GO:0061496.
+
+The topology and assembly-site edges are supported. Templates assembly is scoped by the graph to where daughter assembly starts, not a reconstructed ordered molecular recruitment pathway or an autonomous sufficient nucleator.
+
+### Deferred constituent grounding
+
+completeness: supported. Targets: GO:0061496.
+
+The source names four plausible constituent classes, while native sequence records provide organism-specific candidates. Optional structured composition remains acknowledged work; no wrong family or unsupported stoichiometry is asserted. The inspected domain/family candidates have not resolved every exact whole-component mapping.
+
+### Citation identity and source scope
+
+provenance: supported. Targets: GO:0061496.
+
+The cited review’s actual body supports the duplication-site assertion. The2017 source is used only as corroborating structural context, with its original access time retained.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| mitotic-halfbridge-prep-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0061496,GO%3A0005825,GO%3A0044732,GO%3A0005816; All target and cited boundary GO definitions and child relations | supports | Native GO confirms the exact active half-bridge identity and general-half-bridge is-a parent with mitotic-SPB parthood. |
+| mitotic-halfbridge-prep-taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Native scientificName and rank | supports | ENA confirms species Saccharomyces cerevisiae, NCBITaxon4932. |
+| mitotic-halfbridge-prep-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.cellbio.20.022003.114106%20OR%20DOI:10.1091/mbc.E17-06-0397&amp;format=json&amp;resultType=core; Exact DOI/PMID metadata | supports | Native bibliographic metadata confirms Jaspersen and Winey2004, The budding yeast spindle pole body: structure, duplication, and function, DOI10.1146/annurev.cellbio.20.022003.114106 and PMID15473833. |
+| jaspersen-body | https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function; Public author manuscript pp.5–6,10–12,15–18; browser body re-inspected by read-only source collaborator at the recorded time | supports | The half-bridge adjoins the central-plaque region. Early-G1 satellite assembly begins at its distal cytoplasmic tip; subsequent elongation forms a complete bridge. Kar1, Mps3, Cdc31 and Sfi1 are described as half-bridge constituents, distinct from satellite/core components. The mitotic cell-cycle context includes G1 and does not imply M-phase-only existence. Direct download403 receipts are not used as source text. |
+| mitotic-halfbridge-prep-viswanath2017 | https://pmc-oa-opendata.s3.amazonaws.com/PMC5687031.1/PMC5687031.1.xml; Viswanath2017 full source, Figure1 description; re-read during this source-preparation pass; original access timestamp preserved | supports | Figure1 description corroborates an asymmetric half-bridge protrusion and duplication initiation. This context is not a molecular reconstruction of the half-bridge or proof of exact component stoichiometry. |
+| mitotic-halfbridge-prep-candidate-proteins | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC31%20OR%20gene_exact%3AKAR1%20OR%20gene_exact%3AMPS3%20OR%20gene_exact%3ASFI1%29%20AND%20organism_id%3A559292%20AND%20reviewed%3Atrue&amp;format=json; Reviewed UniProt query: names, gene identities, taxa and family/domain cross-references | supports | Native reviewed S288C records resolve Kar1 P11927, Mps3 P47069, Cdc31 P06704 and Sfi1 Q12369 as potential curation examples. They are not accessions asserted in this target and do not independently establish membership or exact whole-family grounding. |
+| record | data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml; Entire maintained YAML | context_only | The record remains PROPOSED, gives a budding-yeast duplication-site example and explicitly defers protein-family grounding. It has no accession, dimension, image, stoichiometry or ordered recruitment claim. |
+| schema-result | just validate data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/half_bridge_of_mitotic_spindle_pole_body-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/half_bridge_of_mitotic_spindle_pole_body-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch7-20261021-dz9x5cv0/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/half_bridge_of_mitotic_spindle_pole_body-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml; exact collect() scope; snapshot hash identifies the full original resolver TSV, not the extracted target slice | supports | 6 of6 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The2004 review was read as a browser-accessible public author manuscript; direct download attempts returned403, and publisher-version PDF byte identity was not established.
+- The source describes initiation at the distal cytoplasmic tip in early G1. Mitotic-cell-cycle context must not be read as M-phase-only existence or a complete ordered assembly mechanism.
+- Native S288C protein identities are candidate enrichment material, not target-asserted accessions or a complete experimentally resolved family/stoichiometric inventory.
+- COMMON is qualitative occurrence in a characterized budding-yeast model, not measured prevalence across every strain or fungal lineage.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The explicit user goal requires saving clean target reviews; no finding was invented.
+- Read-only collaborator re-inspected the source body and native entries; root assessed the complete target after native input inspection.
+- Only the review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T071135Z-half-bridge-of-mitotic-spindle-pole-body-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mitotic spindle-pole-body half-bridge identity and duplication-site review
+started_at: '2026-10-21T07:09:33Z'
+finished_at: '2026-10-21T07:11:35Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact half-bridge identity, hierarchy and budding-yeast duplication-site
+  topology are supported. The component TODO remains explicit and no concrete curation
+  defect was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+    sha256: 774a31a26d3323f1395c6db0de2a0f68cdeaa17d1d68b97900e364455c3b43d4
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0061496
+  path: data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+  label: half bridge of mitotic spindle pole body
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, all cited GO/taxon/DOI identities, the relevant2004
+    manuscript body and scoped2017 structural context.
+  selection: Second unreviewed path in batch seven, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0061496
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061496
+  command: just validate data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061496
+  command: just validate-strict data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+    --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/half_bridge_of_mitotic_spindle_pole_body-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061496
+  summary: 6 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0061496
+  summary: No gene/regulator or expression-module assertion is present in the target.
+    Candidate constituent identities are optional source context, not a transcriptional
+    mechanism.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061496
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - mitotic-halfbridge-prep-go
+  - mitotic-halfbridge-prep-taxon
+  - mitotic-halfbridge-prep-epmc
+  - jaspersen-body
+  - mitotic-halfbridge-prep-viswanath2017
+  - mitotic-halfbridge-prep-candidate-proteins
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061496
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061496
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061496
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061496
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061496
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: mitotic-halfbridge-prep-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0061496,GO%3A0005825,GO%3A0044732,GO%3A0005816
+  locator: All target and cited boundary GO definitions and child relations
+  accessed_at: '2026-10-21T07:04:09.357396Z'
+  support: supports
+  summary: Native GO confirms the exact active half-bridge identity and general-half-bridge
+    is-a parent with mitotic-SPB parthood.
+  snapshot_sha256: be0f1bdc06414ccff4fca4ccb09da1e50063d2e69f170304d071773a5348caf9
+- evidence_id: mitotic-halfbridge-prep-taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Native scientificName and rank
+  accessed_at: '2026-10-21T07:04:09.403473Z'
+  support: supports
+  summary: ENA confirms species Saccharomyces cerevisiae, NCBITaxon4932.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: mitotic-halfbridge-prep-epmc
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.cellbio.20.022003.114106%20OR%20DOI:10.1091/mbc.E17-06-0397&format=json&resultType=core
+  locator: Exact DOI/PMID metadata
+  accessed_at: '2026-10-21T07:04:09.393029Z'
+  support: supports
+  summary: 'Native bibliographic metadata confirms Jaspersen and Winey2004, The budding
+    yeast spindle pole body: structure, duplication, and function, DOI10.1146/annurev.cellbio.20.022003.114106
+    and PMID15473833.'
+  snapshot_sha256: c03e88f13293f0e6a1c03a44e0c1aa2cf7fd5b4fc1ca21bcf036afe44015f741
+- evidence_id: jaspersen-body
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function
+  locator: Public author manuscript pp.5–6,10–12,15–18; browser body re-inspected
+    by read-only source collaborator at the recorded time
+  accessed_at: '2026-10-21T07:04:15Z'
+  support: supports
+  summary: The half-bridge adjoins the central-plaque region. Early-G1 satellite assembly
+    begins at its distal cytoplasmic tip; subsequent elongation forms a complete bridge.
+    Kar1, Mps3, Cdc31 and Sfi1 are described as half-bridge constituents, distinct
+    from satellite/core components. The mitotic cell-cycle context includes G1 and
+    does not imply M-phase-only existence. Direct download403 receipts are not used
+    as source text.
+- evidence_id: mitotic-halfbridge-prep-viswanath2017
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5687031.1/PMC5687031.1.xml
+  locator: Viswanath2017 full source, Figure1 description; re-read during this source-preparation
+    pass; original access timestamp preserved
+  accessed_at: '2026-10-20T07:38:52.830471Z'
+  support: supports
+  summary: Figure1 description corroborates an asymmetric half-bridge protrusion and
+    duplication initiation. This context is not a molecular reconstruction of the
+    half-bridge or proof of exact component stoichiometry.
+  snapshot_sha256: 004836a027b7fad21def4f6e9eebc94ec5f1e07679d123407a062241f6edb580
+- evidence_id: mitotic-halfbridge-prep-candidate-proteins
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC31%20OR%20gene_exact%3AKAR1%20OR%20gene_exact%3AMPS3%20OR%20gene_exact%3ASFI1%29%20AND%20organism_id%3A559292%20AND%20reviewed%3Atrue&format=json
+  locator: 'Reviewed UniProt query: names, gene identities, taxa and family/domain
+    cross-references'
+  accessed_at: '2026-10-21T07:04:58.457402Z'
+  support: supports
+  summary: Native reviewed S288C records resolve Kar1 P11927, Mps3 P47069, Cdc31 P06704
+    and Sfi1 Q12369 as potential curation examples. They are not accessions asserted
+    in this target and do not independently establish membership or exact whole-family
+    grounding.
+  snapshot_sha256: d847d2edcc74879c32f754b15bd940f998aa5260050d904b7ee295ea70bf677b
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+  locator: Entire maintained YAML
+  accessed_at: '2026-10-21T07:11:34Z'
+  support: context_only
+  summary: The record remains PROPOSED, gives a budding-yeast duplication-site example
+    and explicitly defers protein-family grounding. It has no accession, dimension,
+    image, stoichiometry or ordered recruitment claim.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:09:36Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml'
+  snapshot_sha256: 044f64a33fc7551ca99e0a00f7b19221027cf6f6564e021d7488c3a9f07623aa
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+    --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/half_bridge_of_mitotic_spindle_pole_body-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:09:37Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml\
+    \ --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/half_bridge_of_mitotic_spindle_pole_body-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch7-20261021-dz9x5cv0/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/half_bridge_of_mitotic_spindle_pole_body-strict.tsv"
+  snapshot_sha256: c11873499257266a6ad6ac0668ad94d41e52b016987becea1316bd9d4255d151
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml;
+    exact collect() scope; snapshot hash identifies the full original resolver TSV,
+    not the extracted target slice
+  accessed_at: '2026-10-21T07:11:34Z'
+  support: supports
+  summary: '6 of6 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Named SPB substructure
+  outcome: supported
+  target_ids:
+  - GO:0061496
+  summary: Native identity and general-subtype/mitotic-SPB relations agree with the
+    record. The half-bridge is neither the entire SPB nor one of its plaque layers.
+  evidence_ids:
+  - mitotic-halfbridge-prep-go
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast example through the cell cycle
+  outcome: supported
+  target_ids:
+  - GO:0061496
+  summary: The source supports S. cerevisiae as a characterized example. Mitotic is
+    interpreted as mitotic-cell-cycle context, explicitly including G1 satellite initiation,
+    rather than an assertion of M-phase-only presence.
+  evidence_ids:
+  - mitotic-halfbridge-prep-taxon
+  - jaspersen-body
+  - mitotic-halfbridge-prep-go
+- assessment_id: graph
+  area: graph
+  topic: Bounded daughter-assembly site
+  outcome: supported
+  target_ids:
+  - GO:0061496
+  summary: The topology and assembly-site edges are supported. Templates assembly
+    is scoped by the graph to where daughter assembly starts, not a reconstructed
+    ordered molecular recruitment pathway or an autonomous sufficient nucleator.
+  evidence_ids:
+  - mitotic-halfbridge-prep-go
+  - jaspersen-body
+  - mitotic-halfbridge-prep-viswanath2017
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: Deferred constituent grounding
+  outcome: supported
+  target_ids:
+  - GO:0061496
+  summary: The source names four plausible constituent classes, while native sequence
+    records provide organism-specific candidates. Optional structured composition
+    remains acknowledged work; no wrong family or unsupported stoichiometry is asserted.
+    The inspected domain/family candidates have not resolved every exact whole-component
+    mapping.
+  evidence_ids:
+  - mitotic-halfbridge-prep-candidate-proteins
+  - jaspersen-body
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Citation identity and source scope
+  outcome: supported
+  target_ids:
+  - GO:0061496
+  summary: The cited review’s actual body supports the duplication-site assertion.
+    The2017 source is used only as corroborating structural context, with its original
+    access time retained.
+  evidence_ids:
+  - mitotic-halfbridge-prep-epmc
+  - jaspersen-body
+  - mitotic-halfbridge-prep-viswanath2017
+findings: []
+actions: []
+limitations:
+- The2004 review was read as a browser-accessible public author manuscript; direct
+  download attempts returned403, and publisher-version PDF byte identity was not established.
+- The source describes initiation at the distal cytoplasmic tip in early G1. Mitotic-cell-cycle
+  context must not be read as M-phase-only existence or a complete ordered assembly
+  mechanism.
+- Native S288C protein identities are candidate enrichment material, not target-asserted
+  accessions or a complete experimentally resolved family/stoichiometric inventory.
+- COMMON is qualitative occurrence in a characterized budding-yeast model, not measured
+  prevalence across every strain or fungal lineage.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The explicit user goal requires saving clean target reviews; no finding was invented.
+- Read-only collaborator re-inspected the source body and native entries; root assessed
+  the complete target after native input inspection.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+```
