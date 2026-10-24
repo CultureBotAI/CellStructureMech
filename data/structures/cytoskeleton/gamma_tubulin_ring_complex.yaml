@@ -204,7 +204,7 @@ components:
         microtubule organizing center, spindle pole body' localisation of P87244.
 - component_id: mto1_mto2_activating_tether
   label: CM1-motif gamma-TuRC activator complex (Mto1-Mto2)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: ASSOCIATED_MACHINERY
   gene_symbols:
   - mto1
@@ -404,4 +404,10 @@ curation_history:
   changes: Added reviewed UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) in Schizosaccharomyces
     pombe 972h- (NCBITaxon:284812) to gamma_tusc_repeating_core, disambiguating gamma-tubulin
     P25295 from the homonymous ER glucosidase II beta subunit Q9USH8.
+  llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2420: Updated components#mto1_mto2_activating_tether from component_type
+    PROTEIN to PROTEIN_COMPLEX.'
   llm_assisted: true

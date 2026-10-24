@@ -55,7 +55,7 @@ components:
         rests on the record's own sources.
 - component_id: gcp2_gcp3_spoke_subunits
   label: gamma-tubulin complex spoke scaffold heterodimer (GCP2/Spc97/Alp4 and GCP3/Spc98/Alp6)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - alp4
@@ -268,4 +268,10 @@ curation_history:
   changes: Added reviewed UniProtKB:P25295 (Tubulin gamma chain, gtb1/tug1) in Schizosaccharomyces
     pombe 972h- (NCBITaxon:284812) to gamma_tubulin_subunit, disambiguating gamma-tubulin
     P25295 from the homonymous ER glucosidase II beta subunit Q9USH8.
+  llm_assisted: true
+- timestamp: '2026-10-24T00:20:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2420: Updated components#gcp2_gcp3_spoke_subunits from component_type
+    PROTEIN to PROTEIN_COMPLEX.'
   llm_assisted: true
