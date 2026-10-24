@@ -1,0 +1,932 @@
+schema_version: 1.0.0
+review_id: 20261022T043539Z-ada-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Ada complex scientific review
+started_at: '2026-10-22T04:15:05Z'
+finished_at: '2026-10-22T04:35:39Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Six-subunit budding-yeast ADA identity, HAT activity, protein examples and
+  bounded graph are supported. One grouped minor finding resolves four currently available
+  exact protein families.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/ada_complex.yaml
+    sha256: 19ddd1561eca805686597eff4dff9a4984339e1245e743c82c616267fac35406
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0140671
+  path: data/structures/other/ada_complex.yaml
+  label: ADA complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ada_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire target reviewed for identity, source support, composition,
+    scope, graph claims and completeness.
+  selection: Target 3 of batch44 in strict uncovered path order at fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0140671
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  command: just validate data/structures/other/ada_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  command: just validate-strict data/structures/other/ada_complex.yaml --out /private/tmp/cellstructure-batch44-20261022-b975f18l/ada_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-ada_complex-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  command: /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/ada_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; claim-level support assessed separately.
+  evidence_ids:
+  - native-ada_complex-causal-graphs
+- check_id: native-ada_complex-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  command: /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/ada_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; claim-level support assessed separately.
+  evidence_ids:
+  - native-ada_complex-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0140671
+  summary: No expression-module claim is maintained.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root44-sources-go
+  - root44-sources-pmid-21734642
+  - root44-sources-pmid-22932476
+  - root44-sources-pmid-14562095
+  - root44-sources-pmid-28966424
+  - root44-sources-tax4932
+  - root44-sources-tax559292
+  - root44-sources-protein-Q02336
+  - root44-sources-protein-Q03330
+  - root44-sources-protein-P32494
+  - root44-sources-protein-P25554
+  - root44-sources-protein-Q12433
+  - root44-sources-protein-P25649
+  - root44-sources-gene-ADA2
+  - root44-sources-gene-GCN5
+  - root44-sources-gene-NGG1
+  - root44-sources-gene-SGF29
+  - root44-sources-gene-AHC1
+  - root44-sources-gene-AHC2
+  - root44-sources-ipr-IPR016827
+  - root44-sources-ipr-IPR037800
+  - root44-sources-ipr-IPR019340
+  - root44-sources-ipr-IPR037802
+  - root44-sources-xml-PMC3159981
+  - root44-sources-xml-PMC3489556
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  summary: '12 of 16 collected target identifiers returned OK. PMID:14562095: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:21734642:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:22932476: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:28966424: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - root44-sources-pmid-14562095
+  - root44-sources-pmid-21734642
+  - root44-sources-pmid-22932476
+  - root44-sources-pmid-28966424
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140671
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/ada_complex.yaml
+  locator: Entire maintained target, history, components, evidence, discussions and
+    graphs
+  accessed_at: '2026-10-22T04:20:10Z'
+  support: context_only
+  summary: Every current field and historical note was read; history is provenance
+    rather than independent scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, essentiality and graph scope
+  accessed_at: '2026-10-22T04:20:10Z'
+  support: context_only
+  summary: Protein families differ from domains and organism accessions; formation
+    necessity differs from cellular or catalytic essentiality.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components and REVIEWED_LABEL_ONLY contract, especially lines159–160
+  accessed_at: '2026-10-22T04:20:10Z'
+  support: context_only
+  summary: Reviewed label-only means no exact term exists; an explicitly verified
+    exact family resolves a current gap even when a historical TODO remains.
+- evidence_id: root44-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0004402,GO:0005658,GO:0005829,GO:0006269,GO:0008726,GO:0042575,GO:0070461,GO:0140671,GO:1990200,GO:1990201,GO:1990202,GO:1990204
+  locator: Complete requested id/name/active/definition/synonym fields and typed maintained
+    parent/parthood/activity links
+  accessed_at: '2026-10-22T04:15:35.968772Z'
+  support: supports
+  summary: Native GO definitions, synonyms and maintained typed relationships support
+    these exact complex classes. GO0140671 retains the unrelated PMID28966424 xref,
+    which is appropriately excluded from biological support.
+  snapshot_sha256: fac3f615f0c72d3b731dc777be0ab009b135c9f0f3bcad4ad0df1470840c770e
+- evidence_id: root44-sources-pmid-21734642
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21734642+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native MED id/title/authors/year/DOI and complete abstract
+  accessed_at: '2026-10-22T04:15:40.103114Z'
+  support: supports
+  summary: 'MED21734642: Combinatorial depletion analysis to assemble the network
+    architecture of the SAGA and ADA chromatin remodeling complexes. DOI 10.1038/msb.2011.40;
+    complete abstract read. Bibliographic identity and abstract-level findings only;
+    any inspected primary body has its own evidence row.'
+  snapshot_sha256: 7f5d664df0a9d8ec2dc36013703fec56b86f1dbb35996fae9e1a39ee27d893f4
+- evidence_id: root44-sources-pmid-22932476
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22932476+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native MED id/title/authors/year/DOI and complete abstract
+  accessed_at: '2026-10-22T04:15:40.310052Z'
+  support: supports
+  summary: 'MED22932476: The nuclear localization of SWI/SNF proteins is subjected
+    to oxygen regulation. DOI 10.1186/2045-3701-2-30; complete abstract read. Bibliographic
+    identity and abstract-level findings only; any inspected primary body has its
+    own evidence row.'
+  snapshot_sha256: 0ceaa6b74c793696d062d2cc6a01dda4a98d3707061b4de0b3ea7afc334792d1
+- evidence_id: root44-sources-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native MED id/title/authors/year/DOI and complete abstract
+  accessed_at: '2026-10-22T04:15:39.929587Z'
+  support: supports
+  summary: 'MED14562095: Global analysis of protein localization in budding yeast.
+    DOI 10.1038/nature02026; complete abstract read. Bibliographic identity and abstract-level
+    findings only; any inspected primary body has its own evidence row.'
+  snapshot_sha256: 8bbeed3381c96852db4221aac079da00e1bf5c50630629c24d4d9136e1645c21
+- evidence_id: root44-sources-pmid-28966424
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28966424+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native MED id/title/authors/year/DOI and complete abstract
+  accessed_at: '2026-10-22T04:15:40.532584Z'
+  support: supports
+  summary: 'MED28966424: Reinforcement Sensitivity and Social Anxiety in Combat Veterans.
+    DOI 10.1016/j.paid.2016.04.008; complete abstract read. Bibliographic identity
+    and abstract-level findings only; any inspected primary body has its own evidence
+    row.'
+  snapshot_sha256: a2a0fd111b20fa6940d04266f23634fbd224561b81dfb9eec236b41727baa56c
+- evidence_id: root44-sources-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T04:15:35.969098Z'
+  support: supports
+  summary: ENA confirms the maintained scientific name, rank, aliases and lineage
+    for 4932.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root44-sources-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T04:15:35.969184Z'
+  support: supports
+  summary: ENA confirms the maintained scientific name, rank, aliases and lineage
+    for 559292.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root44-sources-protein-Q02336
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q02336.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; full SUBUNIT/LOCATION/SIMILARITY;
+    InterPro/Pfam cross-reference ids
+  accessed_at: '2026-10-22T04:15:38.258767Z'
+  support: supports
+  summary: Reviewed accession Q02336 has the maintained gene/aliases and taxon. Complete
+    SUBUNIT and SUBCELLULAR LOCATION comments and evidence joins were inspected; localization
+    citations do not by themselves establish membership.
+  snapshot_sha256: 9ba155eb5f302ead97dac6fe1ff83e40e4b87575794cca8900697cd9fbee30b6
+- evidence_id: root44-sources-protein-Q03330
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q03330.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; full SUBUNIT/LOCATION/SIMILARITY;
+    InterPro/Pfam cross-reference ids
+  accessed_at: '2026-10-22T04:15:38.335520Z'
+  support: supports
+  summary: Reviewed accession Q03330 has the maintained gene/aliases and taxon. Complete
+    SUBUNIT and SUBCELLULAR LOCATION comments and evidence joins were inspected; localization
+    citations do not by themselves establish membership.
+  snapshot_sha256: 667475295dfdeb90ef9a627660f618253d4c60fced36b13643b995d8e24dba3d
+- evidence_id: root44-sources-protein-P32494
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P32494.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; full SUBUNIT/LOCATION/SIMILARITY;
+    InterPro/Pfam cross-reference ids
+  accessed_at: '2026-10-22T04:15:37.473653Z'
+  support: supports
+  summary: Reviewed accession P32494 has the maintained gene/aliases and taxon. Complete
+    SUBUNIT and SUBCELLULAR LOCATION comments and evidence joins were inspected; localization
+    citations do not by themselves establish membership.
+  snapshot_sha256: 020685e706f244f3204a35d33a50a31e1a0894ecb1ad807cb5990377fe6f9deb
+- evidence_id: root44-sources-protein-P25554
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P25554.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; full SUBUNIT/LOCATION/SIMILARITY;
+    InterPro/Pfam cross-reference ids
+  accessed_at: '2026-10-22T04:15:36.995269Z'
+  support: supports
+  summary: Reviewed accession P25554 has the maintained gene/aliases and taxon. Complete
+    SUBUNIT and SUBCELLULAR LOCATION comments and evidence joins were inspected; localization
+    citations do not by themselves establish membership.
+  snapshot_sha256: faf7163faf9c9abdda30a26f656a931e135eb18d7e72be4056fdad4b963e793b
+- evidence_id: root44-sources-protein-Q12433
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q12433.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; full SUBUNIT/LOCATION/SIMILARITY;
+    InterPro/Pfam cross-reference ids
+  accessed_at: '2026-10-22T04:15:39.154132Z'
+  support: supports
+  summary: Reviewed accession Q12433 has the maintained gene/aliases and taxon. Complete
+    SUBUNIT and SUBCELLULAR LOCATION comments and evidence joins were inspected; localization
+    citations do not by themselves establish membership.
+  snapshot_sha256: 0cec171ab5cd0984d7a997e38ba8b7ba5c1071993090305db199bcd007cc1e3a
+- evidence_id: root44-sources-protein-P25649
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P25649.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; full SUBUNIT/LOCATION/SIMILARITY;
+    InterPro/Pfam cross-reference ids
+  accessed_at: '2026-10-22T04:15:37.286959Z'
+  support: supports
+  summary: Reviewed accession P25649 has the maintained gene/aliases and taxon. Complete
+    SUBUNIT and SUBCELLULAR LOCATION comments and evidence joins were inspected; localization
+    citations do not by themselves establish membership.
+  snapshot_sha256: 71d91b3ec253d1893d7b84db352bbcc8214ba0c9eb8f356f3fd278f001570a38
+- evidence_id: root44-sources-gene-ADA2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AADA2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:17:39.369537Z'
+  support: supports
+  summary: Exact reviewed ADA2/taxon559292 query returns one result, the maintained
+    accession.
+  snapshot_sha256: 9b2d5bdd018ba939f04992953fa74fe361a9a78c82612b0d87b6725761dc5310
+- evidence_id: root44-sources-gene-GCN5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGCN5%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:17:39.369857Z'
+  support: supports
+  summary: Exact reviewed GCN5/taxon559292 query returns one result, the maintained
+    accession.
+  snapshot_sha256: 92e8c8d4c4a81f4af2abe6384f43f9005699ca3e85b12f97a0806251ec4f9028
+- evidence_id: root44-sources-gene-NGG1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANGG1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:17:39.369962Z'
+  support: supports
+  summary: Exact reviewed NGG1/taxon559292 query returns one result, the maintained
+    accession.
+  snapshot_sha256: ba5277cdcbfad20e5923a084efe5b0a5e39a64674779d6b93a8742f53b118a42
+- evidence_id: root44-sources-gene-SGF29
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASGF29%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:17:39.370056Z'
+  support: supports
+  summary: Exact reviewed SGF29/taxon559292 query returns one result, the maintained
+    accession.
+  snapshot_sha256: 7d6990d3e7bb910b60802c6841cc79c338f9aa81dfd8448076ac2a11b49c39f1
+- evidence_id: root44-sources-gene-AHC1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAHC1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:17:39.370124Z'
+  support: supports
+  summary: Exact reviewed AHC1/taxon559292 query returns one result, the maintained
+    accession.
+  snapshot_sha256: cfdaddf0cf8f800320faf6c53e7e42e8d0335b507c3b0b2abf744c31c8fbc4b4
+- evidence_id: root44-sources-gene-AHC2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAHC2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count, accession/status/name/gene/taxon fields
+  accessed_at: '2026-10-22T04:17:40.356421Z'
+  support: supports
+  summary: Exact reviewed AHC2/taxon559292 query returns one result, the maintained
+    accession.
+  snapshot_sha256: af29a7508e3022ee34abba322ea02885ae46bf0dab70d6ce45769167c92c99ba
+- evidence_id: root44-sources-ipr-IPR016827
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016827/
+  locator: Complete native accession/name/type/description; not a sequence-alignment
+    reanalysis
+  accessed_at: '2026-10-22T04:16:43.267829Z'
+  support: supports
+  summary: IPR016827 is a family named Transcriptional adaptor 2. Its complete description
+    was inspected and compared with the component class and protein cross-reference.
+  snapshot_sha256: b6a44948d830c4744d9da6aeb1c56dd6fc10c7d171647a08f35ae738ea23c67d
+- evidence_id: root44-sources-ipr-IPR037800
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037800/
+  locator: Complete native accession/name/type/description; not a sequence-alignment
+    reanalysis
+  accessed_at: '2026-10-22T04:16:43.268366Z'
+  support: supports
+  summary: IPR037800 is a family named Histone acetyltransferase GCN5. Its complete
+    description was inspected and compared with the component class and protein cross-reference.
+  snapshot_sha256: 3599e328a85614af42ae625f833d773c2b3c5012e1d12ba11ca7fdc590e352a0
+- evidence_id: root44-sources-ipr-IPR019340
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR019340/
+  locator: Complete native accession/name/type/description; not a sequence-alignment
+    reanalysis
+  accessed_at: '2026-10-22T04:16:43.268249Z'
+  support: supports
+  summary: IPR019340 is a family named Histone acetyltransferases subunit 3. Its complete
+    description was inspected and compared with the component class and protein cross-reference.
+  snapshot_sha256: 6143ca90e1a729ff27866a467d031d0ab9b84d933846f63bd4aa8ba265d8fda9
+- evidence_id: root44-sources-ipr-IPR037802
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR037802/
+  locator: Complete native accession/name/type/description; not a sequence-alignment
+    reanalysis
+  accessed_at: '2026-10-22T04:16:43.268477Z'
+  support: supports
+  summary: IPR037802 is a family named SAGA-associated factor 29. Its complete description
+    was inspected and compared with the component class and protein cross-reference.
+  snapshot_sha256: 4509a3332caf2f9a68698b703ed621c3bbf08df2a112d6a0ff0ae65187f94f95
+- evidence_id: root44-sources-xml-PMC3159981
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3159981/fullTextXML
+  locator: Complete Results sec3/6/7 including Fig5/6 captions, Discussion sec9, Methods
+    sec12/13/16/17; other sections and supplements not read
+  accessed_at: '2026-10-22T04:16:10.503874Z'
+  support: supports
+  summary: Lee2011 primary purifications and MudPIT identify six ADA subunits, distinguish
+    the Ahc1/Ahc2-specific module from the shared HAT core, and show Ahc2-purified
+    ADA preferentially acetylates nucleosomes. The modular model is not a direct atomic-interface
+    structure.
+  snapshot_sha256: c80c1f1640e8f67f52481cbe169d0dd6cfcfec32e25401e966c0a1e4536197c9
+- evidence_id: root44-sources-xml-PMC3489556
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3489556/fullTextXML
+  locator: Complete Table1 and complete Methods; other Results paragraphs, figures
+    and supplements not certified
+  accessed_at: '2026-10-22T04:16:10.504407Z'
+  support: supports
+  summary: Dastidar2012 uses GFP microscopy under controlled hypoxia/reoxygenation
+    and reports relocalizing nuclear proteins. This bounded reading is methodological
+    context; it does not independently locate Gcn5 in an uninspected table or image.
+    The maintained Gcn5 annotation is verified directly in UniProt.
+  snapshot_sha256: 5dcd1a0b580a19d27543b0aec7e9a9b68c0e7eb9aa22f2ce1ae89187dd308a97
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/ada_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:15:07Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/ada_complex.yaml'
+  snapshot_sha256: 3e2e7db6a457ba9aa9f0377932e4bd2000fd92b8b2c6a72f1d7a911557daf11a
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/ada_complex.yaml --out /private/tmp/cellstructure-batch44-20261022-b975f18l/ada_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:15:08Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/ada_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch44-20261022-b975f18l/ada_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch44-20261022-b975f18l/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch44-20261022-b975f18l/ada_complex-strict.tsv"
+  snapshot_sha256: 57eb25e6754f3a67289a6c1c174fbd44891d47651c7d214cd50384053ad76ec5
+- evidence_id: native-ada_complex-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/ada_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T04:15:50.686569Z'
+  support: supports
+  summary: "data/structures/other/ada_complex.yaml  (GO:0140671)\n  yeast_ada_histone_acetyltransferase_activity\t\
+    ada2_ada_hat_subunit\tCOVERED\t->ada2_ada_hat_subunit (UniProtKB:Q02336)\n  yeast_ada_histone_acetyltransferase_activity\t\
+    gcn5_ada_catalytic_subunit\tCOVERED\t->gcn5_ada_catalytic_subunit (UniProtKB:Q03330)\n\
+    \  yeast_ada_histone_acetyltransferase_activity\tada3_ngg1_ada_hat_subunit\tCOVERED\t\
+    ->ada3_ngg1_ada_hat_subunit (UniProtKB:P32494)\n  yeast_ada_histone_acetyltransferase_activity\t\
+    sgf29_ada_hat_subunit\tCOVERED\t->sgf29_ada_hat_subunit (UniProtKB:P25554)\n \
+    \ yeast_ada_histone_acetyltransferase_activity\tahc1_ada_module_subunit\tCOVERED\t\
+    ->ahc1_ada_module_subunit (UniProtKB:Q12433)\n  yeast_ada_histone_acetyltransferase_activity\t\
+    ahc2_ada_module_subunit\tCOVERED\t->ahc2_ada_module_subunit (UniProtKB:P25649)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     6  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     6\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 0d96dc55e89d4a8a4cbb28315873b13a8cbd72eff5b96b7d0b76a520d5365e7d
+- evidence_id: native-ada_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/ada_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T04:15:52.068043Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/ada_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '12 of 16 collected target identifiers returned OK. PMID:14562095: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:21734642:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:22932476: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force.; PMID:28966424: UNREACHABLE; Exact native Europe
+    PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport
+    failure. Identity resolution does not certify every attached biological claim;
+    declared abstract/body reading scope remains in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact ADA identity and SAGA-type parent
+  outcome: supported
+  target_ids:
+  - GO:0140671
+  summary: GO0140671, its synonyms and direct parent agree; six-subunit ADA is distinct
+    from the larger SAGA complex.
+  evidence_ids:
+  - record
+  - root44-sources-go
+  - root44-sources-xml-PMC3159981
+- assessment_id: composition
+  area: grounding
+  topic: Six constituents and four resolvable family groundings
+  outcome: concern
+  target_ids:
+  - GO:0140671
+  summary: Primary affinity purification and orthogonal assays support all six constituents.
+    Verified full families resolve Ada2, Gcn5, Ada3/Ngg1 and Sgf29 despite current
+    REVIEWED_LABEL_ONLY fields. Ahc1 domain hits and absent Ahc2 InterPro/Pfam cross-references
+    do not establish exact whole-protein families.
+  evidence_ids:
+  - record
+  - curation
+  - root44-sources-xml-PMC3159981
+  - root44-sources-ipr-IPR016827
+  - root44-sources-ipr-IPR037800
+  - root44-sources-ipr-IPR019340
+  - root44-sources-ipr-IPR037802
+  - root44-sources-protein-Q02336
+  - root44-sources-protein-Q03330
+  - root44-sources-protein-P32494
+  - root44-sources-protein-P25554
+  - root44-sources-protein-Q12433
+  - root44-sources-protein-P25649
+- assessment_id: examples
+  area: grounding
+  topic: Six exact protein examples
+  outcome: supported
+  target_ids:
+  - GO:0140671
+  summary: Reviewed S288C accessions, aliases and single-hit queries match. Gcn5 nuclear
+    PMID22932476, Ngg1 nuclear PMID21734642 and both Ahc cytoplasmic PMID14562095
+    notes faithfully reproduce native annotation. This review does not independently
+    reanalyze every localization experiment.
+  evidence_ids:
+  - record
+  - root44-sources-xml-PMC3489556
+  - root44-sources-protein-Q02336
+  - root44-sources-protein-Q03330
+  - root44-sources-protein-P32494
+  - root44-sources-protein-P25554
+  - root44-sources-protein-Q12433
+  - root44-sources-protein-P25649
+  - root44-sources-gene-ADA2
+  - root44-sources-gene-GCN5
+  - root44-sources-gene-NGG1
+  - root44-sources-gene-SGF29
+  - root44-sources-gene-AHC1
+  - root44-sources-gene-AHC2
+  - root44-sources-tax4932
+  - root44-sources-tax559292
+  - root44-sources-pmid-21734642
+  - root44-sources-pmid-22932476
+  - root44-sources-pmid-14562095
+  - root44-sources-pmid-28966424
+- assessment_id: necessity
+  area: grounding
+  topic: Assembly necessity remains unknown
+  outcome: unknown
+  target_ids:
+  - GO:0140671
+  summary: UNKNOWN on each component is appropriate. Ahc2 depletion removes the ADA-specific
+    pair while retaining a shared core; it does not establish an all-subunit necessity
+    matrix.
+  evidence_ids:
+  - record
+  - schema
+  - root44-sources-xml-PMC3159981
+- assessment_id: function
+  area: evidence
+  topic: Nucleosomal histone acetylation
+  outcome: supported
+  target_ids:
+  - GO:0140671
+  summary: Lee reports direct HAT assays on Ahc2-purified ADA; the GO molecular-function
+    definition and biochemical membership support the bounded claim.
+  evidence_ids:
+  - record
+  - root44-sources-go
+  - root44-sources-xml-PMC3159981
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast scope
+  outcome: supported
+  target_ids:
+  - GO:0140671
+  summary: Species and S288C protein identities agree. COMMON retains the schema meaning
+    present in most members, with losses exceptional. The study supports the established
+    budding-yeast ADA system qualitatively; selected-strain purification does not
+    independently measure the species-wide prevalence.
+  evidence_ids:
+  - record
+  - root44-sources-xml-PMC3159981
+  - root44-sources-tax4932
+  - root44-sources-tax559292
+- assessment_id: graph
+  area: graph
+  topic: Correct nonmechanistic constituent graph
+  outcome: supported
+  target_ids:
+  - GO:0140671
+  summary: Seven edges connect six constituent classes to ADA and HAT activity. NONMECHANISTIC
+    explicitly withholds catalytic chemistry, recruitment and interfaces; no unsupported
+    ordering is introduced.
+  evidence_ids:
+  - record
+  - root44-sources-go
+  - root44-sources-xml-PMC3159981
+- assessment_id: coverage
+  area: completeness
+  topic: Current TODO and unrelated GO citation
+  outcome: supported
+  target_ids:
+  - GO:0140671
+  summary: All target fields were read. The resolved exclusion of PMID28966424 is
+    confirmed by the unrelated native title and abstract; retaining it in an explanatory
+    discussion is appropriate.
+  evidence_ids:
+  - record
+  - root44-sources-go
+  - root44-sources-pmid-28966424
+  - root44-sources-xml-PMC3159981
+findings:
+- finding_id: F1
+  issue_key: ada-exact-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve four verified ADA HAT-module family groundings
+  description: IPR016827 (Ada2), IPR037800 (Gcn5), IPR019340 (Ada3/Ngg1) and IPR037802
+    (Sgf29) are full protein families, match the current constituent classes and are
+    cross-referenced by the verified examples. Current reviewed-label-only notes merely
+    say no identifier was curated in that pass. The exact-family contract can now
+    be satisfied for these four rows.
+  target_ids:
+  - GO:0140671
+  field_paths:
+  - components[0].grounding_status
+  - components[1].grounding_status
+  - components[2].grounding_status
+  - components[3].grounding_status
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - root44-sources-ipr-IPR016827
+  - root44-sources-ipr-IPR037800
+  - root44-sources-ipr-IPR019340
+  - root44-sources-ipr-IPR037802
+  - root44-sources-protein-Q02336
+  - root44-sources-protein-Q03330
+  - root44-sources-protein-P32494
+  - root44-sources-protein-P25554
+  - root44-sources-protein-Q12433
+  - root44-sources-protein-P25649
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ada_complex.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md REVIEWED_LABEL_ONLY
+  native_severity: minor
+  normalization_reason: Correct biological identity and membership; a verified exact
+    family makes this bounded grounding gap actionable. Historical search honesty
+    is not questioned.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0140671
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ada_complex.yaml
+    role: maintained scientific record
+  description: In authorized curation, ground the four named HAT-module classes to
+    the verified families and narrow the open TODO to unresolved Ahc1/Ahc2 classes.
+    Do not substitute an Ahc1 domain for a whole protein or import SAGA-specific functions
+    into ADA.
+  acceptance_checks:
+  - Verify exact family identity and reconcile affected label-only notes and TODO
+    scope.
+  - Preserve organism-specific examples, supported membership and current unresolved
+    classes.
+  - Use guarded curation and pass applicable schema, strict, protein and graph checks.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, raw experiments, supplemental datasets or sequence alignments
+  were reanalyzed. Exact body reading scope is stated in each evidence row.
+- Huh2003 is complete-abstract plus exact UniProt annotation only. Dastidar2012 reading
+  is Table1 and Methods, not a direct Gcn5-specific result; native Gcn5 citation provenance
+  is verified separately.
+- Ahc1/Ahc2 family catalogs were not exhaustively searched. The inspected Ahc1 hits
+  are domains; no exact Ahc2 family is inferred from absence of cross-references.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorizes reviews for all uncovered records, including honest zero-finding
+  bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
