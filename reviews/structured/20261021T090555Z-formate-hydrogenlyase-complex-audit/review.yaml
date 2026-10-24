@@ -1,0 +1,1058 @@
+schema_version: 1.0.0
+review_id: 20261021T090555Z-formate-hydrogenlyase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: E.coli formate hydrogenlyase assembly and reaction-scope review
+started_at: '2026-10-21T08:41:50Z'
+finished_at: '2026-10-21T09:05:55Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Seven exact FHL proteins, their dataset-scoped stoichiometry, E.coli example
+  and coarse coupled reaction are supported. Broad family and partial-assembly limits
+  are preserved; no concrete curation issue was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+    sha256: 597e307ba8e2ff5fb5704e838bb7b305d0bce3a86131cf18047ba104c98c3817
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:formate_hydrogenlyase_complex
+  path: data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+  label: formate hydrogenlyase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, native GO/taxon/UniProt/PDB and candidate-family
+    scope; primary preparation/architecture/reaction sections, supplement Table1 and
+    published correction.
+  selection: Ninth selected target in batch thirteen, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  command: just validate data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  command: just validate-strict data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+    --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/formate_hydrogenlyase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: 10 identifiers OK; 3 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - fhl-agent-pdb-7Z0T
+  - fhl-agent-steinhilper2022-meta
+  - record
+- check_id: native-verify
+  name: Native UniProt verify
+  status: passed
+  required: false
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  command: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native UniProt causal-graphs
+  status: passed
+  required: false
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  command: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - fhl-agent-go
+  - fhl-agent-tax-83333
+  - fhl-agent-P07658
+  - fhl-agent-query-fdhF
+  - fhl-agent-P0AAK1
+  - fhl-agent-query-hycB
+  - fhl-agent-P16429
+  - fhl-agent-query-hycC
+  - fhl-agent-P16430
+  - fhl-agent-query-hycD
+  - fhl-agent-P16431
+  - fhl-agent-query-hycE
+  - fhl-agent-P16432
+  - fhl-agent-query-hycF
+  - fhl-agent-P16433
+  - fhl-agent-query-hycG
+  - fhl-agent-steinhilper2022-meta
+  - fhl-agent-steinhilper2022-jats
+  - fhl-agent-steinhilper2022-supp
+  - fhl-agent-correction-jats
+  - fhl-agent-pdb-7Z0T
+  - fhl-agent-assembly-7Z0T
+  - fhl-agent-7Z0T-entity-1
+  - fhl-agent-7Z0T-entity-2
+  - fhl-agent-7Z0T-entity-3
+  - fhl-agent-7Z0T-entity-4
+  - fhl-agent-7Z0T-entity-5
+  - fhl-agent-7Z0T-entity-6
+  - fhl-agent-7Z0T-entity-7
+  - fhl-agent-IPR006478
+  - fhl-agent-IPR050294
+  - fhl-agent-IPR003918
+  - fhl-agent-IPR052175
+  - fhl-agent-IPR001694
+  - fhl-agent-IPR052561
+  - fhl-agent-IPR001501
+  - fhl-agent-IPR052197
+  - fhl-agent-IPR010226
+  - fhl-agent-IPR006138
+  - fhl-agent-IPR052375
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+  locator: Entire maintained YAML including all imported participants, component examples,
+    functions, graph edges, discussions and history
+  accessed_at: '2026-10-21T08:55:03Z'
+  support: context_only
+  summary: All fields were read after fresh native inspection; the maintained target
+    and PROPOSED state are unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, CausalNode and source-specific ComplexComposition
+    contracts; docs/CURATION.md and review checklist
+  accessed_at: '2026-10-21T08:55:03Z'
+  support: context_only
+  summary: Component family identity, concrete protein identity and source-specific
+    assembly membership are separate. Optional fields are not mandatory. CausalNode
+    permits protein complexes; its xrefs contract does not inherit the top-level record
+    equivalence restriction.
+- evidence_id: fhl-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990204
+  locator: Complete term identity, definition, status and synonym scope
+  accessed_at: '2026-10-21T08:41:54.723788Z'
+  support: supports
+  summary: Active GO1990204 is the broad oxidoreductase-complex parent; no exact GO
+    equivalent is invented for this FHL record.
+  snapshot_sha256: 4e339f111114c299ada727ff221e20f208d643b2e3101aaff568e4a1721f7bc8
+- evidence_id: fhl-agent-tax-83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete names/rank/lineage
+  accessed_at: '2026-10-21T08:41:54.739226Z'
+  support: supports
+  summary: Native taxon83333 denotes E.coli K-12 at strain rank.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: fhl-agent-P07658
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P07658.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:54.776557Z'
+  support: supports
+  summary: Native reviewed UniProtKB P07658 identifies Formate dehydrogenase H, gene
+    fdhF, taxon83333. Concrete identity is checked independently of membership; relevant
+    subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: d6478f839bfce9edc219fa3a6a664e01e95c80d7f50ec407cea9d3de9dd745aa
+- evidence_id: fhl-agent-query-fdhF
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AfdhF%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene fdhF, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:57.919386Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P07658. This checks identifier
+    resolution only.
+  snapshot_sha256: 2e30e0c5b4079cf222492c439e9da3be8f1b57e14da128395a9104c4c4ad0471
+  search_scope: UniProtKB query gene_exact:fdhF AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fhl-agent-P0AAK1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0AAK1.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:55.372782Z'
+  support: supports
+  summary: Native reviewed UniProtKB P0AAK1 identifies Formate hydrogenlyase subunit
+    2, gene hycB, taxon83333. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 2c19546f356522a314de34e97a0e2171ce2dae36ba2823e9e09ccf07a3eb3a10
+- evidence_id: fhl-agent-query-hycB
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AhycB%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene hycB, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:58.293380Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P0AAK1. This checks identifier
+    resolution only.
+  snapshot_sha256: 7c581be07eca94e67e18970190ce7260c62a3be25378dd21ae0428fcd58869b8
+  search_scope: UniProtKB query gene_exact:hycB AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fhl-agent-P16429
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P16429.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:55.548662Z'
+  support: supports
+  summary: Native reviewed UniProtKB P16429 identifies Formate hydrogenlyase subunit
+    3, gene hycC, taxon83333. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 1c07c34d28631233bd51048ea706e2a20cbc7cc04f674af744b3f6ec274a04a7
+- evidence_id: fhl-agent-query-hycC
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AhycC%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene hycC, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:58.621218Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P16429. This checks identifier
+    resolution only.
+  snapshot_sha256: 550f276fffcd56e75ce610497f7168530fccfde1b5a0e67f50d48c8737a4c40e
+  search_scope: UniProtKB query gene_exact:hycC AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fhl-agent-P16430
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P16430.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:55.974826Z'
+  support: supports
+  summary: Native reviewed UniProtKB P16430 identifies Formate hydrogenlyase subunit
+    4, gene hycD, taxon83333. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: f91c5823864ad3aef992d6f544ab3f9a5b00fb59b38971581cf0b8bc03eba89d
+- evidence_id: fhl-agent-query-hycD
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AhycD%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene hycD, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:58.713093Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P16430. This checks identifier
+    resolution only.
+  snapshot_sha256: d335900bf37998cce35b62468602096d8dbe6fddbaa080d870acb7549f321f3a
+  search_scope: UniProtKB query gene_exact:hycD AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fhl-agent-P16431
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P16431.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:56.596750Z'
+  support: supports
+  summary: Native reviewed UniProtKB P16431 identifies Formate hydrogenlyase subunit
+    5, gene hycE, taxon83333. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: a86c6afd4c7f09d506bdd72bf1e7d1cfe4dc268b8419848777df6bfa201917ad
+- evidence_id: fhl-agent-query-hycE
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AhycE%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene hycE, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:59.002228Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P16431. This checks identifier
+    resolution only.
+  snapshot_sha256: f6ee8d6acf0572f894f2bac252a93a78eb99392b34b5c3036b12b57b1f1a4939
+  search_scope: UniProtKB query gene_exact:hycE AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fhl-agent-P16432
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P16432.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:57.215710Z'
+  support: supports
+  summary: Native reviewed UniProtKB P16432 identifies Formate hydrogenlyase subunit
+    6, gene hycF, taxon83333. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: 054b00cfa368f859083cbf7f68b1b48f5d18cfe970a1f4db8739f407136e5b87
+- evidence_id: fhl-agent-query-hycF
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AhycF%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene hycF, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:59.250631Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P16432. This checks identifier
+    resolution only.
+  snapshot_sha256: 844232ecc8651bf836322f8523063c047bdaf63c3558304d1cda4c09b3787d88
+  search_scope: UniProtKB query gene_exact:hycF AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fhl-agent-P16433
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P16433.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; SUBUNIT/COFACTOR/SUBCELLULAR
+    LOCATION comments and cited references where relevant
+  accessed_at: '2026-10-21T08:41:57.662656Z'
+  support: supports
+  summary: Native reviewed UniProtKB P16433 identifies Formate hydrogenlyase subunit
+    7, gene hycG, taxon83333. Concrete identity is checked independently of membership;
+    relevant subunit/cofactor/location comments retain their own evidence scope.
+  snapshot_sha256: c57f78aee77e4c710bd7e7ae65fa50ea0b4aec7ed9b5581562e72bbb1438a37d
+- evidence_id: fhl-agent-query-hycG
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AhycG%29%20AND%20%28organism_id%3A83333%29%20AND%20%28reviewed%3Atrue%29
+  locator: All returned results for exact gene hycG, organism83333, reviewed:true;
+    bounded to this query
+  accessed_at: '2026-10-21T08:41:59.344020Z'
+  support: context_only
+  summary: Exact gene/taxon/reviewed query returns P16433. This checks identifier
+    resolution only.
+  snapshot_sha256: c8920fa5f7160d1e0c6dc6333f64d7d30a94bf38d06e78a68dcaa1d727a5509e
+  search_scope: UniProtKB query gene_exact:hycG AND organism_id:83333 AND reviewed:true;
+    all returned results inspected, no general absence claim.
+- evidence_id: fhl-agent-steinhilper2022-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1038/s41467-022-32831-x
+  locator: Exact bibliographic identity and article-status fields
+  accessed_at: '2026-10-21T08:42:03.751042Z'
+  support: supports
+  summary: Steinhilper, Höff, Heider and Murphy2022 has exact DOI10.1038/s41467-022-32831-x,
+    PMID36104349 and PMC9474812.
+  snapshot_sha256: 0f00be4a11c8a0c5372cdddb3028be6adedee449efaaadf1a8f6846d87121b2a
+- evidence_id: fhl-agent-steinhilper2022-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC9474812.1/PMC9474812.1.xml
+  locator: 'Native PMC9474812 JATS: Introduction Sec1; Results Sec3/4/6; Discussion
+    Sec11; Methods Sec13 protein preparation, Sec15 image processing, Sec16 model
+    building; Figure1–4 captions. Main claim-bearing sections read, not all unrelated
+    mechanistic subregions.'
+  accessed_at: '2026-10-21T08:42:37.198703Z'
+  support: supports
+  summary: Primary cryo-EM establishes aerobically isolated seven-subunit FdhF-HycBCDEFG
+    and anaerobically isolated six-subunit HycBCDEFG lacking FdhF. The soluble arm
+    carries the redox core; HycC/D form the membrane arm. Formate oxidation feeds
+    proton reduction, while ion-pumping/regulation proposals remain qualified.
+  snapshot_sha256: 13406c62e88524e7a89c68b8d606c5ff0d09f894fb9ee7368b1afa809678726a
+- evidence_id: fhl-agent-steinhilper2022-supp
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC9474812.1/41467_2022_32831_MOESM1_ESM.pdf
+  locator: Supplementary PDF Table1, printed p2; full table and footnotes read via
+    extracted text
+  accessed_at: '2026-10-21T08:45:22.646280Z'
+  support: supports
+  summary: Supplementary Table1 independently identifies7Z0T as the aerobic composite
+    model and7Z0S as the anaerobic model; the aerobic model contains2690 protein residues
+    and eightSF4 cofactors. No raw-particle reanalysis is claimed.
+  snapshot_sha256: 60d8845581ea858224e585efd1c545af6e734552577ec0d2d294e3695366afa6
+- evidence_id: fhl-agent-correction-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC9700727.1/PMC9700727.1.xml
+  locator: PMC9700727 correction body, complete text
+  accessed_at: '2026-10-21T08:45:22.616612Z'
+  support: supports
+  summary: The published correction concerns three residue columns obscured by red
+    highlighting in Figure5d; the current article was corrected. It does not change
+    the seven subunit identities or reaction recorded here.
+  snapshot_sha256: 278229d2cc27f36ea7a7ac1be5985a703f9a2845450a28eef9b075ee7cc592ad
+- evidence_id: fhl-agent-pdb-7Z0T
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/7Z0T
+  locator: Entry title, experimental method and primary citation
+  accessed_at: '2026-10-21T08:41:59.394213Z'
+  support: supports
+  summary: 7Z0T is the E.coli formate hydrogenlyase composite cryo-EM model linked
+    to the exact defining primary paper.
+  snapshot_sha256: d3ff428a1ceb5711493bd5f7217956f81cbf262dadc61d05ad2212148dad97e5
+- evidence_id: fhl-agent-assembly-7Z0T
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/7Z0T/1
+  locator: rcsb_assembly_info and pdbx_struct_assembly/gen
+  accessed_at: '2026-10-21T08:41:59.433468Z'
+  support: supports
+  summary: Biological assembly1 is heptameric with seven distinct protein entities
+    and seven protein instances, one of each.
+  snapshot_sha256: 28d814e823f43613e623fcc60f52765744a7e667e5ebbacb85331994f42eb709
+- evidence_id: fhl-agent-7Z0T-entity-1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7Z0T/1
+  locator: Polymer entity description, author chain, source organism and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:38.931758Z'
+  support: supports
+  summary: Entity1 maps toP16429 and E.coli K-12 taxon83333 exactly as recorded.
+  snapshot_sha256: b6fe109659c13b6d9b633b9d8ae0d56c8a421a1d9c8b6cb0e0d6790e9f9432a0
+- evidence_id: fhl-agent-7Z0T-entity-2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7Z0T/2
+  locator: Polymer entity description, author chain, source organism and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.004723Z'
+  support: supports
+  summary: Entity2 maps toP16431 and E.coli K-12 taxon83333 exactly as recorded.
+  snapshot_sha256: d68111ced4df12e06c38b9f6c566e240a33726447cd0b371611cc74fb1dda5c3
+- evidence_id: fhl-agent-7Z0T-entity-3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7Z0T/3
+  locator: Polymer entity description, author chain, source organism and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.028999Z'
+  support: supports
+  summary: Entity3 maps toP0AAK1 and E.coli K-12 taxon83333 exactly as recorded.
+  snapshot_sha256: 5769512d0318ddcc64d89e9851b55e5cf3ab7127d1ad24d8de6a4d8de98a2985
+- evidence_id: fhl-agent-7Z0T-entity-4
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7Z0T/4
+  locator: Polymer entity description, author chain, source organism and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.087059Z'
+  support: supports
+  summary: Entity4 maps toP16433 and E.coli K-12 taxon83333 exactly as recorded.
+  snapshot_sha256: 9d6fce86099e84def729a60b89fcc45d0295a681bcaece252cf32df6c14039d2
+- evidence_id: fhl-agent-7Z0T-entity-5
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7Z0T/5
+  locator: Polymer entity description, author chain, source organism and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.102740Z'
+  support: supports
+  summary: Entity5 maps toP16432 and E.coli K-12 taxon83333 exactly as recorded.
+  snapshot_sha256: f71c1283691082f152153e022a7743515902c768894fc3b94579586bda3c6160
+- evidence_id: fhl-agent-7Z0T-entity-6
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7Z0T/6
+  locator: Polymer entity description, author chain, source organism and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.164023Z'
+  support: supports
+  summary: Entity6 maps toP16430 and E.coli K-12 taxon83333 exactly as recorded.
+  snapshot_sha256: 63c26883c13aa8774dafce453562af715d2f8c5b9356d7a69f222c5edb1c6c2f
+- evidence_id: fhl-agent-7Z0T-entity-7
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7Z0T/7
+  locator: Polymer entity description, author chain, source organism and SIFTS/UniProt
+    mapping
+  accessed_at: '2026-10-21T08:42:39.175080Z'
+  support: supports
+  summary: Entity7 maps toP07658 and E.coli K-12 taxon83333 exactly as recorded.
+  snapshot_sha256: ab169649d4ad10e2dae8b8a40dbb76cabfb9616b13e0baa6fc496120ccbcd524
+- evidence_id: fhl-agent-IPR006478
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006478/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:37.515343Z'
+  support: supports
+  summary: FdhF-related alpha family includes broader formate-dehydrogenase/related
+    molybdoenzyme identities.
+  snapshot_sha256: 17193e2724669712fc9f9de1c5e02208b6e416f9e5344828afd03959a65df303
+- evidence_id: fhl-agent-IPR050294
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050294/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:37.528099Z'
+  support: supports
+  summary: HycB matches a broad RnfB-like family, not an exact FHL-specific constituent
+    class.
+  snapshot_sha256: 5abeabf9271b10dfe5fc127255889d201a153aef117d5b2dd91c43f8b601b1af
+- evidence_id: fhl-agent-IPR003918
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003918/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:37.613364Z'
+  support: supports
+  summary: HycC matches a broad NADH-dehydrogenase/complex-I-like subunit family.
+  snapshot_sha256: c16eca9f914f41c7b05b7b2e1f2994732677981b5ad2873fc6e3047f4f29bfba
+- evidence_id: fhl-agent-IPR052175
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR052175/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:37.683440Z'
+  support: supports
+  summary: HycC candidate includes complex-I-like hydrogenases beyond this FHL form.
+  snapshot_sha256: ddb28dddd4e443f3cb46a20c3abacb19819308a8e04b62d02b0deb7fb22b1100
+- evidence_id: fhl-agent-IPR001694
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001694/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:38.132137Z'
+  support: supports
+  summary: HycD family includes ND1/NuoH, F420 hydrogenase and HyfC relatives.
+  snapshot_sha256: 20178acf726f0d52d7d33d50b232b0a9d2d9cc2e41618c6e816dd6a02bd0cf88
+- evidence_id: fhl-agent-IPR052561
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR052561/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:38.142149Z'
+  support: supports
+  summary: HycD candidate is a broader complex-I-like family.
+  snapshot_sha256: 653e7befb1d87f6f0f875207bad9d03a62861830d3236a2a226ba0d941c573b6
+- evidence_id: fhl-agent-IPR001501
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001501/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:38.238616Z'
+  support: supports
+  summary: HycE NiFe-hydrogenase large-subunit family is broader than hydrogenase3.
+  snapshot_sha256: b14fc4df0605b35be81443ab2df264375afe2fb9c9558620934c63bf323510da
+- evidence_id: fhl-agent-IPR052197
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR052197/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:38.318573Z'
+  support: supports
+  summary: HycE candidate includes broad complex-I49kDa-related proteins.
+  snapshot_sha256: 9ecc478672f2a673ba99bebfeec7a1f5888bacef0cae1182a8ad2fc7d3aab642
+- evidence_id: fhl-agent-IPR010226
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR010226/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:38.525486Z'
+  support: supports
+  summary: HycF matches this NuoI-related entry, but its description expressly excludes
+    formate-hydrogenlyase counterparts; that source inconsistency prevents adopting
+    it as exact HycF grounding.
+  snapshot_sha256: 2ef83d8ccc3efe72f836396769e9da5db644558ba838dd7133d384217c0c8e05
+- evidence_id: fhl-agent-IPR006138
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR006138/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:38.869886Z'
+  support: supports
+  summary: HycG matches a broader complex-I20kDa-related family.
+  snapshot_sha256: 973767e2804258b2a3387e61de230002f88e184bd36656ca44fe6c9db363c89a
+- evidence_id: fhl-agent-IPR052375
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR052375/
+  locator: Complete native family name/type/description and returned hierarchy
+  accessed_at: '2026-10-21T08:42:38.913872Z'
+  support: supports
+  summary: HycG candidate is broader than the named FHL constituent.
+  snapshot_sha256: 46d684b66c893968678b35885accbd2b3dc955e0dc9880d8c7c0b8d81f000113
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:41:52Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/formate_hydrogenlyase_complex.yaml'
+  snapshot_sha256: 033278ec6cd754f9882e299939073162d4c2b893d07b97c4058b550067e2be6e
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+    --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/formate_hydrogenlyase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:41:55Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/energy_complex/formate_hydrogenlyase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/formate_hydrogenlyase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch13-20261021-vud60b4w/formate_hydrogenlyase_complex-strict.tsv"
+  snapshot_sha256: 0e24e82a65c1a79ae2ded50bf8902af95b1c42c9b67e699fe1172a21c4445576
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/energy_complex/formate_hydrogenlyase_complex.yaml; exact
+    collect() scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:55:03Z'
+  support: supports
+  summary: '10 of13 collected target identifiers returned OK at the unchanged base.
+    Residuals: PDB:7Z0T: SKIPPED; resolved by evidence fhl-agent-pdb-7Z0T; PMID:36104349:
+    UNREACHABLE; resolved by evidence fhl-agent-steinhilper2022-meta; cellstructuremech:formate_hydrogenlyase_complex:
+    SKIPPED; resolved by evidence record. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+    --verify
+  locator: Captured focused native verify log
+  accessed_at: '2026-10-21T08:43:55.488522Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+    --causal-graphs
+  locator: Captured focused native causal-graphs log
+  accessed_at: '2026-10-21T08:43:56.144911Z'
+  support: supports
+  summary: "data/structures/energy_complex/formate_hydrogenlyase_complex.yaml  (cellstructuremech:formate_hydrogenlyase_complex)\n\
+    \  formate_hydrogenlyase_formate_to_hydrogen\tfdhf\tCOVERED\t->fdhf_formate_dehydrogenase_h\
+    \ (UniProtKB:P07658)\n  formate_hydrogenlyase_formate_to_hydrogen\thyc_module\t\
+    UNANCHORED_WITH_UNIPROT\tHycB-HycG membrane hydrogenase module (UniProtKB:P0AAK1,\
+    \ UniProtKB:P16431, UniProtKB:P16433)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n\
+    \     1  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     1  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or\
+    \ xref on the node\n     2  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: d1bee0896e23411fac6086334f1de06856c7c0a2e516a14077eb70254fda02da
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Specific membrane-bound E.coli FHL
+  outcome: supported
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: The local identity, explicit E.coli boundary, seven-chain definition, FHL
+    synonym and oxidoreductase parent are supported. FHL is not equated with generic
+    hydrogenase3 alone, a maturation factor, or every complex-I-related enzyme.
+  evidence_ids:
+  - fhl-agent-go
+  - fhl-agent-steinhilper2022-jats
+  - fhl-agent-pdb-7Z0T
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Seven concrete subunit identities
+  outcome: supported
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: All component names, exact gene/taxon/accession pairs and entity numbers
+    match the native deposit. FdhF is the formate-oxidizing input, HycB participates
+    in electron transfer, HycE is the large hydrogenase subunit and HycC/D are membrane
+    chains; F/G membership is directly supported. The grouped Hyc role does not put
+    the hydrogenase active site in C/D.
+  evidence_ids:
+  - fhl-agent-steinhilper2022-jats
+  - fhl-agent-P07658
+  - fhl-agent-P0AAK1
+  - fhl-agent-P16429
+  - fhl-agent-P16430
+  - fhl-agent-P16431
+  - fhl-agent-P16432
+  - fhl-agent-P16433
+  - fhl-agent-7Z0T-entity-1
+  - fhl-agent-7Z0T-entity-2
+  - fhl-agent-7Z0T-entity-3
+  - fhl-agent-7Z0T-entity-4
+  - fhl-agent-7Z0T-entity-5
+  - fhl-agent-7Z0T-entity-6
+  - fhl-agent-7Z0T-entity-7
+  - record
+- assessment_id: stoichiometry
+  area: scope
+  topic: One-copy aerobic composite model
+  outcome: supported
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: Each one-copy statement explicitly names PDB7Z0T and agrees with assembly1.
+    The cited study also recovers a hexamer lacking FdhF and soluble partial complexes.
+    These observations preserve the selected seven-chain model, but show why composition
+    alone cannot establish assembly necessity. The partial six-chain preparation is
+    not a demonstration that the complete seven-chain target forms without FdhF.
+  evidence_ids:
+  - fhl-agent-steinhilper2022-jats
+  - fhl-agent-steinhilper2022-supp
+  - fhl-agent-assembly-7Z0T
+  - fhl-agent-7Z0T-entity-1
+  - fhl-agent-7Z0T-entity-2
+  - fhl-agent-7Z0T-entity-3
+  - fhl-agent-7Z0T-entity-4
+  - fhl-agent-7Z0T-entity-5
+  - fhl-agent-7Z0T-entity-6
+  - fhl-agent-7Z0T-entity-7
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Narrow subunits versus broader family matches
+  outcome: supported
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: The inspected entries represent broader respiratory/hydrogenase families
+    or conflicting annotations, not verified exact equivalents for each narrow FHL
+    component. Keeping label-only component rows and an actionable family TODO is
+    justified. Matching domains and homology to complexI do not establish exact constituent
+    identity.
+  evidence_ids:
+  - fhl-agent-IPR006478
+  - fhl-agent-IPR050294
+  - fhl-agent-IPR003918
+  - fhl-agent-IPR052175
+  - fhl-agent-IPR001694
+  - fhl-agent-IPR052561
+  - fhl-agent-IPR001501
+  - fhl-agent-IPR052197
+  - fhl-agent-IPR010226
+  - fhl-agent-IPR006138
+  - fhl-agent-IPR052375
+  - fhl-agent-P07658
+  - fhl-agent-P0AAK1
+  - fhl-agent-P16429
+  - fhl-agent-P16430
+  - fhl-agent-P16431
+  - fhl-agent-P16432
+  - fhl-agent-P16433
+  - fhl-agent-steinhilper2022-jats
+  - record
+  - policy
+- assessment_id: taxon
+  area: scope
+  topic: Natural protein source and engineered preparation
+  outcome: supported
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: The organism labels agree with native taxonomy and PDB. Experimental protein
+    came from an internally His-tagged HycE strain MG059e1 grown anaerobically; aerobic/anaerobic
+    in the structural comparison refers to purification. The canonical source wording
+    is organism provenance, not an assertion of an unmodified in-cell specimen.
+  evidence_ids:
+  - fhl-agent-tax-83333
+  - fhl-agent-steinhilper2022-jats
+  - fhl-agent-7Z0T-entity-1
+  - fhl-agent-7Z0T-entity-2
+  - fhl-agent-7Z0T-entity-3
+  - fhl-agent-7Z0T-entity-4
+  - fhl-agent-7Z0T-entity-5
+  - fhl-agent-7Z0T-entity-6
+  - fhl-agent-7Z0T-entity-7
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Coupled formate oxidation and hydrogen evolution
+  outcome: supported
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: The primary study supports the stated chemical reaction and redox relay.
+    The record does not claim demonstrated proton pumping, energy-conservation stoichiometry
+    or the proposed redox-controlled FdhF association mechanism; these remain unresolved
+    in the source.
+  evidence_ids:
+  - fhl-agent-steinhilper2022-jats
+  - fhl-agent-steinhilper2022-supp
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Supported grouped module with partial representative links
+  outcome: supported
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: CausalNode expressly allows protein complexes. The six-chain Hyc module
+    label is supported; its three xrefs correctly identify constituent HycB/E/G representatives
+    and do not establish full six-chain reference coverage. The graph contract does
+    not define these node xrefs as the top-level record equivalence relation, so no
+    false-equivalence defect is inferred. FdhF has an exact component_ref; the PDB
+    edge describes architecture and the primary body supports the coarse electron-transfer
+    interpretation.
+  evidence_ids:
+  - fhl-agent-steinhilper2022-jats
+  - fhl-agent-assembly-7Z0T
+  - fhl-agent-7Z0T-entity-1
+  - fhl-agent-7Z0T-entity-2
+  - fhl-agent-7Z0T-entity-3
+  - fhl-agent-7Z0T-entity-4
+  - fhl-agent-7Z0T-entity-5
+  - fhl-agent-7Z0T-entity-6
+  - fhl-agent-7Z0T-entity-7
+  - fhl-agent-P07658
+  - fhl-agent-P0AAK1
+  - fhl-agent-P16429
+  - fhl-agent-P16430
+  - fhl-agent-P16431
+  - fhl-agent-P16432
+  - fhl-agent-P16433
+  - record
+  - policy
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded graph and source state
+  outcome: supported
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: The isolated protons node leaves substrate participation implicit in supported
+    function prose; the nonmechanistic graph is not a complete reaction-balance or
+    per-subunit wiring model. Optional graph expansion, additional cofactors and direct-binding
+    mechanisms are not required. Published correction scope was checked; no concrete
+    curation issue remains.
+  evidence_ids:
+  - fhl-agent-steinhilper2022-jats
+  - fhl-agent-correction-jats
+  - record
+  - policy
+- assessment_id: assembly-necessity
+  area: evidence
+  topic: Assembly necessity versus constituent membership
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:formate_hydrogenlyase_complex
+  summary: The schema defines essentiality by whether the structure forms without
+    the component. The inspected sources establish constituent membership and functions,
+    but those observations alone do not establish this assembly-necessity assertion.
+    No subunit-deletion/assembly experiment was independently checked here; catalytic
+    necessity, organismal viability and intact structural membership are distinct
+    questions.
+  evidence_ids:
+  - fhl-agent-steinhilper2022-jats
+  - fhl-agent-steinhilper2022-supp
+  - fhl-agent-assembly-7Z0T
+  - fhl-agent-7Z0T-entity-1
+  - fhl-agent-7Z0T-entity-2
+  - fhl-agent-7Z0T-entity-3
+  - fhl-agent-7Z0T-entity-4
+  - fhl-agent-7Z0T-entity-5
+  - fhl-agent-7Z0T-entity-6
+  - fhl-agent-7Z0T-entity-7
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- The Hyc module xrefs cover three correct member proteins, not all six; CausalNode
+  permits complexes and does not impose the record-level exact-equivalence contract
+  on these links. No exact accession for the entire module is asserted.
+- Native JATS claim-bearing sections, listed Methods and Supplementary Table1 were
+  read; remaining mechanistic Results subregions, figure pixels, full supplementary
+  alignments and raw cryo-EM maps were not reanalyzed.
+- Family review is bounded to complete integrated native matches of the seven exact
+  proteins and the listed candidate definitions. HycF/IPR010226 description-versus-match
+  inconsistency is preserved, not promoted into an exact family assignment.
+- The primary paper leaves energy-conserving proton translocation and proposed redox-dependent
+  regulation incompletely established. The record claims chemical proton reduction
+  only.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+- The schema defines essentiality by whether the structure forms without the component.
+  The inspected sources establish constituent membership and functions, but those
+  observations alone do not establish this assembly-necessity assertion. No subunit-deletion/assembly
+  experiment was independently checked here; catalytic necessity, organismal viability
+  and intact structural membership are distinct questions.
+- The FdhF-free hexamer directly documents partial assembly and motivates clarification
+  of the assembly boundary. It neither establishes formation of the explicitly seven-chain
+  target without FdhF nor licenses interpreting ESSENTIAL as constituent membership.
+notes:
+- Fresh native schema/strict, UniProt verification and graph coverage passed0; all13
+  inspection input hashes and source receipt hashes verified.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
