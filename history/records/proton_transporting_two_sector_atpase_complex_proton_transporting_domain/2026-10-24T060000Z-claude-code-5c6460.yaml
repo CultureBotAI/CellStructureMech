@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml
+  slug: proton_transporting_two_sector_atpase_complex_proton_transporting_domain
+session:
+  id: 2026-10-24T060000Z-claude-code-5c6460
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added stator-to-c-ring proton conduction edge in proton-transporting domain causal
+    graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added directed edge from membrane_stator_a_subunit
+    to proteolipid_c_ring_subunit.'

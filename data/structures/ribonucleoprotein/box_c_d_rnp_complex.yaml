@@ -179,6 +179,17 @@ causal_graphs:
     grounding: GO:0006364
   edges:
   - subject: box_c_d_rna
+    predicate: nucleates assembly of
+    object: nop1_nop56_nop58_snu13_core
+    description: The kink-turn motif formed by the conserved C and D boxes of the
+      guide RNA binds Snu13 and nucleates hierarchical assembly of the Nop56-Nop58-Nop1
+      (fibrillarin) methyltransferase core.
+    evidence:
+    - reference: PMID:10982895
+      notes: Demonstrates Snu13p binding to box C/D snoRNA and assembly with Nop1p,
+        Nop56p, and Nop58p.
+    - reference: PMID:9372940
+  - subject: box_c_d_rna
     predicate: is part of
     object: box_c_d_rnp_complex
     description: The box C/D small RNA provides the kink-turn motif and antisense
@@ -215,4 +226,10 @@ curation_history:
   changes: Create new CellStructureRecord GO:0170049 (box C/D RNP complex) with verified
     GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
     distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added direct RNP nucleation edge from box_c_d_rna to nop1_nop56_nop58_snu13_core
+    in box_c_d_rnp_assembly_and_methylation (PMID:10982895, PMID:9372940).
   llm_assisted: true

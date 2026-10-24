@@ -40,6 +40,13 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: 'Added yme1 (component_ref: yme1) and zinc (component_ref: zinc, CHEBI:29105)
+    nodes and assembly/cofactor edges into iaaa_ims_proteolysis (DOI:10.1083/jcb.201702125,
+    ComplexPortal:CPX-1655).'
+  llm_assisted: true
 parent_structures:
 - GO:0098800
 part_of:
@@ -231,6 +238,15 @@ causal_graphs:
     transition is a supported mechanistic interpretation, not a visualized handoff
     or an exclusive degradation route.
   nodes:
+  - node_id: yme1
+    label: Mitochondrial inner membrane i-AAA protease supercomplex subunit YME1
+    node_type: GENE_OR_PROTEIN
+    component_ref: yme1
+  - node_id: zinc
+    label: zinc(2+)
+    node_type: CHEMICAL
+    component_ref: zinc
+    grounding: CHEBI:29105
   - node_id: mgr1
     label: Mitochondrial inner membrane i-AAA protease complex subunit Mgr1
     node_type: GENE_OR_PROTEIN
@@ -255,6 +271,29 @@ causal_graphs:
     label: Turnover of tested Tom22 substrate
     node_type: STATE
   edges:
+  - subject: yme1
+    predicate: forms proteolytic core of
+    object: iaaa
+    description: Six Yme1 subunits homo-oligomerize into the asymmetric spiral AAA+
+      ATPase and M41 metalloprotease hexamer of the i-AAA complex.
+    evidence:
+    - reference: DOI:10.1083/jcb.201702125
+      snippet: During Yme1-mediated proteolysis in the intermembrane space, substrates
+        may encounter the rocky road of an asymmetric spiral Staircase of AAA domains.
+      notes: Supports hexameric Yme1 forming the AAA+ and proteolytic core of the
+        i-AAA complex.
+    - reference: ComplexPortal:CPX-1655
+      notes: S. cerevisiae YME1 mitochondrial inner membrane i-AAA protease complex
+        stoichiometry 6x P32795 (YME1).
+  - subject: zinc
+    predicate: is cofactor of
+    object: iaaa
+    description: Catalytic zinc(2+) ions coordinate the M41 peptidase active sites
+      of the hexameric i-AAA protease complex.
+    evidence:
+    - reference: ComplexPortal:CPX-1655
+      notes: S. cerevisiae i-AAA protease complex binds 6x CHEBI:29105 zinc(2+) catalytic
+        cofactors.
   - subject: mgr1
     predicate: participates in
     object: adaptor_engagement

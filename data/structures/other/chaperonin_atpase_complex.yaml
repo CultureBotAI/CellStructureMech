@@ -158,6 +158,9 @@ causal_graphs:
     label: chaperonin ATPase complex
     node_type: STRUCTURE
     grounding: GO:0016465
+  - node_id: cis_folding_cavity
+    label: GroES-capped cis folding chamber
+    node_type: STATE
   - node_id: protein_folding
     label: protein folding
     node_type: BIOLOGICAL_PROCESS
@@ -193,6 +196,34 @@ causal_graphs:
     - reference: DOI:10.1038/41944
       notes: Xu, Horwich and Sigler 1997 characterized the enlarged cis cavity that
         promotes substrate protein folding.
+  - subject: cochaperonin_lid_subunit
+    predicate: caps
+    object: cpn60_groel_subunit
+    description: The heptameric GroES/Cpn10 lid binds the ATP-bound apical domains
+      of a GroEL/Cpn60 heptameric ring to enclose the folding cavity.
+    evidence:
+    - reference: DOI:10.1038/41944
+      notes: Crystal structure of the asymmetric GroEL-GroES-(ADP)7 chaperonin complex
+        showing GroES capping the GroEL cis ring.
+  - subject: chaperonin_atpase_complex
+    predicate: forms
+    object: cis_folding_cavity
+    description: ATP binding and GroES association trigger en bloc apical domain elevation
+      and twist in the GroEL ring, creating an enlarged hydrophilic cis folding chamber.
+    evidence:
+    - reference: DOI:10.1038/41944
+      notes: Crystal structure of the asymmetric GroEL-GroES-(ADP)7 chaperonin complex.
+  - subject: cis_folding_cavity
+    predicate: promotes
+    object: protein_folding
+    description: Encapsulation of the non-native polypeptide inside the hydrophilic
+      cis cavity prevents aggregation and promotes productive folding until ATP hydrolysis
+      triggers lid release.
+    evidence:
+    - reference: GO:0016465
+    - reference: DOI:10.1038/41944
+      notes: Encapsulated cis chamber isolates non-native polypeptide substrates for
+        productive folding.
 curation_history:
 - timestamp: '2026-10-24T03:15:00Z'
   curator: add-cell-structure
@@ -201,4 +232,10 @@ curation_history:
     verified GO identity, source-backed components, reviewed UniProtKB protein examples,
     taxonomic distribution, canonical examples, functions, and mechanistic causal
     graph.
+  llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Enriched chaperonin_cage_assembly_and_folding with GroES capping edge and
+    cis_folding_cavity state mediating protein_folding (DOI:10.1038/41944, GO:0016465).
   llm_assisted: true

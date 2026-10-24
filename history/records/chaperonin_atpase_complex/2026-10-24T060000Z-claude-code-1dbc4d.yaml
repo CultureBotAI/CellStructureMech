@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/chaperonin_atpase_complex.yaml
+  slug: chaperonin_atpase_complex
+session:
+  id: 2026-10-24T060000Z-claude-code-1dbc4d
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Enriched chaperonin ATPase complex causal graph with GroES capping and cis folding
+    cavity state.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added cis_folding_cavity STATE node and
+    edges linking cochaperonin_lid_subunit capping of cpn60_groel_subunit and cis cavity encapsulation
+    to protein_folding.'

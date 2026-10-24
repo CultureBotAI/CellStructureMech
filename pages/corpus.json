@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 993,
- "corpus_updated": "2026-10-24 03:15:00 UTC",
- "corpus_digest": "7056613fb3b6",
+ "corpus_updated": "2026-10-24 06:00:00 UTC",
+ "corpus_digest": "d298410a3c44",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -72698,6 +72698,24 @@
      "edges": [
       {
        "subject": "alpha_tubulin",
+       "predicate": "heterodimerizes with",
+       "object": "beta_tubulin",
+       "description": "Alpha-tubulin and beta-tubulin form obligate alpha/beta-tubulin heterodimers that polymerize into the antiparallel microtubules of the quiescent static bundle.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "snippet": "Upon entry into quiescence, fission yeast cells assemble a single bundle of microtubules (Q-MT bundle) that is extremely stable.",
+         "notes": "Supports alpha/beta-tubulin heterodimers forming the microtubules of the quiescent static bundle."
+        },
+        {
+         "reference": "DOI:10.7554/eLife.89958",
+         "snippet": "Upon starvation, budding yeast cells assemble a hyper-stable microtubule bundle in the nucleus.",
+         "notes": "Supports alpha/beta-tubulin heterodimers assembling the hyper-stable quiescent nuclear microtubule bundle."
+        }
+       ]
+      },
+      {
+       "subject": "alpha_tubulin",
        "predicate": "is part of",
        "object": "static_microtubule_bundle",
        "description": "Alpha-tubulin subunits copolymerize with beta-tubulin into the closely packed microtubules of the static bundle.",
@@ -72745,6 +72763,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:0099070 (static microtubule bundle) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added alpha_tubulin -> beta_tubulin heterodimerization edge in static_bundle_stabilization (DOI:10.1083/jcb.201502025, DOI:10.7554/eLife.89958).",
      "llm_assisted": true
     }
    ]
@@ -79272,6 +79297,13 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2405 (Stage 4 finding division-machinery-discussion-prose-issue-links): added structured evidence references to discussions guided_by_mreb (DOI:10.1016/j.cell.2018.02.050 and GitHub issue #119) and definition_source_predates_roda (GitHub issue #161).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added mrec_mred (component_ref: mrec_mred) node and scaffolding edge to pg_synthesis in elongasome_pg_synthesis (DOI:10.1038/nrmicro2677).",
+     "llm_assisted": true
     }
    ],
    "associated_traits": [
@@ -79407,6 +79439,12 @@
        "node_id": "synthase_motion",
        "label": "directional RodA-PBP2 movement in E. coli",
        "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "mrec_mred",
+       "label": "MreC-MreD transmembrane scaffold",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "mrec_mred"
       }
      ],
      "edges": [
@@ -79515,6 +79553,19 @@
         {
          "reference": "DOI:10.1038/nrmicro2677",
          "notes": "Review connects spatial control of peptidoglycan growth to bacterial morphology; no universal constant-width law is inferred."
+        }
+       ]
+      },
+      {
+       "subject": "mrec_mred",
+       "predicate": "scaffolds synthases during",
+       "object": "pg_synthesis",
+       "description": "The transmembrane MreC-MreD subcomplex bridges cytoplasmic MreB filaments to periplasmic peptidoglycan synthases during lateral cell wall elongation.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nrmicro2677",
+         "snippet": "In rod-shaped bacteria, two protein complexes, the elongasome and the divisome, direct cell wall synthesis during elongation and division, respectively.",
+         "notes": "Supports the role of the MreC-MreD transmembrane scaffold within the elongasome during lateral peptidoglycan synthesis."
         }
        ]
       }
@@ -89810,6 +89861,12 @@
        "label": "proton-transporting ATPase activity, rotational mechanism",
        "node_type": "MOLECULAR_FUNCTION",
        "grounding": "GO:0046961"
+      },
+      {
+       "node_id": "proton_transmembrane_transport",
+       "label": "proton transmembrane transport",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:1902600"
       }
      ],
      "edges": [
@@ -89852,6 +89909,51 @@
          "notes": "Forgac 2007 reviews rotary proton pumping in two-sector V-ATPases."
         }
        ]
+      },
+      {
+       "subject": "proton_transporting_domain",
+       "predicate": "mediates",
+       "object": "proton_transmembrane_transport",
+       "description": "The membrane-embedded V0/F0/A0 proton-transporting sector conducts protons across the lipid bilayer via its proteolipid c-ring and stator half-channels.",
+       "evidence": [
+        {
+         "reference": "GO:0016469"
+        },
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "snippet": "ATP synthases are rotary molecular motors that couple transmembrane ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis in the soluble F1 sector.",
+         "notes": "Supports transmembrane ion/proton transport mediated by the membrane-embedded sector."
+        }
+       ]
+      },
+      {
+       "subject": "proton_transmembrane_transport",
+       "predicate": "is rotationally coupled to",
+       "object": "rotary_proton_atp_coupling",
+       "description": "Proton translocation through the membrane sector is mechanically coupled via central-stalk rotation and peripheral-stalk stabilization to nucleotide catalysis in the catalytic sector.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "snippet": "ATP synthases are rotary molecular motors that couple transmembrane ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis in the soluble F1 sector.",
+         "notes": "Supports rotational coupling between transmembrane proton transport and catalytic-sector ATP turnover."
+        }
+       ]
+      },
+      {
+       "subject": "catalytic_domain",
+       "predicate": "catalyzes",
+       "object": "rotary_proton_atp_coupling",
+       "description": "The peripheral catalytic sector (F1/V1/A1) interconverts mechanical torque of the central rotor and chemical bond energy of ATP.",
+       "evidence": [
+        {
+         "reference": "GO:0016469"
+        },
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "snippet": "ATP synthases are rotary molecular motors that couple transmembrane ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis in the soluble F1 sector.",
+         "notes": "Supports ATP synthesis or hydrolysis in the soluble catalytic sector coupled to rotary motion."
+        }
+       ]
       }
      ]
     }
@@ -89862,6 +89964,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:0016469 (proton-transporting two-sector ATPase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added proton_transmembrane_transport (GO:1902600) node and rotary coupling edges between proton_transporting_domain, catalytic_domain, and rotary_proton_atp_coupling (DOI:10.1146/annurev-biochem-013118-110903, GO:0016469).",
      "llm_assisted": true
     }
    ]
@@ -90109,6 +90218,22 @@
      "edges": [
       {
        "subject": "central_rotational_stalk",
+       "predicate": "drives conformational cycling of",
+       "object": "catalytic_hexamer_head",
+       "description": "Rotation of the asymmetric central-stalk axle inside the catalytic hexamer drives sequential open, loose, and tight conformational transitions across the three catalytic nucleotide-binding sites.",
+       "evidence": [
+        {
+         "reference": "GO:0033178"
+        },
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "snippet": "ATP synthases are rotary molecular motors that couple transmembrane ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis in the soluble F1 sector.",
+         "notes": "Supports rotational driving of catalytic-hexamer conformational cycling by the central stalk."
+        }
+       ]
+      },
+      {
+       "subject": "central_rotational_stalk",
        "predicate": "is part of",
        "object": "catalytic_domain",
        "description": "The central rotational stalk forms the asymmetric rotor shaft inside the catalytic domain.",
@@ -90156,6 +90281,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:0033178 (proton-transporting two-sector ATPase complex, catalytic domain) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added direct rotary-coupling edge from central_rotational_stalk to catalytic_hexamer_head in catalytic_sector_rotary_catalysis (GO:0033178, DOI:10.1146/annurev-biochem-013118-110903).",
      "llm_assisted": true
     }
    ]
@@ -90356,6 +90488,19 @@
      "edges": [
       {
        "subject": "membrane_stator_a_subunit",
+       "predicate": "conducts protons to and from",
+       "object": "proteolipid_c_ring_subunit",
+       "description": "Aqueous half-channels in the membrane stator a-subunit deliver protons to and from conserved carboxylates on the rotating proteolipid c-ring.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "snippet": "ATP synthases are rotary molecular motors that couple transmembrane ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis in the soluble F1 sector.",
+         "notes": "Supports proton transfer between the stator half-channels and the rotating c-ring in the membrane-embedded proton-transporting sector."
+        }
+       ]
+      },
+      {
+       "subject": "membrane_stator_a_subunit",
        "predicate": "is part of",
        "object": "proton_transporting_domain",
        "description": "Stator subunit a provides the two offset aqueous half-channels within the membrane proton-transporting domain.",
@@ -90403,6 +90548,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:0033177 (proton-transporting two-sector ATPase complex, proton-transporting domain) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added direct proton-conduction edge from membrane_stator_a_subunit to proteolipid_c_ring_subunit in proton_sector_rotary_conduction (DOI:10.1146/annurev-biochem-013118-110903).",
      "llm_assisted": true
     }
    ]
@@ -183615,6 +183767,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s); added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added individual lipoprotein subunit nodes bam_b, bam_c, bam_d, and bam_e with component_ref and InterPro groundings and parthood edges into bam_b_to_e_lipoproteins, and added UniProtKB:P0A937 to bam_b_to_e_lipoproteins.xrefs (DOI:10.1038/nature17199, DOI:10.1038/ncomms12865).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -183958,6 +184117,34 @@
        "node_type": "GENE_OR_PROTEIN"
       },
       {
+       "node_id": "bam_b",
+       "label": "Outer membrane protein assembly factor BamB",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "bam_b",
+       "grounding": "InterPro:IPR017687"
+      },
+      {
+       "node_id": "bam_c",
+       "label": "Outer membrane lipoprotein BamC",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "bam_c",
+       "grounding": "InterPro:IPR014524"
+      },
+      {
+       "node_id": "bam_d",
+       "label": "Outer membrane lipoprotein BamD",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "bam_d",
+       "grounding": "InterPro:IPR017689"
+      },
+      {
+       "node_id": "bam_e",
+       "label": "Outer membrane protein assembly factor BamE",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "bam_e",
+       "grounding": "InterPro:IPR026592"
+      },
+      {
        "node_id": "bam_a",
        "label": "BamA beta-barrel core",
        "node_type": "GENE_OR_PROTEIN",
@@ -183970,7 +184157,8 @@
        "xrefs": [
         "UniProtKB:P77774",
         "UniProtKB:P0A903",
-        "UniProtKB:P0AC02"
+        "UniProtKB:P0AC02",
+        "UniProtKB:P0A937"
        ]
       },
       {
@@ -183997,6 +184185,66 @@
       }
      ],
      "edges": [
+      {
+       "subject": "bam_b",
+       "predicate": "is part of",
+       "object": "bam_b_to_e_lipoproteins",
+       "description": "The WD40-repeat lipoprotein BamB associates with the periplasmic POTRA scaffold of BamA as part of the BamB-BamE lipoprotein ring.",
+       "evidence": [
+        {
+         "reference": "GO:1990063"
+        },
+        {
+         "reference": "DOI:10.1038/nature17199",
+         "notes": "Crystal structure of the intact E. coli BamABCDE complex showing BamB-BamE lipoprotein ring organization."
+        }
+       ]
+      },
+      {
+       "subject": "bam_c",
+       "predicate": "is part of",
+       "object": "bam_b_to_e_lipoproteins",
+       "description": "The outer-membrane lipoprotein BamC associates with BamD within the periplasmic BamB-BamE lipoprotein ring.",
+       "evidence": [
+        {
+         "reference": "GO:1990063"
+        },
+        {
+         "reference": "DOI:10.1038/nature17199",
+         "notes": "Crystal structure of the intact E. coli BamABCDE complex."
+        }
+       ]
+      },
+      {
+       "subject": "bam_d",
+       "predicate": "is part of",
+       "object": "bam_b_to_e_lipoproteins",
+       "description": "The essential TPR-containing lipoprotein BamD forms the core periplasmic lipoprotein subcomplex that coordinates with BamA POTRA domains.",
+       "evidence": [
+        {
+         "reference": "GO:1990063"
+        },
+        {
+         "reference": "DOI:10.1038/ncomms12865",
+         "notes": "Cryo-EM structure of the BamABCDE complex showing BamD-POTRA interactions."
+        }
+       ]
+      },
+      {
+       "subject": "bam_e",
+       "predicate": "is part of",
+       "object": "bam_b_to_e_lipoproteins",
+       "description": "The small outer-membrane lipoprotein BamE stabilizes the BamA-BamD interface within the BamB-BamE lipoprotein ring.",
+       "evidence": [
+        {
+         "reference": "GO:1990063"
+        },
+        {
+         "reference": "DOI:10.1038/nature17199",
+         "notes": "Crystal structure of the intact E. coli BamABCDE complex."
+        }
+       ]
+      },
       {
        "subject": "bam_a",
        "predicate": "organizes with",
@@ -188163,6 +188411,11 @@
        "grounding": "GO:0016465"
       },
       {
+       "node_id": "cis_folding_cavity",
+       "label": "GroES-capped cis folding chamber",
+       "node_type": "STATE"
+      },
+      {
        "node_id": "protein_folding",
        "label": "protein folding",
        "node_type": "BIOLOGICAL_PROCESS",
@@ -188209,6 +188462,45 @@
          "notes": "Xu, Horwich and Sigler 1997 characterized the enlarged cis cavity that promotes substrate protein folding."
         }
        ]
+      },
+      {
+       "subject": "cochaperonin_lid_subunit",
+       "predicate": "caps",
+       "object": "cpn60_groel_subunit",
+       "description": "The heptameric GroES/Cpn10 lid binds the ATP-bound apical domains of a GroEL/Cpn60 heptameric ring to enclose the folding cavity.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/41944",
+         "notes": "Crystal structure of the asymmetric GroEL-GroES-(ADP)7 chaperonin complex showing GroES capping the GroEL cis ring."
+        }
+       ]
+      },
+      {
+       "subject": "chaperonin_atpase_complex",
+       "predicate": "forms",
+       "object": "cis_folding_cavity",
+       "description": "ATP binding and GroES association trigger en bloc apical domain elevation and twist in the GroEL ring, creating an enlarged hydrophilic cis folding chamber.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/41944",
+         "notes": "Crystal structure of the asymmetric GroEL-GroES-(ADP)7 chaperonin complex."
+        }
+       ]
+      },
+      {
+       "subject": "cis_folding_cavity",
+       "predicate": "promotes",
+       "object": "protein_folding",
+       "description": "Encapsulation of the non-native polypeptide inside the hydrophilic cis cavity prevents aggregation and promotes productive folding until ATP hydrolysis triggers lid release.",
+       "evidence": [
+        {
+         "reference": "GO:0016465"
+        },
+        {
+         "reference": "DOI:10.1038/41944",
+         "notes": "Encapsulated cis chamber isolates non-native polypeptide substrates for productive folding."
+        }
+       ]
       }
      ]
     }
@@ -188219,6 +188511,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:0016465 (chaperonin ATPase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Enriched chaperonin_cage_assembly_and_folding with GroES capping edge and cis_folding_cavity state mediating protein_folding (DOI:10.1038/41944, GO:0016465).",
      "llm_assisted": true
     }
    ]
@@ -232261,6 +232560,13 @@
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added yme1 (component_ref: yme1) and zinc (component_ref: zinc, CHEBI:29105) nodes and assembly/cofactor edges into iaaa_ims_proteolysis (DOI:10.1083/jcb.201702125, ComplexPortal:CPX-1655).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -232469,6 +232775,19 @@
      "scope_notes": "Source-bounded synthesis of BY4741 recruitment/turnover and W303 photo-crosslinking experiments, not one directly observed temporal sequence. Much of the contact evidence uses tagged Tom22 and protease-dead Yme1. The recruitment-to-processing transition is a supported mechanistic interpretation, not a visualized handoff or an exclusive degradation route.",
      "nodes": [
       {
+       "node_id": "yme1",
+       "label": "Mitochondrial inner membrane i-AAA protease supercomplex subunit YME1",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "yme1"
+      },
+      {
+       "node_id": "zinc",
+       "label": "zinc(2+)",
+       "node_type": "CHEMICAL",
+       "component_ref": "zinc",
+       "grounding": "CHEBI:29105"
+      },
+      {
        "node_id": "mgr1",
        "label": "Mitochondrial inner membrane i-AAA protease complex subunit Mgr1",
        "node_type": "GENE_OR_PROTEIN",
@@ -232505,6 +232824,35 @@
       }
      ],
      "edges": [
+      {
+       "subject": "yme1",
+       "predicate": "forms proteolytic core of",
+       "object": "iaaa",
+       "description": "Six Yme1 subunits homo-oligomerize into the asymmetric spiral AAA+ ATPase and M41 metalloprotease hexamer of the i-AAA complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201702125",
+         "snippet": "During Yme1-mediated proteolysis in the intermembrane space, substrates may encounter the rocky road of an asymmetric spiral Staircase of AAA domains.",
+         "notes": "Supports hexameric Yme1 forming the AAA+ and proteolytic core of the i-AAA complex."
+        },
+        {
+         "reference": "ComplexPortal:CPX-1655",
+         "notes": "S. cerevisiae YME1 mitochondrial inner membrane i-AAA protease complex stoichiometry 6x P32795 (YME1)."
+        }
+       ]
+      },
+      {
+       "subject": "zinc",
+       "predicate": "is cofactor of",
+       "object": "iaaa",
+       "description": "Catalytic zinc(2+) ions coordinate the M41 peptidase active sites of the hexameric i-AAA protease complex.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1655",
+         "notes": "S. cerevisiae i-AAA protease complex binds 6x CHEBI:29105 zinc(2+) catalytic cofactors."
+        }
+       ]
+      },
       {
        "subject": "mgr1",
        "predicate": "participates in",
@@ -237051,6 +237399,13 @@
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added yta10, yta12, and zinc (CHEBI:29105) causal-graph nodes and assembly/cofactor edges into maaa_inner_membrane_proteolysis (ComplexPortal:CPX-1654, EMD-1712).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -237212,6 +237567,25 @@
      "scope_notes": "Experiment-bounded intervention-response graph from Figure 4 in W303-1B derivatives. SIM and IMSD intervals are replaced by GGGGGS linkers, not clean deletions of the entire Yta12 protein. Processing is inferred from a precursor/total reporter endpoint; growth is a separate plate assay. No edge claims that altered MrpL32 processing itself causes peroxide sensitivity, or that these experiments resolve a direct atomic PHB-Yta12 interface.",
      "nodes": [
       {
+       "node_id": "yta10",
+       "label": "Mitochondrial inner membrane m-AAA protease component YTA10",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "yta10"
+      },
+      {
+       "node_id": "yta12",
+       "label": "Mitochondrial inner membrane m-AAA protease component YTA12",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "yta12"
+      },
+      {
+       "node_id": "zinc",
+       "label": "zinc(2+)",
+       "node_type": "CHEMICAL",
+       "component_ref": "zinc",
+       "grounding": "CHEBI:29105"
+      },
+      {
        "node_id": "maaa",
        "label": "m-AAA complex",
        "node_type": "STRUCTURE",
@@ -237250,6 +237624,50 @@
       }
      ],
      "edges": [
+      {
+       "subject": "yta10",
+       "predicate": "co-assembles into",
+       "object": "maaa",
+       "description": "Three Yta10 (Afg3) subunits co-assemble with three Yta12 (Rca1) subunits to form the hetero-hexameric mitochondrial inner membrane m-AAA protease ring.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1654",
+         "notes": "S. cerevisiae YTA10-YTA12 m-AAA protease complex hetero-hexamer (3x YTA10, 3x YTA12)."
+        },
+        {
+         "reference": "https://www.ebi.ac.uk/emdb/EMD-1712",
+         "notes": "Cryo-EM structure of the yeast m-AAA protease hetero-hexamer composed of Yta10 and Yta12."
+        }
+       ]
+      },
+      {
+       "subject": "yta12",
+       "predicate": "co-assembles into",
+       "object": "maaa",
+       "description": "Three Yta12 (Rca1) subunits co-assemble with three Yta10 (Afg3) subunits into the hetero-hexameric m-AAA protease ring.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1654",
+         "notes": "S. cerevisiae YTA10-YTA12 m-AAA protease complex hetero-hexamer (3x YTA10, 3x YTA12)."
+        },
+        {
+         "reference": "https://www.ebi.ac.uk/emdb/EMD-1712",
+         "notes": "Cryo-EM structure of the yeast m-AAA protease hetero-hexamer composed of Yta10 and Yta12."
+        }
+       ]
+      },
+      {
+       "subject": "zinc",
+       "predicate": "is cofactor of",
+       "object": "maaa",
+       "description": "Six catalytic zinc(2+) ions coordinate the M41 metallopeptidase active sites of the m-AAA protease complex.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1654",
+         "notes": "S. cerevisiae YTA10-YTA12 m-AAA protease complex binds 6x CHEBI:29105 zinc(2+) catalytic cofactors."
+        }
+       ]
+      },
       {
        "subject": "maaa",
        "predicate": "catalyzes",
@@ -243703,6 +244121,13 @@
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added mim1 (component_ref: mim1, InterPro:IPR013262) and mim2 (component_ref: mim2, InterPro:IPR037652) nodes and co-assembly edges into mim_insertase_pathway (DOI:10.1016/j.celrep.2020.107567, DOI:10.7554/eLife.34488).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -243882,6 +244307,20 @@
      "scope_notes": "Edges describe YPH499-derived isolated-mitochondrial experiments in the 2020 Cell Reports study, not one temporal sequence or one TOM-MIM-SAM supercomplex. Association is not direct-contact or pore-transit proof. Fis1/Mcr1 dependence differs from earlier steady-state measurements; no exclusive import route, fixed stoichiometry or directly observed exchange between MIM populations is asserted.",
      "nodes": [
       {
+       "node_id": "mim1",
+       "label": "Mitochondrial import protein 1",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "mim1",
+       "grounding": "InterPro:IPR013262"
+      },
+      {
+       "node_id": "mim2",
+       "label": "Mitochondrial outer membrane protein Mim2",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "mim2",
+       "grounding": "InterPro:IPR037652"
+      },
+      {
        "node_id": "mim",
        "label": "MIM complex",
        "node_type": "STRUCTURE",
@@ -243916,6 +244355,37 @@
       }
      ],
      "edges": [
+      {
+       "subject": "mim1",
+       "predicate": "co-assembles into",
+       "object": "mim",
+       "description": "Multiple copies of Mim1 oligomerize with Mim2 in the mitochondrial outer membrane to form the MIM insertase complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.celrep.2020.107567",
+         "snippet": "Import of alpha-helical proteins into the mitochondrial outer membrane is mediated by the mitochondrial import (MIM) complex, which contains multiple copies of Mim1 and one or two copies of Mim2.",
+         "notes": "Supports assembly of multiple Mim1 subunits with Mim2 into the MIM complex."
+        }
+       ]
+      },
+      {
+       "subject": "mim2",
+       "predicate": "co-assembles into",
+       "object": "mim",
+       "description": "One or two copies of the small integral outer-membrane subunit Mim2 co-assemble with Mim1 to stabilize the MIM insertase complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.celrep.2020.107567",
+         "snippet": "Import of alpha-helical proteins into the mitochondrial outer membrane is mediated by the mitochondrial import (MIM) complex, which contains multiple copies of Mim1 and one or two copies of Mim2.",
+         "notes": "Supports co-assembly of Mim2 with Mim1 in the MIM complex."
+        },
+        {
+         "reference": "DOI:10.7554/eLife.34488",
+         "snippet": "The mitochondrial outer membrane (MOM) protein Mim1 is required for the insertion of alpha-helical proteins into the MOM and forms the MIM complex together with Mim2.",
+         "notes": "Demonstrates that Mim1 and Mim2 together form the MIM complex."
+        }
+       ]
+      },
       {
        "subject": "mim",
        "predicate": "associates with",
@@ -268862,6 +269332,33 @@
          "notes": "Tougu and Marians 1996 demonstrated coupled unwinding and RNA primer synthesis by the primosome."
         }
        ]
+      },
+      {
+       "subject": "replicative_dna_helicase",
+       "predicate": "unwinds",
+       "object": "template_dna",
+       "description": "The hexameric replicative DNA helicase (DnaB) translocates along the lagging-strand template to unwind duplex DNA ahead of primer synthesis.",
+       "evidence": [
+        {
+         "reference": "GO:1990077"
+        },
+        {
+         "reference": "PMID:8663105",
+         "notes": "Reconstitution of E. coli primosome assembly and DnaB helicase translocation on template DNA."
+        }
+       ]
+      },
+      {
+       "subject": "replicative_dna_helicase",
+       "predicate": "recruits",
+       "object": "dna_primase",
+       "description": "The translocating DnaB replicative helicase transiently recruits DnaG primase to initiate distributive synthesis of short RNA primers on the unwound single-stranded DNA template.",
+       "evidence": [
+        {
+         "reference": "PMID:8663105",
+         "notes": "Demonstrates DnaB-dependent recruitment of DnaG primase for primer synthesis within the primosome."
+        }
+       ]
       }
      ]
     }
@@ -268872,6 +269369,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:1990077 (primosome complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added direct mechanistic edges from replicative_dna_helicase to template_dna (unwinds) and dna_primase (recruits) in primosome_assembly_and_priming (GO:1990077, PMID:8663105).",
      "llm_assisted": true
     }
    ]
@@ -289677,6 +290181,13 @@
      "action": "EDIT",
      "changes": "updated gene_symbols/synonym annotations for UniProtKB protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added ASSEMBLY causal graph stressosome_core_and_partner_assembly covering RsbR-RsbS core assembly, RsbT recruitment, and Listeria monocytogenes Prli42 membrane tethering of RsbR (DOI:10.1038/s41467-019-10782-0, DOI:10.1107/S205225251900945X, DOI:10.1038/nmicrobiol.2017.5).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -289889,6 +290400,136 @@
     }
    ],
    "causal_graphs": [
+    {
+     "graph_id": "stressosome_core_and_partner_assembly",
+     "title": "Stressosome core assembly and Prli42 membrane tethering",
+     "description": "Assembly of the pseudo-icosahedral RsbR-RsbS core, recruitment of the switch kinase RsbT, and membrane tethering of RsbR by the miniprotein Prli42.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "rsbr",
+       "label": "Stressosome sensor-core protein RsbR",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsbr"
+      },
+      {
+       "node_id": "rsbs",
+       "label": "Stressosome scaffold antagonist RsbS",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsbs"
+      },
+      {
+       "node_id": "rsbr_rsbs_core",
+       "label": "Pseudo-icosahedral 20-RsbR2:10-RsbS2 stressosome core",
+       "node_type": "STATE"
+      },
+      {
+       "node_id": "rsbt",
+       "label": "Serine/threonine protein kinase RsbT",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsbt"
+      },
+      {
+       "node_id": "stressosome",
+       "label": "stressosome",
+       "node_type": "STRUCTURE",
+       "grounding": "cellstructuremech:stressosome"
+      },
+      {
+       "node_id": "prli42",
+       "label": "Small membrane protein Prli42",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "prli42",
+       "grounding": "InterPro:IPR049722"
+      },
+      {
+       "node_id": "membrane_associated_rsbr",
+       "label": "Membrane-tethered RsbR sensor pool",
+       "node_type": "STATE"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "rsbr",
+       "predicate": "co-assembles with",
+       "object": "rsbs",
+       "description": "Twenty RsbR dimers and ten RsbS dimers co-assemble via conserved C-terminal STAS domains into the pseudo-icosahedral stressosome core.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-019-10782-0",
+         "snippet": "The stressosome is a 1.8 MDa cytoplasmic complex that integrates environmental signals to control the general stress response (GSR) in several bacteria.",
+         "notes": "Supports assembly of RsbR and RsbS into the 1.8 MDa stressosome core."
+        }
+       ]
+      },
+      {
+       "subject": "rsbs",
+       "predicate": "forms",
+       "object": "rsbr_rsbs_core",
+       "description": "RsbS and RsbR STAS domains form the 60-protomer pseudo-icosahedral core scaffold displaying 20 sensory N-terminal turrets.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1107/S205225251900945X",
+         "snippet": "The stressosome is a 1.8 MDa complex composed of multiple copies of three proteins: RsbR, RsbS and RsbT.",
+         "notes": "Supports formation of the multimeric RsbR-RsbS stressosome scaffold."
+        }
+       ]
+      },
+      {
+       "subject": "rsbr_rsbs_core",
+       "predicate": "sequesters",
+       "object": "rsbt",
+       "description": "Unphosphorylated RsbS in the resting RsbR-RsbS core binds up to 20 copies of the switch kinase RsbT on the outer surface of the cage.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1107/S205225251900945X",
+         "snippet": "The stressosome is a 1.8 MDa complex composed of multiple copies of three proteins: RsbR, RsbS and RsbT.",
+         "notes": "Supports recruitment of RsbT to the RsbR-RsbS core to form the resting stressosome."
+        }
+       ]
+      },
+      {
+       "subject": "rsbt",
+       "predicate": "completes assembly of",
+       "object": "stressosome",
+       "description": "Binding of RsbT to the RsbR-RsbS STAS core completes the resting 1.8 MDa stressosome signaling complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-019-10782-0",
+         "snippet": "The stressosome is a 1.8 MDa cytoplasmic complex that integrates environmental signals to control the general stress response (GSR) in several bacteria.",
+         "notes": "Supports assembly of the intact 1.8 MDa RsbR-RsbS-RsbT stressosome complex."
+        }
+       ]
+      },
+      {
+       "subject": "prli42",
+       "predicate": "tethers",
+       "object": "membrane_associated_rsbr",
+       "description": "In Listeria monocytogenes, the 31-residue tail-anchored membrane miniprotein Prli42 interacts with RsbR and tethers a subpopulation of stressosomes to the cytoplasmic membrane during oxidative stress.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nmicrobiol.2017.5",
+         "snippet": "Here, we characterize the first bacterial tail-anchored membrane protein, Prli42, in the pathogen Listeria monocytogenes and establish that it interacts with the stressosome component RsbR",
+         "notes": "Supports Prli42 binding RsbR and tethering it to the membrane."
+        }
+       ]
+      },
+      {
+       "subject": "rsbr",
+       "predicate": "participates in",
+       "object": "membrane_associated_rsbr",
+       "description": "RsbR binds Prli42 to form a membrane-tethered stressosome sensor pool in Listeria monocytogenes.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nmicrobiol.2017.5",
+         "snippet": "Here, we characterize the first bacterial tail-anchored membrane protein, Prli42, in the pathogen Listeria monocytogenes and establish that it interacts with the stressosome component RsbR",
+         "notes": "Demonstrates interaction between RsbR and Prli42 at the membrane."
+        }
+       ]
+      }
+     ]
+    },
     {
      "graph_id": "bacillus_core_independent_response",
      "title": "Bacillus core-independent stress response",
@@ -305790,6 +306431,21 @@
      "edges": [
       {
        "subject": "box_c_d_rna",
+       "predicate": "nucleates assembly of",
+       "object": "nop1_nop56_nop58_snu13_core",
+       "description": "The kink-turn motif formed by the conserved C and D boxes of the guide RNA binds Snu13 and nucleates hierarchical assembly of the Nop56-Nop58-Nop1 (fibrillarin) methyltransferase core.",
+       "evidence": [
+        {
+         "reference": "PMID:10982895",
+         "notes": "Demonstrates Snu13p binding to box C/D snoRNA and assembly with Nop1p, Nop56p, and Nop58p."
+        },
+        {
+         "reference": "PMID:9372940"
+        }
+       ]
+      },
+      {
+       "subject": "box_c_d_rna",
        "predicate": "is part of",
        "object": "box_c_d_rnp_complex",
        "description": "The box C/D small RNA provides the kink-turn motif and antisense guide elements of the box C/D RNP complex.",
@@ -305837,6 +306493,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:0170049 (box C/D RNP complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added direct RNP nucleation edge from box_c_d_rna to nop1_nop56_nop58_snu13_core in box_c_d_rnp_assembly_and_methylation (PMID:10982895, PMID:9372940).",
      "llm_assisted": true
     }
    ]
@@ -306080,6 +306743,24 @@
      "edges": [
       {
        "subject": "box_h_aca_rna",
+       "predicate": "scaffolds and guides",
+       "object": "cbf5_gar1_nhp2_nop10_core",
+       "description": "The hairpin-hinge-hairpin-tail box H/ACA guide RNA scaffolds the Cbf5-Nop10-Gar1-Nhp2 protein core and positions the substrate uridine at the Cbf5 catalytic site via pseudouridylation-pocket base pairing.",
+       "evidence": [
+        {
+         "reference": "GO:0072588"
+        },
+        {
+         "reference": "DOI:10.1016/j.molcel.2007.01.024",
+         "notes": "Crystal structure of the box H/ACA RNP showing guide RNA scaffolding of the Cbf5-Nop10-Gar1-L7Ae/Nhp2 core."
+        },
+        {
+         "reference": "PMID:14562095"
+        }
+       ]
+      },
+      {
+       "subject": "box_h_aca_rna",
        "predicate": "is part of",
        "object": "box_h_aca_rnp_complex",
        "description": "The box H/ACA small RNA provides the hairpin-hinge-hairpin-tail scaffold and substrate-guiding pseudouridylation pocket of the RNP.",
@@ -306127,6 +306808,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:0072588 (box H/ACA RNP complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added direct RNP scaffolding edge from box_h_aca_rna to cbf5_gar1_nhp2_nop10_core in box_h_aca_rnp_assembly_and_pseudouridylation (GO:0072588, DOI:10.1016/j.molcel.2007.01.024, PMID:14562095).",
      "llm_assisted": true
     }
    ]
@@ -319524,6 +320212,13 @@
      "action": "TIGHTENED_TAXONOMY_SCOPE",
      "changes": "Removed provisional species prevalence assertion; retain experimentally demonstrated NA1000 as a canonical example without inferring lineage patchiness.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-24T06:00:00Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added causal-graph nodes and recruitment edges for degradosome components rhlb (DEAD-box RNA helicase RhlB) and aconitase (Aconitase) in br_body_assembly_and_decay (DOI:10.1016/j.molcel.2018.08.003).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -319770,6 +320465,18 @@
        "node_id": "disassembly",
        "label": "BR-body disassembly",
        "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "rhlb",
+       "label": "DEAD-box RNA helicase RhlB",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rhlb"
+      },
+      {
+       "node_id": "aconitase",
+       "label": "Aconitase",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "aconitase"
       }
      ],
      "edges": [
@@ -319842,6 +320549,32 @@
         {
          "reference": "DOI:10.1016/j.molcel.2018.08.003",
          "notes": "Wild-type bodies are dynamic on the minute scale; two catalytic mutants retain bodies throughout ten-minute imaging, and RNase A treatment dissolves stabilized bodies in lysates."
+        }
+       ]
+      },
+      {
+       "subject": "rnase_e",
+       "predicate": "recruits",
+       "object": "rhlb",
+       "description": "RNase E scaffolds the DEAD-box RNA helicase RhlB into the bacterial RNP body (BR-body) degradosome machinery.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.molcel.2018.08.003",
+         "snippet": "First, RNase E acts as a scaffold that recruits the RNA degradosome machinery into BR-bodies, and BR-body assembly requires RNA substrates",
+         "notes": "Supports recruitment of RNA degradosome machinery components including RhlB by the RNase E scaffold into BR-bodies."
+        }
+       ]
+      },
+      {
+       "subject": "rnase_e",
+       "predicate": "recruits",
+       "object": "aconitase",
+       "description": "RNase E scaffolds the C. crescentus degradosome client aconitase into the bacterial RNP body (BR-body).",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.molcel.2018.08.003",
+         "snippet": "First, RNase E acts as a scaffold that recruits the RNA degradosome machinery into BR-bodies, and BR-body assembly requires RNA substrates",
+         "notes": "Supports recruitment of C. crescentus RNA degradosome machinery components including aconitase by the RNase E scaffold into BR-bodies."
         }
        ]
       }

@@ -145,6 +145,18 @@ causal_graphs:
     grounding: GO:1902600
   edges:
   - subject: membrane_stator_a_subunit
+    predicate: conducts protons to and from
+    object: proteolipid_c_ring_subunit
+    description: Aqueous half-channels in the membrane stator a-subunit deliver protons
+      to and from conserved carboxylates on the rotating proteolipid c-ring.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      snippet: ATP synthases are rotary molecular motors that couple transmembrane
+        ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis
+        in the soluble F1 sector.
+      notes: Supports proton transfer between the stator half-channels and the rotating
+        c-ring in the membrane-embedded proton-transporting sector.
+  - subject: membrane_stator_a_subunit
     predicate: is part of
     object: proton_transporting_domain
     description: Stator subunit a provides the two offset aqueous half-channels within
@@ -181,4 +193,10 @@ curation_history:
     ATPase complex, proton-transporting domain) with verified GO identity, source-backed
     components, reviewed UniProtKB protein examples, taxonomic distribution, canonical
     examples, functions, and mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added direct proton-conduction edge from membrane_stator_a_subunit to proteolipid_c_ring_subunit
+    in proton_sector_rotary_conduction (DOI:10.1146/annurev-biochem-013118-110903).
   llm_assisted: true

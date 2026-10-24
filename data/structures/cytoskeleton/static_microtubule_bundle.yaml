@@ -208,6 +208,22 @@ causal_graphs:
     grounding: GO:0000226
   edges:
   - subject: alpha_tubulin
+    predicate: heterodimerizes with
+    object: beta_tubulin
+    description: Alpha-tubulin and beta-tubulin form obligate alpha/beta-tubulin heterodimers
+      that polymerize into the antiparallel microtubules of the quiescent static bundle.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      snippet: Upon entry into quiescence, fission yeast cells assemble a single bundle
+        of microtubules (Q-MT bundle) that is extremely stable.
+      notes: Supports alpha/beta-tubulin heterodimers forming the microtubules of
+        the quiescent static bundle.
+    - reference: DOI:10.7554/eLife.89958
+      snippet: Upon starvation, budding yeast cells assemble a hyper-stable microtubule
+        bundle in the nucleus.
+      notes: Supports alpha/beta-tubulin heterodimers assembling the hyper-stable
+        quiescent nuclear microtubule bundle.
+  - subject: alpha_tubulin
     predicate: is part of
     object: static_microtubule_bundle
     description: Alpha-tubulin subunits copolymerize with beta-tubulin into the closely
@@ -245,4 +261,10 @@ curation_history:
     verified GO identity, source-backed components, reviewed UniProtKB protein examples,
     taxonomic distribution, canonical examples, functions, and mechanistic causal
     graph.
+  llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added alpha_tubulin -> beta_tubulin heterodimerization edge in static_bundle_stabilization
+    (DOI:10.1083/jcb.201502025, DOI:10.7554/eLife.89958).
   llm_assisted: true

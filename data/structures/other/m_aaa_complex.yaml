@@ -31,6 +31,12 @@ curation_history:
   action: EDIT
   changes: updated gene_symbols/synonym annotations for UniProtKB protein_examples.
   llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added yta10, yta12, and zinc (CHEBI:29105) causal-graph nodes and assembly/cofactor
+    edges into maaa_inner_membrane_proteolysis (ComplexPortal:CPX-1654, EMD-1712).
+  llm_assisted: true
 parent_structures:
 - GO:0098800
 - GO:1905368
@@ -180,6 +186,19 @@ causal_graphs:
     MrpL32 processing itself causes peroxide sensitivity, or that these experiments
     resolve a direct atomic PHB-Yta12 interface.
   nodes:
+  - node_id: yta10
+    label: Mitochondrial inner membrane m-AAA protease component YTA10
+    node_type: GENE_OR_PROTEIN
+    component_ref: yta10
+  - node_id: yta12
+    label: Mitochondrial inner membrane m-AAA protease component YTA12
+    node_type: GENE_OR_PROTEIN
+    component_ref: yta12
+  - node_id: zinc
+    label: zinc(2+)
+    node_type: CHEMICAL
+    component_ref: zinc
+    grounding: CHEBI:29105
   - node_id: maaa
     label: m-AAA complex
     node_type: STRUCTURE
@@ -211,6 +230,39 @@ causal_graphs:
     description: Reduced growth on YPG with 2 mM H2O2 at 30 C relative to the wild-type
       control; not a universal stress phenotype.
   edges:
+  - subject: yta10
+    predicate: co-assembles into
+    object: maaa
+    description: Three Yta10 (Afg3) subunits co-assemble with three Yta12 (Rca1) subunits
+      to form the hetero-hexameric mitochondrial inner membrane m-AAA protease ring.
+    evidence:
+    - reference: ComplexPortal:CPX-1654
+      notes: S. cerevisiae YTA10-YTA12 m-AAA protease complex hetero-hexamer (3x YTA10,
+        3x YTA12).
+    - reference: https://www.ebi.ac.uk/emdb/EMD-1712
+      notes: Cryo-EM structure of the yeast m-AAA protease hetero-hexamer composed
+        of Yta10 and Yta12.
+  - subject: yta12
+    predicate: co-assembles into
+    object: maaa
+    description: Three Yta12 (Rca1) subunits co-assemble with three Yta10 (Afg3) subunits
+      into the hetero-hexameric m-AAA protease ring.
+    evidence:
+    - reference: ComplexPortal:CPX-1654
+      notes: S. cerevisiae YTA10-YTA12 m-AAA protease complex hetero-hexamer (3x YTA10,
+        3x YTA12).
+    - reference: https://www.ebi.ac.uk/emdb/EMD-1712
+      notes: Cryo-EM structure of the yeast m-AAA protease hetero-hexamer composed
+        of Yta10 and Yta12.
+  - subject: zinc
+    predicate: is cofactor of
+    object: maaa
+    description: Six catalytic zinc(2+) ions coordinate the M41 metallopeptidase active
+      sites of the m-AAA protease complex.
+    evidence:
+    - reference: ComplexPortal:CPX-1654
+      notes: S. cerevisiae YTA10-YTA12 m-AAA protease complex binds 6x CHEBI:29105
+        zinc(2+) catalytic cofactors.
   - subject: maaa
     predicate: catalyzes
     object: processing

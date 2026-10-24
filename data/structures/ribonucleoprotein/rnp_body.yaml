@@ -26,6 +26,13 @@ curation_history:
   changes: Removed provisional species prevalence assertion; retain experimentally
     demonstrated NA1000 as a canonical example without inferring lineage patchiness.
   llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added causal-graph nodes and recruitment edges for degradosome components
+    rhlb (DEAD-box RNA helicase RhlB) and aconitase (Aconitase) in br_body_assembly_and_decay
+    (DOI:10.1016/j.molcel.2018.08.003).
+  llm_assisted: true
 synonyms:
 - synonym_text: BR-body
   synonym_type: EXACT_SYNONYM
@@ -227,6 +234,14 @@ causal_graphs:
   - node_id: disassembly
     label: BR-body disassembly
     node_type: BIOLOGICAL_PROCESS
+  - node_id: rhlb
+    label: DEAD-box RNA helicase RhlB
+    node_type: GENE_OR_PROTEIN
+    component_ref: rhlb
+  - node_id: aconitase
+    label: Aconitase
+    node_type: GENE_OR_PROTEIN
+    component_ref: aconitase
   edges:
   - subject: rnase_e
     predicate: drives
@@ -284,6 +299,28 @@ causal_graphs:
       notes: Wild-type bodies are dynamic on the minute scale; two catalytic mutants
         retain bodies throughout ten-minute imaging, and RNase A treatment dissolves
         stabilized bodies in lysates.
+  - subject: rnase_e
+    predicate: recruits
+    object: rhlb
+    description: RNase E scaffolds the DEAD-box RNA helicase RhlB into the bacterial
+      RNP body (BR-body) degradosome machinery.
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      snippet: First, RNase E acts as a scaffold that recruits the RNA degradosome
+        machinery into BR-bodies, and BR-body assembly requires RNA substrates
+      notes: Supports recruitment of RNA degradosome machinery components including
+        RhlB by the RNase E scaffold into BR-bodies.
+  - subject: rnase_e
+    predicate: recruits
+    object: aconitase
+    description: RNase E scaffolds the C. crescentus degradosome client aconitase
+      into the bacterial RNP body (BR-body).
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2018.08.003
+      snippet: First, RNase E acts as a scaffold that recruits the RNA degradosome
+        machinery into BR-bodies, and BR-body assembly requires RNA substrates
+      notes: Supports recruitment of C. crescentus RNA degradosome machinery components
+        including aconitase by the RNase E scaffold into BR-bodies.
 discussions:
 - discussion_id: condensate_not_degradosome_or_eukaryotic_granule
   prompt: Keep the BR-body condensate distinct from one RNA degradosome and from eukaryotic

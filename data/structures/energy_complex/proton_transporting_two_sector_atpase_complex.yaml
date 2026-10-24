@@ -224,6 +224,10 @@ causal_graphs:
     label: proton-transporting ATPase activity, rotational mechanism
     node_type: MOLECULAR_FUNCTION
     grounding: GO:0046961
+  - node_id: proton_transmembrane_transport
+    label: proton transmembrane transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:1902600
   edges:
   - subject: proton_transporting_domain
     predicate: is part of
@@ -253,6 +257,45 @@ causal_graphs:
       notes: Kuehlbrandt 2019 reviews rotary catalysis in two-sector ATP synthases.
     - reference: DOI:10.1038/nrm2272
       notes: Forgac 2007 reviews rotary proton pumping in two-sector V-ATPases.
+  - subject: proton_transporting_domain
+    predicate: mediates
+    object: proton_transmembrane_transport
+    description: The membrane-embedded V0/F0/A0 proton-transporting sector conducts
+      protons across the lipid bilayer via its proteolipid c-ring and stator half-channels.
+    evidence:
+    - reference: GO:0016469
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      snippet: ATP synthases are rotary molecular motors that couple transmembrane
+        ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis
+        in the soluble F1 sector.
+      notes: Supports transmembrane ion/proton transport mediated by the membrane-embedded
+        sector.
+  - subject: proton_transmembrane_transport
+    predicate: is rotationally coupled to
+    object: rotary_proton_atp_coupling
+    description: Proton translocation through the membrane sector is mechanically
+      coupled via central-stalk rotation and peripheral-stalk stabilization to nucleotide
+      catalysis in the catalytic sector.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      snippet: ATP synthases are rotary molecular motors that couple transmembrane
+        ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis
+        in the soluble F1 sector.
+      notes: Supports rotational coupling between transmembrane proton transport and
+        catalytic-sector ATP turnover.
+  - subject: catalytic_domain
+    predicate: catalyzes
+    object: rotary_proton_atp_coupling
+    description: The peripheral catalytic sector (F1/V1/A1) interconverts mechanical
+      torque of the central rotor and chemical bond energy of ATP.
+    evidence:
+    - reference: GO:0016469
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      snippet: ATP synthases are rotary molecular motors that couple transmembrane
+        ion transport in the membrane-embedded F0 sector to ATP synthesis or hydrolysis
+        in the soluble F1 sector.
+      notes: Supports ATP synthesis or hydrolysis in the soluble catalytic sector
+        coupled to rotary motion.
 curation_history:
 - timestamp: '2026-10-24T03:15:00Z'
   curator: add-cell-structure
@@ -261,4 +304,11 @@ curation_history:
     ATPase complex) with verified GO identity, source-backed components, reviewed
     UniProtKB protein examples, taxonomic distribution, canonical examples, functions,
     and mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added proton_transmembrane_transport (GO:1902600) node and rotary coupling
+    edges between proton_transporting_domain, catalytic_domain, and rotary_proton_atp_coupling
+    (DOI:10.1146/annurev-biochem-013118-110903, GO:0016469).
   llm_assisted: true

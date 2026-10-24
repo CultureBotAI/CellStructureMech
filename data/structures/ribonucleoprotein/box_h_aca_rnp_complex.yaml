@@ -179,6 +179,18 @@ causal_graphs:
     grounding: GO:0001522
   edges:
   - subject: box_h_aca_rna
+    predicate: scaffolds and guides
+    object: cbf5_gar1_nhp2_nop10_core
+    description: The hairpin-hinge-hairpin-tail box H/ACA guide RNA scaffolds the
+      Cbf5-Nop10-Gar1-Nhp2 protein core and positions the substrate uridine at the
+      Cbf5 catalytic site via pseudouridylation-pocket base pairing.
+    evidence:
+    - reference: GO:0072588
+    - reference: DOI:10.1016/j.molcel.2007.01.024
+      notes: Crystal structure of the box H/ACA RNP showing guide RNA scaffolding
+        of the Cbf5-Nop10-Gar1-L7Ae/Nhp2 core.
+    - reference: PMID:14562095
+  - subject: box_h_aca_rna
     predicate: is part of
     object: box_h_aca_rnp_complex
     description: The box H/ACA small RNA provides the hairpin-hinge-hairpin-tail scaffold
@@ -216,4 +228,11 @@ curation_history:
     verified GO identity, source-backed components, reviewed UniProtKB protein examples,
     taxonomic distribution, canonical examples, functions, and mechanistic causal
     graph.
+  llm_assisted: true
+- timestamp: '2026-10-24T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added direct RNP scaffolding edge from box_h_aca_rna to cbf5_gar1_nhp2_nop10_core
+    in box_h_aca_rnp_assembly_and_pseudouridylation (GO:0072588, DOI:10.1016/j.molcel.2007.01.024,
+    PMID:14562095).
   llm_assisted: true
