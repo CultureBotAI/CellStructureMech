@@ -1,0 +1,1279 @@
+# Source-backed review of monopolin complex
+
+- Review: 20261022T090913Z-monopolin-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T08:39:51Z
+- Finished UTC: 2026-10-22T09:09:13Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One grouped minor: three represented monopolin subunit classes have verified whole-family mappings. Budding-yeast membership, narrower fission-yeast boundaries, examples and descriptive mono-orientation remain supported.
+
+## Scope And Provenance
+
+Exactly one entire maintained target and 14 frozen inputs. No neighboring maintained record is an unstated premise. Actual source tiers/read extents are declared per evidence row.
+
+Selection: Batch61 strict ordered selection index 4; exactly one maintained target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0033551 | data/structures/other/monopolin_complex.yaml | maintained | monopolin complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0033551 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0033551 | Focused validator passed. |
+| Focused native causal-graphs | passed | True | GO:0033551 | Focused check passed; scientific assertions were independently assessed. |
+| Focused native verify | passed | True | GO:0033551 | Focused check passed; scientific assertions were independently assessed. |
+| Claim-level scientific review | passed | True | GO:0033551 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0033551 | 15 of 19 collected target identifiers returned OK. PMID:11163190: UNREACHABLE; Native Europe PMC uniquely identifies PMID:11163190: Functional genomics identifies monopolin: a kinetochore protein required for segregation of homologs during meiosis i. (2000), DOI10.1016/s0092-8674(00)00217-8. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope.; PMID:12628929: UNREACHABLE; Native Europe PMC uniquely identifies PMID:12628929: The path from nucleolar 90S to cytoplasmic 40S pre-ribosomes. (2003), DOI10.1093/emboj/cdg121. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope.; PMID:12663816: UNREACHABLE; Native Europe PMC uniquely identifies PMID:12663816: Role of Polo-like kinase CDC5 in programming meiosis I chromosome segregation. (2003), DOI10.1126/science.1081846. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope.; PMID:12689592: UNREACHABLE; Native Europe PMC uniquely identifies PMID:12689592: Kinetochore recruitment of two nucleolar proteins is required for homolog segregation in meiosis I. (2003), DOI10.1016/s1534-5807(03)00086-8. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0033551 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0033551 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0033551 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0033551 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0033551 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Budding monopolin remains distinct from its narrower relatives
+
+identity: supported. Targets: GO:0033551.
+
+The primary identity, protein-containing-complex hierarchy and kinetochore placement agree. The narrow Csm1/Lrs4 and Pcs1/Mde4 synonyms do not equate full four-class budding monopolin with the fission-yeast pair.
+
+### Three exact families are now actionable
+
+grounding: concern. Targets: GO:0033551.
+
+Csm1/Pcs1 IPR040349, Lrs4/Mde4 IPR018479 and Mam1 IPR018847 match represented classes with separate accession/member corroboration. The malformed Csm1 partner sentence is rejected. Broad CK1 IPR050235 is withheld as an exact Hrr25 mapping.
+
+### Descriptive membership and high-level mono-orientation
+
+graph: supported. Targets: GO:0033551.
+
+The six NONMECHANISTIC edges represent four constituent classes, kinetochore association and supported mono-orientation. They do not resolve recruitment order, Aurora/cohesin dependencies or fission-yeast equivalents. Corbett 4:2 stoichiometry is restricted to the Csm1/Lrs4 core.
+
+### Unknown formation labels preserve assay boundaries
+
+evidence: unknown. Targets: GO:0033551.
+
+All four UNKNOWN essentiality labels remain defensible. Genetic orientation phenotypes, kinase function, binding mutations and ectopic recruitment are positive condition-specific observations, not an exhaustive universal assay of physical full-complex formation.
+
+### Four verified reference examples and exact annotation attribution
+
+grounding: supported. Targets: GO:0033551.
+
+The four reviewed S288C genes/accessions and single-hit exact queries agree. Hrr25 cytoplasmic annotation and Mam1 nuclear annotation papers have matching identities and native localization evidence; those locations are not used alone to prove monopolin membership.
+
+### Budding-yeast occurrence and assay-specific relatives
+
+scope: supported. Targets: GO:0033551.
+
+COMMON retains present-in-most-members with exceptional losses; the inspected model systems provide qualitative support, not a strain census. S288C reference proteins, SK1/W303 experiments and fission-yeast mitosis/meiosisII evidence remain distinct. Rabitsch canonical wording is supported at complete abstract tier.
+
+### Complete target review with bounded unresolved details
+
+completeness: supported. Targets: GO:0033551.
+
+All scientific fields, example identities, graphs, current discussions and history were read. Actionable exact mappings are distinguished from optional inventory enrichment, broader domain candidates and historical first-pass statements. No maintained scientific content was changed.
+
+## Findings
+
+### F1: Ground three represented monopolin subunit classes
+
+minor / open / confirmed; issue key: monopolin-three-exact-family-groundings.
+
+The current Csm1, Lrs4 and Mam1 rows remain REVIEWED_LABEL_ONLY despite independently verified exact whole-family mappings. This does not refute the historical first-pass search or require an unverified Hrr25-specific family.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Add IPR040349 for Csm1, IPR018479 for Lrs4 and IPR018847 for Mam1; update current notes/status and the open grounding task. Preserve the fission/budding boundary, Hrr25 uncertainty and UNKNOWN formation labels; do not copy the erroneous Csm1–Mde4 prose.
+
+- The added family identifiers match the named whole-protein classes and independently verified member identities.
+- Current grounding status and discussion reflect the verified mappings while broader candidates and UNKNOWN formation labels remain qualified.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/monopolin_complex.yaml; Entire maintained YAML, including all scientific fields, examples, graphs, discussions and history | context_only | All target bytes were read. No neighboring maintained record supplies an unstated scientific premise. |
+| curation | docs/CURATION.md; Component-class grounding and reviewed-label-only contract | context_only | Species accessions establish examples, not automatic class groundings. Unknowns and empty optional slots alone are not defects. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; EssentialityEnum, PresenceEnum and graph actor semantics | context_only | Formation necessity differs from activity, viability and localization. COMMON means present in most members with exceptional losses, not merely known occurrence. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Actor identity, source placement and descriptive versus mechanistic relationships | context_only | Assay, species and epistemic boundaries apply to each graph claim. Coarse descriptive membership/function need not invent unresolved intermediates or copy ratios. |
+| micro61-md-11163190 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11163190+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText. | supports | PMID11163190: Functional genomics identifies monopolin: a kinetochore protein required for segregation of homologs during meiosis i. Tóth A, Rabitsch KP, Gálová M, Schleiffer A, Buonomo SB, Nasmyth K. (2000), DOI10.1016/s0092-8674(00)00217-8. Complete native abstract read; this metadata row does not attest main-body access. |
+| micro61-md-12628929 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12628929+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText. | supports | PMID12628929: The path from nucleolar 90S to cytoplasmic 40S pre-ribosomes. Schäfer T, Strauss D, Petfalski E, Tollervey D, Hurt E. (2003), DOI10.1093/emboj/cdg121. Complete native abstract read; this metadata row does not attest main-body access. |
+| micro61-md-12663816 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12663816+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText. | supports | PMID12663816: Role of Polo-like kinase CDC5 in programming meiosis I chromosome segregation. Lee BH, Amon A. (2003), DOI10.1126/science.1081846. Complete native abstract read; this metadata row does not attest main-body access. |
+| micro61-md-12689592 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12689592+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText. | supports | PMID12689592: Kinetochore recruitment of two nucleolar proteins is required for homolog segregation in meiosis I. Rabitsch KP, Petronczki M, Javerzat JP, Genier S, Chwalla B, Schleiffer A, Tanaka TU, Nasmyth K. (2003), DOI10.1016/s1534-5807(03)00086-8. Complete native abstract read; this metadata row does not attest main-body access. |
+| micro61-md-16990132 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2006.07.029%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText. | supports | PMID16990132: Monopolar attachment of sister kinetochores at meiosis I requires casein kinase 1. Petronczki M, Matos J, Mori S, Gregan J, Bogdanova A, Schwickart M, Mechtler K, Shirahige K, Zachariae W, Nasmyth K. (2006), DOI10.1016/j.cell.2006.07.029. Complete native abstract read; this metadata row does not attest main-body access. |
+| micro61-md-17289568 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2006.12.040%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText. | supports | PMID17289568: Kinetochore orientation during meiosis is controlled by Aurora B and the monopolin complex. Monje-Casas F, Prabhu VR, Lee BH, Boselli M, Amon A. (2007), DOI10.1016/j.cell.2006.12.040. Complete native abstract read; this metadata row does not attest main-body access. |
+| micro61-md-20723757 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2010.07.017%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText. | supports | PMID20723757: The monopolin complex crosslinks kinetochore components to regulate chromosome-microtubule attachments. Corbett KD, Yip CK, Ee LS, Walz T, Amon A, Harrison SC. (2010), DOI10.1016/j.cell.2010.07.017. Complete native abstract read; this metadata row does not attest main-body access. |
+| micro61-md-17627824 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cub.2007.06.044%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED identity and complete abstractText. | supports | PMID17627824: The kinetochore proteins Pcs1 and Mde4 and heterochromatin are required to prevent merotelic orientation. Gregan J, Riedel CG, Pidoux AL, Katou Y, Rumpf C, Schleiffer A, Kearsey SE, Shirahige K, Allshire RC, Nasmyth K. (2007), DOI10.1016/j.cub.2007.06.044. Complete native abstract read; this metadata row does not attest main-body access. |
+| micro61-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Exact taxId, scientificName, rank, lineage and relevant synonyms. | supports | ENA taxId4932 identifies Saccharomyces cerevisiae, rank species. Experimental backgrounds are not inferred from the reference sequence strain. |
+| micro61-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Exact taxId, scientificName, rank, lineage and relevant synonyms. | supports | ENA taxId559292 identifies Saccharomyces cerevisiae S288C, rank strain. Experimental backgrounds are not inferred from the reference sequence strain. |
+| micro61-protein-P25651 | https://rest.uniprot.org/uniprotkb/P25651.json; Identity/status/names/genes/organism; complete FUNCTION, SUBUNIT and SUBCELLULAR LOCATION comments; InterPro cross-references. | supports | Reviewed P25651 identifies CSM1 in taxon559292; complete function, subunit and location comments were inspected. InterPro cross-references establish accession membership separately from family-only metadata. Unlisted annotation papers are not certified as read. |
+| micro61-protein-P29295 | https://rest.uniprot.org/uniprotkb/P29295.json; Identity/status/names/genes/organism; complete FUNCTION, SUBUNIT and SUBCELLULAR LOCATION comments; InterPro cross-references. | supports | Reviewed P29295 identifies HRR25 in taxon559292; complete function, subunit and location comments were inspected. InterPro cross-references establish accession membership separately from family-only metadata. Unlisted annotation papers are not certified as read. |
+| micro61-protein-P40065 | https://rest.uniprot.org/uniprotkb/P40065.json; Identity/status/names/genes/organism; complete FUNCTION, SUBUNIT and SUBCELLULAR LOCATION comments; InterPro cross-references. | supports | Reviewed P40065 identifies MAM1 in taxon559292; complete function, subunit and location comments were inspected. InterPro cross-references establish accession membership separately from family-only metadata. Unlisted annotation papers are not certified as read. |
+| micro61-protein-Q04087 | https://rest.uniprot.org/uniprotkb/Q04087.json; Identity/status/names/genes/organism; complete FUNCTION, SUBUNIT and SUBCELLULAR LOCATION comments; InterPro cross-references. | supports | Reviewed Q04087 identifies LRS4 in taxon559292; complete function, subunit and location comments were inspected. InterPro cross-references establish accession membership separately from family-only metadata. Unlisted annotation papers are not certified as read. |
+| micro61-gene-CSM1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACSM1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and exact gene_exact, organism_id and reviewed:true query in original URL. | supports | The exact reviewed CSM1 organism559292 query returns P25651. The sole returned primary gene and accession agree with the maintained example. |
+| micro61-gene-LRS4 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ALRS4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and exact gene_exact, organism_id and reviewed:true query in original URL. | supports | The exact reviewed LRS4 organism559292 query returns Q04087. The sole returned primary gene and accession agree with the maintained example. |
+| micro61-gene-HRR25 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AHRR25%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and exact gene_exact, organism_id and reviewed:true query in original URL. | supports | The exact reviewed HRR25 organism559292 query returns P29295. The sole returned primary gene and accession agree with the maintained example. |
+| micro61-gene-MAM1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMAM1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete result identity set and exact gene_exact, organism_id and reviewed:true query in original URL. | supports | The exact reviewed MAM1 organism559292 query returns P40065. The sole returned primary gene and accession agree with the maintained example. |
+| micro61-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000776,GO:0005730,GO:0006281,GO:0007131,GO:0030686,GO:0030870,GO:0032991,GO:0033551,GO:0034457,GO:0034463,GO:0140513; Only these three complete native entries: definition, synonyms, comments and relevant typed links. | supports | GO0033551 preserves the four budding-yeast constituent classes, protein-containing-complex parent, kinetochore parthood and two narrower subcomplex synonyms. GO0032991 and GO0000776 identify the parent and containing structure. |
+| micro61-GO0033551-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0033551/ancestors?relations=is_a; Complete exact requested-term is_a ancestor response. | supports | The is_a-only ancestor array includes protein-containing complex GO0032991. Kinetochore placement is a separately typed relation, not an inferred is_a edge. |
+| micro61-PMC2955198-xml | https://pmc-oa-opendata.s3.amazonaws.com/PMC2955198.1/PMC2955198.1.xml; Genuine primary JATS: entire Introduction S1, Results S3–S6, Discussion S8 and Methods S10–S14, including embedded captions. Results S7/rDNA, S15, separate supplements and figure pixels not read. | supports | Csm1/Lrs4 form a 4:2 V-shaped core, and biochemical/mutant studies support kinetochore-component binding. This core is not the copy ratio of the entire four-class budding-yeast complex; crosslinking geometry remains a model. |
+| micro61-PMC1931489-xml | https://pmc-oa-opendata.s3.amazonaws.com/PMC1931489.1/PMC1931489.1.xml; Genuine primary JATS: Results sec2.1–2.3 and entire Discussion sec3, with embedded captions. Introduction, quantitative sec2.4, supplementary methods/data and pixels not read. | supports | Fission-yeast Pcs1/Mde4 copurification, localization and mutant phenotypes support a related complex preventing merotely in mitosis/meiosisII. These results do not turn it into the full budding-yeast meiosisI mono-orientation complex. |
+| micro61-PMC1808280-legacy | https://pmc.ncbi.nlm.nih.gov/articles/1808280/; Genuine primary HTML: Results S9,S11,S12; Discussion S15,S16; entire Methods S17; Fig4/6/7 captions. Other sections, supplements and pixels not read. | supports | The tested budding-yeast meiosis and ectopic CDC5/MAM1 conditions support monopolin-dependent kinetochore co-orientation and a proposed cohesin-independent sister-linking model. SK1/W303 assay contexts and model status are preserved. |
+| micro61-IPR040349 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR040349/; Complete type/name/descriptions/member_databases and quality flags; scope compared with the represented whole-protein class. | supports | IPR040349 is the Monopolin complex subunit Csm1/Pcs1 family. Exact name, full description, integrated signatures and quality flags were read. Protein membership is independently established by separate UniProt evidence. The description incorrectly pairs budding-yeast Csm1 with Mde4; this sentence is excluded. Exact family/signature identity is corroborated by independent members and primary biology. |
+| micro61-IPR018479 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018479/; Complete type/name/descriptions/member_databases and quality flags; scope compared with the represented whole-protein class. | supports | IPR018479 is the Monopolin complex subunit Lrs4/Mde4 family. Exact name, full description, integrated signatures and quality flags were read. Protein membership is independently established by separate UniProt evidence.  |
+| micro61-IPR018847 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018847/; Complete type/name/descriptions/member_databases and quality flags; scope compared with the represented whole-protein class. | supports | IPR018847 is the Monopolin complex, subunit Mam1 family. Exact name, full description, integrated signatures and quality flags were read. Protein membership is independently established by separate UniProt evidence.  |
+| micro61-IPR050235 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050235/; Complete type/name/descriptions/member_databases and quality flags; scope compared with the represented whole-protein class. | supports | IPR050235 is the Casein kinase 1/Serine/threonine-protein kinase-like family. Exact name, full description, integrated signatures and quality flags were read. Protein membership is independently established by separate UniProt evidence. This broad casein-kinase-I family includes other kinases/pseudokinases and unchecked generated prose; it is not treated as an exact Hrr25-only class. |
+| micro61-IPR040349-reviewed-members | https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR040349+AND+reviewed%3Atrue&amp;format=json&amp;size=100&amp;fields=accession%2Cid%2Cprotein_name%2Cgene_names%2Corganism_name%2Corganism_id; Complete returned accession/status/primary-gene/taxon identity set and exact InterPro query URL; not all unreviewed members. | supports | The bounded reviewed member query returns 2 identities: P25651, O13684. Budding-yeast Csm1 and fission-yeast Pcs1 identities corroborate the homolog-family boundary without adopting the faulty partner sentence. |
+| micro61-IPR018479-reviewed-members | https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR018479+AND+reviewed%3Atrue&amp;format=json&amp;size=100&amp;fields=accession%2Cid%2Cprotein_name%2Cgene_names%2Corganism_name%2Corganism_id; Complete returned accession/status/primary-gene/taxon identity set and exact InterPro query URL; not all unreviewed members. | supports | The bounded reviewed member query returns 2 identities: Q04087, O43068. Lrs4 and Mde4 identities corroborate the stated homolog-family boundary. |
+| micro61-IPR018847-reviewed-members | https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR018847+AND+reviewed%3Atrue&amp;format=json&amp;size=100&amp;fields=accession%2Cid%2Cprotein_name%2Cgene_names%2Corganism_name%2Corganism_id; Complete returned accession/status/primary-gene/taxon identity set and exact InterPro query URL; not all unreviewed members. | supports | The bounded reviewed member query returns 1 identities: P40065. The returned Mam1 example corroborates the family, without asserting exhaustive species coverage. |
+| schema-result | just validate data/structures/other/monopolin_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/monopolin_complex.yaml |
+| strict-result | just validate-strict data/structures/other/monopolin_complex.yaml --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/monopolin_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/monopolin_complex.yaml --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/monopolin_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch61-20261022-t_eoxa78/monopolin_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/monopolin_complex.yaml --causal-graphs; Complete focused read-only native log | supports | data/structures/other/monopolin_complex.yaml  (GO:0033551)<br>  monopolin_sister_kinetochore_mono_orientation	csm1_monopolin_subunit	COVERED	-&gt;csm1_monopolin_subunit (UniProtKB:P25651)<br>  monopolin_sister_kinetochore_mono_orientation	lrs4_monopolin_subunit	COVERED	-&gt;lrs4_monopolin_subunit (UniProtKB:Q04087)<br>  monopolin_sister_kinetochore_mono_orientation	hrr25_monopolin_subunit	COVERED	-&gt;hrr25_monopolin_subunit (UniProtKB:P29295)<br>  monopolin_sister_kinetochore_mono_orientation	mam1_monopolin_subunit	COVERED	-&gt;mam1_monopolin_subunit (UniProtKB:P40065)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     4  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     4  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/monopolin_complex.yaml --verify; Complete focused read-only native log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/monopolin_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 15 of 19 collected target identifiers returned OK. PMID:11163190: UNREACHABLE; Native Europe PMC uniquely identifies PMID:11163190: Functional genomics identifies monopolin: a kinetochore protein required for segregation of homologs during meiosis i. (2000), DOI10.1016/s0092-8674(00)00217-8. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope.; PMID:12628929: UNREACHABLE; Native Europe PMC uniquely identifies PMID:12628929: The path from nucleolar 90S to cytoplasmic 40S pre-ribosomes. (2003), DOI10.1093/emboj/cdg121. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope.; PMID:12663816: UNREACHABLE; Native Europe PMC uniquely identifies PMID:12663816: Role of Polo-like kinase CDC5 in programming meiosis I chromosome segregation. (2003), DOI10.1126/science.1081846. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope.; PMID:12689592: UNREACHABLE; Native Europe PMC uniquely identifies PMID:12689592: Kinetochore recruitment of two nucleolar proteins is required for homolog segregation in meiosis I. (2003), DOI10.1016/s1534-5807(03)00086-8. Identifier/bibliographic verification is separate from the declared body or abstract scientific-reading scope. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Toth2000, Rabitsch2003, Petronczki2006 and localization annotation papers were read at complete native abstract tier only. Their DOI responses returned Crossref metadata rather than primary bodies. Corbett, Gregan and Monje-Casas were read only in the declared sections/captions; no separate supplements, raw data or figure pixels were inspected.
+- Corbett 4:2 is the Csm1/Lrs4 core ratio, not the entire four-class complex. Crosslinking geometry and cohesin-independent linkage retain model status. Fission-yeast Pcs1/Mde4 mitotic/meiosisII phenotypes are not budding-yeast meiosisI evidence.
+- IPR040349 contains incorrect partner prose, excluded from support. Broad unchecked CK1 family metadata does not establish exact Hrr25 class identity. COMMON preserves majority meaning without an exhaustive population census.
+- Original source URL, UTC and SHA256 are retained. HTTP status alone does not establish article-body readability; initial DNS failures and unsuccessful access responses remain diagnostic only.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorization requests a review for every unreviewed record, including qualified clean cases.
+- Initial inspections and failed access attempts are preserved. No scientific record, historical review, index or Git state was edited.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T090913Z-monopolin-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of monopolin complex
+started_at: '2026-10-22T08:39:51Z'
+finished_at: '2026-10-22T09:09:13Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'One grouped minor: three represented monopolin subunit classes have verified
+  whole-family mappings. Budding-yeast membership, narrower fission-yeast boundaries,
+  examples and descriptive mono-orientation remain supported.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/monopolin_complex.yaml
+    sha256: b549cc4866975edd6f620c84983b2f22ceca0dd461a26a6d5fa8dc78f2824918
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0033551
+  path: data/structures/other/monopolin_complex.yaml
+  label: monopolin complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/monopolin_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire maintained target and 14 frozen inputs. No neighboring
+    maintained record is an unstated premise. Actual source tiers/read extents are
+    declared per evidence row.
+  selection: Batch61 strict ordered selection index 4; exactly one maintained target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0033551
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  command: just validate data/structures/other/monopolin_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  command: just validate-strict data/structures/other/monopolin_complex.yaml --out
+    /private/tmp/cellstructure-batch61-20261022-t_eoxa78/monopolin_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  command: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/monopolin_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused check passed; scientific assertions were independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  command: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/monopolin_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused check passed; scientific assertions were independently assessed.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro61-md-11163190
+  - micro61-md-12628929
+  - micro61-md-12663816
+  - micro61-md-12689592
+  - micro61-md-16990132
+  - micro61-md-17289568
+  - micro61-md-20723757
+  - micro61-md-17627824
+  - micro61-tax4932
+  - micro61-tax559292
+  - micro61-protein-P25651
+  - micro61-protein-P29295
+  - micro61-protein-P40065
+  - micro61-protein-Q04087
+  - micro61-gene-CSM1
+  - micro61-gene-LRS4
+  - micro61-gene-HRR25
+  - micro61-gene-MAM1
+  - micro61-go
+  - micro61-GO0033551-ancestors
+  - micro61-PMC2955198-xml
+  - micro61-PMC1931489-xml
+  - micro61-PMC1808280-legacy
+  - micro61-IPR040349
+  - micro61-IPR018479
+  - micro61-IPR018847
+  - micro61-IPR050235
+  - micro61-IPR040349-reviewed-members
+  - micro61-IPR018479-reviewed-members
+  - micro61-IPR018847-reviewed-members
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  summary: '15 of 19 collected target identifiers returned OK. PMID:11163190: UNREACHABLE;
+    Native Europe PMC uniquely identifies PMID:11163190: Functional genomics identifies
+    monopolin: a kinetochore protein required for segregation of homologs during meiosis
+    i. (2000), DOI10.1016/s0092-8674(00)00217-8. Identifier/bibliographic verification
+    is separate from the declared body or abstract scientific-reading scope.; PMID:12628929:
+    UNREACHABLE; Native Europe PMC uniquely identifies PMID:12628929: The path from
+    nucleolar 90S to cytoplasmic 40S pre-ribosomes. (2003), DOI10.1093/emboj/cdg121.
+    Identifier/bibliographic verification is separate from the declared body or abstract
+    scientific-reading scope.; PMID:12663816: UNREACHABLE; Native Europe PMC uniquely
+    identifies PMID:12663816: Role of Polo-like kinase CDC5 in programming meiosis
+    I chromosome segregation. (2003), DOI10.1126/science.1081846. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope.; PMID:12689592: UNREACHABLE; Native Europe PMC uniquely identifies PMID:12689592:
+    Kinetochore recruitment of two nucleolar proteins is required for homolog segregation
+    in meiosis I. (2003), DOI10.1016/s1534-5807(03)00086-8. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro61-md-11163190
+  - micro61-md-12628929
+  - micro61-md-12663816
+  - micro61-md-12689592
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0033551
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/monopolin_complex.yaml
+  locator: Entire maintained YAML, including all scientific fields, examples, graphs,
+    discussions and history
+  accessed_at: '2026-10-22T09:05:56Z'
+  support: context_only
+  summary: All target bytes were read. No neighboring maintained record supplies an
+    unstated scientific premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component-class grounding and reviewed-label-only contract
+  accessed_at: '2026-10-22T09:05:56Z'
+  support: context_only
+  summary: Species accessions establish examples, not automatic class groundings.
+    Unknowns and empty optional slots alone are not defects.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: EssentialityEnum, PresenceEnum and graph actor semantics
+  accessed_at: '2026-10-22T09:05:56Z'
+  support: context_only
+  summary: Formation necessity differs from activity, viability and localization.
+    COMMON means present in most members with exceptional losses, not merely known
+    occurrence.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Actor identity, source placement and descriptive versus mechanistic relationships
+  accessed_at: '2026-10-22T09:05:56Z'
+  support: context_only
+  summary: Assay, species and epistemic boundaries apply to each graph claim. Coarse
+    descriptive membership/function need not invent unresolved intermediates or copy
+    ratios.
+- evidence_id: micro61-md-11163190
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11163190+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:45:49.996298Z'
+  support: supports
+  summary: 'PMID11163190: Functional genomics identifies monopolin: a kinetochore
+    protein required for segregation of homologs during meiosis i. Tóth A, Rabitsch
+    KP, Gálová M, Schleiffer A, Buonomo SB, Nasmyth K. (2000), DOI10.1016/s0092-8674(00)00217-8.
+    Complete native abstract read; this metadata row does not attest main-body access.'
+  snapshot_sha256: 806eb6a4df3f7280bc7ec214b3e93c14f8dd753f1667785b3d8e7e64116dd196
+- evidence_id: micro61-md-12628929
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12628929+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:45:50.603775Z'
+  support: supports
+  summary: 'PMID12628929: The path from nucleolar 90S to cytoplasmic 40S pre-ribosomes.
+    Schäfer T, Strauss D, Petfalski E, Tollervey D, Hurt E. (2003), DOI10.1093/emboj/cdg121.
+    Complete native abstract read; this metadata row does not attest main-body access.'
+  snapshot_sha256: 1781371ff3db0610466cae0c7225518b2f347f170e36b4f47eac5e3e64600b06
+- evidence_id: micro61-md-12663816
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12663816+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:45:50.632493Z'
+  support: supports
+  summary: 'PMID12663816: Role of Polo-like kinase CDC5 in programming meiosis I chromosome
+    segregation. Lee BH, Amon A. (2003), DOI10.1126/science.1081846. Complete native
+    abstract read; this metadata row does not attest main-body access.'
+  snapshot_sha256: e96eb17af4abf583c2beb004a64a596a2dd51af95676df98b3126761b53618b9
+- evidence_id: micro61-md-12689592
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12689592+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:45:51.153626Z'
+  support: supports
+  summary: 'PMID12689592: Kinetochore recruitment of two nucleolar proteins is required
+    for homolog segregation in meiosis I. Rabitsch KP, Petronczki M, Javerzat JP,
+    Genier S, Chwalla B, Schleiffer A, Tanaka TU, Nasmyth K. (2003), DOI10.1016/s1534-5807(03)00086-8.
+    Complete native abstract read; this metadata row does not attest main-body access.'
+  snapshot_sha256: 69a58ec97b60297b664f631280ce72c88829112a9055becf8b1990c2f5fce155
+- evidence_id: micro61-md-16990132
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2006.07.029%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:45:51.888523Z'
+  support: supports
+  summary: 'PMID16990132: Monopolar attachment of sister kinetochores at meiosis I
+    requires casein kinase 1. Petronczki M, Matos J, Mori S, Gregan J, Bogdanova A,
+    Schwickart M, Mechtler K, Shirahige K, Zachariae W, Nasmyth K. (2006), DOI10.1016/j.cell.2006.07.029.
+    Complete native abstract read; this metadata row does not attest main-body access.'
+  snapshot_sha256: 4365c698aa02917773d812af2de9534f230c830bc60cb7ff271c387385f6dfc7
+- evidence_id: micro61-md-17289568
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2006.12.040%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:45:51.915581Z'
+  support: supports
+  summary: 'PMID17289568: Kinetochore orientation during meiosis is controlled by
+    Aurora B and the monopolin complex. Monje-Casas F, Prabhu VR, Lee BH, Boselli
+    M, Amon A. (2007), DOI10.1016/j.cell.2006.12.040. Complete native abstract read;
+    this metadata row does not attest main-body access.'
+  snapshot_sha256: 7b575db50ba0da2f5852000820a8794ea7a83a4aa85d7af2c8a5985b026b2547
+- evidence_id: micro61-md-20723757
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2010.07.017%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:45:52.357706Z'
+  support: supports
+  summary: 'PMID20723757: The monopolin complex crosslinks kinetochore components
+    to regulate chromosome-microtubule attachments. Corbett KD, Yip CK, Ee LS, Walz
+    T, Amon A, Harrison SC. (2010), DOI10.1016/j.cell.2010.07.017. Complete native
+    abstract read; this metadata row does not attest main-body access.'
+  snapshot_sha256: 7787828ee734d6165d538a229050ad6045a423183803d3fa997321231b00d4ce
+- evidence_id: micro61-md-17627824
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cub.2007.06.044%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:45:52.472392Z'
+  support: supports
+  summary: 'PMID17627824: The kinetochore proteins Pcs1 and Mde4 and heterochromatin
+    are required to prevent merotelic orientation. Gregan J, Riedel CG, Pidoux AL,
+    Katou Y, Rumpf C, Schleiffer A, Kearsey SE, Shirahige K, Allshire RC, Nasmyth
+    K. (2007), DOI10.1016/j.cub.2007.06.044. Complete native abstract read; this metadata
+    row does not attest main-body access.'
+  snapshot_sha256: 9db2a1663e62fd0f4deacf02d9c65e1c5a0ad39a005348643b44cf835ad67b2e
+- evidence_id: micro61-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Exact taxId, scientificName, rank, lineage and relevant synonyms.
+  accessed_at: '2026-10-22T08:45:47.563798Z'
+  support: supports
+  summary: ENA taxId4932 identifies Saccharomyces cerevisiae, rank species. Experimental
+    backgrounds are not inferred from the reference sequence strain.
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: micro61-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Exact taxId, scientificName, rank, lineage and relevant synonyms.
+  accessed_at: '2026-10-22T08:45:47.574335Z'
+  support: supports
+  summary: ENA taxId559292 identifies Saccharomyces cerevisiae S288C, rank strain.
+    Experimental backgrounds are not inferred from the reference sequence strain.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: micro61-protein-P25651
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P25651.json
+  locator: Identity/status/names/genes/organism; complete FUNCTION, SUBUNIT and SUBCELLULAR
+    LOCATION comments; InterPro cross-references.
+  accessed_at: '2026-10-22T08:45:47.718604Z'
+  support: supports
+  summary: Reviewed P25651 identifies CSM1 in taxon559292; complete function, subunit
+    and location comments were inspected. InterPro cross-references establish accession
+    membership separately from family-only metadata. Unlisted annotation papers are
+    not certified as read.
+  snapshot_sha256: da5f6a6b8209c1363f6f0610f2b123b5fe25c4a370970977cc69a6ed25a94888
+- evidence_id: micro61-protein-P29295
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P29295.json
+  locator: Identity/status/names/genes/organism; complete FUNCTION, SUBUNIT and SUBCELLULAR
+    LOCATION comments; InterPro cross-references.
+  accessed_at: '2026-10-22T08:45:48.178591Z'
+  support: supports
+  summary: Reviewed P29295 identifies HRR25 in taxon559292; complete function, subunit
+    and location comments were inspected. InterPro cross-references establish accession
+    membership separately from family-only metadata. Unlisted annotation papers are
+    not certified as read.
+  snapshot_sha256: 7213e336f06c9b60c0c8f5298e7e3a6ea5862724502a9604409fd1d3973f1610
+- evidence_id: micro61-protein-P40065
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40065.json
+  locator: Identity/status/names/genes/organism; complete FUNCTION, SUBUNIT and SUBCELLULAR
+    LOCATION comments; InterPro cross-references.
+  accessed_at: '2026-10-22T08:45:48.985553Z'
+  support: supports
+  summary: Reviewed P40065 identifies MAM1 in taxon559292; complete function, subunit
+    and location comments were inspected. InterPro cross-references establish accession
+    membership separately from family-only metadata. Unlisted annotation papers are
+    not certified as read.
+  snapshot_sha256: 307e21246473214177198df6229b493700985c92537183a54e335a3a27edc201
+- evidence_id: micro61-protein-Q04087
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q04087.json
+  locator: Identity/status/names/genes/organism; complete FUNCTION, SUBUNIT and SUBCELLULAR
+    LOCATION comments; InterPro cross-references.
+  accessed_at: '2026-10-22T08:45:49.271989Z'
+  support: supports
+  summary: Reviewed Q04087 identifies LRS4 in taxon559292; complete function, subunit
+    and location comments were inspected. InterPro cross-references establish accession
+    membership separately from family-only metadata. Unlisted annotation papers are
+    not certified as read.
+  snapshot_sha256: 357f98612cf05c39f9126a7b83769238f83b5940baf2f7411cb69ee41f6b1074
+- evidence_id: micro61-gene-CSM1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACSM1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and exact gene_exact, organism_id and reviewed:true
+    query in original URL.
+  accessed_at: '2026-10-22T08:45:53.725012Z'
+  support: supports
+  summary: The exact reviewed CSM1 organism559292 query returns P25651. The sole returned
+    primary gene and accession agree with the maintained example.
+  snapshot_sha256: bb912679d06df3824887a36ef6877effe49d5db3bf14ff922892e0417f174915
+- evidence_id: micro61-gene-LRS4
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ALRS4%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and exact gene_exact, organism_id and reviewed:true
+    query in original URL.
+  accessed_at: '2026-10-22T08:45:53.775755Z'
+  support: supports
+  summary: The exact reviewed LRS4 organism559292 query returns Q04087. The sole returned
+    primary gene and accession agree with the maintained example.
+  snapshot_sha256: 7ef247c7004773f09c7ff2c8f7baa144e858755e95ca8e0c103c4a9cc6e3a9b1
+- evidence_id: micro61-gene-HRR25
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AHRR25%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and exact gene_exact, organism_id and reviewed:true
+    query in original URL.
+  accessed_at: '2026-10-22T08:45:53.877221Z'
+  support: supports
+  summary: The exact reviewed HRR25 organism559292 query returns P29295. The sole
+    returned primary gene and accession agree with the maintained example.
+  snapshot_sha256: 146daecc3971be44d2c230489eb30cdc192a1ffbcaa6bb145ebd2618c829a7ec
+- evidence_id: micro61-gene-MAM1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMAM1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set and exact gene_exact, organism_id and reviewed:true
+    query in original URL.
+  accessed_at: '2026-10-22T08:45:54.184781Z'
+  support: supports
+  summary: The exact reviewed MAM1 organism559292 query returns P40065. The sole returned
+    primary gene and accession agree with the maintained example.
+  snapshot_sha256: df0e3fc57915448e9e97805871b841e89bfcaccd74c1364a07a85438fb8c9f3b
+- evidence_id: micro61-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000776,GO:0005730,GO:0006281,GO:0007131,GO:0030686,GO:0030870,GO:0032991,GO:0033551,GO:0034457,GO:0034463,GO:0140513
+  locator: 'Only these three complete native entries: definition, synonyms, comments
+    and relevant typed links.'
+  accessed_at: '2026-10-22T08:45:46.871612Z'
+  support: supports
+  summary: GO0033551 preserves the four budding-yeast constituent classes, protein-containing-complex
+    parent, kinetochore parthood and two narrower subcomplex synonyms. GO0032991 and
+    GO0000776 identify the parent and containing structure.
+  snapshot_sha256: 2d3568ba02c04018c9315aba7e1101a1a9eb6f2cb8be3d9f92ea31cfea10c19f
+- evidence_id: micro61-GO0033551-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0033551/ancestors?relations=is_a
+  locator: Complete exact requested-term is_a ancestor response.
+  accessed_at: '2026-10-22T08:45:46.871385Z'
+  support: supports
+  summary: The is_a-only ancestor array includes protein-containing complex GO0032991.
+    Kinetochore placement is a separately typed relation, not an inferred is_a edge.
+  snapshot_sha256: daa9e5dfcfe9302def3aae4b3b980d24bd93b6f737df1871caf6ab7f364d959b
+- evidence_id: micro61-PMC2955198-xml
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2955198.1/PMC2955198.1.xml
+  locator: 'Genuine primary JATS: entire Introduction S1, Results S3–S6, Discussion
+    S8 and Methods S10–S14, including embedded captions. Results S7/rDNA, S15, separate
+    supplements and figure pixels not read.'
+  accessed_at: '2026-10-22T08:47:32.801952Z'
+  support: supports
+  summary: Csm1/Lrs4 form a 4:2 V-shaped core, and biochemical/mutant studies support
+    kinetochore-component binding. This core is not the copy ratio of the entire four-class
+    budding-yeast complex; crosslinking geometry remains a model.
+  snapshot_sha256: 3431db4c40e8e884eda781a1d781b3e69e9b7eb3525e227ab83523f1cb4e6c8a
+- evidence_id: micro61-PMC1931489-xml
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC1931489.1/PMC1931489.1.xml
+  locator: 'Genuine primary JATS: Results sec2.1–2.3 and entire Discussion sec3, with
+    embedded captions. Introduction, quantitative sec2.4, supplementary methods/data
+    and pixels not read.'
+  accessed_at: '2026-10-22T08:47:33.168591Z'
+  support: supports
+  summary: Fission-yeast Pcs1/Mde4 copurification, localization and mutant phenotypes
+    support a related complex preventing merotely in mitosis/meiosisII. These results
+    do not turn it into the full budding-yeast meiosisI mono-orientation complex.
+  snapshot_sha256: 9e38c5b927577f10515cf5d94e64ebb226296d131c61a50e44485181fbf3cab7
+- evidence_id: micro61-PMC1808280-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/1808280/
+  locator: 'Genuine primary HTML: Results S9,S11,S12; Discussion S15,S16; entire Methods
+    S17; Fig4/6/7 captions. Other sections, supplements and pixels not read.'
+  accessed_at: '2026-10-22T08:47:32.801488Z'
+  support: supports
+  summary: The tested budding-yeast meiosis and ectopic CDC5/MAM1 conditions support
+    monopolin-dependent kinetochore co-orientation and a proposed cohesin-independent
+    sister-linking model. SK1/W303 assay contexts and model status are preserved.
+  snapshot_sha256: 084f43f15e6c480e7076cb58e5efad0530cf99bb3c8203b29b5f79f3c5193346
+- evidence_id: micro61-IPR040349
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR040349/
+  locator: Complete type/name/descriptions/member_databases and quality flags; scope
+    compared with the represented whole-protein class.
+  accessed_at: '2026-10-22T08:47:33.950650Z'
+  support: supports
+  summary: IPR040349 is the Monopolin complex subunit Csm1/Pcs1 family. Exact name,
+    full description, integrated signatures and quality flags were read. Protein membership
+    is independently established by separate UniProt evidence. The description incorrectly
+    pairs budding-yeast Csm1 with Mde4; this sentence is excluded. Exact family/signature
+    identity is corroborated by independent members and primary biology.
+  snapshot_sha256: 89e7de328b4bd37f5dd71125cad9d4495a1f932cb9fe5a383c274e8a1446ecda
+- evidence_id: micro61-IPR018479
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018479/
+  locator: Complete type/name/descriptions/member_databases and quality flags; scope
+    compared with the represented whole-protein class.
+  accessed_at: '2026-10-22T08:47:34.042027Z'
+  support: supports
+  summary: 'IPR018479 is the Monopolin complex subunit Lrs4/Mde4 family. Exact name,
+    full description, integrated signatures and quality flags were read. Protein membership
+    is independently established by separate UniProt evidence. '
+  snapshot_sha256: 0e6230441eede5d859ec1eb4c7666c5a5704f894a82d9aafac86f4a6795dcf9c
+- evidence_id: micro61-IPR018847
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR018847/
+  locator: Complete type/name/descriptions/member_databases and quality flags; scope
+    compared with the represented whole-protein class.
+  accessed_at: '2026-10-22T08:47:34.132765Z'
+  support: supports
+  summary: 'IPR018847 is the Monopolin complex, subunit Mam1 family. Exact name, full
+    description, integrated signatures and quality flags were read. Protein membership
+    is independently established by separate UniProt evidence. '
+  snapshot_sha256: a251fd4c434c91c9a82fe2b7a7679d840ae5f6b63370b4af219f607fb601bbd4
+- evidence_id: micro61-IPR050235
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050235/
+  locator: Complete type/name/descriptions/member_databases and quality flags; scope
+    compared with the represented whole-protein class.
+  accessed_at: '2026-10-22T08:47:34.207453Z'
+  support: supports
+  summary: IPR050235 is the Casein kinase 1/Serine/threonine-protein kinase-like family.
+    Exact name, full description, integrated signatures and quality flags were read.
+    Protein membership is independently established by separate UniProt evidence.
+    This broad casein-kinase-I family includes other kinases/pseudokinases and unchecked
+    generated prose; it is not treated as an exact Hrr25-only class.
+  snapshot_sha256: e70575bf421e02936f42edd8b30de8e4e1213466cd91d6def6a91fb6463566f7
+- evidence_id: micro61-IPR040349-reviewed-members
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR040349+AND+reviewed%3Atrue&format=json&size=100&fields=accession%2Cid%2Cprotein_name%2Cgene_names%2Corganism_name%2Corganism_id
+  locator: Complete returned accession/status/primary-gene/taxon identity set and
+    exact InterPro query URL; not all unreviewed members.
+  accessed_at: '2026-10-22T08:49:29.859989Z'
+  support: supports
+  summary: 'The bounded reviewed member query returns 2 identities: P25651, O13684.
+    Budding-yeast Csm1 and fission-yeast Pcs1 identities corroborate the homolog-family
+    boundary without adopting the faulty partner sentence.'
+  snapshot_sha256: 2057422211b35eb9414526d98662d9433a94e11a2f141b4f93cac3dd6412d209
+- evidence_id: micro61-IPR018479-reviewed-members
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR018479+AND+reviewed%3Atrue&format=json&size=100&fields=accession%2Cid%2Cprotein_name%2Cgene_names%2Corganism_name%2Corganism_id
+  locator: Complete returned accession/status/primary-gene/taxon identity set and
+    exact InterPro query URL; not all unreviewed members.
+  accessed_at: '2026-10-22T08:49:29.905549Z'
+  support: supports
+  summary: 'The bounded reviewed member query returns 2 identities: Q04087, O43068.
+    Lrs4 and Mde4 identities corroborate the stated homolog-family boundary.'
+  snapshot_sha256: 9979a25fd2336b2ee4b6ee1ffc52a31c342b80beba6f9ae8c25f2e769a5c6821
+- evidence_id: micro61-IPR018847-reviewed-members
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=xref%3Ainterpro-IPR018847+AND+reviewed%3Atrue&format=json&size=100&fields=accession%2Cid%2Cprotein_name%2Cgene_names%2Corganism_name%2Corganism_id
+  locator: Complete returned accession/status/primary-gene/taxon identity set and
+    exact InterPro query URL; not all unreviewed members.
+  accessed_at: '2026-10-22T08:49:30.156537Z'
+  support: supports
+  summary: 'The bounded reviewed member query returns 1 identities: P40065. The returned
+    Mam1 example corroborates the family, without asserting exhaustive species coverage.'
+  snapshot_sha256: d1aa184d22b01fdc3ab3c477c4df2e3da860c5ed198958c670ddc94e25469251
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/monopolin_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:39:52Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/monopolin_complex.yaml'
+  snapshot_sha256: f7b4b13fbe2f10019246fcc448381c58daf4acdeafa2d41cdc6809f7cc8e114e
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/monopolin_complex.yaml --out
+    /private/tmp/cellstructure-batch61-20261022-t_eoxa78/monopolin_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:39:53Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/monopolin_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/monopolin_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch61-20261022-t_eoxa78/monopolin_complex-strict.tsv"
+  snapshot_sha256: 529fb444f934715cce14fd0c9479a21c0abb2605e06db38dac92bf43fa20f931
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/monopolin_complex.yaml
+    --causal-graphs
+  locator: Complete focused read-only native log
+  accessed_at: '2026-10-22T08:48:11.161030Z'
+  support: supports
+  summary: "data/structures/other/monopolin_complex.yaml  (GO:0033551)\n  monopolin_sister_kinetochore_mono_orientation\t\
+    csm1_monopolin_subunit\tCOVERED\t->csm1_monopolin_subunit (UniProtKB:P25651)\n\
+    \  monopolin_sister_kinetochore_mono_orientation\tlrs4_monopolin_subunit\tCOVERED\t\
+    ->lrs4_monopolin_subunit (UniProtKB:Q04087)\n  monopolin_sister_kinetochore_mono_orientation\t\
+    hrr25_monopolin_subunit\tCOVERED\t->hrr25_monopolin_subunit (UniProtKB:P29295)\n\
+    \  monopolin_sister_kinetochore_mono_orientation\tmam1_monopolin_subunit\tCOVERED\t\
+    ->mam1_monopolin_subunit (UniProtKB:P40065)\n\ncausal_graphs GENE_OR_PROTEIN node\
+    \ summary:\n     4  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     0  PARTIAL_EXAMPLES          component_ref\
+    \ target holds protein_examples but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols\
+    \ and holds no protein_examples\n     0  DANGLING_COMPONENT_REF    component_ref\
+    \ names a component_id that does not exist on the record\n     0  UNANCHORED_WITH_UNIPROT\
+    \   no component_ref, but node carries a UniProtKB grounding or xref\n     0 \
+    \ UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref\
+    \ on the node\n     4  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 0c4a1933a7a7eb04994ba5cdce7582b0b2f2a123a82b3c6eeffb0ed1f4ac1ba6
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/monopolin_complex.yaml
+    --verify
+  locator: Complete focused read-only native log
+  accessed_at: '2026-10-22T08:48:12.617717Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/monopolin_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '15 of 19 collected target identifiers returned OK. PMID:11163190: UNREACHABLE;
+    Native Europe PMC uniquely identifies PMID:11163190: Functional genomics identifies
+    monopolin: a kinetochore protein required for segregation of homologs during meiosis
+    i. (2000), DOI10.1016/s0092-8674(00)00217-8. Identifier/bibliographic verification
+    is separate from the declared body or abstract scientific-reading scope.; PMID:12628929:
+    UNREACHABLE; Native Europe PMC uniquely identifies PMID:12628929: The path from
+    nucleolar 90S to cytoplasmic 40S pre-ribosomes. (2003), DOI10.1093/emboj/cdg121.
+    Identifier/bibliographic verification is separate from the declared body or abstract
+    scientific-reading scope.; PMID:12663816: UNREACHABLE; Native Europe PMC uniquely
+    identifies PMID:12663816: Role of Polo-like kinase CDC5 in programming meiosis
+    I chromosome segregation. (2003), DOI10.1126/science.1081846. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope.; PMID:12689592: UNREACHABLE; Native Europe PMC uniquely identifies PMID:12689592:
+    Kinetochore recruitment of two nucleolar proteins is required for homolog segregation
+    in meiosis I. (2003), DOI10.1016/s1534-5807(03)00086-8. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Budding monopolin remains distinct from its narrower relatives
+  outcome: supported
+  target_ids:
+  - GO:0033551
+  summary: The primary identity, protein-containing-complex hierarchy and kinetochore
+    placement agree. The narrow Csm1/Lrs4 and Pcs1/Mde4 synonyms do not equate full
+    four-class budding monopolin with the fission-yeast pair.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro61-go
+  - micro61-GO0033551-ancestors
+  - micro61-PMC2955198-xml
+  - micro61-PMC1931489-xml
+  - micro61-PMC1808280-legacy
+  - micro61-md-11163190
+  - micro61-md-12628929
+  - micro61-md-12663816
+  - micro61-md-12689592
+  - micro61-md-16990132
+  - micro61-md-17289568
+  - micro61-md-20723757
+  - micro61-md-17627824
+- assessment_id: grounding
+  area: grounding
+  topic: Three exact families are now actionable
+  outcome: concern
+  target_ids:
+  - GO:0033551
+  summary: Csm1/Pcs1 IPR040349, Lrs4/Mde4 IPR018479 and Mam1 IPR018847 match represented
+    classes with separate accession/member corroboration. The malformed Csm1 partner
+    sentence is rejected. Broad CK1 IPR050235 is withheld as an exact Hrr25 mapping.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro61-IPR040349
+  - micro61-IPR018479
+  - micro61-IPR018847
+  - micro61-IPR040349-reviewed-members
+  - micro61-IPR018479-reviewed-members
+  - micro61-IPR018847-reviewed-members
+  - micro61-IPR050235
+  - micro61-protein-P25651
+  - micro61-protein-P29295
+  - micro61-protein-P40065
+  - micro61-protein-Q04087
+- assessment_id: graph
+  area: graph
+  topic: Descriptive membership and high-level mono-orientation
+  outcome: supported
+  target_ids:
+  - GO:0033551
+  summary: The six NONMECHANISTIC edges represent four constituent classes, kinetochore
+    association and supported mono-orientation. They do not resolve recruitment order,
+    Aurora/cohesin dependencies or fission-yeast equivalents. Corbett 4:2 stoichiometry
+    is restricted to the Csm1/Lrs4 core.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro61-go
+  - micro61-PMC2955198-xml
+  - micro61-PMC1931489-xml
+  - micro61-PMC1808280-legacy
+  - micro61-md-11163190
+  - micro61-md-12628929
+  - micro61-md-12663816
+  - micro61-md-12689592
+  - micro61-md-16990132
+  - micro61-md-17289568
+  - micro61-md-20723757
+  - micro61-md-17627824
+- assessment_id: formation
+  area: evidence
+  topic: Unknown formation labels preserve assay boundaries
+  outcome: unknown
+  target_ids:
+  - GO:0033551
+  summary: All four UNKNOWN essentiality labels remain defensible. Genetic orientation
+    phenotypes, kinase function, binding mutations and ectopic recruitment are positive
+    condition-specific observations, not an exhaustive universal assay of physical
+    full-complex formation.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro61-PMC2955198-xml
+  - micro61-PMC1931489-xml
+  - micro61-PMC1808280-legacy
+  - micro61-md-11163190
+  - micro61-md-12628929
+  - micro61-md-12663816
+  - micro61-md-12689592
+  - micro61-md-16990132
+  - micro61-md-17289568
+  - micro61-md-20723757
+  - micro61-md-17627824
+- assessment_id: examples
+  area: grounding
+  topic: Four verified reference examples and exact annotation attribution
+  outcome: supported
+  target_ids:
+  - GO:0033551
+  summary: The four reviewed S288C genes/accessions and single-hit exact queries agree.
+    Hrr25 cytoplasmic annotation and Mam1 nuclear annotation papers have matching
+    identities and native localization evidence; those locations are not used alone
+    to prove monopolin membership.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro61-protein-P25651
+  - micro61-protein-P29295
+  - micro61-protein-P40065
+  - micro61-protein-Q04087
+  - micro61-gene-CSM1
+  - micro61-gene-LRS4
+  - micro61-gene-HRR25
+  - micro61-gene-MAM1
+  - micro61-md-11163190
+  - micro61-md-12628929
+  - micro61-md-12663816
+  - micro61-md-12689592
+  - micro61-md-16990132
+  - micro61-md-17289568
+  - micro61-md-20723757
+  - micro61-md-17627824
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast occurrence and assay-specific relatives
+  outcome: supported
+  target_ids:
+  - GO:0033551
+  summary: COMMON retains present-in-most-members with exceptional losses; the inspected
+    model systems provide qualitative support, not a strain census. S288C reference
+    proteins, SK1/W303 experiments and fission-yeast mitosis/meiosisII evidence remain
+    distinct. Rabitsch canonical wording is supported at complete abstract tier.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro61-tax4932
+  - micro61-tax559292
+  - micro61-md-11163190
+  - micro61-md-12628929
+  - micro61-md-12663816
+  - micro61-md-12689592
+  - micro61-md-16990132
+  - micro61-md-17289568
+  - micro61-md-20723757
+  - micro61-md-17627824
+  - micro61-PMC2955198-xml
+  - micro61-PMC1931489-xml
+  - micro61-PMC1808280-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Complete target review with bounded unresolved details
+  outcome: supported
+  target_ids:
+  - GO:0033551
+  summary: All scientific fields, example identities, graphs, current discussions
+    and history were read. Actionable exact mappings are distinguished from optional
+    inventory enrichment, broader domain candidates and historical first-pass statements.
+    No maintained scientific content was changed.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro61-go
+  - micro61-GO0033551-ancestors
+  - micro61-PMC2955198-xml
+  - micro61-PMC1931489-xml
+  - micro61-PMC1808280-legacy
+  - micro61-IPR050235
+  - micro61-IPR040349
+  - micro61-IPR018479
+  - micro61-IPR018847
+  - micro61-IPR040349-reviewed-members
+  - micro61-IPR018479-reviewed-members
+  - micro61-IPR018847-reviewed-members
+  - micro61-md-11163190
+  - micro61-md-12628929
+  - micro61-md-12663816
+  - micro61-md-12689592
+  - micro61-md-16990132
+  - micro61-md-17289568
+  - micro61-md-20723757
+  - micro61-md-17627824
+  - micro61-tax4932
+  - micro61-tax559292
+  - micro61-protein-P25651
+  - micro61-protein-P29295
+  - micro61-protein-P40065
+  - micro61-protein-Q04087
+  - micro61-gene-CSM1
+  - micro61-gene-LRS4
+  - micro61-gene-HRR25
+  - micro61-gene-MAM1
+findings:
+- finding_id: F1
+  issue_key: monopolin-three-exact-family-groundings
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground three represented monopolin subunit classes
+  description: The current Csm1, Lrs4 and Mam1 rows remain REVIEWED_LABEL_ONLY despite
+    independently verified exact whole-family mappings. This does not refute the historical
+    first-pass search or require an unverified Hrr25-specific family.
+  target_ids:
+  - GO:0033551
+  field_paths:
+  - components[0].grounding_status
+  - components[1].grounding_status
+  - components[3].grounding_status
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro61-IPR040349
+  - micro61-IPR018479
+  - micro61-IPR018847
+  - micro61-IPR040349-reviewed-members
+  - micro61-IPR018479-reviewed-members
+  - micro61-IPR018847-reviewed-members
+  - micro61-protein-P25651
+  - micro61-protein-P29295
+  - micro61-protein-P40065
+  - micro61-protein-Q04087
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/monopolin_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component-class grounding and reviewed-label-only contract
+  native_severity: minor
+  normalization_reason: Existing identities and scientific membership are supported.
+    This localized correction supplies verified class identifiers without changing
+    the complex model or treating a historical first-pass search as false.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0033551
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/monopolin_complex.yaml
+    role: maintained scientific record
+  description: Add IPR040349 for Csm1, IPR018479 for Lrs4 and IPR018847 for Mam1;
+    update current notes/status and the open grounding task. Preserve the fission/budding
+    boundary, Hrr25 uncertainty and UNKNOWN formation labels; do not copy the erroneous
+    Csm1–Mde4 prose.
+  acceptance_checks:
+  - The added family identifiers match the named whole-protein classes and independently
+    verified member identities.
+  - Current grounding status and discussion reflect the verified mappings while broader
+    candidates and UNKNOWN formation labels remain qualified.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+limitations:
+- Toth2000, Rabitsch2003, Petronczki2006 and localization annotation papers were read
+  at complete native abstract tier only. Their DOI responses returned Crossref metadata
+  rather than primary bodies. Corbett, Gregan and Monje-Casas were read only in the
+  declared sections/captions; no separate supplements, raw data or figure pixels were
+  inspected.
+- Corbett 4:2 is the Csm1/Lrs4 core ratio, not the entire four-class complex. Crosslinking
+  geometry and cohesin-independent linkage retain model status. Fission-yeast Pcs1/Mde4
+  mitotic/meiosisII phenotypes are not budding-yeast meiosisI evidence.
+- IPR040349 contains incorrect partner prose, excluded from support. Broad unchecked
+  CK1 family metadata does not establish exact Hrr25 class identity. COMMON preserves
+  majority meaning without an exhaustive population census.
+- Original source URL, UTC and SHA256 are retained. HTTP status alone does not establish
+  article-body readability; initial DNS failures and unsuccessful access responses
+  remain diagnostic only.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requests a review for every unreviewed record, including qualified
+  clean cases.
+- Initial inspections and failed access attempts are preserved. No scientific record,
+  historical review, index or Git state was edited.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

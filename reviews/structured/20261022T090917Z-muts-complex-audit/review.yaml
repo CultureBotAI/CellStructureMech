@@ -1,0 +1,785 @@
+schema_version: 1.0.0
+review_id: 20261022T090917Z-muts-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Muts complex scientific review
+started_at: '2026-10-22T08:40:08Z'
+finished_at: '2026-10-22T09:09:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The homodimer class, mismatch binding, canonical oligomer study and reference
+  identity are supported with explicit tetramer context. One minor resolves exact
+  bacterial MutS family grounding.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/muts_complex.yaml
+    sha256: 9a71adc820bd45323620f0866099de2b096d75ca2a9237651adbb0f3126a63ca
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990710
+  path: data/structures/other/muts_complex.yaml
+  label: MutS complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/muts_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one full maintained target and fourteen frozen local inputs,
+    including schema, review guidance, protein-example and causal-graph skills. Actual
+    primary/native reading scopes are declared per evidence row with original URL/UTC/hash
+    receipts.
+  selection: Target 10 of batch61, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990710
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  command: just validate data/structures/other/muts_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  command: just validate-strict data/structures/other/muts_complex.yaml --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/muts_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  command: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/muts_complex.yaml --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; scientific claims reviewed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  command: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/muts_complex.yaml --verify
+  exit_code: 0
+  summary: Native focused check passed; scientific claims reviewed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990710
+  summary: No expression-module inference is used to establish the structure.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex61-agent-go
+  - complex61-agent-go-1990710-ancestors
+  - complex61-agent-tax-562
+  - complex61-agent-tax-83333
+  - complex61-agent-protein-P23909
+  - complex61-agent-gene-mutS
+  - complex61-agent-doi-10.1038_35037509
+  - complex61-agent-doi-10.1038_35037523
+  - complex61-agent-pmid-21666597
+  - complex61-agent-jiang2011-legacy
+  - access-jiang2011-xml
+  - access-obmolova2000-publisher
+  - access-lamers2000-publisher
+  - complex61-agent-ipr-IPR005748
+  - complex61-agent-ipr-IPR017261
+  - complex61-agent-ipr-IPR045076
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  summary: '9 of 12 collected target identifiers returned OK. PMID:11048710: UNREACHABLE;
+    Native Europe PMC uniquely identifies PMID:11048710: Crystal structures of mismatch
+    repair protein MutS and its complex with a substrate DNA. (2000), DOI10.1038/35037509.
+    Identifier/bibliographic verification is separate from the declared body or abstract
+    scientific-reading scope.; PMID:11048711: UNREACHABLE; Native Europe PMC uniquely
+    identifies PMID:11048711: The crystal structure of DNA mismatch repair protein
+    MutS binding to a G x T mismatch. (2000), DOI10.1038/35037523. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope.; PMID:21666597: UNREACHABLE; Native Europe PMC uniquely identifies PMID:21666597:
+    Atomic force microscopy captures MutS tetramers initiating DNA mismatch repair.
+    (2011), DOI10.1038/emboj.2011.180. Identifier/bibliographic verification is separate
+    from the declared body or abstract scientific-reading scope. Native source checks
+    are separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex61-agent-doi-10.1038_35037509
+  - complex61-agent-doi-10.1038_35037523
+  - complex61-agent-pmid-21666597
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990710
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch61 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/muts_complex.yaml
+  locator: Entire maintained record including definition, hierarchy, all components,
+    examples, evidence, graphs, discussions and history
+  accessed_at: '2026-10-22T08:54:56Z'
+  support: context_only
+  summary: Every maintained field was read; historical curator statements are not
+    inherited as present source-reading attestations.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component, ProteinExample, EssentialityEnum, PresenceEnum and causal-graph
+    contracts
+  accessed_at: '2026-10-22T08:54:56Z'
+  support: context_only
+  summary: Membership, catalytic activity and growth are distinct from complex formation
+    necessity. COMMON means present in most members with losses the exception. A protein
+    example is an organism-specific instance, not a substitute for a component family.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Grounding and REVIEWED_LABEL_ONLY contracts
+  accessed_at: '2026-10-22T08:54:56Z'
+  support: context_only
+  summary: Exact whole-protein families differ from domains and broader paralog families;
+    an optional unrepresented enrichment alone does not establish a defect.
+- evidence_id: complex61-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0006298,GO:0006370,GO:0015437,GO:0031533,GO:0032991,GO:0036408,GO:0036409,GO:0036410,GO:0140513,GO:1902495,GO:1990199,GO:1990710
+  locator: Complete target-relevant definitions, synonyms, comments and typed relationships;
+    unrelated entries not used
+  accessed_at: '2026-10-22T08:44:13.522230Z'
+  support: supports
+  summary: GO1990710 defines the homodimeric MutS complex and exact synonym; GO0006298
+    covers mismatch repair including insertion-deletion loops. The GO citation does
+    not eliminate the higher oligomers studied in its primary source.
+  snapshot_sha256: 18f1b31f1932cadf2ab478899206385fd1c2b67756b8c25723a366cc5e297308
+- evidence_id: complex61-agent-go-1990710-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990710/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor response
+  accessed_at: '2026-10-22T08:44:21.755993Z'
+  support: supports
+  summary: The exact is_a-only ancestor closure contains the maintained parent. This
+    establishes the native class relation, not independent biological mechanism or
+    prevalence.
+  snapshot_sha256: e3cb8a0edfbb9b6b2038b2c1896c4c7b82afe40488f1cd4e9cd49960ad798764
+- evidence_id: complex61-agent-tax-562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete exact ENA taxonomy response
+  accessed_at: '2026-10-22T08:44:16.901080Z'
+  support: supports
+  summary: Native taxon 562 is Escherichia coli, rank species; this response's names
+    and lineage were inspected.
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: complex61-agent-tax-83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete exact ENA taxonomy response
+  accessed_at: '2026-10-22T08:44:17.244381Z'
+  support: supports
+  summary: Native taxon 83333 is Escherichia coli K-12, rank strain; this response's
+    names and lineage were inspected.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: complex61-agent-protein-P23909
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P23909.json
+  locator: Identity/status/names/genes/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY
+    and family crossreferences
+  accessed_at: '2026-10-22T08:44:14.400014Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P23909, genes mutS, aliases fdv, taxon
+    83333. Its own function, subunit, location and family annotations were inspected
+    with their original evidence qualifiers.'
+  snapshot_sha256: 47d7aa289b04c574f240850e8b9ffc9bcd83a0bb0ccacdb55ae4e04c5a621b75
+- evidence_id: complex61-agent-gene-mutS
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AmutS+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete returned identity set
+  accessed_at: '2026-10-22T08:44:23.872105Z'
+  support: supports
+  summary: The exact reviewed taxon-paired query returns P23909. All returned identity/status/gene-token/organism
+    fields were inspected.
+  snapshot_sha256: 4088be48040b51867fb693c2a4b2b9540f11e44f1f49728e4236ea5b9386e32a
+  search_scope: Exact retained query https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AmutS+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=500;
+    all returned identities inspected.
+- evidence_id: complex61-agent-doi-10.1038_35037509
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F35037509%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T08:44:19.361984Z'
+  support: supports
+  summary: 'MED 11048710: Crystal structures of mismatch repair protein MutS and its
+    complex with a substrate DNA. Obmolova G, Ban C, Hsieh P, Yang W. (2000), DOI
+    10.1038/35037509. Exact bibliographic identity and complete available abstract
+    read; this is not full-body attestation.'
+  snapshot_sha256: ba9ff5bf7d444013d815951dcf59a43c4d270f0714dbae19599ab3cb04b49bd1
+- evidence_id: complex61-agent-doi-10.1038_35037523
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F35037523%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T08:44:19.797647Z'
+  support: supports
+  summary: 'MED 11048711: The crystal structure of DNA mismatch repair protein MutS
+    binding to a G x T mismatch. Lamers MH, Perrakis A, Enzlin JH, Winterwerp HH,
+    de Wind N, Sixma TK. (2000), DOI 10.1038/35037523. Exact bibliographic identity
+    and complete available abstract read; this is not full-body attestation.'
+  snapshot_sha256: 92a43db12dd6a5392a821a27dad432216235ef0018c3f9e0c2777b85858bd57c
+- evidence_id: complex61-agent-pmid-21666597
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21666597+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T08:44:18.742084Z'
+  support: supports
+  summary: 'MED 21666597: Atomic force microscopy captures MutS tetramers initiating
+    DNA mismatch repair. Jiang Y, Marszalek PE. (2011), DOI 10.1038/emboj.2011.180.
+    Exact bibliographic identity and complete available abstract read; this is not
+    full-body attestation.'
+  snapshot_sha256: a9da8c5b51dd30afd746d5daf05f9e0da36cae46d9fd905b335f76a6c692cfc4
+- evidence_id: complex61-agent-jiang2011-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3160242/?report=xml
+  locator: Complete abstract, Results sec2 including Tables1/2 and all Fig1–7 captions,
+    Discussion sec3, and Methods sec4–9. Introduction, figure pixels, supplements
+    and earlier cited primary bodies not read.
+  accessed_at: '2026-10-22T08:46:10.846481Z'
+  support: supports
+  summary: Jiang/Marszalek2011 measures monomer/dimer/tetramer populations by AFM
+    volume and observes dimers and tetramers on DNA, with tetramers comprising two
+    dimers prominent under the stated DNA/nucleotide conditions. ATP-associated loop
+    growth and roadblock experiments support an initiation model, not a complete downstream
+    repair reaction.
+  snapshot_sha256: 8de378f0382c241a8093d0d7b4f4bcc233aa3a7ff217c141567517682d057ceb
+- evidence_id: access-jiang2011-xml
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3160242/fullTextXML
+  locator: Exact retained response only; no paper body inferred
+  accessed_at: '2026-10-22T08:46:10.594314Z'
+  support: context_only
+  summary: The XML route returned HTTP500; genuine legacy primary text was recovered
+    separately.
+  snapshot_sha256: 289a4bda75934f83a0152938de41bae0e3103c5127f760d6186b2d70bc03cc07
+- evidence_id: access-obmolova2000-publisher
+  kind: authority
+  reference: https://www.nature.com/articles/35037509
+  locator: Exact retained response only; no paper body inferred
+  accessed_at: '2026-10-22T08:46:11.221195Z'
+  support: context_only
+  summary: The publisher route returned HTTP200 challenge HTML rather than article
+    text. Exact native complete abstracts were read separately; full-body access is
+    not claimed.
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+- evidence_id: access-lamers2000-publisher
+  kind: authority
+  reference: https://www.nature.com/articles/35037523
+  locator: Exact retained response only; no paper body inferred
+  accessed_at: '2026-10-22T08:46:11.308814Z'
+  support: context_only
+  summary: The publisher route returned HTTP200 challenge HTML rather than article
+    text. Exact native complete abstracts were read separately; full-body access is
+    not claimed.
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+- evidence_id: complex61-agent-ipr-IPR005748
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005748/
+  locator: Exact entry identity, type, complete description, signatures and quality
+    flags
+  accessed_at: '2026-10-22T08:46:14.013945Z'
+  support: supports
+  summary: Native IPR005748 is type family, named DNA mismatch repair protein MutS.
+    Complete descriptions, member signatures and machine-generation flags were inspected.
+    Protein membership is established by the separately cited UniProt response.
+  snapshot_sha256: 312a60751c90410accc1c46f512be53ebe321521a47bf851f71bc74ea93923c5
+- evidence_id: complex61-agent-ipr-IPR017261
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR017261/
+  locator: Exact entry identity, type, complete description, signatures and quality
+    flags
+  accessed_at: '2026-10-22T08:46:14.277498Z'
+  support: supports
+  summary: Native IPR017261 is type family, named DNA mismatch repair protein MutS/MSH.
+    Complete descriptions, member signatures and machine-generation flags were inspected.
+    Protein membership is established by the separately cited UniProt response.
+  snapshot_sha256: 1ccf8c3d28b800154833a8196f05815fdcb315e0f1275932a2c94211c2eb96e3
+- evidence_id: complex61-agent-ipr-IPR045076
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045076/
+  locator: Exact entry identity, type, complete description, signatures and quality
+    flags
+  accessed_at: '2026-10-22T08:46:14.465203Z'
+  support: supports
+  summary: Native IPR045076 is type family, named DNA mismatch repair MutS. Complete
+    descriptions, member signatures and machine-generation flags were inspected. Protein
+    membership is established by the separately cited UniProt response.
+  snapshot_sha256: af0890eeb511d47c6bae1ba30c383a176fe5f57d9ecd32d5d41ed874ac8fa30d
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/muts_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:40:09Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/muts_complex.yaml'
+  snapshot_sha256: 8dc7b83b0113a475b7c2455de9a83deef0d999974931334dfbde34ad1a693ab7
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/muts_complex.yaml --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/muts_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:40:10Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/muts_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch61-20261022-t_eoxa78/muts_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch61-20261022-t_eoxa78/muts_complex-strict.tsv"
+  snapshot_sha256: 2523af79739ac3a16389cfefeb6425d72ce086b24d596f89b318950914c3575b
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/muts_complex.yaml --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:47:21.484957Z'
+  support: supports
+  summary: "data/structures/other/muts_complex.yaml  (GO:1990710)\n  muts_mismatch_repair\t\
+    muts_subunit\tCOVERED\t->muts_subunit (UniProtKB:P23909)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     1  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     1  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 2563a586ca852d8ac42104e294e10cdf1812411b5c553019ee509a4e41d2f208
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch61-20261022-t_eoxa78/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/muts_complex.yaml --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:47:22.562068Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/muts_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '9 of 12 collected target identifiers returned OK. PMID:11048710: UNREACHABLE;
+    Native Europe PMC uniquely identifies PMID:11048710: Crystal structures of mismatch
+    repair protein MutS and its complex with a substrate DNA. (2000), DOI10.1038/35037509.
+    Identifier/bibliographic verification is separate from the declared body or abstract
+    scientific-reading scope.; PMID:11048711: UNREACHABLE; Native Europe PMC uniquely
+    identifies PMID:11048711: The crystal structure of DNA mismatch repair protein
+    MutS binding to a G x T mismatch. (2000), DOI10.1038/35037523. Identifier/bibliographic
+    verification is separate from the declared body or abstract scientific-reading
+    scope.; PMID:21666597: UNREACHABLE; Native Europe PMC uniquely identifies PMID:21666597:
+    Atomic force microscopy captures MutS tetramers initiating DNA mismatch repair.
+    (2011), DOI10.1038/emboj.2011.180. Identifier/bibliographic verification is separate
+    from the declared body or abstract scientific-reading scope. Native source checks
+    are separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Homodimer class and higher oligomer context
+  outcome: supported
+  target_ids:
+  - GO:1990710
+  summary: GO identity, exact synonym, protein-complex parent and the two-copy definition
+    agree with the structural abstracts and with dimers directly detected in Jiang2011.
+    That study also observes tetramers and models two-dimer initiation. The canonical
+    note accurately says MutS oligomers and does not falsely describe every AFM particle
+    as a dimer. The record is a dimer-level class, not an exhaustive model of all
+    MutS states.
+  evidence_ids:
+  - record
+  - complex61-agent-go
+  - complex61-agent-go-1990710-ancestors
+  - complex61-agent-jiang2011-legacy
+  - complex61-agent-doi-10.1038_35037509
+  - complex61-agent-doi-10.1038_35037523
+  - complex61-agent-pmid-21666597
+- assessment_id: grounding
+  area: grounding
+  topic: Exact bacterial MutS family
+  outcome: concern
+  target_ids:
+  - GO:1990710
+  summary: IPR005748 represents the bacterial MutS family with HAMAP MF00096/NCBIfam
+    TIGR01070 signatures, independently matched by reviewed K-12 P23909. Broader MutS/MSH
+    families and individual domains are not required substitutes. The existing REVIEWED_LABEL_ONLY
+    row can be grounded without changing its two-copy context.
+  evidence_ids:
+  - record
+  - curation
+  - complex61-agent-ipr-IPR005748
+  - complex61-agent-ipr-IPR017261
+  - complex61-agent-ipr-IPR045076
+  - complex61-agent-protein-P23909
+  - complex61-agent-gene-mutS
+- assessment_id: graph
+  area: graph
+  topic: Mismatch engagement and support for repair
+  outcome: supported
+  target_ids:
+  - GO:1990710
+  summary: The NONMECHANISTIC edges describe dimeric membership, mismatch binding
+    and participation in repair. Lamers complete abstract directly supports the E.coli
+    dimer bound to a G-T mismatch; Obmolova supports general dimer/substrate architecture.
+    Neither graph nor function asserts that isolated MutS executes excision/resynthesis
+    alone or that ATP hydrolysis dependence of the AFM loop growth has been resolved.
+  evidence_ids:
+  - record
+  - complex61-agent-go
+  - complex61-agent-jiang2011-legacy
+  - complex61-agent-doi-10.1038_35037509
+  - complex61-agent-doi-10.1038_35037523
+  - complex61-agent-pmid-21666597
+- assessment_id: scope
+  area: scope
+  topic: Reference strain versus AFM preparation
+  outcome: supported
+  target_ids:
+  - GO:1990710
+  summary: P23909, mutS/fdv and taxon83333 are correct and the exact reviewed query
+    returns one entry. The canonical species-level AFM example does not silently replace
+    its published purification provenance with K-12-specific experimental evidence.
+    COMMON retains majority/losses-exception meaning with qualitative conserved-system
+    support; no population census is claimed.
+  evidence_ids:
+  - record
+  - schema
+  - complex61-agent-jiang2011-legacy
+  - complex61-agent-tax-562
+  - complex61-agent-tax-83333
+  - complex61-agent-protein-P23909
+  - complex61-agent-gene-mutS
+- assessment_id: formation
+  area: grounding
+  topic: Individual formation necessity remains unresolved
+  outcome: unknown
+  target_ids:
+  - GO:1990710
+  summary: The record retains UNKNOWN component formation necessity. Positive membership,
+    enzyme activity, viability and condition-specific oligomer observations do not
+    alone establish universal individual assembly requirements. Optional additional
+    interaction detail is not required merely because the paper contains it.
+  evidence_ids:
+  - record
+  - schema
+  - complex61-agent-jiang2011-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target
+  outcome: supported
+  target_ids:
+  - GO:1990710
+  summary: All maintained scientific fields, attached evidence, graph scope and current
+    discussion rationale were compared with the declared sources. No maintained images
+    or datasets are introduced; old history is preserved and native scientific status
+    is not promoted.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex61-agent-go
+findings:
+- finding_id: F1
+  issue_key: muts-exact-whole-family
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the MutS component to the verified bacterial family
+  description: The sole MutS row remains REVIEWED_LABEL_ONLY despite exact IPR005748
+    family metadata and the independent P23909 match. This is an existing-row grounding
+    gap, not a demand to add unrepresented tetramers or downstream repair proteins.
+  target_ids:
+  - GO:1990710
+  field_paths:
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - complex61-agent-ipr-IPR005748
+  - complex61-agent-protein-P23909
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/muts_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope and family-grounding correspondence
+  native_severity: minor
+  normalization_reason: A bounded existing-row grounding correction preserves the
+    supported complex identity, membership and biological function.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990710
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/muts_complex.yaml
+    role: maintained scientific record
+  description: Add InterPro:IPR005748 to the bacterial MutS row, align grounding status/notes
+    and resolve or narrow its current family TODO. Preserve two copies per defined
+    homodimer and higher-oligomer experimental context.
+  acceptance_checks:
+  - Verify whole-family type and protein match separately; do not substitute broad
+    MutS/MSH families or a single domain.
+  - Pass schema, strict and applicable identifier/protein checks after separately
+    authorized curation.
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicit source sections below were read. No figure pixels, supplements,
+  raw experimental data or atomic coordinates were analysed. Native database annotation
+  is distinguished from a newly inspected primary experiment.
+- The two2000 crystal papers are complete-abstract-tier only after retained challenge
+  responses. Jiang2011 was read at full Results/Discussion/Methods and table/caption
+  scope, without figure pixels or supplemental data.
+- AFM population and looping conclusions depend on DNA length, nucleotide, protein
+  concentration and mica preparation. The dimer-level entry does not exhaust the observed
+  oligomeric states or establish the entire mismatch-repair mechanism.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes qualified clean and issue-bearing reviews
+  alike.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
