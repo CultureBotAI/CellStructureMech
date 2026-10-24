@@ -1,0 +1,683 @@
+schema_version: 1.0.0
+review_id: 20261020T032926Z-omcz-cytochrome-nanowire-review
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: OmcZ cytochrome nanowire identity, structure and candidate conduction review
+started_at: '2026-10-19T23:36:18.093073Z'
+finished_at: '2026-10-20T03:29:26Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Separate checkout and source inspection; prior agent authorship
+    is not treated as demonstrated independent human review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'OmcZ identity, components, strain mapping and four graph edges are supported.
+  One major scope finding remains: the COMMON frequency exceeds the cited PDB source-organism
+  metadata. The proposed conduction path remains explicitly qualified.'
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/omce_cytochrome_nanowire.yaml
+    sha256: 46831d86d93aa73f427a5ac189fa4e439ee57d3a598ce023917bac623d8d92a9
+    role: context
+  - path: data/structures/appendage/omcs_cytochrome_nanowire.yaml
+    sha256: ca7929cfc24552723a28266b0c42c392052caa65a5a7115f6b41c1fde5248eb2
+    role: context
+  - path: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+    sha256: 5072025a6196c3c09b9acc76dae5970908799e8daf4a2977d8f04f120eba13c6
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/omcz_cytochrome_nanowire/2026-09-11T152505Z-codex-fa48ac.yaml
+    sha256: d4401c01d4cdaa3912f7c4eeda41b02ffcc9995f68fe8659a37d9611656a5288
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:omcz_cytochrome_nanowire
+  path: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+  label: OmcZ cytochrome nanowire
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+    role: maintained scientific record
+scope:
+  description: Entire maintained record, every source-bearing field and all four causal
+    edges.
+  selection: Fifth target in the second fixed path-sorted group of previously unreviewed
+    records; one record only.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  exclusions:
+  - target: Other corpus records
+    reason: Neighbor identity headers are context only, not scientific review coverage.
+checks:
+- check_id: schema
+  name: Open schema validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  command: just validate data/structures/appendage/omcz_cytochrome_nanowire.yaml
+  exit_code: 0
+  summary: Focused target check exited 0; 2026-10-19T23:36:41.245949+00:00 to 2026-10-19T23:36:42.347748+00:00.
+    No validation errors.
+- check_id: strict
+  name: Closed schema validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  command: just validate-strict data/structures/appendage/omcz_cytochrome_nanowire.yaml
+    --out /private/tmp/cellstructure-batch2-20261019-52rdp0/omcz-review/strict.tsv
+  exit_code: 0
+  summary: Focused target check exited 0; 2026-10-19T23:36:42.348323+00:00 to 2026-10-19T23:36:43.852119+00:00.
+    No validation errors.
+- check_id: source-identifier-audit
+  name: All-field nearest-source and identifier inspection
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  summary: Both cited papers were readable through public full-text routes. All seven
+    distinct CURIE-shaped target identifiers and both EMDB accessions mentioned in
+    notes were checked through source authorities or the defining local record. All
+    four graph edges were assessed against the eLife article.
+  evidence_ids:
+  - record
+  - elife-xml
+  - nature-pmc-html
+  - 8d9m
+  - 8d9m-entity
+  - 7lq5
+  - 7lq5-entity
+  - uniprot
+  - taxon
+  - go-search
+  - emdb-27266
+  - emdb-23481
+  - crossref-elife
+  - crossref-nature
+  - internal
+- check_id: snippets
+  name: Verbatim snippet applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  summary: The entire target has no snippet field; no quotation was introduced.
+- check_id: target-resolver-coverage
+  name: Target resolver coverage including residuals
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  summary: Collected values resolve through shared report plus scoped PDB/local receipts;
+    scientific claim support is separately assessed.
+  evidence_ids:
+  - target-resolver-coverage
+  - 7lq5
+  - 8d9m
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+  locator: 'Entire YAML: identity, two synonyms, one component and protein example,
+    one taxonomic row, one canonical example, one function, five nodes, all four edges,
+    discussion and curation history'
+  accessed_at: '2026-10-19T23:36:18.093073Z'
+  support: supports
+  summary: Read every field; this is a polymeric appendage record with PROPOSED status,
+    not a single-protein identity. No snippet, physical-property, image, trait-link,
+    dataset or complex-composition fields are present.
+- evidence_id: elife-xml
+  kind: primary_source
+  reference: https://cdn.elifesciences.org/articles/81551/elife-81551-v2.xml
+  locator: 'DOI:10.7554/eLife.81551; Introduction; Results: Cryo-EM of the OmcZ filament
+    and solvent-accessible hemes; Discussion; growth/preparation Methods; Figures
+    1–4 captions'
+  accessed_at: '2026-10-19T23:37:01.926133Z'
+  support: supports
+  summary: Inspected the published article body, Results, Discussion and Methods.
+    It resolves an octaheme OmcZ polymer with a surface-exposed side heme and explicitly
+    proposes possible network conduction. Methods identify electrode-grown PCA ΔomcS
+    preparations. The paper cautions that geometry, contact resistance and measurement
+    normalization complicate conductivity comparisons.
+  snapshot_sha256: ec6b205e1a3538504d9320a2c91990b2f9b343507629ce89f003c97a68fb829b
+- evidence_id: nature-pmc-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9999484/
+  locator: 'DOI:10.1038/s41564-022-01315-5 / PMC9999484; Results: OmcZ structure and
+    Haem loop; assembly section; Methods; Data availability'
+  accessed_at: '2026-10-19T23:37:34.092678Z'
+  support: supports
+  summary: Inspected Results, structural and assembly descriptions, Methods context
+    and data availability. This study describes a central linear heme chain plus surface-exposed
+    heme VI and a 30-kDa processed filament subunit. The linear-chain wording does
+    not refute the presence of a side heme. It deposits 7LQ5/EMD-23481; exact comparative
+    conductivity mechanisms remain interpretation dependent.
+  snapshot_sha256: a64eda3e416570e107af104498faec9de6aef12ac7827734ec7fe296fe98a1a8
+- evidence_id: 8d9m
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/entry/8D9M
+  locator: struct.title; rcsb_primary_citation; rcsb_entry_info.resolution_combined;
+    rcsb_entry_container_identifiers.emdb_ids
+  accessed_at: '2026-10-19T23:36:43.898306Z'
+  support: supports
+  summary: 8D9M is the OmcZ nanowire EM model, resolution 4.2 Å, DOI:10.7554/eLife.81551,
+    associated with EMD-27266.
+  snapshot_sha256: d4b1f47217158a902c4c203bc508592819584277011201660277e60dcf244a87
+- evidence_id: 8d9m-entity
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/8D9M/1
+  locator: entity_poly; rcsb_polymer_entity_align; rcsb_polymer_entity_container_identifiers;
+    compare entry modeled/unmodeled residue counts
+  accessed_at: '2026-10-19T23:36:43.898700Z'
+  support: supports
+  summary: Polymer entity 1 has a SIFTS match to Q74BG5 over residues 1–473. This
+    verifies the record’s alignment statement; it does not mean all 473 residues are
+    experimentally modeled. The entry reports 258 modeled and 215 unmodeled residues.
+  snapshot_sha256: f5de6a11afe1cc0f27ee72f9445dd860e81726268a6689de4c40de2dd94db7fc
+- evidence_id: 7lq5
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/entry/7LQ5
+  locator: struct.title; rcsb_entry_info.resolution_combined; rcsb_primary_citation;
+    rcsb_entry_container_identifiers
+  accessed_at: '2026-10-19T23:36:43.898794Z'
+  support: supports
+  summary: 7LQ5 is a polymerized OmcZ EM model at the deposited 3.4 Å resolution and
+    links the Gu 2023 paper with EMD-23481. The paper reports 3.5 Å; the record explicitly
+    attributes 3.4 Å to the PDB entry.
+  snapshot_sha256: 71afe083b488f48170f1fc799644e914059a9e981ca1bb8561716809b63801d2
+- evidence_id: 7lq5-entity
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7LQ5/1
+  locator: rcsb_polymer_entity_align; rcsb_entity_source_organism; reference_sequence_identifiers
+  accessed_at: '2026-10-19T23:36:43.898865Z'
+  support: supports
+  summary: Entity 1 maps to Q74BG5 starting at residue 25 for 258 residues, ending
+    at 282. Natural source is taxonomy 243231, Geobacter sulfurreducens PCA.
+  snapshot_sha256: 14696f6be8ce09d14ce8832db799d882ac8f1380304cfd9a75e31b7a8ad0b2ac
+- evidence_id: uniprot
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q74BG5.json
+  locator: primaryAccession; entryType; proteinDescription; genes; organism; InterPro/Pfam
+    cross-references
+  accessed_at: '2026-10-19T23:36:44.091317Z'
+  support: supports
+  summary: Q74BG5 is an unreviewed Cytochrome c entry, gene omcZ/GSU2076, taxon 243231.
+    Current InterPro/Pfam cross-references are broad multiheme, immunoglobulin-fold
+    and IPT domains; they do not supply an exact whole-OmcZ filament-subunit family
+    grounding.
+  snapshot_sha256: b239dcbb54e166de63ad8ea0ee6f0245b5d2de457e83b35c53141b741585047e
+- evidence_id: taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=243231&retmode=xml
+  locator: TaxaSet/Taxon/TaxId, ScientificName, Rank, ParentTaxId
+  accessed_at: '2026-10-19T23:36:44.091497Z'
+  support: supports
+  summary: NCBITaxon:243231 is Geobacter sulfurreducens PCA, rank strain, under species
+    35554.
+  snapshot_sha256: f1291f188fae1b43a82d2f75e98d90aa41434ef36115f217a9485629eebb2736
+- evidence_id: go-search
+  kind: search
+  reference: https://www.ebi.ac.uk/ols4/api/search?q=OmcZ&ontology=go&rows=20
+  locator: response.numFound and docs
+  accessed_at: '2026-10-19T23:37:01.925506Z'
+  support: supports
+  summary: An OLS GO search for OmcZ returned no matching term. This bounded query
+    does not claim exhaustive absence of every broader appendage term.
+  snapshot_sha256: 8d33fdeb26a2d16294a3c5f4a7f444578bb462aa6036d45a15e9bfadfe47fbd2
+  search_scope: Live EBI OLS4 GO-only query q=OmcZ, rows=20; inspected exact response
+    and zero returned documents. No broad GO absence claim.
+- evidence_id: emdb-27266
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/api/entry/EMD-27266
+  locator: crossreferences/citation_list and pdb_list
+  accessed_at: '2026-10-19T23:37:34.092741Z'
+  support: supports
+  summary: EMD-27266 links 8D9M and the Wang 2022 eLife article.
+  snapshot_sha256: a5bf60e8b55346753aaa71ddf443a44715d2495425e1345850053fff9e35882d
+- evidence_id: emdb-23481
+  kind: authority
+  reference: https://www.ebi.ac.uk/emdb/api/entry/EMD-23481
+  locator: crossreferences/citation_list and pdb_list
+  accessed_at: '2026-10-19T23:37:34.092810Z'
+  support: supports
+  summary: EMD-23481 links 7LQ5 and the Gu 2023 Nature Microbiology article.
+  snapshot_sha256: 0635c32edd16a1456b8bd82a3dbedf366210b2882c2b95473807e7f29f2c7284
+- evidence_id: crossref-elife
+  kind: authority
+  reference: https://api.crossref.org/works/10.7554/eLife.81551
+  locator: message.DOI/title/author/published
+  accessed_at: '2026-10-19T23:36:44.192564Z'
+  support: supports
+  summary: Exact DOI, title, authors and publication identity match Wang 2022 eLife.
+  snapshot_sha256: a8ce8733b1df24c5148a1cefdbfb3c12daa128414f96f220e12df1a5e0ab6114
+- evidence_id: crossref-nature
+  kind: authority
+  reference: https://api.crossref.org/works/10.1038/s41564-022-01315-5
+  locator: message.DOI/title/author/published
+  accessed_at: '2026-10-19T23:36:44.242708Z'
+  support: supports
+  summary: Exact DOI, title, authors and publication identity match Gu 2023 Nature
+    Microbiology.
+  snapshot_sha256: 88ebc859f4e36206f3f1f4d2bb58e6d66016fe87bdfe7e3ffcd35fb5ee4c517c
+- evidence_id: internal
+  kind: search
+  reference: repository working tree
+  locator: Target, OmcS/OmcE sibling identity headers, history/records/omcz_cytochrome_nanowire/2026-09-11T152505Z-codex-fa48ac.yaml
+  accessed_at: '2026-10-19T23:38:51Z'
+  support: supports
+  summary: The target is the only maintained record with this local identifier in
+    the inspected corpus. Siblings remain separate identities. The repository history
+    records prior PCA narrowing and qualification of the proposed conduction path;
+    no earlier structured-review disposition is asserted.
+  search_scope: rg --no-ignore --hidden across data/structures, history/records, reviews/structured
+    and conf for the exact identifier, label and slug; ignored files included. No
+    remote GitHub issue state was inferred from local historical text.
+- evidence_id: presence-schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: PresenceEnum.COMMON
+  accessed_at: '2026-10-20T03:29:00Z'
+  support: supports
+  summary: COMMON means present in most members, with losses exceptional; it is stronger
+    than documentation of one natural-source strain.
+- evidence_id: target-resolver-coverage
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/omcz_cytochrome_nanowire.yaml; exact collect()
+    scope; shared reports/curie_check.tsv
+  accessed_at: '2026-10-19T23:41:41.324461Z'
+  support: supports
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+  summary: 'The exact collection has 7 CURIE-shaped scalars: {''OK'': 4, ''SKIPPED'':
+    3}. Skipped PDB identifiers resolve in the attached exact deposition receipts;
+    the minted local target resolves in the maintained record. HTTP URLs and prose
+    are checked separately. Existence does not imply correct biological mapping.'
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Distinct OmcZ polymer identity and two synonyms
+  outcome: supported
+  summary: The local identity denotes the extracellular filament assembled from OmcZ,
+    distinct from its individual protein and from OmcS/OmcE polymers. APPENDAGE category/kind
+    and both exact synonyms match the inspected sources. No unsupported is-a or parthood
+    relation is asserted.
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  evidence_ids:
+  - record
+  - elife-xml
+  - 8d9m
+  - internal
+  - go-search
+- assessment_id: composition
+  area: representation
+  topic: Constituent and processed protein example
+  outcome: supported
+  summary: The single OmcZ constituent is essential by the stated polymer identity.
+    Covalently bound hemes are represented within the octaheme protein rather than
+    silently omitted. The exact accession/gene/strain/unreviewed-status join and both
+    SIFTS spans match; full-length sequence alignment is distinct from experimental
+    model coverage.
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  evidence_ids:
+  - elife-xml
+  - nature-pmc-html
+  - uniprot
+  - taxon
+  - 8d9m-entity
+  - 7lq5-entity
+- assessment_id: scope
+  area: scope
+  topic: PCA occurrence and canonical structure exemplar
+  outcome: concern
+  summary: PDB7LQ5 supports the exact PCA natural-source identity, not the COMMON
+    quantifier defined by the schema. The cited structural preparations establish
+    occurrence under particular experimental conditions but do not establish most-member
+    prevalence. No absence or inability to produce native OmcZ is inferred.
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  evidence_ids:
+  - 7lq5
+  - 7lq5-entity
+  - taxon
+  - elife-xml
+  - presence-schema
+  dimensions:
+  - name: taxon_rank
+    value: strain
+    definition: NCBI rank of the sole taxonomic and protein-example target.
+    evidence_ids:
+    - taxon
+  - name: experimental_context
+    value: Electrode-grown G. sulfurreducens PCA ΔomcS preparation in Wang 2022; PDB
+      7LQ5 natural-source metadata names PCA.
+    definition: Bounded source context; the review does not treat source strain metadata
+      as universal expression.
+    evidence_ids:
+    - elife-xml
+    - 7lq5-entity
+- assessment_id: function
+  area: evidence
+  topic: Qualified branched-heme electron-transfer function
+  outcome: supported
+  summary: The function explicitly calls the structural conduction path a candidate.
+    The cited article supports that proposal and surface access while discussing competing
+    explanations for apparent conductivity. No numerical conductivity advantage or
+    proven unique pathway is asserted.
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  evidence_ids:
+  - record
+  - elife-xml
+  - nature-pmc-html
+- assessment_id: graph
+  area: graph
+  topic: All four mechanism edges and model scope
+  outcome: supported
+  summary: Edge 0 is supported polymerization; edge 1 describes the observed branched
+    arrangement; edge 2 identifies the exposed side heme; edge 3 remains a candidate
+    electron-transfer path. Five node references are internally coherent. MECHANISTIC
+    describes a bounded architecture/function hypothesis, with the uncertainty preserved
+    in the graph description, scope notes and final edge.
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  evidence_ids:
+  - record
+  - elife-xml
+  - nature-pmc-html
+- assessment_id: grounding-todo
+  area: grounding
+  topic: Label-only family grounding and actionable discussion
+  outcome: supported
+  summary: 'The open exact-family TODO is appropriate: current protein cross-references
+    are broader domains, and a strain-specific UniProt example does not define the
+    neutral family. No newly established exact family replacement was found in the
+    inspected mapping set; this is not a universal negative search result.'
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  evidence_ids:
+  - uniprot
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Publication, structure resolution, map links and history
+  outcome: supported
+  summary: Both DOIs and PDB/EMDB pairs match. Resolutions are source-attributed structural
+    provenance, not biological dimensions. PROPOSED status and three agent curation
+    events are consistent with the maintained history; this review neither promotes
+    status nor closes historic GitHub issues.
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  evidence_ids:
+  - crossref-elife
+  - crossref-nature
+  - 8d9m
+  - 7lq5
+  - emdb-27266
+  - emdb-23481
+  - internal
+- assessment_id: completeness
+  area: completeness
+  topic: Proportionate scope and omitted optional surfaces
+  outcome: not_applicable
+  summary: There are no image-reuse, physical-property, trait, dataset or expression-module
+    claims requiring additional verification. Proteolysis, export and regulation are
+    explicitly outside this function graph; absent assembly machinery is not a constituent-composition
+    defect.
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  evidence_ids:
+  - record
+  - elife-xml
+  - nature-pmc-html
+findings:
+- finding_id: F1
+  issue_key: omcz-pdb-source-not-common-prevalence
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: COMMON occurrence exceeds natural-source metadata
+  description: The taxonomic_distribution row cites PDB7LQ5 source metadata to assign
+    COMMON to PCA. The cited metadata identifies the source organism but does not
+    support the schema quantifier present in most members with losses exceptional.
+    Structural and functional occurrence evidence is positive, but it is not that
+    prevalence assertion. Preserve the canonical example and protein pairing; supply
+    evidence appropriate to the frequency claim or remove the unsupported distribution
+    row. This finding does not assert that occurrence is rare or absent, nor does
+    COMMON itself require constitutive expression in every condition.
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  field_paths:
+  - taxonomic_distribution[0].presence
+  - taxonomic_distribution[0].reference
+  evidence_ids:
+  - record
+  - presence-schema
+  - 7lq5-entity
+  - elife-xml
+  - nature-pmc-html
+  rule_id: review-checklist:Taxonomic distribution; PresenceEnum.COMMON
+  native_severity: major
+  normalization_reason: Machine-readable biological scope exceeds the cited evidence;
+    source-strain identity remains correct.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: Remove the unsupported distribution row while retaining the PCA canonical
+    example, or supply directly relevant evidence for an explicitly supported occurrence
+    frequency. Do not infer another frequency enum from source metadata alone.
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:omcz_cytochrome_nanowire
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/omcz_cytochrome_nanowire.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Every retained presence enum is supported beyond source-organism provenance.
+  - Run focused open/strict validation and native curation/history gates after separately
+    authorized scientific edits.
+  generator: Maintained YAML owns the assertion; generated pages are derived with
+    just render.
+limitations:
+- The relationship between heme geometry, measured conductivity and network function
+  is model dependent; this review does not establish a unique conduction mechanism
+  or a numerical conductivity advantage.
+- PCA source metadata and the cited preparations establish bounded occurrence; no
+  population prevalence or condition-independent expression was measured.
+- Exact whole-OmcZ family grounding remains unresolved in the inspected UniProt cross-references;
+  the record already retains an explicit open TODO.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The user explicitly requested a bundle for every target, including clean observations.
+  This draft does not edit scientific data or promote native status.
