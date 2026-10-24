@@ -1,0 +1,598 @@
+schema_version: 1.0.0
+review_id: 20261022T024031Z-mononeme-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mononeme identity and source review
+started_at: '2026-10-22T02:27:32Z'
+finished_at: '2026-10-22T02:40:31Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No concrete curation defect observed within the bounded mononeme identity,
+  localization and protein-example scope.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/mononeme.yaml
+    sha256: 5e08d2090388a00b0883dd2253e8bd606d8c250a32406fb8492d6896c861a97b
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0070074
+  path: data/structures/membrane_organelle/mononeme.yaml
+  label: mononeme
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mononeme.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire single record: identity, hierarchy, components, protein examples,
+    taxonomy, functions, every graph edge and discussions.'
+  selection: Target 5 of batch34 in strict uncovered path order from fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0070074
+checks:
+- check_id: native-verify
+  name: Native protein verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  command: /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/mononeme.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; literature-to-gene identity independently
+    reviewed.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  command: /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/mononeme.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; literature-to-gene identity independently
+    reviewed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  command: just validate data/structures/membrane_organelle/mononeme.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  command: just validate-strict data/structures/membrane_organelle/mononeme.yaml --out
+    /private/tmp/cellstructure-batch34-20261022-36gi391b/mononeme-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0070074
+  summary: No claimed iModulon membership or expression module used as mechanism evidence;
+    primary localization and perturbation evidence inspected.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - root34-sources-go
+  - root34-sources-GO0070074-isa
+  - root34-sources-tax5833
+  - root34-sources-singh2007-meta
+  - root34-sources-A8IWX2
+  - root34-sources-ipr-A8IWX2
+  - root34-sources-singh2007-pmc
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  summary: 10 of 10 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070074
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/mononeme.yaml
+  locator: Entire maintained target, every graph edge, component, discussion and historical
+    event
+  accessed_at: '2026-10-22T02:31:54Z'
+  support: context_only
+  summary: Complete scientific target read; no scientific edits or status promotion.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, protein_examples, essentiality and graph actor semantics
+  accessed_at: '2026-10-22T02:31:54Z'
+  support: context_only
+  summary: Protein examples identify concrete gene products; functional necessity
+    and organelle-formation necessity are distinct. Optional inventory slots do not
+    automatically create defects.
+- evidence_id: root34-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070074,GO:0043231,GO:0020007,GO:0020025,GO:0020009,GO:0020008,GO:0020026,GO:0036000,GO:0030141
+  locator: Complete nine entries, including all typed relations and synonym scopes
+  accessed_at: '2026-10-22T02:28:03.002434Z'
+  support: supports
+  summary: All nine native entries are active and exact identities, definitions, comments
+    and typed children agree. Mononeme is a part of the apical complex and an intracellular
+    membrane-bounded organelle; mucocyst is a secretory-granule subtype. Adjacent
+    apical organelle identities are distinct.
+  snapshot_sha256: a470c7c64f9e59ad7d74d5739486e255b66108c208cca0d3ee20bd009a48ddf7
+- evidence_id: root34-sources-GO0070074-isa
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070074/ancestors?relations=is_a
+  locator: Complete ancestor list queried with relations=is_a
+  accessed_at: '2026-10-22T02:28:03.002872Z'
+  support: supports
+  summary: Native is_a-only ancestry supports the declared parent without conflating
+    parthood.
+  snapshot_sha256: 4b5e34f21313f5f219c9cd414f95f51d09a8c71ab2ab776a6a94b158a28ddd7d
+- evidence_id: root34-sources-tax5833
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833
+  locator: Complete taxId, scientificName, rank, lineage and otherNames
+  accessed_at: '2026-10-22T02:28:03.003344Z'
+  support: supports
+  summary: Exact scientific name, taxon ID, rank and lineage verified. Species/strain
+    identity is distinct from measured prevalence.
+  snapshot_sha256: 47c9da135299ea0515b9cbddde80166e0e7256bcf1daac4cdf87f8ae3e0ecd11
+- evidence_id: root34-sources-singh2007-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1073/pnas.0709999104%22
+  locator: Complete MED identity and abstractText
+  accessed_at: '2026-10-22T02:28:03.850585Z'
+  support: supports
+  summary: Exact title, authors, DOI 10.1073/pnas.0709999104, PMID 18048320, year
+    and complete abstract checked. Native abstract reading is separate from the explicitly
+    scoped full text.
+  snapshot_sha256: ee84925a6c1eeddf58bdefed06ebb40a583da9bf9409bb2b05ef304f1a9eb2d6
+- evidence_id: root34-sources-A8IWX2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/A8IWX2.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism, complete
+    comments and sequence length
+  accessed_at: '2026-10-22T02:28:04.614828Z'
+  support: supports
+  summary: Exact primary accession, UNREVIEWED status, gene/locus tokens, protein
+    name, taxonomy and comments inspected. Automated comments are not independent
+    experimental localization evidence.
+  snapshot_sha256: b026eba2d5cf47d55b60367cbcc216220c91c093d30f490edba04b83b0da942c
+- evidence_id: root34-sources-ipr-A8IWX2
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/A8IWX2/?page_size=200
+  locator: All returned metadata, types, member signatures and protein-matching locations;
+    no sequence alignment or structure prediction performed
+  accessed_at: '2026-10-22T02:28:04.720300Z'
+  support: supports
+  summary: Complete returned integrated matches and next=null inspected. Domains and
+    broad families are not substituted for exact local cargo-cohort or complex identity.
+  snapshot_sha256: 290eeed04ceacf22690889608fe8d4085ec1bd17984fd0381c55d554d3442b95
+- evidence_id: root34-sources-singh2007-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2148419/
+  locator: Complete Results sec1 (including sec2-5 and Fig1-6 captions), Discussion
+    sec6 and Materials/Methods sec7 (including sec8-12); supplements and pixels not
+    read
+  accessed_at: '2026-10-22T02:29:38.043581Z'
+  support: supports
+  summary: The genuine paper studies full-length 278-aa PfROM1 expressed as an N-terminal
+    HA-tagged episomal construct under its own promoter in P. falciparum 3D7. Mature
+    segmenters show a lateral threadlike compartment distinct from AMA1/EBA175 micronemes,
+    RAP2/RON4 rhoptries and RESA dense granules; released merozoites redistribute
+    signal to their surface and poles. The authors explicitly leave microtubule motors
+    speculative and confocal proximity unresolved below about200nm.
+  snapshot_sha256: 6c3f9d1eec8c521ddbc24156e288801627b4f0d8ea3aeefbeb5950bf8a9d505d
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/mononeme.yaml
+    --verify
+  locator: Entire captured focused native log
+  accessed_at: '2026-10-22T02:28:23.576989Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/mononeme.yaml
+    --causal-graphs
+  locator: Entire captured focused native log
+  accessed_at: '2026-10-22T02:28:24.113690Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/mononeme.yaml  (GO:0070074)\n  pfrom1_mononeme_relocalization\t\
+    pfrom1_rhomboid_protease\tCOVERED\t->pfrom1_rhomboid_protease (UniProtKB:A8IWX2)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 3781cd140b3497305c788818137907d8b5f1135ddf2cf03128e2348128267e99
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/mononeme.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:27:33Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/mononeme.yaml'
+  snapshot_sha256: 3bd513f23c0df2b4a9e1752719967d201d3d0c9759c9dbc6f2768ee626f7ff4b
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/mononeme.yaml
+    --out /private/tmp/cellstructure-batch34-20261022-36gi391b/mononeme-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:27:35Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/mononeme.yaml\
+    \ --out /private/tmp/cellstructure-batch34-20261022-36gi391b/mononeme-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch34-20261022-36gi391b/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch34-20261022-36gi391b/mononeme-strict.tsv"
+  snapshot_sha256: f91e7c674c9bccd6e90ff626362ed968d569c15d653d8db89a930da1f77a1cb7
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/mononeme.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 10 of 10 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact mononeme boundary
+  outcome: supported
+  target_ids:
+  - GO:0070074
+  summary: Native GO and the primary localization study support the mononeme identity,
+    apical parthood and organelle distinction. The definition is a faithful bounded
+    paraphrase of GO rather than a claim of ultrastructurally resolved membrane or
+    lumen.
+  evidence_ids:
+  - record
+  - root34-sources-go
+  - root34-sources-GO0070074-isa
+  - root34-sources-singh2007-pmc
+- assessment_id: protein
+  area: grounding
+  topic: PfROM1 instance and role
+  outcome: supported
+  target_ids:
+  - GO:0070074
+  summary: The accession maps to Rom1 in the stated species and is correctly marked
+    UNREVIEWED. The study confirms a full-length278-aa protein; generic rhomboid family/domain
+    matches are broader than PfROM1. The label-only species-specific constituent is
+    not converted to an unsupported family identity.
+  evidence_ids:
+  - record
+  - root34-sources-A8IWX2
+  - root34-sources-ipr-A8IWX2
+  - root34-sources-singh2007-pmc
+- assessment_id: scope
+  area: scope
+  topic: Segmenter-stage evidence
+  outcome: supported
+  target_ids:
+  - GO:0070074
+  summary: Taxonomy and canonical-example wording explicitly restrict direct mononeme
+    evidence to mature segmenters. Released merozoites support PfROM1 redistribution,
+    not continued observation of the original compartment. No pan-apicomplexan occurrence
+    is asserted.
+  evidence_ids:
+  - record
+  - root34-sources-tax5833
+  - root34-sources-singh2007-pmc
+- assessment_id: function
+  area: scope
+  topic: Compartmentalization versus proteolytic mechanism
+  outcome: supported
+  target_ids:
+  - GO:0070074
+  summary: Observed separation from other secretory markers supports compartmentalization.
+    Substrate sequestration is explicitly a proposal in the evidence note; no direct
+    native AMA1 cleavage assay or universal invasion-essentiality assertion is added.
+  evidence_ids:
+  - record
+  - root34-sources-singh2007-pmc
+- assessment_id: graph
+  area: graph
+  topic: Six descriptive localization edges
+  outcome: supported
+  target_ids:
+  - GO:0070074
+  summary: All six NONMECHANISTIC edges agree with the marker experiments and stage-dependent
+    redistribution. Close proximity is distinct from molecular association; no motor,
+    movement route or membrane fusion mechanism is asserted.
+  evidence_ids:
+  - record
+  - root34-sources-go
+  - root34-sources-singh2007-pmc
+- assessment_id: necessity
+  area: grounding
+  topic: Formation requirement
+  outcome: unknown
+  target_ids:
+  - GO:0070074
+  summary: 'UNKNOWN is appropriate: the study localizes the protease but does not
+    test organelle formation without PfROM1.'
+  evidence_ids:
+  - record
+  - policy
+  - root34-sources-singh2007-pmc
+- assessment_id: coverage
+  area: completeness
+  topic: Bounded completeness
+  outcome: supported
+  target_ids:
+  - GO:0070074
+  summary: All target fields and discussions were assessed. Explicitly unresolved
+    membrane, lumen, cargo and motor questions remain open; no optional inventory
+    or image/measurement claim is fabricated.
+  evidence_ids:
+  - record
+  - root34-sources-singh2007-pmc
+findings: []
+actions: []
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Scientific reading is limited to the explicit source sections below. No source figure
+  pixels, supplementary datasets or raw experiments were reanalyzed. Taxonomic COMMON
+  is qualitative, not a measured prevalence.
+- Failed HTTP406 XML and subsequent HTTP500 XML attempts are retained. The genuine
+  Singh PMC2148419 HTML was verified by title and DOI and read instead.
+- Current protein instances are all unreviewed entries; their presence is an identity
+  claim, not proof of structural membership. Domains and broad family matches do not
+  establish an exact whole-cohort grounding.
+- The original study uses tagged transgenic PfROM1 and fixed-cell confocal microscopy.
+  It does not establish membrane ultrastructure, an untagged endogenous atlas, motor
+  transport, or PfROM1 necessity for formation. No new contradictory-paper census
+  was performed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user explicitly authorizes one bundle for every uncovered record, including
+  honest zero-finding observations.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
