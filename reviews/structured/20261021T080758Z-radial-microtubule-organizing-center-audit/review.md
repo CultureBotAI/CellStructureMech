@@ -1,0 +1,819 @@
+# Radial microtubule organizing center: architecture, Hrs1 dependence and evidence scope review
+
+- Review: 20261021T080758Z-radial-microtubule-organizing-center-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T07:53:56Z
+- Finished UTC: 2026-10-21T08:07:58Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The radial organizing center record is supported within its explicit species, experimental, localization and inference limits; no correction is established.
+
+## Scope And Provenance
+
+Entire target and tracked Figure3; full primary main scientific text, supplemental TableS1/methods/captions, native GO, proteins/family/taxa and figure provenance.
+
+Selection: Fixed batch 10 selection, index 6; one maintained record, no sampling.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:radial_microtubule_organizing_center | data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml | maintained | radial microtubule organizing center |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:radial_microtubule_organizing_center | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:radial_microtubule_organizing_center | Focused validator passed. |
+| Target resolver slice | passed | True | cellstructuremech:radial_microtubule_organizing_center | 10 identifiers OK; 1 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | cellstructuremech:radial_microtubule_organizing_center | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | cellstructuremech:radial_microtubule_organizing_center | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:radial_microtubule_organizing_center | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:radial_microtubule_organizing_center | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:radial_microtubule_organizing_center | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | cellstructuremech:radial_microtubule_organizing_center | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Local center identity and boundaries
+
+identity: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+The local class is supported by the primary structural distinction from SPB core and radial output polymers. Broader GO MTOC parent is appropriate; HAA, whole meiotic SPB and movement process are not equivalent. MULTIPROTEIN_COMPLEX describes an assembly without fixed stoichiometry or membrane enclosure. Historical searches are not rerun or treated as a new exhaustive absence claim.
+
+### Two localized constituents and scoped essentiality
+
+grounding: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+Direct immunolocalization supports Hrs1 and gamma-tubulin. Loss of recognizable matrix/radial geometry after hrs1 deletion supports formation-essentiality despite residual MTs and cell survival. Gamma-tubulin scaffold-essentiality is untested and correctly UNKNOWN. Interacting membrane/SPB proteins and output alpha/beta polymers are not automatically added to the matrix inventory.
+
+### Exact protein mappings and Hrs1 label-only class
+
+grounding: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+Both reviewed identities, aliases, reference taxa and gamma family mapping match native authorities. Q10336 integrated InterPro endpoint returned204 and UniProt has only a broader SUPFAM lead; tentative NudE similarity is insufficient to replace the narrow reviewed label-only class.
+
+### Species, engineered diploids and live-cell conditions
+
+scope: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+Species-level canonical example is supported. TableS1 verifies engineered KT2486/KT2919 genotypes and separate homothallic transition strains; taxon284812 remains reference-sequence provenance, not exact experimental stock identity.
+
+### Radial organization and nuclear movement
+
+evidence: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+Tomography, immunolabeling and deletion connect the matrix to radial organization of predominantly capped ends. Nuclear movement additionally depends on dynein/dynactin; the center is not a motor and does not establish recombination outcomes or purified nucleation sufficiency.
+
+### Hrs1-dependent assembly graph
+
+graph: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+All six edges retain correct dependency/localization/geometry scope. Hrs1 supports enrichment without asserting direct Hrs1–gamma binding; HAA is the output array. Scaffolding and interphase-to-radial conversion remain mechanistically incomplete.
+
+### Hrs1 downregulation and spindle transition
+
+evidence: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+Proteasomal degradation and phosphorylation jointly downregulate Hrs1. T16A-FA6 produces a transient monopolar spindle/delay in live homothallic cells; the delay was not obvious in34C synchronous diploids and depends on Mad2. The target retains conditionality and does not promote vegetative overexpression aggregates to normal meiotic centers.
+
+### Preparation, image and licensing
+
+provenance: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+CC BY3.0 and unchanged image checksum are verified. High-pressure freezing was followed by substitution/resin preparation, not vitreous cryo-ET. The80/120min main/supplement discrepancy is explicitly retained. Caption correctly separates sections/models, mutant context and scale.
+
+### Bounded inventory and unresolved mechanism
+
+completeness: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+No concrete mandatory information gap is established. Hrs1 exact family, matrix stoichiometry, purified bridge/nucleation mechanism, kinase/E3 identities and interphase rearrangement remain valid bounded gaps. Coimmunoprecipitation/two-hybrid partners and general tubulin polymers do not automatically require matrix-component additions; empty optional fields are not defects.
+
+### Claim placement and readability
+
+evidence: supported. Targets: cellstructuremech:radial_microtubule_organizing_center.
+
+Primary body, supplement and native authority rows support the claims at their stated tiers. No unsupported quote snippets occur. Historical counts/access notes remain historical; this review does not assert a fresh global ontology or corpus absence result.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml; Entire YAML: identity, components, examples, functions, graph edges, evidence, discussions and image metadata. | context_only | Entire current target read. The tracked target hash is recorded in native source.inputs; no neighboring scientific record informs this judgment. |
+| policy | .claude/skills/review-yaml-record/SKILL.md; Evidence Rules; completeness and boundary review | context_only | Apply source-specific support, distinguish direct evidence from inference, and evaluate concrete completeness gaps without treating optional empty fields as automatic failures. |
+| radial-mtoc-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005815,GO:0032118,GO:0032117,GO:0030989,GO:0035974; results indexed by GO:0005815,GO:0032118,GO:0032117,GO:0030989,GO:0035974; name, definition, isObsolete. | supports | Five active native GO terms resolve MTOC as broader parent, HAA organization as process, HAA as output array, dynein-driven oscillatory movement as process and meiotic SPB as a distinct whole structure. These are not exact rMTOC equivalents. |
+| radial-mtoc-agent-funaya2012-jats | https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/PMC3382715.1.xml; PMC3382715.1; sec2.1–sec2.8, sec3/3.1, sec4; fig3; permissions. | supports | Full primary Introduction, Results2.1–2.8, Discussion/Conclusion, main experimental procedures and Figure3 caption read. Tomography and immunogold distinguish an Hrs1-dependent, gamma-tubulin-enriched amorphous region from SPB core/output array. Predominantly capped ends and residual nonradial MTs after hrs1 deletion bound essentiality. Hrs1 scaffold/bridge and SPB-holding mechanisms remain models; NudE orthology is tentative. Stabilized nonphosphorylatable Hrs1 delays rather than universally blocks spindle formation, with temperature/checkpoint dependence. Permissions specify CC BY3.0. |
+| radial-mtoc-agent-funaya2012-supp | https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/mmc1.pdf; mmc1.pdf; TableS1 PDF pages13–17; Supplemental Experimental Procedures pages18–22, especially fluorescent microscopy and EM/immunolabeling; captions S1,S4,S6. Text extracted with pdftotext; no supplement pixel reanalysis. | supports | Primary supplement Table S1 identifies KT2486 wild-type hrs1 and KT2919 hrs1-deletion engineered h-/h- pat1.114/pat1.114 mat-Pc diploids for Figures1–3; homothallic transition strains are separate. Methods specify34C synchronized induction,30C live imaging, high-pressure freezing/freeze substitution/resin sections, and120min immunolabeling versus main text80min. Supplement captions treat Kms2/Mto1/Cdc31 coimmunoprecipitation and NudE similarity as context, not a complete localized matrix inventory. |
+| radial-mtoc-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1016/j.cub.2012.02.042%22; resultList.result id22425159; title, doi, abstractText. | supports | Native Europe PMC confirms PMID22425159, title, DOI10.1016/j.cub.2012.02.042 and abstract. Full primary support is supplied separately by the JATS body and supplement. |
+| radial-mtoc-agent-uniprot-Q10336 | https://rest.uniprot.org/uniprotkb/Q10336.json; entryType, primaryAccession, proteinDescription, genes, organism, uniProtKBCrossReferences. | supports | Native reviewed Q10336 is Meiotic coiled-coil protein6, primary gene mcp6 with hrs1/mug3 aliases, taxon284812. It has no integrated InterPro cross-reference; the SUPFAM Tropomyosin match is not an exact Hrs1 family assignment. |
+| radial-mtoc-agent-uniprot-P25295 | https://rest.uniprot.org/uniprotkb/P25295.json; entryType, primaryAccession, proteinDescription, genes, organism, InterPro cross-references. | supports | Native reviewed P25295 is Tubulin gamma chain, primary gene gtb1 with tug1 alias, taxon284812, with InterProIPR002454. This identity lookup does not identify the engineered experimental stock or independently prove localization. |
+| radial-mtoc-agent-IPR002454 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002454/; metadata.accession, type, name, description, hierarchy. | supports | Native InterProIPR002454 is the Gamma tubulin family. Its general MTOC/nucleation description does not establish the entire local rMTOC ring-complex composition or assembly sufficiency. |
+| radial-mtoc-agent-matches-gamma | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P25295/?page_size=200; results metadata accession/name/type for IPR002454. | supports | Native InterPro matches for P25295 include integrated Gamma tubulin IPR002454 as a family, independently supporting the exact component-class mapping. |
+| radial-mtoc-agent-matches-hrs1 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q10336/?page_size=200; HTTP204 response receipt; zero-byte body SHA256; exact Q10336 InterPro request. | context_only | Native integrated InterPro matches endpoint for Q10336 returned HTTP204 with an empty body. This bounded lookup supplies no positive exact integrated family match; it is not a claim that no Hrs1 family can exist elsewhere. Together with UniProt and the paper, it supports retaining reviewed label-only grounding. |
+| radial-mtoc-agent-taxon-4896 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896; taxId, scientificName, rank, lineage, otherNames. | supports | Native ENA taxon4896 is Schizosaccharomyces pombe, rank species; this does not identify KT2486 or KT2919 as that exact stock. |
+| radial-mtoc-agent-taxon-284812 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812; taxId, scientificName, rank, lineage, otherNames. | supports | Native ENA taxon284812 is Schizosaccharomyces pombe 972h-, rank strain; this does not identify KT2486 or KT2919 as that exact stock. |
+| radial-mtoc-agent-funaya2012-package | https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/PMC3382715.1.json; pmcid, version, doi, pmid, license_code, media_urls gr3.jpg and mmc1.pdf. | supports | Native PMC package confirms article version1, DOI/PMID, CC BY code and gr3.jpg MD5 9d12c4edbf7bbdfcc03ef8d3696aa1fb. Exact license3.0 is supplied by JATS permissions. |
+| radial-mtoc-agent-figure3 | https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/gr3.jpg; Original unchanged Figure3 panels A–E; tracked image included in native source.inputs. | supports | Complete Figure3 visually inspected. A/D are immunogold TEM serial sections; B/C/E are interpretive models. Yellow marks gamma-tubulin label positions, green MTs, blue SPB; C adds amorphous-region shading. Bars100nm are image scales, not universal center dimensions. Fresh image equals tracked SHA256 6cc84756e3217317651dfbb0511d8e4d53796cacde66782a23ec9c22af3dfa1d and package MD5. |
+| schema-result | just validate data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml --out /private/tmp/cellstructure-batch10-20261021-giynduuy/radial_microtubule_organizing_center-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml --out /private/tmp/cellstructure-batch10-20261021-giynduuy/radial_microtubule_organizing_center-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch10-20261021-giynduuy/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch10-20261021-giynduuy/radial_microtubule_organizing_center-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml; exact collect() scope; snapshot hash identifies the entire original unchanged-base reports/curie_check.tsv, not resolver-slice.json. | supports | 10 of11 collected target identifiers returned OK at the unchanged base. Residuals: cellstructuremech:radial_microtubule_organizing_center: SKIPPED; resolved by evidence record. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Full main Introduction, Results, Discussion, experimental procedures and Figure3 caption were read. Supplement TableS1, methods pages18–22 and selected captions were read from extracted PDF text; supplement panels, movies, raw tomograms and mass spectra were not visually reanalyzed.
+- Only tracked Figure3 pixels were visually inspected; the other main figures are supported by main text/captions rather than independent image reanalysis.
+- Main text specifies80min for immuno-EM while supplement specifies120min. The source inconsistency is preserved; this review does not select a universal sampling time.
+- The Q10336 integrated InterPro lookup returned204. Lack of a positive match in this endpoint is bounded; neither broader SUPFAM nor proposed NudE similarity establishes an exact Hrs1 family.
+- No new exhaustive local duplicate search or ontology-wide exact-term absence claim was made. The local self-CURIE is independently resolved to the target; no neighboring scientific record informs judgment.
+- Native reference-sequence annotations do not establish exact experimental-stock identity, complete matrix stoichiometry, purified mechanism or prevalence outside S. pombe. Shared full-corpus gates are handled by the parent reviewer.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Native focused schema and strict gates passed before drafting. All scientific repository inputs are the target and its tracked image, captured in the expanded native inspection.
+- Root read the complete target and review, verified native-input/source hashes, checked selected primary claim-bearing sections, and visually inspected the unchanged tracked figure; a separate collaborator also audited source scope. Source reading limits remain as listed.
+- Only this target receives scientific review coverage. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T080758Z-radial-microtubule-organizing-center-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Radial microtubule organizing center: architecture, Hrs1 dependence and evidence
+  scope review'
+started_at: '2026-10-21T07:53:56Z'
+finished_at: '2026-10-21T08:07:58Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The radial organizing center record is supported within its explicit species,
+  experimental, localization and inference limits; no correction is established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/cytoskeleton/radial_microtubule_organizing_center/pmc3382715_fig3.jpg
+    sha256: 6cc84756e3217317651dfbb0511d8e4d53796cacde66782a23ec9c22af3dfa1d
+    role: context
+  - path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    sha256: a6a2e4d87b3159afe989f1f838da6988395c5c2b0fc1b24bf1cde154f2dbc364
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:radial_microtubule_organizing_center
+  path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  label: radial microtubule organizing center
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    role: maintained scientific record
+scope:
+  description: Entire target and tracked Figure3; full primary main scientific text,
+    supplemental TableS1/methods/captions, native GO, proteins/family/taxa and figure
+    provenance.
+  selection: Fixed batch 10 selection, index 6; one maintained record, no sampling.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  command: just validate data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  command: just validate-strict data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    --out /private/tmp/cellstructure-batch10-20261021-giynduuy/radial_microtubule_organizing_center-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: 10 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - radial-mtoc-agent-go
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-funaya2012-supp
+  - radial-mtoc-agent-epmc
+  - radial-mtoc-agent-uniprot-Q10336
+  - radial-mtoc-agent-uniprot-P25295
+  - radial-mtoc-agent-IPR002454
+  - radial-mtoc-agent-matches-gamma
+  - radial-mtoc-agent-matches-hrs1
+  - radial-mtoc-agent-taxon-4896
+  - radial-mtoc-agent-taxon-284812
+  - radial-mtoc-agent-funaya2012-package
+  - radial-mtoc-agent-figure3
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch10 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  locator: 'Entire YAML: identity, components, examples, functions, graph edges, evidence,
+    discussions and image metadata.'
+  accessed_at: '2026-10-21T08:01:53Z'
+  support: context_only
+  summary: Entire current target read. The tracked target hash is recorded in native
+    source.inputs; no neighboring scientific record informs this judgment.
+- evidence_id: policy
+  kind: record_content
+  reference: .claude/skills/review-yaml-record/SKILL.md
+  locator: Evidence Rules; completeness and boundary review
+  accessed_at: '2026-10-21T08:01:53Z'
+  support: context_only
+  summary: Apply source-specific support, distinguish direct evidence from inference,
+    and evaluate concrete completeness gaps without treating optional empty fields
+    as automatic failures.
+- evidence_id: radial-mtoc-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005815,GO:0032118,GO:0032117,GO:0030989,GO:0035974
+  locator: results indexed by GO:0005815,GO:0032118,GO:0032117,GO:0030989,GO:0035974;
+    name, definition, isObsolete.
+  accessed_at: '2026-10-21T07:55:14.216188Z'
+  support: supports
+  summary: Five active native GO terms resolve MTOC as broader parent, HAA organization
+    as process, HAA as output array, dynein-driven oscillatory movement as process
+    and meiotic SPB as a distinct whole structure. These are not exact rMTOC equivalents.
+  snapshot_sha256: a04f665ac454c8e7046ffc8d4eee73b3c231d1e7a41c293f3440587f325ae518
+- evidence_id: radial-mtoc-agent-funaya2012-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/PMC3382715.1.xml
+  locator: PMC3382715.1; sec2.1–sec2.8, sec3/3.1, sec4; fig3; permissions.
+  accessed_at: '2026-10-21T07:55:16.484376Z'
+  support: supports
+  summary: Full primary Introduction, Results2.1–2.8, Discussion/Conclusion, main
+    experimental procedures and Figure3 caption read. Tomography and immunogold distinguish
+    an Hrs1-dependent, gamma-tubulin-enriched amorphous region from SPB core/output
+    array. Predominantly capped ends and residual nonradial MTs after hrs1 deletion
+    bound essentiality. Hrs1 scaffold/bridge and SPB-holding mechanisms remain models;
+    NudE orthology is tentative. Stabilized nonphosphorylatable Hrs1 delays rather
+    than universally blocks spindle formation, with temperature/checkpoint dependence.
+    Permissions specify CC BY3.0.
+  snapshot_sha256: 59f662c998abf622fbb9bccbabc3867cb5ffd3174943cc52cb6228b1e35cd93d
+- evidence_id: radial-mtoc-agent-funaya2012-supp
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/mmc1.pdf
+  locator: mmc1.pdf; TableS1 PDF pages13–17; Supplemental Experimental Procedures
+    pages18–22, especially fluorescent microscopy and EM/immunolabeling; captions
+    S1,S4,S6. Text extracted with pdftotext; no supplement pixel reanalysis.
+  accessed_at: '2026-10-21T07:56:06.472864Z'
+  support: supports
+  summary: Primary supplement Table S1 identifies KT2486 wild-type hrs1 and KT2919
+    hrs1-deletion engineered h-/h- pat1.114/pat1.114 mat-Pc diploids for Figures1–3;
+    homothallic transition strains are separate. Methods specify34C synchronized induction,30C
+    live imaging, high-pressure freezing/freeze substitution/resin sections, and120min
+    immunolabeling versus main text80min. Supplement captions treat Kms2/Mto1/Cdc31
+    coimmunoprecipitation and NudE similarity as context, not a complete localized
+    matrix inventory.
+  snapshot_sha256: 6dde9cc7999b0e3294aa95f3d3036a319c90b9390920d84bd7194c883dc213f9
+- evidence_id: radial-mtoc-agent-epmc
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1016/j.cub.2012.02.042%22
+  locator: resultList.result id22425159; title, doi, abstractText.
+  accessed_at: '2026-10-21T07:55:16.211015Z'
+  support: supports
+  summary: Native Europe PMC confirms PMID22425159, title, DOI10.1016/j.cub.2012.02.042
+    and abstract. Full primary support is supplied separately by the JATS body and
+    supplement.
+  snapshot_sha256: b03e7c8eadd5868d5953e9923cb1c41c49abf2e32ff026ae57fa6aeb5ddc0342
+- evidence_id: radial-mtoc-agent-uniprot-Q10336
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q10336.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism, uniProtKBCrossReferences.
+  accessed_at: '2026-10-21T07:55:15.613837Z'
+  support: supports
+  summary: Native reviewed Q10336 is Meiotic coiled-coil protein6, primary gene mcp6
+    with hrs1/mug3 aliases, taxon284812. It has no integrated InterPro cross-reference;
+    the SUPFAM Tropomyosin match is not an exact Hrs1 family assignment.
+  snapshot_sha256: 392c79e639d3866a32aefe52108d02343682018cb8833ab159bdf96c177651ee
+- evidence_id: radial-mtoc-agent-uniprot-P25295
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P25295.json
+  locator: entryType, primaryAccession, proteinDescription, genes, organism, InterPro
+    cross-references.
+  accessed_at: '2026-10-21T07:55:15.714979Z'
+  support: supports
+  summary: Native reviewed P25295 is Tubulin gamma chain, primary gene gtb1 with tug1
+    alias, taxon284812, with InterProIPR002454. This identity lookup does not identify
+    the engineered experimental stock or independently prove localization.
+  snapshot_sha256: 6c5e36578b9bdda0edebd4bb5352c22762aacb10b0ce93a9d5fb45fa7ac39dcf
+- evidence_id: radial-mtoc-agent-IPR002454
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002454/
+  locator: metadata.accession, type, name, description, hierarchy.
+  accessed_at: '2026-10-21T07:55:15.556482Z'
+  support: supports
+  summary: Native InterProIPR002454 is the Gamma tubulin family. Its general MTOC/nucleation
+    description does not establish the entire local rMTOC ring-complex composition
+    or assembly sufficiency.
+  snapshot_sha256: 0cc07ff810e7acb2b8d24c24597c1bcabf177adb7e06ae6ddfabbb352fe0c668
+- evidence_id: radial-mtoc-agent-matches-gamma
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/P25295/?page_size=200
+  locator: results metadata accession/name/type for IPR002454.
+  accessed_at: '2026-10-21T07:55:16.759256Z'
+  support: supports
+  summary: Native InterPro matches for P25295 include integrated Gamma tubulin IPR002454
+    as a family, independently supporting the exact component-class mapping.
+  snapshot_sha256: 42907d6563396958cafbef2d9c8aeb538af4a828f3dadb2abcdceb8efaf4fb2b
+- evidence_id: radial-mtoc-agent-matches-hrs1
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q10336/?page_size=200
+  locator: HTTP204 response receipt; zero-byte body SHA256; exact Q10336 InterPro
+    request.
+  accessed_at: '2026-10-21T07:55:15.629860Z'
+  support: context_only
+  summary: Native integrated InterPro matches endpoint for Q10336 returned HTTP204
+    with an empty body. This bounded lookup supplies no positive exact integrated
+    family match; it is not a claim that no Hrs1 family can exist elsewhere. Together
+    with UniProt and the paper, it supports retaining reviewed label-only grounding.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: radial-mtoc-agent-taxon-4896
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: taxId, scientificName, rank, lineage, otherNames.
+  accessed_at: '2026-10-21T07:55:14.223750Z'
+  support: supports
+  summary: Native ENA taxon4896 is Schizosaccharomyces pombe, rank species; this does
+    not identify KT2486 or KT2919 as that exact stock.
+  snapshot_sha256: cdb53b3f4ab5e6bb4476de3bf0db333ae647e307a9fa8f98108827f98fe7f4d3
+- evidence_id: radial-mtoc-agent-taxon-284812
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/284812
+  locator: taxId, scientificName, rank, lineage, otherNames.
+  accessed_at: '2026-10-21T07:55:14.239441Z'
+  support: supports
+  summary: Native ENA taxon284812 is Schizosaccharomyces pombe 972h-, rank strain;
+    this does not identify KT2486 or KT2919 as that exact stock.
+  snapshot_sha256: 948c040cabf6c036dff451c7b6eac22605d0ed5d60a74f471e4431e63f82f721
+- evidence_id: radial-mtoc-agent-funaya2012-package
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/PMC3382715.1.json
+  locator: pmcid, version, doi, pmid, license_code, media_urls gr3.jpg and mmc1.pdf.
+  accessed_at: '2026-10-21T07:55:16.388766Z'
+  support: supports
+  summary: Native PMC package confirms article version1, DOI/PMID, CC BY code and
+    gr3.jpg MD5 9d12c4edbf7bbdfcc03ef8d3696aa1fb. Exact license3.0 is supplied by
+    JATS permissions.
+  snapshot_sha256: de30cb0d6700b91298a46f459325baad1210f48a49a6ee79056c1b5056ff2536
+- evidence_id: radial-mtoc-agent-figure3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3382715.1/gr3.jpg
+  locator: Original unchanged Figure3 panels A–E; tracked image included in native
+    source.inputs.
+  accessed_at: '2026-10-21T07:55:16.696450Z'
+  support: supports
+  summary: Complete Figure3 visually inspected. A/D are immunogold TEM serial sections;
+    B/C/E are interpretive models. Yellow marks gamma-tubulin label positions, green
+    MTs, blue SPB; C adds amorphous-region shading. Bars100nm are image scales, not
+    universal center dimensions. Fresh image equals tracked SHA256 6cc84756e3217317651dfbb0511d8e4d53796cacde66782a23ec9c22af3dfa1d
+    and package MD5.
+  snapshot_sha256: 6cc84756e3217317651dfbb0511d8e4d53796cacde66782a23ec9c22af3dfa1d
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:53:57Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml'
+  snapshot_sha256: 4557e8440a75fc6d1b408ab141fc504ea6bda1472280fda364f6fd0570ec5b09
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    --out /private/tmp/cellstructure-batch10-20261021-giynduuy/radial_microtubule_organizing_center-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:53:59Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml\
+    \ --out /private/tmp/cellstructure-batch10-20261021-giynduuy/radial_microtubule_organizing_center-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch10-20261021-giynduuy/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch10-20261021-giynduuy/radial_microtubule_organizing_center-strict.tsv"
+  snapshot_sha256: 58280952adde6175de73ca5faccefa0f3e8849e1759ad381333d643619c56850
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml;
+    exact collect() scope; snapshot hash identifies the entire original unchanged-base
+    reports/curie_check.tsv, not resolver-slice.json.
+  accessed_at: '2026-10-21T08:01:53Z'
+  support: supports
+  summary: '10 of11 collected target identifiers returned OK at the unchanged base.
+    Residuals: cellstructuremech:radial_microtubule_organizing_center: SKIPPED; resolved
+    by evidence record. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Local center identity and boundaries
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: The local class is supported by the primary structural distinction from
+    SPB core and radial output polymers. Broader GO MTOC parent is appropriate; HAA,
+    whole meiotic SPB and movement process are not equivalent. MULTIPROTEIN_COMPLEX
+    describes an assembly without fixed stoichiometry or membrane enclosure. Historical
+    searches are not rerun or treated as a new exhaustive absence claim.
+  evidence_ids:
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-go
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Two localized constituents and scoped essentiality
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: Direct immunolocalization supports Hrs1 and gamma-tubulin. Loss of recognizable
+    matrix/radial geometry after hrs1 deletion supports formation-essentiality despite
+    residual MTs and cell survival. Gamma-tubulin scaffold-essentiality is untested
+    and correctly UNKNOWN. Interacting membrane/SPB proteins and output alpha/beta
+    polymers are not automatically added to the matrix inventory.
+  evidence_ids:
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-funaya2012-supp
+- assessment_id: protein-grounding
+  area: grounding
+  topic: Exact protein mappings and Hrs1 label-only class
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: Both reviewed identities, aliases, reference taxa and gamma family mapping
+    match native authorities. Q10336 integrated InterPro endpoint returned204 and
+    UniProt has only a broader SUPFAM lead; tentative NudE similarity is insufficient
+    to replace the narrow reviewed label-only class.
+  evidence_ids:
+  - radial-mtoc-agent-uniprot-Q10336
+  - radial-mtoc-agent-uniprot-P25295
+  - radial-mtoc-agent-IPR002454
+  - radial-mtoc-agent-matches-gamma
+  - radial-mtoc-agent-matches-hrs1
+  - radial-mtoc-agent-funaya2012-jats
+- assessment_id: scope
+  area: scope
+  topic: Species, engineered diploids and live-cell conditions
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: Species-level canonical example is supported. TableS1 verifies engineered
+    KT2486/KT2919 genotypes and separate homothallic transition strains; taxon284812
+    remains reference-sequence provenance, not exact experimental stock identity.
+  evidence_ids:
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-funaya2012-supp
+  - radial-mtoc-agent-taxon-4896
+  - radial-mtoc-agent-taxon-284812
+- assessment_id: evidence
+  area: evidence
+  topic: Radial organization and nuclear movement
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: Tomography, immunolabeling and deletion connect the matrix to radial organization
+    of predominantly capped ends. Nuclear movement additionally depends on dynein/dynactin;
+    the center is not a motor and does not establish recombination outcomes or purified
+    nucleation sufficiency.
+  evidence_ids:
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-go
+- assessment_id: graph
+  area: graph
+  topic: Hrs1-dependent assembly graph
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: All six edges retain correct dependency/localization/geometry scope. Hrs1
+    supports enrichment without asserting direct Hrs1–gamma binding; HAA is the output
+    array. Scaffolding and interphase-to-radial conversion remain mechanistically
+    incomplete.
+  evidence_ids:
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-funaya2012-supp
+  - radial-mtoc-agent-go
+- assessment_id: regulation
+  area: evidence
+  topic: Hrs1 downregulation and spindle transition
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: Proteasomal degradation and phosphorylation jointly downregulate Hrs1.
+    T16A-FA6 produces a transient monopolar spindle/delay in live homothallic cells;
+    the delay was not obvious in34C synchronous diploids and depends on Mad2. The
+    target retains conditionality and does not promote vegetative overexpression aggregates
+    to normal meiotic centers.
+  evidence_ids:
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-funaya2012-supp
+- assessment_id: imaging
+  area: provenance
+  topic: Preparation, image and licensing
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: CC BY3.0 and unchanged image checksum are verified. High-pressure freezing
+    was followed by substitution/resin preparation, not vitreous cryo-ET. The80/120min
+    main/supplement discrepancy is explicitly retained. Caption correctly separates
+    sections/models, mutant context and scale.
+  evidence_ids:
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-funaya2012-supp
+  - radial-mtoc-agent-funaya2012-package
+  - radial-mtoc-agent-figure3
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded inventory and unresolved mechanism
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: No concrete mandatory information gap is established. Hrs1 exact family,
+    matrix stoichiometry, purified bridge/nucleation mechanism, kinase/E3 identities
+    and interphase rearrangement remain valid bounded gaps. Coimmunoprecipitation/two-hybrid
+    partners and general tubulin polymers do not automatically require matrix-component
+    additions; empty optional fields are not defects.
+  evidence_ids:
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-funaya2012-supp
+  - radial-mtoc-agent-uniprot-Q10336
+  - radial-mtoc-agent-matches-hrs1
+- assessment_id: source
+  area: evidence
+  topic: Claim placement and readability
+  outcome: supported
+  target_ids:
+  - cellstructuremech:radial_microtubule_organizing_center
+  summary: Primary body, supplement and native authority rows support the claims at
+    their stated tiers. No unsupported quote snippets occur. Historical counts/access
+    notes remain historical; this review does not assert a fresh global ontology or
+    corpus absence result.
+  evidence_ids:
+  - radial-mtoc-agent-funaya2012-jats
+  - radial-mtoc-agent-funaya2012-supp
+  - radial-mtoc-agent-epmc
+  - record
+findings: []
+actions: []
+limitations:
+- Full main Introduction, Results, Discussion, experimental procedures and Figure3
+  caption were read. Supplement TableS1, methods pages18–22 and selected captions
+  were read from extracted PDF text; supplement panels, movies, raw tomograms and
+  mass spectra were not visually reanalyzed.
+- Only tracked Figure3 pixels were visually inspected; the other main figures are
+  supported by main text/captions rather than independent image reanalysis.
+- Main text specifies80min for immuno-EM while supplement specifies120min. The source
+  inconsistency is preserved; this review does not select a universal sampling time.
+- The Q10336 integrated InterPro lookup returned204. Lack of a positive match in this
+  endpoint is bounded; neither broader SUPFAM nor proposed NudE similarity establishes
+  an exact Hrs1 family.
+- No new exhaustive local duplicate search or ontology-wide exact-term absence claim
+  was made. The local self-CURIE is independently resolved to the target; no neighboring
+  scientific record informs judgment.
+- Native reference-sequence annotations do not establish exact experimental-stock
+  identity, complete matrix stoichiometry, purified mechanism or prevalence outside
+  S. pombe. Shared full-corpus gates are handled by the parent reviewer.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Native focused schema and strict gates passed before drafting. All scientific repository
+  inputs are the target and its tracked image, captured in the expanded native inspection.
+- Root read the complete target and review, verified native-input/source hashes, checked
+  selected primary claim-bearing sections, and visually inspected the unchanged tracked
+  figure; a separate collaborator also audited source scope. Source reading limits
+  remain as listed.
+- Only this target receives scientific review coverage. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```
