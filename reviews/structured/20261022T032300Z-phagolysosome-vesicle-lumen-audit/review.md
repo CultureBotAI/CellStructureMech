@@ -1,0 +1,939 @@
+# Phagolysosome vesicle lumen scientific review
+
+- Review: 20261022T032300Z-phagolysosome-vesicle-lumen-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T03:05:36Z
+- Finished UTC: 2026-10-22T03:23:00Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact lumen identity and hierarchy are supported. One major concerns the added cross-taxon digestive definition; two minors concern mechanistic graph labeling and direct acidification-assay attribution.
+
+## Scope And Provenance
+
+Entire single target with all components, hierarchy, taxon/examples, functions/graphs, evidence, history and discussions; all explicitly frozen boundary neighbors read. Primary/review/abstract and native-authority scopes are stated per evidence row.
+
+Selection: Batch38 exact path-ordered target 1; fresh f97b native inspection/schema/strict passed before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0106174 | data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml | maintained | phagolysosome vesicle lumen |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0106174 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0106174 | Focused validator passed. |
+| Native graph protein coverage | passed | True | GO:0106174 | Zero GENE_OR_PROTEIN nodes; scientific edge scope independently assessed. |
+| Individual protein verification applicability | not_applicable | False | GO:0106174 | No individual protein accession or gene/protein graph node occurs in the target. |
+| Expression-module applicability | not_applicable | False | GO:0106174 | No computational expression-module assertion is made; experimental gene interventions do not require expression-module evidence. |
+| Claim-level scientific review | passed | True | GO:0106174 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0106174 | 9 of 10 collected target identifiers returned OK. PMID:12388753: UNREACHABLE; Unique native MED result verifies exact PMID, title, DOI and PMC/null identity after the bulk eutils414 failure. Abstract/body scientific scopes remain explicitly bounded in separate evidence rows. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0106174 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0106174 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0106174 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0106174 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0106174 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact lumen and enclosing boundaries
+
+identity: supported. Targets: GO:0106174.
+
+The exact active GO identity, phagocytic-lumen parent and phagolysosome parthood are supported by typed native relations. The shorter synonym is a faithful lexical variant, although current GO0106174 does not enumerate that synonym string. Broader SL0342 context is correctly described rather than used as an exact stage identity.
+
+### Volume identity and variable cargo
+
+grounding: supported. Targets: GO:0106174.
+
+No stable molecular component table is asserted. The stated policy of keeping variable particles and enzymes out of a generic lumen inventory is defensible; substrate/cargo detection does not create an obligatory structural constituent. Formation necessity for individual cargo or enzymes is not established or asserted here.
+
+### Supported Dictyostelium maturation
+
+scope: supported. Targets: GO:0106174.
+
+The taxon is exact and the qualitative species-occurrence row is compatible with directly observed phagosome maturation. COMMON is not a measured per-cell frequency. The primary study supports temporally changing luminal constituents and broad acidification context, with the direct-assay wording qualified separately.
+
+### Added molecular and cross-taxon definition
+
+evidence: concern. Targets: GO:0106174.
+
+The first sentence matches GO. The added sentence defines an acidic protease/lysozyme/phospholipase/ROS digestive program across Dictyostelium, Entamoeba and ciliates. That full defining extension is neither contained in the declared GO source nor demonstrated across those groups by the cited Dictyostelium primary study.
+
+### Descriptive topology versus a mechanism
+
+graph: concern. Targets: GO:0106174.
+
+The graph has one lumen-to-organelle parthood edge and one lumen-to-acidification association. These are useful topology/function summaries but do not represent a molecular actor or causal transition explaining acidification or assembly.
+
+### Measured trafficking versus discussed acidification
+
+evidence: concern. Targets: GO:0106174.
+
+The canonical note and function evidence attribute distinct acidification phases to the2002 dissection. The study directly measures trafficking/constituent profiles, while its Discussion uses earlier acidification literature. This should be expressed as synthesis-level pH context rather than a direct pH assay.
+
+### Historical boundary-model note
+
+provenance: supported. Targets: GO:0106174.
+
+The resolved discussion describes a membrane boundary node, whereas the current graph contains only lumen, enclosing organelle and process. Its historical resolution is not treated as a new biological contradiction or a mandatory inventory requirement; current topology and the graph-scope correction are assessed directly.
+
+### Bounded evidence and unchanged maintained status
+
+provenance: supported. Targets: GO:0106174.
+
+All target claims were reviewed with native identities, exact declared source read extents, explicit primary-versus-review tiers and frozen boundary context. No scientific mutation, mapping-status promotion, persistence or publication is implied.
+
+## Findings
+
+### F1: Bound the expanded definition to demonstrated biology
+
+major / open / confirmed; issue key: phagolysosome-vesicle-lumen-expanded-definition-scope.
+
+The appended definition makes a cross-taxon molecular inventory and microbial-killing claim under a GO definition source that specifies only enclosed volume. The cited primary study directly resolves Dictyostelium trafficking and constituent profiles, not the entire stated enzymatic/ROS program across all named lineages.
+
+### F2: Align graph scope with its descriptive edges
+
+minor / open / confirmed; issue key: phagolysosome-vesicle-lumen-graph-scope.
+
+The MECHANISTIC scope and assembly/functional-mechanism title overstate the two descriptive edges: parthood and whole-volume association with acidification. No proton transport or other explanatory transition is represented.
+
+### F3: Qualify the acidification assay attribution
+
+minor / open / confirmed; issue key: phagolysosome-vesicle-lumen-acidification-source-scope.
+
+The canonical example and function evidence note blend directly dissected membrane/luminal trafficking phases with acidification behavior. Gotthardt2002 discusses acidification from prior work rather than presenting a direct luminal-pH assay in its Methods/Results.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Retain the ontology volume definition and place supported extra biology in source-, taxon- and stage-qualified fields, or provide directly inspected evidence for each retained extension.
+
+- Ontology text and added interpretation are distinguished.
+- No complete cross-taxon digestive program is inferred solely from Dictyostelium time profiles.
+- Correct lumen hierarchy and supported maturation are preserved.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+### A2
+
+Use NONMECHANISTIC with a precise scope note and title, or separately curate a source-backed mechanistic path.
+
+- Scope and title match actual graph resolution.
+- No unsupported obligatory component is introduced to make the graph mechanistic.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+### A3
+
+Distinguish measured trafficking profiles from acidification context synthesized from earlier studies, or cite inspected direct pH evidence.
+
+- The note accurately identifies which measurements the cited study performed.
+- Supported qualitative maturation and acidification are retained.
+- Native schema, strict, identifier, graph and history checks pass after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml; Entire maintained YAML including all fields, graphs, history and discussions | context_only | The entire target was read; maintained science, status and history remain unchanged. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent molecular-building-block/grounding/type and formation-necessity contracts; graph scope and node/component_ref contracts | context_only | A LIPID molecular constituent is distinct from a complete GO membrane structure; correct structural parthood does not validate molecular lipid grounding. OTHER structural-part models are not categorically forbidden. Assembly necessity is not inferred from localization, catalytic function or generic constitution. |
+| neighbor-phagolysosome | data/structures/membrane_organelle/phagolysosome.yaml; Entire frozen maintained boundary neighbor; context only | context_only | The full maintained neighbor was read to distinguish organelle, membrane and volume identities. It is not independent experimental evidence or a certification of every neighboring assertion. |
+| neighbor-phagolysosome_membrane | data/structures/membrane_organelle/phagolysosome_membrane.yaml; Entire frozen maintained boundary neighbor; context only | context_only | The full maintained neighbor was read to distinguish organelle, membrane and volume identities. It is not independent experimental evidence or a certification of every neighboring assertion. |
+| phagolysosome-lumen-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032010,GO:0061474,GO:0106174,GO:0005767,GO:0045335,GO:0030670,GO:0097013,GO:0032009,GO:0006909,GO:0090382,GO:0031410,GO:0030659; Complete exact0106174 entry and0097013/0032010/0045335/0030670 entries with definitions, synonyms and typed children | supports | GO0106174 is active and defines only the volume enclosed by a phagolysosome membrane. GO0097013 lists it as an is_a child and GO0032010 lists it as part_of. Broader phagocytic-vesicle and membrane entries provide context, not the added cross-taxon molecular inventory. |
+| phagolysosome-lumen-agent-go-additional | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0060205,GO:0090383; Complete two native entries and typed child relations | supports | GO0090383 defines phagosome acidification as a decrease in pH/increase in hydrogen-ion concentration. GO0060205 supplies the broader cytoplasmic-vesicle lumen definition and lists0106174 as an is_a child. |
+| phagolysosome-lumen-agent-SL0342 | https://rest.uniprot.org/locations/SL-0342.json; Complete native location including nested hierarchy | supports | SL0342 identifies generic phagosome lumen with Phagocytic vesicle lumen and Phagosomal lumen synonyms, isA cytoplasmic-vesicle lumen and partOf phagosome. It is broader context rather than an exact stage-specific phagolysosome mapping. |
+| phagolysosome-lumen-agent-tax44689 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/44689; Complete taxId/scientificName/rank/lineage | supports | ENA confirms Dictyostelium discoideum44689 at species rank. This taxonomy response is not a measurement of compartment abundance or a strain-specific assay. |
+| phagolysosome-lumen-agent-PMID-12388753 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A12388753%20AND%20SRC%3AMED; Unique MED metadata and complete abstract | supports | PMID12388753/DOI10.1091/mbc.e02-04-0206 exactly identifies Gotthardt2002. The complete primary abstract reports latex-bead phagosome time courses, staged lysosomal constituent delivery/retrieval and accompanying SNARE/Rab7 profiles. |
+| phagolysosome-lumen-agent-gotthardt2002-numeric | https://pmc.ncbi.nlm.nih.gov/articles/129962/; Genuine PMC129962 HTML: complete Introductionsec1, Methodssec2, Resultssec12 and Discussionsec20 with embedded Figures1–7 captions, read in B37 from these exact bytes; native source reused unchanged. No image pixels or supplements. | supports | The actual study uses D. discoideum Ax2 at22C in HL5c, isolated latex-bead phagosomes and yeast comparison. Membrane/luminal protein and hydrolase profiles distinguish trafficking phases. Discussionsec20 synthesizes acidification from earlier work; the inspected Methods/Results do not report a direct luminal-pH assay. This is not a comparative demonstration of the full protease/lysozyme/phospholipase/ROS program across Entamoeba and ciliates. |
+| schema-result | just validate data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml --out /private/tmp/cellstructure-batch38-20261022-tpqg0c05/phagolysosome_vesicle_lumen-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml --out /private/tmp/cellstructure-batch38-20261022-tpqg0c05/phagolysosome_vesicle_lumen-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch38-20261022-tpqg0c05/phagolysosome_vesicle_lumen-strict.tsv |
+| phagolysosome-lumen-causal-graphs | /private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml; Complete native read-only GENE_OR_PROTEIN coverage log | supports | The native coverage command exited0 and reports zero GENE_OR_PROTEIN nodes; accession-specific verification is not applicable. |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 9 of 10 collected target identifiers returned OK. PMID:12388753: UNREACHABLE; Unique native MED result verifies exact PMID, title, DOI and PMC/null identity after the bulk eutils414 failure. Abstract/body scientific scopes remain explicitly bounded in separate evidence rows. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- The primary body was read at complete main-science sections in B37 and reused with original URL/UTC/hash. No pixels, supplementary datasets or new pH assays were inspected.
+- The source directly studies D. discoideum Ax2. Lack of comparative support here is not evidence that Entamoeba or ciliates lack any individual named feature.
+- The historical resolved boundary-node statement does not match the present node list; this is retained as context rather than a separate requirement to rewrite dated history. The shorter synonym is semantic rather than a literal native GO synonym attestation.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User all-record goal authorizes honest clean reviews; no finding was invented to satisfy a local issue-only convention. Parent owns finalization/persistence and integration of the five same-base full-corpus gates.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T032300Z-phagolysosome-vesicle-lumen-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Phagolysosome vesicle lumen scientific review
+started_at: '2026-10-22T03:05:36Z'
+finished_at: '2026-10-22T03:23:00Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact lumen identity and hierarchy are supported. One major concerns the
+  added cross-taxon digestive definition; two minors concern mechanistic graph labeling
+  and direct acidification-assay attribution.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/phagolysosome.yaml
+    sha256: 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e
+    role: context
+  - path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    sha256: 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32
+    role: context
+  - path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    sha256: 096069e6ecc9f33d640dfb9621fa69dedfab50cb9a9f08e6186e9583a823c319
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0106174
+  path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+  label: phagolysosome vesicle lumen
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target with all components, hierarchy, taxon/examples,
+    functions/graphs, evidence, history and discussions; all explicitly frozen boundary
+    neighbors read. Primary/review/abstract and native-authority scopes are stated
+    per evidence row.
+  selection: Batch38 exact path-ordered target 1; fresh f97b native inspection/schema/strict
+    passed before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0106174
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  command: just validate data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  command: just validate-strict data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    --out /private/tmp/cellstructure-batch38-20261022-tpqg0c05/phagolysosome_vesicle_lumen-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: causal-graphs
+  name: Native graph protein coverage
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  command: /private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+  exit_code: 0
+  summary: Zero GENE_OR_PROTEIN nodes; scientific edge scope independently assessed.
+  evidence_ids:
+  - phagolysosome-lumen-causal-graphs
+- check_id: protein-applicability
+  name: Individual protein verification applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0106174
+  summary: No individual protein accession or gene/protein graph node occurs in the
+    target.
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0106174
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - neighbor-phagolysosome
+  - neighbor-phagolysosome_membrane
+  - phagolysosome-lumen-agent-go
+  - phagolysosome-lumen-agent-go-additional
+  - phagolysosome-lumen-agent-SL0342
+  - phagolysosome-lumen-agent-tax44689
+  - phagolysosome-lumen-agent-PMID-12388753
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  summary: '9 of 10 collected target identifiers returned OK. PMID:12388753: UNREACHABLE;
+    Unique native MED result verifies exact PMID, title, DOI and PMC/null identity
+    after the bulk eutils414 failure. Abstract/body scientific scopes remain explicitly
+    bounded in separate evidence rows. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - phagolysosome-lumen-agent-PMID-12388753
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0106174
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch38 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+  locator: Entire maintained YAML including all fields, graphs, history and discussions
+  accessed_at: '2026-10-22T03:13:11Z'
+  support: context_only
+  summary: The entire target was read; maintained science, status and history remain
+    unchanged.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent molecular-building-block/grounding/type and formation-necessity
+    contracts; graph scope and node/component_ref contracts
+  accessed_at: '2026-10-22T03:13:11Z'
+  support: context_only
+  summary: A LIPID molecular constituent is distinct from a complete GO membrane structure;
+    correct structural parthood does not validate molecular lipid grounding. OTHER
+    structural-part models are not categorically forbidden. Assembly necessity is
+    not inferred from localization, catalytic function or generic constitution.
+- evidence_id: neighbor-phagolysosome
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagolysosome.yaml
+  locator: Entire frozen maintained boundary neighbor; context only
+  accessed_at: '2026-10-22T03:13:11Z'
+  support: context_only
+  summary: The full maintained neighbor was read to distinguish organelle, membrane
+    and volume identities. It is not independent experimental evidence or a certification
+    of every neighboring assertion.
+- evidence_id: neighbor-phagolysosome_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+  locator: Entire frozen maintained boundary neighbor; context only
+  accessed_at: '2026-10-22T03:13:11Z'
+  support: context_only
+  summary: The full maintained neighbor was read to distinguish organelle, membrane
+    and volume identities. It is not independent experimental evidence or a certification
+    of every neighboring assertion.
+- evidence_id: phagolysosome-lumen-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032010,GO:0061474,GO:0106174,GO:0005767,GO:0045335,GO:0030670,GO:0097013,GO:0032009,GO:0006909,GO:0090382,GO:0031410,GO:0030659
+  locator: Complete exact0106174 entry and0097013/0032010/0045335/0030670 entries
+    with definitions, synonyms and typed children
+  accessed_at: '2026-10-22T02:59:56.802595Z'
+  support: supports
+  summary: GO0106174 is active and defines only the volume enclosed by a phagolysosome
+    membrane. GO0097013 lists it as an is_a child and GO0032010 lists it as part_of.
+    Broader phagocytic-vesicle and membrane entries provide context, not the added
+    cross-taxon molecular inventory.
+  snapshot_sha256: 6740690b1300ee1c52cf7b22391d2d56e075a2dd3003a46c6436ca1193d350dc
+- evidence_id: phagolysosome-lumen-agent-go-additional
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0060205,GO:0090383
+  locator: Complete two native entries and typed child relations
+  accessed_at: '2026-10-22T03:00:14.617506Z'
+  support: supports
+  summary: GO0090383 defines phagosome acidification as a decrease in pH/increase
+    in hydrogen-ion concentration. GO0060205 supplies the broader cytoplasmic-vesicle
+    lumen definition and lists0106174 as an is_a child.
+  snapshot_sha256: 86d382d3145234a0c0fcea4c69f4a4480451223af37d31e1156b2b74bfb7740c
+- evidence_id: phagolysosome-lumen-agent-SL0342
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0342.json
+  locator: Complete native location including nested hierarchy
+  accessed_at: '2026-10-22T02:59:56.810774Z'
+  support: supports
+  summary: SL0342 identifies generic phagosome lumen with Phagocytic vesicle lumen
+    and Phagosomal lumen synonyms, isA cytoplasmic-vesicle lumen and partOf phagosome.
+    It is broader context rather than an exact stage-specific phagolysosome mapping.
+  snapshot_sha256: b241eb5f4701f414d2e4911c8d661922bd28e3523f6082c25a73e56375a18dd8
+- evidence_id: phagolysosome-lumen-agent-tax44689
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/44689
+  locator: Complete taxId/scientificName/rank/lineage
+  accessed_at: '2026-10-22T02:59:56.811450Z'
+  support: supports
+  summary: ENA confirms Dictyostelium discoideum44689 at species rank. This taxonomy
+    response is not a measurement of compartment abundance or a strain-specific assay.
+  snapshot_sha256: 6f53a1ddbf831afbc0544e18351c92d099e28c4e8258ef29d0f841829af7c37f
+- evidence_id: phagolysosome-lumen-agent-PMID-12388753
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A12388753%20AND%20SRC%3AMED
+  locator: Unique MED metadata and complete abstract
+  accessed_at: '2026-10-22T01:10:31.455988Z'
+  support: supports
+  summary: PMID12388753/DOI10.1091/mbc.e02-04-0206 exactly identifies Gotthardt2002.
+    The complete primary abstract reports latex-bead phagosome time courses, staged
+    lysosomal constituent delivery/retrieval and accompanying SNARE/Rab7 profiles.
+  snapshot_sha256: 7ba1845e0950b4eb8287d04190a939a374cb06b9baee8d880bbd3829a813c22c
+- evidence_id: phagolysosome-lumen-agent-gotthardt2002-numeric
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/129962/
+  locator: 'Genuine PMC129962 HTML: complete Introductionsec1, Methodssec2, Resultssec12
+    and Discussionsec20 with embedded Figures1–7 captions, read in B37 from these
+    exact bytes; native source reused unchanged. No image pixels or supplements.'
+  accessed_at: '2026-10-22T01:11:10.565148Z'
+  support: supports
+  summary: The actual study uses D. discoideum Ax2 at22C in HL5c, isolated latex-bead
+    phagosomes and yeast comparison. Membrane/luminal protein and hydrolase profiles
+    distinguish trafficking phases. Discussionsec20 synthesizes acidification from
+    earlier work; the inspected Methods/Results do not report a direct luminal-pH
+    assay. This is not a comparative demonstration of the full protease/lysozyme/phospholipase/ROS
+    program across Entamoeba and ciliates.
+  snapshot_sha256: 5c333f3d4898a3eac26fb3d8571f723db3ae547e0996914b4696718002408777
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:05:38Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml'
+  snapshot_sha256: c37902a10970a0a8ef969a0b7aa497568cb0a8e0dabc3d58970a92eeaf0a9132
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    --out /private/tmp/cellstructure-batch38-20261022-tpqg0c05/phagolysosome_vesicle_lumen-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:05:39Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml\
+    \ --out /private/tmp/cellstructure-batch38-20261022-tpqg0c05/phagolysosome_vesicle_lumen-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch38-20261022-tpqg0c05/phagolysosome_vesicle_lumen-strict.tsv"
+  snapshot_sha256: 4e0f1728c594a1ee976a252aafda9b10c9a1f23e297609ca614bc0622fe7c201
+- evidence_id: phagolysosome-lumen-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch38-20261022-tpqg0c05/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+  locator: Complete native read-only GENE_OR_PROTEIN coverage log
+  accessed_at: '2026-10-22T03:11:05.154329Z'
+  support: supports
+  summary: The native coverage command exited0 and reports zero GENE_OR_PROTEIN nodes;
+    accession-specific verification is not applicable.
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml; native
+    collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '9 of 10 collected target identifiers returned OK. PMID:12388753: UNREACHABLE;
+    Unique native MED result verifies exact PMID, title, DOI and PMC/null identity
+    after the bulk eutils414 failure. Abstract/body scientific scopes remain explicitly
+    bounded in separate evidence rows. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact lumen and enclosing boundaries
+  outcome: supported
+  target_ids:
+  - GO:0106174
+  summary: The exact active GO identity, phagocytic-lumen parent and phagolysosome
+    parthood are supported by typed native relations. The shorter synonym is a faithful
+    lexical variant, although current GO0106174 does not enumerate that synonym string.
+    Broader SL0342 context is correctly described rather than used as an exact stage
+    identity.
+  evidence_ids:
+  - record
+  - phagolysosome-lumen-agent-go
+  - phagolysosome-lumen-agent-go-additional
+  - phagolysosome-lumen-agent-SL0342
+- assessment_id: constituents
+  area: grounding
+  topic: Volume identity and variable cargo
+  outcome: supported
+  target_ids:
+  - GO:0106174
+  summary: No stable molecular component table is asserted. The stated policy of keeping
+    variable particles and enzymes out of a generic lumen inventory is defensible;
+    substrate/cargo detection does not create an obligatory structural constituent.
+    Formation necessity for individual cargo or enzymes is not established or asserted
+    here.
+  evidence_ids:
+  - record
+  - schema
+  - phagolysosome-lumen-agent-go
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+- assessment_id: scope
+  area: scope
+  topic: Supported Dictyostelium maturation
+  outcome: supported
+  target_ids:
+  - GO:0106174
+  summary: The taxon is exact and the qualitative species-occurrence row is compatible
+    with directly observed phagosome maturation. COMMON is not a measured per-cell
+    frequency. The primary study supports temporally changing luminal constituents
+    and broad acidification context, with the direct-assay wording qualified separately.
+  evidence_ids:
+  - record
+  - phagolysosome-lumen-agent-tax44689
+  - phagolysosome-lumen-agent-PMID-12388753
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+- assessment_id: definition
+  area: evidence
+  topic: Added molecular and cross-taxon definition
+  outcome: concern
+  target_ids:
+  - GO:0106174
+  summary: The first sentence matches GO. The added sentence defines an acidic protease/lysozyme/phospholipase/ROS
+    digestive program across Dictyostelium, Entamoeba and ciliates. That full defining
+    extension is neither contained in the declared GO source nor demonstrated across
+    those groups by the cited Dictyostelium primary study.
+  evidence_ids:
+  - record
+  - phagolysosome-lumen-agent-go
+  - phagolysosome-lumen-agent-PMID-12388753
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+- assessment_id: graph
+  area: graph
+  topic: Descriptive topology versus a mechanism
+  outcome: concern
+  target_ids:
+  - GO:0106174
+  summary: The graph has one lumen-to-organelle parthood edge and one lumen-to-acidification
+    association. These are useful topology/function summaries but do not represent
+    a molecular actor or causal transition explaining acidification or assembly.
+  evidence_ids:
+  - record
+  - schema
+  - phagolysosome-lumen-agent-go
+  - phagolysosome-lumen-agent-go-additional
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+- assessment_id: method-attribution
+  area: evidence
+  topic: Measured trafficking versus discussed acidification
+  outcome: concern
+  target_ids:
+  - GO:0106174
+  summary: The canonical note and function evidence attribute distinct acidification
+    phases to the2002 dissection. The study directly measures trafficking/constituent
+    profiles, while its Discussion uses earlier acidification literature. This should
+    be expressed as synthesis-level pH context rather than a direct pH assay.
+  evidence_ids:
+  - record
+  - phagolysosome-lumen-agent-PMID-12388753
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+- assessment_id: discussion
+  area: provenance
+  topic: Historical boundary-model note
+  outcome: supported
+  target_ids:
+  - GO:0106174
+  summary: The resolved discussion describes a membrane boundary node, whereas the
+    current graph contains only lumen, enclosing organelle and process. Its historical
+    resolution is not treated as a new biological contradiction or a mandatory inventory
+    requirement; current topology and the graph-scope correction are assessed directly.
+  evidence_ids:
+  - record
+  - phagolysosome-lumen-agent-go
+- assessment_id: provenance
+  area: provenance
+  topic: Bounded evidence and unchanged maintained status
+  outcome: supported
+  target_ids:
+  - GO:0106174
+  summary: All target claims were reviewed with native identities, exact declared
+    source read extents, explicit primary-versus-review tiers and frozen boundary
+    context. No scientific mutation, mapping-status promotion, persistence or publication
+    is implied.
+  evidence_ids:
+  - record
+  - phagolysosome-lumen-agent-go
+  - phagolysosome-lumen-agent-go-additional
+  - phagolysosome-lumen-agent-SL0342
+  - phagolysosome-lumen-agent-tax44689
+  - phagolysosome-lumen-agent-PMID-12388753
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+findings:
+- finding_id: F1
+  issue_key: phagolysosome-vesicle-lumen-expanded-definition-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Bound the expanded definition to demonstrated biology
+  description: The appended definition makes a cross-taxon molecular inventory and
+    microbial-killing claim under a GO definition source that specifies only enclosed
+    volume. The cited primary study directly resolves Dictyostelium trafficking and
+    constituent profiles, not the entire stated enzymatic/ROS program across all named
+    lineages.
+  target_ids:
+  - GO:0106174
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - record
+  - phagolysosome-lumen-agent-go
+  - phagolysosome-lumen-agent-PMID-12388753
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    role: maintained scientific record
+  rule_id: Source-specific support and molecular/structural grounding contract
+  native_severity: major
+  normalization_reason: This is a material defining-function and biological-scope
+    extension, not merely a missing citation; the exact lumen identity remains correct.
+- finding_id: F2
+  issue_key: phagolysosome-vesicle-lumen-graph-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Align graph scope with its descriptive edges
+  description: 'The MECHANISTIC scope and assembly/functional-mechanism title overstate
+    the two descriptive edges: parthood and whole-volume association with acidification.
+    No proton transport or other explanatory transition is represented.'
+  target_ids:
+  - GO:0106174
+  field_paths:
+  - causal_graphs[0].scope_status
+  - causal_graphs[0].title
+  - causal_graphs[0].description
+  evidence_ids:
+  - record
+  - schema
+  - phagolysosome-lumen-agent-go
+  - phagolysosome-lumen-agent-go-additional
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    role: maintained scientific record
+  rule_id: Source-specific support and molecular/structural grounding contract
+  native_severity: minor
+  normalization_reason: The underlying identities and broad process association are
+    retained; the bounded problem is the graph scope promise.
+- finding_id: F3
+  issue_key: phagolysosome-vesicle-lumen-acidification-source-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the acidification assay attribution
+  description: The canonical example and function evidence note blend directly dissected
+    membrane/luminal trafficking phases with acidification behavior. Gotthardt2002
+    discusses acidification from prior work rather than presenting a direct luminal-pH
+    assay in its Methods/Results.
+  target_ids:
+  - GO:0106174
+  field_paths:
+  - canonical_examples[0].note
+  - functions[0].evidence[1].notes
+  evidence_ids:
+  - record
+  - phagolysosome-lumen-agent-PMID-12388753
+  - phagolysosome-lumen-agent-gotthardt2002-numeric
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    role: maintained scientific record
+  rule_id: Source-specific support and molecular/structural grounding contract
+  native_severity: minor
+  normalization_reason: This is bounded experimental-source precision independent
+    of the broader definition problem; qualitative acidification remains supported.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0106174
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    role: maintained scientific record
+  description: Retain the ontology volume definition and place supported extra biology
+    in source-, taxon- and stage-qualified fields, or provide directly inspected evidence
+    for each retained extension.
+  acceptance_checks:
+  - Ontology text and added interpretation are distinguished.
+  - No complete cross-taxon digestive program is inferred solely from Dictyostelium
+    time profiles.
+  - Correct lumen hierarchy and supported maturation are preserved.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0106174
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    role: maintained scientific record
+  description: Use NONMECHANISTIC with a precise scope note and title, or separately
+    curate a source-backed mechanistic path.
+  acceptance_checks:
+  - Scope and title match actual graph resolution.
+  - No unsupported obligatory component is introduced to make the graph mechanistic.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0106174
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    role: maintained scientific record
+  description: Distinguish measured trafficking profiles from acidification context
+    synthesized from earlier studies, or cite inspected direct pH evidence.
+  acceptance_checks:
+  - The note accurately identifies which measurements the cited study performed.
+  - Supported qualitative maturation and acidification are retained.
+  - Native schema, strict, identifier, graph and history checks pass after separately
+    authorized curation.
+limitations:
+- The primary body was read at complete main-science sections in B37 and reused with
+  original URL/UTC/hash. No pixels, supplementary datasets or new pH assays were inspected.
+- The source directly studies D. discoideum Ax2. Lack of comparative support here
+  is not evidence that Entamoeba or ciliates lack any individual named feature.
+- The historical resolved boundary-node statement does not match the present node
+  list; this is retained as context rather than a separate requirement to rewrite
+  dated history. The shorter synonym is semantic rather than a literal native GO synonym
+  attestation.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes honest clean reviews; no finding was invented to
+  satisfy a local issue-only convention. Parent owns finalization/persistence and
+  integration of the five same-base full-corpus gates.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
