@@ -56,8 +56,9 @@ tasks:
     disposition: Added check_structure_history_coverage() in scripts/validate_history.py (enforcing 1:1 coverage across all 978 structure records and history/records/<slug>/) and validate_discussion_issue_links() in src/cellstructuremech/validation/validator.py; covered in tests/test_new_history_record.py, tests/test_validator.py, and tests/test_corpus_integrity.py.
   - task_id: cellstructuremech-infra-0005
     summary: Extend src/cellstructuremech/validation/validator.py to check GO/complex CausalNode node_type and component gene_symbols vs protein_examples consistency
-    status: open
+    status: resolved
     issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2417
+    disposition: Extended validate_causal_graphs() and added validate_component_protein_examples() in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics, write_validated_structure, and scripts/validate_strict.py); verified 0 errors across all 985 structure records and added unit and corpus-integrity tests in tests/test_validator.py and tests/test_corpus_integrity.py.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -115,12 +116,13 @@ tasks:
 
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 2, Stage 4 (`record_review`)
 - **Issue**: https://github.com/CultureBotAI/CellStructureMech/issues/2417
-- **Status**: `open`
+- **Status**: `resolved` (Cycle 2, Stage 6)
 - **Priority**: P2
 - **Dependencies**: None
 - **Observation**: During the Cycle 2 Stage 4 whole-corpus audit of all 985 records: (1) `src/cellstructuremech/validation/validator.py` (`validate_causal_graphs`) does not check whether a `CausalNode` carrying a `GO:` or `cellstructuremech:` cellular-component/complex `grounding` (or referencing a `PROTEIN_COMPLEX` component) is typed `GENE_OR_PROTEIN` instead of `STRUCTURE`, allowing 5 records (`clathrin_coat_of_endocytic_vesicle.yaml`, `mitochondrial_crista_junction.yaml`, `mitochondrial_outer_membrane.yaml`, `chlorosome.yaml`, `chlorosome_envelope.yaml`) to use `GENE_OR_PROTEIN` for multiprotein complexes; and (2) `validator.py` does not check whether every `components[].protein_examples[].gene_symbol` is included in a non-empty parent `components[].gene_symbols` list or explicitly disclosed as an organism-specific synonym/locus in `protein_examples[].role`, allowing 6 records across `appendage`, `cytoskeleton`, and `microcompartment` to omit verified `protein_examples` gene symbols (`hag`, `fliY`, `nda2`, `ccmK3`, `ccmK4`) from `components[].gene_symbols`.
 - **Desired outcome**: Extend `src/cellstructuremech/validation/validator.py` (`validate_record_semantics` / `validate_causal_graphs`) to flag `CausalNode` items grounded to `GO:` / `cellstructuremech:` (or referencing `PROTEIN_COMPLEX` components) that use `node_type: GENE_OR_PROTEIN`, and flag `components[].protein_examples` entries whose `gene_symbol` is neither in a non-empty parent `components[].gene_symbols` list nor disclosed in `protein_examples[].role`.
-- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `reviews/structured/20261023T230501Z-clathrin-coat-ap2-causal-node-type/review.yaml`, `reviews/structured/20261023T230502Z-appendage-category-review/review.yaml`, `reviews/structured/20261023T230503Z-cytoskeleton-category-review/review.yaml`, `reviews/structured/20261023T230505Z-membrane-organelle-category-review/review.yaml`, `reviews/structured/20261023T230506Z-microcompartment-category-review/review.yaml`
+- **Resolution**: Extended `validate_causal_graphs()` and added `validate_component_protein_examples()` in `src/cellstructuremech/validation/validator.py` (wired into `validate_record_semantics()`, `write_validated_structure()`, and `scripts/validate_strict.py`), verified 0 errors across all 985 corpus records, and added unit and corpus-integrity tests in `tests/test_validator.py` and `tests/test_corpus_integrity.py`.
+- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `tests/test_validator.py`, `tests/test_corpus_integrity.py`, `reviews/structured/20261023T230501Z-clathrin-coat-ap2-causal-node-type/review.yaml`, `reviews/structured/20261023T230502Z-appendage-category-review/review.yaml`, `reviews/structured/20261023T230503Z-cytoskeleton-category-review/review.yaml`, `reviews/structured/20261023T230505Z-membrane-organelle-category-review/review.yaml`, `reviews/structured/20261023T230506Z-microcompartment-category-review/review.yaml`
 
 
 

@@ -1,4 +1,4 @@
-"""Semantic validation checks for CellStructureRecord documents (#2408, #2410).
+"""Semantic validation checks for CellStructureRecord documents (#2408, #2410, #2417).
 
 Complements closed-schema LinkML validation (``write_validated.py``) with
 cross-field and graph-completeness invariants that JSON Schema alone cannot
@@ -11,6 +11,13 @@ express:
 - Every declared ``CausalNode`` participates in at least one incident
   ``CausalEdge`` (no isolated nodes).
 - Every ``CausalEdge`` carries a non-blank ``description``.
+- No ``CausalNode`` with ``node_type == 'GENE_OR_PROTEIN'`` carries a ``GO:``
+  or ``cellstructuremech:`` structure/complex ``grounding`` or references a
+  ``PROTEIN_COMPLEX`` component grounded to ``GO:`` or ``cellstructuremech:``
+  (such multiprotein complexes/substructures must use ``node_type: STRUCTURE``).
+- Every ``components[].protein_examples[].gene_symbol`` is included in a
+  non-empty parent ``components[].gene_symbols`` list or explicitly disclosed
+  as an organism-specific synonym/locus tag in ``protein_examples[].role``.
 - Every ``#NNN`` GitHub issue mention in ``discussions`` prose (``prompt``,
   ``rationale``, ``resolution_note``) is backed by a full GitHub issue URL in
   that discussion's ``evidence`` list, and every ``attaches_to`` anchor
@@ -24,16 +31,22 @@ from typing import Any
 
 DEFAULT_GITHUB_REPO = "CultureBotAI/CellStructureMech"
 _PROSE_ISSUE_RE = re.compile(r"(?<![A-Za-z0-9_/])#([1-9]\d*)\b")
+_STRUCTURE_GROUNDING_PREFIXES = ("GO:", "cellstructuremech:")
+_SYNONYM_ROLE_RE = re.compile(
+    r"\bgene ([^\s,()]+), which UniProt lists (?:under the primary name\b|without a gene symbol\b)"
+)
+_ALSO_SYNONYM_RE = re.compile(r"\(also declared as (?:synonym|locus tag)[s]? ([^)]+)\)")
 
 
 def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
     """Return semantic validation error strings for ``doc['causal_graphs']``."""
     errors: list[str] = []
-    comp_ids = {
-        c.get("component_id")
+    comps_by_id = {
+        c.get("component_id"): c
         for c in (doc.get("components") or [])
         if isinstance(c, dict) and c.get("component_id")
     }
+    comp_ids = set(comps_by_id)
     for graph in doc.get("causal_graphs") or []:
         if not isinstance(graph, dict):
             continue
@@ -75,6 +88,66 @@ def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
                 errors.append(
                     f"{gid}: isolated CausalNode {nid!r} has zero incident edges"
                 )
+            if node.get("node_type") == "GENE_OR_PROTEIN":
+                grounding = str(node.get("grounding") or "").strip()
+                ref_comp = comps_by_id.get(cref) if cref else None
+                comp_grounding = str((ref_comp or {}).get("grounding") or "").strip()
+                if grounding.startswith(_STRUCTURE_GROUNDING_PREFIXES):
+                    errors.append(
+                        f"{gid}: node {nid!r} has node_type 'GENE_OR_PROTEIN' with "
+                        f"structure/complex grounding {grounding!r} (expected 'STRUCTURE')"
+                    )
+                elif (
+                    ref_comp
+                    and ref_comp.get("component_type") == "PROTEIN_COMPLEX"
+                    and comp_grounding.startswith(_STRUCTURE_GROUNDING_PREFIXES)
+                ):
+                    errors.append(
+                        f"{gid}: node {nid!r} has node_type 'GENE_OR_PROTEIN' referencing "
+                        f"grounded PROTEIN_COMPLEX component {cref!r} ({comp_grounding!r}; "
+                        f"expected 'STRUCTURE')"
+                    )
+    return errors
+
+
+def validate_component_protein_examples(doc: dict[str, Any]) -> list[str]:
+    """Return error strings when ``protein_examples[].gene_symbol`` drifts from ``component.gene_symbols``."""
+    errors: list[str] = []
+    for comp in doc.get("components") or []:
+        if not isinstance(comp, dict):
+            continue
+        cid = comp.get("component_id") or "<component>"
+        gs = [
+            str(s).strip()
+            for s in (comp.get("gene_symbols") or [])
+            if s is not None and str(s).strip()
+        ]
+        if not gs:
+            continue
+        gs_lower = {s.lower() for s in gs}
+        for pe in comp.get("protein_examples") or []:
+            if not isinstance(pe, dict):
+                continue
+            pe_sym = str(pe.get("gene_symbol") or "").strip()
+            if not pe_sym or pe_sym.lower() in gs_lower:
+                continue
+            role = str(pe.get("role") or "")
+            disclosed: set[str] = set()
+            m1 = _SYNONYM_ROLE_RE.search(role)
+            if m1:
+                disclosed.add(m1.group(1).lower())
+            m2 = _ALSO_SYNONYM_RE.search(role)
+            if m2:
+                for tok in re.split(r"[,;\s]+", m2.group(1)):
+                    if tok and tok.lower() != "and":
+                        disclosed.add(tok.lower())
+            if pe_sym.lower() in role.lower() or (disclosed & gs_lower):
+                continue
+            errors.append(
+                f"components#{cid}: protein_example {pe.get('uniprot_id')!r} "
+                f"gene_symbol {pe_sym!r} is not in component.gene_symbols {gs!r} "
+                f"or disclosed as a synonym in role"
+            )
     return errors
 
 
@@ -146,5 +219,6 @@ def validate_record_semantics(
     """Run all semantic record checks on ``doc``."""
     return [
         *validate_causal_graphs(doc),
+        *validate_component_protein_examples(doc),
         *validate_discussion_issue_links(doc, github_repo=github_repo),
     ]
