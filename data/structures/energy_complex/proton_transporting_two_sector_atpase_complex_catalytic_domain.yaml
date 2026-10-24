@@ -1,0 +1,226 @@
+identifier: GO:0033178
+label: proton-transporting two-sector ATPase complex, catalytic domain
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that forms part of a proton-transporting two-sector
+  ATPase complex and catalyzes ATP synthesis or hydrolysis. The catalytic sector consists
+  of a hexameric head and a central stalk; substrate binding and rotary motion of
+  the central stalk is coupled to proton transport in the membrane sector.
+definition_source: GO:0033178
+mapping_status: PROPOSED
+parent_structures:
+- GO:0098796
+part_of:
+- GO:0016469
+components:
+- component_id: catalytic_hexamer_head
+  label: catalytic hexameric head subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - atpA
+  - atpD
+  stoichiometry: three alternating catalytic and non-catalytic subunit pairs (alpha3beta3
+    or A3B3)
+  essentiality: ESSENTIAL
+  role: Alternating hexameric ring (alpha3beta3 in F1, A3B3 in V1) containing three
+    catalytic nucleotide-binding sites that synthesize or hydrolyze ATP.
+  evidence:
+  - reference: GO:0033178
+    notes: GO:0033178 defines the catalytic sector as consisting of a hexameric head
+      and a central stalk that catalyze ATP synthesis or hydrolysis.
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 describes the alpha3beta3 hexameric head and its three
+      catalytic sites.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABB0
+    protein_label: ATP synthase subunit alpha
+    gene_symbol: atpA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reviewed UniProtKB entry for gene atpA in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell
+        envelope.', J Biol Chem.
+  - uniprot_id: UniProtKB:P0ABB4
+    protein_label: ATP synthase subunit beta
+    gene_symbol: atpD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reviewed UniProtKB entry for gene atpD in Escherichia coli K-12.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABB4
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABB4 for gene atpD in Escherichia
+        coli K-12.
+- component_id: central_rotational_stalk
+  label: central rotational stalk subunits
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - atpG
+  - atpC
+  essentiality: ESSENTIAL
+  role: Asymmetric central shaft (gamma/epsilon in F1, D/F in V1) whose rotation inside
+    the hexameric head couples catalytic conformational cycling to proton transport
+    in the membrane sector.
+  evidence:
+  - reference: GO:0033178
+    notes: GO:0033178 specifies that substrate binding and rotary motion of the central
+      stalk is coupled to proton transport in the membrane sector.
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 describes the rotating gamma/epsilon central stalk driving
+      conformational cycling of the catalytic beta subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABA6
+    protein_label: ATP synthase gamma chain
+    gene_symbol: atpG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reviewed UniProtKB entry for gene atpG in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell
+        envelope.', J Biol Chem.
+  - uniprot_id: UniProtKB:P0A6E6
+    protein_label: ATP synthase epsilon chain
+    gene_symbol: atpC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: Reviewed UniProtKB entry for gene atpC in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell
+        envelope.', J Biol Chem.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  presence: COMMON
+  note: Reference bacterial model for the F1 catalytic sector (alpha3beta3gammaepsilon)
+    of F1Fo ATP synthase.
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Reference fungal model for both the V1 catalytic domain of vacuolar V-ATPase
+    and the F1 catalytic domain of mitochondrial ATP synthase.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial model for the F1 catalytic domain of proton-transporting
+    ATP synthase.
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference fungal model for the V1 catalytic domain of the vacuolar H+-ATPase.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+functions:
+- function_id: rotary_atp_catalysis
+  label: proton-transporting ATPase activity, rotational mechanism
+  grounding: GO:0046961
+  description: Catalyzes ATP synthesis or hydrolysis in the hexameric head coupled
+    to rotary motion of the central stalk and proton translocation in the membrane
+    sector.
+  evidence:
+  - reference: GO:0033178
+    notes: GO:0033178 defines the catalytic domain by catalyzing ATP synthesis or
+      hydrolysis coupled via rotary motion of the central stalk to proton transport.
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 reviews rotary catalysis in the hexameric head driven
+      by the central stalk.
+  - reference: DOI:10.1038/nrm2272
+    notes: Forgac 2007 reviews ATP hydrolysis in the V1 catalytic domain driving rotary
+      proton transport.
+evidence:
+- reference: GO:0033178
+  notes: Gene Ontology cellular-component term for proton-transporting two-sector
+    ATPase complex, catalytic domain.
+- reference: GO:0016469
+  notes: Gene Ontology cellular-component term for the holo proton-transporting two-sector
+    ATPase complex.
+- reference: GO:0046961
+  notes: Gene Ontology molecular-function term for proton-transporting ATPase activity,
+    rotational mechanism.
+- reference: DOI:10.1146/annurev-biochem-013118-110903
+  notes: Kuehlbrandt W 2019, 'Structure and Mechanisms of F-Type ATP Synthases', Annual
+    Review of Biochemistry.
+- reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+- reference: DOI:10.1038/nrm2272
+  notes: 'Forgac 2007, Vacuolar ATPases: rotary proton pumps in physiology and pathophysiology,
+    Nature Reviews Molecular Cell Biology.'
+causal_graphs:
+- graph_id: catalytic_domain_rotary_mechanism
+  title: Central stalk rotation and hexameric head conformational cycling mediate
+    rotary ATP catalysis
+  description: Directed causal graph linking the central rotational stalk and hexameric
+    catalytic head of the two-sector ATPase catalytic domain (GO:0033178) to rotational
+    ATP synthesis/hydrolysis (GO:0046961).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: central_rotational_stalk
+    label: central rotational stalk subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: central_rotational_stalk
+  - node_id: catalytic_hexamer_head
+    label: catalytic hexameric head subunits
+    node_type: GENE_OR_PROTEIN
+    component_ref: catalytic_hexamer_head
+  - node_id: catalytic_domain
+    label: proton-transporting two-sector ATPase complex, catalytic domain
+    node_type: STRUCTURE
+    grounding: GO:0033178
+  - node_id: rotary_atp_catalysis
+    label: proton-transporting ATPase activity, rotational mechanism
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0046961
+  edges:
+  - subject: central_rotational_stalk
+    predicate: is part of
+    object: catalytic_domain
+    description: The central rotational stalk forms the asymmetric rotor shaft inside
+      the catalytic domain.
+    evidence:
+    - reference: GO:0033178
+      notes: GO:0033178 defines the catalytic sector as consisting of a hexameric
+        head and a central stalk.
+  - subject: catalytic_hexamer_head
+    predicate: is part of
+    object: catalytic_domain
+    description: The alternating hexameric head subunits form the three catalytic
+      nucleotide-binding sites of the catalytic domain.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 describes the hexameric catalytic head containing three
+        nucleotide-binding catalytic sites.
+  - subject: catalytic_domain
+    predicate: mediates
+    object: rotary_atp_catalysis
+    description: Conformational cycling of the hexameric head coupled to rotary motion
+      of the central stalk catalyzes ATP synthesis or hydrolysis.
+    evidence:
+    - reference: GO:0033178
+      notes: GO:0033178 defines the domain by catalyzing ATP synthesis or hydrolysis
+        coupled to rotary motion of the central stalk.
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 reviews rotary catalysis in the catalytic domain.
+curation_history:
+- timestamp: '2026-10-24T03:15:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0033178 (proton-transporting two-sector
+    ATPase complex, catalytic domain) with verified GO identity, source-backed components,
+    reviewed UniProtKB protein examples, taxonomic distribution, canonical examples,
+    functions, and mechanistic causal graph.
+  llm_assisted: true

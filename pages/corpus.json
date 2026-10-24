@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
- "record_count": 985,
- "corpus_updated": "2026-10-24 00:20:00 UTC",
- "corpus_digest": "51f1fccb3cc1",
+ "record_count": 993,
+ "corpus_updated": "2026-10-24 03:15:00 UTC",
+ "corpus_digest": "7056613fb3b6",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -72423,6 +72423,333 @@
    ]
   },
   {
+   "identifier": "GO:0099070",
+   "label": "static microtubule bundle",
+   "structure_category": "CYTOSKELETON",
+   "structure_kind": "OTHER",
+   "definition": "A stable bundle of closely packed microtubules formed in quiescent cells, usually associated with the spindle pole body. In yeast cells entering quiescence, it assembles at the transition from proliferation to quiescence and disassembles rapidly upon cell cycle re-entry.",
+   "definition_source": "GO:0099070",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "Q-MT bundle",
+     "synonym_type": "NARROW_SYNONYM",
+     "source": "GO:0099070"
+    },
+    {
+     "synonym_text": "quiescent cell MT bundle",
+     "synonym_type": "NARROW_SYNONYM",
+     "source": "GO:0099070"
+    },
+    {
+     "synonym_text": "quiescent cell microtubule bundle",
+     "synonym_type": "NARROW_SYNONYM",
+     "source": "GO:0099070"
+    }
+   ],
+   "parent_structures": [
+    "GO:0097427"
+   ],
+   "part_of": [
+    "GO:0015630"
+   ],
+   "components": [
+    {
+     "component_id": "alpha_tubulin",
+     "label": "alpha-tubulin",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR002452",
+     "gene_symbols": [
+      "atb2",
+      "TUB1",
+      "TUB3"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Alpha-tubulin subunit that heterodimerizes with beta-tubulin to polymerize into the closely packed, hyperstable microtubules of the quiescent bundle.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Laporte et al. 2015 characterized alpha-tubulin (Atb2) within quiescent-cell static microtubule bundles in Schizosaccharomyces pombe."
+      },
+      {
+       "reference": "DOI:10.7554/eLife.89958",
+       "notes": "de Jager et al. 2024 resolved alpha-tubulin isoforms Tub1 and Tub3 within the quiescent nuclear microtubule bundle of Saccharomyces cerevisiae."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P04689",
+       "protein_label": "Tubulin alpha-2 chain",
+       "gene_symbol": "atb2",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene atb2 in Schizosaccharomyces pombe 972h-.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Laporte D et al. 2015 characterized Atb2-containing quiescent microtubule bundles in S. pombe."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P09733",
+       "protein_label": "Tubulin alpha-1 chain",
+       "gene_symbol": "TUB1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene TUB1 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201306075",
+         "notes": "Laporte D et al. 2013 imaged Tub1-GFP in quiescent nuclear microtubule bundles in S. cerevisiae."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P09734",
+       "protein_label": "Tubulin alpha-3 chain",
+       "gene_symbol": "TUB3",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene TUB3 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.89958",
+         "notes": "de Jager L et al. 2024 showed that Tub3 stabilizes the quiescent nuclear microtubule bundle in S. cerevisiae."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "beta_tubulin",
+     "label": "beta-tubulin",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR002453",
+     "gene_symbols": [
+      "nda3",
+      "TUB2"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Beta-tubulin subunit that pairs with alpha-tubulin to form the protofilaments of the static microtubule bundle in quiescent yeast cells.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Laporte et al. 2015 characterized beta-tubulin (Nda3) in the quiescent microtubule bundle of S. pombe."
+      },
+      {
+       "reference": "DOI:10.1083/jcb.201306075",
+       "notes": "Laporte et al. 2013 characterized Tub2 beta-tubulin in the quiescent nuclear microtubule bundle of S. cerevisiae."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P05219",
+       "protein_label": "Tubulin beta chain",
+       "gene_symbol": "nda3",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene nda3 in Schizosaccharomyces pombe 972h-.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Laporte D et al. 2015 demonstrated that beta-tubulin Nda3 forms the core of the S. pombe Q-MT bundle."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P02557",
+       "protein_label": "Tubulin beta chain",
+       "gene_symbol": "TUB2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene TUB2 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201306075",
+         "notes": "Laporte D et al. 2013 demonstrated that Tub2 mutations prevent quiescent microtubule bundle assembly in S. cerevisiae."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4896",
+     "taxon_label": "Schizosaccharomyces pombe",
+     "presence": "COMMON",
+     "note": "Forms a cytoplasmic static microtubule bundle (Q-MT bundle) associated with the spindle pole body upon entry into quiescence.",
+     "reference": "DOI:10.1083/jcb.201502025"
+    },
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Forms a nuclear static microtubule bundle extending from the spindle pole body across the nucleus in quiescent cells.",
+     "reference": "DOI:10.1083/jcb.201306075"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:284812",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
+     "note": "Reference fission yeast strain in which cytoplasmic static microtubule bundles (Q-MT bundles) were characterized during quiescence.",
+     "reference": "DOI:10.1083/jcb.201502025"
+    },
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Reference budding yeast strain in which nuclear static microtubule bundles were characterized by fluorescence and cryo-electron tomography.",
+     "reference": "DOI:10.7554/eLife.89958"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "quiescent_microtubule_cytoskeleton_organization",
+     "label": "microtubule cytoskeleton organization",
+     "grounding": "GO:0000226",
+     "description": "Reorganizes the microtubule cytoskeleton into a hyperstable, spindle-pole-body-associated bundle at the transition from proliferation to quiescence and disassembles rapidly upon cell-cycle re-entry to support survival in quiescence.",
+     "evidence": [
+      {
+       "reference": "GO:0099070",
+       "notes": "GO:0099070 defines the static microtubule bundle as assembling at the transition from proliferation to quiescence and disassembling rapidly upon cell cycle re-entry."
+      },
+      {
+       "reference": "DOI:10.1083/jcb.201306075",
+       "notes": "Laporte et al. 2013 showed that assembly of the static microtubule bundle is required for cell survival during quiescence and rapid spindle reformation upon exit."
+      },
+      {
+       "reference": "DOI:10.1083/jcb.201502025",
+       "notes": "Laporte et al. 2015 demonstrated conserved assembly and rapid depolymerization of the Q-MT bundle in quiescent S. pombe."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0099070",
+     "notes": "Gene Ontology cellular-component term for static microtubule bundle."
+    },
+    {
+     "reference": "GO:0000226",
+     "notes": "Gene Ontology biological-process term for microtubule cytoskeleton organization."
+    },
+    {
+     "reference": "DOI:10.1083/jcb.201306075",
+     "notes": "Laporte D et al. 2013, 'Quiescent Saccharomyces cerevisiae forms a new-type of reversible microtubule bundle required for cell survival.', J Cell Biol."
+    },
+    {
+     "reference": "DOI:10.1083/jcb.201502025",
+     "notes": "Laporte D et al. 2015, 'Kinesin-5 and kinesin-14 control the assembly and stability of quiescent-cell microtubule bundles in fission yeast.', J Cell Biol."
+    },
+    {
+     "reference": "DOI:10.7554/eLife.89958",
+     "notes": "de Jager L et al. 2024, cryo-ET architecture of the quiescent microtubule bundle in Saccharomyces cerevisiae, eLife."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "static_microtubule_bundle_organization",
+     "title": "Alpha/beta-tubulin protofilaments assemble into static microtubule bundles in quiescent cells",
+     "description": "Directed causal graph linking alpha-tubulin and beta-tubulin subunits of the static microtubule bundle (GO:0099070) to microtubule cytoskeleton organization during cellular quiescence (GO:0000226).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "alpha_tubulin",
+       "label": "alpha-tubulin",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR002452",
+       "component_ref": "alpha_tubulin"
+      },
+      {
+       "node_id": "beta_tubulin",
+       "label": "beta-tubulin",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR002453",
+       "component_ref": "beta_tubulin"
+      },
+      {
+       "node_id": "static_microtubule_bundle",
+       "label": "static microtubule bundle",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0099070"
+      },
+      {
+       "node_id": "quiescent_microtubule_cytoskeleton_organization",
+       "label": "microtubule cytoskeleton organization",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0000226"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "alpha_tubulin",
+       "predicate": "is part of",
+       "object": "static_microtubule_bundle",
+       "description": "Alpha-tubulin subunits copolymerize with beta-tubulin into the closely packed microtubules of the static bundle.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201502025",
+         "notes": "Laporte et al. 2015 showed Atb2 alpha-tubulin incorporation into quiescent microtubule bundles."
+        }
+       ]
+      },
+      {
+       "subject": "beta_tubulin",
+       "predicate": "is part of",
+       "object": "static_microtubule_bundle",
+       "description": "Beta-tubulin subunits copolymerize with alpha-tubulin to form the hyperstable microtubules of the static bundle.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201306075",
+         "notes": "Laporte et al. 2013 demonstrated that Tub2 beta-tubulin is essential for static microtubule bundle assembly."
+        }
+       ]
+      },
+      {
+       "subject": "static_microtubule_bundle",
+       "predicate": "mediates",
+       "object": "quiescent_microtubule_cytoskeleton_organization",
+       "description": "Assembly of the static microtubule bundle reorganizes and stabilizes the microtubule cytoskeleton during quiescence.",
+       "evidence": [
+        {
+         "reference": "GO:0099070",
+         "notes": "GO:0099070 defines the static microtubule bundle as assembling at the transition to quiescence and disassembling upon cell cycle re-entry."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.201306075",
+         "notes": "Laporte et al. 2013 demonstrated that the static microtubule bundle reorganizes the cytoskeleton for quiescent survival."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-24T03:15:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0099070 (static microtubule bundle) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "cellstructuremech:stentor_km_fiber",
    "label": "Stentor Km fiber",
    "structure_category": "CYTOSKELETON",
@@ -89192,6 +89519,891 @@
      ],
      "posed_by": "claude",
      "posed_date": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0016469",
+   "label": "proton-transporting two-sector ATPase complex",
+   "structure_category": "ENERGY_COMPLEX",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A large protein complex that catalyzes the synthesis or hydrolysis of ATP by a rotational mechanism, coupled to the transport of protons across a membrane. The complex comprises a membrane sector (F0 or V0) that carries out proton transport and a cytoplasmic compartment sector (F1 or V1) that catalyzes ATP synthesis or hydrolysis.",
+   "definition_source": "GO:0016469",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "hydrogen-transporting two-sector ATPase complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0016469"
+    },
+    {
+     "synonym_text": "vacuolar hydrogen-transporting ATPase",
+     "synonym_type": "RELATED_SYNONYM",
+     "source": "GO:0016469"
+    }
+   ],
+   "parent_structures": [
+    "GO:0098796"
+   ],
+   "has_part": [
+    "GO:0033177",
+    "GO:0033178"
+   ],
+   "components": [
+    {
+     "component_id": "proton_transporting_domain",
+     "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+     "component_type": "PROTEIN_COMPLEX",
+     "component_role": "CONSTITUENT",
+     "grounding": "GO:0033177",
+     "gene_symbols": [
+      "atpE",
+      "atpB"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Membrane-embedded sector (Fo or Vo) containing the proteolipid c-ring rotor and stator subunit a hemichannels that translocate protons across the membrane.",
+     "evidence": [
+      {
+       "reference": "GO:0016469",
+       "notes": "GO:0016469 defines the membrane sector (F0 or V0) that carries out proton transport across the membrane."
+      },
+      {
+       "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+       "notes": "Kuehlbrandt 2019 reviews the membrane Fo proton-transporting sector composed of the c-ring rotor and subunit a stator half-channels."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P68699",
+       "protein_label": "ATP synthase subunit c",
+       "gene_symbol": "atpE",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "Reviewed UniProtKB entry for gene atpE (membrane c-ring rotor subunit) in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:15919996",
+         "notes": "Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli inner membrane proteome.', Science."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P0AB98",
+       "protein_label": "ATP synthase subunit a",
+       "gene_symbol": "atpB",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-09-08",
+       "role": "Reviewed UniProtKB entry for gene atpB (membrane stator subunit a) in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:15919996",
+         "notes": "Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli inner membrane proteome.', Science."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "catalytic_domain",
+     "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+     "component_type": "PROTEIN_COMPLEX",
+     "component_role": "CONSTITUENT",
+     "grounding": "GO:0033178",
+     "gene_symbols": [
+      "atpA",
+      "atpD",
+      "atpG",
+      "atpC"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Peripheral cytoplasmic compartment sector (F1 or V1) containing the hexameric catalytic head and central rotational stalk that catalyzes ATP synthesis or hydrolysis.",
+     "evidence": [
+      {
+       "reference": "GO:0016469",
+       "notes": "GO:0016469 defines the cytoplasmic compartment sector (F1 or V1) that catalyzes ATP synthesis or hydrolysis."
+      },
+      {
+       "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+       "notes": "Kuehlbrandt 2019 reviews the catalytic alpha3beta3 head and rotating central stalk of two-sector rotary ATPases."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0ABB0",
+       "protein_label": "ATP synthase subunit alpha",
+       "gene_symbol": "atpA",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "Reviewed UniProtKB entry for gene atpA in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:16079137",
+         "notes": "Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell envelope.', J Biol Chem."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P0ABB4",
+       "protein_label": "ATP synthase subunit beta",
+       "gene_symbol": "atpD",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "Reviewed UniProtKB entry for gene atpD in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P0ABB4",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P0ABB4 for gene atpD in Escherichia coli K-12."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P0ABA6",
+       "protein_label": "ATP synthase gamma chain",
+       "gene_symbol": "atpG",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "Reviewed UniProtKB entry for gene atpG in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:16079137",
+         "notes": "Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell envelope.', J Biol Chem."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P0A6E6",
+       "protein_label": "ATP synthase epsilon chain",
+       "gene_symbol": "atpC",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Reviewed UniProtKB entry for gene atpC in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:16079137",
+         "notes": "Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell envelope.', J Biol Chem."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2",
+     "taxon_label": "Bacteria",
+     "presence": "COMMON",
+     "note": "Widespread across bacterial plasma membranes as F1Fo ATP synthases and bacterial V/A-type rotary proton pumps.",
+     "reference": "DOI:10.1146/annurev-biochem-013118-110903"
+    },
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Budding yeast contains both mitochondrial F1Fo ATP synthase and vacuolar V1Vo two-sector proton-transporting ATPase complexes.",
+     "reference": "DOI:10.1128/MMBR.70.1.177-191.2006"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Canonical bacterial model for the two-sector F1Fo proton-transporting rotary ATPase complex.",
+     "reference": "DOI:10.1146/annurev-biochem-013118-110903"
+    },
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "note": "Canonical eukaryotic microbial model for the vacuolar V1Vo and mitochondrial F1Fo two-sector proton-transporting ATPase complexes.",
+     "reference": "DOI:10.1128/MMBR.70.1.177-191.2006"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "rotary_proton_atp_coupling",
+     "label": "proton-transporting ATPase activity, rotational mechanism",
+     "grounding": "GO:0046961",
+     "description": "Couples transmembrane proton translocation through the membrane sector (Fo or Vo) to ATP synthesis or hydrolysis in the cytoplasmic catalytic sector (F1 or V1) via rotation of the central rotor.",
+     "evidence": [
+      {
+       "reference": "GO:0016469",
+       "notes": "GO:0016469 defines the complex by rotational catalysis of ATP synthesis or hydrolysis coupled to transmembrane proton transport."
+      },
+      {
+       "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+       "notes": "Kuehlbrandt 2019 reviews rotational coupling between the Fo proton turbine and F1 catalytic head."
+      },
+      {
+       "reference": "DOI:10.1038/nrm2272",
+       "notes": "Forgac 2007 reviews rotary coupling between V1 ATP hydrolysis and V0 proton transport."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0016469",
+     "notes": "Gene Ontology cellular-component term for proton-transporting two-sector ATPase complex."
+    },
+    {
+     "reference": "GO:0033177",
+     "notes": "Gene Ontology cellular-component term for proton-transporting two-sector ATPase complex, proton-transporting domain."
+    },
+    {
+     "reference": "GO:0033178",
+     "notes": "Gene Ontology cellular-component term for proton-transporting two-sector ATPase complex, catalytic domain."
+    },
+    {
+     "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+     "notes": "Kuehlbrandt W 2019, 'Structure and Mechanisms of F-Type ATP Synthases', Annual Review of Biochemistry."
+    },
+    {
+     "reference": "DOI:10.1128/MMBR.70.1.177-191.2006",
+     "notes": "Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews."
+    },
+    {
+     "reference": "DOI:10.1038/nrm2272",
+     "notes": "Forgac 2007, Vacuolar ATPases: rotary proton pumps in physiology and pathophysiology, Nature Reviews Molecular Cell Biology."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "two_sector_atpase_rotary_coupling",
+     "title": "Two-sector rotary coupling between membrane proton transport and ATP catalysis",
+     "description": "Directed causal graph linking the membrane proton-transporting domain (GO:0033177) and cytoplasmic catalytic domain (GO:0033178) of the proton-transporting two-sector ATPase complex (GO:0016469) to rotational ATPase/synthase activity (GO:0046961).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "proton_transporting_domain",
+       "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0033177",
+       "component_ref": "proton_transporting_domain"
+      },
+      {
+       "node_id": "catalytic_domain",
+       "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0033178",
+       "component_ref": "catalytic_domain"
+      },
+      {
+       "node_id": "two_sector_atpase_complex",
+       "label": "proton-transporting two-sector ATPase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0016469"
+      },
+      {
+       "node_id": "rotary_proton_atp_coupling",
+       "label": "proton-transporting ATPase activity, rotational mechanism",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0046961"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "proton_transporting_domain",
+       "predicate": "is part of",
+       "object": "two_sector_atpase_complex",
+       "description": "The membrane sector (Fo or Vo) is the integral transmembrane proton-transporting subassembly of the two-sector ATPase complex.",
+       "evidence": [
+        {
+         "reference": "GO:0016469",
+         "notes": "GO:0016469 defines the complex as comprising a membrane sector (F0 or V0) that carries out proton transport."
+        }
+       ]
+      },
+      {
+       "subject": "catalytic_domain",
+       "predicate": "is part of",
+       "object": "two_sector_atpase_complex",
+       "description": "The cytoplasmic sector (F1 or V1) is the peripheral catalytic subassembly of the two-sector ATPase complex.",
+       "evidence": [
+        {
+         "reference": "GO:0016469",
+         "notes": "GO:0016469 defines the complex as comprising a cytoplasmic compartment sector (F1 or V1) that catalyzes ATP synthesis or hydrolysis."
+        }
+       ]
+      },
+      {
+       "subject": "two_sector_atpase_complex",
+       "predicate": "mediates",
+       "object": "rotary_proton_atp_coupling",
+       "description": "Mechanical rotation between the membrane sector and the catalytic sector couples transmembrane proton translocation to ATP synthesis or hydrolysis.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "notes": "Kuehlbrandt 2019 reviews rotary catalysis in two-sector ATP synthases."
+        },
+        {
+         "reference": "DOI:10.1038/nrm2272",
+         "notes": "Forgac 2007 reviews rotary proton pumping in two-sector V-ATPases."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-24T03:15:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0016469 (proton-transporting two-sector ATPase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0033178",
+   "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+   "structure_category": "ENERGY_COMPLEX",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A protein complex that forms part of a proton-transporting two-sector ATPase complex and catalyzes ATP synthesis or hydrolysis. The catalytic sector consists of a hexameric head and a central stalk; substrate binding and rotary motion of the central stalk is coupled to proton transport in the membrane sector.",
+   "definition_source": "GO:0033178",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0098796"
+   ],
+   "part_of": [
+    "GO:0016469"
+   ],
+   "components": [
+    {
+     "component_id": "catalytic_hexamer_head",
+     "label": "catalytic hexameric head subunits",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "atpA",
+      "atpD"
+     ],
+     "stoichiometry": "three alternating catalytic and non-catalytic subunit pairs (alpha3beta3 or A3B3)",
+     "essentiality": "ESSENTIAL",
+     "role": "Alternating hexameric ring (alpha3beta3 in F1, A3B3 in V1) containing three catalytic nucleotide-binding sites that synthesize or hydrolyze ATP.",
+     "evidence": [
+      {
+       "reference": "GO:0033178",
+       "notes": "GO:0033178 defines the catalytic sector as consisting of a hexameric head and a central stalk that catalyze ATP synthesis or hydrolysis."
+      },
+      {
+       "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+       "notes": "Kuehlbrandt 2019 describes the alpha3beta3 hexameric head and its three catalytic sites."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0ABB0",
+       "protein_label": "ATP synthase subunit alpha",
+       "gene_symbol": "atpA",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "Reviewed UniProtKB entry for gene atpA in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:16079137",
+         "notes": "Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell envelope.', J Biol Chem."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P0ABB4",
+       "protein_label": "ATP synthase subunit beta",
+       "gene_symbol": "atpD",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "Reviewed UniProtKB entry for gene atpD in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P0ABB4",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P0ABB4 for gene atpD in Escherichia coli K-12."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "central_rotational_stalk",
+     "label": "central rotational stalk subunits",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "atpG",
+      "atpC"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Asymmetric central shaft (gamma/epsilon in F1, D/F in V1) whose rotation inside the hexameric head couples catalytic conformational cycling to proton transport in the membrane sector.",
+     "evidence": [
+      {
+       "reference": "GO:0033178",
+       "notes": "GO:0033178 specifies that substrate binding and rotary motion of the central stalk is coupled to proton transport in the membrane sector."
+      },
+      {
+       "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+       "notes": "Kuehlbrandt 2019 describes the rotating gamma/epsilon central stalk driving conformational cycling of the catalytic beta subunits."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0ABA6",
+       "protein_label": "ATP synthase gamma chain",
+       "gene_symbol": "atpG",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "Reviewed UniProtKB entry for gene atpG in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:16079137",
+         "notes": "Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell envelope.', J Biol Chem."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P0A6E6",
+       "protein_label": "ATP synthase epsilon chain",
+       "gene_symbol": "atpC",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-23",
+       "role": "Reviewed UniProtKB entry for gene atpC in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:16079137",
+         "notes": "Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell envelope.', J Biol Chem."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "presence": "COMMON",
+     "note": "Reference bacterial model for the F1 catalytic sector (alpha3beta3gammaepsilon) of F1Fo ATP synthase.",
+     "reference": "DOI:10.1146/annurev-biochem-013118-110903"
+    },
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Reference fungal model for both the V1 catalytic domain of vacuolar V-ATPase and the F1 catalytic domain of mitochondrial ATP synthase.",
+     "reference": "DOI:10.1128/MMBR.70.1.177-191.2006"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference bacterial model for the F1 catalytic domain of proton-transporting ATP synthase.",
+     "reference": "DOI:10.1146/annurev-biochem-013118-110903"
+    },
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "note": "Reference fungal model for the V1 catalytic domain of the vacuolar H+-ATPase.",
+     "reference": "DOI:10.1128/MMBR.70.1.177-191.2006"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "rotary_atp_catalysis",
+     "label": "proton-transporting ATPase activity, rotational mechanism",
+     "grounding": "GO:0046961",
+     "description": "Catalyzes ATP synthesis or hydrolysis in the hexameric head coupled to rotary motion of the central stalk and proton translocation in the membrane sector.",
+     "evidence": [
+      {
+       "reference": "GO:0033178",
+       "notes": "GO:0033178 defines the catalytic domain by catalyzing ATP synthesis or hydrolysis coupled via rotary motion of the central stalk to proton transport."
+      },
+      {
+       "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+       "notes": "Kuehlbrandt 2019 reviews rotary catalysis in the hexameric head driven by the central stalk."
+      },
+      {
+       "reference": "DOI:10.1038/nrm2272",
+       "notes": "Forgac 2007 reviews ATP hydrolysis in the V1 catalytic domain driving rotary proton transport."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0033178",
+     "notes": "Gene Ontology cellular-component term for proton-transporting two-sector ATPase complex, catalytic domain."
+    },
+    {
+     "reference": "GO:0016469",
+     "notes": "Gene Ontology cellular-component term for the holo proton-transporting two-sector ATPase complex."
+    },
+    {
+     "reference": "GO:0046961",
+     "notes": "Gene Ontology molecular-function term for proton-transporting ATPase activity, rotational mechanism."
+    },
+    {
+     "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+     "notes": "Kuehlbrandt W 2019, 'Structure and Mechanisms of F-Type ATP Synthases', Annual Review of Biochemistry."
+    },
+    {
+     "reference": "DOI:10.1128/MMBR.70.1.177-191.2006",
+     "notes": "Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews."
+    },
+    {
+     "reference": "DOI:10.1038/nrm2272",
+     "notes": "Forgac 2007, Vacuolar ATPases: rotary proton pumps in physiology and pathophysiology, Nature Reviews Molecular Cell Biology."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "catalytic_domain_rotary_mechanism",
+     "title": "Central stalk rotation and hexameric head conformational cycling mediate rotary ATP catalysis",
+     "description": "Directed causal graph linking the central rotational stalk and hexameric catalytic head of the two-sector ATPase catalytic domain (GO:0033178) to rotational ATP synthesis/hydrolysis (GO:0046961).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "central_rotational_stalk",
+       "label": "central rotational stalk subunits",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "central_rotational_stalk"
+      },
+      {
+       "node_id": "catalytic_hexamer_head",
+       "label": "catalytic hexameric head subunits",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "catalytic_hexamer_head"
+      },
+      {
+       "node_id": "catalytic_domain",
+       "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0033178"
+      },
+      {
+       "node_id": "rotary_atp_catalysis",
+       "label": "proton-transporting ATPase activity, rotational mechanism",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0046961"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "central_rotational_stalk",
+       "predicate": "is part of",
+       "object": "catalytic_domain",
+       "description": "The central rotational stalk forms the asymmetric rotor shaft inside the catalytic domain.",
+       "evidence": [
+        {
+         "reference": "GO:0033178",
+         "notes": "GO:0033178 defines the catalytic sector as consisting of a hexameric head and a central stalk."
+        }
+       ]
+      },
+      {
+       "subject": "catalytic_hexamer_head",
+       "predicate": "is part of",
+       "object": "catalytic_domain",
+       "description": "The alternating hexameric head subunits form the three catalytic nucleotide-binding sites of the catalytic domain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "notes": "Kuehlbrandt 2019 describes the hexameric catalytic head containing three nucleotide-binding catalytic sites."
+        }
+       ]
+      },
+      {
+       "subject": "catalytic_domain",
+       "predicate": "mediates",
+       "object": "rotary_atp_catalysis",
+       "description": "Conformational cycling of the hexameric head coupled to rotary motion of the central stalk catalyzes ATP synthesis or hydrolysis.",
+       "evidence": [
+        {
+         "reference": "GO:0033178",
+         "notes": "GO:0033178 defines the domain by catalyzing ATP synthesis or hydrolysis coupled to rotary motion of the central stalk."
+        },
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "notes": "Kuehlbrandt 2019 reviews rotary catalysis in the catalytic domain."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-24T03:15:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0033178 (proton-transporting two-sector ATPase complex, catalytic domain) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0033177",
+   "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+   "structure_category": "ENERGY_COMPLEX",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A protein complex that forms part of a proton-transporting two-sector ATPase complex and mediates proton transport across a membrane.",
+   "definition_source": "GO:0033177",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0098796"
+   ],
+   "part_of": [
+    "GO:0016469"
+   ],
+   "components": [
+    {
+     "component_id": "proteolipid_c_ring_subunit",
+     "label": "proteolipid rotor c-ring subunit",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "atpE"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Oligomeric membrane-embedded proteolipid c-ring subunit whose conserved carboxylates bind and release protons during rotary translocation.",
+     "evidence": [
+      {
+       "reference": "GO:0033177",
+       "notes": "GO:0033177 defines the membrane-embedded proton-transporting domain of a two-sector ATPase complex."
+      },
+      {
+       "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+       "notes": "Kuehlbrandt 2019 reviews the membrane c-ring rotor and its proton-binding sites in two-sector rotary ATPases."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P68699",
+       "protein_label": "ATP synthase subunit c",
+       "gene_symbol": "atpE",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-17",
+       "role": "Reviewed UniProtKB entry for gene atpE in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:15919996",
+         "notes": "Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli inner membrane proteome.', Science."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "membrane_stator_a_subunit",
+     "label": "membrane stator subunit a",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "atpB"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Polytopic membrane stator subunit that provides two offset aqueous half-channels for protons to enter and exit the rotating c-ring.",
+     "evidence": [
+      {
+       "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+       "notes": "Kuehlbrandt 2019 describes the two offset half-channels in membrane subunit a that conduct protons to and from the c-ring."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0AB98",
+       "protein_label": "ATP synthase subunit a",
+       "gene_symbol": "atpB",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-09-08",
+       "role": "Reviewed UniProtKB entry for gene atpB in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:15919996",
+         "notes": "Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli inner membrane proteome.', Science."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "presence": "COMMON",
+     "note": "Reference bacterial plasma membrane Fo proton-transporting domain (subunits a, b2, c10).",
+     "reference": "DOI:10.1146/annurev-biochem-013118-110903"
+    },
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Reference eukaryotic microbial model for the vacuolar V0 and mitochondrial Fo membrane proton-transporting domains.",
+     "reference": "DOI:10.1128/MMBR.70.1.177-191.2006"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference bacterial model for the Fo proton-transporting sector of F1Fo ATP synthase.",
+     "reference": "DOI:10.1146/annurev-biochem-013118-110903"
+    },
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "note": "Reference fungal model for the V0 proton-transporting domain of vacuolar V-ATPase.",
+     "reference": "DOI:10.1128/MMBR.70.1.177-191.2006"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "proton_transmembrane_transport",
+     "label": "proton transmembrane transport",
+     "grounding": "GO:1902600",
+     "description": "Conducts protons across the lipid bilayer via protonation and deprotonation of the rotating proteolipid c-ring at the interface with stator subunit a half-channels.",
+     "evidence": [
+      {
+       "reference": "GO:0033177",
+       "notes": "GO:0033177 defines the domain by mediating proton transport across a membrane as part of a two-sector ATPase complex."
+      },
+      {
+       "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+       "notes": "Kuehlbrandt 2019 reviews transmembrane proton translocation through the subunit a half-channels and rotating c-ring."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0033177",
+     "notes": "Gene Ontology cellular-component term for proton-transporting two-sector ATPase complex, proton-transporting domain."
+    },
+    {
+     "reference": "GO:0016469",
+     "notes": "Gene Ontology cellular-component term for the holo proton-transporting two-sector ATPase complex."
+    },
+    {
+     "reference": "GO:1902600",
+     "notes": "Gene Ontology biological-process term for proton transmembrane transport."
+    },
+    {
+     "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+     "notes": "Kuehlbrandt W 2019, 'Structure and Mechanisms of F-Type ATP Synthases', Annual Review of Biochemistry."
+    },
+    {
+     "reference": "DOI:10.1128/MMBR.70.1.177-191.2006",
+     "notes": "Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "proton_transporting_domain_mechanism",
+     "title": "Subunit a half-channels and proteolipid c-ring mediate transmembrane proton transport",
+     "description": "Directed causal graph linking the membrane stator subunit a and proteolipid c-ring rotor of the proton-transporting domain (GO:0033177) to proton transmembrane transport (GO:1902600).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "membrane_stator_a_subunit",
+       "label": "membrane stator subunit a",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "membrane_stator_a_subunit"
+      },
+      {
+       "node_id": "proteolipid_c_ring_subunit",
+       "label": "proteolipid rotor c-ring subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "proteolipid_c_ring_subunit"
+      },
+      {
+       "node_id": "proton_transporting_domain",
+       "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0033177"
+      },
+      {
+       "node_id": "proton_transmembrane_transport",
+       "label": "proton transmembrane transport",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:1902600"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "membrane_stator_a_subunit",
+       "predicate": "is part of",
+       "object": "proton_transporting_domain",
+       "description": "Stator subunit a provides the two offset aqueous half-channels within the membrane proton-transporting domain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "notes": "Kuehlbrandt 2019 describes the two offset half-channels in subunit a of the membrane sector."
+        }
+       ]
+      },
+      {
+       "subject": "proteolipid_c_ring_subunit",
+       "predicate": "is part of",
+       "object": "proton_transporting_domain",
+       "description": "The oligomeric proteolipid c-ring forms the rotating proton-binding core of the membrane proton-transporting domain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "notes": "Kuehlbrandt 2019 reviews the c-ring rotor in the membrane sector."
+        }
+       ]
+      },
+      {
+       "subject": "proton_transporting_domain",
+       "predicate": "mediates",
+       "object": "proton_transmembrane_transport",
+       "description": "Rotation of the c-ring past the subunit a half-channels mediates proton transport across the membrane.",
+       "evidence": [
+        {
+         "reference": "GO:0033177",
+         "notes": "GO:0033177 defines the domain by mediating proton transport across a membrane."
+        },
+        {
+         "reference": "DOI:10.1146/annurev-biochem-013118-110903",
+         "notes": "Kuehlbrandt 2019 describes proton translocation across the membrane at the a/c-ring interface."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-24T03:15:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0033177 (proton-transporting two-sector ATPase complex, proton-transporting domain) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
@@ -186742,6 +187954,276 @@
    ]
   },
   {
+   "identifier": "GO:0016465",
+   "label": "chaperonin ATPase complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A multimeric ATPase complex involved in protein folding. It has a symmetric ring-shaped structure and consists of multiple identical ~60kDa subunits and, in the bacterial complex, several smaller subunits; a central cavity receives unfolded peptides and promotes their folding into the native conformation.",
+   "definition_source": "GO:0016465",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0101031"
+   ],
+   "part_of": [
+    "GO:0005829"
+   ],
+   "components": [
+    {
+     "component_id": "cpn60_groel_subunit",
+     "label": "Chaperonin Cpn60/GroEL",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR001844",
+     "gene_symbols": [
+      "groEL"
+     ],
+     "stoichiometry": "14 copies in two stacked heptameric rings in the bacterial prototype",
+     "essentiality": "ESSENTIAL",
+     "role": "Multimeric ~60 kDa ATPase chaperonin ring subunit that forms the symmetric double-ring central cavity receiving unfolded polypeptide substrates.",
+     "evidence": [
+      {
+       "reference": "GO:0016465",
+       "notes": "GO:0016465 defines the chaperonin ATPase complex as consisting of multiple identical ~60 kDa ATPase subunits arranged in a symmetric ring-shaped structure."
+      },
+      {
+       "reference": "InterPro:IPR001844",
+       "notes": "InterPro IPR001844 is the family entry for Chaperonin Cpn60/GroEL."
+      },
+      {
+       "reference": "DOI:10.1038/41944",
+       "notes": "Xu, Horwich and Sigler 1997 resolved the 14-subunit GroEL double-ring architecture of the bacterial chaperonin ATPase complex (PDB:1AON)."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0A6F5",
+       "protein_label": "Chaperonin GroEL",
+       "gene_symbol": "groEL",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-01",
+       "role": "Reviewed E. coli K-12 GroEL accession mapped by RCSB to the fourteen ~60 kDa chaperonin chains in PDB:1AON.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P0A6F5",
+         "notes": "UniProtKB P0A6F5 is the reviewed Escherichia coli K-12 entry for chaperonin GroEL."
+        },
+        {
+         "reference": "PDB:1AON",
+         "notes": "RCSB SIFTS maps PDB:1AON polymer entity 1 to UniProtKB:P0A6F5 with fourteen protein chains."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "cochaperonin_lid_subunit",
+     "label": "GroES chaperonin",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR020818",
+     "gene_symbols": [
+      "groES"
+     ],
+     "stoichiometry": "7 copies per heptameric co-chaperonin ring in the bacterial complex",
+     "essentiality": "ESSENTIAL",
+     "role": "Smaller (~10 kDa) co-chaperonin lid subunit present in bacterial group I chaperonin ATPase complexes that caps the ~60 kDa chaperonin ring.",
+     "evidence": [
+      {
+       "reference": "GO:0016465",
+       "notes": "GO:0016465 specifies that in the bacterial complex several smaller subunits accompany the ~60 kDa chaperonin ring subunits."
+      },
+      {
+       "reference": "InterPro:IPR020818",
+       "notes": "InterPro IPR020818 is the family entry for GroES chaperonins."
+      },
+      {
+       "reference": "DOI:10.1038/41944",
+       "notes": "Xu, Horwich and Sigler 1997 resolved the heptameric GroES cap bound to the GroEL cylinder in PDB:1AON."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0A6F9",
+       "protein_label": "Co-chaperonin GroES",
+       "gene_symbol": "groES",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-01",
+       "role": "Reviewed E. coli K-12 GroES accession mapped by RCSB to the seven co-chaperonin chains in PDB:1AON.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P0A6F9",
+         "notes": "UniProtKB P0A6F9 is the reviewed Escherichia coli K-12 entry for co-chaperonin GroES."
+        },
+        {
+         "reference": "PDB:1AON",
+         "notes": "RCSB SIFTS maps PDB:1AON polymer entity 2 to UniProtKB:P0A6F9 with seven protein chains."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2",
+     "taxon_label": "Bacteria",
+     "presence": "COMMON",
+     "note": "Bacterial cytosol contains group I chaperonin ATPase complexes exemplified by the GroEL-GroES holoenzyme.",
+     "reference": "DOI:10.1038/41944"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:562",
+     "taxon_label": "Escherichia coli",
+     "note": "Source organism of the crystal structure of the asymmetric GroEL-GroES-(ADP)7 chaperonin ATPase complex (PDB:1AON).",
+     "reference": "PDB:1AON"
+    },
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference bacterial model strain for the reviewed GroEL (P0A6F5) and GroES (P0A6F9) chaperonin ATPase complex subunits.",
+     "reference": "DOI:10.1038/41944"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "protein_folding",
+     "label": "protein folding",
+     "grounding": "GO:0006457",
+     "description": "A central ring-shaped cavity in the chaperonin ATPase complex receives unfolded polypeptide substrates and uses ATP binding and hydrolysis to promote their folding into the native conformation.",
+     "evidence": [
+      {
+       "reference": "GO:0016465",
+       "notes": "GO:0016465 defines the chaperonin ATPase complex by its central cavity that receives unfolded peptides and promotes their folding into the native conformation."
+      },
+      {
+       "reference": "DOI:10.1038/41944",
+       "notes": "Xu, Horwich and Sigler 1997 showed how co-chaperonin capping of the chaperonin ATPase ring enlarges and remodels the cis folding chamber."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0016465",
+     "notes": "Gene Ontology cellular-component term for chaperonin ATPase complex: A multimeric ATPase complex involved in protein folding."
+    },
+    {
+     "reference": "GO:0101031",
+     "notes": "Gene Ontology parent term for protein folding chaperone complex."
+    },
+    {
+     "reference": "GO:0005829",
+     "notes": "Gene Ontology cellular-component term for cytosol."
+    },
+    {
+     "reference": "GO:0006457",
+     "notes": "Gene Ontology biological-process term for protein folding."
+    },
+    {
+     "reference": "DOI:10.1038/41944",
+     "notes": "Xu, Horwich and Sigler 1997, The crystal structure of the asymmetric GroEL-GroES-(ADP)7 chaperonin complex, Nature."
+    },
+    {
+     "reference": "PDB:1AON",
+     "notes": "RCSB Protein Data Bank entry 1AON for the Escherichia coli chaperonin ATPase complex GroEL-GroES-(ADP)7."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "chaperonin_atpase_complex_folding_mechanism",
+     "title": "Chaperonin ATPase ring assembly and cavity-mediated protein folding",
+     "description": "Directed causal graph linking the ~60 kDa chaperonin ring and co-chaperonin lid subunits of the chaperonin ATPase complex (GO:0016465) to ATP-dependent protein folding (GO:0006457).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "cpn60_groel_subunit",
+       "label": "Chaperonin Cpn60/GroEL",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR001844",
+       "component_ref": "cpn60_groel_subunit"
+      },
+      {
+       "node_id": "cochaperonin_lid_subunit",
+       "label": "GroES chaperonin",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR020818",
+       "component_ref": "cochaperonin_lid_subunit"
+      },
+      {
+       "node_id": "chaperonin_atpase_complex",
+       "label": "chaperonin ATPase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0016465"
+      },
+      {
+       "node_id": "protein_folding",
+       "label": "protein folding",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0006457"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "cpn60_groel_subunit",
+       "predicate": "is part of",
+       "object": "chaperonin_atpase_complex",
+       "description": "Multiple identical ~60 kDa Cpn60/GroEL ATPase subunits assemble into the symmetric ring-shaped central cavity of the chaperonin ATPase complex.",
+       "evidence": [
+        {
+         "reference": "GO:0016465",
+         "notes": "GO:0016465 defines the complex as a symmetric ring-shaped structure of multiple identical ~60 kDa subunits."
+        }
+       ]
+      },
+      {
+       "subject": "cochaperonin_lid_subunit",
+       "predicate": "caps",
+       "object": "chaperonin_atpase_complex",
+       "description": "In the bacterial chaperonin ATPase complex, the smaller GroES co-chaperonin subunits cap one ~60 kDa chaperonin ring to enclose the cis folding cavity.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/41944",
+         "notes": "Xu, Horwich and Sigler 1997 showed how the heptameric GroES dome caps the GroEL ring to seal the folding chamber."
+        }
+       ]
+      },
+      {
+       "subject": "chaperonin_atpase_complex",
+       "predicate": "promotes",
+       "object": "protein_folding",
+       "description": "The central cavity of the chaperonin ATPase complex receives unfolded peptides and promotes their ATP-dependent folding into the native conformation.",
+       "evidence": [
+        {
+         "reference": "GO:0016465",
+         "notes": "GO:0016465 defines the complex by its central cavity that receives unfolded peptides and promotes their folding."
+        },
+        {
+         "reference": "DOI:10.1038/41944",
+         "notes": "Xu, Horwich and Sigler 1997 characterized the enlarged cis cavity that promotes substrate protein folding."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-24T03:15:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0016465 (chaperonin ATPase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "GO:0005832",
    "label": "chaperonin-containing T-complex",
    "structure_category": "OTHER",
@@ -267052,6 +268534,349 @@
    ]
   },
   {
+   "identifier": "GO:1990077",
+   "label": "primosome complex",
+   "structure_category": "OTHER",
+   "structure_kind": "NUCLEOPROTEIN_COMPLEX",
+   "definition": "A protein-DNA complex essential for initiation or restart of DNA replication in bacteria. At a minimum, it contains a DNA helicase and associated protein(s) which unwind the double-stranded DNA (dsDNA) and move along a single strand of DNA in the 5' to 3' direction. Typically, it also contains a primase which synthesizes a RNA primer.",
+   "definition_source": "GO:1990077",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "primosome",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1990077"
+    }
+   ],
+   "parent_structures": [
+    "GO:0032993"
+   ],
+   "part_of": [
+    "GO:0030894"
+   ],
+   "components": [
+    {
+     "component_id": "replicative_dna_helicase",
+     "label": "replicative DNA helicase DnaB",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "gene_symbols": [
+      "dnaB"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Hexameric ring helicase that translocates 5' to 3' on the lagging-strand template to unwind parental duplex DNA and recruit DNA primase.",
+     "evidence": [
+      {
+       "reference": "GO:1990077",
+       "notes": "GO:1990077 defines the primosome complex as containing at a minimum a DNA helicase that unwinds dsDNA and moves 5' to 3' along ssDNA."
+      },
+      {
+       "reference": "PMID:8663105",
+       "notes": "Tougu and Marians 1996 characterized the DnaB-DnaG helicase-primase interaction in the Escherichia coli primosome."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0ACB0",
+       "protein_label": "Replicative DNA helicase DnaB",
+       "gene_symbol": "dnaB",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene dnaB in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:8663105",
+         "notes": "Tougu K et al. 1996, 'The interaction between helicase and primase sets the replication fork clock.', J Biol Chem."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "dna_primase",
+     "label": "DNA primase DnaG",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "gene_symbols": [
+      "dnaG"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "RNA polymerase that associates with DnaB helicase to synthesize short RNA primers on unwound lagging-strand ssDNA.",
+     "evidence": [
+      {
+       "reference": "GO:1990077",
+       "notes": "GO:1990077 states that the primosome complex typically contains a primase which synthesizes an RNA primer."
+      },
+      {
+       "reference": "PMID:8663105",
+       "notes": "Tougu and Marians 1996 showed that DnaG primase binds DnaB helicase to prime Okazaki fragment synthesis."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0ABS5",
+       "protein_label": "DNA primase",
+       "gene_symbol": "dnaG",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene dnaG in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:8663105",
+         "notes": "Tougu K et al. 1996, 'The interaction between helicase and primase sets the replication fork clock.', J Biol Chem."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "helicase_chaperone_protein",
+     "label": "DNA replication loader/restart factor DnaC",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "gene_symbols": [
+      "dnaC"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "AAA+ ATPase helicase loader that complexes with DnaB during primosome assembly at replication origins and stalled forks.",
+     "evidence": [
+      {
+       "reference": "PMID:21856207",
+       "notes": "Briggs et al. 2012 (and Marians 2000) describe how DnaC loads DnaB onto PriA/PriB/DnaT-restarted forks and oriC to form the bacterial primosome."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0AEF0",
+       "protein_label": "DNA replication protein DnaC",
+       "gene_symbol": "dnaC",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene dnaC in Escherichia coli K-12.",
+       "evidence": [
+        {
+         "reference": "PMID:21856207",
+         "notes": "DnaC loads DnaB helicase onto single-stranded DNA during bacterial primosome assembly."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "template_dna",
+     "label": "replication fork single-stranded template DNA",
+     "component_type": "DNA",
+     "component_role": "CONSTITUENT",
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "essentiality": "ESSENTIAL",
+     "role": "Single-stranded DNA template strand along which the primosome translocates 5' to 3' to unwind dsDNA and synthesize RNA primers.",
+     "evidence": [
+      {
+       "reference": "GO:1990077",
+       "notes": "GO:1990077 defines the primosome complex as a protein-DNA complex that unwinds dsDNA and moves along ssDNA in the 5' to 3' direction."
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:562",
+     "taxon_label": "Escherichia coli",
+     "presence": "COMMON",
+     "note": "Primary bacterial model organism in which both oriC initiation and PriA-directed replication-restart primosomes were biochemically reconstituted.",
+     "reference": "PMID:8663105"
+    },
+    {
+     "taxon_id": "NCBITaxon:2",
+     "taxon_label": "Bacteria",
+     "presence": "COMMON",
+     "note": "Essential protein-DNA complex across Bacteria for replication initiation and replication fork restart.",
+     "reference": "GO:1990077"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference bacterial strain for the DnaB-DnaG core primosome and PriA-PriB-DnaT-DnaC-DnaB replication restart primosome.",
+     "reference": "PMID:21856207"
+    },
+    {
+     "taxon_id": "NCBITaxon:562",
+     "taxon_label": "Escherichia coli",
+     "note": "Canonical bacterial model for helicase-primase coupling in the primosome complex.",
+     "reference": "PMID:8663105"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "dna_replication_synthesis_of_primer",
+     "label": "DNA replication, synthesis of primer",
+     "grounding": "GO:0006269",
+     "description": "Unwinds template DNA in the 5' to 3' direction and synthesizes short RNA primers required to initiate or restart bacterial DNA synthesis.",
+     "evidence": [
+      {
+       "reference": "GO:1990077",
+       "notes": "GO:1990077 defines the primosome complex as unwinding dsDNA and synthesizing an RNA primer for initiation or restart of DNA replication in bacteria."
+      },
+      {
+       "reference": "PMID:8663105",
+       "notes": "Tougu and Marians 1996 demonstrated coupled dsDNA unwinding and RNA primer synthesis by the DnaB-DnaG primosome."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:1990077",
+     "notes": "Gene Ontology cellular-component term for primosome complex."
+    },
+    {
+     "reference": "GO:0006269",
+     "notes": "Gene Ontology biological-process term for DNA replication, synthesis of primer."
+    },
+    {
+     "reference": "PMID:8663105",
+     "notes": "Tougu K and Marians KJ 1996, 'The interaction between helicase and primase sets the replication fork clock.', J Biol Chem."
+    },
+    {
+     "reference": "PMID:21856207",
+     "notes": "Structural and biochemical characterization of bacterial primosome assembly and replication fork restart in Escherichia coli."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "primosome_primer_synthesis",
+     "title": "DnaB helicase and DnaG primase on template DNA mediate bacterial primer synthesis",
+     "description": "Directed causal graph linking DnaB helicase, DnaG primase, DnaC loader, and template DNA in the bacterial primosome complex (GO:1990077) to RNA primer synthesis during DNA replication (GO:0006269).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "helicase_chaperone_protein",
+       "label": "DNA replication loader/restart factor DnaC",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "helicase_chaperone_protein"
+      },
+      {
+       "node_id": "replicative_dna_helicase",
+       "label": "replicative DNA helicase DnaB",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "replicative_dna_helicase"
+      },
+      {
+       "node_id": "dna_primase",
+       "label": "DNA primase DnaG",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "dna_primase"
+      },
+      {
+       "node_id": "template_dna",
+       "label": "replication fork single-stranded template DNA",
+       "node_type": "GENETIC_ELEMENT",
+       "component_ref": "template_dna"
+      },
+      {
+       "node_id": "primosome_complex",
+       "label": "primosome complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990077"
+      },
+      {
+       "node_id": "dna_replication_synthesis_of_primer",
+       "label": "DNA replication, synthesis of primer",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0006269"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "helicase_chaperone_protein",
+       "predicate": "recruits",
+       "object": "replicative_dna_helicase",
+       "description": "DnaC loads the hexameric DnaB helicase ring onto single-stranded DNA during primosome assembly.",
+       "evidence": [
+        {
+         "reference": "PMID:21856207",
+         "notes": "DnaC loads DnaB onto single-stranded DNA at origins and restarted forks."
+        }
+       ]
+      },
+      {
+       "subject": "replicative_dna_helicase",
+       "predicate": "is part of",
+       "object": "primosome_complex",
+       "description": "DnaB helicase forms the 5' to 3' DNA-unwinding motor core of the bacterial primosome complex.",
+       "evidence": [
+        {
+         "reference": "GO:1990077",
+         "notes": "GO:1990077 defines the primosome complex as containing a DNA helicase that unwinds dsDNA."
+        }
+       ]
+      },
+      {
+       "subject": "dna_primase",
+       "predicate": "is part of",
+       "object": "primosome_complex",
+       "description": "DnaG primase binds DnaB helicase within the primosome complex.",
+       "evidence": [
+        {
+         "reference": "PMID:8663105",
+         "notes": "Tougu and Marians 1996 characterized the DnaB-DnaG interaction in the primosome."
+        }
+       ]
+      },
+      {
+       "subject": "template_dna",
+       "predicate": "is part of",
+       "object": "primosome_complex",
+       "description": "Single-stranded template DNA is bound by the primosome complex during 5' to 3' translocation and priming.",
+       "evidence": [
+        {
+         "reference": "GO:1990077",
+         "notes": "GO:1990077 defines the primosome complex as a protein-DNA complex."
+        }
+       ]
+      },
+      {
+       "subject": "primosome_complex",
+       "predicate": "mediates",
+       "object": "dna_replication_synthesis_of_primer",
+       "description": "The assembled primosome complex unwinds template DNA and synthesizes RNA primers to initiate or restart DNA synthesis.",
+       "evidence": [
+        {
+         "reference": "GO:1990077",
+         "notes": "GO:1990077 defines the primosome complex as essential for initiation or restart of DNA replication via RNA primer synthesis."
+        },
+        {
+         "reference": "PMID:8663105",
+         "notes": "Tougu and Marians 1996 demonstrated coupled unwinding and RNA primer synthesis by the primosome."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-24T03:15:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:1990077 (primosome complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "GO:0022624",
    "label": "proteasome accessory complex",
    "structure_category": "OTHER",
@@ -303723,6 +305548,586 @@
        "notes": "Establishes the site-specific pre-rRNA 2'-O-methylation and rRNA processing function of the box C/D snoRNP complex."
       }
      ]
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0170049",
+   "label": "box C/D RNP complex",
+   "structure_category": "RIBONUCLEOPROTEIN",
+   "structure_kind": "RIBONUCLEOPROTEIN_COMPLEX",
+   "definition": "A ribonucleoprotein complex containing a small RNA with a C/D box sequence motif that functions in the modification and processing of precursor ribosomal RNAs. Most members of this family direct site-specific 2'-O-methylation of substrate RNAs (box C/D methylation guide snoRNPs and scaRNPs), while others, such as the U3, U8, U14, and U22 snoRNPs, mediate endonucleolytic cleavage and folding of pre-rRNA.",
+   "definition_source": "GO:0170049",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "SNORD ribonucleoprotein complex",
+     "synonym_type": "BROAD_SYNONYM",
+     "source": "GO:0170049"
+    },
+    {
+     "synonym_text": "SNORNP",
+     "synonym_type": "BROAD_SYNONYM",
+     "source": "GO:0170049"
+    }
+   ],
+   "parent_structures": [
+    "GO:0005732"
+   ],
+   "components": [
+    {
+     "component_id": "box_c_d_rna",
+     "label": "box C/D small RNA",
+     "component_type": "RNA",
+     "component_role": "CONSTITUENT",
+     "essentiality": "ESSENTIAL",
+     "role": "Small non-coding RNA containing conserved box C (RUGAUGA) and box D (CUGA) kink-turn motifs that scaffolds the RNP and base-pairs with pre-rRNA substrates for 2'-O-methylation or pre-rRNA cleavage/folding.",
+     "evidence": [
+      {
+       "reference": "GO:0170049",
+       "notes": "GO:0170049 defines the complex as containing a small RNA with a C/D box sequence motif."
+      },
+      {
+       "reference": "PMID:9632712",
+       "notes": "Lafontaine and Tollervey 1998 review box C/D snoRNAs in both 2'-O-methylation and pre-rRNA cleavage."
+      }
+     ]
+    },
+    {
+     "component_id": "nop1_nop56_nop58_snu13_core",
+     "label": "Nop1-Nop56-Nop58-Snu13 core protein tetramer",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "NOP1",
+      "NOP56",
+      "NOP58",
+      "SNU13"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Conserved four-protein core consisting of kink-turn binding protein Snu13p (15.5K), scaffold subunits Nop56p and Nop58p, and the 2'-O-methyltransferase Nop1p (fibrillarin).",
+     "evidence": [
+      {
+       "reference": "PMID:9372940",
+       "notes": "Wu et al. 1998 and related yeast studies established Nop1p, Nop56p, Nop58p, and Snu13p as the core proteins of box C/D snoRNPs."
+      },
+      {
+       "reference": "PMID:10982895",
+       "notes": "Watkins et al. 2000 showed that Snu13p/15.5K binds the box C/D kink-turn motif to nucleate assembly of the box C/D RNP core."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P15646",
+       "protein_label": "rRNA 2'-O-methyltransferase fibrillarin",
+       "gene_symbol": "NOP1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene NOP1 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "PMID:9372940",
+         "notes": "Fibrillarin (Nop1p) is the conserved catalytic methyltransferase subunit of yeast box C/D snoRNPs."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q12460",
+       "protein_label": "Nucleolar protein 56",
+       "gene_symbol": "NOP56",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene NOP56 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "PMID:9632712",
+         "notes": "Nop56p is an essential core scaffold subunit of yeast box C/D RNPs."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q12499",
+       "protein_label": "Nucleolar protein 58",
+       "gene_symbol": "NOP58",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene NOP58 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "PMID:9372940",
+         "notes": "Wu P et al. 1998 demonstrated that Nop58p is required for box C/D snoRNP stability and pre-rRNA processing."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P39990",
+       "protein_label": "13 kDa ribonucleoprotein-associated protein",
+       "gene_symbol": "SNU13",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene SNU13 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "PMID:10982895",
+         "notes": "Watkins NJ et al. 2000 showed that Snu13p binds the box C/D RNA motif in Saccharomyces cerevisiae."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Primary eukaryotic microbial model for box C/D RNPs including both methylation-guide snoRNPs and processing snoRNPs (U3, U14).",
+     "reference": "PMID:9632712"
+    },
+    {
+     "taxon_id": "NCBITaxon:2157",
+     "taxon_label": "Archaea",
+     "presence": "COMMON",
+     "note": "Archaeal box C/D sRNPs (L7Ae-Nop5-fibrillarin bound to C/D sRNAs) are conserved microbial homologs directing RNA 2'-O-methylation.",
+     "reference": "DOI:10.1016/j.molcel.2007.01.024"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Reference budding yeast strain for the Nop1p-Nop56p-Nop58p-Snu13p box C/D RNP family.",
+     "reference": "PMID:10982895"
+    },
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "note": "Canonical microbial model for box C/D RNPs functioning in pre-rRNA 2'-O-methylation and cleavage.",
+     "reference": "PMID:9372940"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "pre_rrna_modification_and_processing",
+     "label": "rRNA processing",
+     "grounding": "GO:0006364",
+     "description": "Mediates site-specific 2'-O-methylation, endonucleolytic cleavage, and folding of precursor ribosomal RNAs during ribosome biogenesis.",
+     "evidence": [
+      {
+       "reference": "GO:0170049",
+       "notes": "GO:0170049 defines the complex as functioning in the modification and processing of precursor ribosomal RNAs."
+      },
+      {
+       "reference": "PMID:9632712",
+       "notes": "Lafontaine and Tollervey 1998 review how box C/D snoRNPs direct both pre-rRNA 2'-O-methylation and endonucleolytic pre-rRNA cleavage."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0170049",
+     "notes": "Gene Ontology cellular-component term for box C/D RNP complex."
+    },
+    {
+     "reference": "GO:0006364",
+     "notes": "Gene Ontology biological-process term for rRNA processing."
+    },
+    {
+     "reference": "PMID:9372940",
+     "notes": "Wu P et al. 1998, 'A novel nucleolar protein, Nop58p, is associated with box C+D snoRNAs and is essential for their stability.', EMBO J."
+    },
+    {
+     "reference": "PMID:9632712",
+     "notes": "Lafontaine DL and Tollervey D 1998, 'Birth of the snoRNPs: the evolution of the modification-guide snoRNAs.', Trends Biochem Sci."
+    },
+    {
+     "reference": "PMID:10982895",
+     "notes": "Watkins NJ et al. 2000, 'A common core RNP structure shared between the small nucleoar box C/D RNPs and the spliceosomal U4 snRNP.', Cell."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "box_c_d_rnp_rrna_processing",
+     "title": "Box C/D RNA and Nop1-Nop56-Nop58-Snu13 core mediate pre-rRNA processing",
+     "description": "Directed causal graph linking the box C/D small RNA and the Nop1-Nop56-Nop58-Snu13 protein core of the box C/D RNP complex (GO:0170049) to rRNA processing (GO:0006364).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "box_c_d_rna",
+       "label": "box C/D small RNA",
+       "node_type": "RNA",
+       "component_ref": "box_c_d_rna"
+      },
+      {
+       "node_id": "nop1_nop56_nop58_snu13_core",
+       "label": "Nop1-Nop56-Nop58-Snu13 core protein tetramer",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nop1_nop56_nop58_snu13_core"
+      },
+      {
+       "node_id": "box_c_d_rnp_complex",
+       "label": "box C/D RNP complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0170049"
+      },
+      {
+       "node_id": "pre_rrna_modification_and_processing",
+       "label": "rRNA processing",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0006364"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "box_c_d_rna",
+       "predicate": "is part of",
+       "object": "box_c_d_rnp_complex",
+       "description": "The box C/D small RNA provides the kink-turn motif and antisense guide elements of the box C/D RNP complex.",
+       "evidence": [
+        {
+         "reference": "GO:0170049",
+         "notes": "GO:0170049 defines the complex as containing a small RNA with a C/D box sequence motif."
+        }
+       ]
+      },
+      {
+       "subject": "nop1_nop56_nop58_snu13_core",
+       "predicate": "is part of",
+       "object": "box_c_d_rnp_complex",
+       "description": "The Nop1p-Nop56p-Nop58p-Snu13p tetramer binds the box C/D RNA kink-turn to form the mature RNP complex.",
+       "evidence": [
+        {
+         "reference": "PMID:10982895",
+         "notes": "Watkins et al. 2000 demonstrated assembly of Snu13p, Nop56p, Nop58p, and Nop1p on box C/D RNAs."
+        }
+       ]
+      },
+      {
+       "subject": "box_c_d_rnp_complex",
+       "predicate": "mediates",
+       "object": "pre_rrna_modification_and_processing",
+       "description": "The assembled box C/D RNP complex directs 2'-O-methylation and endonucleolytic cleavage/folding of precursor rRNAs.",
+       "evidence": [
+        {
+         "reference": "GO:0170049",
+         "notes": "GO:0170049 defines the complex as functioning in the modification and processing of precursor ribosomal RNAs."
+        },
+        {
+         "reference": "PMID:9632712",
+         "notes": "Lafontaine and Tollervey 1998 review pre-rRNA modification and processing by box C/D snoRNPs."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-24T03:15:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0170049 (box C/D RNP complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0072588",
+   "label": "box H/ACA RNP complex",
+   "structure_category": "RIBONUCLEOPROTEIN",
+   "structure_kind": "RIBONUCLEOPROTEIN_COMPLEX",
+   "definition": "A ribonucleoprotein complex containing a small RNA with an H/ACA box sequence motif that catalyzes pseudouridylation of RNA molecules. Most members of this family use guide RNAs to direct the site of pseudouridylation of target RNAs (for example, box H/ACA snoRNPs and box H/ACA scaRNPs) although some members do not modify other RNAs (for example, telomerase RNP).",
+   "definition_source": "GO:0072588",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "sRNP complex",
+     "synonym_type": "NARROW_SYNONYM",
+     "source": "GO:0072588"
+    },
+    {
+     "synonym_text": "box H/ACA snoRNP pseudouridylase complex",
+     "synonym_type": "RELATED_SYNONYM",
+     "source": "GO:0072588"
+    }
+   ],
+   "parent_structures": [
+    "GO:0005732"
+   ],
+   "components": [
+    {
+     "component_id": "box_h_aca_rna",
+     "label": "box H/ACA small RNA",
+     "component_type": "RNA",
+     "component_role": "CONSTITUENT",
+     "essentiality": "ESSENTIAL",
+     "role": "Small non-coding RNA containing hairpin-hinge-hairpin-tail secondary structure with conserved H-box and ACA-box motifs that scaffolds the RNP and typically base-pairs with substrate RNA to position the target uridine.",
+     "evidence": [
+      {
+       "reference": "GO:0072588",
+       "notes": "GO:0072588 defines the complex as containing a small RNA with an H/ACA box sequence motif."
+      },
+      {
+       "reference": "DOI:10.1016/j.molcel.2007.01.024",
+       "notes": "Matera et al. 2007 reviews the conserved H/ACA RNA scaffold and guide pockets in box H/ACA RNPs."
+      }
+     ]
+    },
+    {
+     "component_id": "cbf5_gar1_nhp2_nop10_core",
+     "label": "Cbf5-Gar1-Nhp2-Nop10 pseudouridine synthase core protein tetramer",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "CBF5",
+      "GAR1",
+      "NHP2",
+      "NOP10"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Conserved four-protein enzymatic core consisting of the catalytic pseudouridine synthase Cbf5p (dyskerin/TruB homolog) and accessory subunits Gar1p, Nhp2p, and Nop10p.",
+     "evidence": [
+      {
+       "reference": "PMID:9843512",
+       "notes": "Henras et al. 1998 identified Gar1p, Nhp2p, Nop10p, and Cbf5p as components of the yeast box H/ACA RNP family."
+      },
+      {
+       "reference": "PMID:14562095",
+       "notes": "Wang and Meier 2004 determined the architecture of the yeast Cbf5p-Nop10p-Gar1p-Nhp2p box H/ACA RNP core."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P33322",
+       "protein_label": "H/ACA ribonucleoprotein complex subunit CBF5",
+       "gene_symbol": "CBF5",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene CBF5 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Wang C et al. 2004, 'Architecture and assembly of mammalian H/ACA small nucleolar and telomerase ribonucleoproteins.', EMBO J."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P28007",
+       "protein_label": "H/ACA ribonucleoprotein complex subunit GAR1",
+       "gene_symbol": "GAR1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene GAR1 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Wang C et al. 2004, 'Architecture and assembly of mammalian H/ACA small nucleolar and telomerase ribonucleoproteins.', EMBO J."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P32495",
+       "protein_label": "H/ACA ribonucleoprotein complex subunit NHP2",
+       "gene_symbol": "NHP2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene NHP2 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998, 'NhP2p and Nop10p are essential for  the function of the H/ACA snoRNPs.', EMBO J."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q6Q547",
+       "protein_label": "H/ACA ribonucleoprotein complex subunit NOP10",
+       "gene_symbol": "NOP10",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-08-30",
+       "role": "Reviewed UniProtKB entry for gene NOP10 in Saccharomyces cerevisiae S288C.",
+       "evidence": [
+        {
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998, 'NhP2p and Nop10p are essential for the function of the H/ACA snoRNPs.', EMBO J."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "presence": "COMMON",
+     "note": "Primary eukaryotic microbial model in which the box H/ACA RNP family (Cbf5p-Gar1p-Nhp2p-Nop10p plus box H/ACA RNAs) was characterized.",
+     "reference": "PMID:9843512"
+    },
+    {
+     "taxon_id": "NCBITaxon:2157",
+     "taxon_label": "Archaea",
+     "presence": "COMMON",
+     "note": "Archaeal box H/ACA sRNPs (aCBF5-aNOP10-aGAR1-L7Ae bound to H/ACA sRNAs) are conserved homologs catalyzing rRNA pseudouridylation.",
+     "reference": "DOI:10.1016/j.molcel.2007.01.024"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Reference budding yeast strain for the Cbf5p-Gar1p-Nhp2p-Nop10p box H/ACA ribonucleoprotein family.",
+     "reference": "PMID:14562095"
+    },
+    {
+     "taxon_id": "NCBITaxon:4932",
+     "taxon_label": "Saccharomyces cerevisiae",
+     "note": "Canonical microbial model for box H/ACA snoRNPs catalyzing rRNA pseudouridylation.",
+     "reference": "PMID:9843512"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "rna_pseudouridine_synthesis",
+     "label": "pseudouridine synthesis",
+     "grounding": "GO:0001522",
+     "description": "Catalyzes the site-specific isomerization of uridine to pseudouridine in target RNA molecules directed by the box H/ACA guide RNA.",
+     "evidence": [
+      {
+       "reference": "GO:0072588",
+       "notes": "GO:0072588 defines the complex as catalyzing pseudouridylation of RNA molecules."
+      },
+      {
+       "reference": "PMID:9843512",
+       "notes": "Henras et al. 1998 demonstrated that the yeast box H/ACA RNP core subunits are required for site-specific rRNA pseudouridylation."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0072588",
+     "notes": "Gene Ontology cellular-component term for box H/ACA RNP complex."
+    },
+    {
+     "reference": "GO:0001522",
+     "notes": "Gene Ontology biological-process term for pseudouridine synthesis."
+    },
+    {
+     "reference": "PMID:9843512",
+     "notes": "Henras A et al. 1998, 'NhP2p and Nop10p are essential for the function of the H/ACA snoRNPs.', EMBO J."
+    },
+    {
+     "reference": "PMID:14562095",
+     "notes": "Wang C and Meier UT 2004, 'Architecture and assembly of mammalian H/ACA small nucleolar and telomerase ribonucleoproteins.', EMBO J."
+    },
+    {
+     "reference": "DOI:10.1016/j.molcel.2007.01.024",
+     "notes": "Matera AG et al. 2007, 'Non-coding RNAs: lessons from the small nuclear and small nucleolar RNAs', Nat Rev Mol Cell Biol / Mol Cell."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "box_h_aca_rnp_pseudouridylation",
+     "title": "Box H/ACA RNA guide and Cbf5 core tetramer catalyze RNA pseudouridylation",
+     "description": "Directed causal graph linking the box H/ACA RNA scaffold and the Cbf5-Gar1-Nhp2-Nop10 catalytic core of the box H/ACA RNP complex (GO:0072588) to pseudouridine synthesis (GO:0001522).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "box_h_aca_rna",
+       "label": "box H/ACA small RNA",
+       "node_type": "RNA",
+       "component_ref": "box_h_aca_rna"
+      },
+      {
+       "node_id": "cbf5_gar1_nhp2_nop10_core",
+       "label": "Cbf5-Gar1-Nhp2-Nop10 pseudouridine synthase core protein tetramer",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "cbf5_gar1_nhp2_nop10_core"
+      },
+      {
+       "node_id": "box_h_aca_rnp_complex",
+       "label": "box H/ACA RNP complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0072588"
+      },
+      {
+       "node_id": "rna_pseudouridine_synthesis",
+       "label": "pseudouridine synthesis",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0001522"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "box_h_aca_rna",
+       "predicate": "is part of",
+       "object": "box_h_aca_rnp_complex",
+       "description": "The box H/ACA small RNA provides the hairpin-hinge-hairpin-tail scaffold and substrate-guiding pseudouridylation pocket of the RNP.",
+       "evidence": [
+        {
+         "reference": "GO:0072588",
+         "notes": "GO:0072588 defines the complex by containing a small RNA with an H/ACA box sequence motif."
+        }
+       ]
+      },
+      {
+       "subject": "cbf5_gar1_nhp2_nop10_core",
+       "predicate": "is part of",
+       "object": "box_h_aca_rnp_complex",
+       "description": "The Cbf5p-Gar1p-Nhp2p-Nop10p protein tetramer assembles onto the box H/ACA RNA hairpins to form the catalytic RNP core.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Wang and Meier 2004 defined the assembly of the four core proteins on box H/ACA RNAs."
+        }
+       ]
+      },
+      {
+       "subject": "box_h_aca_rnp_complex",
+       "predicate": "mediates",
+       "object": "rna_pseudouridine_synthesis",
+       "description": "The assembled box H/ACA RNP complex catalyzes site-specific isomerization of uridine to pseudouridine in substrate RNAs.",
+       "evidence": [
+        {
+         "reference": "GO:0072588",
+         "notes": "GO:0072588 defines the complex as catalyzing pseudouridylation of RNA molecules."
+        },
+        {
+         "reference": "PMID:9843512",
+         "notes": "Henras et al. 1998 demonstrated that the box H/ACA RNP is required for rRNA pseudouridylation."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-24T03:15:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0072588 (box H/ACA RNP complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },

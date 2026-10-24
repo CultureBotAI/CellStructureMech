@@ -1,0 +1,248 @@
+identifier: GO:0099070
+label: static microtubule bundle
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: A stable bundle of closely packed microtubules formed in quiescent cells,
+  usually associated with the spindle pole body. In yeast cells entering quiescence,
+  it assembles at the transition from proliferation to quiescence and disassembles
+  rapidly upon cell cycle re-entry.
+definition_source: GO:0099070
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: Q-MT bundle
+  synonym_type: NARROW_SYNONYM
+  source: GO:0099070
+- synonym_text: quiescent cell MT bundle
+  synonym_type: NARROW_SYNONYM
+  source: GO:0099070
+- synonym_text: quiescent cell microtubule bundle
+  synonym_type: NARROW_SYNONYM
+  source: GO:0099070
+parent_structures:
+- GO:0097427
+part_of:
+- GO:0015630
+components:
+- component_id: alpha_tubulin
+  label: alpha-tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002452
+  gene_symbols:
+  - atb2
+  - TUB1
+  - TUB3
+  essentiality: ESSENTIAL
+  role: Alpha-tubulin subunit that heterodimerizes with beta-tubulin to polymerize
+    into the closely packed, hyperstable microtubules of the quiescent bundle.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Laporte et al. 2015 characterized alpha-tubulin (Atb2) within quiescent-cell
+      static microtubule bundles in Schizosaccharomyces pombe.
+  - reference: DOI:10.7554/eLife.89958
+    notes: de Jager et al. 2024 resolved alpha-tubulin isoforms Tub1 and Tub3 within
+      the quiescent nuclear microtubule bundle of Saccharomyces cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:P04689
+    protein_label: Tubulin alpha-2 chain
+    gene_symbol: atb2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene atb2 in Schizosaccharomyces pombe 972h-.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Laporte D et al. 2015 characterized Atb2-containing quiescent microtubule
+        bundles in S. pombe.
+  - uniprot_id: UniProtKB:P09733
+    protein_label: Tubulin alpha-1 chain
+    gene_symbol: TUB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene TUB1 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: DOI:10.1083/jcb.201306075
+      notes: Laporte D et al. 2013 imaged Tub1-GFP in quiescent nuclear microtubule
+        bundles in S. cerevisiae.
+  - uniprot_id: UniProtKB:P09734
+    protein_label: Tubulin alpha-3 chain
+    gene_symbol: TUB3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene TUB3 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: DOI:10.7554/eLife.89958
+      notes: de Jager L et al. 2024 showed that Tub3 stabilizes the quiescent nuclear
+        microtubule bundle in S. cerevisiae.
+- component_id: beta_tubulin
+  label: beta-tubulin
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002453
+  gene_symbols:
+  - nda3
+  - TUB2
+  essentiality: ESSENTIAL
+  role: Beta-tubulin subunit that pairs with alpha-tubulin to form the protofilaments
+    of the static microtubule bundle in quiescent yeast cells.
+  evidence:
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Laporte et al. 2015 characterized beta-tubulin (Nda3) in the quiescent
+      microtubule bundle of S. pombe.
+  - reference: DOI:10.1083/jcb.201306075
+    notes: Laporte et al. 2013 characterized Tub2 beta-tubulin in the quiescent nuclear
+      microtubule bundle of S. cerevisiae.
+  protein_examples:
+  - uniprot_id: UniProtKB:P05219
+    protein_label: Tubulin beta chain
+    gene_symbol: nda3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene nda3 in Schizosaccharomyces pombe 972h-.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Laporte D et al. 2015 demonstrated that beta-tubulin Nda3 forms the core
+        of the S. pombe Q-MT bundle.
+  - uniprot_id: UniProtKB:P02557
+    protein_label: Tubulin beta chain
+    gene_symbol: TUB2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene TUB2 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: DOI:10.1083/jcb.201306075
+      notes: Laporte D et al. 2013 demonstrated that Tub2 mutations prevent quiescent
+        microtubule bundle assembly in S. cerevisiae.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  presence: COMMON
+  note: Forms a cytoplasmic static microtubule bundle (Q-MT bundle) associated with
+    the spindle pole body upon entry into quiescence.
+  reference: DOI:10.1083/jcb.201502025
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Forms a nuclear static microtubule bundle extending from the spindle pole
+    body across the nucleus in quiescent cells.
+  reference: DOI:10.1083/jcb.201306075
+canonical_examples:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  note: Reference fission yeast strain in which cytoplasmic static microtubule bundles
+    (Q-MT bundles) were characterized during quiescence.
+  reference: DOI:10.1083/jcb.201502025
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding yeast strain in which nuclear static microtubule bundles
+    were characterized by fluorescence and cryo-electron tomography.
+  reference: DOI:10.7554/eLife.89958
+functions:
+- function_id: quiescent_microtubule_cytoskeleton_organization
+  label: microtubule cytoskeleton organization
+  grounding: GO:0000226
+  description: Reorganizes the microtubule cytoskeleton into a hyperstable, spindle-pole-body-associated
+    bundle at the transition from proliferation to quiescence and disassembles rapidly
+    upon cell-cycle re-entry to support survival in quiescence.
+  evidence:
+  - reference: GO:0099070
+    notes: GO:0099070 defines the static microtubule bundle as assembling at the transition
+      from proliferation to quiescence and disassembling rapidly upon cell cycle re-entry.
+  - reference: DOI:10.1083/jcb.201306075
+    notes: Laporte et al. 2013 showed that assembly of the static microtubule bundle
+      is required for cell survival during quiescence and rapid spindle reformation
+      upon exit.
+  - reference: DOI:10.1083/jcb.201502025
+    notes: Laporte et al. 2015 demonstrated conserved assembly and rapid depolymerization
+      of the Q-MT bundle in quiescent S. pombe.
+evidence:
+- reference: GO:0099070
+  notes: Gene Ontology cellular-component term for static microtubule bundle.
+- reference: GO:0000226
+  notes: Gene Ontology biological-process term for microtubule cytoskeleton organization.
+- reference: DOI:10.1083/jcb.201306075
+  notes: Laporte D et al. 2013, 'Quiescent Saccharomyces cerevisiae forms a new-type
+    of reversible microtubule bundle required for cell survival.', J Cell Biol.
+- reference: DOI:10.1083/jcb.201502025
+  notes: Laporte D et al. 2015, 'Kinesin-5 and kinesin-14 control the assembly and
+    stability of quiescent-cell microtubule bundles in fission yeast.', J Cell Biol.
+- reference: DOI:10.7554/eLife.89958
+  notes: de Jager L et al. 2024, cryo-ET architecture of the quiescent microtubule
+    bundle in Saccharomyces cerevisiae, eLife.
+causal_graphs:
+- graph_id: static_microtubule_bundle_organization
+  title: Alpha/beta-tubulin protofilaments assemble into static microtubule bundles
+    in quiescent cells
+  description: Directed causal graph linking alpha-tubulin and beta-tubulin subunits
+    of the static microtubule bundle (GO:0099070) to microtubule cytoskeleton organization
+    during cellular quiescence (GO:0000226).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: alpha_tubulin
+    label: alpha-tubulin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002452
+    component_ref: alpha_tubulin
+  - node_id: beta_tubulin
+    label: beta-tubulin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002453
+    component_ref: beta_tubulin
+  - node_id: static_microtubule_bundle
+    label: static microtubule bundle
+    node_type: STRUCTURE
+    grounding: GO:0099070
+  - node_id: quiescent_microtubule_cytoskeleton_organization
+    label: microtubule cytoskeleton organization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000226
+  edges:
+  - subject: alpha_tubulin
+    predicate: is part of
+    object: static_microtubule_bundle
+    description: Alpha-tubulin subunits copolymerize with beta-tubulin into the closely
+      packed microtubules of the static bundle.
+    evidence:
+    - reference: DOI:10.1083/jcb.201502025
+      notes: Laporte et al. 2015 showed Atb2 alpha-tubulin incorporation into quiescent
+        microtubule bundles.
+  - subject: beta_tubulin
+    predicate: is part of
+    object: static_microtubule_bundle
+    description: Beta-tubulin subunits copolymerize with alpha-tubulin to form the
+      hyperstable microtubules of the static bundle.
+    evidence:
+    - reference: DOI:10.1083/jcb.201306075
+      notes: Laporte et al. 2013 demonstrated that Tub2 beta-tubulin is essential
+        for static microtubule bundle assembly.
+  - subject: static_microtubule_bundle
+    predicate: mediates
+    object: quiescent_microtubule_cytoskeleton_organization
+    description: Assembly of the static microtubule bundle reorganizes and stabilizes
+      the microtubule cytoskeleton during quiescence.
+    evidence:
+    - reference: GO:0099070
+      notes: GO:0099070 defines the static microtubule bundle as assembling at the
+        transition to quiescence and disassembling upon cell cycle re-entry.
+    - reference: DOI:10.1083/jcb.201306075
+      notes: Laporte et al. 2013 demonstrated that the static microtubule bundle reorganizes
+        the cytoskeleton for quiescent survival.
+curation_history:
+- timestamp: '2026-10-24T03:15:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0099070 (static microtubule bundle) with
+    verified GO identity, source-backed components, reviewed UniProtKB protein examples,
+    taxonomic distribution, canonical examples, functions, and mechanistic causal
+    graph.
+  llm_assisted: true

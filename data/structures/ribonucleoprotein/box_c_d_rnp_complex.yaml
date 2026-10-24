@@ -1,0 +1,218 @@
+identifier: GO:0170049
+label: box C/D RNP complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex containing a small RNA with a C/D box sequence
+  motif that functions in the modification and processing of precursor ribosomal RNAs.
+  Most members of this family direct site-specific 2'-O-methylation of substrate RNAs
+  (box C/D methylation guide snoRNPs and scaRNPs), while others, such as the U3, U8,
+  U14, and U22 snoRNPs, mediate endonucleolytic cleavage and folding of pre-rRNA.
+definition_source: GO:0170049
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: SNORD ribonucleoprotein complex
+  synonym_type: BROAD_SYNONYM
+  source: GO:0170049
+- synonym_text: SNORNP
+  synonym_type: BROAD_SYNONYM
+  source: GO:0170049
+parent_structures:
+- GO:0005732
+components:
+- component_id: box_c_d_rna
+  label: box C/D small RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Small non-coding RNA containing conserved box C (RUGAUGA) and box D (CUGA)
+    kink-turn motifs that scaffolds the RNP and base-pairs with pre-rRNA substrates
+    for 2'-O-methylation or pre-rRNA cleavage/folding.
+  evidence:
+  - reference: GO:0170049
+    notes: GO:0170049 defines the complex as containing a small RNA with a C/D box
+      sequence motif.
+  - reference: PMID:9632712
+    notes: Lafontaine and Tollervey 1998 review box C/D snoRNAs in both 2'-O-methylation
+      and pre-rRNA cleavage.
+- component_id: nop1_nop56_nop58_snu13_core
+  label: Nop1-Nop56-Nop58-Snu13 core protein tetramer
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - NOP1
+  - NOP56
+  - NOP58
+  - SNU13
+  essentiality: ESSENTIAL
+  role: Conserved four-protein core consisting of kink-turn binding protein Snu13p
+    (15.5K), scaffold subunits Nop56p and Nop58p, and the 2'-O-methyltransferase Nop1p
+    (fibrillarin).
+  evidence:
+  - reference: PMID:9372940
+    notes: Wu et al. 1998 and related yeast studies established Nop1p, Nop56p, Nop58p,
+      and Snu13p as the core proteins of box C/D snoRNPs.
+  - reference: PMID:10982895
+    notes: Watkins et al. 2000 showed that Snu13p/15.5K binds the box C/D kink-turn
+      motif to nucleate assembly of the box C/D RNP core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P15646
+    protein_label: rRNA 2'-O-methyltransferase fibrillarin
+    gene_symbol: NOP1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene NOP1 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: PMID:9372940
+      notes: Fibrillarin (Nop1p) is the conserved catalytic methyltransferase subunit
+        of yeast box C/D snoRNPs.
+  - uniprot_id: UniProtKB:Q12460
+    protein_label: Nucleolar protein 56
+    gene_symbol: NOP56
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene NOP56 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: PMID:9632712
+      notes: Nop56p is an essential core scaffold subunit of yeast box C/D RNPs.
+  - uniprot_id: UniProtKB:Q12499
+    protein_label: Nucleolar protein 58
+    gene_symbol: NOP58
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene NOP58 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: PMID:9372940
+      notes: Wu P et al. 1998 demonstrated that Nop58p is required for box C/D snoRNP
+        stability and pre-rRNA processing.
+  - uniprot_id: UniProtKB:P39990
+    protein_label: 13 kDa ribonucleoprotein-associated protein
+    gene_symbol: SNU13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene SNU13 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: PMID:10982895
+      notes: Watkins NJ et al. 2000 showed that Snu13p binds the box C/D RNA motif
+        in Saccharomyces cerevisiae.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Primary eukaryotic microbial model for box C/D RNPs including both methylation-guide
+    snoRNPs and processing snoRNPs (U3, U14).
+  reference: PMID:9632712
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: COMMON
+  note: Archaeal box C/D sRNPs (L7Ae-Nop5-fibrillarin bound to C/D sRNAs) are conserved
+    microbial homologs directing RNA 2'-O-methylation.
+  reference: DOI:10.1016/j.molcel.2007.01.024
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding yeast strain for the Nop1p-Nop56p-Nop58p-Snu13p box C/D
+    RNP family.
+  reference: PMID:10982895
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Canonical microbial model for box C/D RNPs functioning in pre-rRNA 2'-O-methylation
+    and cleavage.
+  reference: PMID:9372940
+functions:
+- function_id: pre_rrna_modification_and_processing
+  label: rRNA processing
+  grounding: GO:0006364
+  description: Mediates site-specific 2'-O-methylation, endonucleolytic cleavage,
+    and folding of precursor ribosomal RNAs during ribosome biogenesis.
+  evidence:
+  - reference: GO:0170049
+    notes: GO:0170049 defines the complex as functioning in the modification and processing
+      of precursor ribosomal RNAs.
+  - reference: PMID:9632712
+    notes: Lafontaine and Tollervey 1998 review how box C/D snoRNPs direct both pre-rRNA
+      2'-O-methylation and endonucleolytic pre-rRNA cleavage.
+evidence:
+- reference: GO:0170049
+  notes: Gene Ontology cellular-component term for box C/D RNP complex.
+- reference: GO:0006364
+  notes: Gene Ontology biological-process term for rRNA processing.
+- reference: PMID:9372940
+  notes: Wu P et al. 1998, 'A novel nucleolar protein, Nop58p, is associated with
+    box C+D snoRNAs and is essential for their stability.', EMBO J.
+- reference: PMID:9632712
+  notes: 'Lafontaine DL and Tollervey D 1998, ''Birth of the snoRNPs: the evolution
+    of the modification-guide snoRNAs.'', Trends Biochem Sci.'
+- reference: PMID:10982895
+  notes: Watkins NJ et al. 2000, 'A common core RNP structure shared between the small
+    nucleoar box C/D RNPs and the spliceosomal U4 snRNP.', Cell.
+causal_graphs:
+- graph_id: box_c_d_rnp_rrna_processing
+  title: Box C/D RNA and Nop1-Nop56-Nop58-Snu13 core mediate pre-rRNA processing
+  description: Directed causal graph linking the box C/D small RNA and the Nop1-Nop56-Nop58-Snu13
+    protein core of the box C/D RNP complex (GO:0170049) to rRNA processing (GO:0006364).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: box_c_d_rna
+    label: box C/D small RNA
+    node_type: RNA
+    component_ref: box_c_d_rna
+  - node_id: nop1_nop56_nop58_snu13_core
+    label: Nop1-Nop56-Nop58-Snu13 core protein tetramer
+    node_type: GENE_OR_PROTEIN
+    component_ref: nop1_nop56_nop58_snu13_core
+  - node_id: box_c_d_rnp_complex
+    label: box C/D RNP complex
+    node_type: STRUCTURE
+    grounding: GO:0170049
+  - node_id: pre_rrna_modification_and_processing
+    label: rRNA processing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006364
+  edges:
+  - subject: box_c_d_rna
+    predicate: is part of
+    object: box_c_d_rnp_complex
+    description: The box C/D small RNA provides the kink-turn motif and antisense
+      guide elements of the box C/D RNP complex.
+    evidence:
+    - reference: GO:0170049
+      notes: GO:0170049 defines the complex as containing a small RNA with a C/D box
+        sequence motif.
+  - subject: nop1_nop56_nop58_snu13_core
+    predicate: is part of
+    object: box_c_d_rnp_complex
+    description: The Nop1p-Nop56p-Nop58p-Snu13p tetramer binds the box C/D RNA kink-turn
+      to form the mature RNP complex.
+    evidence:
+    - reference: PMID:10982895
+      notes: Watkins et al. 2000 demonstrated assembly of Snu13p, Nop56p, Nop58p,
+        and Nop1p on box C/D RNAs.
+  - subject: box_c_d_rnp_complex
+    predicate: mediates
+    object: pre_rrna_modification_and_processing
+    description: The assembled box C/D RNP complex directs 2'-O-methylation and endonucleolytic
+      cleavage/folding of precursor rRNAs.
+    evidence:
+    - reference: GO:0170049
+      notes: GO:0170049 defines the complex as functioning in the modification and
+        processing of precursor ribosomal RNAs.
+    - reference: PMID:9632712
+      notes: Lafontaine and Tollervey 1998 review pre-rRNA modification and processing
+        by box C/D snoRNPs.
+curation_history:
+- timestamp: '2026-10-24T03:15:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0170049 (box C/D RNP complex) with verified
+    GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
+    distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true
