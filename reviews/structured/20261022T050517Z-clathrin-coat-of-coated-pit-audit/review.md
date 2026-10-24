@@ -1,0 +1,789 @@
+# Clathrin coat of coated pit scientific review
+
+- Review: 20261022T050517Z-clathrin-coat-of-coated-pit-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T04:47:11Z
+- Finished UTC: 2026-10-22T05:05:17Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Pit-coat identity, AP2 grounding and nonmechanistic topology are supported. One minor concerns the available exact GO clathrin-triskelion mapping left label-only.
+
+## Scope And Provenance
+
+Exactly one full maintained target, with the full three-record generic coat/pit coat/pit boundary set (target plus two neighbors), current exact GO/protein/taxon authorities and precisely scoped primary sources. No generated pages or scientific records changed.
+
+Selection: Target 4 of batch47, strict uncovered path order at unchanged origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0030132 | data/structures/other/clathrin_coat_of_coated_pit.yaml | maintained | clathrin coat of coated pit |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0030132 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0030132 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0030132 | Native focused check passed; scientific scope independently assessed. |
+| Expression-module applicability | not_applicable | False | GO:0030132 | No expression-module or transcriptomic attribution is made. |
+| Claim-level scientific review | passed | True | GO:0030132 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0030132 | 8 of 8 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0030132 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0030132 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0030132 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0030132 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0030132 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact complex classes versus deferred label-only rows
+
+grounding: concern. Targets: GO:0030132.
+
+The triskelion complex has an exact source-neutral GO0071439 mapping. AP-2 is already correctly grounded to GO0030122; only the triskelion label-only row needs this bounded mapping correction.
+
+### Assembly necessity remains unestablished
+
+grounding: unknown. Targets: GO:0030132.
+
+Verified coat constituents, a six-chain triskelion and AP binding behavior do not by themselves demonstrate the requirement of every constituent for formation under every condition. The existing UNKNOWN essentiality values are retained; endocytic-function phenotypes are not silently substituted for coat-assembly necessity.
+
+### Pit coat versus membrane pit and vesicle coat
+
+identity: supported. Targets: GO:0030132.
+
+The identifier, definition and clathrin-coat parent agree with native GO. Pit parthood and AP2 has-part are explicit typed relations. The native definition also includes derived vesicles; this ontology overlap does not make the maintained identifier interchangeable with the distinct endocytic-vesicle-coat identifier.
+
+### Architecture and membrane/cargo linkage
+
+evidence: supported. Targets: GO:0030132.
+
+Collins complete abstract establishes the four-subunit core architecture; Jackson body provides structure and binding assays supporting the stated AP2 role. The record makes no organism distribution or yeast experimental assertion for these recombinant biochemical studies.
+
+### Nonmechanistic coat topology and coarse adaptor role
+
+graph: supported. Targets: GO:0030132.
+
+NONMECHANISTIC and scope notes match the supported is-a/part-of relations and coarse membrane/cargo linkage. No atomic pathway, complete pit-budding machinery or universal clathrin requirement is asserted.
+
+### Complete single-record review
+
+completeness: supported. Targets: GO:0030132.
+
+All maintained fields, evidence placement, current discussions and history were read. Positive source-native mappings and bounded source limitations were distinguished from hypothetical missing molecular inventories.
+
+## Findings
+
+### F1: Use the verified exact complex grounding
+
+minor / open / confirmed; issue key: clathrin_coat_of_coated_pit-exact-complex-grounding.
+
+The current reviewed-label-only rationale says no exact complex grounding was curated or defers subtype mappings, but native GO positively supplies the same declared complex class: GO0071439 for the clathrin triskelion.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground the triskelion component to GO0071439; update label-only status/rationale and the current TODO without changing valid component IDs, examples or UNKNOWN essentiality.
+
+- Confirm each exact definition matches the component class rather than a protein domain or whole coat.
+- Preserve the existing graph component_ref links and subtype boundaries.
+- Pass applicable schema, strict, identifier and graph checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/clathrin_coat_of_coated_pit.yaml; Complete maintained record including all evidence, graph, discussions and history | context_only | All current fields were read; historical notes are provenance, not independent scientific confirmation. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent grounding, essentiality, COMMON and NONMECHANISTIC graph scope | context_only | Protein complexes may use exact GO complex groundings. UNKNOWN assembly necessity is distinct from verified membership or catalytic function. COMMON means present in most members with losses the exception. |
+| curation | docs/CURATION.md; Exact component grounding and REVIEWED_LABEL_ONLY contract, especially lines159–160 | context_only | REVIEWED_LABEL_ONLY denotes an inspected absence of an exact grounding, not merely an exact mapping deferred in the current pass. |
+| neighbor-clathrin | data/structures/other/clathrin_coat.yaml; Complete record read for the three-record coat/pit boundary comparison | context_only | The separate generic coat, pit coat and membrane-invagination records preserve distinct biological granularity; this neighbor is not another target of this review. |
+| neighbor-pit | data/structures/other/clathrin_coated_pit.yaml; Complete record read for the three-record coat/pit boundary comparison | context_only | The separate generic coat, pit coat and membrane-invagination records preserve distinct biological granularity; this neighbor is not another target of this review. |
+| clathrin47-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005768,GO:0005802,GO:0005905,GO:0012510,GO:0016020,GO:0030117,GO:0030118,GO:0030119,GO:0030120,GO:0030121,GO:0030122,GO:0030125,GO:0030128,GO:0030130,GO:0030132,GO:0030136,GO:0030140,GO:0030669,GO:0045334,GO:0072583; Complete active identities/definitions/synonyms and exact typed child links for the target, maintained parents/parts, GO0072583 and named graph structures in the 20-term response | supports | GO0030132 identifies the pit coat, is_a GO0030118 and part_of GO0005905. Its child relation explicitly places GO0030122 AP-2 as a part. The native definition also mentions vesicles derived from the pits, a retained ontology boundary overlap. |
+| clathrin47-agent-go-triskelion-candidates | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0071439,GO:0030131; Complete two exact native terms including active status, names, definitions, exact synonyms and child relationships | supports | Active GO0071439 clathrin complex has exact synonym clathrin triskelion and the three-heavy/three-light-chain definition. Active GO0030131 clathrin adaptor complex defines the AP-type subset linking clathrin to membrane; its AP-1/AP-2 children and the separate GO0030119 hierarchy distinguish it from all AP-family coats. |
+| clathrin47-agent-collins2002-meta-exact | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2FS0092-8674%2802%2900735-3%22&amp;format=json&amp;resultType=core; Native bibliographic identity/authors/year/DOI and complete abstract | supports | Exact native MED12086608 identity: Molecular architecture and functional model of the endocytic AP2 complex. DOI 10.1016/s0092-8674(02)00735-3. Complete abstract inspected; primary-body scope is separately stated. |
+| clathrin47-agent-jackson2010-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.cell.2010.05.006&amp;format=json&amp;resultType=core; Native bibliographic identity/authors/year/DOI and complete abstract | supports | Exact native MED20603002 identity: A large-scale conformational change couples membrane recruitment to cargo binding in the AP2 clathrin adaptor complex. DOI 10.1016/j.cell.2010.05.006. Complete abstract inspected; primary-body scope is separately stated. |
+| clathrin47-agent-jackson2010-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC3655264/?report=xml; Complete Introduction, Results opening and sec2.1–2.3, Discussion sec3, main Experimental Procedures sec4.1–4.4 and the opening Extended Experimental Procedures expression/preparation paragraph. Main figure captions read; no pixels, movies or independently analyzed supplementary datasets. | supports | The primary study solves ligand-bound recombinant AP2 core architecture and tests lipid/cargo binding with liposomes, SPR and fluorescence assays. Its membrane-dependent conformational model supports AP2 adaptor function; inferred in-vivo simultaneity and phosphorylated-state detail remain qualified. Recombinant expression is in E.coli, not a native microbial AP2 experiment. |
+| clathrin47-agent-collins2002-doi | https://doi.org/10.1016/S0092-8674(02)00735-3; Exact retained failed DOI access response | context_only | The DOI route failed TLS certificate verification (status0); it supplies no article body. |
+| schema-result | just validate data/structures/other/clathrin_coat_of_coated_pit.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/clathrin_coat_of_coated_pit.yaml |
+| strict-result | just validate-strict data/structures/other/clathrin_coat_of_coated_pit.yaml --out /private/tmp/cellstructure-batch47-20261022-cz2022xg/clathrin_coat_of_coated_pit-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/clathrin_coat_of_coated_pit.yaml --out /private/tmp/cellstructure-batch47-20261022-cz2022xg/clathrin_coat_of_coated_pit-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch47-20261022-cz2022xg/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch47-20261022-cz2022xg/clathrin_coat_of_coated_pit-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch47-20261022-cz2022xg/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/other/clathrin_coat_of_coated_pit.yaml --causal-graphs; Complete native read-only focused report | supports | data/structures/other/clathrin_coat_of_coated_pit.yaml  (GO:0030132)<br>  coated_pit_clathrin_coat_topology	clathrin_triskelion_scaffold	NO_GENE_SYMBOLS	-&gt;clathrin_triskelion_scaffold (PROTEIN_COMPLEX: clathrin triskelion scaffold)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/other/clathrin_coat_of_coated_pit.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 8 of 8 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Five completed same-base batch26 global gates remain staged for guarded parent integration; this unsaved draft does not independently rerun or finalize those corpus checks.
+- No source figure pixels, supplementary movies, raw experiments or underlying references were independently reanalyzed. Evidence locators distinguish primary body, abstract and native-authority tiers.
+- Collins2002 was read at exact native metadata/complete-abstract tier only; the retained DOI access failed TLS certificate verification. Jackson2010 supplies primary-body support for its own recombinant AP2 and membrane-binding experiments, not independent replication of every Collins assay.
+- The native pit-coat definition mentions derived vesicles and overlaps the vesicle-coat class. Exact identifiers and the maintained pit-versus-detached-vesicle distinctions are preserved without asserting an ontology correction.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The user goal authorizes one review for every uncovered record, including honest qualified passes.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T050517Z-clathrin-coat-of-coated-pit-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Clathrin coat of coated pit scientific review
+started_at: '2026-10-22T04:47:11Z'
+finished_at: '2026-10-22T05:05:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Pit-coat identity, AP2 grounding and nonmechanistic topology are supported.
+  One minor concerns the available exact GO clathrin-triskelion mapping left label-only.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/clathrin_coat.yaml
+    sha256: 7b118032d28ca3f850fb2a1bb3070ff32923f58df02ae50e326e97e61d2092f7
+    role: context
+  - path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+    sha256: 859f324aa6a2b9ddd65cb2658a052bec387e3f2afd56d1cd49faf42ae663f55e
+    role: target
+  - path: data/structures/other/clathrin_coated_pit.yaml
+    sha256: d64704a67303020e2f3c92a40d1d64ebc830398938e57acd568dc7e29e723e83
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0030132
+  path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+  label: clathrin coat of coated pit
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one full maintained target, with the full three-record generic
+    coat/pit coat/pit boundary set (target plus two neighbors), current exact GO/protein/taxon
+    authorities and precisely scoped primary sources. No generated pages or scientific
+    records changed.
+  selection: Target 4 of batch47, strict uncovered path order at unchanged origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030132
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  command: just validate data/structures/other/clathrin_coat_of_coated_pit.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  command: just validate-strict data/structures/other/clathrin_coat_of_coated_pit.yaml
+    --out /private/tmp/cellstructure-batch47-20261022-cz2022xg/clathrin_coat_of_coated_pit-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  command: /private/tmp/cellstructure-batch47-20261022-cz2022xg/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/other/clathrin_coat_of_coated_pit.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; scientific scope independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0030132
+  summary: No expression-module or transcriptomic attribution is made.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - neighbor-clathrin
+  - neighbor-pit
+  - clathrin47-agent-go
+  - clathrin47-agent-go-triskelion-candidates
+  - clathrin47-agent-collins2002-meta-exact
+  - clathrin47-agent-jackson2010-meta
+  - clathrin47-agent-jackson2010-legacy
+  - clathrin47-agent-collins2002-doi
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch47 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch47 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch47 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch47 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030132
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch47 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/clathrin_coat_of_coated_pit.yaml
+  locator: Complete maintained record including all evidence, graph, discussions and
+    history
+  accessed_at: '2026-10-22T04:54:10Z'
+  support: context_only
+  summary: All current fields were read; historical notes are provenance, not independent
+    scientific confirmation.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent grounding, essentiality, COMMON and NONMECHANISTIC
+    graph scope
+  accessed_at: '2026-10-22T04:54:10Z'
+  support: context_only
+  summary: Protein complexes may use exact GO complex groundings. UNKNOWN assembly
+    necessity is distinct from verified membership or catalytic function. COMMON means
+    present in most members with losses the exception.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact component grounding and REVIEWED_LABEL_ONLY contract, especially
+    lines159–160
+  accessed_at: '2026-10-22T04:54:10Z'
+  support: context_only
+  summary: REVIEWED_LABEL_ONLY denotes an inspected absence of an exact grounding,
+    not merely an exact mapping deferred in the current pass.
+- evidence_id: neighbor-clathrin
+  kind: record_content
+  reference: data/structures/other/clathrin_coat.yaml
+  locator: Complete record read for the three-record coat/pit boundary comparison
+  accessed_at: '2026-10-22T04:54:10Z'
+  support: context_only
+  summary: The separate generic coat, pit coat and membrane-invagination records preserve
+    distinct biological granularity; this neighbor is not another target of this review.
+- evidence_id: neighbor-pit
+  kind: record_content
+  reference: data/structures/other/clathrin_coated_pit.yaml
+  locator: Complete record read for the three-record coat/pit boundary comparison
+  accessed_at: '2026-10-22T04:54:10Z'
+  support: context_only
+  summary: The separate generic coat, pit coat and membrane-invagination records preserve
+    distinct biological granularity; this neighbor is not another target of this review.
+- evidence_id: clathrin47-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005768,GO:0005802,GO:0005905,GO:0012510,GO:0016020,GO:0030117,GO:0030118,GO:0030119,GO:0030120,GO:0030121,GO:0030122,GO:0030125,GO:0030128,GO:0030130,GO:0030132,GO:0030136,GO:0030140,GO:0030669,GO:0045334,GO:0072583
+  locator: Complete active identities/definitions/synonyms and exact typed child links
+    for the target, maintained parents/parts, GO0072583 and named graph structures
+    in the 20-term response
+  accessed_at: '2026-10-22T04:48:27.885977Z'
+  support: supports
+  summary: GO0030132 identifies the pit coat, is_a GO0030118 and part_of GO0005905.
+    Its child relation explicitly places GO0030122 AP-2 as a part. The native definition
+    also mentions vesicles derived from the pits, a retained ontology boundary overlap.
+  snapshot_sha256: d99cebcf37913222815e3282d94e35f6fa629e25ca25660703949d4f38893d30
+- evidence_id: clathrin47-agent-go-triskelion-candidates
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0071439,GO:0030131
+  locator: Complete two exact native terms including active status, names, definitions,
+    exact synonyms and child relationships
+  accessed_at: '2026-10-22T04:48:54.266838Z'
+  support: supports
+  summary: Active GO0071439 clathrin complex has exact synonym clathrin triskelion
+    and the three-heavy/three-light-chain definition. Active GO0030131 clathrin adaptor
+    complex defines the AP-type subset linking clathrin to membrane; its AP-1/AP-2
+    children and the separate GO0030119 hierarchy distinguish it from all AP-family
+    coats.
+  snapshot_sha256: a425c7a31777f7b3c4b24ac1e05fc89fcc459966ef577607175f719c142e4e80
+- evidence_id: clathrin47-agent-collins2002-meta-exact
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2FS0092-8674%2802%2900735-3%22&format=json&resultType=core
+  locator: Native bibliographic identity/authors/year/DOI and complete abstract
+  accessed_at: '2026-10-22T04:16:07.119689Z'
+  support: supports
+  summary: 'Exact native MED12086608 identity: Molecular architecture and functional
+    model of the endocytic AP2 complex. DOI 10.1016/s0092-8674(02)00735-3. Complete
+    abstract inspected; primary-body scope is separately stated.'
+  snapshot_sha256: 57af27eecfc8110e518f323fe509f6c2193e6b7c616e7e57b2e9e73c3088f78e
+- evidence_id: clathrin47-agent-jackson2010-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.cell.2010.05.006&format=json&resultType=core
+  locator: Native bibliographic identity/authors/year/DOI and complete abstract
+  accessed_at: '2026-10-22T04:15:37.228889Z'
+  support: supports
+  summary: 'Exact native MED20603002 identity: A large-scale conformational change
+    couples membrane recruitment to cargo binding in the AP2 clathrin adaptor complex.
+    DOI 10.1016/j.cell.2010.05.006. Complete abstract inspected; primary-body scope
+    is separately stated.'
+  snapshot_sha256: 14efd34161413548e5e85c33be4d009d55bc290fa5a3e46603d15a37d584ad5e
+- evidence_id: clathrin47-agent-jackson2010-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3655264/?report=xml
+  locator: Complete Introduction, Results opening and sec2.1–2.3, Discussion sec3,
+    main Experimental Procedures sec4.1–4.4 and the opening Extended Experimental
+    Procedures expression/preparation paragraph. Main figure captions read; no pixels,
+    movies or independently analyzed supplementary datasets.
+  accessed_at: '2026-10-22T04:16:06.687268Z'
+  support: supports
+  summary: The primary study solves ligand-bound recombinant AP2 core architecture
+    and tests lipid/cargo binding with liposomes, SPR and fluorescence assays. Its
+    membrane-dependent conformational model supports AP2 adaptor function; inferred
+    in-vivo simultaneity and phosphorylated-state detail remain qualified. Recombinant
+    expression is in E.coli, not a native microbial AP2 experiment.
+  snapshot_sha256: 755fcc35ddd82d7161683b3180417bcd46e249f20027d467f5de3a1adf6d5ee6
+- evidence_id: clathrin47-agent-collins2002-doi
+  kind: database
+  reference: https://doi.org/10.1016/S0092-8674(02)00735-3
+  locator: Exact retained failed DOI access response
+  accessed_at: '2026-10-22T04:17:26.601174Z'
+  support: context_only
+  summary: The DOI route failed TLS certificate verification (status0); it supplies
+    no article body.
+  snapshot_sha256: a8014ecefc9b9c4cc3987abe484f64b8ee37dd3e6bc0182a0f12915e702dedb3
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/clathrin_coat_of_coated_pit.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:47:12Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/clathrin_coat_of_coated_pit.yaml'
+  snapshot_sha256: 5a9a84247d5a96005fc46a6fa82c88ffe7d5fb8a695a9b4a1ad28eb159f58e63
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/clathrin_coat_of_coated_pit.yaml
+    --out /private/tmp/cellstructure-batch47-20261022-cz2022xg/clathrin_coat_of_coated_pit-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:47:14Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/clathrin_coat_of_coated_pit.yaml\
+    \ --out /private/tmp/cellstructure-batch47-20261022-cz2022xg/clathrin_coat_of_coated_pit-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch47-20261022-cz2022xg/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch47-20261022-cz2022xg/clathrin_coat_of_coated_pit-strict.tsv"
+  snapshot_sha256: 026c7102a1e84e9a4943706cc2bfc3e38e2d582b6ebfc24ebcc6ca0f25e6d6cd
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch47-20261022-cz2022xg/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/other/clathrin_coat_of_coated_pit.yaml
+    --causal-graphs
+  locator: Complete native read-only focused report
+  accessed_at: '2026-10-22T04:51:59.403428Z'
+  support: supports
+  summary: "data/structures/other/clathrin_coat_of_coated_pit.yaml  (GO:0030132)\n\
+    \  coated_pit_clathrin_coat_topology\tclathrin_triskelion_scaffold\tNO_GENE_SYMBOLS\t\
+    ->clathrin_triskelion_scaffold (PROTEIN_COMPLEX: clathrin triskelion scaffold)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  NO_GENE_SYMBOLS       \
+    \    component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     0  PARTIAL_EXAMPLES          component_ref\
+    \ target holds protein_examples but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: fa0355f90964306b072fd78723c29a82a8e95dd0c0dfdcafdbbcf3fbb7f124b1
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/clathrin_coat_of_coated_pit.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: complex-grounding
+  area: grounding
+  topic: Exact complex classes versus deferred label-only rows
+  outcome: concern
+  target_ids:
+  - GO:0030132
+  summary: The triskelion complex has an exact source-neutral GO0071439 mapping. AP-2
+    is already correctly grounded to GO0030122; only the triskelion label-only row
+    needs this bounded mapping correction.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - clathrin47-agent-go
+  - clathrin47-agent-go-triskelion-candidates
+- assessment_id: formation
+  area: grounding
+  topic: Assembly necessity remains unestablished
+  outcome: unknown
+  target_ids:
+  - GO:0030132
+  summary: Verified coat constituents, a six-chain triskelion and AP binding behavior
+    do not by themselves demonstrate the requirement of every constituent for formation
+    under every condition. The existing UNKNOWN essentiality values are retained;
+    endocytic-function phenotypes are not silently substituted for coat-assembly necessity.
+  evidence_ids:
+  - record
+  - schema
+  - clathrin47-agent-go
+  - clathrin47-agent-go-triskelion-candidates
+- assessment_id: identity
+  area: identity
+  topic: Pit coat versus membrane pit and vesicle coat
+  outcome: supported
+  target_ids:
+  - GO:0030132
+  summary: The identifier, definition and clathrin-coat parent agree with native GO.
+    Pit parthood and AP2 has-part are explicit typed relations. The native definition
+    also includes derived vesicles; this ontology overlap does not make the maintained
+    identifier interchangeable with the distinct endocytic-vesicle-coat identifier.
+  evidence_ids:
+  - record
+  - neighbor-clathrin
+  - neighbor-pit
+  - clathrin47-agent-go
+- assessment_id: AP2
+  area: evidence
+  topic: Architecture and membrane/cargo linkage
+  outcome: supported
+  target_ids:
+  - GO:0030132
+  summary: Collins complete abstract establishes the four-subunit core architecture;
+    Jackson body provides structure and binding assays supporting the stated AP2 role.
+    The record makes no organism distribution or yeast experimental assertion for
+    these recombinant biochemical studies.
+  evidence_ids:
+  - record
+  - clathrin47-agent-go
+  - clathrin47-agent-collins2002-meta-exact
+  - clathrin47-agent-jackson2010-meta
+  - clathrin47-agent-jackson2010-legacy
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic coat topology and coarse adaptor role
+  outcome: supported
+  target_ids:
+  - GO:0030132
+  summary: NONMECHANISTIC and scope notes match the supported is-a/part-of relations
+    and coarse membrane/cargo linkage. No atomic pathway, complete pit-budding machinery
+    or universal clathrin requirement is asserted.
+  evidence_ids:
+  - record
+  - schema
+  - clathrin47-agent-go
+  - clathrin47-agent-go-triskelion-candidates
+  - clathrin47-agent-jackson2010-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Complete single-record review
+  outcome: supported
+  target_ids:
+  - GO:0030132
+  summary: All maintained fields, evidence placement, current discussions and history
+    were read. Positive source-native mappings and bounded source limitations were
+    distinguished from hypothetical missing molecular inventories.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - clathrin47-agent-go
+findings:
+- finding_id: F1
+  issue_key: clathrin_coat_of_coated_pit-exact-complex-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Use the verified exact complex grounding
+  description: 'The current reviewed-label-only rationale says no exact complex grounding
+    was curated or defers subtype mappings, but native GO positively supplies the
+    same declared complex class: GO0071439 for the clathrin triskelion.'
+  target_ids:
+  - GO:0030132
+  field_paths:
+  - components[0].grounding
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  evidence_ids:
+  - record
+  - curation
+  - clathrin47-agent-go
+  - clathrin47-agent-go-triskelion-candidates
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+    role: maintained scientific record
+  rule_id: Exact component grounding / REVIEWED_LABEL_ONLY
+  native_severity: minor
+  normalization_reason: The component identities and membership are correct; the bounded
+    defect is an available exact ontology mapping left under a status meaning no exact
+    grounding exists.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030132
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+    role: maintained scientific record
+  description: Ground the triskelion component to GO0071439; update label-only status/rationale
+    and the current TODO without changing valid component IDs, examples or UNKNOWN
+    essentiality.
+  acceptance_checks:
+  - Confirm each exact definition matches the component class rather than a protein
+    domain or whole coat.
+  - Preserve the existing graph component_ref links and subtype boundaries.
+  - Pass applicable schema, strict, identifier and graph checks.
+limitations:
+- Five completed same-base batch26 global gates remain staged for guarded parent integration;
+  this unsaved draft does not independently rerun or finalize those corpus checks.
+- No source figure pixels, supplementary movies, raw experiments or underlying references
+  were independently reanalyzed. Evidence locators distinguish primary body, abstract
+  and native-authority tiers.
+- Collins2002 was read at exact native metadata/complete-abstract tier only; the retained
+  DOI access failed TLS certificate verification. Jackson2010 supplies primary-body
+  support for its own recombinant AP2 and membrane-binding experiments, not independent
+  replication of every Collins assay.
+- The native pit-coat definition mentions derived vesicles and overlaps the vesicle-coat
+  class. Exact identifiers and the maintained pit-versus-detached-vesicle distinctions
+  are preserved without asserting an ontology correction.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user goal authorizes one review for every uncovered record, including honest
+  qualified passes.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
