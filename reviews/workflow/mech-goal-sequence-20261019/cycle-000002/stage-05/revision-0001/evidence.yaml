@@ -1,0 +1,137 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 2
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed all 7 carried-forward review findings from Cycle 2 Stage 4 across 19 unique CellStructureRecord
+  YAML files, grouped them by shared root cause and repair ownership into 3 GitHub issues (#2419, #2420,
+  #2421), applied all fixes via native writers (record_curation_event + write_validated_structure) and
+  repository history ledger files in commit 99e590eb7afb0e8251f6e81183e59ca1119987b9, regenerated pages/,
+  validated all strict, ID-label, UniProt, history, and pytest gates, and verified resolution via fresh
+  structured RecordReview bundle 20261024T004000Z-c2-stage5-remediation-verification with 0 open carry-forward
+  findings.'
+source_revision: 99e590eb7afb0e8251f6e81183e59ca1119987b9
+scope_frozen_at: '2026-10-24T00:10:00Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml
+  sha256: d82e8d95fbabf37450deff6a3de9169f52b4e6b6af66536d101b5abf3673f945
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  sha256: d6dca162a21badb87a7085c333aadb2b6dc066b527319363ea7b812dede3e9a6
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  sha256: 22367a1482dff830fbd37e758cbe29613f8e2bbdff1f2a0a5a724a91a5e0d8d4
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/resolution_summary.json
+  sha256: d1d142682801f2ba7e4d861f356aa600cd2a8fe06339461fa7be331a08c162ef
+  kind: supporting
+findings:
+- finding_id: clathrin-coat-ap2-adaptor-causal-node-type
+  carried_from: clathrin-coat-ap2-adaptor-causal-node-type
+  group_id: causal-node-subcomplex-structure-typing
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2419
+  status: resolved
+  summary: Typed ap2_adaptor_complex (GO:0030122) in clathrin_coat_of_endocytic_vesicle.yaml as STRUCTURE.
+  disposition: Updated causal_graphs[0].nodes[1] (ap2_adaptor_complex, GO:0030122) in data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    from GENE_OR_PROTEIN to STRUCTURE (commit 99e590eb7afb0e8251f6e81183e59ca1119987b9).
+- finding_id: membrane-organelle-subcomplex-causal-node-types
+  carried_from: membrane-organelle-subcomplex-causal-node-types
+  group_id: causal-node-subcomplex-structure-typing
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2419
+  status: resolved
+  summary: Typed csma_baseplate, micos_complex, and tom_complex causal-graph nodes as STRUCTURE across
+    4 membrane_organelle records.
+  disposition: Updated csma_baseplate (cellstructuremech:chlorosome_baseplate_antenna_complex) in chlorosome.yaml
+    and chlorosome_envelope.yaml, micos_complex (GO:0061617) in mitochondrial_crista_junction.yaml, and
+    tom_complex (GO:0005742) in mitochondrial_outer_membrane.yaml from GENE_OR_PROTEIN to STRUCTURE (commit
+    99e590eb7afb0e8251f6e81183e59ca1119987b9).
+- finding_id: cytoskeleton-subcomplex-component-types
+  carried_from: cytoskeleton-subcomplex-component-types
+  group_id: subcomplex-component-type-protein-complex
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2420
+  status: resolved
+  summary: Typed 8 heterodimeric/multiprotein subcomplex components across 7 cytoskeleton records as PROTEIN_COMPLEX.
+  disposition: 'Updated arc35_arc19_clamp_subunits, arc40_arc18_arc15_peripheral_subunits, gcp2_gcp3_spoke_subunits,
+    mto1_mto2_activating_tether, and bqt1_bqt2_meiotic_connector across 7 cytoskeleton records from component_type:
+    PROTEIN to PROTEIN_COMPLEX (commit 99e590eb7afb0e8251f6e81183e59ca1119987b9).'
+- finding_id: photosystem-reaction-center-core-component-types
+  carried_from: photosystem-reaction-center-core-component-types
+  group_id: subcomplex-component-type-protein-complex
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2420
+  status: resolved
+  summary: Typed type_i_reaction_center_core and type_ii_reaction_center_core in photosystem.yaml as PROTEIN_COMPLEX.
+  disposition: 'Updated type_i_reaction_center_core and type_ii_reaction_center_core in data/structures/energy_complex/photosystem.yaml
+    from component_type: PROTEIN to PROTEIN_COMPLEX (commit 99e590eb7afb0e8251f6e81183e59ca1119987b9).'
+- finding_id: appendage-bacterial-flagellum-gene-symbol-mismatch
+  carried_from: appendage-bacterial-flagellum-gene-symbol-mismatch
+  group_id: component-gene-symbols-protein-examples-sync
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2421
+  status: resolved
+  summary: Added hag and fliY to components#flagellin.gene_symbols and components#c_ring.gene_symbols
+    in bacterial_type_flagellum.yaml.
+  disposition: Added hag to components#flagellin.gene_symbols and fliY to components#c_ring.gene_symbols
+    in data/structures/appendage/bacterial_type_flagellum.yaml (commit 99e590eb7afb0e8251f6e81183e59ca1119987b9).
+- finding_id: cytoskeleton-fission-yeast-nda2-gene-symbol-omission
+  carried_from: cytoskeleton-fission-yeast-nda2-gene-symbol-omission
+  group_id: component-gene-symbols-protein-examples-sync
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2421
+  status: resolved
+  summary: Added nda2 to components#alpha_tubulin.gene_symbols across 4 fission-yeast microtubule array
+    records.
+  disposition: Added nda2 to components#alpha_tubulin.gene_symbols in aster.yaml, astral_microtubule.yaml,
+    horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml (commit 99e590eb7afb0e8251f6e81183e59ca1119987b9).
+- finding_id: carboxysome-bmc-h-paralogue-gene-symbols
+  carried_from: carboxysome-bmc-h-paralogue-gene-symbols
+  group_id: component-gene-symbols-protein-examples-sync
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2421
+  status: resolved
+  summary: Added ccmK3 and ccmK4 to components#bmc_h.gene_symbols in carboxysome.yaml.
+  disposition: Added ccmK3 and ccmK4 to components#bmc_h.gene_symbols in data/structures/microcompartment/carboxysome.yaml
+    (commit 99e590eb7afb0e8251f6e81183e59ca1119987b9).
+groups:
+- group_id: causal-node-subcomplex-structure-typing
+  finding_ids:
+  - clathrin-coat-ap2-adaptor-causal-node-type
+  - membrane-organelle-subcomplex-causal-node-types
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2419
+  status: resolved
+  summary: Type GO/CSM-grounded subcomplex causal-graph nodes as STRUCTURE across 5 records (#2419).
+  disposition: Resolved in commit 99e590eb7afb0e8251f6e81183e59ca1119987b9 and verified in structured
+    review bundle 20261024T004000Z-c2-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/resolution_summary.json
+- group_id: subcomplex-component-type-protein-complex
+  finding_ids:
+  - cytoskeleton-subcomplex-component-types
+  - photosystem-reaction-center-core-component-types
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2420
+  status: resolved
+  summary: Type heterodimeric and multiprotein subcomplex components as PROTEIN_COMPLEX across 8 records
+    (#2420).
+  disposition: Resolved in commit 99e590eb7afb0e8251f6e81183e59ca1119987b9 and verified in structured
+    review bundle 20261024T004000Z-c2-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/resolution_summary.json
+- group_id: component-gene-symbols-protein-examples-sync
+  finding_ids:
+  - appendage-bacterial-flagellum-gene-symbol-mismatch
+  - cytoskeleton-fission-yeast-nda2-gene-symbol-omission
+  - carboxysome-bmc-h-paralogue-gene-symbols
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2421
+  status: resolved
+  summary: Synchronize component gene_symbols with verified protein_examples across 6 records (#2421).
+  disposition: Resolved in commit 99e590eb7afb0e8251f6e81183e59ca1119987b9 and verified in structured
+    review bundle 20261024T004000Z-c2-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/resolution_summary.json
+carry_forward_ids: []
+infra_tasks: []
