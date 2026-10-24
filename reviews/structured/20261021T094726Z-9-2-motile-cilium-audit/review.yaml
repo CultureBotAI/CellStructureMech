@@ -1,0 +1,910 @@
+schema_version: 1.0.0
+review_id: 20261021T094726Z-9-2-motile-cilium-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 9+2 motile cilium source, scope and mechanism review
+started_at: '2026-10-21T09:06:51Z'
+finished_at: '2026-10-21T09:47:26Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact 9+2 identity and five protein examples are supported. Two minor findings
+  concern unqualified paraflagellar-rod scope and a structural/function summary labeled
+  MECHANISTIC.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/9_2_motile_cilium.yaml
+    sha256: c467662c221310d77633097ef15f370573c5bec1c5964ac78f85ffb7e38eca97
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0097729
+  path: data/structures/appendage/9_2_motile_cilium.yaml
+  label: 9+2 motile cilium
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/9_2_motile_cilium.yaml
+    role: maintained scientific record
+scope:
+  description: Full exact record and inspected repository rubric; source-native ontology/taxon/protein
+    identities and all claim-bearing citation scopes, with readable primary results
+    distinguished from review summaries and access-limited sources.
+  selection: Exact target 1 in the frozen batch15 path selection on expanded-main
+    revision 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; no old-base resolver result
+    is reused.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0097729
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  command: just validate data/structures/appendage/9_2_motile_cilium.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  command: just validate-strict data/structures/appendage/9_2_motile_cilium.yaml --out
+    /private/tmp/cellstructure-batch15-20261021-ohdkgt21/9_2_motile_cilium-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  command: /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/appendage/9_2_motile_cilium.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only native diagnostic passed; it does not establish biological membership
+    or mechanism.
+  evidence_ids:
+  - verify-result
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  command: /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/appendage/9_2_motile_cilium.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only native diagnostic passed; it does not establish biological membership
+    or mechanism.
+  evidence_ids:
+  - causal-graphs-result
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - rubric
+  - graph-contract
+  - nine-two-agent-go
+  - nine-two-agent-tax-3055
+  - nine-two-agent-epmc
+  - nine-two-agent-pazour2005-jats
+  - nine-two-agent-nicastro-browser
+  - nine-two-agent-nicastro-methods-browser
+  - nine-two-agent-cole1998-jats
+  - nine-two-agent-hou2007-jats
+  - nine-two-agent-ahmed2008-jats
+  - nine-two-agent-rosenbaum2002-publisher
+  - nine-two-agent-silflow2001-old-pmc
+  - nine-two-agent-Q5DM57
+  - nine-two-agent-Q68RJ5
+  - nine-two-agent-Q6RCE1
+  - nine-two-agent-A2T2X4
+  - nine-two-agent-Q9FPW0
+  - motile-prep-reviewed-uniqueness
+- check_id: target-curies
+  name: Target resolver slice with native transport-failure cross-checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  summary: '22 of 27 exact target identifiers returned OK. Residuals: PMID:15955805
+    returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently
+    verified by nine-two-agent-epmc; PMID:17312020 returned UNREACHABLE (eutils HTTP414);
+    exact native PMID metadata independently verified by nine-two-agent-epmc; PMID:17326139
+    returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently
+    verified by nine-two-agent-epmc; PMID:18852297 returned UNREACHABLE (eutils HTTP414);
+    exact native PMID metadata independently verified by nine-two-agent-epmc; PMID:9585417
+    returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently
+    verified by nine-two-agent-epmc The shared command exit zero is not interpreted
+    as successful network resolution for transport failures.'
+  evidence_ids:
+  - target-curies-result
+  - nine-two-agent-epmc
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097729
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/9_2_motile_cilium.yaml
+  locator: Entire maintained YAML, all components/examples/evidence, definition, hierarchy,
+    functions, every graph node/edge, and creation history.
+  accessed_at: '2026-10-21T09:23:25Z'
+  support: context_only
+  summary: The complete exact target was read after native inspect. No neighboring
+    maintained record is relied on; external GO authority supplies graph identities.
+    The target remains PROPOSED and contains no image, measured property, dataset
+    or verbatim quotation assertion.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Evidence placement; component essentiality; source.inputs also freezes
+    the full review checklist and protein/graph guidance.
+  accessed_at: '2026-10-21T09:23:25Z'
+  support: context_only
+  summary: Evidence is claim-specific and retains taxon, preparation and source tier.
+    Essentiality concerns assembly necessity; canonical presence or catalytic activity
+    does not independently prove it. Optional empty fields and generic protein classes
+    do not automatically require findings.
+- evidence_id: graph-contract
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: CellStructureRecord.causal_graphs; GraphKindEnum.ASSEMBLY/FUNCTION; CausalGraphScopeEnum;
+    curate-causal-graphs/SKILL.md.
+  accessed_at: '2026-10-21T09:23:25Z'
+  support: context_only
+  summary: The graph should explain how the structure is built or does its job. Static
+    parthood or whole-structure function summaries alone do not explain a causal mechanism,
+    even when schema-valid.
+- evidence_id: nine-two-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005929,GO:0005930,GO:0030990,GO:0031514,GO:0035869,GO:0036064,GO:0060170,GO:0060271,GO:0060285,GO:0097546,GO:0097729,GO:0097740
+  locator: 'results: exact id/name/isObsolete/definition/synonyms/children and relation
+    values.'
+  accessed_at: '2026-10-21T09:08:33.338519Z'
+  support: supports
+  summary: All twelve active terms match their intended entities. GO0097729 defines
+    the 9+2 arrangement and the three synonym scopes; GO0031514 lists it as is_a.
+    GO0097740 defines the paraflagellar rod only in some flagellated protists. GO0097729
+    children includes the rod with relation part_of; this inverse display does not
+    assert that every 9+2 cilium has a rod. Other terms identify the axoneme, ciliary
+    membrane, basal body, transition zone, base, IFT particle and the two processes.
+  snapshot_sha256: 92e73b055e1041bf5a0b865af84e95ba682f9fd5c401a8fced21dab37c6c0f84
+- evidence_id: nine-two-agent-tax-3055
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/3055
+  locator: taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-21T09:08:33.339406Z'
+  support: supports
+  summary: NCBITaxon3055 is the species Chlamydomonas reinhardtii; the taxon label
+    and entry taxon match. This lookup is not experimental prevalence evidence.
+  snapshot_sha256: e3861fe6706cefe2e079e15c0178a65e95efaad3890f548f25e721553eaa93a0
+- evidence_id: nine-two-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038/nrm952%22%20OR%20DOI%3A%2210.1083/jcb.200504008%22%20OR%20DOI%3A%2210.1104/pp.010807%22%20OR%20DOI%3A%2210.1126/science.1128618%22%20OR%20EXT_ID%3A15955805%20OR%20EXT_ID%3A17312020%20OR%20EXT_ID%3A17326139%20OR%20EXT_ID%3A18852297%20OR%20EXT_ID%3A9585417&format=json&resultType=core&pageSize=100
+  locator: All resultList.result DOI/PMID/title/author/journal/pubTypeList records.
+  accessed_at: '2026-10-21T09:08:34.137783Z'
+  support: context_only
+  summary: All nine DOI/PMID identities match the named studies. Silflow2001 and Rosenbaum2002
+    are reviews; Pazour2005, Nicastro2006, Cole1998, Hou2007, Ahmed2008, Sloboda2007
+    and Lucker2005 are primary studies. Metadata establishes identity, not access
+    to their entire bodies.
+  snapshot_sha256: e234fcd401a2ccb6e0912a5b374c238ba93ce8723a7f6e431fbdded42ec28d23
+- evidence_id: nine-two-agent-pazour2005-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2171396/fullTextXML
+  locator: Introduction and Fig1; Results Identification of flagellar proteins, Fig2
+    and TableI; dataset-completeness paragraph.
+  accessed_at: '2026-10-21T09:09:26.139910Z'
+  support: supports
+  summary: Purified C. reinhardtii flagella contain a membrane-sheathed axoneme and
+    matrix/IFT proteins. Results distinguish wild-type Tergitol-insoluble material
+    from oda1-1 Nonidet membrane+matrix, KCl-extracted and axonemal fractions. The
+    membrane-associated protein candidates and canonical flagellar proteomics example
+    are supported; candidate detection is not universal membership or depletion-based
+    assembly essentiality.
+  snapshot_sha256: d580547c201083cb49e52ac321edf3611b3bbb64adfcfc47be6068fda5cf3fe1
+- evidence_id: nine-two-agent-nicastro-browser
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/6871150_The_Molecular_Architecture_of_Axonemes_Revealed_by_Cryoelectron_Tomography
+  locator: Browser lines112–215,250–315 (Fig1 caption),330–380 and primary body through648;
+    author-upload provenance71–78.
+  accessed_at: '2026-10-21T07:38:16.675911Z'
+  support: supports
+  summary: Primary author-uploaded manuscript text supports 9+2 axonemal architecture
+    and dynein-driven sliding/bending in Chlamydomonas and sea-urchin preparations.
+    Linker coordination and motor action include model interpretations. The browser
+    response is serialized text with no HTTP status, not a publisher PDF.
+  snapshot_sha256: 0d28f5c7269d892d9ff78d7f8699840cf5ca9887d0b8967c9a2f8afbf12d8d11
+- evidence_id: nine-two-agent-nicastro-methods-browser
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/6871150_The_Molecular_Architecture_of_Axonemes_Revealed_by_Cryoelectron_Tomography
+  locator: Browser lines1514–1652, especially Specimen Preparation1562–1595. Original07:38:38.502409Z
+    browser artifact retained.
+  accessed_at: '2026-10-21T07:38:38.502409Z'
+  support: context_only
+  summary: Supporting primary methods specify Chlamydomonas wild-type137c and pf9-3,
+    pH-shock isolation, NP40 demembranation and plunge freezing. These are isolated
+    axoneme preparations. No movie or PDF-pixel inspection is claimed.
+  snapshot_sha256: 6a9ed325f07a171d0f956a008bddea206631151f957a0463f11d687f68dda60e
+- evidence_id: nine-two-agent-cole1998-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2132775/fullTextXML
+  locator: Methods Cultures and IFT complex preparation; Results immunofluorescence;
+    Discussion Colocalization of FLA10 Kinesin-II and p172 at the Basal Bodies and
+    Fig13 working model.
+  accessed_at: '2026-10-21T09:09:26.141021Z'
+  support: supports
+  summary: Primary fractionation and immunofluorescence establish IFT particle subunits
+    and enrichment of p172/p81/p139 around basal bodies. The paper explicitly leaves
+    their precise relation to basal bodies versus rootlets unclear. FLA10 transport
+    is separated from p172 targeting, which can persist in bld2 and inactive-fla10
+    contexts.
+  snapshot_sha256: 0542da652923e9b91bfc18f75f2d731053156a77cf0ce9223a574d196f65c34f
+- evidence_id: nine-two-agent-hou2007-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2064023/fullTextXML
+  locator: Results Cloning/identification of C. reinhardtii IFT46, Fig1A–D and TableI;
+    IFT46 conservation and mouse experiment paragraph.
+  accessed_at: '2026-10-21T09:09:26.140728Z'
+  support: supports
+  summary: Cloned Chlamydomonas IFT46 is complex B associated, predominantly peribasal
+    with puncta along flagella; Fig1C and the identification Results directly support
+    this localization. The study distinguishes flagellar complex-B stability and outer-arm
+    transport from general protein identity. Its mouse primary-cilium experiment is
+    not misassigned to algae.
+  snapshot_sha256: 119358b72e9754a4c38885695a8500c00af7e435d2e4bff45d8b34cecbf4c07f
+- evidence_id: nine-two-agent-ahmed2008-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2568026/fullTextXML
+  locator: Abstract; Results Oda16 outer arm dyneins and ODA16–IFT46 interaction,
+    Fig6; Discussion comparison with ift46.
+  accessed_at: '2026-10-21T09:09:26.140581Z'
+  support: supports
+  summary: The primary study distinguishes ODA16-associated outer-arm transport from
+    axonemal docking/preassembly. Mammalian two-hybrid identification is followed
+    by direct Chlamydomonas recombinant interaction and flagellar-extract coimmunoprecipitation
+    with IFT46/IFT81. This is bounded cargo-adaptor support, not proof that every
+    IFT protein is a permanent axonemal constituent.
+  snapshot_sha256: ed7f213ada4b8c9d3c71b173a010899a4a908254bb902ea01f197cd2ec3d1226
+- evidence_id: nine-two-agent-rosenbaum2002-publisher
+  kind: authority
+  reference: https://www.nature.com/articles/nrm952
+  locator: Key Points and Abstract before the subscription-content notice; no claim
+    to the main review text.
+  accessed_at: '2026-10-21T09:09:28.393878Z'
+  support: supports
+  summary: Accessible review Key Points/Abstract explain bidirectional nonmembrane
+    IFT particles, kinesin-II anterograde and dynein retrograde motion, and assembly/maintenance
+    context. The publisher page then marks subscription content; large HTTP200 markup
+    does not establish full main-body access.
+  snapshot_sha256: fb34015041b69fb9e33b2b2a218336ad095fd6e391496771095fea103ea9e9a7
+- evidence_id: nine-two-agent-silflow2001-old-pmc
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1540183/?pdf=1
+  locator: Article metadata and body.main-article-body section _pon93_ PDF-only notice.
+  accessed_at: '2026-10-19T07:37:02Z'
+  support: context_only
+  summary: The original PMC HTML confirms Silflow/Lefebvre2001 bibliographic identity
+    and links a PDF-only article. It contains no main body. Original manifest access2026-10-19T07:37:02Z
+    is preserved, and no missing original HTTP status is invented.
+  snapshot_sha256: 9d48eac16706c0c0ccc5552a18d1c2052424825a81df9fead7360a0c92d938b7
+- evidence_id: nine-two-agent-Q5DM57
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q5DM57.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; SUBCELLULAR
+    LOCATION comment and evidence tags.
+  accessed_at: '2026-10-21T09:08:33.339550Z'
+  support: supports
+  summary: Reviewed IFT172/FLA11 at taxon3055; native experimental basal-body annotation
+    cites PMID17326139 and9585417.
+  snapshot_sha256: 81d0a74e5bda18c90d8bc7a12d6abdcfbb0219f5829ae8bdf58bd9eb6d125b1c
+- evidence_id: nine-two-agent-Q68RJ5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q68RJ5.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; SUBCELLULAR
+    LOCATION comment and evidence tags.
+  accessed_at: '2026-10-21T09:08:33.339849Z'
+  support: supports
+  summary: Reviewed IFT81 at taxon3055; cilium annotation is ECO0000305, not an independently
+    imported experimental localization claim.
+  snapshot_sha256: d200c715553d94a8e16d56f2aab24412a810c125e11f1153c68095486cd9153c
+- evidence_id: nine-two-agent-Q6RCE1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q6RCE1.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; SUBCELLULAR
+    LOCATION comment and evidence tags.
+  accessed_at: '2026-10-21T09:08:34.105411Z'
+  support: supports
+  summary: Reviewed IFT74 with IFT71/IFT74-72 aliases at taxon3055; cilium annotation
+    is ECO0000305.
+  snapshot_sha256: d392121fd9271634adef9cc3a4b4309205c022bef3ae3efe733ac90b5cf64bf9
+- evidence_id: nine-two-agent-A2T2X4
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/A2T2X4.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; SUBCELLULAR
+    LOCATION comment and evidence tags.
+  accessed_at: '2026-10-21T09:08:33.339606Z'
+  support: supports
+  summary: Reviewed IFT46/FAP32 at taxon3055; experimental basal-body/cilium annotation
+    includes the three cited PMID15955805,17312020,18852297 among its sources.
+  snapshot_sha256: 9da98899eae02d8a3c974a888104e0e89a3f1b7f6468b130c60fd6e59a9db19e
+- evidence_id: nine-two-agent-Q9FPW0
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9FPW0.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; SUBCELLULAR
+    LOCATION comment and evidence tags.
+  accessed_at: '2026-10-21T09:08:34.115191Z'
+  support: supports
+  summary: Unreviewed IFT88 at taxon3055 with the exact submitted protein name; identity-only
+    use is accurate and there is no native location comment.
+  snapshot_sha256: 2317af7a1a68536f1c6ca22036f78420bb40ae73394e48d681b1edc7ee1a6f82
+- evidence_id: motile-prep-reviewed-uniqueness
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIFT172%20OR%20gene_exact%3AIFT81%20OR%20gene_exact%3AIFT74%20OR%20gene_exact%3AIFT46%29%20AND%20organism_id%3A3055%20AND%20reviewed%3Atrue&format=json&size=100
+  locator: results[].primaryAccession/entryType/genes/organism; original sibling-source
+    receipt preserved.
+  accessed_at: '2026-10-21T09:12:34.687595Z'
+  support: supports
+  summary: The bounded reviewed taxon3055 query returns exactly IFT172 Q5DM57, IFT81
+    Q68RJ5, IFT74 Q6RCE1 and IFT46 A2T2X4; every returned native gene token was checked.
+    It does not search IFT52 or establish IFT88 absence.
+  snapshot_sha256: 240c126103910e1e296caa2b223dca221e81b893bc4d435ea5ae0f6ebd0b60fa
+  search_scope: Remote UniProt search exactly (gene_exact:IFT172 OR gene_exact:IFT81
+    OR gene_exact:IFT74 OR gene_exact:IFT46) AND organism_id:3055 AND reviewed:true,
+    JSON size100; four complete returned entries. Ignored local files are not applicable
+    to this remote bounded query; no local absence claim.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/appendage/9_2_motile_cilium.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:06:55Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/9_2_motile_cilium.yaml'
+  snapshot_sha256: 95ab4afa0c46e19bf68e8331cc5973ea62bee7adb6e02016cc35ca15a04dfd3e
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/appendage/9_2_motile_cilium.yaml
+    --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/9_2_motile_cilium-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:07:00Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/appendage/9_2_motile_cilium.yaml\
+    \ --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/9_2_motile_cilium-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch15-20261021-ohdkgt21/9_2_motile_cilium-strict.tsv"
+  snapshot_sha256: 888b350bb2f04da6f4a48e01038bc3a5c2ebd30fdcb56cdd948932c18d984ef2
+- evidence_id: verify-result
+  kind: validation
+  reference: /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/appendage/9_2_motile_cilium.yaml
+    --verify
+  locator: Read-only native target diagnostic log
+  accessed_at: '2026-10-21T09:14:37Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: causal-graphs-result
+  kind: validation
+  reference: /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/appendage/9_2_motile_cilium.yaml
+    --causal-graphs
+  locator: Read-only native target diagnostic log
+  accessed_at: '2026-10-21T09:14:37Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: target-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/9_2_motile_cilium.yaml; exact native collect()
+    target slice of original fresh-base TSV
+  accessed_at: '2026-10-21T09:47:05.845129Z'
+  support: supports
+  summary: '22 of 27 exact target identifiers returned OK. Residuals: PMID:15955805
+    returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently
+    verified by nine-two-agent-epmc; PMID:17312020 returned UNREACHABLE (eutils HTTP414);
+    exact native PMID metadata independently verified by nine-two-agent-epmc; PMID:17326139
+    returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently
+    verified by nine-two-agent-epmc; PMID:18852297 returned UNREACHABLE (eutils HTTP414);
+    exact native PMID metadata independently verified by nine-two-agent-epmc; PMID:9585417
+    returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently
+    verified by nine-two-agent-epmc The shared command exit zero is not interpreted
+    as successful network resolution for transport failures.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact 9+2 structure
+  outcome: supported
+  target_ids:
+  - GO:0097729
+  summary: Identity, APPENDAGE kind, motile-cilium is-a parent and scoped synonyms
+    match native GO. The appended definition adds literature-level organisms and waveform/regulatory
+    prose beyond the GO text; its core architecture is corroborated by the inspected
+    Chlamydomonas study without treating this as a full three-species comparative
+    assay.
+  evidence_ids:
+  - nine-two-agent-go
+  - nine-two-agent-nicastro-browser
+  - record
+- assessment_id: parts
+  area: scope
+  topic: Paraflagellar rod is taxon-restricted
+  outcome: concern
+  target_ids:
+  - GO:0097729
+  summary: The unqualified has_part and constituent graph description overgeneralize
+    the rod. Native part_of in the reverse direction cannot establish universal has_part.
+  evidence_ids:
+  - nine-two-agent-go
+  - record
+- assessment_id: composition
+  area: grounding
+  topic: Components and source extents
+  outcome: supported
+  target_ids:
+  - GO:0097729
+  summary: The five broad component/machinery identities and named IFT cohort are
+    supported at the represented level. IFT is correctly ASSOCIATED_MACHINERY. No
+    complete individual-protein inventory or IFT52 example is required by this review.
+    Assembly-necessity labels are not independently demonstrated merely by intact
+    architecture, membrane proteomics or basal-body localization.
+  evidence_ids:
+  - nine-two-agent-go
+  - nine-two-agent-pazour2005-jats
+  - nine-two-agent-nicastro-browser
+  - nine-two-agent-cole1998-jats
+  - nine-two-agent-hou2007-jats
+  - nine-two-agent-rosenbaum2002-publisher
+- assessment_id: assembly-necessity
+  area: evidence
+  topic: Assembly necessity of ESSENTIAL components
+  outcome: unknown
+  target_ids:
+  - GO:0097729
+  summary: The axoneme, ciliary membrane and basal body have supported structural
+    identities and canonical roles, but the inspected sources do not independently
+    establish assembly necessity for each broad component across the full9+2 class.
+    Intact architecture, proteomic presence or basal-body localization cannot substitute
+    for that endpoint. ESSENTIAL retains its schema meaning; this remains unknown
+    rather than being redefined or automatically called false.
+  evidence_ids:
+  - nine-two-agent-go
+  - nine-two-agent-pazour2005-jats
+  - nine-two-agent-nicastro-browser
+  - nine-two-agent-cole1998-jats
+  - nine-two-agent-rosenbaum2002-publisher
+- assessment_id: proteins
+  area: grounding
+  topic: Five accession examples
+  outcome: supported
+  target_ids:
+  - GO:0097729
+  summary: All primary accessions, gene tokens, labels, taxon3055 and four-reviewed/one-unreviewed
+    statuses match. Experimental localization annotations remain location-specific;
+    identity-only examples are not promoted to membership assays.
+  evidence_ids:
+  - nine-two-agent-Q5DM57
+  - nine-two-agent-Q68RJ5
+  - nine-two-agent-Q6RCE1
+  - nine-two-agent-A2T2X4
+  - nine-two-agent-Q9FPW0
+  - nine-two-agent-tax-3055
+  - motile-prep-reviewed-uniqueness
+  - nine-two-agent-cole1998-jats
+  - nine-two-agent-hou2007-jats
+  - nine-two-agent-ahmed2008-jats
+- assessment_id: function
+  area: evidence
+  topic: Assembly and motility
+  outcome: supported
+  target_ids:
+  - GO:0097729
+  summary: The inspected primary architecture/proteomics/IFT evidence and accessible
+    review keypoints support assembly/maintenance and dynein-based motility at their
+    stated levels. Chlamydomonas results do not prove universal use of every machinery
+    element or every taxon waveform.
+  evidence_ids:
+  - nine-two-agent-pazour2005-jats
+  - nine-two-agent-nicastro-browser
+  - nine-two-agent-nicastro-methods-browser
+  - nine-two-agent-cole1998-jats
+  - nine-two-agent-hou2007-jats
+  - nine-two-agent-rosenbaum2002-publisher
+- assessment_id: graph
+  area: graph
+  topic: Representation of a mechanism
+  outcome: concern
+  target_ids:
+  - GO:0097729
+  summary: The eight edges are five parthood edges, IFT association, and whole-cilium
+    assembly/motility outputs. They summarize composition and function; they do not
+    connect an actor or molecular event through assembly/sliding/bending. The whole
+    cilium mediates its own assembly edge further obscures causal direction.
+  evidence_ids:
+  - nine-two-agent-go
+  - nine-two-agent-cole1998-jats
+  - nine-two-agent-nicastro-browser
+  - nine-two-agent-rosenbaum2002-publisher
+  - record
+  - graph-contract
+- assessment_id: taxa
+  area: scope
+  topic: Canonical Chlamydomonas example
+  outcome: supported
+  target_ids:
+  - GO:0097729
+  summary: Taxon identity and the flagellar proteomics example are verified. COMMON
+    is used for a well-established flagellated model, not for every life-cycle stage.
+    Silflow-specific detailed wording remains limited by body access.
+  evidence_ids:
+  - nine-two-agent-tax-3055
+  - nine-two-agent-pazour2005-jats
+  - nine-two-agent-silflow2001-old-pmc
+  - nine-two-agent-epmc
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded review
+  outcome: supported
+  target_ids:
+  - GO:0097729
+  summary: All present fields and nine bibliography identities were inspected. No
+    image/measurement/trait/dataset is asserted. Empty optional fields and a missing
+    optional IFT52 instance are not findings; the concrete scope and graph assertions
+    are.
+  evidence_ids:
+  - nine-two-agent-go
+  - nine-two-agent-epmc
+  - record
+findings:
+- finding_id: F1
+  issue_key: nine-two-cilium-paraflagellar-rod-scope
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Restrict the paraflagellar rod to the cilia that contain it
+  description: The record adds GO0097740 as an unqualified has_part and describes
+    it as a constituent of the broad 9+2 cilium class. Native GO explicitly limits
+    this rod to some flagellated protists. A rod part_of 9+2-cilium assertion displayed
+    under GO children does not imply that every 9+2 cilium has that rod. The graph
+    repeats the broad membership and cites the access-limited Silflow review. This
+    finding concerns the positive universalized representation; it does not deny rod
+    membership in trypanosome or other supported subtypes.
+  target_ids:
+  - GO:0097729
+  field_paths:
+  - has_part
+  - causal_graphs[graph_id=9_2_motile_cilium_mechanism].nodes[node_id=paraflagellar_rod]
+  - causal_graphs[graph_id=9_2_motile_cilium_mechanism].edges
+  evidence_ids:
+  - nine-two-agent-go
+  - nine-two-agent-silflow2001-old-pmc
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/9_2_motile_cilium.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Identity, Components, Evidence and Causal graph; docs/CURATION.md:Evidence
+  native_severity: minor
+  normalization_reason: The exact structure and most underlying membership/location
+    claims remain supported. The bounded defect is an overbroad scope qualifier or
+    mechanistic representation, rather than a demonstrated false experimental mechanism
+    or wrong identity; calibrated as minor.
+- finding_id: F2
+  issue_key: nine-two-cilium-static-graph-mechanistic-scope
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Do not label structural membership and outputs as a mechanism
+  description: The FUNCTION/MECHANISTIC graph contains only parthood, association
+    and whole-structure output edges. Mechanistic phrases in node descriptions do
+    not provide a causal path, and the whole cilium is the subject of its own assembly.
+    Inspected primary work can support specific motor or transport steps but those
+    steps are not represented in the current graph.
+  target_ids:
+  - GO:0097729
+  field_paths:
+  - causal_graphs[graph_id=9_2_motile_cilium_mechanism].scope_status
+  - causal_graphs[graph_id=9_2_motile_cilium_mechanism].edges
+  evidence_ids:
+  - record
+  - graph-contract
+  - nine-two-agent-cole1998-jats
+  - nine-two-agent-nicastro-browser
+  - nine-two-agent-rosenbaum2002-publisher
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/9_2_motile_cilium.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Identity, Components, Evidence and Causal graph; docs/CURATION.md:Evidence
+  native_severity: minor
+  normalization_reason: The exact structure and most underlying membership/location
+    claims remain supported. The bounded defect is an overbroad scope qualifier or
+    mechanistic representation, rather than a demonstrated false experimental mechanism
+    or wrong identity; calibrated as minor.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0097729
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/9_2_motile_cilium.yaml
+    role: maintained scientific record
+  description: Remove the unqualified class-wide has_part or represent a taxon-qualified
+    subtype/example; qualify or remove the corresponding graph node/edge and attach
+    direct rod-specific evidence.
+  acceptance_checks:
+  - Preserve native GO relation direction and its some-protists qualifier.
+  - Check the source organism and represented cilium type before asserting rod membership.
+  - After separately authorized curation, use the guarded writer and native history/status
+    rules; run focused schema/strict, identifier and evidence checks.
+  generator: Maintained structure YAML; derived products only after authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0097729
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/9_2_motile_cilium.yaml
+    role: maintained scientific record
+  description: Retain this as NONMECHANISTIC structural/function context with corrected
+    scope, remove it, or replace it with a bounded primary-supported mechanism that
+    separates assembly machinery, cargo, motor action and outcome.
+  acceptance_checks:
+  - Read each directed edge against a claim-bearing passage.
+  - Do not use whole-cilium self-assembly or a membership edge as evidence of a mechanism.
+  - After separately authorized curation, use the guarded writer and native history/status
+    rules; run focused schema/strict, identifier and evidence checks.
+  generator: Maintained structure YAML; derived products only after authorized curation.
+limitations:
+- 'Silflow2001 body was not recovered: original PMC PDF-only HTML, current PMC challenge
+  HTML, exact PDF2001817 challenge and EuropePMC PDF403 are retained. It is not treated
+  as a primary paper or as proof of rod membership.'
+- Nicastro support comes from a serialized browser rendering of an author-uploaded
+  manuscript and SOM, with original source times/hashes. This is neither a native
+  HTTP200 PDF nor an analysis of every item on the2494-line host page.
+- Rosenbaum2002 is a review read only at publisher Key Points/Abstract. Sloboda2007
+  Wiley body returned403; Lucker2005 has native bibliographic/annotation support but
+  the attempted unverified JBC candidate route returned403 and is not claimed to be
+  the verified article body.
+- Pazour membrane+matrix fractionation and candidate proteomics do not independently
+  prove necessity of the membrane for assembly. Other canonical-component ESSENTIAL
+  labels retain an unknown independent assembly-necessity evidence assessment rather
+  than a redefinition of the enum.
+- The exact target resolver slice is derived from the completed fresh-base run. Any
+  PMID transport failures were checked against the separately cited native literature
+  metadata; these identity checks do not establish full-body scientific support.
+- No raw microscopy pixels, original movies, supplementary datasets or unpublished
+  data were independently reanalyzed. Figure captions and relevant body/methods prose
+  were read at the listed locators. The target has no image asset or quantitative
+  measurement assertion.
+- All 14 frozen repository inputs retain their inspected hashes. No neighboring local
+  structure record, expression-module source or iModulonDB claim is used; no optional-empty
+  finding is made.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Unsaveable clean exceptions are not manufactured; each listed finding is supported
+  independently of validator results. Root alone owns finalization, save and shared
+  index updates.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
