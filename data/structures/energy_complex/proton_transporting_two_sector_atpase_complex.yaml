@@ -1,0 +1,264 @@
+identifier: GO:0016469
+label: proton-transporting two-sector ATPase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A large protein complex that catalyzes the synthesis or hydrolysis of
+  ATP by a rotational mechanism, coupled to the transport of protons across a membrane.
+  The complex comprises a membrane sector (F0 or V0) that carries out proton transport
+  and a cytoplasmic compartment sector (F1 or V1) that catalyzes ATP synthesis or
+  hydrolysis.
+definition_source: GO:0016469
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: hydrogen-transporting two-sector ATPase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0016469
+- synonym_text: vacuolar hydrogen-transporting ATPase
+  synonym_type: RELATED_SYNONYM
+  source: GO:0016469
+parent_structures:
+- GO:0098796
+has_part:
+- GO:0033177
+- GO:0033178
+components:
+- component_id: proton_transporting_domain
+  label: proton-transporting two-sector ATPase complex, proton-transporting domain
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0033177
+  gene_symbols:
+  - atpE
+  - atpB
+  essentiality: ESSENTIAL
+  role: Membrane-embedded sector (Fo or Vo) containing the proteolipid c-ring rotor
+    and stator subunit a hemichannels that translocate protons across the membrane.
+  evidence:
+  - reference: GO:0016469
+    notes: GO:0016469 defines the membrane sector (F0 or V0) that carries out proton
+      transport across the membrane.
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 reviews the membrane Fo proton-transporting sector composed
+      of the c-ring rotor and subunit a stator half-channels.
+  protein_examples:
+  - uniprot_id: UniProtKB:P68699
+    protein_label: ATP synthase subunit c
+    gene_symbol: atpE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reviewed UniProtKB entry for gene atpE (membrane c-ring rotor subunit) in
+      Escherichia coli K-12.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli
+        inner membrane proteome.', Science.
+  - uniprot_id: UniProtKB:P0AB98
+    protein_label: ATP synthase subunit a
+    gene_symbol: atpB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: Reviewed UniProtKB entry for gene atpB (membrane stator subunit a) in Escherichia
+      coli K-12.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli
+        inner membrane proteome.', Science.
+- component_id: catalytic_domain
+  label: proton-transporting two-sector ATPase complex, catalytic domain
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0033178
+  gene_symbols:
+  - atpA
+  - atpD
+  - atpG
+  - atpC
+  essentiality: ESSENTIAL
+  role: Peripheral cytoplasmic compartment sector (F1 or V1) containing the hexameric
+    catalytic head and central rotational stalk that catalyzes ATP synthesis or hydrolysis.
+  evidence:
+  - reference: GO:0016469
+    notes: GO:0016469 defines the cytoplasmic compartment sector (F1 or V1) that catalyzes
+      ATP synthesis or hydrolysis.
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 reviews the catalytic alpha3beta3 head and rotating central
+      stalk of two-sector rotary ATPases.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABB0
+    protein_label: ATP synthase subunit alpha
+    gene_symbol: atpA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reviewed UniProtKB entry for gene atpA in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell
+        envelope.', J Biol Chem.
+  - uniprot_id: UniProtKB:P0ABB4
+    protein_label: ATP synthase subunit beta
+    gene_symbol: atpD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reviewed UniProtKB entry for gene atpD in Escherichia coli K-12.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P0ABB4
+      notes: UniProtKB reviewed (Swiss-Prot) entry P0ABB4 for gene atpD in Escherichia
+        coli K-12.
+  - uniprot_id: UniProtKB:P0ABA6
+    protein_label: ATP synthase gamma chain
+    gene_symbol: atpG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reviewed UniProtKB entry for gene atpG in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell
+        envelope.', J Biol Chem.
+  - uniprot_id: UniProtKB:P0A6E6
+    protein_label: ATP synthase epsilon chain
+    gene_symbol: atpC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: Reviewed UniProtKB entry for gene atpC in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:16079137
+      notes: Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell
+        envelope.', J Biol Chem.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Widespread across bacterial plasma membranes as F1Fo ATP synthases and bacterial
+    V/A-type rotary proton pumps.
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast contains both mitochondrial F1Fo ATP synthase and vacuolar V1Vo
+    two-sector proton-transporting ATPase complexes.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Canonical bacterial model for the two-sector F1Fo proton-transporting rotary
+    ATPase complex.
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Canonical eukaryotic microbial model for the vacuolar V1Vo and mitochondrial
+    F1Fo two-sector proton-transporting ATPase complexes.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+functions:
+- function_id: rotary_proton_atp_coupling
+  label: proton-transporting ATPase activity, rotational mechanism
+  grounding: GO:0046961
+  description: Couples transmembrane proton translocation through the membrane sector
+    (Fo or Vo) to ATP synthesis or hydrolysis in the cytoplasmic catalytic sector
+    (F1 or V1) via rotation of the central rotor.
+  evidence:
+  - reference: GO:0016469
+    notes: GO:0016469 defines the complex by rotational catalysis of ATP synthesis
+      or hydrolysis coupled to transmembrane proton transport.
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 reviews rotational coupling between the Fo proton turbine
+      and F1 catalytic head.
+  - reference: DOI:10.1038/nrm2272
+    notes: Forgac 2007 reviews rotary coupling between V1 ATP hydrolysis and V0 proton
+      transport.
+evidence:
+- reference: GO:0016469
+  notes: Gene Ontology cellular-component term for proton-transporting two-sector
+    ATPase complex.
+- reference: GO:0033177
+  notes: Gene Ontology cellular-component term for proton-transporting two-sector
+    ATPase complex, proton-transporting domain.
+- reference: GO:0033178
+  notes: Gene Ontology cellular-component term for proton-transporting two-sector
+    ATPase complex, catalytic domain.
+- reference: DOI:10.1146/annurev-biochem-013118-110903
+  notes: Kuehlbrandt W 2019, 'Structure and Mechanisms of F-Type ATP Synthases', Annual
+    Review of Biochemistry.
+- reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+- reference: DOI:10.1038/nrm2272
+  notes: 'Forgac 2007, Vacuolar ATPases: rotary proton pumps in physiology and pathophysiology,
+    Nature Reviews Molecular Cell Biology.'
+causal_graphs:
+- graph_id: two_sector_atpase_rotary_coupling
+  title: Two-sector rotary coupling between membrane proton transport and ATP catalysis
+  description: Directed causal graph linking the membrane proton-transporting domain
+    (GO:0033177) and cytoplasmic catalytic domain (GO:0033178) of the proton-transporting
+    two-sector ATPase complex (GO:0016469) to rotational ATPase/synthase activity
+    (GO:0046961).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: proton_transporting_domain
+    label: proton-transporting two-sector ATPase complex, proton-transporting domain
+    node_type: STRUCTURE
+    grounding: GO:0033177
+    component_ref: proton_transporting_domain
+  - node_id: catalytic_domain
+    label: proton-transporting two-sector ATPase complex, catalytic domain
+    node_type: STRUCTURE
+    grounding: GO:0033178
+    component_ref: catalytic_domain
+  - node_id: two_sector_atpase_complex
+    label: proton-transporting two-sector ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0016469
+  - node_id: rotary_proton_atp_coupling
+    label: proton-transporting ATPase activity, rotational mechanism
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0046961
+  edges:
+  - subject: proton_transporting_domain
+    predicate: is part of
+    object: two_sector_atpase_complex
+    description: The membrane sector (Fo or Vo) is the integral transmembrane proton-transporting
+      subassembly of the two-sector ATPase complex.
+    evidence:
+    - reference: GO:0016469
+      notes: GO:0016469 defines the complex as comprising a membrane sector (F0 or
+        V0) that carries out proton transport.
+  - subject: catalytic_domain
+    predicate: is part of
+    object: two_sector_atpase_complex
+    description: The cytoplasmic sector (F1 or V1) is the peripheral catalytic subassembly
+      of the two-sector ATPase complex.
+    evidence:
+    - reference: GO:0016469
+      notes: GO:0016469 defines the complex as comprising a cytoplasmic compartment
+        sector (F1 or V1) that catalyzes ATP synthesis or hydrolysis.
+  - subject: two_sector_atpase_complex
+    predicate: mediates
+    object: rotary_proton_atp_coupling
+    description: Mechanical rotation between the membrane sector and the catalytic
+      sector couples transmembrane proton translocation to ATP synthesis or hydrolysis.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 reviews rotary catalysis in two-sector ATP synthases.
+    - reference: DOI:10.1038/nrm2272
+      notes: Forgac 2007 reviews rotary proton pumping in two-sector V-ATPases.
+curation_history:
+- timestamp: '2026-10-24T03:15:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0016469 (proton-transporting two-sector
+    ATPase complex) with verified GO identity, source-backed components, reviewed
+    UniProtKB protein examples, taxonomic distribution, canonical examples, functions,
+    and mechanistic causal graph.
+  llm_assisted: true

@@ -1,0 +1,219 @@
+identifier: GO:0072588
+label: box H/ACA RNP complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A ribonucleoprotein complex containing a small RNA with an H/ACA box sequence
+  motif that catalyzes pseudouridylation of RNA molecules. Most members of this family
+  use guide RNAs to direct the site of pseudouridylation of target RNAs (for example,
+  box H/ACA snoRNPs and box H/ACA scaRNPs) although some members do not modify other
+  RNAs (for example, telomerase RNP).
+definition_source: GO:0072588
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: sRNP complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0072588
+- synonym_text: box H/ACA snoRNP pseudouridylase complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0072588
+parent_structures:
+- GO:0005732
+components:
+- component_id: box_h_aca_rna
+  label: box H/ACA small RNA
+  component_type: RNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Small non-coding RNA containing hairpin-hinge-hairpin-tail secondary structure
+    with conserved H-box and ACA-box motifs that scaffolds the RNP and typically base-pairs
+    with substrate RNA to position the target uridine.
+  evidence:
+  - reference: GO:0072588
+    notes: GO:0072588 defines the complex as containing a small RNA with an H/ACA
+      box sequence motif.
+  - reference: DOI:10.1016/j.molcel.2007.01.024
+    notes: Matera et al. 2007 reviews the conserved H/ACA RNA scaffold and guide pockets
+      in box H/ACA RNPs.
+- component_id: cbf5_gar1_nhp2_nop10_core
+  label: Cbf5-Gar1-Nhp2-Nop10 pseudouridine synthase core protein tetramer
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - CBF5
+  - GAR1
+  - NHP2
+  - NOP10
+  essentiality: ESSENTIAL
+  role: Conserved four-protein enzymatic core consisting of the catalytic pseudouridine
+    synthase Cbf5p (dyskerin/TruB homolog) and accessory subunits Gar1p, Nhp2p, and
+    Nop10p.
+  evidence:
+  - reference: PMID:9843512
+    notes: Henras et al. 1998 identified Gar1p, Nhp2p, Nop10p, and Cbf5p as components
+      of the yeast box H/ACA RNP family.
+  - reference: PMID:14562095
+    notes: Wang and Meier 2004 determined the architecture of the yeast Cbf5p-Nop10p-Gar1p-Nhp2p
+      box H/ACA RNP core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33322
+    protein_label: H/ACA ribonucleoprotein complex subunit CBF5
+    gene_symbol: CBF5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene CBF5 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: PMID:14562095
+      notes: Wang C et al. 2004, 'Architecture and assembly of mammalian H/ACA small
+        nucleolar and telomerase ribonucleoproteins.', EMBO J.
+  - uniprot_id: UniProtKB:P28007
+    protein_label: H/ACA ribonucleoprotein complex subunit GAR1
+    gene_symbol: GAR1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene GAR1 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: PMID:14562095
+      notes: Wang C et al. 2004, 'Architecture and assembly of mammalian H/ACA small
+        nucleolar and telomerase ribonucleoproteins.', EMBO J.
+  - uniprot_id: UniProtKB:P32495
+    protein_label: H/ACA ribonucleoprotein complex subunit NHP2
+    gene_symbol: NHP2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene NHP2 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: PMID:9843512
+      notes: Henras A et al. 1998, 'NhP2p and Nop10p are essential for  the function
+        of the H/ACA snoRNPs.', EMBO J.
+  - uniprot_id: UniProtKB:Q6Q547
+    protein_label: H/ACA ribonucleoprotein complex subunit NOP10
+    gene_symbol: NOP10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene NOP10 in Saccharomyces cerevisiae S288C.
+    evidence:
+    - reference: PMID:9843512
+      notes: Henras A et al. 1998, 'NhP2p and Nop10p are essential for the function
+        of the H/ACA snoRNPs.', EMBO J.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Primary eukaryotic microbial model in which the box H/ACA RNP family (Cbf5p-Gar1p-Nhp2p-Nop10p
+    plus box H/ACA RNAs) was characterized.
+  reference: PMID:9843512
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: COMMON
+  note: Archaeal box H/ACA sRNPs (aCBF5-aNOP10-aGAR1-L7Ae bound to H/ACA sRNAs) are
+    conserved homologs catalyzing rRNA pseudouridylation.
+  reference: DOI:10.1016/j.molcel.2007.01.024
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding yeast strain for the Cbf5p-Gar1p-Nhp2p-Nop10p box H/ACA
+    ribonucleoprotein family.
+  reference: PMID:14562095
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Canonical microbial model for box H/ACA snoRNPs catalyzing rRNA pseudouridylation.
+  reference: PMID:9843512
+functions:
+- function_id: rna_pseudouridine_synthesis
+  label: pseudouridine synthesis
+  grounding: GO:0001522
+  description: Catalyzes the site-specific isomerization of uridine to pseudouridine
+    in target RNA molecules directed by the box H/ACA guide RNA.
+  evidence:
+  - reference: GO:0072588
+    notes: GO:0072588 defines the complex as catalyzing pseudouridylation of RNA molecules.
+  - reference: PMID:9843512
+    notes: Henras et al. 1998 demonstrated that the yeast box H/ACA RNP core subunits
+      are required for site-specific rRNA pseudouridylation.
+evidence:
+- reference: GO:0072588
+  notes: Gene Ontology cellular-component term for box H/ACA RNP complex.
+- reference: GO:0001522
+  notes: Gene Ontology biological-process term for pseudouridine synthesis.
+- reference: PMID:9843512
+  notes: Henras A et al. 1998, 'NhP2p and Nop10p are essential for the function of
+    the H/ACA snoRNPs.', EMBO J.
+- reference: PMID:14562095
+  notes: Wang C and Meier UT 2004, 'Architecture and assembly of mammalian H/ACA small
+    nucleolar and telomerase ribonucleoproteins.', EMBO J.
+- reference: DOI:10.1016/j.molcel.2007.01.024
+  notes: 'Matera AG et al. 2007, ''Non-coding RNAs: lessons from the small nuclear
+    and small nucleolar RNAs'', Nat Rev Mol Cell Biol / Mol Cell.'
+causal_graphs:
+- graph_id: box_h_aca_rnp_pseudouridylation
+  title: Box H/ACA RNA guide and Cbf5 core tetramer catalyze RNA pseudouridylation
+  description: Directed causal graph linking the box H/ACA RNA scaffold and the Cbf5-Gar1-Nhp2-Nop10
+    catalytic core of the box H/ACA RNP complex (GO:0072588) to pseudouridine synthesis
+    (GO:0001522).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: box_h_aca_rna
+    label: box H/ACA small RNA
+    node_type: RNA
+    component_ref: box_h_aca_rna
+  - node_id: cbf5_gar1_nhp2_nop10_core
+    label: Cbf5-Gar1-Nhp2-Nop10 pseudouridine synthase core protein tetramer
+    node_type: GENE_OR_PROTEIN
+    component_ref: cbf5_gar1_nhp2_nop10_core
+  - node_id: box_h_aca_rnp_complex
+    label: box H/ACA RNP complex
+    node_type: STRUCTURE
+    grounding: GO:0072588
+  - node_id: rna_pseudouridine_synthesis
+    label: pseudouridine synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0001522
+  edges:
+  - subject: box_h_aca_rna
+    predicate: is part of
+    object: box_h_aca_rnp_complex
+    description: The box H/ACA small RNA provides the hairpin-hinge-hairpin-tail scaffold
+      and substrate-guiding pseudouridylation pocket of the RNP.
+    evidence:
+    - reference: GO:0072588
+      notes: GO:0072588 defines the complex by containing a small RNA with an H/ACA
+        box sequence motif.
+  - subject: cbf5_gar1_nhp2_nop10_core
+    predicate: is part of
+    object: box_h_aca_rnp_complex
+    description: The Cbf5p-Gar1p-Nhp2p-Nop10p protein tetramer assembles onto the
+      box H/ACA RNA hairpins to form the catalytic RNP core.
+    evidence:
+    - reference: PMID:14562095
+      notes: Wang and Meier 2004 defined the assembly of the four core proteins on
+        box H/ACA RNAs.
+  - subject: box_h_aca_rnp_complex
+    predicate: mediates
+    object: rna_pseudouridine_synthesis
+    description: The assembled box H/ACA RNP complex catalyzes site-specific isomerization
+      of uridine to pseudouridine in substrate RNAs.
+    evidence:
+    - reference: GO:0072588
+      notes: GO:0072588 defines the complex as catalyzing pseudouridylation of RNA
+        molecules.
+    - reference: PMID:9843512
+      notes: Henras et al. 1998 demonstrated that the box H/ACA RNP is required for
+        rRNA pseudouridylation.
+curation_history:
+- timestamp: '2026-10-24T03:15:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0072588 (box H/ACA RNP complex) with
+    verified GO identity, source-backed components, reviewed UniProtKB protein examples,
+    taxonomic distribution, canonical examples, functions, and mechanistic causal
+    graph.
+  llm_assisted: true

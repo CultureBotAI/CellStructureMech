@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+  slug: static_microtubule_bundle
+session:
+  id: 2026-10-24T031500Z-claude-opus-4-6-c3s108
+  timestamp: '2026-10-24T03:15:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for static microtubule bundle (GO:0099070) in
+    cytoskeleton.
+  details: Authored data/structures/cytoskeleton/static_microtubule_bundle.yaml for
+    static microtubule bundle (GO:0099070) with verified GO hierarchy, taxonomic distribution,
+    UniProtKB protein examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

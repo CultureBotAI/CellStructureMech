@@ -2180,6 +2180,16 @@
   "synonyms": "vorticellid spasmoneme stalk myoneme spasmoneme"
  },
  {
+  "identifier": "GO:0099070",
+  "label": "static microtubule bundle",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/static_microtubule_bundle.html",
+  "definition": "A stable bundle of closely packed microtubules formed in quiescent cells, usually associated with the spindle pole body. In yeast cells entering quiescence, it assembles at the transition from proliferation to quiescence and disassembles rapidly upon cell cycle re-entry.",
+  "synonyms": "Q-MT bundle quiescent cell MT bundle quiescent cell microtubule bundle"
+ },
+ {
   "identifier": "cellstructuremech:stentor_km_fiber",
   "label": "Stentor Km fiber",
   "category": "CYTOSKELETON",
@@ -2618,6 +2628,36 @@
   "page": "structures/energy_complex/proton_transporting_atp_synthase_complex.html",
   "definition": "The rotary motor enzyme that makes ATP from ADP and phosphate using the ion motive force across the membrane. It has two coupled sectors: a membrane-embedded Fo, whose c-ring turns as protons cross it, and a soluble F1 (alpha3beta3gammadeltaepsilon), whose catalytic beta subunits are driven through their conformational cycle by the rotating gamma subunit.",
   "synonyms": "F1Fo ATP synthase"
+ },
+ {
+  "identifier": "GO:0016469",
+  "label": "proton-transporting two-sector ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_two_sector_atpase_complex.html",
+  "definition": "A large protein complex that catalyzes the synthesis or hydrolysis of ATP by a rotational mechanism, coupled to the transport of protons across a membrane. The complex comprises a membrane sector (F0 or V0) that carries out proton transport and a cytoplasmic compartment sector (F1 or V1) that catalyzes ATP synthesis or hydrolysis.",
+  "synonyms": "hydrogen-transporting two-sector ATPase complex vacuolar hydrogen-transporting ATPase"
+ },
+ {
+  "identifier": "GO:0033178",
+  "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.html",
+  "definition": "A protein complex that forms part of a proton-transporting two-sector ATPase complex and catalyzes ATP synthesis or hydrolysis. The catalytic sector consists of a hexameric head and a central stalk; substrate binding and rotary motion of the central stalk is coupled to proton transport in the membrane sector.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0033177",
+  "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_two_sector_atpase_complex_proton_transporting_domain.html",
+  "definition": "A protein complex that forms part of a proton-transporting two-sector ATPase complex and mediates proton transport across a membrane.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0033176",
@@ -5820,6 +5860,16 @@
   "synonyms": "cellulosomal complex multienzyme cellulolytic complex"
  },
  {
+  "identifier": "GO:0016465",
+  "label": "chaperonin ATPase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chaperonin_atpase_complex.html",
+  "definition": "A multimeric ATPase complex involved in protein folding. It has a symmetric ring-shaped structure and consists of multiple identical ~60kDa subunits and, in the bacterial complex, several smaller subunits; a central cavity receives unfolded peptides and promotes their folding into the native conformation.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0005832",
   "label": "chaperonin-containing T-complex",
   "category": "OTHER",
@@ -7840,6 +7890,16 @@
   "synonyms": "pre-RC pre-replication complex"
  },
  {
+  "identifier": "GO:1990077",
+  "label": "primosome complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/primosome_complex.html",
+  "definition": "A protein-DNA complex essential for initiation or restart of DNA replication in bacteria. At a minimum, it contains a DNA helicase and associated protein(s) which unwind the double-stranded DNA (dsDNA) and move along a single strand of DNA in the 5' to 3' direction. Typically, it also contains a primase which synthesizes a RNA primer.",
+  "synonyms": "primosome"
+ },
+ {
   "identifier": "GO:0022624",
   "label": "proteasome accessory complex",
   "category": "OTHER",
@@ -8598,6 +8658,26 @@
   "page": "structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.html",
   "definition": "A ribonucleoprotein complex containing a box C/D type RNA that is capable of ribose-2'-O-methylation of target RNAs. Box C/D type RNAs are widespread in eukaryotes and in Archaea, suggesting that an RNA-based guide mechanism for directing specific RNA 2'-O-ribose methylations was present in the common ancestor of Archaea and Eukarya. A conserved ribonucleoprotein complex composed of a box C/D guide snoRNA (or archaeal box C/D sRNA) containing kink-turn C/D and C'/D' motifs bound by the kink-turn binding protein Snu13p (L7Ae in Archaea), the scaffold subunits Nop56p and Nop58p (Nop5 in Archaea), and the SAM-dependent 2'-O-ribose methyltransferase Nop1p/fibrillarin. The complex base-pairs with target pre-rRNA to direct site-specific 2'-O-methylation five nucleotides upstream of box D or D'.",
   "synonyms": "box C/D snoRNP ribose 2'-O methylase complex box C/D sRNP complex box C/D small nucleolar ribonucleoprotein complex box C/D snoRNP complex box C/D snoRNP ribose-2'-O-methyltransferase complex"
+ },
+ {
+  "identifier": "GO:0170049",
+  "label": "box C/D RNP complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/box_c_d_rnp_complex.html",
+  "definition": "A ribonucleoprotein complex containing a small RNA with a C/D box sequence motif that functions in the modification and processing of precursor ribosomal RNAs. Most members of this family direct site-specific 2'-O-methylation of substrate RNAs (box C/D methylation guide snoRNPs and scaRNPs), while others, such as the U3, U8, U14, and U22 snoRNPs, mediate endonucleolytic cleavage and folding of pre-rRNA.",
+  "synonyms": "SNORD ribonucleoprotein complex SNORNP"
+ },
+ {
+  "identifier": "GO:0072588",
+  "label": "box H/ACA RNP complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/box_h_aca_rnp_complex.html",
+  "definition": "A ribonucleoprotein complex containing a small RNA with an H/ACA box sequence motif that catalyzes pseudouridylation of RNA molecules. Most members of this family use guide RNAs to direct the site of pseudouridylation of target RNAs (for example, box H/ACA snoRNPs and box H/ACA scaRNPs) although some members do not modify other RNAs (for example, telomerase RNP).",
+  "synonyms": "sRNP complex box H/ACA snoRNP pseudouridylase complex"
  },
  {
   "identifier": "GO:0031429",

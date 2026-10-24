@@ -1,0 +1,253 @@
+identifier: GO:1990077
+label: primosome complex
+structure_category: OTHER
+structure_kind: NUCLEOPROTEIN_COMPLEX
+definition: A protein-DNA complex essential for initiation or restart of DNA replication
+  in bacteria. At a minimum, it contains a DNA helicase and associated protein(s)
+  which unwind the double-stranded DNA (dsDNA) and move along a single strand of DNA
+  in the 5' to 3' direction. Typically, it also contains a primase which synthesizes
+  a RNA primer.
+definition_source: GO:1990077
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: primosome
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990077
+parent_structures:
+- GO:0032993
+part_of:
+- GO:0030894
+components:
+- component_id: replicative_dna_helicase
+  label: replicative DNA helicase DnaB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  gene_symbols:
+  - dnaB
+  essentiality: ESSENTIAL
+  role: Hexameric ring helicase that translocates 5' to 3' on the lagging-strand template
+    to unwind parental duplex DNA and recruit DNA primase.
+  evidence:
+  - reference: GO:1990077
+    notes: GO:1990077 defines the primosome complex as containing at a minimum a DNA
+      helicase that unwinds dsDNA and moves 5' to 3' along ssDNA.
+  - reference: PMID:8663105
+    notes: Tougu and Marians 1996 characterized the DnaB-DnaG helicase-primase interaction
+      in the Escherichia coli primosome.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ACB0
+    protein_label: Replicative DNA helicase DnaB
+    gene_symbol: dnaB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene dnaB in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:8663105
+      notes: Tougu K et al. 1996, 'The interaction between helicase and primase sets
+        the replication fork clock.', J Biol Chem.
+- component_id: dna_primase
+  label: DNA primase DnaG
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  gene_symbols:
+  - dnaG
+  essentiality: ESSENTIAL
+  role: RNA polymerase that associates with DnaB helicase to synthesize short RNA
+    primers on unwound lagging-strand ssDNA.
+  evidence:
+  - reference: GO:1990077
+    notes: GO:1990077 states that the primosome complex typically contains a primase
+      which synthesizes an RNA primer.
+  - reference: PMID:8663105
+    notes: Tougu and Marians 1996 showed that DnaG primase binds DnaB helicase to
+      prime Okazaki fragment synthesis.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABS5
+    protein_label: DNA primase
+    gene_symbol: dnaG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene dnaG in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:8663105
+      notes: Tougu K et al. 1996, 'The interaction between helicase and primase sets
+        the replication fork clock.', J Biol Chem.
+- component_id: helicase_chaperone_protein
+  label: DNA replication loader/restart factor DnaC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  gene_symbols:
+  - dnaC
+  essentiality: ESSENTIAL
+  role: AAA+ ATPase helicase loader that complexes with DnaB during primosome assembly
+    at replication origins and stalled forks.
+  evidence:
+  - reference: PMID:21856207
+    notes: Briggs et al. 2012 (and Marians 2000) describe how DnaC loads DnaB onto
+      PriA/PriB/DnaT-restarted forks and oriC to form the bacterial primosome.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AEF0
+    protein_label: DNA replication protein DnaC
+    gene_symbol: dnaC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-30'
+    role: Reviewed UniProtKB entry for gene dnaC in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:21856207
+      notes: DnaC loads DnaB helicase onto single-stranded DNA during bacterial primosome
+        assembly.
+- component_id: template_dna
+  label: replication fork single-stranded template DNA
+  component_type: DNA
+  component_role: CONSTITUENT
+  grounding_status: REVIEWED_LABEL_ONLY
+  essentiality: ESSENTIAL
+  role: Single-stranded DNA template strand along which the primosome translocates
+    5' to 3' to unwind dsDNA and synthesize RNA primers.
+  evidence:
+  - reference: GO:1990077
+    notes: GO:1990077 defines the primosome complex as a protein-DNA complex that
+      unwinds dsDNA and moves along ssDNA in the 5' to 3' direction.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  presence: COMMON
+  note: Primary bacterial model organism in which both oriC initiation and PriA-directed
+    replication-restart primosomes were biochemically reconstituted.
+  reference: PMID:8663105
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Essential protein-DNA complex across Bacteria for replication initiation and
+    replication fork restart.
+  reference: GO:1990077
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial strain for the DnaB-DnaG core primosome and PriA-PriB-DnaT-DnaC-DnaB
+    replication restart primosome.
+  reference: PMID:21856207
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Canonical bacterial model for helicase-primase coupling in the primosome complex.
+  reference: PMID:8663105
+functions:
+- function_id: dna_replication_synthesis_of_primer
+  label: DNA replication, synthesis of primer
+  grounding: GO:0006269
+  description: Unwinds template DNA in the 5' to 3' direction and synthesizes short
+    RNA primers required to initiate or restart bacterial DNA synthesis.
+  evidence:
+  - reference: GO:1990077
+    notes: GO:1990077 defines the primosome complex as unwinding dsDNA and synthesizing
+      an RNA primer for initiation or restart of DNA replication in bacteria.
+  - reference: PMID:8663105
+    notes: Tougu and Marians 1996 demonstrated coupled dsDNA unwinding and RNA primer
+      synthesis by the DnaB-DnaG primosome.
+evidence:
+- reference: GO:1990077
+  notes: Gene Ontology cellular-component term for primosome complex.
+- reference: GO:0006269
+  notes: Gene Ontology biological-process term for DNA replication, synthesis of primer.
+- reference: PMID:8663105
+  notes: Tougu K and Marians KJ 1996, 'The interaction between helicase and primase
+    sets the replication fork clock.', J Biol Chem.
+- reference: PMID:21856207
+  notes: Structural and biochemical characterization of bacterial primosome assembly
+    and replication fork restart in Escherichia coli.
+causal_graphs:
+- graph_id: primosome_primer_synthesis
+  title: DnaB helicase and DnaG primase on template DNA mediate bacterial primer synthesis
+  description: Directed causal graph linking DnaB helicase, DnaG primase, DnaC loader,
+    and template DNA in the bacterial primosome complex (GO:1990077) to RNA primer
+    synthesis during DNA replication (GO:0006269).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: helicase_chaperone_protein
+    label: DNA replication loader/restart factor DnaC
+    node_type: GENE_OR_PROTEIN
+    component_ref: helicase_chaperone_protein
+  - node_id: replicative_dna_helicase
+    label: replicative DNA helicase DnaB
+    node_type: GENE_OR_PROTEIN
+    component_ref: replicative_dna_helicase
+  - node_id: dna_primase
+    label: DNA primase DnaG
+    node_type: GENE_OR_PROTEIN
+    component_ref: dna_primase
+  - node_id: template_dna
+    label: replication fork single-stranded template DNA
+    node_type: GENETIC_ELEMENT
+    component_ref: template_dna
+  - node_id: primosome_complex
+    label: primosome complex
+    node_type: STRUCTURE
+    grounding: GO:1990077
+  - node_id: dna_replication_synthesis_of_primer
+    label: DNA replication, synthesis of primer
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006269
+  edges:
+  - subject: helicase_chaperone_protein
+    predicate: recruits
+    object: replicative_dna_helicase
+    description: DnaC loads the hexameric DnaB helicase ring onto single-stranded
+      DNA during primosome assembly.
+    evidence:
+    - reference: PMID:21856207
+      notes: DnaC loads DnaB onto single-stranded DNA at origins and restarted forks.
+  - subject: replicative_dna_helicase
+    predicate: is part of
+    object: primosome_complex
+    description: DnaB helicase forms the 5' to 3' DNA-unwinding motor core of the
+      bacterial primosome complex.
+    evidence:
+    - reference: GO:1990077
+      notes: GO:1990077 defines the primosome complex as containing a DNA helicase
+        that unwinds dsDNA.
+  - subject: dna_primase
+    predicate: is part of
+    object: primosome_complex
+    description: DnaG primase binds DnaB helicase within the primosome complex.
+    evidence:
+    - reference: PMID:8663105
+      notes: Tougu and Marians 1996 characterized the DnaB-DnaG interaction in the
+        primosome.
+  - subject: template_dna
+    predicate: is part of
+    object: primosome_complex
+    description: Single-stranded template DNA is bound by the primosome complex during
+      5' to 3' translocation and priming.
+    evidence:
+    - reference: GO:1990077
+      notes: GO:1990077 defines the primosome complex as a protein-DNA complex.
+  - subject: primosome_complex
+    predicate: mediates
+    object: dna_replication_synthesis_of_primer
+    description: The assembled primosome complex unwinds template DNA and synthesizes
+      RNA primers to initiate or restart DNA synthesis.
+    evidence:
+    - reference: GO:1990077
+      notes: GO:1990077 defines the primosome complex as essential for initiation
+        or restart of DNA replication via RNA primer synthesis.
+    - reference: PMID:8663105
+      notes: Tougu and Marians 1996 demonstrated coupled unwinding and RNA primer
+        synthesis by the primosome.
+curation_history:
+- timestamp: '2026-10-24T03:15:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:1990077 (primosome complex) with verified
+    GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
+    distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true

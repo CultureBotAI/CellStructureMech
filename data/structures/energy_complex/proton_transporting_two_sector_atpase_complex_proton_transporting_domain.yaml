@@ -1,0 +1,184 @@
+identifier: GO:0033177
+label: proton-transporting two-sector ATPase complex, proton-transporting domain
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that forms part of a proton-transporting two-sector
+  ATPase complex and mediates proton transport across a membrane.
+definition_source: GO:0033177
+mapping_status: PROPOSED
+parent_structures:
+- GO:0098796
+part_of:
+- GO:0016469
+components:
+- component_id: proteolipid_c_ring_subunit
+  label: proteolipid rotor c-ring subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - atpE
+  essentiality: ESSENTIAL
+  role: Oligomeric membrane-embedded proteolipid c-ring subunit whose conserved carboxylates
+    bind and release protons during rotary translocation.
+  evidence:
+  - reference: GO:0033177
+    notes: GO:0033177 defines the membrane-embedded proton-transporting domain of
+      a two-sector ATPase complex.
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 reviews the membrane c-ring rotor and its proton-binding
+      sites in two-sector rotary ATPases.
+  protein_examples:
+  - uniprot_id: UniProtKB:P68699
+    protein_label: ATP synthase subunit c
+    gene_symbol: atpE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reviewed UniProtKB entry for gene atpE in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli
+        inner membrane proteome.', Science.
+- component_id: membrane_stator_a_subunit
+  label: membrane stator subunit a
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  gene_symbols:
+  - atpB
+  essentiality: ESSENTIAL
+  role: Polytopic membrane stator subunit that provides two offset aqueous half-channels
+    for protons to enter and exit the rotating c-ring.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 describes the two offset half-channels in membrane subunit
+      a that conduct protons to and from the c-ring.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AB98
+    protein_label: ATP synthase subunit a
+    gene_symbol: atpB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-09-08'
+    role: Reviewed UniProtKB entry for gene atpB in Escherichia coli K-12.
+    evidence:
+    - reference: PMID:15919996
+      notes: Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli
+        inner membrane proteome.', Science.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  presence: COMMON
+  note: Reference bacterial plasma membrane Fo proton-transporting domain (subunits
+    a, b2, c10).
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Reference eukaryotic microbial model for the vacuolar V0 and mitochondrial
+    Fo membrane proton-transporting domains.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial model for the Fo proton-transporting sector of F1Fo ATP
+    synthase.
+  reference: DOI:10.1146/annurev-biochem-013118-110903
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference fungal model for the V0 proton-transporting domain of vacuolar V-ATPase.
+  reference: DOI:10.1128/MMBR.70.1.177-191.2006
+functions:
+- function_id: proton_transmembrane_transport
+  label: proton transmembrane transport
+  grounding: GO:1902600
+  description: Conducts protons across the lipid bilayer via protonation and deprotonation
+    of the rotating proteolipid c-ring at the interface with stator subunit a half-channels.
+  evidence:
+  - reference: GO:0033177
+    notes: GO:0033177 defines the domain by mediating proton transport across a membrane
+      as part of a two-sector ATPase complex.
+  - reference: DOI:10.1146/annurev-biochem-013118-110903
+    notes: Kuehlbrandt 2019 reviews transmembrane proton translocation through the
+      subunit a half-channels and rotating c-ring.
+evidence:
+- reference: GO:0033177
+  notes: Gene Ontology cellular-component term for proton-transporting two-sector
+    ATPase complex, proton-transporting domain.
+- reference: GO:0016469
+  notes: Gene Ontology cellular-component term for the holo proton-transporting two-sector
+    ATPase complex.
+- reference: GO:1902600
+  notes: Gene Ontology biological-process term for proton transmembrane transport.
+- reference: DOI:10.1146/annurev-biochem-013118-110903
+  notes: Kuehlbrandt W 2019, 'Structure and Mechanisms of F-Type ATP Synthases', Annual
+    Review of Biochemistry.
+- reference: DOI:10.1128/MMBR.70.1.177-191.2006
+  notes: Kane 2006, The Where, When, and How of Organelle Acidification by the Yeast
+    Vacuolar H+-ATPase, Microbiology and Molecular Biology Reviews.
+causal_graphs:
+- graph_id: proton_transporting_domain_mechanism
+  title: Subunit a half-channels and proteolipid c-ring mediate transmembrane proton
+    transport
+  description: Directed causal graph linking the membrane stator subunit a and proteolipid
+    c-ring rotor of the proton-transporting domain (GO:0033177) to proton transmembrane
+    transport (GO:1902600).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: membrane_stator_a_subunit
+    label: membrane stator subunit a
+    node_type: GENE_OR_PROTEIN
+    component_ref: membrane_stator_a_subunit
+  - node_id: proteolipid_c_ring_subunit
+    label: proteolipid rotor c-ring subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: proteolipid_c_ring_subunit
+  - node_id: proton_transporting_domain
+    label: proton-transporting two-sector ATPase complex, proton-transporting domain
+    node_type: STRUCTURE
+    grounding: GO:0033177
+  - node_id: proton_transmembrane_transport
+    label: proton transmembrane transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:1902600
+  edges:
+  - subject: membrane_stator_a_subunit
+    predicate: is part of
+    object: proton_transporting_domain
+    description: Stator subunit a provides the two offset aqueous half-channels within
+      the membrane proton-transporting domain.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 describes the two offset half-channels in subunit a
+        of the membrane sector.
+  - subject: proteolipid_c_ring_subunit
+    predicate: is part of
+    object: proton_transporting_domain
+    description: The oligomeric proteolipid c-ring forms the rotating proton-binding
+      core of the membrane proton-transporting domain.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 reviews the c-ring rotor in the membrane sector.
+  - subject: proton_transporting_domain
+    predicate: mediates
+    object: proton_transmembrane_transport
+    description: Rotation of the c-ring past the subunit a half-channels mediates
+      proton transport across the membrane.
+    evidence:
+    - reference: GO:0033177
+      notes: GO:0033177 defines the domain by mediating proton transport across a
+        membrane.
+    - reference: DOI:10.1146/annurev-biochem-013118-110903
+      notes: Kuehlbrandt 2019 describes proton translocation across the membrane at
+        the a/c-ring interface.
+curation_history:
+- timestamp: '2026-10-24T03:15:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0033177 (proton-transporting two-sector
+    ATPase complex, proton-transporting domain) with verified GO identity, source-backed
+    components, reviewed UniProtKB protein examples, taxonomic distribution, canonical
+    examples, functions, and mechanistic causal graph.
+  llm_assisted: true
