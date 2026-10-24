@@ -1,0 +1,707 @@
+# Vacuole scientific review
+
+- Review: 20261022T041018Z-vacuole-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T03:46:50Z
+- Finished UTC: 2026-10-22T04:10:18Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact vacuole identity, yeast storage/degradation example and generic-to-fungal membrane/lumen topology are supported. No concrete curation finding within the declared source scope.
+
+## Scope And Provenance
+
+Exactly one complete target plus the two frozen generic vacuole boundary neighbors; all evidence and graph assertions checked. Native and literature scopes are declared per source. No scientific edits, record promotion, review save or publication.
+
+Selection: Batch42 exact path-ordered target 4; initial native inspect/schema/strict passed on fresh f97b before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0005773 | data/structures/membrane_organelle/vacuole.yaml | maintained | vacuole |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0005773 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0005773 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0005773 | Native read-only check passed; biological source scope was reviewed separately. |
+| Individual protein verification applicability | not_applicable | False | GO:0005773 | No individual protein accession or GENE_OR_PROTEIN node is maintained in this target. |
+| Expression-module applicability | not_applicable | False | GO:0005773 | No computational expression-module assertion is made; experimental gene interventions do not require expression-module evidence. |
+| Claim-level scientific review | passed | True | GO:0005773 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0005773 | 9 of 9 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0005773 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0005773 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0005773 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0005773 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0005773 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Whole organelle, membrane and volume
+
+identity: supported. Targets: GO:0005773.
+
+The exact maintained identity, structural kind and relations are supported by native GO and the full local boundary set. Fungal subtype relationships, where represented, are checked as proper subtypes rather than equated to the generic class. No synonym or exact-identity substitution is needed.
+
+### Yeast example within a generic class
+
+scope: supported. Targets: GO:0005773.
+
+The species and canonical example are supported by the explicitly yeast-focused review. The current occurrence rows are limited to S. cerevisiae, preserving the distinction between a generic ontology class and its experimentally characterized model example.
+
+### Yeast storage and degradation
+
+evidence: supported. Targets: GO:0005773.
+
+The function is explicitly restricted to budding yeast. Li/Kane and the exact fungal-type GO definition support combined storage and degradation within the acidic vacuolar context. This does not claim that every degradation reaction requires low pH or that all vacuole classes share the yeast physiological repertoire.
+
+### Seven descriptive generic/subtype relations
+
+graph: supported. Targets: GO:0005773.
+
+All seven NONMECHANISTIC edges preserve membrane/lumen parthood and fungal subtype relations. The is_a links are valid ancestor relationships, with no claim that every one is an immediate native edge. The membrane and volume are structural parts, not falsely chemically grounded components.
+
+### Anatomical parts without a forced molecular inventory
+
+grounding: supported. Targets: GO:0005773.
+
+The resolved discussion correctly treats membrane and lumen as substructures. The absence of molecular component rows or individual formation requirements is not a defect for this broad record. No complete protein or lipid inventory is inferred.
+
+### Complete target and bounded source audit
+
+provenance: supported. Targets: GO:0005773.
+
+All current fields, graph relations and discussions were read. Evidence distinguishes primary Pan experiments, secondary reviews and native authorities; optional unknown inventories are not treated as mandatory defects. No maintained record or scientific status was changed.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/vacuole.yaml; Entire maintained target including all fields, evidence, graphs, discussions and history | context_only | Every current claim was read; historical curation notes are not independent scientific evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, essentiality, graph-node and evidence contracts | context_only | A whole compartment, its bounding membrane and enclosed volume are distinct. Constitutive material, functional activity and experimental formation necessity must not be conflated. |
+| neighbor-vacuolar_lumen | data/structures/membrane_organelle/vacuolar_lumen.yaml; Entire frozen boundary neighbor | context_only | The complete three-record vacuole boundary set (target plus two neighbors) was read. Neighbor prose supplies local context, not independent experimental support. |
+| neighbor-vacuolar_membrane | data/structures/membrane_organelle/vacuolar_membrane.yaml; Entire frozen boundary neighbor | context_only | The complete three-record vacuole boundary set (target plus two neighbors) was read. Neighbor prose supplies local context, not independent experimental support. |
+| vacuole-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005773,GO:0005774,GO:0005775,GO:0070013,GO:0031090,GO:0043231,GO:0000324,GO:0000328,GO:0000329,GO:0016471,GO:0007035,GO:0005640; Complete target identity/definition/active status and named relation-bearing entries in the twelve-term response; unrelated child lists not exhaustively interpreted | supports | Active GO0005773 matches the maintained closed, eukaryotic, membrane-surrounded liquid compartment; its fuller authority definition describes diverse possible functions. GO0043231 lists it as is_a, and GO0005773 lists membrane GO0005774 and lumen GO0005775 as part_of. GO0000324 is the fungal lytic/storage subtype with GO0000328/0000329 part_of children. |
+| vacuole-agent-go-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005774,GO:0000324,GO:0000329,GO:0000328/ancestors?relations=is_a; Complete four is_a-only ancestor lists for GO0005774, GO0000324, GO0000329 and GO0000328 | supports | The is_a-only response confirms vacuolar membrane GO0005774 under organelle membrane GO0031090, and the three fungal-type classes under their respective generic vacuole/membrane/lumen classes. Some are transitive rather than immediate edges; parthood is checked separately in the term response. |
+| vacuole-agent-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete taxId, scientificName, rank and lineage | supports | ENA4932 verifies Saccharomyces cerevisiae at species rank and its fungal lineage. It does not establish frequency, strain identity or universal vacuolar physiology across Eukaryota. |
+| vacuole-agent-li2009-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1016/j.bbamcr.2008.08.003%22; Unique native MED title/authors/DOI/PMID/PMC/year and complete abstract | supports | Exact secondary source identity: Li SC and Kane PM, The yeast lysosome-like vacuole: endpoint and crossroads; DOI10.1016/j.bbamcr.2008.08.003, PMID18786576, PMC2906225, published2009. The complete abstract explicitly frames a review of S. cerevisiae vacuole biology. |
+| vacuole-agent-li2009-numeric | https://pmc.ncbi.nlm.nih.gov/articles/2906225/; Genuine PMC2906225 review HTML: complete S1 Introduction, S3 protein content, S4 membrane lipids, S16 V-ATPase acidification including Figure3 caption, S20 degradation and S21 storage/homeostasis. Other sections, figure pixels and underlying cited experiments not independently audited for this review. | supports | The review describes acidic yeast vacuoles with proteolytic, storage and homeostatic functions, distinguishes luminal proteins from membrane/cargo inventories, and describes V-ATPase proton pumping. It notes degradation can retain appreciable activity without full acidification and that particular fusion-regulatory lipids are not synonymous with an entire formation requirement. Storage includes amino acids, phosphate and ions; no universal cargo or membrane composition is imposed. |
+| schema-result | just validate data/structures/membrane_organelle/vacuole.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/vacuole.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/vacuole.yaml --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/vacuole-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/vacuole.yaml --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/vacuole-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch42-20261022-q4522lvm/vacuole-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/vacuole.yaml; Complete native read-only log | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/vacuole.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 9 of 9 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- The Li/Kane2009 and, where used, Kane2006 sources are reviews, not newly performed primary experiments. Exact inspected sections are declared in their evidence rows. No image pixels, supplemental datasets, complete source bibliographies or underlying cited experiments were independently reanalyzed.
+- COMMON is a qualitative species occurrence designation. Yeast functional examples do not establish identical physiology, cargo or protein composition for every eukaryotic vacuole. Native generic ontology identity remains broader than the yeast example.
+- The complete generic vacuole boundary set was read. Optional inventories of soluble cargo, all transporters, hydrolases, lipid species or exact stoichiometry are not required to establish a broad compartment, volume or membrane identity.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User all-record goal authorizes clean review bundles. Parent owns finalization and integration of the five completed same-base batch26 full-corpus gates.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T041018Z-vacuole-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Vacuole scientific review
+started_at: '2026-10-22T03:46:50Z'
+finished_at: '2026-10-22T04:10:18Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact vacuole identity, yeast storage/degradation example and generic-to-fungal
+  membrane/lumen topology are supported. No concrete curation finding within the declared
+  source scope.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/vacuolar_lumen.yaml
+    sha256: c766d7de82bee8cf8d6f5c34f61cc41a7150e65686ba387255061a9449106b73
+    role: context
+  - path: data/structures/membrane_organelle/vacuolar_membrane.yaml
+    sha256: 89c3bb9baf5507b45606c975ff1bb6ef8d705601ce44bc7e4c3d72572b5f36e0
+    role: context
+  - path: data/structures/membrane_organelle/vacuole.yaml
+    sha256: 7db6bf4c90e74fed8acf83d164143fe3ef294c46012b631a01c1d241f05f370d
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0005773
+  path: data/structures/membrane_organelle/vacuole.yaml
+  label: vacuole
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/vacuole.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target plus the two frozen generic vacuole boundary
+    neighbors; all evidence and graph assertions checked. Native and literature scopes
+    are declared per source. No scientific edits, record promotion, review save or
+    publication.
+  selection: Batch42 exact path-ordered target 4; initial native inspect/schema/strict
+    passed on fresh f97b before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005773
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  command: just validate data/structures/membrane_organelle/vacuole.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  command: just validate-strict data/structures/membrane_organelle/vacuole.yaml --out
+    /private/tmp/cellstructure-batch42-20261022-q4522lvm/vacuole-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  command: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/vacuole.yaml
+  exit_code: 0
+  summary: Native read-only check passed; biological source scope was reviewed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: protein-applicability
+  name: Individual protein verification applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0005773
+  summary: No individual protein accession or GENE_OR_PROTEIN node is maintained in
+    this target.
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0005773
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - neighbor-vacuolar_lumen
+  - neighbor-vacuolar_membrane
+  - vacuole-agent-go
+  - vacuole-agent-go-ancestors
+  - vacuole-agent-tax4932
+  - vacuole-agent-li2009-meta
+  - vacuole-agent-li2009-numeric
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  summary: 9 of 9 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005773
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/vacuole.yaml
+  locator: Entire maintained target including all fields, evidence, graphs, discussions
+    and history
+  accessed_at: '2026-10-22T03:51:08Z'
+  support: context_only
+  summary: Every current claim was read; historical curation notes are not independent
+    scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, essentiality, graph-node and evidence contracts
+  accessed_at: '2026-10-22T03:51:08Z'
+  support: context_only
+  summary: A whole compartment, its bounding membrane and enclosed volume are distinct.
+    Constitutive material, functional activity and experimental formation necessity
+    must not be conflated.
+- evidence_id: neighbor-vacuolar_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/vacuolar_lumen.yaml
+  locator: Entire frozen boundary neighbor
+  accessed_at: '2026-10-22T03:51:08Z'
+  support: context_only
+  summary: The complete three-record vacuole boundary set (target plus two neighbors)
+    was read. Neighbor prose supplies local context, not independent experimental
+    support.
+- evidence_id: neighbor-vacuolar_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/vacuolar_membrane.yaml
+  locator: Entire frozen boundary neighbor
+  accessed_at: '2026-10-22T03:51:08Z'
+  support: context_only
+  summary: The complete three-record vacuole boundary set (target plus two neighbors)
+    was read. Neighbor prose supplies local context, not independent experimental
+    support.
+- evidence_id: vacuole-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005773,GO:0005774,GO:0005775,GO:0070013,GO:0031090,GO:0043231,GO:0000324,GO:0000328,GO:0000329,GO:0016471,GO:0007035,GO:0005640
+  locator: Complete target identity/definition/active status and named relation-bearing
+    entries in the twelve-term response; unrelated child lists not exhaustively interpreted
+  accessed_at: '2026-10-22T03:48:14.151533Z'
+  support: supports
+  summary: Active GO0005773 matches the maintained closed, eukaryotic, membrane-surrounded
+    liquid compartment; its fuller authority definition describes diverse possible
+    functions. GO0043231 lists it as is_a, and GO0005773 lists membrane GO0005774
+    and lumen GO0005775 as part_of. GO0000324 is the fungal lytic/storage subtype
+    with GO0000328/0000329 part_of children.
+  snapshot_sha256: 936b23d01730645443fb47deb3a7a2480db5363d005460cb31866aa92cbefe87
+- evidence_id: vacuole-agent-go-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005774,GO:0000324,GO:0000329,GO:0000328/ancestors?relations=is_a
+  locator: Complete four is_a-only ancestor lists for GO0005774, GO0000324, GO0000329
+    and GO0000328
+  accessed_at: '2026-10-22T03:49:13.745402Z'
+  support: supports
+  summary: The is_a-only response confirms vacuolar membrane GO0005774 under organelle
+    membrane GO0031090, and the three fungal-type classes under their respective generic
+    vacuole/membrane/lumen classes. Some are transitive rather than immediate edges;
+    parthood is checked separately in the term response.
+  snapshot_sha256: 9a043cf51a611fe10deb5f596d5f5bc5beef5d2f9dc9ba5493b53f896d3634c0
+- evidence_id: vacuole-agent-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T03:48:14.151924Z'
+  support: supports
+  summary: ENA4932 verifies Saccharomyces cerevisiae at species rank and its fungal
+    lineage. It does not establish frequency, strain identity or universal vacuolar
+    physiology across Eukaryota.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: vacuole-agent-li2009-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1016/j.bbamcr.2008.08.003%22
+  locator: Unique native MED title/authors/DOI/PMID/PMC/year and complete abstract
+  accessed_at: '2026-10-22T01:31:22.508649Z'
+  support: supports
+  summary: 'Exact secondary source identity: Li SC and Kane PM, The yeast lysosome-like
+    vacuole: endpoint and crossroads; DOI10.1016/j.bbamcr.2008.08.003, PMID18786576,
+    PMC2906225, published2009. The complete abstract explicitly frames a review of
+    S. cerevisiae vacuole biology.'
+  snapshot_sha256: a80dfab6ca988c4f031b90afb9ca5816e91805513281ba402d81aad11ac0142e
+- evidence_id: vacuole-agent-li2009-numeric
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/2906225/
+  locator: 'Genuine PMC2906225 review HTML: complete S1 Introduction, S3 protein content,
+    S4 membrane lipids, S16 V-ATPase acidification including Figure3 caption, S20
+    degradation and S21 storage/homeostasis. Other sections, figure pixels and underlying
+    cited experiments not independently audited for this review.'
+  accessed_at: '2026-10-22T01:32:07.202194Z'
+  support: supports
+  summary: The review describes acidic yeast vacuoles with proteolytic, storage and
+    homeostatic functions, distinguishes luminal proteins from membrane/cargo inventories,
+    and describes V-ATPase proton pumping. It notes degradation can retain appreciable
+    activity without full acidification and that particular fusion-regulatory lipids
+    are not synonymous with an entire formation requirement. Storage includes amino
+    acids, phosphate and ions; no universal cargo or membrane composition is imposed.
+  snapshot_sha256: 949eb84ba53fa6400a1c205d2459f909e323b5f8eeb58e3672234730830c256b
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/vacuole.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:46:52Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/vacuole.yaml'
+  snapshot_sha256: 3cee06dfd07c9b8d32de42a225ebf7e4618bc438ae4fe68d776d64b821f7d9ee
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/vacuole.yaml
+    --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/vacuole-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:46:53Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/vacuole.yaml\
+    \ --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/vacuole-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch42-20261022-q4522lvm/vacuole-strict.tsv"
+  snapshot_sha256: b6a38c2b7fbb154b47817b43a2fabeccb2961a9cd4e3602d5031efd44a8bb6d7
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/vacuole.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T03:49:19.137086Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/vacuole.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 9 of 9 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Whole organelle, membrane and volume
+  outcome: supported
+  target_ids:
+  - GO:0005773
+  summary: The exact maintained identity, structural kind and relations are supported
+    by native GO and the full local boundary set. Fungal subtype relationships, where
+    represented, are checked as proper subtypes rather than equated to the generic
+    class. No synonym or exact-identity substitution is needed.
+  evidence_ids:
+  - record
+  - vacuole-agent-go
+  - vacuole-agent-go-ancestors
+- assessment_id: taxonomy
+  area: scope
+  topic: Yeast example within a generic class
+  outcome: supported
+  target_ids:
+  - GO:0005773
+  summary: The species and canonical example are supported by the explicitly yeast-focused
+    review. The current occurrence rows are limited to S. cerevisiae, preserving the
+    distinction between a generic ontology class and its experimentally characterized
+    model example.
+  evidence_ids:
+  - record
+  - vacuole-agent-tax4932
+  - vacuole-agent-li2009-meta
+  - vacuole-agent-li2009-numeric
+- assessment_id: function
+  area: evidence
+  topic: Yeast storage and degradation
+  outcome: supported
+  target_ids:
+  - GO:0005773
+  summary: The function is explicitly restricted to budding yeast. Li/Kane and the
+    exact fungal-type GO definition support combined storage and degradation within
+    the acidic vacuolar context. This does not claim that every degradation reaction
+    requires low pH or that all vacuole classes share the yeast physiological repertoire.
+  evidence_ids:
+  - record
+  - vacuole-agent-go
+  - vacuole-agent-li2009-numeric
+- assessment_id: graph
+  area: graph
+  topic: Seven descriptive generic/subtype relations
+  outcome: supported
+  target_ids:
+  - GO:0005773
+  summary: All seven NONMECHANISTIC edges preserve membrane/lumen parthood and fungal
+    subtype relations. The is_a links are valid ancestor relationships, with no claim
+    that every one is an immediate native edge. The membrane and volume are structural
+    parts, not falsely chemically grounded components.
+  evidence_ids:
+  - record
+  - vacuole-agent-go
+  - vacuole-agent-go-ancestors
+- assessment_id: composition
+  area: grounding
+  topic: Anatomical parts without a forced molecular inventory
+  outcome: supported
+  target_ids:
+  - GO:0005773
+  summary: The resolved discussion correctly treats membrane and lumen as substructures.
+    The absence of molecular component rows or individual formation requirements is
+    not a defect for this broad record. No complete protein or lipid inventory is
+    inferred.
+  evidence_ids:
+  - record
+  - schema
+  - vacuole-agent-go
+- assessment_id: coverage
+  area: provenance
+  topic: Complete target and bounded source audit
+  outcome: supported
+  target_ids:
+  - GO:0005773
+  summary: All current fields, graph relations and discussions were read. Evidence
+    distinguishes primary Pan experiments, secondary reviews and native authorities;
+    optional unknown inventories are not treated as mandatory defects. No maintained
+    record or scientific status was changed.
+  evidence_ids:
+  - record
+  - vacuole-agent-go
+  - vacuole-agent-tax4932
+  - vacuole-agent-li2009-meta
+  - vacuole-agent-li2009-numeric
+findings: []
+actions: []
+limitations:
+- The Li/Kane2009 and, where used, Kane2006 sources are reviews, not newly performed
+  primary experiments. Exact inspected sections are declared in their evidence rows.
+  No image pixels, supplemental datasets, complete source bibliographies or underlying
+  cited experiments were independently reanalyzed.
+- COMMON is a qualitative species occurrence designation. Yeast functional examples
+  do not establish identical physiology, cargo or protein composition for every eukaryotic
+  vacuole. Native generic ontology identity remains broader than the yeast example.
+- The complete generic vacuole boundary set was read. Optional inventories of soluble
+  cargo, all transporters, hydrolases, lipid species or exact stoichiometry are not
+  required to establish a broad compartment, volume or membrane identity.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes clean review bundles. Parent owns finalization and
+  integration of the five completed same-base batch26 full-corpus gates.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

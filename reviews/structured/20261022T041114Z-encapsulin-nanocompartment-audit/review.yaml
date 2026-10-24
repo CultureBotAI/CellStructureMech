@@ -1,0 +1,995 @@
+schema_version: 1.0.0
+review_id: 20261022T041114Z-encapsulin-nanocompartment-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Encapsulin nanocompartment scientific review
+started_at: '2026-10-22T03:47:03Z'
+finished_at: '2026-10-22T04:11:14Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Encapsulin shell/cargo identity, two protein examples and bounded type1 assembly
+  are supported. Three minor findings address historical priority, certainty/source
+  placement of iron chemistry and approximate size scope. Native hierarchy absence
+  alone does not establish an additional defect.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    sha256: 9c18ca6df3185b48f8755d7f53857234df1955a0f48ffc0fb1199793b3b6b9d8
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0140737
+  path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  label: encapsulin nanocompartment
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire target reviewed for identity, source support, composition,
+    scope, graph claims and completeness.
+  selection: Target 9 of batch42, strict uncovered path order at fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0140737
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  command: just validate data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  command: just validate-strict data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/encapsulin_nanocompartment-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-encapsulin_nanocompartment-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  command: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  exit_code: 0
+  summary: Focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-encapsulin_nanocompartment-causal-graphs
+- check_id: native-encapsulin_nanocompartment-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  command: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  exit_code: 0
+  summary: Focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-encapsulin_nanocompartment-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0140737
+  summary: No expression-module claim is maintained.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - root42-sources-go
+  - root42-sources-go-encapsulin-ancestry
+  - root42-sources-pfam-PF04454
+  - root42-sources-chebi-29033
+  - root42-sources-tax2
+  - root42-sources-tax2157
+  - root42-sources-tax1773
+  - root42-sources-tax83332
+  - root42-sources-doi-2
+  - root42-sources-doi-3
+  - root42-sources-doi-4
+  - root42-sources-doi-6
+  - root42-sources-doi-7
+  - root42-sources-doi-9
+  - root42-sources-pmid-24855650
+  - root42-sources-pmid-9596740
+  - root42-sources-mchugh2014-legacy
+  - root42-sources-contreras2014-legacy
+  - root42-sources-doi-7-jats
+  - root42-sources-protein-I6WZG6
+  - root42-sources-protein-I6Y4U9
+  - root42-sources-gene-cfp29
+  - root42-sources-gene-dyp
+  - peer42-complex-definition
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  summary: '16 of 19 collected target identifiers returned OK. PMID:24855650: UNREACHABLE;
+    Exact native MED identity/title/DOI and returned PMC field were reviewed after
+    bulk eutils414 transport failure. Resolving an identifier does not certify attached
+    biology; the unrelated Ras PMID20080631 remains an explicit wrong-source finding.;
+    PMID:9596740: UNREACHABLE; Exact native MED identity/title/DOI and returned PMC
+    field were reviewed after bulk eutils414 transport failure. Resolving an identifier
+    does not certify attached biology; the unrelated Ras PMID20080631 remains an explicit
+    wrong-source finding.; Pfam:PF04454: SKIPPED; Exact native Pfam metadata verifies
+    PF04454 shell-protein family and curated description. Embedded third-party encyclopedia
+    text is not used as authority. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root42-sources-pmid-24855650
+  - root42-sources-pmid-9596740
+  - root42-sources-pfam-PF04454
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140737
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch42 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  locator: Entire maintained target, including history, evidence, components, graph
+    edges and discussions
+  accessed_at: '2026-10-22T03:56:51Z'
+  support: context_only
+  summary: All maintained fields were inspected; historical statements are provenance,
+    not additional experiments.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Identity, subclass, material, formation-necessity and graph contracts
+  accessed_at: '2026-10-22T03:56:51Z'
+  support: context_only
+  summary: Strict broader classes differ from parthood; constituent chemistry differs
+    from anatomy. Function and localization alone do not establish formation necessity.
+- evidence_id: root42-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140266,GO:0140535,GO:0140737
+  locator: Complete id/name/definition/active/synonym fields for all three entries;
+    generic complex child list is context, not an exhaustive ontology absence search.
+  accessed_at: '2026-10-22T03:52:38.477321Z'
+  support: supports
+  summary: Three active native GO entries distinguish Woronin body, encapsulin organelle
+    and intracellular protein-containing complex. Woronin definition matches peroxisome-derived
+    dense-core pore sealing; encapsulin definition supports a single HK97-like shell
+    and bacterial/archaeal distribution.
+  snapshot_sha256: 71bdde7565c92c01405a48524a3833365d00aed85a3a70a016d8d4b8454033d2
+- evidence_id: root42-sources-go-encapsulin-ancestry
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140737/ancestors?relations=is_a
+  locator: Complete exact is_a closure response; absence is bounded to this returned
+    native closure
+  accessed_at: '2026-10-22T03:53:33.605653Z'
+  support: supports
+  summary: The complete is_a ancestor response for GO0140737 contains intracellular/non-membrane-bounded
+    organelle classes but not GO0140535 intracellular protein-containing complex.
+  snapshot_sha256: 5a296137975c9a15745ce4c1ed4a5647332b9059b034e119b8922c63b971770f
+- evidence_id: root42-sources-pfam-PF04454
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04454/
+  locator: Complete metadata accession/type/name/integration and curated description;
+    no use of embedded Wikipedia text as authority
+  accessed_at: '2026-10-22T03:52:42.395635Z'
+  support: supports
+  summary: Native Pfam PF04454 is a protein family named Encapsulating protein for
+    peroxidase, integrated into IPR007544; its curated description supports shell
+    proteins and targeted cargo. It is not the whole nanocompartment.
+  snapshot_sha256: 9b644f89f964b0ddb2a709557d18ee5935a557a89ffa93196a4e8b93b45cf037
+- evidence_id: root42-sources-chebi-29033
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/29033/
+  locator: Complete identity, names, chemical data and typed ontology relations; unrelated
+    occurrence records not used
+  accessed_at: '2026-10-22T03:52:42.974992Z'
+  support: supports
+  summary: Native CHEBI29033 is iron(2+) with Fe formula and +2 charge, matching the
+    ferrous-iron graph node.
+  snapshot_sha256: 2041145da7d4c93d6f8aa2714b8cf0f5ca964725167c991e6e544547c6e145fd
+- evidence_id: root42-sources-tax2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Complete native response
+  accessed_at: '2026-10-22T03:52:38.479342Z'
+  support: supports
+  summary: Native ENA verifies Bacteria and rank/lineage.
+  snapshot_sha256: 7429617438ff0162ee4783c4c660f6127642e6ff686522e670c6ecf3a5b28816
+- evidence_id: root42-sources-tax2157
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2157
+  locator: Complete native response
+  accessed_at: '2026-10-22T03:52:38.477912Z'
+  support: supports
+  summary: Native ENA verifies Archaea and rank/lineage.
+  snapshot_sha256: c6e652011b95e43e933983bf5f3f5cec9508c1925adae00dc55e46cd4e816b19
+- evidence_id: root42-sources-tax1773
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1773
+  locator: Complete native response
+  accessed_at: '2026-10-22T03:52:38.477756Z'
+  support: supports
+  summary: Native ENA verifies M.tuberculosis and rank/lineage.
+  snapshot_sha256: 15eb9a4886ef018b1ec937d014f909cc38ac06f5ce50e27121cd62275841d355
+- evidence_id: root42-sources-tax83332
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83332
+  locator: Complete native response
+  accessed_at: '2026-10-22T03:52:39.307998Z'
+  support: supports
+  summary: Native ENA verifies M.tuberculosis H37Rv and rank/lineage.
+  snapshot_sha256: e180d1c39d308888c25a8f6d2e43fb0c344b5c126f49422d1d83d3a2946585d1
+- evidence_id: root42-sources-doi-2
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.cbpa.2016.05.013&format=json&resultType=core
+  locator: Complete native bibliographic identity and returned abstract
+  accessed_at: '2026-10-22T03:52:40.108563Z'
+  support: supports
+  summary: Giessen2016 MED27232770 is a review of encapsulin biology and applications;
+    the complete abstract supports C-terminal targeting, not all quantitative claims
+    in its unread body.
+  snapshot_sha256: 4e57f224390430b6a9ab5f03936b003ca5bd1e581c57c2d4e7d76e13fc045d78
+- evidence_id: root42-sources-doi-3
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1021%2Facs.biochem.6b00294&format=json&resultType=core
+  locator: Complete native bibliographic identity and returned abstract
+  accessed_at: '2026-10-22T03:52:40.201497Z'
+  support: supports
+  summary: Cassidy-Amstutz2016 MED27224728 reports short C-terminal tags sufficient
+    for heterologous T.maritima cargo loading in vivo and in vitro.
+  snapshot_sha256: 35252396ec51151eb8c9e8486c3f4b4b5e05a748396c0353feeeddb8503dafb4
+- evidence_id: root42-sources-doi-4
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnmicrobiol.2017.29&format=json&resultType=core
+  locator: Complete native bibliographic identity and returned abstract
+  accessed_at: '2026-10-22T03:52:40.232410Z'
+  support: supports
+  summary: Giessen and Silver2017 MED28263314 identifies more than900 putative systems
+    across15 bacterial and2 archaeal phyla and tests three systems. The abstract distinguishes
+    predicted systems and probable functions from a universal experimentally known
+    inventory.
+  snapshot_sha256: 03ef238fddce5cca5e17c0cfe34cf18d600d7f3e38c523113ee8abead945c39d
+- evidence_id: root42-sources-doi-6
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnsmb.1473&format=json&resultType=core
+  locator: Complete native bibliographic identity and returned abstract
+  accessed_at: '2026-10-22T03:52:40.753080Z'
+  support: supports
+  summary: Sutter2008 MED19172747 identifies T.maritima 60-subunit 24nm shells and
+    internal C-terminal peptide binding sites.
+  snapshot_sha256: 723165bfb226d11ae45326dec577b42dfa93f1795dd0d41ad04858a9488d12a3
+- evidence_id: root42-sources-doi-7
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41598-021-84329-z&format=json&resultType=core
+  locator: Complete native bibliographic identity and returned abstract
+  accessed_at: '2026-10-22T03:52:40.798569Z'
+  support: supports
+  summary: Altenburg2021 MED33654191/PMC7925596 reports modeled and tested targeting-peptide
+    interactions in T.maritima and M.xanthus systems.
+  snapshot_sha256: 1714e1f9023d35905a2ca2a4ae277e360ba47da13660cdfa078b307cf56e301e
+- evidence_id: root42-sources-doi-9
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.15252%2Fembj.201488566&format=json&resultType=core
+  locator: Complete native bibliographic identity and returned abstract
+  accessed_at: '2026-10-22T03:52:40.862084Z'
+  support: supports
+  summary: McHugh2014 MED25024436/PMC4195785 reports native M.xanthus EncA plus EncB/C/D,
+    iron-rich cores,32nm T3 shells and peroxide protection.
+  snapshot_sha256: 40552c53b2cbd5de3c958a9b82cdf4b55aa03f15a48b6be7c6a7e65e9db6e57f
+- evidence_id: root42-sources-pmid-24855650
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24855650+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native bibliographic identity and returned abstract
+  accessed_at: '2026-10-22T03:52:41.482503Z'
+  support: supports
+  summary: Contreras2014 MED24855650/PMC4140288 DOI10.1074/jbc.m114.570119 reports
+    recombinant mycobacterial encapsulation and retained cargo enzyme activity.
+  snapshot_sha256: 7ee43272330a9defcf57911686b9b1754852faa8ca72e8071e0af33d59c96250
+- evidence_id: root42-sources-pmid-9596740
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A9596740+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native bibliographic identity and returned abstract
+  accessed_at: '2026-10-22T03:52:41.518177Z'
+  support: supports
+  summary: Rosenkrands1998 MED9596740/PMC108262 DOI10.1128/iai.66.6.2728-2735.1998
+    identifies polymeric mycobacterial CFP29 antigen; it does not characterize a DyP-loaded
+    nanocompartment.
+  snapshot_sha256: ee4adaee7ae5dca942a42786f4c6b28ccd2d186cb50f9501b2322d10f602c99a
+- evidence_id: root42-sources-mchugh2014-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4195785/
+  locator: Complete Results sec3/4/5/7/9/10 with captions and Table1; complete Discussion
+    sec12–16 with Fig8/9 captions; Methods sec18 strains/media, sec23 recombinant
+    expression, sec31 oxidative-stress assays; other sections/pixels/supplements not
+    read
+  accessed_at: '2026-10-22T03:53:32.763996Z'
+  support: supports
+  summary: Genuine McHugh primary body shows native M.xanthus particles, recombinant
+    empty EncA shells, iron/phosphorus cores, starvation-associated assembly and two
+    encA mutants sensitive to peroxide. Its proposed metal-entry/nucleation model
+    is not a direct EncB/C ferroxidase assay, and nutritional iron reuse is prospective.
+  snapshot_sha256: 759a3f226bb8ba76c2e5dc094a510e35cf723643ca1763721df1dfabf5b41e9e
+- evidence_id: root42-sources-contreras2014-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4140288/
+  locator: Complete Introduction sec1, Methods sec3/4, Results sec16/18/21 with Fig2/6
+    captions, complete Discussion sec23; no other enzyme Results or image pixels read
+  accessed_at: '2026-10-22T03:53:32.764085Z'
+  support: supports
+  summary: Genuine Contreras body locates prior encapsulin characterization in Sutter2008
+    and presents the first mycobacterial cargo study. H37Rv genes were expressed in
+    E.coli; empty shells are approximately22nm. Tail deletions prevent co-purification.
+    Encapsulated Mt-BfrB retains measured ferroxidase activity; native mycobacterial
+    cargo inventory is explicitly unknown in2014.
+  snapshot_sha256: 997ed11be6e386b5615042b2088724da9c636e20cf5d6dda11664543421db8ef
+- evidence_id: root42-sources-doi-7-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7925596/fullTextXML
+  locator: Complete Results/Discussion Sec3/4/5 with Fig2–5 captions, Methods Sec7/8;
+    no other Methods, figure pixels or supplements read
+  accessed_at: '2026-10-22T03:53:04.997431Z'
+  support: supports
+  summary: Genuine Altenburg body separates modeled hydrophobic/ionic contacts from
+    heterologous mNeonGreen loading tests in E.coli. It explicitly limits the single-peptide
+    computational approximation and shows reduced loading for tested TP mutations.
+  snapshot_sha256: efc32a6d14b949b38fc84285b629d98954e50d5729a24e068af80188a627fbb2
+- evidence_id: root42-sources-protein-I6WZG6
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/I6WZG6.json
+  locator: Complete identity/status/name/gene/taxon and FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION comments; no sequence or full bibliography reanalysis
+  accessed_at: '2026-10-22T03:52:39.311706Z'
+  support: supports
+  summary: Reviewed I6WZG6 is Type 1 encapsulin shell protein, with primary gene enc
+    and synonym cfp29, in H37Rv taxon83332. Native comments distinguish recombinant
+    experiments, later in-situ evidence and inferred physiology.
+  snapshot_sha256: e9fde92c96b147906d0295152e08f43a4a573a2ef9920da6acc9a66557248da3
+- evidence_id: root42-sources-protein-I6Y4U9
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/I6Y4U9.json
+  locator: Complete identity/status/name/gene/taxon and FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION comments; no sequence or full bibliography reanalysis
+  accessed_at: '2026-10-22T03:52:39.372523Z'
+  support: supports
+  summary: Reviewed I6Y4U9 is Dye-decolorizing peroxidase, primary gene dyp, in H37Rv
+    taxon83332. Native comments distinguish recombinant enzyme/encapsulation experiments
+    from later in-situ and low-pH stress evidence.
+  snapshot_sha256: 684a95d11faee7915582edd38779c39697d9b303c6e8b7572885c156e55e23d2
+- evidence_id: root42-sources-gene-cfp29
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3Acfp29%29+AND+%28organism_id%3A83332%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count and accession/status/name/gene/taxon identity fields
+  accessed_at: '2026-10-22T03:52:42.146187Z'
+  support: supports
+  summary: Exact reviewed cfp29/taxon83332 query returns its one expected accession.
+    cfp29 is an alias of primary enc.
+  snapshot_sha256: 9ff549e5c0574f70f7d0d2f87163c448c350e23e2aa299e390dacb346f41e4c9
+- evidence_id: root42-sources-gene-dyp
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3Adyp%29+AND+%28organism_id%3A83332%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete result count and accession/status/name/gene/taxon identity fields
+  accessed_at: '2026-10-22T03:52:42.269418Z'
+  support: supports
+  summary: The exact reviewed dyp/taxon83332 query returns one entry, I6Y4U9, with
+    primary gene dyp and the maintained DyP identity.
+  snapshot_sha256: 2067f5f1ef394c69bb2f8507d7d519ac78ad7ae58b4a89d03aca12695ba8d708
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:47:04Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/microcompartment/encapsulin_nanocompartment.yaml'
+  snapshot_sha256: a9a3e9c0681283ce547333c561420c11de2bc9116ced0d7dcbb0c17206f09a70
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/encapsulin_nanocompartment-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:47:05Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/microcompartment/encapsulin_nanocompartment.yaml\
+    \ --out /private/tmp/cellstructure-batch42-20261022-q4522lvm/encapsulin_nanocompartment-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch42-20261022-q4522lvm/encapsulin_nanocompartment-strict.tsv"
+  snapshot_sha256: 4688557bc1aab614460a7de2199b0591f388809ee356491c6a85a32bd77be22f
+- evidence_id: native-encapsulin_nanocompartment-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T03:53:38.959523Z'
+  support: supports
+  summary: "data/structures/microcompartment/encapsulin_nanocompartment.yaml  (GO:0140737)\n\
+    \  cargo_targeting_iron_storage\tshell\tPARTIAL_EXAMPLES\t->shell (have: UniProtKB:I6WZG6;\
+    \ missing: encA)\n  cargo_targeting_iron_storage\tcargo\tPARTIAL_EXAMPLES\t->cargo\
+    \ (have: UniProtKB:I6Y4U9; missing: encB, encC, flp)\n  hk97_targeting_peptide_shell_assembly\t\
+    shell\tPARTIAL_EXAMPLES\t->shell (have: UniProtKB:I6WZG6; missing: encA)\n  hk97_targeting_peptide_shell_assembly\t\
+    targeting_peptide\tUNANCHORED_NO_UNIPROT\tC-terminal cargo targeting peptide\n\
+    \  hk97_targeting_peptide_shell_assembly\tcargo\tPARTIAL_EXAMPLES\t->cargo (have:\
+    \ UniProtKB:I6Y4U9; missing: encB, encC, flp)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     4  PARTIAL_EXAMPLES          component_ref target holds\
+    \ protein_examples but has unrepresented symbols\n     1  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  COVERED                   component_ref target holds protein_examples covering\
+    \ all declared symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target\
+    \ declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     5  total GENE_OR_PROTEIN\
+    \ causal nodes"
+  snapshot_sha256: 817677ab1878141a9d5262b3705a320c5b1112f764cf582e2b871d119c753068
+- evidence_id: native-encapsulin_nanocompartment-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch42-20261022-q4522lvm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/microcompartment/encapsulin_nanocompartment.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T03:53:40.586326Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: peer42-complex-definition
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032991,GO:0140535
+  locator: Complete id/name/definition/active/synonym/comment fields for GO0032991
+    and GO0140535; generic child lists not used as exhaustive absence proof
+  accessed_at: '2026-10-22T03:58:30.469612Z'
+  support: context_only
+  summary: The broad protein-containing-complex definition allows a stable functional
+    assembly of macromolecules. Absence of GO0140535 from the encapsulin native ancestor
+    closure alone does not establish an incompatible locally asserted broader class,
+    given the purified native shell/cargo particle evidence.
+  snapshot_sha256: 923425789d5d8c601454ca89494a8fa5636ce0fe265893b3b9127248f5e5bd0a
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/microcompartment/encapsulin_nanocompartment.yaml; native
+    collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '16 of 19 collected target identifiers returned OK. PMID:24855650: UNREACHABLE;
+    Exact native MED identity/title/DOI and returned PMC field were reviewed after
+    bulk eutils414 transport failure. Resolving an identifier does not certify attached
+    biology; the unrelated Ras PMID20080631 remains an explicit wrong-source finding.;
+    PMID:9596740: UNREACHABLE; Exact native MED identity/title/DOI and returned PMC
+    field were reviewed after bulk eutils414 transport failure. Resolving an identifier
+    does not certify attached biology; the unrelated Ras PMID20080631 remains an explicit
+    wrong-source finding.; Pfam:PF04454: SKIPPED; Exact native Pfam metadata verifies
+    PF04454 shell-protein family and curated description. Embedded third-party encyclopedia
+    text is not used as authority. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact organelle identity and bounded hierarchy uncertainty
+  outcome: unknown
+  target_ids:
+  - GO:0140737
+  summary: GO0140737 exactly matches the organelle. Its native is_a closure lacks
+    GO0140535, but the broad complex definition and native functional shell/cargo
+    particles do not demonstrate that this local broader-class assertion is false.
+    No hierarchy defect is established by edge absence alone.
+  evidence_ids:
+  - record
+  - schema
+  - root42-sources-go
+  - root42-sources-go-encapsulin-ancestry
+  - peer42-complex-definition
+  - root42-sources-mchugh2014-legacy
+- assessment_id: composition
+  area: grounding
+  topic: Shell and cargo distinguished
+  outcome: supported
+  target_ids:
+  - GO:0140737
+  summary: Constitutive shell protein is essential, while recombinant empty shells
+    directly support dispensability of cargo for shell formation. PF04454 denotes
+    shell protein rather than the whole organelle; its graph xrefs are compatible.
+  evidence_ids:
+  - record
+  - schema
+  - root42-sources-pfam-PF04454
+  - root42-sources-mchugh2014-legacy
+  - root42-sources-contreras2014-legacy
+  - root42-sources-doi-6
+- assessment_id: proteins
+  area: grounding
+  topic: Two verified gene examples
+  outcome: supported
+  target_ids:
+  - GO:0140737
+  summary: Both accession/status/taxon pairs and native exact alias queries agree.
+    These identity examples do not automatically establish all native cargos or all
+    M.tuberculosis functions.
+  evidence_ids:
+  - record
+  - root42-sources-protein-I6WZG6
+  - root42-sources-protein-I6Y4U9
+  - root42-sources-gene-cfp29
+  - root42-sources-gene-dyp
+  - root42-sources-tax2
+  - root42-sources-tax2157
+  - root42-sources-tax1773
+  - root42-sources-tax83332
+  - root42-sources-contreras2014-legacy
+- assessment_id: taxonomy
+  area: scope
+  topic: Broad presence and canonical-history qualifier
+  outcome: concern
+  target_ids:
+  - GO:0140737
+  summary: The2017 abstract supports patchy bacterial and archaeal systems. M.tuberculosis
+    is a valid example, but the first-characterized-encapsulin label conflates the
+    later mycobacterial system with the earlier class characterization.
+  evidence_ids:
+  - record
+  - root42-sources-doi-4
+  - root42-sources-doi-6
+  - root42-sources-pmid-9596740
+  - root42-sources-contreras2014-legacy
+  - root42-sources-tax2
+  - root42-sources-tax2157
+  - root42-sources-tax1773
+  - root42-sources-tax83332
+- assessment_id: assembly
+  area: graph
+  topic: Supported type1 assembly and peptide loading
+  outcome: supported
+  target_ids:
+  - GO:0140737
+  summary: The assembly graph describes causal shell folding/self-assembly and peptide-mediated
+    loading, rather than parthood alone. Sutter/Cassidy abstracts, recombinant empty
+    shells, and Altenburg models plus targeted experiments support this bounded type1
+    mechanism.
+  evidence_ids:
+  - record
+  - root42-sources-pfam-PF04454
+  - root42-sources-doi-6
+  - root42-sources-doi-3
+  - root42-sources-mchugh2014-legacy
+  - root42-sources-contreras2014-legacy
+  - root42-sources-doi-7-jats
+- assessment_id: function
+  area: evidence
+  topic: Measured iron storage versus proposed chemistry and reuse
+  outcome: concern
+  target_ids:
+  - GO:0140737
+  summary: McHugh directly establishes iron-rich compartments and peroxide protection,
+    but its entry/nucleation model and possible later nutritional reuse are not direct
+    Fe2+ oxidation or iron-starvation rescue measurements. Contreras measures a different
+    encapsulated ferritin system. The current graph needs exact source placement and
+    certainty qualifiers.
+  evidence_ids:
+  - record
+  - root42-sources-chebi-29033
+  - root42-sources-mchugh2014-legacy
+  - root42-sources-contreras2014-legacy
+- assessment_id: size
+  area: evidence
+  topic: Approximate range omits the maintained canonical system
+  outcome: concern
+  target_ids:
+  - GO:0140737
+  summary: The primary mycobacterial experiment reports approximately22nm empty and
+    loaded particles, whereas the definition presents24–42nm without a typical/examples
+    qualifier. T1/T3 stoichiometry is supported, but that range is not an exhaustive
+    boundary.
+  evidence_ids:
+  - record
+  - root42-sources-go
+  - root42-sources-contreras2014-legacy
+  - root42-sources-doi-6
+  - root42-sources-mchugh2014-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Full target with bounded source availability
+  outcome: supported
+  target_ids:
+  - GO:0140737
+  summary: All history, components, graph joins and evidence were read. The classic
+    T1/T3 scope is not an exhaustive account of every subsequently characterized encapsulin
+    family.
+  evidence_ids:
+  - record
+  - root42-sources-go
+  - root42-sources-mchugh2014-legacy
+  - root42-sources-contreras2014-legacy
+  - root42-sources-doi-7-jats
+findings:
+- finding_id: F1
+  issue_key: encapsulin-first-characterized-mycobacterial-claim
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the historical claim for the mycobacterial example
+  description: M.tuberculosis is called the source of the first characterized encapsulin
+    with DyP cargo. Contreras2014 explicitly places class characterization in Sutter2008
+    and limits its own novelty to mycobacterial cargo encapsulation; the1998 CFP29
+    antigen paper does not establish the DyP-loaded compartment.
+  target_ids:
+  - GO:0140737
+  field_paths:
+  - canonical_examples[0].note
+  evidence_ids:
+  - record
+  - root42-sources-doi-6
+  - root42-sources-pmid-9596740
+  - root42-sources-contreras2014-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    role: maintained scientific record
+  rule_id: Exact source support, entity scope and evidence placement must match the
+    maintained assertion
+  native_severity: minor
+  normalization_reason: A bounded hierarchy, source-attribution or qualification correction
+    preserves the supported encapsulin identity and experiments.
+- finding_id: F2
+  issue_key: encapsulin-iron-model-certainty
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate measured iron storage from proposed chemistry and nutritional reuse
+  description: The function graph cites McHugh2014 for definitive cargo-mediated Fe2+
+    oxidation, ferric mineral conversion and protection against iron starvation. That
+    paper directly measures iron-rich cores and peroxide sensitivity, while its nucleation
+    and later nutritional-use statements are proposed mechanisms. Contreras2014 measures
+    ferroxidase activity in recombinant Mt-BfrB particles, a distinct system; it cannot
+    silently substitute for the attached M.xanthus evidence.
+  target_ids:
+  - GO:0140737
+  field_paths:
+  - causal_graphs[0].description
+  - causal_graphs[0].edges[3]
+  - causal_graphs[0].edges[4]
+  - causal_graphs[0].edges[5]
+  evidence_ids:
+  - record
+  - root42-sources-chebi-29033
+  - root42-sources-mchugh2014-legacy
+  - root42-sources-contreras2014-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    role: maintained scientific record
+  rule_id: Exact source support, entity scope and evidence placement must match the
+    maintained assertion
+  native_severity: minor
+  normalization_reason: A bounded hierarchy, source-attribution or qualification correction
+    preserves the supported encapsulin identity and experiments.
+- finding_id: F3
+  issue_key: encapsulin-diameter-range-qualification
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the diameter range as an example range
+  description: The definition and T1/T3 physical-property range say24–42nm, while
+    the retained primary study of the canonical mycobacterial system reports approximately22nm
+    empty and cargo-loaded particles. The range should not define an exclusionary
+    boundary for the class.
+  target_ids:
+  - GO:0140737
+  field_paths:
+  - definition
+  - physical_properties[0].value
+  - physical_properties[0].context
+  evidence_ids:
+  - record
+  - root42-sources-contreras2014-legacy
+  - root42-sources-doi-6
+  - root42-sources-mchugh2014-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    role: maintained scientific record
+  rule_id: Exact source support, entity scope and evidence placement must match the
+    maintained assertion
+  native_severity: minor
+  normalization_reason: A bounded hierarchy, source-attribution or qualification correction
+    preserves the supported encapsulin identity and experiments.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0140737
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    role: maintained scientific record
+  description: Keep M.tuberculosis as a canonical example, remove or accurately qualify
+    the first-characterized claim, and cite the relevant mycobacterial compartment
+    study.
+  acceptance_checks:
+  - Each maintained assertion has a source that supports its exact organism, experimental
+    scope and certainty.
+  - Native schema, strict, applicable graph and history checks pass after separately
+    authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0140737
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    role: maintained scientific record
+  description: Qualify the McHugh model, retain directly measured storage/peroxide
+    results, and attach exact organism-specific primary activity evidence to any retained
+    oxidation claim. Remove or separately substantiate iron-starvation protection.
+  acceptance_checks:
+  - Each maintained assertion has a source that supports its exact organism, experimental
+    scope and certainty.
+  - Native schema, strict, applicable graph and history checks pass after separately
+    authorized curation.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0140737
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/encapsulin_nanocompartment.yaml
+    role: maintained scientific record
+  description: Describe the range as approximate and source/system-specific, or revise
+    it with exact measurements including the canonical mycobacterial example. Preserve
+    each measurement context and avoid claiming a universal current size census.
+  acceptance_checks:
+  - Each maintained assertion has a source that supports its exact organism, experimental
+    scope and certainty.
+  - Native schema, strict, applicable graph and history checks pass after separately
+    authorized curation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No image pixels, supplements, sequence alignments, raw microscopy or kinetic data
+  were reanalyzed. Body scopes below name exactly the sections read. Qualitative presence
+  is not a measured species census.
+- Giessen2016 review, Giessen/Silver2017 survey, Sutter2008, Cassidy-Amstutz2016 and
+  Rosenkrands1998 were assessed from complete native abstracts; their full bodies
+  were not read. Retained certificate failures,403 responses and200 challenge pages
+  are not full-text evidence. Rosenkrands legacy HTML was fetched but not read beyond
+  its already verified abstract.
+- The2017 survey full search denominator,2016 detailed size compilation and class-wide
+  frequency of cargo types remain unchecked. No all-family modern taxonomy, native
+  cargo census or quantitative presence frequency is inferred.
+- McHugh, Contreras and Altenburg were read only in the complete sections listed in
+  their evidence entries. Predicted binding models and recombinant E.coli systems
+  remain distinct from native physiology.
+- The native GO ancestor closure does not encode the local GO0140535 parent; the broad
+  complex definition and native functional-particle evidence do not prove this extension
+  false. This remains bounded hierarchy uncertainty, not a confirmed finding.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorizes reviews for all uncovered records, including honest zero-finding
+  bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Independent peer corrections applied before saving; prior draft and inspection are
+  preserved. Exact protein-source wording, formation uncertainty and captured skill
+  inputs were corrected together.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
