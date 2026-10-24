@@ -1,0 +1,873 @@
+# Cilium identity, composition and source-support review
+
+- Review: 20261019T233310Z-cilium-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-19T07:35:10Z
+- Finished UTC: 2026-10-19T23:33:10Z
+- Reviewer: Codex (unknown)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Exact identity, scoped anatomy, protein examples and broad functions are supported by inspected authorities and primary text. No concrete curation defect was found. One nearest-source check remains incomplete for the assembly function’s transition-zone qualifier, which is independently supported by GO elsewhere in the record.
+
+## Scope And Provenance
+
+Complete file read and all native surfaces assessed; the specified source checks remain incomplete.
+
+Selection: Fourth path-sorted previously unreviewed record in batch 1; one target only.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0005929 | data/structures/appendage/cilium.yaml | maintained | cilium |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Open schema validation | passed | True | GO:0005929 | Exit 0; focused target validation succeeded between 2026-10-19T07:35:11Z and 2026-10-19T07:35:13Z. |
+| Closed schema validation | passed | True | GO:0005929 | Exit 0; focused target validation succeeded between 2026-10-19T07:35:13Z and 2026-10-19T07:35:15Z. |
+| Nearest-source support for the assembly function’s transition-zone qualifier | unavailable | True | GO:0005929 | Rosenbaum’s abstract, Key Points and Figures 1–4 were inspected, but full-body support for the transition-zone qualifier remains unverified. Silflow’s previously unavailable body was recovered and its assigned claims checked. |
+| Target identifier coverage including resolver residuals | passed | True | GO:0005929 | All CURIE-shaped target values have issuing-authority or appropriate local/source-specific existence verification. Generic PMID HTTP414 failures and skipped namespaces were resolved by scoped receipts; biological mapping correctness is assessed separately. |
+| Full corpus QC | passed | True | GO:0005929 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0005929 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0005929 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0005929 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0005929 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Cilium identity, synonymy and boundaries
+
+identity: supported. Targets: GO:0005929.
+
+Definition and exact synonyms match GO:0005929. This is the eukaryotic organelle; no bacterial or archaeal appendage is merged. APPENDAGE kind/category are appropriate.
+
+### Four structural constituents and associated IFT machinery
+
+representation: supported. Targets: GO:0005929.
+
+Axoneme, membrane, basal body and transition zone are represented at organelle-component granularity. Essentiality is scoped to the defined complete cilium; IFT and transition-zone essentiality remain UNKNOWN. IFT is associated machinery rather than a permanent axonemal constituent. The 9+2 claim is explicitly confined to motile Chlamydomonas.
+
+### Five taxon-paired examples and six declared genes
+
+grounding: supported. Targets: GO:0005929.
+
+Identifiers, labels, species, entry status and quoted UniProt evidence provenance match. Abstracts explicitly establish IFT-complex membership at the stated level; the examples distinguish identity lookup from structural evidence. No accession is needed for every optional declared gene.
+
+### Chlamydomonas presence and proteomic exemplar
+
+scope: supported. Targets: GO:0005929.
+
+The named species is a valid biflagellate model and COMMON is qualitative, not a measured population frequency. Silflow explicitly supports paired flagella and motility; Pazour supports the narrowly worded purified-flagellum proteomics example.
+
+### Assembly and motility biology
+
+evidence: supported. Targets: GO:0005929.
+
+IFT-dependent assembly/maintenance is explicit in Rosenbaum’s abstract; basal-body and transition-zone roles are defined by inspected GO entries. Nicastro supports dynein-driven microtubule sliding and bending in the scoped motile axoneme. This corroborates coarse biology without claiming full-body verification of every nearest citation.
+
+### Six NONMECHANISTIC assembly and topology edges
+
+graph: supported. Targets: GO:0005929.
+
+Basal-body nucleation, membrane boundary and transition-zone gate match their exact GO definitions. Nicastro supports the axoneme core. Rosenbaum’s Key Points and Figures 1–2 support IFT assembly, bidirectionality and transport between membrane and microtubules. Component references resolve; no detailed motor mechanism or numerical assertion is added.
+
+### Remaining nearest-source qualifier in Rosenbaum 2002
+
+evidence: unknown. Targets: GO:0005929.
+
+Silflow’s assigned claims are now verified in the full paper. Rosenbaum’s abstract, Key Points and Figures 1–4 verify broad transport and spatial claims, but Figure 4 names transition fibres rather than establishing the assembly function’s transition-zone qualifier. Independent GO support does not prove that this nearest citation covers the qualifier.
+
+### History, discussion and scientific status
+
+provenance: supported. Targets: GO:0005929.
+
+PROPOSED status and documented history are consistent with agent curation. The resolved flagellum-boundary discussion is internally coherent and its references resolve. No correction is warranted merely because generated pages or older discussions lack this new audit.
+
+### Optional measurements, images, datasets and composition detail
+
+completeness: not_applicable. Targets: GO:0005929.
+
+The complete file contains no physical measurement, image, dataset or trait-link claim. Organism-specific inventories and detailed IFT subunit mechanisms are deliberately beyond this structure-level graph; their omission alone is not a defect.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/cilium.yaml; Entire record, including all five components, five protein examples, two functions, six graph edges and resolved discussion | supports | Complete file read. The record defines the membrane-sheathed eukaryotic organelle, with explicit Chlamydomonas examples and coarse assembly topology. PROPOSED status is retained. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005929,GO:0005930,GO:0060170,GO:0036064,GO:0035869,GO:0097546,GO:0030990,GO:0060271,GO:0060285,GO:0009288,GO:0097589; results[].id/name/isObsolete/aspect/definition/synonyms; related terms and children | supports | All eleven GO IDs are active and labels match. Exact flagellum synonyms, axoneme core, basal-body nucleation, membrane boundary, transition-zone gate, IFT complex and two process identities match. Bacterial flagellum and archaellum have separate identities. The definition matches GO:0005929. |
+| taxon | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=3055&amp;retmode=xml; TaxaSet/Taxon TaxId, ScientificName, Rank | supports | NCBITaxon:3055 is Chlamydomonas reinhardtii at species rank. |
+| uniprot | https://rest.uniprot.org/uniprotkb/search?query=%28accession%3AQ5DM57%20OR%20accession%3AQ68RJ5%20OR%20accession%3AQ6RCE1%20OR%20accession%3AA2T2X4%20OR%20accession%3AQ9FPW0%29&amp;format=json; results[] accession, entryType, genes, organism and subcellular-location evidence | supports | Q5DM57/IFT172, Q68RJ5/IFT81, Q6RCE1/IFT74 and A2T2X4/IFT46 are reviewed; Q9FPW0/IFT88 is unreviewed. All five match species 3055 and protein labels. The exact experimental PubMed evidence codes quoted for IFT172 and IFT46 occur in the live entries. Identifier verification is not itself membership evidence. |
+| unique | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIFT172%20OR%20gene_exact%3AIFT81%20OR%20gene_exact%3AIFT74%20OR%20gene_exact%3AIFT46%29%20AND%20organism_id%3A3055%20AND%20reviewed%3Atrue&amp;format=tsv&amp;fields=accession,gene_names,organism_id,reviewed; Complete result set for exact four genes, organism 3055 and reviewed:true | supports | Exactly one reviewed entry was returned for each of IFT172, IFT81, IFT74 and IFT46, supporting the record’s bounded single-entry provenance statements. |
+| ift-papers | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=17326139,9585417,15955805,17312020,18852297&amp;retmode=xml; PubMed abstracts and bibliographic metadata for PMID:17326139, 9585417, 15955805, 17312020, 18852297 | supports | Sloboda 2007 supports IFT172 axonemal localization; Cole 1998 supports IFT particles concentrated near basal bodies and assembly; Lucker 2005 identifies the IFT-B core including IFT88/81/74/52/46 and peripheral IFT172. Hou 2007 links IFT46 loss to short flagella and outer-dynein import; Ahmed 2008 supports ODA16–IFT46 interaction. The abstracts corroborate coarse membership; detailed localization annotation provenance was checked directly in UniProt. |
+| rosenbaum | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1038/nrm952; DOI:10.1038/nrm952; Europe PMC full bibliographic record and abstract | partial | Rosenbaum and Witman 2002 identify IFT as bidirectional movement of nonmembrane protein particles between base and tip, required for assembly and maintenance. This abstract alone does not establish every spatial qualifier; the publisher Key Points and Figures 1–4 inspected below supplement it. Full-body support for the function’s transition-zone qualifier remains unverified. |
+| silflow | https://scispace.com/pdf/assembly-and-motility-of-eukaryotic-cilia-and-flagella-2bnrgi0q2j.pdf; DOI:10.1104/pp.010807; full eight-page paper; pp.1500–1501 organism and motility, p.1503 dynein sliding/bending, p.1504 basal-body nucleation | supports | The previously rate-limited public PDF became readable. Inspected paper text explicitly describes biflagellate Chlamydomonas, swimming by paired flagella, dynein-driven sliding constrained into bending, and basal bodies as axoneme nucleation sites. This verifies the record’s assigned basal-body, occurrence and motility claims. No numerical measurement is imported into the record. |
+| pazour | https://pmc.ncbi.nlm.nih.gov/articles/PMC2171396/; DOI:10.1083/jcb.200504008; Introduction; Results proteomics; flagellar fractionation methods; full text cached by delegated reviewer and re-inspected locally at recorded access time | supports | Full text supports the purified Chlamydomonas-flagellum proteomics example and predicted membrane-associated candidates. The introduction describes a membrane-sheathed axoneme with doublets, central pair, dyneins and spokes. Fractionation used wild-type 137c and oda1-1 material. The record does not infer whole-cilium stoichiometry or experimentally proven localization of every proteomic hit. |
+| nicastro | https://www.researchgate.net/publication/6871150_The_Molecular_Architecture_of_Axonemes_Revealed_by_Cryoelectron_Tomography; DOI:10.1126/science.1128618; author-uploaded full paper; Introduction; Figure 1; rapid-freezing preparation; dynein-force discussion | supports | Inspected primary-paper body describes 9+2 Chlamydomonas and sea-urchin axonemes, dynein motors, spokes and linkers; it relates microtubule sliding to bending. Chlamydomonas axonemes were isolated and demembranated without ATP. This supports the organism-scoped architecture and coarse motility claims, not a universal 9+2 requirement or an intact membrane preparation. |
+| history | history/records/cilium/2026-09-12T033042Z-codex-b94582.yaml; events[0] and target curation_history | context_only | Creation history documents the cilium’s explicit prokaryotic boundary, addition of associated IFT machinery and schema-driven essentiality change. The current graph and role distinction preserve that decision; no human review or status promotion is inferred. |
+| references | data/structures/ and history/; Ignored-inclusive exact GO identity and cilium slug searches | context_only | The seven referenced neighboring structural identities have maintained files; target-specific creation history resolves. This bounded check establishes internal reference locations, not exhaustive biological coverage. |
+| rosenbaum-preview | https://www.nature.com/articles/nrm952.pdf; DOI:10.1038/nrm952; redirect to publisher preview; Key Points, Abstract, Figure 1–4 titles and annotated references 6, 8 and 12 | supports | The publisher preview explicitly supports particle cargo transport for assembly/maintenance, anterograde kinesin-II and retrograde dynein motors, Chlamydomonas polypeptide composition and motor-versus-particle distinctions. Bibliographic identity matches. Full article body remains subscription-only; the inspection does not claim to have read it. |
+| figure1 | https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrm952/MediaObjects/41580_2002_Article_BFnrm952_Fig1_HTML.jpg; Rosenbaum and Witman 2002, Figure 1; image visually inspected | supports | Electron micrograph explicitly labels IFT particles between flagellar membrane and outer-doublet microtubules; this directly supports the edge’s spatial qualifier. |
+| figure2 | https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrm952/MediaObjects/41580_2002_Article_BFnrm952_Fig2_HTML.jpg; Rosenbaum and Witman 2002, Figure 2; image visually inspected | supports | Diagram shows particles moving in opposite directions along B-tubules under the flagellar membrane, with separate kinesin-II and cytoplasmic dynein 1b motors. It supports coarse transport geometry and the boundary from motor complexes. |
+| figure3 | https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrm952/MediaObjects/41580_2002_Article_BFnrm952_Fig3_HTML.jpg; Rosenbaum and Witman 2002, Figure 3; image visually inspected | supports | The publisher identifies this figure as localization in Chlamydomonas. Visible panels show flagellar distribution and a basal-body-associated pool; this is compatible with particles cycling through the ciliary compartment rather than every particle being permanently confined there. |
+| figure4 | https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrm952/MediaObjects/41580_2002_Article_BFnrm952_Fig4_HTML.jpg; Rosenbaum and Witman 2002, Figure 4; image visually inspected | supports | The diagram of postulated targeting roles shows the basal body, transition fibre/flagellar pore and particle arrays within the flagellum, plus cytoplasmic pools. Its hypotheses are not promoted to detailed mechanisms in this NONMECHANISTIC graph. |
+| target-resolver-coverage | just check-curies-strict; data/structures/appendage/cilium.yaml; exact scripts/check_curies.py collect() scope; reports/curie_check.tsv | supports | This target contains 26 distinct CURIE-shaped scalar values: 21 OK, 5 transport-unreachable and 0 skipped in the global report. The attached scoped receipts resolve each non-OK identifier. HTTP URLs and prose are outside collect(); their content was inspected separately. Existence is not proof of correct biological mapping. |
+| liveness-pmid-15955805 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=17326139,9585417,15955805,17312020,18852297&amp;retmode=xml; PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList (not nested cited-reference IDs) | supports | PMID:15955805 resolves through the scoped source inspection. Exact article join: pubmed=15955805, doi=10.1074/jbc.M505062200, pii=S0021-9258(20)56619-2. Bibliographic identifier identity; source-claim sufficiency is assessed separately. |
+| liveness-pmid-17312020 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=17326139,9585417,15955805,17312020,18852297&amp;retmode=xml; PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList (not nested cited-reference IDs) | supports | PMID:17312020 resolves through the scoped source inspection. Exact article join: pubmed=17312020, pmc=PMC2064023, doi=10.1083/jcb.200608041, pii=jcb.200608041. Bibliographic identifier identity; source-claim sufficiency is assessed separately. |
+| liveness-pmid-17326139 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=17326139,9585417,15955805,17312020,18852297&amp;retmode=xml; PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList (not nested cited-reference IDs) | supports | PMID:17326139 resolves through the scoped source inspection. Exact article join: pubmed=17326139, doi=10.1002/cm.20195. Bibliographic identifier identity; source-claim sufficiency is assessed separately. |
+| liveness-pmid-18852297 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=17326139,9585417,15955805,17312020,18852297&amp;retmode=xml; PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList (not nested cited-reference IDs) | supports | PMID:18852297 resolves through the scoped source inspection. Exact article join: pubmed=18852297, pmc=PMC2568026, doi=10.1083/jcb.200802025, pii=jcb.200802025. Bibliographic identifier identity; source-claim sufficiency is assessed separately. |
+| liveness-pmid-9585417 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=17326139,9585417,15955805,17312020,18852297&amp;retmode=xml; PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList (not nested cited-reference IDs) | supports | PMID:9585417 resolves through the scoped source inspection. Exact article join: pubmed=9585417, pmc=PMC2132775, doi=10.1083/jcb.141.4.993. Bibliographic identifier identity; source-claim sufficiency is assessed separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Rosenbaum 2002 was inspected through its abstract, publisher Key Points and Figures 1–4, which cover transport geometry; exact support for the assembly function’s transition-zone qualifier remains unverified.
+- Five UniProt-cited experimental papers were inspected through their explicit PubMed abstracts and live annotation provenance, not all full bodies.
+- Microscopy and proteomics involve particular Chlamydomonas preparations; no universal 9+2 architecture, exhaustive protein inventory or measured prevalence is inferred.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The explicit user request to save a validated bundle for every unreviewed target overrides the local issue-only persistence gate. No finding was invented to satisfy it.
+- Only review artifacts are produced; scientific records, history and status are unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261019T233310Z-cilium-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cilium identity, composition and source-support review
+started_at: '2026-10-19T07:35:10Z'
+finished_at: '2026-10-19T23:33:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Source inspection in a separate checkout; prior Codex authorship
+    is not treated as demonstrably independent human review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Exact identity, scoped anatomy, protein examples and broad functions are
+  supported by inspected authorities and primary text. No concrete curation defect
+  was found. One nearest-source check remains incomplete for the assembly function’s
+  transition-zone qualifier, which is independently supported by GO elsewhere in the
+  record.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/archaeal_type_flagellum.yaml
+    sha256: 8b39b9de8cddde9a572abc075923a53601b45ca20b3f4c7f557200f31154b0bf
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum.yaml
+    sha256: 337c8b87b9ee3161965ab37c166e0070ec51b265f8267ab39b8275376101bb31
+    role: context
+  - path: data/structures/appendage/ciliary_membrane.yaml
+    sha256: be5035248f05df4bfc22b39cf6d07b2b76778d02bfbaf5aff0f5dee1f5785a00
+    role: context
+  - path: data/structures/appendage/ciliary_transition_zone.yaml
+    sha256: 86788583f1b2b4cb8bf5ac4e77323059cf48023b4c713a0d82b57ed4a066daa1
+    role: context
+  - path: data/structures/appendage/cilium.yaml
+    sha256: 3c1ce5bbb460bccfca26f7c36aed90cd9bbd655377ca4b466af1c73a12c5481b
+    role: target
+  - path: data/structures/appendage/intraciliary_transport_particle.yaml
+    sha256: 8a6efec6a5218f64f0289cb5af33aed9b911dd278f130db966288ef998753fa0
+    role: context
+  - path: data/structures/cytoskeleton/axoneme.yaml
+    sha256: 0b91b4cd41d1a34bdc3883d988f31009effc74347b881cdc5c9b66014704e223
+    role: context
+  - path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+    sha256: 46027bf3d3d8b3011803fa72d1229a892d34b7233d48ca290466b9afefb6b7ef
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/cilium/2026-09-12T033042Z-codex-b94582.yaml
+    sha256: 74f26bb333162c5374e77ab154fde2a01b4ef28c7b49d4fdcafbcec93e25c043
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0005929
+  path: data/structures/appendage/cilium.yaml
+  label: cilium
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/cilium.yaml
+    role: maintained scientific record
+scope:
+  description: Complete file read and all native surfaces assessed; the specified
+    source checks remain incomplete.
+  selection: Fourth path-sorted previously unreviewed record in batch 1; one target
+    only.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005929
+  exclusions:
+  - target: Other corpus records
+    reason: Outside this one-record scientific observation; shared validators do not
+      confer scientific review coverage.
+checks:
+- check_id: schema
+  name: Open schema validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005929
+  command: just validate data/structures/appendage/cilium.yaml
+  exit_code: 0
+  summary: Exit 0; focused target validation succeeded between 2026-10-19T07:35:11Z
+    and 2026-10-19T07:35:13Z.
+- check_id: strict
+  name: Closed schema validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005929
+  command: just validate-strict data/structures/appendage/cilium.yaml --out /private/tmp/cellstructure-record-reviews-UhRFh7/cilium-strict.tsv
+  exit_code: 0
+  summary: Exit 0; focused target validation succeeded between 2026-10-19T07:35:13Z
+    and 2026-10-19T07:35:15Z.
+- check_id: nearest-source-fulltext
+  name: Nearest-source support for the assembly function’s transition-zone qualifier
+  status: unavailable
+  required: true
+  target_ids:
+  - GO:0005929
+  summary: Rosenbaum’s abstract, Key Points and Figures 1–4 were inspected, but full-body
+    support for the transition-zone qualifier remains unverified. Silflow’s previously
+    unavailable body was recovered and its assigned claims checked.
+  evidence_ids:
+  - rosenbaum
+  - rosenbaum-preview
+  - figure4
+  - silflow
+- check_id: target-identifier-coverage
+  name: Target identifier coverage including resolver residuals
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005929
+  summary: All CURIE-shaped target values have issuing-authority or appropriate local/source-specific
+    existence verification. Generic PMID HTTP414 failures and skipped namespaces were
+    resolved by scoped receipts; biological mapping correctness is assessed separately.
+  evidence_ids:
+  - target-resolver-coverage
+  - liveness-pmid-15955805
+  - liveness-pmid-17312020
+  - liveness-pmid-17326139
+  - liveness-pmid-18852297
+  - liveness-pmid-9585417
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005929
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005929
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005929
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005929
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005929
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/cilium.yaml
+  locator: Entire record, including all five components, five protein examples, two
+    functions, six graph edges and resolved discussion
+  accessed_at: '2026-10-19T07:35:10Z'
+  support: supports
+  summary: Complete file read. The record defines the membrane-sheathed eukaryotic
+    organelle, with explicit Chlamydomonas examples and coarse assembly topology.
+    PROPOSED status is retained.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005929,GO:0005930,GO:0060170,GO:0036064,GO:0035869,GO:0097546,GO:0030990,GO:0060271,GO:0060285,GO:0009288,GO:0097589
+  locator: results[].id/name/isObsolete/aspect/definition/synonyms; related terms
+    and children
+  accessed_at: '2026-10-19T07:35:35Z'
+  support: supports
+  summary: All eleven GO IDs are active and labels match. Exact flagellum synonyms,
+    axoneme core, basal-body nucleation, membrane boundary, transition-zone gate,
+    IFT complex and two process identities match. Bacterial flagellum and archaellum
+    have separate identities. The definition matches GO:0005929.
+  snapshot_sha256: 8f5aa22eda6a51b4afd23e8edf8c6f3a68a96004b0b07caf414e85f2e95ff37a
+- evidence_id: taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3055&retmode=xml
+  locator: TaxaSet/Taxon TaxId, ScientificName, Rank
+  accessed_at: '2026-10-19T07:35:35Z'
+  support: supports
+  summary: NCBITaxon:3055 is Chlamydomonas reinhardtii at species rank.
+  snapshot_sha256: a17bc1c97fea9112288574ef15727ed7e37c42787a430ef074ae5fc654547e6b
+- evidence_id: uniprot
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28accession%3AQ5DM57%20OR%20accession%3AQ68RJ5%20OR%20accession%3AQ6RCE1%20OR%20accession%3AA2T2X4%20OR%20accession%3AQ9FPW0%29&format=json
+  locator: results[] accession, entryType, genes, organism and subcellular-location
+    evidence
+  accessed_at: '2026-10-19T07:35:35Z'
+  support: supports
+  summary: Q5DM57/IFT172, Q68RJ5/IFT81, Q6RCE1/IFT74 and A2T2X4/IFT46 are reviewed;
+    Q9FPW0/IFT88 is unreviewed. All five match species 3055 and protein labels. The
+    exact experimental PubMed evidence codes quoted for IFT172 and IFT46 occur in
+    the live entries. Identifier verification is not itself membership evidence.
+  snapshot_sha256: 74036c463939936e3a95c79193cb0baeb964201bf62254f6c0fccf2bb0e41561
+- evidence_id: unique
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIFT172%20OR%20gene_exact%3AIFT81%20OR%20gene_exact%3AIFT74%20OR%20gene_exact%3AIFT46%29%20AND%20organism_id%3A3055%20AND%20reviewed%3Atrue&format=tsv&fields=accession,gene_names,organism_id,reviewed
+  locator: Complete result set for exact four genes, organism 3055 and reviewed:true
+  accessed_at: '2026-10-19T07:37:02Z'
+  support: supports
+  summary: Exactly one reviewed entry was returned for each of IFT172, IFT81, IFT74
+    and IFT46, supporting the record’s bounded single-entry provenance statements.
+  snapshot_sha256: f76814720d28bc95faad9fc17be14e9523553c32167c66a28a5096a38e72ea0e
+- evidence_id: ift-papers
+  kind: primary_source
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=17326139,9585417,15955805,17312020,18852297&retmode=xml
+  locator: PubMed abstracts and bibliographic metadata for PMID:17326139, 9585417,
+    15955805, 17312020, 18852297
+  accessed_at: '2026-10-19T07:35:36Z'
+  support: supports
+  summary: Sloboda 2007 supports IFT172 axonemal localization; Cole 1998 supports
+    IFT particles concentrated near basal bodies and assembly; Lucker 2005 identifies
+    the IFT-B core including IFT88/81/74/52/46 and peripheral IFT172. Hou 2007 links
+    IFT46 loss to short flagella and outer-dynein import; Ahmed 2008 supports ODA16–IFT46
+    interaction. The abstracts corroborate coarse membership; detailed localization
+    annotation provenance was checked directly in UniProt.
+  snapshot_sha256: dff31a80b5cb4595e6409a28bdff678a1a490d4f983de8ce852112726f727b66
+- evidence_id: rosenbaum
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1038/nrm952
+  locator: DOI:10.1038/nrm952; Europe PMC full bibliographic record and abstract
+  accessed_at: '2026-10-19T07:35:36Z'
+  support: partial
+  summary: Rosenbaum and Witman 2002 identify IFT as bidirectional movement of nonmembrane
+    protein particles between base and tip, required for assembly and maintenance.
+    This abstract alone does not establish every spatial qualifier; the publisher
+    Key Points and Figures 1–4 inspected below supplement it. Full-body support for
+    the function’s transition-zone qualifier remains unverified.
+  snapshot_sha256: 79536f000e09b8357f2caff66d00292b68e5c96350780aed7ce5458e89400154
+- evidence_id: silflow
+  kind: primary_source
+  reference: https://scispace.com/pdf/assembly-and-motility-of-eukaryotic-cilia-and-flagella-2bnrgi0q2j.pdf
+  locator: DOI:10.1104/pp.010807; full eight-page paper; pp.1500–1501 organism and
+    motility, p.1503 dynein sliding/bending, p.1504 basal-body nucleation
+  accessed_at: '2026-10-19T23:30:40Z'
+  support: supports
+  summary: The previously rate-limited public PDF became readable. Inspected paper
+    text explicitly describes biflagellate Chlamydomonas, swimming by paired flagella,
+    dynein-driven sliding constrained into bending, and basal bodies as axoneme nucleation
+    sites. This verifies the record’s assigned basal-body, occurrence and motility
+    claims. No numerical measurement is imported into the record.
+- evidence_id: pazour
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2171396/
+  locator: DOI:10.1083/jcb.200504008; Introduction; Results proteomics; flagellar
+    fractionation methods; full text cached by delegated reviewer and re-inspected
+    locally at recorded access time
+  accessed_at: '2026-10-19T07:42:11Z'
+  support: supports
+  summary: Full text supports the purified Chlamydomonas-flagellum proteomics example
+    and predicted membrane-associated candidates. The introduction describes a membrane-sheathed
+    axoneme with doublets, central pair, dyneins and spokes. Fractionation used wild-type
+    137c and oda1-1 material. The record does not infer whole-cilium stoichiometry
+    or experimentally proven localization of every proteomic hit.
+  snapshot_sha256: 97a83604a43745f9ae198c5d9caabe96b014011d050ae2d18881d16086d7e06c
+- evidence_id: nicastro
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/6871150_The_Molecular_Architecture_of_Axonemes_Revealed_by_Cryoelectron_Tomography
+  locator: DOI:10.1126/science.1128618; author-uploaded full paper; Introduction;
+    Figure 1; rapid-freezing preparation; dynein-force discussion
+  accessed_at: '2026-10-19T07:39:52Z'
+  support: supports
+  summary: Inspected primary-paper body describes 9+2 Chlamydomonas and sea-urchin
+    axonemes, dynein motors, spokes and linkers; it relates microtubule sliding to
+    bending. Chlamydomonas axonemes were isolated and demembranated without ATP. This
+    supports the organism-scoped architecture and coarse motility claims, not a universal
+    9+2 requirement or an intact membrane preparation.
+- evidence_id: history
+  kind: record_content
+  reference: history/records/cilium/2026-09-12T033042Z-codex-b94582.yaml
+  locator: events[0] and target curation_history
+  accessed_at: '2026-10-19T07:39:48Z'
+  support: context_only
+  summary: Creation history documents the cilium’s explicit prokaryotic boundary,
+    addition of associated IFT machinery and schema-driven essentiality change. The
+    current graph and role distinction preserve that decision; no human review or
+    status promotion is inferred.
+- evidence_id: references
+  kind: search
+  reference: data/structures/ and history/
+  locator: Ignored-inclusive exact GO identity and cilium slug searches
+  accessed_at: '2026-10-19T07:40:56Z'
+  support: context_only
+  summary: The seven referenced neighboring structural identities have maintained
+    files; target-specific creation history resolves. This bounded check establishes
+    internal reference locations, not exhaustive biological coverage.
+  search_scope: rg --no-ignore --hidden over data/structures for exact identifier
+    lines and history YAML for cilium.yaml/GO:0005929; ignored and hidden files included.
+    Matched files are hashed context inputs.
+- evidence_id: rosenbaum-preview
+  kind: primary_source
+  reference: https://www.nature.com/articles/nrm952.pdf
+  locator: DOI:10.1038/nrm952; redirect to publisher preview; Key Points, Abstract,
+    Figure 1–4 titles and annotated references 6, 8 and 12
+  accessed_at: '2026-10-19T07:42:55Z'
+  support: supports
+  summary: The publisher preview explicitly supports particle cargo transport for
+    assembly/maintenance, anterograde kinesin-II and retrograde dynein motors, Chlamydomonas
+    polypeptide composition and motor-versus-particle distinctions. Bibliographic
+    identity matches. Full article body remains subscription-only; the inspection
+    does not claim to have read it.
+- evidence_id: figure1
+  kind: primary_source
+  reference: https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrm952/MediaObjects/41580_2002_Article_BFnrm952_Fig1_HTML.jpg
+  locator: Rosenbaum and Witman 2002, Figure 1; image visually inspected
+  accessed_at: '2026-10-19T07:43:44Z'
+  support: supports
+  summary: Electron micrograph explicitly labels IFT particles between flagellar membrane
+    and outer-doublet microtubules; this directly supports the edge’s spatial qualifier.
+  snapshot_sha256: 5d059b0ec1853fe5c8b4832b7e2379ca16e45342b4d63961409b375662e03820
+- evidence_id: figure2
+  kind: primary_source
+  reference: https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrm952/MediaObjects/41580_2002_Article_BFnrm952_Fig2_HTML.jpg
+  locator: Rosenbaum and Witman 2002, Figure 2; image visually inspected
+  accessed_at: '2026-10-19T07:43:44Z'
+  support: supports
+  summary: Diagram shows particles moving in opposite directions along B-tubules under
+    the flagellar membrane, with separate kinesin-II and cytoplasmic dynein 1b motors.
+    It supports coarse transport geometry and the boundary from motor complexes.
+  snapshot_sha256: 7d9c7622414633675d9dff1dae0dc9434ef3270d7744e7d1ddd32a2d1cd7b99c
+- evidence_id: figure3
+  kind: primary_source
+  reference: https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrm952/MediaObjects/41580_2002_Article_BFnrm952_Fig3_HTML.jpg
+  locator: Rosenbaum and Witman 2002, Figure 3; image visually inspected
+  accessed_at: '2026-10-19T07:43:44Z'
+  support: supports
+  summary: The publisher identifies this figure as localization in Chlamydomonas.
+    Visible panels show flagellar distribution and a basal-body-associated pool; this
+    is compatible with particles cycling through the ciliary compartment rather than
+    every particle being permanently confined there.
+  snapshot_sha256: 7af1a354b697e67dbb6adbb0ef5e5352e256daf48623a8c7dacd549cd499e632
+- evidence_id: figure4
+  kind: primary_source
+  reference: https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrm952/MediaObjects/41580_2002_Article_BFnrm952_Fig4_HTML.jpg
+  locator: Rosenbaum and Witman 2002, Figure 4; image visually inspected
+  accessed_at: '2026-10-19T07:43:44Z'
+  support: supports
+  summary: The diagram of postulated targeting roles shows the basal body, transition
+    fibre/flagellar pore and particle arrays within the flagellum, plus cytoplasmic
+    pools. Its hypotheses are not promoted to detailed mechanisms in this NONMECHANISTIC
+    graph.
+  snapshot_sha256: 91f0b4bcba3a16ca208057310cef496140fb2210b0ad5f460982462f6505a04e
+- evidence_id: target-resolver-coverage
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/cilium.yaml; exact scripts/check_curies.py collect()
+    scope; reports/curie_check.tsv
+  accessed_at: '2026-10-19T23:32:25.400320Z'
+  support: supports
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+  summary: 'This target contains 26 distinct CURIE-shaped scalar values: 21 OK, 5
+    transport-unreachable and 0 skipped in the global report. The attached scoped
+    receipts resolve each non-OK identifier. HTTP URLs and prose are outside collect();
+    their content was inspected separately. Existence is not proof of correct biological
+    mapping.'
+- evidence_id: liveness-pmid-15955805
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=17326139,9585417,15955805,17312020,18852297&retmode=xml
+  locator: PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList
+    (not nested cited-reference IDs)
+  accessed_at: '2026-10-19T07:35:36Z'
+  support: supports
+  summary: 'PMID:15955805 resolves through the scoped source inspection. Exact article
+    join: pubmed=15955805, doi=10.1074/jbc.M505062200, pii=S0021-9258(20)56619-2.
+    Bibliographic identifier identity; source-claim sufficiency is assessed separately.'
+  snapshot_sha256: dff31a80b5cb4595e6409a28bdff678a1a490d4f983de8ce852112726f727b66
+- evidence_id: liveness-pmid-17312020
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=17326139,9585417,15955805,17312020,18852297&retmode=xml
+  locator: PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList
+    (not nested cited-reference IDs)
+  accessed_at: '2026-10-19T07:35:36Z'
+  support: supports
+  summary: 'PMID:17312020 resolves through the scoped source inspection. Exact article
+    join: pubmed=17312020, pmc=PMC2064023, doi=10.1083/jcb.200608041, pii=jcb.200608041.
+    Bibliographic identifier identity; source-claim sufficiency is assessed separately.'
+  snapshot_sha256: dff31a80b5cb4595e6409a28bdff678a1a490d4f983de8ce852112726f727b66
+- evidence_id: liveness-pmid-17326139
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=17326139,9585417,15955805,17312020,18852297&retmode=xml
+  locator: PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList
+    (not nested cited-reference IDs)
+  accessed_at: '2026-10-19T07:35:36Z'
+  support: supports
+  summary: 'PMID:17326139 resolves through the scoped source inspection. Exact article
+    join: pubmed=17326139, doi=10.1002/cm.20195. Bibliographic identifier identity;
+    source-claim sufficiency is assessed separately.'
+  snapshot_sha256: dff31a80b5cb4595e6409a28bdff678a1a490d4f983de8ce852112726f727b66
+- evidence_id: liveness-pmid-18852297
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=17326139,9585417,15955805,17312020,18852297&retmode=xml
+  locator: PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList
+    (not nested cited-reference IDs)
+  accessed_at: '2026-10-19T07:35:36Z'
+  support: supports
+  summary: 'PMID:18852297 resolves through the scoped source inspection. Exact article
+    join: pubmed=18852297, pmc=PMC2568026, doi=10.1083/jcb.200802025, pii=jcb.200802025.
+    Bibliographic identifier identity; source-claim sufficiency is assessed separately.'
+  snapshot_sha256: dff31a80b5cb4595e6409a28bdff678a1a490d4f983de8ce852112726f727b66
+- evidence_id: liveness-pmid-9585417
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=17326139,9585417,15955805,17312020,18852297&retmode=xml
+  locator: PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList
+    (not nested cited-reference IDs)
+  accessed_at: '2026-10-19T07:35:36Z'
+  support: supports
+  summary: 'PMID:9585417 resolves through the scoped source inspection. Exact article
+    join: pubmed=9585417, pmc=PMC2132775, doi=10.1083/jcb.141.4.993. Bibliographic
+    identifier identity; source-claim sufficiency is assessed separately.'
+  snapshot_sha256: dff31a80b5cb4595e6409a28bdff678a1a490d4f983de8ce852112726f727b66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Cilium identity, synonymy and boundaries
+  outcome: supported
+  summary: Definition and exact synonyms match GO:0005929. This is the eukaryotic
+    organelle; no bacterial or archaeal appendage is merged. APPENDAGE kind/category
+    are appropriate.
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - record
+  - go
+- assessment_id: composition
+  area: representation
+  topic: Four structural constituents and associated IFT machinery
+  outcome: supported
+  summary: Axoneme, membrane, basal body and transition zone are represented at organelle-component
+    granularity. Essentiality is scoped to the defined complete cilium; IFT and transition-zone
+    essentiality remain UNKNOWN. IFT is associated machinery rather than a permanent
+    axonemal constituent. The 9+2 claim is explicitly confined to motile Chlamydomonas.
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - go
+  - record
+  - nicastro
+  - pazour
+  - rosenbaum
+- assessment_id: proteins
+  area: grounding
+  topic: Five taxon-paired examples and six declared genes
+  outcome: supported
+  summary: Identifiers, labels, species, entry status and quoted UniProt evidence
+    provenance match. Abstracts explicitly establish IFT-complex membership at the
+    stated level; the examples distinguish identity lookup from structural evidence.
+    No accession is needed for every optional declared gene.
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - uniprot
+  - taxon
+  - unique
+  - ift-papers
+- assessment_id: taxon-example
+  area: scope
+  topic: Chlamydomonas presence and proteomic exemplar
+  outcome: supported
+  summary: The named species is a valid biflagellate model and COMMON is qualitative,
+    not a measured population frequency. Silflow explicitly supports paired flagella
+    and motility; Pazour supports the narrowly worded purified-flagellum proteomics
+    example.
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - taxon
+  - pazour
+  - nicastro
+  - silflow
+  dimensions:
+  - name: experimental_context
+    value: Chlamydomonas purified flagella and isolated axonemes; sea-urchin comparisons
+      in Nicastro
+    definition: Limits of primary preparations supporting the microbial example and
+      architecture.
+    evidence_ids:
+    - pazour
+    - nicastro
+- assessment_id: functions
+  area: evidence
+  topic: Assembly and motility biology
+  outcome: supported
+  summary: IFT-dependent assembly/maintenance is explicit in Rosenbaum’s abstract;
+    basal-body and transition-zone roles are defined by inspected GO entries. Nicastro
+    supports dynein-driven microtubule sliding and bending in the scoped motile axoneme.
+    This corroborates coarse biology without claiming full-body verification of every
+    nearest citation.
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - go
+  - rosenbaum
+  - nicastro
+  - ift-papers
+- assessment_id: graph
+  area: graph
+  topic: Six NONMECHANISTIC assembly and topology edges
+  outcome: supported
+  summary: Basal-body nucleation, membrane boundary and transition-zone gate match
+    their exact GO definitions. Nicastro supports the axoneme core. Rosenbaum’s Key
+    Points and Figures 1–2 support IFT assembly, bidirectionality and transport between
+    membrane and microtubules. Component references resolve; no detailed motor mechanism
+    or numerical assertion is added.
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - record
+  - go
+  - nicastro
+  - rosenbaum
+  - rosenbaum-preview
+  - figure1
+  - figure2
+- assessment_id: nearest-sources
+  area: evidence
+  topic: Remaining nearest-source qualifier in Rosenbaum 2002
+  outcome: unknown
+  summary: Silflow’s assigned claims are now verified in the full paper. Rosenbaum’s
+    abstract, Key Points and Figures 1–4 verify broad transport and spatial claims,
+    but Figure 4 names transition fibres rather than establishing the assembly function’s
+    transition-zone qualifier. Independent GO support does not prove that this nearest
+    citation covers the qualifier.
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - silflow
+  - rosenbaum
+  - rosenbaum-preview
+  - figure1
+  - figure2
+  - figure4
+- assessment_id: history-status
+  area: provenance
+  topic: History, discussion and scientific status
+  outcome: supported
+  summary: PROPOSED status and documented history are consistent with agent curation.
+    The resolved flagellum-boundary discussion is internally coherent and its references
+    resolve. No correction is warranted merely because generated pages or older discussions
+    lack this new audit.
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - record
+  - history
+  - references
+  - go
+- assessment_id: completeness
+  area: completeness
+  topic: Optional measurements, images, datasets and composition detail
+  outcome: not_applicable
+  summary: The complete file contains no physical measurement, image, dataset or trait-link
+    claim. Organism-specific inventories and detailed IFT subunit mechanisms are deliberately
+    beyond this structure-level graph; their omission alone is not a defect.
+  target_ids:
+  - GO:0005929
+  evidence_ids:
+  - record
+findings: []
+actions: []
+limitations:
+- Rosenbaum 2002 was inspected through its abstract, publisher Key Points and Figures
+  1–4, which cover transport geometry; exact support for the assembly function’s transition-zone
+  qualifier remains unverified.
+- Five UniProt-cited experimental papers were inspected through their explicit PubMed
+  abstracts and live annotation provenance, not all full bodies.
+- Microscopy and proteomics involve particular Chlamydomonas preparations; no universal
+  9+2 architecture, exhaustive protein inventory or measured prevalence is inferred.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The explicit user request to save a validated bundle for every unreviewed target
+  overrides the local issue-only persistence gate. No finding was invented to satisfy
+  it.
+- Only review artifacts are produced; scientific records, history and status are unchanged.
+```

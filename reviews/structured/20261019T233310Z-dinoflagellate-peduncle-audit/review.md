@@ -1,0 +1,835 @@
+# Dinoflagellate peduncle: scoped scientific review
+
+- Review: 20261019T233310Z-dinoflagellate-peduncle-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-19T07:39:41Z
+- Finished UTC: 2026-10-19T23:33:10Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+All present record claims were assessed. Exact ontology identity, qualitative taxonomic scope, source-specific literature statements and nonmechanistic topology are supported; no concrete issue observed. Molecular composition and homology remain explicitly unresolved rather than asserted.
+
+## Scope And Provenance
+
+One complete maintained dinoflagellate peduncle record, including every present native section and cited identifier.
+
+Selection: Exact queued path data/structures/appendage/dinoflagellate_peduncle.yaml in the unreviewed corpus path order; one record per bundle.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990905 | data/structures/appendage/dinoflagellate_peduncle.yaml | maintained | dinoflagellate peduncle |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Open LinkML target validation | passed | True | GO:1990905 | Exit 0; No issues found. |
+| Closed LinkML target validation | passed | True | GO:1990905 | Exit 0; one file scanned, zero ERROR rows. |
+| Live authority and claim-level source review | passed | True | GO:1990905 | Both GO IDs, taxon ID, four DOIs and four PMIDs resolve. Full text supports the material 2014, 2022 and 2025 claims. The 1992 reference was checked at its declared bibliographic scope. |
+| Verbatim snippet verification | not_applicable | False | GO:1990905 | No snippet fields are present; source-backed notes were assessed directly. |
+| Target identifier coverage including resolver residuals | passed | True | GO:1990905 | All CURIE-shaped target values have issuing-authority or appropriate local/source-specific existence verification. Generic PMID HTTP414 failures and skipped namespaces were resolved by scoped receipts; biological mapping correctness is assessed separately. |
+| Full corpus QC | passed | True | GO:1990905 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:1990905 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:1990905 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:1990905 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:1990905 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Exact structure identity, definition and granularity
+
+identity: supported. Targets: GO:1990905.
+
+The record denotes a specific dinoflagellate cytoplasmic appendage. Its GO definition, APPENDAGE category and structure kind agree with the authority. It is distinct from a flagellum, basal-body apparatus, suctorian tentacle and proposed apical-complex homologue.
+
+### Is-a versus parthood
+
+representation: supported. Targets: GO:1990905.
+
+The only hierarchical assertion is the exact current is-a parent GO:0120025. The record does not force nearby flagellar machinery or unproven homologues into part_of or has_part.
+
+### Variable occurrence within Dinophyceae
+
+scope: supported. Targets: GO:1990905.
+
+The class identifier and label match NCBI. VARIABLE is a conservative qualitative reading of GO occurrence in some dinoflagellates, without asserting universal distribution or converting species-level feeding observations into a prevalence estimate.
+
+### Molecular composition and unresolved component boundaries
+
+completeness: supported. Targets: GO:1990905.
+
+No protein-family or stoichiometry claim is made. The open component discussion accurately separates a microtubule-containing structure from a curated molecular inventory; the cited review does not by itself localize exact families throughout the structure class.
+
+### Claim placement and article identity
+
+evidence: supported. Targets: GO:1990905.
+
+Every stated article identity and source role is supported. The 2014 synthesis supplies structural context, the 2022 primary study supplies feeding evidence, and the 2025 paper supplies taxonomy. The 1992 source is explicitly restricted to metadata corroboration.
+
+### Single NONMECHANISTIC topology edge
+
+graph: supported. Targets: GO:1990905.
+
+Both nodes resolve exactly, and the single is-a edge matches GO. NONMECHANISTIC and scope notes accurately limit the FUNCTION graph to topology; neither assembly causality nor a molecular feeding reaction is asserted.
+
+### Flagellar boundary and apical-complex homology discussions
+
+consistency: supported. Targets: GO:1990905.
+
+The resolved projection boundary and two open questions are actionable and faithful to the review source. No apical-complex component or vesicle homology is silently promoted to established peduncle composition.
+
+### Examples, functions, images, properties and cross-corpus links
+
+completeness: not_applicable. Targets: GO:1990905.
+
+Canonical examples, structured function rows, images, physical properties, complex compositions, trait links and datasets are absent. None is mandatory for the present bounded claims; their absence alone is not a finding.
+
+### PROPOSED status, ownership and history
+
+provenance: supported. Targets: GO:1990905.
+
+The maintained YAML owns future scientific changes. PROPOSED status and both record-history files describe creation and later evidence-scope correction; this review does not promote status or dispose of historical GitHub issues.
+
+### Focused open and closed validation
+
+schema: supported. Targets: GO:1990905.
+
+Both documented focused validators pass.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/dinoflagellate_peduncle.yaml; Entire maintained YAML, including all three discussions and the single graph edge | context_only | Complete target read. The record is a GO-grounded appendage with variable class-level occurrence, bounded literature notes, a NONMECHANISTIC topology graph, and explicit molecular and homology questions. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990905,GO:0120025; GO:1990905 definition, aspect, status and xrefs; GO:0120025 children relation | supports | Both terms are nonobsolete cellular components with exact labels. The definition matches the record, including the source spelling microtubles. GO:0120025 explicitly lists GO:1990905 as an is_a child; GO:1990905 cites PMID:1480107. |
+| taxon | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=2864&amp;retmode=xml; NCBI Taxon 2864: ScientificName and Rank | supports | NCBITaxon:2864 resolves to Dinophyceae, rank class, matching the taxonomic-distribution row. |
+| pubmed | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=1480107,27694777,35288549,40448289&amp;retmode=xml; PubmedArticle records 1480107, 27694777, 35288549, 40448289; titles, authors and ArticleIdList | supports | All four PMIDs resolve to the named articles and exact DOI crosslinks. The Lee and Kugrens 1992 citation is bibliographic corroboration of the GO reference, as explicitly scoped in the target. |
+| doi-1992 | https://api.crossref.org/works/10.1128/mr.56.4.529-542.1992; Crossref message.DOI, title, authors and publication metadata | supports | DOI identity confirmed: Relationship between the flagellates and the ciliates |
+| doi-2014 | https://api.crossref.org/works/10.3390/microorganisms2010073; Crossref message.DOI, title, authors and publication metadata | supports | DOI identity confirmed: A Comparative Overview of the Flagellar Apparatus of Dinoflagellate, Perkinsids and Colpodellids |
+| doi-2022 | https://api.crossref.org/works/10.1038/s41467-022-28867-8; Crossref message.DOI, title, authors and publication metadata | supports | DOI identity confirmed: Mucospheres produced by a mixotrophic protist impact ocean carbon cycling |
+| doi-2025 | https://api.crossref.org/works/10.1111/jeu.70017; Crossref message.DOI, title, authors and publication metadata | supports | DOI identity confirmed: &lt;i&gt;Prorocentrum insidiosum&lt;/i&gt; sp. nov. (Prorocentrales, Dinophyceae): Morphological and Phylogenetic Characterization of a Mucosphere Producing Dinoflagellate From the “&lt;i&gt;cordatum&lt;/i&gt; Group” |
+| flagellar-review | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5029502/fullTextXML; Sections on dinokaryote microtubular strand/basket and 3.3 Is the Dinoflagellate Peduncle Homologous to the Apical Complex? | supports | The review distinguishes demonstrated peduncle-associated strands from the unresolved gonyaulacoid connection. It describes nearby flagellar structures and discusses apical-complex/vesicle homology without establishing universal equivalence. |
+| feeding-study | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8921327/fullTextXML; Results: Identification and distribution; Prorocentrum cf. balticum is a constitutive mixotroph; Figure 2e1-e2 caption | supports | Australian isolates are reported feeding on Rhodomonas salina with a short tubular peduncle; resulting intracellular food vacuoles support myzocytosis. This directly supports the narrowly stated feeding observation. |
+| taxonomy-study | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12125498/fullTextXML; Abstract; introduction; strain/molecular methods; Prorocentrum insidiosum description and phylogenetic results | supports | The formerly provisional Prorocentrum cf. balticum strains are described as P. insidiosum. Morphological and phylogenetic evidence supports that taxonomic reassignment; the target does not use this paper as the primary feeding experiment. |
+| old-paper-access | https://pmc.ncbi.nlm.nih.gov/articles/PMC372886/; PMC372886 HTML citation metadata and abstract; fullTextXML route and publisher DOI landing attempts | context_only | PMC HTML exposes bibliographic metadata and abstract but no searchable peduncle occurrence. Europe PMC fullTextXML returned HTTP 500, and the publisher route returned HTTP 403. Full article body was not reassessed; the record assigns this citation only a bibliographic role. |
+| repository-context | isolated repository working tree; history/records/dinoflagellate_peduncle, reviews, data/structures, research, curation; git log target history | context_only | Ignored-inclusive identity search found the target, two record-level history files and a suctorian-tentacle boundary mention. No prior structured review for this target was found within the searched reviews tree. Git history identifies the record-creation commit 640c7973fee157e555423ae321d70522e22f4657. |
+| schema | just validate; just validate-strict; Target path; strict report /private/tmp/cellstructure-record-reviews-UhRFh7/peduncle-review/strict.tsv | supports | Both focused commands exited 0. Open validation found no issues; closed validation scanned one file with zero ERROR rows. |
+| target-resolver-coverage | just check-curies-strict; data/structures/appendage/dinoflagellate_peduncle.yaml; exact scripts/check_curies.py collect() scope; reports/curie_check.tsv | supports | This target contains 11 distinct CURIE-shaped scalar values: 7 OK, 4 transport-unreachable and 0 skipped in the global report. The attached scoped receipts resolve each non-OK identifier. HTTP URLs and prose are outside collect(); their content was inspected separately. Existence is not proof of correct biological mapping. |
+| liveness-pmid-1480107 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=1480107,27694777,35288549,40448289&amp;retmode=xml; PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList (not nested cited-reference IDs) | supports | PMID:1480107 resolves through the scoped source inspection. Exact article join: pubmed=1480107, pmc=PMC372886, doi=10.1128/mr.56.4.529-542.1992. Bibliographic identifier identity; source-claim sufficiency is assessed separately. |
+| liveness-pmid-27694777 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=1480107,27694777,35288549,40448289&amp;retmode=xml; PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList (not nested cited-reference IDs) | supports | PMID:27694777 resolves through the scoped source inspection. Exact article join: pubmed=27694777, pmc=PMC5029502, doi=10.3390/microorganisms2010073, pii=microorganisms2010073. Bibliographic identifier identity; source-claim sufficiency is assessed separately. |
+| liveness-pmid-35288549 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=1480107,27694777,35288549,40448289&amp;retmode=xml; PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList (not nested cited-reference IDs) | supports | PMID:35288549 resolves through the scoped source inspection. Exact article join: pubmed=35288549, pmc=PMC8921327, doi=10.1038/s41467-022-28867-8, pii=10.1038/s41467-022-28867-8. Bibliographic identifier identity; source-claim sufficiency is assessed separately. |
+| liveness-pmid-40448289 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=1480107,27694777,35288549,40448289&amp;retmode=xml; PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList (not nested cited-reference IDs) | supports | PMID:40448289 resolves through the scoped source inspection. Exact article join: pubmed=40448289, pmc=PMC12125498, doi=10.1111/jeu.70017. Bibliographic identifier identity; source-claim sufficiency is assessed separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The 1992 article body was not reassessed. PubMed/Crossref and PMC HTML establish its bibliographic identity, which is the only role assigned to it by the target. The exact fullTextXML route failed and the publisher route was forbidden; no absence inference is made about the scanned article.
+- The supported scope is an anatomical structure with qualitative occurrence and a topology graph. This does not establish a complete molecular inventory, universal peduncle composition or direct apical-complex homology.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The user expressly requested a validated saved review for every unreviewed target, including clean records, overriding the local issue-only persistence gate. No finding was invented to justify output.
+- No target, generated page, curation event or repository history file was changed. No remote communication or paid provider was used.
+- No gene, locus, protein accession or expression dataset is asserted by this record; an expression-module database is not applicable to these ontology and ultrastructure claims.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261019T233310Z-dinoflagellate-peduncle-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Dinoflagellate peduncle: scoped scientific review'
+started_at: '2026-10-19T07:39:41Z'
+finished_at: '2026-10-19T23:33:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Delegated Codex agent reviewed an existing agent-authored target
+    in the coordinating reviewer isolated clone. Reviewer did not author or edit the
+    target during this task; no independent human approval is claimed.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: All present record claims were assessed. Exact ontology identity, qualitative
+  taxonomic scope, source-specific literature statements and nonmechanistic topology
+  are supported; no concrete issue observed. Molecular composition and homology remain
+  explicitly unresolved rather than asserted.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/dinoflagellate_peduncle.yaml
+    sha256: 773c37d9ae66feb79a26efd7c108ad8783018db79264928b4838f37ea8e721e4
+    role: target
+  - path: data/structures/appendage/suctorian_feeding_tentacle.yaml
+    sha256: 6165bcfed6515881367eba4fe55aafd95e31be8c42f55d78179ceecb93f27400
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/dinoflagellate_peduncle/2026-10-02T231622Z-codex-4f5852.yaml
+    sha256: 7f17b43ac298795d9aa532f06ca1e13035ce348bab98d60cf3e10e3ca1e2d613
+    role: context
+  - path: history/records/dinoflagellate_peduncle/2026-10-02T232926Z-codex-41b398.yaml
+    sha256: 90bb3beb84e3d7af72b0402643b02f5a179b07f7de4c854207b7024570662fee
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: GO:1990905
+  path: data/structures/appendage/dinoflagellate_peduncle.yaml
+  label: dinoflagellate peduncle
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/dinoflagellate_peduncle.yaml
+    role: maintained scientific record
+scope:
+  description: One complete maintained dinoflagellate peduncle record, including every
+    present native section and cited identifier.
+  selection: Exact queued path data/structures/appendage/dinoflagellate_peduncle.yaml
+    in the unreviewed corpus path order; one record per bundle.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990905
+checks:
+- check_id: open-schema
+  name: Open LinkML target validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - GO:1990905
+  command: UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache
+    just validate data/structures/appendage/dinoflagellate_peduncle.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - schema
+- check_id: strict-schema
+  name: Closed LinkML target validation
+  status: passed
+  required: true
+  summary: Exit 0; one file scanned, zero ERROR rows.
+  target_ids:
+  - GO:1990905
+  command: UV_CACHE_DIR=/private/tmp/cellstructure-record-reviews-UhRFh7/uv-cache
+    just validate-strict data/structures/appendage/dinoflagellate_peduncle.yaml --out
+    /private/tmp/cellstructure-record-reviews-UhRFh7/peduncle-review/strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - schema
+- check_id: source-identifier-audit
+  name: Live authority and claim-level source review
+  status: passed
+  required: true
+  summary: Both GO IDs, taxon ID, four DOIs and four PMIDs resolve. Full text supports
+    the material 2014, 2022 and 2025 claims. The 1992 reference was checked at its
+    declared bibliographic scope.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - go
+  - taxon
+  - pubmed
+  - doi-1992
+  - doi-2014
+  - doi-2022
+  - doi-2025
+  - flagellar-review
+  - feeding-study
+  - taxonomy-study
+  - old-paper-access
+- check_id: snippet-verification
+  name: Verbatim snippet verification
+  status: not_applicable
+  required: false
+  summary: No snippet fields are present; source-backed notes were assessed directly.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - record
+- check_id: target-identifier-coverage
+  name: Target identifier coverage including resolver residuals
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990905
+  summary: All CURIE-shaped target values have issuing-authority or appropriate local/source-specific
+    existence verification. Generic PMID HTTP414 failures and skipped namespaces were
+    resolved by scoped receipts; biological mapping correctness is assessed separately.
+  evidence_ids:
+  - target-resolver-coverage
+  - liveness-pmid-1480107
+  - liveness-pmid-27694777
+  - liveness-pmid-35288549
+  - liveness-pmid-40448289
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990905
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990905
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990905
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990905
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990905
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/dinoflagellate_peduncle.yaml
+  locator: Entire maintained YAML, including all three discussions and the single
+    graph edge
+  accessed_at: '2026-10-19T07:41:54Z'
+  support: context_only
+  summary: Complete target read. The record is a GO-grounded appendage with variable
+    class-level occurrence, bounded literature notes, a NONMECHANISTIC topology graph,
+    and explicit molecular and homology questions.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990905,GO:0120025
+  locator: GO:1990905 definition, aspect, status and xrefs; GO:0120025 children relation
+  accessed_at: '2026-10-19T07:40:10Z'
+  support: supports
+  summary: Both terms are nonobsolete cellular components with exact labels. The definition
+    matches the record, including the source spelling microtubles. GO:0120025 explicitly
+    lists GO:1990905 as an is_a child; GO:1990905 cites PMID:1480107.
+  snapshot_sha256: 51677908729fee61495b6b1f711005fe33ab3476d5af4e38737239893d58c346
+- evidence_id: taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=2864&retmode=xml
+  locator: 'NCBI Taxon 2864: ScientificName and Rank'
+  accessed_at: '2026-10-19T07:40:10Z'
+  support: supports
+  summary: NCBITaxon:2864 resolves to Dinophyceae, rank class, matching the taxonomic-distribution
+    row.
+  snapshot_sha256: 3172b0f5201613299f000a1c88fa44c9f8c09f5cc29cccd14acf192c9dc5cce1
+- evidence_id: pubmed
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1480107,27694777,35288549,40448289&retmode=xml
+  locator: PubmedArticle records 1480107, 27694777, 35288549, 40448289; titles, authors
+    and ArticleIdList
+  accessed_at: '2026-10-19T07:40:10Z'
+  support: supports
+  summary: All four PMIDs resolve to the named articles and exact DOI crosslinks.
+    The Lee and Kugrens 1992 citation is bibliographic corroboration of the GO reference,
+    as explicitly scoped in the target.
+  snapshot_sha256: a21b7888c159965338bb41488634a906dec936d285bf99062cf72baa8095ea46
+- evidence_id: doi-1992
+  kind: authority
+  reference: https://api.crossref.org/works/10.1128/mr.56.4.529-542.1992
+  locator: Crossref message.DOI, title, authors and publication metadata
+  accessed_at: '2026-10-19T07:40:10Z'
+  support: supports
+  summary: 'DOI identity confirmed: Relationship between the flagellates and the ciliates'
+  snapshot_sha256: 5f6a8c45681848312144a1197f9a0fdb9bc8075604fc7f8ee4fd738d91d8b167
+- evidence_id: doi-2014
+  kind: authority
+  reference: https://api.crossref.org/works/10.3390/microorganisms2010073
+  locator: Crossref message.DOI, title, authors and publication metadata
+  accessed_at: '2026-10-19T07:40:10Z'
+  support: supports
+  summary: 'DOI identity confirmed: A Comparative Overview of the Flagellar Apparatus
+    of Dinoflagellate, Perkinsids and Colpodellids'
+  snapshot_sha256: a4832f05fb7c1c4b5ab88b51a5da6f01e1c5f015ebb82530151e3420ac34cd1a
+- evidence_id: doi-2022
+  kind: authority
+  reference: https://api.crossref.org/works/10.1038/s41467-022-28867-8
+  locator: Crossref message.DOI, title, authors and publication metadata
+  accessed_at: '2026-10-19T07:40:11Z'
+  support: supports
+  summary: 'DOI identity confirmed: Mucospheres produced by a mixotrophic protist
+    impact ocean carbon cycling'
+  snapshot_sha256: 2cd169766565eff1839c199ec6c47997033913f18527615f6fb396e1b60c187a
+- evidence_id: doi-2025
+  kind: authority
+  reference: https://api.crossref.org/works/10.1111/jeu.70017
+  locator: Crossref message.DOI, title, authors and publication metadata
+  accessed_at: '2026-10-19T07:40:11Z'
+  support: supports
+  summary: 'DOI identity confirmed: <i>Prorocentrum insidiosum</i> sp. nov. (Prorocentrales,
+    Dinophyceae): Morphological and Phylogenetic Characterization of a Mucosphere
+    Producing Dinoflagellate From the “<i>cordatum</i> Group”'
+  snapshot_sha256: a872cbc268962e7ad46042b2acebdbf70fb9a3e6c964b60af006d0075a9680ea
+- evidence_id: flagellar-review
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5029502/fullTextXML
+  locator: Sections on dinokaryote microtubular strand/basket and 3.3 Is the Dinoflagellate
+    Peduncle Homologous to the Apical Complex?
+  accessed_at: '2026-10-19T07:40:33Z'
+  support: supports
+  summary: The review distinguishes demonstrated peduncle-associated strands from
+    the unresolved gonyaulacoid connection. It describes nearby flagellar structures
+    and discusses apical-complex/vesicle homology without establishing universal equivalence.
+  snapshot_sha256: 6bdce5e79beeee0c00fac434ff90f0a310968fbf12d86292cab07da88a32ba98
+- evidence_id: feeding-study
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8921327/fullTextXML
+  locator: 'Results: Identification and distribution; Prorocentrum cf. balticum is
+    a constitutive mixotroph; Figure 2e1-e2 caption'
+  accessed_at: '2026-10-19T07:40:34Z'
+  support: supports
+  summary: Australian isolates are reported feeding on Rhodomonas salina with a short
+    tubular peduncle; resulting intracellular food vacuoles support myzocytosis. This
+    directly supports the narrowly stated feeding observation.
+  snapshot_sha256: 8c451f3e9dad3fb1d9962073128ecbefaa15e032635046d1896ed45868152c98
+- evidence_id: taxonomy-study
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12125498/fullTextXML
+  locator: Abstract; introduction; strain/molecular methods; Prorocentrum insidiosum
+    description and phylogenetic results
+  accessed_at: '2026-10-19T07:40:31Z'
+  support: supports
+  summary: The formerly provisional Prorocentrum cf. balticum strains are described
+    as P. insidiosum. Morphological and phylogenetic evidence supports that taxonomic
+    reassignment; the target does not use this paper as the primary feeding experiment.
+  snapshot_sha256: 1971da89b18b3926d80ee71e8a93c9f94e9c8e1ef088ccf98f948d586e675230
+- evidence_id: old-paper-access
+  kind: database
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC372886/
+  locator: PMC372886 HTML citation metadata and abstract; fullTextXML route and publisher
+    DOI landing attempts
+  accessed_at: '2026-10-19T07:41:04Z'
+  support: context_only
+  summary: PMC HTML exposes bibliographic metadata and abstract but no searchable
+    peduncle occurrence. Europe PMC fullTextXML returned HTTP 500, and the publisher
+    route returned HTTP 403. Full article body was not reassessed; the record assigns
+    this citation only a bibliographic role.
+  snapshot_sha256: 562791a51fad9896838ef5b802d3902ca2c5392aa20bb22c40e2855ffe89ac9c
+  search_scope: Exact PMC372886 HTML and Europe PMC fullTextXML endpoint, plus DOI:10.1128/mr.56.4.529-542.1992
+    publisher route. Case-insensitive pedunc search of fetched HTML returned zero;
+    this does not establish absence from the scanned article.
+- evidence_id: repository-context
+  kind: search
+  reference: isolated repository working tree
+  locator: history/records/dinoflagellate_peduncle, reviews, data/structures, research,
+    curation; git log target history
+  accessed_at: '2026-10-19T07:41:54Z'
+  support: context_only
+  summary: Ignored-inclusive identity search found the target, two record-level history
+    files and a suctorian-tentacle boundary mention. No prior structured review for
+    this target was found within the searched reviews tree. Git history identifies
+    the record-creation commit 640c7973fee157e555423ae321d70522e22f4657.
+  search_scope: rg --no-ignore --hidden -n for GO:1990905, dinoflagellate_peduncle
+    and dinoflagellate peduncle across history reviews data/structures research curation.
+    Ignored/hidden files included; .git and .venv excluded. git log --all --follow
+    inspected separately for the target. The sibling is context only, not a reviewed
+    target.
+- evidence_id: schema
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Target path; strict report /private/tmp/cellstructure-record-reviews-UhRFh7/peduncle-review/strict.tsv
+  accessed_at: '2026-10-19T07:41:54Z'
+  support: supports
+  summary: Both focused commands exited 0. Open validation found no issues; closed
+    validation scanned one file with zero ERROR rows.
+- evidence_id: target-resolver-coverage
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/dinoflagellate_peduncle.yaml; exact scripts/check_curies.py
+    collect() scope; reports/curie_check.tsv
+  accessed_at: '2026-10-19T23:32:25.400320Z'
+  support: supports
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+  summary: 'This target contains 11 distinct CURIE-shaped scalar values: 7 OK, 4 transport-unreachable
+    and 0 skipped in the global report. The attached scoped receipts resolve each
+    non-OK identifier. HTTP URLs and prose are outside collect(); their content was
+    inspected separately. Existence is not proof of correct biological mapping.'
+- evidence_id: liveness-pmid-1480107
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1480107,27694777,35288549,40448289&retmode=xml
+  locator: PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList
+    (not nested cited-reference IDs)
+  accessed_at: '2026-10-19T07:40:10Z'
+  support: supports
+  summary: 'PMID:1480107 resolves through the scoped source inspection. Exact article
+    join: pubmed=1480107, pmc=PMC372886, doi=10.1128/mr.56.4.529-542.1992. Bibliographic
+    identifier identity; source-claim sufficiency is assessed separately.'
+  snapshot_sha256: a21b7888c159965338bb41488634a906dec936d285bf99062cf72baa8095ea46
+- evidence_id: liveness-pmid-27694777
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1480107,27694777,35288549,40448289&retmode=xml
+  locator: PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList
+    (not nested cited-reference IDs)
+  accessed_at: '2026-10-19T07:40:10Z'
+  support: supports
+  summary: 'PMID:27694777 resolves through the scoped source inspection. Exact article
+    join: pubmed=27694777, pmc=PMC5029502, doi=10.3390/microorganisms2010073, pii=microorganisms2010073.
+    Bibliographic identifier identity; source-claim sufficiency is assessed separately.'
+  snapshot_sha256: a21b7888c159965338bb41488634a906dec936d285bf99062cf72baa8095ea46
+- evidence_id: liveness-pmid-35288549
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1480107,27694777,35288549,40448289&retmode=xml
+  locator: PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList
+    (not nested cited-reference IDs)
+  accessed_at: '2026-10-19T07:40:10Z'
+  support: supports
+  summary: 'PMID:35288549 resolves through the scoped source inspection. Exact article
+    join: pubmed=35288549, pmc=PMC8921327, doi=10.1038/s41467-022-28867-8, pii=10.1038/s41467-022-28867-8.
+    Bibliographic identifier identity; source-claim sufficiency is assessed separately.'
+  snapshot_sha256: a21b7888c159965338bb41488634a906dec936d285bf99062cf72baa8095ea46
+- evidence_id: liveness-pmid-40448289
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1480107,27694777,35288549,40448289&retmode=xml
+  locator: PubmedArticle/MedlineCitation/PMID joined only to that article's PubmedData/ArticleIdList
+    (not nested cited-reference IDs)
+  accessed_at: '2026-10-19T07:40:10Z'
+  support: supports
+  summary: 'PMID:40448289 resolves through the scoped source inspection. Exact article
+    join: pubmed=40448289, pmc=PMC12125498, doi=10.1111/jeu.70017. Bibliographic identifier
+    identity; source-claim sufficiency is assessed separately.'
+  snapshot_sha256: a21b7888c159965338bb41488634a906dec936d285bf99062cf72baa8095ea46
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure identity, definition and granularity
+  outcome: supported
+  summary: The record denotes a specific dinoflagellate cytoplasmic appendage. Its
+    GO definition, APPENDAGE category and structure kind agree with the authority.
+    It is distinct from a flagellum, basal-body apparatus, suctorian tentacle and
+    proposed apical-complex homologue.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - record
+  - go
+  - flagellar-review
+  - repository-context
+- assessment_id: hierarchy
+  area: representation
+  topic: Is-a versus parthood
+  outcome: supported
+  summary: The only hierarchical assertion is the exact current is-a parent GO:0120025.
+    The record does not force nearby flagellar machinery or unproven homologues into
+    part_of or has_part.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - go
+  - flagellar-review
+- assessment_id: taxonomic-scope
+  area: scope
+  topic: Variable occurrence within Dinophyceae
+  outcome: supported
+  summary: The class identifier and label match NCBI. VARIABLE is a conservative qualitative
+    reading of GO occurrence in some dinoflagellates, without asserting universal
+    distribution or converting species-level feeding observations into a prevalence
+    estimate.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - go
+  - taxon
+  - feeding-study
+  dimensions:
+  - name: taxon-rank
+    value: class
+    definition: Rank of the declared taxonomic distribution node NCBITaxon:2864.
+    evidence_ids:
+    - taxon
+  - name: presence-evidence
+    value: GO qualitative scope; direct species observations
+    definition: Basis for VARIABLE rather than quantitative or universal prevalence.
+    evidence_ids:
+    - go
+    - feeding-study
+- assessment_id: composition
+  area: completeness
+  topic: Molecular composition and unresolved component boundaries
+  outcome: supported
+  summary: No protein-family or stoichiometry claim is made. The open component discussion
+    accurately separates a microtubule-containing structure from a curated molecular
+    inventory; the cited review does not by itself localize exact families throughout
+    the structure class.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - record
+  - go
+  - flagellar-review
+- assessment_id: literature
+  area: evidence
+  topic: Claim placement and article identity
+  outcome: supported
+  summary: Every stated article identity and source role is supported. The 2014 synthesis
+    supplies structural context, the 2022 primary study supplies feeding evidence,
+    and the 2025 paper supplies taxonomy. The 1992 source is explicitly restricted
+    to metadata corroboration.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - pubmed
+  - doi-1992
+  - doi-2014
+  - doi-2022
+  - doi-2025
+  - flagellar-review
+  - feeding-study
+  - taxonomy-study
+  - old-paper-access
+- assessment_id: graph
+  area: graph
+  topic: Single NONMECHANISTIC topology edge
+  outcome: supported
+  summary: Both nodes resolve exactly, and the single is-a edge matches GO. NONMECHANISTIC
+    and scope notes accurately limit the FUNCTION graph to topology; neither assembly
+    causality nor a molecular feeding reaction is asserted.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - record
+  - go
+  dimensions:
+  - name: graph-evidence-tier
+    value: Ontology topology, NONMECHANISTIC
+    definition: The edge represents a classification relation, not experimental causal
+      mechanism.
+    evidence_ids:
+    - record
+    - go
+- assessment_id: discussions
+  area: consistency
+  topic: Flagellar boundary and apical-complex homology discussions
+  outcome: supported
+  summary: The resolved projection boundary and two open questions are actionable
+    and faithful to the review source. No apical-complex component or vesicle homology
+    is silently promoted to established peduncle composition.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - record
+  - go
+  - flagellar-review
+- assessment_id: optional-surfaces
+  area: completeness
+  topic: Examples, functions, images, properties and cross-corpus links
+  outcome: not_applicable
+  summary: Canonical examples, structured function rows, images, physical properties,
+    complex compositions, trait links and datasets are absent. None is mandatory for
+    the present bounded claims; their absence alone is not a finding.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - record
+- assessment_id: status-history
+  area: provenance
+  topic: PROPOSED status, ownership and history
+  outcome: supported
+  summary: The maintained YAML owns future scientific changes. PROPOSED status and
+    both record-history files describe creation and later evidence-scope correction;
+    this review does not promote status or dispose of historical GitHub issues.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - record
+  - repository-context
+- assessment_id: validation
+  area: schema
+  topic: Focused open and closed validation
+  outcome: supported
+  summary: Both documented focused validators pass.
+  target_ids:
+  - GO:1990905
+  evidence_ids:
+  - schema
+findings: []
+actions: []
+limitations:
+- The 1992 article body was not reassessed. PubMed/Crossref and PMC HTML establish
+  its bibliographic identity, which is the only role assigned to it by the target.
+  The exact fullTextXML route failed and the publisher route was forbidden; no absence
+  inference is made about the scanned article.
+- The supported scope is an anatomical structure with qualitative occurrence and a
+  topology graph. This does not establish a complete molecular inventory, universal
+  peduncle composition or direct apical-complex homology.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The user expressly requested a validated saved review for every unreviewed target,
+  including clean records, overriding the local issue-only persistence gate. No finding
+  was invented to justify output.
+- No target, generated page, curation event or repository history file was changed.
+  No remote communication or paid provider was used.
+- No gene, locus, protein accession or expression dataset is asserted by this record;
+  an expression-module database is not applicable to these ontology and ultrastructure
+  claims.
+```

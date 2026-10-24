@@ -1,0 +1,700 @@
+# Hamus: identity, composition and attachment evidence
+
+- Review: 20261019T233310Z-hamus-review
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-19T07:41:02Z
+- Finished UTC: 2026-10-19T23:33:10Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+No concrete curation issue observed in this one-record audit. The structure, scoped composition, distribution, adhesion and five graph edges are supported; unresolved exact family identity remains explicit.
+
+## Scope And Provenance
+
+Full target-file and all-field audit, with all five causal edges assessed against source text.
+
+Selection: Hamus is the seventh path-ordered unreviewed target selected for this batch; only this record is the scientific target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:hamus | data/structures/appendage/hamus.yaml | maintained | hamus |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Open schema validation | passed | True | cellstructuremech:hamus | Target validation exited 0 with no reported errors. |
+| Closed schema validation | passed | True | cellstructuremech:hamus | Target validation exited 0 with no reported errors. |
+| Native literature readability audit | passed | True | cellstructuremech:hamus | Exit 0: three references across 16 citations (14 evidence items); two full text and one abstract. Manual publisher inspection supplied the third full body. |
+| Claim-level primary-source inspection | passed | True | cellstructuremech:hamus | Inspected the relevant body sections of all three cited papers, and exact taxon/GO authority records. The five edges were each assessed against their nearest citations. |
+| Verbatim quotation applicability | not_applicable | False | cellstructuremech:hamus | The entire record contains no snippet fields. No quotation match is asserted. |
+| iModulonDB runner availability | unavailable | False | cellstructuremech:hamus | kg-microbe-sources was not available on PATH. No transcriptomic dataset or named gene accession is asserted in the record, and no expression-module inference was needed; NCBI and QuickGO authority endpoints were inspected directly. |
+| Target identifier coverage including resolver residuals | passed | True | cellstructuremech:hamus | All CURIE-shaped target values have issuing-authority or appropriate local/source-specific existence verification. Generic PMID HTTP414 failures and skipped namespaces were resolved by scoped receipts; biological mapping correctness is assessed separately. |
+| Full corpus QC | passed | True | cellstructuremech:hamus | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:hamus | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:hamus | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:hamus | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | cellstructuremech:hamus | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Identity, synonyms and broader parent
+
+identity: supported. Targets: cellstructuremech:hamus.
+
+The coined appendage identity, plural hami and related hook names are supported. Category/kind are APPENDAGE; GO:0042995 is a broader parent, not an identity substitution.
+
+### Major constituent, measurement meaning and essentiality
+
+representation: supported. Targets: cellstructuremech:hamus.
+
+Major-constituent wording and UNKNOWN essentiality are appropriate; 120 kDa is apparent gel mobility, not an exact unmodified sequence mass. The model does not exclude minor constituents or infer universal stoichiometry.
+
+### Taxonomic distribution and canonical example
+
+scope: supported. Targets: cellstructuremech:hamus.
+
+The species identifier/name match NCBI. COMMON is supported as qualitative occurrence in studied SM1 populations; the cited exemplar has both EM and cryo-ET support. No prevalence percentage or cross-archaeal universal claim is encoded.
+
+### Adhesion function and nearest-source support
+
+evidence: supported. Targets: cellstructuremech:hamus.
+
+Moissl supports adhesion assays; Perras 2014 supports observed biofilm contact sites. The record does not upgrade proposed motility, signaling or electron transfer to established function.
+
+### Nodes and all five edge assertions
+
+graph: supported. Targets: cellstructuremech:hamus.
+
+Edge 0: major filament constituent; edge 1: periodic prickles; edge 2: terminal tripartite hook; edge 3: hook parthood; edge 4: surface attachment. Each matches its nearest citation. Node types/references agree; NONMECHANISTIC scope properly excludes an established assembly/contact mechanism.
+
+### Label-only subunit and open discussion
+
+grounding: supported. Targets: cellstructuremech:hamus.
+
+The record explicitly retains unresolved exact family grounding. Broader domain/fold similarity is insufficient to replace that honest label-only representation. The discussion targets the component and cites a relevant source; absent protein examples are not presented as biological absence.
+
+### Optional composition, properties, images and cross-corpus links
+
+completeness: not_applicable. Targets: cellstructuremech:hamus.
+
+No complex-composition rows, physical-property objects, images, datasets, pathway or trait links are asserted. These optional omissions are not defects or evidence of nonexistence.
+
+### Status, history, bibliography and internal consistency
+
+provenance: supported. Targets: cellstructuremech:hamus.
+
+PROPOSED is appropriate for agent-authored content. Inline and repository history agree; bibliography identities match inspected papers, and the existing discussion remains open. No record mutation or status promotion is authorized by this review.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/hamus.yaml; Entire YAML, including all five causal edges | supports | Read every field: one component, one taxonomic row, one canonical example, one function, five edges, one open grounding discussion and three curation events. |
+| moissl2005 | https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2005.04294.x; Results: electron microscopy/tomography, biochemical analyses, immunological studies, cell adhesion; Figures 2–7 | supports | Full publisher body supports the filament/hook identity, apparent 120 kDa major subunit, surface adhesion and SM1 exemplar. Direct HTTP retrieval returned 403; browser retrieval exposed Results and Methods. Native readability audit reached only the abstract. |
+| perras2014 | https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2014.00397/full; Results and Discussion; Figures 4–8; PMC4122167 body XML | supports | EM shows hami contacting neighboring archaeal/bacterial cells and extending beyond EPS. The paper distinguishes the SM and MSI populations as different strains and labels additional functions speculative. |
+| perras2015 | https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2015.00543/full; Results: hamus ultrastructure, subunit identification and sequence analyses; Discussion; PMC4460559 body XML | supports | Protein identification links a major hamus subunit to the apparent 120 kDa band; sequence predicts 97 kDa, with glycosylation proposed for the difference. Similarity to S-layer domains and predicted folds does not establish an exact whole-protein family. Minority constituents/assembly proteins remain possible. |
+| taxonomy | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=1803513&amp;retmode=xml; Taxon ScientificName, Rank, OtherNames | supports | 1803513 is species Candidatus Altarchaeum hamiconexum. Candidatus Altiarchaeum hamiconexum and SM1 Euryarchaeon are synonyms; the record uses the current authority spelling. |
+| parent | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042995; GO:0042995 name, definition, aspect, isObsolete | supports | Active cellular-component term cell projection denotes a process extending from a cell and is an appropriate broader is-a parent. |
+| go-search | https://www.ebi.ac.uk/QuickGO/services/ontology/go/search; Queries hamus; hami; grappling hook | supports | No hamus/hami hits; eight hook-query matches denote flagellar hooks, kinetoplastid bilobes or appressorium processes. None of the inspected candidates equals this archaeal appendage. |
+| history | history/records/hamus/2026-09-11T135526Z-codex-da1879.yaml; CREATE event and linked issue/PR URLs | supports | Repository history records creation and claim-narrowing decisions corresponding to the three inline events; present claims preserve those narrower boundaries. |
+| internal | repository working tree; hamus identifier, label, slug, and GO:0042995 | supports | The target, its repository history and broader GO parent were located. No duplicate maintained hamus identity was found within the inspected corpus. |
+| target-resolver-coverage | just check-curies-strict; data/structures/appendage/hamus.yaml; exact scripts/check_curies.py collect() scope; reports/curie_check.tsv | supports | This target contains 6 distinct CURIE-shaped scalar values: 5 OK, 0 transport-unreachable and 1 skipped in the global report. The attached scoped receipts resolve each non-OK identifier. HTTP URLs and prose are outside collect(); their content was inspected separately. Existence is not proof of correct biological mapping. |
+| liveness-cellstructuremech-hamus | data/structures/appendage/hamus.yaml; identifier: cellstructuremech:hamus | supports | cellstructuremech:hamus resolves through the scoped source inspection. Intentionally local namespace; its defining maintained record resolves. No external authority is expected. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- No exact source-neutral whole-protein family accession was established; the existing label-only status and open discussion already disclose this.
+- Qualitative taxonomic occurrence is based on sampled spring populations, not a measured species-wide prevalence.
+- The iModulonDB runner was unavailable on PATH; no transcriptomic claim was evaluated or inferred.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Clean review saved under the explicit user instruction to save one validated bundle for every unreviewed target; no finding was invented to satisfy the repository issue-only persistence default.
+- Shared native checks were executed against unchanged scientific inputs, with their actual results attached. No scientific record, history or generated page was changed.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261019T233310Z-hamus-review
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Hamus: identity, composition and attachment evidence'
+started_at: '2026-10-19T07:41:02Z'
+finished_at: '2026-10-19T23:33:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Fresh audit of existing agent-authored material; prior authorship
+    identity is not established as independent human review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No concrete curation issue observed in this one-record audit. The structure,
+  scoped composition, distribution, adhesion and five graph edges are supported; unresolved
+  exact family identity remains explicit.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/hamus.yaml
+    sha256: 70f8b17cfcb804de80cb347cb03e6b6f13bedc6ec62a639030d7915e5253f553
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/hamus/2026-09-11T135526Z-codex-da1879.yaml
+    sha256: bcf7667f80b81ea3402aa79983b8c0a7700194d42489dfc2ef795cd4097b3c1c
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+targets:
+- target_id: cellstructuremech:hamus
+  path: data/structures/appendage/hamus.yaml
+  label: hamus
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/hamus.yaml
+    role: maintained scientific record
+scope:
+  description: Full target-file and all-field audit, with all five causal edges assessed
+    against source text.
+  selection: Hamus is the seventh path-ordered unreviewed target selected for this
+    batch; only this record is the scientific target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:hamus
+checks:
+- check_id: schema
+  name: Open schema validation
+  status: passed
+  required: true
+  summary: Target validation exited 0 with no reported errors.
+  target_ids:
+  - cellstructuremech:hamus
+  command: just validate data/structures/appendage/hamus.yaml
+  exit_code: 0
+  scope_note: 2026-10-19T07:41:03Z to 2026-10-19T07:41:05Z; log SHA-256 ac03f51e8921277a63a48b154a6274e40405c3de80224bba08a681fad73af56b
+- check_id: strict
+  name: Closed schema validation
+  status: passed
+  required: true
+  summary: Target validation exited 0 with no reported errors.
+  target_ids:
+  - cellstructuremech:hamus
+  command: just validate-strict data/structures/appendage/hamus.yaml --out /private/tmp/cellstructure-record-reviews-UhRFh7/hamus-strict.tsv
+  exit_code: 0
+  scope_note: 2026-10-19T07:41:05Z to 2026-10-19T07:41:07Z; log SHA-256 da5edd0759d47c2972075eb51fc1774316f76e85d99b5965d31877b40f15f792
+- check_id: readability
+  name: Native literature readability audit
+  status: passed
+  required: true
+  summary: 'Exit 0: three references across 16 citations (14 evidence items); two
+    full text and one abstract. Manual publisher inspection supplied the third full
+    body.'
+  target_ids:
+  - cellstructuremech:hamus
+  command: uv run python scripts/fetch_snippets.py --audit --record data/structures/appendage/hamus.yaml
+  exit_code: 0
+  evidence_ids:
+  - moissl2005
+  - perras2014
+  - perras2015
+- check_id: source-inspection
+  name: Claim-level primary-source inspection
+  status: passed
+  required: true
+  summary: Inspected the relevant body sections of all three cited papers, and exact
+    taxon/GO authority records. The five edges were each assessed against their nearest
+    citations.
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - moissl2005
+  - perras2014
+  - perras2015
+  - taxonomy
+  - parent
+- check_id: snippets
+  name: Verbatim quotation applicability
+  status: not_applicable
+  required: false
+  summary: The entire record contains no snippet fields. No quotation match is asserted.
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - record
+- check_id: structured-adapter
+  name: iModulonDB runner availability
+  status: unavailable
+  required: false
+  summary: kg-microbe-sources was not available on PATH. No transcriptomic dataset
+    or named gene accession is asserted in the record, and no expression-module inference
+    was needed; NCBI and QuickGO authority endpoints were inspected directly.
+  target_ids:
+  - cellstructuremech:hamus
+  scope_note: command -v kg-microbe-sources returned 1; this bounded check does not
+    establish absence of an installation elsewhere.
+- check_id: target-identifier-coverage
+  name: Target identifier coverage including resolver residuals
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hamus
+  summary: All CURIE-shaped target values have issuing-authority or appropriate local/source-specific
+    existence verification. Generic PMID HTTP414 failures and skipped namespaces were
+    resolved by scoped receipts; biological mapping correctness is assessed separately.
+  evidence_ids:
+  - target-resolver-coverage
+  - liveness-cellstructuremech-hamus
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hamus
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hamus
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hamus
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hamus
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:hamus
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused across
+    the batch because maintained scientific inputs are unchanged. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/hamus.yaml
+  locator: Entire YAML, including all five causal edges
+  accessed_at: '2026-10-19T07:44:33Z'
+  support: supports
+  summary: 'Read every field: one component, one taxonomic row, one canonical example,
+    one function, five edges, one open grounding discussion and three curation events.'
+- evidence_id: moissl2005
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2005.04294.x
+  locator: 'Results: electron microscopy/tomography, biochemical analyses, immunological
+    studies, cell adhesion; Figures 2–7'
+  accessed_at: '2026-10-19T07:44:17Z'
+  support: supports
+  summary: Full publisher body supports the filament/hook identity, apparent 120 kDa
+    major subunit, surface adhesion and SM1 exemplar. Direct HTTP retrieval returned
+    403; browser retrieval exposed Results and Methods. Native readability audit reached
+    only the abstract.
+- evidence_id: perras2014
+  kind: primary_source
+  reference: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2014.00397/full
+  locator: Results and Discussion; Figures 4–8; PMC4122167 body XML
+  accessed_at: '2026-10-19T07:42:13Z'
+  support: supports
+  summary: EM shows hami contacting neighboring archaeal/bacterial cells and extending
+    beyond EPS. The paper distinguishes the SM and MSI populations as different strains
+    and labels additional functions speculative.
+  snapshot_sha256: 6af180dcd89af6ae313c1486d0a69e7647e6b9a2679bde66b4a9efdedbbe306c
+- evidence_id: perras2015
+  kind: primary_source
+  reference: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2015.00543/full
+  locator: 'Results: hamus ultrastructure, subunit identification and sequence analyses;
+    Discussion; PMC4460559 body XML'
+  accessed_at: '2026-10-19T07:41:38Z'
+  support: supports
+  summary: Protein identification links a major hamus subunit to the apparent 120
+    kDa band; sequence predicts 97 kDa, with glycosylation proposed for the difference.
+    Similarity to S-layer domains and predicted folds does not establish an exact
+    whole-protein family. Minority constituents/assembly proteins remain possible.
+  snapshot_sha256: d7a89450dbdeb91100ec5f0d50460aa3abdabd87fed41f6d229c56fe4c6f5437
+- evidence_id: taxonomy
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1803513&retmode=xml
+  locator: Taxon ScientificName, Rank, OtherNames
+  accessed_at: '2026-10-19T07:41:38Z'
+  support: supports
+  summary: 1803513 is species Candidatus Altarchaeum hamiconexum. Candidatus Altiarchaeum
+    hamiconexum and SM1 Euryarchaeon are synonyms; the record uses the current authority
+    spelling.
+  snapshot_sha256: 15195345900da131f0d12ff326543bddd62a0022f1165cf8ae83737ea0e1f0b5
+- evidence_id: parent
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042995
+  locator: GO:0042995 name, definition, aspect, isObsolete
+  accessed_at: '2026-10-19T07:41:38Z'
+  support: supports
+  summary: Active cellular-component term cell projection denotes a process extending
+    from a cell and is an appropriate broader is-a parent.
+  snapshot_sha256: b7bc936645b14ccf7b8d96f309e7ff4b3965e82c0b305cc6e5d3c2ae03005bd5
+- evidence_id: go-search
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search
+  locator: Queries hamus; hami; grappling hook
+  accessed_at: '2026-10-19T07:42:18Z'
+  support: supports
+  summary: No hamus/hami hits; eight hook-query matches denote flagellar hooks, kinetoplastid
+    bilobes or appressorium processes. None of the inspected candidates equals this
+    archaeal appendage.
+  search_scope: Live QuickGO searches for hamus, hami and grappling hook, limit 100;
+    all returned hits inspected. Bounded synonym search, not proof against every possible
+    ontology wording.
+- evidence_id: history
+  kind: record_content
+  reference: history/records/hamus/2026-09-11T135526Z-codex-da1879.yaml
+  locator: CREATE event and linked issue/PR URLs
+  accessed_at: '2026-10-19T07:44:33Z'
+  support: supports
+  summary: Repository history records creation and claim-narrowing decisions corresponding
+    to the three inline events; present claims preserve those narrower boundaries.
+- evidence_id: internal
+  kind: search
+  reference: repository working tree
+  locator: hamus identifier, label, slug, and GO:0042995
+  accessed_at: '2026-10-19T07:44:33Z'
+  support: supports
+  summary: The target, its repository history and broader GO parent were located.
+    No duplicate maintained hamus identity was found within the inspected corpus.
+  search_scope: rg --no-ignore --hidden in clone data/structures, history/records,
+    conf and reviews/structured; target identifier, hamus, hami and GO:0042995. Ignored
+    files included; Git metadata and dependency directories excluded. Duplicate-identity
+    conclusion is limited to maintained data/structures.
+- evidence_id: target-resolver-coverage
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/hamus.yaml; exact scripts/check_curies.py collect()
+    scope; reports/curie_check.tsv
+  accessed_at: '2026-10-19T23:32:25.400320Z'
+  support: supports
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+  summary: 'This target contains 6 distinct CURIE-shaped scalar values: 5 OK, 0 transport-unreachable
+    and 1 skipped in the global report. The attached scoped receipts resolve each
+    non-OK identifier. HTTP URLs and prose are outside collect(); their content was
+    inspected separately. Existence is not proof of correct biological mapping.'
+- evidence_id: liveness-cellstructuremech-hamus
+  kind: record_content
+  reference: data/structures/appendage/hamus.yaml
+  locator: 'identifier: cellstructuremech:hamus'
+  accessed_at: '2026-10-19T07:44:33Z'
+  support: supports
+  summary: cellstructuremech:hamus resolves through the scoped source inspection.
+    Intentionally local namespace; its defining maintained record resolves. No external
+    authority is expected.
+  snapshot_sha256: 70f8b17cfcb804de80cb347cb03e6b6f13bedc6ec62a639030d7915e5253f553
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Identity, synonyms and broader parent
+  outcome: supported
+  summary: The coined appendage identity, plural hami and related hook names are supported.
+    Category/kind are APPENDAGE; GO:0042995 is a broader parent, not an identity substitution.
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - record
+  - moissl2005
+  - perras2015
+  - parent
+  - go-search
+- assessment_id: component
+  area: representation
+  topic: Major constituent, measurement meaning and essentiality
+  outcome: supported
+  summary: Major-constituent wording and UNKNOWN essentiality are appropriate; 120
+    kDa is apparent gel mobility, not an exact unmodified sequence mass. The model
+    does not exclude minor constituents or infer universal stoichiometry.
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - record
+  - moissl2005
+  - perras2015
+  dimensions:
+  - name: evidence_type
+    value: Biochemical band and antibody localization; sequence and fold comparisons
+    definition: Observed membership is distinct from predicted molecular properties
+      and family identity.
+    evidence_ids:
+    - moissl2005
+    - perras2015
+- assessment_id: taxa
+  area: scope
+  topic: Taxonomic distribution and canonical example
+  outcome: supported
+  summary: The species identifier/name match NCBI. COMMON is supported as qualitative
+    occurrence in studied SM1 populations; the cited exemplar has both EM and cryo-ET
+    support. No prevalence percentage or cross-archaeal universal claim is encoded.
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - record
+  - taxonomy
+  - moissl2005
+  - perras2014
+  dimensions:
+  - name: experimental_context
+    value: Uncultivated SM1 populations from cold sulfidic springs; SM and MSI strains
+    definition: Sampling context bounds the distribution and ultrastructural evidence.
+    evidence_ids:
+    - moissl2005
+    - perras2014
+- assessment_id: function
+  area: evidence
+  topic: Adhesion function and nearest-source support
+  outcome: supported
+  summary: Moissl supports adhesion assays; Perras 2014 supports observed biofilm
+    contact sites. The record does not upgrade proposed motility, signaling or electron
+    transfer to established function.
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - moissl2005
+  - perras2014
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Nodes and all five edge assertions
+  outcome: supported
+  summary: 'Edge 0: major filament constituent; edge 1: periodic prickles; edge 2:
+    terminal tripartite hook; edge 3: hook parthood; edge 4: surface attachment. Each
+    matches its nearest citation. Node types/references agree; NONMECHANISTIC scope
+    properly excludes an established assembly/contact mechanism.'
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - record
+  - moissl2005
+  - perras2014
+- assessment_id: grounding
+  area: grounding
+  topic: Label-only subunit and open discussion
+  outcome: supported
+  summary: The record explicitly retains unresolved exact family grounding. Broader
+    domain/fold similarity is insufficient to replace that honest label-only representation.
+    The discussion targets the component and cites a relevant source; absent protein
+    examples are not presented as biological absence.
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - record
+  - perras2015
+- assessment_id: optional
+  area: completeness
+  topic: Optional composition, properties, images and cross-corpus links
+  outcome: not_applicable
+  summary: No complex-composition rows, physical-property objects, images, datasets,
+    pathway or trait links are asserted. These optional omissions are not defects
+    or evidence of nonexistence.
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - record
+- assessment_id: lifecycle
+  area: provenance
+  topic: Status, history, bibliography and internal consistency
+  outcome: supported
+  summary: PROPOSED is appropriate for agent-authored content. Inline and repository
+    history agree; bibliography identities match inspected papers, and the existing
+    discussion remains open. No record mutation or status promotion is authorized
+    by this review.
+  target_ids:
+  - cellstructuremech:hamus
+  evidence_ids:
+  - record
+  - history
+  - internal
+  - moissl2005
+  - perras2014
+  - perras2015
+findings: []
+actions: []
+limitations:
+- No exact source-neutral whole-protein family accession was established; the existing
+  label-only status and open discussion already disclose this.
+- Qualitative taxonomic occurrence is based on sampled spring populations, not a measured
+  species-wide prevalence.
+- The iModulonDB runner was unavailable on PATH; no transcriptomic claim was evaluated
+  or inferred.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Clean review saved under the explicit user instruction to save one validated bundle
+  for every unreviewed target; no finding was invented to satisfy the repository issue-only
+  persistence default.
+- Shared native checks were executed against unchanged scientific inputs, with their
+  actual results attached. No scientific record, history or generated page was changed.
+```
