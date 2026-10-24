@@ -1,0 +1,887 @@
+schema_version: 1.0.0
+review_id: 20261022T072021Z-get-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-grounded review of GET complex
+started_at: '2026-10-22T06:59:35Z'
+finished_at: '2026-10-22T07:20:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Two minor findings resolve the GET receptor/targeting-factor inventory and
+  distinguish the purified recruitment assay from extract/microsome insertion. Exact
+  identity, ER destination and the broad GET insertion function are supported.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/get_complex.yaml
+    sha256: d4135074d17c507ff77f421100ae094ec373452ad92594a56cd293e8b3744d6c
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0043529
+  path: data/structures/other/get_complex.yaml
+  label: GET complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/get_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target, with source-native and primary
+    reading scopes declared individually.
+  selection: One complete record in strict-path batch 56 of the explicit all-unreviewed-record
+    goal.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0043529
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  command: just validate data/structures/other/get_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  command: just validate-strict data/structures/other/get_complex.yaml --out /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/get_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native focused causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  command: /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/get_complex.yaml --causal-graphs
+  exit_code: 0
+  summary: Focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native focused verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  command: /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/get_complex.yaml --verify
+  exit_code: 0
+  summary: Focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0043529
+  summary: No iModulon-specific claim is assessed; the relevant complex/assay evidence
+    was inspected directly.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - graphs
+  - root56-sources-go
+  - root56-sources-GO0043529-ancestors
+  - root56-sources-tax-4932
+  - root56-sources-tax-559292
+  - root56-sources-doi-10.1016_j.cell.2008.06.025
+  - root56-sources-protein-P53192
+  - root56-sources-gene-GET1
+  - root56-sources-protein-P40056
+  - root56-sources-gene-GET2
+  - root56-sources-protein-Q12154
+  - root56-sources-gene-GET3
+  - root56-sources-ipr-IPR028945
+  - root56-sources-ipr-IPR028143
+  - root56-sources-ipr-IPR027542
+  - root56-sources-ipr-IPR027538
+  - root56-sources-ipr-IPR014802
+  - root56-sources-ipr-IPR016300
+  - root56-sources-ipr-IPR025723
+  - root56-sources-ipr-IPR029012
+  - root56-sources-PMC2572727-html
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  summary: 6 of 6 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0043529
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch56 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/get_complex.yaml
+  locator: Entire maintained target, including all components, evidence, graph edges,
+    discussions and history
+  accessed_at: '2026-10-22T07:05:01Z'
+  support: context_only
+  summary: The complete target was read. The maintained YAML owns any later scientific
+    correction.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: EssentialityEnum, PresenceEnum, StructuralComponent and causal-graph scope
+  accessed_at: '2026-10-22T07:05:01Z'
+  support: context_only
+  summary: Formation necessity is distinct from activity, localization and viability.
+    COMMON is the qualitative category present in most members with exceptional losses,
+    not a measured prevalence census.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact class identity and taxon-paired protein examples
+  accessed_at: '2026-10-22T07:05:01Z'
+  support: context_only
+  summary: Protein examples do not replace constituent-class grounding. Shared domains
+    and broader paralog families do not resolve exact class tasks.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Scope and edge-level source support
+  accessed_at: '2026-10-22T07:05:01Z'
+  support: context_only
+  summary: Descriptive membership graphs need not assert a complete mechanism; a directly
+    observed conditional physical dependency can be stated without making every constituent
+    universally essential.
+- evidence_id: root56-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000811,GO:0005789,GO:0006260,GO:0032991,GO:0043529,GO:0070258,GO:0071816,GO:0071980,GO:0140534,GO:0160055
+  locator: Native identities, status, complete definitions/comments/synonyms and focal
+    typed relationships
+  accessed_at: '2026-10-22T06:55:10.748737Z'
+  support: supports
+  summary: The ten inspected terms establish the focal GET, GINS and glideosome identities,
+    their declared parent classes and the named process/localization targets. Only
+    relevant typed relations were used.
+  snapshot_sha256: 09032cf2d48c60b2af7c714e4cb8b3a9aa65fce438af07e97bf95c6c59853e3a
+- evidence_id: root56-sources-GO0043529-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0043529/ancestors?relations=is_a
+  locator: Complete native is_a ancestor response
+  accessed_at: '2026-10-22T06:55:17.846194Z'
+  support: supports
+  summary: The complete is_a-only ancestry supports the declared parent class. It
+    does not establish parthood or taxonomic frequency.
+  snapshot_sha256: 4fd8d604f2fb392a3e83b75b80a7fc02160993d56b5afdad788d563871f3f55c
+- evidence_id: root56-sources-tax-4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T06:55:10.749010Z'
+  support: supports
+  summary: Native taxId 4932 identifies Saccharomyces cerevisiae; broad taxon, species
+    and reference strain are kept distinct.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root56-sources-tax-559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T06:55:11.406635Z'
+  support: supports
+  summary: Native taxId 559292 identifies Saccharomyces cerevisiae S288C; broad taxon,
+    species and reference strain are kept distinct.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root56-sources-doi-10.1016_j.cell.2008.06.025
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2008.06.025%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique DOI/PMID/title/authors/year/PMCID and entire abstractText
+  accessed_at: '2026-10-22T06:55:15.967118Z'
+  support: supports
+  summary: 'Unique DOI result MED 18724936: The GET complex mediates insertion of
+    tail-anchored proteins into the ER membrane. Schuldiner M, Metz J, Schmid V, Denic
+    V, Rakwalska M, Schmitt HD, Schwappach B, Weissman JS. (2008). Complete abstract
+    read; body evidence is separately located.'
+  snapshot_sha256: 153d5fc08c6b6076d974f9c1d0e6b66c450a0172496d26b724a4f76f3ff26eec
+- evidence_id: root56-sources-protein-P53192
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53192.json
+  locator: Identity/status/names, genes/aliases, organism and family cross-references;
+    complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, CATALYTIC ACTIVITY and SIMILARITY
+    comments where present
+  accessed_at: '2026-10-22T06:55:49.972669Z'
+  support: supports
+  summary: 'P53192: The reviewed gene/taxon identity and native whole-family cross-references
+    corroborate the named constituent class.'
+  snapshot_sha256: 866410cc16331c9e13ee8049e49c9dd2e0b8a9fcc61e572a1cf382ddd0cc52f6
+- evidence_id: root56-sources-gene-GET1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGET1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Whole returned identity set and literal native query parameters
+  accessed_at: '2026-10-22T06:55:21.710543Z'
+  support: supports
+  summary: The query restricted to the declared organism and gene/locus returns exactly
+    P53192; reviewed filtering is used only for reviewed examples.
+  snapshot_sha256: fe47877512fae9c95e11667f331e53f9b9ab8e87a8cba76b9cc2300289bfa113
+- evidence_id: root56-sources-protein-P40056
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40056.json
+  locator: Identity/status/names, genes/aliases, organism and family cross-references;
+    complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, CATALYTIC ACTIVITY and SIMILARITY
+    comments where present
+  accessed_at: '2026-10-22T06:55:51.187092Z'
+  support: supports
+  summary: 'P40056: The reviewed gene/taxon identity and native whole-family cross-references
+    corroborate the named constituent class.'
+  snapshot_sha256: 85313af3f3bac6f61f38febc6f5fa99e6ab34893bec2fe44aab4800fc95cc950
+- evidence_id: root56-sources-gene-GET2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGET2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Whole returned identity set and literal native query parameters
+  accessed_at: '2026-10-22T06:55:22.351275Z'
+  support: supports
+  summary: The query restricted to the declared organism and gene/locus returns exactly
+    P40056; reviewed filtering is used only for reviewed examples.
+  snapshot_sha256: ea8de445382d6a65aec633b456a4e2f5b61b61b3cfc5297c77d879b840d66b4d
+- evidence_id: root56-sources-protein-Q12154
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q12154.json
+  locator: Identity/status/names, genes/aliases, organism and family cross-references;
+    complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, CATALYTIC ACTIVITY and SIMILARITY
+    comments where present
+  accessed_at: '2026-10-22T06:55:52.019652Z'
+  support: supports
+  summary: 'Q12154: The reviewed gene/taxon identity and native whole-family cross-references
+    corroborate the named constituent class.'
+  snapshot_sha256: e201c7cf333cc8d97594fc58beb7e728d505f007ed5810de7a625f301c9978c8
+- evidence_id: root56-sources-gene-GET3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AGET3%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Whole returned identity set and literal native query parameters
+  accessed_at: '2026-10-22T06:55:22.652287Z'
+  support: supports
+  summary: The query restricted to the declared organism and gene/locus returns exactly
+    Q12154; reviewed filtering is used only for reviewed examples.
+  snapshot_sha256: d39df6413339fc63ae71a2193775e881c1198042c39eaa7220f69bd5ebacc8b3
+- evidence_id: root56-sources-ipr-IPR028945
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR028945/
+  locator: Native accession/name/type, entire description with LLM/curation flags,
+    integrated signatures and hierarchy
+  accessed_at: '2026-10-22T06:55:49.972390Z'
+  support: supports
+  summary: The whole Get1 family includes the metazoan WRB homolog; PF04420 is integrated.
+    The narrower fungal child is separately identified.
+  snapshot_sha256: 0513363fbec270c5bee7604e620d273752400b4c58cf8e613eb0e00ad4ace9ed
+- evidence_id: root56-sources-ipr-IPR028143
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR028143/
+  locator: Native accession/name/type, entire description with LLM/curation flags,
+    integrated signatures and hierarchy
+  accessed_at: '2026-10-22T06:55:51.977495Z'
+  support: supports
+  summary: The whole Get2/sif1 family names the yeast GET receptor subunit and fission-yeast
+    homolog; shared homologous identity does not imply identical complex functions
+    everywhere.
+  snapshot_sha256: ad42fc85a9e66610a4f14d8714c1700d5e15404a6c512d0dc6a221981bc7938d
+- evidence_id: root56-sources-ipr-IPR027542
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027542/
+  locator: Native accession/name/type, entire description with LLM/curation flags,
+    integrated signatures and hierarchy
+  accessed_at: '2026-10-22T06:55:53.238486Z'
+  support: supports
+  summary: The eukaryotic ArsA/GET3 branch integrates GET3-specific HAMAP MF_03112.
+    Its generic arsenic-efflux background text is not imported as the yeast GET mechanism.
+  snapshot_sha256: b0067412413394acfa436e096c343bc3a6203d1b6b3864b52f654c2a94e2eae3
+- evidence_id: root56-sources-ipr-IPR027538
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027538/
+  locator: Native accession/name/type, entire description with LLM/curation flags,
+    integrated signatures and hierarchy
+  accessed_at: '2026-10-22T06:55:50.601435Z'
+  support: supports
+  summary: The Get1 fungi whole-family child provides the more restricted fungal mapping.
+  snapshot_sha256: bd5f9a4d765d19e83f942e31b9054dfd227482178917791bfec5d0b4aeec7efc
+- evidence_id: root56-sources-ipr-IPR014802
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014802/
+  locator: Native accession/name/type, entire description with LLM/curation flags,
+    integrated signatures and hierarchy
+  accessed_at: '2026-10-22T06:55:51.350604Z'
+  support: supports
+  summary: The Golgi-to-ER traffic protein 2 child provides the more restricted Get2
+    mapping.
+  snapshot_sha256: 6f0e196dc870fc46575bb9ad66f57fcf57809b160b2f31585d6e1aef43bb157e
+- evidence_id: root56-sources-ipr-IPR016300
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016300/
+  locator: Native accession/name/type, entire description with LLM/curation flags,
+    integrated signatures and hierarchy
+  accessed_at: '2026-10-22T06:55:52.849300Z'
+  support: supports
+  summary: This parent encompasses bacterial ArsA as well as eukaryotic GET3 and is
+    too broad for an exact yeast targeting-factor class.
+  snapshot_sha256: 3026589fd46be6d7b6fda54023dde7c0ffe61b9cbd095cd85b034935a6b269cb
+- evidence_id: root56-sources-ipr-IPR025723
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR025723/
+  locator: Native accession/name/type, entire description with LLM/curation flags,
+    integrated signatures and hierarchy
+  accessed_at: '2026-10-22T06:55:52.582319Z'
+  support: supports
+  summary: The ArsA/GET3 ATPase domain also covers other related ATPases and does
+    not itself ground the complete constituent.
+  snapshot_sha256: 595c59b1cd9ffb6696f58e91caadf64630075a42798d7207e43f790fb9a2b26f
+- evidence_id: root56-sources-ipr-IPR029012
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029012/
+  locator: Native accession/name/type, entire description with LLM/curation flags,
+    integrated signatures and hierarchy
+  accessed_at: '2026-10-22T06:55:50.756826Z'
+  support: supports
+  summary: A shared helix-hairpin structural domain includes Get1/WRB and other protein
+    contexts; it is not an exact whole Get1 family.
+  snapshot_sha256: 5a63923f6ae0747f66afa5fe2c5e6e943592b7e47a69e80209863bfcc512c59e
+- evidence_id: root56-sources-PMC2572727-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2572727/
+  locator: Results sec2.1, sec2.2 and sec2.6 in full, including Figures 1, 2 and 6
+    captions; Methods sec4.1, sec4.2, sec4.3, sec4.10, sec4.11 and sec4.12 in full
+  accessed_at: '2026-10-22T06:55:56.230441Z'
+  support: supports
+  summary: Schuldiner 2008 directly identifies Get1/Get2 recruitment of Get3 and Get-dependent
+    tail-anchor insertion. Purified Get1/Get2 proteoliposomes test Get3 binding; insertion
+    assays instead combine yeast translation extracts and microsomes, with recombinant
+    Get3 supplementation. The two preparations answer different questions.
+  snapshot_sha256: 39dd97417b26d1e2ae7ffc4f9b51a84fb45c17a9579d90e785bbf7b4cb77940e
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/get_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:59:37Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/get_complex.yaml'
+  snapshot_sha256: 1b86fd52c447f22053c5e12bb7e3d2f4f6b2ce89c9579f4e5b04156556cd23e7
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/get_complex.yaml --out /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/get_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:59:38Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/get_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/get_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/get_complex-strict.tsv"
+  snapshot_sha256: 7dac9b592d71fc654adc8e40905eaabf866e597826cdb6828b296fb7039387e4
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/get_complex.yaml --causal-graphs
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T07:02:46.765000Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch56-20261022-3zkw_2l0/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/get_complex.yaml --verify
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T07:02:47.190554Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/get_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 6 of 6 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact GET class and receptor/targeting-factor boundary
+  outcome: supported
+  target_ids:
+  - GO:0043529
+  summary: GO names Get1, Get2 and Get3. Primary assays distinguish the membrane Get1/Get2
+    receptor from cytosolic/ER-shuttling Get3. The record correctly treats GET as
+    a complex and targets insertion to the ER; upstream pretargeting factors need
+    not be imported into this bounded inventory.
+  evidence_ids:
+  - record
+  - root56-sources-go
+  - root56-sources-GO0043529-ancestors
+  - root56-sources-PMC2572727-html
+- assessment_id: composition
+  area: grounding
+  topic: Resolvable three-member inventory under the existing task
+  outcome: concern
+  target_ids:
+  - GO:0043529
+  summary: The entire target has no component inventory because its open task defers
+    class and membership boundaries. Exact whole-family entries and matched yeast
+    proteins now resolve Get1, Get2 and Get3 at the receptor/targeting-factor level.
+    This does not establish a permanently associated three-subunit particle or fixed
+    stoichiometry.
+  evidence_ids:
+  - record
+  - curation
+  - root56-sources-PMC2572727-html
+  - root56-sources-ipr-IPR028945
+  - root56-sources-ipr-IPR028143
+  - root56-sources-ipr-IPR027542
+  - root56-sources-ipr-IPR027538
+  - root56-sources-ipr-IPR014802
+  - root56-sources-ipr-IPR016300
+  - root56-sources-ipr-IPR025723
+  - root56-sources-ipr-IPR029012
+  - root56-sources-protein-P53192
+  - root56-sources-protein-P40056
+  - root56-sources-protein-Q12154
+  - root56-sources-gene-GET1
+  - root56-sources-gene-GET2
+  - root56-sources-gene-GET3
+- assessment_id: preparation
+  area: evidence
+  topic: Purified binding assay versus extract/microsome insertion
+  outcome: concern
+  target_ids:
+  - GO:0043529
+  summary: The function itself is supported, but its evidence note compresses two
+    experiments into a claim that purified Get proteins directly mediate insertion.
+    The inspected body uses purified receptor proteoliposomes for recruitment and
+    yeast extracts/microsomes for insertion, with added recombinant Get3.
+  evidence_ids:
+  - record
+  - root56-sources-PMC2572727-html
+- assessment_id: formation
+  area: grounding
+  topic: Conditional receptor recruitment and insertion readouts
+  outcome: supported
+  target_ids:
+  - GO:0043529
+  summary: Get1/Get2 loss redistributes Get3 and their purified membrane complex recruits
+    Get3. Get3 supplementation rescues specified insertion defects when supplied during
+    translation. These are localization, binding and activity readouts with their
+    stated experimental scope.
+  evidence_ids:
+  - record
+  - schema
+  - root56-sources-PMC2572727-html
+- assessment_id: graph
+  area: graph
+  topic: Bounded whole-structure insertion edges
+  outcome: supported
+  target_ids:
+  - GO:0043529
+  summary: Both graph edges state the whole GET insertion function and its ER-membrane
+    destination. They are supported without asserting a complete pretargeting cycle,
+    an autonomous membrane pore, or a fixed subunit stoichiometry.
+  evidence_ids:
+  - record
+  - graphs
+  - root56-sources-go
+  - root56-sources-PMC2572727-html
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast example and reference proteins
+  outcome: supported
+  target_ids:
+  - GO:0043529
+  summary: The experimental source identifies its yeast genetic backgrounds; reviewed
+    S288C accessions are reference examples and are not substituted for every assay
+    strain. The broader eukaryotic wording is GO-defined; the maintained distribution
+    is restricted to budding yeast.
+  evidence_ids:
+  - record
+  - schema
+  - root56-sources-go
+  - root56-sources-PMC2572727-html
+  - root56-sources-tax-4932
+  - root56-sources-tax-559292
+  - root56-sources-protein-P53192
+  - root56-sources-protein-P40056
+  - root56-sources-protein-Q12154
+- assessment_id: coverage
+  area: completeness
+  topic: Complete maintained target and bounded follow-up
+  outcome: supported
+  target_ids:
+  - GO:0043529
+  summary: Every maintained field, evidence row, component/example, graph edge, discussion
+    and history entry was read. Optional unpopulated slots are not defects. Scientific
+    status/history remain unchanged.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root56-sources-go
+  - root56-sources-doi-10.1016_j.cell.2008.06.025
+- assessment_id: formation-necessity
+  area: grounding
+  topic: Universal individual-constituent formation requirements
+  outcome: unknown
+  target_ids:
+  - GO:0043529
+  summary: The bounded physical-association and activity observations assessed above
+    do not establish a universal individual-constituent necessity profile for formation
+    of this structure. Unspecified requirements remain unknown; they are not presumed
+    essential or treated as a new corrective finding.
+  evidence_ids:
+  - record
+  - schema
+  - root56-sources-PMC2572727-html
+findings:
+- finding_id: F1
+  issue_key: get-resolve-core-subunit-inventory
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the named GET receptor and targeting-factor inventory
+  description: The existing subunit-boundary task already identifies Get1, Get2 and
+    Get3 but defers all component rows. Native exact family mappings, reviewed yeast
+    proteins and the cited primary body resolve those three named classes without
+    requiring a complete upstream pretargeting mechanism.
+  target_ids:
+  - GO:0043529
+  field_paths:
+  - components
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - root56-sources-go
+  - root56-sources-PMC2572727-html
+  - root56-sources-ipr-IPR028945
+  - root56-sources-ipr-IPR028143
+  - root56-sources-ipr-IPR027542
+  - root56-sources-ipr-IPR027538
+  - root56-sources-ipr-IPR014802
+  - root56-sources-protein-P53192
+  - root56-sources-protein-P40056
+  - root56-sources-protein-Q12154
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/get_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact constituent-class grounding
+  native_severity: minor
+  normalization_reason: A bounded actionable class mapping under the existing explicit
+    task; the complex identity and named protein examples remain supported.
+- finding_id: F2
+  issue_key: get-insertion-assay-preparation-precision
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Distinguish receptor binding from the insertion assay
+  description: functions[0].evidence[1].notes says that purified Get proteins directly
+    mediate insertion in vitro. In the cited paper, Get1/Get2 proteoliposomes measure
+    Get3 recruitment, whereas glycosylation-based insertion assays use yeast cytosol/translation
+    extracts and microsomes, including recombinant Get3 add-back.
+  target_ids:
+  - GO:0043529
+  field_paths:
+  - functions[0].evidence[1].notes
+  evidence_ids:
+  - record
+  - root56-sources-PMC2572727-html
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/get_complex.yaml
+    role: maintained scientific record
+  rule_id: Claim-specific experimental preparation
+  native_severity: minor
+  normalization_reason: A bounded preparation/provenance wording error; the structure
+    identity and physiological insertion function remain supported.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0043529
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/get_complex.yaml
+    role: maintained scientific record
+  description: Add source-backed Get1, Get2 and Get3 constituent classes with explicit
+    receptor versus targeting-factor roles and taxon-paired examples; narrow the task
+    to genuinely unresolved pretargeting boundaries.
+  acceptance_checks:
+  - 'Use the appropriate declared class breadth: Get1 IPR028945 (fungal child IPR027538),
+    Get2/sif1 IPR028143 (Get2 child IPR014802), eukaryotic GET3 IPR027542.'
+  - Retain species and reference-strain distinctions; do not assert fixed stoichiometry
+    or permanent association from these data.
+  - Pass applicable native schema, strict, identifier and graph checks after separately
+    authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0043529
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/get_complex.yaml
+    role: maintained scientific record
+  description: Describe the actual Get-dependent extract/microsome insertion assay
+    and the separate purified-receptor recruitment result.
+  acceptance_checks:
+  - Preserve direct support for GET-dependent tail-anchor insertion.
+  - Do not imply a minimal insertion reaction reconstituted solely from three purified
+    Get proteins.
+  - Pass applicable native schema, strict, identifier and graph checks after separately
+    authorized curation.
+limitations:
+- All five same-base batch26 corpus gates and exact target resolver rows are integrated
+  with every manifested input hash verified.
+- No figure pixels, raw datasets, sequence alignments, atomic coordinates or supplementary
+  files were reanalyzed. Primary body reading is limited to declared sections and
+  embedded captions.
+- Any absence finding is confined to the complete inspected target and its existing
+  task; no claim is made that a related record or identifier is absent from the corpus
+  or all databases.
+- Purification and microsome/EndoH details delegated by the paper to supplemental
+  methods were not read. The inspected primary results do not establish a minimal
+  three-purified-protein insertion system.
+- IPR027417 was retrieved but not used or fully inspected; no exhaustive family-search
+  absence is claimed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes clean observations and issue-bearing reviews
+  alike.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
