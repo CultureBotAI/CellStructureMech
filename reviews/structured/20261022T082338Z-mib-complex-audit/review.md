@@ -1,0 +1,715 @@
+# Mib complex scientific review
+
+- Review: 20261022T082338Z-mib-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:58:07Z
+- Finished UTC: 2026-10-22T08:23:38Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+MIB identity, subcomplex boundaries, bounded fission-yeast association and NONMECHANISTIC bridging graph are supported. The existing individual-component and domain-conflict limits are appropriate; no actionable defect was established.
+
+## Scope And Provenance
+
+Exactly one complete maintained target plus frozen guidance and protein-example skill. Actual source-reading extents appear per evidence row; no unlisted primary experiments or assets are certified.
+
+Selection: Target 10 of batch59, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0140275 | data/structures/other/mib_complex.yaml | maintained | MIB complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0140275 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0140275 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0140275 | Native focused check passed; biological claims assessed separately. |
+| Native verify | passed | True | GO:0140275 | Native focused check passed; biological claims assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0140275 | No expression-module inference is used. |
+| Claim-level scientific review | passed | True | GO:0140275 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0140275 | 9 of 9 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0140275 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0140275 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0140275 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0140275 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0140275 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### MIB versus its subcomplexes
+
+identity: supported. Targets: GO:0140275.
+
+Exact GO identity/synonyms, mitochondrial-protein-complex parent, inner-membrane part_of relation and MICOS/SAM subcomplex identities agree. The two grounded PROTEIN_COMPLEX rows intentionally represent subassemblies, not a falsely exhaustive individual inventory.
+
+### Bounded structural bridging
+
+graph: supported. Targets: GO:0140275.
+
+The NONMECHANISTIC graph accurately combines ontology membership with cross-linked association and introductory trans-boundary context. It does not assert a temporal assembly sequence, direct atomic contacts or a fixed stoichiometry.
+
+### Fission-yeast association and unresolved domain disagreement
+
+scope: supported. Targets: GO:0140275.
+
+The canonical species is S.pombe without an unsupported reference-strain substitution. Mmc1 is correctly excluded as an obligatory core constituent. Körner2012 and the exact Zerbes2012 abstract support the retained conflicting C-terminal observations; this record does not falsely resolve different constructs, solubility or species contexts.
+
+### No universal individual formation assertion
+
+grounding: unknown. Targets: GO:0140275.
+
+Association and subcomplex membership do not establish individual formation necessity. No categorical constituent necessity is asserted, and optional individual family/example expansion can remain open without a manufactured completeness finding.
+
+### Whole maintained target and declared source coverage
+
+completeness: supported. Targets: GO:0140275.
+
+Every maintained field, source note, graph and discussion was inspected at the declared extents. Optional inventory/contact enrichment and acknowledged unknowns alone do not create findings.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/mib_complex.yaml; Entire maintained record, all examples, evidence, graphs, properties, images, history and discussions | context_only | Every maintained field was read. Historical curation statements are context, not independent biological evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component/ProteinExample, EssentialityEnum, PresenceEnum and graph-scope contracts | context_only | Formation necessity differs from function, viability and membership. COMMON means most members with losses the exception; VARIABLE means lineage- or strain-level patchiness, not cell-type-specific visibility. |
+| curation | docs/CURATION.md; Component grounding and REVIEWED_LABEL_ONLY at159–160 | context_only | Exact full-family mappings differ from shared domains or broader paralog classes. Label-only is not merely uncurated in this pass. |
+| complex59-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0001401,GO:0005743,GO:0006935,GO:0015191,GO:0030117,GO:0030118,GO:0030119,GO:0030120,GO:0033232,GO:0061617,GO:0098561,GO:0098796,GO:0098800,GO:0140275,GO:1902495,GO:1990197; Complete target-relevant native definitions/synonyms and typed relationships; unrelated combined entries not attributed to this target | supports | GO0140275 identifies the MICOS/SAM/DNAJC11/metaxin bridging assembly; exact synonyms, parent, location and two subcomplex identities agree. |
+| complex59-agent-go-0140275-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140275/ancestors?relations=is_a; Complete is_a-only ancestor response | supports | The is_a-only closure supplies classification ancestry for this exact target. It does not establish parthood, experimental assembly necessity or prevalence. |
+| complex59-agent-tax-4896 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896; Complete ENA identity/names/lineage | supports | Taxon4896: Schizosaccharomyces pombe, rank species; exact native names and lineage inspected. |
+| complex59-agent-doi-10.1016_j.cub.2024.04.028 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cub.2024.04.028%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and abstract | supports | Exact native DOI/MED identity: A dynamin superfamily-like pseudoenzyme coordinates with MICOS to promote cristae architecture. Kumar A, Gok MO, Nguyen KN, Connor OM, Reese ML, Wideman JG, Muñoz-Gómez SA, Friedman JR. (2024), PMID38692277. Complete available abstract read. |
+| complex59-agent-doi-10.1016_j.jmb.2012.05.004 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jmb.2012.05.004%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and abstract | supports | Exact native DOI/MED identity: Role of MINOS in mitochondrial membrane architecture: cristae morphology and outer membrane interactions differentially depend on mitofilin domains. Zerbes RM, Bohnert M, Stroud DA, von der Malsburg K, Kram A, Oeljeklaus S, Warscheid B, Becker T, Wiedemann N, Veenhuis M, van der Klei IJ, Pfanner N, van der Laan M. (2012), PMID22575891. Complete available abstract read. |
+| complex59-agent-doi-10.1091_mbc.E11-10-0831 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.E11-10-0831%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and abstract | supports | Exact native DOI/MED identity: The C-terminal domain of Fcj1 is required for formation of crista junctions and interacts with the TOB/SAM complex in mitochondria. Körner C, Barrera M, Dukanovic J, Eydt K, Harner M, Rabl R, Vogel F, Rapaport D, Neupert W, Reichert AS. (2012), PMID22496419. Complete available abstract read. |
+| complex59-agent-kumar2024-s3-exact | https://pmc-oa-opendata.s3.amazonaws.com/PMC11187654.319/PMC11187654.319.xml; Introduction S1; Results S3/S6/S10; Methods S18 growth/strains and S27 immunoprecipitation/MS; complete Fig1/4/7 captions. No figure pixels, supplements or DataS1 inspection. | supports | Kumar2024 uses cross-linked fission-yeast lysate IP/MS to recover SAM/metaxin/DNAJC11-related proteins with MICOS. MIB association persists without Mmc1; independent Mmc1 oligomer sizes are not MIB stoichiometry. The retained exact version MD5 matches10930e607aec0699d936e157acfdacce. |
+| complex59-agent-korner2012-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3364178/fullTextXML; Complete Results sec6 with Fig4 caption; Methods sec18 GST-affinity procedure. No unlisted sections or pixels. | supports | Körner2012 reports Fcj1/Tob55 co-isolation and loss of Tob55 recovery with Fcj1(1–472), explicitly noting reduced mutant solubility. Lysate recovery is not purified binary-interface proof. |
+| schema-result | just validate data/structures/other/mib_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/mib_complex.yaml |
+| strict-result | just validate-strict data/structures/other/mib_complex.yaml --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/mib_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/mib_complex.yaml --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/mib_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch59-20261022-t3ere5ku/mib_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mib_complex.yaml --causal-graphs; Complete native focused report | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mib_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/mib_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 9 of 9 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicitly listed source sections/assets were inspected. No unlisted supplements, atomic coordinates or raw experimental data were analyzed.
+- Zerbes2012 was inspected at complete native metadata/abstract scope only; construct-level reconciliation remains open. The retained failed KumarXML500/guessedS3version404 responses are diagnostics; exact version319 supplied the genuine body.
+- No figure pixels, supplementary DataS1, individual DNAJC11/metaxin family census or atomic interfaces were analyzed. Positive association does not imply a purified stable stoichiometric assembly.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T082338Z-mib-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mib complex scientific review
+started_at: '2026-10-22T07:58:07Z'
+finished_at: '2026-10-22T08:23:38Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: MIB identity, subcomplex boundaries, bounded fission-yeast association and
+  NONMECHANISTIC bridging graph are supported. The existing individual-component and
+  domain-conflict limits are appropriate; no actionable defect was established.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/mib_complex.yaml
+    sha256: 1a8bd9a823976370cee61ab389dfc2d1e03b9f422de8d9454177f95c52ed4f78
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0140275
+  path: data/structures/other/mib_complex.yaml
+  label: MIB complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mib_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target plus frozen guidance and protein-example
+    skill. Actual source-reading extents appear per evidence row; no unlisted primary
+    experiments or assets are certified.
+  selection: Target 10 of batch59, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0140275
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  command: just validate data/structures/other/mib_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  command: just validate-strict data/structures/other/mib_complex.yaml --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/mib_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  command: /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mib_complex.yaml --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  command: /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mib_complex.yaml --verify
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0140275
+  summary: No expression-module inference is used.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex59-agent-go
+  - complex59-agent-go-0140275-ancestors
+  - complex59-agent-tax-4896
+  - complex59-agent-doi-10.1016_j.cub.2024.04.028
+  - complex59-agent-doi-10.1016_j.jmb.2012.05.004
+  - complex59-agent-doi-10.1091_mbc.E11-10-0831
+  - complex59-agent-kumar2024-s3-exact
+  - complex59-agent-korner2012-xml
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  summary: 9 of 9 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0140275
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/mib_complex.yaml
+  locator: Entire maintained record, all examples, evidence, graphs, properties, images,
+    history and discussions
+  accessed_at: '2026-10-22T08:10:41Z'
+  support: context_only
+  summary: Every maintained field was read. Historical curation statements are context,
+    not independent biological evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component/ProteinExample, EssentialityEnum, PresenceEnum and graph-scope
+    contracts
+  accessed_at: '2026-10-22T08:10:41Z'
+  support: context_only
+  summary: Formation necessity differs from function, viability and membership. COMMON
+    means most members with losses the exception; VARIABLE means lineage- or strain-level
+    patchiness, not cell-type-specific visibility.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component grounding and REVIEWED_LABEL_ONLY at159–160
+  accessed_at: '2026-10-22T08:10:41Z'
+  support: context_only
+  summary: Exact full-family mappings differ from shared domains or broader paralog
+    classes. Label-only is not merely uncurated in this pass.
+- evidence_id: complex59-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0001401,GO:0005743,GO:0006935,GO:0015191,GO:0030117,GO:0030118,GO:0030119,GO:0030120,GO:0033232,GO:0061617,GO:0098561,GO:0098796,GO:0098800,GO:0140275,GO:1902495,GO:1990197
+  locator: Complete target-relevant native definitions/synonyms and typed relationships;
+    unrelated combined entries not attributed to this target
+  accessed_at: '2026-10-22T07:52:24.329077Z'
+  support: supports
+  summary: GO0140275 identifies the MICOS/SAM/DNAJC11/metaxin bridging assembly; exact
+    synonyms, parent, location and two subcomplex identities agree.
+  snapshot_sha256: dbd460ba253a79f76308983bfbf11d984337e32c973e044f3f1b30f1394901af
+- evidence_id: complex59-agent-go-0140275-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0140275/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor response
+  accessed_at: '2026-10-22T07:52:40.625012Z'
+  support: supports
+  summary: The is_a-only closure supplies classification ancestry for this exact target.
+    It does not establish parthood, experimental assembly necessity or prevalence.
+  snapshot_sha256: 72e6125edbe6f5323e2fc2455f254e6b8e9d4f43a2fd8b0e24ca54866490b542
+- evidence_id: complex59-agent-tax-4896
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4896
+  locator: Complete ENA identity/names/lineage
+  accessed_at: '2026-10-22T07:52:30.959350Z'
+  support: supports
+  summary: 'Taxon4896: Schizosaccharomyces pombe, rank species; exact native names
+    and lineage inspected.'
+  snapshot_sha256: 42c5b7d3d99341137803612d6404cd3884e2d06ec8a740b1ad38163c678f6721
+- evidence_id: complex59-agent-doi-10.1016_j.cub.2024.04.028
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cub.2024.04.028%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and abstract
+  accessed_at: '2026-10-22T07:52:36.679625Z'
+  support: supports
+  summary: 'Exact native DOI/MED identity: A dynamin superfamily-like pseudoenzyme
+    coordinates with MICOS to promote cristae architecture. Kumar A, Gok MO, Nguyen
+    KN, Connor OM, Reese ML, Wideman JG, Muñoz-Gómez SA, Friedman JR. (2024), PMID38692277.
+    Complete available abstract read.'
+  snapshot_sha256: 40d4c86877cd21ee1c8d38bc316fb46e1eb643c298347f86e627ae7207dbad94
+- evidence_id: complex59-agent-doi-10.1016_j.jmb.2012.05.004
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jmb.2012.05.004%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and abstract
+  accessed_at: '2026-10-22T07:52:36.738423Z'
+  support: supports
+  summary: 'Exact native DOI/MED identity: Role of MINOS in mitochondrial membrane
+    architecture: cristae morphology and outer membrane interactions differentially
+    depend on mitofilin domains. Zerbes RM, Bohnert M, Stroud DA, von der Malsburg
+    K, Kram A, Oeljeklaus S, Warscheid B, Becker T, Wiedemann N, Veenhuis M, van der
+    Klei IJ, Pfanner N, van der Laan M. (2012), PMID22575891. Complete available abstract
+    read.'
+  snapshot_sha256: 005d0ce49b29ae3464b0105412c2f48316b66449f3d732084af647fb12f78029
+- evidence_id: complex59-agent-doi-10.1091_mbc.E11-10-0831
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1091%2Fmbc.E11-10-0831%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and abstract
+  accessed_at: '2026-10-22T07:52:39.931802Z'
+  support: supports
+  summary: 'Exact native DOI/MED identity: The C-terminal domain of Fcj1 is required
+    for formation of crista junctions and interacts with the TOB/SAM complex in mitochondria.
+    Körner C, Barrera M, Dukanovic J, Eydt K, Harner M, Rabl R, Vogel F, Rapaport
+    D, Neupert W, Reichert AS. (2012), PMID22496419. Complete available abstract read.'
+  snapshot_sha256: d55b236df782c8cc882ac4b1bafb1ceee38f02269a2b69a30d2e102e8f4e0975
+- evidence_id: complex59-agent-kumar2024-s3-exact
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC11187654.319/PMC11187654.319.xml
+  locator: Introduction S1; Results S3/S6/S10; Methods S18 growth/strains and S27
+    immunoprecipitation/MS; complete Fig1/4/7 captions. No figure pixels, supplements
+    or DataS1 inspection.
+  accessed_at: '2026-10-22T07:59:46.064255Z'
+  support: supports
+  summary: Kumar2024 uses cross-linked fission-yeast lysate IP/MS to recover SAM/metaxin/DNAJC11-related
+    proteins with MICOS. MIB association persists without Mmc1; independent Mmc1 oligomer
+    sizes are not MIB stoichiometry. The retained exact version MD5 matches10930e607aec0699d936e157acfdacce.
+  snapshot_sha256: d02487a91098172b31e92998b655bb1a004c78d0b2507cc971950f0de1d8ef76
+- evidence_id: complex59-agent-korner2012-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3364178/fullTextXML
+  locator: Complete Results sec6 with Fig4 caption; Methods sec18 GST-affinity procedure.
+    No unlisted sections or pixels.
+  accessed_at: '2026-10-22T07:57:21.401667Z'
+  support: supports
+  summary: Körner2012 reports Fcj1/Tob55 co-isolation and loss of Tob55 recovery with
+    Fcj1(1–472), explicitly noting reduced mutant solubility. Lysate recovery is not
+    purified binary-interface proof.
+  snapshot_sha256: e94159569f2717297b76d5c0afed6c422689cd85d35a376366d8b6340a8a1fcf
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/mib_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:58:08Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/mib_complex.yaml'
+  snapshot_sha256: cf7379433527aff6422397d72ef92b57736866c02da940b6d8effdf728d80cf5
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/mib_complex.yaml --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/mib_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:58:09Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/mib_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/mib_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch59-20261022-t3ere5ku/mib_complex-strict.tsv"
+  snapshot_sha256: c4a6b7a52ed869ad4bdcfdebbccf29c1e7e80400bda157d751018a33ae4549b5
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mib_complex.yaml --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:00:16.182882Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mib_complex.yaml --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:00:16.558342Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/mib_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 9 of 9 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: MIB versus its subcomplexes
+  outcome: supported
+  target_ids:
+  - GO:0140275
+  summary: Exact GO identity/synonyms, mitochondrial-protein-complex parent, inner-membrane
+    part_of relation and MICOS/SAM subcomplex identities agree. The two grounded PROTEIN_COMPLEX
+    rows intentionally represent subassemblies, not a falsely exhaustive individual
+    inventory.
+  evidence_ids:
+  - record
+  - complex59-agent-go
+  - complex59-agent-go-0140275-ancestors
+  - complex59-agent-kumar2024-s3-exact
+  - complex59-agent-tax-4896
+- assessment_id: graph
+  area: graph
+  topic: Bounded structural bridging
+  outcome: supported
+  target_ids:
+  - GO:0140275
+  summary: The NONMECHANISTIC graph accurately combines ontology membership with cross-linked
+    association and introductory trans-boundary context. It does not assert a temporal
+    assembly sequence, direct atomic contacts or a fixed stoichiometry.
+  evidence_ids:
+  - record
+  - complex59-agent-go
+  - complex59-agent-kumar2024-s3-exact
+- assessment_id: scope
+  area: scope
+  topic: Fission-yeast association and unresolved domain disagreement
+  outcome: supported
+  target_ids:
+  - GO:0140275
+  summary: The canonical species is S.pombe without an unsupported reference-strain
+    substitution. Mmc1 is correctly excluded as an obligatory core constituent. Körner2012
+    and the exact Zerbes2012 abstract support the retained conflicting C-terminal
+    observations; this record does not falsely resolve different constructs, solubility
+    or species contexts.
+  evidence_ids:
+  - record
+  - complex59-agent-kumar2024-s3-exact
+  - complex59-agent-korner2012-xml
+  - complex59-agent-tax-4896
+  - complex59-agent-doi-10.1016_j.cub.2024.04.028
+  - complex59-agent-doi-10.1016_j.jmb.2012.05.004
+  - complex59-agent-doi-10.1091_mbc.E11-10-0831
+- assessment_id: formation
+  area: grounding
+  topic: No universal individual formation assertion
+  outcome: unknown
+  target_ids:
+  - GO:0140275
+  summary: Association and subcomplex membership do not establish individual formation
+    necessity. No categorical constituent necessity is asserted, and optional individual
+    family/example expansion can remain open without a manufactured completeness finding.
+  evidence_ids:
+  - record
+  - schema
+  - complex59-agent-kumar2024-s3-exact
+  - complex59-agent-korner2012-xml
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and declared source coverage
+  outcome: supported
+  target_ids:
+  - GO:0140275
+  summary: Every maintained field, source note, graph and discussion was inspected
+    at the declared extents. Optional inventory/contact enrichment and acknowledged
+    unknowns alone do not create findings.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex59-agent-go
+findings: []
+actions: []
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicitly listed source sections/assets were inspected. No unlisted supplements,
+  atomic coordinates or raw experimental data were analyzed.
+- Zerbes2012 was inspected at complete native metadata/abstract scope only; construct-level
+  reconciliation remains open. The retained failed KumarXML500/guessedS3version404
+  responses are diagnostics; exact version319 supplied the genuine body.
+- No figure pixels, supplementary DataS1, individual DNAJC11/metaxin family census
+  or atomic interfaces were analyzed. Positive association does not imply a purified
+  stable stoichiometric assembly.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
