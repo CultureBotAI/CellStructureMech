@@ -7,6 +7,7 @@ from collections import Counter
 
 from cellstructuremech.validation.validator import (
     validate_causal_graphs,
+    validate_component_protein_examples,
     validate_discussion_issue_links,
 )
 from cellstructuremech.validation.write_validated import validate_structure
@@ -87,6 +88,17 @@ def test_discussions_referencing_issues_carry_structured_issue_links(records):
         for err in validate_discussion_issue_links(doc):
             bad.append(f"{path.name}:{err}")
     assert not bad, f"discussion prose issue mentions missing structured issue links: {bad}"
+
+
+def test_component_protein_examples_match_declared_gene_symbols(records):
+    """Every `components[].protein_examples[].gene_symbol` must appear in its
+    parent component's non-empty `gene_symbols` list or be disclosed as a
+    synonym/locus tag in `protein_examples[].role` (#2417)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_component_protein_examples(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"component protein_examples gene_symbol drift: {bad}"
 
 
 def test_local_ids_are_unique_within_record(records):

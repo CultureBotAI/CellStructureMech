@@ -1,4 +1,4 @@
-"""Unit tests for semantic record validation in cellstructuremech.validation.validator (#2408, #2410)."""
+"""Unit tests for semantic record validation in validator.py (#2408, #2410, #2417)."""
 
 from __future__ import annotations
 
@@ -6,6 +6,7 @@ import pytest
 
 from cellstructuremech.validation.validator import (
     validate_causal_graphs,
+    validate_component_protein_examples,
     validate_discussion_issue_links,
     validate_record_semantics,
 )
@@ -169,3 +170,145 @@ def test_discussion_referencing_issue_in_prose_requires_structured_issue_evidenc
     }
     assert validate_discussion_issue_links(complete_link_doc) == []
     assert validate_structure(complete_link_doc) == []
+
+
+@pytest.mark.parametrize(
+    "grounding",
+    ["GO:0030122", "cellstructuremech:chlorosome_baseplate_antenna_complex"],
+)
+def test_gene_or_protein_causal_node_with_structure_grounding_is_flagged(grounding):
+    doc = {
+        **BASE_RECORD,
+        "causal_graphs": [
+            {
+                "graph_id": "g1",
+                "graph_kind": "FUNCTION",
+                "scope_status": "MECHANISTIC",
+                "nodes": [
+                    {
+                        "node_id": "complex_node",
+                        "label": "AP-2 adaptor complex",
+                        "node_type": "GENE_OR_PROTEIN",
+                        "grounding": grounding,
+                    },
+                    {"node_id": "coat", "label": "clathrin coat", "node_type": "STRUCTURE"},
+                ],
+                "edges": [
+                    {
+                        "subject": "complex_node",
+                        "predicate": "recruits",
+                        "object": "coat",
+                        "description": "The adaptor complex recruits clathrin to the pit.",
+                        "evidence": [{"reference": "PMID:12345678", "notes": "Assay."}],
+                    }
+                ],
+            }
+        ],
+    }
+    errors = validate_causal_graphs(doc)
+    assert len(errors) == 1
+    assert "expected 'STRUCTURE'" in errors[0]
+    assert validate_structure(doc)
+
+
+def test_gene_or_protein_causal_node_referencing_grounded_protein_complex_is_flagged():
+    doc = {
+        **BASE_RECORD,
+        "components": [
+            {
+                "component_id": "csma_baseplate",
+                "label": "chlorosome baseplate antenna complex",
+                "component_type": "PROTEIN_COMPLEX",
+                "component_role": "CONSTITUENT",
+                "grounding": "cellstructuremech:chlorosome_baseplate_antenna_complex",
+            }
+        ],
+        "causal_graphs": [
+            {
+                "graph_id": "g1",
+                "graph_kind": "FUNCTION",
+                "scope_status": "MECHANISTIC",
+                "nodes": [
+                    {
+                        "node_id": "csma_baseplate",
+                        "label": "CsmA baseplate",
+                        "node_type": "GENE_OR_PROTEIN",
+                        "component_ref": "csma_baseplate",
+                    },
+                    {"node_id": "rc", "label": "reaction center", "node_type": "STRUCTURE"},
+                ],
+                "edges": [
+                    {
+                        "subject": "csma_baseplate",
+                        "predicate": "transfers excitation energy to",
+                        "object": "rc",
+                        "description": "The CsmA baseplate funnels excitation energy to the reaction center.",
+                        "evidence": [{"reference": "PMID:12345678", "notes": "Spectroscopy."}],
+                    }
+                ],
+            }
+        ],
+    }
+    errors = validate_causal_graphs(doc)
+    assert len(errors) == 1
+    assert "referencing grounded PROTEIN_COMPLEX component 'csma_baseplate'" in errors[0]
+    assert validate_structure(doc)
+
+
+def test_component_protein_examples_gene_symbol_consistency():
+    bad_doc = {
+        **BASE_RECORD,
+        "components": [
+            {
+                "component_id": "flagellin",
+                "label": "flagellin",
+                "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
+                "gene_symbols": ["fliC", "fljB"],
+                "evidence": [{"reference": "PMID:12345678", "notes": "Component evidence."}],
+                "protein_examples": [
+                    {
+                        "uniprot_id": "UniProtKB:P02968",
+                        "protein_label": "Flagellin",
+                        "gene_symbol": "hag",
+                        "taxon_id": "NCBITaxon:224308",
+                        "taxon_label": "Bacillus subtilis subsp. subtilis str. 168",
+                        "entry_status": "REVIEWED",
+                        "retrieved_on": "2026-10-17",
+                        "role": "Reviewed UniProtKB entry in Bacillus subtilis.",
+                        "evidence": [
+                            {
+                                "reference": "https://www.uniprot.org/uniprotkb/P02968",
+                                "notes": "Reviewed entry.",
+                            }
+                        ],
+                    }
+                ],
+            }
+        ],
+    }
+    errors = validate_component_protein_examples(bad_doc)
+    assert len(errors) == 1
+    assert "gene_symbol 'hag' is not in component.gene_symbols" in errors[0]
+    assert validate_structure(bad_doc)
+
+    # Disclosing the synonym in role or adding the symbol to gene_symbols resolves the error
+    disclosed_doc = {
+        **BASE_RECORD,
+        "components": [
+            {
+                **bad_doc["components"][0],
+                "protein_examples": [
+                    {
+                        **bad_doc["components"][0]["protein_examples"][0],
+                        "role": (
+                            "Reviewed entry in Bacillus subtilis (also declared as synonym fliC)."
+                        ),
+                    }
+                ],
+            }
+        ],
+    }
+    assert validate_component_protein_examples(disclosed_doc) == []
+    assert validate_structure(disclosed_doc) == []
+
