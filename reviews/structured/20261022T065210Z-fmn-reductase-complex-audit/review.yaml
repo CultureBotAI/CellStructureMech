@@ -1,0 +1,732 @@
+schema_version: 1.0.0
+review_id: 20261022T065210Z-fmn-reductase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of fmn reductase complex
+started_at: '2026-10-22T06:28:10Z'
+finished_at: '2026-10-22T06:52:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'Qualified pass: exact SsuE family, E.coli-scoped homodimer count and NADPH-dependent
+  FMN reduction are supported. Hydrodynamic dimer inference, experimental context
+  and unknown formation necessity are preserved.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/fmn_reductase_complex.yaml
+    sha256: 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990202
+  path: data/structures/other/fmn_reductase_complex.yaml
+  label: FMN reductase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/fmn_reductase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target plus frozen governing/schema/protein/graph
+    guidance. Native identifiers and independently read primary/abstract evidence
+    are separated. No neighboring maintained record is an unstated premise.
+  selection: Batch55 strict ordered selection, index 5; exactly one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990202
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: just validate data/structures/other/fmn_reductase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: just validate-strict data/structures/other/fmn_reductase_complex.yaml --out
+    /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/fmn_reductase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/fmn_reductase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; scientific scope independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/fmn_reductase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; scientific scope independently assessed.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO1990202-ancestors
+  - micro55-tax562
+  - micro55-tax83333
+  - micro55-pmid-10480865
+  - micro55-ipr-IPR020048
+  - micro55-protein-P80644
+  - micro55-gene-ssuE
+  - micro55-eichhorn-browser
+  - micro55-eichhorn-browser-find
+  - micro55-eichhorn1999-pdf
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  summary: '8 of 9 collected target identifiers returned OK. PMID:10480865: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro55-pmid-10480865
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990202
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/fmn_reductase_complex.yaml
+  locator: Complete current YAML, including all citations, component/example fields,
+    graph edges, discussions and history
+  accessed_at: '2026-10-22T06:45:24Z'
+  support: context_only
+  summary: The entire target was read. No neighboring maintained record is an unstated
+    premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Source-neutral class grounding and label-only review contract
+  accessed_at: '2026-10-22T06:45:24Z'
+  support: context_only
+  summary: Verified exact families may resolve explicit current grounding tasks; a
+    protein example is not a family identity. Physical complex formation differs from
+    catalytic activity, viability and localization.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum and PresenceEnum
+  accessed_at: '2026-10-22T06:45:24Z'
+  support: context_only
+  summary: UNKNOWN does not assert formation necessity. COMMON means present in most
+    taxon members, with exceptional losses; a model-organism experiment or only_in_taxon
+    constraint is not a prevalence census.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Graph scope, actor identity and source-specific edge support
+  accessed_at: '2026-10-22T06:45:24Z'
+  support: context_only
+  summary: Descriptive membership/function graphs may remain NONMECHANISTIC. A coarse
+    physical assembly and catalytic reaction can be mechanistic without specifying
+    every intermediate.
+- evidence_id: micro55-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035101,GO:0008023,GO:0034728,GO:0006354,GO:1990202,GO:1990204,GO:0052873,GO:0005760,GO:0042575,GO:0098798,GO:0005759,GO:0006264
+  locator: Exact target/parent/function entries, full definitions/synonyms and relevant
+    typed links.
+  accessed_at: '2026-10-22T06:35:36.591500Z'
+  support: supports
+  summary: GO1990202 exactly identifies the FMN reductase complex, the NAD(P)H-dependent
+    exact synonym and narrower SsuE-complex synonym; its definition explicitly limits
+    the SsuE dimer to E.coli. GO1990204 is the oxidoreductase-complex parent; GO0052873
+    supplies NADPH-dependent FMN reductase activity.
+  snapshot_sha256: 4afb3b0b05daaeda1d6ce52f48b9cae548f1c81ce9b5c4b1e12c97a343bb1f7d
+- evidence_id: micro55-GO1990202-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990202/ancestors?relations=is_a
+  locator: Complete relations=is_a ancestors array.
+  accessed_at: '2026-10-22T06:35:41.985232Z'
+  support: supports
+  summary: The is_a-only array confirms oxidoreductase, catalytic and protein-containing-complex
+    ancestry.
+  snapshot_sha256: 257cc77c4b709aaf4bc674277ecb45e01945d1aa19d15437d36de0965528291f
+- evidence_id: micro55-tax562
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Native taxId, scientificName, rank and lineage fields.
+  accessed_at: '2026-10-22T06:35:41.142024Z'
+  support: supports
+  summary: ENA taxId562 is Escherichia coli, species.
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: micro55-tax83333
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Native taxId, scientificName, rank and lineage fields.
+  accessed_at: '2026-10-22T06:35:41.148896Z'
+  support: supports
+  summary: ENA taxId83333 is Escherichia coli K-12, strain, matching the reference-protein
+    example.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: micro55-pmid-10480865
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10480865+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED entry, exact title/authors/year/DOI/PMID and complete abstractText.
+    No unlisted main-body or individual figure inference.
+  accessed_at: '2026-10-22T06:35:37.332883Z'
+  support: supports
+  summary: 'PMID10480865: Characterization of a two-component alkanesulfonate monooxygenase
+    from Escherichia coli. Eichhorn E, van der Ploeg JR, Leisinger T. (1999), DOI10.1074/jbc.274.38.26639.
+    Exact identity and complete native abstract were read; source-specific body scope
+    is separately declared.'
+  snapshot_sha256: 36fbdb88da80354ffdf2c994887a6e383aa8da288fff17fa78b519297f7271de
+- evidence_id: micro55-ipr-IPR020048
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020048/
+  locator: Complete native family identity/type/description/signature metadata.
+  accessed_at: '2026-10-22T06:35:42.559635Z'
+  support: supports
+  summary: IPR020048 is the NADPH-dependent FMN reductase SsuE whole-protein family,
+    with TIGR03567. Its native description identifies homodimeric flavin reduction.
+  snapshot_sha256: d607b745db371b09e707102526b201b3299641f0993f43f2d4b14d5320cda210
+- evidence_id: micro55-protein-P80644
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P80644.json
+  locator: Native entryType, primaryAccession, recommendedName, organism/taxonId,
+    genes, complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION blocks and relevant family
+    cross-references. Unlisted annotation citations are not independently certified
+    as papers.
+  accessed_at: '2026-10-22T06:35:38.576037Z'
+  support: supports
+  summary: Reviewed E.coli K-12 P80644 is ssuE (ycbP; b0937/JW0920). Its FUNCTION
+    describes NADPH-dependent FMN reduction and broader flavin substrates; SUBUNIT
+    says homodimer. This entry has no independently asserted location experiment in
+    the inspected comments.
+  snapshot_sha256: 56f363a3aac0e1cb52b89fd691df34d5360245dc353167a4df8b4a3a72ef7eec
+- evidence_id: micro55-gene-ssuE
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AssuE%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; exact gene_exact, organism_id and reviewed:true
+    query retained in URL. This is accession uniqueness, not evidence of complex membership.
+  accessed_at: '2026-10-22T06:35:39.665305Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P80644, matching the maintained
+    example and its stated organism.
+  snapshot_sha256: 62e7c5589be5667dbeb2d4d00431ef30cd4a369b24c283480acb13d381802cb7
+- evidence_id: micro55-eichhorn-browser
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/12819004_Characterization_of_a_Two-component_Alkanesulfonate_Monooxygenase_from_Escherichia_coli
+  locator: 'URL-specific browser-extracted primary representation, status:null: title/abstract/Introduction
+    and initial cloning/expression Methods through ssuE construct preparation, printed
+    p26639. Original combined output and exact derivation receipt retained.'
+  accessed_at: '2026-10-22T06:41:06.942414Z'
+  support: supports
+  summary: The primary title/abstract and introductory Methods identify E.coli SsuE
+    as the reducing partner of SsuD. Protein work uses wild-type and His-tagged expression
+    constructs in named E.coli laboratory strains; this is not a species-wide direct
+    observation of every cell.
+  snapshot_sha256: 00405004cfbc92bead175f69f6978c104b87357da0856ddd18115836982c5790
+- evidence_id: micro55-eichhorn-browser-find
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/12819004_Characterization_of_a_Two-component_Alkanesulfonate_Monooxygenase_from_Escherichia_coli
+  locator: 'Retained source-native primary text returned at exact find locators: Analytical
+    Methods, Purification/Characterization/Substrate Range of NAD(P)H:FMN Oxidoreductase
+    and a short separately labeled SsuD/reconstitution excerpt, printed pp26640-26642.
+    This is inspected body text, not a search-result lead; no pixels or unretained
+    sections.'
+  accessed_at: '2026-10-22T06:41:06.943015Z'
+  support: supports
+  summary: The primary Analytical Methods use calibrated Superdex75 gel filtration.
+    Purified His-tagged SsuE has estimated native mass58400 versus approximately25400
+    by SDS-PAGE, supporting a homodimer inference. The Results explicitly compare
+    wild-type and tagged activity, prefer NADPH and FMN, and distinguish SsuD as a
+    separate enzyme.
+  snapshot_sha256: 6b1223e8d71ebce1d7a58251304ed07cffc2a2e360f0eb03fd9c7892f82e448d
+- evidence_id: micro55-eichhorn1999-pdf
+  kind: authority
+  reference: https://www.jbc.org/article/S0021925819550724/pdf
+  locator: Original URL and native403 response.
+  accessed_at: '2026-10-22T06:36:59.904343Z'
+  support: context_only
+  summary: The native JBC PDF route returned HTTP403 HTML. It is not counted as a
+    retrieved PDF; the independent genuine browser primary passages supply the stated
+    body scope.
+  snapshot_sha256: 6d380acfc6910bb83baadf7daf3da1a30d3dc27521d15d79e2fba8b5268d35c8
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/fmn_reductase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:28:11Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/fmn_reductase_complex.yaml'
+  snapshot_sha256: 0723328481792ccbf081a39871e7d2e62c13172ecd3b4e969c022f21294a4afe
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/fmn_reductase_complex.yaml
+    --out /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/fmn_reductase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:28:13Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/fmn_reductase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/fmn_reductase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/fmn_reductase_complex-strict.tsv"
+  snapshot_sha256: 1c89707e71c257080e01ac2589fd240cbb23c53ddb5d0e13bb12e963bc4965c9
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/fmn_reductase_complex.yaml
+    --causal-graphs
+  locator: Complete focused native read-only report
+  accessed_at: '2026-10-22T06:41:49.923153Z'
+  support: supports
+  summary: "data/structures/other/fmn_reductase_complex.yaml  (GO:1990202)\n  ssue_fmn_reductase_function\t\
+    ssue_fmn_reductase\tCOVERED\t->ssue_fmn_reductase (UniProtKB:P80644)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     1  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     1  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: ff0b115d5574011d1a8f0573dce8a722f08305763ff4d2bde3716bb4c4710a38
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/fmn_reductase_complex.yaml
+    --verify
+  locator: Complete focused native read-only report
+  accessed_at: '2026-10-22T06:41:51.216300Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/fmn_reductase_complex.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '8 of 9 collected target identifiers returned OK. PMID:10480865: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact enzyme-complex identity and limited synonym
+  outcome: supported
+  target_ids:
+  - GO:1990202
+  summary: The generic FMN reductase identity and oxidoreductase parent match GO.
+    SsuE is explicitly a narrow E.coli example rather than an assertion that every
+    FMN reductase complex has this composition.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO1990202-ancestors
+  - micro55-tax562
+  - micro55-tax83333
+  - micro55-ipr-IPR020048
+  - micro55-pmid-10480865
+- assessment_id: composition
+  area: grounding
+  topic: Exact SsuE family and scoped dimer count
+  outcome: supported
+  target_ids:
+  - GO:1990202
+  summary: IPR020048 and P80644 support the single molecular class. The component
+    stoichiometry and SUBUNIT_COUNT2 are explicitly E.coli SsuE-scoped and consistent
+    with GO and the original hydrodynamic dimer inference. SsuD is not incorrectly
+    added to this homodimer.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO1990202-ancestors
+  - micro55-tax562
+  - micro55-tax83333
+  - micro55-ipr-IPR020048
+  - micro55-eichhorn-browser
+  - micro55-eichhorn-browser-find
+  - micro55-protein-P80644
+  - micro55-gene-ssuE
+- assessment_id: function
+  area: evidence
+  topic: NADPH-dependent FMN reduction
+  outcome: supported
+  target_ids:
+  - GO:1990202
+  summary: The original purified-protein results support reduction of FMN with NADPH
+    and a preference, not exclusivity, for these substrates. The source distinguishes
+    the reductase from SsuD-dependent alkanesulfonate oxidation; the maintained function
+    preserves that distinction.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO1990202-ancestors
+  - micro55-tax562
+  - micro55-tax83333
+  - micro55-eichhorn-browser
+  - micro55-eichhorn-browser-find
+  - micro55-protein-P80644
+  - micro55-gene-ssuE
+  - micro55-pmid-10480865
+- assessment_id: examples
+  area: grounding
+  topic: Correct K-12 example and broader species context
+  outcome: supported
+  target_ids:
+  - GO:1990202
+  summary: The reviewed K-12 accession and single exact-organism gene query are correct.
+    The E.coli canonical example is compatible with the experimental laboratory backgrounds;
+    no population-level prevalence or unlisted localization evidence is claimed.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO1990202-ancestors
+  - micro55-tax562
+  - micro55-tax83333
+  - micro55-protein-P80644
+  - micro55-gene-ssuE
+  - micro55-eichhorn-browser
+  - micro55-eichhorn-browser-find
+- assessment_id: graph
+  area: graph
+  topic: Coarse physical dimer assembly and catalysis
+  outcome: supported
+  target_ids:
+  - GO:1990202
+  summary: 'The two edges link the exact SsuE subunit to its homodimer and the homodimer
+    to measured flavin reduction. At this coarse level the MECHANISTIC label is reasonable:
+    physical assembly plus catalysis, rather than parthood alone. The source does
+    not directly resolve assembly kinetics or molecular interfaces.'
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO1990202-ancestors
+  - micro55-tax562
+  - micro55-tax83333
+  - micro55-ipr-IPR020048
+  - micro55-eichhorn-browser
+  - micro55-eichhorn-browser-find
+  - micro55-protein-P80644
+  - micro55-gene-ssuE
+- assessment_id: formation
+  area: evidence
+  topic: Formation necessity is not established
+  outcome: unknown
+  target_ids:
+  - GO:1990202
+  summary: The UNKNOWN constituent label is retained. A purified active homodimer
+    and its inferred subunit count do not establish a universal loss-of-subunit formation
+    experiment, nor that every NAD(P)H-dependent FMN reductase uses SsuE.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO1990202-ancestors
+  - micro55-tax562
+  - micro55-tax83333
+  - micro55-eichhorn-browser
+  - micro55-eichhorn-browser-find
+- assessment_id: coverage
+  area: completeness
+  topic: Whole target reviewed with explicit evidence limits
+  outcome: supported
+  target_ids:
+  - GO:1990202
+  summary: All scientific fields, citations, discussions, graph edges and history
+    were reviewed. Findings address exact actionable current tasks, not optional empty
+    slots or historical wording made false merely by later source availability. Unmeasured
+    formation and broader prevalence remain explicit uncertainties.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO1990202-ancestors
+  - micro55-tax562
+  - micro55-tax83333
+  - micro55-ipr-IPR020048
+  - micro55-eichhorn-browser
+  - micro55-eichhorn-browser-find
+  - micro55-protein-P80644
+  - micro55-gene-ssuE
+  - micro55-pmid-10480865
+findings: []
+actions: []
+limitations:
+- The genuine Eichhorn primary body was inspected only in retained browser text blocks
+  and the complete native abstract. No image pixels, supplementary data or unlisted
+  full-paper sections were read; the direct JBC PDF request was403.
+- The homodimer conclusion is based on purified His-tagged SsuE, calibrated gel filtration
+  and SDS-PAGE; it is not a directly imaged interface, kinetic assembly measurement
+  or cell-wide stoichiometric census.
+- The generic ontology class is broader than the explicitly scoped E.coli SsuE model.
+  No per-subunit physical formation necessity is inferred from enzymatic activity.
+- Original source bytes, URLs, UTC timestamps and SHA256 receipts are retained. Browser-derived
+  URL-specific blocks retain their original combined representation and do not assert
+  native HTTP200.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user requests a review for every unreviewed record, including qualified clean
+  records.
+- Native ontology, taxonomic and protein/family databases directly address these claims;
+  no expression-module membership is treated as proof of physical complex membership.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
