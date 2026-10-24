@@ -1,0 +1,908 @@
+schema_version: 1.0.0
+review_id: 20261022T084809Z-mitochondrial-lon-protease-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mitochondrial lon protease complex scientific review
+started_at: '2026-10-22T08:17:29Z'
+finished_at: '2026-10-22T08:48:09Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Identity, yeast-scoped family, intervention graph, archives and licensed
+  image are supported. Preparation-specific oligomer and source-detail conflicts are
+  properly retained; no actionable defect was established.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/images/other/mitochondrial_lon_protease_complex/pmc8913295_fig1.jpg
+    sha256: a5c78bd75286956f9389092a1f0070b7df894266773b793201748c6a24b3ba6b
+    role: context
+  - path: data/structures/other/mitochondrial_lon_protease_complex.yaml
+    sha256: 22c985cbd94a32e0a04e1ba4b7f77e796ef99815390b9165a3b15b987429d5d6
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:mitochondrial_lon_protease_complex
+  path: data/structures/other/mitochondrial_lon_protease_complex.yaml
+  label: mitochondrial Lon protease complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mitochondrial_lon_protease_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target, frozen guidance/protein-example
+    skill and, for Lon, its exact stored figure. Actual source-reading extents and
+    original receipts are declared per evidence row.
+  selection: Target 7 of batch60, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  command: just validate data/structures/other/mitochondrial_lon_protease_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  command: just validate-strict data/structures/other/mitochondrial_lon_protease_complex.yaml
+    --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_lon_protease_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_lon_protease_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_lon_protease_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: No expression-module inference is used to establish this structure.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex60-agent-go
+  - complex60-agent-tax-4932
+  - complex60-agent-tax-559292
+  - complex60-agent-protein-P36775
+  - complex60-agent-gene-PIM1
+  - complex60-agent-gene-LON
+  - complex60-agent-doi-10.1016_j.jbc.2022.101694
+  - complex60-agent-doi-10.1073_pnas.96.12.6787
+  - local-identity
+  - complex60-agent-go-search-lon
+  - complex60-agent-go-search-pim1
+  - complex60-agent-ipr-IPR027503
+  - complex60-agent-yang2022-xml
+  - complex60-agent-stahlberg1999-legacy
+  - access-stahlberg1999-xml
+  - complex60-agent-pdb-7SXO
+  - complex60-agent-pdb-7SXO-assembly1
+  - complex60-agent-pdb-7SXO-entity1
+  - complex60-agent-pdb-7SXO-entity2
+  - complex60-agent-pdb-7SXO-nonpolymer3
+  - complex60-agent-pdb-7SXO-nonpolymer4
+  - complex60-agent-pdb-7SXO-nonpolymer5
+  - complex60-agent-emdb-25502
+  - complex60-agent-pdb-7XSO
+  - complex60-agent-emdb-25505
+  - complex60-agent-yang2022-fig1
+  - complex60-agent-yang2022-s3-gr2-jpg
+  - complex60-agent-yang2022-s3-gr3-jpg
+  - complex60-agent-yang2022-s3-PMC8913295-1-json
+  - local-image
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: '9 of 12 collected target identifiers returned OK. EMDB:EMD-25502: SKIPPED;
+    Native released EMD25502 header identifies yeast Lon with endogenous substrate
+    and links7SXO, PMID35143841 and DOI10.1016/j.jbc.2022.101694. The3.3-Angstrom
+    reconstruction metadata is inspected; map voxels are not reanalyzed.; PDB:7SXO:
+    SKIPPED; Native released RCSB7SXO is Yeast Lon (PIM1) with endogenous substrate,
+    primary DOI10.1016/j.jbc.2022.101694 and PMID35143841. No coordinate reanalysis
+    is implied.; cellstructuremech:mitochondrial_lon_protease_complex: SKIPPED; Exact
+    local identifier uniquely resolves to this maintained target in the complete data/structures
+    YAML traversal, including ignored files. This verifies local reference identity,
+    not external ontology resolution. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex60-agent-emdb-25502
+  - complex60-agent-pdb-7SXO
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/mitochondrial_lon_protease_complex.yaml
+  locator: Entire maintained record, including all evidence, graph edges, discussions,
+    examples, datasets, images and history
+  accessed_at: '2026-10-22T08:35:37Z'
+  support: context_only
+  summary: Every maintained field was read. Historical source-inspection claims are
+    not automatically adopted as current review evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component, ProteinExample, EssentialityEnum, PresenceEnum and graph contracts
+  accessed_at: '2026-10-22T08:35:37Z'
+  support: context_only
+  summary: Membership and enzymatic activity differ from formation necessity. COMMON
+    means most members with losses the exception; VARIABLE denotes lineage/strain
+    patchiness, not cell state.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact grounding, label-only classes and native validation contracts
+  accessed_at: '2026-10-22T08:35:37Z'
+  support: context_only
+  summary: Exact whole-protein families differ from domains or broader classes. Optional
+    inventories and acknowledged unknowns do not alone establish defects.
+- evidence_id: complex60-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0004176,GO:0005741,GO:0005742,GO:0005743,GO:0005759,GO:0007005,GO:0030150,GO:0035632,GO:0098799,GO:0098800,GO:1905368
+  locator: Complete target-relevant native definitions, synonyms and typed relationships;
+    unrelated combined entries excluded
+  accessed_at: '2026-10-22T08:24:00.662524Z'
+  support: supports
+  summary: The active broader peptidase-complex, mitochondrial-matrix and ATP-dependent-peptidase
+    terms retain the class, location and function distinctions used here.
+  snapshot_sha256: e6a248305bc7752e1bb81d50f22d98da6c5bdd61dadb96af270f922128b26fb7
+- evidence_id: complex60-agent-tax-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete exact ENA taxonomy response
+  accessed_at: '2026-10-22T08:24:03.593628Z'
+  support: supports
+  summary: Native taxon4932 is Saccharomyces cerevisiae, rank species. Its own names
+    and lineage were read.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: complex60-agent-tax-559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete exact ENA taxonomy response
+  accessed_at: '2026-10-22T08:24:04.027671Z'
+  support: supports
+  summary: Native taxon559292 is Saccharomyces cerevisiae S288C, rank strain. Its
+    own names and lineage were read.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: complex60-agent-protein-P36775
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P36775.json
+  locator: Identity/status/name/gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY and family crossreferences
+  accessed_at: '2026-10-22T08:24:00.663165Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P36775, genes PIM1, aliases LON, taxon559292.
+    Its own function, subunit, localization and family annotations were inspected
+    with original evidence qualifiers.'
+  snapshot_sha256: 79795cc1a1c14cade0a4bb5d3bdf06776da1242bb07129fbe5bed46659903d3b
+- evidence_id: complex60-agent-gene-PIM1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APIM1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete query result identity set and indicated returned-entry comments
+  accessed_at: '2026-10-22T08:24:08.362878Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returns P36775; all returned identities
+    and gene tokens were inspected. '
+  snapshot_sha256: 9993742923d7f9199f3fc83d442a094eb95bb6777daa4c109a9316cde47150bc
+  search_scope: Exact retained request https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APIM1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500;
+    all returned results inspected.
+- evidence_id: complex60-agent-gene-LON
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ALON+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete query result identity set and indicated returned-entry comments
+  accessed_at: '2026-10-22T08:24:08.365131Z'
+  support: supports
+  summary: 'The exact reviewed S288C query returns P36775; all returned identities
+    and gene tokens were inspected. '
+  snapshot_sha256: 9993742923d7f9199f3fc83d442a094eb95bb6777daa4c109a9316cde47150bc
+  search_scope: Exact retained request https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ALON+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500;
+    all returned results inspected.
+- evidence_id: complex60-agent-doi-10.1016_j.jbc.2022.101694
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jbc.2022.101694%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native bibliographic identity and available abstract
+  accessed_at: '2026-10-22T08:24:07.110319Z'
+  support: supports
+  summary: 'Exact native identity: Cryo-EM structure of hexameric yeast Lon protease
+    (PIM1) highlights the importance of conserved structural elements. Yang J, Song
+    AS, Wiseman RL, Lander GC. (2022), PMID35143841. Complete available abstract read.'
+  snapshot_sha256: 7e246310e798877fc5a5bc159ca33c6aac31b1fa77277b8fcd5f4714ca12881a
+- evidence_id: complex60-agent-doi-10.1073_pnas.96.12.6787
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.96.12.6787%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native bibliographic identity and available abstract
+  accessed_at: '2026-10-22T08:24:07.141443Z'
+  support: supports
+  summary: 'Exact native identity: Mitochondrial Lon of Saccharomyces cerevisiae is
+    a ring-shaped protease with seven flexible subunits. Stahlberg H, Kutejová E,
+    Suda K, Wolpensinger B, Lustig A, Schatz G, Engel A, Suzuki CK. (1999), PMID10359790.
+    Complete available abstract read.'
+  snapshot_sha256: 8796d7f22ec8d66a84ceed3a32ca5e9a4861fc906f5026a6d0e9904fb4ee363b
+- evidence_id: local-identity
+  kind: record_content
+  reference: data/structures/other/mitochondrial_lon_protease_complex.yaml
+  locator: Exact identifier; retained complex60-agent/local-id-uniqueness.json
+  accessed_at: '2026-10-22T08:35:37Z'
+  support: context_only
+  summary: The ignored-inclusive whole data/structures search found exactly one anchored
+    occurrence of each of the two queried local identifiers, at its own maintained
+    target. This is not a search for every possible synonymous record.
+- evidence_id: complex60-agent-go-search-lon
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Lon+protease&limit=100
+  locator: Returned search results only
+  accessed_at: '2026-10-22T08:25:15.570584Z'
+  support: context_only
+  summary: Bounded native search returned 204 total hits with 100 returned records.
+    Returned IDs/names and relevant definitions were inspected; no exact active identity
+    was established from this response. This is not an exhaustive ontology-absence
+    claim.
+  snapshot_sha256: d7e2f73b2407e16fb4e542578a176cfacee440243cc05c9409753979b6ec6a50
+  search_scope: Exact request https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Lon+protease&limit=100;
+    returned page only; no claim to have repeated the historical fully paginated or
+    OLS/ComplexPortal searches.
+- evidence_id: complex60-agent-go-search-pim1
+  kind: search
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Pim1&limit=100
+  locator: Returned search results only
+  accessed_at: '2026-10-22T08:25:15.743100Z'
+  support: context_only
+  summary: Bounded native search returned 1 total hits with 1 returned records. Returned
+    IDs/names and relevant definitions were inspected; no exact active identity was
+    established from this response. This is not an exhaustive ontology-absence claim.
+  snapshot_sha256: 7cf85192a19997aac04c39aeb4aaa07814d6ab9dd21ba88ce1ecc93c2f7dca32
+  search_scope: Exact request https://www.ebi.ac.uk/QuickGO/services/ontology/go/search?query=Pim1&limit=100;
+    returned page only; no claim to have repeated the historical fully paginated or
+    OLS/ComplexPortal searches.
+- evidence_id: complex60-agent-ipr-IPR027503
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027503/
+  locator: Complete family metadata, descriptions, signatures and quality flags
+  accessed_at: '2026-10-22T08:24:02.781593Z'
+  support: supports
+  summary: 'Native family identity: IPR027503, Lon protease homologue, chloroplastic/mitochondrial,
+    type family. Its complete description, signatures and quality flags were inspected;
+    any protein membership is supported separately by the protein response.'
+  snapshot_sha256: d212f7f0d10e33b337c8c02f91635416689e6db65d6cee9e3e8b4863706dce9c
+- evidence_id: complex60-agent-yang2022-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8913295/fullTextXML
+  locator: Complete main Introduction, Results sec1.1–1.3, Discussion sec2, Experimental
+    Procedures sec3.1–3.5, Data availability sec4, main Fig1–3 captions and permissions;
+    supplements not read
+  accessed_at: '2026-10-22T08:24:13.379093Z'
+  support: supports
+  summary: Yang2022 resolves six bacterially expressed mature yeast Pim1 chains around
+    separate copurified substrate. Purified beta-casein assays compare WT, S1015A,
+    INSdel and GSlink; retained activity and structural interpretations are bounded
+    to the experimental preparations. The source itself contains the retained accession
+    and detail inconsistencies.
+  snapshot_sha256: 1aef18ed6da1d5cb8ce4394fb400e4680d7145059f10f6db15960b0a2058273f
+- evidence_id: complex60-agent-stahlberg1999-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC21993/
+  locator: Genuine primary Methods sec1–5, Results sec6–11 and Discussion sec12; embedded
+    Fig1–4 captions; no figure pixels or supplements
+  accessed_at: '2026-10-22T08:26:10.315738Z'
+  support: supports
+  summary: Stahlberg1999 reports a seven-subunit interpretation from yeast-overexpressed
+    mitochondrial Pim1 preparations, mass measurements and EM. C-terminal tagging,
+    crosslinking and nucleotide-dependent stability differ from the2022 preparation.
+  snapshot_sha256: 99e5ee7ce3549a9c69546d8748075a9687253812e08329fd967ebd61815b441c
+- evidence_id: access-stahlberg1999-xml
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC21993/fullTextXML
+  locator: Exact retained transport response; no biological body inferred
+  accessed_at: '2026-10-22T08:25:10.617583Z'
+  support: context_only
+  summary: The EuropePMC XML route returned HTTP500. The genuine legacy primary body
+    was recovered and read separately.
+  snapshot_sha256: 7f7a0e062a92600e1b66e9f8b52ad3e0bbec333bf9ebdc24289c0b9071875d6e
+- evidence_id: complex60-agent-pdb-7SXO
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/7SXO
+  locator: Entry title/citation/experimental resolution and EMDB crossreference
+  accessed_at: '2026-10-22T08:24:14.410143Z'
+  support: supports
+  summary: PDB7SXO matches the exact Yang2022 citation and EMD25502; native experimental
+    resolution is3.3 Angstrom.
+  snapshot_sha256: 83762e0b93ac8e2566f07c8a35cd0fb134be029260c3f4a4db873cffe2e2888f
+- evidence_id: complex60-agent-pdb-7SXO-assembly1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/7SXO/1
+  locator: Complete assembly generation, composition counts and symmetry fields
+  accessed_at: '2026-10-22T08:24:14.516808Z'
+  support: supports
+  summary: Assembly1 has global A6B1/hetero7-mer annotation, with six identical Pim1
+    chains and one substrate entity. Local A6 symmetry does not turn the substrate
+    into a seventh Pim1.
+  snapshot_sha256: b5eca35aec2f9992847b670bd1a769e659292a30a79f442a9b94fb58148799dc
+- evidence_id: complex60-agent-pdb-7SXO-entity1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7SXO/1
+  locator: Identity, sequence/fragment, chain identifiers, source/host organism and
+    UniProt mapping
+  accessed_at: '2026-10-22T08:24:14.599583Z'
+  support: supports
+  summary: Entity1 maps to P36775 and source taxon559292; the engineered mature182–1133
+    construct has six chains and an E.coli expression host.
+  snapshot_sha256: 2c746ba7a41147b3f1d27ddd21700c48d3552519ceaefa5b14909f0c801a9678
+- evidence_id: complex60-agent-pdb-7SXO-entity2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/7SXO/2
+  locator: Complete entity identity/sequence/chains and source-organism fields
+  accessed_at: '2026-10-22T08:24:14.735089Z'
+  support: supports
+  summary: Entity2 is one12-residue unknown-sequence substrate chain annotated to
+    E.coli562. This metadata does not identify a physiological yeast substrate.
+  snapshot_sha256: 49d1c2f1cbedfee7aec84afe75af3619efd2377592ce5295f3f88807fd2393e2
+- evidence_id: complex60-agent-pdb-7SXO-nonpolymer3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/nonpolymer_entity/7SXO/3
+  locator: Complete nonpolymer entity identity and instance count
+  accessed_at: '2026-10-22T08:26:11.053710Z'
+  support: supports
+  summary: Native nonpolymer entity3 is ATP, with 4 copies. Deposited ligands are
+    distinct from the ATPgammaS preparation condition.
+  snapshot_sha256: a17baa6e8b9a412b4f7f48e2a9b4212d0b835a465dd9cd15ab5ccaa0c721c02d
+- evidence_id: complex60-agent-pdb-7SXO-nonpolymer4
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/nonpolymer_entity/7SXO/4
+  locator: Complete nonpolymer entity identity and instance count
+  accessed_at: '2026-10-22T08:26:11.135572Z'
+  support: supports
+  summary: Native nonpolymer entity4 is magnesium, with 4 copies. Deposited ligands
+    are distinct from the ATPgammaS preparation condition.
+  snapshot_sha256: 9ac8b1546a1d3fe5b0fba3dccd43eb70bf23fff0b37c434323c0255faa48cbab
+- evidence_id: complex60-agent-pdb-7SXO-nonpolymer5
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/nonpolymer_entity/7SXO/5
+  locator: Complete nonpolymer entity identity and instance count
+  accessed_at: '2026-10-22T08:26:11.221372Z'
+  support: supports
+  summary: Native nonpolymer entity5 is ADP, with 2 copies. Deposited ligands are
+    distinct from the ATPgammaS preparation condition.
+  snapshot_sha256: faf75e00866ea5de32fa4271fe89105aa861e33b77b56d3e213c9ffdb9fec6a3
+- evidence_id: complex60-agent-emdb-25502
+  kind: database
+  reference: https://files.wwpdb.org/pub/emdb/structures/EMD-25502/header/emd-25502.xml
+  locator: Complete administrative identity, citation/PDB crossreferences, reconstruction/instrument
+    metadata and map header
+  accessed_at: '2026-10-22T08:24:14.911120Z'
+  support: supports
+  summary: Released EMD25502 links7SXO and the exact Pim1 citation, with3.3-Angstrom
+    reconstruction, Talos Arctica200kV and GatanK2 detector. Its XML SHA matches the
+    maintained dataset note.
+  snapshot_sha256: 621e50e914f5184d6f0d6cb5903e4e525221f3dfd703fccc9145befeb9270793
+- evidence_id: complex60-agent-pdb-7XSO
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/7XSO
+  locator: Exact native title and citation identity
+  accessed_at: '2026-10-22T08:24:14.827158Z'
+  support: context_only
+  summary: PDB7XSO is the typeIII-E CRISPR-Cas gRAMP structure, not the Pim1 dataset.
+  snapshot_sha256: bc204c4623e35a19e444ac205b8828c473eb4dafa0c8bc67d4ec1d09d57a486e
+- evidence_id: complex60-agent-emdb-25505
+  kind: database
+  reference: https://files.wwpdb.org/pub/emdb/structures/EMD-25505/header/emd-25505.xml
+  locator: Native administrative title and citation identity
+  accessed_at: '2026-10-22T08:24:15.125300Z'
+  support: context_only
+  summary: EMD25505 is a SARS-CoV-2 spike reconstruction, not the Pim1 map.
+  snapshot_sha256: 6de8750e12883cc9fd248c0994e9b7a16b1eefd85510db456c9a80efad76c192
+- evidence_id: complex60-agent-yang2022-fig1
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC8913295.1/gr1.jpg
+  locator: Entire actual figure pixels independently viewed; caption separately read
+    in the primary body
+  accessed_at: '2026-10-22T08:25:16.967454Z'
+  support: supports
+  summary: Figure1 pixels show model views of the six-Pim1 ring, nucleotide states
+    and substrate-engaging pore; these are structural model renderings, not in situ
+    micrographs. Its bytes exactly match the frozen local image.
+  snapshot_sha256: a5c78bd75286956f9389092a1f0070b7df894266773b793201748c6a24b3ba6b
+- evidence_id: complex60-agent-yang2022-s3-gr2-jpg
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC8913295.1/gr2.jpg
+  locator: Entire actual figure pixels independently viewed; caption separately read
+    in the primary body
+  accessed_at: '2026-10-22T08:26:10.316267Z'
+  support: supports
+  summary: Figure2 pixels show the protease S1015/K1058 catalytic dyad and substrate-binding
+    groove, plus the C-terminal extension and intraprotomer contacts. No time-resolved
+    catalytic trajectory is inferred.
+  snapshot_sha256: 06d729051a522da5366df50f8803f9b9d8b6bcb5103b6f3ec611360432c21546
+- evidence_id: complex60-agent-yang2022-s3-gr3-jpg
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC8913295.1/gr3.jpg
+  locator: Entire actual figure pixels independently viewed; caption separately read
+    in the primary body
+  accessed_at: '2026-10-22T08:26:10.593796Z'
+  support: supports
+  summary: Figure3 pixels show domain/insertion constructs and the beta-casein gel
+    assay. S1015A is inactive and INSdel/GSlink retain near-WT degradation under the
+    specified conditions.
+  snapshot_sha256: 275d2a8c67beeada7c8dff4b806aaf8accb645a5de4b3d5716bb9cd80c574db5
+- evidence_id: complex60-agent-yang2022-s3-PMC8913295-1-json
+  kind: database
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC8913295.1/PMC8913295.1.json
+  locator: Native version metadata and gr1.jpg media entry
+  accessed_at: '2026-10-22T08:26:10.700815Z'
+  support: supports
+  summary: Exact PMC8913295.1 package metadata identifies gr1.jpg and its MD5fd98aa3d48b65d293f30c18c33dc815a;
+    the downloaded and stored image share SHAa5c78bd75286956f9389092a1f0070b7df894266773b793201748c6a24b3ba6b.
+    The exact CC BY4.0 license URL is in separately read JATS permissions.
+  snapshot_sha256: a4c5295badb28f331cf70072fba39f01c0bebdd3f60cfba8d3a0dfabf113df0e
+- evidence_id: local-image
+  kind: record_content
+  reference: data/images/other/mitochondrial_lon_protease_complex/pmc8913295_fig1.jpg
+  locator: Entire frozen image pixels and SHA-256
+  accessed_at: '2026-10-22T08:35:37Z'
+  support: context_only
+  summary: Stored figure matches the primary source asset byte for byte. Attribution
+    and model-rendering caption agree with source permissions and content.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/mitochondrial_lon_protease_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:30Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/mitochondrial_lon_protease_complex.yaml'
+  snapshot_sha256: 879c791c849c9282ae338a0535d78cc432531f88c77b3e13261bf68ec5751866
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/mitochondrial_lon_protease_complex.yaml
+    --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_lon_protease_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:31Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/mitochondrial_lon_protease_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_lon_protease_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_lon_protease_complex-strict.tsv"
+  snapshot_sha256: 93a312e06336b646a22b70096780faa774d5e54dbe83235b7d246402fb23f366
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_lon_protease_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:25:11.106359Z'
+  support: supports
+  summary: "data/structures/other/mitochondrial_lon_protease_complex.yaml  (cellstructuremech:mitochondrial_lon_protease_complex)\n\
+    \  pim1_assembly_and_assayed_proteolysis\tlon\tCOVERED\t->lon (UniProtKB:P36775)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 593a4556e111d3a1cfcf401fad0bc11ad1edf7df8b98ea85523db231d52f846b
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_lon_protease_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:25:12.257826Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/mitochondrial_lon_protease_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '9 of 12 collected target identifiers returned OK. EMDB:EMD-25502: SKIPPED;
+    Native released EMD25502 header identifies yeast Lon with endogenous substrate
+    and links7SXO, PMID35143841 and DOI10.1016/j.jbc.2022.101694. The3.3-Angstrom
+    reconstruction metadata is inspected; map voxels are not reanalyzed.; PDB:7SXO:
+    SKIPPED; Native released RCSB7SXO is Yeast Lon (PIM1) with endogenous substrate,
+    primary DOI10.1016/j.jbc.2022.101694 and PMID35143841. No coordinate reanalysis
+    is implied.; cellstructuremech:mitochondrial_lon_protease_complex: SKIPPED; Exact
+    local identifier uniquely resolves to this maintained target in the complete data/structures
+    YAML traversal, including ignored files. This verifies local reference identity,
+    not external ontology resolution. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Oligomer identity, family and compartment
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: The mitochondrial oligomer is distinct from one PIM1 protein, its cargo
+    and membrane AAA proteases. The broader chloroplastic/mitochondrial family is
+    explicitly bounded to the yeast mitochondrial instance. Peptidase parent and matrix
+    parthood are appropriate; the bounded present search does not certify all historical
+    search routes.
+  evidence_ids:
+  - record
+  - complex60-agent-go
+  - complex60-agent-yang2022-xml
+  - complex60-agent-stahlberg1999-legacy
+  - local-identity
+  - complex60-agent-protein-P36775
+  - complex60-agent-ipr-IPR027503
+  - complex60-agent-gene-PIM1
+  - complex60-agent-gene-LON
+- assessment_id: graph
+  area: graph
+  topic: Assay-bounded interventions
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: The five mechanistic edges preserve six-Pim1 membership in the2022 preparation,
+    WT beta-casein degradation, inactive S1015A, and near-WT insertion-mutant activity.
+    ATP-dependent enzyme annotation is independent of the gel assay. No loss of assembly,
+    all-substrate dispensability, DNA-binding mechanism or directly observed hand-over-hand
+    trajectory is asserted.
+  evidence_ids:
+  - record
+  - complex60-agent-yang2022-xml
+  - complex60-agent-protein-P36775
+  - complex60-agent-yang2022-fig1
+  - complex60-agent-yang2022-s3-gr2-jpg
+  - complex60-agent-yang2022-s3-gr3-jpg
+- assessment_id: archive
+  area: evidence
+  topic: Archive discrepancies are correctly retained
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: The matching7SXO/EMD25502 identity, A6B1 cargo distinction,4ATP/2ADP,12-UNK
+    substrate,3.3-Angstrom archive resolution and incorrect publication accessions
+    agree. Paper9-residue/polyalanine,~3.21-Angstrom,181/182 and pore-loop notation
+    differences remain unresolved rather than silently normalized.
+  evidence_ids:
+  - record
+  - complex60-agent-yang2022-xml
+  - complex60-agent-pdb-7SXO
+  - complex60-agent-pdb-7SXO-assembly1
+  - complex60-agent-pdb-7SXO-entity1
+  - complex60-agent-pdb-7SXO-entity2
+  - complex60-agent-emdb-25502
+  - complex60-agent-pdb-7XSO
+  - complex60-agent-emdb-25505
+  - complex60-agent-pdb-7SXO-nonpolymer3
+  - complex60-agent-pdb-7SXO-nonpolymer4
+  - complex60-agent-pdb-7SXO-nonpolymer5
+  - complex60-agent-yang2022-fig1
+  - complex60-agent-yang2022-s3-gr2-jpg
+  - complex60-agent-yang2022-s3-gr3-jpg
+- assessment_id: scope
+  area: scope
+  topic: Historical and recombinant preparations
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: The1999 mitochondrial heptamer interpretation and2022 recombinant hexamer
+    are different experimentally scoped observations. Species-level yeast canonical
+    context and S288C sequence annotation are distinguished from E.coli expression
+    and from an invariant in situ stoichiometry.
+  evidence_ids:
+  - record
+  - complex60-agent-yang2022-xml
+  - complex60-agent-stahlberg1999-legacy
+  - complex60-agent-pdb-7SXO-entity1
+  - complex60-agent-pdb-7SXO-entity2
+  - complex60-agent-tax-4932
+  - complex60-agent-tax-559292
+- assessment_id: image
+  area: evidence
+  topic: Licensed stored image
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: The local Fig1 SHA and native media MD5 join exactly; JATS permissions
+    specify CC BY4.0, attribution is correct and the caption identifies structural
+    model views. Fig1–3 were actually viewed; no raw map or coordinates are hosted.
+  evidence_ids:
+  - record
+  - local-image
+  - complex60-agent-yang2022-xml
+  - complex60-agent-yang2022-s3-PMC8913295-1-json
+  - complex60-agent-yang2022-fig1
+  - complex60-agent-yang2022-s3-gr2-jpg
+  - complex60-agent-yang2022-s3-gr3-jpg
+- assessment_id: formation
+  area: grounding
+  topic: No universal requirement inferred
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: The purified oligomer and activity controls do not establish universal
+    native formation conditions or individual domain necessity. The record leaves
+    these unresolved rather than treating catalytic loss as failed assembly.
+  evidence_ids:
+  - record
+  - schema
+  - complex60-agent-yang2022-xml
+  - complex60-agent-stahlberg1999-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and exact current source scope
+  outcome: supported
+  target_ids:
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  summary: All maintained fields and current scientific assertions were compared with
+    their nearest inspected sources. Historical read claims, optional enrichment and
+    acknowledged unknowns alone do not create findings.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex60-agent-go
+findings: []
+actions: []
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only explicitly declared source sections and assets were inspected. No raw experimental
+  data or atomic coordinates were reanalysed.
+- The current GO searches inspected only their returned first pages; they do not repeat
+  all historical paginated/OLS searches. No exact active replacement was established
+  in this bounded review.
+- No1999 figure pixels, supplementary data, atomic coordinates or map voxels were
+  analysed. Historical six-versus-seven-subunit and publication/archive discrepancies
+  remain explicitly unresolved.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both qualified clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
