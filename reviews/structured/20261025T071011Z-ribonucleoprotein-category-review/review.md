@@ -1,4 +1,4 @@
-# Category review of data/structures/ribonucleoprotein/ (89 records): box C/D and H/ACA RNP citations, subcomplex component_type, curation_history graph IDs, and ribosome 23S rRNA node grounding
+# Category review of data/structures/ribonucleoprotein/ (89 records): box C/D and H/ACA RNP citations, subcomplex component_type, and curation_history graph IDs
 
 - Review: 20261025T071011Z-ribonucleoprotein-category-review
 - Repository: CultureBotAI/CellStructureMech
@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 89 records in data/structures/ribonucleoprotein/ (including the 3 new Cycle 3 Stage 1 records box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml) verified distinct ribosomal, spliceosomal, snoRNP/sRNP, and RNP-granule boundaries. Three cohort findings were identified across 5 records: (F1, major) box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml cite DOI:10.1016/j.molcel.2007.01.024 (Shcherbik &amp; Haines 2007 on Cdc48p polyubiquitin segregation) for archaeal sRNP conservation/structure, and box_h_aca_rnp_complex.yaml misattributes PMID:14562095 (Huh et al. 2003 yeast GFP localization) to Wang &amp; Meier 2004; (F2, minor) heterotetrameric core components nop1_nop56_nop58_snu13_core and cbf5_gar1_nhp2_nop10_core in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml are typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and curation_history in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and rnp_body.yaml cites stale causal_graph IDs; and (F3, minor) ribosome.yaml causal_graphs[1] node rrna_23s omits grounding: SO:0000651 from components#rrna_23s.
+Full-coverage category review of all 89 records in data/structures/ribonucleoprotein/ (including the 3 new Cycle 3 Stage 1 records box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml) verified distinct ribosomal, spliceosomal, snoRNP/sRNP, and RNP-granule boundaries. Two cohort findings were identified across 4 records: (F1, major) box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml cite DOI:10.1016/j.molcel.2007.01.024 (Shcherbik &amp; Haines 2007 on Cdc48p polyubiquitin segregation) for archaeal sRNP conservation/structure (where box_h_aca_rnp_complex.yaml notes attribute it to 'Matera et al. 2007' and 'Crystal structure of the box H/ACA RNP'), while box_h_aca_snornp_complex.yaml pairs PMID:14562095 (which is Wang C &amp; Meier UT 2004, EMBO J.) with notes for Huh WK et al. 2003 (whose actual PubMed ID is PMID:14562099); and (F2, minor) heterotetrameric core components nop1_nop56_nop58_snu13_core and cbf5_gar1_nhp2_nop10_core in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml are typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and curation_history in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and rnp_body.yaml cites stale causal_graph IDs.
 
 ## Scope And Provenance
 
@@ -128,11 +128,11 @@ scope: supported. Targets: GO:0120259, GO:0030686, GO:1990061, GO:0031428, GO:01
 
 All 88 records in data/structures/ribonucleoprotein/ represent distinct microbial cell structures or subcomplexes with valid hierarchy links and verified UniProtKB protein examples.
 
-### Bibliographic accuracy of DOI:10.1016/j.molcel.2007.01.024 and PMID:14562095 in box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml
+### Bibliographic accuracy of DOI:10.1016/j.molcel.2007.01.024 and PMID:14562095 across box C/D and H/ACA RNP records
 
-evidence: concern. Targets: GO:0170049, GO:0072588.
+evidence: concern. Targets: GO:0170049, GO:0072588, GO:0031429.
 
-DOI:10.1016/j.molcel.2007.01.024 (Shcherbik &amp; Haines 2007) is misattributed to archaeal sRNP structure/distribution, and PMID:14562095 (Huh et al. 2003) is misattributed in notes to Wang &amp; Meier 2004.
+DOI:10.1016/j.molcel.2007.01.024 (Shcherbik &amp; Haines 2007) is misattributed to archaeal sRNP structure/distribution in GO:0170049 and GO:0072588, and PMID:14562095 (Wang &amp; Meier 2004) is paired with Huh et al. 2003 notes in GO:0031429.
 
 ### Heterotetrameric RNP core component_type and curation_history causal_graph IDs
 
@@ -140,37 +140,25 @@ consistency: concern. Targets: GO:0170049, GO:0072588, GO:0031429, GO:0140365.
 
 Three snoRNP/RNP records type heterotetrameric protein cores as PROTEIN instead of PROTEIN_COMPLEX, and 3 records cite stale graph_ids in curation_history.
 
-### Causal-graph component_ref grounding propagation for rrna_23s in ribosome.yaml
-
-graph: concern. Targets: GO:0005840.
-
-causal_graphs[1] node rrna_23s in ribosome.yaml omits SO:0000651 from components#rrna_23s.
-
 ## Findings
 
-### F1: box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml misattribute DOI:10.1016/j.molcel.2007.01.024 and PMID:14562095
+### F1: box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml misattribute DOI:10.1016/j.molcel.2007.01.024 and PMID:14562095
 
 major / open / confirmed; issue key: ribonucleoprotein-box-rnp-reference-misattribution.
 
-In data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml (GO:0170049, taxonomic_distribution[1].reference) and data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml (GO:0072588, components[0].evidence[1], taxonomic_distribution[1].reference, evidence[4], causal_graphs[0].edges[0].evidence[1], curation_history[1]), DOI:10.1016/j.molcel.2007.01.024 (which is Shcherbik &amp; Haines 2007, Molecular Cell 25(3):385-397 on Cdc48p(Npl4p/Ufd1p) polyubiquitin segregation) is misattributed to archaeal box C/D and box H/ACA sRNP structure/conservation (supported in box_c_d_rnp_complex.yaml and box_h_aca_snornp_complex.yaml by PMID:10545111, PMID:9632712, and GO:0005732). Furthermore, in box_h_aca_rnp_complex.yaml, PMID:14562095 (Huh WK et al. 2003, 'Global analysis of protein localization in budding yeast', Nature 425:686-691, as correctly cited in box_h_aca_snornp_complex.yaml) is misattributed in notes across components[1].evidence[1], components[1].protein_examples[0..1].evidence[0], evidence[3], and causal_graphs[0].edges[2].evidence[0] to 'Wang C and Meier UT 2004, Architecture and assembly of mammalian H/ACA small nucleolar and telomerase ribonucleoproteins, EMBO J.'.
+In data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml (GO:0170049, taxonomic_distribution[1].reference) and data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml (GO:0072588, components[0].evidence[1], taxonomic_distribution[1].reference, evidence[4], causal_graphs[0].edges[0].evidence[1], curation_history[1].changes), DOI:10.1016/j.molcel.2007.01.024 (which is Shcherbik &amp; Haines 2007, Molecular Cell 25(3):385-397 on Cdc48p(Npl4p/Ufd1p) polyubiquitin segregation) is misattributed to archaeal box C/D and box H/ACA sRNP structure/conservation (with notes in box_h_aca_rnp_complex.yaml attributing it to 'Matera et al. 2007' and 'Crystal structure of the box H/ACA RNP'). Furthermore, in data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml (GO:0031429, components[1].protein_examples[0].evidence[0], components[1].protein_examples[1].evidence[1], components[1].protein_examples[2].evidence[0], components[1].protein_examples[3].evidence[0]), PMID:14562095 (which is Wang C &amp; Meier UT 2004, 'Architecture and assembly of mammalian H/ACA small nucleolar and telomerase ribonucleoproteins', EMBO J.) is paired with notes for 'Huh WK et al. 2003, Global analysis of protein localization in budding yeast, Nature' (whose actual PubMed ID is PMID:14562099).
 
 ### F2: Heterotetrameric snoRNP/RNP core components are typed PROTEIN instead of PROTEIN_COMPLEX and 3 records cite mismatched graph_ids in curation_history
 
 minor / open / confirmed; issue key: ribonucleoprotein-subcomplex-types-and-history-graph-ids.
 
-In box_c_d_rnp_complex.yaml (GO:0170049, components#nop1_nop56_nop58_snu13_core, NOP1/NOP56/NOP58/SNU13), box_h_aca_rnp_complex.yaml (GO:0072588, components#cbf5_gar1_nhp2_nop10_core, CBF5/GAR1/NHP2/NOP10), and box_h_aca_snornp_complex.yaml (GO:0031429, components#cbf5_gar1_nhp2_nop10_core, CBF5/GAR1/NHP2/NOP10), heterotetrameric protein cores are typed component_type: PROTEIN instead of PROTEIN_COMPLEX. Additionally, curation_history cites stale causal_graph IDs in box_c_d_rnp_complex.yaml (box_c_d_rnp_assembly_and_methylation vs box_c_d_rnp_rrna_processing), box_h_aca_rnp_complex.yaml (box_h_aca_rnp_assembly_and_pseudouridylation vs box_h_aca_rnp_pseudouridylation), and rnp_body.yaml (GO:0140365, br_body_assembly_and_decay vs caulobacter_br_body_cycle).
-
-### F3: ribosome.yaml causal_graphs[1] node rrna_23s omits verified SO:0000651 grounding from components#rrna_23s
-
-minor / open / confirmed; issue key: ribonucleoprotein-ribosome-rrna-23s-causal-node-grounding.
-
-In data/structures/ribonucleoprotein/ribosome.yaml (GO:0005840), components#rrna_23s declares grounding: SO:0000651 (rRNA_23S), whereas causal_graphs[1] node rrna_23s (component_ref: rrna_23s) omits grounding.
+In box_c_d_rnp_complex.yaml (GO:0170049, components[1] nop1_nop56_nop58_snu13_core, NOP1/NOP56/NOP58/SNU13), box_h_aca_rnp_complex.yaml (GO:0072588, components[1] cbf5_gar1_nhp2_nop10_core, CBF5/GAR1/NHP2/NOP10), and box_h_aca_snornp_complex.yaml (GO:0031429, components[1] cbf5_gar1_nhp2_nop10_core, CBF5/GAR1/NHP2/NOP10), heterotetrameric protein cores are typed component_type: PROTEIN instead of PROTEIN_COMPLEX. Additionally, curation_history cites stale causal_graph IDs in box_c_d_rnp_complex.yaml (curation_history[1].changes: box_c_d_rnp_assembly_and_methylation vs box_c_d_rnp_rrna_processing), box_h_aca_rnp_complex.yaml (curation_history[1].changes: box_h_aca_rnp_assembly_and_pseudouridylation vs box_h_aca_rnp_pseudouridylation), and rnp_body.yaml (GO:0140365, curation_history[3].changes: br_body_assembly_and_decay vs caulobacter_br_body_cycle).
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Replace the misattributed DOI:10.1016/j.molcel.2007.01.024 citations in box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml with verified snoRNP/sRNP references (PMID:10545111 / PMID:9632712 / GO:0072588), correct the PMID:14562095 notes in box_h_aca_rnp_complex.yaml to Huh et al. 2003 (Nature 425:686-691), and record the updates in history/records/.
+Replace the misattributed DOI:10.1016/j.molcel.2007.01.024 citations in box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml with verified snoRNP/sRNP references, reconcile PMID:14562095 vs PMID:14562099 (Huh et al. 2003) in box_h_aca_snornp_complex.yaml, and record the updates in history/records/.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -182,13 +170,6 @@ Update nop1_nop56_nop58_snu13_core and cbf5_gar1_nhp2_nop10_core in box_c_d_rnp_
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
 
-### A3
-
-Propagate grounding: SO:0000651 (grounding_label: rRNA_23S) to causal_graphs[1].nodes[2] (rrna_23s) in data/structures/ribonucleoprotein/ribosome.yaml and record the update in history/records/ribosome/.
-
-- .venv/bin/python scripts/validate_strict.py data/structures/ribonucleoprotein/ribosome.yaml --out /tmp/ribosome_failures.tsv
-- .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
-
 ## Category Boundaries
 
 - retain: GO:0120259, GO:0030686, GO:1990061, GO:0031428, GO:0170049, GO:0072588, GO:0031429, GO:0015030, GO:0071012, GO:0071013, GO:0000243, GO:0030679, GO:0000177, GO:0010494, GO:0030680, GO:0000178, cellstructuremech:glycolytic_body, cellstructuremech:h_body, GO:0035363, GO:0035061, GO:0015934, GO:0120115, GO:0030681, GO:0010445, GO:0000176, GO:0016607, GO:0097165, GO:0101019, GO:0005655, GO:0035062, GO:0000932, GO:0042382, GO:0071003, GO:0097356, GO:0071014, GO:0071020, GO:0071011, GO:0030684, GO:0030687, GO:0030688, GO:0071010, GO:0000172, GO:0030677, GO:0005840, GO:0140365, GO:0048500, GO:0071024, GO:0030532, GO:0015935, GO:0032040, GO:0005732, GO:0071601, GO:0005681, GO:0097525, GO:0097526, GO:0044530, GO:0005697, cellstructuremech:tmar_condensate, GO:0071023, GO:0005692, GO:0034693, GO:0005693, GO:0071017, GO:0071018, GO:0071019, GO:0071022, GO:0071016, GO:0071015, GO:0005689, GO:0005685, GO:0005686, GO:0071006, GO:0071007, GO:0071008, GO:0071021, GO:0071005, GO:0071004, GO:0005684, GO:0005687, GO:0071001, GO:0046540, GO:0005690, GO:0071002, GO:0071009, GO:0005682, GO:0005688, GO:0005691, GO:0005683. All 89 records in data/structures/ribonucleoprotein/ represent distinct ribosomal, spliceosomal, snoRNP/sRNP, vault, or cytoplasmic/nuclear RNP granule assemblies.
@@ -199,9 +180,8 @@ Propagate grounding: SO:0000651 (grounding_label: rRNA_23S) to causal_graphs[1].
 | --- | --- | --- | --- |
 | ev_strict_ribonucleoprotein | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 88 ribonucleoprotein records. |
 | ev_labels_ribonucleoprotein | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
-| ev_rnp_citations | data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml; components[0..1], taxonomic_distribution[1], evidence[3..4], and causal_graphs[0] in box_h_aca_rnp_complex.yaml and taxonomic_distribution[1] in box_c_d_rnp_complex.yaml | supports | box_h_aca_rnp_complex.yaml and box_c_d_rnp_complex.yaml cite DOI:10.1016/j.molcel.2007.01.024 (Shcherbik &amp; Haines 2007 Cdc48p paper) for archaeal sRNP claims, and box_h_aca_rnp_complex.yaml attributes PMID:14562095 (Huh et al. 2003) to Wang &amp; Meier 2004. |
-| ev_rnp_subcomplex_and_history | data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml; components#nop1_nop56_nop58_snu13_core and curation_history[1] in box_c_d_rnp_complex.yaml (plus box_h_aca_rnp_complex.yaml, box_h_aca_snornp_complex.yaml, rnp_body.yaml) | supports | Heterotetrameric protein cores in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml are typed PROTEIN instead of PROTEIN_COMPLEX, and curation_history in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and rnp_body.yaml cites stale causal_graph IDs. |
-| ev_rnp_ribosome_grounding | data/structures/ribonucleoprotein/ribosome.yaml; components#rrna_23s vs causal_graphs[1].nodes#rrna_23s | supports | ribosome.yaml causal_graphs[1] node rrna_23s (component_ref: rrna_23s) omits grounding: SO:0000651 declared on components#rrna_23s. |
+| ev_rnp_citations | data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml; evidence[4] (lines 152-154), components[0].evidence[1], taxonomic_distribution[1], causal_graphs[0].edges[0].evidence[1], and curation_history[1].changes in box_h_aca_rnp_complex.yaml; taxonomic_distribution[1] in box_c_d_rnp_complex.yaml; and components[1].protein_examples[0..3].evidence in box_h_aca_snornp_complex.yaml | supports | box_h_aca_rnp_complex.yaml and box_c_d_rnp_complex.yaml cite DOI:10.1016/j.molcel.2007.01.024 (Shcherbik &amp; Haines 2007 Cdc48p paper) for archaeal sRNP claims, and box_h_aca_snornp_complex.yaml pairs PMID:14562095 (Wang &amp; Meier 2004) with notes for Huh et al. 2003 (PMID:14562099). |
+| ev_rnp_subcomplex_and_history | data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml; components[1] (lines 37-40) and curation_history[1].changes (lines 255-260) in box_c_d_rnp_complex.yaml (plus box_h_aca_rnp_complex.yaml, box_h_aca_snornp_complex.yaml, rnp_body.yaml) | supports | Heterotetrameric protein cores in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml are typed PROTEIN instead of PROTEIN_COMPLEX, and curation_history in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and rnp_body.yaml cites stale causal_graph IDs. |
 
 ## Limits And Additional Notes
 
@@ -217,8 +197,7 @@ review_id: 20261025T071011Z-ribonucleoprotein-category-review
 kind: category
 repository: CultureBotAI/CellStructureMech
 title: 'Category review of data/structures/ribonucleoprotein/ (89 records): box C/D
-  and H/ACA RNP citations, subcomplex component_type, curation_history graph IDs,
-  and ribosome 23S rRNA node grounding'
+  and H/ACA RNP citations, subcomplex component_type, and curation_history graph IDs'
 started_at: '2026-10-25T06:56:00Z'
 finished_at: '2026-10-25T07:10:11Z'
 reviewer:
@@ -237,17 +216,17 @@ scientific_review: true
 summary: 'Full-coverage category review of all 89 records in data/structures/ribonucleoprotein/
   (including the 3 new Cycle 3 Stage 1 records box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml,
   and box_h_aca_snornp_complex.yaml) verified distinct ribosomal, spliceosomal, snoRNP/sRNP,
-  and RNP-granule boundaries. Three cohort findings were identified across 5 records:
+  and RNP-granule boundaries. Two cohort findings were identified across 4 records:
   (F1, major) box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml cite DOI:10.1016/j.molcel.2007.01.024
   (Shcherbik & Haines 2007 on Cdc48p polyubiquitin segregation) for archaeal sRNP
-  conservation/structure, and box_h_aca_rnp_complex.yaml misattributes PMID:14562095
-  (Huh et al. 2003 yeast GFP localization) to Wang & Meier 2004; (F2, minor) heterotetrameric
+  conservation/structure (where box_h_aca_rnp_complex.yaml notes attribute it to ''Matera
+  et al. 2007'' and ''Crystal structure of the box H/ACA RNP''), while box_h_aca_snornp_complex.yaml
+  pairs PMID:14562095 (which is Wang C & Meier UT 2004, EMBO J.) with notes for Huh
+  WK et al. 2003 (whose actual PubMed ID is PMID:14562099); and (F2, minor) heterotetrameric
   core components nop1_nop56_nop58_snu13_core and cbf5_gar1_nhp2_nop10_core in box_c_d_rnp_complex.yaml,
   box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml are typed component_type:
   PROTEIN instead of PROTEIN_COMPLEX, and curation_history in box_c_d_rnp_complex.yaml,
-  box_h_aca_rnp_complex.yaml, and rnp_body.yaml cites stale causal_graph IDs; and
-  (F3, minor) ribosome.yaml causal_graphs[1] node rrna_23s omits grounding: SO:0000651
-  from components#rrna_23s.'
+  box_h_aca_rnp_complex.yaml, and rnp_body.yaml cites stale causal_graph IDs.'
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
   state: git_commit
@@ -2004,42 +1983,34 @@ evidence:
 - evidence_id: ev_rnp_citations
   kind: record_content
   reference: data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml
-  locator: components[0..1], taxonomic_distribution[1], evidence[3..4], and causal_graphs[0]
-    in box_h_aca_rnp_complex.yaml and taxonomic_distribution[1] in box_c_d_rnp_complex.yaml
+  locator: evidence[4] (lines 152-154), components[0].evidence[1], taxonomic_distribution[1],
+    causal_graphs[0].edges[0].evidence[1], and curation_history[1].changes in box_h_aca_rnp_complex.yaml;
+    taxonomic_distribution[1] in box_c_d_rnp_complex.yaml; and components[1].protein_examples[0..3].evidence
+    in box_h_aca_snornp_complex.yaml
   accessed_at: '2026-10-25T07:04:30Z'
   support: supports
   summary: box_h_aca_rnp_complex.yaml and box_c_d_rnp_complex.yaml cite DOI:10.1016/j.molcel.2007.01.024
-    (Shcherbik & Haines 2007 Cdc48p paper) for archaeal sRNP claims, and box_h_aca_rnp_complex.yaml
-    attributes PMID:14562095 (Huh et al. 2003) to Wang & Meier 2004.
-  quote: "- reference: PMID:14562095\n  supports: SUPPORT\n  evidence_source: IN_VITRO\n\
-    \  notes: Wang C and Meier UT 2004, 'Architecture and assembly of mammalian H/ACA\
-    \ small\n    nucleolar and telomerase ribonucleoproteins.', EMBO J."
+    (Shcherbik & Haines 2007 Cdc48p paper) for archaeal sRNP claims, and box_h_aca_snornp_complex.yaml
+    pairs PMID:14562095 (Wang & Meier 2004) with notes for Huh et al. 2003 (PMID:14562099).
+  quote: "- reference: DOI:10.1016/j.molcel.2007.01.024\n  notes: 'Matera AG et al.\
+    \ 2007, ''Non-coding RNAs: lessons from the small nuclear\n    and small nucleolar\
+    \ RNAs'', Nat Rev Mol Cell Biol / Mol Cell.'"
   snapshot_sha256: 0d9b655bdd19d234416d90e358e1e919774f668a2b43fa6be14663bd2e6373d0
 - evidence_id: ev_rnp_subcomplex_and_history
   kind: record_content
   reference: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
-  locator: components#nop1_nop56_nop58_snu13_core and curation_history[1] in box_c_d_rnp_complex.yaml
-    (plus box_h_aca_rnp_complex.yaml, box_h_aca_snornp_complex.yaml, rnp_body.yaml)
+  locator: components[1] (lines 37-40) and curation_history[1].changes (lines 255-260)
+    in box_c_d_rnp_complex.yaml (plus box_h_aca_rnp_complex.yaml, box_h_aca_snornp_complex.yaml,
+    rnp_body.yaml)
   accessed_at: '2026-10-25T07:04:45Z'
   support: supports
   summary: Heterotetrameric protein cores in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml,
     and box_h_aca_snornp_complex.yaml are typed PROTEIN instead of PROTEIN_COMPLEX,
     and curation_history in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml,
     and rnp_body.yaml cites stale causal_graph IDs.
-  quote: "- component_id: nop1_nop56_nop58_snu13_core\n  label: Box C/D RNP catalytic\
-    \ protein core (Nop1/fibrillarin, Nop56, Nop58, Snu13)\n  component_type: PROTEIN"
+  quote: "- component_id: nop1_nop56_nop58_snu13_core\n  label: Nop1-Nop56-Nop58-Snu13\
+    \ core protein tetramer\n  component_type: PROTEIN\n  component_role: CONSTITUENT"
   snapshot_sha256: b4bd09a844c3efd0bb0df3cb3292bdbe04d4e26eb167150efca0453be251370b
-- evidence_id: ev_rnp_ribosome_grounding
-  kind: record_content
-  reference: data/structures/ribonucleoprotein/ribosome.yaml
-  locator: components#rrna_23s vs causal_graphs[1].nodes#rrna_23s
-  accessed_at: '2026-10-25T07:05:00Z'
-  support: supports
-  summary: 'ribosome.yaml causal_graphs[1] node rrna_23s (component_ref: rrna_23s)
-    omits grounding: SO:0000651 declared on components#rrna_23s.'
-  quote: "- id: rrna_23s\n    label: 23S ribosomal RNA peptidyl transferase center\n\
-    \    node_type: BIOMOLECULE\n    component_ref: rrna_23s"
-  snapshot_sha256: c5eedf782372b48b8355ab5387fad6df558b0c2a11769b5a3d28dcc7a43d0169
 assessments:
 - assessment_id: assess_ribonucleoprotein_cohort
   area: scope
@@ -2143,14 +2114,15 @@ assessments:
 - assessment_id: assess_rnp_citations
   area: evidence
   topic: Bibliographic accuracy of DOI:10.1016/j.molcel.2007.01.024 and PMID:14562095
-    in box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml
+    across box C/D and H/ACA RNP records
   outcome: concern
   summary: DOI:10.1016/j.molcel.2007.01.024 (Shcherbik & Haines 2007) is misattributed
-    to archaeal sRNP structure/distribution, and PMID:14562095 (Huh et al. 2003) is
-    misattributed in notes to Wang & Meier 2004.
+    to archaeal sRNP structure/distribution in GO:0170049 and GO:0072588, and PMID:14562095
+    (Wang & Meier 2004) is paired with Huh et al. 2003 notes in GO:0031429.
   target_ids:
   - GO:0170049
   - GO:0072588
+  - GO:0031429
   evidence_ids:
   - ev_rnp_citations
 - assessment_id: assess_rnp_subcomplex_and_history
@@ -2167,15 +2139,6 @@ assessments:
   - GO:0140365
   evidence_ids:
   - ev_rnp_subcomplex_and_history
-- assessment_id: assess_rnp_ribosome_grounding
-  area: graph
-  topic: Causal-graph component_ref grounding propagation for rrna_23s in ribosome.yaml
-  outcome: concern
-  summary: causal_graphs[1] node rrna_23s in ribosome.yaml omits SO:0000651 from components#rrna_23s.
-  target_ids:
-  - GO:0005840
-  evidence_ids:
-  - ev_rnp_ribosome_grounding
 findings:
 - finding_id: F1
   issue_key: ribonucleoprotein-box-rnp-reference-misattribution
@@ -2183,33 +2146,37 @@ findings:
   severity: major
   status: open
   certainty: confirmed
-  title: box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml misattribute DOI:10.1016/j.molcel.2007.01.024
-    and PMID:14562095
+  title: box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml
+    misattribute DOI:10.1016/j.molcel.2007.01.024 and PMID:14562095
   description: In data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml (GO:0170049,
     taxonomic_distribution[1].reference) and data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml
     (GO:0072588, components[0].evidence[1], taxonomic_distribution[1].reference, evidence[4],
-    causal_graphs[0].edges[0].evidence[1], curation_history[1]), DOI:10.1016/j.molcel.2007.01.024
+    causal_graphs[0].edges[0].evidence[1], curation_history[1].changes), DOI:10.1016/j.molcel.2007.01.024
     (which is Shcherbik & Haines 2007, Molecular Cell 25(3):385-397 on Cdc48p(Npl4p/Ufd1p)
     polyubiquitin segregation) is misattributed to archaeal box C/D and box H/ACA
-    sRNP structure/conservation (supported in box_c_d_rnp_complex.yaml and box_h_aca_snornp_complex.yaml
-    by PMID:10545111, PMID:9632712, and GO:0005732). Furthermore, in box_h_aca_rnp_complex.yaml,
-    PMID:14562095 (Huh WK et al. 2003, 'Global analysis of protein localization in
-    budding yeast', Nature 425:686-691, as correctly cited in box_h_aca_snornp_complex.yaml)
-    is misattributed in notes across components[1].evidence[1], components[1].protein_examples[0..1].evidence[0],
-    evidence[3], and causal_graphs[0].edges[2].evidence[0] to 'Wang C and Meier UT
-    2004, Architecture and assembly of mammalian H/ACA small nucleolar and telomerase
-    ribonucleoproteins, EMBO J.'.
+    sRNP structure/conservation (with notes in box_h_aca_rnp_complex.yaml attributing
+    it to 'Matera et al. 2007' and 'Crystal structure of the box H/ACA RNP'). Furthermore,
+    in data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml (GO:0031429,
+    components[1].protein_examples[0].evidence[0], components[1].protein_examples[1].evidence[1],
+    components[1].protein_examples[2].evidence[0], components[1].protein_examples[3].evidence[0]),
+    PMID:14562095 (which is Wang C & Meier UT 2004, 'Architecture and assembly of
+    mammalian H/ACA small nucleolar and telomerase ribonucleoproteins', EMBO J.) is
+    paired with notes for 'Huh WK et al. 2003, Global analysis of protein localization
+    in budding yeast, Nature' (whose actual PubMed ID is PMID:14562099).
   target_ids:
   - GO:0170049
   - GO:0072588
+  - GO:0031429
   field_paths:
   - taxonomic_distribution[1].reference
   - components[0].evidence[1]
-  - components[1].evidence[1].notes
-  - evidence[3].notes
+  - components[1].protein_examples[0].evidence[0]
+  - components[1].protein_examples[1].evidence[1]
+  - components[1].protein_examples[2].evidence[0]
+  - components[1].protein_examples[3].evidence[0]
   - evidence[4]
   - causal_graphs[0].edges[0].evidence[1]
-  - causal_graphs[0].edges[2].evidence[0].notes
+  - curation_history[1].changes
   evidence_ids:
   - ev_rnp_citations
   rule_id: docs/CURATION.md:evidence-reference-accuracy
@@ -2219,6 +2186,9 @@ findings:
     role: maintained_record
   - repository: CultureBotAI/CellStructureMech
     path: data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml
     role: maintained_record
   tags:
   - evidence
@@ -2232,15 +2202,16 @@ findings:
   certainty: confirmed
   title: Heterotetrameric snoRNP/RNP core components are typed PROTEIN instead of
     PROTEIN_COMPLEX and 3 records cite mismatched graph_ids in curation_history
-  description: 'In box_c_d_rnp_complex.yaml (GO:0170049, components#nop1_nop56_nop58_snu13_core,
-    NOP1/NOP56/NOP58/SNU13), box_h_aca_rnp_complex.yaml (GO:0072588, components#cbf5_gar1_nhp2_nop10_core,
-    CBF5/GAR1/NHP2/NOP10), and box_h_aca_snornp_complex.yaml (GO:0031429, components#cbf5_gar1_nhp2_nop10_core,
-    CBF5/GAR1/NHP2/NOP10), heterotetrameric protein cores are typed component_type:
-    PROTEIN instead of PROTEIN_COMPLEX. Additionally, curation_history cites stale
-    causal_graph IDs in box_c_d_rnp_complex.yaml (box_c_d_rnp_assembly_and_methylation
-    vs box_c_d_rnp_rrna_processing), box_h_aca_rnp_complex.yaml (box_h_aca_rnp_assembly_and_pseudouridylation
-    vs box_h_aca_rnp_pseudouridylation), and rnp_body.yaml (GO:0140365, br_body_assembly_and_decay
-    vs caulobacter_br_body_cycle).'
+  description: 'In box_c_d_rnp_complex.yaml (GO:0170049, components[1] nop1_nop56_nop58_snu13_core,
+    NOP1/NOP56/NOP58/SNU13), box_h_aca_rnp_complex.yaml (GO:0072588, components[1]
+    cbf5_gar1_nhp2_nop10_core, CBF5/GAR1/NHP2/NOP10), and box_h_aca_snornp_complex.yaml
+    (GO:0031429, components[1] cbf5_gar1_nhp2_nop10_core, CBF5/GAR1/NHP2/NOP10), heterotetrameric
+    protein cores are typed component_type: PROTEIN instead of PROTEIN_COMPLEX. Additionally,
+    curation_history cites stale causal_graph IDs in box_c_d_rnp_complex.yaml (curation_history[1].changes:
+    box_c_d_rnp_assembly_and_methylation vs box_c_d_rnp_rrna_processing), box_h_aca_rnp_complex.yaml
+    (curation_history[1].changes: box_h_aca_rnp_assembly_and_pseudouridylation vs
+    box_h_aca_rnp_pseudouridylation), and rnp_body.yaml (GO:0140365, curation_history[3].changes:
+    br_body_assembly_and_decay vs caulobacter_br_body_cycle).'
   target_ids:
   - GO:0170049
   - GO:0072588
@@ -2248,7 +2219,8 @@ findings:
   - GO:0140365
   field_paths:
   - components[1].component_type
-  - curation_history[*].summary
+  - curation_history[1].changes
+  - curation_history[3].changes
   evidence_ids:
   - ev_rnp_subcomplex_and_history
   rule_id: docs/SCHEMA.md:ComponentTypeEnum
@@ -2270,51 +2242,27 @@ findings:
   - component-type
   - curation-history
   - stage4-record-review
-- finding_id: F3
-  issue_key: ribonucleoprotein-ribosome-rrna-23s-causal-node-grounding
-  category: graph
-  severity: minor
-  status: open
-  certainty: confirmed
-  title: ribosome.yaml causal_graphs[1] node rrna_23s omits verified SO:0000651 grounding
-    from components#rrna_23s
-  description: 'In data/structures/ribonucleoprotein/ribosome.yaml (GO:0005840), components#rrna_23s
-    declares grounding: SO:0000651 (rRNA_23S), whereas causal_graphs[1] node rrna_23s
-    (component_ref: rrna_23s) omits grounding.'
-  target_ids:
-  - GO:0005840
-  field_paths:
-  - causal_graphs[1].nodes[2].grounding
-  evidence_ids:
-  - ev_rnp_ribosome_grounding
-  rule_id: docs/SCHEMA.md:CausalNode-grounding
-  owner_paths:
-  - repository: CultureBotAI/CellStructureMech
-    path: data/structures/ribonucleoprotein/ribosome.yaml
-    role: maintained_record
-  tags:
-  - causal-graphs
-  - grounding
-  - component-ref
-  - stage4-record-review
 actions:
 - action_id: A1
   description: Replace the misattributed DOI:10.1016/j.molcel.2007.01.024 citations
     in box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml with verified snoRNP/sRNP
-    references (PMID:10545111 / PMID:9632712 / GO:0072588), correct the PMID:14562095
-    notes in box_h_aca_rnp_complex.yaml to Huh et al. 2003 (Nature 425:686-691), and
-    record the updates in history/records/.
+    references, reconcile PMID:14562095 vs PMID:14562099 (Huh et al. 2003) in box_h_aca_snornp_complex.yaml,
+    and record the updates in history/records/.
   finding_ids:
   - F1
   target_ids:
   - GO:0170049
   - GO:0072588
+  - GO:0031429
   owner_paths:
   - repository: CultureBotAI/CellStructureMech
     path: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
     role: maintained_record
   - repository: CultureBotAI/CellStructureMech
     path: data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml
     role: maintained_record
   acceptance_checks:
   - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
@@ -2348,22 +2296,6 @@ actions:
   acceptance_checks:
   - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
   - .venv/bin/python scripts/validate_history.py
-- action_id: A3
-  description: 'Propagate grounding: SO:0000651 (grounding_label: rRNA_23S) to causal_graphs[1].nodes[2]
-    (rrna_23s) in data/structures/ribonucleoprotein/ribosome.yaml and record the update
-    in history/records/ribosome/.'
-  finding_ids:
-  - F3
-  target_ids:
-  - GO:0005840
-  owner_paths:
-  - repository: CultureBotAI/CellStructureMech
-    path: data/structures/ribonucleoprotein/ribosome.yaml
-    role: maintained_record
-  acceptance_checks:
-  - .venv/bin/python scripts/validate_strict.py data/structures/ribonucleoprotein/ribosome.yaml
-    --out /tmp/ribosome_failures.tsv
-  - .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
 boundary_decisions:
 - action: retain
   target_ids:

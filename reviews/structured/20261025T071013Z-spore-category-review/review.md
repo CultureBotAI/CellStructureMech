@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 23 records in data/structures/spore/ verified distinct bacterial endospore, fungal ascospore/prospore, and microsporidian spore apparatus boundaries. One minor causal-graph grounding gap was identified in ascospore_wall.yaml (GO:0005619): causal_graphs[0] node chitosan_outer_layer (component_ref: chitosan_outer_layer) omits grounding: CHEBI:16261 declared on components#chitosan_outer_layer.
+Full-coverage category review of all 23 records in data/structures/spore/ verified distinct bacterial endospore, fungal ascospore/prospore, and microsporidian spore apparatus boundaries. One minor causal-graph grounding gap was identified in ascospore_wall.yaml (GO:0005619): causal_graphs[0].nodes[3] (node_id: chitosan_outer_layer, component_ref: chitosan_outer_layer) omits grounding: CHEBI:16261 declared on components#chitosan_outer_layer.
 
 ## Scope And Provenance
 
@@ -67,21 +67,21 @@ All 23 records in data/structures/spore/ represent distinct microbial cell struc
 
 graph: concern. Targets: GO:0005619.
 
-causal_graphs[0] node chitosan_outer_layer in ascospore_wall.yaml omits CHEBI:16261 from components#chitosan_outer_layer.
+causal_graphs[0].nodes[3] (chitosan_outer_layer) in ascospore_wall.yaml omits CHEBI:16261 from components#chitosan_outer_layer.
 
 ## Findings
 
-### F1: ascospore_wall.yaml causal_graphs[0] node chitosan_outer_layer omits verified CHEBI:16261 grounding from components#chitosan_outer_layer
+### F1: ascospore_wall.yaml causal_graphs[0].nodes[3] (chitosan_outer_layer) omits verified CHEBI:16261 grounding from components#chitosan_outer_layer
 
 minor / open / confirmed; issue key: spore-ascospore-wall-causal-node-component-ref-grounding.
 
-In data/structures/spore/ascospore_wall.yaml (GO:0005619), components#chitosan_outer_layer declares grounding: CHEBI:16261 (chitosan), whereas causal_graphs[0] node chitosan_outer_layer (component_ref: chitosan_outer_layer) omits grounding.
+In data/structures/spore/ascospore_wall.yaml (GO:0005619), components#chitosan_outer_layer declares grounding: CHEBI:16261 (chitosan), whereas causal_graphs[0].nodes[3] (node_id: chitosan_outer_layer, component_ref: chitosan_outer_layer) omits grounding.
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Propagate grounding: CHEBI:16261 (grounding_label: chitosan) to causal_graphs[0].nodes[2] (chitosan_outer_layer) in data/structures/spore/ascospore_wall.yaml and record the update in history/records/ascospore_wall/.
+Propagate grounding: CHEBI:16261 (grounding_label: chitosan) to causal_graphs[0].nodes[3] (chitosan_outer_layer) in data/structures/spore/ascospore_wall.yaml and record the update in history/records/ascospore_wall/.
 
 - .venv/bin/python scripts/validate_strict.py data/structures/spore/ascospore_wall.yaml --out /tmp/ascospore_failures.tsv
 - .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
@@ -96,7 +96,7 @@ Propagate grounding: CHEBI:16261 (grounding_label: chitosan) to causal_graphs[0]
 | --- | --- | --- | --- |
 | ev_strict_spore | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 23 spore records. |
 | ev_labels_spore | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
-| ev_sp_ascospore_grounding | data/structures/spore/ascospore_wall.yaml; components#chitosan_outer_layer vs causal_graphs[0].nodes#chitosan_outer_layer | supports | ascospore_wall.yaml components#chitosan_outer_layer declares grounding: CHEBI:16261 whereas causal_graphs[0] node chitosan_outer_layer omits grounding. |
+| ev_sp_ascospore_grounding | data/structures/spore/ascospore_wall.yaml; components#chitosan_outer_layer vs causal_graphs[0].nodes[3] (lines 220-223) | supports | ascospore_wall.yaml components#chitosan_outer_layer declares grounding: CHEBI:16261 whereas causal_graphs[0].nodes[3] (chitosan_outer_layer) omits grounding. |
 
 ## Limits And Additional Notes
 
@@ -131,8 +131,8 @@ scientific_review: true
 summary: 'Full-coverage category review of all 23 records in data/structures/spore/
   verified distinct bacterial endospore, fungal ascospore/prospore, and microsporidian
   spore apparatus boundaries. One minor causal-graph grounding gap was identified
-  in ascospore_wall.yaml (GO:0005619): causal_graphs[0] node chitosan_outer_layer
-  (component_ref: chitosan_outer_layer) omits grounding: CHEBI:16261 declared on components#chitosan_outer_layer.'
+  in ascospore_wall.yaml (GO:0005619): causal_graphs[0].nodes[3] (node_id: chitosan_outer_layer,
+  component_ref: chitosan_outer_layer) omits grounding: CHEBI:16261 declared on components#chitosan_outer_layer.'
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
   state: git_commit
@@ -653,13 +653,13 @@ evidence:
 - evidence_id: ev_sp_ascospore_grounding
   kind: record_content
   reference: data/structures/spore/ascospore_wall.yaml
-  locator: components#chitosan_outer_layer vs causal_graphs[0].nodes#chitosan_outer_layer
+  locator: components#chitosan_outer_layer vs causal_graphs[0].nodes[3] (lines 220-223)
   accessed_at: '2026-10-25T07:05:40Z'
   support: supports
   summary: 'ascospore_wall.yaml components#chitosan_outer_layer declares grounding:
-    CHEBI:16261 whereas causal_graphs[0] node chitosan_outer_layer omits grounding.'
-  quote: "- id: chitosan_outer_layer\n    label: Outer glucosamine/chitosan polymer\
-    \ layer\n    node_type: BIOMOLECULE\n    component_ref: chitosan_outer_layer"
+    CHEBI:16261 whereas causal_graphs[0].nodes[3] (chitosan_outer_layer) omits grounding.'
+  quote: "  - node_id: chitosan_outer_layer\n    label: chitosan\n    node_type: CHEMICAL\n\
+    \    component_ref: chitosan_outer_layer"
   snapshot_sha256: 97c1d9a7123cc5f0e5209c1e4bb6ba15d7ddebe89f5e001363c564938cfbacc7
 assessments:
 - assessment_id: assess_spore_cohort
@@ -700,8 +700,8 @@ assessments:
   area: graph
   topic: Causal-graph component_ref grounding propagation in ascospore_wall.yaml
   outcome: concern
-  summary: causal_graphs[0] node chitosan_outer_layer in ascospore_wall.yaml omits
-    CHEBI:16261 from components#chitosan_outer_layer.
+  summary: causal_graphs[0].nodes[3] (chitosan_outer_layer) in ascospore_wall.yaml
+    omits CHEBI:16261 from components#chitosan_outer_layer.
   target_ids:
   - GO:0005619
   evidence_ids:
@@ -713,15 +713,15 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: ascospore_wall.yaml causal_graphs[0] node chitosan_outer_layer omits verified
-    CHEBI:16261 grounding from components#chitosan_outer_layer
+  title: ascospore_wall.yaml causal_graphs[0].nodes[3] (chitosan_outer_layer) omits
+    verified CHEBI:16261 grounding from components#chitosan_outer_layer
   description: 'In data/structures/spore/ascospore_wall.yaml (GO:0005619), components#chitosan_outer_layer
-    declares grounding: CHEBI:16261 (chitosan), whereas causal_graphs[0] node chitosan_outer_layer
-    (component_ref: chitosan_outer_layer) omits grounding.'
+    declares grounding: CHEBI:16261 (chitosan), whereas causal_graphs[0].nodes[3]
+    (node_id: chitosan_outer_layer, component_ref: chitosan_outer_layer) omits grounding.'
   target_ids:
   - GO:0005619
   field_paths:
-  - causal_graphs[0].nodes[2].grounding
+  - causal_graphs[0].nodes[3].grounding
   evidence_ids:
   - ev_sp_ascospore_grounding
   rule_id: docs/SCHEMA.md:CausalNode-grounding
@@ -736,7 +736,7 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Propagate grounding: CHEBI:16261 (grounding_label: chitosan) to causal_graphs[0].nodes[2]
+  description: 'Propagate grounding: CHEBI:16261 (grounding_label: chitosan) to causal_graphs[0].nodes[3]
     (chitosan_outer_layer) in data/structures/spore/ascospore_wall.yaml and record
     the update in history/records/ascospore_wall/.'
   finding_ids:

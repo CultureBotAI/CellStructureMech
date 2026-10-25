@@ -1,4 +1,4 @@
-# Record review of static microtubule bundle (GO:0097496): DOI:10.7554/eLife.89958 misattribution to Trypanosoma brucei and curation_history graph_id mismatch
+# Record review of static microtubule bundle (GO:0099070): curation_history[1] causal_graph ID mismatch
 
 - Review: 20261025T071001Z-static-microtubule-bundle-reference-attribution
 - Repository: CultureBotAI/CellStructureMech
@@ -6,16 +6,16 @@
 - Finished UTC: 2026-10-25T07:10:01Z
 - Reviewer: antigravity-c3s4-record-review (independent)
 - Completion: completed
-- Verdict: needs_curation
+- Verdict: pass_with_limitations
 - Scientific review: true
 
 ## Summary
 
-Static microtubule bundle (GO:0097496, data/structures/cytoskeleton/static_microtubule_bundle.yaml) has valid GO cellular-component identity, parent/part_of hierarchy, and Saccharomyces cerevisiae S288C quiescent nuclear microtubule bundle composition (TUB1/TUB2/BIM1/STU2/CIN8). However, DOI:10.7554/eLife.89958 (the S. cerevisiae quiescent nuclear microtubule bundle study also cited in quiescent_nuclear_microtubule_bundle.yaml and quiescent_cell_microtubule_bundle.yaml) is misattributed across components#alpha_tubulin, components#beta_tubulin, taxonomic_distribution[1], canonical_examples[1], functions[0].evidence[1], evidence[3], causal_graphs[0], and curation_history[1] to Trypanosoma brucei subpellicular microtubule array cryo-ET (which in sibling subpellicular_microtubule.yaml is supported by PMID:9858467 and DOI:10.15252/embj.2020105926). Additionally, curation_history[1] (CURATED_CAUSAL_GRAPH) cites graph_id 'static_bundle_stabilization' whereas causal_graphs[0].id is 'static_microtubule_bundle_organization'.
+Static microtubule bundle (GO:0099070, data/structures/cytoskeleton/static_microtubule_bundle.yaml) has valid GO cellular-component identity, parent/part_of hierarchy (GO:0043209, GO:0005856, GO:0005874), and well-sourced alpha/beta-tubulin subunit composition (alpha_tubulin atb2/TUB1/TUB3 with UniProtKB:P04689, UniProtKB:P09733, UniProtKB:P09734; beta_tubulin nda3/TUB2 with UniProtKB:P05219, UniProtKB:P02557) across Schizosaccharomyces pombe and Saccharomyces cerevisiae supported by DOI:10.1083/jcb.201502025, DOI:10.1083/jcb.201306075, and DOI:10.7554/eLife.89958. One minor provenance discrepancy was identified: curation_history[1].changes (CURATED_CAUSAL_GRAPH) cites graph_id 'static_bundle_stabilization' whereas causal_graphs[0].graph_id is 'static_microtubule_bundle_organization'.
 
 ## Scope And Provenance
 
-Single-record audit of static microtubule bundle (GO:0097496) covering identity, composition, citations, causal graphs, and curation history.
+Single-record audit of static microtubule bundle (GO:0099070) covering identity, composition, citations, causal graphs, and curation history.
 
 Selection: Targeted single-record review of new Cycle 3 Stage 1 record data/structures/cytoskeleton/static_microtubule_bundle.yaml.
 Coverage: full; 1 reviewed / 1 in the declared population.
@@ -24,42 +24,42 @@ Working-tree hashes do not imply those bytes were committed.
 
 | Target | Path / selector | Kind | Label |
 | --- | --- | --- | --- |
-| GO:0097496 | data/structures/cytoskeleton/static_microtubule_bundle.yaml | maintained | static microtubule bundle |
+| GO:0099070 | data/structures/cytoskeleton/static_microtubule_bundle.yaml | maintained | static microtubule bundle |
 
 ## Validation
 
 | Check | Status | Required | Targets | Result |
 | --- | --- | --- | --- | --- |
-| LinkML schema validation on static_microtubule_bundle.yaml | passed | True | GO:0097496 | No LinkML schema issues found for static_microtubule_bundle.yaml. |
-| Strict instance validator on static_microtubule_bundle.yaml | passed | True | GO:0097496 | Zero strict validator errors on static_microtubule_bundle.yaml. |
+| LinkML schema validation on static_microtubule_bundle.yaml | passed | True | GO:0099070 | No LinkML schema issues found for static_microtubule_bundle.yaml. |
+| Strict instance validator on static_microtubule_bundle.yaml | passed | True | GO:0099070 | Zero strict validator errors on static_microtubule_bundle.yaml. |
 
 ## Scientific And Domain Assessments
 
-### GO cellular-component identity and S. cerevisiae quiescent bundle composition of static microtubule bundle (GO:0097496)
+### GO cellular-component identity and S. pombe / S. cerevisiae tubulin composition of static microtubule bundle (GO:0099070)
 
-identity: supported. Targets: GO:0097496.
+identity: supported. Targets: GO:0099070.
 
-GO:0097496 identity, parent/part_of hierarchy, and S. cerevisiae quiescent nuclear microtubule bundle composition (PMID:19879843, PMID:29921728, PMID:26868148) are accurately grounded.
+GO:0099070 identity, parent/part_of hierarchy, alpha/beta-tubulin subunit composition (atb2/TUB1/TUB3 and nda3/TUB2), and citations (DOI:10.1083/jcb.201502025, DOI:10.1083/jcb.201306075, DOI:10.7554/eLife.89958) are accurately grounded.
 
-### Bibliographic attribution of DOI:10.7554/eLife.89958 and curation_history causal_graph ID
+### Alignment between curation_history[1].changes and causal_graphs[0].graph_id
 
-evidence: concern. Targets: GO:0097496.
+provenance: concern. Targets: GO:0099070.
 
-DOI:10.7554/eLife.89958 (S. cerevisiae quiescent nuclear microtubule bundle paper) is misattributed to Trypanosoma brucei subpellicular microtubule array cryo-ET, and curation_history[1] cites static_bundle_stabilization instead of static_microtubule_bundle_organization.
+curation_history[1].changes cites static_bundle_stabilization instead of causal_graphs[0].graph_id static_microtubule_bundle_organization.
 
 ## Findings
 
-### F1: static_microtubule_bundle.yaml misattributes DOI:10.7554/eLife.89958 to Trypanosoma brucei and cites a mismatched graph_id in curation_history[1]
+### F1: static_microtubule_bundle.yaml curation_history[1].changes cites graph_id static_bundle_stabilization instead of static_microtubule_bundle_organization
 
-major / open / confirmed; issue key: static-microtubule-bundle-elife89958-reference-and-graph-id.
+minor / open / confirmed; issue key: static-microtubule-bundle-curation-history-graph-id-mismatch.
 
-In data/structures/cytoskeleton/static_microtubule_bundle.yaml (GO:0097496), DOI:10.7554/eLife.89958 (which reports Saccharomyces cerevisiae quiescent nuclear microtubule bundle organization and is cited as such in quiescent_nuclear_microtubule_bundle.yaml and quiescent_cell_microtubule_bundle.yaml) is misattributed across components#alpha_tubulin.evidence[1], components#alpha_tubulin.protein_examples[1].evidence[0], components#beta_tubulin.evidence[1], components#beta_tubulin.protein_examples[1].evidence[0], taxonomic_distribution[1], canonical_examples[1], functions[0].evidence[1], evidence[3], causal_graphs[0], and curation_history[1] to Trypanosoma brucei subpellicular microtubule array cryo-ET (which in sibling subpellicular_microtubule.yaml is supported by PMID:9858467 and DOI:10.15252/embj.2020105926). In addition, curation_history[1] (CURATED_CAUSAL_GRAPH) cites graph_id 'static_bundle_stabilization' whereas causal_graphs[0].id is 'static_microtubule_bundle_organization'.
+In data/structures/cytoskeleton/static_microtubule_bundle.yaml (GO:0099070), curation_history[1].changes (action: CURATED_CAUSAL_GRAPH, lines 265-270) cites graph_id 'static_bundle_stabilization' whereas causal_graphs[0].graph_id (line 182) is 'static_microtubule_bundle_organization'.
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Replace the misattributed Trypanosoma brucei DOI:10.7554/eLife.89958 citations in data/structures/cytoskeleton/static_microtubule_bundle.yaml with verified T. brucei subpellicular microtubule references (PMID:9858467 / DOI:10.15252/embj.2020105926) or align DOI:10.7554/eLife.89958 to S. cerevisiae quiescent nuclear microtubule bundle claims, align curation_history[1] to static_microtubule_bundle_organization, and record the update in history/records/static_microtubule_bundle/.
+Align curation_history[1].changes in data/structures/cytoskeleton/static_microtubule_bundle.yaml to causal_graphs[0].graph_id 'static_microtubule_bundle_organization' and record the update in history/records/static_microtubule_bundle/.
 
 - .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/static_microtubule_bundle.yaml --out /tmp/static_mt_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -71,7 +71,7 @@ Replace the misattributed Trypanosoma brucei DOI:10.7554/eLife.89958 citations i
 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
-| ev_static_mt_elife89958 | data/structures/cytoskeleton/static_microtubule_bundle.yaml; taxonomic_distribution[1], canonical_examples[1], evidence[3], causal_graphs[0], and curation_history[1] | supports | static_microtubule_bundle.yaml attributes DOI:10.7554/eLife.89958 (an S. cerevisiae quiescent nuclear microtubule bundle paper) to Trypanosoma brucei subpellicular microtubule array cryo-ET and cites static_bundle_stabilization in curation_history[1] instead of static_microtubule_bundle_organization. |
+| ev_static_mt_history_graph_id | data/structures/cytoskeleton/static_microtubule_bundle.yaml; causal_graphs[0].graph_id (line 182) and curation_history[1].changes (lines 265-270) | supports | static_microtubule_bundle.yaml curation_history[1].changes cites graph_id 'static_bundle_stabilization' whereas causal_graphs[0].graph_id is 'static_microtubule_bundle_organization'. |
 | ev_schema_static_mt | scripts/validate_strict.py; schema_static_mt receipt | supports | linkml-validate exited 0 on static_microtubule_bundle.yaml. |
 | ev_strict_static_mt | scripts/validate_strict.py; strict_static_mt receipt | supports | validate_strict.py exited 0 on static_microtubule_bundle.yaml. |
 
@@ -88,8 +88,8 @@ schema_version: 1.0.0
 review_id: 20261025T071001Z-static-microtubule-bundle-reference-attribution
 kind: record
 repository: CultureBotAI/CellStructureMech
-title: 'Record review of static microtubule bundle (GO:0097496): DOI:10.7554/eLife.89958
-  misattribution to Trypanosoma brucei and curation_history graph_id mismatch'
+title: 'Record review of static microtubule bundle (GO:0099070): curation_history[1]
+  causal_graph ID mismatch'
 started_at: '2026-10-25T06:55:00Z'
 finished_at: '2026-10-25T07:10:01Z'
 reviewer:
@@ -102,20 +102,18 @@ reviewer:
     this stage.
 skill: .claude/skills/review-yaml-record/SKILL.md
 completion: completed
-verdict: needs_curation
-native_verdict: NEEDS_CURATION
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
 scientific_review: true
-summary: Static microtubule bundle (GO:0097496, data/structures/cytoskeleton/static_microtubule_bundle.yaml)
-  has valid GO cellular-component identity, parent/part_of hierarchy, and Saccharomyces
-  cerevisiae S288C quiescent nuclear microtubule bundle composition (TUB1/TUB2/BIM1/STU2/CIN8).
-  However, DOI:10.7554/eLife.89958 (the S. cerevisiae quiescent nuclear microtubule
-  bundle study also cited in quiescent_nuclear_microtubule_bundle.yaml and quiescent_cell_microtubule_bundle.yaml)
-  is misattributed across components#alpha_tubulin, components#beta_tubulin, taxonomic_distribution[1],
-  canonical_examples[1], functions[0].evidence[1], evidence[3], causal_graphs[0],
-  and curation_history[1] to Trypanosoma brucei subpellicular microtubule array cryo-ET
-  (which in sibling subpellicular_microtubule.yaml is supported by PMID:9858467 and
-  DOI:10.15252/embj.2020105926). Additionally, curation_history[1] (CURATED_CAUSAL_GRAPH)
-  cites graph_id 'static_bundle_stabilization' whereas causal_graphs[0].id is 'static_microtubule_bundle_organization'.
+summary: 'Static microtubule bundle (GO:0099070, data/structures/cytoskeleton/static_microtubule_bundle.yaml)
+  has valid GO cellular-component identity, parent/part_of hierarchy (GO:0043209,
+  GO:0005856, GO:0005874), and well-sourced alpha/beta-tubulin subunit composition
+  (alpha_tubulin atb2/TUB1/TUB3 with UniProtKB:P04689, UniProtKB:P09733, UniProtKB:P09734;
+  beta_tubulin nda3/TUB2 with UniProtKB:P05219, UniProtKB:P02557) across Schizosaccharomyces
+  pombe and Saccharomyces cerevisiae supported by DOI:10.1083/jcb.201502025, DOI:10.1083/jcb.201306075,
+  and DOI:10.7554/eLife.89958. One minor provenance discrepancy was identified: curation_history[1].changes
+  (CURATED_CAUSAL_GRAPH) cites graph_id ''static_bundle_stabilization'' whereas causal_graphs[0].graph_id
+  is ''static_microtubule_bundle_organization''.'
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
   state: git_commit
@@ -151,15 +149,15 @@ source:
     sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
     role: context
 scope:
-  description: Single-record audit of static microtubule bundle (GO:0097496) covering
+  description: Single-record audit of static microtubule bundle (GO:0099070) covering
     identity, composition, citations, causal graphs, and curation history.
   selection: Targeted single-record review of new Cycle 3 Stage 1 record data/structures/cytoskeleton/static_microtubule_bundle.yaml.
   coverage: full
   population_size: 1
   reviewed_target_ids:
-  - GO:0097496
+  - GO:0099070
 targets:
-- target_id: GO:0097496
+- target_id: GO:0099070
   path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
   label: static microtubule bundle
   record_class: CellStructureRecord
@@ -179,7 +177,7 @@ checks:
   required: true
   summary: No LinkML schema issues found for static_microtubule_bundle.yaml.
   target_ids:
-  - GO:0097496
+  - GO:0099070
   command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
     --target-class CellStructureRecord data/structures/cytoskeleton/static_microtubule_bundle.yaml
   exit_code: 0
@@ -192,7 +190,7 @@ checks:
   required: true
   summary: Zero strict validator errors on static_microtubule_bundle.yaml.
   target_ids:
-  - GO:0097496
+  - GO:0099070
   command: .venv/bin/python scripts/validate_strict.py data/structures/cytoskeleton/static_microtubule_bundle.yaml
     --out /tmp/static_mt_validation_failures.tsv
   exit_code: 0
@@ -200,21 +198,18 @@ checks:
   evidence_ids:
   - ev_strict_static_mt
 evidence:
-- evidence_id: ev_static_mt_elife89958
+- evidence_id: ev_static_mt_history_graph_id
   kind: record_content
   reference: data/structures/cytoskeleton/static_microtubule_bundle.yaml
-  locator: taxonomic_distribution[1], canonical_examples[1], evidence[3], causal_graphs[0],
-    and curation_history[1]
+  locator: causal_graphs[0].graph_id (line 182) and curation_history[1].changes (lines
+    265-270)
   accessed_at: '2026-10-25T07:00:00Z'
   support: supports
-  summary: static_microtubule_bundle.yaml attributes DOI:10.7554/eLife.89958 (an S.
-    cerevisiae quiescent nuclear microtubule bundle paper) to Trypanosoma brucei subpellicular
-    microtubule array cryo-ET and cites static_bundle_stabilization in curation_history[1]
-    instead of static_microtubule_bundle_organization.
-  quote: "- reference: DOI:10.7554/eLife.89958\n  supports: SUPPORT\n  evidence_source:\
-    \ OTHER\n  notes: Cryo-electron tomography of the subpellicular microtubule array\
-    \ in Trypanosoma\n    brucei demonstrating how regularly spaced inter-microtubule\
-    \ cross-bridges maintain\n    a static cortical microtubule cage."
+  summary: static_microtubule_bundle.yaml curation_history[1].changes cites graph_id
+    'static_bundle_stabilization' whereas causal_graphs[0].graph_id is 'static_microtubule_bundle_organization'.
+  quote: "- timestamp: '2026-10-24T06:00:00Z'\n  curator: antigravity\n  action: CURATED_CAUSAL_GRAPH\n\
+    \  changes: Added alpha_tubulin -> beta_tubulin heterodimerization edge in static_bundle_stabilization\n\
+    \    (DOI:10.1083/jcb.201502025, DOI:10.7554/eLife.89958).\n  llm_assisted: true"
   snapshot_sha256: 7b57f98c5e8037cbf1e6848a40f75f9fe6e5b5b0e2fc62d503e17dd58002a24d
 - evidence_id: ev_schema_static_mt
   kind: validation
@@ -235,85 +230,66 @@ evidence:
 assessments:
 - assessment_id: assess_static_mt_identity
   area: identity
-  topic: GO cellular-component identity and S. cerevisiae quiescent bundle composition
-    of static microtubule bundle (GO:0097496)
+  topic: GO cellular-component identity and S. pombe / S. cerevisiae tubulin composition
+    of static microtubule bundle (GO:0099070)
   outcome: supported
-  summary: GO:0097496 identity, parent/part_of hierarchy, and S. cerevisiae quiescent
-    nuclear microtubule bundle composition (PMID:19879843, PMID:29921728, PMID:26868148)
-    are accurately grounded.
+  summary: GO:0099070 identity, parent/part_of hierarchy, alpha/beta-tubulin subunit
+    composition (atb2/TUB1/TUB3 and nda3/TUB2), and citations (DOI:10.1083/jcb.201502025,
+    DOI:10.1083/jcb.201306075, DOI:10.7554/eLife.89958) are accurately grounded.
   target_ids:
-  - GO:0097496
+  - GO:0099070
   evidence_ids:
   - ev_schema_static_mt
   - ev_strict_static_mt
-- assessment_id: assess_static_mt_evidence_attribution
-  area: evidence
-  topic: Bibliographic attribution of DOI:10.7554/eLife.89958 and curation_history
-    causal_graph ID
+- assessment_id: assess_static_mt_history_graph_id
+  area: provenance
+  topic: Alignment between curation_history[1].changes and causal_graphs[0].graph_id
   outcome: concern
-  summary: DOI:10.7554/eLife.89958 (S. cerevisiae quiescent nuclear microtubule bundle
-    paper) is misattributed to Trypanosoma brucei subpellicular microtubule array
-    cryo-ET, and curation_history[1] cites static_bundle_stabilization instead of
-    static_microtubule_bundle_organization.
+  summary: curation_history[1].changes cites static_bundle_stabilization instead of
+    causal_graphs[0].graph_id static_microtubule_bundle_organization.
   target_ids:
-  - GO:0097496
+  - GO:0099070
   evidence_ids:
-  - ev_static_mt_elife89958
+  - ev_static_mt_history_graph_id
 findings:
 - finding_id: F1
-  issue_key: static-microtubule-bundle-elife89958-reference-and-graph-id
-  category: evidence
-  severity: major
+  issue_key: static-microtubule-bundle-curation-history-graph-id-mismatch
+  category: provenance
+  severity: minor
   status: open
   certainty: confirmed
-  title: static_microtubule_bundle.yaml misattributes DOI:10.7554/eLife.89958 to Trypanosoma
-    brucei and cites a mismatched graph_id in curation_history[1]
-  description: In data/structures/cytoskeleton/static_microtubule_bundle.yaml (GO:0097496),
-    DOI:10.7554/eLife.89958 (which reports Saccharomyces cerevisiae quiescent nuclear
-    microtubule bundle organization and is cited as such in quiescent_nuclear_microtubule_bundle.yaml
-    and quiescent_cell_microtubule_bundle.yaml) is misattributed across components#alpha_tubulin.evidence[1],
-    components#alpha_tubulin.protein_examples[1].evidence[0], components#beta_tubulin.evidence[1],
-    components#beta_tubulin.protein_examples[1].evidence[0], taxonomic_distribution[1],
-    canonical_examples[1], functions[0].evidence[1], evidence[3], causal_graphs[0],
-    and curation_history[1] to Trypanosoma brucei subpellicular microtubule array
-    cryo-ET (which in sibling subpellicular_microtubule.yaml is supported by PMID:9858467
-    and DOI:10.15252/embj.2020105926). In addition, curation_history[1] (CURATED_CAUSAL_GRAPH)
-    cites graph_id 'static_bundle_stabilization' whereas causal_graphs[0].id is 'static_microtubule_bundle_organization'.
+  title: static_microtubule_bundle.yaml curation_history[1].changes cites graph_id
+    static_bundle_stabilization instead of static_microtubule_bundle_organization
+  description: 'In data/structures/cytoskeleton/static_microtubule_bundle.yaml (GO:0099070),
+    curation_history[1].changes (action: CURATED_CAUSAL_GRAPH, lines 265-270) cites
+    graph_id ''static_bundle_stabilization'' whereas causal_graphs[0].graph_id (line
+    182) is ''static_microtubule_bundle_organization''.'
   target_ids:
-  - GO:0097496
+  - GO:0099070
   field_paths:
-  - components[0].evidence[1]
-  - components[1].evidence[1]
-  - taxonomic_distribution[1].reference
-  - canonical_examples[1].reference
-  - functions[0].evidence[1]
-  - evidence[3]
-  - causal_graphs[0].edges[0].evidence[1]
-  - curation_history[1].summary
+  - curation_history[1].changes
+  - causal_graphs[0].graph_id
   evidence_ids:
-  - ev_static_mt_elife89958
-  rule_id: docs/CURATION.md:evidence-reference-accuracy
+  - ev_static_mt_history_graph_id
+  rule_id: docs/CURATION.md:curation-history-accuracy
   owner_paths:
   - repository: CultureBotAI/CellStructureMech
     path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
     role: maintained_record
   tags:
-  - evidence
-  - reference-attribution
+  - provenance
   - curation-history
+  - causal-graphs
   - stage4-record-review
 actions:
 - action_id: A1
-  description: Replace the misattributed Trypanosoma brucei DOI:10.7554/eLife.89958
-    citations in data/structures/cytoskeleton/static_microtubule_bundle.yaml with
-    verified T. brucei subpellicular microtubule references (PMID:9858467 / DOI:10.15252/embj.2020105926)
-    or align DOI:10.7554/eLife.89958 to S. cerevisiae quiescent nuclear microtubule
-    bundle claims, align curation_history[1] to static_microtubule_bundle_organization,
-    and record the update in history/records/static_microtubule_bundle/.
+  description: Align curation_history[1].changes in data/structures/cytoskeleton/static_microtubule_bundle.yaml
+    to causal_graphs[0].graph_id 'static_microtubule_bundle_organization' and record
+    the update in history/records/static_microtubule_bundle/.
   finding_ids:
   - F1
   target_ids:
-  - GO:0097496
+  - GO:0099070
   owner_paths:
   - repository: CultureBotAI/CellStructureMech
     path: data/structures/cytoskeleton/static_microtubule_bundle.yaml

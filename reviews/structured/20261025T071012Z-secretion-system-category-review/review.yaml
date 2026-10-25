@@ -489,14 +489,15 @@ evidence:
 - evidence_id: ev_sec_t6ss_grounding
   kind: record_content
   reference: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
-  locator: components[0..4] vs causal_graphs[0].nodes[0..4]
+  locator: components[0..4] vs causal_graphs[0].nodes[0..4] (lines 488-495)
   accessed_at: '2026-10-25T07:05:20Z'
   support: supports
   summary: 'type_vi_protein_secretion_system_complex.yaml causal_graphs[0] nodes membrane,
     baseplate, tube, sheath, and spike omit the cellstructuremech: groundings declared
     on components[0..4].'
-  quote: "- id: membrane\n    label: TssJLM membrane core complex\n    node_type:\
-    \ STRUCTURE\n    component_ref: membrane"
+  quote: "  - node_id: membrane\n    label: TssJ/TssL/TssM membrane complex\n    node_type:\
+    \ STRUCTURE\n    component_ref: membrane_complex\n  - node_id: baseplate\n   \
+    \ label: T6SS baseplate\n    node_type: STRUCTURE\n    component_ref: baseplate"
   snapshot_sha256: f5f982d25a43b3446ed59dc7ebde4970151e1825c0bd311c514b4bb6bba8bf92
 assessments:
 - assessment_id: assess_secretionsystem_cohort
@@ -558,7 +559,11 @@ findings:
   target_ids:
   - GO:0033104
   field_paths:
-  - causal_graphs[0].nodes[0..4].grounding
+  - causal_graphs[0].nodes[0].grounding
+  - causal_graphs[0].nodes[1].grounding
+  - causal_graphs[0].nodes[2].grounding
+  - causal_graphs[0].nodes[3].grounding
+  - causal_graphs[0].nodes[4].grounding
   evidence_ids:
   - ev_sec_t6ss_grounding
   rule_id: docs/SCHEMA.md:CausalNode-grounding

@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 308 records in data/structures/other/ (including new Cycle 3 Stage 1 records chaperonin_atpase_complex.yaml and primosome_complex.yaml, with primosome_complex.yaml reviewed in detail in 20261025T071002Z-primosome-complex-pmid-citation-misattribution) verified distinct macromolecular complex boundaries. Two minor cohort findings were identified across 10 records: (F1) in nucleosome.yaml (GO:0000786), components#histone_octamer_core (HTA1/HTB1/HHT1/HHF1 heterooctamer) is typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and in chaperonin_atpase_complex.yaml (GO:0016465), curation_history[1] cites graph_id 'chaperonin_cage_assembly_and_folding' instead of causal_graphs[0].id 'chaperonin_atpase_complex_folding_mechanism'; and (F2) across 8 records in data/structures/other/, 13 causal_graphs nodes with component_ref omit the verified InterPro: or Pfam: grounding declared on their referenced components[] entries.
+Full-coverage category review of all 308 records in data/structures/other/ (including new Cycle 3 Stage 1 records chaperonin_atpase_complex.yaml and primosome_complex.yaml, with primosome_complex.yaml reviewed in detail in 20261025T071002Z-primosome-complex-pmid-citation-misattribution) verified distinct macromolecular complex boundaries. Two minor cohort findings were identified across 10 records: (F1) in nucleosome.yaml (GO:0000786), components[1] histone_octamer_core (HTA1/HTB1/HHT1/HHF1 heterooctamer) is typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and in chaperonin_atpase_complex.yaml (GO:0016465), curation_history[1].changes cites graph_id 'chaperonin_cage_assembly_and_folding' instead of causal_graphs[0].graph_id 'chaperonin_atpase_complex_folding_mechanism'; and (F2) across 8 records in data/structures/other/, 13 causal_graphs nodes with component_ref omit the verified InterPro: or Pfam: grounding declared on their referenced components[] entries.
 
 ## Scope And Provenance
 
@@ -353,7 +353,7 @@ All 309 records in data/structures/other/ represent distinct microbial cell stru
 
 consistency: concern. Targets: GO:0000786, GO:0016465.
 
-nucleosome.yaml types histone_octamer_core as PROTEIN and chaperonin_atpase_complex.yaml cites a mismatched graph_id in curation_history[1].
+nucleosome.yaml types histone_octamer_core as PROTEIN and chaperonin_atpase_complex.yaml cites a mismatched graph_id in curation_history[1].changes.
 
 ### Propagation of verified component grounding to causal_graphs nodes with component_ref across data/structures/other/
 
@@ -363,23 +363,23 @@ Thirteen causal_graphs nodes across 8 records in data/structures/other/ omit ver
 
 ## Findings
 
-### F1: nucleosome.yaml types histone_octamer_core as PROTEIN and chaperonin_atpase_complex.yaml cites a mismatched graph_id in curation_history[1]
+### F1: nucleosome.yaml types histone_octamer_core as PROTEIN and chaperonin_atpase_complex.yaml cites a mismatched graph_id in curation_history[1].changes
 
 minor / open / confirmed; issue key: other-nucleosome-type-and-chaperonin-history-graph-id.
 
-In data/structures/other/nucleosome.yaml (GO:0000786), components#histone_octamer_core (gene_symbols: [HTA1, HTB1, HHT1, HHF1], representing the heterooctameric H2A-H2B-H3-H4 histone core) is typed component_type: PROTEIN instead of PROTEIN_COMPLEX; and in data/structures/other/chaperonin_atpase_complex.yaml (GO:0016465), curation_history[1] (CURATED_CAUSAL_GRAPH) cites graph_id 'chaperonin_cage_assembly_and_folding' instead of causal_graphs[0].id 'chaperonin_atpase_complex_folding_mechanism'.
+In data/structures/other/nucleosome.yaml (GO:0000786), components[1] histone_octamer_core (gene_symbols: [HTA1, HTB1, HHT1, HHF1], representing the heterooctameric H2A-H2B-H3-H4 histone core) is typed component_type: PROTEIN instead of PROTEIN_COMPLEX; and in data/structures/other/chaperonin_atpase_complex.yaml (GO:0016465), curation_history[1].changes (CURATED_CAUSAL_GRAPH) cites graph_id 'chaperonin_cage_assembly_and_folding' instead of causal_graphs[0].graph_id 'chaperonin_atpase_complex_folding_mechanism'.
 
 ### F2: Thirteen causal_graphs nodes with component_ref across 8 records in data/structures/other/ omit verified component groundings
 
 minor / open / confirmed; issue key: other-causal-node-component-ref-grounding.
 
-Across 8 records in data/structures/other/ — bam_protein_complex.yaml (node bam_a InterPro:IPR023707), dna_gyrase_complex.yaml (nodes gyrase_subunit_a InterPro:IPR005743, gyrase_subunit_b InterPro:IPR011557), eisosome.yaml (node pil1_lsp1_bar_core InterPro:IPR028245), exodeoxyribonuclease_v_complex.yaml (nodes recb_subunit InterPro:IPR004586, recc_subunit InterPro:IPR006697, recd_subunit InterPro:IPR006344), glideosome.yaml (node gap45_glideosome_associated_protein Pfam:PF29346), meiotic_telomere_bouquet.yaml (nodes ndj1 InterPro:IPR062583, mps3 InterPro:IPR045119, mps2 InterPro:IPR031433), quiescent_telomere_hypercluster.yaml (node bqt4 InterPro:IPR037548), and single_stranded_dna_binding_protein_complex.yaml (node ssb_protein InterPro:IPR011344) — causal_graphs nodes with component_ref omit the verified InterPro: or Pfam: grounding declared on their referenced components[] entries.
+Across 8 records in data/structures/other/ — bam_protein_complex.yaml (node bam_a InterPro:IPR023707), dna_gyrase_complex.yaml (nodes gyrase_subunit_a InterPro:IPR005743, gyrase_subunit_b InterPro:IPR011557), eisosome.yaml (node pil1_lsp1_bar_core InterPro:IPR028245), exodeoxyribonuclease_v_complex.yaml (nodes recb_subunit InterPro:IPR004586, recc_subunit InterPro:IPR006697, recd_subunit InterPro:IPR006344), glideosome.yaml (node gap45_glideosome_associated_protein Pfam:PF29346), meiotic_telomere_bouquet.yaml (nodes ndj1 InterPro:IPR062583, mps3 InterPro:IPR045119, mps2 InterPro:IPR031433), quiescent_telomere_hypercluster.yaml (causal_graphs[1] node bqt4 InterPro:IPR037548), and single_stranded_dna_binding_protein_complex.yaml (node ssb_protein InterPro:IPR011344) — causal_graphs nodes with component_ref omit the verified InterPro: or Pfam: grounding declared on their referenced components[] entries.
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Update components#histone_octamer_core in nucleosome.yaml to component_type: PROTEIN_COMPLEX, align curation_history[1] in chaperonin_atpase_complex.yaml to chaperonin_atpase_complex_folding_mechanism, and record the updates in history/records/.
+Update components[1] histone_octamer_core in nucleosome.yaml to component_type: PROTEIN_COMPLEX, align curation_history[1].changes in chaperonin_atpase_complex.yaml to chaperonin_atpase_complex_folding_mechanism, and record the updates in history/records/.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -401,8 +401,8 @@ Propagate the verified InterPro: and Pfam: groundings from components[] to the 1
 | --- | --- | --- | --- |
 | ev_strict_other | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 309 other records. |
 | ev_labels_other | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
-| ev_oth_nucleosome_chaperonin | data/structures/other/nucleosome.yaml; components#histone_octamer_core in nucleosome.yaml and curation_history[1] in chaperonin_atpase_complex.yaml | supports | nucleosome.yaml types histone_octamer_core (H2A/H2B/H3/H4 heterooctamer) as PROTEIN instead of PROTEIN_COMPLEX, and chaperonin_atpase_complex.yaml curation_history[1] cites chaperonin_cage_assembly_and_folding instead of chaperonin_atpase_complex_folding_mechanism. |
-| ev_oth_node_grounding | data/structures/other/dna_gyrase_complex.yaml; causal_graphs[0].nodes in dna_gyrase_complex.yaml (plus 7 sibling records in data/structures/other/) | supports | Thirteen causal_graphs nodes across 8 records in data/structures/other/ omit verified InterPro: or Pfam: groundings from their referenced components[] entries. |
+| ev_oth_nucleosome_chaperonin | data/structures/other/nucleosome.yaml; components[1] (lines 38-41) in nucleosome.yaml and curation_history[1].changes (lines 257-262) in chaperonin_atpase_complex.yaml | supports | nucleosome.yaml types histone_octamer_core (H2A/H2B/H3/H4 heterooctamer) as PROTEIN instead of PROTEIN_COMPLEX, and chaperonin_atpase_complex.yaml curation_history[1].changes cites chaperonin_cage_assembly_and_folding instead of chaperonin_atpase_complex_folding_mechanism. |
+| ev_oth_node_grounding | data/structures/other/dna_gyrase_complex.yaml; causal_graphs[0].nodes[0] (lines 173-176) in dna_gyrase_complex.yaml (plus 7 sibling records in data/structures/other/) | supports | Thirteen causal_graphs nodes across 8 records in data/structures/other/ omit verified InterPro: or Pfam: groundings from their referenced components[] entries. |
 
 ## Limits And Additional Notes
 
@@ -438,13 +438,14 @@ summary: 'Full-coverage category review of all 308 records in data/structures/ot
   (including new Cycle 3 Stage 1 records chaperonin_atpase_complex.yaml and primosome_complex.yaml,
   with primosome_complex.yaml reviewed in detail in 20261025T071002Z-primosome-complex-pmid-citation-misattribution)
   verified distinct macromolecular complex boundaries. Two minor cohort findings were
-  identified across 10 records: (F1) in nucleosome.yaml (GO:0000786), components#histone_octamer_core
-  (HTA1/HTB1/HHT1/HHF1 heterooctamer) is typed component_type: PROTEIN instead of
-  PROTEIN_COMPLEX, and in chaperonin_atpase_complex.yaml (GO:0016465), curation_history[1]
-  cites graph_id ''chaperonin_cage_assembly_and_folding'' instead of causal_graphs[0].id
-  ''chaperonin_atpase_complex_folding_mechanism''; and (F2) across 8 records in data/structures/other/,
-  13 causal_graphs nodes with component_ref omit the verified InterPro: or Pfam: grounding
-  declared on their referenced components[] entries.'
+  identified across 10 records: (F1) in nucleosome.yaml (GO:0000786), components[1]
+  histone_octamer_core (HTA1/HTB1/HHT1/HHF1 heterooctamer) is typed component_type:
+  PROTEIN instead of PROTEIN_COMPLEX, and in chaperonin_atpase_complex.yaml (GO:0016465),
+  curation_history[1].changes cites graph_id ''chaperonin_cage_assembly_and_folding''
+  instead of causal_graphs[0].graph_id ''chaperonin_atpase_complex_folding_mechanism'';
+  and (F2) across 8 records in data/structures/other/, 13 causal_graphs nodes with
+  component_ref omit the verified InterPro: or Pfam: grounding declared on their referenced
+  components[] entries.'
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
   state: git_commit
@@ -6400,27 +6401,27 @@ evidence:
 - evidence_id: ev_oth_nucleosome_chaperonin
   kind: record_content
   reference: data/structures/other/nucleosome.yaml
-  locator: components#histone_octamer_core in nucleosome.yaml and curation_history[1]
-    in chaperonin_atpase_complex.yaml
+  locator: components[1] (lines 38-41) in nucleosome.yaml and curation_history[1].changes
+    (lines 257-262) in chaperonin_atpase_complex.yaml
   accessed_at: '2026-10-25T07:04:00Z'
   support: supports
   summary: nucleosome.yaml types histone_octamer_core (H2A/H2B/H3/H4 heterooctamer)
-    as PROTEIN instead of PROTEIN_COMPLEX, and chaperonin_atpase_complex.yaml curation_history[1]
+    as PROTEIN instead of PROTEIN_COMPLEX, and chaperonin_atpase_complex.yaml curation_history[1].changes
     cites chaperonin_cage_assembly_and_folding instead of chaperonin_atpase_complex_folding_mechanism.
-  quote: "- component_id: histone_octamer_core\n  label: Histone octamer core (H2A,\
-    \ H2B, H3, H4)\n  component_type: PROTEIN"
+  quote: "- component_id: histone_octamer_core\n  label: core histone octamer (H2A,\
+    \ H2B, H3, H4)\n  component_type: PROTEIN\n  component_role: CONSTITUENT"
   snapshot_sha256: d33429bb88735d409f637af3ee129ed1b7b7e84e871e11fc67bf3c97b567d175
 - evidence_id: ev_oth_node_grounding
   kind: record_content
   reference: data/structures/other/dna_gyrase_complex.yaml
-  locator: causal_graphs[0].nodes in dna_gyrase_complex.yaml (plus 7 sibling records
-    in data/structures/other/)
+  locator: causal_graphs[0].nodes[0] (lines 173-176) in dna_gyrase_complex.yaml (plus
+    7 sibling records in data/structures/other/)
   accessed_at: '2026-10-25T07:04:15Z'
   support: supports
   summary: 'Thirteen causal_graphs nodes across 8 records in data/structures/other/
     omit verified InterPro: or Pfam: groundings from their referenced components[]
     entries.'
-  quote: "- id: gyrase_subunit_a\n    label: DNA gyrase subunit A (GyrA)\n    node_type:\
+  quote: "  - node_id: gyrase_subunit_a\n    label: DNA gyrase subunit A\n    node_type:\
     \ GENE_OR_PROTEIN\n    component_ref: gyrase_subunit_a"
   snapshot_sha256: 5f4e9e6f29de383572bdbea4aabb06fd250a5faeedd5facf716a7d57c860a263
 assessments:
@@ -6750,7 +6751,7 @@ assessments:
     in chaperonin_atpase_complex.yaml
   outcome: concern
   summary: nucleosome.yaml types histone_octamer_core as PROTEIN and chaperonin_atpase_complex.yaml
-    cites a mismatched graph_id in curation_history[1].
+    cites a mismatched graph_id in curation_history[1].changes.
   target_ids:
   - GO:0000786
   - GO:0016465
@@ -6782,19 +6783,20 @@ findings:
   status: open
   certainty: confirmed
   title: nucleosome.yaml types histone_octamer_core as PROTEIN and chaperonin_atpase_complex.yaml
-    cites a mismatched graph_id in curation_history[1]
-  description: 'In data/structures/other/nucleosome.yaml (GO:0000786), components#histone_octamer_core
-    (gene_symbols: [HTA1, HTB1, HHT1, HHF1], representing the heterooctameric H2A-H2B-H3-H4
-    histone core) is typed component_type: PROTEIN instead of PROTEIN_COMPLEX; and
-    in data/structures/other/chaperonin_atpase_complex.yaml (GO:0016465), curation_history[1]
-    (CURATED_CAUSAL_GRAPH) cites graph_id ''chaperonin_cage_assembly_and_folding''
-    instead of causal_graphs[0].id ''chaperonin_atpase_complex_folding_mechanism''.'
+    cites a mismatched graph_id in curation_history[1].changes
+  description: 'In data/structures/other/nucleosome.yaml (GO:0000786), components[1]
+    histone_octamer_core (gene_symbols: [HTA1, HTB1, HHT1, HHF1], representing the
+    heterooctameric H2A-H2B-H3-H4 histone core) is typed component_type: PROTEIN instead
+    of PROTEIN_COMPLEX; and in data/structures/other/chaperonin_atpase_complex.yaml
+    (GO:0016465), curation_history[1].changes (CURATED_CAUSAL_GRAPH) cites graph_id
+    ''chaperonin_cage_assembly_and_folding'' instead of causal_graphs[0].graph_id
+    ''chaperonin_atpase_complex_folding_mechanism''.'
   target_ids:
   - GO:0000786
   - GO:0016465
   field_paths:
-  - components[0].component_type
-  - curation_history[1].summary
+  - components[1].component_type
+  - curation_history[1].changes
   evidence_ids:
   - ev_oth_nucleosome_chaperonin
   rule_id: docs/SCHEMA.md:ComponentTypeEnum
@@ -6826,7 +6828,7 @@ findings:
     InterPro:IPR006344), glideosome.yaml (node gap45_glideosome_associated_protein
     Pfam:PF29346), meiotic_telomere_bouquet.yaml (nodes ndj1 InterPro:IPR062583, mps3
     InterPro:IPR045119, mps2 InterPro:IPR031433), quiescent_telomere_hypercluster.yaml
-    (node bqt4 InterPro:IPR037548), and single_stranded_dna_binding_protein_complex.yaml
+    (causal_graphs[1] node bqt4 InterPro:IPR037548), and single_stranded_dna_binding_protein_complex.yaml
     (node ssb_protein InterPro:IPR011344) — causal_graphs nodes with component_ref
     omit the verified InterPro: or Pfam: grounding declared on their referenced components[]
     entries.'
@@ -6876,9 +6878,9 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Update components#histone_octamer_core in nucleosome.yaml to component_type:
-    PROTEIN_COMPLEX, align curation_history[1] in chaperonin_atpase_complex.yaml to
-    chaperonin_atpase_complex_folding_mechanism, and record the updates in history/records/.'
+  description: 'Update components[1] histone_octamer_core in nucleosome.yaml to component_type:
+    PROTEIN_COMPLEX, align curation_history[1].changes in chaperonin_atpase_complex.yaml
+    to chaperonin_atpase_complex_folding_mechanism, and record the updates in history/records/.'
   finding_ids:
   - F1
   target_ids:

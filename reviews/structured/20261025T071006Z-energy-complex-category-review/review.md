@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 40 records in data/structures/energy_complex/ (including the 2 new Cycle 3 Stage 1 two-sector ATPase domain records) verified distinct bioenergetic complex boundaries. Two minor cohort findings were identified across 3 records: (F1) in proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml (GO:0033178), heteromeric subcomplexes catalytic_hexamer_head (atpA/atpB) and central_rotational_stalk (atpG/atpD/atpC) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and curation_history[1] in both GO:0033178 and sibling GO:0033177 cites stale causal_graph IDs; and (F2) in methyl_coenzyme_m_reductase_complex.yaml (GO:0044674), causal_graphs[0] nodes mcr_alpha_subunit, mcr_beta_subunit, and mcr_gamma_subunit omit the verified InterPro: grounding declared on their referenced components[] entries.
+Full-coverage category review of all 40 records in data/structures/energy_complex/ (including the 2 new Cycle 3 Stage 1 two-sector ATPase domain records) verified distinct bioenergetic complex boundaries. Two minor cohort findings were identified across 3 records: (F1) in proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml (GO:0033178), heteromeric subcomplexes catalytic_hexamer_head (atpA/atpD/VMA1/VMA2) and central_rotational_stalk (atpG/atpC/VMA8/VMA7) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and curation_history[1].changes in both GO:0033178 and sibling GO:0033177 cites stale causal_graph IDs; and (F2) in methyl_coenzyme_m_reductase_complex.yaml (GO:0044674), causal_graphs[0] nodes mcr_alpha_subunit, mcr_beta_subunit, and mcr_gamma_subunit (causal_graphs[0].nodes[1..3]) omit the verified InterPro: grounding declared on their referenced components[] entries.
 
 ## Scope And Provenance
 
@@ -84,7 +84,7 @@ All 40 records in data/structures/energy_complex/ represent distinct microbial c
 
 consistency: concern. Targets: GO:0033178, GO:0033177.
 
-GO:0033178 types heteromeric subcomplexes catalytic_hexamer_head and central_rotational_stalk as PROTEIN, and GO:0033178 and GO:0033177 cite stale graph_ids in curation_history[1].
+GO:0033178 types heteromeric subcomplexes catalytic_hexamer_head and central_rotational_stalk as PROTEIN, and GO:0033178 and GO:0033177 cite stale graph_ids in curation_history[1].changes.
 
 ### Causal-graph component_ref grounding propagation in methyl_coenzyme_m_reductase_complex.yaml
 
@@ -94,30 +94,30 @@ Three component_ref causal_graphs nodes in methyl_coenzyme_m_reductase_complex.y
 
 ## Findings
 
-### F1: Two-sector ATPase domain records type heteromeric F1 subcomplexes as PROTEIN and cite mismatched causal_graph IDs in curation_history[1]
+### F1: Two-sector ATPase domain records type heteromeric F1/V1 subcomplexes as PROTEIN and cite mismatched causal_graph IDs in curation_history[1].changes
 
 minor / open / confirmed; issue key: energy-complex-atpase-subcomplex-types-and-history-graph-ids.
 
-In data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml (GO:0033178), heteromeric multiprotein subcomplex components catalytic_hexamer_head (atpA/atpB, alpha3-beta3 hexamer) and central_rotational_stalk (atpG/atpD/atpC, gamma-delta-epsilon stalk) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and curation_history[1] cites graph_id 'catalytic_sector_rotary_catalysis' instead of causal_graphs[0].id 'catalytic_domain_rotary_mechanism'. In sibling proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml (GO:0033177), curation_history[1] cites graph_id 'proton_sector_rotary_conduction' instead of causal_graphs[0].id 'proton_transporting_domain_mechanism'.
+In data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml (GO:0033178), heteromeric multiprotein subcomplex components catalytic_hexamer_head (atpA/atpD/VMA1/VMA2, alpha3-beta3 hexamer) and central_rotational_stalk (atpG/atpC/VMA8/VMA7, gamma-epsilon / D-F stalk) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and curation_history[1].changes cites graph_id 'catalytic_sector_rotary_catalysis' instead of causal_graphs[0].graph_id 'catalytic_domain_rotary_mechanism'. In sibling proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml (GO:0033177), curation_history[1].changes cites graph_id 'proton_sector_rotary_conduction' instead of causal_graphs[0].graph_id 'proton_transporting_domain_mechanism'.
 
 ### F2: methyl_coenzyme_m_reductase_complex.yaml causal_graphs[0] subunit nodes omit verified InterPro: groundings from components[]
 
 minor / open / confirmed; issue key: energy-complex-mcr-causal-node-component-ref-grounding.
 
-In data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml (GO:0044674), causal_graphs[0] nodes mcr_alpha_subunit, mcr_beta_subunit, and mcr_gamma_subunit reference components[0..2] via component_ref but omit their verified InterPro: groundings (InterPro:IPR016212, InterPro:IPR003179, InterPro:IPR003178).
+In data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml (GO:0044674), causal_graphs[0] nodes mcr_alpha_subunit (nodes[1]), mcr_beta_subunit (nodes[2]), and mcr_gamma_subunit (nodes[3]) reference components[0..2] via component_ref but omit their verified InterPro: groundings (InterPro:IPR016212, InterPro:IPR003179, InterPro:IPR003178).
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Update catalytic_hexamer_head and central_rotational_stalk in GO:0033178 to component_type: PROTEIN_COMPLEX, align curation_history[1] in GO:0033178 and GO:0033177 to their actual causal_graphs[0].id values, and record the updates in history/records/.
+Update catalytic_hexamer_head and central_rotational_stalk in GO:0033178 to component_type: PROTEIN_COMPLEX, align curation_history[1].changes in GO:0033178 and GO:0033177 to their actual causal_graphs[0].graph_id values, and record the updates in history/records/.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
 
 ### A2
 
-Propagate InterPro:IPR016212, InterPro:IPR003179, and InterPro:IPR003178 to causal_graphs[0].nodes[0..2] in methyl_coenzyme_m_reductase_complex.yaml and record the update in history/records/methyl_coenzyme_m_reductase_complex/.
+Propagate InterPro:IPR016212, InterPro:IPR003179, and InterPro:IPR003178 to causal_graphs[0].nodes[1..3] in methyl_coenzyme_m_reductase_complex.yaml and record the update in history/records/methyl_coenzyme_m_reductase_complex/.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
@@ -132,8 +132,8 @@ Propagate InterPro:IPR016212, InterPro:IPR003179, and InterPro:IPR003178 to caus
 | --- | --- | --- | --- |
 | ev_strict_energycomplex | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 40 energy_complex records. |
 | ev_labels_energycomplex | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
-| ev_ec_atpase_subcomplex_and_history | data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml; components#catalytic_hexamer_head, components#central_rotational_stalk, and curation_history[1] in GO:0033178 and GO:0033177 | supports | GO:0033178 types heteromeric subcomplexes catalytic_hexamer_head and central_rotational_stalk as PROTEIN instead of PROTEIN_COMPLEX, and both GO:0033178 and GO:0033177 cite mismatched graph_ids in curation_history[1]. |
-| ev_ec_mcr_grounding | data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml; components[0..2] vs causal_graphs[0].nodes[0..2] | supports | methyl_coenzyme_m_reductase_complex.yaml causal_graphs[0] nodes mcr_alpha_subunit, mcr_beta_subunit, and mcr_gamma_subunit omit InterPro:IPR016212, InterPro:IPR003179, and InterPro:IPR003178. |
+| ev_ec_atpase_subcomplex_and_history | data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml; components[0..1] (lines 16-66) and curation_history[1].changes (lines 259-264) in GO:0033178 and curation_history[1].changes (lines 255-260) in GO:0033177 | supports | GO:0033178 types heteromeric subcomplexes catalytic_hexamer_head and central_rotational_stalk as PROTEIN instead of PROTEIN_COMPLEX, and both GO:0033178 and GO:0033177 cite mismatched graph_ids in curation_history[1].changes. |
+| ev_ec_mcr_grounding | data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml; components[0..2] vs causal_graphs[0].nodes[1..3] (lines 226-240) | supports | methyl_coenzyme_m_reductase_complex.yaml causal_graphs[0] nodes mcr_alpha_subunit, mcr_beta_subunit, and mcr_gamma_subunit omit InterPro:IPR016212, InterPro:IPR003179, and InterPro:IPR003178. |
 
 ## Limits And Additional Notes
 
@@ -169,12 +169,13 @@ summary: 'Full-coverage category review of all 40 records in data/structures/ene
   (including the 2 new Cycle 3 Stage 1 two-sector ATPase domain records) verified
   distinct bioenergetic complex boundaries. Two minor cohort findings were identified
   across 3 records: (F1) in proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
-  (GO:0033178), heteromeric subcomplexes catalytic_hexamer_head (atpA/atpB) and central_rotational_stalk
-  (atpG/atpD/atpC) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and
-  curation_history[1] in both GO:0033178 and sibling GO:0033177 cites stale causal_graph
-  IDs; and (F2) in methyl_coenzyme_m_reductase_complex.yaml (GO:0044674), causal_graphs[0]
-  nodes mcr_alpha_subunit, mcr_beta_subunit, and mcr_gamma_subunit omit the verified
-  InterPro: grounding declared on their referenced components[] entries.'
+  (GO:0033178), heteromeric subcomplexes catalytic_hexamer_head (atpA/atpD/VMA1/VMA2)
+  and central_rotational_stalk (atpG/atpC/VMA8/VMA7) are typed component_type: PROTEIN
+  instead of PROTEIN_COMPLEX, and curation_history[1].changes in both GO:0033178 and
+  sibling GO:0033177 cites stale causal_graph IDs; and (F2) in methyl_coenzyme_m_reductase_complex.yaml
+  (GO:0044674), causal_graphs[0] nodes mcr_alpha_subunit, mcr_beta_subunit, and mcr_gamma_subunit
+  (causal_graphs[0].nodes[1..3]) omit the verified InterPro: grounding declared on
+  their referenced components[] entries.'
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
   state: git_commit
@@ -1019,27 +1020,27 @@ evidence:
 - evidence_id: ev_ec_atpase_subcomplex_and_history
   kind: record_content
   reference: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
-  locator: components#catalytic_hexamer_head, components#central_rotational_stalk,
-    and curation_history[1] in GO:0033178 and GO:0033177
+  locator: components[0..1] (lines 16-66) and curation_history[1].changes (lines 259-264)
+    in GO:0033178 and curation_history[1].changes (lines 255-260) in GO:0033177
   accessed_at: '2026-10-25T07:02:30Z'
   support: supports
   summary: GO:0033178 types heteromeric subcomplexes catalytic_hexamer_head and central_rotational_stalk
     as PROTEIN instead of PROTEIN_COMPLEX, and both GO:0033178 and GO:0033177 cite
-    mismatched graph_ids in curation_history[1].
-  quote: "- component_id: catalytic_hexamer_head\n  label: Catalytic hexamer head\
-    \ (alpha3-beta3 / A3-B3)\n  component_type: PROTEIN"
+    mismatched graph_ids in curation_history[1].changes.
+  quote: "- component_id: catalytic_hexamer_head\n  label: catalytic hexameric head\
+    \ subunits\n  component_type: PROTEIN\n  component_role: CONSTITUENT"
   snapshot_sha256: ffe0962a1a4efb660e02c185cce1f37ded89481634a7f12f217863e6ab7569e1
 - evidence_id: ev_ec_mcr_grounding
   kind: record_content
   reference: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
-  locator: components[0..2] vs causal_graphs[0].nodes[0..2]
+  locator: components[0..2] vs causal_graphs[0].nodes[1..3] (lines 226-240)
   accessed_at: '2026-10-25T07:02:45Z'
   support: supports
   summary: methyl_coenzyme_m_reductase_complex.yaml causal_graphs[0] nodes mcr_alpha_subunit,
     mcr_beta_subunit, and mcr_gamma_subunit omit InterPro:IPR016212, InterPro:IPR003179,
     and InterPro:IPR003178.
-  quote: "- id: mcr_alpha_subunit\n    label: Methyl-coenzyme M reductase alpha subunit\
-    \ (McrA)\n    node_type: GENE_OR_PROTEIN\n    component_ref: mcr_alpha_subunit"
+  quote: "  - node_id: mcr_alpha_subunit\n    label: Methyl coenzyme M reductase,\
+    \ alpha subunit\n    node_type: GENE_OR_PROTEIN\n    component_ref: mcr_alpha_subunit"
   snapshot_sha256: ef43ab9df3e0a3d8ed86e0347c9801db59ced9efd1d0313f8ab2a9b3b1420338
 assessments:
 - assessment_id: assess_energycomplex_cohort
@@ -1099,7 +1100,7 @@ assessments:
     ATPase domain records
   outcome: concern
   summary: GO:0033178 types heteromeric subcomplexes catalytic_hexamer_head and central_rotational_stalk
-    as PROTEIN, and GO:0033178 and GO:0033177 cite stale graph_ids in curation_history[1].
+    as PROTEIN, and GO:0033178 and GO:0033177 cite stale graph_ids in curation_history[1].changes.
   target_ids:
   - GO:0033178
   - GO:0033177
@@ -1122,23 +1123,24 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: Two-sector ATPase domain records type heteromeric F1 subcomplexes as PROTEIN
-    and cite mismatched causal_graph IDs in curation_history[1]
+  title: Two-sector ATPase domain records type heteromeric F1/V1 subcomplexes as PROTEIN
+    and cite mismatched causal_graph IDs in curation_history[1].changes
   description: 'In data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
     (GO:0033178), heteromeric multiprotein subcomplex components catalytic_hexamer_head
-    (atpA/atpB, alpha3-beta3 hexamer) and central_rotational_stalk (atpG/atpD/atpC,
-    gamma-delta-epsilon stalk) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX,
-    and curation_history[1] cites graph_id ''catalytic_sector_rotary_catalysis'' instead
-    of causal_graphs[0].id ''catalytic_domain_rotary_mechanism''. In sibling proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml
-    (GO:0033177), curation_history[1] cites graph_id ''proton_sector_rotary_conduction''
-    instead of causal_graphs[0].id ''proton_transporting_domain_mechanism''.'
+    (atpA/atpD/VMA1/VMA2, alpha3-beta3 hexamer) and central_rotational_stalk (atpG/atpC/VMA8/VMA7,
+    gamma-epsilon / D-F stalk) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX,
+    and curation_history[1].changes cites graph_id ''catalytic_sector_rotary_catalysis''
+    instead of causal_graphs[0].graph_id ''catalytic_domain_rotary_mechanism''. In
+    sibling proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml
+    (GO:0033177), curation_history[1].changes cites graph_id ''proton_sector_rotary_conduction''
+    instead of causal_graphs[0].graph_id ''proton_transporting_domain_mechanism''.'
   target_ids:
   - GO:0033178
   - GO:0033177
   field_paths:
   - components[0].component_type
   - components[1].component_type
-  - curation_history[1].summary
+  - curation_history[1].changes
   evidence_ids:
   - ev_ec_atpase_subcomplex_and_history
   rule_id: docs/SCHEMA.md:ComponentTypeEnum
@@ -1163,15 +1165,16 @@ findings:
   title: 'methyl_coenzyme_m_reductase_complex.yaml causal_graphs[0] subunit nodes
     omit verified InterPro: groundings from components[]'
   description: 'In data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
-    (GO:0044674), causal_graphs[0] nodes mcr_alpha_subunit, mcr_beta_subunit, and
-    mcr_gamma_subunit reference components[0..2] via component_ref but omit their
-    verified InterPro: groundings (InterPro:IPR016212, InterPro:IPR003179, InterPro:IPR003178).'
+    (GO:0044674), causal_graphs[0] nodes mcr_alpha_subunit (nodes[1]), mcr_beta_subunit
+    (nodes[2]), and mcr_gamma_subunit (nodes[3]) reference components[0..2] via component_ref
+    but omit their verified InterPro: groundings (InterPro:IPR016212, InterPro:IPR003179,
+    InterPro:IPR003178).'
   target_ids:
   - GO:0044674
   field_paths:
-  - causal_graphs[0].nodes[0].grounding
   - causal_graphs[0].nodes[1].grounding
   - causal_graphs[0].nodes[2].grounding
+  - causal_graphs[0].nodes[3].grounding
   evidence_ids:
   - ev_ec_mcr_grounding
   rule_id: docs/SCHEMA.md:CausalNode-grounding
@@ -1187,9 +1190,9 @@ findings:
 actions:
 - action_id: A1
   description: 'Update catalytic_hexamer_head and central_rotational_stalk in GO:0033178
-    to component_type: PROTEIN_COMPLEX, align curation_history[1] in GO:0033178 and
-    GO:0033177 to their actual causal_graphs[0].id values, and record the updates
-    in history/records/.'
+    to component_type: PROTEIN_COMPLEX, align curation_history[1].changes in GO:0033178
+    and GO:0033177 to their actual causal_graphs[0].graph_id values, and record the
+    updates in history/records/.'
   finding_ids:
   - F1
   target_ids:
@@ -1207,7 +1210,7 @@ actions:
   - .venv/bin/python scripts/validate_history.py
 - action_id: A2
   description: Propagate InterPro:IPR016212, InterPro:IPR003179, and InterPro:IPR003178
-    to causal_graphs[0].nodes[0..2] in methyl_coenzyme_m_reductase_complex.yaml and
+    to causal_graphs[0].nodes[1..3] in methyl_coenzyme_m_reductase_complex.yaml and
     record the update in history/records/methyl_coenzyme_m_reductase_complex/.
   finding_ids:
   - F2

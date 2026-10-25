@@ -1098,13 +1098,13 @@
       "review_id": "20261025T071001Z-static-microtubule-bundle-reference-attribution",
       "kind": "record",
       "skill": ".claude/skills/review-yaml-record/SKILL.md",
-      "verdict": "needs_curation",
+      "verdict": "pass_with_limitations",
       "population_size": 1,
       "reviewed_count": 1,
       "path": "reviews/structured/20261025T071001Z-static-microtubule-bundle-reference-attribution/review.yaml",
-      "sha256": "70d883ab4dda31d8dc653f549f36e2632a7c2d420dc3aa8b68acdc66807574cb",
+      "sha256": "7c74407a9d79fc3ef9a86a6a76caeaacbfd8a9d28b842c1ba5cd353ec2990604",
       "finding_keys": [
-        "static-microtubule-bundle-elife89958-reference-and-graph-id"
+        "static-microtubule-bundle-curation-history-graph-id-mismatch"
       ]
     },
     {
@@ -1115,7 +1115,7 @@
       "population_size": 1,
       "reviewed_count": 1,
       "path": "reviews/structured/20261025T071002Z-primosome-complex-pmid-citation-misattribution/review.yaml",
-      "sha256": "215a1f07478dd378a7f190e01d15eb6ec35a4ddcc8e57b9f2b85a80f0da5d676",
+      "sha256": "dec84210b8c955a5fefca3786d660dccd65817f796b1b82eb3abf9c8e9aa062c",
       "finding_keys": [
         "primosome-complex-pmid-citation-and-graph-id"
       ]
@@ -1128,7 +1128,7 @@
       "population_size": 58,
       "reviewed_count": 58,
       "path": "reviews/structured/20261025T071003Z-appendage-category-review/review.yaml",
-      "sha256": "264d88aa02f665bfb2c5120b8f6e1278f5bf57139e60f7cb41511fccb5b1a6b5",
+      "sha256": "dab74acc152d6b2e47b9dfb83cf7eda4b50590ae8a29a0c7bdd018c92651baca",
       "finding_keys": [
         "appendage-flagellum-causal-node-component-ref-grounding"
       ]
@@ -1141,7 +1141,7 @@
       "population_size": 178,
       "reviewed_count": 178,
       "path": "reviews/structured/20261025T071004Z-cytoskeleton-category-review/review.yaml",
-      "sha256": "cab40cc77112b9ccb6230ad2cfa6d9df534e4be3f03a85c158fbda235c52fcc2",
+      "sha256": "d34740ab1423ae3417a5a7ba665d7141ddfea865663a44c75aedfbc77b91d2a4",
       "finding_keys": [
         "cytoskeleton-heteromeric-subcomplex-component-types",
         "cytoskeleton-cartwheel-discussions-unlinked-pmid"
@@ -1155,7 +1155,7 @@
       "population_size": 2,
       "reviewed_count": 2,
       "path": "reviews/structured/20261025T071005Z-division-machinery-category-review/review.yaml",
-      "sha256": "b5a939aa5d0d06bd3a2d34ceb153d45bf95c57ffd84507ea01ba531cc5c058d7",
+      "sha256": "c8698af75cd473adb49d39f3578084d451f361eb3a8d61b84a1bd2a8097c1a2a",
       "finding_keys": [
         "elongasome-curation-history-causal-graph-id-mismatch"
       ]
@@ -1168,7 +1168,7 @@
       "population_size": 40,
       "reviewed_count": 40,
       "path": "reviews/structured/20261025T071006Z-energy-complex-category-review/review.yaml",
-      "sha256": "9d5abce942a7be27ab114557bb9bbb769a52589b6e9ec9c409807cafa191a81f",
+      "sha256": "e711d5f5b710f0bf33facd08863a8d1e206b2d0a185906a359acbd886a728146",
       "finding_keys": [
         "energy-complex-atpase-subcomplex-types-and-history-graph-ids",
         "energy-complex-mcr-causal-node-component-ref-grounding"
@@ -1182,7 +1182,7 @@
       "population_size": 20,
       "reviewed_count": 20,
       "path": "reviews/structured/20261025T071007Z-envelope-category-review/review.yaml",
-      "sha256": "6802a1ed29182508c76fb3c7cd07e2c34951d7978b4f6df390db0f0c9f04ff59",
+      "sha256": "a9949258f3929dfef414fc72aa62d578563d6cdda03a5b59e343682780877c85",
       "finding_keys": [
         "envelope-s-layer-causal-node-component-ref-grounding"
       ]
@@ -1195,7 +1195,7 @@
       "population_size": 20,
       "reviewed_count": 20,
       "path": "reviews/structured/20261025T071008Z-inclusion-category-review/review.yaml",
-      "sha256": "9fd9c9a839cb668be5bc88bb8dfe91485f645a6b41b9299ed0a807788830d6cb",
+      "sha256": "568e4454e538917392efd3c0b264cb82e916910ddad11d64f5e0b64def345ab9",
       "finding_keys": [
         "inclusion-psg-discussions-unlinked-doi"
       ]
@@ -1208,7 +1208,7 @@
       "population_size": 224,
       "reviewed_count": 224,
       "path": "reviews/structured/20261025T071009Z-membrane-organelle-category-review/review.yaml",
-      "sha256": "0dd17637085d718bf134e5fef305d56eb9e020e8d7762613ae96d075f9d760d3",
+      "sha256": "d8e8c3c8bef55f9cf0301313bf840bce3772b9ad03ed2c399a8de592bc4ddfbe",
       "finding_keys": [
         "membrane-organelle-causal-node-component-ref-grounding"
       ]
@@ -1221,7 +1221,7 @@
       "population_size": 309,
       "reviewed_count": 309,
       "path": "reviews/structured/20261025T071010Z-other-category-review/review.yaml",
-      "sha256": "edb61852ad968daa9f3af281a55ae818c887aa4be7e8744512e724ec55083d94",
+      "sha256": "272c52987330b99dbc57de6f1dfc4a746b25c8c349426aa3ec3dfb55f2debbe4",
       "finding_keys": [
         "other-nucleosome-type-and-chaperonin-history-graph-id",
         "other-causal-node-component-ref-grounding"
@@ -1235,11 +1235,10 @@
       "population_size": 88,
       "reviewed_count": 88,
       "path": "reviews/structured/20261025T071011Z-ribonucleoprotein-category-review/review.yaml",
-      "sha256": "970e38b5c03b8d892fafc8519af734760c57503a1e1a3357f3b5c9931266d0ba",
+      "sha256": "68512836776443988d97d9d3ce12193ad1ecec3cfd2ee394919294a5f24d5688",
       "finding_keys": [
         "ribonucleoprotein-box-rnp-reference-misattribution",
-        "ribonucleoprotein-subcomplex-types-and-history-graph-ids",
-        "ribonucleoprotein-ribosome-rrna-23s-causal-node-grounding"
+        "ribonucleoprotein-subcomplex-types-and-history-graph-ids"
       ]
     },
     {
@@ -1250,7 +1249,7 @@
       "population_size": 20,
       "reviewed_count": 20,
       "path": "reviews/structured/20261025T071012Z-secretion-system-category-review/review.yaml",
-      "sha256": "c4f50b79032b5c00b8d59d80270a333aaff709686409d9da27e2903f38c6b14c",
+      "sha256": "4db6aab04147ce69ab0ba512c8abe487b088a7656de5381badb1a348bc4498d5",
       "finding_keys": [
         "secretion-system-t6ss-causal-node-component-ref-grounding"
       ]
@@ -1263,7 +1262,7 @@
       "population_size": 23,
       "reviewed_count": 23,
       "path": "reviews/structured/20261025T071013Z-spore-category-review/review.yaml",
-      "sha256": "dd321b7f7ca06d54ef65a668522c77908972aede46012efa06692d7263a9a01a",
+      "sha256": "d1b059ce7648c01a34e97501f2329eb9a36e3edfee51984b7884087bb06bcca1",
       "finding_keys": [
         "spore-ascospore-wall-causal-node-component-ref-grounding"
       ]
@@ -1271,14 +1270,14 @@
   ],
   "findings": [
     {
-      "finding_id": "static-microtubule-bundle-elife89958-reference-and-graph-id",
+      "finding_id": "static-microtubule-bundle-curation-history-graph-id-mismatch",
       "status": "open",
-      "summary": "static_microtubule_bundle.yaml misattributes DOI:10.7554/eLife.89958 to Trypanosoma brucei and cites a mismatched graph_id in curation_history[1] (native review: 20261025T071001Z-static-microtubule-bundle-reference-attribution, finding F1, severity major)."
+      "summary": "static_microtubule_bundle.yaml curation_history[1].changes cites graph_id static_bundle_stabilization instead of static_microtubule_bundle_organization (native review: 20261025T071001Z-static-microtubule-bundle-reference-attribution, finding F1, severity minor)."
     },
     {
       "finding_id": "primosome-complex-pmid-citation-and-graph-id",
       "status": "open",
-      "summary": "primosome_complex.yaml misattributes PMID:8663105 and PMID:21856207 in evidence notes and cites a mismatched graph_id in curation_history[1] (native review: 20261025T071002Z-primosome-complex-pmid-citation-misattribution, finding F1, severity major)."
+      "summary": "primosome_complex.yaml misattributes PMID:8663105 and PMID:21856207 in evidence notes and cites a mismatched graph_id in curation_history[1].changes (native review: 20261025T071002Z-primosome-complex-pmid-citation-misattribution, finding F1, severity major)."
     },
     {
       "finding_id": "appendage-flagellum-causal-node-component-ref-grounding",
@@ -1293,17 +1292,17 @@
     {
       "finding_id": "cytoskeleton-cartwheel-discussions-unlinked-pmid",
       "status": "open",
-      "summary": "basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml cite PMID:42709820 in discussions prose without a structured discussions[0].evidence entry (native review: 20261025T071004Z-cytoskeleton-category-review, finding F2, severity minor)."
+      "summary": "basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml cite PMID:42709820 in discussion notes without a structured discussions evidence entry (native review: 20261025T071004Z-cytoskeleton-category-review, finding F2, severity minor)."
     },
     {
       "finding_id": "elongasome-curation-history-causal-graph-id-mismatch",
       "status": "open",
-      "summary": "elongasome.yaml curation_history[12] cites graph_id elongasome_pg_synthesis instead of elongasome_sidewall_elongation (native review: 20261025T071005Z-division-machinery-category-review, finding F1, severity minor)."
+      "summary": "elongasome.yaml curation_history[12].changes cites graph_id elongasome_pg_synthesis instead of elongasome_sidewall_elongation (native review: 20261025T071005Z-division-machinery-category-review, finding F1, severity minor)."
     },
     {
       "finding_id": "energy-complex-atpase-subcomplex-types-and-history-graph-ids",
       "status": "open",
-      "summary": "Two-sector ATPase domain records type heteromeric F1 subcomplexes as PROTEIN and cite mismatched causal_graph IDs in curation_history[1] (native review: 20261025T071006Z-energy-complex-category-review, finding F1, severity minor)."
+      "summary": "Two-sector ATPase domain records type heteromeric F1/V1 subcomplexes as PROTEIN and cite mismatched causal_graph IDs in curation_history[1].changes (native review: 20261025T071006Z-energy-complex-category-review, finding F1, severity minor)."
     },
     {
       "finding_id": "energy-complex-mcr-causal-node-component-ref-grounding",
@@ -1318,7 +1317,7 @@
     {
       "finding_id": "inclusion-psg-discussions-unlinked-doi",
       "status": "open",
-      "summary": "proteasome_storage_granule.yaml discussions#retracted_evidence cites DOI:10.7554/eLife.34532 in prose without a structured discussions[0].evidence entry (native review: 20261025T071008Z-inclusion-category-review, finding F1, severity minor)."
+      "summary": "proteasome_storage_granule.yaml discussions[0].notes mentions DOI 10.7554/eLife.34532 without a structured discussions[0].evidence entry (native review: 20261025T071008Z-inclusion-category-review, finding F1, severity minor)."
     },
     {
       "finding_id": "membrane-organelle-causal-node-component-ref-grounding",
@@ -1328,7 +1327,7 @@
     {
       "finding_id": "other-nucleosome-type-and-chaperonin-history-graph-id",
       "status": "open",
-      "summary": "nucleosome.yaml types histone_octamer_core as PROTEIN and chaperonin_atpase_complex.yaml cites a mismatched graph_id in curation_history[1] (native review: 20261025T071010Z-other-category-review, finding F1, severity minor)."
+      "summary": "nucleosome.yaml types histone_octamer_core as PROTEIN and chaperonin_atpase_complex.yaml cites a mismatched graph_id in curation_history[1].changes (native review: 20261025T071010Z-other-category-review, finding F1, severity minor)."
     },
     {
       "finding_id": "other-causal-node-component-ref-grounding",
@@ -1338,17 +1337,12 @@
     {
       "finding_id": "ribonucleoprotein-box-rnp-reference-misattribution",
       "status": "open",
-      "summary": "box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml misattribute DOI:10.1016/j.molcel.2007.01.024 and PMID:14562095 (native review: 20261025T071011Z-ribonucleoprotein-category-review, finding F1, severity major)."
+      "summary": "box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml misattribute DOI:10.1016/j.molcel.2007.01.024 and PMID:14562095 (native review: 20261025T071011Z-ribonucleoprotein-category-review, finding F1, severity major)."
     },
     {
       "finding_id": "ribonucleoprotein-subcomplex-types-and-history-graph-ids",
       "status": "open",
       "summary": "Heterotetrameric snoRNP/RNP core components are typed PROTEIN instead of PROTEIN_COMPLEX and 3 records cite mismatched graph_ids in curation_history (native review: 20261025T071011Z-ribonucleoprotein-category-review, finding F2, severity minor)."
-    },
-    {
-      "finding_id": "ribonucleoprotein-ribosome-rrna-23s-causal-node-grounding",
-      "status": "open",
-      "summary": "ribosome.yaml causal_graphs[1] node rrna_23s omits verified SO:0000651 grounding from components#rrna_23s (native review: 20261025T071011Z-ribonucleoprotein-category-review, finding F3, severity minor)."
     },
     {
       "finding_id": "secretion-system-t6ss-causal-node-component-ref-grounding",
@@ -1358,7 +1352,7 @@
     {
       "finding_id": "spore-ascospore-wall-causal-node-component-ref-grounding",
       "status": "open",
-      "summary": "ascospore_wall.yaml causal_graphs[0] node chitosan_outer_layer omits verified CHEBI:16261 grounding from components#chitosan_outer_layer (native review: 20261025T071013Z-spore-category-review, finding F1, severity minor)."
+      "summary": "ascospore_wall.yaml causal_graphs[0].nodes[3] (chitosan_outer_layer) omits verified CHEBI:16261 grounding from components#chitosan_outer_layer (native review: 20261025T071013Z-spore-category-review, finding F1, severity minor)."
     }
   ],
   "inventory": [

@@ -23,9 +23,10 @@ summary: 'Full-coverage category review of all 224 records in data/structures/me
   verified distinct membrane-bounded organelle and membrane-subcompartment boundaries
   and confirmed all Cycle 2 findings in this cohort remain resolved. One minor cohort
   graph-grounding gap was identified across 2 records (magnetosome.yaml and plasma_membrane_derived_chromatophore_membrane.yaml):
-  3 causal_graphs nodes with component_ref (crystal, rc_lh1_pufx, cytochrome_bc1)
-  omit the verified CHEBI: or cellstructuremech: grounding declared on their referenced
-  components[] entries.'
+  3 causal_graphs nodes with component_ref (crystal with component_ref: magnetite,
+  rc_lh1_pufx with component_ref: rc_lh1_pufx_core_complex, and cytochrome_bc1 with
+  component_ref: cytochrome_bc1_complex) omit the verified CHEBI: or cellstructuremech:
+  grounding declared on their referenced components[] entries.'
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
   state: git_commit
@@ -4367,14 +4368,15 @@ evidence:
 - evidence_id: ev_mo_node_grounding
   kind: record_content
   reference: data/structures/membrane_organelle/magnetosome.yaml
-  locator: components#crystal vs causal_graphs[0].nodes#crystal in magnetosome.yaml
-    and rc_lh1_pufx/cytochrome_bc1 in plasma_membrane_derived_chromatophore_membrane.yaml
+  locator: causal_graphs[0].nodes[3] (lines 351-354) in magnetosome.yaml and causal_graphs[0].nodes[2,4]
+    in plasma_membrane_derived_chromatophore_membrane.yaml
   accessed_at: '2026-10-25T07:03:40Z'
   support: supports
-  summary: 'magnetosome.yaml causal_graphs[0] node crystal omits CHEBI:46726 and plasma_membrane_derived_chromatophore_membrane.yaml
-    nodes rc_lh1_pufx and cytochrome_bc1 omit their cellstructuremech: groundings.'
-  quote: "- id: crystal\n    label: Magnetite/greigite crystal core\n    node_type:\
-    \ BIOMOLECULE\n    component_ref: crystal"
+  summary: 'magnetosome.yaml causal_graphs[0] node crystal (component_ref: magnetite)
+    omits CHEBI:46726 and plasma_membrane_derived_chromatophore_membrane.yaml nodes
+    rc_lh1_pufx and cytochrome_bc1 omit their cellstructuremech: groundings.'
+  quote: "  - node_id: crystal\n    label: magnetite\n    node_type: CHEMICAL\n  \
+    \  component_ref: magnetite"
   snapshot_sha256: fca499ca429ba4282722280f05c08012db6a9fcd6766d2f65f85d83639eaa084
 assessments:
 - assessment_id: assess_membraneorganelle_cohort
@@ -4634,16 +4636,20 @@ findings:
   title: Three causal_graphs nodes with component_ref across 2 membrane_organelle
     records omit verified component groundings
   description: 'In data/structures/membrane_organelle/magnetosome.yaml (GO:0110143),
-    causal_graphs[0] node crystal (component_ref: crystal) omits grounding: CHEBI:46726
-    declared on components#crystal; and in data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
-    (GO:0042717), causal_graphs[0] nodes rc_lh1_pufx and cytochrome_bc1 omit grounding:
-    cellstructuremech:rc_lh1_pufx_core_complex and grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex
-    declared on their referenced components[] entries.'
+    causal_graphs[0].nodes[3] (node_id: crystal, component_ref: magnetite) omits grounding:
+    CHEBI:46726 declared on components#magnetite; and in data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+    (GO:0042717), causal_graphs[0].nodes[2] (node_id: rc_lh1_pufx, component_ref:
+    rc_lh1_pufx_core_complex) and causal_graphs[0].nodes[4] (node_id: cytochrome_bc1,
+    component_ref: cytochrome_bc1_complex) omit grounding: cellstructuremech:rc_lh1_pufx_core_complex
+    and grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex declared
+    on their referenced components[] entries.'
   target_ids:
   - GO:0110143
   - GO:0042717
   field_paths:
-  - causal_graphs[0].nodes[*].grounding
+  - causal_graphs[0].nodes[2].grounding
+  - causal_graphs[0].nodes[3].grounding
+  - causal_graphs[0].nodes[4].grounding
   evidence_ids:
   - ev_mo_node_grounding
   rule_id: docs/SCHEMA.md:CausalNode-grounding

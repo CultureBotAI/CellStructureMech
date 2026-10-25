@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 178 records in data/structures/cytoskeleton/ (including new Cycle 3 Stage 1 record static_microtubule_bundle.yaml, reviewed separately in 20261025T071001Z-static-microtubule-bundle-reference-attribution) verified distinct cytoskeletal filament, MTOC, basal-body, septin, and motor boundaries. Two minor cohort consistency patterns were identified across 4 records: (F1) heterodimeric/heterotrimeric subcomplex components arp2_arp3_nucleation_dimer (ARP2+ARP3 in arp2_3_protein_complex.yaml) and gcp4_gcp5_gcp6_ring_subunits (gfh1+mod21+alp16 in gamma_tubulin_ring_complex.yaml) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX; and (F2) basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml cite PMID:42709820 in discussions prose without a corresponding structured EvidenceItem in discussions[0].evidence.
+Full-coverage category review of all 178 records in data/structures/cytoskeleton/ (including new Cycle 3 Stage 1 record static_microtubule_bundle.yaml, reviewed separately in 20261025T071001Z-static-microtubule-bundle-reference-attribution) verified distinct cytoskeletal filament, MTOC, basal-body, septin, and motor boundaries. Two minor cohort consistency patterns were identified across 4 records: (F1) heterodimeric/heterotrimeric subcomplex components arp2_arp3_nucleation_dimer (ARP2+ARP3 in arp2_3_protein_complex.yaml) and gcp4_gcp5_gcp6_ring_subunits (gfh1+mod21+alp16 in gamma_tubulin_ring_complex.yaml) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX; and (F2) basal_body_cartwheel.yaml (discussions[3].notes) and basal_body_cartwheel_inner_density.yaml (discussions[5].notes) cite PMID:42709820 in discussion notes without a corresponding structured EvidenceItem in discussions[3].evidence / discussions[5].evidence.
 
 ## Scope And Provenance
 
@@ -224,11 +224,11 @@ consistency: concern. Targets: GO:0005885, GO:0000931.
 
 Two heteromeric subcomplex components in arp2_3_protein_complex.yaml and gamma_tubulin_ring_complex.yaml are typed PROTEIN instead of PROTEIN_COMPLEX.
 
-### Structured evidence backing for PMID citations in discussions prose in basal-body cartwheel records
+### Structured evidence backing for PMID citations in discussions notes in basal-body cartwheel records
 
 evidence: concern. Targets: cellstructuremech:basal_body_cartwheel, cellstructuremech:basal_body_cartwheel_inner_density.
 
-Two basal-body cartwheel records cite PMID:42709820 in discussions[0].rationale without a matching structured EvidenceItem in discussions[0].evidence.
+Two basal-body cartwheel records cite PMID:42709820 in discussions[3].notes / discussions[5].notes without a matching structured EvidenceItem in discussions[3].evidence / discussions[5].evidence.
 
 ## Findings
 
@@ -236,13 +236,13 @@ Two basal-body cartwheel records cite PMID:42709820 in discussions[0].rationale 
 
 minor / open / confirmed; issue key: cytoskeleton-heteromeric-subcomplex-component-types.
 
-In data/structures/cytoskeleton/arp2_3_protein_complex.yaml (GO:0005885, components#arp2_arp3_nucleation_dimer, gene_symbols: [ARP2, ARP3]) and data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml (GO:0000931, components#gcp4_gcp5_gcp6_ring_subunits, gene_symbols: [gfh1, mod21, alp16]), components that represent multi-subunit heterodimers or heterotrimeric subcomplexes of distinct non-paralogous subunits are typed component_type: PROTEIN instead of component_type: PROTEIN_COMPLEX.
+In data/structures/cytoskeleton/arp2_3_protein_complex.yaml (GO:0005885, components[0] arp2_arp3_nucleation_dimer, gene_symbols: [ARP2, ARP3]) and data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml (GO:0000931, components[1] gcp4_gcp5_gcp6_ring_subunits, gene_symbols: [gfh1, mod21, alp16]), components that represent multi-subunit heterodimers or heterotrimeric subcomplexes of distinct non-paralogous subunits are typed component_type: PROTEIN instead of component_type: PROTEIN_COMPLEX.
 
-### F2: basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml cite PMID:42709820 in discussions prose without a structured discussions[0].evidence entry
+### F2: basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml cite PMID:42709820 in discussion notes without a structured discussions evidence entry
 
 minor / open / confirmed; issue key: cytoskeleton-cartwheel-discussions-unlinked-pmid.
 
-In data/structures/cytoskeleton/basal_body_cartwheel.yaml (cellstructuremech:basal_body_cartwheel, discussions#newer_trichonympha_source.rationale) and data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml (cellstructuremech:basal_body_cartwheel_inner_density, discussions#newer_model_followup.rationale), prose cites PMID:42709820 without a corresponding structured EvidenceItem in discussions[0].evidence or removes the unverified placeholder PMID string if it is non-resolvable.
+In data/structures/cytoskeleton/basal_body_cartwheel.yaml (cellstructuremech:basal_body_cartwheel, discussions[3] newer_trichonympha_source.notes) and data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml (cellstructuremech:basal_body_cartwheel_inner_density, discussions[5] newer_model_followup.notes), notes cite PMID:42709820 without a corresponding structured EvidenceItem in discussions[3].evidence / discussions[5].evidence.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -255,7 +255,7 @@ Update arp2_arp3_nucleation_dimer in arp2_3_protein_complex.yaml and gcp4_gcp5_g
 
 ### A2
 
-Reconcile the unlinked PMID:42709820 mention in discussions[0].rationale of basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml with structured discussions[0].evidence and record the updates in history/records/.
+Reconcile the unlinked PMID:42709820 mention in discussions[3].notes of basal_body_cartwheel.yaml and discussions[5].notes of basal_body_cartwheel_inner_density.yaml with structured discussions evidence and record the updates in history/records/.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -270,8 +270,8 @@ Reconcile the unlinked PMID:42709820 mention in discussions[0].rationale of basa
 | --- | --- | --- | --- |
 | ev_strict_cytoskeleton | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 178 cytoskeleton records. |
 | ev_labels_cytoskeleton | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
-| ev_cyto_heteromeric_subcomplex | data/structures/cytoskeleton/arp2_3_protein_complex.yaml; components#arp2_arp3_nucleation_dimer in arp2_3_protein_complex.yaml and components#gcp4_gcp5_gcp6_ring_subunits in gamma_tubulin_ring_complex.yaml | supports | arp2_arp3_nucleation_dimer (ARP2/ARP3 heterodimer) and gcp4_gcp5_gcp6_ring_subunits (Gfh1/Mod21/Alp16 subcomplex) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX. |
-| ev_cyto_cartwheel_discussion | data/structures/cytoskeleton/basal_body_cartwheel.yaml; discussions[0].rationale in basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml | supports | basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml cite PMID:42709820 in discussions[0].rationale without a structured PMID:42709820 entry in discussions[0].evidence. |
+| ev_cyto_heteromeric_subcomplex | data/structures/cytoskeleton/arp2_3_protein_complex.yaml; components[0] (lines 21-24) in arp2_3_protein_complex.yaml and components[1] (lines 51-54) in gamma_tubulin_ring_complex.yaml | supports | arp2_arp3_nucleation_dimer (ARP2/ARP3 heterodimer) and gcp4_gcp5_gcp6_ring_subunits (Gfh1/Mod21/Alp16 subcomplex) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX. |
+| ev_cyto_cartwheel_discussion | data/structures/cytoskeleton/basal_body_cartwheel.yaml; discussions[3].notes (lines 238-255) in basal_body_cartwheel.yaml and discussions[5].notes (lines 248-267) in basal_body_cartwheel_inner_density.yaml | supports | basal_body_cartwheel.yaml (discussions[3].notes) and basal_body_cartwheel_inner_density.yaml (discussions[5].notes) cite PMID:42709820 in notes without a structured PMID:42709820 entry in discussions[3].evidence / discussions[5].evidence. |
 
 ## Limits And Additional Notes
 
@@ -311,8 +311,9 @@ summary: 'Full-coverage category review of all 178 records in data/structures/cy
   subcomplex components arp2_arp3_nucleation_dimer (ARP2+ARP3 in arp2_3_protein_complex.yaml)
   and gcp4_gcp5_gcp6_ring_subunits (gfh1+mod21+alp16 in gamma_tubulin_ring_complex.yaml)
   are typed component_type: PROTEIN instead of PROTEIN_COMPLEX; and (F2) basal_body_cartwheel.yaml
-  and basal_body_cartwheel_inner_density.yaml cite PMID:42709820 in discussions prose
-  without a corresponding structured EvidenceItem in discussions[0].evidence.'
+  (discussions[3].notes) and basal_body_cartwheel_inner_density.yaml (discussions[5].notes)
+  cite PMID:42709820 in discussion notes without a corresponding structured EvidenceItem
+  in discussions[3].evidence / discussions[5].evidence.'
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
   state: git_commit
@@ -3780,27 +3781,39 @@ evidence:
 - evidence_id: ev_cyto_heteromeric_subcomplex
   kind: record_content
   reference: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
-  locator: components#arp2_arp3_nucleation_dimer in arp2_3_protein_complex.yaml and
-    components#gcp4_gcp5_gcp6_ring_subunits in gamma_tubulin_ring_complex.yaml
+  locator: components[0] (lines 21-24) in arp2_3_protein_complex.yaml and components[1]
+    (lines 51-54) in gamma_tubulin_ring_complex.yaml
   accessed_at: '2026-10-25T07:01:30Z'
   support: supports
   summary: 'arp2_arp3_nucleation_dimer (ARP2/ARP3 heterodimer) and gcp4_gcp5_gcp6_ring_subunits
     (Gfh1/Mod21/Alp16 subcomplex) are typed component_type: PROTEIN instead of PROTEIN_COMPLEX.'
-  quote: "- component_id: arp2_arp3_nucleation_dimer\n  label: Arp2-Arp3 actin-like\
-    \ nucleation heterodimer\n  component_type: PROTEIN"
+  quote: "- component_id: arp2_arp3_nucleation_dimer\n  label: actin-related catalytic\
+    \ nucleation subunits Arp2 and Arp3\n  component_type: PROTEIN\n  component_role:\
+    \ CONSTITUENT"
   snapshot_sha256: cbdf1988c3ba5d6d509ce20ffa8fefa763f7273e9120ed2231eca3d33d424d80
 - evidence_id: ev_cyto_cartwheel_discussion
   kind: record_content
   reference: data/structures/cytoskeleton/basal_body_cartwheel.yaml
-  locator: discussions[0].rationale in basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml
+  locator: discussions[3].notes (lines 238-255) in basal_body_cartwheel.yaml and discussions[5].notes
+    (lines 248-267) in basal_body_cartwheel_inner_density.yaml
   accessed_at: '2026-10-25T07:01:45Z'
   support: supports
-  summary: basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml cite
-    PMID:42709820 in discussions[0].rationale without a structured PMID:42709820 entry
-    in discussions[0].evidence.
-  quote: "id: newer_trichonympha_source\n  topic: Evaluate newer Trichonympha / SAS-6\
-    \ structural follow-up\n  ...\n  rationale: Tracked in #1822; PMID:42709820 is\
-    \ queued for abstract/full-text verification"
+  summary: basal_body_cartwheel.yaml (discussions[3].notes) and basal_body_cartwheel_inner_density.yaml
+    (discussions[5].notes) cite PMID:42709820 in notes without a structured PMID:42709820
+    entry in discussions[3].evidence / discussions[5].evidence.
+  quote: "- discussion_id: newer_trichonympha_source\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  prompt: Assess the full 2026 Trichonympha cartwheel study before adding\
+    \ its molecular\n    model or deposits.\n  rationale: Metadata and an abstract\
+    \ do not support an audited native model.\n  notes: The published DOI and PMID:42709820\
+    \ were verified, and the bioRxiv API links\n    the author preprint to this publication.\
+    \ Publisher/full-text routes were unsuccessful\n    and the preprint XML returned\
+    \ HTTP 429 after backoff on 2026-10-04. Full Results\n    and Methods have not\
+    \ been inspected. Its molecular assignments, repeat interpretation,\n    model\
+    \ stoichiometry and specimen taxon are not curated here. Existing numerical\n\
+    \    fields remain explicitly tied to the 2017 or 2020 Chlamydomonas experiments,\
+    \ not\n    a universal architecture.\n  evidence:\n  - reference: DOI:10.1073/pnas.2612170123\n\
+    \    notes: Metadata and abstract inspected only; follow-up source, not evidence\
+    \ for\n      an asserted molecular claim in this record.\n  posed_by: codex"
   snapshot_sha256: ad4e6fcf7639e0fffc00b553b0ab2e0e2a8eac5981b87ae9da1ee783ba942957
 assessments:
 - assessment_id: assess_cytoskeleton_cohort
@@ -4006,11 +4019,12 @@ assessments:
   - ev_cyto_heteromeric_subcomplex
 - assessment_id: assess_cyto_cartwheel_discussion
   area: evidence
-  topic: Structured evidence backing for PMID citations in discussions prose in basal-body
+  topic: Structured evidence backing for PMID citations in discussions notes in basal-body
     cartwheel records
   outcome: concern
-  summary: Two basal-body cartwheel records cite PMID:42709820 in discussions[0].rationale
-    without a matching structured EvidenceItem in discussions[0].evidence.
+  summary: Two basal-body cartwheel records cite PMID:42709820 in discussions[3].notes
+    / discussions[5].notes without a matching structured EvidenceItem in discussions[3].evidence
+    / discussions[5].evidence.
   target_ids:
   - cellstructuremech:basal_body_cartwheel
   - cellstructuremech:basal_body_cartwheel_inner_density
@@ -4026,9 +4040,9 @@ findings:
   title: Heteromeric subcomplex components arp2_arp3_nucleation_dimer and gcp4_gcp5_gcp6_ring_subunits
     are typed PROTEIN instead of PROTEIN_COMPLEX
   description: 'In data/structures/cytoskeleton/arp2_3_protein_complex.yaml (GO:0005885,
-    components#arp2_arp3_nucleation_dimer, gene_symbols: [ARP2, ARP3]) and data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
-    (GO:0000931, components#gcp4_gcp5_gcp6_ring_subunits, gene_symbols: [gfh1, mod21,
-    alp16]), components that represent multi-subunit heterodimers or heterotrimeric
+    components[0] arp2_arp3_nucleation_dimer, gene_symbols: [ARP2, ARP3]) and data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    (GO:0000931, components[1] gcp4_gcp5_gcp6_ring_subunits, gene_symbols: [gfh1,
+    mod21, alp16]), components that represent multi-subunit heterodimers or heterotrimeric
     subcomplexes of distinct non-paralogous subunits are typed component_type: PROTEIN
     instead of component_type: PROTEIN_COMPLEX.'
   target_ids:
@@ -4036,7 +4050,7 @@ findings:
   - GO:0000931
   field_paths:
   - components[0].component_type
-  - components[2].component_type
+  - components[1].component_type
   evidence_ids:
   - ev_cyto_heteromeric_subcomplex
   rule_id: docs/SCHEMA.md:ComponentTypeEnum
@@ -4058,19 +4072,20 @@ findings:
   status: open
   certainty: confirmed
   title: basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml cite
-    PMID:42709820 in discussions prose without a structured discussions[0].evidence
-    entry
+    PMID:42709820 in discussion notes without a structured discussions evidence entry
   description: In data/structures/cytoskeleton/basal_body_cartwheel.yaml (cellstructuremech:basal_body_cartwheel,
-    discussions#newer_trichonympha_source.rationale) and data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml
-    (cellstructuremech:basal_body_cartwheel_inner_density, discussions#newer_model_followup.rationale),
-    prose cites PMID:42709820 without a corresponding structured EvidenceItem in discussions[0].evidence
-    or removes the unverified placeholder PMID string if it is non-resolvable.
+    discussions[3] newer_trichonympha_source.notes) and data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml
+    (cellstructuremech:basal_body_cartwheel_inner_density, discussions[5] newer_model_followup.notes),
+    notes cite PMID:42709820 without a corresponding structured EvidenceItem in discussions[3].evidence
+    / discussions[5].evidence.
   target_ids:
   - cellstructuremech:basal_body_cartwheel
   - cellstructuremech:basal_body_cartwheel_inner_density
   field_paths:
-  - discussions[0].rationale
-  - discussions[0].evidence
+  - discussions[3].notes
+  - discussions[3].evidence
+  - discussions[5].notes
+  - discussions[5].evidence
   evidence_ids:
   - ev_cyto_cartwheel_discussion
   rule_id: docs/CURATION.md:discussion-evidence-links
@@ -4106,9 +4121,9 @@ actions:
   - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
   - .venv/bin/python scripts/validate_history.py
 - action_id: A2
-  description: Reconcile the unlinked PMID:42709820 mention in discussions[0].rationale
-    of basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml with
-    structured discussions[0].evidence and record the updates in history/records/.
+  description: Reconcile the unlinked PMID:42709820 mention in discussions[3].notes
+    of basal_body_cartwheel.yaml and discussions[5].notes of basal_body_cartwheel_inner_density.yaml
+    with structured discussions evidence and record the updates in history/records/.
   finding_ids:
   - F2
   target_ids:

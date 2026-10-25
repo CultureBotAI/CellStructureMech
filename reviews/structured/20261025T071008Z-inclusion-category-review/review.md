@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 20 records in data/structures/inclusion/ verified distinct microbial storage-granule and crystalline-inclusion boundaries. One minor discussion-evidence gap was identified in proteasome_storage_granule.yaml (GO:0034515): discussions#retracted_evidence cites DOI:10.7554/eLife.34532 in prompt and rationale without a corresponding structured EvidenceItem in discussions[0].evidence.
+Full-coverage category review of all 20 records in data/structures/inclusion/ verified distinct microbial storage-granule and crystalline-inclusion boundaries. One minor discussion-evidence gap was identified in proteasome_storage_granule.yaml (GO:0034515): discussions[0] (discussion_id: retracted_evidence) mentions DOI 10.7554/eLife.34532 in discussions[0].notes without a corresponding structured EvidenceItem in discussions[0].evidence.
 
 ## Scope And Provenance
 
@@ -60,19 +60,19 @@ scope: supported. Targets: cellstructuremech:age_associated_protein_deposit, cel
 
 All 20 records in data/structures/inclusion/ represent distinct microbial cell structures or subcomplexes with valid hierarchy links and verified UniProtKB protein examples.
 
-### Structured evidence backing for DOI citation in discussions#retracted_evidence of proteasome_storage_granule.yaml
+### Structured evidence backing for DOI citation in discussions[0] (retracted_evidence) of proteasome_storage_granule.yaml
 
 evidence: concern. Targets: GO:0034515.
 
-discussions#retracted_evidence in proteasome_storage_granule.yaml cites DOI:10.7554/eLife.34532 in prose without a matching structured EvidenceItem in discussions[0].evidence.
+discussions[0].notes in proteasome_storage_granule.yaml mentions DOI 10.7554/eLife.34532 without a matching structured EvidenceItem in discussions[0].evidence.
 
 ## Findings
 
-### F1: proteasome_storage_granule.yaml discussions#retracted_evidence cites DOI:10.7554/eLife.34532 in prose without a structured discussions[0].evidence entry
+### F1: proteasome_storage_granule.yaml discussions[0].notes mentions DOI 10.7554/eLife.34532 without a structured discussions[0].evidence entry
 
 minor / open / confirmed; issue key: inclusion-psg-discussions-unlinked-doi.
 
-In data/structures/inclusion/proteasome_storage_granule.yaml (GO:0034515), discussions[0] (id: retracted_evidence) cites DOI:10.7554/eLife.34532 in prompt and rationale without a corresponding structured EvidenceItem (reference: DOI:10.7554/eLife.34532, supports: REFUTE) in discussions[0].evidence.
+In data/structures/inclusion/proteasome_storage_granule.yaml (GO:0034515), discussions[0] (discussion_id: retracted_evidence, lines 249-265) mentions DOI 10.7554/eLife.34532 in discussions[0].notes while discussions[0].evidence only lists DOI:10.7554/eLife.82988 and PMID:30204036.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -93,7 +93,7 @@ Add a structured EvidenceItem for DOI:10.7554/eLife.34532 (supports: REFUTE) to 
 | --- | --- | --- | --- |
 | ev_strict_inclusion | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 20 inclusion records. |
 | ev_labels_inclusion | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
-| ev_inc_psg_discussion | data/structures/inclusion/proteasome_storage_granule.yaml; discussions[0] (lines 166-179) | supports | proteasome_storage_granule.yaml discussions#retracted_evidence cites DOI:10.7554/eLife.34532 in prompt and rationale while discussions[0].evidence only lists the GitHub issue URL. |
+| ev_inc_psg_discussion | data/structures/inclusion/proteasome_storage_granule.yaml; discussions[0] (lines 249-265) | supports | proteasome_storage_granule.yaml discussions[0] (retracted_evidence) mentions DOI 10.7554/eLife.34532 in discussions[0].notes while discussions[0].evidence only lists DOI:10.7554/eLife.82988 and PMID:30204036. |
 
 ## Limits And Additional Notes
 
@@ -128,8 +128,8 @@ scientific_review: true
 summary: 'Full-coverage category review of all 20 records in data/structures/inclusion/
   verified distinct microbial storage-granule and crystalline-inclusion boundaries.
   One minor discussion-evidence gap was identified in proteasome_storage_granule.yaml
-  (GO:0034515): discussions#retracted_evidence cites DOI:10.7554/eLife.34532 in prompt
-  and rationale without a corresponding structured EvidenceItem in discussions[0].evidence.'
+  (GO:0034515): discussions[0] (discussion_id: retracted_evidence) mentions DOI 10.7554/eLife.34532
+  in discussions[0].notes without a corresponding structured EvidenceItem in discussions[0].evidence.'
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
   state: git_commit
@@ -594,15 +594,24 @@ evidence:
 - evidence_id: ev_inc_psg_discussion
   kind: record_content
   reference: data/structures/inclusion/proteasome_storage_granule.yaml
-  locator: discussions[0] (lines 166-179)
+  locator: discussions[0] (lines 249-265)
   accessed_at: '2026-10-25T07:03:20Z'
   support: supports
-  summary: proteasome_storage_granule.yaml discussions#retracted_evidence cites DOI:10.7554/eLife.34532
-    in prompt and rationale while discussions[0].evidence only lists the GitHub issue
-    URL.
-  quote: "id: retracted_evidence\n  topic: Replace retracted eLife 2018 PSG paper\n\
-    \  ...\n  prompt: Replace retracted DOI:10.7554/eLife.34532 with non-retracted\
-    \ PSG evidence."
+  summary: proteasome_storage_granule.yaml discussions[0] (retracted_evidence) mentions
+    DOI 10.7554/eLife.34532 in discussions[0].notes while discussions[0].evidence
+    only lists DOI:10.7554/eLife.82988 and PMID:30204036.
+  quote: "- discussion_id: retracted_evidence\n  kind: INTERPRETATION\n  status: RESOLVED\n\
+    \  prompt: Exclude the retracted 2018 study and derivative commentary from positive\n\
+    \    support.\n  rationale: Ontology citation chains can retain secondary accounts\
+    \ of withdrawn work.\n  notes: DOI 10.7554/eLife.34532 was retracted by DOI 10.7554/eLife.82988\
+    \ following\n    reported western-blot irregularities and misplaced confocal images.\
+    \ GO's definition\n    also cites PMID 30204036, a commentary on that study, which\
+    \ is not independent\n    support. No proteaphagy-protection or Arabidopsis PSG\
+    \ claim is imported from either.\n    Independent 2008 and 2017 primary evidence\
+    \ supports this record's yeast scope.\n  evidence:\n  - reference: DOI:10.7554/eLife.82988\n\
+    \    notes: Official retraction notice read; used only for exclusion provenance.\n\
+    \  - reference: PMID:30204036\n    notes: Native PubMed identifies this as a comment\
+    \ on the retracted study.\n  posed_by: codex"
   snapshot_sha256: 4e9730ed25a0a5a14b8c758073d590597c4f7c4638395e54897ec6fa1f12ff2e
 assessments:
 - assessment_id: assess_inclusion_cohort
@@ -638,12 +647,11 @@ assessments:
   - ev_labels_inclusion
 - assessment_id: assess_inc_psg_discussion
   area: evidence
-  topic: Structured evidence backing for DOI citation in discussions#retracted_evidence
+  topic: Structured evidence backing for DOI citation in discussions[0] (retracted_evidence)
     of proteasome_storage_granule.yaml
   outcome: concern
-  summary: discussions#retracted_evidence in proteasome_storage_granule.yaml cites
-    DOI:10.7554/eLife.34532 in prose without a matching structured EvidenceItem in
-    discussions[0].evidence.
+  summary: discussions[0].notes in proteasome_storage_granule.yaml mentions DOI 10.7554/eLife.34532
+    without a matching structured EvidenceItem in discussions[0].evidence.
   target_ids:
   - GO:0034515
   evidence_ids:
@@ -655,15 +663,16 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: proteasome_storage_granule.yaml discussions#retracted_evidence cites DOI:10.7554/eLife.34532
-    in prose without a structured discussions[0].evidence entry
+  title: proteasome_storage_granule.yaml discussions[0].notes mentions DOI 10.7554/eLife.34532
+    without a structured discussions[0].evidence entry
   description: 'In data/structures/inclusion/proteasome_storage_granule.yaml (GO:0034515),
-    discussions[0] (id: retracted_evidence) cites DOI:10.7554/eLife.34532 in prompt
-    and rationale without a corresponding structured EvidenceItem (reference: DOI:10.7554/eLife.34532,
-    supports: REFUTE) in discussions[0].evidence.'
+    discussions[0] (discussion_id: retracted_evidence, lines 249-265) mentions DOI
+    10.7554/eLife.34532 in discussions[0].notes while discussions[0].evidence only
+    lists DOI:10.7554/eLife.82988 and PMID:30204036.'
   target_ids:
   - GO:0034515
   field_paths:
+  - discussions[0].notes
   - discussions[0].evidence
   evidence_ids:
   - ev_inc_psg_discussion

@@ -93,7 +93,7 @@ Propagate grounding: InterPro:IPR001119 (grounding_label: 'S-layer homology doma
 | --- | --- | --- | --- |
 | ev_strict_envelope | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 20 envelope records. |
 | ev_labels_envelope | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
-| ev_env_slayer_grounding | data/structures/envelope/s_layer.yaml; components#slh_domain vs causal_graphs[0].nodes[1] | supports | s_layer.yaml components#slh_domain declares grounding: InterPro:IPR001119 whereas causal_graphs[0] node slh_domain omits grounding. |
+| ev_env_slayer_grounding | data/structures/envelope/s_layer.yaml; components#slh_domain vs causal_graphs[0].nodes[1] (lines 205-208) | supports | s_layer.yaml components#slh_domain declares grounding: InterPro:IPR001119 whereas causal_graphs[0] node slh_domain omits grounding. |
 
 ## Limits And Additional Notes
 
@@ -594,13 +594,13 @@ evidence:
 - evidence_id: ev_env_slayer_grounding
   kind: record_content
   reference: data/structures/envelope/s_layer.yaml
-  locator: components#slh_domain vs causal_graphs[0].nodes[1]
+  locator: components#slh_domain vs causal_graphs[0].nodes[1] (lines 205-208)
   accessed_at: '2026-10-25T07:03:00Z'
   support: supports
   summary: 's_layer.yaml components#slh_domain declares grounding: InterPro:IPR001119
     whereas causal_graphs[0] node slh_domain omits grounding.'
-  quote: "- id: slh_domain\n    label: S-layer homology (SLH) anchoring domain\n \
-    \   node_type: GENE_OR_PROTEIN\n    component_ref: slh_domain"
+  quote: "  - node_id: slh_domain\n    label: S-layer homology domain\n    node_type:\
+    \ GENE_OR_PROTEIN\n    component_ref: slh_domain"
   snapshot_sha256: 69d847bc6803766499ff12fa44e69ac239cb35fb75cb79cb4e6d7d4a6d24c4d0
 assessments:
 - assessment_id: assess_envelope_cohort

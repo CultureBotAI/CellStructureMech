@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of both records in data/structures/division_machinery/ (divisome.yaml and elongasome.yaml) verified distinct medial-division vs lateral-wall-elongation machinery boundaries and enriched causal graphs. One minor provenance discrepancy was found in elongasome.yaml (cellstructuremech:elongasome): curation_history[12] (CURATED_CAUSAL_GRAPH) cites graph_id 'elongasome_pg_synthesis' whereas causal_graphs[0].id is 'elongasome_sidewall_elongation'.
+Full-coverage category review of both records in data/structures/division_machinery/ (divisome.yaml and elongasome.yaml) verified distinct medial-division vs lateral-wall-elongation machinery boundaries and enriched causal graphs. One minor provenance discrepancy was found in elongasome.yaml (cellstructuremech:elongasome): curation_history[12].changes (CURATED_CAUSAL_GRAPH) cites graph_id 'elongasome_pg_synthesis' whereas causal_graphs[0].graph_id is 'elongasome_sidewall_elongation'.
 
 ## Scope And Provenance
 
@@ -42,25 +42,25 @@ scope: supported. Targets: GO:1990586, cellstructuremech:elongasome.
 
 All 2 records in data/structures/division_machinery/ represent distinct microbial cell structures or subcomplexes with valid hierarchy links and verified UniProtKB protein examples.
 
-### Alignment between curation_history CURATED_CAUSAL_GRAPH summary and causal_graphs[0].id in elongasome.yaml
+### Alignment between curation_history CURATED_CAUSAL_GRAPH changes and causal_graphs[0].graph_id in elongasome.yaml
 
 provenance: concern. Targets: cellstructuremech:elongasome.
 
-curation_history[12] in elongasome.yaml cites elongasome_pg_synthesis instead of actual causal_graphs[0].id elongasome_sidewall_elongation.
+curation_history[12].changes in elongasome.yaml cites elongasome_pg_synthesis instead of actual causal_graphs[0].graph_id elongasome_sidewall_elongation.
 
 ## Findings
 
-### F1: elongasome.yaml curation_history[12] cites graph_id elongasome_pg_synthesis instead of elongasome_sidewall_elongation
+### F1: elongasome.yaml curation_history[12].changes cites graph_id elongasome_pg_synthesis instead of elongasome_sidewall_elongation
 
 minor / open / confirmed; issue key: elongasome-curation-history-causal-graph-id-mismatch.
 
-In data/structures/division_machinery/elongasome.yaml (cellstructuremech:elongasome), curation_history[12] (event_type: CURATED_CAUSAL_GRAPH) summarizes the graph ID as 'elongasome_pg_synthesis', whereas causal_graphs[0].id is 'elongasome_sidewall_elongation'.
+In data/structures/division_machinery/elongasome.yaml (cellstructuremech:elongasome), curation_history[12].changes (action: CURATED_CAUSAL_GRAPH) summarizes the graph ID as 'elongasome_pg_synthesis', whereas causal_graphs[0].graph_id is 'elongasome_sidewall_elongation'.
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Update curation_history[12].summary in data/structures/division_machinery/elongasome.yaml to reference elongasome_sidewall_elongation and record the update in history/records/elongasome/.
+Update curation_history[12].changes in data/structures/division_machinery/elongasome.yaml to reference elongasome_sidewall_elongation and record the update in history/records/elongasome/.
 
 - .venv/bin/python scripts/validate_strict.py data/structures/division_machinery/elongasome.yaml --out /tmp/elongasome_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -75,7 +75,7 @@ Update curation_history[12].summary in data/structures/division_machinery/elonga
 | --- | --- | --- | --- |
 | ev_strict_divisionmachinery | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 2 division_machinery records. |
 | ev_labels_divisionmachinery | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
-| ev_div_elongasome_history | data/structures/division_machinery/elongasome.yaml; causal_graphs[0].id and curation_history[12].summary | supports | elongasome.yaml curation_history[12] states 'Added causal graph (elongasome_pg_synthesis)' whereas causal_graphs[0].id is elongasome_sidewall_elongation. |
+| ev_div_elongasome_history | data/structures/division_machinery/elongasome.yaml; causal_graphs[0].graph_id (line 185) and curation_history[12].changes (lines 319-324) | supports | elongasome.yaml curation_history[12].changes states 'Added causal graph (elongasome_pg_synthesis)' whereas causal_graphs[0].graph_id is elongasome_sidewall_elongation. |
 
 ## Limits And Additional Notes
 
@@ -110,8 +110,8 @@ scientific_review: true
 summary: 'Full-coverage category review of both records in data/structures/division_machinery/
   (divisome.yaml and elongasome.yaml) verified distinct medial-division vs lateral-wall-elongation
   machinery boundaries and enriched causal graphs. One minor provenance discrepancy
-  was found in elongasome.yaml (cellstructuremech:elongasome): curation_history[12]
-  (CURATED_CAUSAL_GRAPH) cites graph_id ''elongasome_pg_synthesis'' whereas causal_graphs[0].id
+  was found in elongasome.yaml (cellstructuremech:elongasome): curation_history[12].changes
+  (CURATED_CAUSAL_GRAPH) cites graph_id ''elongasome_pg_synthesis'' whereas causal_graphs[0].graph_id
   is ''elongasome_sidewall_elongation''.'
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
@@ -235,13 +235,16 @@ evidence:
 - evidence_id: ev_div_elongasome_history
   kind: record_content
   reference: data/structures/division_machinery/elongasome.yaml
-  locator: causal_graphs[0].id and curation_history[12].summary
+  locator: causal_graphs[0].graph_id (line 185) and curation_history[12].changes (lines
+    319-324)
   accessed_at: '2026-10-25T07:02:00Z'
   support: supports
-  summary: elongasome.yaml curation_history[12] states 'Added causal graph (elongasome_pg_synthesis)'
-    whereas causal_graphs[0].id is elongasome_sidewall_elongation.
-  quote: "- timestamp: '2026-04-20T05:14:22.496215Z'\n  event_type: CURATED_CAUSAL_GRAPH\n\
-    \  ...\n  summary: Added causal graph (elongasome_pg_synthesis)"
+  summary: elongasome.yaml curation_history[12].changes states 'Added causal graph
+    (elongasome_pg_synthesis)' whereas causal_graphs[0].graph_id is elongasome_sidewall_elongation.
+  quote: "- timestamp: '2026-10-24T06:00:00Z'\n  curator: antigravity\n  action: CURATED_CAUSAL_GRAPH\n\
+    \  changes: 'Added mrec_mred (component_ref: mrec_mred) node and scaffolding edge\
+    \ to\n    pg_synthesis in elongasome_pg_synthesis (DOI:10.1038/nrmicro2677).'\n\
+    \  llm_assisted: true"
   snapshot_sha256: 9ed092396d873bd1619e15515ebaec36b5f6da64bfebec61752b30f4e4d4ec6f
 assessments:
 - assessment_id: assess_divisionmachinery_cohort
@@ -259,11 +262,11 @@ assessments:
   - ev_labels_divisionmachinery
 - assessment_id: assess_div_elongasome_history
   area: provenance
-  topic: Alignment between curation_history CURATED_CAUSAL_GRAPH summary and causal_graphs[0].id
+  topic: Alignment between curation_history CURATED_CAUSAL_GRAPH changes and causal_graphs[0].graph_id
     in elongasome.yaml
   outcome: concern
-  summary: curation_history[12] in elongasome.yaml cites elongasome_pg_synthesis instead
-    of actual causal_graphs[0].id elongasome_sidewall_elongation.
+  summary: curation_history[12].changes in elongasome.yaml cites elongasome_pg_synthesis
+    instead of actual causal_graphs[0].graph_id elongasome_sidewall_elongation.
   target_ids:
   - cellstructuremech:elongasome
   evidence_ids:
@@ -275,15 +278,16 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: elongasome.yaml curation_history[12] cites graph_id elongasome_pg_synthesis
+  title: elongasome.yaml curation_history[12].changes cites graph_id elongasome_pg_synthesis
     instead of elongasome_sidewall_elongation
   description: 'In data/structures/division_machinery/elongasome.yaml (cellstructuremech:elongasome),
-    curation_history[12] (event_type: CURATED_CAUSAL_GRAPH) summarizes the graph ID
-    as ''elongasome_pg_synthesis'', whereas causal_graphs[0].id is ''elongasome_sidewall_elongation''.'
+    curation_history[12].changes (action: CURATED_CAUSAL_GRAPH) summarizes the graph
+    ID as ''elongasome_pg_synthesis'', whereas causal_graphs[0].graph_id is ''elongasome_sidewall_elongation''.'
   target_ids:
   - cellstructuremech:elongasome
   field_paths:
-  - curation_history[12].summary
+  - curation_history[12].changes
+  - causal_graphs[0].graph_id
   evidence_ids:
   - ev_div_elongasome_history
   rule_id: docs/CURATION.md:curation-history-accuracy
@@ -297,7 +301,7 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: Update curation_history[12].summary in data/structures/division_machinery/elongasome.yaml
+  description: Update curation_history[12].changes in data/structures/division_machinery/elongasome.yaml
     to reference elongasome_sidewall_elongation and record the update in history/records/elongasome/.
   finding_ids:
   - F1
