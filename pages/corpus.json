@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 993,
- "corpus_updated": "2026-10-24 06:00:00 UTC",
- "corpus_digest": "d298410a3c44",
+ "corpus_updated": "2026-10-25 05:35:08 UTC",
+ "corpus_digest": "165d822af374",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -50072,6 +50072,13 @@
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Added source-backed mechanistic descriptions to 2 causal edge(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T05:35:07Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 3 Stage 3 protein_examples curation: added 2 declared gene_symbol(s); added 2 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -50106,6 +50113,27 @@
        "reference": "DOI:10.1242/jcs.019414",
        "notes": "Abstract read: proteomics identifies ten centrin subfamilies required for ICL biogenesis. Full experimental text was not reached."
       }
+     ],
+     "gene_symbols": [
+      "Icl1e"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q3SEK0",
+       "protein_label": "Caltractin ICL1e",
+       "gene_symbol": "Icl1e",
+       "taxon_id": "NCBITaxon:5888",
+       "taxon_label": "Paramecium tetraurelia",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "The single reviewed UniProtKB entry for gene Icl1e in Paramecium tetraurelia, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q3SEK0",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry Q3SEK0, the single reviewed entry for gene Icl1e in Paramecium tetraurelia. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      }
      ]
     },
     {
@@ -50125,6 +50153,27 @@
       {
        "reference": "DOI:10.1242/jcs.019414",
        "notes": "Abstract read: two Sfi1-like protein subfamilies are required for ICL biogenesis. Full experimental text was not reached."
+      }
+     ],
+     "gene_symbols": [
+      "PtCenBP1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q3SE25",
+       "protein_label": "Centrin-binding protein, putative",
+       "gene_symbol": "PtCenBP1",
+       "taxon_id": "NCBITaxon:5888",
+       "taxon_label": "Paramecium tetraurelia",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene PtCenBP1 in Paramecium tetraurelia. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q3SE25",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q3SE25 for gene PtCenBP1 in Paramecium tetraurelia. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -54312,6 +54361,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added median-body synonymy, cytoskeleton parthood, a microtubule has_part link, alpha/beta tubulin and Kinesin-13 components, Giardia intestinalis scope, DOI evidence, a nonmechanistic Kinesin-13 dynamics graph, and open TODOs for component boundaries and median-body function.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T05:35:08Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 3 Stage 3 protein_examples curation: added 1 declared gene_symbol(s); added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -54362,7 +54418,28 @@
       }
      ],
      "grounding_status": "REVIEWED_LABEL_ONLY",
-     "grounding_notes": "Giardia has a single kinesin-13 homolog in the Dawson et al. study, but no exact cross-source family CURIE specific to the Giardia Kinesin-13 regulator was curated here."
+     "grounding_notes": "Giardia has a single kinesin-13 homolog in the Dawson et al. study, but no exact cross-source family CURIE specific to the Giardia Kinesin-13 regulator was curated here.",
+     "gene_symbols": [
+      "kin-13"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q969B0",
+       "protein_label": "Kinesin-like protein KIN-13",
+       "gene_symbol": "kin-13",
+       "taxon_id": "NCBITaxon:5741",
+       "taxon_label": "Giardia intestinalis",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene kin-13 in Giardia intestinalis. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:35772734",
+         "notes": "Park EA et al. 2022, ‘Kinesin-13, a Motor Protein, is Regulated by Polo-like Kinase in Giardia lamblia.’, Korean J Parasitol. ECO:0000269 experimental evidence cited by UniProt for the 'Cell projection, cilium, flagellum' localisation of Q969B0."
+        }
+       ]
+      }
+     ]
     }
    ],
    "taxonomic_distribution": [
@@ -89609,7 +89686,9 @@
      "grounding": "GO:0033177",
      "gene_symbols": [
       "atpE",
-      "atpB"
+      "atpB",
+      "VMA3",
+      "VPH1"
      ],
      "essentiality": "ESSENTIAL",
      "role": "Membrane-embedded sector (Fo or Vo) containing the proteolipid c-ring rotor and stator subunit a hemichannels that translocate protons across the membrane.",
@@ -89655,6 +89734,38 @@
          "notes": "Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli inner membrane proteome.', Science."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P25515",
+       "protein_label": "V-type proton ATPase subunit c",
+       "gene_symbol": "VMA3",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA3 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:9030535",
+         "notes": "Hirata R et al. 1997, ‘VMA11 and VMA16 encode second and third proteolipid subunits of the Saccharomyces cerevisiae vacuolar membrane H+-ATPase.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P25515."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P32563",
+       "protein_label": "V-type proton ATPase subunit a, vacuolar isoform",
+       "gene_symbol": "VPH1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VPH1 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P32563."
+        }
+       ]
       }
      ]
     },
@@ -89668,7 +89779,11 @@
       "atpA",
       "atpD",
       "atpG",
-      "atpC"
+      "atpC",
+      "VMA1",
+      "VMA2",
+      "VMA8",
+      "VMA7"
      ],
      "essentiality": "ESSENTIAL",
      "role": "Peripheral cytoplasmic compartment sector (F1 or V1) containing the hexameric catalytic head and central rotational stalk that catalyzes ATP synthesis or hydrolysis.",
@@ -89744,6 +89859,74 @@
         {
          "reference": "PMID:16079137",
          "notes": "Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell envelope.', J Biol Chem."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P17255",
+       "protein_label": "V-type proton ATPase catalytic subunit A",
+       "gene_symbol": "VMA1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA1 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P17255."
+        },
+        {
+         "reference": "PMID:2139027",
+         "notes": "Hirata R et al. 1990, ‘Molecular structure of a gene, VMA1, encoding the catalytic subunit of H(+)-translocating adenosine triphosphatase from vacuolar membranes of Saccharomyces cerevisiae.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P17255."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P16140",
+       "protein_label": "V-type proton ATPase subunit B",
+       "gene_symbol": "VMA2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA2 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:2141385",
+         "notes": "Yamashiro CT et al. 1990, ‘Role of vacuolar acidification in protein sorting and zymogen activation: a genetic analysis of the yeast vacuolar proton-translocating ATPase.’, Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P16140."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P32610",
+       "protein_label": "V-type proton ATPase subunit D",
+       "gene_symbol": "VMA8",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA8 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:7797485",
+         "notes": "Graham LA et al. 1995, ‘VMA8 encodes a 32-kDa V1 subunit of the Saccharomyces cerevisiae vacuolar H(+)-ATPase required for function and assembly of the enzyme complex.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P32610."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P39111",
+       "protein_label": "V-type proton ATPase subunit F",
+       "gene_symbol": "VMA7",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA7 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P39111",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P39111, the single reviewed entry for gene VMA7 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -89972,6 +90155,13 @@
      "action": "CURATED_CAUSAL_GRAPH",
      "changes": "Added proton_transmembrane_transport (GO:1902600) node and rotary coupling edges between proton_transporting_domain, catalytic_domain, and rotary_proton_atp_coupling (DOI:10.1146/annurev-biochem-013118-110903, GO:0016469).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T05:35:08Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 3 Stage 3 protein_examples curation: added 6 declared gene_symbol(s); added 6 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ]
   },
@@ -89997,7 +90187,9 @@
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "atpA",
-      "atpD"
+      "atpD",
+      "VMA1",
+      "VMA2"
      ],
      "stoichiometry": "three alternating catalytic and non-catalytic subunit pairs (alpha3beta3 or A3B3)",
      "essentiality": "ESSENTIAL",
@@ -90044,6 +90236,42 @@
          "notes": "UniProtKB reviewed (Swiss-Prot) entry P0ABB4 for gene atpD in Escherichia coli K-12."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P17255",
+       "protein_label": "V-type proton ATPase catalytic subunit A",
+       "gene_symbol": "VMA1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA1 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P17255."
+        },
+        {
+         "reference": "PMID:2139027",
+         "notes": "Hirata R et al. 1990, ‘Molecular structure of a gene, VMA1, encoding the catalytic subunit of H(+)-translocating adenosine triphosphatase from vacuolar membranes of Saccharomyces cerevisiae.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P17255."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P16140",
+       "protein_label": "V-type proton ATPase subunit B",
+       "gene_symbol": "VMA2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA2 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:2141385",
+         "notes": "Yamashiro CT et al. 1990, ‘Role of vacuolar acidification in protein sorting and zymogen activation: a genetic analysis of the yeast vacuolar proton-translocating ATPase.’, Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P16140."
+        }
+       ]
       }
      ]
     },
@@ -90054,7 +90282,9 @@
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "atpG",
-      "atpC"
+      "atpC",
+      "VMA8",
+      "VMA7"
      ],
      "essentiality": "ESSENTIAL",
      "role": "Asymmetric central shaft (gamma/epsilon in F1, D/F in V1) whose rotation inside the hexameric head couples catalytic conformational cycling to proton transport in the membrane sector.",
@@ -90098,6 +90328,38 @@
         {
          "reference": "PMID:16079137",
          "notes": "Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell envelope.', J Biol Chem."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P32610",
+       "protein_label": "V-type proton ATPase subunit D",
+       "gene_symbol": "VMA8",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA8 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:7797485",
+         "notes": "Graham LA et al. 1995, ‘VMA8 encodes a 32-kDa V1 subunit of the Saccharomyces cerevisiae vacuolar H(+)-ATPase required for function and assembly of the enzyme complex.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P32610."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P39111",
+       "protein_label": "V-type proton ATPase subunit F",
+       "gene_symbol": "VMA7",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA7 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P39111",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P39111, the single reviewed entry for gene VMA7 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -90289,6 +90551,13 @@
      "action": "CURATED_CAUSAL_GRAPH",
      "changes": "Added direct rotary-coupling edge from central_rotational_stalk to catalytic_hexamer_head in catalytic_sector_rotary_catalysis (GO:0033178, DOI:10.1146/annurev-biochem-013118-110903).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T05:35:08Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 3 Stage 3 protein_examples curation: added 4 declared gene_symbol(s); added 4 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ]
   },
@@ -90313,7 +90582,8 @@
      "component_type": "PROTEIN",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
-      "atpE"
+      "atpE",
+      "VMA3"
      ],
      "essentiality": "ESSENTIAL",
      "role": "Oligomeric membrane-embedded proteolipid c-ring subunit whose conserved carboxylates bind and release protons during rotary translocation.",
@@ -90343,6 +90613,22 @@
          "notes": "Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli inner membrane proteome.', Science."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P25515",
+       "protein_label": "V-type proton ATPase subunit c",
+       "gene_symbol": "VMA3",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VMA3 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:9030535",
+         "notes": "Hirata R et al. 1997, ‘VMA11 and VMA16 encode second and third proteolipid subunits of the Saccharomyces cerevisiae vacuolar membrane H+-ATPase.’, J Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P25515."
+        }
+       ]
       }
      ]
     },
@@ -90352,7 +90638,8 @@
      "component_type": "PROTEIN",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
-      "atpB"
+      "atpB",
+      "VPH1"
      ],
      "essentiality": "ESSENTIAL",
      "role": "Polytopic membrane stator subunit that provides two offset aqueous half-channels for protons to enter and exit the rotating c-ring.",
@@ -90376,6 +90663,22 @@
         {
          "reference": "PMID:15919996",
          "notes": "Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli inner membrane proteome.', Science."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P32563",
+       "protein_label": "V-type proton ATPase subunit a, vacuolar isoform",
+       "gene_symbol": "VPH1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative reviewed UniProtKB entry for gene VPH1 in Saccharomyces cerevisiae S288C. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "PMID:14562095",
+         "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole membrane' localisation of P32563."
         }
        ]
       }
@@ -90555,6 +90858,13 @@
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
      "changes": "Added direct proton-conduction edge from membrane_stator_a_subunit to proteolipid_c_ring_subunit in proton_sector_rotary_conduction (DOI:10.1146/annurev-biochem-013118-110903).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T05:35:08Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 3 Stage 3 protein_examples curation: added 2 declared gene_symbol(s); added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
     }
    ]
@@ -167440,6 +167750,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T05:35:08Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 3 Stage 3 protein_examples curation: added 1 declared gene_symbol(s); added 1 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -167545,6 +167862,27 @@
       {
        "reference": "DOI:10.1371/journal.pone.0171594",
        "notes": "LpHV1 localization was supported by immunostaining, Western blotting and peptide detection."
+      }
+     ],
+     "gene_symbols": [
+      "lphv1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:A0A1S5TET4",
+       "protein_label": "Voltage-gated hydrogen channel 1",
+       "gene_symbol": "lphv1",
+       "taxon_id": "NCBITaxon:160621",
+       "taxon_label": "Lingulaulax polyedra",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene lphv1 in Lingulaulax polyedra. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/A0A1S5TET4",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry A0A1S5TET4 for gene lphv1 in Lingulaulax polyedra. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -290188,6 +290526,13 @@
      "action": "CURATED_CAUSAL_GRAPH",
      "changes": "Added ASSEMBLY causal graph stressosome_core_and_partner_assembly covering RsbR-RsbS core assembly, RsbT recruitment, and Listeria monocytogenes Prli42 membrane tethering of RsbR (DOI:10.1038/s41467-019-10782-0, DOI:10.1107/S205225251900945X, DOI:10.1038/nmicrobiol.2017.5).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T05:35:08Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 3 Stage 3 protein_examples curation: added 3 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -290240,6 +290585,22 @@
          "notes": "UniProtKB reviewed (Swiss-Prot) entry O34627, the single reviewed entry for gene ytvA in Bacillus subtilis subsp. subtilis str. 168. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q8Y8K9",
+       "protein_label": "RsbR protein",
+       "gene_symbol": "RsbR",
+       "taxon_id": "NCBITaxon:169963",
+       "taxon_label": "Listeria monocytogenes EGD-e",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene rsbR in Listeria monocytogenes EGD-e. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q8Y8K9",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q8Y8K9 for gene rsbR in Listeria monocytogenes EGD-e. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ],
      "evidence": [
@@ -290279,6 +290640,22 @@
         {
          "reference": "DOI:10.1107/S205225251900945X",
          "notes": "Kwon et al. cloned the proteins from strain 168 (ATCC 23857) and reconstituted RsbRA-RsbS cores. The accession, reviewed status and strain taxon were independently checked at UniProt; the canonical taxon label was checked through ENA taxonomy."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q92DC5",
+       "protein_label": "RsbS protein",
+       "gene_symbol": "rsbS",
+       "taxon_id": "NCBITaxon:169963",
+       "taxon_label": "Listeria monocytogenes EGD-e",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene rsbS in Listeria monocytogenes EGD-e. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q92DC5",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q92DC5 for gene rsbS in Listeria monocytogenes EGD-e. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -290334,6 +290711,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/P42411",
          "notes": "UniProtKB reviewed (Swiss-Prot) entry P42411, the single reviewed entry for gene rsbT in Bacillus subtilis subsp. subtilis str. 168. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q8Y8K8",
+       "protein_label": "RsbT protein",
+       "gene_symbol": "rsbT",
+       "taxon_id": "NCBITaxon:169963",
+       "taxon_label": "Listeria monocytogenes EGD-e",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene rsbT in Listeria monocytogenes EGD-e. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q8Y8K8",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q8Y8K8 for gene rsbT in Listeria monocytogenes EGD-e. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }

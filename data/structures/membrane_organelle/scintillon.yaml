@@ -30,6 +30,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-25T05:35:08Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 3 Stage 3 protein_examples curation: added 1 declared gene_symbol(s);
+    added 1 verified UniProtKB protein_example(s).'
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
@@ -114,6 +120,24 @@ components:
   - reference: DOI:10.1371/journal.pone.0171594
     notes: LpHV1 localization was supported by immunostaining, Western blotting and
       peptide detection.
+  gene_symbols:
+  - lphv1
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A1S5TET4
+    protein_label: Voltage-gated hydrogen channel 1
+    gene_symbol: lphv1
+    taxon_id: NCBITaxon:160621
+    taxon_label: Lingulaulax polyedra
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene lphv1 in Lingulaulax
+      polyedra. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/A0A1S5TET4
+      notes: UniProtKB unreviewed (TrEMBL) entry A0A1S5TET4 for gene lphv1 in Lingulaulax
+        polyedra. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2864
   taxon_label: Dinophyceae

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/scintillon.yaml
+  slug: scintillon
+session:
+  id: 2026-10-25T053508Z-uniprot-protein-examples-skill-af54c4
+  timestamp: '2026-10-25T05:35:08Z'
+  actors:
+  - type: ai_agent
+    name: uniprot-protein-examples-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Cycle 3 Stage 3 protein_examples curation: added 1 declared gene_symbol(s);
+    added 1 verified UniProtKB protein_example(s).'
+  details: 'Cycle 3 Stage 3 protein_examples curation: added 1 declared gene_symbol(s);
+    added 1 verified UniProtKB protein_example(s). Validated via write_validated_structure
+    and uniprot_genes.py --verify.'

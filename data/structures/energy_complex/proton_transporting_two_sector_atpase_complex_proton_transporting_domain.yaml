@@ -17,6 +17,7 @@ components:
   component_role: CONSTITUENT
   gene_symbols:
   - atpE
+  - VMA3
   essentiality: ESSENTIAL
   role: Oligomeric membrane-embedded proteolipid c-ring subunit whose conserved carboxylates
     bind and release protons during rotary translocation.
@@ -40,12 +41,29 @@ components:
     - reference: PMID:15919996
       notes: Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli
         inner membrane proteome.', Science.
+  - uniprot_id: UniProtKB:P25515
+    protein_label: V-type proton ATPase subunit c
+    gene_symbol: VMA3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative reviewed UniProtKB entry for gene VMA3 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:9030535
+      notes: Hirata R et al. 1997, ‘VMA11 and VMA16 encode second and third proteolipid
+        subunits of the Saccharomyces cerevisiae vacuolar membrane H+-ATPase.’, J
+        Biol Chem. ECO:0000269 experimental evidence cited by UniProt for the 'Vacuole
+        membrane' localisation of P25515.
 - component_id: membrane_stator_a_subunit
   label: membrane stator subunit a
   component_type: PROTEIN
   component_role: CONSTITUENT
   gene_symbols:
   - atpB
+  - VPH1
   essentiality: ESSENTIAL
   role: Polytopic membrane stator subunit that provides two offset aqueous half-channels
     for protons to enter and exit the rotating c-ring.
@@ -66,6 +84,21 @@ components:
     - reference: PMID:15919996
       notes: Daley DO et al. 2005, 'Global topology analysis of the Escherichia coli
         inner membrane proteome.', Science.
+  - uniprot_id: UniProtKB:P32563
+    protein_label: V-type proton ATPase subunit a, vacuolar isoform
+    gene_symbol: VPH1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative reviewed UniProtKB entry for gene VPH1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Vacuole membrane' localisation of P32563.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12
@@ -199,4 +232,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added direct proton-conduction edge from membrane_stator_a_subunit to proteolipid_c_ring_subunit
     in proton_sector_rotary_conduction (DOI:10.1146/annurev-biochem-013118-110903).
+  llm_assisted: true
+- timestamp: '2026-10-25T05:35:08Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 3 Stage 3 protein_examples curation: added 2 declared gene_symbol(s);
+    added 2 verified UniProtKB protein_example(s).'
   llm_assisted: true

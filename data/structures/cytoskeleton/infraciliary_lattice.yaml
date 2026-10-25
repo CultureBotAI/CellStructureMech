@@ -33,6 +33,12 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: Added source-backed mechanistic descriptions to 2 causal edge(s).
   llm_assisted: true
+- timestamp: '2026-10-25T05:35:07Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 3 Stage 3 protein_examples curation: added 2 declared gene_symbol(s);
+    added 2 verified UniProtKB protein_example(s).'
+  llm_assisted: true
 parent_structures:
 - GO:0005622
 part_of:
@@ -61,6 +67,25 @@ components:
   - reference: DOI:10.1242/jcs.019414
     notes: 'Abstract read: proteomics identifies ten centrin subfamilies required
       for ICL biogenesis. Full experimental text was not reached.'
+  gene_symbols:
+  - Icl1e
+  protein_examples:
+  - uniprot_id: UniProtKB:Q3SEK0
+    protein_label: Caltractin ICL1e
+    gene_symbol: Icl1e
+    taxon_id: NCBITaxon:5888
+    taxon_label: Paramecium tetraurelia
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: The single reviewed UniProtKB entry for gene Icl1e in Paramecium tetraurelia,
+      a taxon this record names. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3SEK0
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q3SEK0, the single reviewed entry
+        for gene Icl1e in Paramecium tetraurelia. Establishes the accession and gene
+        identity only; the component's membership in this structure rests on the record's
+        own sources.
 - component_id: icl_centrin_binding_proteins
   label: Infraciliary-lattice Sfi1-like centrin-binding proteins
   component_type: PROTEIN
@@ -79,6 +104,24 @@ components:
   - reference: DOI:10.1242/jcs.019414
     notes: 'Abstract read: two Sfi1-like protein subfamilies are required for ICL
       biogenesis. Full experimental text was not reached.'
+  gene_symbols:
+  - PtCenBP1
+  protein_examples:
+  - uniprot_id: UniProtKB:Q3SE25
+    protein_label: Centrin-binding protein, putative
+    gene_symbol: PtCenBP1
+    taxon_id: NCBITaxon:5888
+    taxon_label: Paramecium tetraurelia
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene PtCenBP1 in
+      Paramecium tetraurelia. Identifier for the component's declared gene symbol;
+      it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q3SE25
+      notes: UniProtKB unreviewed (TrEMBL) entry Q3SE25 for gene PtCenBP1 in Paramecium
+        tetraurelia. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
 canonical_examples:
 - taxon_id: NCBITaxon:5888
   taxon_label: Paramecium tetraurelia

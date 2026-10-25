@@ -20,6 +20,8 @@ components:
   gene_symbols:
   - atpA
   - atpD
+  - VMA1
+  - VMA2
   stoichiometry: three alternating catalytic and non-catalytic subunit pairs (alpha3beta3
     or A3B3)
   essentiality: ESSENTIAL
@@ -57,6 +59,43 @@ components:
     - reference: https://www.uniprot.org/uniprotkb/P0ABB4
       notes: UniProtKB reviewed (Swiss-Prot) entry P0ABB4 for gene atpD in Escherichia
         coli K-12.
+  - uniprot_id: UniProtKB:P17255
+    protein_label: V-type proton ATPase catalytic subunit A
+    gene_symbol: VMA1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative reviewed UniProtKB entry for gene VMA1 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Vacuole membrane' localisation of P17255.
+    - reference: PMID:2139027
+      notes: Hirata R et al. 1990, ‘Molecular structure of a gene, VMA1, encoding
+        the catalytic subunit of H(+)-translocating adenosine triphosphatase from
+        vacuolar membranes of Saccharomyces cerevisiae.’, J Biol Chem. ECO:0000269
+        experimental evidence cited by UniProt for the 'Vacuole membrane' localisation
+        of P17255.
+  - uniprot_id: UniProtKB:P16140
+    protein_label: V-type proton ATPase subunit B
+    gene_symbol: VMA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative reviewed UniProtKB entry for gene VMA2 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:2141385
+      notes: 'Yamashiro CT et al. 1990, ‘Role of vacuolar acidification in protein
+        sorting and zymogen activation: a genetic analysis of the yeast vacuolar proton-translocating
+        ATPase.’, Mol Cell Biol. ECO:0000269 experimental evidence cited by UniProt
+        for the ''Vacuole membrane'' localisation of P16140.'
 - component_id: central_rotational_stalk
   label: central rotational stalk subunits
   component_type: PROTEIN
@@ -64,6 +103,8 @@ components:
   gene_symbols:
   - atpG
   - atpC
+  - VMA8
+  - VMA7
   essentiality: ESSENTIAL
   role: Asymmetric central shaft (gamma/epsilon in F1, D/F in V1) whose rotation inside
     the hexameric head couples catalytic conformational cycling to proton transport
@@ -100,6 +141,38 @@ components:
     - reference: PMID:16079137
       notes: Stenberg F et al. 2005, 'Protein complexes of the Escherichia coli cell
         envelope.', J Biol Chem.
+  - uniprot_id: UniProtKB:P32610
+    protein_label: V-type proton ATPase subunit D
+    gene_symbol: VMA8
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative reviewed UniProtKB entry for gene VMA8 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:7797485
+      notes: Graham LA et al. 1995, ‘VMA8 encodes a 32-kDa V1 subunit of the Saccharomyces
+        cerevisiae vacuolar H(+)-ATPase required for function and assembly of the
+        enzyme complex.’, J Biol Chem. ECO:0000269 experimental evidence cited by
+        UniProt for the 'Vacuole membrane' localisation of P32610.
+  - uniprot_id: UniProtKB:P39111
+    protein_label: V-type proton ATPase subunit F
+    gene_symbol: VMA7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative reviewed UniProtKB entry for gene VMA7 in Saccharomyces cerevisiae
+      S288C. Identifier for the component's declared gene symbol; it is not itself
+      evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P39111
+      notes: UniProtKB reviewed (Swiss-Prot) entry P39111, the single reviewed entry
+        for gene VMA7 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12
@@ -243,4 +316,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added direct rotary-coupling edge from central_rotational_stalk to catalytic_hexamer_head
     in catalytic_sector_rotary_catalysis (GO:0033178, DOI:10.1146/annurev-biochem-013118-110903).
+  llm_assisted: true
+- timestamp: '2026-10-25T05:35:08Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 3 Stage 3 protein_examples curation: added 4 declared gene_symbol(s);
+    added 4 verified UniProtKB protein_example(s).'
   llm_assisted: true
