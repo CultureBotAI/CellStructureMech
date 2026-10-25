@@ -620,6 +620,16 @@
   "synonyms": "contractile ring cytokinetic actomyosin ring"
  },
  {
+  "identifier": "GO:0110131",
+  "label": "Aim21-Tda2 complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/aim21_tda2_complex.html",
+  "definition": "A complex that localizes to actin cortical patches at sites of endocytosis and negatively regulates barbed end F-actin assembly, resulting in the generation of free actin pools. The Aim21-Tda2 complex is necessary for efficient endocytosis and balancing the distribution of actin between patches and cables.",
+  "synonyms": "Aim21/Tda2 complex"
+ },
+ {
   "identifier": "cellstructuremech:alfa_filament",
   "label": "AlfA filament",
   "category": "CYTOSKELETON",
@@ -2380,6 +2390,36 @@
   "synonyms": "Rod complex RodA-PBP2 complex"
  },
  {
+  "identifier": "GO:1990588",
+  "label": "FtsBL complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/ftsbl_complex.html",
+  "definition": "A protein complex required for prokaryotic cell division (FtsZ-dependent cytokinesis). Part of the divisome. Assembled independently of the other divisome components in the cytoplasm prior to transport to the cell septum. In E. coli consists of FtsB and FtsL.",
+  "synonyms": "FtsB-FtsL complex"
+ },
+ {
+  "identifier": "GO:1990587",
+  "label": "FtsQBL complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/ftsqbl_complex.html",
+  "definition": "A protein complex required for prokaryotic cell division (FtsZ-dependent cytokinesis). Part of the divisome. Assembled independently of the other divisome components in the cytoplasm prior to transport to the cell septum. In E. coli consists of FtsB, FtsL and FtsQ.",
+  "synonyms": "FtsB-FtsL-FtsQ complex"
+ },
+ {
+  "identifier": "GO:1990490",
+  "label": "archaeal proton-transporting A-type ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.html",
+  "definition": "A large proton-transporting two-sector ATPase protein complex that catalyzes the synthesis or hydrolysis of ATP by a rotational mechanism, coupled to the transport of protons across a membrane and is found in Archaea.",
+  "synonyms": "A-type ATPase protein complex archaeal A-type ATPase protein complex"
+ },
+ {
   "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
   "label": "chlorosome baseplate antenna complex",
   "category": "ENERGY_COMPLEX",
@@ -3277,6 +3317,16 @@
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/apicoplast_membrane.html",
   "definition": "Any of the lipid bilayers that surround an apicoplast and form the apicoplast envelope.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0097658",
+  "label": "Asi complex",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/asi_complex.html",
+  "definition": "A nuclear ubiquitin ligase multiprotein complex located in the inner nuclear membrane (INM) that recognizes and ubiquitinates misfolded INM proteins and also some proteins involved in sterol biosynthesis, during ER-associated protein degradation (ERAD). In S. cerevisiae, this complex contains the ubiquitin ligases Asi1p and Asi3p.",
   "synonyms": ""
  },
  {
@@ -4717,6 +4767,16 @@
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/nuclear_lumen.html",
   "definition": "The volume enclosed by the nuclear inner membrane.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:1990862",
+  "label": "nuclear membrane complex Bqt3-Bqt4",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/nuclear_membrane_complex_bqt3_bqt4.html",
+  "definition": "A protein complex that resides in the inner nuclear membrane and anchors telomeres to the nuclear envelope. In fission yeast, it is composed of Bqt3 and Bqt4.",
   "synonyms": ""
  },
  {
@@ -7240,6 +7300,16 @@
   "synonyms": "Fcj1 complex MINOS complex mitochondrial contact site and cristae organizing system MitOS complex"
  },
  {
+  "identifier": "GO:0120155",
+  "label": "MIH complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mih_complex.html",
+  "definition": "A trimeric complex involved in cytokinesis. Proposed to bridge actomyosin ring contraction and septum synthesis in yeast, resulting in the coordination of these processes, and leading to plasma membrane ingression and fusion. In the yeast Saccharomyces cerevisiae this complex consists of Mlc1p, Iqg1p and Hof1p proteins.",
+  "synonyms": "Mlc1p-Iqg1p-Hof1p complex"
+ },
+ {
   "identifier": "GO:0140595",
   "label": "MIM complex",
   "category": "OTHER",
@@ -8388,6 +8458,16 @@
   "page": "structures/other/taurine_dioxygenase_complex.html",
   "definition": "A protein complex capable of catalyzing the conversion of taurine and alpha-ketoglutarate to sulfite, aminoacetaldehyde and succinate under sulfur or cysteine starvation conditions. Its expression is repressed by the presence of sulfate or cysteine. In E. coli it is a homodimer or homotetramer of the protein TauD.",
   "synonyms": "2-aminoethanesulfonate dioxygenase complex alpha-ketoglutarate-dependent taurine dioxygenase complex TauD complex"
+ },
+ {
+  "identifier": "GO:0031500",
+  "label": "Tea1 cell-end complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/tea1_cell_end_complex.html",
+  "definition": "A high molecular weight complex characterized in S. pombe containing the cell-end anchoring protein Tea1. This complex is transported to the cell ends by microtubules and is involved in bipolar growth and the maintennce of normal cell polarity.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0000347",

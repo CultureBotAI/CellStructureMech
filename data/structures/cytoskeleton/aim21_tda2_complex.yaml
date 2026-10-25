@@ -1,0 +1,212 @@
+identifier: GO:0110131
+label: Aim21-Tda2 complex
+structure_category: CYTOSKELETON
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A complex that localizes to actin cortical patches at sites of endocytosis
+  and negatively regulates barbed end F-actin assembly, resulting in the generation
+  of free actin pools. The Aim21-Tda2 complex is necessary for efficient endocytosis
+  and balancing the distribution of actin between patches and cables.
+definition_source: GO:0110131
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: Aim21/Tda2 complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0110131
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0030479
+components:
+- component_id: aim21_subunit
+  label: Altered inheritance of mitochondria protein 21
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR021582
+  gene_symbols:
+  - AIM21
+  stoichiometry: 2 copies per heterotetrameric Aim21(2)-Tda2(2) complex
+  essentiality: DISPENSABLE
+  role: Proline-rich actin-patch regulatory subunit that binds Tda2p dimers and interacts
+    with Bbc1p and F-actin capping protein (Cap1p/Cap2p) to attenuate barbed-end actin
+    polymerization at endocytic cortical patches.
+  evidence:
+  - reference: GO:0110131
+    notes: GO:0110131 defines the Aim21-Tda2 complex at endocytic actin cortical patches.
+  - reference: PMID:29467252
+    notes: Shin et al. 2018 (DOI:10.1091/mbc.E17-10-0592) demonstrated that Aim21
+      and Tda2 form a stable complex that localizes to actin cortical patches, binds
+      Cap1/Cap2, and reduces barbed-end actin assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40563
+    protein_label: Altered inheritance of mitochondria protein 21
+    gene_symbol: AIM21
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. cerevisiae S288C Aim21p subunit of the cortical-patch Aim21-Tda2
+      complex.
+    evidence:
+    - reference: UniProtKB:P40563
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C AIM21.
+    - reference: PMID:29467252
+      notes: Shin et al. 2018 characterized S. cerevisiae Aim21p as the catalytic/scaffold
+        partner of Tda2p at actin cortical patches.
+- component_id: tda2_subunit
+  label: Topoisomerase I damage affected protein 2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR038586
+  gene_symbols:
+  - TDA2
+  stoichiometry: 2 copies (homodimer) per heterotetrameric Aim21(2)-Tda2(2) complex
+  essentiality: DISPENSABLE
+  role: Dynein light chain Tctex-1-like homodimer that binds the C-terminal region
+    of Aim21p, dimerizing Aim21p and promoting its recruitment and barbed-end inhibitory
+    activity at endocytic actin cortical patches.
+  evidence:
+  - reference: GO:0110131
+    notes: GO:0110131 defines Tda2 as a constituent subunit of the Aim21-Tda2 complex.
+  - reference: PMID:29467252
+    notes: Shin et al. 2018 showed that Tda2 is a homodimer that binds Aim21 to form
+      the functional Aim21/Tda2 complex and is required for Aim21-mediated regulation
+      of cortical patch actin assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:P40045
+    protein_label: Topoisomerase I damage affected protein 2
+    gene_symbol: TDA2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed S. cerevisiae S288C Tda2p Tctex-1-like dimerization subunit of
+      the Aim21-Tda2 complex.
+    evidence:
+    - reference: UniProtKB:P40045
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C TDA2.
+    - reference: PMID:29467252
+      notes: Shin et al. 2018 demonstrated that S. cerevisiae Tda2p binds Aim21p to
+        form the Aim21/Tda2 complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: GO:0110131 carries an explicit RO:0002162 (in taxon) constraint to NCBITaxon:4751
+    (Fungi), where Aim21-Tda2 regulates endocytic actin cortical patches.
+  reference: GO:0110131
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference yeast strain in which the Aim21-Tda2 complex and its role in negatively
+    regulating barbed-end F-actin assembly at cortical patches were established.
+  reference: PMID:29467252
+functions:
+- function_id: negative_regulation_actin_polymerization
+  label: negative regulation of actin filament polymerization
+  grounding: GO:0030837
+  description: Localizes to endocytic actin cortical patches and inhibits barbed-end
+    F-actin elongation in collaboration with Cap1p/Cap2p, maintaining the cytoplasmic
+    pool of free actin monomers needed to balance actin distribution between cortical
+    patches and formin-nucleated cables.
+  evidence:
+  - reference: GO:0110131
+    notes: GO:0110131 carries a capable_of_part_of (RO:0002216) axiom to GO:0030837
+      (negative regulation of actin filament polymerization).
+  - reference: PMID:29467252
+    notes: Shin et al. 2018 demonstrated that the Aim21/Tda2 complex reduces barbed-end
+      actin assembly and interacts with Cap1/Cap2 to balance actin assembly between
+      patches and cables.
+evidence:
+- reference: GO:0110131
+  notes: Gene Ontology cellular-component term for Aim21-Tda2 complex.
+- reference: GO:0030479
+  notes: Gene Ontology cellular-component term for actin cortical patch.
+- reference: GO:0030837
+  notes: Gene Ontology biological-process term for negative regulation of actin filament
+    polymerization.
+- reference: PMID:29467252
+  notes: Shin et al. 2018 (Mol Biol Cell, DOI:10.1091/mbc.E17-10-0592), primary study
+    characterizing the Saccharomyces cerevisiae Aim21/Tda2 complex.
+causal_graphs:
+- graph_id: aim21_tda2_actin_patch_regulation
+  title: Assembly of the Aim21-Tda2 complex at actin cortical patches and negative
+    regulation of barbed-end actin polymerization
+  description: Directed causal graph linking Aim21p and Tda2p subunits to assembly
+    of the Aim21-Tda2 complex (GO:0110131) at actin cortical patches and negative
+    regulation of actin filament polymerization (GO:0030837) supporting endocytosis
+    (GO:0006897).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: aim21_subunit
+    label: Altered inheritance of mitochondria protein 21
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR021582
+    component_ref: aim21_subunit
+    description: Proline-rich actin-patch regulatory protein Aim21p.
+  - node_id: tda2_subunit
+    label: Topoisomerase I damage affected protein 2
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR038586
+    component_ref: tda2_subunit
+    description: Tctex-1-like dimerization subunit Tda2p.
+  - node_id: aim21_tda2_complex_node
+    label: Aim21-Tda2 complex
+    node_type: STRUCTURE
+    grounding: GO:0110131
+    description: Assembled Aim21-Tda2 complex at endocytic actin cortical patches.
+  - node_id: negative_regulation_actin_polymerization
+    label: negative regulation of actin filament polymerization
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030837
+    description: Inhibition of excessive barbed-end F-actin assembly at cortical patches.
+  - node_id: endocytosis_process
+    label: endocytosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006897
+    description: Efficient actin-driven endocytic internalization at cortical patches.
+  edges:
+  - subject: tda2_subunit
+    predicate: RO:0002436
+    object: aim21_tda2_complex_node
+    description: Homodimeric Tda2p binds the C-terminal tail of Aim21p to assemble
+      the Aim21-Tda2 complex.
+    evidence:
+    - reference: PMID:29467252
+      notes: Shin et al. 2018 demonstrated that Tda2 dimers bind Aim21 to form the
+        functional Aim21/Tda2 complex.
+  - subject: aim21_subunit
+    predicate: RO:0002436
+    object: aim21_tda2_complex_node
+    description: Aim21p co-assembles with Tda2p and targets the complex to Bbc1p at
+      endocytic actin cortical patches.
+    evidence:
+    - reference: PMID:29467252
+      notes: Shin et al. 2018 showed that Aim21 and Tda2 co-assemble and localize
+        to endocytic cortical patches.
+  - subject: aim21_tda2_complex_node
+    predicate: RO:0002213
+    object: negative_regulation_actin_polymerization
+    description: The Aim21-Tda2 complex inhibits barbed-end F-actin assembly and recruits
+      Cap1p/Cap2p to cortical patches.
+    evidence:
+    - reference: PMID:29467252
+      notes: Shin et al. 2018 established that Aim21/Tda2 negatively regulates barbed-end
+        actin polymerization and binds Cap1/Cap2.
+  - subject: negative_regulation_actin_polymerization
+    predicate: RO:0002213
+    object: endocytosis_process
+    description: Controlled barbed-end actin assembly and Cap1p/Cap2p recruitment
+      at cortical patches support efficient endocytosis.
+    evidence:
+    - reference: GO:0110131
+      notes: GO:0110131 states that the Aim21-Tda2 complex is necessary for efficient
+        endocytosis and balancing actin distribution.
+curation_history:
+- timestamp: '2026-10-25T15:35:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0110131 (Aim21-Tda2 complex) with verified
+    GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
+    distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true

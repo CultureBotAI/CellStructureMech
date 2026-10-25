@@ -1,0 +1,314 @@
+identifier: GO:1990587
+label: FtsQBL complex
+structure_category: DIVISION_MACHINERY
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex required for prokaryotic cell division (FtsZ-dependent
+  cytokinesis). Part of the divisome. Assembled independently of the other divisome
+  components in the cytoplasm prior to transport to the cell septum. In E. coli consists
+  of FtsB, FtsL and FtsQ.
+definition_source: GO:1990587
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: FtsB-FtsL-FtsQ complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990587
+parent_structures:
+- GO:1990586
+part_of:
+- GO:1990586
+has_part:
+- GO:1990588
+components:
+- component_id: ftsb_subunit
+  label: Cell division protein FtsB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR023081
+  gene_symbols:
+  - ftsB
+  - ygbQ
+  stoichiometry: 1 copy per heterotrimeric FtsQBL protomer (forms 1:1:1 or 2:2:2 oligomeric
+    assemblies)
+  essentiality: ESSENTIAL
+  role: Bitopic inner-membrane divisome subunit whose periplasmic coiled-coil and
+    C-terminal domain pair with FtsL and bind the periplasmic domain of FtsQ to assemble
+    the ternary FtsQBL complex prior to septal recruitment.
+  evidence:
+  - reference: GO:1990587
+    notes: GO:1990587 defines the Escherichia coli FtsQBL complex as consisting of
+      FtsB, FtsL, and FtsQ and cites FtsB (UniProtKB:P0A6S5) in PMID:15165235.
+  - reference: PMID:15165235
+    notes: Buddelmeijer and Beckwith 2004 (DOI:10.1111/j.1365-2958.2004.04044.x) demonstrated
+      by co-immunoprecipitation that E. coli FtsB, FtsL, and FtsQ form a ternary subcomplex
+      independently of septal localization.
+  - reference: PMID:19233928
+    notes: Gonzalez and Beckwith 2009 (DOI:10.1128/JB.01597-08) mapped the periplasmic
+      coiled-coil and C-terminal domains of FtsB required for interaction with FtsL
+      and FtsQ.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A6S5
+    protein_label: Cell division protein FtsB
+    gene_symbol: ftsB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed E. coli K-12 FtsB subunit (also declared as synonym ygbQ) cited
+      in the GO:1990587 ontology comment and characterized in PMID:15165235.
+    evidence:
+    - reference: UniProtKB:P0A6S5
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 cell division protein
+        FtsB.
+    - reference: PMID:15165235
+      notes: Buddelmeijer and Beckwith 2004 characterized E. coli FtsB within the
+        ternary FtsQBL complex.
+- component_id: ftsl_subunit
+  label: Cell division protein FtsL
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011922
+  gene_symbols:
+  - ftsL
+  - mraR
+  - yabD
+  stoichiometry: 1 copy per heterotrimeric FtsQBL protomer
+  essentiality: ESSENTIAL
+  role: Essential bitopic membrane divisome subunit that forms a heterodimeric coiled-coil
+    subcomplex with FtsB and recruits FtsQ and downstream septal peptidoglycan synthase
+    FtsWI.
+  evidence:
+  - reference: GO:1990587
+    notes: GO:1990587 specifies FtsL as one of the three constituent subunits of the
+      E. coli FtsQBL complex.
+  - reference: PMID:15165235
+    notes: Buddelmeijer and Beckwith 2004 showed that FtsL and FtsB stabilize each
+      other and associate with FtsQ to form the FtsQBL complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AEN4
+    protein_label: Cell division protein FtsL
+    gene_symbol: ftsL
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed E. coli K-12 FtsL subunit (also declared as synonyms mraR, yabD)
+      of the ternary FtsQBL divisome subcomplex.
+    evidence:
+    - reference: UniProtKB:P0AEN4
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 cell division protein
+        FtsL.
+    - reference: PMID:15165235
+      notes: Buddelmeijer and Beckwith 2004 demonstrated co-immunoprecipitation of
+        E. coli FtsL with FtsB and FtsQ.
+- component_id: ftsq_subunit
+  label: Cell division protein FtsQ
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005548
+  gene_symbols:
+  - ftsQ
+  stoichiometry: 1 copy per heterotrimeric FtsQBL protomer
+  essentiality: ESSENTIAL
+  role: Essential POTRA-domain bitopic membrane protein that binds the FtsBL heterodimer
+    via its C-terminal periplasmic region and targets the preassembled FtsQBL complex
+    to the division septum.
+  evidence:
+  - reference: GO:1990587
+    notes: GO:1990587 defines FtsQ as a core subunit of the Escherichia coli FtsQBL
+      complex.
+  - reference: PMID:15165235
+    notes: Buddelmeijer and Beckwith 2004 showed that FtsQ binds the FtsBL subcomplex
+      prior to septal recruitment and directs it to the midcell division site.
+  - reference: PMID:21672257
+    notes: Villanelo et al. 2011 (DOI:10.1186/1472-6807-11-28) modeled the periplasmic
+      assembly interface of the E. coli FtsB/FtsL/FtsQ complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06136
+    protein_label: Cell division protein FtsQ
+    gene_symbol: ftsQ
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Reviewed E. coli K-12 FtsQ subunit that binds the FtsBL subcomplex and mediates
+      septal localization of the FtsQBL complex.
+    evidence:
+    - reference: UniProtKB:P06136
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 cell division protein
+        FtsQ.
+    - reference: PMID:15165235
+      notes: Buddelmeijer and Beckwith 2004 demonstrated that FtsQ associates with
+        FtsB and FtsL to form the FtsQBL complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Conserved across diderm and monoderm bacteria as the FtsQBL (or DivIB-DivIC-FtsL)
+    late-early divisome subcomplex bridging early Z-ring components to septal peptidoglycan
+    synthesis.
+  reference: PMID:15165235
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial strain in which preassembly of the ternary FtsQ-FtsB-FtsL
+    complex prior to septal localization was biochemically established.
+  reference: PMID:15165235
+functions:
+- function_id: ftsz_dependent_cytokinesis
+  label: FtsZ-dependent cytokinesis
+  grounding: GO:0043093
+  description: Preassembles from FtsB, FtsL, and FtsQ prior to septal localization
+    and is recruited to the midcell divisome to license FtsW-FtsI septal peptidoglycan
+    synthesis during prokaryotic FtsZ-dependent cytokinesis.
+  evidence:
+  - reference: GO:1990587
+    notes: GO:1990587 defines the FtsQBL complex as required for prokaryotic FtsZ-dependent
+      cytokinesis.
+  - reference: PMID:15165235
+    notes: Buddelmeijer and Beckwith 2004 established that the preassembled FtsQBL
+      complex is transported to the septum to drive downstream divisome maturation
+      and cell division.
+- function_id: division_septum_assembly
+  label: division septum assembly
+  grounding: GO:0000917
+  description: Serves as the structural scaffold within the divisome that bridges
+    early septal ring proteins to the late peptidoglycan transglycosylase-transpeptidase
+    machinery (FtsW-FtsI) during division septum assembly.
+  evidence:
+  - reference: PMID:15165235
+    notes: Buddelmeijer and Beckwith 2004 showed that FtsQBL complex formation and
+      septal localization are required to recruit downstream septal assembly proteins
+      FtsW and FtsI.
+  - reference: PMID:19233928
+    notes: Gonzalez and Beckwith 2009 showed that distinct periplasmic domains of
+      FtsB within the FtsQBL complex mediate interactions required for divisome construction
+      at the septum.
+evidence:
+- reference: GO:1990587
+  notes: Gene Ontology cellular-component term for FtsQBL complex.
+- reference: GO:1990586
+  notes: Gene Ontology cellular-component term for divisome complex.
+- reference: GO:1990588
+  notes: Gene Ontology cellular-component term for FtsBL complex.
+- reference: PMID:15165235
+  notes: Buddelmeijer and Beckwith 2004 (Mol Microbiol, DOI:10.1111/j.1365-2958.2004.04044.x),
+    primary experimental study characterizing the Escherichia coli FtsL-FtsB-FtsQ
+    complex.
+- reference: PMID:19233928
+  notes: Gonzalez and Beckwith 2009 (J Bacteriol, DOI:10.1128/JB.01597-08), domain
+    dissection of FtsB interactions with FtsL and FtsQ.
+- reference: PMID:21672257
+  notes: Villanelo et al. 2011 (BMC Struct Biol, DOI:10.1186/1472-6807-11-28), structural
+    model of the Escherichia coli FtsB/FtsL/FtsQ cell division complex.
+causal_graphs:
+- graph_id: ftsqbl_complex_assembly_and_septal_division
+  title: Preassembly of the FtsQBL complex and septal recruitment in FtsZ-dependent
+    cytokinesis
+  description: Directed causal graph linking FtsB, FtsL, and FtsQ subunits through
+    FtsBL subcomplex formation to the ternary FtsQBL complex (GO:1990587), division
+    septum assembly (GO:0000917), and FtsZ-dependent cytokinesis (GO:0043093).
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ftsb_subunit
+    label: Cell division protein FtsB
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023081
+    component_ref: ftsb_subunit
+    description: Bitopic inner-membrane divisome subunit FtsB.
+  - node_id: ftsl_subunit
+    label: Cell division protein FtsL
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR011922
+    component_ref: ftsl_subunit
+    description: Bitopic inner-membrane divisome subunit FtsL.
+  - node_id: ftsbl_subcomplex
+    label: FtsBL complex
+    node_type: STRUCTURE
+    grounding: GO:1990588
+    description: Preassembled FtsB-FtsL heterodimeric coiled-coil subcomplex.
+  - node_id: ftsq_subunit
+    label: Cell division protein FtsQ
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR005548
+    component_ref: ftsq_subunit
+    description: POTRA-domain bitopic divisome protein FtsQ.
+  - node_id: ftsqbl_holocomplex
+    label: FtsQBL complex
+    node_type: STRUCTURE
+    grounding: GO:1990587
+    description: Assembled heterotrimeric FtsB-FtsL-FtsQ divisome complex.
+  - node_id: division_septum_assembly
+    label: division septum assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000917
+    description: Recruitment and activation of downstream septal synthesis proteins
+      at midcell.
+  - node_id: ftsz_dependent_cytokinesis
+    label: FtsZ-dependent cytokinesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0043093
+    description: Prokaryotic FtsZ-dependent cytokinesis.
+  edges:
+  - subject: ftsb_subunit
+    predicate: RO:0002436
+    object: ftsbl_subcomplex
+    description: FtsB pairs with FtsL via transmembrane and periplasmic coiled-coil
+      helices to form the FtsBL subcomplex.
+    evidence:
+    - reference: PMID:15165235
+      notes: Buddelmeijer and Beckwith 2004 showed that FtsB and FtsL form a stable
+        subcomplex independently of FtsQ.
+  - subject: ftsl_subunit
+    predicate: RO:0002436
+    object: ftsbl_subcomplex
+    description: FtsL co-assembles with FtsB to form the mutually stabilizing FtsBL
+      subcomplex.
+    evidence:
+    - reference: PMID:15165235
+      notes: Buddelmeijer and Beckwith 2004 demonstrated co-stabilization and physical
+        interaction of FtsL and FtsB.
+  - subject: ftsbl_subcomplex
+    predicate: BFO:0000050
+    object: ftsqbl_holocomplex
+    description: The preassembled FtsBL subcomplex binds the C-terminal periplasmic
+      domain of FtsQ to form the FtsQBL complex.
+    evidence:
+    - reference: PMID:15165235
+      notes: Buddelmeijer and Beckwith 2004 showed that the FtsBL subcomplex interacts
+        with FtsQ to assemble the ternary FtsQBL complex.
+  - subject: ftsq_subunit
+    predicate: RO:0002436
+    object: ftsqbl_holocomplex
+    description: FtsQ binds the FtsBL heterodimer prior to septal recruitment and
+      targets the ternary FtsQBL complex to midcell.
+    evidence:
+    - reference: PMID:15165235
+      notes: Buddelmeijer and Beckwith 2004 demonstrated that FtsQ recruits the FtsBL
+        subcomplex into the ternary FtsQBL complex and to the division septum.
+  - subject: ftsqbl_holocomplex
+    predicate: RO:0002213
+    object: division_septum_assembly
+    description: Septal localization of the FtsQBL complex recruits and regulates
+      late divisome proteins FtsW and FtsI during division septum assembly.
+    evidence:
+    - reference: PMID:15165235
+      notes: Buddelmeijer and Beckwith 2004 showed that septal targeting of FtsQBL
+        is required for recruitment of downstream division septum components.
+  - subject: division_septum_assembly
+    predicate: RO:0002213
+    object: ftsz_dependent_cytokinesis
+    description: Division septum assembly mediated by the FtsQBL divisome subcomplex
+      drives prokaryotic FtsZ-dependent cytokinesis.
+    evidence:
+    - reference: GO:1990587
+      notes: GO:1990587 defines the FtsQBL complex as required for prokaryotic FtsZ-dependent
+        cytokinesis.
+curation_history:
+- timestamp: '2026-10-25T15:35:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:1990587 (FtsQBL complex) with verified
+    GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
+    distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true

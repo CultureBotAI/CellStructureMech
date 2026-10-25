@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
- "record_count": 993,
- "corpus_updated": "2026-10-25 12:15:00 UTC",
- "corpus_digest": "514f18fa094a",
+ "record_count": 1001,
+ "corpus_updated": "2026-10-25 15:35:00 UTC",
+ "corpus_digest": "93a8e4d4cfb3",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -24308,6 +24308,280 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-11"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0110131",
+   "label": "Aim21-Tda2 complex",
+   "structure_category": "CYTOSKELETON",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A complex that localizes to actin cortical patches at sites of endocytosis and negatively regulates barbed end F-actin assembly, resulting in the generation of free actin pools. The Aim21-Tda2 complex is necessary for efficient endocytosis and balancing the distribution of actin between patches and cables.",
+   "definition_source": "GO:0110131",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "Aim21/Tda2 complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0110131"
+    }
+   ],
+   "parent_structures": [
+    "GO:0032991"
+   ],
+   "part_of": [
+    "GO:0030479"
+   ],
+   "components": [
+    {
+     "component_id": "aim21_subunit",
+     "label": "Altered inheritance of mitochondria protein 21",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR021582",
+     "gene_symbols": [
+      "AIM21"
+     ],
+     "stoichiometry": "2 copies per heterotetrameric Aim21(2)-Tda2(2) complex",
+     "essentiality": "DISPENSABLE",
+     "role": "Proline-rich actin-patch regulatory subunit that binds Tda2p dimers and interacts with Bbc1p and F-actin capping protein (Cap1p/Cap2p) to attenuate barbed-end actin polymerization at endocytic cortical patches.",
+     "evidence": [
+      {
+       "reference": "GO:0110131",
+       "notes": "GO:0110131 defines the Aim21-Tda2 complex at endocytic actin cortical patches."
+      },
+      {
+       "reference": "PMID:29467252",
+       "notes": "Shin et al. 2018 (DOI:10.1091/mbc.E17-10-0592) demonstrated that Aim21 and Tda2 form a stable complex that localizes to actin cortical patches, binds Cap1/Cap2, and reduces barbed-end actin assembly."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P40563",
+       "protein_label": "Altered inheritance of mitochondria protein 21",
+       "gene_symbol": "AIM21",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. cerevisiae S288C Aim21p subunit of the cortical-patch Aim21-Tda2 complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P40563",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C AIM21."
+        },
+        {
+         "reference": "PMID:29467252",
+         "notes": "Shin et al. 2018 characterized S. cerevisiae Aim21p as the catalytic/scaffold partner of Tda2p at actin cortical patches."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "tda2_subunit",
+     "label": "Topoisomerase I damage affected protein 2",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR038586",
+     "gene_symbols": [
+      "TDA2"
+     ],
+     "stoichiometry": "2 copies (homodimer) per heterotetrameric Aim21(2)-Tda2(2) complex",
+     "essentiality": "DISPENSABLE",
+     "role": "Dynein light chain Tctex-1-like homodimer that binds the C-terminal region of Aim21p, dimerizing Aim21p and promoting its recruitment and barbed-end inhibitory activity at endocytic actin cortical patches.",
+     "evidence": [
+      {
+       "reference": "GO:0110131",
+       "notes": "GO:0110131 defines Tda2 as a constituent subunit of the Aim21-Tda2 complex."
+      },
+      {
+       "reference": "PMID:29467252",
+       "notes": "Shin et al. 2018 showed that Tda2 is a homodimer that binds Aim21 to form the functional Aim21/Tda2 complex and is required for Aim21-mediated regulation of cortical patch actin assembly."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P40045",
+       "protein_label": "Topoisomerase I damage affected protein 2",
+       "gene_symbol": "TDA2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. cerevisiae S288C Tda2p Tctex-1-like dimerization subunit of the Aim21-Tda2 complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P40045",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C TDA2."
+        },
+        {
+         "reference": "PMID:29467252",
+         "notes": "Shin et al. 2018 demonstrated that S. cerevisiae Tda2p binds Aim21p to form the Aim21/Tda2 complex."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4751",
+     "taxon_label": "Fungi",
+     "presence": "COMMON",
+     "note": "GO:0110131 carries an explicit RO:0002162 (in taxon) constraint to NCBITaxon:4751 (Fungi), where Aim21-Tda2 regulates endocytic actin cortical patches.",
+     "reference": "GO:0110131"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Reference yeast strain in which the Aim21-Tda2 complex and its role in negatively regulating barbed-end F-actin assembly at cortical patches were established.",
+     "reference": "PMID:29467252"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "negative_regulation_actin_polymerization",
+     "label": "negative regulation of actin filament polymerization",
+     "grounding": "GO:0030837",
+     "description": "Localizes to endocytic actin cortical patches and inhibits barbed-end F-actin elongation in collaboration with Cap1p/Cap2p, maintaining the cytoplasmic pool of free actin monomers needed to balance actin distribution between cortical patches and formin-nucleated cables.",
+     "evidence": [
+      {
+       "reference": "GO:0110131",
+       "notes": "GO:0110131 carries a capable_of_part_of (RO:0002216) axiom to GO:0030837 (negative regulation of actin filament polymerization)."
+      },
+      {
+       "reference": "PMID:29467252",
+       "notes": "Shin et al. 2018 demonstrated that the Aim21/Tda2 complex reduces barbed-end actin assembly and interacts with Cap1/Cap2 to balance actin assembly between patches and cables."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0110131",
+     "notes": "Gene Ontology cellular-component term for Aim21-Tda2 complex."
+    },
+    {
+     "reference": "GO:0030479",
+     "notes": "Gene Ontology cellular-component term for actin cortical patch."
+    },
+    {
+     "reference": "GO:0030837",
+     "notes": "Gene Ontology biological-process term for negative regulation of actin filament polymerization."
+    },
+    {
+     "reference": "PMID:29467252",
+     "notes": "Shin et al. 2018 (Mol Biol Cell, DOI:10.1091/mbc.E17-10-0592), primary study characterizing the Saccharomyces cerevisiae Aim21/Tda2 complex."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "aim21_tda2_actin_patch_regulation",
+     "title": "Assembly of the Aim21-Tda2 complex at actin cortical patches and negative regulation of barbed-end actin polymerization",
+     "description": "Directed causal graph linking Aim21p and Tda2p subunits to assembly of the Aim21-Tda2 complex (GO:0110131) at actin cortical patches and negative regulation of actin filament polymerization (GO:0030837) supporting endocytosis (GO:0006897).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "aim21_subunit",
+       "label": "Altered inheritance of mitochondria protein 21",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR021582",
+       "component_ref": "aim21_subunit",
+       "description": "Proline-rich actin-patch regulatory protein Aim21p."
+      },
+      {
+       "node_id": "tda2_subunit",
+       "label": "Topoisomerase I damage affected protein 2",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR038586",
+       "component_ref": "tda2_subunit",
+       "description": "Tctex-1-like dimerization subunit Tda2p."
+      },
+      {
+       "node_id": "aim21_tda2_complex_node",
+       "label": "Aim21-Tda2 complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0110131",
+       "description": "Assembled Aim21-Tda2 complex at endocytic actin cortical patches."
+      },
+      {
+       "node_id": "negative_regulation_actin_polymerization",
+       "label": "negative regulation of actin filament polymerization",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0030837",
+       "description": "Inhibition of excessive barbed-end F-actin assembly at cortical patches."
+      },
+      {
+       "node_id": "endocytosis_process",
+       "label": "endocytosis",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0006897",
+       "description": "Efficient actin-driven endocytic internalization at cortical patches."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "tda2_subunit",
+       "predicate": "RO:0002436",
+       "object": "aim21_tda2_complex_node",
+       "description": "Homodimeric Tda2p binds the C-terminal tail of Aim21p to assemble the Aim21-Tda2 complex.",
+       "evidence": [
+        {
+         "reference": "PMID:29467252",
+         "notes": "Shin et al. 2018 demonstrated that Tda2 dimers bind Aim21 to form the functional Aim21/Tda2 complex."
+        }
+       ]
+      },
+      {
+       "subject": "aim21_subunit",
+       "predicate": "RO:0002436",
+       "object": "aim21_tda2_complex_node",
+       "description": "Aim21p co-assembles with Tda2p and targets the complex to Bbc1p at endocytic actin cortical patches.",
+       "evidence": [
+        {
+         "reference": "PMID:29467252",
+         "notes": "Shin et al. 2018 showed that Aim21 and Tda2 co-assemble and localize to endocytic cortical patches."
+        }
+       ]
+      },
+      {
+       "subject": "aim21_tda2_complex_node",
+       "predicate": "RO:0002213",
+       "object": "negative_regulation_actin_polymerization",
+       "description": "The Aim21-Tda2 complex inhibits barbed-end F-actin assembly and recruits Cap1p/Cap2p to cortical patches.",
+       "evidence": [
+        {
+         "reference": "PMID:29467252",
+         "notes": "Shin et al. 2018 established that Aim21/Tda2 negatively regulates barbed-end actin polymerization and binds Cap1/Cap2."
+        }
+       ]
+      },
+      {
+       "subject": "negative_regulation_actin_polymerization",
+       "predicate": "RO:0002213",
+       "object": "endocytosis_process",
+       "description": "Controlled barbed-end actin assembly and Cap1p/Cap2p recruitment at cortical patches support efficient endocytosis.",
+       "evidence": [
+        {
+         "reference": "GO:0110131",
+         "notes": "GO:0110131 states that the Aim21-Tda2 complex is necessary for efficient endocytosis and balancing actin distribution."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-25T15:35:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0110131 (Aim21-Tda2 complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
@@ -79768,6 +80042,1094 @@
    ]
   },
   {
+   "identifier": "GO:1990588",
+   "label": "FtsBL complex",
+   "structure_category": "DIVISION_MACHINERY",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A protein complex required for prokaryotic cell division (FtsZ-dependent cytokinesis). Part of the divisome. Assembled independently of the other divisome components in the cytoplasm prior to transport to the cell septum. In E. coli consists of FtsB and FtsL.",
+   "definition_source": "GO:1990588",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "FtsB-FtsL complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1990588"
+    }
+   ],
+   "parent_structures": [
+    "GO:1990586"
+   ],
+   "part_of": [
+    "GO:1990587",
+    "GO:0005829"
+   ],
+   "components": [
+    {
+     "component_id": "ftsb_subunit",
+     "label": "Cell division protein FtsB",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR023081",
+     "gene_symbols": [
+      "ftsB",
+      "ygbQ"
+     ],
+     "stoichiometry": "1 copy per FtsBL heterodimer (or 2 copies in a heterotetrameric coiled-coil bundle)",
+     "essentiality": "ESSENTIAL",
+     "role": "Bitopic membrane divisome subunit that pairs with FtsL via transmembrane and periplasmic coiled-coil segments to form the preassembled FtsBL subcomplex independently of FtsQ.",
+     "evidence": [
+      {
+       "reference": "GO:1990588",
+       "notes": "GO:1990588 defines the Escherichia coli FtsBL complex as consisting of FtsB and FtsL and cites FtsB (UniProtKB:P0A6S5) in PMID:15165235."
+      },
+      {
+       "reference": "PMID:15165235",
+       "notes": "Buddelmeijer and Beckwith 2004 showed that FtsB and FtsL form a subcomplex in the absence of FtsQ."
+      },
+      {
+       "reference": "PMID:11972052",
+       "notes": "Buddelmeijer et al. 2002 (DOI:10.1073/pnas.092128499) demonstrated that FtsB (YgbQ) and FtsL are mutually codependent for stability and septal localization."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0A6S5",
+       "protein_label": "Cell division protein FtsB",
+       "gene_symbol": "ftsB",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed E. coli K-12 FtsB subunit (also declared as synonym ygbQ) cited in the GO:1990588 ontology comment and shown to form the FtsQ-independent FtsBL subcomplex in PMID:15165235.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P0A6S5",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 cell division protein FtsB."
+        },
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 demonstrated FtsB-FtsL subcomplex assembly in E. coli."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "ftsl_subunit",
+     "label": "Cell division protein FtsL",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR011922",
+     "gene_symbols": [
+      "ftsL",
+      "mraR",
+      "yabD"
+     ],
+     "stoichiometry": "1 copy per FtsBL heterodimer (or 2 copies in a heterotetrameric coiled-coil bundle)",
+     "essentiality": "ESSENTIAL",
+     "role": "Bitopic membrane divisome subunit that co-folds with FtsB into a transmembrane and periplasmic coiled-coil heterodimer required for FtsQ binding and downstream divisome activation.",
+     "evidence": [
+      {
+       "reference": "GO:1990588",
+       "notes": "GO:1990588 defines FtsL as one of the two constituent subunits of the E. coli FtsBL complex."
+      },
+      {
+       "reference": "PMID:15165235",
+       "notes": "Buddelmeijer and Beckwith 2004 showed that FtsL co-immunoprecipitates with FtsB in FtsQ-depleted cells, establishing an independent FtsBL subcomplex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0AEN4",
+       "protein_label": "Cell division protein FtsL",
+       "gene_symbol": "ftsL",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed E. coli K-12 FtsL subunit (also declared as synonyms mraR, yabD) that forms the heterodimeric FtsBL subcomplex with FtsB.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P0AEN4",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 cell division protein FtsL."
+        },
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 demonstrated FtsL-FtsB subcomplex formation in E. coli."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2",
+     "taxon_label": "Bacteria",
+     "presence": "COMMON",
+     "note": "Widespread across bacteria as the heterodimeric FtsB-FtsL (or DivIC-FtsL) coiled-coil divisome subcomplex.",
+     "reference": "PMID:15165235"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference bacterial strain in which FtsQ-independent assembly of the FtsBL subcomplex was demonstrated.",
+     "reference": "PMID:15165235"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "ftsz_dependent_cytokinesis",
+     "label": "FtsZ-dependent cytokinesis",
+     "grounding": "GO:0043093",
+     "description": "Forms a mutually stabilizing FtsB-FtsL heterodimer prior to septal transport, providing the binding surface for FtsQ and the activating interface for septal peptidoglycan synthases during FtsZ-dependent cytokinesis.",
+     "evidence": [
+      {
+       "reference": "GO:1990588",
+       "notes": "GO:1990588 defines the FtsBL complex as required for prokaryotic cell division (FtsZ-dependent cytokinesis)."
+      },
+      {
+       "reference": "PMID:15165235",
+       "notes": "Buddelmeijer and Beckwith 2004 showed that FtsBL subcomplex formation is required for binding FtsQ and subsequent localization to the division septum."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:1990588",
+     "notes": "Gene Ontology cellular-component term for FtsBL complex."
+    },
+    {
+     "reference": "GO:1990587",
+     "notes": "Gene Ontology cellular-component term for FtsQBL complex."
+    },
+    {
+     "reference": "GO:1990586",
+     "notes": "Gene Ontology cellular-component term for divisome complex."
+    },
+    {
+     "reference": "GO:0005829",
+     "notes": "Gene Ontology cellular-component term for cytosol."
+    },
+    {
+     "reference": "PMID:15165235",
+     "notes": "Buddelmeijer and Beckwith 2004 (Mol Microbiol, DOI:10.1111/j.1365-2958.2004.04044.x), demonstrating FtsQ-independent assembly of the E. coli FtsB-FtsL subcomplex."
+    },
+    {
+     "reference": "PMID:11972052",
+     "notes": "Buddelmeijer et al. 2002 (Proc Natl Acad Sci U S A, DOI:10.1073/pnas.092128499), establishing codependent stability and localization of FtsB (YgbQ) and FtsL."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "ftsbl_complex_assembly_and_function",
+     "title": "Co-stabilizing assembly of the FtsBL complex and incorporation into the FtsQBL divisome subcomplex",
+     "description": "Directed causal graph linking FtsB and FtsL subunits to assembly of the FtsBL complex (GO:1990588), incorporation into the FtsQBL complex (GO:1990587), and FtsZ-dependent cytokinesis (GO:0043093).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "ftsb_subunit",
+       "label": "Cell division protein FtsB",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR023081",
+       "component_ref": "ftsb_subunit",
+       "description": "Bitopic divisome subunit FtsB."
+      },
+      {
+       "node_id": "ftsl_subunit",
+       "label": "Cell division protein FtsL",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR011922",
+       "component_ref": "ftsl_subunit",
+       "description": "Bitopic divisome subunit FtsL."
+      },
+      {
+       "node_id": "ftsbl_complex_node",
+       "label": "FtsBL complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990588",
+       "description": "Assembled FtsB-FtsL heterodimeric divisome subcomplex."
+      },
+      {
+       "node_id": "ftsqbl_complex_node",
+       "label": "FtsQBL complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990587",
+       "description": "Ternary FtsB-FtsL-FtsQ divisome complex."
+      },
+      {
+       "node_id": "ftsz_dependent_cytokinesis",
+       "label": "FtsZ-dependent cytokinesis",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0043093",
+       "description": "Prokaryotic FtsZ-dependent cytokinesis."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "ftsb_subunit",
+       "predicate": "RO:0002436",
+       "object": "ftsbl_complex_node",
+       "description": "FtsB associates with FtsL via transmembrane and periplasmic coiled-coil helices to assemble the FtsBL complex.",
+       "evidence": [
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 showed that FtsB and FtsL assemble into a subcomplex independently of FtsQ."
+        }
+       ]
+      },
+      {
+       "subject": "ftsl_subunit",
+       "predicate": "RO:0002436",
+       "object": "ftsbl_complex_node",
+       "description": "FtsL stabilizes FtsB and co-assembles into the FtsBL heterodimer.",
+       "evidence": [
+        {
+         "reference": "PMID:11972052",
+         "notes": "Buddelmeijer et al. 2002 demonstrated codependent stabilization of FtsL and FtsB."
+        }
+       ]
+      },
+      {
+       "subject": "ftsbl_complex_node",
+       "predicate": "BFO:0000050",
+       "object": "ftsqbl_complex_node",
+       "description": "The preassembled FtsBL complex provides the C-terminal binding site that recruits FtsQ into the ternary FtsQBL complex.",
+       "evidence": [
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 showed that FtsBL formation is required for association with FtsQ."
+        }
+       ]
+      },
+      {
+       "subject": "ftsqbl_complex_node",
+       "predicate": "RO:0002213",
+       "object": "ftsz_dependent_cytokinesis",
+       "description": "Incorporation of the FtsBL complex into the septal FtsQBL complex enables downstream divisome maturation and FtsZ-dependent cytokinesis.",
+       "evidence": [
+        {
+         "reference": "GO:1990588",
+         "notes": "GO:1990588 defines the FtsBL complex as part of the FtsQBL complex required for prokaryotic FtsZ-dependent cytokinesis."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-25T15:35:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:1990588 (FtsBL complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
+   "identifier": "GO:1990587",
+   "label": "FtsQBL complex",
+   "structure_category": "DIVISION_MACHINERY",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A protein complex required for prokaryotic cell division (FtsZ-dependent cytokinesis). Part of the divisome. Assembled independently of the other divisome components in the cytoplasm prior to transport to the cell septum. In E. coli consists of FtsB, FtsL and FtsQ.",
+   "definition_source": "GO:1990587",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "FtsB-FtsL-FtsQ complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1990587"
+    }
+   ],
+   "parent_structures": [
+    "GO:1990586"
+   ],
+   "part_of": [
+    "GO:1990586"
+   ],
+   "has_part": [
+    "GO:1990588"
+   ],
+   "components": [
+    {
+     "component_id": "ftsb_subunit",
+     "label": "Cell division protein FtsB",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR023081",
+     "gene_symbols": [
+      "ftsB",
+      "ygbQ"
+     ],
+     "stoichiometry": "1 copy per heterotrimeric FtsQBL protomer (forms 1:1:1 or 2:2:2 oligomeric assemblies)",
+     "essentiality": "ESSENTIAL",
+     "role": "Bitopic inner-membrane divisome subunit whose periplasmic coiled-coil and C-terminal domain pair with FtsL and bind the periplasmic domain of FtsQ to assemble the ternary FtsQBL complex prior to septal recruitment.",
+     "evidence": [
+      {
+       "reference": "GO:1990587",
+       "notes": "GO:1990587 defines the Escherichia coli FtsQBL complex as consisting of FtsB, FtsL, and FtsQ and cites FtsB (UniProtKB:P0A6S5) in PMID:15165235."
+      },
+      {
+       "reference": "PMID:15165235",
+       "notes": "Buddelmeijer and Beckwith 2004 (DOI:10.1111/j.1365-2958.2004.04044.x) demonstrated by co-immunoprecipitation that E. coli FtsB, FtsL, and FtsQ form a ternary subcomplex independently of septal localization."
+      },
+      {
+       "reference": "PMID:19233928",
+       "notes": "Gonzalez and Beckwith 2009 (DOI:10.1128/JB.01597-08) mapped the periplasmic coiled-coil and C-terminal domains of FtsB required for interaction with FtsL and FtsQ."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0A6S5",
+       "protein_label": "Cell division protein FtsB",
+       "gene_symbol": "ftsB",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed E. coli K-12 FtsB subunit (also declared as synonym ygbQ) cited in the GO:1990587 ontology comment and characterized in PMID:15165235.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P0A6S5",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 cell division protein FtsB."
+        },
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 characterized E. coli FtsB within the ternary FtsQBL complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "ftsl_subunit",
+     "label": "Cell division protein FtsL",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR011922",
+     "gene_symbols": [
+      "ftsL",
+      "mraR",
+      "yabD"
+     ],
+     "stoichiometry": "1 copy per heterotrimeric FtsQBL protomer",
+     "essentiality": "ESSENTIAL",
+     "role": "Essential bitopic membrane divisome subunit that forms a heterodimeric coiled-coil subcomplex with FtsB and recruits FtsQ and downstream septal peptidoglycan synthase FtsWI.",
+     "evidence": [
+      {
+       "reference": "GO:1990587",
+       "notes": "GO:1990587 specifies FtsL as one of the three constituent subunits of the E. coli FtsQBL complex."
+      },
+      {
+       "reference": "PMID:15165235",
+       "notes": "Buddelmeijer and Beckwith 2004 showed that FtsL and FtsB stabilize each other and associate with FtsQ to form the FtsQBL complex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0AEN4",
+       "protein_label": "Cell division protein FtsL",
+       "gene_symbol": "ftsL",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed E. coli K-12 FtsL subunit (also declared as synonyms mraR, yabD) of the ternary FtsQBL divisome subcomplex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P0AEN4",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 cell division protein FtsL."
+        },
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 demonstrated co-immunoprecipitation of E. coli FtsL with FtsB and FtsQ."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "ftsq_subunit",
+     "label": "Cell division protein FtsQ",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR005548",
+     "gene_symbols": [
+      "ftsQ"
+     ],
+     "stoichiometry": "1 copy per heterotrimeric FtsQBL protomer",
+     "essentiality": "ESSENTIAL",
+     "role": "Essential POTRA-domain bitopic membrane protein that binds the FtsBL heterodimer via its C-terminal periplasmic region and targets the preassembled FtsQBL complex to the division septum.",
+     "evidence": [
+      {
+       "reference": "GO:1990587",
+       "notes": "GO:1990587 defines FtsQ as a core subunit of the Escherichia coli FtsQBL complex."
+      },
+      {
+       "reference": "PMID:15165235",
+       "notes": "Buddelmeijer and Beckwith 2004 showed that FtsQ binds the FtsBL subcomplex prior to septal recruitment and directs it to the midcell division site."
+      },
+      {
+       "reference": "PMID:21672257",
+       "notes": "Villanelo et al. 2011 (DOI:10.1186/1472-6807-11-28) modeled the periplasmic assembly interface of the E. coli FtsB/FtsL/FtsQ complex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P06136",
+       "protein_label": "Cell division protein FtsQ",
+       "gene_symbol": "ftsQ",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed E. coli K-12 FtsQ subunit that binds the FtsBL subcomplex and mediates septal localization of the FtsQBL complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P06136",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 cell division protein FtsQ."
+        },
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 demonstrated that FtsQ associates with FtsB and FtsL to form the FtsQBL complex."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2",
+     "taxon_label": "Bacteria",
+     "presence": "COMMON",
+     "note": "Conserved across diderm and monoderm bacteria as the FtsQBL (or DivIB-DivIC-FtsL) late-early divisome subcomplex bridging early Z-ring components to septal peptidoglycan synthesis.",
+     "reference": "PMID:15165235"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference bacterial strain in which preassembly of the ternary FtsQ-FtsB-FtsL complex prior to septal localization was biochemically established.",
+     "reference": "PMID:15165235"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "ftsz_dependent_cytokinesis",
+     "label": "FtsZ-dependent cytokinesis",
+     "grounding": "GO:0043093",
+     "description": "Preassembles from FtsB, FtsL, and FtsQ prior to septal localization and is recruited to the midcell divisome to license FtsW-FtsI septal peptidoglycan synthesis during prokaryotic FtsZ-dependent cytokinesis.",
+     "evidence": [
+      {
+       "reference": "GO:1990587",
+       "notes": "GO:1990587 defines the FtsQBL complex as required for prokaryotic FtsZ-dependent cytokinesis."
+      },
+      {
+       "reference": "PMID:15165235",
+       "notes": "Buddelmeijer and Beckwith 2004 established that the preassembled FtsQBL complex is transported to the septum to drive downstream divisome maturation and cell division."
+      }
+     ]
+    },
+    {
+     "function_id": "division_septum_assembly",
+     "label": "division septum assembly",
+     "grounding": "GO:0000917",
+     "description": "Serves as the structural scaffold within the divisome that bridges early septal ring proteins to the late peptidoglycan transglycosylase-transpeptidase machinery (FtsW-FtsI) during division septum assembly.",
+     "evidence": [
+      {
+       "reference": "PMID:15165235",
+       "notes": "Buddelmeijer and Beckwith 2004 showed that FtsQBL complex formation and septal localization are required to recruit downstream septal assembly proteins FtsW and FtsI."
+      },
+      {
+       "reference": "PMID:19233928",
+       "notes": "Gonzalez and Beckwith 2009 showed that distinct periplasmic domains of FtsB within the FtsQBL complex mediate interactions required for divisome construction at the septum."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:1990587",
+     "notes": "Gene Ontology cellular-component term for FtsQBL complex."
+    },
+    {
+     "reference": "GO:1990586",
+     "notes": "Gene Ontology cellular-component term for divisome complex."
+    },
+    {
+     "reference": "GO:1990588",
+     "notes": "Gene Ontology cellular-component term for FtsBL complex."
+    },
+    {
+     "reference": "PMID:15165235",
+     "notes": "Buddelmeijer and Beckwith 2004 (Mol Microbiol, DOI:10.1111/j.1365-2958.2004.04044.x), primary experimental study characterizing the Escherichia coli FtsL-FtsB-FtsQ complex."
+    },
+    {
+     "reference": "PMID:19233928",
+     "notes": "Gonzalez and Beckwith 2009 (J Bacteriol, DOI:10.1128/JB.01597-08), domain dissection of FtsB interactions with FtsL and FtsQ."
+    },
+    {
+     "reference": "PMID:21672257",
+     "notes": "Villanelo et al. 2011 (BMC Struct Biol, DOI:10.1186/1472-6807-11-28), structural model of the Escherichia coli FtsB/FtsL/FtsQ cell division complex."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "ftsqbl_complex_assembly_and_septal_division",
+     "title": "Preassembly of the FtsQBL complex and septal recruitment in FtsZ-dependent cytokinesis",
+     "description": "Directed causal graph linking FtsB, FtsL, and FtsQ subunits through FtsBL subcomplex formation to the ternary FtsQBL complex (GO:1990587), division septum assembly (GO:0000917), and FtsZ-dependent cytokinesis (GO:0043093).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "ftsb_subunit",
+       "label": "Cell division protein FtsB",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR023081",
+       "component_ref": "ftsb_subunit",
+       "description": "Bitopic inner-membrane divisome subunit FtsB."
+      },
+      {
+       "node_id": "ftsl_subunit",
+       "label": "Cell division protein FtsL",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR011922",
+       "component_ref": "ftsl_subunit",
+       "description": "Bitopic inner-membrane divisome subunit FtsL."
+      },
+      {
+       "node_id": "ftsbl_subcomplex",
+       "label": "FtsBL complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990588",
+       "description": "Preassembled FtsB-FtsL heterodimeric coiled-coil subcomplex."
+      },
+      {
+       "node_id": "ftsq_subunit",
+       "label": "Cell division protein FtsQ",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR005548",
+       "component_ref": "ftsq_subunit",
+       "description": "POTRA-domain bitopic divisome protein FtsQ."
+      },
+      {
+       "node_id": "ftsqbl_holocomplex",
+       "label": "FtsQBL complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990587",
+       "description": "Assembled heterotrimeric FtsB-FtsL-FtsQ divisome complex."
+      },
+      {
+       "node_id": "division_septum_assembly",
+       "label": "division septum assembly",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0000917",
+       "description": "Recruitment and activation of downstream septal synthesis proteins at midcell."
+      },
+      {
+       "node_id": "ftsz_dependent_cytokinesis",
+       "label": "FtsZ-dependent cytokinesis",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0043093",
+       "description": "Prokaryotic FtsZ-dependent cytokinesis."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "ftsb_subunit",
+       "predicate": "RO:0002436",
+       "object": "ftsbl_subcomplex",
+       "description": "FtsB pairs with FtsL via transmembrane and periplasmic coiled-coil helices to form the FtsBL subcomplex.",
+       "evidence": [
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 showed that FtsB and FtsL form a stable subcomplex independently of FtsQ."
+        }
+       ]
+      },
+      {
+       "subject": "ftsl_subunit",
+       "predicate": "RO:0002436",
+       "object": "ftsbl_subcomplex",
+       "description": "FtsL co-assembles with FtsB to form the mutually stabilizing FtsBL subcomplex.",
+       "evidence": [
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 demonstrated co-stabilization and physical interaction of FtsL and FtsB."
+        }
+       ]
+      },
+      {
+       "subject": "ftsbl_subcomplex",
+       "predicate": "BFO:0000050",
+       "object": "ftsqbl_holocomplex",
+       "description": "The preassembled FtsBL subcomplex binds the C-terminal periplasmic domain of FtsQ to form the FtsQBL complex.",
+       "evidence": [
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 showed that the FtsBL subcomplex interacts with FtsQ to assemble the ternary FtsQBL complex."
+        }
+       ]
+      },
+      {
+       "subject": "ftsq_subunit",
+       "predicate": "RO:0002436",
+       "object": "ftsqbl_holocomplex",
+       "description": "FtsQ binds the FtsBL heterodimer prior to septal recruitment and targets the ternary FtsQBL complex to midcell.",
+       "evidence": [
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 demonstrated that FtsQ recruits the FtsBL subcomplex into the ternary FtsQBL complex and to the division septum."
+        }
+       ]
+      },
+      {
+       "subject": "ftsqbl_holocomplex",
+       "predicate": "RO:0002213",
+       "object": "division_septum_assembly",
+       "description": "Septal localization of the FtsQBL complex recruits and regulates late divisome proteins FtsW and FtsI during division septum assembly.",
+       "evidence": [
+        {
+         "reference": "PMID:15165235",
+         "notes": "Buddelmeijer and Beckwith 2004 showed that septal targeting of FtsQBL is required for recruitment of downstream division septum components."
+        }
+       ]
+      },
+      {
+       "subject": "division_septum_assembly",
+       "predicate": "RO:0002213",
+       "object": "ftsz_dependent_cytokinesis",
+       "description": "Division septum assembly mediated by the FtsQBL divisome subcomplex drives prokaryotic FtsZ-dependent cytokinesis.",
+       "evidence": [
+        {
+         "reference": "GO:1990587",
+         "notes": "GO:1990587 defines the FtsQBL complex as required for prokaryotic FtsZ-dependent cytokinesis."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-25T15:35:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:1990587 (FtsQBL complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
+   "identifier": "GO:1990490",
+   "label": "archaeal proton-transporting A-type ATPase complex",
+   "structure_category": "ENERGY_COMPLEX",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A large proton-transporting two-sector ATPase protein complex that catalyzes the synthesis or hydrolysis of ATP by a rotational mechanism, coupled to the transport of protons across a membrane and is found in Archaea.",
+   "definition_source": "GO:1990490",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "A-type ATPase protein complex",
+     "synonym_type": "BROAD_SYNONYM",
+     "source": "GO:1990490"
+    },
+    {
+     "synonym_text": "archaeal A-type ATPase protein complex",
+     "synonym_type": "BROAD_SYNONYM",
+     "source": "GO:1990490"
+    }
+   ],
+   "parent_structures": [
+    "GO:0016469",
+    "GO:1904949"
+   ],
+   "components": [
+    {
+     "component_id": "atpa_catalytic_subunit",
+     "label": "A-type ATP synthase subunit A",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR005726",
+     "gene_symbols": [
+      "atpA"
+     ],
+     "stoichiometry": "3 copies per A1 catalytic headpiece (A3B3 hexamer)",
+     "essentiality": "ESSENTIAL",
+     "role": "Catalytic nucleotide-binding subunit of the peripheral A1 sector that alternates with subunit B in the A3B3 hexamer and catalyzes rotational ATP synthesis or hydrolysis.",
+     "evidence": [
+      {
+       "reference": "PMID:12768457",
+       "notes": "Lingl et al. 2003 (DOI:10.1007/s00792-003-0318-7) isolated the intact nine-subunit A1AO ATP synthase from Methanocaldococcus jannaschii containing catalytic subunit A (AtpA)."
+      },
+      {
+       "reference": "PMID:15220347",
+       "notes": "Coskun et al. 2004 (DOI:10.1074/jbc.M406196200) resolved the A3B3 headpiece and peripheral stalk organization of the M. jannaschii A-type ATP synthase by electron microscopy."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q57670",
+       "protein_label": "A-type ATP synthase subunit A",
+       "gene_symbol": "atpA",
+       "taxon_id": "NCBITaxon:243232",
+       "taxon_label": "Methanocaldococcus jannaschii DSM 2661",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed M. jannaschii catalytic subunit A of the archaeal A1AO ATP synthase characterized in PMID:12768457 and PMID:15220347.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q57670",
+         "notes": "Reviewed Swiss-Prot entry for Methanocaldococcus jannaschii A-type ATP synthase subunit A."
+        },
+        {
+         "reference": "PMID:12768457",
+         "notes": "Lingl et al. 2003 purified the intact M. jannaschii A1AO ATP synthase containing subunit A."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "atpb_regulatory_subunit",
+     "label": "A-type ATP synthase subunit B",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR005724",
+     "gene_symbols": [
+      "atpB"
+     ],
+     "stoichiometry": "3 copies per A1 headpiece (A3B3 hexamer)",
+     "essentiality": "ESSENTIAL",
+     "role": "Non-catalytic nucleotide-binding subunit of the peripheral A1 sector that assembles with three AtpA subunits into the A3B3 catalytic hexamer.",
+     "evidence": [
+      {
+       "reference": "PMID:12768457",
+       "notes": "Lingl et al. 2003 identified subunit B (AtpB) in the purified M. jannaschii A1AO ATP synthase."
+      },
+      {
+       "reference": "PMID:15220347",
+       "notes": "Coskun et al. 2004 resolved the A3B3 catalytic headpiece of the M. jannaschii A-type ATP synthase."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q57669",
+       "protein_label": "A-type ATP synthase subunit B",
+       "gene_symbol": "atpB",
+       "taxon_id": "NCBITaxon:243232",
+       "taxon_label": "Methanocaldococcus jannaschii DSM 2661",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed M. jannaschii subunit B of the archaeal A1AO ATP synthase characterized in PMID:12768457.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q57669",
+         "notes": "Reviewed Swiss-Prot entry for Methanocaldococcus jannaschii A-type ATP synthase subunit B."
+        },
+        {
+         "reference": "PMID:12768457",
+         "notes": "Lingl et al. 2003 purified the nine-subunit M. jannaschii A1AO ATP synthase containing AtpB."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "atpk_rotor_ring_subunit",
+     "label": "A-type ATP synthase subunit K",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR000245",
+     "gene_symbols": [
+      "atpK"
+     ],
+     "stoichiometry": "Oligomeric membrane rotor ring (c/K-ring) in the AO sector",
+     "essentiality": "ESSENTIAL",
+     "role": "Membrane-embedded proteolipid rotor-ring subunit of the AO sector that translocates ions across the archaeal membrane to drive rotation of the central stalk.",
+     "evidence": [
+      {
+       "reference": "PMID:12768457",
+       "notes": "Lingl et al. 2003 demonstrated that the M. jannaschii A1AO ATP synthase contains the membrane proteolipid subunit K (AtpK) in the AO sector."
+      },
+      {
+       "reference": "PMID:19203996",
+       "notes": "Vonck et al. 2009 (DOI:10.1074/jbc.M808498200) resolved the membrane-embedded AO rotor ring and stator architecture of the archaeal A1AO ATP synthase."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q57674",
+       "protein_label": "A-type ATP synthase subunit K",
+       "gene_symbol": "atpK",
+       "taxon_id": "NCBITaxon:243232",
+       "taxon_label": "Methanocaldococcus jannaschii DSM 2661",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed M. jannaschii proteolipid rotor-ring subunit K of the archaeal A1AO ATP synthase.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q57674",
+         "notes": "Reviewed Swiss-Prot entry for Methanocaldococcus jannaschii A-type ATP synthase subunit K."
+        },
+        {
+         "reference": "PMID:12768457",
+         "notes": "Lingl et al. 2003 verified subunit K as part of the intact M. jannaschii A1AO ATP synthase."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "atpi_stator_subunit",
+     "label": "A-type ATP synthase subunit I",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR002490",
+     "gene_symbols": [
+      "atpI"
+     ],
+     "stoichiometry": "1 copy per A1AO holoenzyme",
+     "essentiality": "ESSENTIAL",
+     "role": "Integral membrane stator subunit of the AO sector that forms proton-access half-channels at the interface with the AtpK rotor ring and anchors the peripheral stalks.",
+     "evidence": [
+      {
+       "reference": "PMID:12768457",
+       "notes": "Lingl et al. 2003 identified the membrane stator subunit I (AtpI) in the purified M. jannaschii A1AO ATP synthase."
+      },
+      {
+       "reference": "PMID:19203996",
+       "notes": "Vonck et al. 2009 showed how the membrane-embedded subunit I anchors the two peripheral stalks against the AO rotor ring."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q57675",
+       "protein_label": "A-type ATP synthase subunit I",
+       "gene_symbol": "atpI",
+       "taxon_id": "NCBITaxon:243232",
+       "taxon_label": "Methanocaldococcus jannaschii DSM 2661",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed M. jannaschii AO membrane stator subunit I of the archaeal A-type ATP synthase.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q57675",
+         "notes": "Reviewed Swiss-Prot entry for Methanocaldococcus jannaschii A-type ATP synthase subunit I."
+        },
+        {
+         "reference": "PMID:12768457",
+         "notes": "Lingl et al. 2003 confirmed subunit I in the isolated M. jannaschii A1AO ATP synthase."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2157",
+     "taxon_label": "Archaea",
+     "presence": "COMMON",
+     "note": "GO:1990490 carries an explicit RO:0002162 (in taxon) constraint to NCBITaxon:2157 (Archaea), where the A1AO ATP synthase serves as the primary rotary bioenergetic ATP synthase.",
+     "reference": "GO:1990490"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:243232",
+     "taxon_label": "Methanocaldococcus jannaschii DSM 2661",
+     "note": "Hyperthermophilic methanogenic archaeon from which the intact nine-subunit A1AO ATP synthase was isolated and structurally characterized.",
+     "reference": "PMID:12768457"
+    },
+    {
+     "taxon_id": "NCBITaxon:186497",
+     "taxon_label": "Pyrococcus furiosus DSM 3638",
+     "note": "Hyperthermophilic archaeon in which the three-dimensional electron-microscopy reconstruction of the A1AO ATP synthase was determined.",
+     "reference": "PMID:19203996"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "proton_motive_force_driven_atp_synthesis",
+     "label": "proton motive force-driven ATP synthesis",
+     "grounding": "GO:0015986",
+     "description": "Couples transmembrane proton translocation through the membrane-embedded AO sector (AtpI-AtpK) to rotational catalysis in the peripheral A1 (AtpA3AtpB3) headpiece to synthesize or hydrolyze ATP.",
+     "evidence": [
+      {
+       "reference": "GO:1990490",
+       "notes": "GO:1990490 defines the archaeal proton-transporting A-type ATPase complex as catalyzing the synthesis or hydrolysis of ATP by a rotational mechanism coupled to proton transport across a membrane."
+      },
+      {
+       "reference": "PMID:15220347",
+       "notes": "Coskun et al. 2004 characterized the rotational coupling architecture between the AO membrane domain and A1 catalytic headpiece in M. jannaschii."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:1990490",
+     "notes": "Gene Ontology cellular-component term for archaeal proton-transporting A-type ATPase complex."
+    },
+    {
+     "reference": "GO:0016469",
+     "notes": "Gene Ontology parent term for proton-transporting two-sector ATPase complex."
+    },
+    {
+     "reference": "GO:1904949",
+     "notes": "Gene Ontology parent term for ATPase complex."
+    },
+    {
+     "reference": "PMID:12768457",
+     "notes": "Lingl et al. 2003 (Extremophiles, DOI:10.1007/s00792-003-0318-7), isolation of the complete nine-subunit A1AO ATP synthase from Methanocaldococcus jannaschii."
+    },
+    {
+     "reference": "PMID:15220347",
+     "notes": "Coskun et al. 2004 (J Biol Chem, DOI:10.1074/jbc.M406196200), electron microscopy structure and subunit arrangement of the M. jannaschii A-type ATP synthase."
+    },
+    {
+     "reference": "PMID:19203996",
+     "notes": "Vonck et al. 2009 (J Biol Chem, DOI:10.1074/jbc.M808498200), 3D structure of the A1AO ATP synthase from Pyrococcus furiosus."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "archaeal_a_type_atpase_rotary_catalysis",
+     "title": "Two-sector assembly and rotary ATP synthesis by the archaeal proton-transporting A-type ATPase complex",
+     "description": "Directed causal graph linking the AO membrane sector (AtpI stator and AtpK rotor ring) and A1 catalytic sector (AtpA and AtpB) to assembly of the archaeal proton-transporting A-type ATPase complex (GO:1990490) and proton motive force-driven ATP synthesis (GO:0015986).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "atpi_stator_subunit",
+       "label": "A-type ATP synthase subunit I",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR002490",
+       "component_ref": "atpi_stator_subunit",
+       "description": "AO sector integral membrane stator subunit AtpI."
+      },
+      {
+       "node_id": "atpk_rotor_ring_subunit",
+       "label": "A-type ATP synthase subunit K",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR000245",
+       "component_ref": "atpk_rotor_ring_subunit",
+       "description": "AO sector proteolipid rotor-ring subunit AtpK."
+      },
+      {
+       "node_id": "atpa_catalytic_subunit",
+       "label": "A-type ATP synthase subunit A",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR005726",
+       "component_ref": "atpa_catalytic_subunit",
+       "description": "A1 sector catalytic nucleotide-binding subunit AtpA."
+      },
+      {
+       "node_id": "atpb_regulatory_subunit",
+       "label": "A-type ATP synthase subunit B",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR005724",
+       "component_ref": "atpb_regulatory_subunit",
+       "description": "A1 sector non-catalytic hexamer subunit AtpB."
+      },
+      {
+       "node_id": "archaeal_a_type_atpase_holoenzyme",
+       "label": "archaeal proton-transporting A-type ATPase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990490",
+       "description": "Intact two-sector archaeal A1AO ATPase holocomplex."
+      },
+      {
+       "node_id": "proton_motive_force_driven_atp_synthesis",
+       "label": "proton motive force-driven ATP synthesis",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0015986",
+       "description": "Rotational synthesis of ATP driven by transmembrane proton transport."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "atpi_stator_subunit",
+       "predicate": "RO:0002436",
+       "object": "archaeal_a_type_atpase_holoenzyme",
+       "description": "Subunit I forms the membrane stator proton half-channels and anchors the peripheral stalks in the A1AO holoenzyme.",
+       "evidence": [
+        {
+         "reference": "PMID:19203996",
+         "notes": "Vonck et al. 2009 resolved how subunit I anchors the peripheral stalks and abuts the rotor ring in the AO membrane sector."
+        }
+       ]
+      },
+      {
+       "subject": "atpk_rotor_ring_subunit",
+       "predicate": "RO:0002436",
+       "object": "archaeal_a_type_atpase_holoenzyme",
+       "description": "Subunit K oligomerizes into the membrane-embedded rotor ring of the AO sector.",
+       "evidence": [
+        {
+         "reference": "PMID:12768457",
+         "notes": "Lingl et al. 2003 identified proteolipid subunit K in the intact M. jannaschii A1AO ATP synthase."
+        }
+       ]
+      },
+      {
+       "subject": "atpa_catalytic_subunit",
+       "predicate": "RO:0002436",
+       "object": "archaeal_a_type_atpase_holoenzyme",
+       "description": "Three catalytic AtpA subunits alternate with AtpB to form the A1 catalytic hexamer.",
+       "evidence": [
+        {
+         "reference": "PMID:15220347",
+         "notes": "Coskun et al. 2004 resolved the A3B3 catalytic headpiece of the M. jannaschii A-type ATP synthase."
+        }
+       ]
+      },
+      {
+       "subject": "atpb_regulatory_subunit",
+       "predicate": "RO:0002436",
+       "object": "archaeal_a_type_atpase_holoenzyme",
+       "description": "Three AtpB subunits co-assemble with AtpA to complete the A3B3 headpiece of the A1 sector.",
+       "evidence": [
+        {
+         "reference": "PMID:15220347",
+         "notes": "Coskun et al. 2004 established the hexameric A3B3 arrangement of the M. jannaschii A1 sector."
+        }
+       ]
+      },
+      {
+       "subject": "archaeal_a_type_atpase_holoenzyme",
+       "predicate": "RO:0002213",
+       "object": "proton_motive_force_driven_atp_synthesis",
+       "description": "Proton translocation through the AtpI-AtpK interface drives central-stalk rotation and conformational ATP synthesis in the A3B3 headpiece.",
+       "evidence": [
+        {
+         "reference": "GO:1990490",
+         "notes": "GO:1990490 defines the complex as catalyzing rotational ATP synthesis or hydrolysis coupled to transmembrane proton transport."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-25T15:35:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:1990490 (archaeal proton-transporting A-type ATPase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
    "label": "chlorosome baseplate antenna complex",
    "structure_category": "ENERGY_COMPLEX",
@@ -113310,6 +114672,347 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-13"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0097658",
+   "label": "Asi complex",
+   "structure_category": "MEMBRANE_ORGANELLE",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A nuclear ubiquitin ligase multiprotein complex located in the inner nuclear membrane (INM) that recognizes and ubiquitinates misfolded INM proteins and also some proteins involved in sterol biosynthesis, during ER-associated protein degradation (ERAD). In S. cerevisiae, this complex contains the ubiquitin ligases Asi1p and Asi3p.",
+   "definition_source": "GO:0097658",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0000152",
+    "GO:0098796"
+   ],
+   "part_of": [
+    "GO:0005637"
+   ],
+   "components": [
+    {
+     "component_id": "asi1_e3_ligase_subunit",
+     "label": "ERAD-associated E3 ubiquitin-protein ligase ASI1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR013083",
+     "gene_symbols": [
+      "ASI1"
+     ],
+     "stoichiometry": "Constituent RING-domain E3 ubiquitin ligase subunit",
+     "essentiality": "DISPENSABLE",
+     "role": "Multipass inner nuclear membrane C-terminal RING-finger E3 ubiquitin ligase subunit that partners with Asi3p and Asi2p to polyubiquitinate misfolded or mislocalized inner nuclear membrane proteins for proteasomal degradation.",
+     "evidence": [
+      {
+       "reference": "GO:0097658",
+       "notes": "GO:0097658 defines the S. cerevisiae Asi complex as containing the inner nuclear membrane ubiquitin ligases Asi1p and Asi3p."
+      },
+      {
+       "reference": "PMID:25236469",
+       "notes": "Foresti et al. 2014 (DOI:10.1126/science.1255638) demonstrated that Asi1, Asi2, and Asi3 form an inner nuclear membrane E3 ubiquitin ligase complex mediating ERAD of inner nuclear membrane and sterol-biosynthesis substrates."
+      },
+      {
+       "reference": "PMID:25519137",
+       "notes": "Khmelinskii et al. 2014 (DOI:10.1038/nature14096) showed that the Asi1-Asi2-Asi3 complex ubiquitinates mislocalized proteins at the inner nuclear membrane to preserve nuclear envelope identity."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P54074",
+       "protein_label": "ERAD-associated E3 ubiquitin-protein ligase ASI1",
+       "gene_symbol": "ASI1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. cerevisiae S288C Asi1p RING-domain E3 ubiquitin ligase subunit of the inner nuclear membrane Asi complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P54074",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C ERAD-associated E3 ubiquitin-protein ligase ASI1."
+        },
+        {
+         "reference": "PMID:25236469",
+         "notes": "Foresti et al. 2014 characterized S. cerevisiae Asi1 as a core RING E3 subunit of the Asi complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "asi3_e3_ligase_subunit",
+     "label": "Probable ERAD-associated E3 ubiquitin-protein ligase ASI1/ASI3",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR013083",
+     "gene_symbols": [
+      "ASI3"
+     ],
+     "stoichiometry": "Constituent RING-domain E3 ubiquitin ligase subunit",
+     "essentiality": "DISPENSABLE",
+     "role": "Multipass inner nuclear membrane C-terminal RING-domain E3 ubiquitin ligase subunit that hetero-oligomerizes with Asi1p to catalyze Ubc6p/Ubc7p-dependent substrate polyubiquitination at the inner nuclear membrane.",
+     "evidence": [
+      {
+       "reference": "GO:0097658",
+       "notes": "GO:0097658 specifies Asi3p together with Asi1p as the ubiquitin ligase subunits of the S. cerevisiae Asi complex."
+      },
+      {
+       "reference": "PMID:25236469",
+       "notes": "Foresti et al. 2014 showed that both Asi1 and Asi3 RING domains are required for Asi complex E3 ligase activity."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P53983",
+       "protein_label": "Probable ERAD-associated E3 ubiquitin-protein ligase ASI1",
+       "gene_symbol": "ASI3",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. cerevisiae S288C Asi3p RING-domain subunit of the inner nuclear membrane Asi ubiquitin ligase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P53983",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C ASI3."
+        },
+        {
+         "reference": "PMID:25236469",
+         "notes": "Foresti et al. 2014 established Asi3 as an essential catalytic partner of Asi1 in the Asi complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "asi2_recognition_subunit",
+     "label": "Protein ASI2",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR063277",
+     "gene_symbols": [
+      "ASI2"
+     ],
+     "stoichiometry": "Accessory transmembrane substrate-recognition factor",
+     "essentiality": "DISPENSABLE",
+     "role": "Two-transmembrane inner nuclear membrane recognition factor that associates with Asi1p-Asi3p to select subset transmembrane substrates for Asi-mediated ubiquitination.",
+     "evidence": [
+      {
+       "reference": "PMID:25236469",
+       "notes": "Foresti et al. 2014 showed that Asi2 associates with Asi1-Asi3 and is required for recognition of specific transmembrane substrates such as Erg11."
+      },
+      {
+       "reference": "PMID:25519137",
+       "notes": "Khmelinskii et al. 2014 demonstrated that Asi2 acts as a substrate-specific recognition factor within the Asi1-Asi2-Asi3 complex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P53895",
+       "protein_label": "Protein ASI2",
+       "gene_symbol": "ASI2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. cerevisiae S288C Asi2p transmembrane substrate-recognition subunit of the inner nuclear membrane Asi complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P53895",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C protein ASI2."
+        },
+        {
+         "reference": "PMID:25236469",
+         "notes": "Foresti et al. 2014 characterized Asi2 as a subunit of the S. cerevisiae Asi complex."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4891",
+     "taxon_label": "Saccharomycetaceae",
+     "presence": "COMMON",
+     "note": "Conserved across budding yeasts (Saccharomycetaceae) as the dedicated inner-nuclear-membrane branch of ER-associated protein degradation (ERAD).",
+     "reference": "PMID:25236469"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Reference budding yeast strain in which the inner-nuclear-membrane Asi1-Asi2-Asi3 ubiquitin ligase complex was identified and functionally characterized.",
+     "reference": "PMID:25236469"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "ubiquitin_dependent_protein_catabolic_process",
+     "label": "ubiquitin-dependent protein catabolic process",
+     "grounding": "GO:0006511",
+     "description": "Recognizes and polyubiquitinates misfolded or mislocalized integral membrane proteins and sterol-biosynthesis enzymes at the inner nuclear membrane, targeting them for Cdc48p extraction and proteasomal degradation.",
+     "evidence": [
+      {
+       "reference": "GO:0097658",
+       "notes": "GO:0097658 defines the Asi complex as recognizing and ubiquitinating misfolded inner nuclear membrane proteins and sterol-biosynthesis proteins during ER-associated protein degradation."
+      },
+      {
+       "reference": "PMID:25236469",
+       "notes": "Foresti et al. 2014 established that the Asi complex defines an inner nuclear membrane quality-control and ubiquitin-dependent degradation pathway."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0097658",
+     "notes": "Gene Ontology cellular-component term for Asi complex."
+    },
+    {
+     "reference": "GO:0005637",
+     "notes": "Gene Ontology cellular-component term for nuclear inner membrane."
+    },
+    {
+     "reference": "GO:0000152",
+     "notes": "Gene Ontology parent term for nuclear ubiquitin ligase complex."
+    },
+    {
+     "reference": "PMID:25236469",
+     "notes": "Foresti et al. 2014 (Science, DOI:10.1126/science.1255638), characterization of inner nuclear membrane protein quality control by the Asi complex."
+    },
+    {
+     "reference": "PMID:25519137",
+     "notes": "Khmelinskii et al. 2014 (Nature, DOI:10.1038/nature14096), demonstration that the Asi1-Asi2-Asi3 complex ubiquitinates mislocalized proteins at the inner nuclear membrane."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "asi_complex_inm_quality_control",
+     "title": "Inner nuclear membrane assembly of the Asi complex and ubiquitin-dependent protein degradation",
+     "description": "Directed causal graph linking Asi1p, Asi3p, and Asi2p subunits to assembly of the inner-nuclear-membrane Asi complex (GO:0097658), protein polyubiquitination (GO:0000209), and ubiquitin-dependent protein catabolic process (GO:0006511).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "asi1_e3_ligase_subunit",
+       "label": "ERAD-associated E3 ubiquitin-protein ligase ASI1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR013083",
+       "component_ref": "asi1_e3_ligase_subunit",
+       "description": "Inner nuclear membrane RING-finger E3 ubiquitin ligase Asi1p."
+      },
+      {
+       "node_id": "asi3_e3_ligase_subunit",
+       "label": "Probable ERAD-associated E3 ubiquitin-protein ligase ASI1/ASI3",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR013083",
+       "component_ref": "asi3_e3_ligase_subunit",
+       "description": "Inner nuclear membrane RING-finger E3 ubiquitin ligase Asi3p."
+      },
+      {
+       "node_id": "asi2_recognition_subunit",
+       "label": "Protein ASI2",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR063277",
+       "component_ref": "asi2_recognition_subunit",
+       "description": "Inner nuclear membrane transmembrane recognition factor Asi2p."
+      },
+      {
+       "node_id": "asi_complex_node",
+       "label": "Asi complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0097658",
+       "description": "Assembled Asi1p-Asi2p-Asi3p ubiquitin ligase complex in the inner nuclear membrane."
+      },
+      {
+       "node_id": "protein_polyubiquitination",
+       "label": "protein polyubiquitination",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0000209",
+       "description": "Polyubiquitination of misfolded or mislocalized inner nuclear membrane proteins."
+      },
+      {
+       "node_id": "ubiquitin_dependent_catabolism",
+       "label": "ubiquitin-dependent protein catabolic process",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0006511",
+       "description": "Proteasomal degradation of ubiquitinated inner nuclear membrane substrates."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "asi1_e3_ligase_subunit",
+       "predicate": "RO:0002436",
+       "object": "asi_complex_node",
+       "description": "Asi1p associates with Asi3p and Asi2p in the inner nuclear membrane to form the catalytic core of the Asi complex.",
+       "evidence": [
+        {
+         "reference": "PMID:25236469",
+         "notes": "Foresti et al. 2014 showed that Asi1 co-purifies with Asi3 and Asi2 as a membrane-embedded E3 ligase complex."
+        }
+       ]
+      },
+      {
+       "subject": "asi3_e3_ligase_subunit",
+       "predicate": "RO:0002436",
+       "object": "asi_complex_node",
+       "description": "Asi3p partners with Asi1p via transmembrane and RING domains within the inner nuclear membrane Asi complex.",
+       "evidence": [
+        {
+         "reference": "PMID:25236469",
+         "notes": "Foresti et al. 2014 demonstrated that Asi3 is an essential RING-domain subunit of the Asi complex."
+        }
+       ]
+      },
+      {
+       "subject": "asi2_recognition_subunit",
+       "predicate": "RO:0002436",
+       "object": "asi_complex_node",
+       "description": "Asi2p binds the Asi1p-Asi3p subcomplex to confer transmembrane substrate recognition.",
+       "evidence": [
+        {
+         "reference": "PMID:25519137",
+         "notes": "Khmelinskii et al. 2014 showed that Asi2 associates with Asi1-Asi3 to recognize specific inner nuclear membrane substrates."
+        }
+       ]
+      },
+      {
+       "subject": "asi_complex_node",
+       "predicate": "RO:0002213",
+       "object": "protein_polyubiquitination",
+       "description": "The Asi complex recruits Ubc6p and Ubc7p E2 enzymes to polyubiquitinate misfolded or mislocalized inner nuclear membrane proteins.",
+       "evidence": [
+        {
+         "reference": "PMID:25236469",
+         "notes": "Foresti et al. 2014 demonstrated Asi1-Asi3-dependent polyubiquitination of inner nuclear membrane substrates."
+        }
+       ]
+      },
+      {
+       "subject": "protein_polyubiquitination",
+       "predicate": "RO:0002213",
+       "object": "ubiquitin_dependent_catabolism",
+       "description": "Polyubiquitinated inner nuclear membrane substrates are extracted by the Cdc48p ATPase complex for proteasomal degradation.",
+       "evidence": [
+        {
+         "reference": "PMID:25236469",
+         "notes": "Foresti et al. 2014 showed that Asi-ubiquitinated substrates undergo Cdc48- and proteasome-dependent degradation."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-25T15:35:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0097658 (Asi complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
@@ -153964,6 +155667,257 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-15"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:1990862",
+   "label": "nuclear membrane complex Bqt3-Bqt4",
+   "structure_category": "MEMBRANE_ORGANELLE",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A protein complex that resides in the inner nuclear membrane and anchors telomeres to the nuclear envelope. In fission yeast, it is composed of Bqt3 and Bqt4.",
+   "definition_source": "GO:1990862",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0098796",
+    "GO:0140513"
+   ],
+   "part_of": [
+    "GO:0005637"
+   ],
+   "components": [
+    {
+     "component_id": "bqt3_subunit",
+     "label": "Bouquet formation protein 3",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "gene_symbols": [
+      "bqt3"
+     ],
+     "stoichiometry": "Constituent multipass inner-nuclear-membrane receptor subunit",
+     "essentiality": "DISPENSABLE",
+     "role": "Seven-transmembrane inner nuclear membrane protein that binds the C-terminal transmembrane segment of Bqt4 and protects Bqt4 from proteolytic degradation at the inner nuclear membrane.",
+     "evidence": [
+      {
+       "reference": "GO:1990862",
+       "notes": "GO:1990862 defines the fission yeast nuclear membrane complex Bqt3-Bqt4 as composed of Bqt3 and Bqt4."
+      },
+      {
+       "reference": "PMID:19948484",
+       "notes": "Chikashige et al. 2009 (DOI:10.1083/jcb.200902122) demonstrated that Bqt3 is an inner nuclear membrane protein that directly binds and stabilizes Bqt4 against degradation."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O74510",
+       "protein_label": "Bouquet formation protein 3",
+       "gene_symbol": "bqt3",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. pombe Bqt3 inner-nuclear-membrane subunit that anchors and stabilizes Bqt4.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:O74510",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe bouquet formation protein 3 (Bqt3)."
+        },
+        {
+         "reference": "PMID:19948484",
+         "notes": "Chikashige et al. 2009 characterized S. pombe Bqt3 as the inner nuclear membrane partner of Bqt4."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "bqt4_subunit",
+     "label": "Bouquet formation protein 4",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR037548",
+     "gene_symbols": [
+      "bqt4"
+     ],
+     "stoichiometry": "Constituent inner-nuclear-membrane telomere-tethering subunit",
+     "essentiality": "DISPENSABLE",
+     "role": "Inner nuclear membrane protein anchored by a C-terminal transmembrane segment and stabilized by Bqt3; binds the telomeric shelterin component Rap1 during vegetative growth and recruits the meiotic Bqt1-Bqt2 bridge to cluster telomeres at the spindle pole body during meiotic prophase.",
+     "evidence": [
+      {
+       "reference": "GO:1990862",
+       "notes": "GO:1990862 defines Bqt4 as one of the two subunits of the inner nuclear membrane complex Bqt3-Bqt4."
+      },
+      {
+       "reference": "PMID:19948484",
+       "notes": "Chikashige et al. 2009 showed that Bqt4 directly binds Rap1 to tether telomeres to the nuclear envelope in vegetative cells, a prerequisite for meiotic bouquet formation."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O60158",
+       "protein_label": "Bouquet formation protein 4",
+       "gene_symbol": "bqt4",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. pombe Bqt4 subunit that binds telomeric Rap1 and partners with Bqt3 at the inner nuclear membrane.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:O60158",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe bouquet formation protein 4 (Bqt4)."
+        },
+        {
+         "reference": "PMID:19948484",
+         "notes": "Chikashige et al. 2009 identified S. pombe Bqt4 and its interaction with Rap1 and Bqt3."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4895",
+     "taxon_label": "Schizosaccharomyces",
+     "presence": "COMMON",
+     "note": "Characterized in fission yeasts (Schizosaccharomyces) as the constitutive inner-nuclear-membrane telomere-anchoring complex.",
+     "reference": "PMID:19948484"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:284812",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
+     "note": "Reference fission yeast strain in which the inner-nuclear-membrane Bqt3-Bqt4 telomere-tethering complex was identified and characterized.",
+     "reference": "PMID:19948484"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "meiotic_telomere_nuclear_envelope_attachment",
+     "label": "meiotic attachment of telomere to nuclear envelope",
+     "grounding": "GO:0070197",
+     "description": "Resides in the inner nuclear membrane where Bqt3 stabilizes Bqt4 and Bqt4 binds the telomeric protein Rap1 to anchor telomeres to the nuclear envelope, enabling Bqt1-Bqt2-mediated telomere clustering and chromosomal bouquet formation during meiotic prophase.",
+     "evidence": [
+      {
+       "reference": "GO:1990862",
+       "notes": "GO:1990862 carries a capable_of_part_of (RO:0002216) axiom to GO:0070197 (meiotic attachment of telomere to nuclear envelope)."
+      },
+      {
+       "reference": "PMID:19948484",
+       "notes": "Chikashige et al. 2009 demonstrated that Bqt3 and Bqt4 anchor telomeres to the inner nuclear envelope to ensure meiotic chromosomal bouquet formation."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:1990862",
+     "notes": "Gene Ontology cellular-component term for nuclear membrane complex Bqt3-Bqt4."
+    },
+    {
+     "reference": "GO:0005637",
+     "notes": "Gene Ontology cellular-component term for nuclear inner membrane."
+    },
+    {
+     "reference": "GO:0070197",
+     "notes": "Gene Ontology biological-process term for meiotic attachment of telomere to nuclear envelope."
+    },
+    {
+     "reference": "PMID:19948484",
+     "notes": "Chikashige et al. 2009 (J Cell Biol, DOI:10.1083/jcb.200902122), primary study establishing that inner nuclear membrane proteins Bqt3 and Bqt4 anchor telomeres to the nuclear envelope."
+    },
+    {
+     "reference": "PMID:16615890",
+     "notes": "Chikashige et al. 2006 (Cell, DOI:10.1016/j.cell.2006.01.048), characterization of meiotic bouquet proteins Bqt1 and Bqt2 that connect telomere-bound Rap1/Taz1 to the spindle pole body."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "bqt3_bqt4_telomere_anchoring_mechanism",
+     "title": "Inner nuclear membrane assembly of Bqt3-Bqt4 and telomere anchoring to the nuclear envelope",
+     "description": "Directed causal graph linking Bqt3-mediated stabilization of Bqt4 at the inner nuclear membrane to assembly of the nuclear membrane complex Bqt3-Bqt4 (GO:1990862) and meiotic attachment of telomeres to the nuclear envelope (GO:0070197).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "bqt3_subunit",
+       "label": "Bouquet formation protein 3",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "bqt3_subunit",
+       "description": "Multipass inner-nuclear-membrane protein Bqt3 (carries no family-level InterPro grounding)."
+      },
+      {
+       "node_id": "bqt4_subunit",
+       "label": "Bouquet formation protein 4",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR037548",
+       "component_ref": "bqt4_subunit",
+       "description": "Inner-nuclear-membrane Rap1-binding protein Bqt4."
+      },
+      {
+       "node_id": "bqt3_bqt4_complex_node",
+       "label": "nuclear membrane complex Bqt3-Bqt4",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990862",
+       "description": "Assembled inner-nuclear-membrane Bqt3-Bqt4 telomere-tethering complex."
+      },
+      {
+       "node_id": "meiotic_telomere_attachment",
+       "label": "meiotic attachment of telomere to nuclear envelope",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0070197",
+       "description": "Tethering of telomeres to the inner nuclear membrane required for meiotic bouquet formation."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "bqt3_subunit",
+       "predicate": "RO:0002436",
+       "object": "bqt3_bqt4_complex_node",
+       "description": "Bqt3 binds the C-terminal transmembrane region of Bqt4 and protects Bqt4 from degradation at the inner nuclear membrane.",
+       "evidence": [
+        {
+         "reference": "PMID:19948484",
+         "notes": "Chikashige et al. 2009 showed that Bqt3 directly interacts with and stabilizes Bqt4 at the inner nuclear membrane."
+        }
+       ]
+      },
+      {
+       "subject": "bqt4_subunit",
+       "predicate": "RO:0002436",
+       "object": "bqt3_bqt4_complex_node",
+       "description": "Bqt4 co-assembles with Bqt3 in the inner nuclear membrane and exposes its N-terminal Rap1-binding domain to the nucleoplasm.",
+       "evidence": [
+        {
+         "reference": "PMID:19948484",
+         "notes": "Chikashige et al. 2009 demonstrated that Bqt4 forms an inner nuclear membrane complex with Bqt3."
+        }
+       ]
+      },
+      {
+       "subject": "bqt3_bqt4_complex_node",
+       "predicate": "RO:0002213",
+       "object": "meiotic_telomere_attachment",
+       "description": "The Bqt3-Bqt4 complex binds telomeric Rap1 to anchor telomeres to the nuclear envelope and enable meiotic bouquet formation.",
+       "evidence": [
+        {
+         "reference": "PMID:19948484",
+         "notes": "Chikashige et al. 2009 showed that Bqt3-Bqt4-mediated telomere tethering to the nuclear envelope is required for meiotic bouquet formation."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-25T15:35:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:1990862 (nuclear membrane complex Bqt3-Bqt4) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
@@ -244639,6 +246593,351 @@
    ]
   },
   {
+   "identifier": "GO:0120155",
+   "label": "MIH complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A trimeric complex involved in cytokinesis. Proposed to bridge actomyosin ring contraction and septum synthesis in yeast, resulting in the coordination of these processes, and leading to plasma membrane ingression and fusion. In the yeast Saccharomyces cerevisiae this complex consists of Mlc1p, Iqg1p and Hof1p proteins.",
+   "definition_source": "GO:0120155",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "Mlc1p-Iqg1p-Hof1p complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0120155"
+    }
+   ],
+   "parent_structures": [
+    "GO:0032991"
+   ],
+   "part_of": [
+    "GO:0005935"
+   ],
+   "components": [
+    {
+     "component_id": "mlc1_subunit",
+     "label": "Myosin light chain 1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR002048",
+     "gene_symbols": [
+      "MLC1"
+     ],
+     "stoichiometry": "Constituent EF-hand light-chain subunit of the trimeric MIH complex",
+     "essentiality": "ESSENTIAL",
+     "role": "EF-hand myosin light chain that binds the IQ motifs of Iqg1p, recruiting Iqg1p to the cellular bud neck to nucleate assembly of the Mlc1p-Iqg1p-Hof1p (MIH) complex.",
+     "evidence": [
+      {
+       "reference": "GO:0120155",
+       "notes": "GO:0120155 defines the S. cerevisiae MIH complex as consisting of Mlc1p, Iqg1p, and Hof1p."
+      },
+      {
+       "reference": "PMID:24895401",
+       "notes": "Tian et al. 2014 (DOI:10.1242/jcs.153429) demonstrated stepwise and cooperative assembly of the Mlc1p-Iqg1p-Hof1p cytokinetic core complex at the Saccharomyces cerevisiae bud neck."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P53141",
+       "protein_label": "Myosin light chain 1",
+       "gene_symbol": "MLC1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. cerevisiae S288C Mlc1p light-chain subunit of the trimeric MIH complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P53141",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C myosin light chain 1 (MLC1)."
+        },
+        {
+         "reference": "PMID:24895401",
+         "notes": "Tian et al. 2014 characterized Mlc1p as a constituent subunit of the S. cerevisiae MIH complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "iqg1_scaffold_subunit",
+     "label": "Ras GTPase-activating-like protein IQG1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR000593",
+     "gene_symbols": [
+      "IQG1",
+      "CYK1"
+     ],
+     "stoichiometry": "Central IQGAP scaffold subunit of the trimeric MIH complex",
+     "essentiality": "ESSENTIAL",
+     "role": "IQGAP-family scaffold protein that binds Mlc1p via its IQ motifs and Hof1p via its N-terminal and C-terminal regions to couple actomyosin contractile ring constriction to primary septum synthesis.",
+     "evidence": [
+      {
+       "reference": "GO:0120155",
+       "notes": "GO:0120155 specifies Iqg1p as one of the three subunits of the S. cerevisiae MIH complex."
+      },
+      {
+       "reference": "PMID:24895401",
+       "notes": "Tian et al. 2014 showed that Iqg1p directly interacts with Mlc1p and Hof1p to assemble the cytokinetic MIH core complex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q12280",
+       "protein_label": "Ras GTPase-activating-like protein IQG1",
+       "gene_symbol": "IQG1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. cerevisiae S288C Iqg1p (also declared as synonym CYK1) IQGAP scaffold subunit of the trimeric MIH complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q12280",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C IQG1."
+        },
+        {
+         "reference": "PMID:24895401",
+         "notes": "Tian et al. 2014 demonstrated how Iqg1p bridges Mlc1p and Hof1p in the MIH complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "hof1_fbar_subunit",
+     "label": "Cytokinesis protein 2 (Hof1p)",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR031160",
+     "gene_symbols": [
+      "HOF1",
+      "CYK2"
+     ],
+     "stoichiometry": "F-BAR/SH3 membrane- and septum-coupling subunit of the trimeric MIH complex",
+     "essentiality": "DISPENSABLE",
+     "role": "F-BAR and C-terminal SH3 domain cytokinesis protein that binds Iqg1p and Inn1p/Chs2p at the cellular bud neck, coupling actomyosin ring contraction to plasma membrane ingression and septum synthesis.",
+     "evidence": [
+      {
+       "reference": "GO:0120155",
+       "notes": "GO:0120155 specifies Hof1p as one of the three constituent subunits of the S. cerevisiae MIH complex."
+      },
+      {
+       "reference": "PMID:24895401",
+       "notes": "Tian et al. 2014 showed that Hof1p binds Iqg1p to complete the trimeric MIH complex and coordinate cytokinesis with septum synthesis."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q05080",
+       "protein_label": "Cytokinesis protein 2",
+       "gene_symbol": "HOF1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. cerevisiae S288C Hof1p (also declared as synonym CYK2) F-BAR/SH3 subunit of the trimeric MIH complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q05080",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C cytokinesis protein 2 (HOF1)."
+        },
+        {
+         "reference": "PMID:24895401",
+         "notes": "Tian et al. 2014 characterized Hof1p interaction with Iqg1p-Mlc1p in the S. cerevisiae MIH complex."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4891",
+     "taxon_label": "Saccharomycetaceae",
+     "presence": "COMMON",
+     "note": "Characterized in budding yeasts (Saccharomyces cerevisiae); GO:0120155 carries an explicit RO:0002161 (never in taxon) axiom for NCBITaxon:4895 (Schizosaccharomyces).",
+     "reference": "PMID:24895401"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Reference budding yeast strain in which stepwise assembly of the trimeric Mlc1p-Iqg1p-Hof1p (MIH) complex at the cellular bud neck was established.",
+     "reference": "PMID:24895401"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "cytokinesis_septum_coordination",
+     "label": "cytokinesis",
+     "grounding": "GO:0000910",
+     "description": "Bridges actomyosin contractile ring constriction and primary septum synthesis at the cellular bud neck, coordinating plasma membrane ingression and abscission during yeast cytokinesis.",
+     "evidence": [
+      {
+       "reference": "GO:0120155",
+       "notes": "GO:0120155 defines the MIH complex as a trimeric complex involved in cytokinesis that bridges actomyosin ring contraction and septum synthesis."
+      },
+      {
+       "reference": "PMID:24895401",
+       "notes": "Tian et al. 2014 showed that cooperative assembly of the Mlc1p-Iqg1p-Hof1p complex coordinates actomyosin ring contraction with centripetal septum formation."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0120155",
+     "notes": "Gene Ontology cellular-component term for MIH complex."
+    },
+    {
+     "reference": "GO:0005935",
+     "notes": "Gene Ontology cellular-component term for cellular bud neck."
+    },
+    {
+     "reference": "GO:0000910",
+     "notes": "Gene Ontology biological-process term for cytokinesis."
+    },
+    {
+     "reference": "PMID:24895401",
+     "notes": "Tian et al. 2014 (J Cell Sci, DOI:10.1242/jcs.153429), stepwise and cooperative assembly of the Mlc1p-Iqg1p-Hof1p cytokinetic core complex in Saccharomyces cerevisiae."
+    },
+    {
+     "reference": "PMID:24413167",
+     "notes": "Naylor and Morgan 2014 (J Cell Sci, DOI:10.1242/jcs.144097), regulation of Iqg1 recruitment during actomyosin ring assembly prior to cytokinesis."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "mih_complex_assembly_and_cytokinesis",
+     "title": "Stepwise assembly of the Mlc1p-Iqg1p-Hof1p (MIH) complex at the bud neck and coordination of cytokinesis",
+     "description": "Directed causal graph linking Mlc1p, Iqg1p, and Hof1p subunits to assembly of the trimeric MIH complex (GO:0120155), actomyosin contractile ring contraction (GO:0000916), and cytokinesis (GO:0000910).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "mlc1_subunit",
+       "label": "Myosin light chain 1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR002048",
+       "component_ref": "mlc1_subunit",
+       "description": "EF-hand myosin light chain Mlc1p."
+      },
+      {
+       "node_id": "iqg1_scaffold_subunit",
+       "label": "Ras GTPase-activating-like protein IQG1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR000593",
+       "component_ref": "iqg1_scaffold_subunit",
+       "description": "IQGAP-family cytokinetic scaffold protein Iqg1p."
+      },
+      {
+       "node_id": "hof1_fbar_subunit",
+       "label": "Cytokinesis protein 2 (Hof1p)",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR031160",
+       "component_ref": "hof1_fbar_subunit",
+       "description": "F-BAR and SH3 domain cytokinesis protein Hof1p."
+      },
+      {
+       "node_id": "mih_complex_node",
+       "label": "MIH complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0120155",
+       "description": "Trimeric Mlc1p-Iqg1p-Hof1p complex at the cellular bud neck."
+      },
+      {
+       "node_id": "actomyosin_ring_contraction",
+       "label": "actomyosin contractile ring contraction",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0000916",
+       "description": "Constriction of the bud-neck actomyosin contractile ring coupled to septum synthesis."
+      },
+      {
+       "node_id": "cytokinesis_process",
+       "label": "cytokinesis",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0000910",
+       "description": "Plasma membrane ingression, septum closure, and cell separation."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "mlc1_subunit",
+       "predicate": "RO:0002436",
+       "object": "mih_complex_node",
+       "description": "Mlc1p binds the IQ motifs of Iqg1p and recruits Iqg1p to the bud neck to initiate MIH complex assembly.",
+       "evidence": [
+        {
+         "reference": "PMID:24895401",
+         "notes": "Tian et al. 2014 showed that Mlc1p binding to Iqg1p IQ motifs targets Iqg1p to the bud neck during MIH complex assembly."
+        }
+       ]
+      },
+      {
+       "subject": "iqg1_scaffold_subunit",
+       "predicate": "RO:0002436",
+       "object": "mih_complex_node",
+       "description": "Iqg1p serves as the central scaffold bridging Mlc1p and Hof1p in the trimeric MIH complex.",
+       "evidence": [
+        {
+         "reference": "PMID:24895401",
+         "notes": "Tian et al. 2014 demonstrated direct cooperative interactions of Iqg1p with both Mlc1p and Hof1p."
+        }
+       ]
+      },
+      {
+       "subject": "hof1_fbar_subunit",
+       "predicate": "RO:0002436",
+       "object": "mih_complex_node",
+       "description": "Hof1p associates with Iqg1p at the bud neck to form the complete Mlc1p-Iqg1p-Hof1p complex.",
+       "evidence": [
+        {
+         "reference": "PMID:24895401",
+         "notes": "Tian et al. 2014 established that Hof1p binds Iqg1p to complete the cytokinetic MIH core complex."
+        }
+       ]
+      },
+      {
+       "subject": "mih_complex_node",
+       "predicate": "RO:0002213",
+       "object": "actomyosin_ring_contraction",
+       "description": "The MIH complex stabilizes the actomyosin contractile ring and couples its constriction to primary septum synthesis.",
+       "evidence": [
+        {
+         "reference": "PMID:24895401",
+         "notes": "Tian et al. 2014 showed that the MIH complex coordinates actomyosin ring contraction with septum formation."
+        }
+       ]
+      },
+      {
+       "subject": "actomyosin_ring_contraction",
+       "predicate": "RO:0002213",
+       "object": "cytokinesis_process",
+       "description": "Coordinated actomyosin ring contraction and septum synthesis drive plasma membrane ingression and cytokinesis.",
+       "evidence": [
+        {
+         "reference": "GO:0120155",
+         "notes": "GO:0120155 defines the MIH complex as coordinating actomyosin ring contraction and septum synthesis to drive cytokinesis."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-25T15:35:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0120155 (MIH complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "GO:0140595",
    "label": "MIM complex",
    "structure_category": "OTHER",
@@ -294427,6 +296726,333 @@
        ]
       }
      ]
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0031500",
+   "label": "Tea1 cell-end complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A high molecular weight complex characterized in S. pombe containing the cell-end anchoring protein Tea1. This complex is transported to the cell ends by microtubules and is involved in bipolar growth and the maintennce of normal cell polarity.",
+   "definition_source": "GO:0031500",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0005875"
+   ],
+   "part_of": [
+    "GO:0000133"
+   ],
+   "components": [
+    {
+     "component_id": "tea1_kelch_scaffold_subunit",
+     "label": "Tip elongation aberrant protein 1 (Tea1)",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR015915",
+     "gene_symbols": [
+      "tea1",
+      "alp8"
+     ],
+     "stoichiometry": "Core Kelch-repeat/coiled-coil polarity marker subunit of the high-molecular-weight Tea1 complex",
+     "essentiality": "DISPENSABLE",
+     "role": "Kelch-repeat and C-terminal coiled-coil cell-end polarity protein that is delivered on growing microtubule plus ends to cell tips, where it anchors to Mod5/Tea3 and binds Tea4 to recruit the formin For3 for bipolar polarized growth.",
+     "evidence": [
+      {
+       "reference": "GO:0031500",
+       "notes": "GO:0031500 defines the Tea1 cell-end complex as a high molecular weight complex characterized in S. pombe containing the cell-end anchoring protein Tea1."
+      },
+      {
+       "reference": "PMID:9200612",
+       "notes": "Mata and Nurse 1997 (DOI:10.1016/s0092-8674(00)80279-2) demonstrated that S. pombe Tea1 is transported on microtubule plus ends to cell tips to maintain antipodal cell polarity."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P87061",
+       "protein_label": "Tip elongation aberrant protein 1",
+       "gene_symbol": "tea1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. pombe Tea1 subunit (also declared as synonym alp8) that nucleates the high-molecular-weight Tea1 cell-end complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P87061",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe tip elongation aberrant protein 1 (tea1)."
+        },
+        {
+         "reference": "PMID:9200612",
+         "notes": "Mata and Nurse 1997 characterized S. pombe Tea1 delivery by microtubules and cortical cell-end anchoring."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "tea3_anchoring_subunit",
+     "label": "Tip elongation aberrant protein 3 (Tea3)",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR015915",
+     "gene_symbols": [
+      "tea3"
+     ],
+     "stoichiometry": "Cell-end cortical anchoring partner of Tea1",
+     "essentiality": "DISPENSABLE",
+     "role": "Kelch-repeat and coiled-coil cell-end cortex protein that physically interacts with Tea1 and Mod5 at non-growing cell ends to anchor the Tea1 cell-end complex and promote bipolar growth initiation.",
+     "evidence": [
+      {
+       "reference": "PMID:12007420",
+       "notes": "Arellano et al. 2002 (DOI:10.1016/s0960-9822(02)00821-7) showed that S. pombe Tea3p is a cell-end marker that directly interacts with Tea1p to activate polarized growth."
+      },
+      {
+       "reference": "PMID:14663827",
+       "notes": "Snaith and Sawin 2003 (DOI:10.1002/yea.1054) dissected the interactions of Tea1p and Tea3p in establishing cell-end polarity complexes in S. pombe."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O14248",
+       "protein_label": "Tip elongation aberrant protein 3",
+       "gene_symbol": "tea3",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. pombe Tea3 cell-end marker subunit that binds Tea1 at the cell cortex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:O14248",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe tip elongation aberrant protein 3 (tea3)."
+        },
+        {
+         "reference": "PMID:12007420",
+         "notes": "Arellano et al. 2002 identified S. pombe Tea3p and its physical interaction with Tea1p."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "tea4_sh3_adaptor_subunit",
+     "label": "Tip elongation aberrant protein Tea4",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR053039",
+     "gene_symbols": [
+      "tea4",
+      "wsh3"
+     ],
+     "stoichiometry": "SH3-domain effector adaptor subunit of the Tea1 cell-end complex",
+     "essentiality": "DISPENSABLE",
+     "role": "SH3-domain cell-end adaptor protein (also known as Wsh3) that binds Tea1 directly in the high-molecular-weight Tea1 cell-end complex and links cortical Tea1 to the formin For3 for bipolar actin cable assembly.",
+     "evidence": [
+      {
+       "reference": "PMID:15936270",
+       "notes": "Tatebe et al. 2005 (DOI:10.1016/j.cub.2005.04.061) identified Wsh3/Tea4 as a novel cell-end factor that binds Tea1 and is essential for bipolar Tea1 function and cell polarity in S. pombe."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O60132",
+       "protein_label": "Tip elongation aberrant protein Tea4",
+       "gene_symbol": "tea4",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-25",
+       "role": "Reviewed S. pombe Tea4 subunit (also declared as synonym wsh3) that associates with Tea1 in the cell-end polarity complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:O60132",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe tip elongation aberrant protein Tea4."
+        },
+        {
+         "reference": "PMID:15936270",
+         "notes": "Tatebe et al. 2005 characterized S. pombe Wsh3/Tea4 as a direct binding partner of Tea1 at cell ends."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4895",
+     "taxon_label": "Schizosaccharomyces",
+     "presence": "COMMON",
+     "note": "Characterized in fission yeasts (Schizosaccharomyces pombe) as the microtubule-delivered cortical cell-end polarity complex.",
+     "reference": "PMID:9200612"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:284812",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
+     "note": "Reference fission yeast strain in which the high-molecular-weight Tea1 cell-end complex was identified and functionally dissected.",
+     "reference": "PMID:9200612"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "establishment_or_maintenance_of_cell_polarity",
+     "label": "establishment or maintenance of cell polarity",
+     "grounding": "GO:0007163",
+     "description": "Delivered on microtubule plus ends to the cell cortex at both cell tips, where Tea1 associates with Tea3 and Tea4 to mark cell ends, recruit polarity effectors, and maintain normal bipolar cell growth.",
+     "evidence": [
+      {
+       "reference": "GO:0031500",
+       "notes": "GO:0031500 defines the Tea1 cell-end complex as transported to cell ends by microtubules and involved in bipolar growth and maintenance of normal cell polarity."
+      },
+      {
+       "reference": "PMID:9200612",
+       "notes": "Mata and Nurse 1997 showed that microtubule-mediated delivery of Tea1 to cell ends is required to establish and maintain antipodal cell polarity in S. pombe."
+      },
+      {
+       "reference": "PMID:15936270",
+       "notes": "Tatebe et al. 2005 demonstrated that Tea4/Wsh3 binds Tea1 at cell ends to promote bipolar growth and maintain cell polarity."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0031500",
+     "notes": "Gene Ontology cellular-component term for Tea1 cell-end complex."
+    },
+    {
+     "reference": "GO:0000133",
+     "notes": "Gene Ontology cellular-component term for polarisome."
+    },
+    {
+     "reference": "GO:0005875",
+     "notes": "Gene Ontology parent term for microtubule associated complex."
+    },
+    {
+     "reference": "GO:0007163",
+     "notes": "Gene Ontology biological-process term for establishment or maintenance of cell polarity."
+    },
+    {
+     "reference": "PMID:9200612",
+     "notes": "Mata and Nurse 1997 (Cell, DOI:10.1016/s0092-8674(00)80279-2), primary study establishing Tea1 and microtubule-mediated delivery to fission yeast cell ends."
+    },
+    {
+     "reference": "PMID:12007420",
+     "notes": "Arellano et al. 2002 (Curr Biol, DOI:10.1016/s0960-9822(02)00821-7), characterization of Tea3p as a cell-end marker interacting with Tea1p."
+    },
+    {
+     "reference": "PMID:15936270",
+     "notes": "Tatebe et al. 2005 (Curr Biol, DOI:10.1016/j.cub.2005.04.061), identification of Wsh3/Tea4 as an essential binding partner of Tea1 in bipolar cell-end polarity."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "tea1_cell_end_complex_polarity_mechanism",
+     "title": "Assembly of the Tea1 cell-end complex at fission yeast cell tips and maintenance of bipolar cell polarity",
+     "description": "Directed causal graph linking Tea1, Tea3, and Tea4 subunits to assembly of the Tea1 cell-end complex (GO:0031500) within the polarisome (GO:0000133) and establishment or maintenance of cell polarity (GO:0007163).",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "tea1_kelch_scaffold_subunit",
+       "label": "Tip elongation aberrant protein 1 (Tea1)",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR015915",
+       "component_ref": "tea1_kelch_scaffold_subunit",
+       "description": "Kelch-repeat cell-end polarity marker protein Tea1."
+      },
+      {
+       "node_id": "tea3_anchoring_subunit",
+       "label": "Tip elongation aberrant protein 3 (Tea3)",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR015915",
+       "component_ref": "tea3_anchoring_subunit",
+       "description": "Cortical cell-end anchoring partner Tea3."
+      },
+      {
+       "node_id": "tea4_sh3_adaptor_subunit",
+       "label": "Tip elongation aberrant protein Tea4",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR053039",
+       "component_ref": "tea4_sh3_adaptor_subunit",
+       "description": "SH3-domain cell-end effector adaptor Tea4 (Wsh3)."
+      },
+      {
+       "node_id": "tea1_cell_end_complex_node",
+       "label": "Tea1 cell-end complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0031500",
+       "description": "High-molecular-weight Tea1 cell-end polarity complex."
+      },
+      {
+       "node_id": "cell_polarity_maintenance",
+       "label": "establishment or maintenance of cell polarity",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0007163",
+       "description": "Bipolar cell growth and maintenance of normal antipodal cell polarity."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "tea1_kelch_scaffold_subunit",
+       "predicate": "RO:0002436",
+       "object": "tea1_cell_end_complex_node",
+       "description": "Tea1 is delivered on microtubule plus ends to cell tips where it nucleates the high-molecular-weight Tea1 cell-end complex.",
+       "evidence": [
+        {
+         "reference": "PMID:9200612",
+         "notes": "Mata and Nurse 1997 demonstrated microtubule-dependent delivery of Tea1 to the cell ends."
+        }
+       ]
+      },
+      {
+       "subject": "tea3_anchoring_subunit",
+       "predicate": "RO:0002436",
+       "object": "tea1_cell_end_complex_node",
+       "description": "Tea3 binds cortical Tea1 at cell tips to anchor the Tea1 cell-end complex and promote bipolar growth.",
+       "evidence": [
+        {
+         "reference": "PMID:12007420",
+         "notes": "Arellano et al. 2002 showed that Tea3p directly interacts with Tea1p at the cell ends."
+        }
+       ]
+      },
+      {
+       "subject": "tea4_sh3_adaptor_subunit",
+       "predicate": "RO:0002436",
+       "object": "tea1_cell_end_complex_node",
+       "description": "Tea4 (Wsh3) directly binds Tea1 within the cell-end complex to couple cortical Tea1 to downstream polarity effectors.",
+       "evidence": [
+        {
+         "reference": "PMID:15936270",
+         "notes": "Tatebe et al. 2005 showed that Wsh3/Tea4 binds Tea1 at cell ends."
+        }
+       ]
+      },
+      {
+       "subject": "tea1_cell_end_complex_node",
+       "predicate": "RO:0002213",
+       "object": "cell_polarity_maintenance",
+       "description": "The cortical Tea1 cell-end complex marks antipodal cell tips and recruits polarity machinery to maintain normal bipolar cell polarity.",
+       "evidence": [
+        {
+         "reference": "GO:0031500",
+         "notes": "GO:0031500 defines the Tea1 cell-end complex as involved in bipolar growth and the maintenance of normal cell polarity."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-25T15:35:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0031500 (Tea1 cell-end complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
