@@ -59,6 +59,10 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2417
     disposition: Extended validate_causal_graphs() and added validate_component_protein_examples() in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics, write_validated_structure, and scripts/validate_strict.py); verified 0 errors across all 985 structure records and added unit and corpus-integrity tests in tests/test_validator.py and tests/test_corpus_integrity.py.
+  - task_id: cellstructuremech-infra-0006
+    summary: Extend src/cellstructuremech/validation/validator.py to check causal_graphs component_ref grounding propagation, CURATED_CAUSAL_GRAPH id targets, and discussions prose citation evidence
+    status: open
+    issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2428
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -123,6 +127,18 @@ tasks:
 - **Desired outcome**: Extend `src/cellstructuremech/validation/validator.py` (`validate_record_semantics` / `validate_causal_graphs`) to flag `CausalNode` items grounded to `GO:` / `cellstructuremech:` (or referencing `PROTEIN_COMPLEX` components) that use `node_type: GENE_OR_PROTEIN`, and flag `components[].protein_examples` entries whose `gene_symbol` is neither in a non-empty parent `components[].gene_symbols` list nor disclosed in `protein_examples[].role`.
 - **Resolution**: Extended `validate_causal_graphs()` and added `validate_component_protein_examples()` in `src/cellstructuremech/validation/validator.py` (wired into `validate_record_semantics()`, `write_validated_structure()`, and `scripts/validate_strict.py`), verified 0 errors across all 985 corpus records, and added unit and corpus-integrity tests in `tests/test_validator.py` and `tests/test_corpus_integrity.py`.
 - **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `tests/test_validator.py`, `tests/test_corpus_integrity.py`, `reviews/structured/20261023T230501Z-clathrin-coat-ap2-causal-node-type/review.yaml`, `reviews/structured/20261023T230502Z-appendage-category-review/review.yaml`, `reviews/structured/20261023T230503Z-cytoskeleton-category-review/review.yaml`, `reviews/structured/20261023T230505Z-membrane-organelle-category-review/review.yaml`, `reviews/structured/20261023T230506Z-microcompartment-category-review/review.yaml`
+
+### `cellstructuremech-infra-0006` — Extend `src/cellstructuremech/validation/validator.py` to check `causal_graphs` `component_ref` grounding propagation, `CURATED_CAUSAL_GRAPH` `id` targets, and `discussions` prose citation evidence
+
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 3, Stage 4 (`record_review`)
+- **Issue**: https://github.com/CultureBotAI/CellStructureMech/issues/2428
+- **Status**: `open`
+- **Priority**: P2
+- **Dependencies**: None
+- **Observation**: During the Cycle 3 Stage 4 whole-corpus audit of all 993 records: (1) `src/cellstructuremech/validation/validator.py` (`validate_causal_graphs`) does not check whether a `CausalNode` carrying a `component_ref` omits `grounding` when the referenced `components[]` item carries a verified ontology `grounding` (affecting 39 nodes across 21 records in `appendage`, `energy_complex`, `envelope`, `membrane_organelle`, `other`, `ribonucleoprotein`, `secretion_system`, and `spore`); (2) `validator.py` does not check whether `curation_history` entries with `action: CURATED_CAUSAL_GRAPH` reference a `causal_graphs` slug (`graph_id`) in `summary`/`notes` that no longer matches any `causal_graphs[].id` in the record (affecting 9 records across `cytoskeleton`, `division_machinery`, `energy_complex`, `other`, and `ribonucleoprotein`); and (3) `validator.py` (`validate_discussion_issue_links`) checks `#NNN` issue mentions in `discussions` prose against `discussion.evidence`, but does not check whether `DOI:` or `PMID:` citations in `discussions` prose (`prompt`, `rationale`, `resolution_note`) are backed by matching structured `discussion.evidence` items (affecting 3 records: `basal_body_cartwheel.yaml`, `basal_body_cartwheel_inner_density.yaml`, and `proteasome_storage_granule.yaml`).
+- **Desired outcome**: Extend `src/cellstructuremech/validation/validator.py` (`validate_record_semantics` / `validate_causal_graphs` / `validate_discussion_issue_links`) to flag `CausalNode` items with `component_ref` lacking `grounding` when the referenced component has `grounding`, `CURATED_CAUSAL_GRAPH` `curation_history` summaries/notes referencing nonexistent `causal_graphs[].id` slugs, and `DOI:`/`PMID:` citations in `discussions` prose lacking matching structured `discussion.evidence` entries.
+- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `reviews/structured/20261025T071001Z-static-microtubule-bundle-reference-attribution/review.yaml`, `reviews/structured/20261025T071002Z-primosome-complex-pmid-citation-misattribution/review.yaml`, `reviews/structured/20261025T071003Z-appendage-category-review/review.yaml`, `reviews/structured/20261025T071004Z-cytoskeleton-category-review/review.yaml`, `reviews/structured/20261025T071005Z-division-machinery-category-review/review.yaml`, `reviews/structured/20261025T071006Z-energy-complex-category-review/review.yaml`, `reviews/structured/20261025T071007Z-envelope-category-review/review.yaml`, `reviews/structured/20261025T071008Z-inclusion-category-review/review.yaml`, `reviews/structured/20261025T071009Z-membrane-organelle-category-review/review.yaml`, `reviews/structured/20261025T071010Z-other-category-review/review.yaml`, `reviews/structured/20261025T071011Z-ribonucleoprotein-category-review/review.yaml`, `reviews/structured/20261025T071012Z-secretion-system-category-review/review.yaml`, `reviews/structured/20261025T071013Z-spore-category-review/review.yaml`
+
 
 
 

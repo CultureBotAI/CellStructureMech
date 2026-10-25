@@ -1,0 +1,619 @@
+schema_version: 1.0.0
+review_id: 20261025T071007Z-envelope-category-review
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: 'Category review of data/structures/envelope/ (20 records): S-layer causal-graph
+  slh_domain component_ref grounding propagation'
+started_at: '2026-10-25T06:56:00Z'
+finished_at: '2026-10-25T07:10:07Z'
+reviewer:
+  identity: antigravity-c3s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 3 Stage 4 record_review against committed
+    git revision 83ec9d5184fb203d87d8c3bd7043792d385193bf without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
+scientific_review: true
+summary: 'Full-coverage category review of all 20 records in data/structures/envelope/
+  verified distinct bacterial, archaeal, fungal, and protist cell-envelope boundaries.
+  One minor causal-graph grounding gap was identified in s_layer.yaml (GO:0030115):
+  causal_graphs[0] node slh_domain (component_ref: slh_domain) omits the verified
+  InterPro:IPR001119 grounding declared on components#slh_domain.'
+source:
+  git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/envelope/capsule.yaml
+    sha256: b50823333417fed66efe064e2a21217adaebf87715ca1d22baf5010cdca87b47
+    role: target
+  - path: data/structures/envelope/cell_outer_membrane.yaml
+    sha256: 6a21a7409a3e93aa290cbff61f4734629b927f04a33c469e6166ef1b24673fab
+    role: target
+  - path: data/structures/envelope/cell_septum.yaml
+    sha256: feb3124957603d095f40d56b031828b135cdbd6b7d61f21c8bc6ec1d401b7e54
+    role: target
+  - path: data/structures/envelope/cellular_bud_membrane.yaml
+    sha256: e90c632bd6b0247beed83ee5c7411f2083dae19765e149ae2475d4e35455127f
+    role: target
+  - path: data/structures/envelope/coccolith.yaml
+    sha256: 8932b1ad635cf2e272c74fb8d4f00e6036b851ec2baa3daa3b5c3b52cc6979fa
+    role: target
+  - path: data/structures/envelope/coccosphere.yaml
+    sha256: b72167a6093a734226fc2c9458c475f7a05120e8d2077d5f7b7007ee0a5cd299
+    role: target
+  - path: data/structures/envelope/division_septum.yaml
+    sha256: 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80
+    role: target
+  - path: data/structures/envelope/dolipore_septum.yaml
+    sha256: 3b7c1413156cdbbd98ab7dc441ba3c88f993d109ce4649ca5fb71952353dc8ca
+    role: target
+  - path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    sha256: cf0490c93ccba7b66f5f9fc3f6e108981620ba71eb7635fb3c7582dd7dfb1a1f
+    role: target
+  - path: data/structures/envelope/fungal_type_cell_wall.yaml
+    sha256: 4baef5e8cd747edc51bba48a001e2284ca225b28a25d153629006ef1ab782f64
+    role: target
+  - path: data/structures/envelope/glycocalyx.yaml
+    sha256: 4ebec54781652733dfc62c3ee5ef24695e6065aea361cc672d6e8a99f82840d8
+    role: target
+  - path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    sha256: 83183223bc8eec87634604b8ecbd07afac5f8b31ef3970fb0c4911b7e98b6b69
+    role: target
+  - path: data/structures/envelope/mycolate_outer_membrane.yaml
+    sha256: f120a57e032cb65c20843bb2847f7d9647c1fc1d70a011f2853dbe7670584881
+    role: target
+  - path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+    sha256: f1027d233b3287f4a8118b17a7570fdba36acb7cc14b2ac0b766fb0c8985ea2f
+    role: target
+  - path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    sha256: 239aa572fa480afd0f360740541527524455ce476301122cb9edd0d05c52a76f
+    role: target
+  - path: data/structures/envelope/periplasmic_space.yaml
+    sha256: 12236748d4e23ed9023aafe5ef5c9f5c396a57d577c6659f5bb76c4cbe62ad98
+    role: target
+  - path: data/structures/envelope/plasma_membrane.yaml
+    sha256: 20619b6099645731d2a8ee641c76ec5130b747bac304fb61ccccfd0b5693d25d
+    role: target
+  - path: data/structures/envelope/porous_cell_septum.yaml
+    sha256: 71ac61741f785e2f38b6a90e7463457e98ab432d9625ef08236e10f4787dd56f
+    role: target
+  - path: data/structures/envelope/s_layer.yaml
+    sha256: 69d847bc6803766499ff12fa44e69ac239cb35fb75cb79cb4e6d7d4a6d24c4d0
+    role: target
+  - path: data/structures/envelope/slime_layer.yaml
+    sha256: e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Full-cohort review of all 20 CellStructureRecord YAML files under data/structures/envelope/.
+  selection: Complete folder cohort data/structures/envelope/*.yaml in the frozen
+    993-record Cycle 3 Stage 4 inventory.
+  coverage: full
+  population_size: 20
+  reviewed_target_ids:
+  - GO:0042603
+  - GO:0009279
+  - GO:0030428
+  - GO:0033101
+  - cellstructuremech:coccolith
+  - cellstructuremech:coccosphere
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0009276
+  - GO:0036407
+  - GO:0030288
+  - GO:0009274
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030115
+  - GO:0030114
+targets:
+- target_id: GO:0042603
+  path: data/structures/envelope/capsule.yaml
+  label: capsule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b50823333417fed66efe064e2a21217adaebf87715ca1d22baf5010cdca87b47
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/capsule.yaml
+    role: maintained_record
+- target_id: GO:0009279
+  path: data/structures/envelope/cell_outer_membrane.yaml
+  label: cell outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6a21a7409a3e93aa290cbff61f4734629b927f04a33c469e6166ef1b24673fab
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/cell_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0030428
+  path: data/structures/envelope/cell_septum.yaml
+  label: cell septum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: feb3124957603d095f40d56b031828b135cdbd6b7d61f21c8bc6ec1d401b7e54
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/cell_septum.yaml
+    role: maintained_record
+- target_id: GO:0033101
+  path: data/structures/envelope/cellular_bud_membrane.yaml
+  label: cellular bud membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e90c632bd6b0247beed83ee5c7411f2083dae19765e149ae2475d4e35455127f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/cellular_bud_membrane.yaml
+    role: maintained_record
+- target_id: cellstructuremech:coccolith
+  path: data/structures/envelope/coccolith.yaml
+  label: coccolith
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8932b1ad635cf2e272c74fb8d4f00e6036b851ec2baa3daa3b5c3b52cc6979fa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/coccolith.yaml
+    role: maintained_record
+- target_id: cellstructuremech:coccosphere
+  path: data/structures/envelope/coccosphere.yaml
+  label: coccosphere
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b72167a6093a734226fc2c9458c475f7a05120e8d2077d5f7b7007ee0a5cd299
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/coccosphere.yaml
+    role: maintained_record
+- target_id: GO:0000935
+  path: data/structures/envelope/division_septum.yaml
+  label: division septum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 956d96777f95a2db040b1e94d2f2d9be78932ef0dac1c49cefd6b095a148ca80
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/division_septum.yaml
+    role: maintained_record
+- target_id: GO:0000937
+  path: data/structures/envelope/dolipore_septum.yaml
+  label: dolipore septum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3b7c1413156cdbbd98ab7dc441ba3c88f993d109ce4649ca5fb71952353dc8ca
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/dolipore_septum.yaml
+    role: maintained_record
+- target_id: GO:0090512
+  path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+  label: eisosome membrane domain/MCC
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cf0490c93ccba7b66f5f9fc3f6e108981620ba71eb7635fb3c7582dd7dfb1a1f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/eisosome_membrane_domain_mcc.yaml
+    role: maintained_record
+- target_id: GO:0009277
+  path: data/structures/envelope/fungal_type_cell_wall.yaml
+  label: fungal-type cell wall
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4baef5e8cd747edc51bba48a001e2284ca225b28a25d153629006ef1ab782f64
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/fungal_type_cell_wall.yaml
+    role: maintained_record
+- target_id: GO:0030112
+  path: data/structures/envelope/glycocalyx.yaml
+  label: glycocalyx
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4ebec54781652733dfc62c3ee5ef24695e6065aea361cc672d6e8a99f82840d8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/glycocalyx.yaml
+    role: maintained_record
+- target_id: GO:0009276
+  path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+  label: Gram-negative-bacterium-type cell wall
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 83183223bc8eec87634604b8ecbd07afac5f8b31ef3970fb0c4911b7e98b6b69
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/gram_negative_bacterium_type_cell_wall.yaml
+    role: maintained_record
+- target_id: GO:0036407
+  path: data/structures/envelope/mycolate_outer_membrane.yaml
+  label: mycolate outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f120a57e032cb65c20843bb2847f7d9647c1fc1d70a011f2853dbe7670584881
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/mycolate_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0030288
+  path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+  label: outer membrane-bounded periplasmic space
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f1027d233b3287f4a8118b17a7570fdba36acb7cc14b2ac0b766fb0c8985ea2f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/outer_membrane_bounded_periplasmic_space.yaml
+    role: maintained_record
+- target_id: GO:0009274
+  path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  label: peptidoglycan-based cell wall
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 239aa572fa480afd0f360740541527524455ce476301122cb9edd0d05c52a76f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+    role: maintained_record
+- target_id: GO:0042597
+  path: data/structures/envelope/periplasmic_space.yaml
+  label: periplasmic space
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 12236748d4e23ed9023aafe5ef5c9f5c396a57d577c6659f5bb76c4cbe62ad98
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/periplasmic_space.yaml
+    role: maintained_record
+- target_id: GO:0005886
+  path: data/structures/envelope/plasma_membrane.yaml
+  label: plasma membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 20619b6099645731d2a8ee641c76ec5130b747bac304fb61ccccfd0b5693d25d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/plasma_membrane.yaml
+    role: maintained_record
+- target_id: GO:0000934
+  path: data/structures/envelope/porous_cell_septum.yaml
+  label: porous cell septum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 71ac61741f785e2f38b6a90e7463457e98ab432d9625ef08236e10f4787dd56f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/porous_cell_septum.yaml
+    role: maintained_record
+- target_id: GO:0030115
+  path: data/structures/envelope/s_layer.yaml
+  label: S-layer
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 69d847bc6803766499ff12fa44e69ac239cb35fb75cb79cb4e6d7d4a6d24c4d0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained_record
+- target_id: GO:0030114
+  path: data/structures/envelope/slime_layer.yaml
+  label: slime layer
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/slime_layer.yaml
+    role: maintained_record
+checks:
+- check_id: strict_envelope
+  name: Strict corpus validation covering envelope cohort
+  status: passed
+  required: true
+  summary: All 20 envelope records pass strict LinkML and semantic validation.
+  target_ids:
+  - GO:0042603
+  - GO:0009279
+  - GO:0030428
+  - GO:0033101
+  - cellstructuremech:coccolith
+  - cellstructuremech:coccosphere
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0009276
+  - GO:0036407
+  - GO:0030288
+  - GO:0009274
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030115
+  - GO:0030114
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_envelope
+- check_id: labels_envelope
+  name: ID-label correspondence across envelope cohort
+  status: passed
+  required: true
+  summary: All ontology ID-label pairs in envelope records correspond to canonical
+    labels.
+  target_ids:
+  - GO:0042603
+  - GO:0009279
+  - GO:0030428
+  - GO:0033101
+  - cellstructuremech:coccolith
+  - cellstructuremech:coccosphere
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0009276
+  - GO:0036407
+  - GO:0030288
+  - GO:0009274
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030115
+  - GO:0030114
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_labels_envelope
+evidence:
+- evidence_id: ev_strict_envelope
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict receipt
+  accessed_at: '2026-10-25T07:10:07Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 993 records including all 20 envelope
+    records.
+  snapshot_sha256: fc80872aed828ea24abbaf1ff66194605d09857b0bf0773189fc076d223594eb
+- evidence_id: ev_labels_envelope
+  kind: validation
+  reference: scripts/validate_id_label_correspondence.py
+  locator: labels receipt
+  accessed_at: '2026-10-25T07:10:07Z'
+  support: supports
+  summary: validate_id_label_correspondence.py exited 0 across all ontology targets.
+  snapshot_sha256: 4bb207ccdd3216a741b1ca17643c1b57a2f2c68af02138decedfcd4fd19c8b3a
+- evidence_id: ev_env_slayer_grounding
+  kind: record_content
+  reference: data/structures/envelope/s_layer.yaml
+  locator: components#slh_domain vs causal_graphs[0].nodes[1]
+  accessed_at: '2026-10-25T07:03:00Z'
+  support: supports
+  summary: 's_layer.yaml components#slh_domain declares grounding: InterPro:IPR001119
+    whereas causal_graphs[0] node slh_domain omits grounding.'
+  quote: "- id: slh_domain\n    label: S-layer homology (SLH) anchoring domain\n \
+    \   node_type: GENE_OR_PROTEIN\n    component_ref: slh_domain"
+  snapshot_sha256: 69d847bc6803766499ff12fa44e69ac239cb35fb75cb79cb4e6d7d4a6d24c4d0
+assessments:
+- assessment_id: assess_envelope_cohort
+  area: scope
+  topic: Identity, boundaries, causal graphs, and ontology grounding across data/structures/envelope/
+  outcome: supported
+  summary: All 20 records in data/structures/envelope/ represent distinct microbial
+    cell structures or subcomplexes with valid hierarchy links and verified UniProtKB
+    protein examples.
+  target_ids:
+  - GO:0042603
+  - GO:0009279
+  - GO:0030428
+  - GO:0033101
+  - cellstructuremech:coccolith
+  - cellstructuremech:coccosphere
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0009276
+  - GO:0036407
+  - GO:0030288
+  - GO:0009274
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030115
+  - GO:0030114
+  evidence_ids:
+  - ev_strict_envelope
+  - ev_labels_envelope
+- assessment_id: assess_env_slayer_grounding
+  area: graph
+  topic: Causal-graph component_ref grounding propagation in s_layer.yaml
+  outcome: concern
+  summary: causal_graphs[0] node slh_domain in s_layer.yaml omits InterPro:IPR001119
+    from components#slh_domain.
+  target_ids:
+  - GO:0030115
+  evidence_ids:
+  - ev_env_slayer_grounding
+findings:
+- finding_id: F1
+  issue_key: envelope-s-layer-causal-node-component-ref-grounding
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: s_layer.yaml causal_graphs[0] node slh_domain omits verified InterPro:IPR001119
+    grounding from components#slh_domain
+  description: 'In data/structures/envelope/s_layer.yaml (GO:0030115), components#slh_domain
+    declares grounding: InterPro:IPR001119 (S-layer homology domain), whereas causal_graphs[0]
+    node slh_domain (component_ref: slh_domain) omits grounding.'
+  target_ids:
+  - GO:0030115
+  field_paths:
+  - causal_graphs[0].nodes[1].grounding
+  evidence_ids:
+  - ev_env_slayer_grounding
+  rule_id: docs/SCHEMA.md:CausalNode-grounding
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained_record
+  tags:
+  - causal-graphs
+  - grounding
+  - component-ref
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: 'Propagate grounding: InterPro:IPR001119 (grounding_label: ''S-layer
+    homology domain'') to causal_graphs[0].nodes[1] (slh_domain) in data/structures/envelope/s_layer.yaml
+    and record the update in history/records/s_layer/.'
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030115
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py data/structures/envelope/s_layer.yaml
+    --out /tmp/slayer_failures.tsv
+  - .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0042603
+  - GO:0009279
+  - GO:0030428
+  - GO:0033101
+  - cellstructuremech:coccolith
+  - cellstructuremech:coccosphere
+  - GO:0000935
+  - GO:0000937
+  - GO:0090512
+  - GO:0009277
+  - GO:0030112
+  - GO:0009276
+  - GO:0036407
+  - GO:0030288
+  - GO:0009274
+  - GO:0042597
+  - GO:0005886
+  - GO:0000934
+  - GO:0030115
+  - GO:0030114
+  rationale: All 20 records in data/structures/envelope/ represent distinct bacterial,
+    archaeal, fungal, or protist cell-wall and envelope structures.
+  evidence_ids:
+  - ev_strict_envelope
+  - ev_labels_envelope
+limitations:
+- Record edits for envelope cohort findings are queued for Cycle 3 Stage 5 (resolve_review_findings).
+tags:
+- stage4
+- category-review
+- envelope

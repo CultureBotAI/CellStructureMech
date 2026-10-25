@@ -1,0 +1,5232 @@
+# Category review of data/structures/membrane_organelle/ (224 records): causal-graph component_ref grounding propagation in magnetosome and chromatophore membrane
+
+- Review: 20261025T071009Z-membrane-organelle-category-review
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-25T06:56:00Z
+- Finished UTC: 2026-10-25T07:10:09Z
+- Reviewer: antigravity-c3s4-record-review (independent)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Full-coverage category review of all 224 records in data/structures/membrane_organelle/ verified distinct membrane-bounded organelle and membrane-subcompartment boundaries and confirmed all Cycle 2 findings in this cohort remain resolved. One minor cohort graph-grounding gap was identified across 2 records (magnetosome.yaml and plasma_membrane_derived_chromatophore_membrane.yaml): 3 causal_graphs nodes with component_ref (crystal, rc_lh1_pufx, cytochrome_bc1) omit the verified CHEBI: or cellstructuremech: grounding declared on their referenced components[] entries.
+
+## Scope And Provenance
+
+Full-cohort review of all 224 CellStructureRecord YAML files under data/structures/membrane_organelle/.
+
+Selection: Complete folder cohort data/structures/membrane_organelle/*.yaml in the frozen 993-record Cycle 3 Stage 4 inventory.
+Coverage: full; 224 reviewed / 224 in the declared population.
+Source: git_commit at Git base 83ec9d5184fb203d87d8c3bd7043792d385193bf.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0020022 | data/structures/membrane_organelle/acidocalcisome.yaml | maintained | acidocalcisome |
+| GO:0033985 | data/structures/membrane_organelle/acidocalcisome_lumen.yaml | maintained | acidocalcisome lumen |
+| GO:0033102 | data/structures/membrane_organelle/acidocalcisome_membrane.yaml | maintained | acidocalcisome membrane |
+| cellstructuremech:actinophryid_extrusome | data/structures/membrane_organelle/actinophryid_extrusome.yaml | maintained | actinophryid extrusome |
+| GO:0044222 | data/structures/membrane_organelle/anammoxosome.yaml | maintained | anammoxosome |
+| cellstructuremech:anammoxosome_membrane | data/structures/membrane_organelle/anammoxosome_membrane.yaml | maintained | anammoxosome membrane |
+| GO:0020026 | data/structures/membrane_organelle/apicomplexan_dense_granule.yaml | maintained | apicomplexan dense granule |
+| GO:0030668 | data/structures/membrane_organelle/apicomplexan_dense_granule_membrane.yaml | maintained | apicomplexan dense granule membrane |
+| GO:0020011 | data/structures/membrane_organelle/apicoplast.yaml | maintained | apicoplast |
+| GO:0160211 | data/structures/membrane_organelle/apicoplast_membrane.yaml | maintained | apicoplast membrane |
+| GO:0005776 | data/structures/membrane_organelle/autophagosome.yaml | maintained | autophagosome |
+| GO:0034423 | data/structures/membrane_organelle/autophagosome_lumen.yaml | maintained | autophagosome lumen |
+| GO:0000421 | data/structures/membrane_organelle/autophagosome_membrane.yaml | maintained | autophagosome membrane |
+| GO:0030075 | data/structures/membrane_organelle/bacterial_thylakoid.yaml | maintained | bacterial thylakoid |
+| GO:0045009 | data/structures/membrane_organelle/chitosome.yaml | maintained | chitosome |
+| GO:0009507 | data/structures/membrane_organelle/chloroplast.yaml | maintained | chloroplast |
+| GO:0009941 | data/structures/membrane_organelle/chloroplast_envelope.yaml | maintained | chloroplast envelope |
+| GO:0009706 | data/structures/membrane_organelle/chloroplast_inner_membrane.yaml | maintained | chloroplast inner membrane |
+| GO:0031972 | data/structures/membrane_organelle/chloroplast_intermembrane_space.yaml | maintained | chloroplast intermembrane space |
+| GO:0031969 | data/structures/membrane_organelle/chloroplast_membrane.yaml | maintained | chloroplast membrane |
+| GO:0009707 | data/structures/membrane_organelle/chloroplast_outer_membrane.yaml | maintained | chloroplast outer membrane |
+| GO:0009570 | data/structures/membrane_organelle/chloroplast_stroma.yaml | maintained | chloroplast stroma |
+| GO:0009534 | data/structures/membrane_organelle/chloroplast_thylakoid.yaml | maintained | chloroplast thylakoid |
+| GO:0009543 | data/structures/membrane_organelle/chloroplast_thylakoid_lumen.yaml | maintained | chloroplast thylakoid lumen |
+| GO:0009535 | data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml | maintained | chloroplast thylakoid membrane |
+| GO:0046858 | data/structures/membrane_organelle/chlorosome.yaml | maintained | chlorosome |
+| GO:0033105 | data/structures/membrane_organelle/chlorosome_envelope.yaml | maintained | chlorosome envelope |
+| GO:0020018 | data/structures/membrane_organelle/ciliary_pocket_membrane.yaml | maintained | ciliary pocket membrane |
+| GO:0005801 | data/structures/membrane_organelle/cis_golgi_network.yaml | maintained | cis-Golgi network |
+| GO:0033106 | data/structures/membrane_organelle/cis_golgi_network_membrane.yaml | maintained | cis-Golgi network membrane |
+| GO:0045334 | data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle.yaml | maintained | clathrin-coated endocytic vesicle |
+| GO:0106176 | data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_lumen.yaml | maintained | clathrin-coated endocytic vesicle lumen |
+| GO:0030669 | data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_membrane.yaml | maintained | clathrin-coated endocytic vesicle membrane |
+| GO:0030136 | data/structures/membrane_organelle/clathrin_coated_vesicle.yaml | maintained | clathrin-coated vesicle |
+| cellstructuremech:clathrin_coated_vesicle_lumen | data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml | maintained | clathrin-coated vesicle lumen |
+| GO:0030665 | data/structures/membrane_organelle/clathrin_coated_vesicle_membrane.yaml | maintained | clathrin-coated vesicle membrane |
+| GO:0030135 | data/structures/membrane_organelle/coated_vesicle.yaml | maintained | coated vesicle |
+| GO:0030662 | data/structures/membrane_organelle/coated_vesicle_membrane.yaml | maintained | coated vesicle membrane |
+| cellstructuremech:coccolith_vesicle | data/structures/membrane_organelle/coccolith_vesicle.yaml | maintained | coccolith vesicle |
+| GO:0031164 | data/structures/membrane_organelle/contractile_vacuolar_membrane.yaml | maintained | contractile vacuolar membrane |
+| GO:0000331 | data/structures/membrane_organelle/contractile_vacuole.yaml | maintained | contractile vacuole |
+| GO:0062159 | data/structures/membrane_organelle/contractile_vacuole_complex.yaml | maintained | contractile vacuole complex |
+| cellstructuremech:contractile_vacuole_lumen | data/structures/membrane_organelle/contractile_vacuole_lumen.yaml | maintained | contractile vacuole lumen |
+| GO:0031913 | data/structures/membrane_organelle/contractile_vacuole_pore.yaml | maintained | contractile vacuole pore |
+| GO:0030137 | data/structures/membrane_organelle/copi_coated_vesicle.yaml | maintained | COPI-coated vesicle |
+| cellstructuremech:copi_coated_vesicle_lumen | data/structures/membrane_organelle/copi_coated_vesicle_lumen.yaml | maintained | COPI-coated vesicle lumen |
+| GO:0030663 | data/structures/membrane_organelle/copi_coated_vesicle_membrane.yaml | maintained | COPI-coated vesicle membrane |
+| GO:0030134 | data/structures/membrane_organelle/copii_coated_er_to_golgi_transport_vesicle.yaml | maintained | COPII-coated ER to Golgi transport vesicle |
+| cellstructuremech:copii_coated_vesicle_lumen | data/structures/membrane_organelle/copii_coated_vesicle_lumen.yaml | maintained | COPII-coated vesicle lumen |
+| GO:0033107 | data/structures/membrane_organelle/cvt_vesicle.yaml | maintained | Cvt vesicle |
+| cellstructuremech:cvt_vesicle_lumen | data/structures/membrane_organelle/cvt_vesicle_lumen.yaml | maintained | Cvt vesicle lumen |
+| GO:0033110 | data/structures/membrane_organelle/cvt_vesicle_membrane.yaml | maintained | Cvt vesicle membrane |
+| GO:0009842 | data/structures/membrane_organelle/cyanelle.yaml | maintained | cyanelle |
+| GO:0033112 | data/structures/membrane_organelle/cyanelle_envelope.yaml | maintained | cyanelle envelope |
+| GO:0036012 | data/structures/membrane_organelle/cyanelle_inner_membrane.yaml | maintained | cyanelle inner membrane |
+| GO:0036014 | data/structures/membrane_organelle/cyanelle_intermembrane_space.yaml | maintained | cyanelle intermembrane space |
+| GO:0033113 | data/structures/membrane_organelle/cyanelle_membrane.yaml | maintained | cyanelle membrane |
+| GO:0036013 | data/structures/membrane_organelle/cyanelle_outer_membrane.yaml | maintained | cyanelle outer membrane |
+| GO:0034060 | data/structures/membrane_organelle/cyanelle_stroma.yaml | maintained | cyanelle stroma |
+| GO:0009843 | data/structures/membrane_organelle/cyanelle_thylakoid.yaml | maintained | cyanelle thylakoid |
+| GO:0033114 | data/structures/membrane_organelle/cyanelle_thylakoid_lumen.yaml | maintained | cyanelle thylakoid lumen |
+| GO:0033115 | data/structures/membrane_organelle/cyanelle_thylakoid_membrane.yaml | maintained | cyanelle thylakoid membrane |
+| GO:0031410 | data/structures/membrane_organelle/cytoplasmic_vesicle.yaml | maintained | cytoplasmic vesicle |
+| GO:0060205 | data/structures/membrane_organelle/cytoplasmic_vesicle_lumen.yaml | maintained | cytoplasmic vesicle lumen |
+| GO:0030659 | data/structures/membrane_organelle/cytoplasmic_vesicle_membrane.yaml | maintained | cytoplasmic vesicle membrane |
+| cellstructuremech:diazoplast | data/structures/membrane_organelle/diazoplast.yaml | maintained | diazoplast |
+| GO:0005769 | data/structures/membrane_organelle/early_endosome.yaml | maintained | early endosome |
+| GO:0031905 | data/structures/membrane_organelle/early_endosome_lumen.yaml | maintained | early endosome lumen |
+| GO:0031901 | data/structures/membrane_organelle/early_endosome_membrane.yaml | maintained | early endosome membrane |
+| GO:0032009 | data/structures/membrane_organelle/early_phagosome.yaml | maintained | early phagosome |
+| GO:0062113 | data/structures/membrane_organelle/early_phagosome_lumen.yaml | maintained | early phagosome lumen |
+| GO:0036186 | data/structures/membrane_organelle/early_phagosome_membrane.yaml | maintained | early phagosome membrane |
+| GO:0030139 | data/structures/membrane_organelle/endocytic_vesicle.yaml | maintained | endocytic vesicle |
+| GO:0071682 | data/structures/membrane_organelle/endocytic_vesicle_lumen.yaml | maintained | endocytic vesicle lumen |
+| GO:0030666 | data/structures/membrane_organelle/endocytic_vesicle_membrane.yaml | maintained | endocytic vesicle membrane |
+| GO:0005783 | data/structures/membrane_organelle/endoplasmic_reticulum.yaml | maintained | endoplasmic reticulum |
+| GO:0005788 | data/structures/membrane_organelle/endoplasmic_reticulum_lumen.yaml | maintained | endoplasmic reticulum lumen |
+| GO:0005789 | data/structures/membrane_organelle/endoplasmic_reticulum_membrane.yaml | maintained | endoplasmic reticulum membrane |
+| GO:0005768 | data/structures/membrane_organelle/endosome.yaml | maintained | endosome |
+| GO:0031904 | data/structures/membrane_organelle/endosome_lumen.yaml | maintained | endosome lumen |
+| GO:0010008 | data/structures/membrane_organelle/endosome_membrane.yaml | maintained | endosome membrane |
+| GO:7770040 | data/structures/membrane_organelle/epiplastidial_membrane.yaml | maintained | epiplastidial membrane |
+| GO:0012507 | data/structures/membrane_organelle/er_to_golgi_transport_vesicle_membrane.yaml | maintained | ER to Golgi transport vesicle membrane |
+| GO:0033117 | data/structures/membrane_organelle/esterosome.yaml | maintained | esterosome |
+| GO:0034467 | data/structures/membrane_organelle/esterosome_lumen.yaml | maintained | esterosome lumen |
+| GO:0033118 | data/structures/membrane_organelle/esterosome_membrane.yaml | maintained | esterosome membrane |
+| GO:0044311 | data/structures/membrane_organelle/exoneme.yaml | maintained | exoneme |
+| GO:1990413 | data/structures/membrane_organelle/eyespot_apparatus.yaml | maintained | eyespot apparatus |
+| cellstructuremech:ferrosome | data/structures/membrane_organelle/ferrosome.yaml | maintained | ferrosome |
+| GO:0020016 | data/structures/membrane_organelle/flagellar_pocket.yaml | maintained | flagellar pocket |
+| GO:0020020 | data/structures/membrane_organelle/food_vacuole.yaml | maintained | food vacuole |
+| GO:0000324 | data/structures/membrane_organelle/fungal_type_vacuole.yaml | maintained | fungal-type vacuole |
+| GO:0000328 | data/structures/membrane_organelle/fungal_type_vacuole_lumen.yaml | maintained | fungal-type vacuole lumen |
+| GO:0000329 | data/structures/membrane_organelle/fungal_type_vacuole_membrane.yaml | maintained | fungal-type vacuole membrane |
+| GO:0020015 | data/structures/membrane_organelle/glycosome.yaml | maintained | glycosome |
+| GO:0034468 | data/structures/membrane_organelle/glycosome_lumen.yaml | maintained | glycosome lumen |
+| GO:0046860 | data/structures/membrane_organelle/glycosome_membrane.yaml | maintained | glycosome membrane |
+| GO:0031908 | data/structures/membrane_organelle/glyoxysomal_lumen.yaml | maintained | glyoxysomal lumen |
+| GO:0046861 | data/structures/membrane_organelle/glyoxysomal_membrane.yaml | maintained | glyoxysomal membrane |
+| GO:0009514 | data/structures/membrane_organelle/glyoxysome.yaml | maintained | glyoxysome |
+| GO:0005794 | data/structures/membrane_organelle/golgi_apparatus.yaml | maintained | Golgi apparatus |
+| GO:0005798 | data/structures/membrane_organelle/golgi_associated_vesicle.yaml | maintained | Golgi-associated vesicle |
+| GO:0030660 | data/structures/membrane_organelle/golgi_associated_vesicle_membrane.yaml | maintained | Golgi-associated vesicle membrane |
+| GO:0031985 | data/structures/membrane_organelle/golgi_cisterna.yaml | maintained | Golgi cisterna |
+| GO:0032580 | data/structures/membrane_organelle/golgi_cisterna_membrane.yaml | maintained | Golgi cisterna membrane |
+| GO:0005796 | data/structures/membrane_organelle/golgi_lumen.yaml | maintained | Golgi lumen |
+| GO:0000139 | data/structures/membrane_organelle/golgi_membrane.yaml | maintained | Golgi membrane |
+| GO:0046859 | data/structures/membrane_organelle/hydrogenosomal_membrane.yaml | maintained | hydrogenosomal membrane |
+| GO:0042566 | data/structures/membrane_organelle/hydrogenosome.yaml | maintained | hydrogenosome |
+| GO:0034492 | data/structures/membrane_organelle/hydrogenosome_lumen.yaml | maintained | hydrogenosome lumen |
+| GO:0070258 | data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml | maintained | inner membrane pellicle complex |
+| cellstructuremech:intramitochondrial_protein_quality_control_compartment | data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml | maintained | intramitochondrial protein quality control compartment |
+| GO:0005770 | data/structures/membrane_organelle/late_endosome.yaml | maintained | late endosome |
+| GO:0031906 | data/structures/membrane_organelle/late_endosome_lumen.yaml | maintained | late endosome lumen |
+| GO:0031902 | data/structures/membrane_organelle/late_endosome_membrane.yaml | maintained | late endosome membrane |
+| GO:0031039 | data/structures/membrane_organelle/macronucleus.yaml | maintained | macronucleus |
+| GO:0110143 | data/structures/membrane_organelle/magnetosome.yaml | maintained | magnetosome |
+| GO:0110145 | data/structures/membrane_organelle/magnetosome_lumen.yaml | maintained | magnetosome lumen |
+| GO:0110146 | data/structures/membrane_organelle/magnetosome_membrane.yaml | maintained | magnetosome membrane |
+| GO:0020036 | data/structures/membrane_organelle/maurer_s_cleft.yaml | maintained | Maurer's cleft |
+| GO:0044227 | data/structures/membrane_organelle/methane_oxidizing_organelle.yaml | maintained | methane-oxidizing organelle |
+| GO:0020009 | data/structures/membrane_organelle/microneme.yaml | maintained | microneme |
+| GO:0034494 | data/structures/membrane_organelle/microneme_lumen.yaml | maintained | microneme lumen |
+| GO:0033163 | data/structures/membrane_organelle/microneme_membrane.yaml | maintained | microneme membrane |
+| GO:0031040 | data/structures/membrane_organelle/micronucleus.yaml | maintained | micronucleus |
+| cellstructuremech:microsporidian_posterior_vacuole | data/structures/membrane_organelle/microsporidian_posterior_vacuole.yaml | maintained | microsporidian posterior vacuole |
+| GO:0030061 | data/structures/membrane_organelle/mitochondrial_crista.yaml | maintained | mitochondrial crista |
+| GO:0044284 | data/structures/membrane_organelle/mitochondrial_crista_junction.yaml | maintained | mitochondrial crista junction |
+| cellstructuremech:mitochondrial_derived_compartment | data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml | maintained | mitochondrial-derived compartment |
+| GO:0005740 | data/structures/membrane_organelle/mitochondrial_envelope.yaml | maintained | mitochondrial envelope |
+| GO:0097002 | data/structures/membrane_organelle/mitochondrial_inner_boundary_membrane.yaml | maintained | mitochondrial inner boundary membrane |
+| GO:0005743 | data/structures/membrane_organelle/mitochondrial_inner_membrane.yaml | maintained | mitochondrial inner membrane |
+| GO:0005758 | data/structures/membrane_organelle/mitochondrial_intermembrane_space.yaml | maintained | mitochondrial intermembrane space |
+| GO:0005759 | data/structures/membrane_organelle/mitochondrial_matrix.yaml | maintained | mitochondrial matrix |
+| GO:0031966 | data/structures/membrane_organelle/mitochondrial_membrane.yaml | maintained | mitochondrial membrane |
+| GO:0005741 | data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml | maintained | mitochondrial outer membrane |
+| GO:0005739 | data/structures/membrane_organelle/mitochondrion.yaml | maintained | mitochondrion |
+| GO:0032047 | data/structures/membrane_organelle/mitosome.yaml | maintained | mitosome |
+| cellstructuremech:mitosome_envelope | data/structures/membrane_organelle/mitosome_envelope.yaml | maintained | mitosome envelope |
+| cellstructuremech:mitosome_inner_membrane | data/structures/membrane_organelle/mitosome_inner_membrane.yaml | maintained | mitosome inner membrane |
+| cellstructuremech:mitosome_intermembrane_space | data/structures/membrane_organelle/mitosome_intermembrane_space.yaml | maintained | mitosome intermembrane space |
+| cellstructuremech:mitosome_matrix | data/structures/membrane_organelle/mitosome_matrix.yaml | maintained | mitosome matrix |
+| cellstructuremech:mitosome_outer_membrane | data/structures/membrane_organelle/mitosome_outer_membrane.yaml | maintained | mitosome outer membrane |
+| GO:0070074 | data/structures/membrane_organelle/mononeme.yaml | maintained | mononeme |
+| GO:0036000 | data/structures/membrane_organelle/mucocyst.yaml | maintained | mucocyst |
+| GO:0005771 | data/structures/membrane_organelle/multivesicular_body.yaml | maintained | multivesicular body |
+| cellstructuremech:multivesicular_body_intraluminal_vesicle | data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml | maintained | multivesicular body intraluminal vesicle |
+| cellstructuremech:multivesicular_body_lumen | data/structures/membrane_organelle/multivesicular_body_lumen.yaml | maintained | multivesicular body lumen |
+| GO:0032585 | data/structures/membrane_organelle/multivesicular_body_membrane.yaml | maintained | multivesicular body membrane |
+| cellstructuremech:nitroplast | data/structures/membrane_organelle/nitroplast.yaml | maintained | nitroplast |
+| GO:0005635 | data/structures/membrane_organelle/nuclear_envelope.yaml | maintained | nuclear envelope |
+| GO:0005641 | data/structures/membrane_organelle/nuclear_envelope_lumen.yaml | maintained | nuclear envelope lumen |
+| GO:0005637 | data/structures/membrane_organelle/nuclear_inner_membrane.yaml | maintained | nuclear inner membrane |
+| GO:0031981 | data/structures/membrane_organelle/nuclear_lumen.yaml | maintained | nuclear lumen |
+| cellstructuremech:nuclear_net | data/structures/membrane_organelle/nuclear_net.yaml | maintained | nuclear net |
+| GO:0005640 | data/structures/membrane_organelle/nuclear_outer_membrane.yaml | maintained | nuclear outer membrane |
+| GO:0033009 | data/structures/membrane_organelle/nucleomorph.yaml | maintained | nucleomorph |
+| GO:0005634 | data/structures/membrane_organelle/nucleus.yaml | maintained | nucleus |
+| GO:0070111 | data/structures/membrane_organelle/organellar_chromatophore.yaml | maintained | organellar chromatophore |
+| GO:0070113 | data/structures/membrane_organelle/organellar_chromatophore_inner_membrane.yaml | maintained | organellar chromatophore inner membrane |
+| GO:0070115 | data/structures/membrane_organelle/organellar_chromatophore_intermembrane_space.yaml | maintained | organellar chromatophore intermembrane space |
+| GO:0070112 | data/structures/membrane_organelle/organellar_chromatophore_membrane.yaml | maintained | organellar chromatophore membrane |
+| GO:0070114 | data/structures/membrane_organelle/organellar_chromatophore_outer_membrane.yaml | maintained | organellar chromatophore outer membrane |
+| GO:0070116 | data/structures/membrane_organelle/organellar_chromatophore_thylakoid.yaml | maintained | organellar chromatophore thylakoid |
+| GO:0070117 | data/structures/membrane_organelle/organellar_chromatophore_thylakoid_lumen.yaml | maintained | organellar chromatophore thylakoid lumen |
+| GO:0070118 | data/structures/membrane_organelle/organellar_chromatophore_thylakoid_membrane.yaml | maintained | organellar chromatophore thylakoid membrane |
+| GO:0044310 | data/structures/membrane_organelle/osmiophilic_body.yaml | maintained | osmiophilic body |
+| cellstructuremech:parasitophorous_vacuole | data/structures/membrane_organelle/parasitophorous_vacuole.yaml | maintained | parasitophorous vacuole |
+| cellstructuremech:parasitophorous_vacuole_lumen | data/structures/membrane_organelle/parasitophorous_vacuole_lumen.yaml | maintained | parasitophorous vacuole lumen |
+| cellstructuremech:parasitophorous_vacuole_membrane | data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml | maintained | parasitophorous vacuole membrane |
+| GO:7770041 | data/structures/membrane_organelle/periplastidial_membrane.yaml | maintained | periplastidial membrane |
+| GO:0005782 | data/structures/membrane_organelle/peroxisomal_matrix.yaml | maintained | peroxisomal matrix |
+| GO:0005778 | data/structures/membrane_organelle/peroxisomal_membrane.yaml | maintained | peroxisomal membrane |
+| GO:0005777 | data/structures/membrane_organelle/peroxisome.yaml | maintained | peroxisome |
+| GO:0045335 | data/structures/membrane_organelle/phagocytic_vesicle.yaml | maintained | phagocytic vesicle |
+| GO:0097013 | data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml | maintained | phagocytic vesicle lumen |
+| GO:0030670 | data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml | maintained | phagocytic vesicle membrane |
+| GO:0032010 | data/structures/membrane_organelle/phagolysosome.yaml | maintained | phagolysosome |
+| GO:0061474 | data/structures/membrane_organelle/phagolysosome_membrane.yaml | maintained | phagolysosome membrane |
+| GO:0106174 | data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml | maintained | phagolysosome vesicle lumen |
+| GO:0034357 | data/structures/membrane_organelle/photosynthetic_membrane.yaml | maintained | photosynthetic membrane |
+| GO:0042717 | data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml | maintained | plasma membrane-derived chromatophore membrane |
+| GO:0031979 | data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_lumen.yaml | maintained | plasma membrane-derived thylakoid lumen |
+| GO:0031676 | data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_membrane.yaml | maintained | plasma membrane-derived thylakoid membrane |
+| GO:0009536 | data/structures/membrane_organelle/plastid.yaml | maintained | plastid |
+| GO:0009526 | data/structures/membrane_organelle/plastid_envelope.yaml | maintained | plastid envelope |
+| GO:0009528 | data/structures/membrane_organelle/plastid_inner_membrane.yaml | maintained | plastid inner membrane |
+| GO:0009529 | data/structures/membrane_organelle/plastid_intermembrane_space.yaml | maintained | plastid intermembrane space |
+| GO:0042170 | data/structures/membrane_organelle/plastid_membrane.yaml | maintained | plastid membrane |
+| GO:0009527 | data/structures/membrane_organelle/plastid_outer_membrane.yaml | maintained | plastid outer membrane |
+| GO:0009532 | data/structures/membrane_organelle/plastid_stroma.yaml | maintained | plastid stroma |
+| GO:0031976 | data/structures/membrane_organelle/plastid_thylakoid.yaml | maintained | plastid thylakoid |
+| GO:0031978 | data/structures/membrane_organelle/plastid_thylakoid_lumen.yaml | maintained | plastid thylakoid lumen |
+| GO:0055035 | data/structures/membrane_organelle/plastid_thylakoid_membrane.yaml | maintained | plastid thylakoid membrane |
+| GO:0160201 | data/structures/membrane_organelle/polaroplast.yaml | maintained | polaroplast |
+| cellstructuremech:pusule | data/structures/membrane_organelle/pusule.yaml | maintained | pusule |
+| GO:0160223 | data/structures/membrane_organelle/pyrenoid_tubule.yaml | maintained | pyrenoid tubule |
+| GO:0055037 | data/structures/membrane_organelle/recycling_endosome.yaml | maintained | recycling endosome |
+| GO:0034777 | data/structures/membrane_organelle/recycling_endosome_lumen.yaml | maintained | recycling endosome lumen |
+| GO:0055038 | data/structures/membrane_organelle/recycling_endosome_membrane.yaml | maintained | recycling endosome membrane |
+| cellstructuremech:reservosome | data/structures/membrane_organelle/reservosome.yaml | maintained | reservosome |
+| GO:0106124 | data/structures/membrane_organelle/reservosome_lumen.yaml | maintained | reservosome lumen |
+| GO:0106125 | data/structures/membrane_organelle/reservosome_matrix.yaml | maintained | reservosome matrix |
+| GO:0106126 | data/structures/membrane_organelle/reservosome_membrane.yaml | maintained | reservosome membrane |
+| GO:0020008 | data/structures/membrane_organelle/rhoptry.yaml | maintained | rhoptry |
+| GO:0034591 | data/structures/membrane_organelle/rhoptry_lumen.yaml | maintained | rhoptry lumen |
+| GO:0033016 | data/structures/membrane_organelle/rhoptry_membrane.yaml | maintained | rhoptry membrane |
+| GO:1990225 | data/structures/membrane_organelle/rhoptry_neck.yaml | maintained | rhoptry neck |
+| GO:0036007 | data/structures/membrane_organelle/scintillon.yaml | maintained | scintillon |
+| GO:0062160 | data/structures/membrane_organelle/spongiome.yaml | maintained | spongiome |
+| GO:0009579 | data/structures/membrane_organelle/thylakoid.yaml | maintained | thylakoid |
+| GO:0031977 | data/structures/membrane_organelle/thylakoid_lumen.yaml | maintained | thylakoid lumen |
+| GO:0042651 | data/structures/membrane_organelle/thylakoid_membrane.yaml | maintained | thylakoid membrane |
+| cellstructuremech:toxicyst | data/structures/membrane_organelle/toxicyst.yaml | maintained | toxicyst |
+| GO:0005802 | data/structures/membrane_organelle/trans_golgi_network.yaml | maintained | trans-Golgi network |
+| GO:0032588 | data/structures/membrane_organelle/trans_golgi_network_membrane.yaml | maintained | trans-Golgi network membrane |
+| GO:0030140 | data/structures/membrane_organelle/trans_golgi_network_transport_vesicle.yaml | maintained | trans-Golgi network transport vesicle |
+| GO:0098564 | data/structures/membrane_organelle/trans_golgi_network_transport_vesicle_lumen.yaml | maintained | trans-Golgi network transport vesicle lumen |
+| GO:0012510 | data/structures/membrane_organelle/trans_golgi_network_transport_vesicle_membrane.yaml | maintained | trans-Golgi network transport vesicle membrane |
+| GO:0055039 | data/structures/membrane_organelle/trichocyst.yaml | maintained | trichocyst |
+| GO:0005775 | data/structures/membrane_organelle/vacuolar_lumen.yaml | maintained | vacuolar lumen |
+| GO:0005774 | data/structures/membrane_organelle/vacuolar_membrane.yaml | maintained | vacuolar membrane |
+| GO:0005773 | data/structures/membrane_organelle/vacuole.yaml | maintained | vacuole |
+| GO:0140266 | data/structures/membrane_organelle/woronin_body.yaml | maintained | Woronin body |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Strict corpus validation covering membrane_organelle cohort | passed | True | GO:0020022, GO:0033985, GO:0033102, cellstructuremech:actinophryid_extrusome, GO:0044222, cellstructuremech:anammoxosome_membrane, GO:0020026, GO:0030668, GO:0020011, GO:0160211, GO:0005776, GO:0034423, GO:0000421, GO:0030075, GO:0045009, GO:0009507, GO:0009941, GO:0009706, GO:0031972, GO:0031969, GO:0009707, GO:0009570, GO:0009534, GO:0009543, GO:0009535, GO:0046858, GO:0033105, GO:0020018, GO:0005801, GO:0033106, GO:0045334, GO:0106176, GO:0030669, GO:0030136, cellstructuremech:clathrin_coated_vesicle_lumen, GO:0030665, GO:0030135, GO:0030662, cellstructuremech:coccolith_vesicle, GO:0031164, GO:0000331, GO:0062159, cellstructuremech:contractile_vacuole_lumen, GO:0031913, GO:0030137, cellstructuremech:copi_coated_vesicle_lumen, GO:0030663, GO:0030134, cellstructuremech:copii_coated_vesicle_lumen, GO:0033107, cellstructuremech:cvt_vesicle_lumen, GO:0033110, GO:0009842, GO:0033112, GO:0036012, GO:0036014, GO:0033113, GO:0036013, GO:0034060, GO:0009843, GO:0033114, GO:0033115, GO:0031410, GO:0060205, GO:0030659, cellstructuremech:diazoplast, GO:0005769, GO:0031905, GO:0031901, GO:0032009, GO:0062113, GO:0036186, GO:0030139, GO:0071682, GO:0030666, GO:0005783, GO:0005788, GO:0005789, GO:0005768, GO:0031904, GO:0010008, GO:7770040, GO:0012507, GO:0033117, GO:0034467, GO:0033118, GO:0044311, GO:1990413, cellstructuremech:ferrosome, GO:0020016, GO:0020020, GO:0000324, GO:0000328, GO:0000329, GO:0020015, GO:0034468, GO:0046860, GO:0031908, GO:0046861, GO:0009514, GO:0005794, GO:0005798, GO:0030660, GO:0031985, GO:0032580, GO:0005796, GO:0000139, GO:0046859, GO:0042566, GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146, GO:0020036, GO:0044227, GO:0020009, GO:0034494, GO:0033163, GO:0031040, cellstructuremech:microsporidian_posterior_vacuole, GO:0030061, GO:0044284, cellstructuremech:mitochondrial_derived_compartment, GO:0005740, GO:0097002, GO:0005743, GO:0005758, GO:0005759, GO:0031966, GO:0005741, GO:0005739, GO:0032047, cellstructuremech:mitosome_envelope, cellstructuremech:mitosome_inner_membrane, cellstructuremech:mitosome_intermembrane_space, cellstructuremech:mitosome_matrix, cellstructuremech:mitosome_outer_membrane, GO:0070074, GO:0036000, GO:0005771, cellstructuremech:multivesicular_body_intraluminal_vesicle, cellstructuremech:multivesicular_body_lumen, GO:0032585, cellstructuremech:nitroplast, GO:0005635, GO:0005641, GO:0005637, GO:0031981, cellstructuremech:nuclear_net, GO:0005640, GO:0033009, GO:0005634, GO:0070111, GO:0070113, GO:0070115, GO:0070112, GO:0070114, GO:0070116, GO:0070117, GO:0070118, GO:0044310, cellstructuremech:parasitophorous_vacuole, cellstructuremech:parasitophorous_vacuole_lumen, cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474, GO:0106174, GO:0034357, GO:0042717, GO:0031979, GO:0031676, GO:0009536, GO:0009526, GO:0009528, GO:0009529, GO:0042170, GO:0009527, GO:0009532, GO:0031976, GO:0031978, GO:0055035, GO:0160201, cellstructuremech:pusule, GO:0160223, GO:0055037, GO:0034777, GO:0055038, cellstructuremech:reservosome, GO:0106124, GO:0106125, GO:0106126, GO:0020008, GO:0034591, GO:0033016, GO:1990225, GO:0036007, GO:0062160, GO:0009579, GO:0031977, GO:0042651, cellstructuremech:toxicyst, GO:0005802, GO:0032588, GO:0030140, GO:0098564, GO:0012510, GO:0055039, GO:0005775, GO:0005774, GO:0005773, GO:0140266 | All 224 membrane_organelle records pass strict LinkML and semantic validation. |
+| ID-label correspondence across membrane_organelle cohort | passed | True | GO:0020022, GO:0033985, GO:0033102, cellstructuremech:actinophryid_extrusome, GO:0044222, cellstructuremech:anammoxosome_membrane, GO:0020026, GO:0030668, GO:0020011, GO:0160211, GO:0005776, GO:0034423, GO:0000421, GO:0030075, GO:0045009, GO:0009507, GO:0009941, GO:0009706, GO:0031972, GO:0031969, GO:0009707, GO:0009570, GO:0009534, GO:0009543, GO:0009535, GO:0046858, GO:0033105, GO:0020018, GO:0005801, GO:0033106, GO:0045334, GO:0106176, GO:0030669, GO:0030136, cellstructuremech:clathrin_coated_vesicle_lumen, GO:0030665, GO:0030135, GO:0030662, cellstructuremech:coccolith_vesicle, GO:0031164, GO:0000331, GO:0062159, cellstructuremech:contractile_vacuole_lumen, GO:0031913, GO:0030137, cellstructuremech:copi_coated_vesicle_lumen, GO:0030663, GO:0030134, cellstructuremech:copii_coated_vesicle_lumen, GO:0033107, cellstructuremech:cvt_vesicle_lumen, GO:0033110, GO:0009842, GO:0033112, GO:0036012, GO:0036014, GO:0033113, GO:0036013, GO:0034060, GO:0009843, GO:0033114, GO:0033115, GO:0031410, GO:0060205, GO:0030659, cellstructuremech:diazoplast, GO:0005769, GO:0031905, GO:0031901, GO:0032009, GO:0062113, GO:0036186, GO:0030139, GO:0071682, GO:0030666, GO:0005783, GO:0005788, GO:0005789, GO:0005768, GO:0031904, GO:0010008, GO:7770040, GO:0012507, GO:0033117, GO:0034467, GO:0033118, GO:0044311, GO:1990413, cellstructuremech:ferrosome, GO:0020016, GO:0020020, GO:0000324, GO:0000328, GO:0000329, GO:0020015, GO:0034468, GO:0046860, GO:0031908, GO:0046861, GO:0009514, GO:0005794, GO:0005798, GO:0030660, GO:0031985, GO:0032580, GO:0005796, GO:0000139, GO:0046859, GO:0042566, GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146, GO:0020036, GO:0044227, GO:0020009, GO:0034494, GO:0033163, GO:0031040, cellstructuremech:microsporidian_posterior_vacuole, GO:0030061, GO:0044284, cellstructuremech:mitochondrial_derived_compartment, GO:0005740, GO:0097002, GO:0005743, GO:0005758, GO:0005759, GO:0031966, GO:0005741, GO:0005739, GO:0032047, cellstructuremech:mitosome_envelope, cellstructuremech:mitosome_inner_membrane, cellstructuremech:mitosome_intermembrane_space, cellstructuremech:mitosome_matrix, cellstructuremech:mitosome_outer_membrane, GO:0070074, GO:0036000, GO:0005771, cellstructuremech:multivesicular_body_intraluminal_vesicle, cellstructuremech:multivesicular_body_lumen, GO:0032585, cellstructuremech:nitroplast, GO:0005635, GO:0005641, GO:0005637, GO:0031981, cellstructuremech:nuclear_net, GO:0005640, GO:0033009, GO:0005634, GO:0070111, GO:0070113, GO:0070115, GO:0070112, GO:0070114, GO:0070116, GO:0070117, GO:0070118, GO:0044310, cellstructuremech:parasitophorous_vacuole, cellstructuremech:parasitophorous_vacuole_lumen, cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474, GO:0106174, GO:0034357, GO:0042717, GO:0031979, GO:0031676, GO:0009536, GO:0009526, GO:0009528, GO:0009529, GO:0042170, GO:0009527, GO:0009532, GO:0031976, GO:0031978, GO:0055035, GO:0160201, cellstructuremech:pusule, GO:0160223, GO:0055037, GO:0034777, GO:0055038, cellstructuremech:reservosome, GO:0106124, GO:0106125, GO:0106126, GO:0020008, GO:0034591, GO:0033016, GO:1990225, GO:0036007, GO:0062160, GO:0009579, GO:0031977, GO:0042651, cellstructuremech:toxicyst, GO:0005802, GO:0032588, GO:0030140, GO:0098564, GO:0012510, GO:0055039, GO:0005775, GO:0005774, GO:0005773, GO:0140266 | All ontology ID-label pairs in membrane_organelle records correspond to canonical labels. |
+
+## Scientific And Domain Assessments
+
+### Identity, boundaries, causal graphs, and ontology grounding across data/structures/membrane_organelle/
+
+scope: supported. Targets: GO:0020022, GO:0033985, GO:0033102, cellstructuremech:actinophryid_extrusome, GO:0044222, cellstructuremech:anammoxosome_membrane, GO:0020026, GO:0030668, GO:0020011, GO:0160211, GO:0005776, GO:0034423, GO:0000421, GO:0030075, GO:0045009, GO:0009507, GO:0009941, GO:0009706, GO:0031972, GO:0031969, GO:0009707, GO:0009570, GO:0009534, GO:0009543, GO:0009535, GO:0046858, GO:0033105, GO:0020018, GO:0005801, GO:0033106, GO:0045334, GO:0106176, GO:0030669, GO:0030136, cellstructuremech:clathrin_coated_vesicle_lumen, GO:0030665, GO:0030135, GO:0030662, cellstructuremech:coccolith_vesicle, GO:0031164, GO:0000331, GO:0062159, cellstructuremech:contractile_vacuole_lumen, GO:0031913, GO:0030137, cellstructuremech:copi_coated_vesicle_lumen, GO:0030663, GO:0030134, cellstructuremech:copii_coated_vesicle_lumen, GO:0033107, cellstructuremech:cvt_vesicle_lumen, GO:0033110, GO:0009842, GO:0033112, GO:0036012, GO:0036014, GO:0033113, GO:0036013, GO:0034060, GO:0009843, GO:0033114, GO:0033115, GO:0031410, GO:0060205, GO:0030659, cellstructuremech:diazoplast, GO:0005769, GO:0031905, GO:0031901, GO:0032009, GO:0062113, GO:0036186, GO:0030139, GO:0071682, GO:0030666, GO:0005783, GO:0005788, GO:0005789, GO:0005768, GO:0031904, GO:0010008, GO:7770040, GO:0012507, GO:0033117, GO:0034467, GO:0033118, GO:0044311, GO:1990413, cellstructuremech:ferrosome, GO:0020016, GO:0020020, GO:0000324, GO:0000328, GO:0000329, GO:0020015, GO:0034468, GO:0046860, GO:0031908, GO:0046861, GO:0009514, GO:0005794, GO:0005798, GO:0030660, GO:0031985, GO:0032580, GO:0005796, GO:0000139, GO:0046859, GO:0042566, GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146, GO:0020036, GO:0044227, GO:0020009, GO:0034494, GO:0033163, GO:0031040, cellstructuremech:microsporidian_posterior_vacuole, GO:0030061, GO:0044284, cellstructuremech:mitochondrial_derived_compartment, GO:0005740, GO:0097002, GO:0005743, GO:0005758, GO:0005759, GO:0031966, GO:0005741, GO:0005739, GO:0032047, cellstructuremech:mitosome_envelope, cellstructuremech:mitosome_inner_membrane, cellstructuremech:mitosome_intermembrane_space, cellstructuremech:mitosome_matrix, cellstructuremech:mitosome_outer_membrane, GO:0070074, GO:0036000, GO:0005771, cellstructuremech:multivesicular_body_intraluminal_vesicle, cellstructuremech:multivesicular_body_lumen, GO:0032585, cellstructuremech:nitroplast, GO:0005635, GO:0005641, GO:0005637, GO:0031981, cellstructuremech:nuclear_net, GO:0005640, GO:0033009, GO:0005634, GO:0070111, GO:0070113, GO:0070115, GO:0070112, GO:0070114, GO:0070116, GO:0070117, GO:0070118, GO:0044310, cellstructuremech:parasitophorous_vacuole, cellstructuremech:parasitophorous_vacuole_lumen, cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474, GO:0106174, GO:0034357, GO:0042717, GO:0031979, GO:0031676, GO:0009536, GO:0009526, GO:0009528, GO:0009529, GO:0042170, GO:0009527, GO:0009532, GO:0031976, GO:0031978, GO:0055035, GO:0160201, cellstructuremech:pusule, GO:0160223, GO:0055037, GO:0034777, GO:0055038, cellstructuremech:reservosome, GO:0106124, GO:0106125, GO:0106126, GO:0020008, GO:0034591, GO:0033016, GO:1990225, GO:0036007, GO:0062160, GO:0009579, GO:0031977, GO:0042651, cellstructuremech:toxicyst, GO:0005802, GO:0032588, GO:0030140, GO:0098564, GO:0012510, GO:0055039, GO:0005775, GO:0005774, GO:0005773, GO:0140266.
+
+All 224 records in data/structures/membrane_organelle/ represent distinct microbial cell structures or subcomplexes with valid hierarchy links and verified UniProtKB protein examples.
+
+### Causal-graph component_ref grounding propagation in magnetosome.yaml and plasma_membrane_derived_chromatophore_membrane.yaml
+
+graph: concern. Targets: GO:0110143, GO:0042717.
+
+Three component_ref causal_graphs nodes across 2 membrane_organelle records omit verified groundings from components[].
+
+## Findings
+
+### F1: Three causal_graphs nodes with component_ref across 2 membrane_organelle records omit verified component groundings
+
+minor / open / confirmed; issue key: membrane-organelle-causal-node-component-ref-grounding.
+
+In data/structures/membrane_organelle/magnetosome.yaml (GO:0110143), causal_graphs[0] node crystal (component_ref: crystal) omits grounding: CHEBI:46726 declared on components#crystal; and in data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml (GO:0042717), causal_graphs[0] nodes rc_lh1_pufx and cytochrome_bc1 omit grounding: cellstructuremech:rc_lh1_pufx_core_complex and grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex declared on their referenced components[] entries.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Propagate CHEBI:46726 to node crystal in magnetosome.yaml and cellstructuremech:rc_lh1_pufx_core_complex / cellstructuremech:chromatophore_cytochrome_bc1_complex to nodes rc_lh1_pufx and cytochrome_bc1 in plasma_membrane_derived_chromatophore_membrane.yaml, and record the updates in history/records/.
+
+- .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+- .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+
+## Category Boundaries
+
+- retain: GO:0020022, GO:0033985, GO:0033102, cellstructuremech:actinophryid_extrusome, GO:0044222, cellstructuremech:anammoxosome_membrane, GO:0020026, GO:0030668, GO:0020011, GO:0160211, GO:0005776, GO:0034423, GO:0000421, GO:0030075, GO:0045009, GO:0009507, GO:0009941, GO:0009706, GO:0031972, GO:0031969, GO:0009707, GO:0009570, GO:0009534, GO:0009543, GO:0009535, GO:0046858, GO:0033105, GO:0020018, GO:0005801, GO:0033106, GO:0045334, GO:0106176, GO:0030669, GO:0030136, cellstructuremech:clathrin_coated_vesicle_lumen, GO:0030665, GO:0030135, GO:0030662, cellstructuremech:coccolith_vesicle, GO:0031164, GO:0000331, GO:0062159, cellstructuremech:contractile_vacuole_lumen, GO:0031913, GO:0030137, cellstructuremech:copi_coated_vesicle_lumen, GO:0030663, GO:0030134, cellstructuremech:copii_coated_vesicle_lumen, GO:0033107, cellstructuremech:cvt_vesicle_lumen, GO:0033110, GO:0009842, GO:0033112, GO:0036012, GO:0036014, GO:0033113, GO:0036013, GO:0034060, GO:0009843, GO:0033114, GO:0033115, GO:0031410, GO:0060205, GO:0030659, cellstructuremech:diazoplast, GO:0005769, GO:0031905, GO:0031901, GO:0032009, GO:0062113, GO:0036186, GO:0030139, GO:0071682, GO:0030666, GO:0005783, GO:0005788, GO:0005789, GO:0005768, GO:0031904, GO:0010008, GO:7770040, GO:0012507, GO:0033117, GO:0034467, GO:0033118, GO:0044311, GO:1990413, cellstructuremech:ferrosome, GO:0020016, GO:0020020, GO:0000324, GO:0000328, GO:0000329, GO:0020015, GO:0034468, GO:0046860, GO:0031908, GO:0046861, GO:0009514, GO:0005794, GO:0005798, GO:0030660, GO:0031985, GO:0032580, GO:0005796, GO:0000139, GO:0046859, GO:0042566, GO:0034492, GO:0070258, cellstructuremech:intramitochondrial_protein_quality_control_compartment, GO:0005770, GO:0031906, GO:0031902, GO:0031039, GO:0110143, GO:0110145, GO:0110146, GO:0020036, GO:0044227, GO:0020009, GO:0034494, GO:0033163, GO:0031040, cellstructuremech:microsporidian_posterior_vacuole, GO:0030061, GO:0044284, cellstructuremech:mitochondrial_derived_compartment, GO:0005740, GO:0097002, GO:0005743, GO:0005758, GO:0005759, GO:0031966, GO:0005741, GO:0005739, GO:0032047, cellstructuremech:mitosome_envelope, cellstructuremech:mitosome_inner_membrane, cellstructuremech:mitosome_intermembrane_space, cellstructuremech:mitosome_matrix, cellstructuremech:mitosome_outer_membrane, GO:0070074, GO:0036000, GO:0005771, cellstructuremech:multivesicular_body_intraluminal_vesicle, cellstructuremech:multivesicular_body_lumen, GO:0032585, cellstructuremech:nitroplast, GO:0005635, GO:0005641, GO:0005637, GO:0031981, cellstructuremech:nuclear_net, GO:0005640, GO:0033009, GO:0005634, GO:0070111, GO:0070113, GO:0070115, GO:0070112, GO:0070114, GO:0070116, GO:0070117, GO:0070118, GO:0044310, cellstructuremech:parasitophorous_vacuole, cellstructuremech:parasitophorous_vacuole_lumen, cellstructuremech:parasitophorous_vacuole_membrane, GO:7770041, GO:0005782, GO:0005778, GO:0005777, GO:0045335, GO:0097013, GO:0030670, GO:0032010, GO:0061474, GO:0106174, GO:0034357, GO:0042717, GO:0031979, GO:0031676, GO:0009536, GO:0009526, GO:0009528, GO:0009529, GO:0042170, GO:0009527, GO:0009532, GO:0031976, GO:0031978, GO:0055035, GO:0160201, cellstructuremech:pusule, GO:0160223, GO:0055037, GO:0034777, GO:0055038, cellstructuremech:reservosome, GO:0106124, GO:0106125, GO:0106126, GO:0020008, GO:0034591, GO:0033016, GO:1990225, GO:0036007, GO:0062160, GO:0009579, GO:0031977, GO:0042651, cellstructuremech:toxicyst, GO:0005802, GO:0032588, GO:0030140, GO:0098564, GO:0012510, GO:0055039, GO:0005775, GO:0005774, GO:0005773, GO:0140266. All 224 records in data/structures/membrane_organelle/ represent distinct membrane-bounded organelles, vesicles, or specialized membrane subcompartments.
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev_strict_membraneorganelle | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 224 membrane_organelle records. |
+| ev_labels_membraneorganelle | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
+| ev_mo_node_grounding | data/structures/membrane_organelle/magnetosome.yaml; components#crystal vs causal_graphs[0].nodes#crystal in magnetosome.yaml and rc_lh1_pufx/cytochrome_bc1 in plasma_membrane_derived_chromatophore_membrane.yaml | supports | magnetosome.yaml causal_graphs[0] node crystal omits CHEBI:46726 and plasma_membrane_derived_chromatophore_membrane.yaml nodes rc_lh1_pufx and cytochrome_bc1 omit their cellstructuremech: groundings. |
+
+## Limits And Additional Notes
+
+- Record edits for membrane_organelle cohort findings are queued for Cycle 3 Stage 5 (resolve_review_findings).
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261025T071009Z-membrane-organelle-category-review
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: 'Category review of data/structures/membrane_organelle/ (224 records): causal-graph
+  component_ref grounding propagation in magnetosome and chromatophore membrane'
+started_at: '2026-10-25T06:56:00Z'
+finished_at: '2026-10-25T07:10:09Z'
+reviewer:
+  identity: antigravity-c3s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 3 Stage 4 record_review against committed
+    git revision 83ec9d5184fb203d87d8c3bd7043792d385193bf without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
+scientific_review: true
+summary: 'Full-coverage category review of all 224 records in data/structures/membrane_organelle/
+  verified distinct membrane-bounded organelle and membrane-subcompartment boundaries
+  and confirmed all Cycle 2 findings in this cohort remain resolved. One minor cohort
+  graph-grounding gap was identified across 2 records (magnetosome.yaml and plasma_membrane_derived_chromatophore_membrane.yaml):
+  3 causal_graphs nodes with component_ref (crystal, rc_lh1_pufx, cytochrome_bc1)
+  omit the verified CHEBI: or cellstructuremech: grounding declared on their referenced
+  components[] entries.'
+source:
+  git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/membrane_organelle/acidocalcisome.yaml
+    sha256: a694232f7d3e26286500601a55bb4332f35a07c6fc150f6ea85e8e7be640d0f7
+    role: target
+  - path: data/structures/membrane_organelle/acidocalcisome_lumen.yaml
+    sha256: 3238b530f5846e584dfb86651fd4895cb461e26bcc74afa51f3740815fab02e9
+    role: target
+  - path: data/structures/membrane_organelle/acidocalcisome_membrane.yaml
+    sha256: 2a2a8ddf090bccdc6e8f0fd6b84f3e2ce971789071cb6af97dde48ed834f3a55
+    role: target
+  - path: data/structures/membrane_organelle/actinophryid_extrusome.yaml
+    sha256: 4b0f4ea17353cf6db5e343ef4a88ddc1458185fdcb508b74ca4fa8685421d0ea
+    role: target
+  - path: data/structures/membrane_organelle/anammoxosome.yaml
+    sha256: c98e06c7ce32979c1cb1a54179f4395700a59adfcc5c0a1947c5b30f9fb34b84
+    role: target
+  - path: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    sha256: 0a47b8cfa7bc71dcfc8cb69ba625087ce23025f9a1204b0fe578d185c2035f61
+    role: target
+  - path: data/structures/membrane_organelle/apicomplexan_dense_granule.yaml
+    sha256: 5079f63ad8455118899a0119a2d29197bd314c573c181a6bead705cd063f8fe1
+    role: target
+  - path: data/structures/membrane_organelle/apicomplexan_dense_granule_membrane.yaml
+    sha256: bd48fa3c1773cf7be7066602608acdd61ba386a9fbc5fc3fd19ddaa25dcab51b
+    role: target
+  - path: data/structures/membrane_organelle/apicoplast.yaml
+    sha256: 00971d8425f63fc5d490907a43c00b6760c2d88c5413fce6bdbc2dd09919410e
+    role: target
+  - path: data/structures/membrane_organelle/apicoplast_membrane.yaml
+    sha256: fb3e343e0ed2a8711dff2305abea2166c589cb0a7b169d291c67fed81990ca58
+    role: target
+  - path: data/structures/membrane_organelle/autophagosome.yaml
+    sha256: 9d18c1f34ce5e4da65546eccf8f4ffc9a2273fcca1cd6db4efbb770f8591c3ba
+    role: target
+  - path: data/structures/membrane_organelle/autophagosome_lumen.yaml
+    sha256: 33fbf9f3ae1591081dd1e113d0fd7476c64bdafaa238ec35c7705fb89bb0f98d
+    role: target
+  - path: data/structures/membrane_organelle/autophagosome_membrane.yaml
+    sha256: aa651db3a9b5a208ae7a4deef9d3595d79c0296cda8ebdc9a1c524a11b948254
+    role: target
+  - path: data/structures/membrane_organelle/bacterial_thylakoid.yaml
+    sha256: a134c6cf6fd6069f0a0ddc37f1e99ded9a32994b3b1fa16d2f9938e3e46b8c40
+    role: target
+  - path: data/structures/membrane_organelle/chitosome.yaml
+    sha256: ec564f818b649f3c4c8a56de6d6bea798eded59e73f1c4b840325eb83b9d5493
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast.yaml
+    sha256: 4c13f5dadaeb23a88fabfc2b5ec65034ed0ac83cbca9d45143793618acf2e727
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast_envelope.yaml
+    sha256: 29da363489107536342db1782001be534ea54605039b80c201cba0a46de9468e
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast_inner_membrane.yaml
+    sha256: 05283f5252a6354d26bef1ff196b3a9e10fbd6e72e9a6ec17014330f7a28dbb3
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast_intermembrane_space.yaml
+    sha256: 7ab90f4d2f4c41c466e100d589fb1f1d42bf90ded515dea6db5575d54119d43a
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast_membrane.yaml
+    sha256: 115d9369e1b84a54e66028f079a8d140e72d40ec2fb5877e64fb592b6a085905
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast_outer_membrane.yaml
+    sha256: f499d6317b1546cf0d578f54d04df76a8af3c54746f29db6b2d7af0244b0075d
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast_stroma.yaml
+    sha256: cfdb0d3be9fba838d5288e478b39f922a4e11cbd240b689a2cbca7690c262b6a
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast_thylakoid.yaml
+    sha256: ed335bb9dbdc4ba22ed33046fa25d64796c2eadefe71b1e04eaeb7d67156723c
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast_thylakoid_lumen.yaml
+    sha256: 6efd0a2e86462ae192dc2f27f9edc945dc6b522a31d8e233458cd25e661fb2af
+    role: target
+  - path: data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+    sha256: 16f50bd615bee75edd15004622bae49a9a25e71dd4b9573584ca1659139d0999
+    role: target
+  - path: data/structures/membrane_organelle/chlorosome.yaml
+    sha256: eacca36a012da67cb45237059e21f59f42619b8c93a0fd06b37a1d8fcbe4afb4
+    role: target
+  - path: data/structures/membrane_organelle/chlorosome_envelope.yaml
+    sha256: d39583d641a4c6070008f52e29246d1659bf86b1158799b1c30caf2e272ef903
+    role: target
+  - path: data/structures/membrane_organelle/ciliary_pocket_membrane.yaml
+    sha256: acdf228c05817a740e627e5885200d543b8cb91f6ac94aefa4f5bf954255b3e0
+    role: target
+  - path: data/structures/membrane_organelle/cis_golgi_network.yaml
+    sha256: 369cae5270aeacd25a94317be3b005167773bd89a5e4c2583061fa24cd79f31d
+    role: target
+  - path: data/structures/membrane_organelle/cis_golgi_network_membrane.yaml
+    sha256: c818f4de1c2fd8c36bc121d4389ce017c59526e083e6aefdf1b2a0041411da9c
+    role: target
+  - path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle.yaml
+    sha256: 3193e3f6ea811d515c1545dc4e9179c8122e8718a328ed11261c7b648e94343d
+    role: target
+  - path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_lumen.yaml
+    sha256: d3a53daa5cc28635e48242bfa4d7dab04186a8c7f17b40a1491de51e94a33951
+    role: target
+  - path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_membrane.yaml
+    sha256: 70d8d315440e5cc7cc4c8f8c11a9103d74deffa773df25d9051113122d8a189a
+    role: target
+  - path: data/structures/membrane_organelle/clathrin_coated_vesicle.yaml
+    sha256: cee241afc73475bcdec9d8c3c4c57bdf9c4cb2f726e4a78615dfb393613be9ad
+    role: target
+  - path: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    sha256: 2137a192f721232651c140497813cea3f15a73a67e910194d59fadc7837308f9
+    role: target
+  - path: data/structures/membrane_organelle/clathrin_coated_vesicle_membrane.yaml
+    sha256: 963e3cbe094c98b1279923d8f4ecc6a27343f82aa7240dece427fa09882c25f1
+    role: target
+  - path: data/structures/membrane_organelle/coated_vesicle.yaml
+    sha256: baf2f374fd87cb07f0ae0a31c5962cfa34c345941f872a96759858c88c8218c1
+    role: target
+  - path: data/structures/membrane_organelle/coated_vesicle_membrane.yaml
+    sha256: b74f6c754d374d664267834c903c7bb2aed86f79145de8ce69f6ea9785bbebcc
+    role: target
+  - path: data/structures/membrane_organelle/coccolith_vesicle.yaml
+    sha256: 89b7e793211332507189d1ba872fc1eb901cf8703323853cd10d65b45e971655
+    role: target
+  - path: data/structures/membrane_organelle/contractile_vacuolar_membrane.yaml
+    sha256: a73ad7ccfc67c7c39a41d555109a229de1c469dec8eff0d808a3cddaa0aa383c
+    role: target
+  - path: data/structures/membrane_organelle/contractile_vacuole.yaml
+    sha256: d1057e9c19ff100f054c73da52b597742dadde491f2a007cd7b648b8a7b626bb
+    role: target
+  - path: data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    sha256: 5d37be1aa899c1bfd20611faeafefb842a96e8a21144dea9e010b2c89d4b7a1c
+    role: target
+  - path: data/structures/membrane_organelle/contractile_vacuole_lumen.yaml
+    sha256: 9c85ec352245d16e963b9d86d4d1cf0b41d499b956b0b2d05611dca3a4341622
+    role: target
+  - path: data/structures/membrane_organelle/contractile_vacuole_pore.yaml
+    sha256: e6b016675a36c215388bfd9053da4af4b1ec407c47c197f8a2217f9ba66cc294
+    role: target
+  - path: data/structures/membrane_organelle/copi_coated_vesicle.yaml
+    sha256: d542d1063731ec276cf5e771752715152ad950ee3fd1819f24e1a792036f2981
+    role: target
+  - path: data/structures/membrane_organelle/copi_coated_vesicle_lumen.yaml
+    sha256: f4da3395ba3aa5bfa65d859069e5b2f5d15303f81d7da6048291813188d9bcfa
+    role: target
+  - path: data/structures/membrane_organelle/copi_coated_vesicle_membrane.yaml
+    sha256: 70dbc868044797a3911de45524d13ccbedb5bf9cc671824b0dcade909ab4922f
+    role: target
+  - path: data/structures/membrane_organelle/copii_coated_er_to_golgi_transport_vesicle.yaml
+    sha256: 141713f26c4f5cc6a2e6c6cb232bf45e194df53bcd60aa4769cc4343ac6599bf
+    role: target
+  - path: data/structures/membrane_organelle/copii_coated_vesicle_lumen.yaml
+    sha256: d75ae8e81d2fc08979408842f74ef1ad621e87108044faf2dcc6ca216e5e7782
+    role: target
+  - path: data/structures/membrane_organelle/cvt_vesicle.yaml
+    sha256: cf6eb5075a057a0b8b104cbacb61cdf895298eb4b018945a08b46bcb939c8b0c
+    role: target
+  - path: data/structures/membrane_organelle/cvt_vesicle_lumen.yaml
+    sha256: 3bb8cb5c3f751ec93619bb4658fb51a2c6e6a94e4e0b16aa0ea8a0833a28c243
+    role: target
+  - path: data/structures/membrane_organelle/cvt_vesicle_membrane.yaml
+    sha256: 679cdeb18f93b2ecf38916c132f8461121e7067f0db52e4b24842559b39dbb67
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle.yaml
+    sha256: 24275c8050ca5d13c66d563c7aa697a4de65766f87499f876fc94c41cd2f0db7
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle_envelope.yaml
+    sha256: 4a25594b3a26541401976d3ab78f271bc8726951462af9073fafc0eff2389a67
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle_inner_membrane.yaml
+    sha256: f10bb4f3ff44fb6d0b23e67379861768a590eb6d3da75686e296a0a5b3b26970
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle_intermembrane_space.yaml
+    sha256: aba8ad62f544ec82bea2f4767a8c79cc45d3fe117423163fc1ce1211a2527f8c
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle_membrane.yaml
+    sha256: b95c9fcb293bd9f434df3ccf9ecaa7c9bf04e1f83a95a2cd19673441a537a20b
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle_outer_membrane.yaml
+    sha256: 2f058b25ce3bf1b49d52bc03391ee46d6e26376860035469f037d27c52234047
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle_stroma.yaml
+    sha256: 13d83e3dadca9cafaa6550a7bf84cd8066bf1539ccaacd3627ec23aa5b08e118
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle_thylakoid.yaml
+    sha256: 19838578792948bb527b33a0dd61374b6ee7a688eb2ee0406426c2e95639c7e3
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle_thylakoid_lumen.yaml
+    sha256: 6dc48d3d810b7a63387502082d26502265a7f12eafec88058eb9e5d8be70a205
+    role: target
+  - path: data/structures/membrane_organelle/cyanelle_thylakoid_membrane.yaml
+    sha256: c1c3958038a4f3a20735ce33206475130078e9a12048dcbeff4bc0d04beb4178
+    role: target
+  - path: data/structures/membrane_organelle/cytoplasmic_vesicle.yaml
+    sha256: f4704b74324c18cab955983a27173d6a98fae0153bc7a403cbbe3c865e4eba84
+    role: target
+  - path: data/structures/membrane_organelle/cytoplasmic_vesicle_lumen.yaml
+    sha256: 87d5a5379cb643e40257e60c99a3308f2b6e6a49aa079856fb501fe6e3c738fe
+    role: target
+  - path: data/structures/membrane_organelle/cytoplasmic_vesicle_membrane.yaml
+    sha256: 112643d19f662095c8d81c907d5d6435fe93b612f8a037df2af0fe66af87d4aa
+    role: target
+  - path: data/structures/membrane_organelle/diazoplast.yaml
+    sha256: fd3948e827eb4a9870bc4eccb09689dd5c82f5caef443f1e319daabbf21bb038
+    role: target
+  - path: data/structures/membrane_organelle/early_endosome.yaml
+    sha256: ed91f355f5faca2b5bd7af5036740c6d6034d783fcfa0252aeb533489c6a46a9
+    role: target
+  - path: data/structures/membrane_organelle/early_endosome_lumen.yaml
+    sha256: fe21c86defd34e34c5df67ec7bc0e7be16cc0342f2b10c6bae2ffd9569060290
+    role: target
+  - path: data/structures/membrane_organelle/early_endosome_membrane.yaml
+    sha256: 2d96c5c692f3e324e718d1fc2750703c41060a9ef56dd535cd55831da69354dc
+    role: target
+  - path: data/structures/membrane_organelle/early_phagosome.yaml
+    sha256: 9b6c5d68e60dd7e28c33d369c72e84353e5415993837864471571dd2d4bb294e
+    role: target
+  - path: data/structures/membrane_organelle/early_phagosome_lumen.yaml
+    sha256: 530a570df4533015ec12d582458b5f59b04ecc49f4c89cd1bca2cc024d18e328
+    role: target
+  - path: data/structures/membrane_organelle/early_phagosome_membrane.yaml
+    sha256: dc07745b1527ee223fd0337c906e97fe7174b08bd5b8c0e5632c71522b84139f
+    role: target
+  - path: data/structures/membrane_organelle/endocytic_vesicle.yaml
+    sha256: ae5fddc4231f0302846ce5f2baad8665456b8d042bb3cdad58b1675636fe9b82
+    role: target
+  - path: data/structures/membrane_organelle/endocytic_vesicle_lumen.yaml
+    sha256: 5f1d0bbdb0ae22d96964222f70d6eda4be22f838ec7d1cbbac19b7857a10790c
+    role: target
+  - path: data/structures/membrane_organelle/endocytic_vesicle_membrane.yaml
+    sha256: 532ded42040e51dfeef59ceb1ec3adfc1114e07d298b5aa96ce01284b3aede36
+    role: target
+  - path: data/structures/membrane_organelle/endoplasmic_reticulum.yaml
+    sha256: 3e7c22c86e29207632f95ab47dbc3f13cedcdcbc7d1062a496789ed3082b143c
+    role: target
+  - path: data/structures/membrane_organelle/endoplasmic_reticulum_lumen.yaml
+    sha256: 8ffe704fef493506e494107aba2b583e563921f2f12a6e98748971f64976b622
+    role: target
+  - path: data/structures/membrane_organelle/endoplasmic_reticulum_membrane.yaml
+    sha256: 599774aca4e215829787fe1a818ef52bd2c3772b48c289505d14417c05d0f679
+    role: target
+  - path: data/structures/membrane_organelle/endosome.yaml
+    sha256: 7eb3c5b8022e63698365a49990831c7609d649c6024002eb19f6a28cdfff38a8
+    role: target
+  - path: data/structures/membrane_organelle/endosome_lumen.yaml
+    sha256: 7522ffb363729241f2263bef6ebf96cb135a807c677df546e0b4ae92fe2bc604
+    role: target
+  - path: data/structures/membrane_organelle/endosome_membrane.yaml
+    sha256: 564b0ecf02448e0dab2210a213597b20b57ebfe09bf7637dfe2bed79a1b95270
+    role: target
+  - path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    sha256: 15876d75b2efb4115edcf9f6ffa44a5254fcf104c9f543d7eb07b78a5f06db8a
+    role: target
+  - path: data/structures/membrane_organelle/er_to_golgi_transport_vesicle_membrane.yaml
+    sha256: 5cdd951707eead318295ce7ceb64c16bdc0c85b465374678d564878481f04a9c
+    role: target
+  - path: data/structures/membrane_organelle/esterosome.yaml
+    sha256: c5779634687c3e16478f4782e24897bc8df7939f14eddfd26ec4715c6de3c95a
+    role: target
+  - path: data/structures/membrane_organelle/esterosome_lumen.yaml
+    sha256: 6891a8c551bc57b8ab1ce07357d050e40b46303debc2de0b81132b54424b53a4
+    role: target
+  - path: data/structures/membrane_organelle/esterosome_membrane.yaml
+    sha256: b29aff5dceea8ed56348277d76f1c3658da2f304baa1b8e9858bf64cea5f4e5a
+    role: target
+  - path: data/structures/membrane_organelle/exoneme.yaml
+    sha256: 2e32d7ca2f38ab39d5e1eb57cf683833fed5fdf18337191a3302689058d3b4b4
+    role: target
+  - path: data/structures/membrane_organelle/eyespot_apparatus.yaml
+    sha256: 46c34aa696b5a0672d295e04dd475009d79c5c51b22aebe5afd541ccb97bc248
+    role: target
+  - path: data/structures/membrane_organelle/ferrosome.yaml
+    sha256: a8350e9f852acd4d6cb753caba52b5f70ba3002f73f48e083ac047d0db405a6f
+    role: target
+  - path: data/structures/membrane_organelle/flagellar_pocket.yaml
+    sha256: d67c465d104f21905f63ea994b6f4f526a51502cefccf79e9e732698f4971fa8
+    role: target
+  - path: data/structures/membrane_organelle/food_vacuole.yaml
+    sha256: 956ec0d47253c51f7931d89e9308f1be821836cb87de96410327f374e30d5ac0
+    role: target
+  - path: data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    sha256: d447fe7bc41bcf0749629f12affde731c10286f9efbb170efbf81bc27b975016
+    role: target
+  - path: data/structures/membrane_organelle/fungal_type_vacuole_lumen.yaml
+    sha256: ef0fef76aaa4813b13015b2fc8b1029f479aa1b997e96a1d7d13950e355eb3aa
+    role: target
+  - path: data/structures/membrane_organelle/fungal_type_vacuole_membrane.yaml
+    sha256: 2436643a28b07f28373a3c9d61360377b61b5e8803b0b6bef5b44ec32f1bfc51
+    role: target
+  - path: data/structures/membrane_organelle/glycosome.yaml
+    sha256: 79383aea821433fbb6a6e2cc904578d9b106b549f5a5e97244b562190ed21c9b
+    role: target
+  - path: data/structures/membrane_organelle/glycosome_lumen.yaml
+    sha256: 86388cc4813e19a29b617f1800e0499e8b280823c7f3240b75c45fa7d1b8b544
+    role: target
+  - path: data/structures/membrane_organelle/glycosome_membrane.yaml
+    sha256: 3d72e1e3fa6653b4d605c490e50da8b348c78773fa0e08947088b4e7ab2f43e9
+    role: target
+  - path: data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+    sha256: 57bdc53bba889fb38dd511718cec3c0cab5013fa2029d21636f27da4ca97801b
+    role: target
+  - path: data/structures/membrane_organelle/glyoxysomal_membrane.yaml
+    sha256: acf5b4c65edac5fd14c1a33ffa545fc5f7715162e84fdb59535e6a39d48be48c
+    role: target
+  - path: data/structures/membrane_organelle/glyoxysome.yaml
+    sha256: 4f1e29ea41f06149b1f638a6b94949e9f6c7246bfb5ed9b954eb5ded839858a4
+    role: target
+  - path: data/structures/membrane_organelle/golgi_apparatus.yaml
+    sha256: b064dc1116ec2814e2ecb946d8ebd554a4b176494c2259ff7e458bac0d3e5eb1
+    role: target
+  - path: data/structures/membrane_organelle/golgi_associated_vesicle.yaml
+    sha256: 71af7287ce915ee5a16cef9a81c36b2c46e1b0cb7622a3f5c445fe308bbd81ba
+    role: target
+  - path: data/structures/membrane_organelle/golgi_associated_vesicle_membrane.yaml
+    sha256: 6467fb8e64210d44c66f32b8c6f654c6bdada08ecd35edc36f074667d4ce4413
+    role: target
+  - path: data/structures/membrane_organelle/golgi_cisterna.yaml
+    sha256: 09ebdf2a8646a8f51638cd933e9523e9e9170e0610567ad3e09efa7a97c6de7a
+    role: target
+  - path: data/structures/membrane_organelle/golgi_cisterna_membrane.yaml
+    sha256: 4157a0d579677dd5e6e32cb11bb215bfc414f18833e120abf0a19b892029b62e
+    role: target
+  - path: data/structures/membrane_organelle/golgi_lumen.yaml
+    sha256: 609cac48e5a5d75c55ed731b281a531dbe76e9db2ad105b228f17194399f608b
+    role: target
+  - path: data/structures/membrane_organelle/golgi_membrane.yaml
+    sha256: 22a35f67a05738d876923e98adfe54cde34ee23c9009667f48676dca83ba708c
+    role: target
+  - path: data/structures/membrane_organelle/hydrogenosomal_membrane.yaml
+    sha256: 7e389b3e00ef30e931b8415dcc2daf38b5022ba6849696387af283a6f9f7ab56
+    role: target
+  - path: data/structures/membrane_organelle/hydrogenosome.yaml
+    sha256: cbe6ff879b7bc2477e475394c4361107d4d033bfeba79e4a85c03787b27b8b70
+    role: target
+  - path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+    sha256: 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40
+    role: target
+  - path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    sha256: 8090ece98a38a0ca4a5d6644b36bbb0a40b8225c439956d1010443ab0b6e24f9
+    role: target
+  - path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    sha256: 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2
+    role: target
+  - path: data/structures/membrane_organelle/late_endosome.yaml
+    sha256: af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0
+    role: target
+  - path: data/structures/membrane_organelle/late_endosome_lumen.yaml
+    sha256: f4f801cc662e9d680eec7749b54e4c69b699e76e8af5faba7b27316d3b0ecc91
+    role: target
+  - path: data/structures/membrane_organelle/late_endosome_membrane.yaml
+    sha256: abd97317590eaf6f8b21b611d08470cc92e1a3b8bb4773381d092e2e4ddb27cc
+    role: target
+  - path: data/structures/membrane_organelle/macronucleus.yaml
+    sha256: 99c6a5a957b29cb3ee37f2f1c81b5e0c4a8e3e32462bbb5e33dc5134c04d38c2
+    role: target
+  - path: data/structures/membrane_organelle/magnetosome.yaml
+    sha256: fca499ca429ba4282722280f05c08012db6a9fcd6766d2f65f85d83639eaa084
+    role: target
+  - path: data/structures/membrane_organelle/magnetosome_lumen.yaml
+    sha256: 6e777efa5c662d732dad014690fca690f9cad0ec08d9990e907ec04112e059c6
+    role: target
+  - path: data/structures/membrane_organelle/magnetosome_membrane.yaml
+    sha256: 2c4667f86bae65f60cb8aa414079523e0b5f38a940b192e858d5a76f143c6ed4
+    role: target
+  - path: data/structures/membrane_organelle/maurer_s_cleft.yaml
+    sha256: 8eed10ce23b6b30eb30d69fc14e8686bc350a5906ac9b7fbe4b6601ebe3616a9
+    role: target
+  - path: data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    sha256: 8d513f399ed2555737573ae9d0c888514408062fcd5f2ec60bc19bad9e93f2c8
+    role: target
+  - path: data/structures/membrane_organelle/microneme.yaml
+    sha256: 8c260a40b26529407d136e11511c846d6554d975d54a3a45f444876aa0b51da8
+    role: target
+  - path: data/structures/membrane_organelle/microneme_lumen.yaml
+    sha256: c40d221eea42af12fcb06a6a5dbcc7d3592f289ad31f52a275acad4d6666af38
+    role: target
+  - path: data/structures/membrane_organelle/microneme_membrane.yaml
+    sha256: f3c40aeb98a8d3eec6950ea6a3875db63372a5e72c66a75130e4ec821f0dc4ad
+    role: target
+  - path: data/structures/membrane_organelle/micronucleus.yaml
+    sha256: fe6086eb62e1499109082d20f9a25ff776a68482d0ab89253469f6f3bfcbb8c1
+    role: target
+  - path: data/structures/membrane_organelle/microsporidian_posterior_vacuole.yaml
+    sha256: db2c2e1271b64aa7037885eeb2f1e39c6e3ee5d769b83e8374ed96d2e768f6b8
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_crista.yaml
+    sha256: d7f734bbcd5e5af1c899f0c2034d2bc72656eaeb71d5861cf185613c65f4bda6
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_crista_junction.yaml
+    sha256: b994a1d51d584f4614c50fb97db455db7a6cf72b2f886da419fcbf3b77ba3adb
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+    sha256: c7a83f3db0bb05a7016b5c3991e79bd21c9a6ec4f723335fc3a1d14864d1c5c8
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_envelope.yaml
+    sha256: e750843104d72fd05608a59a650410e8bc8103b02697f5a1add9fd5bd31e283f
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_inner_boundary_membrane.yaml
+    sha256: b71189fd942fa0d436ed4557db09ef5835f40d249f04d354503c67b9e9b7baa0
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_inner_membrane.yaml
+    sha256: 63301d7a679c30a2afadd331aa17b3559852b09c038e97dab14f53e40d34ed1f
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_intermembrane_space.yaml
+    sha256: 9b1d3fcf94d5a598d61810b56580265af6c9325890c673eab3532645e4cb48ea
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_matrix.yaml
+    sha256: a8348a52ab8d24234029023bee3b95b7bd8c42a618dad2822755c59b908a727a
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_membrane.yaml
+    sha256: 1cc1754c594a82d41263e94b0c5c8b80fc3c99d6a4e1703e379e9641963fba08
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml
+    sha256: 136ac3a72a4a1f8475301e2328ebc27c3799397823e0b5804124480ff728800f
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrion.yaml
+    sha256: 9152cb04bd6e1faf9f845187d723336a26136fa7d568d5cbb2b54070319aceac
+    role: target
+  - path: data/structures/membrane_organelle/mitosome.yaml
+    sha256: 6c663b4b22120c931071ef1b26da5d7859ec9b98cfbda7631cda2d2425ffd59f
+    role: target
+  - path: data/structures/membrane_organelle/mitosome_envelope.yaml
+    sha256: 762b8bad522664b480655908ccd92a258624f836a99d3e78232fe1e30aea8fc9
+    role: target
+  - path: data/structures/membrane_organelle/mitosome_inner_membrane.yaml
+    sha256: 758c67ff3788eef18a08b4b6720e1c3a96f135d4313cb3dc7777823599f6eb35
+    role: target
+  - path: data/structures/membrane_organelle/mitosome_intermembrane_space.yaml
+    sha256: c961b013182d3ac6fb50a2fe4af7988c95d957237c78e904142cbb7e2f88df95
+    role: target
+  - path: data/structures/membrane_organelle/mitosome_matrix.yaml
+    sha256: cc21e220c39e8210a84b7d15251fcb85474ec75f85eafab74c8df1d4a80c3bca
+    role: target
+  - path: data/structures/membrane_organelle/mitosome_outer_membrane.yaml
+    sha256: 8c9ed412d5d033717ea703db6c61c6960078608448a4cc6a57743a0ed37b7a58
+    role: target
+  - path: data/structures/membrane_organelle/mononeme.yaml
+    sha256: 5e08d2090388a00b0883dd2253e8bd606d8c250a32406fb8492d6896c861a97b
+    role: target
+  - path: data/structures/membrane_organelle/mucocyst.yaml
+    sha256: 5be0c727236d287685859cb323b9e0b109da3c26398bfe2d9adbe00f81f4b5bc
+    role: target
+  - path: data/structures/membrane_organelle/multivesicular_body.yaml
+    sha256: cf6713b73e225eb2413a2a8b8a0fc9dfb6cf84a12f10133e3dcbec03791585a9
+    role: target
+  - path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    sha256: 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916
+    role: target
+  - path: data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+    sha256: 6c67050e4fa82c1a03f0476a13be57741651c0ad9e1d4bfa241ca500525175f6
+    role: target
+  - path: data/structures/membrane_organelle/multivesicular_body_membrane.yaml
+    sha256: f4b66123e8565c11507c55cd1184da62efd23de4b37e20995a6561bee8634db7
+    role: target
+  - path: data/structures/membrane_organelle/nitroplast.yaml
+    sha256: 3f7dc36b6c5e8389c881e64839227e1e5cdde49edb55277e245b180f0de8d6a8
+    role: target
+  - path: data/structures/membrane_organelle/nuclear_envelope.yaml
+    sha256: 226a12a5500d39f1afbc5baa0f3a81891d6ae4918f4d6c29e8ce05de0df9979a
+    role: target
+  - path: data/structures/membrane_organelle/nuclear_envelope_lumen.yaml
+    sha256: 1c45350eaa4a19474f4689125aadc8aa93d1824d41303e3c4aaff1f7e1db6019
+    role: target
+  - path: data/structures/membrane_organelle/nuclear_inner_membrane.yaml
+    sha256: c0484a80c2b1568174ca7f9c96805a6ce2749a3ba27b700e21fb1de2aef4e4df
+    role: target
+  - path: data/structures/membrane_organelle/nuclear_lumen.yaml
+    sha256: dbb07d267c0272e4deb338a2e8a0e29892a6f1d28f279160c3d42f730410fb49
+    role: target
+  - path: data/structures/membrane_organelle/nuclear_net.yaml
+    sha256: 8b4a54d13a70cfb4fdce9bd18ae990793f9de9627fdca067573c033335d847ba
+    role: target
+  - path: data/structures/membrane_organelle/nuclear_outer_membrane.yaml
+    sha256: a760b04919cb0a80c89fd2eee5c1d4a0c940fc15a17b77b4b1810b9e1d2b2ffb
+    role: target
+  - path: data/structures/membrane_organelle/nucleomorph.yaml
+    sha256: 9653087b981991e28b537ec1eb809e442f5215f4ff4c994687106b74ed6338ad
+    role: target
+  - path: data/structures/membrane_organelle/nucleus.yaml
+    sha256: 889818b3c6a37074924a97bc81271f43ef236dc9112a871c5e521dae123e497d
+    role: target
+  - path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+    sha256: 6e9805392c72104f5f1d6e9ee70767c49f480b22130da0e6f293bcf8f6a1bec0
+    role: target
+  - path: data/structures/membrane_organelle/organellar_chromatophore_inner_membrane.yaml
+    sha256: e3c244a36b1484e5d3ca95aa114de0a719660aa4d76ae1811ed12584b3d72b1e
+    role: target
+  - path: data/structures/membrane_organelle/organellar_chromatophore_intermembrane_space.yaml
+    sha256: f67ae10cda248a93eba761943f430c0ea5e6d4550dcf9514611822866d2c98ed
+    role: target
+  - path: data/structures/membrane_organelle/organellar_chromatophore_membrane.yaml
+    sha256: 179b7a8a2519cb216889baed1305e54b1de332688cbb7bac1c24857f1209a794
+    role: target
+  - path: data/structures/membrane_organelle/organellar_chromatophore_outer_membrane.yaml
+    sha256: f7d415a8e211d48ef9ecf5f0bb1b96a0ac3336c1ce6498d78d9bf0033bce3c11
+    role: target
+  - path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid.yaml
+    sha256: 6ce01ac746d2a475719c41e8eea903b510d96648cff04a1338248feb3558731a
+    role: target
+  - path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid_lumen.yaml
+    sha256: 6d012bda5b45cabee640a9a066a9ceb0f0a61e1b26d13214370ad299b185c2fa
+    role: target
+  - path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid_membrane.yaml
+    sha256: 67a0433476fdb5ca77a1a30bb921d4d80603a5ae1c61869162edf87f07d6364b
+    role: target
+  - path: data/structures/membrane_organelle/osmiophilic_body.yaml
+    sha256: 12985dc29b3e81008d138f3de6e0e10b93090ff200e538a105f24a7c171bfafc
+    role: target
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+    sha256: bc5b288dc20d549717192249a6d0889856bdaf66fe33b61cd213b503f4d6f610
+    role: target
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole_lumen.yaml
+    sha256: 4a2a0820584215f4a76152f44d66e365ed67a663527da333d2e6c00d24bc244f
+    role: target
+  - path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    sha256: fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da
+    role: target
+  - path: data/structures/membrane_organelle/periplastidial_membrane.yaml
+    sha256: 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a
+    role: target
+  - path: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+    sha256: 4fc4ffe0656f64952c9e1c0c88df647019381b19abe4201b321c5542297f6e23
+    role: target
+  - path: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+    sha256: 4c11f2dcb589eddf4948f8018d1008cfe30f7eb5e4edc3bbd020fa46fd3dcf87
+    role: target
+  - path: data/structures/membrane_organelle/peroxisome.yaml
+    sha256: 63767bb1954d10e3237eec60b9541a916b6039d71f9afa374e8ff376a5066828
+    role: target
+  - path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+    sha256: 604f232e3d5457913d2118c27a4e372ba90def9cb369184ce11d3a8f021e335f
+    role: target
+  - path: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+    sha256: 6f0f574162ac901bb338539914a46653734c7864b4acb89060254f6f34077c19
+    role: target
+  - path: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+    sha256: 65c456f56f9491c367091e38bf497df4e7f3aa50b21b94d9bf4017ffec2c449f
+    role: target
+  - path: data/structures/membrane_organelle/phagolysosome.yaml
+    sha256: 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e
+    role: target
+  - path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    sha256: 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32
+    role: target
+  - path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    sha256: 096069e6ecc9f33d640dfb9621fa69dedfab50cb9a9f08e6186e9583a823c319
+    role: target
+  - path: data/structures/membrane_organelle/photosynthetic_membrane.yaml
+    sha256: 5fe446aae99635ba843cf22d1144ab1312a2c30224367c49efd0bedcbd06db97
+    role: target
+  - path: data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+    sha256: f3130fc795ff500febb7d273c6a7b281ec7d2cc230d6e44fb5363c6c9256b064
+    role: target
+  - path: data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_lumen.yaml
+    sha256: 4b4fbe694529235b322625d85f5c210eddea0cc03e5e1a684d5bff2d698bca82
+    role: target
+  - path: data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_membrane.yaml
+    sha256: 66205b2d304df6e2b425730f885ccf46de08dc94c99c60636eab667d3bf68410
+    role: target
+  - path: data/structures/membrane_organelle/plastid.yaml
+    sha256: 1be30ab06bc2fbae9294930ceaf74b20a2d43d8af60986aa9ed0e07b9645ae81
+    role: target
+  - path: data/structures/membrane_organelle/plastid_envelope.yaml
+    sha256: 9033a6955c21d6043019061509c7ca1bf470bec884e7f4e1a5edc0080b680968
+    role: target
+  - path: data/structures/membrane_organelle/plastid_inner_membrane.yaml
+    sha256: ceb12c6ee4451216ae406f17f68ea2d3730a6da302b38e8bb8fcabc532a6a4fa
+    role: target
+  - path: data/structures/membrane_organelle/plastid_intermembrane_space.yaml
+    sha256: 2ef21406931fb90ec3aead7f57ee12a4376ad3d95276c7db3c2a7ab324c73c5d
+    role: target
+  - path: data/structures/membrane_organelle/plastid_membrane.yaml
+    sha256: ae09183c12ecb85ac2135b3615b9a613985285039f5730126227fde982e55bef
+    role: target
+  - path: data/structures/membrane_organelle/plastid_outer_membrane.yaml
+    sha256: 59bd8548931d27f711233f542b5f927c0e7b0a68dd611eabb4777ee08003deaa
+    role: target
+  - path: data/structures/membrane_organelle/plastid_stroma.yaml
+    sha256: 86d19307cbe21273498f0d7d6741e61f5ebf002cf78418c34b922d9d4963503b
+    role: target
+  - path: data/structures/membrane_organelle/plastid_thylakoid.yaml
+    sha256: ec3c74ee89bf25eea6a3a5682b3f7f73e0837465dccf2a8f2c0cce1550a4e3c8
+    role: target
+  - path: data/structures/membrane_organelle/plastid_thylakoid_lumen.yaml
+    sha256: 7a75c5aee47a20bbae7da6351e07fc7f2d1dc418e7ca34e253d08e3a531ff4ee
+    role: target
+  - path: data/structures/membrane_organelle/plastid_thylakoid_membrane.yaml
+    sha256: 51a2ece521e1b5c0b3b589fc7cf665be1c9544299257e0fda7fcf8352e7401c2
+    role: target
+  - path: data/structures/membrane_organelle/polaroplast.yaml
+    sha256: b755d59c2ad21e4b73e222a7d9979859a4d4b5c3c9f4543f9695dc3749beff69
+    role: target
+  - path: data/structures/membrane_organelle/pusule.yaml
+    sha256: 3bc5082b5e3b721414b9b2d57c585c1a278de5053885f34f55b40ccd4b71a6ae
+    role: target
+  - path: data/structures/membrane_organelle/pyrenoid_tubule.yaml
+    sha256: dd5c61f94612f6c30f259f029b7f4bc4daa8a7d4c0fa8111f6eb0715f78483d7
+    role: target
+  - path: data/structures/membrane_organelle/recycling_endosome.yaml
+    sha256: 7a806e4e4eaddd3578c517d587c4eaaf1c458e4f5cfc2e59065fc0f26594ac48
+    role: target
+  - path: data/structures/membrane_organelle/recycling_endosome_lumen.yaml
+    sha256: 69bc318299125a4de316f2ba3b7fc20e0655bca2d37fa6d43c12afcfa3fc3ce2
+    role: target
+  - path: data/structures/membrane_organelle/recycling_endosome_membrane.yaml
+    sha256: cc07cfcf4d3c8fcfac3594e3dec18791b1e5f40e13d867fcdb4ef355f07aebf0
+    role: target
+  - path: data/structures/membrane_organelle/reservosome.yaml
+    sha256: 0e733e8adbe97aaadfaaa43aafd271069aaa3fb14cad36f8c3281b31852e7aeb
+    role: target
+  - path: data/structures/membrane_organelle/reservosome_lumen.yaml
+    sha256: d792cf1b253ed384ca734154902e13ebb5ac760a45635226ebe3c110bf4682a4
+    role: target
+  - path: data/structures/membrane_organelle/reservosome_matrix.yaml
+    sha256: 96579f72d8aa8c8570ed688ff44ac93574640e579a33349333074f4b9e72a174
+    role: target
+  - path: data/structures/membrane_organelle/reservosome_membrane.yaml
+    sha256: 73604615ebff7b587a19bac850af2728c5ff9cee59e065977e9498f59092a831
+    role: target
+  - path: data/structures/membrane_organelle/rhoptry.yaml
+    sha256: f36f8d4602ddfeb6fc27df4eebcfb3a127fa1e3720d689fac45f4300cb492709
+    role: target
+  - path: data/structures/membrane_organelle/rhoptry_lumen.yaml
+    sha256: 92b2f8d10c93bb944c4e7d33e5297e827292572cf0bc5ebb17f133eed2fc541f
+    role: target
+  - path: data/structures/membrane_organelle/rhoptry_membrane.yaml
+    sha256: 46a8bc0e8ce32d1b0bcfb24668ab3b2c08c1978ebaee578f6dadbd98190c771a
+    role: target
+  - path: data/structures/membrane_organelle/rhoptry_neck.yaml
+    sha256: 6a03bef47fa2182ce142ecc9819b386f0e0152d14338e4e8a45dc29c58c1c67f
+    role: target
+  - path: data/structures/membrane_organelle/scintillon.yaml
+    sha256: 34119157abb1c76c2d64730753284a1244a033f8cac3aac3cda2ef9ed7890734
+    role: target
+  - path: data/structures/membrane_organelle/spongiome.yaml
+    sha256: 4bdc11a86d247b6a45549a41c9aac3b25946b046f3b54d269fab634ca9d44019
+    role: target
+  - path: data/structures/membrane_organelle/thylakoid.yaml
+    sha256: 4fcac02ebe90f61cb32599bdee08e057abd6bb9223f55a2ded7e9318850b3c89
+    role: target
+  - path: data/structures/membrane_organelle/thylakoid_lumen.yaml
+    sha256: 64fd81c89bf71dd2933947922bdba179c520f7590a238a1159c2d01b4bbd173c
+    role: target
+  - path: data/structures/membrane_organelle/thylakoid_membrane.yaml
+    sha256: e604b90dad263791f827ec2c883b7e279a071e792a9f161b8fac54f712069e8a
+    role: target
+  - path: data/structures/membrane_organelle/toxicyst.yaml
+    sha256: 672baa23fe05a4cd16b6319696b5837b2a446f13e14e453e6fa983e36bdb5c57
+    role: target
+  - path: data/structures/membrane_organelle/trans_golgi_network.yaml
+    sha256: 87b0be103b020a03a3db064561125bb504cd21959ed2986ce813f62ecb6d5ef4
+    role: target
+  - path: data/structures/membrane_organelle/trans_golgi_network_membrane.yaml
+    sha256: 67edbc6da8b52722913b6ff9cad5011d1f38d2f0cf5d16c84e91fe92a854f0a7
+    role: target
+  - path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle.yaml
+    sha256: 0e8fec7988254c43b3f0b6bffe1ba26bde68be5be4543469233acf9564335232
+    role: target
+  - path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle_lumen.yaml
+    sha256: 14224a4767fec087790f0f07c24f9882def0a56df30a7be1d856d5bc6d8e6879
+    role: target
+  - path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle_membrane.yaml
+    sha256: 55a3a50f388915b80fc069ee5f2289a014b7ec9803ae3231477801a59650fb30
+    role: target
+  - path: data/structures/membrane_organelle/trichocyst.yaml
+    sha256: 97b8d6300b391f6a22683336db953b9b4e278b6e1b81b04420a25bd320de4914
+    role: target
+  - path: data/structures/membrane_organelle/vacuolar_lumen.yaml
+    sha256: c766d7de82bee8cf8d6f5c34f61cc41a7150e65686ba387255061a9449106b73
+    role: target
+  - path: data/structures/membrane_organelle/vacuolar_membrane.yaml
+    sha256: 89c3bb9baf5507b45606c975ff1bb6ef8d705601ce44bc7e4c3d72572b5f36e0
+    role: target
+  - path: data/structures/membrane_organelle/vacuole.yaml
+    sha256: 7db6bf4c90e74fed8acf83d164143fe3ef294c46012b631a01c1d241f05f370d
+    role: target
+  - path: data/structures/membrane_organelle/woronin_body.yaml
+    sha256: 7d9cfb32d06cb04c7ca329818156372f6433451f8f0acd53906dbb7080a03aed
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Full-cohort review of all 224 CellStructureRecord YAML files under
+    data/structures/membrane_organelle/.
+  selection: Complete folder cohort data/structures/membrane_organelle/*.yaml in the
+    frozen 993-record Cycle 3 Stage 4 inventory.
+  coverage: full
+  population_size: 224
+  reviewed_target_ids:
+  - GO:0020022
+  - GO:0033985
+  - GO:0033102
+  - cellstructuremech:actinophryid_extrusome
+  - GO:0044222
+  - cellstructuremech:anammoxosome_membrane
+  - GO:0020026
+  - GO:0030668
+  - GO:0020011
+  - GO:0160211
+  - GO:0005776
+  - GO:0034423
+  - GO:0000421
+  - GO:0030075
+  - GO:0045009
+  - GO:0009507
+  - GO:0009941
+  - GO:0009706
+  - GO:0031972
+  - GO:0031969
+  - GO:0009707
+  - GO:0009570
+  - GO:0009534
+  - GO:0009543
+  - GO:0009535
+  - GO:0046858
+  - GO:0033105
+  - GO:0020018
+  - GO:0005801
+  - GO:0033106
+  - GO:0045334
+  - GO:0106176
+  - GO:0030669
+  - GO:0030136
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  - GO:0030665
+  - GO:0030135
+  - GO:0030662
+  - cellstructuremech:coccolith_vesicle
+  - GO:0031164
+  - GO:0000331
+  - GO:0062159
+  - cellstructuremech:contractile_vacuole_lumen
+  - GO:0031913
+  - GO:0030137
+  - cellstructuremech:copi_coated_vesicle_lumen
+  - GO:0030663
+  - GO:0030134
+  - cellstructuremech:copii_coated_vesicle_lumen
+  - GO:0033107
+  - cellstructuremech:cvt_vesicle_lumen
+  - GO:0033110
+  - GO:0009842
+  - GO:0033112
+  - GO:0036012
+  - GO:0036014
+  - GO:0033113
+  - GO:0036013
+  - GO:0034060
+  - GO:0009843
+  - GO:0033114
+  - GO:0033115
+  - GO:0031410
+  - GO:0060205
+  - GO:0030659
+  - cellstructuremech:diazoplast
+  - GO:0005769
+  - GO:0031905
+  - GO:0031901
+  - GO:0032009
+  - GO:0062113
+  - GO:0036186
+  - GO:0030139
+  - GO:0071682
+  - GO:0030666
+  - GO:0005783
+  - GO:0005788
+  - GO:0005789
+  - GO:0005768
+  - GO:0031904
+  - GO:0010008
+  - GO:7770040
+  - GO:0012507
+  - GO:0033117
+  - GO:0034467
+  - GO:0033118
+  - GO:0044311
+  - GO:1990413
+  - cellstructuremech:ferrosome
+  - GO:0020016
+  - GO:0020020
+  - GO:0000324
+  - GO:0000328
+  - GO:0000329
+  - GO:0020015
+  - GO:0034468
+  - GO:0046860
+  - GO:0031908
+  - GO:0046861
+  - GO:0009514
+  - GO:0005794
+  - GO:0005798
+  - GO:0030660
+  - GO:0031985
+  - GO:0032580
+  - GO:0005796
+  - GO:0000139
+  - GO:0046859
+  - GO:0042566
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  - GO:0020036
+  - GO:0044227
+  - GO:0020009
+  - GO:0034494
+  - GO:0033163
+  - GO:0031040
+  - cellstructuremech:microsporidian_posterior_vacuole
+  - GO:0030061
+  - GO:0044284
+  - cellstructuremech:mitochondrial_derived_compartment
+  - GO:0005740
+  - GO:0097002
+  - GO:0005743
+  - GO:0005758
+  - GO:0005759
+  - GO:0031966
+  - GO:0005741
+  - GO:0005739
+  - GO:0032047
+  - cellstructuremech:mitosome_envelope
+  - cellstructuremech:mitosome_inner_membrane
+  - cellstructuremech:mitosome_intermembrane_space
+  - cellstructuremech:mitosome_matrix
+  - cellstructuremech:mitosome_outer_membrane
+  - GO:0070074
+  - GO:0036000
+  - GO:0005771
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  - cellstructuremech:multivesicular_body_lumen
+  - GO:0032585
+  - cellstructuremech:nitroplast
+  - GO:0005635
+  - GO:0005641
+  - GO:0005637
+  - GO:0031981
+  - cellstructuremech:nuclear_net
+  - GO:0005640
+  - GO:0033009
+  - GO:0005634
+  - GO:0070111
+  - GO:0070113
+  - GO:0070115
+  - GO:0070112
+  - GO:0070114
+  - GO:0070116
+  - GO:0070117
+  - GO:0070118
+  - GO:0044310
+  - cellstructuremech:parasitophorous_vacuole
+  - cellstructuremech:parasitophorous_vacuole_lumen
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  - GO:0106174
+  - GO:0034357
+  - GO:0042717
+  - GO:0031979
+  - GO:0031676
+  - GO:0009536
+  - GO:0009526
+  - GO:0009528
+  - GO:0009529
+  - GO:0042170
+  - GO:0009527
+  - GO:0009532
+  - GO:0031976
+  - GO:0031978
+  - GO:0055035
+  - GO:0160201
+  - cellstructuremech:pusule
+  - GO:0160223
+  - GO:0055037
+  - GO:0034777
+  - GO:0055038
+  - cellstructuremech:reservosome
+  - GO:0106124
+  - GO:0106125
+  - GO:0106126
+  - GO:0020008
+  - GO:0034591
+  - GO:0033016
+  - GO:1990225
+  - GO:0036007
+  - GO:0062160
+  - GO:0009579
+  - GO:0031977
+  - GO:0042651
+  - cellstructuremech:toxicyst
+  - GO:0005802
+  - GO:0032588
+  - GO:0030140
+  - GO:0098564
+  - GO:0012510
+  - GO:0055039
+  - GO:0005775
+  - GO:0005774
+  - GO:0005773
+  - GO:0140266
+targets:
+- target_id: GO:0020022
+  path: data/structures/membrane_organelle/acidocalcisome.yaml
+  label: acidocalcisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a694232f7d3e26286500601a55bb4332f35a07c6fc150f6ea85e8e7be640d0f7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/acidocalcisome.yaml
+    role: maintained_record
+- target_id: GO:0033985
+  path: data/structures/membrane_organelle/acidocalcisome_lumen.yaml
+  label: acidocalcisome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3238b530f5846e584dfb86651fd4895cb461e26bcc74afa51f3740815fab02e9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/acidocalcisome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0033102
+  path: data/structures/membrane_organelle/acidocalcisome_membrane.yaml
+  label: acidocalcisome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2a2a8ddf090bccdc6e8f0fd6b84f3e2ce971789071cb6af97dde48ed834f3a55
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/acidocalcisome_membrane.yaml
+    role: maintained_record
+- target_id: cellstructuremech:actinophryid_extrusome
+  path: data/structures/membrane_organelle/actinophryid_extrusome.yaml
+  label: actinophryid extrusome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4b0f4ea17353cf6db5e343ef4a88ddc1458185fdcb508b74ca4fa8685421d0ea
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/actinophryid_extrusome.yaml
+    role: maintained_record
+- target_id: GO:0044222
+  path: data/structures/membrane_organelle/anammoxosome.yaml
+  label: anammoxosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c98e06c7ce32979c1cb1a54179f4395700a59adfcc5c0a1947c5b30f9fb34b84
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/anammoxosome.yaml
+    role: maintained_record
+- target_id: cellstructuremech:anammoxosome_membrane
+  path: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+  label: anammoxosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0a47b8cfa7bc71dcfc8cb69ba625087ce23025f9a1204b0fe578d185c2035f61
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/anammoxosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0020026
+  path: data/structures/membrane_organelle/apicomplexan_dense_granule.yaml
+  label: apicomplexan dense granule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5079f63ad8455118899a0119a2d29197bd314c573c181a6bead705cd063f8fe1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicomplexan_dense_granule.yaml
+    role: maintained_record
+- target_id: GO:0030668
+  path: data/structures/membrane_organelle/apicomplexan_dense_granule_membrane.yaml
+  label: apicomplexan dense granule membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bd48fa3c1773cf7be7066602608acdd61ba386a9fbc5fc3fd19ddaa25dcab51b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicomplexan_dense_granule_membrane.yaml
+    role: maintained_record
+- target_id: GO:0020011
+  path: data/structures/membrane_organelle/apicoplast.yaml
+  label: apicoplast
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 00971d8425f63fc5d490907a43c00b6760c2d88c5413fce6bdbc2dd09919410e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained_record
+- target_id: GO:0160211
+  path: data/structures/membrane_organelle/apicoplast_membrane.yaml
+  label: apicoplast membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fb3e343e0ed2a8711dff2305abea2166c589cb0a7b169d291c67fed81990ca58
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005776
+  path: data/structures/membrane_organelle/autophagosome.yaml
+  label: autophagosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9d18c1f34ce5e4da65546eccf8f4ffc9a2273fcca1cd6db4efbb770f8591c3ba
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/autophagosome.yaml
+    role: maintained_record
+- target_id: GO:0034423
+  path: data/structures/membrane_organelle/autophagosome_lumen.yaml
+  label: autophagosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 33fbf9f3ae1591081dd1e113d0fd7476c64bdafaa238ec35c7705fb89bb0f98d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/autophagosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0000421
+  path: data/structures/membrane_organelle/autophagosome_membrane.yaml
+  label: autophagosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: aa651db3a9b5a208ae7a4deef9d3595d79c0296cda8ebdc9a1c524a11b948254
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/autophagosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0030075
+  path: data/structures/membrane_organelle/bacterial_thylakoid.yaml
+  label: bacterial thylakoid
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a134c6cf6fd6069f0a0ddc37f1e99ded9a32994b3b1fa16d2f9938e3e46b8c40
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/bacterial_thylakoid.yaml
+    role: maintained_record
+- target_id: GO:0045009
+  path: data/structures/membrane_organelle/chitosome.yaml
+  label: chitosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ec564f818b649f3c4c8a56de6d6bea798eded59e73f1c4b840325eb83b9d5493
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chitosome.yaml
+    role: maintained_record
+- target_id: GO:0009507
+  path: data/structures/membrane_organelle/chloroplast.yaml
+  label: chloroplast
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4c13f5dadaeb23a88fabfc2b5ec65034ed0ac83cbca9d45143793618acf2e727
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast.yaml
+    role: maintained_record
+- target_id: GO:0009941
+  path: data/structures/membrane_organelle/chloroplast_envelope.yaml
+  label: chloroplast envelope
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 29da363489107536342db1782001be534ea54605039b80c201cba0a46de9468e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_envelope.yaml
+    role: maintained_record
+- target_id: GO:0009706
+  path: data/structures/membrane_organelle/chloroplast_inner_membrane.yaml
+  label: chloroplast inner membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 05283f5252a6354d26bef1ff196b3a9e10fbd6e72e9a6ec17014330f7a28dbb3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_inner_membrane.yaml
+    role: maintained_record
+- target_id: GO:0031972
+  path: data/structures/membrane_organelle/chloroplast_intermembrane_space.yaml
+  label: chloroplast intermembrane space
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7ab90f4d2f4c41c466e100d589fb1f1d42bf90ded515dea6db5575d54119d43a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_intermembrane_space.yaml
+    role: maintained_record
+- target_id: GO:0031969
+  path: data/structures/membrane_organelle/chloroplast_membrane.yaml
+  label: chloroplast membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 115d9369e1b84a54e66028f079a8d140e72d40ec2fb5877e64fb592b6a085905
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_membrane.yaml
+    role: maintained_record
+- target_id: GO:0009707
+  path: data/structures/membrane_organelle/chloroplast_outer_membrane.yaml
+  label: chloroplast outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f499d6317b1546cf0d578f54d04df76a8af3c54746f29db6b2d7af0244b0075d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0009570
+  path: data/structures/membrane_organelle/chloroplast_stroma.yaml
+  label: chloroplast stroma
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cfdb0d3be9fba838d5288e478b39f922a4e11cbd240b689a2cbca7690c262b6a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_stroma.yaml
+    role: maintained_record
+- target_id: GO:0009534
+  path: data/structures/membrane_organelle/chloroplast_thylakoid.yaml
+  label: chloroplast thylakoid
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ed335bb9dbdc4ba22ed33046fa25d64796c2eadefe71b1e04eaeb7d67156723c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_thylakoid.yaml
+    role: maintained_record
+- target_id: GO:0009543
+  path: data/structures/membrane_organelle/chloroplast_thylakoid_lumen.yaml
+  label: chloroplast thylakoid lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6efd0a2e86462ae192dc2f27f9edc945dc6b522a31d8e233458cd25e661fb2af
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_thylakoid_lumen.yaml
+    role: maintained_record
+- target_id: GO:0009535
+  path: data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+  label: chloroplast thylakoid membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 16f50bd615bee75edd15004622bae49a9a25e71dd4b9573584ca1659139d0999
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chloroplast_thylakoid_membrane.yaml
+    role: maintained_record
+- target_id: GO:0046858
+  path: data/structures/membrane_organelle/chlorosome.yaml
+  label: chlorosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: eacca36a012da67cb45237059e21f59f42619b8c93a0fd06b37a1d8fcbe4afb4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chlorosome.yaml
+    role: maintained_record
+- target_id: GO:0033105
+  path: data/structures/membrane_organelle/chlorosome_envelope.yaml
+  label: chlorosome envelope
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d39583d641a4c6070008f52e29246d1659bf86b1158799b1c30caf2e272ef903
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chlorosome_envelope.yaml
+    role: maintained_record
+- target_id: GO:0020018
+  path: data/structures/membrane_organelle/ciliary_pocket_membrane.yaml
+  label: ciliary pocket membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: acdf228c05817a740e627e5885200d543b8cb91f6ac94aefa4f5bf954255b3e0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/ciliary_pocket_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005801
+  path: data/structures/membrane_organelle/cis_golgi_network.yaml
+  label: cis-Golgi network
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 369cae5270aeacd25a94317be3b005167773bd89a5e4c2583061fa24cd79f31d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cis_golgi_network.yaml
+    role: maintained_record
+- target_id: GO:0033106
+  path: data/structures/membrane_organelle/cis_golgi_network_membrane.yaml
+  label: cis-Golgi network membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c818f4de1c2fd8c36bc121d4389ce017c59526e083e6aefdf1b2a0041411da9c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cis_golgi_network_membrane.yaml
+    role: maintained_record
+- target_id: GO:0045334
+  path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle.yaml
+  label: clathrin-coated endocytic vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3193e3f6ea811d515c1545dc4e9179c8122e8718a328ed11261c7b648e94343d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0106176
+  path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_lumen.yaml
+  label: clathrin-coated endocytic vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d3a53daa5cc28635e48242bfa4d7dab04186a8c7f17b40a1491de51e94a33951
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0030669
+  path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_membrane.yaml
+  label: clathrin-coated endocytic vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 70d8d315440e5cc7cc4c8f8c11a9103d74deffa773df25d9051113122d8a189a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/clathrin_coated_endocytic_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0030136
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle.yaml
+  label: clathrin-coated vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cee241afc73475bcdec9d8c3c4c57bdf9c4cb2f726e4a78615dfb393613be9ad
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/clathrin_coated_vesicle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:clathrin_coated_vesicle_lumen
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+  label: clathrin-coated vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2137a192f721232651c140497813cea3f15a73a67e910194d59fadc7837308f9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0030665
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle_membrane.yaml
+  label: clathrin-coated vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 963e3cbe094c98b1279923d8f4ecc6a27343f82aa7240dece427fa09882c25f1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/clathrin_coated_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0030135
+  path: data/structures/membrane_organelle/coated_vesicle.yaml
+  label: coated vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: baf2f374fd87cb07f0ae0a31c5962cfa34c345941f872a96759858c88c8218c1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/coated_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0030662
+  path: data/structures/membrane_organelle/coated_vesicle_membrane.yaml
+  label: coated vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b74f6c754d374d664267834c903c7bb2aed86f79145de8ce69f6ea9785bbebcc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/coated_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: cellstructuremech:coccolith_vesicle
+  path: data/structures/membrane_organelle/coccolith_vesicle.yaml
+  label: coccolith vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 89b7e793211332507189d1ba872fc1eb901cf8703323853cd10d65b45e971655
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/coccolith_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0031164
+  path: data/structures/membrane_organelle/contractile_vacuolar_membrane.yaml
+  label: contractile vacuolar membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a73ad7ccfc67c7c39a41d555109a229de1c469dec8eff0d808a3cddaa0aa383c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/contractile_vacuolar_membrane.yaml
+    role: maintained_record
+- target_id: GO:0000331
+  path: data/structures/membrane_organelle/contractile_vacuole.yaml
+  label: contractile vacuole
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d1057e9c19ff100f054c73da52b597742dadde491f2a007cd7b648b8a7b626bb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/contractile_vacuole.yaml
+    role: maintained_record
+- target_id: GO:0062159
+  path: data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+  label: contractile vacuole complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5d37be1aa899c1bfd20611faeafefb842a96e8a21144dea9e010b2c89d4b7a1c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/contractile_vacuole_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:contractile_vacuole_lumen
+  path: data/structures/membrane_organelle/contractile_vacuole_lumen.yaml
+  label: contractile vacuole lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9c85ec352245d16e963b9d86d4d1cf0b41d499b956b0b2d05611dca3a4341622
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/contractile_vacuole_lumen.yaml
+    role: maintained_record
+- target_id: GO:0031913
+  path: data/structures/membrane_organelle/contractile_vacuole_pore.yaml
+  label: contractile vacuole pore
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e6b016675a36c215388bfd9053da4af4b1ec407c47c197f8a2217f9ba66cc294
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/contractile_vacuole_pore.yaml
+    role: maintained_record
+- target_id: GO:0030137
+  path: data/structures/membrane_organelle/copi_coated_vesicle.yaml
+  label: COPI-coated vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d542d1063731ec276cf5e771752715152ad950ee3fd1819f24e1a792036f2981
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/copi_coated_vesicle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:copi_coated_vesicle_lumen
+  path: data/structures/membrane_organelle/copi_coated_vesicle_lumen.yaml
+  label: COPI-coated vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f4da3395ba3aa5bfa65d859069e5b2f5d15303f81d7da6048291813188d9bcfa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/copi_coated_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0030663
+  path: data/structures/membrane_organelle/copi_coated_vesicle_membrane.yaml
+  label: COPI-coated vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 70dbc868044797a3911de45524d13ccbedb5bf9cc671824b0dcade909ab4922f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/copi_coated_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0030134
+  path: data/structures/membrane_organelle/copii_coated_er_to_golgi_transport_vesicle.yaml
+  label: COPII-coated ER to Golgi transport vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 141713f26c4f5cc6a2e6c6cb232bf45e194df53bcd60aa4769cc4343ac6599bf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/copii_coated_er_to_golgi_transport_vesicle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:copii_coated_vesicle_lumen
+  path: data/structures/membrane_organelle/copii_coated_vesicle_lumen.yaml
+  label: COPII-coated vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d75ae8e81d2fc08979408842f74ef1ad621e87108044faf2dcc6ca216e5e7782
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/copii_coated_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0033107
+  path: data/structures/membrane_organelle/cvt_vesicle.yaml
+  label: Cvt vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cf6eb5075a057a0b8b104cbacb61cdf895298eb4b018945a08b46bcb939c8b0c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cvt_vesicle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:cvt_vesicle_lumen
+  path: data/structures/membrane_organelle/cvt_vesicle_lumen.yaml
+  label: Cvt vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3bb8cb5c3f751ec93619bb4658fb51a2c6e6a94e4e0b16aa0ea8a0833a28c243
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cvt_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0033110
+  path: data/structures/membrane_organelle/cvt_vesicle_membrane.yaml
+  label: Cvt vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 679cdeb18f93b2ecf38916c132f8461121e7067f0db52e4b24842559b39dbb67
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cvt_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0009842
+  path: data/structures/membrane_organelle/cyanelle.yaml
+  label: cyanelle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 24275c8050ca5d13c66d563c7aa697a4de65766f87499f876fc94c41cd2f0db7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle.yaml
+    role: maintained_record
+- target_id: GO:0033112
+  path: data/structures/membrane_organelle/cyanelle_envelope.yaml
+  label: cyanelle envelope
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4a25594b3a26541401976d3ab78f271bc8726951462af9073fafc0eff2389a67
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle_envelope.yaml
+    role: maintained_record
+- target_id: GO:0036012
+  path: data/structures/membrane_organelle/cyanelle_inner_membrane.yaml
+  label: cyanelle inner membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f10bb4f3ff44fb6d0b23e67379861768a590eb6d3da75686e296a0a5b3b26970
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle_inner_membrane.yaml
+    role: maintained_record
+- target_id: GO:0036014
+  path: data/structures/membrane_organelle/cyanelle_intermembrane_space.yaml
+  label: cyanelle intermembrane space
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: aba8ad62f544ec82bea2f4767a8c79cc45d3fe117423163fc1ce1211a2527f8c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle_intermembrane_space.yaml
+    role: maintained_record
+- target_id: GO:0033113
+  path: data/structures/membrane_organelle/cyanelle_membrane.yaml
+  label: cyanelle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b95c9fcb293bd9f434df3ccf9ecaa7c9bf04e1f83a95a2cd19673441a537a20b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0036013
+  path: data/structures/membrane_organelle/cyanelle_outer_membrane.yaml
+  label: cyanelle outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2f058b25ce3bf1b49d52bc03391ee46d6e26376860035469f037d27c52234047
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0034060
+  path: data/structures/membrane_organelle/cyanelle_stroma.yaml
+  label: cyanelle stroma
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 13d83e3dadca9cafaa6550a7bf84cd8066bf1539ccaacd3627ec23aa5b08e118
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle_stroma.yaml
+    role: maintained_record
+- target_id: GO:0009843
+  path: data/structures/membrane_organelle/cyanelle_thylakoid.yaml
+  label: cyanelle thylakoid
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 19838578792948bb527b33a0dd61374b6ee7a688eb2ee0406426c2e95639c7e3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle_thylakoid.yaml
+    role: maintained_record
+- target_id: GO:0033114
+  path: data/structures/membrane_organelle/cyanelle_thylakoid_lumen.yaml
+  label: cyanelle thylakoid lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6dc48d3d810b7a63387502082d26502265a7f12eafec88058eb9e5d8be70a205
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle_thylakoid_lumen.yaml
+    role: maintained_record
+- target_id: GO:0033115
+  path: data/structures/membrane_organelle/cyanelle_thylakoid_membrane.yaml
+  label: cyanelle thylakoid membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c1c3958038a4f3a20735ce33206475130078e9a12048dcbeff4bc0d04beb4178
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cyanelle_thylakoid_membrane.yaml
+    role: maintained_record
+- target_id: GO:0031410
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle.yaml
+  label: cytoplasmic vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f4704b74324c18cab955983a27173d6a98fae0153bc7a403cbbe3c865e4eba84
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cytoplasmic_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0060205
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle_lumen.yaml
+  label: cytoplasmic vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 87d5a5379cb643e40257e60c99a3308f2b6e6a49aa079856fb501fe6e3c738fe
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cytoplasmic_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0030659
+  path: data/structures/membrane_organelle/cytoplasmic_vesicle_membrane.yaml
+  label: cytoplasmic vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 112643d19f662095c8d81c907d5d6435fe93b612f8a037df2af0fe66af87d4aa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/cytoplasmic_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: cellstructuremech:diazoplast
+  path: data/structures/membrane_organelle/diazoplast.yaml
+  label: diazoplast
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fd3948e827eb4a9870bc4eccb09689dd5c82f5caef443f1e319daabbf21bb038
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/diazoplast.yaml
+    role: maintained_record
+- target_id: GO:0005769
+  path: data/structures/membrane_organelle/early_endosome.yaml
+  label: early endosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ed91f355f5faca2b5bd7af5036740c6d6034d783fcfa0252aeb533489c6a46a9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/early_endosome.yaml
+    role: maintained_record
+- target_id: GO:0031905
+  path: data/structures/membrane_organelle/early_endosome_lumen.yaml
+  label: early endosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fe21c86defd34e34c5df67ec7bc0e7be16cc0342f2b10c6bae2ffd9569060290
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/early_endosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0031901
+  path: data/structures/membrane_organelle/early_endosome_membrane.yaml
+  label: early endosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2d96c5c692f3e324e718d1fc2750703c41060a9ef56dd535cd55831da69354dc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/early_endosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0032009
+  path: data/structures/membrane_organelle/early_phagosome.yaml
+  label: early phagosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9b6c5d68e60dd7e28c33d369c72e84353e5415993837864471571dd2d4bb294e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/early_phagosome.yaml
+    role: maintained_record
+- target_id: GO:0062113
+  path: data/structures/membrane_organelle/early_phagosome_lumen.yaml
+  label: early phagosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 530a570df4533015ec12d582458b5f59b04ecc49f4c89cd1bca2cc024d18e328
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/early_phagosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0036186
+  path: data/structures/membrane_organelle/early_phagosome_membrane.yaml
+  label: early phagosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: dc07745b1527ee223fd0337c906e97fe7174b08bd5b8c0e5632c71522b84139f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/early_phagosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0030139
+  path: data/structures/membrane_organelle/endocytic_vesicle.yaml
+  label: endocytic vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ae5fddc4231f0302846ce5f2baad8665456b8d042bb3cdad58b1675636fe9b82
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endocytic_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0071682
+  path: data/structures/membrane_organelle/endocytic_vesicle_lumen.yaml
+  label: endocytic vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5f1d0bbdb0ae22d96964222f70d6eda4be22f838ec7d1cbbac19b7857a10790c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endocytic_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0030666
+  path: data/structures/membrane_organelle/endocytic_vesicle_membrane.yaml
+  label: endocytic vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 532ded42040e51dfeef59ceb1ec3adfc1114e07d298b5aa96ce01284b3aede36
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endocytic_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005783
+  path: data/structures/membrane_organelle/endoplasmic_reticulum.yaml
+  label: endoplasmic reticulum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3e7c22c86e29207632f95ab47dbc3f13cedcdcbc7d1062a496789ed3082b143c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endoplasmic_reticulum.yaml
+    role: maintained_record
+- target_id: GO:0005788
+  path: data/structures/membrane_organelle/endoplasmic_reticulum_lumen.yaml
+  label: endoplasmic reticulum lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8ffe704fef493506e494107aba2b583e563921f2f12a6e98748971f64976b622
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endoplasmic_reticulum_lumen.yaml
+    role: maintained_record
+- target_id: GO:0005789
+  path: data/structures/membrane_organelle/endoplasmic_reticulum_membrane.yaml
+  label: endoplasmic reticulum membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 599774aca4e215829787fe1a818ef52bd2c3772b48c289505d14417c05d0f679
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endoplasmic_reticulum_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005768
+  path: data/structures/membrane_organelle/endosome.yaml
+  label: endosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7eb3c5b8022e63698365a49990831c7609d649c6024002eb19f6a28cdfff38a8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endosome.yaml
+    role: maintained_record
+- target_id: GO:0031904
+  path: data/structures/membrane_organelle/endosome_lumen.yaml
+  label: endosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7522ffb363729241f2263bef6ebf96cb135a807c677df546e0b4ae92fe2bc604
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0010008
+  path: data/structures/membrane_organelle/endosome_membrane.yaml
+  label: endosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 564b0ecf02448e0dab2210a213597b20b57ebfe09bf7637dfe2bed79a1b95270
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/endosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:7770040
+  path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+  label: epiplastidial membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 15876d75b2efb4115edcf9f6ffa44a5254fcf104c9f543d7eb07b78a5f06db8a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/epiplastidial_membrane.yaml
+    role: maintained_record
+- target_id: GO:0012507
+  path: data/structures/membrane_organelle/er_to_golgi_transport_vesicle_membrane.yaml
+  label: ER to Golgi transport vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5cdd951707eead318295ce7ceb64c16bdc0c85b465374678d564878481f04a9c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/er_to_golgi_transport_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0033117
+  path: data/structures/membrane_organelle/esterosome.yaml
+  label: esterosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c5779634687c3e16478f4782e24897bc8df7939f14eddfd26ec4715c6de3c95a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/esterosome.yaml
+    role: maintained_record
+- target_id: GO:0034467
+  path: data/structures/membrane_organelle/esterosome_lumen.yaml
+  label: esterosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6891a8c551bc57b8ab1ce07357d050e40b46303debc2de0b81132b54424b53a4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/esterosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0033118
+  path: data/structures/membrane_organelle/esterosome_membrane.yaml
+  label: esterosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b29aff5dceea8ed56348277d76f1c3658da2f304baa1b8e9858bf64cea5f4e5a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/esterosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0044311
+  path: data/structures/membrane_organelle/exoneme.yaml
+  label: exoneme
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2e32d7ca2f38ab39d5e1eb57cf683833fed5fdf18337191a3302689058d3b4b4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/exoneme.yaml
+    role: maintained_record
+- target_id: GO:1990413
+  path: data/structures/membrane_organelle/eyespot_apparatus.yaml
+  label: eyespot apparatus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 46c34aa696b5a0672d295e04dd475009d79c5c51b22aebe5afd541ccb97bc248
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/eyespot_apparatus.yaml
+    role: maintained_record
+- target_id: cellstructuremech:ferrosome
+  path: data/structures/membrane_organelle/ferrosome.yaml
+  label: ferrosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a8350e9f852acd4d6cb753caba52b5f70ba3002f73f48e083ac047d0db405a6f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/ferrosome.yaml
+    role: maintained_record
+- target_id: GO:0020016
+  path: data/structures/membrane_organelle/flagellar_pocket.yaml
+  label: flagellar pocket
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d67c465d104f21905f63ea994b6f4f526a51502cefccf79e9e732698f4971fa8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/flagellar_pocket.yaml
+    role: maintained_record
+- target_id: GO:0020020
+  path: data/structures/membrane_organelle/food_vacuole.yaml
+  label: food vacuole
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 956ec0d47253c51f7931d89e9308f1be821836cb87de96410327f374e30d5ac0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/food_vacuole.yaml
+    role: maintained_record
+- target_id: GO:0000324
+  path: data/structures/membrane_organelle/fungal_type_vacuole.yaml
+  label: fungal-type vacuole
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d447fe7bc41bcf0749629f12affde731c10286f9efbb170efbf81bc27b975016
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    role: maintained_record
+- target_id: GO:0000328
+  path: data/structures/membrane_organelle/fungal_type_vacuole_lumen.yaml
+  label: fungal-type vacuole lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ef0fef76aaa4813b13015b2fc8b1029f479aa1b997e96a1d7d13950e355eb3aa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/fungal_type_vacuole_lumen.yaml
+    role: maintained_record
+- target_id: GO:0000329
+  path: data/structures/membrane_organelle/fungal_type_vacuole_membrane.yaml
+  label: fungal-type vacuole membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2436643a28b07f28373a3c9d61360377b61b5e8803b0b6bef5b44ec32f1bfc51
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/fungal_type_vacuole_membrane.yaml
+    role: maintained_record
+- target_id: GO:0020015
+  path: data/structures/membrane_organelle/glycosome.yaml
+  label: glycosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 79383aea821433fbb6a6e2cc904578d9b106b549f5a5e97244b562190ed21c9b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome.yaml
+    role: maintained_record
+- target_id: GO:0034468
+  path: data/structures/membrane_organelle/glycosome_lumen.yaml
+  label: glycosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 86388cc4813e19a29b617f1800e0499e8b280823c7f3240b75c45fa7d1b8b544
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0046860
+  path: data/structures/membrane_organelle/glycosome_membrane.yaml
+  label: glycosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3d72e1e3fa6653b4d605c490e50da8b348c78773fa0e08947088b4e7ab2f43e9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0031908
+  path: data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+  label: glyoxysomal lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 57bdc53bba889fb38dd511718cec3c0cab5013fa2029d21636f27da4ca97801b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+    role: maintained_record
+- target_id: GO:0046861
+  path: data/structures/membrane_organelle/glyoxysomal_membrane.yaml
+  label: glyoxysomal membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: acf5b4c65edac5fd14c1a33ffa545fc5f7715162e84fdb59535e6a39d48be48c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glyoxysomal_membrane.yaml
+    role: maintained_record
+- target_id: GO:0009514
+  path: data/structures/membrane_organelle/glyoxysome.yaml
+  label: glyoxysome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4f1e29ea41f06149b1f638a6b94949e9f6c7246bfb5ed9b954eb5ded839858a4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glyoxysome.yaml
+    role: maintained_record
+- target_id: GO:0005794
+  path: data/structures/membrane_organelle/golgi_apparatus.yaml
+  label: Golgi apparatus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b064dc1116ec2814e2ecb946d8ebd554a4b176494c2259ff7e458bac0d3e5eb1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/golgi_apparatus.yaml
+    role: maintained_record
+- target_id: GO:0005798
+  path: data/structures/membrane_organelle/golgi_associated_vesicle.yaml
+  label: Golgi-associated vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 71af7287ce915ee5a16cef9a81c36b2c46e1b0cb7622a3f5c445fe308bbd81ba
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/golgi_associated_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0030660
+  path: data/structures/membrane_organelle/golgi_associated_vesicle_membrane.yaml
+  label: Golgi-associated vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6467fb8e64210d44c66f32b8c6f654c6bdada08ecd35edc36f074667d4ce4413
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/golgi_associated_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0031985
+  path: data/structures/membrane_organelle/golgi_cisterna.yaml
+  label: Golgi cisterna
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 09ebdf2a8646a8f51638cd933e9523e9e9170e0610567ad3e09efa7a97c6de7a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/golgi_cisterna.yaml
+    role: maintained_record
+- target_id: GO:0032580
+  path: data/structures/membrane_organelle/golgi_cisterna_membrane.yaml
+  label: Golgi cisterna membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4157a0d579677dd5e6e32cb11bb215bfc414f18833e120abf0a19b892029b62e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/golgi_cisterna_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005796
+  path: data/structures/membrane_organelle/golgi_lumen.yaml
+  label: Golgi lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 609cac48e5a5d75c55ed731b281a531dbe76e9db2ad105b228f17194399f608b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/golgi_lumen.yaml
+    role: maintained_record
+- target_id: GO:0000139
+  path: data/structures/membrane_organelle/golgi_membrane.yaml
+  label: Golgi membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 22a35f67a05738d876923e98adfe54cde34ee23c9009667f48676dca83ba708c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/golgi_membrane.yaml
+    role: maintained_record
+- target_id: GO:0046859
+  path: data/structures/membrane_organelle/hydrogenosomal_membrane.yaml
+  label: hydrogenosomal membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7e389b3e00ef30e931b8415dcc2daf38b5022ba6849696387af283a6f9f7ab56
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosomal_membrane.yaml
+    role: maintained_record
+- target_id: GO:0042566
+  path: data/structures/membrane_organelle/hydrogenosome.yaml
+  label: hydrogenosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cbe6ff879b7bc2477e475394c4361107d4d033bfeba79e4a85c03787b27b8b70
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome.yaml
+    role: maintained_record
+- target_id: GO:0034492
+  path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+  label: hydrogenosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0070258
+  path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  label: inner membrane pellicle complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8090ece98a38a0ca4a5d6644b36bbb0a40b8225c439956d1010443ab0b6e24f9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+  label: intramitochondrial protein quality control compartment
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 26f3b14010ef4beda14dcd52c0069b1cb44a904f7bb7b9147fee099a61f9beb2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/intramitochondrial_protein_quality_control_compartment.yaml
+    role: maintained_record
+- target_id: GO:0005770
+  path: data/structures/membrane_organelle/late_endosome.yaml
+  label: late endosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: af154194fa19aa780722ab1444ffedd803936571c202be13ce49983c7d9352a0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/late_endosome.yaml
+    role: maintained_record
+- target_id: GO:0031906
+  path: data/structures/membrane_organelle/late_endosome_lumen.yaml
+  label: late endosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f4f801cc662e9d680eec7749b54e4c69b699e76e8af5faba7b27316d3b0ecc91
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/late_endosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0031902
+  path: data/structures/membrane_organelle/late_endosome_membrane.yaml
+  label: late endosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: abd97317590eaf6f8b21b611d08470cc92e1a3b8bb4773381d092e2e4ddb27cc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/late_endosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0031039
+  path: data/structures/membrane_organelle/macronucleus.yaml
+  label: macronucleus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 99c6a5a957b29cb3ee37f2f1c81b5e0c4a8e3e32462bbb5e33dc5134c04d38c2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/macronucleus.yaml
+    role: maintained_record
+- target_id: GO:0110143
+  path: data/structures/membrane_organelle/magnetosome.yaml
+  label: magnetosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fca499ca429ba4282722280f05c08012db6a9fcd6766d2f65f85d83639eaa084
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained_record
+- target_id: GO:0110145
+  path: data/structures/membrane_organelle/magnetosome_lumen.yaml
+  label: magnetosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6e777efa5c662d732dad014690fca690f9cad0ec08d9990e907ec04112e059c6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0110146
+  path: data/structures/membrane_organelle/magnetosome_membrane.yaml
+  label: magnetosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2c4667f86bae65f60cb8aa414079523e0b5f38a940b192e858d5a76f143c6ed4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0020036
+  path: data/structures/membrane_organelle/maurer_s_cleft.yaml
+  label: Maurer's cleft
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8eed10ce23b6b30eb30d69fc14e8686bc350a5906ac9b7fbe4b6601ebe3616a9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/maurer_s_cleft.yaml
+    role: maintained_record
+- target_id: GO:0044227
+  path: data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+  label: methane-oxidizing organelle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8d513f399ed2555737573ae9d0c888514408062fcd5f2ec60bc19bad9e93f2c8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/methane_oxidizing_organelle.yaml
+    role: maintained_record
+- target_id: GO:0020009
+  path: data/structures/membrane_organelle/microneme.yaml
+  label: microneme
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8c260a40b26529407d136e11511c846d6554d975d54a3a45f444876aa0b51da8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme.yaml
+    role: maintained_record
+- target_id: GO:0034494
+  path: data/structures/membrane_organelle/microneme_lumen.yaml
+  label: microneme lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c40d221eea42af12fcb06a6a5dbcc7d3592f289ad31f52a275acad4d6666af38
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme_lumen.yaml
+    role: maintained_record
+- target_id: GO:0033163
+  path: data/structures/membrane_organelle/microneme_membrane.yaml
+  label: microneme membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f3c40aeb98a8d3eec6950ea6a3875db63372a5e72c66a75130e4ec821f0dc4ad
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme_membrane.yaml
+    role: maintained_record
+- target_id: GO:0031040
+  path: data/structures/membrane_organelle/micronucleus.yaml
+  label: micronucleus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fe6086eb62e1499109082d20f9a25ff776a68482d0ab89253469f6f3bfcbb8c1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/micronucleus.yaml
+    role: maintained_record
+- target_id: cellstructuremech:microsporidian_posterior_vacuole
+  path: data/structures/membrane_organelle/microsporidian_posterior_vacuole.yaml
+  label: microsporidian posterior vacuole
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: db2c2e1271b64aa7037885eeb2f1e39c6e3ee5d769b83e8374ed96d2e768f6b8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microsporidian_posterior_vacuole.yaml
+    role: maintained_record
+- target_id: GO:0030061
+  path: data/structures/membrane_organelle/mitochondrial_crista.yaml
+  label: mitochondrial crista
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d7f734bbcd5e5af1c899f0c2034d2bc72656eaeb71d5861cf185613c65f4bda6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_crista.yaml
+    role: maintained_record
+- target_id: GO:0044284
+  path: data/structures/membrane_organelle/mitochondrial_crista_junction.yaml
+  label: mitochondrial crista junction
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b994a1d51d584f4614c50fb97db455db7a6cf72b2f886da419fcbf3b77ba3adb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_crista_junction.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mitochondrial_derived_compartment
+  path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+  label: mitochondrial-derived compartment
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c7a83f3db0bb05a7016b5c3991e79bd21c9a6ec4f723335fc3a1d14864d1c5c8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_derived_compartment.yaml
+    role: maintained_record
+- target_id: GO:0005740
+  path: data/structures/membrane_organelle/mitochondrial_envelope.yaml
+  label: mitochondrial envelope
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e750843104d72fd05608a59a650410e8bc8103b02697f5a1add9fd5bd31e283f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_envelope.yaml
+    role: maintained_record
+- target_id: GO:0097002
+  path: data/structures/membrane_organelle/mitochondrial_inner_boundary_membrane.yaml
+  label: mitochondrial inner boundary membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b71189fd942fa0d436ed4557db09ef5835f40d249f04d354503c67b9e9b7baa0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_inner_boundary_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005743
+  path: data/structures/membrane_organelle/mitochondrial_inner_membrane.yaml
+  label: mitochondrial inner membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 63301d7a679c30a2afadd331aa17b3559852b09c038e97dab14f53e40d34ed1f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_inner_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005758
+  path: data/structures/membrane_organelle/mitochondrial_intermembrane_space.yaml
+  label: mitochondrial intermembrane space
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9b1d3fcf94d5a598d61810b56580265af6c9325890c673eab3532645e4cb48ea
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_intermembrane_space.yaml
+    role: maintained_record
+- target_id: GO:0005759
+  path: data/structures/membrane_organelle/mitochondrial_matrix.yaml
+  label: mitochondrial matrix
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a8348a52ab8d24234029023bee3b95b7bd8c42a618dad2822755c59b908a727a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_matrix.yaml
+    role: maintained_record
+- target_id: GO:0031966
+  path: data/structures/membrane_organelle/mitochondrial_membrane.yaml
+  label: mitochondrial membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1cc1754c594a82d41263e94b0c5c8b80fc3c99d6a4e1703e379e9641963fba08
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005741
+  path: data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml
+  label: mitochondrial outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 136ac3a72a4a1f8475301e2328ebc27c3799397823e0b5804124480ff728800f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005739
+  path: data/structures/membrane_organelle/mitochondrion.yaml
+  label: mitochondrion
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9152cb04bd6e1faf9f845187d723336a26136fa7d568d5cbb2b54070319aceac
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrion.yaml
+    role: maintained_record
+- target_id: GO:0032047
+  path: data/structures/membrane_organelle/mitosome.yaml
+  label: mitosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6c663b4b22120c931071ef1b26da5d7859ec9b98cfbda7631cda2d2425ffd59f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitosome.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mitosome_envelope
+  path: data/structures/membrane_organelle/mitosome_envelope.yaml
+  label: mitosome envelope
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 762b8bad522664b480655908ccd92a258624f836a99d3e78232fe1e30aea8fc9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitosome_envelope.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mitosome_inner_membrane
+  path: data/structures/membrane_organelle/mitosome_inner_membrane.yaml
+  label: mitosome inner membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 758c67ff3788eef18a08b4b6720e1c3a96f135d4313cb3dc7777823599f6eb35
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitosome_inner_membrane.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mitosome_intermembrane_space
+  path: data/structures/membrane_organelle/mitosome_intermembrane_space.yaml
+  label: mitosome intermembrane space
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c961b013182d3ac6fb50a2fe4af7988c95d957237c78e904142cbb7e2f88df95
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitosome_intermembrane_space.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mitosome_matrix
+  path: data/structures/membrane_organelle/mitosome_matrix.yaml
+  label: mitosome matrix
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cc21e220c39e8210a84b7d15251fcb85474ec75f85eafab74c8df1d4a80c3bca
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitosome_matrix.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mitosome_outer_membrane
+  path: data/structures/membrane_organelle/mitosome_outer_membrane.yaml
+  label: mitosome outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8c9ed412d5d033717ea703db6c61c6960078608448a4cc6a57743a0ed37b7a58
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitosome_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0070074
+  path: data/structures/membrane_organelle/mononeme.yaml
+  label: mononeme
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5e08d2090388a00b0883dd2253e8bd606d8c250a32406fb8492d6896c861a97b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mononeme.yaml
+    role: maintained_record
+- target_id: GO:0036000
+  path: data/structures/membrane_organelle/mucocyst.yaml
+  label: mucocyst
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5be0c727236d287685859cb323b9e0b109da3c26398bfe2d9adbe00f81f4b5bc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mucocyst.yaml
+    role: maintained_record
+- target_id: GO:0005771
+  path: data/structures/membrane_organelle/multivesicular_body.yaml
+  label: multivesicular body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cf6713b73e225eb2413a2a8b8a0fc9dfb6cf84a12f10133e3dcbec03791585a9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/multivesicular_body.yaml
+    role: maintained_record
+- target_id: cellstructuremech:multivesicular_body_intraluminal_vesicle
+  path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+  label: multivesicular body intraluminal vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 47e5f39198c321eb8e1df58ff20ac1a0a50ec731170ae0f9d07d22b299594916
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/multivesicular_body_intraluminal_vesicle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:multivesicular_body_lumen
+  path: data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+  label: multivesicular body lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6c67050e4fa82c1a03f0476a13be57741651c0ad9e1d4bfa241ca500525175f6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/multivesicular_body_lumen.yaml
+    role: maintained_record
+- target_id: GO:0032585
+  path: data/structures/membrane_organelle/multivesicular_body_membrane.yaml
+  label: multivesicular body membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f4b66123e8565c11507c55cd1184da62efd23de4b37e20995a6561bee8634db7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/multivesicular_body_membrane.yaml
+    role: maintained_record
+- target_id: cellstructuremech:nitroplast
+  path: data/structures/membrane_organelle/nitroplast.yaml
+  label: nitroplast
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3f7dc36b6c5e8389c881e64839227e1e5cdde49edb55277e245b180f0de8d6a8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/nitroplast.yaml
+    role: maintained_record
+- target_id: GO:0005635
+  path: data/structures/membrane_organelle/nuclear_envelope.yaml
+  label: nuclear envelope
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 226a12a5500d39f1afbc5baa0f3a81891d6ae4918f4d6c29e8ce05de0df9979a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/nuclear_envelope.yaml
+    role: maintained_record
+- target_id: GO:0005641
+  path: data/structures/membrane_organelle/nuclear_envelope_lumen.yaml
+  label: nuclear envelope lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1c45350eaa4a19474f4689125aadc8aa93d1824d41303e3c4aaff1f7e1db6019
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/nuclear_envelope_lumen.yaml
+    role: maintained_record
+- target_id: GO:0005637
+  path: data/structures/membrane_organelle/nuclear_inner_membrane.yaml
+  label: nuclear inner membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c0484a80c2b1568174ca7f9c96805a6ce2749a3ba27b700e21fb1de2aef4e4df
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/nuclear_inner_membrane.yaml
+    role: maintained_record
+- target_id: GO:0031981
+  path: data/structures/membrane_organelle/nuclear_lumen.yaml
+  label: nuclear lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: dbb07d267c0272e4deb338a2e8a0e29892a6f1d28f279160c3d42f730410fb49
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/nuclear_lumen.yaml
+    role: maintained_record
+- target_id: cellstructuremech:nuclear_net
+  path: data/structures/membrane_organelle/nuclear_net.yaml
+  label: nuclear net
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8b4a54d13a70cfb4fdce9bd18ae990793f9de9627fdca067573c033335d847ba
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/nuclear_net.yaml
+    role: maintained_record
+- target_id: GO:0005640
+  path: data/structures/membrane_organelle/nuclear_outer_membrane.yaml
+  label: nuclear outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a760b04919cb0a80c89fd2eee5c1d4a0c940fc15a17b77b4b1810b9e1d2b2ffb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/nuclear_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0033009
+  path: data/structures/membrane_organelle/nucleomorph.yaml
+  label: nucleomorph
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9653087b981991e28b537ec1eb809e442f5215f4ff4c994687106b74ed6338ad
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/nucleomorph.yaml
+    role: maintained_record
+- target_id: GO:0005634
+  path: data/structures/membrane_organelle/nucleus.yaml
+  label: nucleus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 889818b3c6a37074924a97bc81271f43ef236dc9112a871c5e521dae123e497d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/nucleus.yaml
+    role: maintained_record
+- target_id: GO:0070111
+  path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+  label: organellar chromatophore
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6e9805392c72104f5f1d6e9ee70767c49f480b22130da0e6f293bcf8f6a1bec0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+    role: maintained_record
+- target_id: GO:0070113
+  path: data/structures/membrane_organelle/organellar_chromatophore_inner_membrane.yaml
+  label: organellar chromatophore inner membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e3c244a36b1484e5d3ca95aa114de0a719660aa4d76ae1811ed12584b3d72b1e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore_inner_membrane.yaml
+    role: maintained_record
+- target_id: GO:0070115
+  path: data/structures/membrane_organelle/organellar_chromatophore_intermembrane_space.yaml
+  label: organellar chromatophore intermembrane space
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f67ae10cda248a93eba761943f430c0ea5e6d4550dcf9514611822866d2c98ed
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore_intermembrane_space.yaml
+    role: maintained_record
+- target_id: GO:0070112
+  path: data/structures/membrane_organelle/organellar_chromatophore_membrane.yaml
+  label: organellar chromatophore membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 179b7a8a2519cb216889baed1305e54b1de332688cbb7bac1c24857f1209a794
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore_membrane.yaml
+    role: maintained_record
+- target_id: GO:0070114
+  path: data/structures/membrane_organelle/organellar_chromatophore_outer_membrane.yaml
+  label: organellar chromatophore outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f7d415a8e211d48ef9ecf5f0bb1b96a0ac3336c1ce6498d78d9bf0033bce3c11
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0070116
+  path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid.yaml
+  label: organellar chromatophore thylakoid
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6ce01ac746d2a475719c41e8eea903b510d96648cff04a1338248feb3558731a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid.yaml
+    role: maintained_record
+- target_id: GO:0070117
+  path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid_lumen.yaml
+  label: organellar chromatophore thylakoid lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6d012bda5b45cabee640a9a066a9ceb0f0a61e1b26d13214370ad299b185c2fa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid_lumen.yaml
+    role: maintained_record
+- target_id: GO:0070118
+  path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid_membrane.yaml
+  label: organellar chromatophore thylakoid membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 67a0433476fdb5ca77a1a30bb921d4d80603a5ae1c61869162edf87f07d6364b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore_thylakoid_membrane.yaml
+    role: maintained_record
+- target_id: GO:0044310
+  path: data/structures/membrane_organelle/osmiophilic_body.yaml
+  label: osmiophilic body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 12985dc29b3e81008d138f3de6e0e10b93090ff200e538a105f24a7c171bfafc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/osmiophilic_body.yaml
+    role: maintained_record
+- target_id: cellstructuremech:parasitophorous_vacuole
+  path: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+  label: parasitophorous vacuole
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bc5b288dc20d549717192249a6d0889856bdaf66fe33b61cd213b503f4d6f610
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/parasitophorous_vacuole.yaml
+    role: maintained_record
+- target_id: cellstructuremech:parasitophorous_vacuole_lumen
+  path: data/structures/membrane_organelle/parasitophorous_vacuole_lumen.yaml
+  label: parasitophorous vacuole lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4a2a0820584215f4a76152f44d66e365ed67a663527da333d2e6c00d24bc244f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/parasitophorous_vacuole_lumen.yaml
+    role: maintained_record
+- target_id: cellstructuremech:parasitophorous_vacuole_membrane
+  path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+  label: parasitophorous vacuole membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fceffba04e82c2b88ce9fc1a9366c8931296169b4146291996ebe84f3dc213da
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/parasitophorous_vacuole_membrane.yaml
+    role: maintained_record
+- target_id: GO:7770041
+  path: data/structures/membrane_organelle/periplastidial_membrane.yaml
+  label: periplastidial membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 96374ff1877ac9701ca4104ebc8e7218aee2345b6d2170b35cf64e6c30f6188a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/periplastidial_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005782
+  path: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+  label: peroxisomal matrix
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4fc4ffe0656f64952c9e1c0c88df647019381b19abe4201b321c5542297f6e23
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/peroxisomal_matrix.yaml
+    role: maintained_record
+- target_id: GO:0005778
+  path: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+  label: peroxisomal membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4c11f2dcb589eddf4948f8018d1008cfe30f7eb5e4edc3bbd020fa46fd3dcf87
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/peroxisomal_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005777
+  path: data/structures/membrane_organelle/peroxisome.yaml
+  label: peroxisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 63767bb1954d10e3237eec60b9541a916b6039d71f9afa374e8ff376a5066828
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/peroxisome.yaml
+    role: maintained_record
+- target_id: GO:0045335
+  path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+  label: phagocytic vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 604f232e3d5457913d2118c27a4e372ba90def9cb369184ce11d3a8f021e335f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0097013
+  path: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+  label: phagocytic vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6f0f574162ac901bb338539914a46653734c7864b4acb89060254f6f34077c19
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0030670
+  path: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+  label: phagocytic vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 65c456f56f9491c367091e38bf497df4e7f3aa50b21b94d9bf4017ffec2c449f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagocytic_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0032010
+  path: data/structures/membrane_organelle/phagolysosome.yaml
+  label: phagolysosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1aa7bcc22c4b8a9bb65c69fad0c276e2446d28534b72a8abf930ed0e64c70e1e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome.yaml
+    role: maintained_record
+- target_id: GO:0061474
+  path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+  label: phagolysosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7f7e638a499bf7a56376a0f51d9de765fe0e3b9f7563bdb2ee13e9d332306b32
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0106174
+  path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+  label: phagolysosome vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 096069e6ecc9f33d640dfb9621fa69dedfab50cb9a9f08e6186e9583a823c319
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/phagolysosome_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0034357
+  path: data/structures/membrane_organelle/photosynthetic_membrane.yaml
+  label: photosynthetic membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5fe446aae99635ba843cf22d1144ab1312a2c30224367c49efd0bedcbd06db97
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/photosynthetic_membrane.yaml
+    role: maintained_record
+- target_id: GO:0042717
+  path: data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+  label: plasma membrane-derived chromatophore membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f3130fc795ff500febb7d273c6a7b281ec7d2cc230d6e44fb5363c6c9256b064
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+    role: maintained_record
+- target_id: GO:0031979
+  path: data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_lumen.yaml
+  label: plasma membrane-derived thylakoid lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4b4fbe694529235b322625d85f5c210eddea0cc03e5e1a684d5bff2d698bca82
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_lumen.yaml
+    role: maintained_record
+- target_id: GO:0031676
+  path: data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_membrane.yaml
+  label: plasma membrane-derived thylakoid membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 66205b2d304df6e2b425730f885ccf46de08dc94c99c60636eab667d3bf68410
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plasma_membrane_derived_thylakoid_membrane.yaml
+    role: maintained_record
+- target_id: GO:0009536
+  path: data/structures/membrane_organelle/plastid.yaml
+  label: plastid
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1be30ab06bc2fbae9294930ceaf74b20a2d43d8af60986aa9ed0e07b9645ae81
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid.yaml
+    role: maintained_record
+- target_id: GO:0009526
+  path: data/structures/membrane_organelle/plastid_envelope.yaml
+  label: plastid envelope
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9033a6955c21d6043019061509c7ca1bf470bec884e7f4e1a5edc0080b680968
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid_envelope.yaml
+    role: maintained_record
+- target_id: GO:0009528
+  path: data/structures/membrane_organelle/plastid_inner_membrane.yaml
+  label: plastid inner membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ceb12c6ee4451216ae406f17f68ea2d3730a6da302b38e8bb8fcabc532a6a4fa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid_inner_membrane.yaml
+    role: maintained_record
+- target_id: GO:0009529
+  path: data/structures/membrane_organelle/plastid_intermembrane_space.yaml
+  label: plastid intermembrane space
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2ef21406931fb90ec3aead7f57ee12a4376ad3d95276c7db3c2a7ab324c73c5d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid_intermembrane_space.yaml
+    role: maintained_record
+- target_id: GO:0042170
+  path: data/structures/membrane_organelle/plastid_membrane.yaml
+  label: plastid membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ae09183c12ecb85ac2135b3615b9a613985285039f5730126227fde982e55bef
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid_membrane.yaml
+    role: maintained_record
+- target_id: GO:0009527
+  path: data/structures/membrane_organelle/plastid_outer_membrane.yaml
+  label: plastid outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 59bd8548931d27f711233f542b5f927c0e7b0a68dd611eabb4777ee08003deaa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0009532
+  path: data/structures/membrane_organelle/plastid_stroma.yaml
+  label: plastid stroma
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 86d19307cbe21273498f0d7d6741e61f5ebf002cf78418c34b922d9d4963503b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid_stroma.yaml
+    role: maintained_record
+- target_id: GO:0031976
+  path: data/structures/membrane_organelle/plastid_thylakoid.yaml
+  label: plastid thylakoid
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ec3c74ee89bf25eea6a3a5682b3f7f73e0837465dccf2a8f2c0cce1550a4e3c8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid_thylakoid.yaml
+    role: maintained_record
+- target_id: GO:0031978
+  path: data/structures/membrane_organelle/plastid_thylakoid_lumen.yaml
+  label: plastid thylakoid lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7a75c5aee47a20bbae7da6351e07fc7f2d1dc418e7ca34e253d08e3a531ff4ee
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid_thylakoid_lumen.yaml
+    role: maintained_record
+- target_id: GO:0055035
+  path: data/structures/membrane_organelle/plastid_thylakoid_membrane.yaml
+  label: plastid thylakoid membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 51a2ece521e1b5c0b3b589fc7cf665be1c9544299257e0fda7fcf8352e7401c2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plastid_thylakoid_membrane.yaml
+    role: maintained_record
+- target_id: GO:0160201
+  path: data/structures/membrane_organelle/polaroplast.yaml
+  label: polaroplast
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b755d59c2ad21e4b73e222a7d9979859a4d4b5c3c9f4543f9695dc3749beff69
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/polaroplast.yaml
+    role: maintained_record
+- target_id: cellstructuremech:pusule
+  path: data/structures/membrane_organelle/pusule.yaml
+  label: pusule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3bc5082b5e3b721414b9b2d57c585c1a278de5053885f34f55b40ccd4b71a6ae
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/pusule.yaml
+    role: maintained_record
+- target_id: GO:0160223
+  path: data/structures/membrane_organelle/pyrenoid_tubule.yaml
+  label: pyrenoid tubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: dd5c61f94612f6c30f259f029b7f4bc4daa8a7d4c0fa8111f6eb0715f78483d7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/pyrenoid_tubule.yaml
+    role: maintained_record
+- target_id: GO:0055037
+  path: data/structures/membrane_organelle/recycling_endosome.yaml
+  label: recycling endosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7a806e4e4eaddd3578c517d587c4eaaf1c458e4f5cfc2e59065fc0f26594ac48
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/recycling_endosome.yaml
+    role: maintained_record
+- target_id: GO:0034777
+  path: data/structures/membrane_organelle/recycling_endosome_lumen.yaml
+  label: recycling endosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 69bc318299125a4de316f2ba3b7fc20e0655bca2d37fa6d43c12afcfa3fc3ce2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/recycling_endosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0055038
+  path: data/structures/membrane_organelle/recycling_endosome_membrane.yaml
+  label: recycling endosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cc07cfcf4d3c8fcfac3594e3dec18791b1e5f40e13d867fcdb4ef355f07aebf0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/recycling_endosome_membrane.yaml
+    role: maintained_record
+- target_id: cellstructuremech:reservosome
+  path: data/structures/membrane_organelle/reservosome.yaml
+  label: reservosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0e733e8adbe97aaadfaaa43aafd271069aaa3fb14cad36f8c3281b31852e7aeb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/reservosome.yaml
+    role: maintained_record
+- target_id: GO:0106124
+  path: data/structures/membrane_organelle/reservosome_lumen.yaml
+  label: reservosome lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d792cf1b253ed384ca734154902e13ebb5ac760a45635226ebe3c110bf4682a4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/reservosome_lumen.yaml
+    role: maintained_record
+- target_id: GO:0106125
+  path: data/structures/membrane_organelle/reservosome_matrix.yaml
+  label: reservosome matrix
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 96579f72d8aa8c8570ed688ff44ac93574640e579a33349333074f4b9e72a174
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/reservosome_matrix.yaml
+    role: maintained_record
+- target_id: GO:0106126
+  path: data/structures/membrane_organelle/reservosome_membrane.yaml
+  label: reservosome membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 73604615ebff7b587a19bac850af2728c5ff9cee59e065977e9498f59092a831
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/reservosome_membrane.yaml
+    role: maintained_record
+- target_id: GO:0020008
+  path: data/structures/membrane_organelle/rhoptry.yaml
+  label: rhoptry
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f36f8d4602ddfeb6fc27df4eebcfb3a127fa1e3720d689fac45f4300cb492709
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/rhoptry.yaml
+    role: maintained_record
+- target_id: GO:0034591
+  path: data/structures/membrane_organelle/rhoptry_lumen.yaml
+  label: rhoptry lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 92b2f8d10c93bb944c4e7d33e5297e827292572cf0bc5ebb17f133eed2fc541f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/rhoptry_lumen.yaml
+    role: maintained_record
+- target_id: GO:0033016
+  path: data/structures/membrane_organelle/rhoptry_membrane.yaml
+  label: rhoptry membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 46a8bc0e8ce32d1b0bcfb24668ab3b2c08c1978ebaee578f6dadbd98190c771a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/rhoptry_membrane.yaml
+    role: maintained_record
+- target_id: GO:1990225
+  path: data/structures/membrane_organelle/rhoptry_neck.yaml
+  label: rhoptry neck
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6a03bef47fa2182ce142ecc9819b386f0e0152d14338e4e8a45dc29c58c1c67f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/rhoptry_neck.yaml
+    role: maintained_record
+- target_id: GO:0036007
+  path: data/structures/membrane_organelle/scintillon.yaml
+  label: scintillon
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 34119157abb1c76c2d64730753284a1244a033f8cac3aac3cda2ef9ed7890734
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/scintillon.yaml
+    role: maintained_record
+- target_id: GO:0062160
+  path: data/structures/membrane_organelle/spongiome.yaml
+  label: spongiome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4bdc11a86d247b6a45549a41c9aac3b25946b046f3b54d269fab634ca9d44019
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/spongiome.yaml
+    role: maintained_record
+- target_id: GO:0009579
+  path: data/structures/membrane_organelle/thylakoid.yaml
+  label: thylakoid
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4fcac02ebe90f61cb32599bdee08e057abd6bb9223f55a2ded7e9318850b3c89
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/thylakoid.yaml
+    role: maintained_record
+- target_id: GO:0031977
+  path: data/structures/membrane_organelle/thylakoid_lumen.yaml
+  label: thylakoid lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 64fd81c89bf71dd2933947922bdba179c520f7590a238a1159c2d01b4bbd173c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/thylakoid_lumen.yaml
+    role: maintained_record
+- target_id: GO:0042651
+  path: data/structures/membrane_organelle/thylakoid_membrane.yaml
+  label: thylakoid membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e604b90dad263791f827ec2c883b7e279a071e792a9f161b8fac54f712069e8a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/thylakoid_membrane.yaml
+    role: maintained_record
+- target_id: cellstructuremech:toxicyst
+  path: data/structures/membrane_organelle/toxicyst.yaml
+  label: toxicyst
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 672baa23fe05a4cd16b6319696b5837b2a446f13e14e453e6fa983e36bdb5c57
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/toxicyst.yaml
+    role: maintained_record
+- target_id: GO:0005802
+  path: data/structures/membrane_organelle/trans_golgi_network.yaml
+  label: trans-Golgi network
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 87b0be103b020a03a3db064561125bb504cd21959ed2986ce813f62ecb6d5ef4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/trans_golgi_network.yaml
+    role: maintained_record
+- target_id: GO:0032588
+  path: data/structures/membrane_organelle/trans_golgi_network_membrane.yaml
+  label: trans-Golgi network membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 67edbc6da8b52722913b6ff9cad5011d1f38d2f0cf5d16c84e91fe92a854f0a7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/trans_golgi_network_membrane.yaml
+    role: maintained_record
+- target_id: GO:0030140
+  path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle.yaml
+  label: trans-Golgi network transport vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0e8fec7988254c43b3f0b6bffe1ba26bde68be5be4543469233acf9564335232
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0098564
+  path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle_lumen.yaml
+  label: trans-Golgi network transport vesicle lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 14224a4767fec087790f0f07c24f9882def0a56df30a7be1d856d5bc6d8e6879
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle_lumen.yaml
+    role: maintained_record
+- target_id: GO:0012510
+  path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle_membrane.yaml
+  label: trans-Golgi network transport vesicle membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 55a3a50f388915b80fc069ee5f2289a014b7ec9803ae3231477801a59650fb30
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/trans_golgi_network_transport_vesicle_membrane.yaml
+    role: maintained_record
+- target_id: GO:0055039
+  path: data/structures/membrane_organelle/trichocyst.yaml
+  label: trichocyst
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 97b8d6300b391f6a22683336db953b9b4e278b6e1b81b04420a25bd320de4914
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/trichocyst.yaml
+    role: maintained_record
+- target_id: GO:0005775
+  path: data/structures/membrane_organelle/vacuolar_lumen.yaml
+  label: vacuolar lumen
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c766d7de82bee8cf8d6f5c34f61cc41a7150e65686ba387255061a9449106b73
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/vacuolar_lumen.yaml
+    role: maintained_record
+- target_id: GO:0005774
+  path: data/structures/membrane_organelle/vacuolar_membrane.yaml
+  label: vacuolar membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 89c3bb9baf5507b45606c975ff1bb6ef8d705601ce44bc7e4c3d72572b5f36e0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/vacuolar_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005773
+  path: data/structures/membrane_organelle/vacuole.yaml
+  label: vacuole
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7db6bf4c90e74fed8acf83d164143fe3ef294c46012b631a01c1d241f05f370d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/vacuole.yaml
+    role: maintained_record
+- target_id: GO:0140266
+  path: data/structures/membrane_organelle/woronin_body.yaml
+  label: Woronin body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7d9cfb32d06cb04c7ca329818156372f6433451f8f0acd53906dbb7080a03aed
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/woronin_body.yaml
+    role: maintained_record
+checks:
+- check_id: strict_membrane_organelle
+  name: Strict corpus validation covering membrane_organelle cohort
+  status: passed
+  required: true
+  summary: All 224 membrane_organelle records pass strict LinkML and semantic validation.
+  target_ids:
+  - GO:0020022
+  - GO:0033985
+  - GO:0033102
+  - cellstructuremech:actinophryid_extrusome
+  - GO:0044222
+  - cellstructuremech:anammoxosome_membrane
+  - GO:0020026
+  - GO:0030668
+  - GO:0020011
+  - GO:0160211
+  - GO:0005776
+  - GO:0034423
+  - GO:0000421
+  - GO:0030075
+  - GO:0045009
+  - GO:0009507
+  - GO:0009941
+  - GO:0009706
+  - GO:0031972
+  - GO:0031969
+  - GO:0009707
+  - GO:0009570
+  - GO:0009534
+  - GO:0009543
+  - GO:0009535
+  - GO:0046858
+  - GO:0033105
+  - GO:0020018
+  - GO:0005801
+  - GO:0033106
+  - GO:0045334
+  - GO:0106176
+  - GO:0030669
+  - GO:0030136
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  - GO:0030665
+  - GO:0030135
+  - GO:0030662
+  - cellstructuremech:coccolith_vesicle
+  - GO:0031164
+  - GO:0000331
+  - GO:0062159
+  - cellstructuremech:contractile_vacuole_lumen
+  - GO:0031913
+  - GO:0030137
+  - cellstructuremech:copi_coated_vesicle_lumen
+  - GO:0030663
+  - GO:0030134
+  - cellstructuremech:copii_coated_vesicle_lumen
+  - GO:0033107
+  - cellstructuremech:cvt_vesicle_lumen
+  - GO:0033110
+  - GO:0009842
+  - GO:0033112
+  - GO:0036012
+  - GO:0036014
+  - GO:0033113
+  - GO:0036013
+  - GO:0034060
+  - GO:0009843
+  - GO:0033114
+  - GO:0033115
+  - GO:0031410
+  - GO:0060205
+  - GO:0030659
+  - cellstructuremech:diazoplast
+  - GO:0005769
+  - GO:0031905
+  - GO:0031901
+  - GO:0032009
+  - GO:0062113
+  - GO:0036186
+  - GO:0030139
+  - GO:0071682
+  - GO:0030666
+  - GO:0005783
+  - GO:0005788
+  - GO:0005789
+  - GO:0005768
+  - GO:0031904
+  - GO:0010008
+  - GO:7770040
+  - GO:0012507
+  - GO:0033117
+  - GO:0034467
+  - GO:0033118
+  - GO:0044311
+  - GO:1990413
+  - cellstructuremech:ferrosome
+  - GO:0020016
+  - GO:0020020
+  - GO:0000324
+  - GO:0000328
+  - GO:0000329
+  - GO:0020015
+  - GO:0034468
+  - GO:0046860
+  - GO:0031908
+  - GO:0046861
+  - GO:0009514
+  - GO:0005794
+  - GO:0005798
+  - GO:0030660
+  - GO:0031985
+  - GO:0032580
+  - GO:0005796
+  - GO:0000139
+  - GO:0046859
+  - GO:0042566
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  - GO:0020036
+  - GO:0044227
+  - GO:0020009
+  - GO:0034494
+  - GO:0033163
+  - GO:0031040
+  - cellstructuremech:microsporidian_posterior_vacuole
+  - GO:0030061
+  - GO:0044284
+  - cellstructuremech:mitochondrial_derived_compartment
+  - GO:0005740
+  - GO:0097002
+  - GO:0005743
+  - GO:0005758
+  - GO:0005759
+  - GO:0031966
+  - GO:0005741
+  - GO:0005739
+  - GO:0032047
+  - cellstructuremech:mitosome_envelope
+  - cellstructuremech:mitosome_inner_membrane
+  - cellstructuremech:mitosome_intermembrane_space
+  - cellstructuremech:mitosome_matrix
+  - cellstructuremech:mitosome_outer_membrane
+  - GO:0070074
+  - GO:0036000
+  - GO:0005771
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  - cellstructuremech:multivesicular_body_lumen
+  - GO:0032585
+  - cellstructuremech:nitroplast
+  - GO:0005635
+  - GO:0005641
+  - GO:0005637
+  - GO:0031981
+  - cellstructuremech:nuclear_net
+  - GO:0005640
+  - GO:0033009
+  - GO:0005634
+  - GO:0070111
+  - GO:0070113
+  - GO:0070115
+  - GO:0070112
+  - GO:0070114
+  - GO:0070116
+  - GO:0070117
+  - GO:0070118
+  - GO:0044310
+  - cellstructuremech:parasitophorous_vacuole
+  - cellstructuremech:parasitophorous_vacuole_lumen
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  - GO:0106174
+  - GO:0034357
+  - GO:0042717
+  - GO:0031979
+  - GO:0031676
+  - GO:0009536
+  - GO:0009526
+  - GO:0009528
+  - GO:0009529
+  - GO:0042170
+  - GO:0009527
+  - GO:0009532
+  - GO:0031976
+  - GO:0031978
+  - GO:0055035
+  - GO:0160201
+  - cellstructuremech:pusule
+  - GO:0160223
+  - GO:0055037
+  - GO:0034777
+  - GO:0055038
+  - cellstructuremech:reservosome
+  - GO:0106124
+  - GO:0106125
+  - GO:0106126
+  - GO:0020008
+  - GO:0034591
+  - GO:0033016
+  - GO:1990225
+  - GO:0036007
+  - GO:0062160
+  - GO:0009579
+  - GO:0031977
+  - GO:0042651
+  - cellstructuremech:toxicyst
+  - GO:0005802
+  - GO:0032588
+  - GO:0030140
+  - GO:0098564
+  - GO:0012510
+  - GO:0055039
+  - GO:0005775
+  - GO:0005774
+  - GO:0005773
+  - GO:0140266
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_membraneorganelle
+- check_id: labels_membrane_organelle
+  name: ID-label correspondence across membrane_organelle cohort
+  status: passed
+  required: true
+  summary: All ontology ID-label pairs in membrane_organelle records correspond to
+    canonical labels.
+  target_ids:
+  - GO:0020022
+  - GO:0033985
+  - GO:0033102
+  - cellstructuremech:actinophryid_extrusome
+  - GO:0044222
+  - cellstructuremech:anammoxosome_membrane
+  - GO:0020026
+  - GO:0030668
+  - GO:0020011
+  - GO:0160211
+  - GO:0005776
+  - GO:0034423
+  - GO:0000421
+  - GO:0030075
+  - GO:0045009
+  - GO:0009507
+  - GO:0009941
+  - GO:0009706
+  - GO:0031972
+  - GO:0031969
+  - GO:0009707
+  - GO:0009570
+  - GO:0009534
+  - GO:0009543
+  - GO:0009535
+  - GO:0046858
+  - GO:0033105
+  - GO:0020018
+  - GO:0005801
+  - GO:0033106
+  - GO:0045334
+  - GO:0106176
+  - GO:0030669
+  - GO:0030136
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  - GO:0030665
+  - GO:0030135
+  - GO:0030662
+  - cellstructuremech:coccolith_vesicle
+  - GO:0031164
+  - GO:0000331
+  - GO:0062159
+  - cellstructuremech:contractile_vacuole_lumen
+  - GO:0031913
+  - GO:0030137
+  - cellstructuremech:copi_coated_vesicle_lumen
+  - GO:0030663
+  - GO:0030134
+  - cellstructuremech:copii_coated_vesicle_lumen
+  - GO:0033107
+  - cellstructuremech:cvt_vesicle_lumen
+  - GO:0033110
+  - GO:0009842
+  - GO:0033112
+  - GO:0036012
+  - GO:0036014
+  - GO:0033113
+  - GO:0036013
+  - GO:0034060
+  - GO:0009843
+  - GO:0033114
+  - GO:0033115
+  - GO:0031410
+  - GO:0060205
+  - GO:0030659
+  - cellstructuremech:diazoplast
+  - GO:0005769
+  - GO:0031905
+  - GO:0031901
+  - GO:0032009
+  - GO:0062113
+  - GO:0036186
+  - GO:0030139
+  - GO:0071682
+  - GO:0030666
+  - GO:0005783
+  - GO:0005788
+  - GO:0005789
+  - GO:0005768
+  - GO:0031904
+  - GO:0010008
+  - GO:7770040
+  - GO:0012507
+  - GO:0033117
+  - GO:0034467
+  - GO:0033118
+  - GO:0044311
+  - GO:1990413
+  - cellstructuremech:ferrosome
+  - GO:0020016
+  - GO:0020020
+  - GO:0000324
+  - GO:0000328
+  - GO:0000329
+  - GO:0020015
+  - GO:0034468
+  - GO:0046860
+  - GO:0031908
+  - GO:0046861
+  - GO:0009514
+  - GO:0005794
+  - GO:0005798
+  - GO:0030660
+  - GO:0031985
+  - GO:0032580
+  - GO:0005796
+  - GO:0000139
+  - GO:0046859
+  - GO:0042566
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  - GO:0020036
+  - GO:0044227
+  - GO:0020009
+  - GO:0034494
+  - GO:0033163
+  - GO:0031040
+  - cellstructuremech:microsporidian_posterior_vacuole
+  - GO:0030061
+  - GO:0044284
+  - cellstructuremech:mitochondrial_derived_compartment
+  - GO:0005740
+  - GO:0097002
+  - GO:0005743
+  - GO:0005758
+  - GO:0005759
+  - GO:0031966
+  - GO:0005741
+  - GO:0005739
+  - GO:0032047
+  - cellstructuremech:mitosome_envelope
+  - cellstructuremech:mitosome_inner_membrane
+  - cellstructuremech:mitosome_intermembrane_space
+  - cellstructuremech:mitosome_matrix
+  - cellstructuremech:mitosome_outer_membrane
+  - GO:0070074
+  - GO:0036000
+  - GO:0005771
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  - cellstructuremech:multivesicular_body_lumen
+  - GO:0032585
+  - cellstructuremech:nitroplast
+  - GO:0005635
+  - GO:0005641
+  - GO:0005637
+  - GO:0031981
+  - cellstructuremech:nuclear_net
+  - GO:0005640
+  - GO:0033009
+  - GO:0005634
+  - GO:0070111
+  - GO:0070113
+  - GO:0070115
+  - GO:0070112
+  - GO:0070114
+  - GO:0070116
+  - GO:0070117
+  - GO:0070118
+  - GO:0044310
+  - cellstructuremech:parasitophorous_vacuole
+  - cellstructuremech:parasitophorous_vacuole_lumen
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  - GO:0106174
+  - GO:0034357
+  - GO:0042717
+  - GO:0031979
+  - GO:0031676
+  - GO:0009536
+  - GO:0009526
+  - GO:0009528
+  - GO:0009529
+  - GO:0042170
+  - GO:0009527
+  - GO:0009532
+  - GO:0031976
+  - GO:0031978
+  - GO:0055035
+  - GO:0160201
+  - cellstructuremech:pusule
+  - GO:0160223
+  - GO:0055037
+  - GO:0034777
+  - GO:0055038
+  - cellstructuremech:reservosome
+  - GO:0106124
+  - GO:0106125
+  - GO:0106126
+  - GO:0020008
+  - GO:0034591
+  - GO:0033016
+  - GO:1990225
+  - GO:0036007
+  - GO:0062160
+  - GO:0009579
+  - GO:0031977
+  - GO:0042651
+  - cellstructuremech:toxicyst
+  - GO:0005802
+  - GO:0032588
+  - GO:0030140
+  - GO:0098564
+  - GO:0012510
+  - GO:0055039
+  - GO:0005775
+  - GO:0005774
+  - GO:0005773
+  - GO:0140266
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_labels_membraneorganelle
+evidence:
+- evidence_id: ev_strict_membraneorganelle
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict receipt
+  accessed_at: '2026-10-25T07:10:09Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 993 records including all 224 membrane_organelle
+    records.
+  snapshot_sha256: fc80872aed828ea24abbaf1ff66194605d09857b0bf0773189fc076d223594eb
+- evidence_id: ev_labels_membraneorganelle
+  kind: validation
+  reference: scripts/validate_id_label_correspondence.py
+  locator: labels receipt
+  accessed_at: '2026-10-25T07:10:09Z'
+  support: supports
+  summary: validate_id_label_correspondence.py exited 0 across all ontology targets.
+  snapshot_sha256: 4bb207ccdd3216a741b1ca17643c1b57a2f2c68af02138decedfcd4fd19c8b3a
+- evidence_id: ev_mo_node_grounding
+  kind: record_content
+  reference: data/structures/membrane_organelle/magnetosome.yaml
+  locator: components#crystal vs causal_graphs[0].nodes#crystal in magnetosome.yaml
+    and rc_lh1_pufx/cytochrome_bc1 in plasma_membrane_derived_chromatophore_membrane.yaml
+  accessed_at: '2026-10-25T07:03:40Z'
+  support: supports
+  summary: 'magnetosome.yaml causal_graphs[0] node crystal omits CHEBI:46726 and plasma_membrane_derived_chromatophore_membrane.yaml
+    nodes rc_lh1_pufx and cytochrome_bc1 omit their cellstructuremech: groundings.'
+  quote: "- id: crystal\n    label: Magnetite/greigite crystal core\n    node_type:\
+    \ BIOMOLECULE\n    component_ref: crystal"
+  snapshot_sha256: fca499ca429ba4282722280f05c08012db6a9fcd6766d2f65f85d83639eaa084
+assessments:
+- assessment_id: assess_membraneorganelle_cohort
+  area: scope
+  topic: Identity, boundaries, causal graphs, and ontology grounding across data/structures/membrane_organelle/
+  outcome: supported
+  summary: All 224 records in data/structures/membrane_organelle/ represent distinct
+    microbial cell structures or subcomplexes with valid hierarchy links and verified
+    UniProtKB protein examples.
+  target_ids:
+  - GO:0020022
+  - GO:0033985
+  - GO:0033102
+  - cellstructuremech:actinophryid_extrusome
+  - GO:0044222
+  - cellstructuremech:anammoxosome_membrane
+  - GO:0020026
+  - GO:0030668
+  - GO:0020011
+  - GO:0160211
+  - GO:0005776
+  - GO:0034423
+  - GO:0000421
+  - GO:0030075
+  - GO:0045009
+  - GO:0009507
+  - GO:0009941
+  - GO:0009706
+  - GO:0031972
+  - GO:0031969
+  - GO:0009707
+  - GO:0009570
+  - GO:0009534
+  - GO:0009543
+  - GO:0009535
+  - GO:0046858
+  - GO:0033105
+  - GO:0020018
+  - GO:0005801
+  - GO:0033106
+  - GO:0045334
+  - GO:0106176
+  - GO:0030669
+  - GO:0030136
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  - GO:0030665
+  - GO:0030135
+  - GO:0030662
+  - cellstructuremech:coccolith_vesicle
+  - GO:0031164
+  - GO:0000331
+  - GO:0062159
+  - cellstructuremech:contractile_vacuole_lumen
+  - GO:0031913
+  - GO:0030137
+  - cellstructuremech:copi_coated_vesicle_lumen
+  - GO:0030663
+  - GO:0030134
+  - cellstructuremech:copii_coated_vesicle_lumen
+  - GO:0033107
+  - cellstructuremech:cvt_vesicle_lumen
+  - GO:0033110
+  - GO:0009842
+  - GO:0033112
+  - GO:0036012
+  - GO:0036014
+  - GO:0033113
+  - GO:0036013
+  - GO:0034060
+  - GO:0009843
+  - GO:0033114
+  - GO:0033115
+  - GO:0031410
+  - GO:0060205
+  - GO:0030659
+  - cellstructuremech:diazoplast
+  - GO:0005769
+  - GO:0031905
+  - GO:0031901
+  - GO:0032009
+  - GO:0062113
+  - GO:0036186
+  - GO:0030139
+  - GO:0071682
+  - GO:0030666
+  - GO:0005783
+  - GO:0005788
+  - GO:0005789
+  - GO:0005768
+  - GO:0031904
+  - GO:0010008
+  - GO:7770040
+  - GO:0012507
+  - GO:0033117
+  - GO:0034467
+  - GO:0033118
+  - GO:0044311
+  - GO:1990413
+  - cellstructuremech:ferrosome
+  - GO:0020016
+  - GO:0020020
+  - GO:0000324
+  - GO:0000328
+  - GO:0000329
+  - GO:0020015
+  - GO:0034468
+  - GO:0046860
+  - GO:0031908
+  - GO:0046861
+  - GO:0009514
+  - GO:0005794
+  - GO:0005798
+  - GO:0030660
+  - GO:0031985
+  - GO:0032580
+  - GO:0005796
+  - GO:0000139
+  - GO:0046859
+  - GO:0042566
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  - GO:0020036
+  - GO:0044227
+  - GO:0020009
+  - GO:0034494
+  - GO:0033163
+  - GO:0031040
+  - cellstructuremech:microsporidian_posterior_vacuole
+  - GO:0030061
+  - GO:0044284
+  - cellstructuremech:mitochondrial_derived_compartment
+  - GO:0005740
+  - GO:0097002
+  - GO:0005743
+  - GO:0005758
+  - GO:0005759
+  - GO:0031966
+  - GO:0005741
+  - GO:0005739
+  - GO:0032047
+  - cellstructuremech:mitosome_envelope
+  - cellstructuremech:mitosome_inner_membrane
+  - cellstructuremech:mitosome_intermembrane_space
+  - cellstructuremech:mitosome_matrix
+  - cellstructuremech:mitosome_outer_membrane
+  - GO:0070074
+  - GO:0036000
+  - GO:0005771
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  - cellstructuremech:multivesicular_body_lumen
+  - GO:0032585
+  - cellstructuremech:nitroplast
+  - GO:0005635
+  - GO:0005641
+  - GO:0005637
+  - GO:0031981
+  - cellstructuremech:nuclear_net
+  - GO:0005640
+  - GO:0033009
+  - GO:0005634
+  - GO:0070111
+  - GO:0070113
+  - GO:0070115
+  - GO:0070112
+  - GO:0070114
+  - GO:0070116
+  - GO:0070117
+  - GO:0070118
+  - GO:0044310
+  - cellstructuremech:parasitophorous_vacuole
+  - cellstructuremech:parasitophorous_vacuole_lumen
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  - GO:0106174
+  - GO:0034357
+  - GO:0042717
+  - GO:0031979
+  - GO:0031676
+  - GO:0009536
+  - GO:0009526
+  - GO:0009528
+  - GO:0009529
+  - GO:0042170
+  - GO:0009527
+  - GO:0009532
+  - GO:0031976
+  - GO:0031978
+  - GO:0055035
+  - GO:0160201
+  - cellstructuremech:pusule
+  - GO:0160223
+  - GO:0055037
+  - GO:0034777
+  - GO:0055038
+  - cellstructuremech:reservosome
+  - GO:0106124
+  - GO:0106125
+  - GO:0106126
+  - GO:0020008
+  - GO:0034591
+  - GO:0033016
+  - GO:1990225
+  - GO:0036007
+  - GO:0062160
+  - GO:0009579
+  - GO:0031977
+  - GO:0042651
+  - cellstructuremech:toxicyst
+  - GO:0005802
+  - GO:0032588
+  - GO:0030140
+  - GO:0098564
+  - GO:0012510
+  - GO:0055039
+  - GO:0005775
+  - GO:0005774
+  - GO:0005773
+  - GO:0140266
+  evidence_ids:
+  - ev_strict_membraneorganelle
+  - ev_labels_membraneorganelle
+- assessment_id: assess_mo_node_grounding
+  area: graph
+  topic: Causal-graph component_ref grounding propagation in magnetosome.yaml and
+    plasma_membrane_derived_chromatophore_membrane.yaml
+  outcome: concern
+  summary: Three component_ref causal_graphs nodes across 2 membrane_organelle records
+    omit verified groundings from components[].
+  target_ids:
+  - GO:0110143
+  - GO:0042717
+  evidence_ids:
+  - ev_mo_node_grounding
+findings:
+- finding_id: F1
+  issue_key: membrane-organelle-causal-node-component-ref-grounding
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Three causal_graphs nodes with component_ref across 2 membrane_organelle
+    records omit verified component groundings
+  description: 'In data/structures/membrane_organelle/magnetosome.yaml (GO:0110143),
+    causal_graphs[0] node crystal (component_ref: crystal) omits grounding: CHEBI:46726
+    declared on components#crystal; and in data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+    (GO:0042717), causal_graphs[0] nodes rc_lh1_pufx and cytochrome_bc1 omit grounding:
+    cellstructuremech:rc_lh1_pufx_core_complex and grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex
+    declared on their referenced components[] entries.'
+  target_ids:
+  - GO:0110143
+  - GO:0042717
+  field_paths:
+  - causal_graphs[0].nodes[*].grounding
+  evidence_ids:
+  - ev_mo_node_grounding
+  rule_id: docs/SCHEMA.md:CausalNode-grounding
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+    role: maintained_record
+  tags:
+  - causal-graphs
+  - grounding
+  - component-ref
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: Propagate CHEBI:46726 to node crystal in magnetosome.yaml and cellstructuremech:rc_lh1_pufx_core_complex
+    / cellstructuremech:chromatophore_cytochrome_bc1_complex to nodes rc_lh1_pufx
+    and cytochrome_bc1 in plasma_membrane_derived_chromatophore_membrane.yaml, and
+    record the updates in history/records/.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0110143
+  - GO:0042717
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0020022
+  - GO:0033985
+  - GO:0033102
+  - cellstructuremech:actinophryid_extrusome
+  - GO:0044222
+  - cellstructuremech:anammoxosome_membrane
+  - GO:0020026
+  - GO:0030668
+  - GO:0020011
+  - GO:0160211
+  - GO:0005776
+  - GO:0034423
+  - GO:0000421
+  - GO:0030075
+  - GO:0045009
+  - GO:0009507
+  - GO:0009941
+  - GO:0009706
+  - GO:0031972
+  - GO:0031969
+  - GO:0009707
+  - GO:0009570
+  - GO:0009534
+  - GO:0009543
+  - GO:0009535
+  - GO:0046858
+  - GO:0033105
+  - GO:0020018
+  - GO:0005801
+  - GO:0033106
+  - GO:0045334
+  - GO:0106176
+  - GO:0030669
+  - GO:0030136
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  - GO:0030665
+  - GO:0030135
+  - GO:0030662
+  - cellstructuremech:coccolith_vesicle
+  - GO:0031164
+  - GO:0000331
+  - GO:0062159
+  - cellstructuremech:contractile_vacuole_lumen
+  - GO:0031913
+  - GO:0030137
+  - cellstructuremech:copi_coated_vesicle_lumen
+  - GO:0030663
+  - GO:0030134
+  - cellstructuremech:copii_coated_vesicle_lumen
+  - GO:0033107
+  - cellstructuremech:cvt_vesicle_lumen
+  - GO:0033110
+  - GO:0009842
+  - GO:0033112
+  - GO:0036012
+  - GO:0036014
+  - GO:0033113
+  - GO:0036013
+  - GO:0034060
+  - GO:0009843
+  - GO:0033114
+  - GO:0033115
+  - GO:0031410
+  - GO:0060205
+  - GO:0030659
+  - cellstructuremech:diazoplast
+  - GO:0005769
+  - GO:0031905
+  - GO:0031901
+  - GO:0032009
+  - GO:0062113
+  - GO:0036186
+  - GO:0030139
+  - GO:0071682
+  - GO:0030666
+  - GO:0005783
+  - GO:0005788
+  - GO:0005789
+  - GO:0005768
+  - GO:0031904
+  - GO:0010008
+  - GO:7770040
+  - GO:0012507
+  - GO:0033117
+  - GO:0034467
+  - GO:0033118
+  - GO:0044311
+  - GO:1990413
+  - cellstructuremech:ferrosome
+  - GO:0020016
+  - GO:0020020
+  - GO:0000324
+  - GO:0000328
+  - GO:0000329
+  - GO:0020015
+  - GO:0034468
+  - GO:0046860
+  - GO:0031908
+  - GO:0046861
+  - GO:0009514
+  - GO:0005794
+  - GO:0005798
+  - GO:0030660
+  - GO:0031985
+  - GO:0032580
+  - GO:0005796
+  - GO:0000139
+  - GO:0046859
+  - GO:0042566
+  - GO:0034492
+  - GO:0070258
+  - cellstructuremech:intramitochondrial_protein_quality_control_compartment
+  - GO:0005770
+  - GO:0031906
+  - GO:0031902
+  - GO:0031039
+  - GO:0110143
+  - GO:0110145
+  - GO:0110146
+  - GO:0020036
+  - GO:0044227
+  - GO:0020009
+  - GO:0034494
+  - GO:0033163
+  - GO:0031040
+  - cellstructuremech:microsporidian_posterior_vacuole
+  - GO:0030061
+  - GO:0044284
+  - cellstructuremech:mitochondrial_derived_compartment
+  - GO:0005740
+  - GO:0097002
+  - GO:0005743
+  - GO:0005758
+  - GO:0005759
+  - GO:0031966
+  - GO:0005741
+  - GO:0005739
+  - GO:0032047
+  - cellstructuremech:mitosome_envelope
+  - cellstructuremech:mitosome_inner_membrane
+  - cellstructuremech:mitosome_intermembrane_space
+  - cellstructuremech:mitosome_matrix
+  - cellstructuremech:mitosome_outer_membrane
+  - GO:0070074
+  - GO:0036000
+  - GO:0005771
+  - cellstructuremech:multivesicular_body_intraluminal_vesicle
+  - cellstructuremech:multivesicular_body_lumen
+  - GO:0032585
+  - cellstructuremech:nitroplast
+  - GO:0005635
+  - GO:0005641
+  - GO:0005637
+  - GO:0031981
+  - cellstructuremech:nuclear_net
+  - GO:0005640
+  - GO:0033009
+  - GO:0005634
+  - GO:0070111
+  - GO:0070113
+  - GO:0070115
+  - GO:0070112
+  - GO:0070114
+  - GO:0070116
+  - GO:0070117
+  - GO:0070118
+  - GO:0044310
+  - cellstructuremech:parasitophorous_vacuole
+  - cellstructuremech:parasitophorous_vacuole_lumen
+  - cellstructuremech:parasitophorous_vacuole_membrane
+  - GO:7770041
+  - GO:0005782
+  - GO:0005778
+  - GO:0005777
+  - GO:0045335
+  - GO:0097013
+  - GO:0030670
+  - GO:0032010
+  - GO:0061474
+  - GO:0106174
+  - GO:0034357
+  - GO:0042717
+  - GO:0031979
+  - GO:0031676
+  - GO:0009536
+  - GO:0009526
+  - GO:0009528
+  - GO:0009529
+  - GO:0042170
+  - GO:0009527
+  - GO:0009532
+  - GO:0031976
+  - GO:0031978
+  - GO:0055035
+  - GO:0160201
+  - cellstructuremech:pusule
+  - GO:0160223
+  - GO:0055037
+  - GO:0034777
+  - GO:0055038
+  - cellstructuremech:reservosome
+  - GO:0106124
+  - GO:0106125
+  - GO:0106126
+  - GO:0020008
+  - GO:0034591
+  - GO:0033016
+  - GO:1990225
+  - GO:0036007
+  - GO:0062160
+  - GO:0009579
+  - GO:0031977
+  - GO:0042651
+  - cellstructuremech:toxicyst
+  - GO:0005802
+  - GO:0032588
+  - GO:0030140
+  - GO:0098564
+  - GO:0012510
+  - GO:0055039
+  - GO:0005775
+  - GO:0005774
+  - GO:0005773
+  - GO:0140266
+  rationale: All 224 records in data/structures/membrane_organelle/ represent distinct
+    membrane-bounded organelles, vesicles, or specialized membrane subcompartments.
+  evidence_ids:
+  - ev_strict_membraneorganelle
+  - ev_labels_membraneorganelle
+limitations:
+- Record edits for membrane_organelle cohort findings are queued for Cycle 3 Stage
+  5 (resolve_review_findings).
+tags:
+- stage4
+- category-review
+- membrane-organelle
+```
