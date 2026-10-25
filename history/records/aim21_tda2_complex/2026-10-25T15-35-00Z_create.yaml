@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+  slug: aim21_tda2_complex
+session:
+  id: 2026-10-25T153500Z-claude-opus-4-6-c4s107
+  timestamp: '2026-10-25T15:35:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for Aim21-Tda2 complex (GO:0110131) in cytoskeleton.
+  details: Authored data/structures/cytoskeleton/aim21_tda2_complex.yaml for Aim21-Tda2
+    complex (GO:0110131) with verified GO hierarchy, taxonomic distribution, UniProtKB
+    protein examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

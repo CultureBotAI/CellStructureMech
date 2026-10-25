@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+  slug: archaeal_proton_transporting_a_type_atpase_complex
+session:
+  id: 2026-10-25T153500Z-claude-opus-4-6-c4s103
+  timestamp: '2026-10-25T15:35:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for archaeal proton-transporting A-type ATPase
+    complex (GO:1990490) in energy_complex.
+  details: Authored data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+    for archaeal proton-transporting A-type ATPase complex (GO:1990490) with verified
+    GO hierarchy, taxonomic distribution, UniProtKB protein examples, functions, literature
+    evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence
