@@ -1,0 +1,1079 @@
+schema_version: 1.0.0
+review_id: 20261025T201244Z-ftsqbl-complex
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Scientific review of FtsQBL complex
+started_at: '2026-10-25T19:59:33Z'
+finished_at: '2026-10-25T20:12:44Z'
+reviewer:
+  identity: Codex /root/microtubule_sources
+  kind: agent
+  model: GPT-6
+  independence: independent
+  independence_basis: Reviewed the entire frozen record and source payloads independently;
+    did not author or modify the maintained record.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The FtsQBL identity and native examples are supported. Two majors concern
+  membrane-associated versus cytoplasmic preassembly and domain-to-whole-protein FtsQ
+  grounding; one minor qualifies modeled oligomer counts. Unread2004 activation details
+  remain explicitly unresolved.
+source:
+  git_revision: 1497f644d59655f087825054920ef1a99ddebce4
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/division_machinery/ftsqbl_complex.yaml
+    sha256: c6563e47cef93b8807aaebfdd48e746d54d985e1b42f35b1ff42f0eab32e296a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+scope:
+  description: Whole single-record scientific review, with actual source-access boundaries
+    stated below.
+  selection: Exact assigned path; no sampling or credit for neighboring records.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990587
+targets:
+- target_id: GO:1990587
+  path: data/structures/division_machinery/ftsqbl_complex.yaml
+  label: FtsQBL complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    role: maintained scientific record
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:1990587
+  command: just validate data/structures/division_machinery/ftsqbl_complex.yaml
+  exit_code: 0
+  evidence_ids:
+  - check-schema
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:1990587
+  command: just validate-strict data/structures/division_machinery/ftsqbl_complex.yaml
+    --out /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex-strict.tsv
+  exit_code: 0
+  evidence_ids:
+  - check-strict
+- check_id: proteins
+  name: proteins
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:1990587
+  command: uv run python scripts/uniprot_genes.py --record data/structures/division_machinery/ftsqbl_complex.yaml
+    --verify
+  exit_code: 0
+  evidence_ids:
+  - check-proteins
+- check_id: causal
+  name: causal
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:1990587
+  command: uv run python scripts/uniprot_genes.py --record data/structures/division_machinery/ftsqbl_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  evidence_ids:
+  - check-causal
+- check_id: inspect
+  name: inspect
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:1990587
+  command: uv run python scripts/record_review.py inspect --targets /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex-targets.yaml
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    .claude/skills/literature-evidence/SKILL.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input CLAUDE.md --input docs/CURATION.md --input docs/SCHEMA.md --input docs/record-review-profile.md
+    --input docs/record-reviews.md --input justfile --input schema/record_review.yaml
+    --input src/cellstructuremech/schema/cellstructuremech.yaml --input .claude/skills/curate-causal-graphs/SKILL.md
+    --input .claude/skills/uniprot-protein-examples/SKILL.md
+  exit_code: 0
+  evidence_ids:
+  - check-inspect
+- check_id: global-history
+  name: global-history
+  status: passed
+  required: true
+  summary: Fresh whole-corpus native history validation:2065 records,0invalid.
+  target_ids:
+  - GO:1990587
+  command: just validate-history
+  exit_code: 0
+  evidence_ids:
+  - check-global-history
+- check_id: global-products
+  name: global-products
+  status: passed
+  required: true
+  summary: Fresh native full-corpus configured identifier/label products check passed.
+  target_ids:
+  - GO:1990587
+  command: just validate-products
+  exit_code: 0
+  evidence_ids:
+  - check-global-products
+- check_id: global-traits
+  name: global-traits
+  status: passed
+  required: true
+  summary: Fresh native TraitMech check passed10/10 current linked identifiers.
+  target_ids:
+  - GO:1990587
+  command: just check-trait-links --check
+  exit_code: 0
+  evidence_ids:
+  - check-global-traits
+- check_id: global-curies
+  name: global-curies
+  status: passed
+  required: true
+  summary: Fresh strict full-corpus resolver returned0:4997OK,856UNREACHABLE,252SKIPPED.
+    BFO self-control was not exercised due network unreachability; zero exit is not
+    complete resolution. All residuals retained beside native TSV.
+  target_ids:
+  - GO:1990587
+  command: just check-curies-strict
+  exit_code: 0
+  evidence_ids:
+  - check-global-curies
+- check_id: final-global-history
+  name: Current-base native corpus history
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990587
+  command: just validate-history
+  exit_code: 0
+  evidence_ids:
+  - final-global-history
+  summary: Native append-only history validation passed for2065 history files.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-products
+  name: Current-base native corpus products
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990587
+  command: just validate-products
+  exit_code: 0
+  evidence_ids:
+  - final-global-products
+  summary: Native corpus ID-label validator returned0; it does not prove class-level
+    identity or support biological scope.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-traits
+  name: Current-base native corpus traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990587
+  command: just check-trait-links --check
+  exit_code: 0
+  evidence_ids:
+  - final-global-traits
+  summary: All10 trait links matched the freshly obtained TraitMech index. This target
+    has no asserted trait links.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-curies
+  name: Current-base native corpus curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990587
+  command: just check-curies-strict
+  exit_code: 0
+  evidence_ids:
+  - final-global-curies
+  summary: Native corpus resolver returned0:6105 identifiers,4997 OK,856 UNREACHABLE,252
+    SKIPPED. BFO authority control was not exercised because unreachable. Native exit0
+    is not universal resolution; target source-native checks and limitations are recorded
+    separately.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-qc
+  name: Current-base native corpus qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990587
+  command: just qc
+  exit_code: 0
+  evidence_ids:
+  - final-global-qc
+  summary: Full current-base native QC passed; review-only additions are checked separately
+    after saving. Scientific content was unchanged.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/division_machinery/ftsqbl_complex.yaml
+  locator: Entire maintained YAML; all scientific fields, evidence and history.
+  accessed_at: '2026-10-25T20:11:10Z'
+  support: supports
+  summary: Complete target read before assessment; this row supplies the exact field
+    contents being reviewed.
+  snapshot_sha256: c6563e47cef93b8807aaebfdd48e746d54d985e1b42f35b1ff42f0eab32e296a
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components, identifiers, evidence and causal-graph rules; schema EssentialityEnum
+    and PresenceEnum separately captured.
+  accessed_at: '2026-10-25T20:11:10Z'
+  support: supports
+  summary: Formation necessity concerns the reviewed structure; protein components
+    require exact families, while mechanism and taxonomic scope require claim-specific
+    evidence.
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: EssentialityEnum and PresenceEnum, lines1080–1100; component and graph
+    classes.
+  accessed_at: '2026-10-25T20:11:10Z'
+  support: supports
+  summary: DISPENSABLE means the structure forms without the component; COMMON means
+    present in most clade members, with losses exceptional.
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000917,GO:0043093,GO:1990586,GO:1990587,GO:1990588
+  locator: All returned ids/names/definitions/synonyms and relevant typed children;
+    exact target term and BL/QBL/divisome/function entries; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/go.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:16.263349Z'
+  support: supports
+  summary: Current active GO terms verify the named complex, exact synonym, divisome
+    hierarchy, BL/QBL part relation and function identifiers. The FtsQBL definition
+    literally contains cytoplasmic preassembly wording. This authority wording is
+    retained as a conflict with the membrane-associated experimental context, not
+    misreported as absent. The response contains the five requested QBL/divisome/BL/function
+    terms and does not include a cytosol-term response.
+  snapshot_sha256: 1b31cae8788f1e5085f608837e73681706698eea309e6594d25d9d7514845033
+- evidence_id: go-constraints
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990587/constraints
+  locator: results target id and taxonConstraints only; unrelated blacklist annotations
+    are not used as absence evidence; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/go-constraints.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:16.918034Z'
+  support: supports
+  summary: The current native taxon-constraint response was checked for the target.
+    Constraint relationships bound annotation applicability; they do not quantify
+    bacterial prevalence or establish experimental strains.
+  snapshot_sha256: bf02ed6653e421a8c320f01c6047562474022a1bdddf8d0269f0fd8cd11b9bc5
+- evidence_id: tax-2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: ENA taxId/scientificName/rank/lineage and names; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/tax-2.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:17.595748Z'
+  support: supports
+  summary: Native taxonomy identifies 2 as Bacteria at rank domain. It does not measure
+    complex prevalence or establish the experimental strain.
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: tax-83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: ENA taxId/scientificName/rank/lineage and names; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/tax-83333.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:17.596747Z'
+  support: supports
+  summary: Native taxonomy identifies 83333 as Escherichia coli K-12 at rank strain.
+    It does not measure complex prevalence or establish the experimental strain.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: ipr-IPR023081
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR023081/
+  locator: metadata accession/type/name, complete description and member_databases;
+    retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/ipr-IPR023081.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:17.527205Z'
+  support: supports
+  summary: The native entry is a whole-protein FtsB family with corresponding family
+    signatures, distinct from a shared domain.
+  snapshot_sha256: e8535b4ad0e4e27d403c619641933f4b12cfb73e881466f9fff9f624fc57d439
+- evidence_id: ipr-IPR011922
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR011922/
+  locator: metadata accession/type/name, complete description and member_databases;
+    retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/ipr-IPR011922.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:17.005720Z'
+  support: supports
+  summary: The native entry is a whole-protein FtsL family with corresponding family
+    signatures, distinct from a shared domain.
+  snapshot_sha256: ccd91f10e547ec26d29629374882aa6b433e4aa51ff18aeac64f8cf20bd1e300
+- evidence_id: protein-P0A6S5
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P0A6S5.json
+  locator: primaryAccession/entryType/genes/organism; complete FUNCTION, SUBUNIT,
+    SUBCELLULAR LOCATION, DISRUPTION PHENOTYPE where present; TRANSMEM/TOPO_DOM features
+    and InterPro xrefs; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/protein-P0A6S5.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:18.176859Z'
+  support: supports
+  summary: The reviewed P0A6S5 entry identifies E. coli K-12 ftsB (83333). Full location/topology
+    and subunit comments place the bitopic protein at the cell inner membrane, with
+    periplasmic interaction regions. Its gene aliases and own InterPro xrefs were
+    inspected.
+  snapshot_sha256: 3cf6e7609a6392229c4391bc9884f431cf78e5b68538c7f2db722bb3d8d5f888
+- evidence_id: query-ftsB
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AftsB%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Exact reviewed UniProt gene query; full returned identities; retained /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/query-ftsB.raw
+  accessed_at: '2026-10-25T20:02:19.507539Z'
+  support: supports
+  summary: 'Two reviewed results occur: P0A6S5 is the intended ftsB; P69924 is nrdB
+    with an ftsB alias. The retained protein example is correct, and a one-hit search
+    claim is not made.'
+  snapshot_sha256: 6312506085b181dd6a2cba05c7143bca99f5686fc1677a77b6a7cd5ca9c6d226
+  search_scope: Only the exact gene_exact and organism_id terms in this native request,
+    reviewed:true; all returned identities inspected. This is a remote query, so ignored
+    local files are not applicable. No absence outside this exact query is inferred.
+- evidence_id: protein-P0AEN4
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P0AEN4.json
+  locator: primaryAccession/entryType/genes/organism; complete FUNCTION, SUBUNIT,
+    SUBCELLULAR LOCATION, DISRUPTION PHENOTYPE where present; TRANSMEM/TOPO_DOM features
+    and InterPro xrefs; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/protein-P0AEN4.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:18.190870Z'
+  support: supports
+  summary: The reviewed P0AEN4 entry identifies E. coli K-12 ftsL (83333). Full location/topology
+    and subunit comments place the bitopic protein at the cell inner membrane, with
+    periplasmic interaction regions. Its gene aliases and own InterPro xrefs were
+    inspected.
+  snapshot_sha256: e7d33e2ee32bea22a02b43d0242540cf6460e994d50d3401fa0b19d64ab04e7a
+- evidence_id: query-ftsL
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AftsL%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Exact reviewed UniProt gene query; full returned identities; retained /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/query-ftsL.raw
+  accessed_at: '2026-10-25T20:02:19.581502Z'
+  support: supports
+  summary: The exact reviewed ftsL query returns the intended single entry P0AEN4.
+  snapshot_sha256: 587902fca14c0a5e582b7e8c7a4ad473e49f50eac73ce675162ba83bb9cba7f4
+  search_scope: Only the exact gene_exact and organism_id terms in this native request,
+    reviewed:true; all returned identities inspected. This is a remote query, so ignored
+    local files are not applicable. No absence outside this exact query is inferred.
+- evidence_id: protein-P06136
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P06136.json
+  locator: primaryAccession/entryType/genes/organism; complete FUNCTION, SUBUNIT,
+    SUBCELLULAR LOCATION, DISRUPTION PHENOTYPE where present; TRANSMEM/TOPO_DOM features
+    and InterPro xrefs; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/protein-P06136.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:18.116340Z'
+  support: supports
+  summary: The reviewed P06136 entry identifies E. coli K-12 ftsQ (83333). Full location/topology
+    and subunit comments place the bitopic protein at the cell inner membrane, with
+    periplasmic interaction regions. Its gene aliases and own InterPro xrefs were
+    inspected.
+  snapshot_sha256: 09c18f1970995203f73bc985302845c6e95254113eca3a9d6b40078b922f0182
+- evidence_id: query-ftsQ
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AftsQ%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Exact reviewed UniProt gene query; full returned identities; retained /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/query-ftsQ.raw
+  accessed_at: '2026-10-25T20:02:19.581762Z'
+  support: supports
+  summary: The exact reviewed ftsQ query returns the intended single entry P06136.
+  snapshot_sha256: 1dbc82a3d468846b8acd9af122591429ef60f56619409ce29918ac43c46bc07a
+  search_scope: Only the exact gene_exact and organism_id terms in this native request,
+    reviewed:true; all returned identities inspected. This is a remote query, so ignored
+    local files are not applicable. No absence outside this exact query is inferred.
+- evidence_id: pmid-15165235
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15165235+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact resultList.result entry; PMID/title/authorString/pubYear/doi and
+    complete abstractText; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/pmid-15165235.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:18.909043Z'
+  support: supports
+  summary: Native MED identity verifies PMID 15165235, title A complex of the Escherichia
+    coli cell division proteins FtsL, FtsB and FtsQ forms independently of its localization
+    to the septal region., authors Buddelmeijer N, Beckwith J., publication year 2004,
+    and DOI 10.1111/j.1365-2958.2004.04044.x. The complete abstract was read; a body
+    is not inferred from this metadata.
+  snapshot_sha256: b359536da3e5a1d31f837588a71f9e866167475fd7aadceabcdb52bba7eace8b
+- evidence_id: pmid-19233928
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19233928+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact resultList.result entry; PMID/title/authorString/pubYear/doi and
+    complete abstractText; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/pmid-19233928.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:18.910869Z'
+  support: supports
+  summary: 'Native MED identity verifies PMID 19233928, title Divisome under construction:
+    distinct domains of the small membrane protein FtsB are necessary for interaction
+    with multiple cell division proteins., authors Gonzalez MD, Beckwith J., publication
+    year 2009, and DOI 10.1128/jb.01597-08. The complete abstract was read; a body
+    is not inferred from this metadata.'
+  snapshot_sha256: 3a3a5b4282c79d8a0b20b5722fb737a1b45b4cd83cd7f1551c69d0d817b5ef90
+- evidence_id: pmid-21672257
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21672257+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact resultList.result entry; PMID/title/authorString/pubYear/doi and
+    complete abstractText; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/pmid-21672257.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:18.943389Z'
+  support: supports
+  summary: Native MED identity verifies PMID 21672257, title A model for the Escherichia
+    coli FtsB/FtsL/FtsQ cell division complex., authors Villanelo F, Ordenes A, Brunet
+    J, Lagos R, Monasterio O., publication year 2011, and DOI 10.1186/1472-6807-11-28.
+    The complete abstract was read; a body is not inferred from this metadata.
+  snapshot_sha256: f89fce9673695f8c74974397a8a5d254a79d8c74f385ea4905700d56f46f28a4
+- evidence_id: bud2002-numeric
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/122946/
+  locator: 'Genuine PMC HTML: Abstract/Introduction; Methods sec6–9; Results sec12/13
+    and sec15/16; complete Discussion sec17; Fig2–5 captions. No pixels, full Table1
+    strain inventory or remaining Vibrio Methods read.; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsbl_complex/bud2002-numeric.raw;
+    HTTP 200.'
+  accessed_at: '2026-10-25T20:02:45.891487Z'
+  support: supports
+  summary: The original experiments establish YgbQ/FtsB membrane topology, codependent
+    FtsB/FtsL septal localization and reduced FtsL stability after FtsB depletion.
+    The reciprocal FtsL-depletion effect on FtsB stability is not the demonstrated2002
+    experiment. Its coiled-coil heterodimer/multimer is proposed, not a measured stoichiometry.
+  snapshot_sha256: 19237e4011dcff33de56855868a4abfde5d3fa1cd947b45215aa8423b0c0fd6b
+- evidence_id: gonzalez2009-numeric
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/2668415/
+  locator: 'Genuine PMC HTML: Methods sec5–10; Results sec12/13 and sec17; complete
+    Discussion sec18 and Fig1/2/5/6 captions. Detailed truncation Results sec14–16
+    and full Tables2/3 were not independently read; related conclusions are attributed
+    only to Discussion.; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/gonzalez2009-numeric.raw;
+    HTTP 200.'
+  accessed_at: '2026-10-25T20:03:27.760429Z'
+  support: supports
+  summary: This primary membrane-preparation/coimmunoprecipitation study directly
+    tests reciprocal FtsB/FtsL stability and describes distinct FtsB regions and a
+    scaffold model. Discussion separates artificial premature recruitment from normal
+    localization and cannot distinguish all direct from indirect contacts. It concerns
+    inner-membrane proteins rather than a soluble cytosolic complex.
+  snapshot_sha256: 9fe77e3dfe043d0babeca8a272f63d6593ecaaaebcca8b97a2d84df4a3945a58
+- evidence_id: villanelo2011-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3152878/fullTextXML
+  locator: 'Genuine JATS: complete Background sec4; monomer modeling sec6; complete
+    stoichiometry sec7 and modeling/sec8; specified trimeric/hexameric interface descriptions
+    and Fig3/4 captions; Conclusions sec12; Methods sec14–17. No coordinates, supplementary
+    data, pixels or quantitative reanalysis.; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/villanelo2011-xml.raw;
+    HTTP 200.'
+  accessed_at: '2026-10-25T20:02:46.461149Z'
+  support: supports
+  summary: The paper constructs alternative periplasmic1:1:1 and2:2:2 models using
+    docking/dynamics and prior experimental constraints. It explicitly says experimental
+    stoichiometry is lacking and confirmation is required. It is not an experimental
+    copy-number determination. Background provides bacterial homology context.
+  snapshot_sha256: 9e108c9e57a39f9b2af4206cfee6c6af146c654e0b26281e1cb10b77276a1f2a
+- evidence_id: bud2004-publisher
+  kind: authority
+  reference: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2004.04044.x
+  locator: Actual response status/body type; no primary body interpreted; retained
+    raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsbl_complex/bud2004-publisher.raw;
+    HTTP 403.
+  accessed_at: '2026-10-25T20:02:45.890917Z'
+  support: unknown
+  summary: This publisher attempt returned HTTP403 HTML, not the2004 article body.
+    It supplies an access limit only; the native complete abstract and separate protein
+    annotations are the readable evidence.
+  snapshot_sha256: 5c4cb9ca1b9eb90398964dddef0cf6b8602d1dc9e7c39dc5de7ea400523cb6c8
+- evidence_id: bud2004-pdf
+  kind: authority
+  reference: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1365-2958.2004.04044.x
+  locator: Actual response status/body type; no primary body interpreted; retained
+    raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsbl_complex/bud2004-pdf.raw;
+    HTTP 403.
+  accessed_at: '2026-10-25T20:03:27.761391Z'
+  support: unknown
+  summary: This publisher attempt returned HTTP403 HTML, not the2004 article body.
+    It supplies an access limit only; the native complete abstract and separate protein
+    annotations are the readable evidence.
+  snapshot_sha256: cd6170a40ca2d5ba0fad86f9d620e964d170ffbc8709e32ff3e53d3d86a71953
+- evidence_id: adapter-ftsB
+  kind: search
+  reference: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise_mg1655 --query ftsB
+  locator: Native adapter stdout /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsbl_complex/imodulon-ftsB.stdout;
+    receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsbl_complex/imodulon-ftsB.receipt.json
+  accessed_at: '2026-10-25T20:05:10.449699Z'
+  support: supports
+  summary: The exact e_coli/precise_mg1655 query returned one matching ftsB gene and
+    zero iModulons. This is computational gene context, not physical assembly, localization
+    or prevalence evidence.
+  snapshot_sha256: ca2a77ddcd5a8d057c29f44011c870c685db23869119c5000decc2096c82a5ef
+  search_scope: Native free iModulonDB adapter; organism e_coli, dataset precise_mg1655,
+    exact query ftsB. Only this bounded result was inspected. No matching module informed
+    the review, so no module summary was used. Other datasets and aliases were not
+    exhaustively searched. Ignored local files are not applicable.
+- evidence_id: adapter-ftsL
+  kind: search
+  reference: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise_mg1655 --query ftsL
+  locator: Native adapter stdout /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsbl_complex/imodulon-ftsL.stdout;
+    receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsbl_complex/imodulon-ftsL.receipt.json
+  accessed_at: '2026-10-25T20:05:10.618727Z'
+  support: supports
+  summary: The exact e_coli/precise_mg1655 query returned one matching ftsL gene and
+    zero iModulons. This is computational gene context, not physical assembly, localization
+    or prevalence evidence.
+  snapshot_sha256: 906141ad1ecccdb02b97bbbd89df9a5de5c95894bab3059eecb4b9b7706e83a4
+  search_scope: Native free iModulonDB adapter; organism e_coli, dataset precise_mg1655,
+    exact query ftsL. Only this bounded result was inspected. No matching module informed
+    the review, so no module summary was used. Other datasets and aliases were not
+    exhaustively searched. Ignored local files are not applicable.
+- evidence_id: adapter-ftsQ
+  kind: search
+  reference: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb search --organism e_coli --dataset precise_mg1655 --query ftsQ
+  locator: Native adapter stdout /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/imodulon-ftsQ.stdout;
+    receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/imodulon-ftsQ.receipt.json
+  accessed_at: '2026-10-25T20:05:10.787692Z'
+  support: supports
+  summary: The exact e_coli/precise_mg1655 query returned one matching ftsQ gene and
+    zero iModulons. This is computational gene context, not physical assembly, localization
+    or prevalence evidence.
+  snapshot_sha256: dd15d9d373ce699ef70535bed473a676d5ca533d3e619a615fc246b1bcc2a922
+  search_scope: Native free iModulonDB adapter; organism e_coli, dataset precise_mg1655,
+    exact query ftsQ. Only this bounded result was inspected. No matching module informed
+    the review, so no module summary was used. Other datasets and aliases were not
+    exhaustively searched. Ignored local files are not applicable.
+- evidence_id: ipr-IPR005548
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005548/
+  locator: metadata accession/type/name, complete description and signatures; retained
+    raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/ipr-IPR005548.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:16.996755Z'
+  support: supports
+  summary: IPR005548 is a domain entry for the FtsQ/DivIB C-terminal region, not the
+    whole FtsQ protein family.
+  snapshot_sha256: c26ece91554b6b418fb2c63b5b6aaaf19a2c380a6a3b1386602b15ef1675ab4f
+- evidence_id: ipr-IPR026579
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR026579/
+  locator: metadata accession/type/name, complete description and member_databases;
+    retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/ipr-IPR026579.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:03:27.761203Z'
+  support: supports
+  summary: IPR026579 is the FtsQ whole-protein family with HAMAP MF00911 and PANTHER
+    PTHR35851 signatures. The native metadata itself supplies class identity; accession
+    membership is separately checked in P06136.
+  snapshot_sha256: 2c1e67fbea6785fa26cb251cbd4a6c2fbab37e00615a82f8b32aa7bbf39832a4
+- evidence_id: check-schema
+  kind: validation
+  reference: just validate data/structures/division_machinery/ftsqbl_complex.yaml
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex-schema.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex-schema.log
+  accessed_at: '2026-10-25T19:59:34Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: a4c19f406338d50def1281d8d842b4d7cf38bb57a397ae7b2bf3aa332152f260
+- evidence_id: check-strict
+  kind: validation
+  reference: just validate-strict data/structures/division_machinery/ftsqbl_complex.yaml
+    --out /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex-strict.tsv
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex-strict.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex-strict.log
+  accessed_at: '2026-10-25T19:59:36Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: b45bb48d006e3f3ae918259519f04d6261b0b200bd6aa4e8ed3296d05a62f250
+- evidence_id: check-proteins
+  kind: validation
+  reference: uv run python scripts/uniprot_genes.py --record data/structures/division_machinery/ftsqbl_complex.yaml
+    --verify
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/proteins-receipt.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/proteins.log
+  accessed_at: '2026-10-25T20:02:34.244092Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: check-causal
+  kind: validation
+  reference: uv run python scripts/uniprot_genes.py --record data/structures/division_machinery/ftsqbl_complex.yaml
+    --causal-graphs
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/causal-receipt.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/causal.log
+  accessed_at: '2026-10-25T20:02:34.949428Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: 7306c888644c5e1d114f6dd2040391d906cb9853e202c25c386f4e5069cc9550
+- evidence_id: check-inspect
+  kind: validation
+  reference: uv run python scripts/record_review.py inspect --targets /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex-targets.yaml
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    .claude/skills/literature-evidence/SKILL.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input CLAUDE.md --input docs/CURATION.md --input docs/SCHEMA.md --input docs/record-review-profile.md
+    --input docs/record-reviews.md --input justfile --input schema/record_review.yaml
+    --input src/cellstructuremech/schema/cellstructuremech.yaml --input .claude/skills/curate-causal-graphs/SKILL.md
+    --input .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/inspect-receipt.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/ftsqbl_complex/inspect.json
+  accessed_at: '2026-10-25T20:02:32.817356Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: 46feb3bb81ef4a4631e1c8eaa3ebc26a41a5a90cfdd8df11dee7cea0bef2e652
+- evidence_id: check-global-history
+  kind: validation
+  reference: just validate-history
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/history-initial/result.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/history-initial/stdout.log
+  accessed_at: '2026-10-25T19:59:33.039839Z'
+  support: supports
+  summary: Fresh whole-corpus native history validation:2065 records,0invalid.
+  snapshot_sha256: beb8780a7910df045dcae7003d8ede2f8b6d08b9a311c15982997c40796d02d8
+- evidence_id: check-global-products
+  kind: validation
+  reference: just validate-products
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/products-initial/result.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/products-initial/stdout.log
+  accessed_at: '2026-10-25T20:00:11.856400Z'
+  support: supports
+  summary: Fresh native full-corpus configured identifier/label products check passed.
+  snapshot_sha256: 0158645d825815955f637f5ec44265e94950a33f646e419a0c8999be5aff8d2f
+- evidence_id: check-global-traits
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/traits-initial/result.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/traits-initial/stdout.log
+  accessed_at: '2026-10-25T19:59:53.599030Z'
+  support: supports
+  summary: Fresh native TraitMech check passed10/10 current linked identifiers.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: check-global-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/curies-initial/result.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/curies-initial/stdout.log
+  accessed_at: '2026-10-25T20:01:08.675608Z'
+  support: supports
+  summary: Fresh strict full-corpus resolver returned0:4997OK,856UNREACHABLE,252SKIPPED.
+    BFO self-control was not exercised due network unreachability; zero exit is not
+    complete resolution. All residuals retained beside native TSV.
+  snapshot_sha256: 1429e55e1cb3667b4710ad56b2b9d90bd7104a24f4899edc6470f15152838e7d
+- evidence_id: final-global-history
+  kind: validation
+  reference: just validate-history
+  locator: Exact current-base history stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T19:59:33.039839Z'
+  support: supports
+  summary: Native append-only history validation passed for2065 history files.
+  snapshot_sha256: beb8780a7910df045dcae7003d8ede2f8b6d08b9a311c15982997c40796d02d8
+- evidence_id: final-global-products
+  kind: validation
+  reference: just validate-products
+  locator: Exact current-base products stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T20:00:11.856400Z'
+  support: supports
+  summary: Native corpus ID-label validator returned0; it does not prove class-level
+    identity or support biological scope.
+  snapshot_sha256: 0158645d825815955f637f5ec44265e94950a33f646e419a0c8999be5aff8d2f
+- evidence_id: final-global-traits
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Exact current-base traits stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T19:59:53.599030Z'
+  support: supports
+  summary: All10 trait links matched the freshly obtained TraitMech index. This target
+    has no asserted trait links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: final-global-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: Exact current-base curies stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T20:01:08.675608Z'
+  support: supports
+  summary: Native corpus resolver returned0:6105 identifiers,4997 OK,856 UNREACHABLE,252
+    SKIPPED. BFO authority control was not exercised because unreachable. Native exit0
+    is not universal resolution; target source-native checks and limitations are recorded
+    separately.
+  snapshot_sha256: 1429e55e1cb3667b4710ad56b2b9d90bd7104a24f4899edc6470f15152838e7d
+- evidence_id: final-global-qc
+  kind: validation
+  reference: just qc
+  locator: Exact current-base qc stdout; retained receipt binds command, UTC, input
+    manifest and exit code
+  accessed_at: '2026-10-25T20:06:17.301813Z'
+  support: supports
+  summary: Full current-base native QC passed; review-only additions are checked separately
+    after saving. Scientific content was unchanged.
+  snapshot_sha256: 3b50443af049a5f09641445e5c29c66e5f96c4f7a3bb046b344e96fa0d223d8b
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact complex and boundary
+  outcome: supported
+  summary: The active GO identity, exact synonym and divisome/BL-QBL relationships
+    are correct. A bitopic protein complex can preassemble before septal recruitment;
+    this does not entail soluble cytosolic assembly. The current GO wording itself
+    requires explicit conflict handling.
+  target_ids:
+  - GO:1990587
+  evidence_ids:
+  - go
+  - pmid-15165235
+  - gonzalez2009-numeric
+- assessment_id: location
+  area: scope
+  topic: Preseptal assembly versus cytosolic compartment
+  outcome: concern
+  summary: Primary topology and membrane-fraction coimmunoprecipitation support preassembly
+    within the inner-membrane/periplasmic divisome context. The definition exports
+    an unqualified cytoplasmic assembly claim. The distinction is biologically consequential
+    even though current GO repeats it.
+  target_ids:
+  - GO:1990587
+  evidence_ids:
+  - go
+  - bud2002-numeric
+  - gonzalez2009-numeric
+  - protein-P0A6S5
+  - protein-P0AEN4
+- assessment_id: proteins
+  area: grounding
+  topic: Native protein examples and aliases
+  outcome: supported
+  summary: All maintained accessions are reviewed E. coli K-12 entries with the intended
+    gene identities. The ftsB alias collision is distinguished from the intended protein;
+    it does not invalidate P0A6S5. Exact native family and individual membership evidence
+    are considered jointly.
+  target_ids:
+  - GO:1990587
+  evidence_ids:
+  - protein-P0A6S5
+  - protein-P0AEN4
+  - query-ftsB
+  - query-ftsL
+  - protein-P06136
+  - query-ftsQ
+- assessment_id: quantity
+  area: quantity
+  topic: Subunit counts and physical complex
+  outcome: concern
+  summary: The named subunit classes and association are supported, but the supplied
+    alternative copy counts originate in modeled assemblies. The2011 study expressly
+    requests experimental confirmation.
+  target_ids:
+  - GO:1990587
+  evidence_ids:
+  - pmid-15165235
+  - villanelo2011-xml
+- assessment_id: necessity
+  area: evidence
+  topic: Formation necessity boundaries
+  outcome: unknown
+  summary: The constituent classes define the named BL or QBL assembly, and depletion/coimmunoprecipitation
+    supports specific stability/association dependencies in E. coli. The inspected
+    sources do not establish a universal formation phenotype for every lineage or
+    equate essential cell division with assembly of the entire divisome. ESSENTIAL
+    is assessed as a formation claim, not redefined as catalytic importance; no additional
+    omission finding is forced.
+  target_ids:
+  - GO:1990587
+  evidence_ids:
+  - schema
+  - pmid-15165235
+  - bud2002-numeric
+  - gonzalez2009-numeric
+- assessment_id: taxonomy
+  area: scope
+  topic: Bacterial range and strain context
+  outcome: unknown
+  summary: Native taxon IDs and K-12 reference proteins are correct, and the supplemental2009/2011
+    descriptions support conservation across multiple bacterial groups, including
+    Gram-positive homologous systems. COMMON retains the schema meaning of presence
+    in most members with exceptional losses; that prevalence dimension remains unestablished
+    at the inspected scope. The supported identity and qualitative cross-group context
+    are preserved without inferring bacterial absence or exact strain equivalence
+    for all assays.
+  target_ids:
+  - GO:1990587
+  evidence_ids:
+  - schema
+  - tax-2
+  - tax-83333
+  - gonzalez2009-numeric
+  - villanelo2011-xml
+- assessment_id: graph
+  area: graph
+  topic: Assembly, recruitment and activation distinctions
+  outcome: unknown
+  summary: The graph has substantive association/localization biology and appropriately
+    typed protein/complex/process actors. A requirement for recruitment is distinct
+    from direct enzymatic activation of FtsWI. The2004 complete abstract supports
+    preseptal association, while the body was inaccessible; precise activation/licensing
+    attribution to that article remains unverified, not disproved by an unread body.
+    Later2009 artificial recruitment is not substituted for a direct activation assay.
+  target_ids:
+  - GO:1990587
+  evidence_ids:
+  - go
+  - pmid-15165235
+  - gonzalez2009-numeric
+  - bud2004-publisher
+  - bud2004-pdf
+- assessment_id: coverage
+  area: completeness
+  topic: Whole-record and structured-source coverage
+  outcome: supported
+  summary: All fields, citation placements, graph entries and history were reviewed.
+    Native focused schema/strict/protein/graph checks pass. The required bounded iModulon
+    gene queries yielded matching gene context and no informative module hit; they
+    supply no assembly proof. Optional inventories/figures/traits are not mandatory
+    additions.
+  target_ids:
+  - GO:1990587
+  evidence_ids:
+  - record
+  - adapter-ftsB
+  - adapter-ftsL
+  - adapter-ftsQ
+- assessment_id: families
+  area: grounding
+  topic: FtsQ domain versus whole-protein identity
+  outcome: concern
+  summary: FtsB/FtsL family groundings are appropriate. FtsQ component and actor use
+    the C-terminal domain IPR005548 for the whole protein; native IPR026579 supplies
+    an exact full-family alternative corroborated by the P06136 xref.
+  target_ids:
+  - GO:1990587
+  evidence_ids:
+  - ipr-IPR023081
+  - ipr-IPR011922
+  - ipr-IPR005548
+  - ipr-IPR026579
+  - protein-P06136
+findings:
+- finding_id: F1
+  issue_key: ftsqbl-complex-F1
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate membrane-associated preassembly from cytosolic assembly
+  description: The definition says the complex assembles in the cytoplasm before septal
+    transport. Current GO repeats that wording, but native topology and the original
+    membrane-protein experiments support inner-membrane association with periplasmic
+    domains before septal localization. Preseptal does not mean soluble cytosolic.
+  target_ids:
+  - GO:1990587
+  field_paths:
+  - definition
+  evidence_ids:
+  - record
+  - go
+  - bud2002-numeric
+  - gonzalez2009-numeric
+  - pmid-15165235
+  - protein-P0A6S5
+  - protein-P0AEN4
+  rule_id: CellStructureMech claim-specific evidence and exact-grounding rubric
+  native_severity: major
+  normalization_reason: Material claim or identity mismatch under the local rubric;
+    this does not assert the biological entity is absent.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    role: maintained scientific record
+- finding_id: F2
+  issue_key: ftsqbl-complex-F2
+  category: quantity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Identify alternative subunit counts as structural models
+  description: The component copy-count fields and oligomer labels state alternative
+    trimer/hexamer assemblies without their model status. The2011 source explicitly
+    lacks experimental stoichiometry and presents competing predictions.
+  target_ids:
+  - GO:1990587
+  field_paths:
+  - components[0].stoichiometry
+  - components[1].stoichiometry
+  - components[2].stoichiometry
+  - causal_graphs[0].nodes[4].description
+  evidence_ids:
+  - record
+  - villanelo2011-xml
+  - bud2002-numeric
+  rule_id: CellStructureMech claim-specific evidence and exact-grounding rubric
+  native_severity: minor
+  normalization_reason: Localized source, qualification or metadata repair; the named
+    complex and supported core biology remain intact.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    role: maintained scientific record
+- finding_id: F3
+  issue_key: ftsqbl-complex-F3
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Ground the whole FtsQ subunit to its protein family
+  description: The FtsQ component and graph actor denote the entire bitopic protein
+    but use the C-terminal domain IPR005548 as their identity. The exact FtsQ family
+    IPR026579 is independently available and linked by the verified protein entry.
+  target_ids:
+  - GO:1990587
+  field_paths:
+  - components[2].grounding
+  - causal_graphs[0].nodes[3].grounding
+  evidence_ids:
+  - record
+  - ipr-IPR005548
+  - ipr-IPR026579
+  - protein-P06136
+  - rubric
+  rule_id: CellStructureMech claim-specific evidence and exact-grounding rubric
+  native_severity: major
+  normalization_reason: Material claim or identity mismatch under the local rubric;
+    this does not assert the biological entity is absent.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    role: maintained scientific record
+actions:
+- action_id: action-F1
+  description: Preserve the exact GO identity while recording the authority conflict.
+    Describe the membrane-associated complex assembling before septal localization;
+    qualify the cytoplasmic wording in the definition and avoid interpreting cytoplasmic
+    N-terminal segments as the location of the whole complex.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990587
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Change only the maintained target under a separately authorized curation task,
+    preserving GO identity and source conflict where applicable.
+  - Verify every replacement against its own native authority or primary passage;
+    run native schema/strict, protein/graph and applicable full-corpus gates.
+- action_id: action-F2
+  description: Qualify each alternative count as a proposed model and cite the modeling
+    source. Retain experimentally established membership and association without converting
+    one model into a measured native copy number.
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:1990587
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Change only the maintained target under a separately authorized curation task,
+    preserving GO identity and source conflict where applicable.
+  - Verify every replacement against its own native authority or primary passage;
+    run native schema/strict, protein/graph and applicable full-corpus gates.
+- action_id: action-F3
+  description: Replace the whole-protein component and node grounding with verified
+    IPR026579. Preserve IPR005548 only as a domain description where useful; keep
+    the correct reviewed P06136 example.
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:1990587
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Change only the maintained target under a separately authorized curation task,
+    preserving GO identity and source conflict where applicable.
+  - Verify every replacement against its own native authority or primary passage;
+    run native schema/strict, protein/graph and applicable full-corpus gates.
+limitations:
+- Buddelmeijer and Beckwith2004 was read at complete native abstract and verified
+  bibliographic tier only; both inspected publisher routes returned403 HTML. Its exact
+  experimental strains and every body-level claim were not independently checked.
+- Villanelo2011 is a modeling study, not an observed stoichiometric structure. The
+  review does not reanalyze coordinates or infer direct FtsWI activation from colocalization/recruitment.
+- COMMON is not reduced to mere occurrence, but the inspected qualitative bacterial
+  conservation does not provide a numerical prevalence census. The precise_mg1655
+  adapter results do not establish absence from other datasets.
+- No raw microscopy or structural-coordinate reanalysis was performed. Figure captions
+  are evidence only where explicitly named; no figure-pixel inspection or unlisted
+  supplementary reading is claimed.
+- Strict resolver native0 retains856 unreachable and252 skipped corpus identifiers
+  and one unexercised BFO control. Exact record-specific native metadata supplies
+  the positively asserted identifier checks.
+- Corpus identifier resolution includes856 unreachable and252 skipped identifiers
+  despite native exit0; BFO authority control was not exercised. These residuals are
+  not evidence of absence or scientific validity.
+notes:
+- Read-only scientific review; no maintained record, generated product, history, Git
+  or saved review changed.
+- The explicit user instruction to create one bundle for every uncovered record overrides
+  the local issue-only persistence policy.

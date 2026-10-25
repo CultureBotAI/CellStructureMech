@@ -1,0 +1,1246 @@
+# Scientific review of Aim21-Tda2 complex
+
+- Review: 20261025T201338Z-aim21-tda2-complex
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-25T19:59:26Z
+- Finished UTC: 2026-10-25T20:13:38Z
+- Reviewer: Codex /root/microtubule_sources (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The yeast complex and protein examples are supported. Three major concerns involve Tda2 grounding, conflicting recruitment evidence and fungal prevalence scope; two minors qualify modeled stoichiometry and formation dispensability.
+
+## Scope And Provenance
+
+Whole single-record scientific review, with actual source-access boundaries stated below.
+
+Selection: Exact assigned path; no sampling or credit for neighboring records.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 1497f644d59655f087825054920ef1a99ddebce4.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0110131 | data/structures/cytoskeleton/aim21_tda2_complex.yaml | maintained | Aim21-Tda2 complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | GO:0110131 | Actual native exit 0. |
+| strict | passed | True | GO:0110131 | Actual native exit 0. |
+| proteins | passed | True | GO:0110131 | Actual native exit 0. |
+| causal | passed | True | GO:0110131 | Actual native exit 0. |
+| inspect | passed | True | GO:0110131 | Actual native exit 0. |
+| global-history | passed | True | GO:0110131 | Fresh whole-corpus native history validation:2065 records,0invalid. |
+| global-products | passed | True | GO:0110131 | Fresh native full-corpus configured identifier/label products check passed. |
+| global-traits | passed | True | GO:0110131 | Fresh native TraitMech check passed10/10 current linked identifiers. |
+| global-curies | passed | True | GO:0110131 | Fresh strict full-corpus resolver returned0:4997OK,856UNREACHABLE,252SKIPPED. BFO self-control was not exercised due network unreachability; zero exit is not complete resolution. All residuals retained beside native TSV. |
+| Current-base native corpus history | passed | True | GO:0110131 | Native append-only history validation passed for2065 history files. |
+| Current-base native corpus products | passed | True | GO:0110131 | Native corpus ID-label validator returned0; it does not prove class-level identity or support biological scope. |
+| Current-base native corpus traits | passed | True | GO:0110131 | All10 trait links matched the freshly obtained TraitMech index. This target has no asserted trait links. |
+| Current-base native corpus curies | passed | True | GO:0110131 | Native corpus resolver returned0:6105 identifiers,4997 OK,856 UNREACHABLE,252 SKIPPED. BFO authority control was not exercised because unreachable. Native exit0 is not universal resolution; target source-native checks and limitations are recorded separately. |
+| Current-base native corpus qc | passed | True | GO:0110131 | Full current-base native QC passed; review-only additions are checked separately after saving. Scientific content was unchanged. |
+
+## Scientific And Domain Assessments
+
+### Exact structure and hierarchy
+
+identity: supported. Targets: GO:0110131.
+
+GO identity, category, protein-complex kind, exact synonym and cortical-patch placement match the current authority and yeast studies. Mapping remains PROPOSED; no identity replacement is needed.
+
+### Whole-protein component grounding
+
+grounding: concern. Targets: GO:0110131.
+
+Aim21 family grounding is appropriate. Tda2 is a real constituent, but IPR038586 denotes a broader structural superfamily rather than its exact whole-protein class. The accession example remains valid.
+
+### Protein examples and gene scope
+
+grounding: supported. Targets: GO:0110131.
+
+Both reviewed entries and exact gene/taxon pairings are correct. Regulatory association/localization is supported; the word catalytic in the Aim21 paper note is not a demonstrated enzymatic mechanism. That qualifier should be treated cautiously rather than used as an enzyme annotation.
+
+### Membership and copy-number evidence
+
+quantity: concern. Targets: GO:0110131.
+
+Both named subunits are supported. Tda2 homodimerization is measured in Farrell2017; whole-complex2:2 stoichiometry is a compatible model, not an exact measurement from Shin2018.
+
+### Formation versus retained cellular function
+
+evidence: concern. Targets: GO:0110131.
+
+Viable deletion strains and residual actin behavior do not show that the named Aim21-Tda2 complex forms without each constituent. Farrell directly distinguishes free Tda2 dimer from loss of the larger complex in aim21 deletion. Both DISPENSABLE entries therefore need formation-specific reconsideration.
+
+### Fungal restriction and reference strain
+
+scope: concern. Targets: GO:0110131.
+
+The taxonomy IDs are correct, and the complex is directly studied in budding yeast. COMMON retains its schema meaning, present in most fungal members with exceptional losses; neither the only_in_taxon constraint nor these yeast experiments establishes that broad prevalence. The S288C UniProt reference is verified, while the exact experimental strain-table assertion is unresolved at the read scope.
+
+### Actin regulation and disputed capping recruitment
+
+graph: concern. Targets: GO:0110131.
+
+Direct binding, local actin inhibition and endocytosis context support a mechanistic graph. Its unqualified recruitment clause cannot be attributed to Shin2018: that source reports the contrary Cap1 result and discusses its disagreement with Farrell2017. Preserve the disagreement and separate physical binding from recruitment.
+
+### Whole-record review and bounded gaps
+
+completeness: supported. Targets: GO:0110131.
+
+All maintained fields, evidence placements and history were read; optional figures, traits and measurements are not mandatory additions. Native schema/strict, protein and graph checks pass. No exact Tda2 replacement family is asserted from the limited candidate evidence, and the unrelated adapter listing supplies no mechanism.
+
+## Findings
+
+### F1: Use an exact Tda2 class or retain an explicitly label-only component
+
+major / open / confirmed; issue key: aim21-tda2-complex-F1.
+
+The component and graph node identify the whole Tda2 protein but ground it to IPR038586, a homologous superfamily encompassing other Tctex-like proteins. This is an identity-scope mismatch, not a claim that Tda2 lacks this fold.
+
+### F2: Preserve the conflicting capping-protein recruitment results
+
+major / open / confirmed; issue key: aim21-tda2-complex-F2.
+
+The graph says Aim21-Tda2 recruits Cap1/Cap2 while citing Shin2018. That study explicitly found unchanged patch Cap1 abundance after loss of either protein and concluded Aim21/Tda2 was not necessary for Cap1/Cap2 recruitment. Farrell2017 reports a different outcome, so silently presenting recruitment as the Shin-supported mechanism is materially misleading.
+
+### F3: Qualify the whole-complex two-to-two count as a model
+
+minor / open / confirmed; issue key: aim21-tda2-complex-F3.
+
+Both component rows present two copies per heterotetramer as an established count. Farrell2017 measures Tda2 dimerization but proposes whole-complex2:2 as compatible with SEC, with explicit alternatives; Shin2018 is not a direct stoichiometry measurement.
+
+### F4: Assess dispensability for complex formation rather than cell survival
+
+minor / open / confirmed; issue key: aim21-tda2-complex-F4.
+
+Both subunits are DISPENSABLE, which asserts the named complex forms without each. The deletion/actin-function experiments do not establish that assertion, and the larger Tda2 complex disappears in aim21 deletion even though free Tda2 dimer remains.
+
+### F5: Do not derive fungal majority occurrence from a taxon restriction
+
+major / open / confirmed; issue key: aim21-tda2-complex-F5.
+
+The sole distribution row asserts COMMON throughout Fungi but cites an only_in_taxon constraint. That constraint bounds allowed taxa; it does not establish presence in most fungi. The inspected primary work supports yeast systems and mentions yeast conservation, not the claimed kingdom-wide majority. This finding concerns unsupported scope, not biological absence in any fungal lineage.
+
+## Recommended Actions And Acceptance Checks
+
+### action-F1
+
+Keep the verified TDA2 protein example. Replace the superfamily with a separately verified exact Tda2 whole-protein family if available; otherwise remove the misleading exact grounding and use REVIEWED_LABEL_ONLY with the retained broad-fold relationship described only as context.
+
+- Change only the maintained target under a separately authorized curation task, preserving GO identity and source conflict where applicable.
+- Verify every replacement against its own native authority or primary passage; run native schema/strict, protein/graph and applicable full-corpus gates.
+
+### action-F2
+
+Separate demonstrated binding and actin inhibition from disputed recruitment. Remove the recruitment clause from the Shin-supported edge or explicitly scope it to Farrell2017 and record Shin2018 as contrary evidence; retain the supported endocytosis relationship.
+
+- Change only the maintained target under a separately authorized curation task, preserving GO identity and source conflict where applicable.
+- Verify every replacement against its own native authority or primary passage; run native schema/strict, protein/graph and applicable full-corpus gates.
+
+### action-F3
+
+Cite Farrell2017 for measured Tda2 dimerization and distinguish its proposed Aim21:Tda2=2:2 model from observed association. Avoid a definitive whole-complex copy count or unqualified Aim21 dimerization mechanism unless a direct measurement is added.
+
+- Change only the maintained target under a separately authorized curation task, preserving GO identity and source conflict where applicable.
+- Verify every replacement against its own native authority or primary passage; run native schema/strict, protein/graph and applicable full-corpus gates.
+
+### action-F4
+
+Reassess each formation assignment using the named-complex assay. Use supported formation necessity or UNKNOWN as appropriate, and retain viability/residual actin phenotypes separately; do not infer equal necessity for both solely from their names.
+
+- Change only the maintained target under a separately authorized curation task, preserving GO identity and source conflict where applicable.
+- Verify every replacement against its own native authority or primary passage; run native schema/strict, protein/graph and applicable full-corpus gates.
+
+### action-F5
+
+Preserve the fungal taxon restriction with its exact relation type. Supply comparative evidence for the asserted COMMON range or narrow/qualify the distribution to the evidence-supported scope without substituting an unsupported alternative prevalence enum.
+
+- Change only the maintained target under a separately authorized curation task, preserving GO identity and source conflict where applicable.
+- Verify every replacement against its own native authority or primary passage; run native schema/strict, protein/graph and applicable full-corpus gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/aim21_tda2_complex.yaml; Entire maintained YAML; all scientific fields, evidence and history. | supports | Complete target read before assessment; this row supplies the exact field contents being reviewed. |
+| rubric | docs/CURATION.md; Components, identifiers, evidence and causal-graph rules; schema EssentialityEnum and PresenceEnum separately captured. | supports | Formation necessity concerns the reviewed structure; protein components require exact families, while mechanism and taxonomic scope require claim-specific evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; EssentialityEnum and PresenceEnum, lines1080–1100; component and graph classes. | supports | DISPENSABLE means the structure forms without the component; COMMON means present in most clade members, with losses exceptional. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0006897,GO:0030479,GO:0030837,GO:0032991,GO:0110131; All five results: id/name/isObsolete/definition/synonyms and relevant typed children; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/go.raw; HTTP 200. | supports | Active GO0110131 matches the name, exact synonym and definition. The retained terms support protein-containing-complex parent, actin cortical patch context, negative actin-polymerization regulation and endocytosis; typed children preserve the relevant part_of/capable_of_part_of links. |
+| go-constraints | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0110131/constraints; results[0].taxonConstraints; blacklist not used for prevalence; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/go-constraints.raw; HTTP 200. | supports | The term has an only_in_taxon Fungi constraint. This restriction neither measures occurrence in most fungi nor warrants interpreting unrelated annotation blacklists as organism absences. |
+| tax-4751 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4751; ENA taxId/scientificName/rank/lineage and names; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/tax-4751.raw; HTTP 200. | supports | Native taxonomy identifies 4751 as Fungi at rank kingdom. It does not measure complex prevalence or establish the experimental strain. |
+| tax-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; ENA taxId/scientificName/rank/lineage and names; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/tax-559292.raw; HTTP 200. | supports | Native taxonomy identifies 559292 as Saccharomyces cerevisiae S288C at rank strain. It does not measure complex prevalence or establish the experimental strain. |
+| ipr-IPR021582 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021582/; metadata accession/type/name, complete description and member_databases; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/ipr-IPR021582.raw; HTTP 200. | supports | IPR021582 is the Aim21 protein family; its description and PF11489 signature support the named whole-protein class. |
+| ipr-IPR038586 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR038586/; metadata accession/type/name, both description paragraphs, member_databases, overlaps_with; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/ipr-IPR038586.raw; HTTP 200. | supports | IPR038586 is a homologous superfamily, Tctex-1-like, with a CATH fold signature. Its full description includes dynein light chains and separately yeast Tda2; it is broader than the named Tda2 class. |
+| protein-P40563 | https://rest.uniprot.org/uniprotkb/P40563.json; primaryAccession/entryType/proteinDescription/genes/organism; all actual FUNCTION, SUBUNIT, INTERACTION, SUBCELLULAR LOCATION and DISRUPTION PHENOTYPE comments, with absent categories explicitly distinguished; InterPro xrefs | supports | The reviewed P40563 entry identifies AIM21 in S. cerevisiae S288C (559292) and carries the Aim21 family xref. Its FUNCTION comment concerns mitochondrial migration; SUBUNIT mentions ribosomes and ABP1; LOCATION specifies cortical actin patches and shmoo tip. The INTERACTION list includes TDA2. The primary papers, rather than those FUNCTION/SUBUNIT comments, establish the Aim21-Tda2 actin-regulatory complex. |
+| query-AIM21 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAIM21%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Exact reviewed UniProt gene query; full returned identities; retained /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/query-AIM21.raw | supports | The exact reviewed AIM21 query in organism559292 returns one matching entry, P40563. |
+| protein-P40045 | https://rest.uniprot.org/uniprotkb/P40045.json; primaryAccession/entryType/proteinDescription/genes/organism; all actual FUNCTION, SUBUNIT, INTERACTION, SUBCELLULAR LOCATION and DISRUPTION PHENOTYPE comments, with absent categories explicitly distinguished; InterPro xrefs | supports | The reviewed P40045 entry identifies TDA2 in S. cerevisiae S288C (559292), carries the Tctex-like superfamily xref, and has an AIM21 INTERACTION entry. It has no FUNCTION or SUBUNIT comment. LOCATION describes cytoplasmic puncta and mating projection tip, while DISRUPTION PHENOTYPE concerns TOP1 mutant overexpression. The exact cortical-patch regulatory mechanism is supplied by the primary papers. |
+| query-TDA2 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATDA2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Exact reviewed UniProt gene query; full returned identities; retained /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/query-TDA2.raw | supports | The exact reviewed TDA2 query in organism559292 returns one matching entry, P40045. |
+| pmid-29467252 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A29467252+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact resultList.result entry; PMID/title/authorString/pubYear/doi and complete abstractText; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/pmid-29467252.raw; HTTP 200. | supports | Native MED identity verifies PMID 29467252, title Yeast Aim21/Tda2 both regulates free actin by reducing barbed end assembly and forms a complex with Cap1/Cap2 to balance actin assembly between patches and cables., authors Shin M, van Leeuwen J, Boone C, Bretscher A., publication year 2018, and DOI 10.1091/mbc.e17-10-0592. The complete abstract was read; a body is not inferred from this metadata. |
+| farrell2017-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28706108%20AND%20SRC%3AMED&amp;format=json&amp;resultType=core; Native MED title/authors/PMID/DOI/PMCID and complete abstract; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/farrell2017-meta.raw; HTTP 200. | supports | The native record verifies Farrell et al.2017, PMID28706108, DOI10.1083/jcb.201604123 and PMC5551697; its complete abstract describes Tda2/Aim21 and capping-protein recruitment. |
+| shin2018-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5896931/fullTextXML; Genuine JATS: complete Introduction, Results, Discussion; Fig1–8 captions; Methods strains, microscopy, latrunculin, protein purification/pulldown, actin assembly and cosedimentation. Decisive paragraphs indexed396 and562 in shin2018-xml.reading.txt; yeast-conservation paragraph608. No pixels or supplement read.; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/shin2018-xml.raw; HTTP 200. | supports | The primary study directly establishes Aim21/Tda2 binding and barbed-end assembly inhibition. Fig6C/D and the associated Results show no significant loss of patch Cap1 after either deletion; Discussion explicitly challenges the earlier recruitment conclusion. The study supplies regulatory activity, not a measured whole-complex 2:2 ratio or catalytic chemistry for Aim21. |
+| farrell2017-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5551697/fullTextXML; Genuine JATS: Results s04 homodimer paragraph214/Fig3 caption; s05 cytosolic SEC paragraph267/Fig4 caption; s06 complete; s07 Bbc1-binding paragraph350; s08 complete and Fig7–9 captions; s09 complete Discussion/Fig10 caption; Methods s12 cytosolic SEC and recombinant-protein paragraphs717/721/722, s15 ultracentrifugation paragraph762. No pixels/supplements/coordinates read.; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/farrell2017-xml.raw; HTTP 200. | supports | Tda2 is experimentally a homodimer; loss of Aim21 removes the larger Tda2-containing complex while leaving free dimer. The Discussion proposes a two-Aim21/two-Tda2 complex compatible with size-exclusion data, explicitly allowing asymmetry or additional proteins. Its recruitment experiments differ from Shin2018. |
+| shin2018-supp | https://pmc.ncbi.nlm.nih.gov/articles/instance/5896931/bin/mbc-29-923-s001.pdf; Actual response file type and body; not treated as scientific supplementary text; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/shin2018-supp.raw; HTTP 200. | unknown | The requested supplementary PDF URL returned an1817-byte HTML response rather than PDF; TableS1 and exact experimental strain derivation remain unread. |
+| adapter-datasets | kg-microbe-sources imodulondb datasets; Full native dataset listing /private/tmp/cellstructure-coverage-reconciliation-20261025-hpx9eiit/adapter/datasets.stdout | supports | The available listing has no exact Saccharomyces dataset. A bacterial transcriptomic dataset is not substituted for this yeast complex. |
+| check-schema | just validate data/structures/cytoskeleton/aim21_tda2_complex.yaml; Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-schema.json; log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-schema.log | supports | Native command completed with exit 0. |
+| check-strict | just validate-strict data/structures/cytoskeleton/aim21_tda2_complex.yaml --out /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-strict.tsv; Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-strict.json; log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-strict.log | supports | Native command completed with exit 0. |
+| check-proteins | uv run python scripts/uniprot_genes.py --record data/structures/cytoskeleton/aim21_tda2_complex.yaml --verify; Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/proteins-receipt.json; log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/proteins.log | supports | Native command completed with exit 0. |
+| check-causal | uv run python scripts/uniprot_genes.py --record data/structures/cytoskeleton/aim21_tda2_complex.yaml --causal-graphs; Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/causal-receipt.json; log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/causal.log | supports | Native command completed with exit 0. |
+| check-inspect | uv run python scripts/record_review.py inspect --targets /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-targets.yaml --input .claude/skills/curate-yaml-record/references/review-checklist.md --input .claude/skills/literature-evidence/SKILL.md --input .claude/skills/review-yaml-record/SKILL.md --input CLAUDE.md --input docs/CURATION.md --input docs/SCHEMA.md --input docs/record-review-profile.md --input docs/record-reviews.md --input justfile --input schema/record_review.yaml --input src/cellstructuremech/schema/cellstructuremech.yaml --input .claude/skills/curate-causal-graphs/SKILL.md --input .claude/skills/uniprot-protein-examples/SKILL.md; Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/inspect-receipt.json; log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/inspect.json | supports | Native command completed with exit 0. |
+| check-global-history | just validate-history; Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/history-initial/result.json; log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/history-initial/stdout.log | supports | Fresh whole-corpus native history validation:2065 records,0invalid. |
+| check-global-products | just validate-products; Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/products-initial/result.json; log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/products-initial/stdout.log | supports | Fresh native full-corpus configured identifier/label products check passed. |
+| check-global-traits | just check-trait-links --check; Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/traits-initial/result.json; log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/traits-initial/stdout.log | supports | Fresh native TraitMech check passed10/10 current linked identifiers. |
+| check-global-curies | just check-curies-strict; Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/curies-initial/result.json; log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/curies-initial/stdout.log | supports | Fresh strict full-corpus resolver returned0:4997OK,856UNREACHABLE,252SKIPPED. BFO self-control was not exercised due network unreachability; zero exit is not complete resolution. All residuals retained beside native TSV. |
+| final-global-history | just validate-history; Exact current-base history stdout; retained receipt binds command, UTC, input manifest and exit code | supports | Native append-only history validation passed for2065 history files. |
+| final-global-products | just validate-products; Exact current-base products stdout; retained receipt binds command, UTC, input manifest and exit code | supports | Native corpus ID-label validator returned0; it does not prove class-level identity or support biological scope. |
+| final-global-traits | just check-trait-links --check; Exact current-base traits stdout; retained receipt binds command, UTC, input manifest and exit code | supports | All10 trait links matched the freshly obtained TraitMech index. This target has no asserted trait links. |
+| final-global-curies | just check-curies-strict; Exact current-base curies stdout; retained receipt binds command, UTC, input manifest and exit code | supports | Native corpus resolver returned0:6105 identifiers,4997 OK,856 UNREACHABLE,252 SKIPPED. BFO authority control was not exercised because unreachable. Native exit0 is not universal resolution; target source-native checks and limitations are recorded separately. |
+| final-global-qc | just qc; Exact current-base qc stdout; retained receipt binds command, UTC, input manifest and exit code | supports | Full current-base native QC passed; review-only additions are checked separately after saving. Scientific content was unchanged. |
+
+## Limits And Additional Notes
+
+- Shin supplementary TableS1 was not readable through the inspected URL; exact assay-strain equivalence to the S288C reference is unknown, not a demonstrated taxon mismatch.
+- The two primary studies differ on Cap1/2 recruitment. This review does not resolve that experimental disagreement or infer catalytic chemistry for Aim21.
+- An exact Tda2 family was not established by the inspected IPR038586/P40045 pair; this bounded search is not an exhaustive absence claim across all databases.
+- No raw microscopy or structural-coordinate reanalysis was performed. Figure captions are evidence only where explicitly named; no figure-pixel inspection or unlisted supplementary reading is claimed.
+- Strict resolver native0 retains856 unreachable and252 skipped corpus identifiers and one unexercised BFO control. Exact record-specific native metadata supplies the positively asserted identifier checks.
+- Corpus identifier resolution includes856 unreachable and252 skipped identifiers despite native exit0; BFO authority control was not exercised. These residuals are not evidence of absence or scientific validity.
+- Read-only scientific review; no maintained record, generated product, history, Git or saved review changed.
+- The explicit user instruction to create one bundle for every uncovered record overrides the local issue-only persistence policy.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261025T201338Z-aim21-tda2-complex
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Scientific review of Aim21-Tda2 complex
+started_at: '2026-10-25T19:59:26Z'
+finished_at: '2026-10-25T20:13:38Z'
+reviewer:
+  identity: Codex /root/microtubule_sources
+  kind: agent
+  model: GPT-6
+  independence: independent
+  independence_basis: Reviewed the entire frozen record and source payloads independently;
+    did not author or modify the maintained record.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The yeast complex and protein examples are supported. Three major concerns
+  involve Tda2 grounding, conflicting recruitment evidence and fungal prevalence scope;
+  two minors qualify modeled stoichiometry and formation dispensability.
+source:
+  git_revision: 1497f644d59655f087825054920ef1a99ddebce4
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    sha256: 0ac6977eb76db7660a6379547b0abf29a9794cd1178d7a7b5dbd9805dd4a7ace
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+scope:
+  description: Whole single-record scientific review, with actual source-access boundaries
+    stated below.
+  selection: Exact assigned path; no sampling or credit for neighboring records.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0110131
+targets:
+- target_id: GO:0110131
+  path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+  label: Aim21-Tda2 complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:0110131
+  command: just validate data/structures/cytoskeleton/aim21_tda2_complex.yaml
+  exit_code: 0
+  evidence_ids:
+  - check-schema
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:0110131
+  command: just validate-strict data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    --out /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-strict.tsv
+  exit_code: 0
+  evidence_ids:
+  - check-strict
+- check_id: proteins
+  name: proteins
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:0110131
+  command: uv run python scripts/uniprot_genes.py --record data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    --verify
+  exit_code: 0
+  evidence_ids:
+  - check-proteins
+- check_id: causal
+  name: causal
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:0110131
+  command: uv run python scripts/uniprot_genes.py --record data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  evidence_ids:
+  - check-causal
+- check_id: inspect
+  name: inspect
+  status: passed
+  required: true
+  summary: Actual native exit 0.
+  target_ids:
+  - GO:0110131
+  command: uv run python scripts/record_review.py inspect --targets /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-targets.yaml
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    .claude/skills/literature-evidence/SKILL.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input CLAUDE.md --input docs/CURATION.md --input docs/SCHEMA.md --input docs/record-review-profile.md
+    --input docs/record-reviews.md --input justfile --input schema/record_review.yaml
+    --input src/cellstructuremech/schema/cellstructuremech.yaml --input .claude/skills/curate-causal-graphs/SKILL.md
+    --input .claude/skills/uniprot-protein-examples/SKILL.md
+  exit_code: 0
+  evidence_ids:
+  - check-inspect
+- check_id: global-history
+  name: global-history
+  status: passed
+  required: true
+  summary: Fresh whole-corpus native history validation:2065 records,0invalid.
+  target_ids:
+  - GO:0110131
+  command: just validate-history
+  exit_code: 0
+  evidence_ids:
+  - check-global-history
+- check_id: global-products
+  name: global-products
+  status: passed
+  required: true
+  summary: Fresh native full-corpus configured identifier/label products check passed.
+  target_ids:
+  - GO:0110131
+  command: just validate-products
+  exit_code: 0
+  evidence_ids:
+  - check-global-products
+- check_id: global-traits
+  name: global-traits
+  status: passed
+  required: true
+  summary: Fresh native TraitMech check passed10/10 current linked identifiers.
+  target_ids:
+  - GO:0110131
+  command: just check-trait-links --check
+  exit_code: 0
+  evidence_ids:
+  - check-global-traits
+- check_id: global-curies
+  name: global-curies
+  status: passed
+  required: true
+  summary: Fresh strict full-corpus resolver returned0:4997OK,856UNREACHABLE,252SKIPPED.
+    BFO self-control was not exercised due network unreachability; zero exit is not
+    complete resolution. All residuals retained beside native TSV.
+  target_ids:
+  - GO:0110131
+  command: just check-curies-strict
+  exit_code: 0
+  evidence_ids:
+  - check-global-curies
+- check_id: final-global-history
+  name: Current-base native corpus history
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110131
+  command: just validate-history
+  exit_code: 0
+  evidence_ids:
+  - final-global-history
+  summary: Native append-only history validation passed for2065 history files.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-products
+  name: Current-base native corpus products
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110131
+  command: just validate-products
+  exit_code: 0
+  evidence_ids:
+  - final-global-products
+  summary: Native corpus ID-label validator returned0; it does not prove class-level
+    identity or support biological scope.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-traits
+  name: Current-base native corpus traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110131
+  command: just check-trait-links --check
+  exit_code: 0
+  evidence_ids:
+  - final-global-traits
+  summary: All10 trait links matched the freshly obtained TraitMech index. This target
+    has no asserted trait links.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-curies
+  name: Current-base native corpus curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110131
+  command: just check-curies-strict
+  exit_code: 0
+  evidence_ids:
+  - final-global-curies
+  summary: Native corpus resolver returned0:6105 identifiers,4997 OK,856 UNREACHABLE,252
+    SKIPPED. BFO authority control was not exercised because unreachable. Native exit0
+    is not universal resolution; target source-native checks and limitations are recorded
+    separately.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-qc
+  name: Current-base native corpus qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:0110131
+  command: just qc
+  exit_code: 0
+  evidence_ids:
+  - final-global-qc
+  summary: Full current-base native QC passed; review-only additions are checked separately
+    after saving. Scientific content was unchanged.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+  locator: Entire maintained YAML; all scientific fields, evidence and history.
+  accessed_at: '2026-10-25T20:10:53Z'
+  support: supports
+  summary: Complete target read before assessment; this row supplies the exact field
+    contents being reviewed.
+  snapshot_sha256: 0ac6977eb76db7660a6379547b0abf29a9794cd1178d7a7b5dbd9805dd4a7ace
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components, identifiers, evidence and causal-graph rules; schema EssentialityEnum
+    and PresenceEnum separately captured.
+  accessed_at: '2026-10-25T20:10:53Z'
+  support: supports
+  summary: Formation necessity concerns the reviewed structure; protein components
+    require exact families, while mechanism and taxonomic scope require claim-specific
+    evidence.
+  snapshot_sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: EssentialityEnum and PresenceEnum, lines1080–1100; component and graph
+    classes.
+  accessed_at: '2026-10-25T20:10:53Z'
+  support: supports
+  summary: DISPENSABLE means the structure forms without the component; COMMON means
+    present in most clade members, with losses exceptional.
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0006897,GO:0030479,GO:0030837,GO:0032991,GO:0110131
+  locator: 'All five results: id/name/isObsolete/definition/synonyms and relevant
+    typed children; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/go.raw;
+    HTTP 200.'
+  accessed_at: '2026-10-25T20:02:11.179564Z'
+  support: supports
+  summary: Active GO0110131 matches the name, exact synonym and definition. The retained
+    terms support protein-containing-complex parent, actin cortical patch context,
+    negative actin-polymerization regulation and endocytosis; typed children preserve
+    the relevant part_of/capable_of_part_of links.
+  snapshot_sha256: 44b2fde789b7850fd33aa9515adbfb5630c847adef2cc2801df88ff9dcb0b6d8
+- evidence_id: go-constraints
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0110131/constraints
+  locator: results[0].taxonConstraints; blacklist not used for prevalence; retained
+    raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/go-constraints.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:11.179122Z'
+  support: supports
+  summary: The term has an only_in_taxon Fungi constraint. This restriction neither
+    measures occurrence in most fungi nor warrants interpreting unrelated annotation
+    blacklists as organism absences.
+  snapshot_sha256: ba743bf0e5d59838c2419aa6ca52ad5540958fa10a4c9fdc48ad04b1c6f8b407
+- evidence_id: tax-4751
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4751
+  locator: ENA taxId/scientificName/rank/lineage and names; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/tax-4751.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:11.893421Z'
+  support: supports
+  summary: Native taxonomy identifies 4751 as Fungi at rank kingdom. It does not measure
+    complex prevalence or establish the experimental strain.
+  snapshot_sha256: a7bab59bce650c0d29732327d4e7e342f1b648747f7f9635958f923b4a6089e6
+- evidence_id: tax-559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: ENA taxId/scientificName/rank/lineage and names; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/tax-559292.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:12.000358Z'
+  support: supports
+  summary: Native taxonomy identifies 559292 as Saccharomyces cerevisiae S288C at
+    rank strain. It does not measure complex prevalence or establish the experimental
+    strain.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: ipr-IPR021582
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021582/
+  locator: metadata accession/type/name, complete description and member_databases;
+    retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/ipr-IPR021582.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:11.179694Z'
+  support: supports
+  summary: IPR021582 is the Aim21 protein family; its description and PF11489 signature
+    support the named whole-protein class.
+  snapshot_sha256: 62a97029a110765e9e4eb3c76f582207425cfee03502ed15f1626d778b9e41be
+- evidence_id: ipr-IPR038586
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR038586/
+  locator: metadata accession/type/name, both description paragraphs, member_databases,
+    overlaps_with; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/ipr-IPR038586.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:11.862019Z'
+  support: supports
+  summary: IPR038586 is a homologous superfamily, Tctex-1-like, with a CATH fold signature.
+    Its full description includes dynein light chains and separately yeast Tda2; it
+    is broader than the named Tda2 class.
+  snapshot_sha256: 667db322c72f1deaa605aae27554591b5a02bf9d220e867a7c5c30785cd2930e
+- evidence_id: protein-P40563
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P40563.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; all actual
+    FUNCTION, SUBUNIT, INTERACTION, SUBCELLULAR LOCATION and DISRUPTION PHENOTYPE
+    comments, with absent categories explicitly distinguished; InterPro xrefs
+  accessed_at: '2026-10-25T20:02:12.480177Z'
+  support: supports
+  summary: The reviewed P40563 entry identifies AIM21 in S. cerevisiae S288C (559292)
+    and carries the Aim21 family xref. Its FUNCTION comment concerns mitochondrial
+    migration; SUBUNIT mentions ribosomes and ABP1; LOCATION specifies cortical actin
+    patches and shmoo tip. The INTERACTION list includes TDA2. The primary papers,
+    rather than those FUNCTION/SUBUNIT comments, establish the Aim21-Tda2 actin-regulatory
+    complex.
+  snapshot_sha256: 5b89d914101e02c927026fe7d42e6903bac07fa18c316eac9c476d9cdead258c
+- evidence_id: query-AIM21
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAIM21%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Exact reviewed UniProt gene query; full returned identities; retained /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/query-AIM21.raw
+  accessed_at: '2026-10-25T20:02:13.098242Z'
+  support: supports
+  summary: The exact reviewed AIM21 query in organism559292 returns one matching entry,
+    P40563.
+  snapshot_sha256: 5eb701561a7d30469db4f69dd20ba706bf09814af437f1c0046841e681eb07da
+  search_scope: Only the exact gene_exact and organism_id terms in this native request,
+    reviewed:true; all returned identities inspected. This is a remote query, so ignored
+    local files are not applicable. No absence outside this exact query is inferred.
+- evidence_id: protein-P40045
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P40045.json
+  locator: primaryAccession/entryType/proteinDescription/genes/organism; all actual
+    FUNCTION, SUBUNIT, INTERACTION, SUBCELLULAR LOCATION and DISRUPTION PHENOTYPE
+    comments, with absent categories explicitly distinguished; InterPro xrefs
+  accessed_at: '2026-10-25T20:02:12.455872Z'
+  support: supports
+  summary: The reviewed P40045 entry identifies TDA2 in S. cerevisiae S288C (559292),
+    carries the Tctex-like superfamily xref, and has an AIM21 INTERACTION entry. It
+    has no FUNCTION or SUBUNIT comment. LOCATION describes cytoplasmic puncta and
+    mating projection tip, while DISRUPTION PHENOTYPE concerns TOP1 mutant overexpression.
+    The exact cortical-patch regulatory mechanism is supplied by the primary papers.
+  snapshot_sha256: 709990f8ce63444ee7ef0e6ba1c9a529c6fc5ddd77724b3d71e40162c5cf7769
+- evidence_id: query-TDA2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATDA2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Exact reviewed UniProt gene query; full returned identities; retained /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/query-TDA2.raw
+  accessed_at: '2026-10-25T20:02:13.203495Z'
+  support: supports
+  summary: The exact reviewed TDA2 query in organism559292 returns one matching entry,
+    P40045.
+  snapshot_sha256: f8a56a90200243f23060d86ce1ff7fb17aed8ed876f8614a6faad8272d8f9e30
+  search_scope: Only the exact gene_exact and organism_id terms in this native request,
+    reviewed:true; all returned identities inspected. This is a remote query, so ignored
+    local files are not applicable. No absence outside this exact query is inferred.
+- evidence_id: pmid-29467252
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A29467252+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact resultList.result entry; PMID/title/authorString/pubYear/doi and
+    complete abstractText; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/pmid-29467252.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:02:12.590153Z'
+  support: supports
+  summary: Native MED identity verifies PMID 29467252, title Yeast Aim21/Tda2 both
+    regulates free actin by reducing barbed end assembly and forms a complex with
+    Cap1/Cap2 to balance actin assembly between patches and cables., authors Shin
+    M, van Leeuwen J, Boone C, Bretscher A., publication year 2018, and DOI 10.1091/mbc.e17-10-0592.
+    The complete abstract was read; a body is not inferred from this metadata.
+  snapshot_sha256: 67fc29eb937dca83df358404f1c6cd43b5e2075b7c0179fe27173f48aea76387
+- evidence_id: farrell2017-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28706108%20AND%20SRC%3AMED&format=json&resultType=core
+  locator: Native MED title/authors/PMID/DOI/PMCID and complete abstract; retained
+    raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/farrell2017-meta.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:03:27.877533Z'
+  support: supports
+  summary: The native record verifies Farrell et al.2017, PMID28706108, DOI10.1083/jcb.201604123
+    and PMC5551697; its complete abstract describes Tda2/Aim21 and capping-protein
+    recruitment.
+  snapshot_sha256: 60a3fe279ab4d8401aa70180239be3ff39ac117cdfeb670df6af25e65594ca53
+- evidence_id: shin2018-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5896931/fullTextXML
+  locator: 'Genuine JATS: complete Introduction, Results, Discussion; Fig1–8 captions;
+    Methods strains, microscopy, latrunculin, protein purification/pulldown, actin
+    assembly and cosedimentation. Decisive paragraphs indexed396 and562 in shin2018-xml.reading.txt;
+    yeast-conservation paragraph608. No pixels or supplement read.; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/shin2018-xml.raw;
+    HTTP 200.'
+  accessed_at: '2026-10-25T20:02:45.891348Z'
+  support: supports
+  summary: The primary study directly establishes Aim21/Tda2 binding and barbed-end
+    assembly inhibition. Fig6C/D and the associated Results show no significant loss
+    of patch Cap1 after either deletion; Discussion explicitly challenges the earlier
+    recruitment conclusion. The study supplies regulatory activity, not a measured
+    whole-complex 2:2 ratio or catalytic chemistry for Aim21.
+  snapshot_sha256: 33345687178d0e18f8519ee76e1ea015f9629278e1ae40d8ec2f8286d68ea6fd
+- evidence_id: farrell2017-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5551697/fullTextXML
+  locator: 'Genuine JATS: Results s04 homodimer paragraph214/Fig3 caption; s05 cytosolic
+    SEC paragraph267/Fig4 caption; s06 complete; s07 Bbc1-binding paragraph350; s08
+    complete and Fig7–9 captions; s09 complete Discussion/Fig10 caption; Methods s12
+    cytosolic SEC and recombinant-protein paragraphs717/721/722, s15 ultracentrifugation
+    paragraph762. No pixels/supplements/coordinates read.; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/farrell2017-xml.raw;
+    HTTP 200.'
+  accessed_at: '2026-10-25T20:03:50.551505Z'
+  support: supports
+  summary: Tda2 is experimentally a homodimer; loss of Aim21 removes the larger Tda2-containing
+    complex while leaving free dimer. The Discussion proposes a two-Aim21/two-Tda2
+    complex compatible with size-exclusion data, explicitly allowing asymmetry or
+    additional proteins. Its recruitment experiments differ from Shin2018.
+  snapshot_sha256: 26693808f89467b21503b0b7dd5d7e48c919eea6d764f6c1cde6f3fe95836e5b
+- evidence_id: shin2018-supp
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/instance/5896931/bin/mbc-29-923-s001.pdf
+  locator: Actual response file type and body; not treated as scientific supplementary
+    text; retained raw /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/shin2018-supp.raw;
+    HTTP 200.
+  accessed_at: '2026-10-25T20:05:42.647453Z'
+  support: unknown
+  summary: The requested supplementary PDF URL returned an1817-byte HTML response
+    rather than PDF; TableS1 and exact experimental strain derivation remain unread.
+  snapshot_sha256: cfe571cf5f1b236ae60b318978d56b6793c969ae51ecd1ddd1fdd4ab191829cb
+- evidence_id: adapter-datasets
+  kind: search
+  reference: kg-microbe-sources imodulondb datasets
+  locator: Full native dataset listing /private/tmp/cellstructure-coverage-reconciliation-20261025-hpx9eiit/adapter/datasets.stdout
+  accessed_at: '2026-10-25T20:04:24.215410Z'
+  support: supports
+  summary: The available listing has no exact Saccharomyces dataset. A bacterial transcriptomic
+    dataset is not substituted for this yeast complex.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  search_scope: The complete native free-adapter dataset listing was inspected. This
+    is a remote service listing, not a local-file absence claim; ignored files are
+    not applicable. No fungal gene/module query was run against mismatched organisms.
+- evidence_id: check-schema
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/aim21_tda2_complex.yaml
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-schema.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-schema.log
+  accessed_at: '2026-10-25T19:59:27Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: 7260a53f426794f9b37055aa0f8135e7332eed1bc180601cdcc9e749fba9c734
+- evidence_id: check-strict
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    --out /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-strict.tsv
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-strict.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-strict.log
+  accessed_at: '2026-10-25T19:59:29Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: b5660b018c493b35156e0fced1bedf2e8860e4b8e9d37225251b2ee8b4194b55
+- evidence_id: check-proteins
+  kind: validation
+  reference: uv run python scripts/uniprot_genes.py --record data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    --verify
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/proteins-receipt.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/proteins.log
+  accessed_at: '2026-10-25T20:02:26.919696Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: check-causal
+  kind: validation
+  reference: uv run python scripts/uniprot_genes.py --record data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    --causal-graphs
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/causal-receipt.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/causal.log
+  accessed_at: '2026-10-25T20:02:28.035169Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: 30cf6b23b8f3a50e76fbf82faf0bde849762f148448b4425dd1a52e0992f0967
+- evidence_id: check-inspect
+  kind: validation
+  reference: uv run python scripts/record_review.py inspect --targets /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex-targets.yaml
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    .claude/skills/literature-evidence/SKILL.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input CLAUDE.md --input docs/CURATION.md --input docs/SCHEMA.md --input docs/record-review-profile.md
+    --input docs/record-reviews.md --input justfile --input schema/record_review.yaml
+    --input src/cellstructuremech/schema/cellstructuremech.yaml --input .claude/skills/curate-causal-graphs/SKILL.md
+    --input .claude/skills/uniprot-protein-examples/SKILL.md
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/inspect-receipt.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/aim21_tda2_complex/inspect.json
+  accessed_at: '2026-10-25T20:02:25.131666Z'
+  support: supports
+  summary: Native command completed with exit 0.
+  snapshot_sha256: 92a12a5a132045b3dd003a5ef6e37614693b057751e9bbb74b74baac39c07dd7
+- evidence_id: check-global-history
+  kind: validation
+  reference: just validate-history
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/history-initial/result.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/history-initial/stdout.log
+  accessed_at: '2026-10-25T19:59:33.039839Z'
+  support: supports
+  summary: Fresh whole-corpus native history validation:2065 records,0invalid.
+  snapshot_sha256: beb8780a7910df045dcae7003d8ede2f8b6d08b9a311c15982997c40796d02d8
+- evidence_id: check-global-products
+  kind: validation
+  reference: just validate-products
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/products-initial/result.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/products-initial/stdout.log
+  accessed_at: '2026-10-25T20:00:11.856400Z'
+  support: supports
+  summary: Fresh native full-corpus configured identifier/label products check passed.
+  snapshot_sha256: 0158645d825815955f637f5ec44265e94950a33f646e419a0c8999be5aff8d2f
+- evidence_id: check-global-traits
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/traits-initial/result.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/traits-initial/stdout.log
+  accessed_at: '2026-10-25T19:59:53.599030Z'
+  support: supports
+  summary: Fresh native TraitMech check passed10/10 current linked identifiers.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: check-global-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: Actual receipt /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/curies-initial/result.json;
+    log /private/tmp/cellstructure-batch62-20261025-siz_24tk/global-checks/curies-initial/stdout.log
+  accessed_at: '2026-10-25T20:01:08.675608Z'
+  support: supports
+  summary: Fresh strict full-corpus resolver returned0:4997OK,856UNREACHABLE,252SKIPPED.
+    BFO self-control was not exercised due network unreachability; zero exit is not
+    complete resolution. All residuals retained beside native TSV.
+  snapshot_sha256: 1429e55e1cb3667b4710ad56b2b9d90bd7104a24f4899edc6470f15152838e7d
+- evidence_id: final-global-history
+  kind: validation
+  reference: just validate-history
+  locator: Exact current-base history stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T19:59:33.039839Z'
+  support: supports
+  summary: Native append-only history validation passed for2065 history files.
+  snapshot_sha256: beb8780a7910df045dcae7003d8ede2f8b6d08b9a311c15982997c40796d02d8
+- evidence_id: final-global-products
+  kind: validation
+  reference: just validate-products
+  locator: Exact current-base products stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T20:00:11.856400Z'
+  support: supports
+  summary: Native corpus ID-label validator returned0; it does not prove class-level
+    identity or support biological scope.
+  snapshot_sha256: 0158645d825815955f637f5ec44265e94950a33f646e419a0c8999be5aff8d2f
+- evidence_id: final-global-traits
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Exact current-base traits stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T19:59:53.599030Z'
+  support: supports
+  summary: All10 trait links matched the freshly obtained TraitMech index. This target
+    has no asserted trait links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: final-global-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: Exact current-base curies stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T20:01:08.675608Z'
+  support: supports
+  summary: Native corpus resolver returned0:6105 identifiers,4997 OK,856 UNREACHABLE,252
+    SKIPPED. BFO authority control was not exercised because unreachable. Native exit0
+    is not universal resolution; target source-native checks and limitations are recorded
+    separately.
+  snapshot_sha256: 1429e55e1cb3667b4710ad56b2b9d90bd7104a24f4899edc6470f15152838e7d
+- evidence_id: final-global-qc
+  kind: validation
+  reference: just qc
+  locator: Exact current-base qc stdout; retained receipt binds command, UTC, input
+    manifest and exit code
+  accessed_at: '2026-10-25T20:06:17.301813Z'
+  support: supports
+  summary: Full current-base native QC passed; review-only additions are checked separately
+    after saving. Scientific content was unchanged.
+  snapshot_sha256: 3b50443af049a5f09641445e5c29c66e5f96c4f7a3bb046b344e96fa0d223d8b
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure and hierarchy
+  outcome: supported
+  summary: GO identity, category, protein-complex kind, exact synonym and cortical-patch
+    placement match the current authority and yeast studies. Mapping remains PROPOSED;
+    no identity replacement is needed.
+  target_ids:
+  - GO:0110131
+  evidence_ids:
+  - go
+  - shin2018-xml
+- assessment_id: grounding
+  area: grounding
+  topic: Whole-protein component grounding
+  outcome: concern
+  summary: Aim21 family grounding is appropriate. Tda2 is a real constituent, but
+    IPR038586 denotes a broader structural superfamily rather than its exact whole-protein
+    class. The accession example remains valid.
+  target_ids:
+  - GO:0110131
+  evidence_ids:
+  - ipr-IPR021582
+  - ipr-IPR038586
+  - protein-P40045
+  - rubric
+- assessment_id: proteins
+  area: grounding
+  topic: Protein examples and gene scope
+  outcome: supported
+  summary: Both reviewed entries and exact gene/taxon pairings are correct. Regulatory
+    association/localization is supported; the word catalytic in the Aim21 paper note
+    is not a demonstrated enzymatic mechanism. That qualifier should be treated cautiously
+    rather than used as an enzyme annotation.
+  target_ids:
+  - GO:0110131
+  evidence_ids:
+  - protein-P40563
+  - protein-P40045
+  - query-AIM21
+  - query-TDA2
+  - shin2018-xml
+- assessment_id: composition
+  area: quantity
+  topic: Membership and copy-number evidence
+  outcome: concern
+  summary: Both named subunits are supported. Tda2 homodimerization is measured in
+    Farrell2017; whole-complex2:2 stoichiometry is a compatible model, not an exact
+    measurement from Shin2018.
+  target_ids:
+  - GO:0110131
+  evidence_ids:
+  - shin2018-xml
+  - farrell2017-xml
+- assessment_id: necessity
+  area: evidence
+  topic: Formation versus retained cellular function
+  outcome: concern
+  summary: Viable deletion strains and residual actin behavior do not show that the
+    named Aim21-Tda2 complex forms without each constituent. Farrell directly distinguishes
+    free Tda2 dimer from loss of the larger complex in aim21 deletion. Both DISPENSABLE
+    entries therefore need formation-specific reconsideration.
+  target_ids:
+  - GO:0110131
+  evidence_ids:
+  - schema
+  - shin2018-xml
+  - farrell2017-xml
+- assessment_id: scope
+  area: scope
+  topic: Fungal restriction and reference strain
+  outcome: concern
+  summary: The taxonomy IDs are correct, and the complex is directly studied in budding
+    yeast. COMMON retains its schema meaning, present in most fungal members with
+    exceptional losses; neither the only_in_taxon constraint nor these yeast experiments
+    establishes that broad prevalence. The S288C UniProt reference is verified, while
+    the exact experimental strain-table assertion is unresolved at the read scope.
+  target_ids:
+  - GO:0110131
+  evidence_ids:
+  - schema
+  - go-constraints
+  - tax-4751
+  - tax-559292
+  - shin2018-xml
+  - shin2018-supp
+- assessment_id: mechanism
+  area: graph
+  topic: Actin regulation and disputed capping recruitment
+  outcome: concern
+  summary: 'Direct binding, local actin inhibition and endocytosis context support
+    a mechanistic graph. Its unqualified recruitment clause cannot be attributed to
+    Shin2018: that source reports the contrary Cap1 result and discusses its disagreement
+    with Farrell2017. Preserve the disagreement and separate physical binding from
+    recruitment.'
+  target_ids:
+  - GO:0110131
+  evidence_ids:
+  - shin2018-xml
+  - farrell2017-xml
+  - go
+- assessment_id: coverage
+  area: completeness
+  topic: Whole-record review and bounded gaps
+  outcome: supported
+  summary: All maintained fields, evidence placements and history were read; optional
+    figures, traits and measurements are not mandatory additions. Native schema/strict,
+    protein and graph checks pass. No exact Tda2 replacement family is asserted from
+    the limited candidate evidence, and the unrelated adapter listing supplies no
+    mechanism.
+  target_ids:
+  - GO:0110131
+  evidence_ids:
+  - record
+  - adapter-datasets
+  - ipr-IPR038586
+findings:
+- finding_id: F1
+  issue_key: aim21-tda2-complex-F1
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Use an exact Tda2 class or retain an explicitly label-only component
+  description: The component and graph node identify the whole Tda2 protein but ground
+    it to IPR038586, a homologous superfamily encompassing other Tctex-like proteins.
+    This is an identity-scope mismatch, not a claim that Tda2 lacks this fold.
+  target_ids:
+  - GO:0110131
+  field_paths:
+  - components[1].grounding
+  - causal_graphs[0].nodes[1].grounding
+  evidence_ids:
+  - record
+  - ipr-IPR038586
+  - protein-P40045
+  - rubric
+  rule_id: CellStructureMech claim-specific evidence and exact-grounding rubric
+  native_severity: major
+  normalization_reason: Material claim or identity mismatch under the local rubric;
+    this does not assert the biological entity is absent.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+- finding_id: F2
+  issue_key: aim21-tda2-complex-F2
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Preserve the conflicting capping-protein recruitment results
+  description: The graph says Aim21-Tda2 recruits Cap1/Cap2 while citing Shin2018.
+    That study explicitly found unchanged patch Cap1 abundance after loss of either
+    protein and concluded Aim21/Tda2 was not necessary for Cap1/Cap2 recruitment.
+    Farrell2017 reports a different outcome, so silently presenting recruitment as
+    the Shin-supported mechanism is materially misleading.
+  target_ids:
+  - GO:0110131
+  field_paths:
+  - causal_graphs[0].edges[2].description
+  - causal_graphs[0].edges[2].evidence
+  - causal_graphs[0].edges[3].description
+  evidence_ids:
+  - record
+  - shin2018-xml
+  - farrell2017-xml
+  rule_id: CellStructureMech claim-specific evidence and exact-grounding rubric
+  native_severity: major
+  normalization_reason: Material claim or identity mismatch under the local rubric;
+    this does not assert the biological entity is absent.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+- finding_id: F3
+  issue_key: aim21-tda2-complex-F3
+  category: quantity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the whole-complex two-to-two count as a model
+  description: Both component rows present two copies per heterotetramer as an established
+    count. Farrell2017 measures Tda2 dimerization but proposes whole-complex2:2 as
+    compatible with SEC, with explicit alternatives; Shin2018 is not a direct stoichiometry
+    measurement.
+  target_ids:
+  - GO:0110131
+  field_paths:
+  - components[0].stoichiometry
+  - components[1].stoichiometry
+  - components[1].role
+  - components[1].evidence[1]
+  evidence_ids:
+  - record
+  - farrell2017-xml
+  - shin2018-xml
+  rule_id: CellStructureMech claim-specific evidence and exact-grounding rubric
+  native_severity: minor
+  normalization_reason: Localized source, qualification or metadata repair; the named
+    complex and supported core biology remain intact.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+- finding_id: F4
+  issue_key: aim21-tda2-complex-F4
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Assess dispensability for complex formation rather than cell survival
+  description: Both subunits are DISPENSABLE, which asserts the named complex forms
+    without each. The deletion/actin-function experiments do not establish that assertion,
+    and the larger Tda2 complex disappears in aim21 deletion even though free Tda2
+    dimer remains.
+  target_ids:
+  - GO:0110131
+  field_paths:
+  - components[0].essentiality
+  - components[1].essentiality
+  evidence_ids:
+  - record
+  - schema
+  - farrell2017-xml
+  - shin2018-xml
+  rule_id: CellStructureMech claim-specific evidence and exact-grounding rubric
+  native_severity: minor
+  normalization_reason: Localized source, qualification or metadata repair; the named
+    complex and supported core biology remain intact.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+- finding_id: F5
+  issue_key: aim21-tda2-complex-F5
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Do not derive fungal majority occurrence from a taxon restriction
+  description: The sole distribution row asserts COMMON throughout Fungi but cites
+    an only_in_taxon constraint. That constraint bounds allowed taxa; it does not
+    establish presence in most fungi. The inspected primary work supports yeast systems
+    and mentions yeast conservation, not the claimed kingdom-wide majority. This finding
+    concerns unsupported scope, not biological absence in any fungal lineage.
+  target_ids:
+  - GO:0110131
+  field_paths:
+  - taxonomic_distribution[0].presence
+  - taxonomic_distribution[0].note
+  - taxonomic_distribution[0].reference
+  evidence_ids:
+  - record
+  - schema
+  - go-constraints
+  - shin2018-xml
+  - farrell2017-xml
+  rule_id: CellStructureMech claim-specific evidence and exact-grounding rubric
+  native_severity: major
+  normalization_reason: Material claim or identity mismatch under the local rubric;
+    this does not assert the biological entity is absent.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+actions:
+- action_id: action-F1
+  description: Keep the verified TDA2 protein example. Replace the superfamily with
+    a separately verified exact Tda2 whole-protein family if available; otherwise
+    remove the misleading exact grounding and use REVIEWED_LABEL_ONLY with the retained
+    broad-fold relationship described only as context.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0110131
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Change only the maintained target under a separately authorized curation task,
+    preserving GO identity and source conflict where applicable.
+  - Verify every replacement against its own native authority or primary passage;
+    run native schema/strict, protein/graph and applicable full-corpus gates.
+- action_id: action-F2
+  description: Separate demonstrated binding and actin inhibition from disputed recruitment.
+    Remove the recruitment clause from the Shin-supported edge or explicitly scope
+    it to Farrell2017 and record Shin2018 as contrary evidence; retain the supported
+    endocytosis relationship.
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0110131
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Change only the maintained target under a separately authorized curation task,
+    preserving GO identity and source conflict where applicable.
+  - Verify every replacement against its own native authority or primary passage;
+    run native schema/strict, protein/graph and applicable full-corpus gates.
+- action_id: action-F3
+  description: Cite Farrell2017 for measured Tda2 dimerization and distinguish its
+    proposed Aim21:Tda2=2:2 model from observed association. Avoid a definitive whole-complex
+    copy count or unqualified Aim21 dimerization mechanism unless a direct measurement
+    is added.
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0110131
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Change only the maintained target under a separately authorized curation task,
+    preserving GO identity and source conflict where applicable.
+  - Verify every replacement against its own native authority or primary passage;
+    run native schema/strict, protein/graph and applicable full-corpus gates.
+- action_id: action-F4
+  description: Reassess each formation assignment using the named-complex assay. Use
+    supported formation necessity or UNKNOWN as appropriate, and retain viability/residual
+    actin phenotypes separately; do not infer equal necessity for both solely from
+    their names.
+  finding_ids:
+  - F4
+  target_ids:
+  - GO:0110131
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Change only the maintained target under a separately authorized curation task,
+    preserving GO identity and source conflict where applicable.
+  - Verify every replacement against its own native authority or primary passage;
+    run native schema/strict, protein/graph and applicable full-corpus gates.
+- action_id: action-F5
+  description: Preserve the fungal taxon restriction with its exact relation type.
+    Supply comparative evidence for the asserted COMMON range or narrow/qualify the
+    distribution to the evidence-supported scope without substituting an unsupported
+    alternative prevalence enum.
+  finding_ids:
+  - F5
+  target_ids:
+  - GO:0110131
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Change only the maintained target under a separately authorized curation task,
+    preserving GO identity and source conflict where applicable.
+  - Verify every replacement against its own native authority or primary passage;
+    run native schema/strict, protein/graph and applicable full-corpus gates.
+limitations:
+- Shin supplementary TableS1 was not readable through the inspected URL; exact assay-strain
+  equivalence to the S288C reference is unknown, not a demonstrated taxon mismatch.
+- The two primary studies differ on Cap1/2 recruitment. This review does not resolve
+  that experimental disagreement or infer catalytic chemistry for Aim21.
+- An exact Tda2 family was not established by the inspected IPR038586/P40045 pair;
+  this bounded search is not an exhaustive absence claim across all databases.
+- No raw microscopy or structural-coordinate reanalysis was performed. Figure captions
+  are evidence only where explicitly named; no figure-pixel inspection or unlisted
+  supplementary reading is claimed.
+- Strict resolver native0 retains856 unreachable and252 skipped corpus identifiers
+  and one unexercised BFO control. Exact record-specific native metadata supplies
+  the positively asserted identifier checks.
+- Corpus identifier resolution includes856 unreachable and252 skipped identifiers
+  despite native exit0; BFO authority control was not exercised. These residuals are
+  not evidence of absence or scientific validity.
+notes:
+- Read-only scientific review; no maintained record, generated product, history, Git
+  or saved review changed.
+- The explicit user instruction to create one bundle for every uncovered record overrides
+  the local issue-only persistence policy.
+```
