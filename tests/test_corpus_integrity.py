@@ -8,6 +8,7 @@ from collections import Counter
 from cellstructuremech.validation.validator import (
     validate_causal_graphs,
     validate_component_protein_examples,
+    validate_curation_history,
     validate_discussion_issue_links,
 )
 from cellstructuremech.validation.write_validated import validate_structure
@@ -99,6 +100,17 @@ def test_component_protein_examples_match_declared_gene_symbols(records):
         for err in validate_component_protein_examples(doc):
             bad.append(f"{path.name}:{err}")
     assert not bad, f"component protein_examples gene_symbol drift: {bad}"
+
+
+def test_curated_causal_graph_history_targets_match_record_graphs(records):
+    """Every `curation_history` entry with `action: CURATED_CAUSAL_GRAPH` that
+    names a target causal-graph slug must match a declared `graph_id` on the
+    record (#2428)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_curation_history(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"CURATED_CAUSAL_GRAPH history target mismatch: {bad}"
 
 
 def test_local_ids_are_unique_within_record(records):

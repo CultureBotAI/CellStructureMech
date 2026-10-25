@@ -4,11 +4,11 @@ github_repository: CultureBotAI/CellStructureMech
 run_id: mech-goal-sequence-20261019
 latest:
   cycle: 3
-  stage: 4
+  stage: 5
   goal_evidence:
-    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml
-    sha256: 5c9d063bb0b141b352ef104a9e33ce39b7aa2ba418e55f76fe195e7d6fbae2d0
-  receipt_sha256: 686cf049c2a91d2e4848fb4dd114fee9503617644e14445c7ce5caef91bbb59d
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/evidence.yaml
+    sha256: 4237492297a2b023ff4ef673d989f522e15880131191ac8d701960b70b1cca91
+  receipt_sha256: be6bbbe3c68de597d2310d793d2c64bd8e38b8183711dd1171327e21951ba323
   verification:
     checks:
     - bucket: pass
@@ -23,12 +23,12 @@ latest:
     - bucket: pass
       name: vendored-sync
       state: SUCCESS
-    head_sha: 30a683eca25dde6ef0888494ebe7ad043a94311e
-    merge_commit_sha: 7a576b4db730ecea3903e4842acdc21405a9483c
-    merged_at: '2026-10-25T11:46:05Z'
-    pr_number: 2429
+    head_sha: facb1f613eeacfbc9d86e1a0f2c087df9ac4f1ab
+    merge_commit_sha: 08473198b32bffce4520313807aea4527a788a7e
+    merged_at: '2026-10-25T13:40:50Z'
+    pr_number: 2433
     status: merged
-    verified_at: '2026-10-25T11:51:58.301907+00:00'
+    verified_at: '2026-10-25T13:48:26.099770+00:00'
 entries:
 - cycle: 1
   stage: 4
@@ -212,4 +212,30 @@ entries:
     pr_number: 2429
     status: merged
     verified_at: '2026-10-25T11:51:58.301907+00:00'
+- cycle: 3
+  stage: 5
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/evidence.yaml
+    sha256: 4237492297a2b023ff4ef673d989f522e15880131191ac8d701960b70b1cca91
+  receipt_sha256: be6bbbe3c68de597d2310d793d2c64bd8e38b8183711dd1171327e21951ba323
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: facb1f613eeacfbc9d86e1a0f2c087df9ac4f1ab
+    merge_commit_sha: 08473198b32bffce4520313807aea4527a788a7e
+    merged_at: '2026-10-25T13:40:50Z'
+    pr_number: 2433
+    status: merged
+    verified_at: '2026-10-25T13:48:26.099770+00:00'
 

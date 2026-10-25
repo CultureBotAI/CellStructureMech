@@ -1,4 +1,4 @@
-"""Unit tests for semantic record validation in validator.py (#2408, #2410, #2417)."""
+"""Unit tests for semantic record validation in validator.py (#2408, #2410, #2417, #2428)."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import pytest
 from cellstructuremech.validation.validator import (
     validate_causal_graphs,
     validate_component_protein_examples,
+    validate_curation_history,
     validate_discussion_issue_links,
     validate_record_semantics,
 )
@@ -311,4 +312,170 @@ def test_component_protein_examples_gene_symbol_consistency():
     }
     assert validate_component_protein_examples(disclosed_doc) == []
     assert validate_structure(disclosed_doc) == []
+
+
+def test_causal_node_component_ref_requires_grounding_propagation():
+    missing_grounding_doc = {
+        **BASE_RECORD,
+        "components": [
+            {
+                "component_id": "bam_b",
+                "label": "BamB outer-membrane lipoprotein",
+                "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
+                "grounding": "InterPro:IPR017688",
+                "evidence": [{"reference": "PMID:12345678", "notes": "Component evidence."}],
+            }
+        ],
+        "causal_graphs": [
+            {
+                "graph_id": "bam_assembly",
+                "graph_kind": "ASSEMBLY",
+                "scope_status": "MECHANISTIC",
+                "nodes": [
+                    {
+                        "node_id": "bam_b",
+                        "label": "BamB",
+                        "node_type": "GENE_OR_PROTEIN",
+                        "component_ref": "bam_b",
+                    },
+                    {"node_id": "bam_complex", "label": "BAM complex", "node_type": "STRUCTURE"},
+                ],
+                "edges": [
+                    {
+                        "subject": "bam_b",
+                        "predicate": "part of",
+                        "object": "bam_complex",
+                        "description": "BamB associates with the BAM complex.",
+                        "evidence": [{"reference": "PMID:12345678", "notes": "Assay."}],
+                    }
+                ],
+            }
+        ],
+    }
+    errors = validate_causal_graphs(missing_grounding_doc)
+    assert len(errors) == 1
+    assert "omits grounding 'InterPro:IPR017688' from referenced component" in errors[0]
+    assert validate_structure(missing_grounding_doc)
+
+    propagated_doc = {
+        **missing_grounding_doc,
+        "causal_graphs": [
+            {
+                **missing_grounding_doc["causal_graphs"][0],
+                "nodes": [
+                    {
+                        **missing_grounding_doc["causal_graphs"][0]["nodes"][0],
+                        "grounding": "InterPro:IPR017688",
+                    },
+                    missing_grounding_doc["causal_graphs"][0]["nodes"][1],
+                ],
+            }
+        ],
+    }
+    assert validate_causal_graphs(propagated_doc) == []
+    assert validate_structure(propagated_doc) == []
+
+
+def test_curated_causal_graph_history_target_must_match_record_graph_id():
+    bad_history_doc = {
+        **BASE_RECORD,
+        "causal_graphs": [
+            {
+                "graph_id": "static_microtubule_bundle_organization",
+                "graph_kind": "ASSEMBLY",
+                "scope_status": "MECHANISTIC",
+                "nodes": [
+                    {"node_id": "a", "label": "alpha-tubulin", "node_type": "GENE_OR_PROTEIN"},
+                    {"node_id": "b", "label": "beta-tubulin", "node_type": "GENE_OR_PROTEIN"},
+                ],
+                "edges": [
+                    {
+                        "subject": "a",
+                        "predicate": "heterodimerizes with",
+                        "object": "b",
+                        "description": "Alpha- and beta-tubulin form heterodimers.",
+                        "evidence": [{"reference": "PMID:12345678", "notes": "Assay."}],
+                    }
+                ],
+            }
+        ],
+        "curation_history": [
+            {
+                "timestamp": "2026-10-25T00:00:00Z",
+                "curator": "curator",
+                "action": "CURATED_CAUSAL_GRAPH",
+                "changes": (
+                    "Added alpha_tubulin -> beta_tubulin heterodimerization edge in "
+                    "static_microtubule_bundle_assembly (PMID:12345678)."
+                ),
+            }
+        ],
+    }
+    errors = validate_curation_history(bad_history_doc)
+    assert len(errors) == 1
+    assert "static_microtubule_bundle_assembly" in errors[0]
+    assert validate_structure(bad_history_doc)
+
+    good_history_doc = {
+        **bad_history_doc,
+        "curation_history": [
+            {
+                **bad_history_doc["curation_history"][0],
+                "changes": (
+                    "Added alpha_tubulin -> beta_tubulin heterodimerization edge in "
+                    "static_microtubule_bundle_organization (PMID:12345678)."
+                ),
+            }
+        ],
+    }
+    assert validate_curation_history(good_history_doc) == []
+    assert validate_structure(good_history_doc) == []
+
+
+def test_discussion_referencing_doi_or_pmid_requires_structured_evidence():
+    missing_citation_doc = {
+        **BASE_RECORD,
+        "discussions": [
+            {
+                "discussion_id": "cartwheel_note",
+                "kind": "CONTROVERSY",
+                "status": "OPEN",
+                "prompt": "How is cartwheel symmetry maintained?",
+                "notes": (
+                    "Supported by DOI:10.1038/nsmb.2865 and PMID:18497260 in Chlamydomonas."
+                ),
+                "evidence": [
+                    {
+                        "reference": "DOI:10.1038/nsmb.2865",
+                        "notes": "Guichard et al. 2014.",
+                    }
+                ],
+            }
+        ],
+    }
+    errors = validate_discussion_issue_links(missing_citation_doc)
+    assert len(errors) == 1
+    assert "PMID:18497260" in errors[0]
+    assert "10.1038/nsmb.2865" not in errors[0]
+    assert validate_structure(missing_citation_doc)
+
+    complete_citation_doc = {
+        **BASE_RECORD,
+        "discussions": [
+            {
+                **missing_citation_doc["discussions"][0],
+                "evidence": [
+                    *missing_citation_doc["discussions"][0]["evidence"],
+                    {
+                        "reference": "PMID:18497260",
+                        "notes": "Additional supporting study.",
+                    },
+                ],
+            }
+        ],
+    }
+    assert validate_discussion_issue_links(complete_citation_doc) == []
+    assert validate_structure(complete_citation_doc) == []
+
 
