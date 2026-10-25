@@ -40,6 +40,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
+    verified component grounding to causal_graphs component_ref node(s): recb_subunit
+    (InterPro:IPR004586), recc_subunit (InterPro:IPR006697), recd_subunit (InterPro:IPR006344).'
+  llm_assisted: true
 parent_structures:
 - GO:0140535
 - GO:1902494
@@ -209,14 +216,17 @@ causal_graphs:
     label: RecBCD enzyme subunit RecB
     node_type: GENE_OR_PROTEIN
     component_ref: recb_subunit
+    grounding: InterPro:IPR004586
   - node_id: recc_subunit
     label: RecBCD enzyme subunit RecC
     node_type: GENE_OR_PROTEIN
     component_ref: recc_subunit
+    grounding: InterPro:IPR006697
   - node_id: recd_subunit
     label: RecBCD enzyme subunit RecD
     node_type: GENE_OR_PROTEIN
     component_ref: recd_subunit
+    grounding: InterPro:IPR006344
   - node_id: dna_end
     label: DNA end
     node_type: GENETIC_ELEMENT

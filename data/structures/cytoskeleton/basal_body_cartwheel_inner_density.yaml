@@ -29,6 +29,13 @@ curation_history:
   changes: Refined the Chlamydomonas occupancy source pointer to the inspected Results
     paragraph and its Appendix Figure S4D citation.
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2430 (finding cytoskeleton-cartwheel-discussions-unlinked-pmid):
+    aligned discussions#newer_model_followup prose citation with structured discussions[5].evidence
+    (DOI:10.1073/pnas.2612170123).'
+  llm_assisted: true
 parent_structures:
 - GO:0005575
 part_of:
@@ -252,9 +259,9 @@ discussions:
     claims.
   rationale: An abstract and deposited hub model cannot substitute for Results and
     Methods or identify an unmodeled density.
-  notes: PMID:42709820 metadata and abstract were inspected, including the abstract's
-    description of asymmetric CID densities and possible polarity/stability roles.
-    Publisher and author-preprint full-text routes were unsuccessful on 2026-10-04;
+  notes: DOI:10.1073/pnas.2612170123 metadata and abstract were inspected, including
+    the abstract's description of asymmetric CID densities and possible polarity/stability
+    roles. Publisher and author-preprint full-text routes were unsuccessful on 2026-10-04;
     full Results and Methods remain uninspected. Native RCSB entry and polymer-entity
     metadata for PDB:9ZMK identify only SAS-6, not a CID protein. The deposited eight-chain
     hub model is not CID stoichiometry. No 2026 numerical, compositional or causal

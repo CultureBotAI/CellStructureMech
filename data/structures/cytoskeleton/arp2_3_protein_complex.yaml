@@ -20,7 +20,7 @@ part_of:
 components:
 - component_id: arp2_arp3_nucleation_dimer
   label: actin-related catalytic nucleation subunits Arp2 and Arp3
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - ARP2
@@ -364,4 +364,10 @@ curation_history:
   action: ADDRESS_SAVED_REVIEW
   changes: 'Addressed #2420: Updated components#arc35_arc19_clamp_subunits, components#arc40_arc18_arc15_peripheral_subunits
     from component_type PROTEIN to PROTEIN_COMPLEX.'
+  llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2431 (finding cytoskeleton-heteromeric-subcomplex-component-types):
+    updated components#arp2_arp3_nucleation_dimer from component_type PROTEIN to PROTEIN_COMPLEX.'
   llm_assisted: true

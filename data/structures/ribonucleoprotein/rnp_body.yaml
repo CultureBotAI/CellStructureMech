@@ -30,8 +30,14 @@ curation_history:
   curator: antigravity
   action: CURATED_CAUSAL_GRAPH
   changes: Added causal-graph nodes and recruitment edges for degradosome components
-    rhlb (DEAD-box RNA helicase RhlB) and aconitase (Aconitase) in br_body_assembly_and_decay
+    rhlb (DEAD-box RNA helicase RhlB) and aconitase (Aconitase) in caulobacter_br_body_cycle
     (DOI:10.1016/j.molcel.2018.08.003).
+  llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2431 (finding ribonucleoprotein-subcomplex-types-and-history-graph-ids):
+    aligned curation_history[3] graph_id to caulobacter_br_body_cycle.'
   llm_assisted: true
 synonyms:
 - synonym_text: BR-body

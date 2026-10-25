@@ -73,6 +73,13 @@ curation_history:
     support to the parent polymer-grounding TODO that tracks the unresolved inner-wall
     mannan/beta-glucan component.'
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding spore-ascospore-wall-causal-node-component-ref-grounding):
+    propagated verified component grounding to causal_graphs component_ref node(s):
+    chitosan_outer_layer (CHEBI:16261).'
+  llm_assisted: true
 synonyms:
 - synonym_text: fungal-type spore wall
   synonym_type: BROAD_SYNONYM
@@ -221,6 +228,7 @@ causal_graphs:
     label: chitosan
     node_type: CHEMICAL
     component_ref: chitosan_outer_layer
+    grounding: CHEBI:16261
   - node_id: chitosan_layer
     label: chitosan layer of spore wall
     node_type: STRUCTURE

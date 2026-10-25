@@ -29,6 +29,13 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: Added source-backed mechanistic descriptions to 2 causal edge(s).
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2430 (finding inclusion-psg-discussions-unlinked-doi): added
+    structured discussions[0].evidence entry for DOI:10.7554/eLife.34532 (supports:
+    REFUTE) in discussions#retracted_evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: PSG
   synonym_type: RELATED_SYNONYM
@@ -258,6 +265,10 @@ discussions:
     support. No proteaphagy-protection or Arabidopsis PSG claim is imported from either.
     Independent 2008 and 2017 primary evidence supports this record's yeast scope.
   evidence:
+  - reference: DOI:10.7554/eLife.34532
+    supports: REFUTE
+    notes: Retracted 2018 study (Marshall & Vierstra 2018, eLife); cited only to document
+      its exclusion from positive support per DOI:10.7554/eLife.82988.
   - reference: DOI:10.7554/eLife.82988
     notes: Official retraction notice read; used only for exclusion provenance.
   - reference: PMID:30204036

@@ -27,6 +27,13 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: Grounded self-referential causal node 'bouquet' to cellstructuremech:meiotic_telomere_bouquet.
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
+    verified component grounding to causal_graphs component_ref node(s): ndj1 (InterPro:IPR062583),
+    mps3 (InterPro:IPR045119), mps2 (InterPro:IPR031433).'
+  llm_assisted: true
 parent_structures:
 - GO:0032993
 part_of:
@@ -449,14 +456,17 @@ causal_graphs:
     label: Ndj1-class connector
     node_type: GENE_OR_PROTEIN
     component_ref: ndj1
+    grounding: InterPro:IPR062583
   - node_id: mps3
     label: Mps3 SUN tether
     node_type: GENE_OR_PROTEIN
     component_ref: sun
+    grounding: InterPro:IPR045119
   - node_id: mps2
     label: Mps2 linker
     node_type: GENE_OR_PROTEIN
     component_ref: mps2
+    grounding: InterPro:IPR031433
   - node_id: csm4
     label: Csm4 tether factor
     node_type: GENE_OR_PROTEIN

@@ -22,6 +22,13 @@ curation_history:
     Documented grounding, model and deposition boundaries and the unread 2026 full-text
     follow-up.
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2430 (finding cytoskeleton-cartwheel-discussions-unlinked-pmid):
+    aligned discussions#newer_trichonympha_source prose citation with structured discussions[3].evidence
+    (DOI:10.1073/pnas.2612170123).'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -241,13 +248,13 @@ discussions:
   prompt: Assess the full 2026 Trichonympha cartwheel study before adding its molecular
     model or deposits.
   rationale: Metadata and an abstract do not support an audited native model.
-  notes: The published DOI and PMID:42709820 were verified, and the bioRxiv API links
-    the author preprint to this publication. Publisher/full-text routes were unsuccessful
-    and the preprint XML returned HTTP 429 after backoff on 2026-10-04. Full Results
-    and Methods have not been inspected. Its molecular assignments, repeat interpretation,
-    model stoichiometry and specimen taxon are not curated here. Existing numerical
-    fields remain explicitly tied to the 2017 or 2020 Chlamydomonas experiments, not
-    a universal architecture.
+  notes: The published DOI (DOI:10.1073/pnas.2612170123) was verified, and the bioRxiv
+    API links the author preprint to this publication. Publisher/full-text routes
+    were unsuccessful and the preprint XML returned HTTP 429 after backoff on 2026-10-04.
+    Full Results and Methods have not been inspected. Its molecular assignments, repeat
+    interpretation, model stoichiometry and specimen taxon are not curated here. Existing
+    numerical fields remain explicitly tied to the 2017 or 2020 Chlamydomonas experiments,
+    not a universal architecture.
   evidence:
   - reference: DOI:10.1073/pnas.2612170123
     notes: Metadata and abstract inspected only; follow-up source, not evidence for

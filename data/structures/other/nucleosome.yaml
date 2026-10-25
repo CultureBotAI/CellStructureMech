@@ -37,7 +37,7 @@ components:
       wound around a multisubunit histone core.
 - component_id: histone_octamer_core
   label: core histone octamer (H2A, H2B, H3, H4)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - HTA1
@@ -249,3 +249,9 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2431 (finding other-nucleosome-type-and-chaperonin-history-graph-id):
+    updated components#histone_octamer_core from component_type PROTEIN to PROTEIN_COMPLEX.'
+  llm_assisted: true

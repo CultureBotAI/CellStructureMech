@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 993,
- "corpus_updated": "2026-10-25 05:35:08 UTC",
- "corpus_digest": "165d822af374",
+ "corpus_updated": "2026-10-25 12:15:00 UTC",
+ "corpus_digest": "514f18fa094a",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -5010,6 +5010,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): flig (InterPro:IPR000090), flim (InterPro:IPR001689), flin (InterPro:IPR012826).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -5306,19 +5313,22 @@
        "node_id": "flig",
        "label": "FliG",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flig"
+       "component_ref": "flig",
+       "grounding": "InterPro:IPR000090"
       },
       {
        "node_id": "flim",
        "label": "FliM",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flim"
+       "component_ref": "flim",
+       "grounding": "InterPro:IPR001689"
       },
       {
        "node_id": "flin",
        "label": "FliN",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flin"
+       "component_ref": "flin",
+       "grounding": "InterPro:IPR012826"
       },
       {
        "node_id": "c_ring",
@@ -6838,6 +6848,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "#2142 #2143: Replace unsupported majority bacterial prevalence with lineage-dependent occurrence and an explicitly qualified genomic survey. Ground FliE to verified IPR001624/P26462 while retaining the earlier label-only rationale and leaving FlgF unchanged.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): flie (InterPro:IPR001624).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -7117,7 +7134,8 @@
        "node_id": "flie",
        "label": "flagellar basal-body protein FliE",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flie"
+       "component_ref": "flie",
+       "grounding": "InterPro:IPR001624"
       },
       {
        "node_id": "flgb",
@@ -7300,6 +7318,13 @@
      "curator": "claude",
      "action": "ADDRESS_REVIEW",
      "changes": "#2144 #2145: Replace unsupported majority bacterial prevalence with lineage-dependent occurrence and an explicitly qualified genomic survey. Ground FliE to verified IPR001624/P26462 while retaining the earlier label-only rationale and leaving FlgF unchanged.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): flie (InterPro:IPR001624).",
      "llm_assisted": true
     }
    ],
@@ -7620,7 +7645,8 @@
        "node_id": "flie",
        "label": "flagellar basal-body protein FliE",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flie"
+       "component_ref": "flie",
+       "grounding": "InterPro:IPR001624"
       },
       {
        "node_id": "flgb",
@@ -8939,6 +8965,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s); added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): flgk_hap1 (InterPro:IPR002371), flgl_hap3 (InterPro:IPR013384).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -9150,13 +9183,15 @@
        "node_id": "flgk_hap1",
        "label": "hook-associated protein FlgK/HAP1",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flgk_hap1"
+       "component_ref": "flgk_hap1",
+       "grounding": "InterPro:IPR002371"
       },
       {
        "node_id": "flgl_hap3",
        "label": "hook-associated protein FlgL/HAP3",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flgl_hap3"
+       "component_ref": "flgl_hap3",
+       "grounding": "InterPro:IPR013384"
       },
       {
        "node_id": "hook_filament_junction",
@@ -10334,6 +10369,13 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2157, #2158, #2159: Modern export-core architecture is falsely attributed to Fukumura 2017; ATPase model is described as a resolved complete complex; Sodium coupling is conflated with the intact ATPase-assisted state. Preserved historical events and PROPOSED status.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): flip (InterPro:IPR005837), fliq (InterPro:IPR006305), flir (InterPro:IPR006303), flha (InterPro:IPR006301), flhb (InterPro:IPR006136), flih (InterPro:IPR000563), flij (InterPro:IPR012823).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -10808,37 +10850,43 @@
        "node_id": "flip",
        "label": "Flagellar transport protein FliP",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flip"
+       "component_ref": "flip",
+       "grounding": "InterPro:IPR005837"
       },
       {
        "node_id": "fliq",
        "label": "Flagellar biosynthesis protein FliQ",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "fliq"
+       "component_ref": "fliq",
+       "grounding": "InterPro:IPR006305"
       },
       {
        "node_id": "flir",
        "label": "Flagellar biosynthesis protein FliR",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flir"
+       "component_ref": "flir",
+       "grounding": "InterPro:IPR006303"
       },
       {
        "node_id": "flha",
        "label": "Flagellar biosynthesis protein FlhA",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flha"
+       "component_ref": "flha",
+       "grounding": "InterPro:IPR006301"
       },
       {
        "node_id": "flhb",
        "label": "Flagellar biosynthetic protein FlhB",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flhb"
+       "component_ref": "flhb",
+       "grounding": "InterPro:IPR006136"
       },
       {
        "node_id": "flih",
        "label": "Flagellar assembly protein FliH",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flih"
+       "component_ref": "flih",
+       "grounding": "InterPro:IPR000563"
       },
       {
        "node_id": "flii",
@@ -10850,7 +10898,8 @@
        "node_id": "flij",
        "label": "Flagellar export FliJ",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "flij"
+       "component_ref": "flij",
+       "grounding": "InterPro:IPR012823"
       },
       {
        "node_id": "atpase",
@@ -11109,6 +11158,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): a_subunit (InterPro:IPR047055).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -11332,7 +11388,8 @@
        "node_id": "a_subunit",
        "label": "Motility protein A-like",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "a_subunit"
+       "component_ref": "a_subunit",
+       "grounding": "InterPro:IPR047055"
       },
       {
        "node_id": "b_subunit",
@@ -24563,7 +24620,7 @@
     {
      "component_id": "arp2_arp3_nucleation_dimer",
      "label": "actin-related catalytic nucleation subunits Arp2 and Arp3",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "ARP2",
@@ -24980,6 +25037,13 @@
      "curator": "claude-code",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2420: Updated components#arc35_arc19_clamp_subunits, components#arc40_arc18_arc15_peripheral_subunits from component_type PROTEIN to PROTEIN_COMPLEX.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2431 (finding cytoskeleton-heteromeric-subcomplex-component-types): updated components#arp2_arp3_nucleation_dimer from component_type PROTEIN to PROTEIN_COMPLEX.",
      "llm_assisted": true
     }
    ]
@@ -32940,6 +33004,13 @@
      "action": "CURATED_RECORD",
      "changes": "Added source-scoped cartwheel identity, constituents and protein examples, three microbial examples, native measurements and an inspected CC BY 4.0 figure. Documented grounding, model and deposition boundaries and the unread 2026 full-text follow-up.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2430 (finding cytoskeleton-cartwheel-discussions-unlinked-pmid): aligned discussions#newer_trichonympha_source prose citation with structured discussions[3].evidence (DOI:10.1073/pnas.2612170123).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -33193,7 +33264,7 @@
      "status": "OPEN",
      "prompt": "Assess the full 2026 Trichonympha cartwheel study before adding its molecular model or deposits.",
      "rationale": "Metadata and an abstract do not support an audited native model.",
-     "notes": "The published DOI and PMID:42709820 were verified, and the bioRxiv API links the author preprint to this publication. Publisher/full-text routes were unsuccessful and the preprint XML returned HTTP 429 after backoff on 2026-10-04. Full Results and Methods have not been inspected. Its molecular assignments, repeat interpretation, model stoichiometry and specimen taxon are not curated here. Existing numerical fields remain explicitly tied to the 2017 or 2020 Chlamydomonas experiments, not a universal architecture.",
+     "notes": "The published DOI (DOI:10.1073/pnas.2612170123) was verified, and the bioRxiv API links the author preprint to this publication. Publisher/full-text routes were unsuccessful and the preprint XML returned HTTP 429 after backoff on 2026-10-04. Full Results and Methods have not been inspected. Its molecular assignments, repeat interpretation, model stoichiometry and specimen taxon are not curated here. Existing numerical fields remain explicitly tied to the 2017 or 2020 Chlamydomonas experiments, not a universal architecture.",
      "evidence": [
       {
        "reference": "DOI:10.1073/pnas.2612170123",
@@ -33270,6 +33341,13 @@
      "curator": "codex",
      "action": "CURATED_RECORD",
      "changes": "Refined the Chlamydomonas occupancy source pointer to the inspected Results paragraph and its Appendix Figure S4D citation.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2430 (finding cytoskeleton-cartwheel-discussions-unlinked-pmid): aligned discussions#newer_model_followup prose citation with structured discussions[5].evidence (DOI:10.1073/pnas.2612170123).",
      "llm_assisted": true
     }
    ],
@@ -33490,7 +33568,7 @@
      "status": "OPEN",
      "prompt": "Inspect the full 2026 Trichonympha study before extending molecular or mechanistic claims.",
      "rationale": "An abstract and deposited hub model cannot substitute for Results and Methods or identify an unmodeled density.",
-     "notes": "PMID:42709820 metadata and abstract were inspected, including the abstract's description of asymmetric CID densities and possible polarity/stability roles. Publisher and author-preprint full-text routes were unsuccessful on 2026-10-04; full Results and Methods remain uninspected. Native RCSB entry and polymer-entity metadata for PDB:9ZMK identify only SAS-6, not a CID protein. The deposited eight-chain hub model is not CID stoichiometry. No 2026 numerical, compositional or causal assertion is imported here; the measured properties remain tied to the inspected 2020 experiments.",
+     "notes": "DOI:10.1073/pnas.2612170123 metadata and abstract were inspected, including the abstract's description of asymmetric CID densities and possible polarity/stability roles. Publisher and author-preprint full-text routes were unsuccessful on 2026-10-04; full Results and Methods remain uninspected. Native RCSB entry and polymer-entity metadata for PDB:9ZMK identify only SAS-6, not a CID protein. The deposited eight-chain hub model is not CID stoichiometry. No 2026 numerical, compositional or causal assertion is imported here; the measured properties remain tied to the inspected 2020 experiments.",
      "evidence": [
       {
        "reference": "DOI:10.1073/pnas.2612170123"
@@ -46727,7 +46805,7 @@
     {
      "component_id": "gcp4_gcp5_gcp6_ring_subunits",
      "label": "gamma-TuRC asymmetric seam subunits (GCP4/Gfh1, GCP5/Mod21, GCP6/Alp16)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "gfh1",
@@ -47053,6 +47131,13 @@
      "curator": "claude-code",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2420: Updated components#mto1_mto2_activating_tether from component_type PROTEIN to PROTEIN_COMPLEX.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2431 (finding cytoskeleton-heteromeric-subcomplex-component-types): updated components#gcp4_gcp5_gcp6_ring_subunits from component_type PROTEIN to PROTEIN_COMPLEX.",
      "llm_assisted": true
     }
    ]
@@ -72846,7 +72931,14 @@
      "timestamp": "2026-10-24T06:00:00Z",
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
-     "changes": "Added alpha_tubulin -> beta_tubulin heterodimerization edge in static_bundle_stabilization (DOI:10.1083/jcb.201502025, DOI:10.7554/eLife.89958).",
+     "changes": "Added alpha_tubulin -> beta_tubulin heterodimerization edge in static_microtubule_bundle_organization (DOI:10.1083/jcb.201502025, DOI:10.7554/eLife.89958).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2431 (finding static-microtubule-bundle-curation-history-graph-id-mismatch): aligned curation_history[1] graph_id to static_microtubule_bundle_organization.",
      "llm_assisted": true
     }
    ]
@@ -79379,7 +79471,14 @@
      "timestamp": "2026-10-24T06:00:00Z",
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
-     "changes": "Added mrec_mred (component_ref: mrec_mred) node and scaffolding edge to pg_synthesis in elongasome_pg_synthesis (DOI:10.1038/nrmicro2677).",
+     "changes": "Added mrec_mred (component_ref: mrec_mred) node and scaffolding edge to pg_synthesis in elongasome_sidewall_elongation (DOI:10.1038/nrmicro2677).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2431 (finding elongasome-curation-history-causal-graph-id-mismatch): aligned curation_history[12] graph_id to elongasome_sidewall_elongation.",
      "llm_assisted": true
     }
    ],
@@ -84370,6 +84469,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 3 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding energy-complex-mcr-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): mcr_alpha_subunit (InterPro:IPR016212), mcr_beta_subunit (InterPro:IPR003179), mcr_gamma_subunit (InterPro:IPR003178).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -84591,19 +84697,22 @@
        "node_id": "mcr_alpha_subunit",
        "label": "Methyl coenzyme M reductase, alpha subunit",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "mcr_alpha_subunit"
+       "component_ref": "mcr_alpha_subunit",
+       "grounding": "InterPro:IPR016212"
       },
       {
        "node_id": "mcr_beta_subunit",
        "label": "Methyl-coenzyme M reductase, beta subunit",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "mcr_beta_subunit"
+       "component_ref": "mcr_beta_subunit",
+       "grounding": "InterPro:IPR003179"
       },
       {
        "node_id": "mcr_gamma_subunit",
        "label": "Methyl-coenzyme M reductase, gamma subunit",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "mcr_gamma_subunit"
+       "component_ref": "mcr_gamma_subunit",
+       "grounding": "InterPro:IPR003178"
       },
       {
        "node_id": "coenzyme_b",
@@ -90183,7 +90292,7 @@
     {
      "component_id": "catalytic_hexamer_head",
      "label": "catalytic hexameric head subunits",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "atpA",
@@ -90278,7 +90387,7 @@
     {
      "component_id": "central_rotational_stalk",
      "label": "central rotational stalk subunits",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "atpG",
@@ -90549,7 +90658,7 @@
      "timestamp": "2026-10-24T06:00:00Z",
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
-     "changes": "Added direct rotary-coupling edge from central_rotational_stalk to catalytic_hexamer_head in catalytic_sector_rotary_catalysis (GO:0033178, DOI:10.1146/annurev-biochem-013118-110903).",
+     "changes": "Added direct rotary-coupling edge from central_rotational_stalk to catalytic_hexamer_head in catalytic_domain_rotary_mechanism (GO:0033178, DOI:10.1146/annurev-biochem-013118-110903).",
      "llm_assisted": true
     },
     {
@@ -90557,6 +90666,13 @@
      "curator": "antigravity",
      "action": "EDIT",
      "changes": "Cycle 3 Stage 3 protein_examples curation: added 4 declared gene_symbol(s); added 4 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2431 (finding energy-complex-atpase-subcomplex-types-and-history-graph-ids): updated components#catalytic_hexamer_head and components#central_rotational_stalk to PROTEIN_COMPLEX and aligned curation_history[1] graph_id to catalytic_domain_rotary_mechanism.",
      "llm_assisted": true
     }
    ]
@@ -90857,7 +90973,7 @@
      "timestamp": "2026-10-24T06:00:00Z",
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
-     "changes": "Added direct proton-conduction edge from membrane_stator_a_subunit to proteolipid_c_ring_subunit in proton_sector_rotary_conduction (DOI:10.1146/annurev-biochem-013118-110903).",
+     "changes": "Added direct proton-conduction edge from membrane_stator_a_subunit to proteolipid_c_ring_subunit in proton_transporting_domain_mechanism (DOI:10.1146/annurev-biochem-013118-110903).",
      "llm_assisted": true
     },
     {
@@ -90865,6 +90981,13 @@
      "curator": "antigravity",
      "action": "EDIT",
      "changes": "Cycle 3 Stage 3 protein_examples curation: added 2 declared gene_symbol(s); added 2 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2431 (finding energy-complex-atpase-subcomplex-types-and-history-graph-ids): aligned curation_history[1] graph_id to proton_transporting_domain_mechanism.",
      "llm_assisted": true
     }
    ]
@@ -100563,7 +100686,8 @@
        "node_id": "slh_domain",
        "label": "S-layer homology domain",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "slh_domain"
+       "component_ref": "slh_domain",
+       "grounding": "InterPro:IPR001119"
       },
       {
        "node_id": "scwp",
@@ -100721,6 +100845,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding envelope-s-layer-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): slh_domain (InterPro:IPR001119).",
      "llm_assisted": true
     }
    ],
@@ -108156,6 +108287,13 @@
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Added source-backed mechanistic descriptions to 2 causal edge(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2430 (finding inclusion-psg-discussions-unlinked-doi): added structured discussions[0].evidence entry for DOI:10.7554/eLife.34532 (supports: REFUTE) in discussions#retracted_evidence.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -108456,6 +108594,11 @@
      "rationale": "Ontology citation chains can retain secondary accounts of withdrawn work.",
      "notes": "DOI 10.7554/eLife.34532 was retracted by DOI 10.7554/eLife.82988 following reported western-blot irregularities and misplaced confocal images. GO's definition also cites PMID 30204036, a commentary on that study, which is not independent support. No proteaphagy-protection or Arabidopsis PSG claim is imported from either. Independent 2008 and 2017 primary evidence supports this record's yeast scope.",
      "evidence": [
+      {
+       "reference": "DOI:10.7554/eLife.34532",
+       "supports": "REFUTE",
+       "notes": "Retracted 2018 study (Marshall & Vierstra 2018, eLife); cited only to document its exclusion from positive support per DOI:10.7554/eLife.82988."
+      },
       {
        "reference": "DOI:10.7554/eLife.82988",
        "notes": "Official retraction notice read; used only for exclusion provenance."
@@ -142674,7 +142817,8 @@
        "node_id": "crystal",
        "label": "magnetite",
        "node_type": "CHEMICAL",
-       "component_ref": "magnetite"
+       "component_ref": "magnetite",
+       "grounding": "CHEBI:46726"
       },
       {
        "node_id": "mamj",
@@ -142930,6 +143074,13 @@
      "curator": "curate-causal-graphs-skill",
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Added MamJ connector node (mamj, component_ref: mamj_connector, InterPro:IPR060787) and vesicle-to-MamK attachment edge to magnetosome_chain_alignment.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding membrane-organelle-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): crystal (CHEBI:46726).",
      "llm_assisted": true
     }
    ],
@@ -160733,6 +160884,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding membrane-organelle-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): rc_lh1_pufx (cellstructuremech:rc_lh1_pufx_core_complex), cytochrome_bc1 (cellstructuremech:chromatophore_cytochrome_bc1_complex).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -161063,7 +161221,8 @@
        "node_id": "rc_lh1_pufx",
        "label": "RC-LH1-PufX core complex",
        "node_type": "STRUCTURE",
-       "component_ref": "rc_lh1_pufx_core_complex"
+       "component_ref": "rc_lh1_pufx_core_complex",
+       "grounding": "cellstructuremech:rc_lh1_pufx_core_complex"
       },
       {
        "node_id": "quinone_pool",
@@ -161075,7 +161234,8 @@
        "node_id": "cytochrome_bc1",
        "label": "cytochrome bc1 complex",
        "node_type": "STRUCTURE",
-       "component_ref": "cytochrome_bc1_complex"
+       "component_ref": "cytochrome_bc1_complex",
+       "grounding": "cellstructuremech:chromatophore_cytochrome_bc1_complex"
       },
       {
        "node_id": "proton_motive_force",
@@ -184112,6 +184272,13 @@
      "action": "CURATED_CAUSAL_GRAPH",
      "changes": "Added individual lipoprotein subunit nodes bam_b, bam_c, bam_d, and bam_e with component_ref and InterPro groundings and parthood edges into bam_b_to_e_lipoproteins, and added UniProtKB:P0A937 to bam_b_to_e_lipoproteins.xrefs (DOI:10.1038/nature17199, DOI:10.1038/ncomms12865).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): bam_a (InterPro:IPR023707).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -184486,7 +184653,8 @@
        "node_id": "bam_a",
        "label": "BamA beta-barrel core",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "bam_a"
+       "component_ref": "bam_a",
+       "grounding": "InterPro:IPR023707"
       },
       {
        "node_id": "bam_b_to_e_lipoproteins",
@@ -188855,7 +189023,14 @@
      "timestamp": "2026-10-24T06:00:00Z",
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
-     "changes": "Enriched chaperonin_cage_assembly_and_folding with GroES capping edge and cis_folding_cavity state mediating protein_folding (DOI:10.1038/41944, GO:0016465).",
+     "changes": "Enriched chaperonin_atpase_complex_folding_mechanism with GroES capping edge and cis_folding_cavity state mediating protein_folding (DOI:10.1038/41944, GO:0016465).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2431 (finding other-nucleosome-type-and-chaperonin-history-graph-id): aligned curation_history[1] graph_id to chaperonin_atpase_complex_folding_mechanism.",
      "llm_assisted": true
     }
    ]
@@ -205016,6 +205191,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 2 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): gyrase_subunit_a (InterPro:IPR005743), gyrase_subunit_b (InterPro:IPR011557).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -205198,13 +205380,15 @@
        "node_id": "gyrase_subunit_a",
        "label": "DNA gyrase subunit A",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "gyrase_subunit_a"
+       "component_ref": "gyrase_subunit_a",
+       "grounding": "InterPro:IPR005743"
       },
       {
        "node_id": "gyrase_subunit_b",
        "label": "DNA gyrase subunit B",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "gyrase_subunit_b"
+       "component_ref": "gyrase_subunit_b",
+       "grounding": "InterPro:IPR011557"
       },
       {
        "node_id": "dna_segment",
@@ -214926,6 +215110,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 3 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): pil1_lsp1_bar_core (InterPro:IPR028245).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -215129,7 +215320,8 @@
        "node_id": "pil1_lsp1_bar_core",
        "label": "Pil1/Lsp1 BAR-domain eisosome core",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "pil1_lsp1_bar_core"
+       "component_ref": "pil1_lsp1_bar_core",
+       "grounding": "InterPro:IPR028245"
       },
       {
        "node_id": "sur7_membrane_protein",
@@ -221914,6 +222106,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 3 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): recb_subunit (InterPro:IPR004586), recc_subunit (InterPro:IPR006697), recd_subunit (InterPro:IPR006344).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -222134,19 +222333,22 @@
        "node_id": "recb_subunit",
        "label": "RecBCD enzyme subunit RecB",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "recb_subunit"
+       "component_ref": "recb_subunit",
+       "grounding": "InterPro:IPR004586"
       },
       {
        "node_id": "recc_subunit",
        "label": "RecBCD enzyme subunit RecC",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "recc_subunit"
+       "component_ref": "recc_subunit",
+       "grounding": "InterPro:IPR006697"
       },
       {
        "node_id": "recd_subunit",
        "label": "RecBCD enzyme subunit RecD",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "recd_subunit"
+       "component_ref": "recd_subunit",
+       "grounding": "InterPro:IPR006344"
       },
       {
        "node_id": "dna_end",
@@ -226345,6 +226547,13 @@
      "action": "EDIT",
      "changes": "added 4 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): gap45_glideosome_associated_protein (Pfam:PF29346).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -226631,7 +226840,8 @@
        "node_id": "gap45_glideosome_associated_protein",
        "label": "Glideosome-associated protein 45",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "gap45_glideosome_associated_protein"
+       "component_ref": "gap45_glideosome_associated_protein",
+       "grounding": "Pfam:PF29346"
       },
       {
        "node_id": "gap50_membrane_receptor",
@@ -240419,6 +240629,13 @@
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Grounded self-referential causal node 'bouquet' to cellstructuremech:meiotic_telomere_bouquet.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): ndj1 (InterPro:IPR062583), mps3 (InterPro:IPR045119), mps2 (InterPro:IPR031433).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -240962,19 +241179,22 @@
        "node_id": "ndj1",
        "label": "Ndj1-class connector",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "ndj1"
+       "component_ref": "ndj1",
+       "grounding": "InterPro:IPR062583"
       },
       {
        "node_id": "mps3",
        "label": "Mps3 SUN tether",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "sun"
+       "component_ref": "sun",
+       "grounding": "InterPro:IPR045119"
       },
       {
        "node_id": "mps2",
        "label": "Mps2 linker",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "mps2"
+       "component_ref": "mps2",
+       "grounding": "InterPro:IPR031433"
       },
       {
        "node_id": "csm4",
@@ -261910,7 +262130,7 @@
     {
      "component_id": "histone_octamer_core",
      "label": "core histone octamer (H2A, H2B, H3, H4)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "HTA1",
@@ -262164,6 +262384,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 2 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2431 (finding other-nucleosome-type-and-chaperonin-history-graph-id): updated components#histone_octamer_core from component_type PROTEIN to PROTEIN_COMPLEX.",
+     "llm_assisted": true
     }
    ]
   },
@@ -269381,7 +269608,7 @@
       },
       {
        "reference": "PMID:8663105",
-       "notes": "Tougu and Marians 1996 characterized the DnaB-DnaG helicase-primase interaction in the Escherichia coli primosome."
+       "notes": "Ng JY and Marians KJ 1996, 'The ordered assembly of the phiX174-type primosome. II. Preservation of primosome composition from assembly through replication.', J Biol Chem — demonstrated retention of DnaB helicase during primosome assembly and replication."
       }
      ],
      "protein_examples": [
@@ -269397,7 +269624,7 @@
        "evidence": [
         {
          "reference": "PMID:8663105",
-         "notes": "Tougu K et al. 1996, 'The interaction between helicase and primase sets the replication fork clock.', J Biol Chem."
+         "notes": "Ng JY and Marians KJ 1996, 'The ordered assembly of the phiX174-type primosome. II. Preservation of primosome composition from assembly through replication.', J Biol Chem."
         }
        ]
       }
@@ -269421,7 +269648,7 @@
       },
       {
        "reference": "PMID:8663105",
-       "notes": "Tougu and Marians 1996 showed that DnaG primase binds DnaB helicase to prime Okazaki fragment synthesis."
+       "notes": "Ng JY and Marians KJ 1996, 'The ordered assembly of the phiX174-type primosome. II. Preservation of primosome composition from assembly through replication.', J Biol Chem — demonstrated DnaG primase recruitment to the assembled primosome for RNA primer synthesis."
       }
      ],
      "protein_examples": [
@@ -269437,7 +269664,7 @@
        "evidence": [
         {
          "reference": "PMID:8663105",
-         "notes": "Tougu K et al. 1996, 'The interaction between helicase and primase sets the replication fork clock.', J Biol Chem."
+         "notes": "Ng JY and Marians KJ 1996, 'The ordered assembly of the phiX174-type primosome. II. Preservation of primosome composition from assembly through replication.', J Biol Chem."
         }
        ]
       }
@@ -269457,7 +269684,7 @@
      "evidence": [
       {
        "reference": "PMID:21856207",
-       "notes": "Briggs et al. 2012 (and Marians 2000) describe how DnaC loads DnaB onto PriA/PriB/DnaT-restarted forks and oriC to form the bacterial primosome."
+       "notes": "Kaguni JM 2011, 'Replication initiation at the Escherichia coli chromosomal origin.', Curr Opin Chem Biol — reviews how DnaC loads the DnaB replicative helicase ring onto single-stranded DNA during primosome assembly."
       }
      ],
      "protein_examples": [
@@ -269538,7 +269765,7 @@
       },
       {
        "reference": "PMID:8663105",
-       "notes": "Tougu and Marians 1996 demonstrated coupled dsDNA unwinding and RNA primer synthesis by the DnaB-DnaG primosome."
+       "notes": "Ng JY and Marians KJ 1996 demonstrated coupled dsDNA unwinding and DnaG-mediated RNA primer synthesis by the reconstituted Escherichia coli primosome."
       }
      ]
     }
@@ -269554,11 +269781,11 @@
     },
     {
      "reference": "PMID:8663105",
-     "notes": "Tougu K and Marians KJ 1996, 'The interaction between helicase and primase sets the replication fork clock.', J Biol Chem."
+     "notes": "Ng JY and Marians KJ 1996, 'The ordered assembly of the phiX174-type primosome. II. Preservation of primosome composition from assembly through replication.', J Biol Chem."
     },
     {
      "reference": "PMID:21856207",
-     "notes": "Structural and biochemical characterization of bacterial primosome assembly and replication fork restart in Escherichia coli."
+     "notes": "Kaguni JM 2011, 'Replication initiation at the Escherichia coli chromosomal origin.', Curr Opin Chem Biol."
     }
    ],
    "causal_graphs": [
@@ -269639,7 +269866,7 @@
        "evidence": [
         {
          "reference": "PMID:8663105",
-         "notes": "Tougu and Marians 1996 characterized the DnaB-DnaG interaction in the primosome."
+         "notes": "Ng JY and Marians KJ 1996 characterized DnaG primase association with the DnaB-containing primosome."
         }
        ]
       },
@@ -269667,7 +269894,7 @@
         },
         {
          "reference": "PMID:8663105",
-         "notes": "Tougu and Marians 1996 demonstrated coupled unwinding and RNA primer synthesis by the primosome."
+         "notes": "Ng JY and Marians KJ 1996 demonstrated coupled DNA unwinding and RNA primer synthesis by the reconstituted primosome."
         }
        ]
       },
@@ -269713,7 +269940,14 @@
      "timestamp": "2026-10-24T06:00:00Z",
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
-     "changes": "Added direct mechanistic edges from replicative_dna_helicase to template_dna (unwinds) and dna_primase (recruits) in primosome_assembly_and_priming (GO:1990077, PMID:8663105).",
+     "changes": "Added direct mechanistic edges from replicative_dna_helicase to template_dna (unwinds) and dna_primase (recruits) in primosome_primer_synthesis (GO:1990077, PMID:8663105).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2430 (finding primosome-complex-pmid-citation-and-graph-id): corrected bibliographic notes for PMID:8663105 (Ng & Marians 1996, J Biol Chem) and PMID:21856207 (Kaguni 2011, Curr Opin Chem Biol) and aligned curation_history[1] graph_id to primosome_primer_synthesis.",
      "llm_assisted": true
     }
    ]
@@ -272978,6 +273212,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added twelve component classes, nine verified protein examples, species-scoped mechanisms, three dataset links, one hosted and two link-only inspected figures, and explicit evidence conflicts and access limits.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): bqt4 (InterPro:IPR037548).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -273543,7 +273784,8 @@
        "node_id": "bqt4",
        "label": "Bouquet formation protein 4",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "bqt4"
+       "component_ref": "bqt4",
+       "grounding": "InterPro:IPR037548"
       },
       {
        "node_id": "budding_position",
@@ -287304,6 +287546,13 @@
      "action": "TIGHTEN_REVIEW_WORDING",
      "changes": "#1477: tightened the SSB graph scope note to describe tetrameric composition rather than tetramerization.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): ssb_protein (InterPro:IPR011344).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -287468,7 +287717,8 @@
        "node_id": "ssb_protein",
        "label": "single-stranded DNA-binding protein",
        "node_type": "GENE_OR_PROTEIN",
-       "component_ref": "ssb_protein"
+       "component_ref": "ssb_protein",
+       "grounding": "InterPro:IPR011344"
       },
       {
        "node_id": "single_stranded_dna",
@@ -306623,14 +306873,14 @@
       },
       {
        "reference": "PMID:9632712",
-       "notes": "Lafontaine and Tollervey 1998 review box C/D snoRNAs in both 2'-O-methylation and pre-rRNA cleavage."
+       "notes": "Wu P et al. 1998, 'Nop5p is a small nucleolar ribonucleoprotein component required for pre-18 S rRNA processing in yeast.', J Biol Chem — characterizes box C/D snoRNP components and pre-rRNA processing in yeast."
       }
      ]
     },
     {
      "component_id": "nop1_nop56_nop58_snu13_core",
      "label": "Nop1-Nop56-Nop58-Snu13 core protein tetramer",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "NOP1",
@@ -306643,11 +306893,11 @@
      "evidence": [
       {
        "reference": "PMID:9372940",
-       "notes": "Wu et al. 1998 and related yeast studies established Nop1p, Nop56p, Nop58p, and Snu13p as the core proteins of box C/D snoRNPs."
+       "notes": "Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol."
       },
       {
-       "reference": "PMID:10982895",
-       "notes": "Watkins et al. 2000 showed that Snu13p/15.5K binds the box C/D kink-turn motif to nucleate assembly of the box C/D RNP core."
+       "reference": "PMID:9632712",
+       "notes": "Wu P et al. 1998, 'Nop5p is a small nucleolar ribonucleoprotein component required for pre-18 S rRNA processing in yeast.', J Biol Chem."
       }
      ],
      "protein_examples": [
@@ -306663,7 +306913,7 @@
        "evidence": [
         {
          "reference": "PMID:9372940",
-         "notes": "Fibrillarin (Nop1p) is the conserved catalytic methyltransferase subunit of yeast box C/D snoRNPs."
+         "notes": "Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol."
         }
        ]
       },
@@ -306679,7 +306929,7 @@
        "evidence": [
         {
          "reference": "PMID:9632712",
-         "notes": "Nop56p is an essential core scaffold subunit of yeast box C/D RNPs."
+         "notes": "Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol; Wu P et al. 1998, J Biol Chem."
         }
        ]
       },
@@ -306695,7 +306945,7 @@
        "evidence": [
         {
          "reference": "PMID:9372940",
-         "notes": "Wu P et al. 1998 demonstrated that Nop58p is required for box C/D snoRNP stability and pre-rRNA processing."
+         "notes": "Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol; Wu P et al. 1998, J Biol Chem."
         }
        ]
       },
@@ -306710,8 +306960,8 @@
        "role": "Reviewed UniProtKB entry for gene SNU13 in Saccharomyces cerevisiae S288C.",
        "evidence": [
         {
-         "reference": "PMID:10982895",
-         "notes": "Watkins NJ et al. 2000 showed that Snu13p binds the box C/D RNA motif in Saccharomyces cerevisiae."
+         "reference": "https://www.uniprot.org/uniprotkb/P39990",
+         "notes": "Reviewed UniProtKB entry for 13 kDa ribonucleoprotein-associated protein Snu13p (SNU13) in Saccharomyces cerevisiae S288C, a core box C/D snoRNP and U4 snRNP kink-turn binding subunit."
         }
        ]
       }
@@ -306731,7 +306981,7 @@
      "taxon_label": "Archaea",
      "presence": "COMMON",
      "note": "Archaeal box C/D sRNPs (L7Ae-Nop5-fibrillarin bound to C/D sRNAs) are conserved microbial homologs directing RNA 2'-O-methylation.",
-     "reference": "DOI:10.1016/j.molcel.2007.01.024"
+     "reference": "GO:0005732"
     }
    ],
    "canonical_examples": [
@@ -306739,7 +306989,7 @@
      "taxon_id": "NCBITaxon:559292",
      "taxon_label": "Saccharomyces cerevisiae S288C",
      "note": "Reference budding yeast strain for the Nop1p-Nop56p-Nop58p-Snu13p box C/D RNP family.",
-     "reference": "PMID:10982895"
+     "reference": "PMID:9372940"
     },
     {
      "taxon_id": "NCBITaxon:4932",
@@ -306761,7 +307011,7 @@
       },
       {
        "reference": "PMID:9632712",
-       "notes": "Lafontaine and Tollervey 1998 review how box C/D snoRNPs direct both pre-rRNA 2'-O-methylation and endonucleolytic pre-rRNA cleavage."
+       "notes": "Wu P et al. 1998, 'Nop5p is a small nucleolar ribonucleoprotein component required for pre-18 S rRNA processing in yeast.', J Biol Chem — demonstrates box C/D snoRNP requirement for pre-rRNA processing."
       }
      ]
     }
@@ -306777,15 +307027,11 @@
     },
     {
      "reference": "PMID:9372940",
-     "notes": "Wu P et al. 1998, 'A novel nucleolar protein, Nop58p, is associated with box C+D snoRNAs and is essential for their stability.', EMBO J."
+     "notes": "Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol."
     },
     {
      "reference": "PMID:9632712",
-     "notes": "Lafontaine DL and Tollervey D 1998, 'Birth of the snoRNPs: the evolution of the modification-guide snoRNAs.', Trends Biochem Sci."
-    },
-    {
-     "reference": "PMID:10982895",
-     "notes": "Watkins NJ et al. 2000, 'A common core RNP structure shared between the small nucleoar box C/D RNPs and the spliceosomal U4 snRNP.', Cell."
+     "notes": "Wu P et al. 1998, 'Nop5p is a small nucleolar ribonucleoprotein component required for pre-18 S rRNA processing in yeast.', J Biol Chem."
     }
    ],
    "causal_graphs": [
@@ -306829,11 +307075,12 @@
        "description": "The kink-turn motif formed by the conserved C and D boxes of the guide RNA binds Snu13 and nucleates hierarchical assembly of the Nop56-Nop58-Nop1 (fibrillarin) methyltransferase core.",
        "evidence": [
         {
-         "reference": "PMID:10982895",
-         "notes": "Demonstrates Snu13p binding to box C/D snoRNA and assembly with Nop1p, Nop56p, and Nop58p."
+         "reference": "GO:0170049",
+         "notes": "GO:0170049 defines the box C/D RNP complex as assembling on a small RNA with a C/D box sequence motif."
         },
         {
-         "reference": "PMID:9372940"
+         "reference": "PMID:9372940",
+         "notes": "Gautier T et al. 1997 demonstrated physical interaction of Nop56p and Nop58p with Nop1p in box C/D snoRNPs."
         }
        ]
       },
@@ -306856,8 +307103,11 @@
        "description": "The Nop1p-Nop56p-Nop58p-Snu13p tetramer binds the box C/D RNA kink-turn to form the mature RNP complex.",
        "evidence": [
         {
-         "reference": "PMID:10982895",
-         "notes": "Watkins et al. 2000 demonstrated assembly of Snu13p, Nop56p, Nop58p, and Nop1p on box C/D RNAs."
+         "reference": "PMID:9372940",
+         "notes": "Gautier T et al. 1997 and Wu P et al. 1998 (PMID:9632712) established Nop1p, Nop56p, and Nop58p as essential core subunits of yeast box C/D snoRNPs."
+        },
+        {
+         "reference": "PMID:9632712"
         }
        ]
       },
@@ -306873,7 +307123,7 @@
         },
         {
          "reference": "PMID:9632712",
-         "notes": "Lafontaine and Tollervey 1998 review pre-rRNA modification and processing by box C/D snoRNPs."
+         "notes": "Wu P et al. 1998 demonstrated that the yeast box C/D snoRNP core is required for pre-rRNA processing."
         }
        ]
       }
@@ -306892,7 +307142,14 @@
      "timestamp": "2026-10-24T06:00:00Z",
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
-     "changes": "Added direct RNP nucleation edge from box_c_d_rna to nop1_nop56_nop58_snu13_core in box_c_d_rnp_assembly_and_methylation (PMID:10982895, PMID:9372940).",
+     "changes": "Added direct RNP nucleation edge from box_c_d_rna to nop1_nop56_nop58_snu13_core in box_c_d_rnp_rrna_processing (GO:0170049, PMID:9372940).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2430 and #2431 (findings ribonucleoprotein-box-rnp-reference-misattribution, ribonucleoprotein-subcomplex-types-and-history-graph-ids): replaced misattributed DOI:10.1016/j.molcel.2007.01.024 and PMID:10982895 citations, corrected PMID:9372940/PMID:9632712 bibliographic notes, updated nop1_nop56_nop58_snu13_core to PROTEIN_COMPLEX, and aligned curation_history[1] graph_id to box_c_d_rnp_rrna_processing.",
      "llm_assisted": true
     }
    ]
@@ -306934,15 +307191,15 @@
        "notes": "GO:0072588 defines the complex as containing a small RNA with an H/ACA box sequence motif."
       },
       {
-       "reference": "DOI:10.1016/j.molcel.2007.01.024",
-       "notes": "Matera et al. 2007 reviews the conserved H/ACA RNA scaffold and guide pockets in box H/ACA RNPs."
+       "reference": "PMID:9843512",
+       "notes": "Henras A et al. 1998, 'Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.', EMBO J — characterizes the box H/ACA snoRNA-protein complex required for rRNA pseudouridylation."
       }
      ]
     },
     {
      "component_id": "cbf5_gar1_nhp2_nop10_core",
      "label": "Cbf5-Gar1-Nhp2-Nop10 pseudouridine synthase core protein tetramer",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "CBF5",
@@ -306959,7 +307216,7 @@
       },
       {
        "reference": "PMID:14562095",
-       "notes": "Wang and Meier 2004 determined the architecture of the yeast Cbf5p-Nop10p-Gar1p-Nhp2p box H/ACA RNP core."
+       "notes": "Huh WK et al. 2003, 'Global analysis of protein localization in budding yeast.', Nature — confirms nucleolar localization of the yeast Cbf5p, Gar1p, Nhp2p, and Nop10p box H/ACA RNP core subunits."
       }
      ],
      "protein_examples": [
@@ -306975,7 +307232,11 @@
        "evidence": [
         {
          "reference": "PMID:14562095",
-         "notes": "Wang C et al. 2004, 'Architecture and assembly of mammalian H/ACA small nucleolar and telomerase ribonucleoproteins.', EMBO J."
+         "notes": "Huh WK et al. 2003, 'Global analysis of protein localization in budding yeast.', Nature."
+        },
+        {
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998, 'Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.', EMBO J."
         }
        ]
       },
@@ -306991,7 +307252,11 @@
        "evidence": [
         {
          "reference": "PMID:14562095",
-         "notes": "Wang C et al. 2004, 'Architecture and assembly of mammalian H/ACA small nucleolar and telomerase ribonucleoproteins.', EMBO J."
+         "notes": "Huh WK et al. 2003, 'Global analysis of protein localization in budding yeast.', Nature."
+        },
+        {
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998, 'Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.', EMBO J."
         }
        ]
       },
@@ -307043,7 +307308,7 @@
      "taxon_label": "Archaea",
      "presence": "COMMON",
      "note": "Archaeal box H/ACA sRNPs (aCBF5-aNOP10-aGAR1-L7Ae bound to H/ACA sRNAs) are conserved homologs catalyzing rRNA pseudouridylation.",
-     "reference": "DOI:10.1016/j.molcel.2007.01.024"
+     "reference": "GO:0005732"
     }
    ],
    "canonical_examples": [
@@ -307089,15 +307354,11 @@
     },
     {
      "reference": "PMID:9843512",
-     "notes": "Henras A et al. 1998, 'NhP2p and Nop10p are essential for the function of the H/ACA snoRNPs.', EMBO J."
+     "notes": "Henras A et al. 1998, 'Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.', EMBO J."
     },
     {
      "reference": "PMID:14562095",
-     "notes": "Wang C and Meier UT 2004, 'Architecture and assembly of mammalian H/ACA small nucleolar and telomerase ribonucleoproteins.', EMBO J."
-    },
-    {
-     "reference": "DOI:10.1016/j.molcel.2007.01.024",
-     "notes": "Matera AG et al. 2007, 'Non-coding RNAs: lessons from the small nuclear and small nucleolar RNAs', Nat Rev Mol Cell Biol / Mol Cell."
+     "notes": "Huh WK et al. 2003, 'Global analysis of protein localization in budding yeast.', Nature."
     }
    ],
    "causal_graphs": [
@@ -307141,14 +307402,12 @@
        "description": "The hairpin-hinge-hairpin-tail box H/ACA guide RNA scaffolds the Cbf5-Nop10-Gar1-Nhp2 protein core and positions the substrate uridine at the Cbf5 catalytic site via pseudouridylation-pocket base pairing.",
        "evidence": [
         {
-         "reference": "GO:0072588"
+         "reference": "GO:0072588",
+         "notes": "GO:0072588 defines the box H/ACA RNP complex as a small RNA with an H/ACA box sequence motif that catalyzes RNA pseudouridylation."
         },
         {
-         "reference": "DOI:10.1016/j.molcel.2007.01.024",
-         "notes": "Crystal structure of the box H/ACA RNP showing guide RNA scaffolding of the Cbf5-Nop10-Gar1-L7Ae/Nhp2 core."
-        },
-        {
-         "reference": "PMID:14562095"
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998 demonstrated that the Cbf5p-Gar1p-Nhp2p-Nop10p protein core associates with box H/ACA snoRNAs and is essential for rRNA pseudouridylation."
         }
        ]
       },
@@ -307171,8 +307430,12 @@
        "description": "The Cbf5p-Gar1p-Nhp2p-Nop10p protein tetramer assembles onto the box H/ACA RNA hairpins to form the catalytic RNP core.",
        "evidence": [
         {
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998 established Cbf5p, Gar1p, Nhp2p, and Nop10p as essential subunits of the yeast box H/ACA RNP core."
+        },
+        {
          "reference": "PMID:14562095",
-         "notes": "Wang and Meier 2004 defined the assembly of the four core proteins on box H/ACA RNAs."
+         "notes": "Huh WK et al. 2003 confirmed nucleolar localization of the four yeast box H/ACA RNP core subunits."
         }
        ]
       },
@@ -307207,7 +307470,14 @@
      "timestamp": "2026-10-24T06:00:00Z",
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
-     "changes": "Added direct RNP scaffolding edge from box_h_aca_rna to cbf5_gar1_nhp2_nop10_core in box_h_aca_rnp_assembly_and_pseudouridylation (GO:0072588, DOI:10.1016/j.molcel.2007.01.024, PMID:14562095).",
+     "changes": "Added direct RNP scaffolding edge from box_h_aca_rna to cbf5_gar1_nhp2_nop10_core in box_h_aca_rnp_pseudouridylation (GO:0072588, PMID:9843512).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2430 and #2431 (findings ribonucleoprotein-box-rnp-reference-misattribution, ribonucleoprotein-subcomplex-types-and-history-graph-ids): removed misattributed DOI:10.1016/j.molcel.2007.01.024, reconciled PMID:14562095 (Huh et al. 2003, Nature) and PMID:9843512 (Henras et al. 1998, EMBO J) notes, updated cbf5_gar1_nhp2_nop10_core to PROTEIN_COMPLEX, and aligned curation_history[1] graph_id to box_h_aca_rnp_pseudouridylation.",
      "llm_assisted": true
     }
    ]
@@ -307258,7 +307528,7 @@
     {
      "component_id": "cbf5_gar1_nhp2_nop10_core",
      "label": "box H/ACA snoRNP pseudouridine synthase core quartet (Cbf5/Dyskerin, Gar1, Nhp2, Nop10)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "CBF5",
@@ -307272,6 +307542,10 @@
       {
        "reference": "GO:0031429",
        "notes": "Defines the catalytic Cbf5 pseudouridine synthase and core subunits of the box H/ACA snoRNP complex."
+      },
+      {
+       "reference": "PMID:9843512",
+       "notes": "Henras A et al. 1998, 'Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.', EMBO J — established Cbf5p, Gar1p, Nhp2p, and Nop10p as essential core subunits of yeast box H/ACA snoRNPs."
       }
      ],
      "protein_examples": [
@@ -307288,6 +307562,10 @@
         {
          "reference": "PMID:14562095",
          "notes": "Huh WK et al. 2003, ‘Global analysis of protein localization in budding yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the 'Nucleus, nucleolus' localisation of P33322."
+        },
+        {
+         "reference": "PMID:9843512",
+         "notes": "Henras A et al. 1998, ‘Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.’, EMBO J. Experimental evidence for the yeast box H/ACA snoRNP core containing Cbf5p."
         }
        ]
       },
@@ -307370,6 +307648,10 @@
     {
      "reference": "GO:1990904",
      "notes": "Gene Ontology cellular-component parent term for ribonucleoprotein complex."
+    },
+    {
+     "reference": "PMID:9843512",
+     "notes": "Henras A et al. 1998, 'Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.', EMBO J."
     }
    ],
    "causal_graphs": [
@@ -307481,6 +307763,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 4 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2430 and #2431 (findings ribonucleoprotein-box-rnp-reference-misattribution, ribonucleoprotein-subcomplex-types-and-history-graph-ids): updated components#cbf5_gar1_nhp2_nop10_core from PROTEIN to PROTEIN_COMPLEX and added explicit PMID:9843512 (Henras et al. 1998, EMBO J) box H/ACA snoRNP core evidence alongside verified PMID:14562095 (Huh et al. 2003, Nature) nucleolar localization evidence.",
+     "llm_assisted": true
     }
    ],
    "taxonomic_distribution": [
@@ -320610,7 +320899,14 @@
      "timestamp": "2026-10-24T06:00:00Z",
      "curator": "antigravity",
      "action": "CURATED_CAUSAL_GRAPH",
-     "changes": "Added causal-graph nodes and recruitment edges for degradosome components rhlb (DEAD-box RNA helicase RhlB) and aconitase (Aconitase) in br_body_assembly_and_decay (DOI:10.1016/j.molcel.2018.08.003).",
+     "changes": "Added causal-graph nodes and recruitment edges for degradosome components rhlb (DEAD-box RNA helicase RhlB) and aconitase (Aconitase) in caulobacter_br_body_cycle (DOI:10.1016/j.molcel.2018.08.003).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2431 (finding ribonucleoprotein-subcomplex-types-and-history-graph-ids): aligned curation_history[3] graph_id to caulobacter_br_body_cycle.",
      "llm_assisted": true
     }
    ],
@@ -336846,6 +337142,13 @@
      "action": "EDIT",
      "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding secretion-system-t6ss-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): membrane (cellstructuremech:type_vi_secretion_system_membrane_complex), baseplate (cellstructuremech:type_vi_secretion_system_baseplate), tube (cellstructuremech:type_vi_secretion_system_hcp_tube), sheath (cellstructuremech:type_vi_secretion_system_contractile_sheath), spike (cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -337307,31 +337610,36 @@
        "node_id": "membrane",
        "label": "TssJ/TssL/TssM membrane complex",
        "node_type": "STRUCTURE",
-       "component_ref": "membrane_complex"
+       "component_ref": "membrane_complex",
+       "grounding": "cellstructuremech:type_vi_secretion_system_membrane_complex"
       },
       {
        "node_id": "baseplate",
        "label": "T6SS baseplate",
        "node_type": "STRUCTURE",
-       "component_ref": "baseplate"
+       "component_ref": "baseplate",
+       "grounding": "cellstructuremech:type_vi_secretion_system_baseplate"
       },
       {
        "node_id": "tube",
        "label": "Hcp inner tube",
        "node_type": "STRUCTURE",
-       "component_ref": "hcp_tube"
+       "component_ref": "hcp_tube",
+       "grounding": "cellstructuremech:type_vi_secretion_system_hcp_tube"
       },
       {
        "node_id": "sheath",
        "label": "TssB/TssC sheath",
        "node_type": "STRUCTURE",
-       "component_ref": "contractile_sheath"
+       "component_ref": "contractile_sheath",
+       "grounding": "cellstructuremech:type_vi_secretion_system_contractile_sheath"
       },
       {
        "node_id": "spike",
        "label": "VgrG/PAAR spike complex",
        "node_type": "STRUCTURE",
-       "component_ref": "spike_complex"
+       "component_ref": "spike_complex",
+       "grounding": "cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex"
       },
       {
        "node_id": "clpv",
@@ -339940,6 +340248,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Resolved PR #1347 review issue #1348 by adding GO:0005632 and Neiman 2005 support to the parent polymer-grounding TODO that tracks the unresolved inner-wall mannan/beta-glucan component.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-25T12:15:00Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_SAVED_REVIEW",
+     "changes": "Addressed #2432 (finding spore-ascospore-wall-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): chitosan_outer_layer (CHEBI:16261).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -340130,7 +340445,8 @@
        "node_id": "chitosan_outer_layer",
        "label": "chitosan",
        "node_type": "CHEMICAL",
-       "component_ref": "chitosan_outer_layer"
+       "component_ref": "chitosan_outer_layer",
+       "grounding": "CHEBI:16261"
       },
       {
        "node_id": "chitosan_layer",

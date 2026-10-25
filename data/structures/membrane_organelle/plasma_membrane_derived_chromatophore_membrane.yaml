@@ -69,6 +69,13 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding membrane-organelle-causal-node-component-ref-grounding):
+    propagated verified component grounding to causal_graphs component_ref node(s):
+    rc_lh1_pufx (cellstructuremech:rc_lh1_pufx_core_complex), cytochrome_bc1 (cellstructuremech:chromatophore_cytochrome_bc1_complex).'
+  llm_assisted: true
 synonyms:
 - synonym_text: cellular chromatophore membrane
   synonym_type: EXACT_SYNONYM
@@ -361,6 +368,7 @@ causal_graphs:
     label: RC-LH1-PufX core complex
     node_type: STRUCTURE
     component_ref: rc_lh1_pufx_core_complex
+    grounding: cellstructuremech:rc_lh1_pufx_core_complex
   - node_id: quinone_pool
     label: quinone pool
     node_type: CHEMICAL
@@ -370,6 +378,7 @@ causal_graphs:
     label: cytochrome bc1 complex
     node_type: STRUCTURE
     component_ref: cytochrome_bc1_complex
+    grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex
   - node_id: proton_motive_force
     label: chromatophore transmembrane proton motive force
     node_type: STATE
