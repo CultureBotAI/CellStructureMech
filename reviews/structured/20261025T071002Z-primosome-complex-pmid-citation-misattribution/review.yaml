@@ -26,15 +26,20 @@ summary: Primosome complex (GO:1990077, data/structures/other/primosome_complex.
   assembly of the phiX174-type primosome. II. Preservation of primosome composition
   from assembly through replication', J Biol Chem 271(26):15649-15655, as cited in
   GO:1990077 and dnab_dnac_dnat_pria_prib_complex.yaml) is misattributed in notes
-  across components[0].evidence[1], components[0].protein_examples[0].evidence[0],
-  components[1].evidence[1], components[1].protein_examples[0].evidence[0], functions[0].evidence[1],
-  evidence[2], causal_graphs[0].edges[2].evidence[0], and causal_graphs[0].edges[4].evidence[1]
-  to 'Tougu K and Marians KJ 1996, The interaction between helicase and primase sets
-  the replication fork clock'; and PMID:21856207 (Kaguni JM 2011, Curr Opin Chem Biol
-  15:606-613, DOI:10.1016/j.cbpa.2011.07.016) is misattributed in components[2].evidence[0].notes
-  to 'Briggs et al. 2012 (and Marians 2000)'. Additionally, curation_history[1].changes
-  cites graph_id 'primosome_assembly_and_priming' whereas causal_graphs[0].graph_id
-  is 'primosome_primer_synthesis'.
+  across 8 fields (components[0].evidence[1].notes, components[0].protein_examples[0].evidence[0].notes,
+  components[1].evidence[1].notes, components[1].protein_examples[0].evidence[0].notes,
+  functions[0].evidence[1].notes, evidence[2].notes, causal_graphs[0].edges[2].evidence[0].notes,
+  and causal_graphs[0].edges[4].evidence[1].notes) to 'Tougu K and Marians KJ 1996,
+  The interaction between helicase and primase sets the replication fork clock' (and
+  also appears in taxonomic_distribution[0].reference, canonical_examples[1].reference,
+  causal_graphs[0].edges[5].evidence[1].notes, causal_graphs[0].edges[6].evidence[0].notes,
+  and curation_history[1].changes); and PMID:21856207 (Kaguni JM 2011, Curr Opin Chem
+  Biol 15(5):606-613, DOI:10.1016/j.cbpa.2011.07.016) is misattributed in components[2].evidence[0].notes
+  to 'Briggs et al. 2012 (and Marians 2000)' (and cited for DnaC/restart-primosome
+  claims in components[2].protein_examples[0].evidence[0].notes, canonical_examples[0].reference,
+  evidence[3].notes, and causal_graphs[0].edges[0].evidence[0].notes). Additionally,
+  curation_history[1].changes cites graph_id 'primosome_assembly_and_priming' whereas
+  causal_graphs[0].graph_id is 'primosome_primer_synthesis'.
 source:
   git_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
   state: git_commit
@@ -188,18 +193,26 @@ findings:
     (which is Ng JY and Marians KJ 1996, 'The ordered assembly of the phiX174-type
     primosome. II. Preservation of primosome composition from assembly through replication',
     J Biol Chem 271(26):15649-15655, the GO:1990077 definition reference also cited
-    in dnab_dnac_dnat_pria_prib_complex.yaml) is misattributed in notes across components[0].evidence[1].notes,
-    components[0].protein_examples[0].evidence[0].notes, components[1].evidence[1].notes,
-    components[1].protein_examples[0].evidence[0].notes, functions[0].evidence[1].notes,
-    evidence[2].notes, causal_graphs[0].edges[2].evidence[0].notes, and causal_graphs[0].edges[4].evidence[1].notes
-    to 'Tougu K and Marians KJ 1996, The interaction between helicase and primase
-    sets the replication fork clock'; and PMID:21856207 (Kaguni JM 2011, 'Replication
+    in dnab_dnac_dnat_pria_prib_complex.yaml) is misattributed in notes across 8 fields
+    — components[0].evidence[1].notes (lines 35-37), components[0].protein_examples[0].evidence[0].notes
+    (lines 48-50), components[1].evidence[1].notes (lines 65-67), components[1].protein_examples[0].evidence[0].notes
+    (lines 78-80), functions[0].evidence[1].notes (lines 153-155), evidence[2].notes
+    (lines 161-163), causal_graphs[0].edges[2].evidence[0].notes (lines 223-225),
+    and causal_graphs[0].edges[4].evidence[1].notes (lines 243-245) — to 'Tougu K
+    and Marians KJ 1996, The interaction between helicase and primase sets the replication
+    fork clock' (and also appears in taxonomic_distribution[0].reference line 126,
+    canonical_examples[1].reference line 142, causal_graphs[0].edges[5].evidence[1].notes
+    lines 253-255, causal_graphs[0].edges[6].evidence[0].notes lines 263-265, and
+    curation_history[1].changes line 279); and PMID:21856207 (Kaguni JM 2011, 'Replication
     initiation at the Escherichia coli chromosomal origin', Curr Opin Chem Biol 15(5):606-613,
     DOI:10.1016/j.cbpa.2011.07.016, the second GO:1990077 definition reference also
     cited in core_primosome_complex.yaml) is misattributed in components[2].evidence[0].notes
-    to 'Briggs et al. 2012 (and Marians 2000)'. In addition, curation_history[1].changes
-    (CURATED_CAUSAL_GRAPH) cites graph_id 'primosome_assembly_and_priming' whereas
-    causal_graphs[0].graph_id is 'primosome_primer_synthesis'.
+    (lines 92-94) to 'Briggs et al. 2012 (and Marians 2000)' (and cited for DnaC/restart-primosome
+    claims in components[2].protein_examples[0].evidence[0].notes lines 105-107, canonical_examples[0].reference
+    line 138, evidence[3].notes lines 164-166, and causal_graphs[0].edges[0].evidence[0].notes
+    lines 207-208). In addition, curation_history[1].changes (lines 277-279, CURATED_CAUSAL_GRAPH)
+    cites graph_id 'primosome_assembly_and_priming' whereas causal_graphs[0].graph_id
+    (line 168) is 'primosome_primer_synthesis'.
   target_ids:
   - GO:1990077
   field_paths:
@@ -208,10 +221,18 @@ findings:
   - components[1].evidence[1].notes
   - components[1].protein_examples[0].evidence[0].notes
   - components[2].evidence[0].notes
+  - components[2].protein_examples[0].evidence[0].notes
+  - taxonomic_distribution[0].reference
+  - canonical_examples[0].reference
+  - canonical_examples[1].reference
   - functions[0].evidence[1].notes
   - evidence[2].notes
+  - evidence[3].notes
+  - causal_graphs[0].edges[0].evidence[0].notes
   - causal_graphs[0].edges[2].evidence[0].notes
   - causal_graphs[0].edges[4].evidence[1].notes
+  - causal_graphs[0].edges[5].evidence[1].notes
+  - causal_graphs[0].edges[6].evidence[0].notes
   - curation_history[1].changes
   evidence_ids:
   - ev_primosome_pmid_notes

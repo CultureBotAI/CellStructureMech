@@ -2,7 +2,7 @@ schema_version: 1.0.0
 review_id: 20261025T071010Z-other-category-review
 kind: category
 repository: CultureBotAI/CellStructureMech
-title: 'Category review of data/structures/other/ (308 records): nucleosome octamer
+title: 'Category review of data/structures/other/ (309 records): nucleosome octamer
   component_type, chaperonin curation_history graph ID, and component_ref node groundings'
 started_at: '2026-10-25T06:56:00Z'
 finished_at: '2026-10-25T07:10:10Z'
@@ -19,7 +19,7 @@ completion: completed
 verdict: pass_with_limitations
 native_verdict: PASS_WITH_FOLLOW_UP
 scientific_review: true
-summary: 'Full-coverage category review of all 308 records in data/structures/other/
+summary: 'Full-coverage category review of all 309 records in data/structures/other/
   (including new Cycle 3 Stage 1 records chaperonin_atpase_complex.yaml and primosome_complex.yaml,
   with primosome_complex.yaml reviewed in detail in 20261025T071002Z-primosome-complex-pmid-citation-misattribution)
   verified distinct macromolecular complex boundaries. Two minor cohort findings were
@@ -5999,7 +5999,7 @@ evidence:
 - evidence_id: ev_oth_node_grounding
   kind: record_content
   reference: data/structures/other/dna_gyrase_complex.yaml
-  locator: causal_graphs[0].nodes[0] (lines 173-176) in dna_gyrase_complex.yaml (plus
+  locator: causal_graphs[0].nodes[1] (lines 173-176) in dna_gyrase_complex.yaml (plus
     7 sibling records in data/structures/other/)
   accessed_at: '2026-10-25T07:04:15Z'
   support: supports
@@ -6836,7 +6836,7 @@ boundary_decisions:
   - GO:0030120
   - GO:0071203
   - GO:0016035
-  rationale: All 308 records in data/structures/other/ represent distinct chromatin,
+  rationale: All 309 records in data/structures/other/ represent distinct chromatin,
     replication/repair, folding, trafficking, signaling, or cell-surface macromolecular
     complexes.
   evidence_ids:

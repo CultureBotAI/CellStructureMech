@@ -2,7 +2,7 @@ schema_version: 1.0.0
 review_id: 20261025T071011Z-ribonucleoprotein-category-review
 kind: category
 repository: CultureBotAI/CellStructureMech
-title: 'Category review of data/structures/ribonucleoprotein/ (89 records): box C/D
+title: 'Category review of data/structures/ribonucleoprotein/ (88 records): box C/D
   and H/ACA RNP citations, subcomplex component_type, and curation_history graph IDs'
 started_at: '2026-10-25T06:56:00Z'
 finished_at: '2026-10-25T07:10:11Z'
@@ -19,7 +19,7 @@ completion: completed
 verdict: needs_curation
 native_verdict: NEEDS_CURATION
 scientific_review: true
-summary: 'Full-coverage category review of all 89 records in data/structures/ribonucleoprotein/
+summary: 'Full-coverage category review of all 88 records in data/structures/ribonucleoprotein/
   (including the 3 new Cycle 3 Stage 1 records box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml,
   and box_h_aca_snornp_complex.yaml) verified distinct ribosomal, spliceosomal, snoRNP/sRNP,
   and RNP-granule boundaries. Two cohort findings were identified across 4 records:
@@ -2193,7 +2193,7 @@ boundary_decisions:
   - GO:0005688
   - GO:0005691
   - GO:0005683
-  rationale: All 89 records in data/structures/ribonucleoprotein/ represent distinct
+  rationale: All 88 records in data/structures/ribonucleoprotein/ represent distinct
     ribosomal, spliceosomal, snoRNP/sRNP, vault, or cytoplasmic/nuclear RNP granule
     assemblies.
   evidence_ids:

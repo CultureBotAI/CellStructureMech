@@ -23,8 +23,8 @@
 | `membrane_organelle` | 224 | 224 (100% full) | `20261025T071009Z-membrane-organelle-category-review` (`pass_with_limitations`, 1 minor finding) |
 | `microcompartment` | 6 | 6 (100% full) | No issues observed; no review-output record generated (`pass`) |
 | `nucleoid` | 5 | 5 (100% full) | No issues observed; no review-output record generated (`pass`) |
-| `other` | 308 | 308 (100% full) | `20261025T071002Z-primosome-complex-pmid-citation-misattribution` (`needs_curation`, 1 major finding) + `20261025T071010Z-other-category-review` (`pass_with_limitations`, 2 minor findings) |
-| `ribonucleoprotein` | 89 | 89 (100% full) | `20261025T071011Z-ribonucleoprotein-category-review` (`needs_curation`, 1 major + 1 minor finding) |
+| `other` | 309 | 309 (100% full) | `20261025T071002Z-primosome-complex-pmid-citation-misattribution` (`needs_curation`, 1 major finding) + `20261025T071010Z-other-category-review` (`pass_with_limitations`, 2 minor findings) |
+| `ribonucleoprotein` | 88 | 88 (100% full) | `20261025T071011Z-ribonucleoprotein-category-review` (`needs_curation`, 1 major + 1 minor finding) |
 | `secretion_system` | 20 | 20 (100% full) | `20261025T071012Z-secretion-system-category-review` (`pass_with_limitations`, 1 minor finding) |
 | `spore` | 23 | 23 (100% full) | `20261025T071013Z-spore-category-review` (`pass_with_limitations`, 1 minor finding) |
 | **Total** | **993** | **993 (100%)** | **13 native `RecordReview` bundles persisted in `reviews/structured/`** |
@@ -42,8 +42,8 @@
 | `20261025T071007Z-envelope-category-review` | `category` | `.claude/skills/review-yaml-category/SKILL.md` | `pass_with_limitations` | 20 / 20 | `envelope-s-layer-causal-node-component-ref-grounding` (`minor`) |
 | `20261025T071008Z-inclusion-category-review` | `category` | `.claude/skills/review-yaml-category/SKILL.md` | `pass_with_limitations` | 20 / 20 | `inclusion-psg-discussions-unlinked-doi` (`minor`) |
 | `20261025T071009Z-membrane-organelle-category-review` | `category` | `.claude/skills/review-yaml-category/SKILL.md` | `pass_with_limitations` | 224 / 224 | `membrane-organelle-causal-node-component-ref-grounding` (`minor`) |
-| `20261025T071010Z-other-category-review` | `category` | `.claude/skills/review-yaml-category/SKILL.md` | `pass_with_limitations` | 308 / 308 | `other-nucleosome-type-and-chaperonin-history-graph-id` (`minor`), `other-causal-node-component-ref-grounding` (`minor`) |
-| `20261025T071011Z-ribonucleoprotein-category-review` | `category` | `.claude/skills/review-yaml-category/SKILL.md` | `needs_curation` | 89 / 89 | `ribonucleoprotein-box-rnp-reference-misattribution` (`major`), `ribonucleoprotein-subcomplex-types-and-history-graph-ids` (`minor`) |
+| `20261025T071010Z-other-category-review` | `category` | `.claude/skills/review-yaml-category/SKILL.md` | `pass_with_limitations` | 309 / 309 | `other-nucleosome-type-and-chaperonin-history-graph-id` (`minor`), `other-causal-node-component-ref-grounding` (`minor`) |
+| `20261025T071011Z-ribonucleoprotein-category-review` | `category` | `.claude/skills/review-yaml-category/SKILL.md` | `needs_curation` | 88 / 88 | `ribonucleoprotein-box-rnp-reference-misattribution` (`major`), `ribonucleoprotein-subcomplex-types-and-history-graph-ids` (`minor`) |
 | `20261025T071012Z-secretion-system-category-review` | `category` | `.claude/skills/review-yaml-category/SKILL.md` | `pass_with_limitations` | 20 / 20 | `secretion-system-t6ss-causal-node-component-ref-grounding` (`minor`) |
 | `20261025T071013Z-spore-category-review` | `category` | `.claude/skills/review-yaml-category/SKILL.md` | `pass_with_limitations` | 23 / 23 | `spore-ascospore-wall-causal-node-component-ref-grounding` (`minor`) |
 

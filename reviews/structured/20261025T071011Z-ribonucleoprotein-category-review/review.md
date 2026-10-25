@@ -1,4 +1,4 @@
-# Category review of data/structures/ribonucleoprotein/ (89 records): box C/D and H/ACA RNP citations, subcomplex component_type, and curation_history graph IDs
+# Category review of data/structures/ribonucleoprotein/ (88 records): box C/D and H/ACA RNP citations, subcomplex component_type, and curation_history graph IDs
 
 - Review: 20261025T071011Z-ribonucleoprotein-category-review
 - Repository: CultureBotAI/CellStructureMech
@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-coverage category review of all 89 records in data/structures/ribonucleoprotein/ (including the 3 new Cycle 3 Stage 1 records box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml) verified distinct ribosomal, spliceosomal, snoRNP/sRNP, and RNP-granule boundaries. Two cohort findings were identified across 4 records: (F1, major) box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml cite DOI:10.1016/j.molcel.2007.01.024 (Shcherbik &amp; Haines 2007 on Cdc48p polyubiquitin segregation) for archaeal sRNP conservation/structure (where box_h_aca_rnp_complex.yaml notes attribute it to 'Matera et al. 2007' and 'Crystal structure of the box H/ACA RNP'), while box_h_aca_snornp_complex.yaml pairs PMID:14562095 (which is Wang C &amp; Meier UT 2004, EMBO J.) with notes for Huh WK et al. 2003 (whose actual PubMed ID is PMID:14562099); and (F2, minor) heterotetrameric core components nop1_nop56_nop58_snu13_core and cbf5_gar1_nhp2_nop10_core in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml are typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and curation_history in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and rnp_body.yaml cites stale causal_graph IDs.
+Full-coverage category review of all 88 records in data/structures/ribonucleoprotein/ (including the 3 new Cycle 3 Stage 1 records box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml) verified distinct ribosomal, spliceosomal, snoRNP/sRNP, and RNP-granule boundaries. Two cohort findings were identified across 4 records: (F1, major) box_c_d_rnp_complex.yaml and box_h_aca_rnp_complex.yaml cite DOI:10.1016/j.molcel.2007.01.024 (Shcherbik &amp; Haines 2007 on Cdc48p polyubiquitin segregation) for archaeal sRNP conservation/structure (where box_h_aca_rnp_complex.yaml notes attribute it to 'Matera et al. 2007' and 'Crystal structure of the box H/ACA RNP'), while box_h_aca_snornp_complex.yaml pairs PMID:14562095 (which is Wang C &amp; Meier UT 2004, EMBO J.) with notes for Huh WK et al. 2003 (whose actual PubMed ID is PMID:14562099); and (F2, minor) heterotetrameric core components nop1_nop56_nop58_snu13_core and cbf5_gar1_nhp2_nop10_core in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml are typed component_type: PROTEIN instead of PROTEIN_COMPLEX, and curation_history in box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and rnp_body.yaml cites stale causal_graph IDs.
 
 ## Scope And Provenance
 
@@ -172,7 +172,7 @@ Update nop1_nop56_nop58_snu13_core and cbf5_gar1_nhp2_nop10_core in box_c_d_rnp_
 
 ## Category Boundaries
 
-- retain: GO:0120259, GO:0030686, GO:1990061, GO:0031428, GO:0170049, GO:0072588, GO:0031429, GO:0015030, GO:0071012, GO:0071013, GO:0000243, GO:0030679, GO:0000177, GO:0010494, GO:0030680, GO:0000178, cellstructuremech:glycolytic_body, cellstructuremech:h_body, GO:0035363, GO:0035061, GO:0015934, GO:0120115, GO:0030681, GO:0010445, GO:0000176, GO:0016607, GO:0097165, GO:0101019, GO:0005655, GO:0035062, GO:0000932, GO:0042382, GO:0071003, GO:0097356, GO:0071014, GO:0071020, GO:0071011, GO:0030684, GO:0030687, GO:0030688, GO:0071010, GO:0000172, GO:0030677, GO:0005840, GO:0140365, GO:0048500, GO:0071024, GO:0030532, GO:0015935, GO:0032040, GO:0005732, GO:0071601, GO:0005681, GO:0097525, GO:0097526, GO:0044530, GO:0005697, cellstructuremech:tmar_condensate, GO:0071023, GO:0005692, GO:0034693, GO:0005693, GO:0071017, GO:0071018, GO:0071019, GO:0071022, GO:0071016, GO:0071015, GO:0005689, GO:0005685, GO:0005686, GO:0071006, GO:0071007, GO:0071008, GO:0071021, GO:0071005, GO:0071004, GO:0005684, GO:0005687, GO:0071001, GO:0046540, GO:0005690, GO:0071002, GO:0071009, GO:0005682, GO:0005688, GO:0005691, GO:0005683. All 89 records in data/structures/ribonucleoprotein/ represent distinct ribosomal, spliceosomal, snoRNP/sRNP, vault, or cytoplasmic/nuclear RNP granule assemblies.
+- retain: GO:0120259, GO:0030686, GO:1990061, GO:0031428, GO:0170049, GO:0072588, GO:0031429, GO:0015030, GO:0071012, GO:0071013, GO:0000243, GO:0030679, GO:0000177, GO:0010494, GO:0030680, GO:0000178, cellstructuremech:glycolytic_body, cellstructuremech:h_body, GO:0035363, GO:0035061, GO:0015934, GO:0120115, GO:0030681, GO:0010445, GO:0000176, GO:0016607, GO:0097165, GO:0101019, GO:0005655, GO:0035062, GO:0000932, GO:0042382, GO:0071003, GO:0097356, GO:0071014, GO:0071020, GO:0071011, GO:0030684, GO:0030687, GO:0030688, GO:0071010, GO:0000172, GO:0030677, GO:0005840, GO:0140365, GO:0048500, GO:0071024, GO:0030532, GO:0015935, GO:0032040, GO:0005732, GO:0071601, GO:0005681, GO:0097525, GO:0097526, GO:0044530, GO:0005697, cellstructuremech:tmar_condensate, GO:0071023, GO:0005692, GO:0034693, GO:0005693, GO:0071017, GO:0071018, GO:0071019, GO:0071022, GO:0071016, GO:0071015, GO:0005689, GO:0005685, GO:0005686, GO:0071006, GO:0071007, GO:0071008, GO:0071021, GO:0071005, GO:0071004, GO:0005684, GO:0005687, GO:0071001, GO:0046540, GO:0005690, GO:0071002, GO:0071009, GO:0005682, GO:0005688, GO:0005691, GO:0005683. All 88 records in data/structures/ribonucleoprotein/ represent distinct ribosomal, spliceosomal, snoRNP/sRNP, vault, or cytoplasmic/nuclear RNP granule assemblies.
 
 ## Evidence
 
@@ -196,7 +196,7 @@ schema_version: 1.0.0
 review_id: 20261025T071011Z-ribonucleoprotein-category-review
 kind: category
 repository: CultureBotAI/CellStructureMech
-title: 'Category review of data/structures/ribonucleoprotein/ (89 records): box C/D
+title: 'Category review of data/structures/ribonucleoprotein/ (88 records): box C/D
   and H/ACA RNP citations, subcomplex component_type, and curation_history graph IDs'
 started_at: '2026-10-25T06:56:00Z'
 finished_at: '2026-10-25T07:10:11Z'
@@ -213,7 +213,7 @@ completion: completed
 verdict: needs_curation
 native_verdict: NEEDS_CURATION
 scientific_review: true
-summary: 'Full-coverage category review of all 89 records in data/structures/ribonucleoprotein/
+summary: 'Full-coverage category review of all 88 records in data/structures/ribonucleoprotein/
   (including the 3 new Cycle 3 Stage 1 records box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml,
   and box_h_aca_snornp_complex.yaml) verified distinct ribosomal, spliceosomal, snoRNP/sRNP,
   and RNP-granule boundaries. Two cohort findings were identified across 4 records:
@@ -2387,7 +2387,7 @@ boundary_decisions:
   - GO:0005688
   - GO:0005691
   - GO:0005683
-  rationale: All 89 records in data/structures/ribonucleoprotein/ represent distinct
+  rationale: All 88 records in data/structures/ribonucleoprotein/ represent distinct
     ribosomal, spliceosomal, snoRNP/sRNP, vault, or cytoplasmic/nuclear RNP granule
     assemblies.
   evidence_ids:

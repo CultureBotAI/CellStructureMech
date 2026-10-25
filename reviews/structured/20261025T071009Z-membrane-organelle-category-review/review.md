@@ -276,7 +276,7 @@ Three component_ref causal_graphs nodes across 2 membrane_organelle records omit
 
 minor / open / confirmed; issue key: membrane-organelle-causal-node-component-ref-grounding.
 
-In data/structures/membrane_organelle/magnetosome.yaml (GO:0110143), causal_graphs[0].nodes[3] (node_id: crystal, component_ref: magnetite) omits grounding: CHEBI:46726 declared on components#magnetite; and in data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml (GO:0042717), causal_graphs[0].nodes[2] (node_id: rc_lh1_pufx, component_ref: rc_lh1_pufx_core_complex) and causal_graphs[0].nodes[4] (node_id: cytochrome_bc1, component_ref: cytochrome_bc1_complex) omit grounding: cellstructuremech:rc_lh1_pufx_core_complex and grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex declared on their referenced components[] entries.
+In data/structures/membrane_organelle/magnetosome.yaml (GO:0110143), causal_graphs[0].nodes[2] (node_id: crystal, component_ref: magnetite, lines 351-354) omits grounding: CHEBI:46726 declared on components#magnetite; and in data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml (GO:0042717), causal_graphs[0].nodes[1] (node_id: rc_lh1_pufx, component_ref: rc_lh1_pufx_core_complex, lines 310-313) and causal_graphs[0].nodes[2] (node_id: cytochrome_bc1, component_ref: cytochrome_bc1_complex, lines 314-317) omit grounding: cellstructuremech:rc_lh1_pufx_core_complex and grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex declared on their referenced components[] entries.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -297,7 +297,7 @@ Propagate CHEBI:46726 to node crystal in magnetosome.yaml and cellstructuremech:
 | --- | --- | --- | --- |
 | ev_strict_membraneorganelle | scripts/validate_strict.py; strict receipt | supports | validate_strict.py exited 0 across all 993 records including all 224 membrane_organelle records. |
 | ev_labels_membraneorganelle | scripts/validate_id_label_correspondence.py; labels receipt | supports | validate_id_label_correspondence.py exited 0 across all ontology targets. |
-| ev_mo_node_grounding | data/structures/membrane_organelle/magnetosome.yaml; causal_graphs[0].nodes[3] (lines 351-354) in magnetosome.yaml and causal_graphs[0].nodes[2,4] in plasma_membrane_derived_chromatophore_membrane.yaml | supports | magnetosome.yaml causal_graphs[0] node crystal (component_ref: magnetite) omits CHEBI:46726 and plasma_membrane_derived_chromatophore_membrane.yaml nodes rc_lh1_pufx and cytochrome_bc1 omit their cellstructuremech: groundings. |
+| ev_mo_node_grounding | data/structures/membrane_organelle/magnetosome.yaml; causal_graphs[0].nodes[2] (lines 351-354) in magnetosome.yaml and causal_graphs[0].nodes[1,2] (lines 310-317) in plasma_membrane_derived_chromatophore_membrane.yaml | supports | magnetosome.yaml causal_graphs[0] node crystal (component_ref: magnetite) omits CHEBI:46726 and plasma_membrane_derived_chromatophore_membrane.yaml nodes rc_lh1_pufx and cytochrome_bc1 omit their cellstructuremech: groundings. |
 
 ## Limits And Additional Notes
 
@@ -4678,8 +4678,8 @@ evidence:
 - evidence_id: ev_mo_node_grounding
   kind: record_content
   reference: data/structures/membrane_organelle/magnetosome.yaml
-  locator: causal_graphs[0].nodes[3] (lines 351-354) in magnetosome.yaml and causal_graphs[0].nodes[2,4]
-    in plasma_membrane_derived_chromatophore_membrane.yaml
+  locator: causal_graphs[0].nodes[2] (lines 351-354) in magnetosome.yaml and causal_graphs[0].nodes[1,2]
+    (lines 310-317) in plasma_membrane_derived_chromatophore_membrane.yaml
   accessed_at: '2026-10-25T07:03:40Z'
   support: supports
   summary: 'magnetosome.yaml causal_graphs[0] node crystal (component_ref: magnetite)
@@ -4946,20 +4946,19 @@ findings:
   title: Three causal_graphs nodes with component_ref across 2 membrane_organelle
     records omit verified component groundings
   description: 'In data/structures/membrane_organelle/magnetosome.yaml (GO:0110143),
-    causal_graphs[0].nodes[3] (node_id: crystal, component_ref: magnetite) omits grounding:
-    CHEBI:46726 declared on components#magnetite; and in data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
-    (GO:0042717), causal_graphs[0].nodes[2] (node_id: rc_lh1_pufx, component_ref:
-    rc_lh1_pufx_core_complex) and causal_graphs[0].nodes[4] (node_id: cytochrome_bc1,
-    component_ref: cytochrome_bc1_complex) omit grounding: cellstructuremech:rc_lh1_pufx_core_complex
-    and grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex declared
-    on their referenced components[] entries.'
+    causal_graphs[0].nodes[2] (node_id: crystal, component_ref: magnetite, lines 351-354)
+    omits grounding: CHEBI:46726 declared on components#magnetite; and in data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+    (GO:0042717), causal_graphs[0].nodes[1] (node_id: rc_lh1_pufx, component_ref:
+    rc_lh1_pufx_core_complex, lines 310-313) and causal_graphs[0].nodes[2] (node_id:
+    cytochrome_bc1, component_ref: cytochrome_bc1_complex, lines 314-317) omit grounding:
+    cellstructuremech:rc_lh1_pufx_core_complex and grounding: cellstructuremech:chromatophore_cytochrome_bc1_complex
+    declared on their referenced components[] entries.'
   target_ids:
   - GO:0110143
   - GO:0042717
   field_paths:
+  - causal_graphs[0].nodes[1].grounding
   - causal_graphs[0].nodes[2].grounding
-  - causal_graphs[0].nodes[3].grounding
-  - causal_graphs[0].nodes[4].grounding
   evidence_ids:
   - ev_mo_node_grounding
   rule_id: docs/SCHEMA.md:CausalNode-grounding

@@ -19,16 +19,16 @@ previous_evidence:
   sha256: 0440b0090bcaa8047fb865bacbc74f604f2d06f1a3023dad3b8f5062a8edbb9b
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_report.md
-  sha256: 55364a50231d67ceff93dfe14f181773334c364a4f19f4c24336e1b206118b7f
+  sha256: d97d358de6722e21d81267f5b041785f01d937c331ad1c1fb024788e29cacf83
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_findings.md
-  sha256: 75104ee294e5f47aa753123b7df48f3555b0dde168dae459f07d78dbe4e31c9f
+  sha256: adb222a6a8a1c24c1d15f55d0908567031671b3bdce19140efc8d5d380aef53b
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/validation.md
   sha256: 458893e309e0630aad6a2ec892a0dcea43ccdecec6cbf1daf0e73c8041582db7
   kind: validation
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/coverage_inventory.json
-  sha256: ca4dee8ada7dea8974665562703652a1379b7aa4e843dd1aa199a4f8408f84de
+  sha256: 06bffa2b2d88736071c8ae87d42d525d8523800db7e0be9e6e7f4a4cb2f656de
   kind: supporting
 findings:
 - finding_id: static-microtubule-bundle-curation-history-graph-id-mismatch
