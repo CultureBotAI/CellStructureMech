@@ -24,14 +24,15 @@ summary: 'Fresh post-remediation review of all 36 CellStructureRecord YAML files
   in Cycle 3 Stage 5 (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190) resolving all
   17 open findings carried forward from Cycle 3 Stage 4 across issues #2430 (bibliographic
   citation repairs in primosome_complex, box_c_d_rnp_complex, box_h_aca_rnp_complex,
-  and box_h_aca_snornp_complex plus structured discussions[].evidence items in basal_body_cartwheel,
-  basal_body_cartwheel_inner_density, and proteasome_storage_granule), #2431 (component_type:
-  PROTEIN_COMPLEX for 11 heteromeric subcomplex components across 6 records and exact
-  curation_history causal_graphs[].id alignment across 9 records), and #2432 (propagation
-  of grounded component term IDs to 41 component_ref CausalNode entries across 20
-  records). All 36 records pass strict validation, ID-label correspondence, UniProt
-  verification, offline CURIE cache check, history ledger validation, and page regeneration
-  checks with zero open findings.'
+  and box_h_aca_snornp_complex plus discussion reference alignments and structured
+  discussions[].evidence items in basal_body_cartwheel, basal_body_cartwheel_inner_density,
+  and proteasome_storage_granule), #2431 (component_type: PROTEIN_COMPLEX for 8 heteromeric
+  subcomplex components across 7 records and exact curation_history causal_graphs[].graph_id
+  alignment across 9 records), and #2432 (propagation of grounded component CURIE
+  strings to 41 component_ref CausalNode.grounding entries across 20 records). All
+  36 records pass strict validation, ID-label correspondence, UniProt verification,
+  offline CURIE cache check, history ledger validation, and page regeneration checks
+  with zero open findings.'
 source:
   git_revision: 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190
   state: git_commit
@@ -833,8 +834,8 @@ checks:
   name: Offline CURIE liveness check across corpus
   status: passed
   required: true
-  summary: All 5776 resolved CURIEs (including newly added PMID:24106270, PMID:10982890,
-    PMID:9843512, and DOI:10.7554/eLife.34532) pass offline liveness verification.
+  summary: All 5776 resolved CURIEs (including newly added PMID:9372940, PMID:9632712,
+    PMID:9843512, GO:0005732, and DOI:10.7554/eLife.34532) pass offline liveness verification.
   target_ids:
   - GO:0009433
   - GO:0009429
@@ -976,13 +977,18 @@ assessments:
     (#2430)
   outcome: supported
   summary: 'All 7 records in Group 1 (#2430) have accurate PubMed/DOI citations and
-    structured discussion evidence: primosome_complex.yaml replaces PMID:8265400 with
-    PMID:24106270 (PriA-PriB-DnaT-DnaB primosome review), box_c_d_rnp_complex.yaml
-    replaces PMID:9489704 with PMID:10982890 (yeast Nop1p-Nop56p-Nop58p-Snu13p box
-    C/D core), box_h_aca_rnp_complex.yaml and box_h_aca_snornp_complex.yaml pair PMID:14562095
-    (Huh et al. 2003 Nature localization) with PMID:9843512 (Henras et al. 1998 EMBO
-    J Nhp2p-Gar1p-Nop10p-Cbf5p box H/ACA core), basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml
-    attach PMID:25657325 to discussions[0].evidence, and proteasome_storage_granule.yaml
+    aligned discussion evidence: primosome_complex.yaml corrects bibliographic .notes
+    strings on PMID:8663105 (Ng JY & Marians KJ 1996 J Biol Chem) and PMID:21856207
+    (Kaguni JM 2011 Curr Opin Chem Biol); box_c_d_rnp_complex.yaml removes misattributed
+    DOI:10.1016/j.molcel.2007.01.024 and PMID:10982895 and replaces them with PMID:9372940
+    (Gautier et al. 1997 Mol Cell Biol), PMID:9632712 (Wu et al. 1998 J Biol Chem),
+    GO:0005732, and https://www.uniprot.org/uniprotkb/P39990; box_h_aca_rnp_complex.yaml
+    removes misattributed DOI:10.1016/j.molcel.2007.01.024, reconciles PMID:14562095
+    notes to Huh WK et al. 2003 (Nature), and pairs with PMID:9843512 (Henras et al.
+    1998 EMBO J); box_h_aca_snornp_complex.yaml adds PMID:9843512 alongside verified
+    PMID:14562095; basal_body_cartwheel.yaml (discussions[3].notes) and basal_body_cartwheel_inner_density.yaml
+    (discussions[5].notes) align unindexed PMID:42709820 prose mentions to DOI:10.1073/pnas.2612170123
+    matching their structured evidence items; and proteasome_storage_granule.yaml
     attaches DOI:10.7554/eLife.34532 (supports: REFUTE) to discussions[0].evidence.'
   target_ids:
   - GO:1990077
@@ -1000,12 +1006,20 @@ assessments:
   topic: PROTEIN_COMPLEX typing for heteromeric subcomplexes and curation_history
     causal_graph ID alignment (#2431)
   outcome: supported
-  summary: 'All 11 heteromeric subcomplex components across arp2_3_protein_complex.yaml,
-    gamma_tubulin_ring_complex.yaml, proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml,
-    proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml,
-    nucleosome.yaml, and box_c_d_rnp_complex.yaml now use component_type: PROTEIN_COMPLEX,
-    and all 9 records with C3S1/C3S2 curation_history causal_graphs[].id discrepancies
-    now reference their exact causal_graphs[].id values.'
+  summary: 'All 8 heteromeric subcomplex components (arp2_arp3_nucleation_dimer in
+    arp2_3_protein_complex.yaml; gcp4_gcp5_gcp6_ring_subunits in gamma_tubulin_ring_complex.yaml;
+    catalytic_hexamer_head and central_rotational_stalk in proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml;
+    histone_octamer_core in nucleosome.yaml; nop1_nop56_nop58_snu13_core in box_c_d_rnp_complex.yaml;
+    and cbf5_gar1_nhp2_nop10_core in box_h_aca_rnp_complex.yaml and box_h_aca_snornp_complex.yaml)
+    across 7 records now use component_type: PROTEIN_COMPLEX, and all 9 records with
+    C3S1/C3S2 curation_history[].changes causal_graphs[].graph_id discrepancies (primosome_complex.yaml
+    -> primosome_primer_synthesis; static_microtubule_bundle.yaml -> static_microtubule_bundle_organization;
+    elongasome.yaml -> elongasome_sidewall_elongation; proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
+    -> catalytic_domain_rotary_mechanism; proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml
+    -> proton_transporting_domain_mechanism; chaperonin_atpase_complex.yaml -> chaperonin_atpase_complex_folding_mechanism;
+    box_c_d_rnp_complex.yaml -> box_c_d_rnp_rrna_processing; box_h_aca_rnp_complex.yaml
+    -> box_h_aca_rnp_pseudouridylation; rnp_body.yaml -> caulobacter_br_body_cycle)
+    now match their record causal_graphs[].id values.'
   target_ids:
   - GO:1990077
   - GO:0099070
@@ -1018,18 +1032,20 @@ assessments:
   - GO:0016465
   - GO:0170049
   - GO:0072588
+  - GO:0031429
   - GO:0140365
   evidence_ids:
   - ev_strict_c3_stage5
   - ev_history_c3_stage5
 - assessment_id: assess_group3_causal_node_component_ref_grounding
   area: grounding
-  topic: Propagation of grounded component term IDs to causal_graphs component_ref
+  topic: Propagation of grounded component CURIE strings to causal_graphs component_ref
     nodes (#2432)
   outcome: supported
-  summary: 'All 41 component_ref CausalNode entries across the 20 records in Group
-    3 (#2432) now carry the exact term: {id, label} grounding of their referenced
-    components[] entries and pass strict LinkML and OAK ID-label correspondence validation.'
+  summary: All 41 component_ref CausalNode entries across the 20 records in Group
+    3 (#2432) now carry the exact grounding CURIE string of their referenced components[].grounding
+    entries on CausalNode.grounding and pass strict LinkML and OAK ID-label correspondence
+    validation.
   target_ids:
   - GO:0009433
   - GO:0009429
