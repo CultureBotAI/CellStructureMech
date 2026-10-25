@@ -42,6 +42,12 @@ curation_history:
     tethering of RsbR (DOI:10.1038/s41467-019-10782-0, DOI:10.1107/S205225251900945X,
     DOI:10.1038/nmicrobiol.2017.5).
   llm_assisted: true
+- timestamp: '2026-10-25T05:35:08Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 3 Stage 3 protein_examples curation: added 3 verified UniProtKB
+    protein_example(s).'
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 components:
@@ -94,6 +100,21 @@ components:
         for gene ytvA in Bacillus subtilis subsp. subtilis str. 168. Establishes the
         accession and gene identity only; the component's membership in this structure
         rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q8Y8K9
+    protein_label: RsbR protein
+    gene_symbol: RsbR
+    taxon_id: NCBITaxon:169963
+    taxon_label: Listeria monocytogenes EGD-e
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene rsbR in Listeria
+      monocytogenes EGD-e. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8Y8K9
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8Y8K9 for gene rsbR in Listeria
+        monocytogenes EGD-e. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
   evidence:
   - reference: DOI:10.1038/s41467-019-10782-0
     notes: Listeria cryo-EM resolves RsbR STAS domains in the core; the N-terminal
@@ -127,6 +148,21 @@ components:
       notes: Kwon et al. cloned the proteins from strain 168 (ATCC 23857) and reconstituted
         RsbRA-RsbS cores. The accession, reviewed status and strain taxon were independently
         checked at UniProt; the canonical taxon label was checked through ENA taxonomy.
+  - uniprot_id: UniProtKB:Q92DC5
+    protein_label: RsbS protein
+    gene_symbol: rsbS
+    taxon_id: NCBITaxon:169963
+    taxon_label: Listeria monocytogenes EGD-e
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene rsbS in Listeria
+      monocytogenes EGD-e. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q92DC5
+      notes: UniProtKB unreviewed (TrEMBL) entry Q92DC5 for gene rsbS in Listeria
+        monocytogenes EGD-e. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
   evidence:
   - reference: DOI:10.1038/s41467-019-10782-0
     notes: RsbS is resolved as a core constituent in the Listeria reconstruction.
@@ -172,6 +208,21 @@ components:
         for gene rsbT in Bacillus subtilis subsp. subtilis str. 168. Establishes the
         accession and gene identity only; the component's membership in this structure
         rests on the record's own sources.
+  - uniprot_id: UniProtKB:Q8Y8K8
+    protein_label: RsbT protein
+    gene_symbol: rsbT
+    taxon_id: NCBITaxon:169963
+    taxon_label: Listeria monocytogenes EGD-e
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-25'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene rsbT in Listeria
+      monocytogenes EGD-e. Identifier for the component's declared gene symbol; it
+      is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8Y8K8
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8Y8K8 for gene rsbT in Listeria
+        monocytogenes EGD-e. Establishes the accession and gene identity only; the
+        component's membership in this structure rests on the record's own sources.
 - component_id: prli42
   label: Stressosome-associated protein Prli42
   component_type: PROTEIN
