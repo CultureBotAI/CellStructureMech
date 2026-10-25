@@ -127,7 +127,7 @@ components:
         rests on the record's own sources.
 - component_id: gcp4_gcp5_gcp6_ring_subunits
   label: gamma-TuRC asymmetric seam subunits (GCP4/Gfh1, GCP5/Mod21, GCP6/Alp16)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - gfh1
@@ -410,4 +410,11 @@ curation_history:
   action: ADDRESS_SAVED_REVIEW
   changes: 'Addressed #2420: Updated components#mto1_mto2_activating_tether from component_type
     PROTEIN to PROTEIN_COMPLEX.'
+  llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2431 (finding cytoskeleton-heteromeric-subcomplex-component-types):
+    updated components#gcp4_gcp5_gcp6_ring_subunits from component_type PROTEIN to
+    PROTEIN_COMPLEX.'
   llm_assisted: true

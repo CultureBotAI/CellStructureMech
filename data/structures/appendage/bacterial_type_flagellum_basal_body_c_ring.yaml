@@ -57,6 +57,13 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding):
+    propagated verified component grounding to causal_graphs component_ref node(s):
+    flig (InterPro:IPR000090), flim (InterPro:IPR001689), flin (InterPro:IPR012826).'
+  llm_assisted: true
 synonyms:
 - synonym_text: flagellar basal body, C ring
   synonym_type: EXACT_SYNONYM
@@ -301,14 +308,17 @@ causal_graphs:
     label: FliG
     node_type: GENE_OR_PROTEIN
     component_ref: flig
+    grounding: InterPro:IPR000090
   - node_id: flim
     label: FliM
     node_type: GENE_OR_PROTEIN
     component_ref: flim
+    grounding: InterPro:IPR001689
   - node_id: flin
     label: FliN
     node_type: GENE_OR_PROTEIN
     component_ref: flin
+    grounding: InterPro:IPR012826
   - node_id: c_ring
     label: bacterial-type flagellum basal body, C ring
     node_type: STRUCTURE

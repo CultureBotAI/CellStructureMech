@@ -39,6 +39,13 @@ curation_history:
   changes: '#1477: tightened the SSB graph scope note to describe tetrameric composition
     rather than tetramerization.'
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
+    verified component grounding to causal_graphs component_ref node(s): ssb_protein
+    (InterPro:IPR011344).'
+  llm_assisted: true
 synonyms:
 - synonym_text: SSB complex
   synonym_type: EXACT_SYNONYM
@@ -154,6 +161,7 @@ causal_graphs:
     label: single-stranded DNA-binding protein
     node_type: GENE_OR_PROTEIN
     component_ref: ssb_protein
+    grounding: InterPro:IPR011344
   - node_id: single_stranded_dna
     label: single-stranded DNA
     node_type: GENETIC_ELEMENT

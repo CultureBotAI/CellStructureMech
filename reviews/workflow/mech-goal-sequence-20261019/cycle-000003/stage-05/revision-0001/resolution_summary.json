@@ -1,0 +1,64 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 3,
+  "stage": 5,
+  "revision": 1,
+  "source_revision": "02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190",
+  "stage4_source_revision": "83ec9d5184fb203d87d8c3bd7043792d385193bf",
+  "stage4_evidence_sha256": "5c9d063bb0b141b352ef104a9e33ce39b7aa2ba418e55f76fe195e7d6fbae2d0",
+  "remediated_record_count": 36,
+  "findings_consumed": 17,
+  "findings_resolved": 17,
+  "findings_carried_forward": 0,
+  "verification_review_bundle": "reviews/structured/20261025T122500Z-c3-stage5-remediation-verification/review.yaml",
+  "verification_review_sha256": "a135f495b6741cec26fd22368bab479d795150b6214e246d0431a0d6496418a1",
+  "issues": [
+    {
+      "number": 2430,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2430",
+      "action": "created",
+      "state": "closed",
+      "group_id": "bib-citation-and-discussion-evidence-attribution",
+      "finding_ids": [
+        "primosome-complex-pmid-citation-and-graph-id",
+        "ribonucleoprotein-box-rnp-reference-misattribution",
+        "cytoskeleton-cartwheel-discussions-unlinked-pmid",
+        "inclusion-psg-discussions-unlinked-doi"
+      ],
+      "resolution_commit_sha": "02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190"
+    },
+    {
+      "number": 2431,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2431",
+      "action": "created",
+      "state": "closed",
+      "group_id": "heteromeric-subcomplex-types-and-history-graph-ids",
+      "finding_ids": [
+        "static-microtubule-bundle-curation-history-graph-id-mismatch",
+        "cytoskeleton-heteromeric-subcomplex-component-types",
+        "elongasome-curation-history-causal-graph-id-mismatch",
+        "energy-complex-atpase-subcomplex-types-and-history-graph-ids",
+        "other-nucleosome-type-and-chaperonin-history-graph-id",
+        "ribonucleoprotein-subcomplex-types-and-history-graph-ids"
+      ],
+      "resolution_commit_sha": "02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190"
+    },
+    {
+      "number": 2432,
+      "url": "https://github.com/CultureBotAI/CellStructureMech/issues/2432",
+      "action": "created",
+      "state": "closed",
+      "group_id": "causal-node-component-ref-grounding-propagation",
+      "finding_ids": [
+        "appendage-flagellum-causal-node-component-ref-grounding",
+        "energy-complex-mcr-causal-node-component-ref-grounding",
+        "envelope-s-layer-causal-node-component-ref-grounding",
+        "membrane-organelle-causal-node-component-ref-grounding",
+        "other-causal-node-component-ref-grounding",
+        "secretion-system-t6ss-causal-node-component-ref-grounding",
+        "spore-ascospore-wall-causal-node-component-ref-grounding"
+      ],
+      "resolution_commit_sha": "02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190"
+    }
+  ]
+}

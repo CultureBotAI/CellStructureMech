@@ -265,6 +265,12 @@ curation_history:
 - timestamp: '2026-10-24T06:00:00Z'
   curator: antigravity
   action: CURATED_CAUSAL_GRAPH
-  changes: Added alpha_tubulin -> beta_tubulin heterodimerization edge in static_bundle_stabilization
+  changes: Added alpha_tubulin -> beta_tubulin heterodimerization edge in static_microtubule_bundle_organization
     (DOI:10.1083/jcb.201502025, DOI:10.7554/eLife.89958).
+  llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2431 (finding static-microtubule-bundle-curation-history-graph-id-mismatch):
+    aligned curation_history[1] graph_id to static_microtubule_bundle_organization.'
   llm_assisted: true

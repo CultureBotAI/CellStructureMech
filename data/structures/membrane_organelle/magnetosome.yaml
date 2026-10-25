@@ -352,6 +352,7 @@ causal_graphs:
     label: magnetite
     node_type: CHEMICAL
     component_ref: magnetite
+    grounding: CHEBI:46726
   - node_id: mamj
     label: MamJ connector
     node_type: GENE_OR_PROTEIN
@@ -569,6 +570,13 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: 'Added MamJ connector node (mamj, component_ref: mamj_connector, InterPro:IPR060787)
     and vesicle-to-MamK attachment edge to magnetosome_chain_alignment.'
+  llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding membrane-organelle-causal-node-component-ref-grounding):
+    propagated verified component grounding to causal_graphs component_ref node(s):
+    crystal (CHEBI:46726).'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510

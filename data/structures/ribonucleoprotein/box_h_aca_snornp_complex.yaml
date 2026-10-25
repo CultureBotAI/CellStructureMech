@@ -42,7 +42,7 @@ components:
 - component_id: cbf5_gar1_nhp2_nop10_core
   label: box H/ACA snoRNP pseudouridine synthase core quartet (Cbf5/Dyskerin, Gar1,
     Nhp2, Nop10)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - CBF5
@@ -57,6 +57,10 @@ components:
   - reference: GO:0031429
     notes: Defines the catalytic Cbf5 pseudouridine synthase and core subunits of
       the box H/ACA snoRNP complex.
+  - reference: PMID:9843512
+    notes: Henras A et al. 1998, 'Nhp2p and Nop10p are essential for the function
+      of H/ACA snoRNPs.', EMBO J — established Cbf5p, Gar1p, Nhp2p, and Nop10p as
+      essential core subunits of yeast box H/ACA snoRNPs.
   protein_examples:
   - uniprot_id: UniProtKB:P33322
     protein_label: H/ACA ribonucleoprotein complex subunit CBF5
@@ -73,6 +77,10 @@ components:
       notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
         yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
         'Nucleus, nucleolus' localisation of P33322.
+    - reference: PMID:9843512
+      notes: Henras A et al. 1998, ‘Nhp2p and Nop10p are essential for the function
+        of H/ACA snoRNPs.’, EMBO J. Experimental evidence for the yeast box H/ACA
+        snoRNP core containing Cbf5p.
   - uniprot_id: UniProtKB:P28007
     protein_label: H/ACA ribonucleoprotein complex subunit GAR1
     gene_symbol: GAR1
@@ -146,6 +154,9 @@ evidence:
     complex.
 - reference: GO:1990904
   notes: Gene Ontology cellular-component parent term for ribonucleoprotein complex.
+- reference: PMID:9843512
+  notes: Henras A et al. 1998, 'Nhp2p and Nop10p are essential for the function of
+    H/ACA snoRNPs.', EMBO J.
 causal_graphs:
 - graph_id: box_h_aca_snornp_complex_mechanism
   title: Box h/aca snornp complex assembly and functional mechanism
@@ -247,6 +258,15 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2430 and #2431 (findings ribonucleoprotein-box-rnp-reference-misattribution,
+    ribonucleoprotein-subcomplex-types-and-history-graph-ids): updated components#cbf5_gar1_nhp2_nop10_core
+    from PROTEIN to PROTEIN_COMPLEX and added explicit PMID:9843512 (Henras et al.
+    1998, EMBO J) box H/ACA snoRNP core evidence alongside verified PMID:14562095
+    (Huh et al. 2003, Nature) nucleolar localization evidence.'
+  llm_assisted: true
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

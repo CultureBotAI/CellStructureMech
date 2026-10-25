@@ -52,6 +52,12 @@ curation_history:
     and added UniProtKB:P0A937 to bam_b_to_e_lipoproteins.xrefs (DOI:10.1038/nature17199,
     DOI:10.1038/ncomms12865).
   llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
+    verified component grounding to causal_graphs component_ref node(s): bam_a (InterPro:IPR023707).'
+  llm_assisted: true
 synonyms:
 - synonym_text: BAM complex
   synonym_type: EXACT_SYNONYM
@@ -353,6 +359,7 @@ causal_graphs:
     label: BamA beta-barrel core
     node_type: GENE_OR_PROTEIN
     component_ref: bam_a
+    grounding: InterPro:IPR023707
   - node_id: bam_b_to_e_lipoproteins
     label: BamB-E lipoproteins
     node_type: GENE_OR_PROTEIN

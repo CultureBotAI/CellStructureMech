@@ -236,6 +236,13 @@ curation_history:
 - timestamp: '2026-10-24T06:00:00Z'
   curator: antigravity
   action: CURATED_CAUSAL_GRAPH
-  changes: Enriched chaperonin_cage_assembly_and_folding with GroES capping edge and
-    cis_folding_cavity state mediating protein_folding (DOI:10.1038/41944, GO:0016465).
+  changes: Enriched chaperonin_atpase_complex_folding_mechanism with GroES capping
+    edge and cis_folding_cavity state mediating protein_folding (DOI:10.1038/41944,
+    GO:0016465).
+  llm_assisted: true
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2431 (finding other-nucleosome-type-and-chaperonin-history-graph-id):
+    aligned curation_history[1] graph_id to chaperonin_atpase_complex_folding_mechanism.'
   llm_assisted: true
