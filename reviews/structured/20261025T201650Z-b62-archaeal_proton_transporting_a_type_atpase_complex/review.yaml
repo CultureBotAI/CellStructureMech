@@ -1,0 +1,868 @@
+schema_version: 1.0.0
+review_id: 20261025T201650Z-b62-archaeal_proton_transporting_a_type_atpase_complex
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Scientific review of archaeal proton-transporting A-type ATPase complex
+started_at: '2026-10-25T19:59:36Z'
+finished_at: '2026-10-25T20:16:50.820962Z'
+reviewer:
+  identity: Codex /root/plaque_review_source
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review of the complete maintained target and retained
+    native/primary payloads; this reviewer did not author or alter the maintained
+    scientific record.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: Source-backed curation findings; current-base global validation receipts
+  attached.
+scientific_review: true
+summary: Reviewed the full record at explicitly bounded literature/native-source scope.
+  Found 1 major and 0 minor issues. Accurate identities and supported biology are
+  preserved; unresolved formation, prevalence and access details are reported separately.
+source:
+  git_revision: 1497f644d59655f087825054920ef1a99ddebce4
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+    sha256: 038cd0feb2fa802aee4b15ba40ff7ec80836c3765fa6816f15a1d3bbc1c2de2c
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+scope:
+  description: One complete maintained record, all fields, source identities, current
+    authority scopes and mechanistic assertions; no maintained scientific edits.
+  selection: Root-confirmed strict uncovered-target selection for fresh B62; one independent
+    review bundle per target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990490
+targets:
+- target_id: GO:1990490
+  path: data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+  label: archaeal proton-transporting A-type ATPase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+    role: maintained scientific record
+checks:
+- check_id: schema
+  name: Native schema
+  status: passed
+  required: true
+  summary: Executed current-target check returned0.
+  target_ids:
+  - GO:1990490
+  command: just validate data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-schema
+- check_id: strict
+  name: Native strict
+  status: passed
+  required: true
+  summary: Executed current-target check returned0.
+  target_ids:
+  - GO:1990490
+  command: just validate-strict data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+    --out /private/tmp/cellstructure-batch62-20261025-siz_24tk/archaeal_proton_transporting_a_type_atpase_complex-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-strict
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  summary: Executed current-target check returned0.
+  target_ids:
+  - GO:1990490
+  command: /private/tmp/cellstructure-batch62-20261025-siz_24tk/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-causal-graphs
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  summary: Executed current-target check returned0.
+  target_ids:
+  - GO:1990490
+  command: /private/tmp/cellstructure-batch62-20261025-siz_24tk/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+    --verify
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-verify
+- check_id: scientific-review
+  name: Bounded full-record scientific review
+  status: passed
+  required: true
+  summary: Every maintained field was inspected against the explicitly declared native
+    and literature scopes; source-body access, inference and unresolved formation
+    limits remain in the assessments.
+  target_ids:
+  - GO:1990490
+  evidence_ids:
+  - source-go-ancestors
+  - source-go
+  - source-ipr-IPR000245
+  - source-ipr-IPR002490
+  - source-ipr-IPR005724
+  - source-ipr-IPR005726
+  - source-protein-Q57669
+  - source-protein-Q57670
+  - source-protein-Q57674
+  - source-protein-Q57675
+  - source-tax-186497
+  - source-tax-2157
+  - source-tax-243232
+  - source-pmid-12768457
+  - source-pmid-15220347
+  - source-pmid-19203996
+  - source-pmid-17614964
+  - source-pmid-24650628
+  - source-coskun2004-pdf
+  - source-vonck2009-legacy
+  - source-coskun2004-publisher
+  - source-lingl2003-publisher
+  - source-lingl2003-pdf
+  - record-target
+  - record-schema
+- check_id: final-global-history
+  name: Current-base native corpus history
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990490
+  command: just validate-history
+  exit_code: 0
+  evidence_ids:
+  - final-global-history
+  summary: Native append-only history validation passed for2065 history files.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-products
+  name: Current-base native corpus products
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990490
+  command: just validate-products
+  exit_code: 0
+  evidence_ids:
+  - final-global-products
+  summary: Native corpus ID-label validator returned0; it does not prove class-level
+    identity or support biological scope.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-traits
+  name: Current-base native corpus traits
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990490
+  command: just check-trait-links --check
+  exit_code: 0
+  evidence_ids:
+  - final-global-traits
+  summary: All10 trait links matched the freshly obtained TraitMech index. This target
+    has no asserted trait links.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-curies
+  name: Current-base native corpus curies
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990490
+  command: just check-curies-strict
+  exit_code: 0
+  evidence_ids:
+  - final-global-curies
+  summary: Native corpus resolver returned0:6105 identifiers,4997 OK,856 UNREACHABLE,252
+    SKIPPED. BFO authority control was not exercised because unreachable. Native exit0
+    is not universal resolution; target source-native checks and limitations are recorded
+    separately.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: final-global-qc
+  name: Current-base native corpus qc
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990490
+  command: just qc
+  exit_code: 0
+  evidence_ids:
+  - final-global-qc
+  summary: Full current-base native QC passed; review-only additions are checked separately
+    after saving. Scientific content was unchanged.
+  scope_note: Run against unchanged scientific inputs at 1497f644d59655f087825054920ef1a99ddebce4;
+    complete baseline regular-file manifest SHA256 29137a831cea7ea233f8d3f7930a920c51f63760b1c23623e2e4c0bf7bfac77e.
+- check_id: imodulondb-applicability
+  name: Native expression-dataset applicability check
+  status: passed
+  required: false
+  target_ids:
+  - GO:1990490
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  summary: The native dataset-list command ran successfully. No dataset matches the
+    exact named organisms, so downstream target-gene queries are not applicable. Listing
+    absence is not biological absence; expression-module membership would not establish
+    physical assembly.
+  evidence_ids:
+  - imodulondb-datasets
+evidence:
+- evidence_id: source-go-ancestors
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990490/ancestors?relations=is_a
+  locator: Complete ancestor lists; request explicitly restricts relations=is_a.
+  accessed_at: '2026-10-25T20:02:43.233070Z'
+  support: supports
+  summary: 'This is an is_a-only ancestry request. Returned closures: GO:1990490:
+    GO:0016469, GO:1902494, GO:0098796, GO:1904949, GO:1990490, GO:0032991, GO:0005575.
+    This response does not attest other relation types.'
+  snapshot_sha256: 0ea4c20b500923eba8f779ebf99ffd96556681afb806fa61ab009a092f5d7cfa
+- evidence_id: source-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0015986,GO:0016469,GO:1904949,GO:1990490
+  locator: 'All returned terms: identifiers, definitions, synonyms, isObsolete and
+    typed children relationships.'
+  accessed_at: '2026-10-25T20:02:43.232034Z'
+  support: supports
+  summary: 'Complete requested native GO responses read: GO:0016469 proton-transporting
+    two-sector ATPase complex; GO:1990490 archaeal proton-transporting A-type ATPase
+    complex; GO:1904949 ATPase complex; GO:0015986 proton motive force-driven ATP
+    synthesis. Definitions, obsolescence, synonyms and typed relationships were checked
+    separately from biological source claims.'
+  snapshot_sha256: 91532feb3aaa82e7f74d5ac6ab3f7ccc59b221d631e0e0d54652f01a15b87f98
+- evidence_id: source-ipr-IPR000245
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR000245/
+  locator: metadata.accession/name/type, complete descriptions and member signatures.
+  accessed_at: '2026-10-25T20:02:43.859045Z'
+  support: supports
+  summary: 'Native InterPro IPR000245 is named {''name'': ''V-ATPase proteolipid subunit'',
+    ''short'': ''ATPase_proteolipid_csu''}, with entry type ''family''. Its complete
+    native description and signatures were inspected for the represented family/domain
+    scope. This family-entry response does not by itself attest membership of a particular
+    UniProt accession.'
+  snapshot_sha256: a86a1efa6e95716821fa174a2614e117d8b998a09b09d471efec28e0528e4285
+- evidence_id: source-ipr-IPR002490
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002490/
+  locator: metadata.accession/name/type, complete descriptions and member signatures.
+  accessed_at: '2026-10-25T20:02:43.881808Z'
+  support: supports
+  summary: 'Native InterPro IPR002490 is named {''name'': ''V-type ATPase, V0 complex,
+    116kDa subunit family'', ''short'': ''V-ATPase_116kDa_su''}, with entry type ''family''.
+    Its complete native description and signatures were inspected for the represented
+    family/domain scope. This family-entry response does not by itself attest membership
+    of a particular UniProt accession.'
+  snapshot_sha256: 5dfaea2fea926facf91780ae51deea145522b6d61b77a490182c2d6b5cf1524c
+- evidence_id: source-ipr-IPR005724
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005724/
+  locator: metadata.accession/name/type, complete descriptions and member signatures.
+  accessed_at: '2026-10-25T20:02:44.486723Z'
+  support: supports
+  summary: 'Native InterPro IPR005724 is named {''name'': ''ATPase, A1 complex, beta
+    subunit'', ''short'': ''ATPase_A1-cplx_bsu''}, with entry type ''family''. Its
+    complete native description and signatures were inspected for the represented
+    family/domain scope. This family-entry response does not by itself attest membership
+    of a particular UniProt accession.'
+  snapshot_sha256: 2324bafd7836fe9e71ef0bd436f41fb3f99f74c5cda1361a1dddb6867b6f1465
+- evidence_id: source-ipr-IPR005726
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005726/
+  locator: metadata.accession/name/type, complete descriptions and member signatures.
+  accessed_at: '2026-10-25T20:02:44.687554Z'
+  support: supports
+  summary: 'Native InterPro IPR005726 is named {''name'': ''ATP synthase alpha chain,
+    archaea'', ''short'': ''ATP_synth_asu_arc''}, with entry type ''family''. Its
+    complete native description and signatures were inspected for the represented
+    family/domain scope. This family-entry response does not by itself attest membership
+    of a particular UniProt accession.'
+  snapshot_sha256: 441c1b449d423d9b05bf58151c96c4a28cb98c65f2084cc6dd52bccaecb0f1b5
+- evidence_id: source-protein-Q57669
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q57669.json
+  locator: Identity, entryType, proteinDescription, genes, organism, relevant comments
+    and InterPro cross-references.
+  accessed_at: '2026-10-25T20:02:46.080088Z'
+  support: supports
+  summary: Native Q57669 is UniProtKB reviewed (Swiss-Prot); recommended protein name
+    A-type ATP synthase subunit B; primary gene(s) atpB; organism Methanocaldococcus
+    jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (NCBITaxon:243232).
+    Its own InterPro cross-references are IPR055190, IPR020003, IPR005724, IPR004100,
+    IPR000194, IPR027417, IPR022879. Relevant function, subunit, subcellular-location
+    and similarity comments were read, retaining evidence levels and source context.
+    This protein response supplies the member-to-family bridge; a separate family
+    entry does not establish that bridge by itself.
+  snapshot_sha256: 35ec2791288015a4a8d9be9aa64de4e50fbc53545ef65009f14689829e8e3ed3
+- evidence_id: source-protein-Q57670
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q57670.json
+  locator: Identity, entryType, proteinDescription, genes, organism, relevant comments
+    and InterPro cross-references.
+  accessed_at: '2026-10-25T20:02:46.505590Z'
+  support: supports
+  summary: Native Q57670 is UniProtKB reviewed (Swiss-Prot); recommended protein name
+    A-type ATP synthase subunit A; primary gene(s) atpA; organism Methanocaldococcus
+    jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (NCBITaxon:243232).
+    Its own InterPro cross-references are IPR055190, IPR031686, IPR023366, IPR005726,
+    IPR020003, IPR004100, IPR036121, IPR000194, IPR024034, IPR027417, IPR022878. Relevant
+    function, subunit, subcellular-location and similarity comments were read, retaining
+    evidence levels and source context. This protein response supplies the member-to-family
+    bridge; a separate family entry does not establish that bridge by itself.
+  snapshot_sha256: bd17478a3903e3e017cd331b83ad11caf78fd59d2a481a936beba65a76ea9082
+- evidence_id: source-protein-Q57674
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q57674.json
+  locator: Identity, entryType, proteinDescription, genes, organism, relevant comments
+    and InterPro cross-references.
+  accessed_at: '2026-10-25T20:02:46.724424Z'
+  support: supports
+  summary: Native Q57674 is UniProtKB reviewed (Swiss-Prot); recommended protein name
+    A-type ATP synthase subunit K; primary gene(s) atpK; organism Methanocaldococcus
+    jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (NCBITaxon:243232).
+    Its own InterPro cross-references are IPR038662, IPR002379, IPR000245, IPR035921.
+    Relevant function, subunit, subcellular-location and similarity comments were
+    read, retaining evidence levels and source context. This protein response supplies
+    the member-to-family bridge; a separate family entry does not establish that bridge
+    by itself.
+  snapshot_sha256: 24ead57c17c329ad58e444204e9d3e9af4324bd95d5b7b816fae5b57cbc8adea
+- evidence_id: source-protein-Q57675
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q57675.json
+  locator: Identity, entryType, proteinDescription, genes, organism, relevant comments
+    and InterPro cross-references.
+  accessed_at: '2026-10-25T20:02:47.160431Z'
+  support: supports
+  summary: Native Q57675 is UniProtKB reviewed (Swiss-Prot); recommended protein name
+    A-type ATP synthase subunit I; primary gene(s) atpI; organism Methanocaldococcus
+    jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (NCBITaxon:243232).
+    Its own InterPro cross-references are IPR002490. Relevant function, subunit, subcellular-location
+    and similarity comments were read, retaining evidence levels and source context.
+    This protein response supplies the member-to-family bridge; a separate family
+    entry does not establish that bridge by itself.
+  snapshot_sha256: 46f4c75b8a2b1aed3b9b0d67ab5bc118c49e8059cf0934ba6ed04e529b3a47a5
+- evidence_id: source-tax-186497
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/186497
+  locator: 'Complete taxonomy response: taxId, scientificName, rank and lineage.'
+  accessed_at: '2026-10-25T20:02:45.091247Z'
+  support: supports
+  summary: Native taxonomy identifies NCBITaxon:186497 as Pyrococcus furiosus DSM
+    3638, rank strain. The response verifies this identifier/name/rank and lineage
+    only, not prevalence or an experimental organism assignment.
+  snapshot_sha256: 8444ca1fba9ae3efd3cc3af260e82a9ba750c9a3d331f493dcc3ef2b706ed161
+- evidence_id: source-tax-2157
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2157
+  locator: 'Complete taxonomy response: taxId, scientificName, rank and lineage.'
+  accessed_at: '2026-10-25T20:02:45.305845Z'
+  support: supports
+  summary: Native taxonomy identifies NCBITaxon:2157 as Archaea, rank domain. The
+    response verifies this identifier/name/rank and lineage only, not prevalence or
+    an experimental organism assignment.
+  snapshot_sha256: c6e652011b95e43e933983bf5f3f5cec9508c1925adae00dc55e46cd4e816b19
+- evidence_id: source-tax-243232
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/243232
+  locator: 'Complete taxonomy response: taxId, scientificName, rank and lineage.'
+  accessed_at: '2026-10-25T20:02:45.916123Z'
+  support: supports
+  summary: Native taxonomy identifies NCBITaxon:243232 as Methanocaldococcus jannaschii
+    DSM 2661, rank strain. The response verifies this identifier/name/rank and lineage
+    only, not prevalence or an experimental organism assignment.
+  snapshot_sha256: 745e98bc6df67c74391c2522b11541b7221858073bd003c2855256930db06a36
+- evidence_id: source-pmid-12768457
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12768457+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native Europe PMC MED identity, title/authors/year/DOI and complete
+    abstract where supplied; not a full-body attestation.
+  accessed_at: '2026-10-25T20:02:47.343709Z'
+  support: supports
+  summary: Lingl et al. 2003, DOI10.1007/s00792-003-0318-7, describes isolation of
+    intact nine-subunit Methanocaldococcus jannaschii A1AO ATP synthase. Only the
+    complete native abstract was read; it supports composition/isolation, not all
+    detailed experimental or formation claims.
+  snapshot_sha256: 81a68dbb02c8567e96e881d28d6782792f7eadea4b8f67df5e72f8e72c0ca367
+- evidence_id: source-pmid-15220347
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15220347+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native Europe PMC MED identity, title/authors/year/DOI and complete
+    abstract where supplied; not a full-body attestation.
+  accessed_at: '2026-10-25T20:02:47.795249Z'
+  support: supports
+  summary: Coskun et al. 2004, DOI10.1074/jbc.M406196200, is the M. jannaschii A-type
+    ATP synthase electron-microscopy study; bibliographic identity and full abstract
+    match the separately read publisher PDF.
+  snapshot_sha256: 18a78db722b785f54ec4fdf392c40a3b632c11517b14fbb1da4910bef35791a2
+- evidence_id: source-pmid-19203996
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19203996+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native Europe PMC MED identity, title/authors/year/DOI and complete
+    abstract where supplied; not a full-body attestation.
+  accessed_at: '2026-10-25T20:02:47.999176Z'
+  support: supports
+  summary: Vonck et al. 2009, DOI10.1074/jbc.M808498200, is the Pyrococcus furiosus
+    A1AO ATP synthase 3D reconstruction study; exact identity and abstract match the
+    separately read complete primary main text.
+  snapshot_sha256: 83120fde2f6befd42ad3f94047f2a752ba3b95b3734632ef0829ec40db15d3af
+- evidence_id: source-pmid-17614964
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17614964+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native Europe PMC MED identity, title/authors/year/DOI and complete
+    abstract where supplied; not a full-body attestation.
+  accessed_at: '2026-10-25T20:04:01.820229Z'
+  support: supports
+  summary: Pisa et al. 2007 primary abstract reports Na+-dependent ATP hydrolysis
+    in purified P. furiosus ATP synthase, substitution by Li+ but not K+, and competition
+    of sodium and protons for a common binding site as inferred from altered sodium
+    dependence at high proton concentration. This supports a sodium-coupling qualification;
+    it does not prove that the enzyme can never bind or use protons.
+  snapshot_sha256: c83a9674314cf5aefffe13dadface8c093e255ec850416675dd46c68d8144ba5
+- evidence_id: source-pmid-24650628
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24650628+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact native Europe PMC MED identity, title/authors/year/DOI and complete
+    abstract where supplied; not a full-body attestation.
+  accessed_at: '2026-10-25T20:04:01.819829Z'
+  support: supports
+  summary: Grüber et al. 2014 review abstract distinguishes archaeal ATP synthases
+    using H+, Na+, or both. This is secondary context for coupling-ion diversity,
+    not an independent primary measurement.
+  snapshot_sha256: 666d82b91804ad093095d397380667ce0d15b4e14f4f868b5b0328bcc7286824
+- evidence_id: source-coskun2004-pdf
+  kind: primary_source
+  reference: https://pure.rug.nl/ws/files/2953746/2004JBiolChemCoskun.pdf
+  locator: 'Complete scientific text printed pp38644–38648: Introduction, Experimental
+    Procedures, Results, Discussion and Figures1–5 captions, read from genuine publisher
+    PDF. Figure pixels and atomic coordinates not inspected.'
+  accessed_at: '2026-10-25T20:04:34.581621Z'
+  support: supports
+  summary: The M. jannaschii primary paper describes purification and negative-stain
+    electron microscopy, approximately 1.8-nm projection averages, an A3B3 headpiece
+    and peripheral-stalk interpretation. The paper combines images and fits with existing
+    subunit knowledge; this is structural architecture evidence rather than a direct
+    movie of rotation or atomic resolution of proton half-channels.
+  snapshot_sha256: caebc8d40a64ea31a3afd7115cb05e1214e17936f5d2eb31e77bfd973c05f4b3
+- evidence_id: source-vonck2009-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2665065/
+  locator: Complete primary Introduction, Experimental Procedures sec1, Results sec2
+    and Discussion sec3. Captions, figure pixels and supplementary material not independently
+    inspected.
+  accessed_at: '2026-10-25T20:03:09.066946Z'
+  support: supports
+  summary: The P. furiosus primary main text explicitly identifies a sodium-coupled
+    enzyme in its Introduction, then reports negative-stain 3D reconstruction and
+    LILBID analysis, including an A3B3CDE2FH2ac10 model and inferred peripheral-stalk
+    organization. Its structural reconstruction is relevant comparative A-type architecture,
+    but does not by itself verify proton-specific transport or atomic proton half-channels
+    in this preparation.
+  snapshot_sha256: 02d91faeaa087663aa37cf006a6d5e05ed738da4f9f24e3b354c287a47b954fe
+- evidence_id: source-coskun2004-publisher
+  kind: authority
+  reference: https://doi.org/10.1074/jbc.M406196200
+  locator: Retained access response only; no scientific body was available through
+    this route.
+  accessed_at: '2026-10-25T20:03:09.067276Z'
+  support: context_only
+  summary: The original DOI-route request failed with TLS certificate verification
+    failure. The subsequently recovered institutional publisher PDF is the genuine
+    scientific body used here.
+  snapshot_sha256: a8014ecefc9b9c4cc3987abe484f64b8ee37dd3e6bc0182a0f12915e702dedb3
+- evidence_id: source-lingl2003-publisher
+  kind: authority
+  reference: https://doi.org/10.1007/s00792-003-0318-7
+  locator: Retained access response only; no scientific body was available through
+    this route.
+  accessed_at: '2026-10-25T20:03:09.441398Z'
+  support: context_only
+  summary: The publisher route returned HTTP200 challenge HTML, not the scientific
+    body. Only the separately retained native MED abstract is used for this paper.
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+- evidence_id: source-lingl2003-pdf
+  kind: authority
+  reference: https://electronicsandbooks.com/edt/manual/Magazine/E/Extremophiles/2003%20Volume%207/3/249-257.pdf
+  locator: Retained access response only; no scientific body was available through
+    this route.
+  accessed_at: '2026-10-25T20:04:34.581981Z'
+  support: context_only
+  summary: The attempted public PDF mirror failed with Network is unreachable; no
+    body was read from this attempt.
+  snapshot_sha256: ae9f60fb6598c295a96a05befdb5a30573ca07f5cd2879bf7b6e37b23a4fab6a
+- evidence_id: record-target
+  kind: record_content
+  reference: data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+  locator: Entire frozen maintained YAML, including history, every component/example,
+    taxonomy, evidence and graph.
+  accessed_at: '2026-10-25T20:09:37.052625Z'
+  support: context_only
+  summary: The complete maintained target was read and compared claim by claim with
+    the scoped sources; this snapshot records the assertions being reviewed rather
+    than supplying independent biological confirmation.
+  snapshot_sha256: 038cd0feb2fa802aee4b15ba40ff7ec80836c3765fa6816f15a1d3bbc1c2de2c
+- evidence_id: record-schema
+  kind: authority
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent grounding/essentiality, ProteinExample, EssentialityEnum
+    and PresenceEnum definitions; frozen schema input.
+  accessed_at: '2026-10-25T20:09:37.052625Z'
+  support: context_only
+  summary: Grounding identifies a protein family/class rather than a generic domain.
+    Essentiality concerns whether the structure forms without a component, independently
+    of function or viability. COMMON means present in most members with losses exceptional;
+    it is not redefined as cell-state occurrence.
+  snapshot_sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+- evidence_id: check-schema
+  kind: validation
+  reference: /private/tmp/cellstructure-batch62-20261025-siz_24tk/archaeal_proton_transporting_a_type_atpase_complex-schema.log
+  locator: Complete retained native command output.
+  accessed_at: '2026-10-25T19:59:38Z'
+  support: supports
+  summary: Executed native schema check returned0 for this exact target. This validates
+    its bounded syntactic/identifier or coverage scope; it does not prove the biological
+    claims.
+  snapshot_sha256: ead01b80955655b0b4b2e20a390b1d9e105109b87af840bc89dd6fba9f09c1c9
+- evidence_id: check-strict
+  kind: validation
+  reference: /private/tmp/cellstructure-batch62-20261025-siz_24tk/archaeal_proton_transporting_a_type_atpase_complex-strict.log
+  locator: Complete retained native command output.
+  accessed_at: '2026-10-25T19:59:39Z'
+  support: supports
+  summary: Executed native strict check returned0 for this exact target. This validates
+    its bounded syntactic/identifier or coverage scope; it does not prove the biological
+    claims.
+  snapshot_sha256: ccdb754b89975ba422b872573330bde0d8b22162294831f66073279a63311ac9
+- evidence_id: check-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch62-20261025-siz_24tk/archaeal_proton_transporting_a_type_atpase_complex/causal-graphs.log
+  locator: Complete retained native command output.
+  accessed_at: '2026-10-25T20:03:38.758103Z'
+  support: supports
+  summary: Executed native causal-graphs check returned0 for this exact target. This
+    validates its bounded syntactic/identifier or coverage scope; it does not prove
+    the biological claims.
+  snapshot_sha256: c38c22fd9203cd3b1fa81a369916ed9f06020e34501b31450288bfef66ecbbe9
+- evidence_id: check-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch62-20261025-siz_24tk/archaeal_proton_transporting_a_type_atpase_complex/verify.log
+  locator: Complete retained native command output.
+  accessed_at: '2026-10-25T20:03:40.562722Z'
+  support: supports
+  summary: Executed native verify check returned0 for this exact target. This validates
+    its bounded syntactic/identifier or coverage scope; it does not prove the biological
+    claims.
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: final-global-history
+  kind: validation
+  reference: just validate-history
+  locator: Exact current-base history stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T19:59:33.039839Z'
+  support: supports
+  summary: Native append-only history validation passed for2065 history files.
+  snapshot_sha256: beb8780a7910df045dcae7003d8ede2f8b6d08b9a311c15982997c40796d02d8
+- evidence_id: final-global-products
+  kind: validation
+  reference: just validate-products
+  locator: Exact current-base products stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T20:00:11.856400Z'
+  support: supports
+  summary: Native corpus ID-label validator returned0; it does not prove class-level
+    identity or support biological scope.
+  snapshot_sha256: 0158645d825815955f637f5ec44265e94950a33f646e419a0c8999be5aff8d2f
+- evidence_id: final-global-traits
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Exact current-base traits stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T19:59:53.599030Z'
+  support: supports
+  summary: All10 trait links matched the freshly obtained TraitMech index. This target
+    has no asserted trait links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: final-global-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: Exact current-base curies stdout; retained receipt binds command, UTC,
+    input manifest and exit code
+  accessed_at: '2026-10-25T20:01:08.675608Z'
+  support: supports
+  summary: Native corpus resolver returned0:6105 identifiers,4997 OK,856 UNREACHABLE,252
+    SKIPPED. BFO authority control was not exercised because unreachable. Native exit0
+    is not universal resolution; target source-native checks and limitations are recorded
+    separately.
+  snapshot_sha256: 1429e55e1cb3667b4710ad56b2b9d90bd7104a24f4899edc6470f15152838e7d
+- evidence_id: final-global-qc
+  kind: validation
+  reference: just qc
+  locator: Exact current-base qc stdout; retained receipt binds command, UTC, input
+    manifest and exit code
+  accessed_at: '2026-10-25T20:06:17.301813Z'
+  support: supports
+  summary: Full current-base native QC passed; review-only additions are checked separately
+    after saving. Scientific content was unchanged.
+  snapshot_sha256: 3b50443af049a5f09641445e5c29c66e5f96c4f7a3bb046b344e96fa0d223d8b
+- evidence_id: imodulondb-datasets
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Complete native console datasets listing;28 rows; exact named-organism
+    applicability checked
+  accessed_at: '2026-10-25T20:04:24.215410Z'
+  support: context_only
+  summary: 'No exact named-organism dataset match: Pyrococcus furiosus DSM 3638, Methanocaldococcus
+    jannaschii DSM 2661. No listed organism matches the target named species/reference
+    strains. Listing absence is not biological negative evidence. Sulfolobus acidocaldarius
+    is listed, but is a different archaeal species; do not claim all Archaea are absent
+    or infer orthology/structure from that listing.'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+  search_scope: All28 dataset rows returned by kg-microbe-sources imodulondb datasets;
+    exact named-organism matching, not an exhaustive transcriptomics search.
+assessments:
+- assessment_id: A1
+  area: identity
+  topic: Proton-specific ontology identity and hierarchy
+  outcome: supported
+  summary: GO1990490 is explicitly the proton-transporting archaeal A-type ATPase
+    class, with the maintained broader synonyms and the two maintained is_a parents.
+    GO0015986 supplies the synthesis process; reverse ATP hydrolysis belongs to the
+    broader enzyme description, not a separate proof of synthesis in every cited preparation.
+  target_ids:
+  - GO:1990490
+  evidence_ids:
+  - source-go
+  - source-go-ancestors
+- assessment_id: A2
+  area: grounding
+  topic: Four molecular classes and protein instances
+  outcome: supported
+  summary: The four mappings represent whole subunit families. IPR000245 and IPR002490
+    use V-type terminology but their actual scope includes the related A-type proteolipid/stator
+    classes; their names alone do not invalidate the mappings. Native Q57670/Q57669/Q57674/Q57675
+    are reviewed M. jannaschii DSM2661 AtpA/B/K/I instances and supply separate membership
+    bridges. A3B3 stoichiometry is supported; the K ring is not assigned one universal
+    copy number.
+  target_ids:
+  - GO:1990490
+  evidence_ids:
+  - source-ipr-IPR000245
+  - source-ipr-IPR002490
+  - source-ipr-IPR005724
+  - source-ipr-IPR005726
+  - source-protein-Q57669
+  - source-protein-Q57670
+  - source-protein-Q57674
+  - source-protein-Q57675
+  - source-coskun2004-pdf
+  - source-pmid-12768457
+- assessment_id: A3
+  area: scope
+  topic: Canonical coupling-ion context
+  outcome: concern
+  summary: The unqualified P. furiosus canonical example and its use beneath a proton-specific
+    definition need a coupling-ion qualification. Vonck explicitly concerns a sodium-coupled
+    enzyme; Pisa supplies direct primary abstract evidence for sodium dependence and
+    H+/Na+ competition. Preserve comparative A-type structure evidence without promoting
+    it to direct proton-specific transport evidence.
+  target_ids:
+  - GO:1990490
+  evidence_ids:
+  - source-go
+  - source-vonck2009-legacy
+  - source-pmid-17614964
+  - source-pmid-24650628
+- assessment_id: A4
+  area: graph
+  topic: Assembly and rotary-catalysis graph
+  outcome: concern
+  summary: Component references, identities and edge direction support a coarse mechanistic
+    account. The AtpI edge specifically attaches proton-half-channel wording to the
+    sodium-coupled Vonck structure; that source supports inferred membrane/stalk organization
+    rather than direct atomic proton-channel resolution. The same coupling/source-scope
+    correction is covered by F1, not a separate architecture finding.
+  target_ids:
+  - GO:1990490
+  evidence_ids:
+  - source-go
+  - source-vonck2009-legacy
+  - source-coskun2004-pdf
+  - source-pmid-12768457
+- assessment_id: A5
+  area: scope
+  topic: Taxonomy and experimental examples
+  outcome: unknown
+  summary: Taxon2157 is Archaea and the two example IDs are the named DSM strains.
+    COMMON means present in most members with losses exceptional; an in-taxon restriction
+    alone does not establish this prevalence, particularly for the proton-specific
+    subset of a broader H+/Na+ family. The inspected structural and isolation papers
+    support characterized occurrence rather than a clade-wide census.
+  target_ids:
+  - GO:1990490
+  evidence_ids:
+  - source-tax-2157
+  - source-tax-243232
+  - source-tax-186497
+  - source-pmid-12768457
+  - source-coskun2004-pdf
+  - source-vonck2009-legacy
+  - source-pmid-24650628
+- assessment_id: A6
+  area: evidence
+  topic: Individual assembly necessity
+  outcome: unknown
+  summary: ESSENTIAL denotes failure of structure formation, not catalytic importance
+    or inclusion in an intact preparation. The read studies establish intact composition,
+    architecture and activity; they do not resolve each of the four universal formation
+    assignments. This uncertainty is retained rather than inferring dispensability
+    or demanding an omission experiment as the sole acceptable form of evidence.
+  target_ids:
+  - GO:1990490
+  evidence_ids:
+  - record-schema
+  - source-pmid-12768457
+  - source-coskun2004-pdf
+  - source-vonck2009-legacy
+- assessment_id: A7
+  area: completeness
+  topic: Inventory and literature coverage
+  outcome: supported
+  summary: The record deliberately represents four key subunit classes and does not
+    claim an exhaustive nine-class inventory. Other subunits in the papers do not
+    create a finding merely because an optional inventory is selective. History and
+    evidence identities were read; access and experimental-resolution limits remain
+    explicit.
+  target_ids:
+  - GO:1990490
+  evidence_ids:
+  - record-target
+  - source-pmid-12768457
+  - source-coskun2004-pdf
+  - source-vonck2009-legacy
+findings:
+- finding_id: F1
+  issue_key: archaeal-atpase-pfuriosus-ion-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Qualify the sodium-coupled Pyrococcus structural example
+  description: The record identifies a proton-transporting class but lists the P.
+    furiosus enzyme as an unqualified canonical example, and uses its Vonck2009 structure
+    for proton-half-channel language. Vonck explicitly describes this preparation
+    as sodium coupled; Pisa2007 provides direct primary abstract evidence for Na+-dependent
+    ATPase activity and ion competition. Structural similarity does not establish
+    the proton-specific transport claim for that preparation. This does not invalidate
+    GO1990490, the M. jannaschii protein identities, or the comparative architecture.
+  target_ids:
+  - GO:1990490
+  field_paths:
+  - canonical_examples[1]
+  - components[3].role
+  - causal_graphs[0].edges[0]
+  evidence_ids:
+  - record-target
+  - source-go
+  - source-vonck2009-legacy
+  - source-pmid-17614964
+  normalization_reason: Major because the experimental example and source-supported
+    mechanism cross the defining coupling-ion boundary; the correction is bounded
+    to source/example scope rather than a claim that all A-type ATPases are misidentified.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+    role: maintained scientific record
+actions:
+- action_id: C1
+  description: Qualify P. furiosus as sodium-coupled comparative A-type structural
+    evidence rather than an unqualified proton-specific example, or substitute a directly
+    verified proton-coupled example. Restrict the Vonck-supported AtpI language to
+    the structural inference it actually supports; retain proton-channel claims only
+    with an appropriately scoped source.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990490
+  acceptance_checks:
+  - The canonical example explicitly states its sodium-coupling context, or is replaced
+    by a source-verified proton-specific preparation.
+  - Vonck2009 is not represented as direct proton-transport or atomic proton-half-channel
+    evidence.
+  - The valid GO identity, four protein identities and comparative architectural evidence
+    are preserved.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.yaml
+    role: maintained scientific record
+limitations:
+- Lingl2003 was readable only as a complete native abstract; publisher challenge HTML
+  and the failed mirror attempt are retained. Its detailed Methods and all individual
+  formation requirements remain unverified.
+- Coskun2004 full scientific PDF text and captions were read, but no figure pixels
+  were independently inspected. Vonck2009 complete main prose was read without independently
+  inspecting its figure pixels, captions or supplements; no atomic ion-channel reconstruction
+  is certified.
+- Pisa2007 and the secondary Grüber2014 review were read at complete-abstract scope
+  only. Sodium dependence and proton competition do not justify asserting an absolute
+  inability to use protons.
+- The native term request verifies Archaea-specific definition and is_a hierarchy;
+  it is not a separate taxon-constraint endpoint or a measured prevalence census.
+  COMMON retains its schema majority meaning, whose population scope is unresolved
+  here.
+- Corpus identifier resolution includes856 unreachable and252 skipped identifiers
+  despite native exit0; BFO authority control was not exercised. These residuals are
+  not evidence of absence or scientific validity.
+notes: []
