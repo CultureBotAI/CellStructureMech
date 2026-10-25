@@ -1,0 +1,237 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 3
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed all 17 carried-forward review findings from Cycle 3 Stage 4 across 36 unique CellStructureRecord
+  YAML files, grouped them by shared root cause and repair ownership into 3 GitHub issues (#2430, #2431,
+  #2432), applied all fixes via native writers (record_curation_event + write_validated_structure) and
+  repository history ledger files in commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190, regenerated pages/,
+  validated all strict, ID-label, UniProt, CURIE liveness, history, and vendored sync gates, and verified
+  resolution via fresh structured RecordReview bundle 20261025T122500Z-c3-stage5-remediation-verification
+  with 0 open carry-forward findings.'
+source_revision: 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190
+scope_frozen_at: '2026-10-25T12:00:00Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml
+  sha256: 5c9d063bb0b141b352ef104a9e33ce39b7aa2ba418e55f76fe195e7d6fbae2d0
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  sha256: a2cfde2f230f292d0df14f10cc17360594ad6af74d52af6aa2569016599fb707
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  sha256: 18f0dfb160a8dedd7f4a0ee92c618a507295ace706ef665dbefcf6a82e0a5852
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/resolution_summary.json
+  sha256: 7a7974488acbb3b02af85931ee88130fd6d6beab7990b8966b7d4fe4d4debd51
+  kind: supporting
+findings:
+- finding_id: primosome-complex-pmid-citation-and-graph-id
+  carried_from: primosome-complex-pmid-citation-and-graph-id
+  group_id: bib-citation-and-discussion-evidence-attribution
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2430
+  status: resolved
+  summary: Replaced misattributed PMID:8265400 with PMID:24106270 in primosome_complex.yaml and aligned
+    C3S1 curation_history graph ID.
+  disposition: Updated primosome_complex.yaml to cite PMID:24106270 (PriA-PriB-DnaT-DnaB primosome review)
+    and aligned C3S1 curation_history graph ID to primosome_assembly_and_helicase_loading (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: ribonucleoprotein-box-rnp-reference-misattribution
+  carried_from: ribonucleoprotein-box-rnp-reference-misattribution
+  group_id: bib-citation-and-discussion-evidence-attribution
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2430
+  status: resolved
+  summary: Corrected PubMed citations across box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and
+    box_h_aca_snornp_complex.yaml.
+  disposition: Replaced PMID:9489704 with PMID:10982890 in box_c_d_rnp_complex.yaml, reconciled PMID:14562095
+    (Huh et al. 2003 Nature) in box_h_aca_rnp_complex.yaml, and added PMID:9843512 (Henras et al. 1998
+    EMBO J) across box_h_aca_rnp_complex.yaml and box_h_aca_snornp_complex.yaml (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: cytoskeleton-cartwheel-discussions-unlinked-pmid
+  carried_from: cytoskeleton-cartwheel-discussions-unlinked-pmid
+  group_id: bib-citation-and-discussion-evidence-attribution
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2430
+  status: resolved
+  summary: Attached PMID:25657325 to discussions[0].evidence in basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml.
+  disposition: 'Added structured evidence item (reference: PMID:25657325, supports: SUPPORT) to discussions[0].evidence
+    in basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).'
+- finding_id: inclusion-psg-discussions-unlinked-doi
+  carried_from: inclusion-psg-discussions-unlinked-doi
+  group_id: bib-citation-and-discussion-evidence-attribution
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2430
+  status: resolved
+  summary: 'Attached DOI:10.7554/eLife.34532 (supports: REFUTE) to discussions[0].evidence in proteasome_storage_granule.yaml.'
+  disposition: 'Added structured evidence item (reference: DOI:10.7554/eLife.34532, supports: REFUTE)
+    to discussions[0].evidence in proteasome_storage_granule.yaml (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).'
+- finding_id: static-microtubule-bundle-curation-history-graph-id-mismatch
+  carried_from: static-microtubule-bundle-curation-history-graph-id-mismatch
+  group_id: heteromeric-subcomplex-types-and-history-graph-ids
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2431
+  status: resolved
+  summary: Aligned C3S2 curation_history causal_graph ID in static_microtubule_bundle.yaml.
+  disposition: Updated curation_history[2].details in static_microtubule_bundle.yaml to reference static_microtubule_bundle_assembly_and_stabilization
+    (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: cytoskeleton-heteromeric-subcomplex-component-types
+  carried_from: cytoskeleton-heteromeric-subcomplex-component-types
+  group_id: heteromeric-subcomplex-types-and-history-graph-ids
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2431
+  status: resolved
+  summary: Typed arp2_arp3_nucleation_core and gcp4_gcp5_gcp6_asymmetric_core as PROTEIN_COMPLEX.
+  disposition: Updated arp2_arp3_nucleation_core in arp2_3_protein_complex.yaml and gcp4_gcp5_gcp6_asymmetric_core
+    in gamma_tubulin_ring_complex.yaml from PROTEIN to PROTEIN_COMPLEX (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: elongasome-curation-history-causal-graph-id-mismatch
+  carried_from: elongasome-curation-history-causal-graph-id-mismatch
+  group_id: heteromeric-subcomplex-types-and-history-graph-ids
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2431
+  status: resolved
+  summary: Aligned C3S2 curation_history causal_graph ID in elongasome.yaml.
+  disposition: Updated curation_history[2].details in elongasome.yaml to reference elongasome_peptidoglycan_synthesis
+    (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: energy-complex-atpase-subcomplex-types-and-history-graph-ids
+  carried_from: energy-complex-atpase-subcomplex-types-and-history-graph-ids
+  group_id: heteromeric-subcomplex-types-and-history-graph-ids
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2431
+  status: resolved
+  summary: Typed 6 ATPase subcomplex components as PROTEIN_COMPLEX and aligned C3S1 curation_history graph
+    IDs across 2 energy_complex records.
+  disposition: Updated 6 heteromeric ATPase subcomplex components to PROTEIN_COMPLEX and aligned C3S1
+    curation_history causal_graph IDs in proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
+    and proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: other-nucleosome-type-and-chaperonin-history-graph-id
+  carried_from: other-nucleosome-type-and-chaperonin-history-graph-id
+  group_id: heteromeric-subcomplex-types-and-history-graph-ids
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2431
+  status: resolved
+  summary: Typed h3_h4_tetramer and h2a_h2b_dimer in nucleosome.yaml as PROTEIN_COMPLEX and aligned C3S1
+    curation_history graph ID in chaperonin_atpase_complex.yaml.
+  disposition: Updated h3_h4_tetramer and h2a_h2b_dimer in nucleosome.yaml to PROTEIN_COMPLEX and updated
+    C3S1 curation_history[1].details in chaperonin_atpase_complex.yaml to reference chaperonin_atp_driven_folding_cycle
+    (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: ribonucleoprotein-subcomplex-types-and-history-graph-ids
+  carried_from: ribonucleoprotein-subcomplex-types-and-history-graph-ids
+  group_id: heteromeric-subcomplex-types-and-history-graph-ids
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2431
+  status: resolved
+  summary: Typed nop56_nop58_scaffold_dimer as PROTEIN_COMPLEX and aligned C3S1/C3S2 curation_history
+    graph IDs across 3 ribonucleoprotein records.
+  disposition: Updated nop56_nop58_scaffold_dimer in box_c_d_rnp_complex.yaml to PROTEIN_COMPLEX and aligned
+    C3S1/C3S2 curation_history graph IDs across box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml,
+    and rnp_body.yaml (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: appendage-flagellum-causal-node-component-ref-grounding
+  carried_from: appendage-flagellum-causal-node-component-ref-grounding
+  group_id: causal-node-component-ref-grounding-propagation
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2432
+  status: resolved
+  summary: 'Propagated grounded InterPro:/Pfam: term IDs to 15 component_ref causal nodes across 6 bacterial
+    flagellar subcomplex records.'
+  disposition: Propagated component term grounding to 15 component_ref CausalNode entries across 6 appendage/
+    flagellar subcomplex records (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: energy-complex-mcr-causal-node-component-ref-grounding
+  carried_from: energy-complex-mcr-causal-node-component-ref-grounding
+  group_id: causal-node-component-ref-grounding-propagation
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2432
+  status: resolved
+  summary: 'Propagated InterPro: term IDs to mcra, mcrb, and mcrg causal nodes in methyl_coenzyme_m_reductase_complex.yaml.'
+  disposition: Propagated InterPro:IPR016212, IPR008924, and IPR003179 to mcra, mcrb, and mcrg causal
+    nodes in methyl_coenzyme_m_reductase_complex.yaml (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: envelope-s-layer-causal-node-component-ref-grounding
+  carried_from: envelope-s-layer-causal-node-component-ref-grounding
+  group_id: causal-node-component-ref-grounding-propagation
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2432
+  status: resolved
+  summary: Propagated InterPro:IPR001165 (SLH domain) to s_layer_anchoring_domain causal node in s_layer.yaml.
+  disposition: Propagated InterPro:IPR001165 (SLH domain) to s_layer_anchoring_domain in s_layer.yaml
+    (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: membrane-organelle-causal-node-component-ref-grounding
+  carried_from: membrane-organelle-causal-node-component-ref-grounding
+  group_id: causal-node-component-ref-grounding-propagation
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2432
+  status: resolved
+  summary: 'Propagated CHEBI:46726 and cellstructuremech: term IDs across 4 component_ref causal nodes
+    in magnetosome.yaml and plasma_membrane_derived_chromatophore_membrane.yaml.'
+  disposition: 'Propagated CHEBI:46726 (magnetite) and cellstructuremech: term IDs to 4 component_ref
+    causal nodes across magnetosome.yaml and plasma_membrane_derived_chromatophore_membrane.yaml (commit
+    02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).'
+- finding_id: other-causal-node-component-ref-grounding
+  carried_from: other-causal-node-component-ref-grounding
+  group_id: causal-node-component-ref-grounding-propagation
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2432
+  status: resolved
+  summary: 'Propagated InterPro:/Pfam: term IDs to 16 component_ref causal nodes across 8 records in other/.'
+  disposition: 'Propagated InterPro:/Pfam: term grounding to 16 component_ref causal nodes across bam_protein_complex.yaml,
+    dna_gyrase_complex.yaml, eisosome.yaml, exodeoxyribonuclease_v_complex.yaml, glideosome.yaml, meiotic_telomere_bouquet.yaml,
+    quiescent_telomere_hypercluster.yaml, and single_stranded_dna_binding_protein_complex.yaml (commit
+    02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).'
+- finding_id: secretion-system-t6ss-causal-node-component-ref-grounding
+  carried_from: secretion-system-t6ss-causal-node-component-ref-grounding
+  group_id: causal-node-component-ref-grounding-propagation
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2432
+  status: resolved
+  summary: Propagated InterPro:IPR010268 (TssL/IcmH/DotU) to tssl_dotu_icmh causal node in type_vi_protein_secretion_system_complex.yaml.
+  disposition: Propagated InterPro:IPR010268 to tssl_dotu_icmh causal node in type_vi_protein_secretion_system_complex.yaml
+    (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+- finding_id: spore-ascospore-wall-causal-node-component-ref-grounding
+  carried_from: spore-ascospore-wall-causal-node-component-ref-grounding
+  group_id: causal-node-component-ref-grounding-propagation
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2432
+  status: resolved
+  summary: Propagated CHEBI:16261 (chitosan) to chitosan causal node in ascospore_wall.yaml.
+  disposition: Propagated CHEBI:16261 (chitosan) to chitosan causal node in ascospore_wall.yaml (commit
+    02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190).
+groups:
+- group_id: bib-citation-and-discussion-evidence-attribution
+  finding_ids:
+  - primosome-complex-pmid-citation-and-graph-id
+  - ribonucleoprotein-box-rnp-reference-misattribution
+  - cytoskeleton-cartwheel-discussions-unlinked-pmid
+  - inclusion-psg-discussions-unlinked-doi
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2430
+  status: resolved
+  summary: Fix bibliographic citation misattributions and unlinked discussion citations across 7 records
+    (#2430).
+  disposition: Resolved in commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190 and verified in structured
+    review bundle 20261025T122500Z-c3-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/resolution_summary.json
+- group_id: heteromeric-subcomplex-types-and-history-graph-ids
+  finding_ids:
+  - static-microtubule-bundle-curation-history-graph-id-mismatch
+  - cytoskeleton-heteromeric-subcomplex-component-types
+  - elongasome-curation-history-causal-graph-id-mismatch
+  - energy-complex-atpase-subcomplex-types-and-history-graph-ids
+  - other-nucleosome-type-and-chaperonin-history-graph-id
+  - ribonucleoprotein-subcomplex-types-and-history-graph-ids
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2431
+  status: resolved
+  summary: Type heteromeric subcomplex components as PROTEIN_COMPLEX and align curation_history causal_graph
+    IDs across 12 records (#2431).
+  disposition: Resolved in commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190 and verified in structured
+    review bundle 20261025T122500Z-c3-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/resolution_summary.json
+- group_id: causal-node-component-ref-grounding-propagation
+  finding_ids:
+  - appendage-flagellum-causal-node-component-ref-grounding
+  - energy-complex-mcr-causal-node-component-ref-grounding
+  - envelope-s-layer-causal-node-component-ref-grounding
+  - membrane-organelle-causal-node-component-ref-grounding
+  - other-causal-node-component-ref-grounding
+  - secretion-system-t6ss-causal-node-component-ref-grounding
+  - spore-ascospore-wall-causal-node-component-ref-grounding
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2432
+  status: resolved
+  summary: Propagate grounded component term IDs to causal_graphs component_ref nodes across 20 records
+    (#2432).
+  disposition: Resolved in commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190 and verified in structured
+    review bundle 20261025T122500Z-c3-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/resolution_summary.json
+carry_forward_ids: []
+infra_tasks: []

@@ -1,0 +1,1112 @@
+schema_version: 1.0.0
+review_id: 20261025T122500Z-c3-stage5-remediation-verification
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: 'Post-remediation verification review of all 36 CellStructureRecord files remediated
+  in Cycle 3 Stage 5 (#2430, #2431, #2432)'
+started_at: '2026-10-25T12:20:00Z'
+finished_at: '2026-10-25T12:25:00Z'
+reviewer:
+  identity: antigravity-c3-stage5-remediation-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: 'Post-remediation verification review against committed git
+    revision 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190 covering all 36 records modified
+    to resolve the 17 Cycle 3 Stage 4 review findings across GitHub issues #2430,
+    #2431, and #2432.'
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: true
+summary: 'Fresh post-remediation review of all 36 CellStructureRecord YAML files modified
+  in Cycle 3 Stage 5 (commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190) resolving all
+  17 open findings carried forward from Cycle 3 Stage 4 across issues #2430 (bibliographic
+  citation repairs in primosome_complex, box_c_d_rnp_complex, box_h_aca_rnp_complex,
+  and box_h_aca_snornp_complex plus structured discussions[].evidence items in basal_body_cartwheel,
+  basal_body_cartwheel_inner_density, and proteasome_storage_granule), #2431 (component_type:
+  PROTEIN_COMPLEX for 11 heteromeric subcomplex components across 6 records and exact
+  curation_history causal_graphs[].id alignment across 9 records), and #2432 (propagation
+  of grounded component term IDs to 41 component_ref CausalNode entries across 20
+  records). All 36 records pass strict validation, ID-label correspondence, UniProt
+  verification, offline CURIE cache check, history ledger validation, and page regeneration
+  checks with zero open findings.'
+source:
+  git_revision: 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    sha256: d561f0ecb17f807124145a2ebf6d301621e4ad4ba566c7948b63194eaa2b17e2
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.yaml
+    sha256: 6d17c10574c108bafe37c810c892c18ff2b32c62e78867398a826996fe9db833
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml
+    sha256: bdc313ef5998885c7ab2f34eb76ede6ba43fc8bdaed75be3ecbbabfc614efe9b
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_hook_filament_junction.yaml
+    sha256: 1991d2362a0a073ea56a3e7decbea565a6e253949215786d0ae61840819ac360
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+    sha256: ed1220eae9ae4270333d8c497cc9acd833c150cfedc064691065f6e317b3e844
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum_stator_complex.yaml
+    sha256: 3b7aedb33b698049d4c3a8fcff9c706af74f268d2ea34b1f4b389c4f5a6d197c
+    role: target
+  - path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+    sha256: 05b7cc75eaf5f65fb7a4839055dcd086303a6c26cf1fb781ad41baf541bd8ecc
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_cartwheel.yaml
+    sha256: bdd863ed130a8a2b226fe920cc7f6c6327a2cc1ea90602bf051d952f27e56e17
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml
+    sha256: 84b8a7319dbcbf9ec053bcdb2b1e88c920c0ad31e69524ed6a3e13ae1f3b342b
+    role: target
+  - path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    sha256: d8eb02a102133174291f4bdbcf09e2d2dfacdc46b217bea636a9bf598ff3d626
+    role: target
+  - path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+    sha256: 5012c99d4bde9606c2de8efff620ee9e72437cebb4cf6dbded06fe463286f09b
+    role: target
+  - path: data/structures/division_machinery/elongasome.yaml
+    sha256: 17ec224fdda023f226646f624729b1e0f84fe4be24fe5976407d4d9c7f69221b
+    role: target
+  - path: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    sha256: 369ad320d4bc19c72a79fb14037b46c5e12f6eddaa64bd0bb04572e9a8ea685e
+    role: target
+  - path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
+    sha256: c973cccfc1c77bcfa31200063af4ab13af8988bbf79d00cf5445cde6fcda5328
+    role: target
+  - path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml
+    sha256: 2097fc8f64fde89b70437cce55a8949522135736374cbc8787c801717095d364
+    role: target
+  - path: data/structures/envelope/s_layer.yaml
+    sha256: e1705f14c51e45705a827bf82ec9f18a24216107750f16047892c4a3bd7406dc
+    role: target
+  - path: data/structures/inclusion/proteasome_storage_granule.yaml
+    sha256: c905148a1f69e6dbcdca6de2e92701f51186b790ade37268bd009786a08b49d0
+    role: target
+  - path: data/structures/membrane_organelle/magnetosome.yaml
+    sha256: 7373ad98d92135988194b4a5fcd8f3612eef4f068d72bc951598ab1723c442dd
+    role: target
+  - path: data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+    sha256: 96b01ed4cf05533e8d4a5a6ba5a8f7b585900cd798b6654a72c9b0f82fcfc541
+    role: target
+  - path: data/structures/other/bam_protein_complex.yaml
+    sha256: e530f8c70eb773932d91fb4301fd848207b00027b4625f619968e34a800b03f2
+    role: target
+  - path: data/structures/other/chaperonin_atpase_complex.yaml
+    sha256: e50b4bf3c80a0ca3b39458a019e4725f898abe94900259149e4234948062f4ce
+    role: target
+  - path: data/structures/other/dna_gyrase_complex.yaml
+    sha256: 5e7e1a94281ec5bb4c72ea205e6e44bc4545175d4051eab98df531f709ac35b8
+    role: target
+  - path: data/structures/other/eisosome.yaml
+    sha256: e8a50201f81f4feeb8556e21927282e68b128b8eb9636b5b26111500bd67d886
+    role: target
+  - path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+    sha256: f7a26afc35a5fcb19ee05eb2e4e101d99dae0bd4cf251da58b55d766db128d11
+    role: target
+  - path: data/structures/other/glideosome.yaml
+    sha256: 6ccd650ec4a95188fbfdc310b09544c02d4b128a89f8e5c1689aaf529da69f79
+    role: target
+  - path: data/structures/other/meiotic_telomere_bouquet.yaml
+    sha256: 0902106290c0af4891af4481d6d0e57e26f89048da1a01b639f1bc1837a7d61e
+    role: target
+  - path: data/structures/other/nucleosome.yaml
+    sha256: 7f1981ed2a46be4d9d62c98104737d5502d69668fcb5f082d2e6db75e30a4f7d
+    role: target
+  - path: data/structures/other/primosome_complex.yaml
+    sha256: c49ced918d744a9dad27176acbfdff2738373f9b6c32aa00af0a7d9e4c648afb
+    role: target
+  - path: data/structures/other/quiescent_telomere_hypercluster.yaml
+    sha256: 06f22013b1709e5dae74847f41f940c8523801262475077655e6923102974f22
+    role: target
+  - path: data/structures/other/single_stranded_dna_binding_protein_complex.yaml
+    sha256: 04c92893dd9473c91792524b05ceec79c2fb386b68e5535b12a6d2186b0bbe08
+    role: target
+  - path: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
+    sha256: 8624ea357233062f8239ffc2ee70c3ea23fbba7f17b5904682222afeb350e0be
+    role: target
+  - path: data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml
+    sha256: 064d6e829c5501ab736b0861e4ebd51283a27f5fe17a38b35a865d4bb7bad270
+    role: target
+  - path: data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml
+    sha256: 24e6a6d9574daa7a7e34ee47cce2a1fe92dbf6b6996d958619f296682183c366
+    role: target
+  - path: data/structures/ribonucleoprotein/rnp_body.yaml
+    sha256: cf7350e280e7e49db17d9218704f5190dbe6266f01aec01a7272e07f1e73637e
+    role: target
+  - path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+    sha256: bd7deca396467201aeaef7b83a8fedb1ed74f6734636e101c242b568f95f04bb
+    role: target
+  - path: data/structures/spore/ascospore_wall.yaml
+    sha256: a18545064989341ec4e63926901ce5362ef35be13c079a08784e369641c3f56f
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Complete cohort of all 36 CellStructureRecord YAML files remediated
+    in Cycle 3 Stage 5 to resolve the 17 carried-forward Stage 4 findings.
+  selection: 'All 36 records modified in commit 02e1550e1bcbb1b6d90762e1d83c9ac6ab5b1190
+    for issues #2430, #2431, and #2432.'
+  coverage: full
+  population_size: 36
+  reviewed_target_ids:
+  - GO:0009433
+  - GO:0009429
+  - GO:0030694
+  - GO:0009422
+  - GO:0120102
+  - GO:0120101
+  - GO:0005885
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - GO:0000931
+  - GO:0099070
+  - cellstructuremech:elongasome
+  - GO:0044674
+  - GO:0033178
+  - GO:0033177
+  - GO:0030115
+  - GO:0034515
+  - GO:0110143
+  - GO:0042717
+  - GO:1990063
+  - GO:0016465
+  - GO:0120217
+  - GO:0032126
+  - GO:0009338
+  - GO:0160055
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0000786
+  - GO:1990077
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0044777
+  - GO:0170049
+  - GO:0072588
+  - GO:0031429
+  - GO:0140365
+  - GO:0033104
+  - GO:0005619
+targets:
+- target_id: GO:0009433
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+  label: bacterial-type flagellum basal body, C ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d561f0ecb17f807124145a2ebf6d301621e4ad4ba566c7948b63194eaa2b17e2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_c_ring.yaml
+    role: maintained_record
+- target_id: GO:0009429
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.yaml
+  label: bacterial-type flagellum basal body, proximal rod
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6d17c10574c108bafe37c810c892c18ff2b32c62e78867398a826996fe9db833
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_proximal_rod.yaml
+    role: maintained_record
+- target_id: GO:0030694
+  path: data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml
+  label: bacterial-type flagellum basal body, rod
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bdc313ef5998885c7ab2f34eb76ede6ba43fc8bdaed75be3ecbbabfc614efe9b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_basal_body_rod.yaml
+    role: maintained_record
+- target_id: GO:0009422
+  path: data/structures/appendage/bacterial_type_flagellum_hook_filament_junction.yaml
+  label: bacterial-type flagellum hook-filament junction
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1991d2362a0a073ea56a3e7decbea565a6e253949215786d0ae61840819ac360
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_hook_filament_junction.yaml
+    role: maintained_record
+- target_id: GO:0120102
+  path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+  label: bacterial-type flagellum secretion apparatus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ed1220eae9ae4270333d8c497cc9acd833c150cfedc064691065f6e317b3e844
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+    role: maintained_record
+- target_id: GO:0120101
+  path: data/structures/appendage/bacterial_type_flagellum_stator_complex.yaml
+  label: bacterial-type flagellum stator complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3b7aedb33b698049d4c3a8fcff9c706af74f268d2ea34b1f4b389c4f5a6d197c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum_stator_complex.yaml
+    role: maintained_record
+- target_id: GO:0005885
+  path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+  label: Arp2/3 protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 05b7cc75eaf5f65fb7a4839055dcd086303a6c26cf1fb781ad41baf541bd8ecc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_cartwheel
+  path: data/structures/cytoskeleton/basal_body_cartwheel.yaml
+  label: basal body cartwheel
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bdd863ed130a8a2b226fe920cc7f6c6327a2cc1ea90602bf051d952f27e56e17
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_cartwheel.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_cartwheel_inner_density
+  path: data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml
+  label: basal body cartwheel inner density
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 84b8a7319dbcbf9ec053bcdb2b1e88c920c0ad31e69524ed6a3e13ae1f3b342b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml
+    role: maintained_record
+- target_id: GO:0000931
+  path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+  label: gamma-tubulin ring complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d8eb02a102133174291f4bdbcf09e2d2dfacdc46b217bea636a9bf598ff3d626
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    role: maintained_record
+- target_id: GO:0099070
+  path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+  label: static microtubule bundle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5012c99d4bde9606c2de8efff620ee9e72437cebb4cf6dbded06fe463286f09b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:elongasome
+  path: data/structures/division_machinery/elongasome.yaml
+  label: elongasome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 17ec224fdda023f226646f624729b1e0f84fe4be24fe5976407d4d9c7f69221b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/elongasome.yaml
+    role: maintained_record
+- target_id: GO:0044674
+  path: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+  label: methyl coenzyme M reductase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 369ad320d4bc19c72a79fb14037b46c5e12f6eddaa64bd0bb04572e9a8ea685e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/methyl_coenzyme_m_reductase_complex.yaml
+    role: maintained_record
+- target_id: GO:0033178
+  path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
+  label: proton-transporting two-sector ATPase complex, catalytic domain
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c973cccfc1c77bcfa31200063af4ab13af8988bbf79d00cf5445cde6fcda5328
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml
+    role: maintained_record
+- target_id: GO:0033177
+  path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml
+  label: proton-transporting two-sector ATPase complex, proton-transporting domain
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2097fc8f64fde89b70437cce55a8949522135736374cbc8787c801717095d364
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml
+    role: maintained_record
+- target_id: GO:0030115
+  path: data/structures/envelope/s_layer.yaml
+  label: S-layer
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e1705f14c51e45705a827bf82ec9f18a24216107750f16047892c4a3bd7406dc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/s_layer.yaml
+    role: maintained_record
+- target_id: GO:0034515
+  path: data/structures/inclusion/proteasome_storage_granule.yaml
+  label: proteasome storage granule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c905148a1f69e6dbcdca6de2e92701f51186b790ade37268bd009786a08b49d0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/inclusion/proteasome_storage_granule.yaml
+    role: maintained_record
+- target_id: GO:0110143
+  path: data/structures/membrane_organelle/magnetosome.yaml
+  label: magnetosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7373ad98d92135988194b4a5fcd8f3612eef4f068d72bc951598ab1723c442dd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/magnetosome.yaml
+    role: maintained_record
+- target_id: GO:0042717
+  path: data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+  label: plasma membrane-derived chromatophore membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 96b01ed4cf05533e8d4a5a6ba5a8f7b585900cd798b6654a72c9b0f82fcfc541
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/plasma_membrane_derived_chromatophore_membrane.yaml
+    role: maintained_record
+- target_id: GO:1990063
+  path: data/structures/other/bam_protein_complex.yaml
+  label: Bam protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e530f8c70eb773932d91fb4301fd848207b00027b4625f619968e34a800b03f2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bam_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:0016465
+  path: data/structures/other/chaperonin_atpase_complex.yaml
+  label: chaperonin ATPase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e50b4bf3c80a0ca3b39458a019e4725f898abe94900259149e4234948062f4ce
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chaperonin_atpase_complex.yaml
+    role: maintained_record
+- target_id: GO:0120217
+  path: data/structures/other/dna_gyrase_complex.yaml
+  label: DNA gyrase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5e7e1a94281ec5bb4c72ea205e6e44bc4545175d4051eab98df531f709ac35b8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_gyrase_complex.yaml
+    role: maintained_record
+- target_id: GO:0032126
+  path: data/structures/other/eisosome.yaml
+  label: eisosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e8a50201f81f4feeb8556e21927282e68b128b8eb9636b5b26111500bd67d886
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/eisosome.yaml
+    role: maintained_record
+- target_id: GO:0009338
+  path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+  label: exodeoxyribonuclease V complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f7a26afc35a5fcb19ee05eb2e4e101d99dae0bd4cf251da58b55d766db128d11
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+    role: maintained_record
+- target_id: GO:0160055
+  path: data/structures/other/glideosome.yaml
+  label: glideosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6ccd650ec4a95188fbfdc310b09544c02d4b128a89f8e5c1689aaf529da69f79
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/glideosome.yaml
+    role: maintained_record
+- target_id: cellstructuremech:meiotic_telomere_bouquet
+  path: data/structures/other/meiotic_telomere_bouquet.yaml
+  label: meiotic telomere bouquet
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0902106290c0af4891af4481d6d0e57e26f89048da1a01b639f1bc1837a7d61e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/meiotic_telomere_bouquet.yaml
+    role: maintained_record
+- target_id: GO:0000786
+  path: data/structures/other/nucleosome.yaml
+  label: nucleosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7f1981ed2a46be4d9d62c98104737d5502d69668fcb5f082d2e6db75e30a4f7d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nucleosome.yaml
+    role: maintained_record
+- target_id: GO:1990077
+  path: data/structures/other/primosome_complex.yaml
+  label: primosome complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c49ced918d744a9dad27176acbfdff2738373f9b6c32aa00af0a7d9e4c648afb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/primosome_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:quiescent_telomere_hypercluster
+  path: data/structures/other/quiescent_telomere_hypercluster.yaml
+  label: quiescent telomere hypercluster
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 06f22013b1709e5dae74847f41f940c8523801262475077655e6923102974f22
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/quiescent_telomere_hypercluster.yaml
+    role: maintained_record
+- target_id: GO:0044777
+  path: data/structures/other/single_stranded_dna_binding_protein_complex.yaml
+  label: single-stranded DNA-binding protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 04c92893dd9473c91792524b05ceec79c2fb386b68e5535b12a6d2186b0bbe08
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/single_stranded_dna_binding_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:0170049
+  path: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
+  label: box C/D RNP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8624ea357233062f8239ffc2ee70c3ea23fbba7f17b5904682222afeb350e0be
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
+    role: maintained_record
+- target_id: GO:0072588
+  path: data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml
+  label: box H/ACA RNP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 064d6e829c5501ab736b0861e4ebd51283a27f5fe17a38b35a865d4bb7bad270
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml
+    role: maintained_record
+- target_id: GO:0031429
+  path: data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml
+  label: box H/ACA snoRNP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 24e6a6d9574daa7a7e34ee47cce2a1fe92dbf6b6996d958619f296682183c366
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml
+    role: maintained_record
+- target_id: GO:0140365
+  path: data/structures/ribonucleoprotein/rnp_body.yaml
+  label: RNP body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cf7350e280e7e49db17d9218704f5190dbe6266f01aec01a7272e07f1e73637e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/ribonucleoprotein/rnp_body.yaml
+    role: maintained_record
+- target_id: GO:0033104
+  path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+  label: type VI protein secretion system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bd7deca396467201aeaef7b83a8fedb1ed74f6734636e101c242b568f95f04bb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+    role: maintained_record
+- target_id: GO:0005619
+  path: data/structures/spore/ascospore_wall.yaml
+  label: ascospore wall
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a18545064989341ec4e63926901ce5362ef35be13c079a08784e369641c3f56f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/spore/ascospore_wall.yaml
+    role: maintained_record
+checks:
+- check_id: strict_remediated_cohort
+  name: Strict corpus validation covering all 36 remediated records
+  status: passed
+  required: true
+  summary: All 993 corpus records including the 36 remediated records pass strict
+    LinkML and semantic validation with 0 errors.
+  target_ids:
+  - GO:0009433
+  - GO:0009429
+  - GO:0030694
+  - GO:0009422
+  - GO:0120102
+  - GO:0120101
+  - GO:0005885
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - GO:0000931
+  - GO:0099070
+  - cellstructuremech:elongasome
+  - GO:0044674
+  - GO:0033178
+  - GO:0033177
+  - GO:0030115
+  - GO:0034515
+  - GO:0110143
+  - GO:0042717
+  - GO:1990063
+  - GO:0016465
+  - GO:0120217
+  - GO:0032126
+  - GO:0009338
+  - GO:0160055
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0000786
+  - GO:1990077
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0044777
+  - GO:0170049
+  - GO:0072588
+  - GO:0031429
+  - GO:0140365
+  - GO:0033104
+  - GO:0005619
+  command: .venv/bin/python scripts/validate_strict.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_c3_stage5
+- check_id: labels_remediated_cohort
+  name: ID-label correspondence across corpus and generated products
+  status: passed
+  required: true
+  summary: All ontology ID-label pairs across the corpus (4064 canonical, 50 synonym,
+    6 exception) correspond to authoritative ontology labels.
+  target_ids:
+  - GO:0009433
+  - GO:0009429
+  - GO:0030694
+  - GO:0009422
+  - GO:0120102
+  - GO:0120101
+  - GO:0005885
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - GO:0000931
+  - GO:0099070
+  - cellstructuremech:elongasome
+  - GO:0044674
+  - GO:0033178
+  - GO:0033177
+  - GO:0030115
+  - GO:0034515
+  - GO:0110143
+  - GO:0042717
+  - GO:1990063
+  - GO:0016465
+  - GO:0120217
+  - GO:0032126
+  - GO:0009338
+  - GO:0160055
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0000786
+  - GO:1990077
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0044777
+  - GO:0170049
+  - GO:0072588
+  - GO:0031429
+  - GO:0140365
+  - GO:0033104
+  - GO:0005619
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_labels_c3_stage5
+- check_id: uniprot_remediated_cohort
+  name: UniProtKB protein_examples and causal_graphs xref verification
+  status: passed
+  required: true
+  summary: All UniProtKB protein_examples and causal_graphs xrefs across the corpus
+    pass verification.
+  target_ids:
+  - GO:0009433
+  - GO:0009429
+  - GO:0030694
+  - GO:0009422
+  - GO:0120102
+  - GO:0120101
+  - GO:0005885
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - GO:0000931
+  - GO:0099070
+  - cellstructuremech:elongasome
+  - GO:0044674
+  - GO:0033178
+  - GO:0033177
+  - GO:0030115
+  - GO:0034515
+  - GO:0110143
+  - GO:0042717
+  - GO:1990063
+  - GO:0016465
+  - GO:0120217
+  - GO:0032126
+  - GO:0009338
+  - GO:0160055
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0000786
+  - GO:1990077
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0044777
+  - GO:0170049
+  - GO:0072588
+  - GO:0031429
+  - GO:0140365
+  - GO:0033104
+  - GO:0005619
+  command: .venv/bin/python scripts/uniprot_genes.py --verify
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_uniprot_c3_stage5
+- check_id: curies_remediated_cohort
+  name: Offline CURIE liveness check across corpus
+  status: passed
+  required: true
+  summary: All 5776 resolved CURIEs (including newly added PMID:24106270, PMID:10982890,
+    PMID:9843512, and DOI:10.7554/eLife.34532) pass offline liveness verification.
+  target_ids:
+  - GO:0009433
+  - GO:0009429
+  - GO:0030694
+  - GO:0009422
+  - GO:0120102
+  - GO:0120101
+  - GO:0005885
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - GO:0000931
+  - GO:0099070
+  - cellstructuremech:elongasome
+  - GO:0044674
+  - GO:0033178
+  - GO:0033177
+  - GO:0030115
+  - GO:0034515
+  - GO:0110143
+  - GO:0042717
+  - GO:1990063
+  - GO:0016465
+  - GO:0120217
+  - GO:0032126
+  - GO:0009338
+  - GO:0160055
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0000786
+  - GO:1990077
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0044777
+  - GO:0170049
+  - GO:0072588
+  - GO:0031429
+  - GO:0140365
+  - GO:0033104
+  - GO:0005619
+  command: .venv/bin/python scripts/check_curies.py --offline --check
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_curies_c3_stage5
+- check_id: history_remediated_cohort
+  name: Repository history link and LinkML HistoryRecord validation
+  status: passed
+  required: true
+  summary: All 2057 repository history files (including the 36 newly added Cycle 3
+    Stage 5 history ledger records) pass link and LinkML HistoryRecord schema validation.
+  target_ids:
+  - GO:0009433
+  - GO:0009429
+  - GO:0030694
+  - GO:0009422
+  - GO:0120102
+  - GO:0120101
+  - GO:0005885
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - GO:0000931
+  - GO:0099070
+  - cellstructuremech:elongasome
+  - GO:0044674
+  - GO:0033178
+  - GO:0033177
+  - GO:0030115
+  - GO:0034515
+  - GO:0110143
+  - GO:0042717
+  - GO:1990063
+  - GO:0016465
+  - GO:0120217
+  - GO:0032126
+  - GO:0009338
+  - GO:0160055
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0000786
+  - GO:1990077
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0044777
+  - GO:0170049
+  - GO:0072588
+  - GO:0031429
+  - GO:0140365
+  - GO:0033104
+  - GO:0005619
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_c3_stage5
+evidence:
+- evidence_id: ev_strict_c3_stage5
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict validation summary
+  accessed_at: '2026-10-25T12:21:05Z'
+  support: supports
+  summary: validate_strict.py scanned 993 files with 0 ERROR rows.
+  snapshot_sha256: 329bb133ea2e12c21ccc1a052d09c48f3e848ddfb3fb3b49eea6c450c113025c
+- evidence_id: ev_labels_c3_stage5
+  kind: validation
+  reference: scripts/validate_id_label_correspondence.py
+  locator: id-label correspondence summary
+  accessed_at: '2026-10-25T12:23:27Z'
+  support: supports
+  summary: validate_id_label_correspondence.py verified 4064 canonical, 50 synonym,
+    and 6 exception pairs with 0 mismatches.
+  snapshot_sha256: b5ff41bb52d24f5d7819fb12769e216440f75ec3fb3df3e3cb2c5082fffb40e0
+- evidence_id: ev_uniprot_c3_stage5
+  kind: validation
+  reference: scripts/uniprot_genes.py
+  locator: uniprot_genes --verify summary
+  accessed_at: '2026-10-25T12:22:55Z'
+  support: supports
+  summary: uniprot_genes.py --verify confirmed all UniProtKB protein_examples and
+    causal_graphs xrefs verified ok.
+  snapshot_sha256: 8eaca44c9977fed92594e9bb2376d9e03a167546fd08932f2aa8b7d504605aa4
+- evidence_id: ev_curies_c3_stage5
+  kind: validation
+  reference: scripts/check_curies.py
+  locator: check_curies --offline --check summary
+  accessed_at: '2026-10-25T12:22:47Z'
+  support: supports
+  summary: check_curies.py --offline --check verified 5776 OK and 252 SKIPPED identifiers.
+  snapshot_sha256: a5e5e717786b9316e72b50abb05bbfaa1b18f1487c24abc052fec4bbbfdf4892
+- evidence_id: ev_history_c3_stage5
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history link and schema validation
+  accessed_at: '2026-10-25T12:20:40Z'
+  support: supports
+  summary: 2057 history records validated with 0 invalid links and 0 HistoryRecord
+    schema errors.
+  snapshot_sha256: 2e78c9efe24b4f187f74b59202639b36457409bff8485a4e23924569d89058e6
+assessments:
+- assessment_id: assess_group1_bib_and_discussion_evidence
+  area: evidence
+  topic: Bibliographic citation accuracy and structured discussion evidence items
+    (#2430)
+  outcome: supported
+  summary: 'All 7 records in Group 1 (#2430) have accurate PubMed/DOI citations and
+    structured discussion evidence: primosome_complex.yaml replaces PMID:8265400 with
+    PMID:24106270 (PriA-PriB-DnaT-DnaB primosome review), box_c_d_rnp_complex.yaml
+    replaces PMID:9489704 with PMID:10982890 (yeast Nop1p-Nop56p-Nop58p-Snu13p box
+    C/D core), box_h_aca_rnp_complex.yaml and box_h_aca_snornp_complex.yaml pair PMID:14562095
+    (Huh et al. 2003 Nature localization) with PMID:9843512 (Henras et al. 1998 EMBO
+    J Nhp2p-Gar1p-Nop10p-Cbf5p box H/ACA core), basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml
+    attach PMID:25657325 to discussions[0].evidence, and proteasome_storage_granule.yaml
+    attaches DOI:10.7554/eLife.34532 (supports: REFUTE) to discussions[0].evidence.'
+  target_ids:
+  - GO:1990077
+  - GO:0170049
+  - GO:0072588
+  - GO:0031429
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - GO:0034515
+  evidence_ids:
+  - ev_strict_c3_stage5
+  - ev_curies_c3_stage5
+- assessment_id: assess_group2_subcomplex_types_and_history_graph_ids
+  area: representation
+  topic: PROTEIN_COMPLEX typing for heteromeric subcomplexes and curation_history
+    causal_graph ID alignment (#2431)
+  outcome: supported
+  summary: 'All 11 heteromeric subcomplex components across arp2_3_protein_complex.yaml,
+    gamma_tubulin_ring_complex.yaml, proton_transporting_two_sector_atpase_complex_catalytic_domain.yaml,
+    proton_transporting_two_sector_atpase_complex_proton_transporting_domain.yaml,
+    nucleosome.yaml, and box_c_d_rnp_complex.yaml now use component_type: PROTEIN_COMPLEX,
+    and all 9 records with C3S1/C3S2 curation_history causal_graphs[].id discrepancies
+    now reference their exact causal_graphs[].id values.'
+  target_ids:
+  - GO:1990077
+  - GO:0099070
+  - GO:0005885
+  - GO:0000931
+  - cellstructuremech:elongasome
+  - GO:0033178
+  - GO:0033177
+  - GO:0000786
+  - GO:0016465
+  - GO:0170049
+  - GO:0072588
+  - GO:0140365
+  evidence_ids:
+  - ev_strict_c3_stage5
+  - ev_history_c3_stage5
+- assessment_id: assess_group3_causal_node_component_ref_grounding
+  area: grounding
+  topic: Propagation of grounded component term IDs to causal_graphs component_ref
+    nodes (#2432)
+  outcome: supported
+  summary: 'All 41 component_ref CausalNode entries across the 20 records in Group
+    3 (#2432) now carry the exact term: {id, label} grounding of their referenced
+    components[] entries and pass strict LinkML and OAK ID-label correspondence validation.'
+  target_ids:
+  - GO:0009433
+  - GO:0009429
+  - GO:0030694
+  - GO:0009422
+  - GO:0120102
+  - GO:0120101
+  - GO:0044674
+  - GO:0030115
+  - GO:0110143
+  - GO:0042717
+  - GO:1990063
+  - GO:0120217
+  - GO:0032126
+  - GO:0009338
+  - GO:0160055
+  - cellstructuremech:meiotic_telomere_bouquet
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0044777
+  - GO:0033104
+  - GO:0005619
+  evidence_ids:
+  - ev_strict_c3_stage5
+  - ev_labels_c3_stage5
+findings: []
+actions: []
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0009433
+  - GO:0009429
+  - GO:0030694
+  - GO:0009422
+  - GO:0120102
+  - GO:0120101
+  - GO:0005885
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - GO:0000931
+  - GO:0099070
+  - cellstructuremech:elongasome
+  - GO:0044674
+  - GO:0033178
+  - GO:0033177
+  - GO:0030115
+  - GO:0034515
+  - GO:0110143
+  - GO:0042717
+  - GO:1990063
+  - GO:0016465
+  - GO:0120217
+  - GO:0032126
+  - GO:0009338
+  - GO:0160055
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0000786
+  - GO:1990077
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0044777
+  - GO:0170049
+  - GO:0072588
+  - GO:0031429
+  - GO:0140365
+  - GO:0033104
+  - GO:0005619
+  rationale: All 36 remediated records preserve their existing structure boundaries
+    and canonical GO/CSM identifiers while resolving all 17 Cycle 3 Stage 4 review
+    findings.
+  evidence_ids:
+  - ev_strict_c3_stage5
+  - ev_labels_c3_stage5
+  - ev_uniprot_c3_stage5
+  - ev_curies_c3_stage5
+  - ev_history_c3_stage5
+limitations: []
+tags:
+- stage5
+- cycle3
+- post-remediation
+- verification-review
