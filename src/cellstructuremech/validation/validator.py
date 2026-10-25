@@ -1,4 +1,4 @@
-"""Semantic validation checks for CellStructureRecord documents (#2408, #2410, #2417).
+"""Semantic validation checks for CellStructureRecord documents (#2408, #2410, #2417, #2428).
 
 Complements closed-schema LinkML validation (``write_validated.py``) with
 cross-field and graph-completeness invariants that JSON Schema alone cannot
@@ -7,7 +7,8 @@ express:
 - Every ``CausalEdge.subject`` and ``CausalEdge.object`` references a declared
   ``CausalNode.node_id`` in the same graph.
 - Every ``CausalNode.component_ref`` resolves to a declared ``component_id`` on
-  the record.
+  the record and propagates the referenced component's ``grounding`` (unless
+  the node description explicitly documents a sub-region grounding omission).
 - Every declared ``CausalNode`` participates in at least one incident
   ``CausalEdge`` (no isolated nodes).
 - Every ``CausalEdge`` carries a non-blank ``description``.
@@ -18,10 +19,14 @@ express:
 - Every ``components[].protein_examples[].gene_symbol`` is included in a
   non-empty parent ``components[].gene_symbols`` list or explicitly disclosed
   as an organism-specific synonym/locus tag in ``protein_examples[].role``.
-- Every ``#NNN`` GitHub issue mention in ``discussions`` prose (``prompt``,
-  ``rationale``, ``resolution_note``) is backed by a full GitHub issue URL in
-  that discussion's ``evidence`` list, and every ``attaches_to`` anchor
-  resolves to a local ID on the record.
+- Every ``curation_history`` entry with ``action == 'CURATED_CAUSAL_GRAPH'``
+  that names a target causal-graph slug resolves to a declared
+  ``causal_graphs[].graph_id`` on the record.
+- Every ``#NNN`` GitHub issue mention and every ``DOI`` or ``PMID`` citation in
+  ``discussions`` prose (``prompt``, ``rationale``, ``resolution_note``,
+  ``notes``) is backed by a matching reference in that discussion's
+  ``evidence`` list, and every ``attaches_to`` anchor resolves to a local ID on
+  the record.
 """
 
 from __future__ import annotations
@@ -31,6 +36,14 @@ from typing import Any
 
 DEFAULT_GITHUB_REPO = "CultureBotAI/CellStructureMech"
 _PROSE_ISSUE_RE = re.compile(r"(?<![A-Za-z0-9_/])#([1-9]\d*)\b")
+_PROSE_DOI_RE = re.compile(
+    r"\b(?:DOI:\s*)?(10\.\d{4,9}/[^\s,;)\]\"]*[A-Za-z0-9])", re.IGNORECASE
+)
+_PROSE_PMID_RE = re.compile(r"\bPMID:\s*([1-9]\d*)\b", re.IGNORECASE)
+_CURATED_CG_TARGET_RE = re.compile(
+    r"(?:\b(?:in|Enriched)\s+|\bcausal[ -]graph\s+|\bcausal_graphs(?:\[\d+\])?\s*\(\s*)"
+    r"`?([a-z][a-z0-9]*(?:_[a-z0-9]+)+)`?"
+)
 _STRUCTURE_GROUNDING_PREFIXES = ("GO:", "cellstructuremech:")
 _SYNONYM_ROLE_RE = re.compile(
     r"\bgene ([^\s,()]+), which UniProt lists (?:under the primary name\b|without a gene symbol\b)"
@@ -88,25 +101,38 @@ def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
                 errors.append(
                     f"{gid}: isolated CausalNode {nid!r} has zero incident edges"
                 )
-            if node.get("node_type") == "GENE_OR_PROTEIN":
-                grounding = str(node.get("grounding") or "").strip()
-                ref_comp = comps_by_id.get(cref) if cref else None
-                comp_grounding = str((ref_comp or {}).get("grounding") or "").strip()
-                if grounding.startswith(_STRUCTURE_GROUNDING_PREFIXES):
-                    errors.append(
-                        f"{gid}: node {nid!r} has node_type 'GENE_OR_PROTEIN' with "
-                        f"structure/complex grounding {grounding!r} (expected 'STRUCTURE')"
-                    )
-                elif (
-                    ref_comp
-                    and ref_comp.get("component_type") == "PROTEIN_COMPLEX"
-                    and comp_grounding.startswith(_STRUCTURE_GROUNDING_PREFIXES)
-                ):
-                    errors.append(
-                        f"{gid}: node {nid!r} has node_type 'GENE_OR_PROTEIN' referencing "
-                        f"grounded PROTEIN_COMPLEX component {cref!r} ({comp_grounding!r}; "
-                        f"expected 'STRUCTURE')"
-                    )
+            grounding = str(node.get("grounding") or "").strip()
+            ref_comp = comps_by_id.get(cref) if cref else None
+            comp_grounding = str((ref_comp or {}).get("grounding") or "").strip()
+            node_desc = str(node.get("description") or "").lower()
+            if node.get("node_type") == "GENE_OR_PROTEIN" and grounding.startswith(
+                _STRUCTURE_GROUNDING_PREFIXES
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} has node_type 'GENE_OR_PROTEIN' with "
+                    f"structure/complex grounding {grounding!r} (expected 'STRUCTURE')"
+                )
+            elif (
+                node.get("node_type") == "GENE_OR_PROTEIN"
+                and ref_comp
+                and ref_comp.get("component_type") == "PROTEIN_COMPLEX"
+                and comp_grounding.startswith(_STRUCTURE_GROUNDING_PREFIXES)
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} has node_type 'GENE_OR_PROTEIN' referencing "
+                    f"grounded PROTEIN_COMPLEX component {cref!r} ({comp_grounding!r}; "
+                    f"expected 'STRUCTURE')"
+                )
+            elif (
+                ref_comp
+                and comp_grounding
+                and not grounding
+                and not ("carries no " in node_desc and "grounding" in node_desc)
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} with component_ref {cref!r} omits "
+                    f"grounding {comp_grounding!r} from referenced component"
+                )
     return errors
 
 
@@ -193,9 +219,10 @@ def validate_discussion_issue_links(
             for ev in (disc.get("evidence") or [])
             if isinstance(ev, dict)
         }
+        ev_refs_lower = {r.lower() for r in ev_refs if r}
         prose = " ".join(
             str(disc.get(field) or "")
-            for field in ("prompt", "rationale", "resolution_note", "text")
+            for field in ("prompt", "rationale", "resolution_note", "notes", "text")
         )
         seen_nums: set[str] = set()
         for match in _PROSE_ISSUE_RE.finditer(prose):
@@ -207,6 +234,54 @@ def validate_discussion_issue_links(
             if expected_url not in ev_refs:
                 errors.append(
                     f"{did}: prose mentions #{num} without {expected_url!r} in discussion.evidence"
+                )
+        seen_dois: set[str] = set()
+        for match in _PROSE_DOI_RE.finditer(prose):
+            doi = match.group(1)
+            doi_lower = doi.lower()
+            if doi_lower in seen_dois:
+                continue
+            seen_dois.add(doi_lower)
+            if not any(doi_lower in r for r in ev_refs_lower):
+                errors.append(
+                    f"{did}: prose mentions DOI:{doi} without 'DOI:{doi}' in discussion.evidence"
+                )
+        seen_pmids: set[str] = set()
+        for match in _PROSE_PMID_RE.finditer(prose):
+            pmid = match.group(1)
+            if pmid in seen_pmids:
+                continue
+            seen_pmids.add(pmid)
+            if f"pmid:{pmid}" not in ev_refs_lower:
+                errors.append(
+                    f"{did}: prose mentions PMID:{pmid} without 'PMID:{pmid}' in discussion.evidence"
+                )
+    return errors
+
+
+def validate_curation_history(doc: dict[str, Any]) -> list[str]:
+    """Return error strings when ``CURATED_CAUSAL_GRAPH`` entries cite nonexistent ``graph_id`` slugs."""
+    errors: list[str] = []
+    graph_ids = {
+        g.get("graph_id")
+        for g in (doc.get("causal_graphs") or [])
+        if isinstance(g, dict) and g.get("graph_id")
+    }
+    for idx, entry in enumerate(doc.get("curation_history") or []):
+        if not isinstance(entry, dict) or entry.get("action") != "CURATED_CAUSAL_GRAPH":
+            continue
+        if not graph_ids:
+            errors.append(
+                f"curation_history[{idx}]: action 'CURATED_CAUSAL_GRAPH' on record with no causal_graphs"
+            )
+            continue
+        changes = str(entry.get("changes") or "")
+        for match in _CURATED_CG_TARGET_RE.finditer(changes):
+            target = match.group(1)
+            if target not in graph_ids:
+                errors.append(
+                    f"curation_history[{idx}]: CURATED_CAUSAL_GRAPH target {target!r} "
+                    f"is not in causal_graphs ({sorted(graph_ids)!r})"
                 )
     return errors
 
@@ -220,5 +295,6 @@ def validate_record_semantics(
     return [
         *validate_causal_graphs(doc),
         *validate_component_protein_examples(doc),
+        *validate_curation_history(doc),
         *validate_discussion_issue_links(doc, github_repo=github_repo),
     ]
