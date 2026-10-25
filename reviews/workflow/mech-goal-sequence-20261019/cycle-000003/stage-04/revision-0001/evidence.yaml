@@ -1,0 +1,143 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 3
+stage: 4
+revision: 1
+outcome: completed
+summary: Reviewed all 993 eligible CellStructureRecord YAML files across all 13 category
+  folders at frozen git revision 83ec9d5184fb203d87d8c3bd7043792d385193bf (100% full
+  coverage). Saved 13 native structured RecordReview bundles under reviews/structured/
+  (2 single-record reviews and 11 category reviews; 293 total valid bundles) and recorded
+  17 open findings (2 major, 15 minor across 36 unique records) in carry_forward_ids
+  for Stage 5 grouped remediation, plus infrastructure task cellstructuremech-infra-0006
+  (#2428) in INFRA_TASKS.md.
+source_revision: 83ec9d5184fb203d87d8c3bd7043792d385193bf
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/evidence.yaml
+  sha256: 0440b0090bcaa8047fb865bacbc74f604f2d06f1a3023dad3b8f5062a8edbb9b
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_report.md
+  sha256: d97d358de6722e21d81267f5b041785f01d937c331ad1c1fb024788e29cacf83
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_findings.md
+  sha256: adb222a6a8a1c24c1d15f55d0908567031671b3bdce19140efc8d5d380aef53b
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/validation.md
+  sha256: 458893e309e0630aad6a2ec892a0dcea43ccdecec6cbf1daf0e73c8041582db7
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/coverage_inventory.json
+  sha256: 06bffa2b2d88736071c8ae87d42d525d8523800db7e0be9e6e7f4a4cb2f656de
+  kind: supporting
+findings:
+- finding_id: static-microtubule-bundle-curation-history-graph-id-mismatch
+  status: open
+  summary: 'static_microtubule_bundle.yaml curation_history[1].changes cites graph_id
+    static_bundle_stabilization instead of static_microtubule_bundle_organization
+    (native review: 20261025T071001Z-static-microtubule-bundle-reference-attribution,
+    finding F1, severity minor).'
+- finding_id: primosome-complex-pmid-citation-and-graph-id
+  status: open
+  summary: 'primosome_complex.yaml misattributes PMID:8663105 and PMID:21856207 in
+    evidence notes and cites a mismatched graph_id in curation_history[1].changes
+    (native review: 20261025T071002Z-primosome-complex-pmid-citation-misattribution,
+    finding F1, severity major).'
+- finding_id: appendage-flagellum-causal-node-component-ref-grounding
+  status: open
+  summary: 'Fifteen causal_graphs nodes with component_ref across 6 bacterial flagellar
+    subcomplex records omit verified component InterPro: grounding (native review:
+    20261025T071003Z-appendage-category-review, finding F1, severity minor).'
+- finding_id: cytoskeleton-heteromeric-subcomplex-component-types
+  status: open
+  summary: 'Heteromeric subcomplex components arp2_arp3_nucleation_dimer and gcp4_gcp5_gcp6_ring_subunits
+    are typed PROTEIN instead of PROTEIN_COMPLEX (native review: 20261025T071004Z-cytoskeleton-category-review,
+    finding F1, severity minor).'
+- finding_id: cytoskeleton-cartwheel-discussions-unlinked-pmid
+  status: open
+  summary: 'basal_body_cartwheel.yaml and basal_body_cartwheel_inner_density.yaml
+    cite PMID:42709820 in discussion notes without a structured discussions evidence
+    entry (native review: 20261025T071004Z-cytoskeleton-category-review, finding F2,
+    severity minor).'
+- finding_id: elongasome-curation-history-causal-graph-id-mismatch
+  status: open
+  summary: 'elongasome.yaml curation_history[12].changes cites graph_id elongasome_pg_synthesis
+    instead of elongasome_sidewall_elongation (native review: 20261025T071005Z-division-machinery-category-review,
+    finding F1, severity minor).'
+- finding_id: energy-complex-atpase-subcomplex-types-and-history-graph-ids
+  status: open
+  summary: 'Two-sector ATPase domain records type heteromeric F1/V1 subcomplexes as
+    PROTEIN and cite mismatched causal_graph IDs in curation_history[1].changes (native
+    review: 20261025T071006Z-energy-complex-category-review, finding F1, severity
+    minor).'
+- finding_id: energy-complex-mcr-causal-node-component-ref-grounding
+  status: open
+  summary: 'methyl_coenzyme_m_reductase_complex.yaml causal_graphs[0] subunit nodes
+    omit verified InterPro: groundings from components[] (native review: 20261025T071006Z-energy-complex-category-review,
+    finding F2, severity minor).'
+- finding_id: envelope-s-layer-causal-node-component-ref-grounding
+  status: open
+  summary: 's_layer.yaml causal_graphs[0] node slh_domain omits verified InterPro:IPR001119
+    grounding from components#slh_domain (native review: 20261025T071007Z-envelope-category-review,
+    finding F1, severity minor).'
+- finding_id: inclusion-psg-discussions-unlinked-doi
+  status: open
+  summary: 'proteasome_storage_granule.yaml discussions[0].notes mentions DOI 10.7554/eLife.34532
+    without a structured discussions[0].evidence entry (native review: 20261025T071008Z-inclusion-category-review,
+    finding F1, severity minor).'
+- finding_id: membrane-organelle-causal-node-component-ref-grounding
+  status: open
+  summary: 'Three causal_graphs nodes with component_ref across 2 membrane_organelle
+    records omit verified component groundings (native review: 20261025T071009Z-membrane-organelle-category-review,
+    finding F1, severity minor).'
+- finding_id: other-nucleosome-type-and-chaperonin-history-graph-id
+  status: open
+  summary: 'nucleosome.yaml types histone_octamer_core as PROTEIN and chaperonin_atpase_complex.yaml
+    cites a mismatched graph_id in curation_history[1].changes (native review: 20261025T071010Z-other-category-review,
+    finding F1, severity minor).'
+- finding_id: other-causal-node-component-ref-grounding
+  status: open
+  summary: 'Thirteen causal_graphs nodes with component_ref across 8 records in data/structures/other/
+    omit verified component groundings (native review: 20261025T071010Z-other-category-review,
+    finding F2, severity minor).'
+- finding_id: ribonucleoprotein-box-rnp-reference-misattribution
+  status: open
+  summary: 'box_c_d_rnp_complex.yaml, box_h_aca_rnp_complex.yaml, and box_h_aca_snornp_complex.yaml
+    misattribute DOI:10.1016/j.molcel.2007.01.024 and PMID:14562095 (native review:
+    20261025T071011Z-ribonucleoprotein-category-review, finding F1, severity major).'
+- finding_id: ribonucleoprotein-subcomplex-types-and-history-graph-ids
+  status: open
+  summary: 'Heterotetrameric snoRNP/RNP core components are typed PROTEIN instead
+    of PROTEIN_COMPLEX and 3 records cite mismatched graph_ids in curation_history
+    (native review: 20261025T071011Z-ribonucleoprotein-category-review, finding F2,
+    severity minor).'
+- finding_id: secretion-system-t6ss-causal-node-component-ref-grounding
+  status: open
+  summary: 'type_vi_protein_secretion_system_complex.yaml causal_graphs[0] subcomplex
+    nodes omit verified cellstructuremech: groundings from components[] (native review:
+    20261025T071012Z-secretion-system-category-review, finding F1, severity minor).'
+- finding_id: spore-ascospore-wall-causal-node-component-ref-grounding
+  status: open
+  summary: 'ascospore_wall.yaml causal_graphs[0].nodes[3] (chitosan_outer_layer) omits
+    verified CHEBI:16261 grounding from components#chitosan_outer_layer (native review:
+    20261025T071013Z-spore-category-review, finding F1, severity minor).'
+groups: []
+carry_forward_ids:
+- static-microtubule-bundle-curation-history-graph-id-mismatch
+- primosome-complex-pmid-citation-and-graph-id
+- appendage-flagellum-causal-node-component-ref-grounding
+- cytoskeleton-heteromeric-subcomplex-component-types
+- cytoskeleton-cartwheel-discussions-unlinked-pmid
+- elongasome-curation-history-causal-graph-id-mismatch
+- energy-complex-atpase-subcomplex-types-and-history-graph-ids
+- energy-complex-mcr-causal-node-component-ref-grounding
+- envelope-s-layer-causal-node-component-ref-grounding
+- inclusion-psg-discussions-unlinked-doi
+- membrane-organelle-causal-node-component-ref-grounding
+- other-nucleosome-type-and-chaperonin-history-graph-id
+- other-causal-node-component-ref-grounding
+- ribonucleoprotein-box-rnp-reference-misattribution
+- ribonucleoprotein-subcomplex-types-and-history-graph-ids
+- secretion-system-t6ss-causal-node-component-ref-grounding
+- spore-ascospore-wall-causal-node-component-ref-grounding
+infra_tasks: []
