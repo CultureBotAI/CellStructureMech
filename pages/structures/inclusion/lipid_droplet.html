@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/inclusion.html">Inclusion</a> · lipid droplet</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>lipid droplet</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a> · Inclusion · Inclusion body · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a> · Inclusion · Inclusion body · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">An intracellular non-membrane-bounded organelle comprising a matrix of coalesced lipids surrounded by a phospholipid monolayer. May include associated proteins. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a>]</small></p>
 <p><strong>Synonyms:</strong> adiposome; lipid body; lipid particle</p><p><strong>Has part:</strong> <a href="../../structures/inclusion/monolayer_surrounded_lipid_storage_body_outer_lipid_monolayer.html">monolayer-surrounded lipid storage body outer lipid monolayer</a> (<a href="http://purl.obolibrary.org/obo/GO_0034430"><code>GO:0034430</code></a>) </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -59,7 +60,7 @@
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>triglyceride <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_17855"><code>CHEBI:17855</code></a>)</small></td><td>forms core of</td><td>lipid droplet <small>(<a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a>)</small></td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/29397034"><code>PMID:29397034</code></a> <small>Graef 2018 reviews triacylglycerols as a major neutral-lipid class dynamically stored in budding-yeast lipid droplets.</small></li></ul></td></tr>
 <tr><td>sterol ester <small>(<a href="http://purl.obolibrary.org/obo/CHEBI_35915"><code>CHEBI:35915</code></a>)</small></td><td>forms core of</td><td>lipid droplet <small>(<a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a>)</small></td><td><ul class="evidence"><li><a href="https://pubmed.ncbi.nlm.nih.gov/29397034"><code>PMID:29397034</code></a> <small>Graef 2018 reviews steryl esters as a major neutral-lipid class dynamically stored in budding-yeast lipid droplets.</small></li></ul></td></tr>
-<tr><td>monolayer-surrounded lipid storage body outer lipid monolayer <small>(<a href="http://purl.obolibrary.org/obo/GO_0034430"><code>GO:0034430</code></a>)</small></td><td>surrounds</td><td>lipid droplet <small>(<a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a> <small>The GO lipid droplet definition describes a coalesced-lipid matrix surrounded by a phospholipid monolayer.</small></li></ul></td></tr>
+<tr><td>monolayer-surrounded lipid storage body outer lipid monolayer <small>(<a href="../../structures/inclusion/monolayer_surrounded_lipid_storage_body_outer_lipid_monolayer.html"><code>GO:0034430</code></a>)</small></td><td>surrounds</td><td>lipid droplet <small>(<a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a> <small>The GO lipid droplet definition describes a coalesced-lipid matrix surrounded by a phospholipid monolayer.</small></li></ul></td></tr>
 <tr><td>lipid droplet <small>(<a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a>)</small></td><td>stores</td><td>stored neutral lipids</td><td><ul class="evidence"><li><a href="https://doi.org/10.1007/s00018-015-1903-5"><code>DOI:10.1007/s00018-015-1903-5</code></a> <small>Wang 2015 reviews storage and mobilization of neutral lipids in budding-yeast lipid droplets.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -70,11 +71,13 @@
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005811"><code>GO:0005811</code></a> <small>Gene Ontology cellular-component term for lipid droplet.</small></li><li><a href="https://doi.org/10.1007/s00018-015-1903-5"><code>DOI:10.1007/s00018-015-1903-5</code></a> <small>Wang 2015, Lipid droplet dynamics in budding yeast, Cellular and Molecular Life Sciences.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/29397034"><code>PMID:29397034</code></a> <small>Graef 2018, Lipid droplet-mediated lipid and protein homeostasis in budding yeast, FEBS Letters.</small></li><li><a href="https://doi.org/10.1016/j.bbalip.2011.07.015"><code>DOI:10.1016/j.bbalip.2011.07.015</code></a> <small>Grillitsch et al. 2011, Lipid particles/droplets of the yeast Saccharomyces cerevisiae revisited: lipidome meets proteome, Biochimica et Biophysica Acta.</small></li><li><a href="https://doi.org/10.1111/mmi.15170"><code>DOI:10.1111/mmi.15170</code></a> <small>Al Mamun, Reza, and Islam 2023, Identification of novel proteins regulating lipid droplet biogenesis in filamentous fungi, Molecular Microbiology.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-10T10:20:26Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T10:22:09Z</code> claude · EXPANDED_RECORD — Added GO exact synonyms and monolayer parthood, ChEBI-grounded triglyceride and sterol-ester core components, fungal taxonomic scope, a Saccharomyces cerevisiae S288C canonical example, neutral-lipid storage function, record-level evidence and a nonmechanistic neutral-lipid storage graph.</li><li><code>2026-09-10T10:31:24Z</code> claude · ADDRESS_REVIEW — Resolved #346 by correcting the Al Mamun lipid-droplet citation year and title; resolved #347 by changing the budding-yeast canonical example from strain-specific Saccharomyces cerevisiae S288C to species-level Saccharomyces cerevisiae.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/inclusion/lipid_droplet.yaml"><code>data/structures/inclusion/lipid_droplet.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-10T10:20:26Z</code> claude · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T10:22:09Z</code> claude · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added GO exact synonyms and monolayer parthood, ChEBI-grounded triglyceride and sterol-ester core components, fungal taxonomic scope, a Saccharomyces cerevisiae S288C canonical example, neutral-lipid storage function, record-level evidence and a nonmechanistic neutral-lipid storage graph.</li><li><code>2026-09-10T10:31:24Z</code> claude · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Resolved #346 by correcting the Al Mamun lipid-droplet citation year and title; resolved #347 by changing the budding-yeast canonical example from strain-specific Saccharomyces cerevisiae S288C to species-level Saccharomyces cerevisiae.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/inclusion/lipid_droplet.yaml"><code>data/structures/inclusion/lipid_droplet.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0005811&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Finclusion%2Flipid_droplet.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

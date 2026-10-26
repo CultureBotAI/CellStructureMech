@@ -35,7 +35,11 @@ IMAGES = list(_pages())
 
 def _page(path: Path) -> str:
     page = PAGES / path.parent.name / (path.stem + ".html")
-    return re.sub(r"\s+", " ", html.unescape(page.read_text(encoding="utf-8")))
+    markup = page.read_text(encoding="utf-8")
+    # The text a reader sees as well: a DOI in an attribution is rendered as a
+    # link, which splits the attribution with markup.
+    visible = re.sub(r"<[^>]+>", "", markup)
+    return re.sub(r"\s+", " ", html.unescape(markup + "\n" + visible))
 
 
 @pytest.mark.skipif(not IMAGES, reason="no images in the corpus")

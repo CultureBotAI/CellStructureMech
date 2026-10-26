@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/ribonucleoprotein.html">Ribonucleoprotein</a> · box H/ACA RNP complex</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>box H/ACA RNP complex</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0072588"><code>GO:0072588</code></a> · Ribonucleoprotein · Ribonucleoprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0072588"><code>GO:0072588</code></a> · Ribonucleoprotein · Ribonucleoprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A ribonucleoprotein complex containing a small RNA with an H/ACA box sequence motif that catalyzes pseudouridylation of RNA molecules. Most members of this family use guide RNAs to direct the site of pseudouridylation of target RNAs (for example, box H/ACA snoRNPs and box H/ACA scaRNPs) although some members do not modify other RNAs (for example, telomerase RNP). <small>[<a href="http://purl.obolibrary.org/obo/GO_0072588"><code>GO:0072588</code></a>]</small></p>
 <p><strong>Synonyms:</strong> sRNP complex; box H/ACA snoRNP pseudouridylase complex</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -88,11 +89,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0072588"><code>GO:0072588</code></a> <small>Gene Ontology cellular-component term for box H/ACA RNP complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0001522"><code>GO:0001522</code></a> <small>Gene Ontology biological-process term for pseudouridine synthesis.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/9843512"><code>PMID:9843512</code></a> <small>Henras A et al. 1998, &#39;Nhp2p and Nop10p are essential for the function of H/ACA snoRNPs.&#39;, EMBO J.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/14562095"><code>PMID:14562095</code></a> <small>Huh WK et al. 2003, &#39;Global analysis of protein localization in budding yeast.&#39;, Nature.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-10-24T03:15:00Z</code> add-cell-structure · CREATED — Create new CellStructureRecord GO:0072588 (box H/ACA RNP complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.</li><li><code>2026-10-24T06:00:00Z</code> antigravity · CURATED_CAUSAL_GRAPH — Added direct RNP scaffolding edge from box_h_aca_rna to cbf5_gar1_nhp2_nop10_core in box_h_aca_rnp_pseudouridylation (GO:0072588, PMID:9843512).</li><li><code>2026-10-25T12:15:00Z</code> antigravity · ADDRESS_SAVED_REVIEW — Addressed #2430 and #2431 (findings ribonucleoprotein-box-rnp-reference-misattribution, ribonucleoprotein-subcomplex-types-and-history-graph-ids): removed misattributed DOI:10.1016/j.molcel.2007.01.024, reconciled PMID:14562095 (Huh et al. 2003, Nature) and PMID:9843512 (Henras et al. 1998, EMBO J) notes, updated cbf5_gar1_nhp2_nop10_core to PROTEIN_COMPLEX, and aligned curation_history[1] graph_id to box_h_aca_rnp_pseudouridylation.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml"><code>data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-10-24T03:15:00Z</code> add-cell-structure · CREATED · <span class="llm-assisted">LLM-assisted</span> — Create new CellStructureRecord GO:0072588 (box H/ACA RNP complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.</li><li><code>2026-10-24T06:00:00Z</code> antigravity · CURATED_CAUSAL_GRAPH · <span class="llm-assisted">LLM-assisted</span> — Added direct RNP scaffolding edge from box_h_aca_rna to cbf5_gar1_nhp2_nop10_core in box_h_aca_rnp_pseudouridylation (GO:0072588, <a href="https://pubmed.ncbi.nlm.nih.gov/9843512/">PMID:9843512</a>).</li><li><code>2026-10-25T12:15:00Z</code> antigravity · ADDRESS_SAVED_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Addressed #2430 and #2431 (findings ribonucleoprotein-box-rnp-reference-misattribution, ribonucleoprotein-subcomplex-types-and-history-graph-ids): removed misattributed <a href="https://doi.org/10.1016/j.molcel.2007.01.024">DOI:10.1016/j.molcel.2007.01.024</a>, reconciled <a href="https://pubmed.ncbi.nlm.nih.gov/14562095/">PMID:14562095</a> (Huh et al. 2003, Nature) and <a href="https://pubmed.ncbi.nlm.nih.gov/9843512/">PMID:9843512</a> (Henras et al. 1998, EMBO J) notes, updated cbf5_gar1_nhp2_nop10_core to PROTEIN_COMPLEX, and aligned curation_history[1] graph_id to box_h_aca_rnp_pseudouridylation.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml"><code>data/structures/ribonucleoprotein/box_h_aca_rnp_complex.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0072588&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fribonucleoprotein%2Fbox_h_aca_rnp_complex.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

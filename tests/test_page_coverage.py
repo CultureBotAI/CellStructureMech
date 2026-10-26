@@ -80,7 +80,11 @@ def _page_text(path: Path) -> str:
     assert page.exists(), f"no rendered page for {path.name}"
     # Unescape first: a prompt containing an apostrophe reaches the page as
     # &#39; and would look absent to a naive substring test.
-    return re.sub(r"\s+", " ", html.unescape(page.read_text(encoding="utf-8")))
+    markup = page.read_text(encoding="utf-8")
+    # The text a reader sees as well: a reference token inside record prose is
+    # rendered as a link, which splits the prose with markup.
+    visible = re.sub(r"<[^>]+>", "", markup)
+    return re.sub(r"\s+", " ", html.unescape(markup + "\n" + visible))
 
 
 @pytest.mark.parametrize("section", sorted(PROBES))

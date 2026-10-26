@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · DNA topoisomerase IV complex</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>DNA topoisomerase IV complex</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009340"><code>GO:0009340</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009340"><code>GO:0009340</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A bacterial type IIA topoisomerase complex composed of ParC and ParE subunits that can relax supercoiled DNA and supports chromosome segregation. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009340"><code>GO:0009340</code></a>]</small></p>
 <p><strong>Synonyms:</strong> topoisomerase IV</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -89,11 +90,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009340"><code>GO:0009340</code></a> <small>Gene Ontology cellular-component term for DNA topoisomerase IV complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009330"><code>GO:0009330</code></a> <small>Gene Ontology cellular-component term for ATP-hydrolyzing DNA topoisomerase type II complexes, the broader class that includes DNA topoisomerase IV.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032991"><code>GO:0032991</code></a> <small>Gene Ontology cellular-component term for protein-containing complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0003918"><code>GO:0003918</code></a> <small>Gene Ontology molecular-function term for ATP-hydrolyzing DNA topoisomerase type II activity.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P0AFI2"><code>UniProtKB:P0AFI2</code></a> <small>UniProtKB reviewed Escherichia coli K-12 ParC entry.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P20083"><code>UniProtKB:P20083</code></a> <small>UniProtKB reviewed Escherichia coli K-12 ParE entry.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR005742"><code>InterPro:IPR005742</code></a> <small>InterPro family for Gram-negative DNA topoisomerase IV subunit A proteins.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR005737"><code>InterPro:IPR005737</code></a> <small>InterPro family for Gram-negative DNA topoisomerase IV subunit B proteins.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR050220"><code>InterPro:IPR050220</code></a> <small>InterPro type-II DNA topoisomerase family observed on the E. coli ParC example; broader than the ParC component.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001241"><code>InterPro:IPR001241</code></a> <small>InterPro type-IIA DNA topoisomerase family observed on the E. coli ParE example; broader than the ParE component.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/8227000"><code>PMID:8227000</code></a> <small>Peng and Marians 1993, Escherichia coli topoisomerase IV. Purification, characterization, subunit structure, and subunit interactions.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/7783632"><code>PMID:7783632</code></a> <small>PubMed identifier for Luttinger 1995, a review cited by the GO:0009340 term definition.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-24T10:33:14Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-24T10:34:02Z</code> codex · EXPANDED_RECORD — Added topoisomerase-II parentage, ParC/ParE reviewed-label-only components with E. coli K-12 UniProt examples, an E. coli canonical example, type-II DNA topoisomerase function evidence, InterPro boundary discussion, and a compact function graph.</li><li><code>2026-09-24T10:45:16Z</code> codex · ADDRESS_REVIEW — #1479: removed the unsupported Topo IV exact synonym while leaving the GO-backed topoisomerase IV synonym in place.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dna_topoisomerase_iv_complex.yaml"><code>data/structures/other/dna_topoisomerase_iv_complex.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-24T10:33:14Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-24T10:34:02Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added topoisomerase-II parentage, ParC/ParE reviewed-label-only components with E. coli K-12 UniProt examples, an E. coli canonical example, type-II DNA topoisomerase function evidence, InterPro boundary discussion, and a compact function graph.</li><li><code>2026-09-24T10:45:16Z</code> codex · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — #1479: removed the unsupported Topo IV exact synonym while leaving the GO-backed topoisomerase IV synonym in place.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dna_topoisomerase_iv_complex.yaml"><code>data/structures/other/dna_topoisomerase_iv_complex.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0009340&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Fdna_topoisomerase_iv_complex.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

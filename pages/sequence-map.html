@@ -8,6 +8,7 @@
 <script src="theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="index.html">CellStructureMech</a>
   <nav>
@@ -15,14 +16,14 @@
     <a href="embedding-map.html">Text map</a>
     <a href="sequence-map.html">Sequence map</a>
     <a href="corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="wide">
+<main id="main" class="wide">
 <h1>Protein sequence map (pLM)</h1>
-<p class="definition">2D PACMAP projection of <strong>469 unique protein sequences</strong>
+<p class="definition">2D PaCMAP projection of <strong>469 unique protein sequences</strong>
 across <strong>140 microbial cell structures</strong> (1169 protein&ndash;structure mentions), embedded with
 <code>facebook/esm2_t33_650M_UR50D</code> (revision <code>08e4846e537177426273712802403f7ba8261b6c</code>, 1280-d mean-pooled residue representations).</p>
 <p class="meta">Each point represents a curated UniProtKB protein from a cell structure component or
@@ -82,6 +83,17 @@ scroll to zoom, drag to pan, double-click to reset view.</p>
       <canvas id="seq-canvas" width="920" height="580" aria-label="ESM-2 PaCMAP embedding scatter plot of cell structure proteins"></canvas>
       <div id="seq-tip" class="seq-tip" hidden></div>
     </div>
+    <noscript><p class="meta">The sequence map needs JavaScript. <a href="browse.html">Browse all records as a table</a>.</p></noscript>
+    <details id="seq-table" class="map-table" hidden>
+      <summary>View data as table</summary>
+      <div class="table-scroll" role="region" tabindex="0" aria-label="Plotted proteins">
+        <table>
+          <caption id="seq-table-caption"></caption>
+          <thead><tr><th scope="col">Protein</th><th scope="col">Accession</th><th scope="col">Organism</th><th scope="col">Length (aa)</th><th scope="col">Structure category</th><th scope="col">Role</th><th scope="col">Structure records</th></tr></thead>
+          <tbody id="seq-table-body"></tbody>
+        </table>
+      </div>
+    </details>
     <section id="seq-details" class="map-details" aria-live="polite">
       <h2>Select a protein</h2>
       <p>Click any point on the map to inspect its parent cell structure records, component role, organism, and sequence length.</p>
@@ -133,6 +145,54 @@ scroll to zoom, drag to pan, double-click to reset view.</p>
   var statusEl = document.getElementById('seq-status');
   var legendEl = document.getElementById('seq-legend');
   var detailsEl = document.getElementById('seq-details');
+  var tableBox = document.getElementById('seq-table');
+  var tableBody = document.getElementById('seq-table-body');
+  var tableCaption = document.getElementById('seq-table-caption');
+
+  function cell(row, content) {
+    var td = document.createElement('td');
+    if (typeof content === 'string') td.textContent = content; else td.appendChild(content);
+    row.appendChild(td);
+    return td;
+  }
+
+  // The canvas's text alternative: one row per protein the map currently
+  // shows, each linking its structure records, built only while it is open.
+  function renderTable() {
+    if (!tableBox.open) return;
+    var rows = [];
+    pts.forEach(function (p, i) {
+      if (!matchMask[i]) return;
+      var row = document.createElement('tr');
+      cell(row, p.label || '');
+      var url = extUrl(p.id);
+      if (url) {
+        var entry = document.createElement('a');
+        entry.href = url;
+        entry.textContent = p.id;
+        cell(row, entry);
+      } else {
+        cell(row, p.id);
+      }
+      cell(row, p.organism || '');
+      cell(row, String(p.length));
+      cell(row, readable(p.primary_group));
+      cell(row, p.primary_role_label || p.primary_role || '');
+      var records = cell(row, '');
+      (p.records || []).forEach(function (r, k) {
+        if (k) records.appendChild(document.createTextNode('; '));
+        var link = document.createElement('a');
+        link.href = r.page;
+        link.textContent = r.label;
+        records.appendChild(link);
+      });
+      rows.push(row);
+    });
+    tableCaption.textContent = rows.length + ' of ' + pts.length + ' proteins shown';
+    tableBody.replaceChildren.apply(tableBody, rows);
+  }
+  tableBox.addEventListener('toggle', renderTable);
+  tableBox.hidden = false;
 
   (DATA.groups || []).forEach(function (g) {
     var opt = document.createElement('option');
@@ -269,6 +329,7 @@ scroll to zoom, drag to pan, double-click to reset view.</p>
     statusEl.textContent = shown + ' of ' + pts.length + ' proteins shown';
     rebuildLegend();
     draw();
+    renderTable();
   }
 
   function draw() {
@@ -418,7 +479,8 @@ scroll to zoom, drag to pan, double-click to reset view.</p>
 </script>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="corpus.json">corpus JSON</a> · <a href="index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="corpus.json">corpus JSON</a> · <a href="index.json">index JSON</a> · <a href="schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

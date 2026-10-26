@@ -63,7 +63,9 @@ def test_original_graph_scope_has_displayed_description(slug):
 def test_generated_page_exposes_complete_original_qualifications(slug, section, field):
     page = VisibleText()
     page.feed((ROOT / "pages/structures/cytoskeleton" / f"{slug}.html").read_text())
-    visible = " ".join(" ".join(page.parts).split())
+    # Text nodes are joined as a browser shows them, with no added space: a
+    # linked "PMC10963028" in "PMC10963028.1" is one run of text, not two.
+    visible = " ".join("".join(page.parts).split())
     for item in record(slug)[section]:
         assert " ".join(item[field].split()) in visible
 

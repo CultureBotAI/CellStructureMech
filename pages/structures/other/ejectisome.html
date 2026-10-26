@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · ejectisome</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>ejectisome</h1>
-<p class="meta"><code>cellstructuremech:ejectisome</code> · Other · Other · <span class="status">Proposed</span></p>
+<p class="meta"><a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/ejectisome.yaml"><code>cellstructuremech:ejectisome</code></a> · Other · Other · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A cryptophyte extrusive organelle that discharges proteinaceous paracrystalline ribbons or filaments built in part from small ejectisin polypeptides. <small>[<a href="https://doi.org/10.1007/s00709-012-0440-4"><code>DOI:10.1007/s00709-012-0440-4</code></a>]</small></p>
 
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -54,8 +55,8 @@
 <h3 id="causal_graphs-ejectisins_build_discharged_ejectisome_filaments">Ejectisins are major components of discharged ejectisomes <small>(FUNCTION)</small></h3>
 <p>Cryptophyte ejectisomes contain small ejectisin polypeptides and discharge as tubular or filamentous proteinaceous structures with a paracrystalline lattice.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Ejectisins are major components of discharged ejectisomes">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>ejectisin polypeptides</td><td>are major component of</td><td>ejectisome <small>(<code>cellstructuremech:ejectisome</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1007/s00709-012-0440-4"><code>DOI:10.1007/s00709-012-0440-4</code></a> <small>Ammermann et al. 2013 found the isolated ejectisome-fragment protein pattern was dominated by 6-kDa polypeptides and named those major components ejectisins.</small></li></ul></td></tr>
-<tr><td>ejectisome <small>(<code>cellstructuremech:ejectisome</code>)</small></td><td>discharges as</td><td>discharged ejectisome filaments</td><td><ul class="evidence"><li><a href="https://doi.org/10.1007/s00709-011-0267-4"><code>DOI:10.1007/s00709-011-0267-4</code></a> <small>Rhiel and Westermann 2012 purified discharged ejectisomes from Chroomonas and Cryptomonas species and measured paracrystalline periodicity in tubular fragments.</small></li></ul></td></tr>
+<tr><td>ejectisin polypeptides</td><td>are major component of</td><td>ejectisome <small>(<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/ejectisome.yaml"><code>cellstructuremech:ejectisome</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1007/s00709-012-0440-4"><code>DOI:10.1007/s00709-012-0440-4</code></a> <small>Ammermann et al. 2013 found the isolated ejectisome-fragment protein pattern was dominated by 6-kDa polypeptides and named those major components ejectisins.</small></li></ul></td></tr>
+<tr><td>ejectisome <small>(<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/ejectisome.yaml"><code>cellstructuremech:ejectisome</code></a>)</small></td><td>discharges as</td><td>discharged ejectisome filaments</td><td><ul class="evidence"><li><a href="https://doi.org/10.1007/s00709-011-0267-4"><code>DOI:10.1007/s00709-011-0267-4</code></a> <small>Rhiel and Westermann 2012 purified discharged ejectisomes from Chroomonas and Cryptomonas species and measured paracrystalline periodicity in tubular fragments.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -67,11 +68,13 @@
 <ul class="evidence"><li><a href="https://doi.org/10.1007/s00709-011-0267-4"><code>DOI:10.1007/s00709-011-0267-4</code></a> <small>Rhiel and Westermann 2012 isolated discharged ejectisomes from pigmented cryptophytes and characterized their tubular paracrystalline fragments by transmission electron microscopy.</small></li><li><a href="https://doi.org/10.1007/s00709-012-0440-4"><code>DOI:10.1007/s00709-012-0440-4</code></a> <small>Ammermann et al. 2013 purified Chroomonas and Cryptomonas ejectisome fragments and identified ejectisins as major cryptophycean ejectisome polypeptides.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/21336864"><code>PMID:21336864</code></a> <small>PubMed record for the Rhiel and Westermann 2012 discharged ejectisome ultrastructure study.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/22868567"><code>PMID:22868567</code></a> <small>PubMed record for the Ammermann et al. 2013 ejectisin component study.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-22T10:18:59Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-22T10:20:21Z</code> codex · EXPANDED_RECORD — Added a label-only ejectisin component, Cryptophyceae and Chroomonas scope, DOI and PMID evidence, a nonmechanistic discharged-ejectisome filament graph, and TODOs for ejectisin grounding and ejectisome boundaries.</li><li><code>2026-09-22T10:46:35Z</code> codex · ADDRESS_REVIEW — Resolved PR #1272 review issue #1273 by adding GO:0043231 as the broader parent_structures term for the minted ejectisome record.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/ejectisome.yaml"><code>data/structures/other/ejectisome.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-22T10:18:59Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-22T10:20:21Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added a label-only ejectisin component, Cryptophyceae and Chroomonas scope, DOI and PMID evidence, a nonmechanistic discharged-ejectisome filament graph, and TODOs for ejectisin grounding and ejectisome boundaries.</li><li><code>2026-09-22T10:46:35Z</code> codex · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Resolved PR #1272 review issue #1273 by adding GO:0043231 as the broader parent_structures term for the minted ejectisome record.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/ejectisome.yaml"><code>data/structures/other/ejectisome.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+cellstructuremech%3Aejectisome&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Fejectisome.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

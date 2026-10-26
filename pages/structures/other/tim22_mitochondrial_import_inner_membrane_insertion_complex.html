@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · TIM22 mitochondrial import inner membrane insertion complex</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>TIM22 mitochondrial import inner membrane insertion complex</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A multi-subunit mitochondrial inner-membrane complex that mediates insertion of multi-pass inner-membrane precursor proteins carrying internal targeting elements. <small>[<a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a>]</small></p>
 <p><strong>Synonyms:</strong> mitochondrial inner membrane protein insertion complex; Tim22 complex; mitochondrial protein translocase complex</p><p><strong>Part of:</strong> <a href="../../structures/membrane_organelle/mitochondrial_inner_membrane.html">mitochondrial inner membrane</a> (<a href="http://purl.obolibrary.org/obo/GO_0005743"><code>GO:0005743</code></a>) </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -50,7 +51,7 @@
 <h3 id="causal_graphs-tim22_inner_membrane_insertion">TIM22 mediates carrier insertion into the inner membrane <small>(FUNCTION)</small></h3>
 <p>TIM22 resides in the mitochondrial inner membrane and inserts imported multi-pass carrier proteins into that membrane.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: TIM22 mediates carrier insertion into the inner membrane">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>TIM22 mitochondrial import inner membrane insertion complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a>)</small></td><td>is part of</td><td>mitochondrial inner membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005743"><code>GO:0005743</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a> <small>GO:0042721 defines TIM22 as a complex embedded in the mitochondrial inner membrane.</small></li></ul></td></tr>
+<tr><td>TIM22 mitochondrial import inner membrane insertion complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a>)</small></td><td>is part of</td><td>mitochondrial inner membrane <small>(<a href="../../structures/membrane_organelle/mitochondrial_inner_membrane.html"><code>GO:0005743</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a> <small>GO:0042721 defines TIM22 as a complex embedded in the mitochondrial inner membrane.</small></li></ul></td></tr>
 <tr><td>TIM22 mitochondrial import inner membrane insertion complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a>)</small></td><td>supports</td><td>protein insertion into mitochondrial inner membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0045039"><code>GO:0045039</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a> <small>GO:0042721 grounds TIM22 as the mitochondrial inner-membrane insertion complex for multi-transmembrane proteins with internal targeting elements.</small></li><li><a href="https://doi.org/10.1016/j.cell.2009.08.005"><code>DOI:10.1016/j.cell.2009.08.005</code></a> <small>Chacinska et al. 2009 reviewed the TIM22 carrier pathway for protein insertion into the mitochondrial inner membrane.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -63,11 +64,13 @@
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0042721"><code>GO:0042721</code></a> <small>Gene Ontology cellular-component term for the TIM22 mitochondrial import inner membrane insertion complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098800"><code>GO:0098800</code></a> <small>Gene Ontology cellular-component parent term for inner mitochondrial membrane protein complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005743"><code>GO:0005743</code></a> <small>Gene Ontology cellular-component term for the mitochondrial inner membrane that contains TIM22.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0045039"><code>GO:0045039</code></a> <small>Gene Ontology biological-process term for protein insertion into the mitochondrial inner membrane.</small></li><li><a href="https://doi.org/10.1016/j.cell.2009.08.005"><code>DOI:10.1016/j.cell.2009.08.005</code></a> <small>Chacinska et al. 2009, &#39;Importing mitochondrial proteins: machineries and mechanisms&#39;, Cell.</small></li><li><a href="https://doi.org/10.1128/MCB.20.4.1187-1193.2000"><code>DOI:10.1128/MCB.20.4.1187-1193.2000</code></a> <small>Koehler et al. 2000, &#39;Tim18p, a new subunit of the TIM22 complex that mediates insertion of imported proteins into the yeast mitochondrial inner membrane&#39;, Molecular and Cellular Biology.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-18T17:41:46Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-18T17:42:27Z</code> codex · EXPANDED_RECORD — Added GO synonymy, inner-mitochondrial-membrane protein-complex parentage, mitochondrial-inner-membrane parthood, Saccharomyces scope, inner-membrane insertion function evidence, a nonmechanistic TIM22 insertion graph, and a TIM22 subunit-boundary TODO.</li><li><code>2026-09-18T17:52:32Z</code> codex · ADDRESS_REVIEW — Resolved #1177 by narrowing the TIM22 graph scope and subunit TODO to the cited yeast integral membrane subunits and small TIM chaperone boundary.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/tim22_mitochondrial_import_inner_membrane_insertion_complex.yaml"><code>data/structures/other/tim22_mitochondrial_import_inner_membrane_insertion_complex.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-18T17:41:46Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-18T17:42:27Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added GO synonymy, inner-mitochondrial-membrane protein-complex parentage, mitochondrial-inner-membrane parthood, Saccharomyces scope, inner-membrane insertion function evidence, a nonmechanistic TIM22 insertion graph, and a TIM22 subunit-boundary TODO.</li><li><code>2026-09-18T17:52:32Z</code> codex · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Resolved #1177 by narrowing the TIM22 graph scope and subunit TODO to the cited yeast integral membrane subunits and small TIM chaperone boundary.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/tim22_mitochondrial_import_inner_membrane_insertion_complex.yaml"><code>data/structures/other/tim22_mitochondrial_import_inner_membrane_insertion_complex.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0042721&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Ftim22_mitochondrial_import_inner_membrane_insertion_complex.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

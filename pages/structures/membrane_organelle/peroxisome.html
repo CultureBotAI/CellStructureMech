@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · peroxisome</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>peroxisome</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005777"><code>GO:0005777</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005777"><code>GO:0005777</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A small organelle enclosed by a single membrane, and found in most eukaryotic cells; it contains peroxidases and other enzymes involved in metabolic processes including free radical detoxification, lipid catabolism and biosynthesis, and hydrogen peroxide metabolism. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005777"><code>GO:0005777</code></a>]</small></p>
 <p><strong>Has part:</strong> <a href="../../structures/membrane_organelle/peroxisomal_membrane.html">peroxisomal membrane</a> (<a href="http://purl.obolibrary.org/obo/GO_0005778"><code>GO:0005778</code></a>);  <a href="../../structures/membrane_organelle/peroxisomal_matrix.html">peroxisomal matrix</a> (<a href="http://purl.obolibrary.org/obo/GO_0005782"><code>GO:0005782</code></a>) </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -36,7 +37,7 @@
 <h2>Components</h2>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
-<tr id="components-peroxisomal_membrane"><td>peroxisomal membrane</td><td>Lipid</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0005778"><code>GO:0005778</code></a></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid bilayer that bounds the peroxisome and encloses its matrix.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005778"><code>GO:0005778</code></a> <small>Gene Ontology cellular-component term for the lipid bilayer surrounding a peroxisome.</small></li><li><a href="https://doi.org/10.1038/nrm3700"><code>DOI:10.1038/nrm3700</code></a> <small>Smith and Aitchison 2013 review peroxisomes as single-membrane organelles with regulated membrane growth and division.</small></li></ul></td></tr>
+<tr id="components-peroxisomal_membrane"><td>peroxisomal membrane</td><td>Lipid</td><td>part of</td><td><a href="../../structures/membrane_organelle/peroxisomal_membrane.html"><code>GO:0005778</code></a></td><td></td><td></td><td>ESSENTIAL</td><td>Lipid bilayer that bounds the peroxisome and encloses its matrix.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005778"><code>GO:0005778</code></a> <small>Gene Ontology cellular-component term for the lipid bilayer surrounding a peroxisome.</small></li><li><a href="https://doi.org/10.1038/nrm3700"><code>DOI:10.1038/nrm3700</code></a> <small>Smith and Aitchison 2013 review peroxisomes as single-membrane organelles with regulated membrane growth and division.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -62,9 +63,9 @@
 <h3 id="causal_graphs-peroxisomal_matrix_import">Peroxisomal import builds the metabolic matrix <small>(FUNCTION)</small></h3>
 <p>The peroxisomal membrane encloses a matrix, and peroxisomal targeting pathways move folded metabolic enzymes across that membrane into the matrix.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Peroxisomal import builds the metabolic matrix">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>peroxisomal membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005778"><code>GO:0005778</code></a>)</small></td><td>bounds</td><td>peroxisomal matrix <small>(<a href="http://purl.obolibrary.org/obo/GO_0005782"><code>GO:0005782</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005782"><code>GO:0005782</code></a> <small>GO defines the peroxisomal matrix as the volume contained within the membranes of a peroxisome.</small></li></ul></td></tr>
-<tr><td>peroxisomal targeting signal-bearing matrix proteins</td><td>are imported into</td><td>peroxisomal matrix <small>(<a href="http://purl.obolibrary.org/obo/GO_0005782"><code>GO:0005782</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm3700"><code>DOI:10.1038/nrm3700</code></a> <small>Smith and Aitchison 2013 reviewed peroxisomal targeting signal pathways for matrix-protein import.</small></li></ul></td></tr>
-<tr><td>peroxisomal matrix <small>(<a href="http://purl.obolibrary.org/obo/GO_0005782"><code>GO:0005782</code></a>)</small></td><td>compartmentalizes</td><td>fatty acid beta-oxidation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/femsyr/fow038"><code>DOI:10.1093/femsyr/fow038</code></a> <small>Sibirny 2016 reviewed fatty-acid beta-oxidation as peroxisome-localized metabolism in yeasts.</small></li></ul></td></tr>
+<tr><td>peroxisomal membrane <small>(<a href="../../structures/membrane_organelle/peroxisomal_membrane.html"><code>GO:0005778</code></a>)</small></td><td>bounds</td><td>peroxisomal matrix <small>(<a href="../../structures/membrane_organelle/peroxisomal_matrix.html"><code>GO:0005782</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005782"><code>GO:0005782</code></a> <small>GO defines the peroxisomal matrix as the volume contained within the membranes of a peroxisome.</small></li></ul></td></tr>
+<tr><td>peroxisomal targeting signal-bearing matrix proteins</td><td>are imported into</td><td>peroxisomal matrix <small>(<a href="../../structures/membrane_organelle/peroxisomal_matrix.html"><code>GO:0005782</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nrm3700"><code>DOI:10.1038/nrm3700</code></a> <small>Smith and Aitchison 2013 reviewed peroxisomal targeting signal pathways for matrix-protein import.</small></li></ul></td></tr>
+<tr><td>peroxisomal matrix <small>(<a href="../../structures/membrane_organelle/peroxisomal_matrix.html"><code>GO:0005782</code></a>)</small></td><td>compartmentalizes</td><td>fatty acid beta-oxidation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1093/femsyr/fow038"><code>DOI:10.1093/femsyr/fow038</code></a> <small>Sibirny 2016 reviewed fatty-acid beta-oxidation as peroxisome-localized metabolism in yeasts.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -76,11 +77,13 @@
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005777"><code>GO:0005777</code></a> <small>Gene Ontology cellular-component term for peroxisome.</small></li><li><a href="https://doi.org/10.1038/nrm3700"><code>DOI:10.1038/nrm3700</code></a> <small>Smith and Aitchison 2013, Peroxisomes take shape, Nature Reviews Molecular Cell Biology.</small></li><li><a href="https://doi.org/10.1093/femsyr/fow038"><code>DOI:10.1093/femsyr/fow038</code></a> <small>Sibirny 2016, Yeast peroxisomes: structure, functions and biotechnological opportunities, FEMS Yeast Research.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2015.09.008"><code>DOI:10.1016/j.bbamcr.2015.09.008</code></a> <small>Yuan, Veenhuis and van der Klei 2016, The birth of yeast peroxisomes, Biochimica et Biophysica Acta - Molecular Cell Research.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-10T14:53:33Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T14:55:51Z</code> claude · EXPANDED_RECORD — Added peroxisomal membrane and matrix parts, Saccharomyces cerevisiae scope, fatty-acid beta-oxidation and matrix-protein import functions, record evidence, a matrix-import graph, and a peroxin/metabolic-enzyme grounding TODO.</li><li><code>2026-09-11T01:33:42Z</code> claude · ADDRESS_REVIEW — Addressed #384 by keeping GO:0005782 as a peroxisome part but removing the peroxisomal matrix from components because it is a lumenal volume rather than a molecular constituent.</li><li><code>2026-10-05T17:45:01Z</code> codex · ADD_PATHWAY_LINK — Added an evidence-backed, organism-scoped PathwayMech link with a full source commit and explicit relation limits.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/peroxisome.yaml"><code>data/structures/membrane_organelle/peroxisome.yaml</code></a></p>
+<p class="meta">4 of 4 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-10T14:53:33Z</code> claude · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T14:55:51Z</code> claude · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added peroxisomal membrane and matrix parts, Saccharomyces cerevisiae scope, fatty-acid beta-oxidation and matrix-protein import functions, record evidence, a matrix-import graph, and a peroxin/metabolic-enzyme grounding TODO.</li><li><code>2026-09-11T01:33:42Z</code> claude · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Addressed #384 by keeping GO:0005782 as a peroxisome part but removing the peroxisomal matrix from components because it is a lumenal volume rather than a molecular constituent.</li><li><code>2026-10-05T17:45:01Z</code> codex · ADD_PATHWAY_LINK · <span class="llm-assisted">LLM-assisted</span> — Added an evidence-backed, organism-scoped PathwayMech link with a full source commit and explicit relation limits.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/peroxisome.yaml"><code>data/structures/membrane_organelle/peroxisome.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0005777&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fmembrane_organelle%2Fperoxisome.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

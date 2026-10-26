@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/microcompartment.html">Microcompartment</a> · propanediol degradation polyhedral organelle</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>propanediol degradation polyhedral organelle</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031472"><code>GO:0031472</code></a> · Microcompartment · Protein shelled organelle · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031472"><code>GO:0031472</code></a> · Microcompartment · Protein shelled organelle · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">An organelle found in bacteria consisting of a proteinaceous coat containing enzymes for the degradation of 1,2-propanediol whose purpose is the protection of the rest of the cell from the toxic propionaldehyde product of the enzyme diol dehydratase. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031472"><code>GO:0031472</code></a>]</small></p>
 <p><strong>Synonyms:</strong> Pdu microcompartment; propanediol-utilizing metabolosome</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -127,11 +128,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="https://doi.org/10.1038/s41467-020-15888-4"><code>DOI:10.1038/s41467-020-15888-4</code></a> <small>Yang et al. used imaging and quantitative proteomics to define the composition and organization of native Salmonella Pdu metabolosomes.</small></li><li><a href="https://doi.org/10.1038/s41467-022-30608-w"><code>DOI:10.1038/s41467-022-30608-w</code></a> <small>Yang et al. dissected convergent shell and cargo assembly pathways of the Salmonella Pdu metabolosome.</small></li><li><a href="https://doi.org/10.1128/JB.185.17.5086-5095.2003"><code>DOI:10.1128/JB.185.17.5086-5095.2003</code></a> <small>Havemann and Bobik purified Pdu polyhedral organelles and identified shell and enzymatic components.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-06T08:06:19Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-06T08:08:10Z</code> claude · CURATED_PDU_METABOLOSOME — Added Pdu shell and PduCDE components, bacterial distribution, a Salmonella example, GO:0051144 function, propionaldehyde sequestration, and a convergent shell/cargo assembly graph.</li><li><code>2026-09-06T08:26:34Z</code> claude · FIX_PDU_BIOGENESIS_SCOPE — Reworded the Pdu assembly graph to describe convergent shell and cargo biogenesis instead of a cargo-first-only pathway.</li><li><code>2026-09-08T07:39:58Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 8 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-18T03:19:13Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 3 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-18T05:29:50Z</code> claude-opus-4-7 · EDIT — added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml"><code>data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml</code></a></p>
+<p class="meta">4 of 6 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-06T08:06:19Z</code> claude · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-06T08:08:10Z</code> claude · CURATED_PDU_METABOLOSOME · <span class="llm-assisted">LLM-assisted</span> — Added Pdu shell and PduCDE components, bacterial distribution, a Salmonella example, GO:0051144 function, propionaldehyde sequestration, and a convergent shell/cargo assembly graph.</li><li><code>2026-09-06T08:26:34Z</code> claude · FIX_PDU_BIOGENESIS_SCOPE · <span class="llm-assisted">LLM-assisted</span> — Reworded the Pdu assembly graph to describe convergent shell and cargo biogenesis instead of a cargo-first-only pathway.</li><li><code>2026-09-08T07:39:58Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 8 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-18T03:19:13Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 3 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-18T05:29:50Z</code> claude-opus-4-7 · EDIT · <span class="llm-assisted">LLM-assisted</span> — added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml"><code>data/structures/microcompartment/propanediol_degradation_polyhedral_organelle.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0031472&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fmicrocompartment%2Fpropanediol_degradation_polyhedral_organelle.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

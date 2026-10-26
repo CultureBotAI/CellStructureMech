@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · dinoflagellate sulcus</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>dinoflagellate sulcus</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a> · Other · Subcellular region · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a> · Other · Subcellular region · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A cell surface furrow that occurs on the ventral side of a dinoflagellate cell. It partially houses the longitudinal flagellum. The sulcus intersects with the cingulum on the ventral side of a dinoflagellate cell. <small>[<a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a>]</small></p>
 <p><strong>Synonyms:</strong> sulcus; longitudinal furrow; longitudinal groove</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -46,8 +47,8 @@
 <h3 id="causal_graphs-sulcus_cingulum_topology">Sulcus-cingulum topology <small>(FUNCTION)</small></h3>
 <p>The dinoflagellate sulcus is a ventral cell-surface furrow that intersects the dinoflagellate cingulum.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Sulcus-cingulum topology">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>dinoflagellate sulcus <small>(<a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a>)</small></td><td>is a</td><td>cell surface furrow <small>(<a href="http://purl.obolibrary.org/obo/GO_0097610"><code>GO:0097610</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a> <small>The GO graph links GO:0097612 to GO:0097610 by rdfs:subClassOf.</small></li></ul></td></tr>
-<tr><td>dinoflagellate sulcus <small>(<a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a>)</small></td><td>intersects</td><td>dinoflagellate cingulum <small>(<a href="http://purl.obolibrary.org/obo/GO_0097611"><code>GO:0097611</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a> <small>The GO:0097612 definition describes the dinoflagellate sulcus as intersecting the cingulum ventrally.</small></li></ul></td></tr>
+<tr><td>dinoflagellate sulcus <small>(<a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a>)</small></td><td>is a</td><td>cell surface furrow <small>(<a href="../../structures/other/cell_surface_furrow.html"><code>GO:0097610</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a> <small>The GO graph links GO:0097612 to GO:0097610 by rdfs:subClassOf.</small></li></ul></td></tr>
+<tr><td>dinoflagellate sulcus <small>(<a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a>)</small></td><td>intersects</td><td>dinoflagellate cingulum <small>(<a href="../../structures/other/dinoflagellate_cingulum.html"><code>GO:0097611</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a> <small>The GO:0097612 definition describes the dinoflagellate sulcus as intersecting the cingulum ventrally.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -56,14 +57,16 @@
 
 
 <h2>Evidence</h2>
-<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a> <small>Gene Ontology cellular-component term for the dinoflagellate sulcus.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0097610"><code>GO:0097610</code></a> <small>Gene Ontology cellular-component parent term for cell surface furrow.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0097611"><code>GO:0097611</code></a> <small>Gene Ontology cellular-component term for the dinoflagellate cingulum, which the GO:0097612 definition names as the furrow intersected by the sulcus.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/7002229"><code>PMID:7002229</code></a> <small>PubMed record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution review cited by GO:0097612; EuropePMC reported no PMC, open-access, full-text, or PDF route in this pass.</small></li><li><a href="https://doi.org/10.1016/0303-2647(80)90006-4"><code>DOI:10.1016/0303-2647(80)90006-4</code></a> <small>Crossref and EuropePMC metadata identify DOI:10.1016/0303-2647(80)90006-4 as the Taylor 1980 Biosystems review behind PMID:7002229; no article-body text was reachable through the checked metadata routes, so this record uses it only as bibliographic corroboration for the GO definition xref.</small></li></ul>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097612"><code>GO:0097612</code></a> <small>Gene Ontology cellular-component term for the dinoflagellate sulcus.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0097610"><code>GO:0097610</code></a> <small>Gene Ontology cellular-component parent term for cell surface furrow.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0097611"><code>GO:0097611</code></a> <small>Gene Ontology cellular-component term for the dinoflagellate cingulum, which the GO:0097612 definition names as the furrow intersected by the sulcus.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/7002229"><code>PMID:7002229</code></a> <small>PubMed record for Taylor 1980, the subscription Biosystems dinoflagellate-evolution review cited by GO:0097612; EuropePMC reported no PMC, open-access, full-text, or PDF route in this pass.</small></li><li><a href="https://doi.org/10.1016/0303-2647(80)90006-4"><code>DOI:10.1016/0303-2647(80)90006-4</code></a> <small>Crossref and EuropePMC metadata identify <a href="https://doi.org/10.1016/0303-2647(80)90006-4">DOI:10.1016/0303-2647(80)90006-4</a> as the Taylor 1980 Biosystems review behind <a href="https://pubmed.ncbi.nlm.nih.gov/7002229/">PMID:7002229</a>; no article-body text was reachable through the checked metadata routes, so this record uses it only as bibliographic corroboration for the GO definition xref.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-10-02T17:17:06Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-02T17:17:55Z</code> codex · EXPANDED_RECORD — Added GO sulcus synonymy, GO cell-surface-furrow parentage, Dinophyceae taxon evidence, record-level PMID/DOI evidence, a nonmechanistic sulcus/cingulum topology graph, and a curation TODO for sulcus molecular components.</li><li><code>2026-10-02T17:31:19Z</code> codex · ADDRESSED_PR_REVIEW — Addressed PR #1927 review issues #1928 and #1929 by adding GO:0097611 evidence for the cingulum graph node and documenting GO:0097618 dinoflagellate sulcal notch as narrower than the general sulcus.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dinoflagellate_sulcus.yaml"><code>data/structures/other/dinoflagellate_sulcus.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-10-02T17:17:06Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-10-02T17:17:55Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added GO sulcus synonymy, GO cell-surface-furrow parentage, Dinophyceae taxon evidence, record-level PMID/DOI evidence, a nonmechanistic sulcus/cingulum topology graph, and a curation TODO for sulcus molecular components.</li><li><code>2026-10-02T17:31:19Z</code> codex · ADDRESSED_PR_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Addressed PR #1927 review issues #1928 and #1929 by adding GO:0097611 evidence for the cingulum graph node and documenting GO:0097618 dinoflagellate sulcal notch as narrower than the general sulcus.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/dinoflagellate_sulcus.yaml"><code>data/structures/other/dinoflagellate_sulcus.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0097612&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Fdinoflagellate_sulcus.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · MacAB-TolC complex</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>MacAB-TolC complex</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990196"><code>GO:1990196</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990196"><code>GO:1990196</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">The MacAB-TolC complex is a macrolide transporter complex found in E.coli and related gram-negative bacteria. Its transport activity is specific to macrolide compounds containing 14- and 15-membered lactones. It consists of the dimeric inner membrane ATPase MacB, the hexameric, periplasmic membrane fusion protein MacA and the trimeric outer membrane factor TolC. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990196"><code>GO:1990196</code></a>]</small></p>
 <p><strong>Synonyms:</strong> macrolide transporter MacAB-TolC complex</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -98,11 +99,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990196"><code>GO:1990196</code></a> <small>Gene Ontology cellular-component term for the MacAB-TolC complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1990195"><code>GO:1990195</code></a> <small>QuickGO reports GO:1990196 as an is-a child of GO:1990195 macrolide transmembrane transporter complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0008559"><code>GO:0008559</code></a> <small>Gene Ontology molecular-function term for ABC-type xenobiotic transporter activity.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR058623"><code>InterPro:IPR058623</code></a> <small>InterPro family entry for Macrolide export protein MacA.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR050250"><code>InterPro:IPR050250</code></a> <small>InterPro family entry for Macrolide Exporter MacB.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR058622"><code>InterPro:IPR058622</code></a> <small>InterPro family entry for Outer membrane channel protein TolC.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P75830"><code>UniProtKB:P75830</code></a> <small>UniProtKB reviewed E. coli K-12 MacA entry.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P75831"><code>UniProtKB:P75831</code></a> <small>UniProtKB reviewed E. coli K-12 MacB entry.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P02930"><code>UniProtKB:P02930</code></a> <small>UniProtKB reviewed E. coli K-12 TolC entry.</small></li><li><a href="https://www.rcsb.org/structure/5NIK"><code>PDB:5NIK</code></a> <small>RCSB Protein Data Bank entry for the E. coli MacAB-TolC ABC-type tripartite multidrug efflux pump structure.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/28504659"><code>PMID:28504659</code></a> <small>PubMed identifier for the 2017 MacAB-TolC structural paper cited by PDB:5NIK.</small></li><li><a href="https://doi.org/10.1038/nmicrobiol.2017.70"><code>DOI:10.1038/nmicrobiol.2017.70</code></a> <small>DOI for &#39;Structure of the MacAB-TolC ABC-type tripartite multidrug efflux pump&#39; as reported by RCSB and PubMed.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/18955484"><code>PMID:18955484</code></a> <small>PubMed identifier for the 2009 Journal of Biological Chemistry paper showing that MacA regulates MacB ATPase activity and macrolide binding.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-10-01T19:20:53Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T19:22:57Z</code> codex · EXPANDED_RECORD — Added GO synonymy and macrolide-transporter parentage, MacA/MacB/TolC components with exact InterPro groundings and reviewed E. coli K-12 UniProt examples, the PDB:5NIK hetero-11-mer, function, taxonomy, and authority evidence.</li><li><code>2026-10-21T18:45:05Z</code> curate-causal-graphs-skill · UPDATED_CAUSAL_GRAPHS — Added source-backed FUNCTION causal graph &#39;macab_tolc_efflux_function&#39; with 4 nodes and 3 edges.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/macab_tolc_complex.yaml"><code>data/structures/other/macab_tolc_complex.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-10-01T19:20:53Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T19:22:57Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added GO synonymy and macrolide-transporter parentage, MacA/MacB/TolC components with exact InterPro groundings and reviewed E. coli K-12 UniProt examples, the PDB:5NIK hetero-11-mer, function, taxonomy, and authority evidence.</li><li><code>2026-10-21T18:45:05Z</code> curate-causal-graphs-skill · UPDATED_CAUSAL_GRAPHS · <span class="llm-assisted">LLM-assisted</span> — Added source-backed FUNCTION causal graph &#39;macab_tolc_efflux_function&#39; with 4 nodes and 3 edges.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/macab_tolc_complex.yaml"><code>data/structures/other/macab_tolc_complex.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A1990196&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Fmacab_tolc_complex.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/spore.html">Spore</a> · endospore core</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>endospore core</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a> · Spore · Subcellular region · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a> · Spore · Subcellular region · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">An intracellular part that represents the innermost portion of an endospore; the endospore core is dehydrated, enriched in dipicolinic acid and divalent cations, and metabolically inactive. <small>[<a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a>]</small></p>
 <p><strong>Synonyms:</strong> spore core; spore matrix</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -48,8 +49,8 @@
 <h3 id="causal_graphs-endospore_core_dehydrated_interior">Cortex maintains low water in the endospore core <small>(FUNCTION)</small></h3>
 <p>The dormant endospore core is the innermost compartment and is bounded by the spore inner membrane. Outside the core, the endospore cortex helps maintain the low core water content that supports wet-heat resistance.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Cortex maintains low water in the endospore core">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>spore inner membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a>)</small></td><td>surrounds</td><td>endospore core <small>(<a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a> <small>GO:0140549 defines the spore inner membrane as the membrane surrounding the spore core.</small></li></ul></td></tr>
-<tr><td>endospore cortex <small>(<a href="http://purl.obolibrary.org/obo/GO_0043595"><code>GO:0043595</code></a>)</small></td><td>maintains</td><td>low core water content</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/9781555819323.ch10"><code>DOI:10.1128/9781555819323.ch10</code></a> <small>Setlow 2016 reviews the cortex contribution to spore core dehydration.</small></li></ul></td></tr>
+<tr><td>spore inner membrane <small>(<a href="../../structures/spore/spore_inner_membrane.html"><code>GO:0140549</code></a>)</small></td><td>surrounds</td><td>endospore core <small>(<a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a> <small>GO:0140549 defines the spore inner membrane as the membrane surrounding the spore core.</small></li></ul></td></tr>
+<tr><td>endospore cortex <small>(<a href="../../structures/spore/endospore_cortex.html"><code>GO:0043595</code></a>)</small></td><td>maintains</td><td>low core water content</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/9781555819323.ch10"><code>DOI:10.1128/9781555819323.ch10</code></a> <small>Setlow 2016 reviews the cortex contribution to spore core dehydration.</small></li></ul></td></tr>
 <tr><td>low core water content</td><td>enables</td><td>wet-heat resistance</td><td><ul class="evidence"><li><a href="https://doi.org/10.1128/9781555819323.ch10"><code>DOI:10.1128/9781555819323.ch10</code></a> <small>Setlow 2016 reviews low core water content as a determinant of spore wet-heat resistance.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -62,11 +63,13 @@
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0070477"><code>GO:0070477</code></a> <small>Gene Ontology cellular-component term for the endospore core.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0140549"><code>GO:0140549</code></a> <small>Gene Ontology cellular-component term for the spore inner membrane that surrounds the endospore core.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0043595"><code>GO:0043595</code></a> <small>Gene Ontology cellular-component term for the endospore cortex layer outside the spore inner membrane and core.</small></li><li><a href="https://www.uniprot.org/locations/SL-0253"><code>uniprot.location:SL-0253</code></a> — Spore core <small>UniProt Subcellular Location SL-0253 identifies a generic Spore core location without a GO mapping and records spore matrix as an alternate name.</small></li><li><a href="https://doi.org/10.1128/9781555819323.ch10"><code>DOI:10.1128/9781555819323.ch10</code></a> <small>Setlow 2016, Spore Resistance Properties, in The Bacterial Spore.</small></li><li><a href="https://doi.org/10.1038/nrmicro2921"><code>DOI:10.1038/nrmicro2921</code></a> <small>McKenney, Driks and Eichenberger 2012, The Bacillus subtilis endospore: assembly and functions of the multilayered coat, Nature Reviews Microbiology.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-22T23:16:24Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-22T23:17:35Z</code> codex · EXPANDED_RECORD — Added UniProt SL synonyms and cross-reference, Bacillota distribution, a Bacillus subtilis example, GO/UniProt/literature evidence, a nonmechanistic core-dehydration graph, and a surrounding-layer boundary discussion.</li><li><code>2026-09-22T23:30:30Z</code> codex · ADDRESS_REVIEW — Resolved #1333 by removing the generic UniProt SL-0253 location from xrefs while preserving it as scoped evidence, and resolved #1334 by retitling the function graph to assign core dehydration to the cortex rather than all surrounding layers.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/spore/endospore_core.yaml"><code>data/structures/spore/endospore_core.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-22T23:16:24Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-22T23:17:35Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added UniProt SL synonyms and cross-reference, Bacillota distribution, a Bacillus subtilis example, GO/UniProt/literature evidence, a nonmechanistic core-dehydration graph, and a surrounding-layer boundary discussion.</li><li><code>2026-09-22T23:30:30Z</code> codex · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Resolved #1333 by removing the generic UniProt SL-0253 location from xrefs while preserving it as scoped evidence, and resolved #1334 by retitling the function graph to assign core dehydration to the cortex rather than all surrounding layers.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/spore/endospore_core.yaml"><code>data/structures/spore/endospore_core.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0070477&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fspore%2Fendospore_core.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · cytoophidium</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>cytoophidium</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a> · Cytoskeleton · Filament · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a> · Cytoskeleton · Filament · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A filamentous, membrane-less subcellular structure composed primarily of polymerized metabolic enzymes, most notably cytidine triphosphate synthase (CTPS). Cytoophidia are evolutionarily conserved structures found across archaea, bacteria, and eukaryotes. <small>[<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>]</small></p>
 <p><strong>Synonyms:</strong> CtpS filament; CTPS cytoophidium</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -72,7 +73,7 @@ family; these are the specific entries behind it.</small></p>
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>CTP synthase</td><td>polymerizes into</td><td>cytoophidium <small>(<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 used fluorescence microscopy and electron cryo-tomography to identify CtpS as the Caulobacter inner-curvature filament protein.</small></li></ul></td></tr>
 <tr><td>cytoophidium <small>(<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>)</small></td><td>localizes to</td><td>Caulobacter inner cell curvature</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 followed mCherry-CtpS structures that elongated and moved to the inner cell curvature.</small></li></ul></td></tr>
-<tr><td>cytoophidium <small>(<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>)</small></td><td>functionally interacts with</td><td>crescentin filament <small>(<code>cellstructuremech:crescentin_filament</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 connected the CtpS morphogenic role to a functional interaction with crescentin.</small></li></ul></td></tr>
+<tr><td>cytoophidium <small>(<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>)</small></td><td>functionally interacts with</td><td>crescentin filament <small>(<a href="../../structures/cytoskeleton/crescentin_filament.html"><code>cellstructuremech:crescentin_filament</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 connected the CtpS morphogenic role to a functional interaction with crescentin.</small></li></ul></td></tr>
 <tr><td>cytoophidium <small>(<a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a>)</small></td><td>regulates</td><td>curved Caulobacter morphology</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar et al. 2010 showed that Caulobacter CtpS overexpression and depletion perturb cell curvature and that the morphogenic effect is separable from catalytic activity.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -85,11 +86,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0097268"><code>GO:0097268</code></a> <small>Gene Ontology defines cytoophidium as a filamentous membrane-less cellular component composed primarily of polymerized metabolic enzymes including CTPS.</small></li><li><a href="https://doi.org/10.1038/ncb2087"><code>DOI:10.1038/ncb2087</code></a> <small>Ingerson-Mahar, Briegel, Werner, Jensen and Gitai 2010, &#39;The metabolic enzyme CTP synthase forms cytoskeletal filaments&#39;, Nature Cell Biology.</small></li><li><a href="https://doi.org/10.1042/BST20221410"><code>DOI:10.1042/BST20221410</code></a> <small>Guo and Liu 2023 reviewed cytoophidia and CTPS-containing enzyme filaments across domains of life.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-11T16:08:25Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T16:09:28Z</code> codex · EXPANDED_RECORD — Added supramolecular-fiber parentage, CtpS and CTPS synonymy, label-only CTP synthase component curation, Caulobacter vibrioides scope, a cell-curvature function, DOI evidence, a nonmechanistic CtpS-to-crescentin graph, and CTP synthase grounding and crescentin boundary discussions.</li><li><code>2026-09-11T16:16:14Z</code> codex · REVIEW_FIX — Addressed PR #515 review issues #516 and #517 by adding variable Bacteria, Archaea and Eukaryota cytoophidium distribution rows and narrowing broad CTP synthase essentiality to UNKNOWN.</li><li><code>2026-10-23T20:51:55Z</code> antigravity · EDIT — Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/cytoophidium.yaml"><code>data/structures/cytoskeleton/cytoophidium.yaml</code></a></p>
+<p class="meta">4 of 4 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-11T16:08:25Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T16:09:28Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added supramolecular-fiber parentage, CtpS and CTPS synonymy, label-only CTP synthase component curation, Caulobacter vibrioides scope, a cell-curvature function, DOI evidence, a nonmechanistic CtpS-to-crescentin graph, and CTP synthase grounding and crescentin boundary discussions.</li><li><code>2026-09-11T16:16:14Z</code> codex · REVIEW_FIX · <span class="llm-assisted">LLM-assisted</span> — Addressed PR #515 review issues #516 and #517 by adding variable Bacteria, Archaea and Eukaryota cytoophidium distribution rows and narrowing broad CTP synthase essentiality to UNKNOWN.</li><li><code>2026-10-23T20:51:55Z</code> antigravity · EDIT · <span class="llm-assisted">LLM-assisted</span> — Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/cytoophidium.yaml"><code>data/structures/cytoskeleton/cytoophidium.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0097268&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fcytoskeleton%2Fcytoophidium.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

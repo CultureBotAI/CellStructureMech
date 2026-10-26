@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/spore.html">Spore</a> · Isp3 layer of spore wall</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>Isp3 layer of spore wall</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a> · Spore · Envelope layer · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a> · Spore · Envelope layer · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">The outermost layers of the spore wall, as described in Schizosaccharomyces pombe. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="../../structures/spore/ascospore_wall.html">ascospore wall</a> (<a href="http://purl.obolibrary.org/obo/GO_0005619"><code>GO:0005619</code></a>) </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -69,7 +70,7 @@ family; these are the specific entries behind it.</small></p>
 <p>In Schizosaccharomyces pombe, the Isp3 spore-wall protein localizes to and forms the outermost electron-dense layer of the ascospore wall, where the layer contributes to spore stress resistance.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Isp3 builds the outer fission-yeast spore-wall layer">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 <tr><td>Isp3 spore wall protein</td><td>forms</td><td>Isp3 layer of spore wall <small>(<a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E13-12-0731"><code>DOI:10.1091/mbc.E13-12-0731</code></a> <small>Fukunishi et al. 2014 identified Isp3/Meu4 as the p23 spore-wall protein and showed that the outermost electron-dense layer is absent from isp3-deletion spores.</small></li></ul></td></tr>
-<tr><td>Isp3 layer of spore wall <small>(<a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a>)</small></td><td>is outermost layer of</td><td>ascospore wall <small>(<a href="http://purl.obolibrary.org/obo/GO_0005619"><code>GO:0005619</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a> <small>GO:1990916 defines the Isp3 layer as the outermost layers of the Schizosaccharomyces pombe spore wall.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005619"><code>GO:0005619</code></a> <small>GO places GO:1990916 as part of the ascospore wall.</small></li></ul></td></tr>
+<tr><td>Isp3 layer of spore wall <small>(<a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a>)</small></td><td>is outermost layer of</td><td>ascospore wall <small>(<a href="../../structures/spore/ascospore_wall.html"><code>GO:0005619</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a> <small>GO:1990916 defines the Isp3 layer as the outermost layers of the Schizosaccharomyces pombe spore wall.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005619"><code>GO:0005619</code></a> <small>GO places GO:1990916 as part of the ascospore wall.</small></li></ul></td></tr>
 <tr><td>Isp3 layer of spore wall <small>(<a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a>)</small></td><td>contributes to</td><td>spore environmental stress resistance</td><td><ul class="evidence"><li><a href="https://doi.org/10.1091/mbc.E13-12-0731"><code>DOI:10.1091/mbc.E13-12-0731</code></a> <small>Fukunishi et al. 2014 measured decreased heat, digestive-enzyme, and ethanol tolerance when isp3 was deleted.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -82,11 +83,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990916"><code>GO:1990916</code></a> <small>Gene Ontology cellular-component term for the Schizosaccharomyces pombe Isp3 layer of the spore wall.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005619"><code>GO:0005619</code></a> <small>Gene Ontology cellular-component term for the broader ascospore wall that contains GO:1990916.</small></li><li><a href="https://doi.org/10.1091/mbc.E13-12-0731"><code>DOI:10.1091/mbc.E13-12-0731</code></a> <small>Fukunishi et al. 2014, The fission yeast spore is coated by a proteinaceous surface layer comprising mainly Isp3, Molecular Biology of the Cell.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-23T01:08:07Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-23T01:09:44Z</code> codex · EXPANDED_RECORD — Added ascospore-wall parthood, a reviewed-label-only Isp3 protein component, Schizosaccharomyces pombe scope, a stress barrier function, GO/DOI evidence, a nonmechanistic Isp3 layer topology graph, and boundary discussions for Isp3 component grounding and Saccharomyces layer separation.</li><li><code>2026-10-18T03:37:42Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 1 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/spore/isp3_layer_of_spore_wall.yaml"><code>data/structures/spore/isp3_layer_of_spore_wall.yaml</code></a></p>
+<p class="meta">2 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-23T01:08:07Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-23T01:09:44Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added ascospore-wall parthood, a reviewed-label-only Isp3 protein component, Schizosaccharomyces pombe scope, a stress barrier function, GO/DOI evidence, a nonmechanistic Isp3 layer topology graph, and boundary discussions for Isp3 component grounding and Saccharomyces layer separation.</li><li><code>2026-10-18T03:37:42Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 1 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/spore/isp3_layer_of_spore_wall.yaml"><code>data/structures/spore/isp3_layer_of_spore_wall.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A1990916&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fspore%2Fisp3_layer_of_spore_wall.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

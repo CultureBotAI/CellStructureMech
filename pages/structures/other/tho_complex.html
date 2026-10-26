@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · THO complex</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>THO complex</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0000347"><code>GO:0000347</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0000347"><code>GO:0000347</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A eukaryotic nuclear protein complex that promotes transcription elongation and can act as part of the transcription export complex to couple RNA polymerase II transcription with mRNA export from the nucleus. <small>[<a href="http://purl.obolibrary.org/obo/GO_0000347"><code>GO:0000347</code></a>]</small></p>
 
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -102,18 +103,20 @@ family; these are the specific entries behind it.</small></p>
 </div>
 
 <h2>Discussions</h2>
-<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral family groundings for the Hpr1, Tho2, Mft1 and Thp2 constituents of the THO complex. <small>PMID:11060033 identifies the four named budding-yeast constituents of the THO complex, but exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIEs for these subunit classes were not curated in this pass.</small></li></ul>
+<ul><li><strong>CURATION_TODO</strong> (OPEN): Resolve exact source-neutral family groundings for the Hpr1, Tho2, Mft1 and Thp2 constituents of the THO complex. <small><a href="https://pubmed.ncbi.nlm.nih.gov/11060033/">PMID:11060033</a> identifies the four named budding-yeast constituents of the THO complex, but exact source-neutral InterPro, Pfam, NCBIfam or UniProtKB family CURIEs for these subunit classes were not curated in this pass.</small></li></ul>
 
 
 <h2>Evidence</h2>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0000347"><code>GO:0000347</code></a> <small>Gene Ontology cellular-component term for the THO complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0140513"><code>GO:0140513</code></a> <small>Gene Ontology cellular-component parent term for nuclear protein-containing complexes.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0000346"><code>GO:0000346</code></a> <small>Gene Ontology cellular-component term for the transcription export complex, which contains THO.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006354"><code>GO:0006354</code></a> <small>Gene Ontology biological-process term for DNA-templated transcription elongation.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0006406"><code>GO:0006406</code></a> <small>Gene Ontology biological-process term for mRNA export from nucleus.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/11060033"><code>PMID:11060033</code></a> <small>PubMed identifier for Chavez et al. 2000, the EMBO Journal paper identifying the four-protein Saccharomyces cerevisiae THO complex.</small></li><li><a href="https://doi.org/10.1093/emboj/19.21.5824"><code>DOI:10.1093/emboj/19.21.5824</code></a> <small>DOI for Chavez et al. 2000, verified through PubMed and PMC.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/11979277"><code>PMID:11979277</code></a> <small>PubMed identifier for Strasser et al. 2002, the Nature paper identifying TREX as a conserved transcription-mRNA-export coupling complex.</small></li><li><a href="https://doi.org/10.1038/nature746"><code>DOI:10.1038/nature746</code></a> <small>DOI for Strasser et al. 2002, verified through PubMed.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/16983072"><code>PMID:16983072</code></a> <small>PubMed identifier for Voynov et al. 2006, the PNAS paper on THO-dependent transcription of genes with internal repeats.</small></li><li><a href="https://doi.org/10.1073/pnas.0606546103"><code>DOI:10.1073/pnas.0606546103</code></a> <small>DOI for Voynov et al. 2006, verified through PubMed and PMC.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-27T14:22:23Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-27T14:23:14Z</code> codex · EXPANDED_RECORD — Added nuclear protein-containing-complex parentage, transcription export complex parthood, four reviewed-label-only budding-yeast constituent rows, Saccharomyces cerevisiae scope, transcription elongation and mRNA-export function evidence, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a THO subunit-grounding TODO.</li><li><code>2026-09-27T14:43:48Z</code> codex · TIGHTEN_MEREOLOGY — Removed GO:0000346 transcription export complex parthood from the generic GO:0000347 THO complex because GO scopes that context-specific parthood to child term GO:0000445.</li><li><code>2026-10-18T03:31:34Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 3 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-18T05:29:52Z</code> claude-opus-4-7 · EDIT — added 1 verified UniProtKB protein_example(s).</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/tho_complex.yaml"><code>data/structures/other/tho_complex.yaml</code></a></p>
+<p class="meta">4 of 5 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-27T14:22:23Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-27T14:23:14Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added nuclear protein-containing-complex parentage, transcription export complex parthood, four reviewed-label-only budding-yeast constituent rows, Saccharomyces cerevisiae scope, transcription elongation and mRNA-export function evidence, GO/PubMed/DOI evidence, a nonmechanistic function graph, and a THO subunit-grounding TODO.</li><li><code>2026-09-27T14:43:48Z</code> codex · TIGHTEN_MEREOLOGY · <span class="llm-assisted">LLM-assisted</span> — Removed GO:0000346 transcription export complex parthood from the generic GO:0000347 THO complex because GO scopes that context-specific parthood to child term GO:0000445.</li><li><code>2026-10-18T03:31:34Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 3 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-18T05:29:52Z</code> claude-opus-4-7 · EDIT · <span class="llm-assisted">LLM-assisted</span> — added 1 verified UniProtKB protein_example(s).</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/tho_complex.yaml"><code>data/structures/other/tho_complex.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0000347&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Ftho_complex.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

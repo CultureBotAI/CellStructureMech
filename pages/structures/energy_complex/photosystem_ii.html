@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/energy_complex.html">Energy complex</a> · photosystem II</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>photosystem II</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> · Energy complex · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> · Energy complex · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A photosystem that contains a pheophytin-quinone reaction center with associated accessory pigments and electron carriers. In cyanobacteria and chloroplasts, in the presence of light, PSII functions as a water-plastoquinone oxidoreductase, transferring electrons from water to plastoquinone, whereas other photosynthetic bacteria carry out anoxygenic photosynthesis and oxidize other compounds to re-reduce the photoreaction center. <small>[<a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a>]</small></p>
 
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -88,11 +89,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0009523"><code>GO:0009523</code></a> <small>Gene Ontology cellular-component term for photosystem II.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009521"><code>GO:0009521</code></a> <small>Gene Ontology cellular-component term for photosystems.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0009767"><code>GO:0009767</code></a> <small>Gene Ontology biological-process term for the photosynthetic electron transport chain.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/21499260"><code>PMID:21499260</code></a> <small>Umena et al. 2011, Crystal structure of oxygen-evolving photosystem II at a resolution of 1.9 A, Nature.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-24T02:08:00Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-24T02:08:46Z</code> codex · EXPANDED_RECORD — Added GO photosystem parentage, reviewed-label-only PSII component classes, cyanobacterial distribution and Thermosynechococcus example, photosynthetic electron-transfer function, GO/PubMed evidence, a PSII water-oxidation graph, and a component-grounding TODO.</li><li><code>2026-09-24T02:29:24Z</code> codex · ADDRESS_REVIEW — #1442: updated the NCBITaxon:32053 canonical-example label from the accepted Thermosynechococcus vulcanus synonym to the current NCBI label Thermostichus vulcanus.</li><li><code>2026-10-18T03:13:40Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 2 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/energy_complex/photosystem_ii.yaml"><code>data/structures/energy_complex/photosystem_ii.yaml</code></a></p>
+<p class="meta">3 of 4 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-24T02:08:00Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-24T02:08:46Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added GO photosystem parentage, reviewed-label-only PSII component classes, cyanobacterial distribution and Thermosynechococcus example, photosynthetic electron-transfer function, GO/PubMed evidence, a PSII water-oxidation graph, and a component-grounding TODO.</li><li><code>2026-09-24T02:29:24Z</code> codex · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — #1442: updated the NCBITaxon:32053 canonical-example label from the accepted Thermosynechococcus vulcanus synonym to the current NCBI label Thermostichus vulcanus.</li><li><code>2026-10-18T03:13:40Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 2 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/energy_complex/photosystem_ii.yaml"><code>data/structures/energy_complex/photosystem_ii.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0009523&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fenergy_complex%2Fphotosystem_ii.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
