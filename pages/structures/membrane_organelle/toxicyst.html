@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · toxicyst</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>toxicyst</h1>
-<p class="meta"><code>cellstructuremech:toxicyst</code> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
+<p class="meta"><a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/toxicyst.yaml"><code>cellstructuremech:toxicyst</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A ciliate offensive extrusome that stores toxic discharge material and ejects on prey contact to immobilize prey during raptorial feeding. <small>[<a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a>]</small></p>
 
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -57,7 +58,7 @@
 <h3 id="causal_graphs-toxicyst_predatory_discharge">Toxicysts discharge toxic material during predation <small>(FUNCTION)</small></h3>
 <p>A ciliate toxicyst is enclosed by a membrane, discharges during predatory prey contact, and releases toxic cargo that supports prey immobilization.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Toxicysts discharge toxic material during predation">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>toxicyst membrane</td><td>bounds</td><td>toxicyst <small>(<code>cellstructuremech:toxicyst</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a> <small>Chen et al. 2024 describe discharge models in which the toxicyst membrane releases stored toxic material.</small></li></ul></td></tr>
+<tr><td>toxicyst membrane</td><td>bounds</td><td>toxicyst <small>(<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/toxicyst.yaml"><code>cellstructuremech:toxicyst</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a> <small>Chen et al. 2024 describe discharge models in which the toxicyst membrane releases stored toxic material.</small></li></ul></td></tr>
 <tr><td>prey contact</td><td>triggers</td><td>toxicyst discharge</td><td><ul class="evidence"><li><a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a> <small>Chen et al. 2024 described toxicysts as offensive extrusomes that rapidly discharge upon prey contact.</small></li></ul></td></tr>
 <tr><td>toxicyst discharge</td><td>releases</td><td>toxicyst toxic discharge material</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a> <small>Buonanno et al. 2014 isolated and chemically analyzed toxicyst discharge from living Coleps hirtus cells.</small></li></ul></td></tr>
 <tr><td>toxicyst toxic discharge material</td><td>supports</td><td>prey immobilization</td><td><ul class="evidence"><li><a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a> <small>Buonanno et al. 2014 found Coleps hirtus toxicyst discharge was cytotoxic to tested ciliates and essential for effective predation.</small></li></ul></td></tr>
@@ -72,11 +73,13 @@
 <ul class="evidence"><li><a href="https://doi.org/10.1186/s12915-024-01904-2"><code>DOI:10.1186/s12915-024-01904-2</code></a> <small>Chen et al. 2024, Genomic insights into the cellular specialization of predation in raptorial protists, BMC Biology.</small></li><li><a href="https://doi.org/10.1111/jeu.12106"><code>DOI:10.1111/jeu.12106</code></a> <small>Buonanno et al. 2014, Chemical offense by means of toxicysts in the freshwater ciliate, Coleps hirtus, Journal of Eukaryotic Microbiology.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-10-03T07:46:18Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-03T07:47:23Z</code> codex · EXPANDED_RECORD — Added toxicyst membrane and toxic discharge-material components, Haptoria and Coleps hirtus taxonomic scope, Coleps hirtus as a canonical example, predatory discharge evidence, a nonmechanistic toxicyst discharge graph, and curation discussions for unresolved toxin chemistry and candidate PKS/LAAO boundary handling.</li><li><code>2026-10-03T08:04:23Z</code> codex · ADDRESS_REVIEW — Resolved PR #1973 review issue #1974 by removing an uncoupled Didinium nasutum Ca2+-triggered discharge citation from the record-level evidence list.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/toxicyst.yaml"><code>data/structures/membrane_organelle/toxicyst.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-10-03T07:46:18Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-10-03T07:47:23Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added toxicyst membrane and toxic discharge-material components, Haptoria and Coleps hirtus taxonomic scope, Coleps hirtus as a canonical example, predatory discharge evidence, a nonmechanistic toxicyst discharge graph, and curation discussions for unresolved toxin chemistry and candidate PKS/LAAO boundary handling.</li><li><code>2026-10-03T08:04:23Z</code> codex · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Resolved PR #1973 review issue #1974 by removing an uncoupled Didinium nasutum Ca2+-triggered discharge citation from the record-level evidence list.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/toxicyst.yaml"><code>data/structures/membrane_organelle/toxicyst.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+cellstructuremech%3Atoxicyst&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fmembrane_organelle%2Ftoxicyst.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

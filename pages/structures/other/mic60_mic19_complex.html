@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · Mic60-Mic19 complex</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>Mic60-Mic19 complex</h1>
-<p class="meta"><code>cellstructuremech:mic60_mic19_complex</code> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mic60_mic19_complex.yaml"><code>cellstructuremech:mic60_mic19_complex</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A heteromeric MICOS subcomplex composed of Mic60 and Mic19 that couples protein assembly to mitochondrial inner-membrane remodeling and crista-junction organization. <small>[<a href="https://doi.org/10.1126/sciadv.abo4946"><code>DOI:10.1126/sciadv.abo4946</code></a>]</small></p>
 <figure class="hero">
 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5460017/"><img src="../../../data/images/other/mic60_mic19_complex/pmc5460017_f4.jpg" alt="Mic60 perturbation context in YPH499-derived Saccharomyces cerevisiae, not an image of the isolated Mic60-Mic19 complex. Full Figure 4: affinity purification (a), respiratory growth (b), mitochondrial cryosection TEM of Mic60-ProtA control and mic60 deletion or lipid-binding mutants (c-f; scale bars 500 nm), crista-junction counts (g), and respiratory-complex activities (h-i). Original multipanel figure retained."></a>
@@ -93,14 +94,16 @@ family; these are the specific entries behind it.</small></p>
 
 
 <h2>Evidence</h2>
-<ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms15258"><code>DOI:10.1038/ncomms15258</code></a> <small>Hessenberger et al. (2017), Regulated membrane remodeling by Mic60 controls formation of mitochondrial crista junctions. Full Results, Discussion, methods and Figure 4 inspected in checksum-verified PMC5460017 version 1.</small></li><li><a href="https://doi.org/10.1126/sciadv.abo4946"><code>DOI:10.1126/sciadv.abo4946</code></a> <small>Bock-Bierbaum et al. (2022), Structural insights into crista junction formation by the Mic60-Mic19 complex. Full Results, Discussion and relevant methods inspected in checksum-verified PMC9432830 version 1.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098800"><code>GO:0098800</code></a> <small>The local complex is a type of inner mitochondrial membrane protein complex; this broader GO term is not its exact identity.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0061617"><code>GO:0061617</code></a> <small>MICOS is the containing complex, not an is-a parent or synonym of the two-component subcomplex.</small></li></ul>
+<ul class="evidence"><li><a href="https://doi.org/10.1038/ncomms15258"><code>DOI:10.1038/ncomms15258</code></a> <small>Hessenberger et al. (2017), Regulated membrane remodeling by Mic60 controls formation of mitochondrial crista junctions. Full Results, Discussion, methods and Figure 4 inspected in checksum-verified <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5460017/">PMC5460017</a> version 1.</small></li><li><a href="https://doi.org/10.1126/sciadv.abo4946"><code>DOI:10.1126/sciadv.abo4946</code></a> <small>Bock-Bierbaum et al. (2022), Structural insights into crista junction formation by the Mic60-Mic19 complex. Full Results, Discussion and relevant methods inspected in checksum-verified <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9432830/">PMC9432830</a> version 1.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098800"><code>GO:0098800</code></a> <small>The local complex is a type of inner mitochondrial membrane protein complex; this broader GO term is not its exact identity.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0061617"><code>GO:0061617</code></a> <small>MICOS is the containing complex, not an is-a parent or synonym of the two-component subcomplex.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-10-04T21:48:42Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-04T21:50:14Z</code> codex · EXPANDED_RECORD — Added source-bounded fungal components, yeast scope, cristae-formation function, direct biochemical mechanism and explicit family/native-architecture limitations.</li><li><code>2026-10-04T21:50:36Z</code> pmc_oa · ADD_IMAGE — Added PMC5460017.1 f4; version, CC licence, JATS figure identity and media md5 verified through the PMC OA S3 dataset.</li><li><code>2026-10-18T03:26:12Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 1 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-18T05:29:52Z</code> claude-opus-4-7 · EDIT — added 1 verified UniProtKB protein_example(s).</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mic60_mic19_complex.yaml"><code>data/structures/other/mic60_mic19_complex.yaml</code></a></p>
+<p class="meta">3 of 5 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-10-04T21:48:42Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-10-04T21:50:14Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added source-bounded fungal components, yeast scope, cristae-formation function, direct biochemical mechanism and explicit family/native-architecture limitations.</li><li><code>2026-10-04T21:50:36Z</code> pmc_oa · ADD_IMAGE — Added <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5460017/">PMC5460017</a>.1 f4; version, CC licence, JATS figure identity and media md5 verified through the PMC OA S3 dataset.</li><li><code>2026-10-18T03:26:12Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 1 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-18T05:29:52Z</code> claude-opus-4-7 · EDIT · <span class="llm-assisted">LLM-assisted</span> — added 1 verified UniProtKB protein_example(s).</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mic60_mic19_complex.yaml"><code>data/structures/other/mic60_mic19_complex.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+cellstructuremech%3Amic60_mic19_complex&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Fmic60_mic19_complex.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

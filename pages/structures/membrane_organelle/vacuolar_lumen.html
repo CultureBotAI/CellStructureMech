@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · vacuolar lumen</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>vacuolar lumen</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> · Membrane organelle · Subcellular region · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> · Membrane organelle · Subcellular region · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">The volume enclosed within the vacuolar membrane. <small>[<a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="../../structures/membrane_organelle/vacuole.html">vacuole</a> (<a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a>) </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -50,8 +51,8 @@
 <h3 id="causal_graphs-vacuolar_lumen_topology">The vacuolar membrane encloses the vacuolar lumen <small>(FUNCTION)</small></h3>
 <p>The vacuolar lumen is the internal vacuolar compartment bounded by the vacuolar membrane.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: The vacuolar membrane encloses the vacuolar lumen">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>vacuolar lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a>)</small></td><td>is part of</td><td>vacuole <small>(<a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> <small>GO:0005775 identifies the vacuolar lumen and places it inside the vacuole.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a> <small>GO:0005773 identifies the containing vacuole.</small></li></ul></td></tr>
-<tr><td>vacuolar membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a>)</small></td><td>bounds</td><td>vacuolar lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> <small>GO:0005775 defines the lumen as the volume enclosed within the vacuolar membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a> <small>GO:0005774 identifies the bounding vacuolar membrane.</small></li></ul></td></tr>
+<tr><td>vacuolar lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a>)</small></td><td>is part of</td><td>vacuole <small>(<a href="../../structures/membrane_organelle/vacuole.html"><code>GO:0005773</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> <small>GO:0005775 identifies the vacuolar lumen and places it inside the vacuole.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a> <small>GO:0005773 identifies the containing vacuole.</small></li></ul></td></tr>
+<tr><td>vacuolar membrane <small>(<a href="../../structures/membrane_organelle/vacuolar_membrane.html"><code>GO:0005774</code></a>)</small></td><td>bounds</td><td>vacuolar lumen <small>(<a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> <small>GO:0005775 defines the lumen as the volume enclosed within the vacuolar membrane.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a> <small>GO:0005774 identifies the bounding vacuolar membrane.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -63,11 +64,13 @@
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0005775"><code>GO:0005775</code></a> <small>Gene Ontology cellular-component term for the vacuolar lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0070013"><code>GO:0070013</code></a> <small>Gene Ontology cellular-component parent term for intracellular organelle lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005773"><code>GO:0005773</code></a> <small>Gene Ontology cellular-component term for the vacuole that contains the vacuolar lumen.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005774"><code>GO:0005774</code></a> <small>Gene Ontology cellular-component term for the vacuolar membrane that bounds the lumen.</small></li><li><a href="https://doi.org/10.1016/j.bbamcr.2008.08.003"><code>DOI:10.1016/j.bbamcr.2008.08.003</code></a> <small>Li and Kane 2009, The yeast lysosome-like vacuole: Endpoint and crossroads, Biochimica et Biophysica Acta.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-15T09:30:21Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-15T09:31:21Z</code> codex · EXPANDED_RECORD — Added organelle-lumen parentage, vacuole parthood, Eukaryota scope, a Saccharomyces example, lumen compartmentalization, GO/DOI evidence, a nonmechanistic membrane/lumen topology graph, and a resolved lumen-boundary interpretation.</li><li><code>2026-09-15T09:42:48Z</code> codex · REVIEW_FIX — Addressed PR #957 review issues #958, #959, and #960 by narrowing distribution to Saccharomyces evidence, retyping the lumen and vacuole graph nodes, and marking the topology graph as FUNCTION.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/vacuolar_lumen.yaml"><code>data/structures/membrane_organelle/vacuolar_lumen.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-15T09:30:21Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-15T09:31:21Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added organelle-lumen parentage, vacuole parthood, Eukaryota scope, a Saccharomyces example, lumen compartmentalization, GO/DOI evidence, a nonmechanistic membrane/lumen topology graph, and a resolved lumen-boundary interpretation.</li><li><code>2026-09-15T09:42:48Z</code> codex · REVIEW_FIX · <span class="llm-assisted">LLM-assisted</span> — Addressed PR #957 review issues #958, #959, and #960 by narrowing distribution to Saccharomyces evidence, retyping the lumen and vacuole graph nodes, and marking the topology graph as FUNCTION.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/vacuolar_lumen.yaml"><code>data/structures/membrane_organelle/vacuolar_lumen.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0005775&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fmembrane_organelle%2Fvacuolar_lumen.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

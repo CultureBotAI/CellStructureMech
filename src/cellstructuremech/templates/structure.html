@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block title %}{{ r.label }} · CellStructureMech{% endblock %}
-{% macro curie(c) %}{% set u = c | curie_url %}{% if u %}<a href="{{ u }}"><code>{{ c }}</code></a>{% else %}<code>{{ c }}</code>{% endif %}{% set label = (reference_labels | default({})).get(c) %}{% if label %} — {{ label }}{% endif %}{% endmacro %}
-{% macro related(c) %}{% set target = (local_records | default({})).get(c) %}{% if target %}<a href="{{ root }}{{ target.page }}">{{ target.label }}</a> ({{ curie(c) }}){% else %}{{ curie(c) }} <small>(no local record)</small>{% endif %}{% endmacro %}
+{# curie(): an identifier naming a thing -- a record here links its page. ref(): an identifier naming the source a claim cites. #}
+{% macro curie(c, label=none) %}{{ c | term_link(label) }}{% endmacro %}
+{% macro ref(c) %}{{ c | term_link(reference=true) }}{% endmacro %}
+{% macro related(c) %}{% set target = (local_records | default({})).get(c) %}{% if target %}<a href="{{ root }}{{ target.page }}">{{ target.label }}</a> ({{ ref(c) }}){% else %}{{ curie(c) }} <small>(no local record)</small>{% endif %}{% endmacro %}
 {% macro figure(im, label, cls) %}<figure class="{{ cls }}">
 {% if im.file %}<a href="{{ im.source_url }}"><img src="{{ img_base }}{{ im.file }}" alt="{{ im.caption or label }}"></a>
 {% else %}<p class="linked-image">Image (not hosted — {{ im.licence }}): <a href="{{ im.source_url }}">{{ im.source_accession }}</a></p>{% endif %}
-<figcaption>{% if im.caption %}{{ im.caption }} {% endif %}<span class="modality">{{ im.modality }}</span> · <em>{{ im.taxon_label }}</em> ({{ curie(im.taxon_id) }}) · {{ im.attribution }} · {% if im.licence_url %}<a href="{{ im.licence_url }}">{{ im.licence }}</a>{% else %}{{ im.licence }}{% endif %} · source: <a href="{{ im.source_url }}">{{ im.source }} {{ im.source_accession }}</a> · {{ curie(im.reference) }}</figcaption>
+<figcaption>{% if im.caption %}{{ im.caption | autolink }} {% endif %}<span class="modality">{{ im.modality }}</span> · <em>{{ im.taxon_label }}</em> ({{ curie(im.taxon_id) }}) · {{ im.attribution | autolink }} · {% if im.licence_url %}<a href="{{ im.licence_url }}">{{ im.licence }}</a>{% else %}{{ im.licence }}{% endif %} · source: <a href="{{ im.source_url }}">{{ im.source }} {{ im.source_accession }}</a> · {{ ref(im.reference) }}</figcaption>
 </figure>{% endmacro %}
-{% macro evid(items) %}{% if items %}<ul class="evidence">{% for e in items %}<li>{{ curie(e.reference) }}{% if e.snippet %} — <q>{{ e.snippet }}</q>{% endif %}{% if e.notes %} <small>{{ e.notes }}</small>{% endif %}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
+{% macro evid(items) %}{% if items %}<ul class="evidence">{% for e in items %}<li>{{ ref(e.reference) }}{% if e.snippet %} — <q>{{ e.snippet | autolink }}</q>{% endif %}{% if e.notes %} <small>{{ e.notes | autolink }}</small>{% endif %}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
 {% block content %}
 <div class="record-topbar">
   <p class="crumbs"><a href="{{ root }}browse.html">Browse</a> · <a href="{{ root }}category/{{ r.structure_category | lower }}.html">{{ r.structure_category | replace('_', ' ') | lower | capitalize }}</a> · {{ r.label }}</p>
@@ -16,8 +18,9 @@
   </form>
 </div>
 <h1>{{ r.label }}</h1>
-<p class="meta">{{ curie(r.identifier) }} · {{ r.structure_category | replace('_', ' ') | lower | capitalize }}{% if r.structure_kind %} · {{ r.structure_kind | replace('_', ' ') | lower | capitalize }}{% endif %} · <span class="status">{{ r.mapping_status | replace('_', ' ') | lower | capitalize }}</span></p>
-{% if r.definition %}<p class="definition">{{ r.definition }}{% if r.definition_source %} <small>[{{ curie(r.definition_source) }}]</small>{% endif %}</p>{% endif %}
+{% set meaning = (status_meanings | default({})).get(r.mapping_status) %}
+<p class="meta">{{ curie(r.identifier) }} · {{ r.structure_category | replace('_', ' ') | lower | capitalize }}{% if r.structure_kind %} · {{ r.structure_kind | replace('_', ' ') | lower | capitalize }}{% endif %} · <span class="status">{{ r.mapping_status | replace('_', ' ') | lower | capitalize }}</span>{% if meaning %} <small class="status-note">— {{ meaning }} <a href="{{ root }}index.html#curation">How records are made</a></small>{% endif %}</p>
+{% if r.definition %}<p class="definition">{{ r.definition | autolink }}{% if r.definition_source %} <small>[{{ ref(r.definition_source) }}]</small>{% endif %}</p>{% endif %}
 
 {% if r.images %}
 {{ figure(r.images[0], r.label, "hero") }}
@@ -34,7 +37,7 @@
 <div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
 {% for c in r.components %}
-<tr id="components-{{ c.component_id }}"><td>{{ c.label }}</td><td>{{ c.component_type | replace('_', ' ') | lower | capitalize }}</td><td>{% if c.component_role == "ASSOCIATED_MACHINERY" %}<span class="machinery" title="Binds the assembled structure to position, partition or maintain it">acts on</span>{% else %}part of{% endif %}</td><td>{% if c.grounding %}{{ curie(c.grounding) }}{% elif c.grounding_status %}<em title="{% if c.grounding_status == 'REVIEWED_LABEL_ONLY' %}The component label was reviewed; no accession grounding is asserted.{% else %}{{ c.grounding_notes | default('') }}{% endif %}">{{ c.grounding_status | replace('_', ' ') | lower | capitalize }}</em>{% if c.grounding_status == 'REVIEWED_LABEL_ONLY' %}<small> (reviewed name; no accession asserted)</small>{% endif %}{% endif %}</td><td>{{ (c.gene_symbols or []) | join(", ") }}</td><td>{{ c.stoichiometry or "" }}</td><td>{{ c.essentiality or "" }}</td><td>{{ c.role or "" }}{{ evid(c.evidence) }}</td></tr>
+<tr id="components-{{ c.component_id }}"><td>{{ c.label }}</td><td>{{ c.component_type | replace('_', ' ') | lower | capitalize }}</td><td>{% if c.component_role == "ASSOCIATED_MACHINERY" %}<span class="machinery" title="Binds the assembled structure to position, partition or maintain it">acts on</span>{% else %}part of{% endif %}</td><td>{% if c.grounding %}{{ curie(c.grounding) }}{% elif c.grounding_status %}<em title="{% if c.grounding_status == 'REVIEWED_LABEL_ONLY' %}The component label was reviewed; no accession grounding is asserted.{% else %}{{ c.grounding_notes | default('') }}{% endif %}">{{ c.grounding_status | replace('_', ' ') | lower | capitalize }}</em>{% if c.grounding_status == 'REVIEWED_LABEL_ONLY' %}<small> (reviewed name; no accession asserted)</small>{% endif %}{% endif %}</td><td>{{ (c.gene_symbols or []) | join(", ") }}</td><td>{{ c.stoichiometry or "" }}</td><td>{{ c.essentiality or "" }}</td><td>{{ c.role | autolink }}{{ evid(c.evidence) }}</td></tr>
 {% endfor %}
 </tbody></table>
 </div>
@@ -53,7 +56,7 @@ family; these are the specific entries behind it.</small></p>
 {% for p in c.protein_examples %}
 <tr id="protein-{{ p.uniprot_id | replace(':', '-') }}"><td>{{ curie(p.uniprot_id) }}</td><td>{{ p.protein_label }}</td><td>{{ p.gene_symbol or "" }}</td><td><em>{{ p.taxon_label }}</em> ({{ curie(p.taxon_id) }})</td><td>{{ p.entry_status or "" }}</td></tr>
 {% if p.role or p.evidence %}
-<tr><td colspan="5"><details><summary>Role and evidence{% if p.evidence %} ({{ p.evidence | length }} reference{{ "" if p.evidence | length == 1 else "s" }}){% endif %}</summary>{% if p.role %}<p>{{ p.role }}</p>{% endif %}{{ evid(p.evidence) }}</details></td></tr>
+<tr><td colspan="5"><details><summary>Role and evidence{% if p.evidence %} ({{ p.evidence | length }} reference{{ "" if p.evidence | length == 1 else "s" }}){% endif %}</summary>{% if p.role %}<p>{{ p.role | autolink }}</p>{% endif %}{{ evid(p.evidence) }}</details></td></tr>
 {% endif %}
 {% endfor %}
 </tbody></table>
@@ -71,28 +74,28 @@ family; these are the specific entries behind it.</small></p>
 {% for p in c.participants %}<tr><td>{{ curie(p.participant_id) }} — {{ p.label }}</td><td>{{ p.participant_type }}</td><td>{{ p.source_name or p.gene_symbol or "" }}</td><td>{{ p.stoichiometry or "not asserted" }}</td></tr>{% endfor %}
 </tbody></table>
 </div>
-{% if c.notes %}<p><small>{{ c.notes }}</small></p>{% endif %}
+{% if c.notes %}<p><small>{{ c.notes | autolink }}</small></p>{% endif %}
 {% endfor %}
 {% endif %}
 
 {% if r.taxonomic_distribution %}
 <h2>Taxonomic distribution</h2>
-<ul>{% for t in r.taxonomic_distribution %}<li>{{ curie(t.taxon_id) }} {{ t.taxon_label }} — <strong>{{ t.presence }}</strong>{% if t.note %}: {{ t.note }}{% endif %}{% if t.reference %} [{{ curie(t.reference) }}]{% endif %}</li>{% endfor %}</ul>
+<ul>{% for t in r.taxonomic_distribution %}<li>{{ curie(t.taxon_id) }} {{ t.taxon_label }} — <strong>{{ t.presence }}</strong>{% if t.note %}: {{ t.note | autolink }}{% endif %}{% if t.reference %} [{{ ref(t.reference) }}]{% endif %}</li>{% endfor %}</ul>
 {% endif %}
 
 {% if r.canonical_examples %}
 <h2>Canonical examples</h2>
-<ul>{% for t in r.canonical_examples %}<li>{{ curie(t.taxon_id) }} <em>{{ t.taxon_label }}</em>{% if t.note %} — {{ t.note }}{% endif %}{% if t.reference %} [{{ curie(t.reference) }}]{% endif %}</li>{% endfor %}</ul>
+<ul>{% for t in r.canonical_examples %}<li>{{ curie(t.taxon_id) }} <em>{{ t.taxon_label }}</em>{% if t.note %} — {{ t.note | autolink }}{% endif %}{% if t.reference %} [{{ ref(t.reference) }}]{% endif %}</li>{% endfor %}</ul>
 {% endif %}
 
 {% if r.functions %}
 <h2>Functions</h2>
-<ul>{% for f in r.functions %}<li><strong>{{ f.label }}</strong>{% if f.grounding %} {{ curie(f.grounding) }}{% endif %}{% if f.description %} — {{ f.description }}{% endif %}{{ evid(f.evidence) }}</li>{% endfor %}</ul>
+<ul>{% for f in r.functions %}<li><strong>{{ f.label }}</strong>{% if f.grounding %} {{ curie(f.grounding) }}{% endif %}{% if f.description %} — {{ f.description | autolink }}{% endif %}{{ evid(f.evidence) }}</li>{% endfor %}</ul>
 {% endif %}
 
 {% if r.associated_traits %}
 <h2>Associated traits</h2>
-<ul>{% for t in r.associated_traits %}<li>{{ t.relation }} {{ curie(t.trait_id) }} {{ t.trait_label }}{% if t.note %} — {{ t.note }}{% endif %}{{ evid(t.evidence) }}</li>{% endfor %}</ul>
+<ul>{% for t in r.associated_traits %}<li>{{ t.relation }} {{ curie(t.trait_id, t.trait_label) }}{% if t.note %} — {{ t.note | autolink }}{% endif %}{{ evid(t.evidence) }}</li>{% endfor %}</ul>
 {% endif %}
 
 {% if r.related_records %}
@@ -100,19 +103,19 @@ family; these are the specific entries behind it.</small></p>
 <ul>{% for link in r.related_records %}<li>
 <a href="https://culturebotai.github.io/PathwayMech/pages/records/{{ link.identifier|replace(':', '_')|replace('/', '_')|urlencode }}.html">{{ link.label }}</a> ({{ link.identifier }})
 — {{ link.relation }}; target taxon {{ curie(link.target_taxon_id) }}.
-<p>{{ link.scope_note }}</p><p>Basis: {{ link.basis }}. PathwayMech revision: <code>{{ link.source_version }}</code>.</p>
+<p>{{ link.scope_note | autolink }}</p><p>Basis: {{ link.basis | autolink }}. PathwayMech revision: <code>{{ link.source_version }}</code>.</p>
 {{ evid(link.evidence) }}</li>{% endfor %}</ul>
 {% endif %}
 {% if r.physical_properties %}
 <h2>Physical properties</h2>
-<ul>{% for p in r.physical_properties %}<li>{{ p.property }}: {{ p.value }}{% if p.unit %} {{ curie(p.unit) }}{% endif %}{% if p.context %} ({{ p.context }}){% endif %}{% if p.reference and not p.evidence %} [{{ curie(p.reference) }}]{% endif %}{{ evid(p.evidence) }}</li>{% endfor %}</ul>
+<ul>{% for p in r.physical_properties %}<li>{{ p.property }}: {{ p.value }}{% if p.unit %} {{ curie(p.unit) }}{% endif %}{% if p.context %} ({{ p.context | autolink }}){% endif %}{% if p.reference and not p.evidence %} [{{ ref(p.reference) }}]{% endif %}{{ evid(p.evidence) }}</li>{% endfor %}</ul>
 {% endif %}
 
 {% if r.causal_graphs %}
 <h2>Mechanism graphs</h2>
 {% for g in r.causal_graphs %}
 <h3 id="causal_graphs-{{ g.graph_id }}">{{ g.title or g.graph_id }}{% if g.graph_kind %} <small>({{ g.graph_kind }})</small>{% endif %}</h3>
-{% if g.description %}<p>{{ g.description }}</p>{% endif %}
+{% if g.description %}<p>{{ g.description | autolink }}</p>{% endif %}
 <div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: {{ g.title or g.graph_id }}">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
 {% set nodes = {} %}{% for n in g.nodes %}{% set _ = nodes.update({n.node_id: n}) %}{% endfor %}
@@ -126,7 +129,7 @@ family; these are the specific entries behind it.</small></p>
 
 {% if r.discussions %}
 <h2>Discussions</h2>
-<ul>{% for d in r.discussions %}<li><strong>{{ d.kind }}</strong> ({{ d.status }}): {{ d.prompt }}{% if d.rationale %} <small>{{ d.rationale }}</small>{% endif %}</li>{% endfor %}</ul>
+<ul>{% for d in r.discussions %}<li><strong>{{ d.kind }}</strong> ({{ d.status }}): {{ d.prompt | autolink }}{% if d.rationale %} <small>{{ d.rationale | autolink }}</small>{% endif %}</li>{% endfor %}</ul>
 {% endif %}
 
 {% if r.images and r.images | length > 1 %}
@@ -137,7 +140,7 @@ family; these are the specific entries behind it.</small></p>
 
 {%- if r.datasets %}
 <h2>Datasets</h2>
-<ul class="datasets">{% for d in r.datasets %}<li>{% if d.url %}<a href="{{ d.url }}"><strong>{{ d.title or d.accession }}</strong></a>{% else %}<strong>{{ d.title or d.accession }}</strong>{% endif %}{% if d.accession %} ({{ curie(d.accession) }}){% endif %}{% if d.repository %} · {{ d.repository }}{% endif %}{% if d.dataset_type %} · {{ d.dataset_type }}{% endif %}{% if d.organism %}<br><em>Organism:</em> {{ d.organism }}{% endif %}{% if d.platform %} · <em>Platform:</em> {{ d.platform }}{% endif %}{% if d.sample_count is defined and d.sample_count is not none %} · {{ d.sample_count }} samples{% endif %}{% if d.findings %}<p>{{ d.findings }}</p>{% endif %}{% if d.notes %}<p><small>{{ d.notes }}</small></p>{% endif %}{{ evid(d.evidence) }}</li>{% endfor %}</ul>
+<ul class="datasets">{% for d in r.datasets %}<li>{% if d.url %}<a href="{{ d.url }}"><strong>{{ d.title or d.accession }}</strong></a>{% else %}<strong>{{ d.title or d.accession }}</strong>{% endif %}{% if d.accession %} ({{ curie(d.accession) }}){% endif %}{% if d.repository %} · {{ d.repository }}{% endif %}{% if d.dataset_type %} · {{ d.dataset_type }}{% endif %}{% if d.organism %}<br><em>Organism:</em> {{ d.organism }}{% endif %}{% if d.platform %} · <em>Platform:</em> {{ d.platform }}{% endif %}{% if d.sample_count is defined and d.sample_count is not none %} · {{ d.sample_count }} samples{% endif %}{% if d.findings %}<p>{{ d.findings | autolink }}</p>{% endif %}{% if d.notes %}<p><small>{{ d.notes | autolink }}</small></p>{% endif %}{{ evid(d.evidence) }}</li>{% endfor %}</ul>
 {% endif %}
 
 {% if r.evidence %}
@@ -147,7 +150,9 @@ family; these are the specific entries behind it.</small></p>
 
 {% if r.curation_history %}
 <h2>Curation history</h2>
-<ul class="history">{% for h in r.curation_history %}<li><code>{{ h.timestamp }}</code> {{ h.curator }} · {{ h.action }}{% if h.changes %} — {{ h.changes }}{% endif %}</li>{% endfor %}</ul>
+{% set llm_events = r.curation_history | selectattr("llm_assisted") | list %}
+<p class="meta">{{ llm_events | length }} of {{ r.curation_history | length }} event{{ "" if r.curation_history | length == 1 else "s" }} marked <code>llm_assisted</code> in the record.</p>
+<ul class="history">{% for h in r.curation_history %}<li><code>{{ h.timestamp }}</code> {{ h.curator }} · {{ h.action }}{% if h.llm_assisted %} · <span class="llm-assisted">LLM-assisted</span>{% endif %}{% if h.changes %} — {{ h.changes | autolink }}{% endif %}</li>{% endfor %}</ul>
 {% endif %}
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/{{ source_path }}"><code>{{ source_path }}</code></a></p>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/{{ source_path }}"><code>{{ source_path }}</code></a>{% if report_url %} · <a class="report" href="{{ report_url }}">Report a problem with this record</a>{% endif %}</p>
 {% endblock %}

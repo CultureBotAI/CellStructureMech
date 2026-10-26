@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/cytoskeleton.html">Cytoskeleton</a> · basal body triplet base</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>basal body triplet base</h1>
-<p class="meta"><code>cellstructuremech:basal_body_triplet_base</code> · Cytoskeleton · Other · <span class="status">Proposed</span></p>
+<p class="meta"><a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/basal_body_triplet_base.yaml"><code>cellstructuremech:basal_body_triplet_base</code></a> · Cytoskeleton · Other · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A linker in the proximal region of a microbial ciliary basal body that connects the pinhead to the A-C linker. In Paramecium tetraurelia reconstructions it extends to the ArmB region of the A-C linker. <small>[<a href="https://doi.org/10.15252/embj.2020106246"><code>DOI:10.15252/embj.2020106246</code></a>]</small></p>
 <figure class="hero">
 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7667884/figure/embj2020106246-fig-0005/"><img src="../../../data/images/cytoskeleton/basal_body_triplet_base/pmc7667884_embj2020106246_fig_0005.jpg" alt="Paramecium proximal-triplet reconstructions. Panel A shows the triplet base in green connecting the purple pinhead to the turquoise A-C linker at low contour threshold, with an approximate 35-nm span annotation. Panel B uses a higher threshold and shows only a dashed putative triplet-base position; C-F emphasize the neighboring A-C linker and proximal/distal comparisons. These are segmented averages, not raw micrographs or sequence-resolved proteins."></a>
@@ -55,17 +56,19 @@
 <ul><li><strong>CURATION_TODO</strong> (RESOLVED): Keep the triplet base distinct from adjacent basal-body modules. <small>A named linker is not the entire cartwheel, pinhead or A-C linker.</small></li><li><strong>CURATION_TODO</strong> (OPEN): Resolve triplet-base molecular composition and a narrower structure class. <small>A proposed coiled-coil assignment is not a demonstrated molecular identity.</small></li><li><strong>CURATION_TODO</strong> (RESOLVED): Separate observed connectivity from periodicity and mechanical hypotheses. <small>Low density and static axial differences do not uniquely specify occupancy, flexibility or chronology.</small></li></ul>
 
 <h2>Datasets</h2>
-<ul class="datasets"><li><a href="https://www.ebi.ac.uk/emdb/EMD-10729"><strong>Paramecium microtubule triplet from the start of the proximal region</strong></a> (<a href="https://www.ebi.ac.uk/emdb/EMD-10729"><code>EMDB:EMD-10729</code></a>) · OTHER · STRUCTURAL_IMAGING<br><em>Organism:</em> Paramecium tetraurelia · <em>Platform:</em> cryo-electron tomography and subtomogram averaging<p><small>Native released EMDB metadata verifies the start-of-proximal-region title, taxon 5888, DOI and PMID:32954513. The paper lists EMD-10726 through EMD-10729 in Data availability. EMD-10728 denotes the distal comparison; EMD-10726 and EMD-10727 denote A-C-linker-focused maps. Their sample-name fields repeat start-region wording despite different entry titles, so titles are used to distinguish these deposits. No exact structure xref or hosted map volume is asserted.</small></p></li></ul>
+<ul class="datasets"><li><a href="https://www.ebi.ac.uk/emdb/EMD-10729"><strong>Paramecium microtubule triplet from the start of the proximal region</strong></a> (<a href="https://www.ebi.ac.uk/emdb/EMD-10729"><code>EMDB:EMD-10729</code></a>) · OTHER · STRUCTURAL_IMAGING<br><em>Organism:</em> Paramecium tetraurelia · <em>Platform:</em> cryo-electron tomography and subtomogram averaging<p><small>Native released EMDB metadata verifies the start-of-proximal-region title, taxon 5888, DOI and <a href="https://pubmed.ncbi.nlm.nih.gov/32954513/">PMID:32954513</a>. The paper lists EMD-10726 through EMD-10729 in Data availability. EMD-10728 denotes the distal comparison; EMD-10726 and EMD-10727 denote A-C-linker-focused maps. Their sample-name fields repeat start-region wording despite different entry titles, so titles are used to distinguish these deposits. No exact structure xref or hosted map volume is asserted.</small></p></li></ul>
 
 <h2>Evidence</h2>
-<ul class="evidence"><li><a href="https://doi.org/10.15252/embj.2020106246"><code>DOI:10.15252/embj.2020106246</code></a> <small>Klena et al. 2020, PMID:32954513. Checksum-verified PMC7667884.1 JATS Results, Discussion, species preparation and A-C-linker averaging Methods, Figure 5 and Data availability inspected. Figure 5 was visually inspected; its low-threshold triplet-base density is not a sequence-resolved model.</small></li></ul>
+<ul class="evidence"><li><a href="https://doi.org/10.15252/embj.2020106246"><code>DOI:10.15252/embj.2020106246</code></a> <small>Klena et al. 2020, <a href="https://pubmed.ncbi.nlm.nih.gov/32954513/">PMID:32954513</a>. Checksum-verified <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7667884/">PMC7667884</a>.1 JATS Results, Discussion, species preparation and A-C-linker averaging Methods, Figure 5 and Data availability inspected. Figure 5 was visually inspected; its low-threshold triplet-base density is not a sequence-resolved model.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-10-04T14:28:41Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-04T14:30:29Z</code> codex · CURATED_RECORD — Added directly imaged triplet-base connectivity, two species examples, approximate Paramecium span, scoped EMDB provenance and inspected CC BY figure. Retained molecular identity, periodicity and mechanics as unresolved; no hypothesized protein membership or broad distribution asserted.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/basal_body_triplet_base.yaml"><code>data/structures/cytoskeleton/basal_body_triplet_base.yaml</code></a></p>
+<p class="meta">2 of 2 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-10-04T14:28:41Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-10-04T14:30:29Z</code> codex · CURATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added directly imaged triplet-base connectivity, two species examples, approximate Paramecium span, scoped EMDB provenance and inspected CC BY figure. Retained molecular identity, periodicity and mechanics as unresolved; no hypothesized protein membership or broad distribution asserted.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/cytoskeleton/basal_body_triplet_base.yaml"><code>data/structures/cytoskeleton/basal_body_triplet_base.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+cellstructuremech%3Abasal_body_triplet_base&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fcytoskeleton%2Fbasal_body_triplet_base.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

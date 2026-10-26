@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/ribonucleoprotein.html">Ribonucleoprotein</a> · sphere organelle</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>sphere organelle</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0071601"><code>GO:0071601</code></a> · Ribonucleoprotein · Other · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0071601"><code>GO:0071601</code></a> · Ribonucleoprotein · Other · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A nuclear body that is found in the germinal vesicles of amphibian oocytes, and consist of three major parts: a remarkably spherical body about 5-10 pm in diameter, smaller spherical or nearly spherical granules on the surface, and inclusions of various sizes that strongly resemble the surface granules. The parts of the sphere organelle have distinct compositions, including splicing snRNAs and proteins. <small>[<a href="http://purl.obolibrary.org/obo/GO_0071601"><code>GO:0071601</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="../../structures/membrane_organelle/nuclear_lumen.html">nuclear lumen</a> (<a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a>) </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -80,11 +81,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0071601"><code>GO:0071601</code></a> <small>Gene Ontology cellular-component term for sphere organelle.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0016604"><code>GO:0016604</code></a> <small>Gene Ontology cellular-component parent term for nuclear body.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0031981"><code>GO:0031981</code></a> <small>Gene Ontology cellular-component term for the nuclear lumen; sphere organelles are amphibian-oocyte germinal-vesicle nuclear bodies.</small></li><li><a href="https://doi.org/10.1002/dvg.1020160107"><code>DOI:10.1002/dvg.1020160107</code></a> <small>Gall, Tsvetkov, Wu and Murphy 1995 reviewed the sphere organelle/coiled body as a nuclear component related to coiled bodies, prenucleolar bodies and insect Binnenkorper.</small></li><li><a href="https://doi.org/10.1083/jcb.122.4.767"><code>DOI:10.1083/jcb.122.4.767</code></a> <small>Tuma, Stolk and Roth 1993, Identification and characterization of a sphere organelle protein, Journal of Cell Biology.</small></li><li><a href="https://doi.org/10.1091/mbc.5.10.1119"><code>DOI:10.1091/mbc.5.10.1119</code></a> <small>Wu, Murphy and Gall 1994 targeted human p80-coilin to sphere organelles in Xenopus oocyte germinal vesicles.</small></li><li><a href="https://doi.org/10.1007/s004120050385"><code>DOI:10.1007/s004120050385</code></a> <small>Tuma and Roth 1999, Induction of coiled body-like structures in Xenopus oocytes by U7 snRNA, Chromosoma.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-28T06:33:59Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-28T06:35:07Z</code> codex · EXPANDED_RECORD — Added nuclear-body parentage, nuclear-lumen parthood, SPH-1/coilin and U7 snRNA components, Xenopus laevis scope, GO/DOI evidence, a nonmechanistic SPH-1/U7 sphere-organelle assembly graph and a sphere/Cajal-body boundary TODO.</li><li><code>2026-09-28T06:35:52Z</code> codex · TIGHTENED_EVIDENCE — Narrowed the Xenopus laevis canonical-example note to the SPH-1 cloning and sphere-cortex localization claim supported by its Tuma, Stolk and Roth 1993 reference.</li><li><code>2026-10-18T03:35:34Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 1 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/sphere_organelle.yaml"><code>data/structures/ribonucleoprotein/sphere_organelle.yaml</code></a></p>
+<p class="meta">3 of 4 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-28T06:33:59Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-28T06:35:07Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added nuclear-body parentage, nuclear-lumen parthood, SPH-1/coilin and U7 snRNA components, Xenopus laevis scope, GO/DOI evidence, a nonmechanistic SPH-1/U7 sphere-organelle assembly graph and a sphere/Cajal-body boundary TODO.</li><li><code>2026-09-28T06:35:52Z</code> codex · TIGHTENED_EVIDENCE · <span class="llm-assisted">LLM-assisted</span> — Narrowed the Xenopus laevis canonical-example note to the SPH-1 cloning and sphere-cortex localization claim supported by its Tuma, Stolk and Roth 1993 reference.</li><li><code>2026-10-18T03:35:34Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 1 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/ribonucleoprotein/sphere_organelle.yaml"><code>data/structures/ribonucleoprotein/sphere_organelle.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0071601&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fribonucleoprotein%2Fsphere_organelle.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

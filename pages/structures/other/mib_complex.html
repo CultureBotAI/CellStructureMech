@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · MIB complex</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>MIB complex</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A mitochondrial intermembrane-space-spanning assembly that couples inner-membrane MICOS to outer-membrane SAM and includes a conserved DNAJC11-related protein and metaxin 1. <small>[<a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a>]</small></p>
 <p><strong>Synonyms:</strong> mitochondrial intermembrane space bridging complex; mitofilin complex</p><p><strong>Part of:</strong> <a href="../../structures/membrane_organelle/mitochondrial_inner_membrane.html">mitochondrial inner membrane</a> (<a href="http://purl.obolibrary.org/obo/GO_0005743"><code>GO:0005743</code></a>) </p><p><strong>Has part:</strong> <a href="../../structures/other/micos_complex.html">MICOS complex</a> (<a href="http://purl.obolibrary.org/obo/GO_0061617"><code>GO:0061617</code></a>);  <a href="../../structures/other/sam_complex.html">SAM complex</a> (<a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a>) </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -36,8 +37,8 @@
 <h2>Components</h2>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Components">
 <table><thead><tr><th>Component</th><th>Type</th><th>Part of / acts on</th><th>Grounding</th><th>Genes</th><th>Stoichiometry</th><th>Essential</th><th>Role</th></tr></thead><tbody>
-<tr id="components-micos"><td>MICOS complex</td><td>Protein complex</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0061617"><code>GO:0061617</code></a></td><td></td><td></td><td></td><td>Inner-membrane subcomplex of the membrane-spanning assembly.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>MIB includes MICOS constituents.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Figure 1F-G: Mic60 and Mic26 baits recovered MICOS and MIB proteins in fission yeast.</small></li></ul></td></tr>
-<tr id="components-sam"><td>SAM complex</td><td>Protein complex</td><td>part of</td><td><a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a></td><td></td><td></td><td></td><td>Outer-membrane subcomplex associated with MICOS.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>SAM is the outer-membrane complex included in MIB.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Sam50 and metaxin 1 were enriched with both MICOS baits.</small></li></ul></td></tr>
+<tr id="components-micos"><td>MICOS complex</td><td>Protein complex</td><td>part of</td><td><a href="../../structures/other/micos_complex.html"><code>GO:0061617</code></a></td><td></td><td></td><td></td><td>Inner-membrane subcomplex of the membrane-spanning assembly.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>MIB includes MICOS constituents.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Figure 1F-G: Mic60 and Mic26 baits recovered MICOS and MIB proteins in fission yeast.</small></li></ul></td></tr>
+<tr id="components-sam"><td>SAM complex</td><td>Protein complex</td><td>part of</td><td><a href="../../structures/other/sam_complex.html"><code>GO:0001401</code></a></td><td></td><td></td><td></td><td>Outer-membrane subcomplex associated with MICOS.<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>SAM is the outer-membrane complex included in MIB.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Sam50 and metaxin 1 were enriched with both MICOS baits.</small></li></ul></td></tr>
 </tbody></table>
 </div>
 
@@ -55,8 +56,8 @@
 <h3 id="causal_graphs-mib_membrane_bridge">MIB connects MICOS and SAM <small>(FUNCTION)</small></h3>
 <p>Structural organization of the membrane bridge, not a temporal assembly pathway.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: MIB connects MICOS and SAM">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>MICOS complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0061617"><code>GO:0061617</code></a>)</small></td><td>is part of</td><td>MIB complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Definition-level membership.</small></li></ul></td></tr>
-<tr><td>SAM complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0001401"><code>GO:0001401</code></a>)</small></td><td>is part of</td><td>MIB complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Definition-level membership.</small></li></ul></td></tr>
+<tr><td>MICOS complex <small>(<a href="../../structures/other/micos_complex.html"><code>GO:0061617</code></a>)</small></td><td>is part of</td><td>MIB complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Definition-level membership.</small></li></ul></td></tr>
+<tr><td>SAM complex <small>(<a href="../../structures/other/sam_complex.html"><code>GO:0001401</code></a>)</small></td><td>is part of</td><td>MIB complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Definition-level membership.</small></li></ul></td></tr>
 <tr><td>MIB complex <small>(<a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a>)</small></td><td>mediates</td><td>mitochondrial membrane bridging</td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Structural bridging role in the GO definition.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Introduction: trans-boundary MIB organization.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -66,14 +67,16 @@
 
 
 <h2>Evidence</h2>
-<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Exact cellular-component identity, synonyms and composition boundary.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098800"><code>GO:0098800</code></a> <small>Verified GO is-a parent of MIB.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005743"><code>GO:0005743</code></a> <small>Containing inner mitochondrial membrane, not an identity mapping.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Kumar et al. 2024, A dynamin superfamily-like pseudoenzyme coordinates with MICOS to promote cristae architecture. PMID 38692277; native PMC11187654.319 JATS checked against MD5 10930e607aec0699d936e157acfdacce.</small></li></ul>
+<ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0140275"><code>GO:0140275</code></a> <small>Exact cellular-component identity, synonyms and composition boundary.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098800"><code>GO:0098800</code></a> <small>Verified GO is-a parent of MIB.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005743"><code>GO:0005743</code></a> <small>Containing inner mitochondrial membrane, not an identity mapping.</small></li><li><a href="https://doi.org/10.1016/j.cub.2024.04.028"><code>DOI:10.1016/j.cub.2024.04.028</code></a> <small>Kumar et al. 2024, A dynamin superfamily-like pseudoenzyme coordinates with MICOS to promote cristae architecture. <a href="https://pubmed.ncbi.nlm.nih.gov/38692277/">PMID 38692277</a>; native <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11187654/">PMC11187654</a>.319 JATS checked against MD5 10930e607aec0699d936e157acfdacce.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-10-04T21:05:04Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-04T21:07:34Z</code> codex · CURATED_RECORD — Added exact GO identity and subcomplexes, a fission-yeast association example, structural bridging function, nonmechanistic graph and bounded component/experimental uncertainties.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mib_complex.yaml"><code>data/structures/other/mib_complex.yaml</code></a></p>
+<p class="meta">2 of 2 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-10-04T21:05:04Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-10-04T21:07:34Z</code> codex · CURATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added exact GO identity and subcomplexes, a fission-yeast association example, structural bridging function, nonmechanistic graph and bounded component/experimental uncertainties.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mib_complex.yaml"><code>data/structures/other/mib_complex.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0140275&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Fmib_complex.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · nuclear pore linkers</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>nuclear pore linkers</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0044612"><code>GO:0044612</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0044612"><code>GO:0044612</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A eukaryotic nuclear pore substructure made of linker nucleoporins that connect central transport-channel FG nucleoporins with core nuclear-pore scaffold modules. <small>[<a href="http://purl.obolibrary.org/obo/GO_0044612"><code>GO:0044612</code></a>]</small></p>
 <p><strong>Synonyms:</strong> linker Nups</p><p><strong>Part of:</strong> <a href="../../structures/other/nuclear_pore.html">nuclear pore</a> (<a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a>) </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -100,11 +101,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0044612"><code>GO:0044612</code></a> <small>Gene Ontology cellular-component term for nuclear pore linkers.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005643"><code>GO:0005643</code></a> <small>Gene Ontology cellular-component term for the nuclear pore.</small></li><li><a href="https://doi.org/10.1016/j.cell.2011.06.039"><code>DOI:10.1016/j.cell.2011.06.039</code></a> <small>Amlacher et al. 2011, &#39;Insight into Structure and Assembly of the Nuclear Pore Complex by Utilizing the Genome of a Eukaryotic Thermophile&#39;, Cell.</small></li><li><a href="https://doi.org/10.1038/nsmb.3084"><code>DOI:10.1038/nsmb.3084</code></a> <small>Fischer et al. 2015, &#39;Linker Nups connect the nuclear pore complex inner ring with the outer ring and transport channel&#39;, Nature Structural and Molecular Biology.</small></li><li><a href="https://doi.org/10.1126/science.abm9798"><code>DOI:10.1126/science.abm9798</code></a> <small>Petrovic et al. 2022, &#39;Architecture of the linker-scaffold in the nuclear pore&#39;, Science.</small></li><li><a href="https://doi.org/10.1016/j.molcel.2023.08.025"><code>DOI:10.1016/j.molcel.2023.08.025</code></a> <small>Akey et al. 2023, &#39;Implications of a multiscale structure of the yeast nuclear pore complex&#39;, Molecular Cell.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-11T07:30:41Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T07:32:10Z</code> codex · EXPANDED_RECORD — Added linker-Nup synonymy, nuclear-pore parthood, three linker nucleoporin component classes, fungal taxonomic scope, a Saccharomyces cerevisiae example, module-linking function, DOI/GO evidence, a conservative linker assembly graph, and a linker-Nup grounding TODO.</li><li><code>2026-09-11T07:40:58Z</code> codex · ADDRESSED_REVIEW — Resolved #437 and #438 by narrowing the fungal taxonomic row to sampled ascomycete linker-Nup evidence, scoping Nup145N to the N-terminal linker cleavage product, and adding a resolved boundary discussion that separates Nup145N from outer-ring Nup145C.</li><li><code>2026-10-18T03:28:22Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 4 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/nuclear_pore_linkers.yaml"><code>data/structures/other/nuclear_pore_linkers.yaml</code></a></p>
+<p class="meta">3 of 4 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-11T07:30:41Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T07:32:10Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added linker-Nup synonymy, nuclear-pore parthood, three linker nucleoporin component classes, fungal taxonomic scope, a Saccharomyces cerevisiae example, module-linking function, DOI/GO evidence, a conservative linker assembly graph, and a linker-Nup grounding TODO.</li><li><code>2026-09-11T07:40:58Z</code> codex · ADDRESSED_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Resolved #437 and #438 by narrowing the fungal taxonomic row to sampled ascomycete linker-Nup evidence, scoping Nup145N to the N-terminal linker cleavage product, and adding a resolved boundary discussion that separates Nup145N from outer-ring Nup145C.</li><li><code>2026-10-18T03:28:22Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 4 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/nuclear_pore_linkers.yaml"><code>data/structures/other/nuclear_pore_linkers.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0044612&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Fnuclear_pore_linkers.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

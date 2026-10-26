@@ -29,6 +29,19 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
     <ul id="map-legend" class="map-legend" aria-label="Structure category colors"></ul>
   </aside>
   <div class="results-main">
+    <noscript><p class="meta">The text map needs JavaScript. <a href="browse.html">Browse all records as a table</a>.</p></noscript>
+    {# Before the plot: each of its points is a link, so a keyboard reader would
+       otherwise tab through every one of them to reach this alternative. #}
+    <details id="map-table" class="map-table" hidden>
+      <summary>View data as table</summary>
+      <div class="table-scroll" role="region" tabindex="0" aria-label="Plotted structures">
+        <table>
+          <caption id="map-table-caption"></caption>
+          <thead><tr><th scope="col">Structure</th><th scope="col">Identifier</th><th scope="col">Category</th><th scope="col">PC 1</th><th scope="col">PC 2</th></tr></thead>
+          <tbody id="map-table-body"></tbody>
+        </table>
+      </div>
+    </details>
     <div id="embedding-map" class="embedding-map" aria-label="Scatter plot of structure text embeddings"></div>
     <section id="map-details" class="map-details" aria-live="polite">
       <h2>Select a structure</h2>
@@ -69,11 +82,69 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
   const count = document.getElementById("map-count");
   const readable = value => value.toLowerCase().replaceAll("_", " ");
   let selected = "";
+  const fetchJson = url => fetch(url).then(response => {
+    if (!response.ok) throw new Error(`${url} answered HTTP ${response.status}`);
+    return response.json();
+  });
+  // A failed load is a visible error with a way to try again, never an empty
+  // plot that reads as an empty corpus.
+  function showLoadError(error) {
+    plot.replaceChildren();
+    const box = document.createElement("div");
+    box.className = "map-error";
+    box.setAttribute("role", "alert");
+    const message = document.createElement("p");
+    message.textContent = `Could not load embedding artifacts: ${error.message}`;
+    const retry = document.createElement("button");
+    retry.type = "button";
+    retry.textContent = "Retry";
+    retry.addEventListener("click", () => {
+      plot.textContent = "Loading the text map…";
+      load();
+    });
+    const fallback = document.createElement("a");
+    fallback.href = "browse.html";
+    fallback.textContent = "Browse all records as a table";
+    box.append(message, retry, " ", fallback);
+    plot.appendChild(box);
+    count.textContent = "";
+    retry.focus();
+  }
+  function load() {
   Promise.all([
-    fetch("data/structure_text_map.json").then(r => r.json()),
-    fetch("data/structure_text_neighbors.json").then(r => r.json())
+    fetchJson("data/structure_text_map.json"),
+    fetchJson("data/structure_text_neighbors.json")
   ]).then(([map, neighborData]) => {
+    select.replaceChildren(new Option("All categories", ""));
+    legend.replaceChildren();
     const neighborById = Object.fromEntries(neighborData.records.map(r => [r.identifier, r]));
+    // The plot's text alternative: one linked row per point it currently
+    // shows, built from the same records only while the disclosure is open.
+    const table = document.getElementById("map-table");
+    const tableBody = document.getElementById("map-table-body");
+    const tableCaption = document.getElementById("map-table-caption");
+    let plotted = [];
+    function renderTable() {
+      if (!table.open) return;
+      tableCaption.textContent = `${plotted.length} of ${map.records.length} structures plotted`;
+      tableBody.replaceChildren(...plotted.map(record => {
+        const row = document.createElement("tr");
+        const name = document.createElement("td");
+        const link = document.createElement("a");
+        link.href = record.page;
+        link.textContent = record.label;
+        name.appendChild(link);
+        row.appendChild(name);
+        [record.identifier, readable(record.category), record.x.toFixed(3), record.y.toFixed(3)].forEach(value => {
+          const cell = document.createElement("td");
+          cell.textContent = value;
+          row.appendChild(cell);
+        });
+        return row;
+      }));
+    }
+    table.ontoggle = renderTable;
+    table.hidden = false;
     [...new Set(map.records.map(r => r.category))].sort().forEach(category => {
       const option = document.createElement("option");
       option.value = category;
@@ -139,6 +210,8 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
       const matches = map.records.filter(r => (!select.value || r.category === select.value) &&
         (r.label + " " + r.identifier).toLowerCase().includes(term));
       count.textContent = `${matches.length} of ${map.records.length} structures shown`;
+      plotted = matches;
+      renderTable();
       recordSelect.replaceChildren(new Option("Select a structure", ""));
       matches.forEach(record => recordSelect.appendChild(new Option(record.label + " · " + record.identifier, record.identifier)));
       recordSelect.value = matches.some(record => record.identifier === selected) ? selected : "";
@@ -167,20 +240,20 @@ Two-dimensional distance is lossy; use cosine neighbours for the full-vector com
       });
       plot.appendChild(svg);
     }
-    select.addEventListener("change", draw);
-    query.addEventListener("input", draw);
-    recordSelect.addEventListener("change", () => {
+    select.onchange = draw;
+    query.oninput = draw;
+    recordSelect.onchange = () => {
       const record = map.records.find(item => item.identifier === recordSelect.value);
       if (record) show(record);
-    });
+    };
     if (window.location && window.location.search) {
       const params = new URLSearchParams(window.location.search);
       if (params.get("q")) query.value = params.get("q");
     }
     draw();
-  }).catch(error => {
-    plot.textContent = `Could not load embedding artifacts: ${error.message}`;
-  });
+  }).catch(showLoadError);
+  }
+  load();
 })();
 </script>
 {% endblock %}

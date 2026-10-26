@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/envelope.html">Envelope</a> · cell outer membrane</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>cell outer membrane</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009279"><code>GO:0009279</code></a> · Envelope · Membrane · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0009279"><code>GO:0009279</code></a> · Envelope · Membrane · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">The outermost lipid bilayer of a diderm cell envelope. In canonical Gram-negative bacteria it is asymmetric, with phospholipid enriched in the inner leaflet and lipopolysaccharide enriched in the outer leaflet, and contains beta-barrel proteins that mediate transport and assembly. <small>[<a href="https://doi.org/10.1101/cshperspect.a000414"><code>DOI:10.1101/cshperspect.a000414</code></a>]</small></p>
 <p><strong>Synonyms:</strong> outer membrane of cell</p><p><strong>Xrefs:</strong> <a href="https://www.uniprot.org/locations/SL-0040"><code>uniprot.location:SL-0040</code></a> — Cell outer membrane </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -100,11 +101,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="https://doi.org/10.1101/cshperspect.a000414"><code>DOI:10.1101/cshperspect.a000414</code></a> <small>The bacterial cell envelope.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-08-30T19:30:00Z</code> codex · CREATED_RECORD — Added as a literature-backed foundational seed. Identity checked against the 2026-07-01 Gene Ontology release; requires human review.</li><li><code>2026-08-31T03:48:23Z</code> uniprot_sl · ADD_UNIPROT_SL_XREF — Added uniprot.location:SL-0040 (Cell outer membrane); mapping read from the GO line of UniProt subcell.txt.</li><li><code>2026-08-31T06:12:34Z</code> claude · SET_COMPONENT_ROLE — component_role became required (#77) so the constituent/machinery distinction is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY only where the protein acts on the already-assembled structure.</li><li><code>2026-09-04T01:09:39Z</code> codex · ADD_CAUSAL_GRAPH — Added an ASSEMBLY graph for Lpt-driven LPS transport, BAM-driven beta-barrel OMP assembly, and the resulting asymmetric outer-membrane permeability barrier, with additional DOI evidence on Lpt and BAM.</li><li><code>2026-09-04T04:03:00Z</code> codex · ADD_CAUSAL_GRAPH — Added a FUNCTION graph for LPS- and beta-barrel-porin-mediated selective permeability, grounded LPS nodes with ChEBI, and added Nikaido 2003 evidence for hydrophobic exclusion and porin diffusion.</li><li><code>2026-10-18T05:29:49Z</code> claude-opus-4-7 · EDIT — added 4 verified UniProtKB protein_example(s); added 5 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/envelope/cell_outer_membrane.yaml"><code>data/structures/envelope/cell_outer_membrane.yaml</code></a></p>
+<p class="meta">5 of 6 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-08-30T19:30:00Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added as a literature-backed foundational seed. Identity checked against the 2026-07-01 Gene Ontology release; requires human review.</li><li><code>2026-08-31T03:48:23Z</code> uniprot_sl · ADD_UNIPROT_SL_XREF — Added uniprot.location:SL-0040 (Cell outer membrane); mapping read from the GO line of UniProt subcell.txt.</li><li><code>2026-08-31T06:12:34Z</code> claude · SET_COMPONENT_ROLE · <span class="llm-assisted">LLM-assisted</span> — component_role became required (#77) so the constituent/machinery distinction is machine-readable rather than prose. Set per component; ASSOCIATED_MACHINERY only where the protein acts on the already-assembled structure.</li><li><code>2026-09-04T01:09:39Z</code> codex · ADD_CAUSAL_GRAPH · <span class="llm-assisted">LLM-assisted</span> — Added an ASSEMBLY graph for Lpt-driven LPS transport, BAM-driven beta-barrel OMP assembly, and the resulting asymmetric outer-membrane permeability barrier, with additional DOI evidence on Lpt and BAM.</li><li><code>2026-09-04T04:03:00Z</code> codex · ADD_CAUSAL_GRAPH · <span class="llm-assisted">LLM-assisted</span> — Added a FUNCTION graph for LPS- and beta-barrel-porin-mediated selective permeability, grounded LPS nodes with ChEBI, and added Nikaido 2003 evidence for hydrophobic exclusion and porin diffusion.</li><li><code>2026-10-18T05:29:49Z</code> claude-opus-4-7 · EDIT · <span class="llm-assisted">LLM-assisted</span> — added 4 verified UniProtKB protein_example(s); added 5 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/envelope/cell_outer_membrane.yaml"><code>data/structures/envelope/cell_outer_membrane.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0009279&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fenvelope%2Fcell_outer_membrane.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

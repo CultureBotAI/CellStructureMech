@@ -4,10 +4,10 @@ from pathlib import Path
 
 import pytest
 import yaml
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+from scripts.render_pages import template_environment
 
 ROOT = Path(__file__).resolve().parents[1]
-TEMPLATES = ROOT / "src/cellstructuremech/templates"
 
 
 class Tables(HTMLParser):
@@ -32,9 +32,8 @@ class Tables(HTMLParser):
 
 def render_record(relative):
     record = yaml.safe_load((ROOT / "data/structures" / relative).read_text())
-    env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=select_autoescape(["html"]))
-    env.filters["curie_url"] = lambda _curie: None
-    return env.get_template("structure.html").render(
+    # The renderer's own environment: the template needs its filters.
+    return template_environment().get_template("structure.html").render(
         r=record, root="../../", source_path="data/structures/" + relative, img_base="../../../data/images/"
     )
 

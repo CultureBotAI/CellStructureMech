@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · tripartite ATP-independent periplasmic transporter complex</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>tripartite ATP-independent periplasmic transporter complex</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031317"><code>GO:0031317</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031317"><code>GO:0031317</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A complex consisting of two membrane proteins and one extracytoplasmic solute receptor. Such transporters transport a variety of substrates without direct ATP power, instead using energy from ion gradients. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031317"><code>GO:0031317</code></a>]</small></p>
 <p><strong>Synonyms:</strong> TRAP transporter complex; TRAP-T transporter complex</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -98,11 +99,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031317"><code>GO:0031317</code></a> <small>GO:0031317 is an active cellular-component term for the tripartite ATP-independent periplasmic transporter complex and is_a GO:1990351 transporter complex.</small></li><li><a href="https://doi.org/10.1128/JB.179.17.5482-5493.1997"><code>DOI:10.1128/JB.179.17.5482-5493.1997</code></a> <small>Forward et al. 1997 characterized the R. capsulatus dctPQM genes, showed that dctP, dctQ, and dctM were sufficient for C4-dicarboxylate transport, and proposed the TRAP transporter name.</small></li><li><a href="https://doi.org/10.1099/00221287-145-12-3431"><code>DOI:10.1099/00221287-145-12-3431</code></a> <small>Rabus et al. 1999 analyzed TRAP transporters as an ancient family of extracytoplasmic solute-receptor-dependent secondary active transporters.</small></li><li><a href="https://doi.org/10.1111/j.1574-6976.2010.00236.x"><code>DOI:10.1111/j.1574-6976.2010.00236.x</code></a> <small>Mulligan, Fischer and Thomas 2011 reviewed tripartite ATP-independent periplasmic transporters in bacteria and archaea.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-10-01T16:25:59Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T16:27:13Z</code> codex · EXPANDED_RECORD — Added GO synonymy, transporter-complex parentage, TRAP receptor and membrane components, bacterial and archaeal taxonomy, the R. capsulatus DctPQM canonical example, ion-gradient-dependent transport function, evidence, and a receptor-grounding discussion.</li><li><code>2026-10-18T03:32:49Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 3 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-21T18:45:05Z</code> curate-causal-graphs-skill · UPDATED_CAUSAL_GRAPHS — Added source-backed FUNCTION causal graph &#39;trap_transporter_solute_uptake&#39; with 4 nodes and 3 edges.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml"><code>data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml</code></a></p>
+<p class="meta">3 of 4 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-10-01T16:25:59Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T16:27:13Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added GO synonymy, transporter-complex parentage, TRAP receptor and membrane components, bacterial and archaeal taxonomy, the R. capsulatus DctPQM canonical example, ion-gradient-dependent transport function, evidence, and a receptor-grounding discussion.</li><li><code>2026-10-18T03:32:49Z</code> uniprot_genes · SEED_PROTEIN_EXAMPLES — #183: added 3 protein example(s) by resolving each of the component&#39;s declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between.</li><li><code>2026-10-21T18:45:05Z</code> curate-causal-graphs-skill · UPDATED_CAUSAL_GRAPHS · <span class="llm-assisted">LLM-assisted</span> — Added source-backed FUNCTION causal graph &#39;trap_transporter_solute_uptake&#39; with 4 nodes and 3 edges.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml"><code>data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0031317&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Ftripartite_atp_independent_periplasmic_transporter_complex.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

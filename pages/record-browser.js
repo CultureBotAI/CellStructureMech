@@ -35,11 +35,13 @@
     if (sort && records.length) {
       var mode = sort.value || '';
       var ordered = records.slice().sort(function (a, b) {
+        if (mode === 'label-asc') return a.label.localeCompare(b.label) || (a.idx - b.idx);
         if (mode === 'label-desc') return b.label.localeCompare(a.label) || (a.idx - b.idx);
         if (mode === 'id-asc') return a.id.localeCompare(b.id) || (a.idx - b.idx);
-        if (mode === 'category-asc') return (a.row.dataset.category || '').localeCompare(b.row.dataset.category || '') || a.label.localeCompare(b.label);
         if (mode === 'kind-asc') return (a.row.dataset.kind || '').localeCompare(b.row.dataset.kind || '') || a.label.localeCompare(b.label);
         if (mode === 'status-asc') return (a.row.dataset.status || '').localeCompare(b.row.dataset.status || '') || a.label.localeCompare(b.label);
+        // The rendered order: grouped by category, then file name. It was
+        // labelled "Label (A-Z)" though it is not alphabetical across groups.
         return a.idx - b.idx;
       });
       var parent = ordered[0].row && ordered[0].row.parentNode;

@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · food vacuole</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>food vacuole</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0020020"><code>GO:0020020</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0020020"><code>GO:0020020</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A vacuole within a parasite used for digestion of the host cell cytoplasm. <small>[<a href="http://purl.obolibrary.org/obo/GO_0020020"><code>GO:0020020</code></a>]</small></p>
 <p><strong>Synonyms:</strong> digestive vacuole</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -70,11 +71,13 @@
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0020020"><code>GO:0020020</code></a> <small>Gene Ontology cellular-component term for food vacuole, with digestive vacuole as an exact synonym.</small></li><li><a href="https://doi.org/10.1002/prca.200700112"><code>DOI:10.1002/prca.200700112</code></a> <small>Lamarque et al. 2008, Food vacuole proteome of the malarial parasite Plasmodium falciparum, Proteomics Clinical Applications.</small></li><li><a href="https://doi.org/10.3390/pathogens13030182"><code>DOI:10.3390/pathogens13030182</code></a> <small>Wiser 2024, The Digestive Vacuole of the Malaria Parasite: A Specialized Lysosome, Pathogens.</small></li><li><a href="https://doi.org/10.1083/jcb.113.5.1033"><code>DOI:10.1083/jcb.113.5.1033</code></a> <small>Cowman et al. 1991, A P-glycoprotein homologue of Plasmodium falciparum is localized on the digestive vacuole, Journal of Cell Biology.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-10T14:02:08Z</code> claude · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T14:02:43Z</code> claude · EXPANDED_RECORD — Added the digestive vacuole synonym, a reviewed-label-only food vacuole membrane component, Plasmodium falciparum scope, hemoglobin catabolism and heme detoxification functions, record evidence, a nonmechanistic hemozoin-formation graph, and a vacuolar enzyme/transporter grounding TODO.</li><li><code>2026-09-10T14:03:02Z</code> claude · REMOVE_UNVERIFIED_GROUNDING — Removed an unverified ChEBI grounding from the free heme graph node; exact ChEBI groundings require an authority lookup.</li><li><code>2026-09-10T14:10:10Z</code> claude · ADDRESS_REVIEW — Addressed PR #377 review issues #378 and #379 by narrowing the GO-sourced definition to the GO-level food-vacuole claim and removing a Cowman-backed membrane-localization statement from the Lamarque-backed Plasmodium falciparum canonical example.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/food_vacuole.yaml"><code>data/structures/membrane_organelle/food_vacuole.yaml</code></a></p>
+<p class="meta">4 of 4 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-10T14:02:08Z</code> claude · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-10T14:02:43Z</code> claude · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added the digestive vacuole synonym, a reviewed-label-only food vacuole membrane component, Plasmodium falciparum scope, hemoglobin catabolism and heme detoxification functions, record evidence, a nonmechanistic hemozoin-formation graph, and a vacuolar enzyme/transporter grounding TODO.</li><li><code>2026-09-10T14:03:02Z</code> claude · REMOVE_UNVERIFIED_GROUNDING · <span class="llm-assisted">LLM-assisted</span> — Removed an unverified ChEBI grounding from the free heme graph node; exact ChEBI groundings require an authority lookup.</li><li><code>2026-09-10T14:10:10Z</code> claude · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Addressed PR #377 review issues #378 and #379 by narrowing the GO-sourced definition to the GO-level food-vacuole claim and removing a Cowman-backed membrane-localization statement from the Lamarque-backed Plasmodium falciparum canonical example.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/food_vacuole.yaml"><code>data/structures/membrane_organelle/food_vacuole.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0020020&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fmembrane_organelle%2Ffood_vacuole.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

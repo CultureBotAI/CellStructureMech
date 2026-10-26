@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/membrane_organelle.html">Membrane organelle</a> · Golgi cisterna</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>Golgi cisterna</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a> · Membrane organelle · Membrane bounded organelle · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">Any of the thin, flattened membrane-bounded compartments that form the central portion of the Golgi complex. <small>[<a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a>]</small></p>
 <p><strong>Part of:</strong> <a href="../../structures/membrane_organelle/golgi_apparatus.html">Golgi apparatus</a> (<a href="http://purl.obolibrary.org/obo/GO_0005794"><code>GO:0005794</code></a>) </p><p><strong>Has part:</strong> <a href="../../structures/membrane_organelle/golgi_cisterna_membrane.html">Golgi cisterna membrane</a> (<a href="http://purl.obolibrary.org/obo/GO_0032580"><code>GO:0032580</code></a>) </p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -56,8 +57,8 @@
 <h3 id="causal_graphs-golgi_cisterna_maturation">Yeast Golgi cisternae mature over time <small>(FUNCTION)</small></h3>
 <p>Live imaging of Saccharomyces cerevisiae showed that Golgi cisternae change resident marker composition as they mature from early to late compartments.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: Yeast Golgi cisternae mature over time">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>Golgi cisterna membrane <small>(<a href="http://purl.obolibrary.org/obo/GO_0032580"><code>GO:0032580</code></a>)</small></td><td>bounds</td><td>Golgi cisterna <small>(<a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a> <small>GO:0031985 defines Golgi cisternae as thin, flattened membrane-bounded compartments.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032580"><code>GO:0032580</code></a> <small>GO:0032580 identifies the Golgi cisterna membrane as the bilayer around Golgi cisternae.</small></li></ul></td></tr>
-<tr><td>Golgi cisterna <small>(<a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a>)</small></td><td>is part of</td><td>Golgi apparatus <small>(<a href="http://purl.obolibrary.org/obo/GO_0005794"><code>GO:0005794</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature04717"><code>DOI:10.1038/nature04717</code></a> <small>Losev et al. 2006 tracked individual Golgi cisternae in living yeast.</small></li></ul></td></tr>
+<tr><td>Golgi cisterna membrane <small>(<a href="../../structures/membrane_organelle/golgi_cisterna_membrane.html"><code>GO:0032580</code></a>)</small></td><td>bounds</td><td>Golgi cisterna <small>(<a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a>)</small></td><td><ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a> <small>GO:0031985 defines Golgi cisternae as thin, flattened membrane-bounded compartments.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032580"><code>GO:0032580</code></a> <small>GO:0032580 identifies the Golgi cisterna membrane as the bilayer around Golgi cisternae.</small></li></ul></td></tr>
+<tr><td>Golgi cisterna <small>(<a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a>)</small></td><td>is part of</td><td>Golgi apparatus <small>(<a href="../../structures/membrane_organelle/golgi_apparatus.html"><code>GO:0005794</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature04717"><code>DOI:10.1038/nature04717</code></a> <small>Losev et al. 2006 tracked individual Golgi cisternae in living yeast.</small></li></ul></td></tr>
 <tr><td>Golgi cisterna <small>(<a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a>)</small></td><td>undergoes</td><td>early-to-late cisternal maturation</td><td><ul class="evidence"><li><a href="https://doi.org/10.1038/nature04737"><code>DOI:10.1038/nature04737</code></a> <small>Matsuura-Tokita et al. 2006 visualized yeast Golgi cisternal maturation in living cells.</small></li></ul></td></tr>
 </tbody></table>
 </div>
@@ -70,11 +71,13 @@
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_0031985"><code>GO:0031985</code></a> <small>Gene Ontology cellular-component term for Golgi cisterna.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0098791"><code>GO:0098791</code></a> <small>Gene Ontology cellular-component parent term for Golgi apparatus subcompartment.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0005794"><code>GO:0005794</code></a> <small>Gene Ontology cellular-component term for Golgi apparatus.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0032580"><code>GO:0032580</code></a> <small>Gene Ontology cellular-component term for Golgi cisterna membrane.</small></li><li><a href="https://doi.org/10.1038/nature04717"><code>DOI:10.1038/nature04717</code></a> <small>Losev et al. 2006, &#39;Golgi maturation visualized in living yeast&#39;, Nature.</small></li><li><a href="https://doi.org/10.1038/nature04737"><code>DOI:10.1038/nature04737</code></a> <small>Matsuura-Tokita et al. 2006, &#39;Live imaging of yeast Golgi cisternal maturation&#39;, Nature.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-14T03:39:37Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-14T03:40:07Z</code> codex · EXPANDED_RECORD — Added Golgi-subcompartment parentage, Golgi-apparatus parthood, Golgi cisterna membrane as a part, a reviewed-label-only cisternal lipid bilayer component, Saccharomyces scope, cisternal-maturation function, GO/DOI evidence, a nonmechanistic cisternal maturation graph, and a lipid-grounding TODO.</li><li><code>2026-09-14T03:46:08Z</code> codex · ADDRESS_REVIEW — Resolved #875 by grounding the Golgi cisterna boundary graph node to GO:0032580 Golgi cisterna membrane instead of the generic GO:0000139 Golgi membrane.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/golgi_cisterna.yaml"><code>data/structures/membrane_organelle/golgi_cisterna.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-14T03:39:37Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-14T03:40:07Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added Golgi-subcompartment parentage, Golgi-apparatus parthood, Golgi cisterna membrane as a part, a reviewed-label-only cisternal lipid bilayer component, Saccharomyces scope, cisternal-maturation function, GO/DOI evidence, a nonmechanistic cisternal maturation graph, and a lipid-grounding TODO.</li><li><code>2026-09-14T03:46:08Z</code> codex · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Resolved #875 by grounding the Golgi cisterna boundary graph node to GO:0032580 Golgi cisterna membrane instead of the generic GO:0000139 Golgi membrane.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/membrane_organelle/golgi_cisterna.yaml"><code>data/structures/membrane_organelle/golgi_cisterna.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A0031985&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fmembrane_organelle%2Fgolgi_cisterna.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/other.html">Other</a> · MdtBC Complex</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>MdtBC Complex</h1>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990203"><code>GO:1990203</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span></p>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/GO_1990203"><code>GO:1990203</code></a> · Other · Multiprotein complex · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">A protein complex containing two transmembrane subunits; a MdtB dimer and one unit of MdtC. Capable of exporting substrates across the cell membrane. Involved in conferring antibiotic resistance of Gram-negative bacteria by transporting drugs across the membrane. <small>[<a href="http://purl.obolibrary.org/obo/GO_1990203"><code>GO:1990203</code></a>]</small></p>
 <p><strong>Synonyms:</strong> multidrug efflux pump MdtBC</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -89,11 +90,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="http://purl.obolibrary.org/obo/GO_1990203"><code>GO:1990203</code></a> <small>Gene Ontology cellular-component term for the MdtBC complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_1902495"><code>GO:1902495</code></a> <small>QuickGO reports GO:1990203 as an is-a child of GO:1902495 transmembrane transporter complex.</small></li><li><a href="http://purl.obolibrary.org/obo/GO_0042910"><code>GO:0042910</code></a> <small>Gene Ontology molecular-function term for xenobiotic transmembrane transporter activity.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR022831"><code>InterPro:IPR022831</code></a> <small>InterPro family entry for Multidrug resistance protein MdtB.</small></li><li><a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR023931"><code>InterPro:IPR023931</code></a> <small>InterPro family entry for Multidrug resistance protein MdtC.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P76398"><code>UniProtKB:P76398</code></a> <small>UniProtKB reviewed E. coli K-12 MdtB entry.</small></li><li><a href="https://www.uniprot.org/uniprotkb/P76399"><code>UniProtKB:P76399</code></a> <small>UniProtKB reviewed E. coli K-12 MdtC entry.</small></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/20038594"><code>PMID:20038594</code></a> <small>PubMed identifier for the E. coli MdtBC B2C heterotrimer study cited by GO:1990203.</small></li><li><a href="https://doi.org/10.1128/JB.01448-09"><code>DOI:10.1128/JB.01448-09</code></a> <small>DOI for the MdtBC B2C heterotrimer study as reported by PubMed.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-10-01T20:27:24Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T20:28:45Z</code> codex · EXPANDED_RECORD — Added GO synonymy and transmembrane-transporter parentage, MdtB and MdtC components with exact InterPro groundings and reviewed E. coli K-12 UniProt examples, the B2C heterotrimer subunit count, xenobiotic transport function, taxonomy, and PMID/DOI evidence.</li><li><code>2026-10-21T18:45:05Z</code> curate-causal-graphs-skill · UPDATED_CAUSAL_GRAPHS — Added source-backed FUNCTION causal graph &#39;mdtbc_heterotrimer_efflux&#39; with 3 nodes and 2 edges.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mdtbc_complex.yaml"><code>data/structures/other/mdtbc_complex.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-10-01T20:27:24Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-10-01T20:28:45Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added GO synonymy and transmembrane-transporter parentage, MdtB and MdtC components with exact InterPro groundings and reviewed E. coli K-12 UniProt examples, the B2C heterotrimer subunit count, xenobiotic transport function, taxonomy, and PMID/DOI evidence.</li><li><code>2026-10-21T18:45:05Z</code> curate-causal-graphs-skill · UPDATED_CAUSAL_GRAPHS · <span class="llm-assisted">LLM-assisted</span> — Added source-backed FUNCTION causal graph &#39;mdtbc_heterotrimer_efflux&#39; with 3 nodes and 2 edges.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/other/mdtbc_complex.yaml"><code>data/structures/other/mdtbc_complex.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+GO%3A1990203&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fother%2Fmdtbc_complex.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·

@@ -8,6 +8,7 @@
 <script src="../../theme-toggle.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <a class="brand" href="../../index.html">CellStructureMech</a>
   <nav>
@@ -15,12 +16,12 @@
     <a href="../../embedding-map.html">Text map</a>
     <a href="../../sequence-map.html">Sequence map</a>
     <a href="../../corpus.json">Data JSON</a>
-    <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">Schema</a>
+    <a href="../../schema.html">Schema</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
     <a href="https://github.com/CultureBotAI/CellStructureMech">GitHub</a>
   </nav>
 </header>
-<main class="">
+<main id="main" class="">
 <div class="record-topbar">
   <p class="crumbs"><a href="../../browse.html">Browse</a> · <a href="../../category/appendage.html">Appendage</a> · OmcZ cytochrome nanowire</p>
   <form class="record-search" action="../../browse.html" method="get" role="search">
@@ -28,7 +29,7 @@
   </form>
 </div>
 <h1>OmcZ cytochrome nanowire</h1>
-<p class="meta"><code>cellstructuremech:omcz_cytochrome_nanowire</code> · Appendage · Appendage · <span class="status">Proposed</span></p>
+<p class="meta"><a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/omcz_cytochrome_nanowire.yaml"><code>cellstructuremech:omcz_cytochrome_nanowire</code></a> · Appendage · Appendage · <span class="status">Proposed</span> <small class="status-note">— Drafted from literature to fill a coverage gap; not yet reviewed. <a href="../../index.html#curation">How records are made</a></small></p>
 <p class="definition">An extracellular electrically conductive Geobacter sulfurreducens filament assembled from the octaheme c-type cytochrome OmcZ; each subunit contributes a branched heme arrangement with a surface-exposed heme site to the cytochrome polymer. <small>[<a href="https://doi.org/10.7554/eLife.81551"><code>DOI:10.7554/eLife.81551</code></a>]</small></p>
 <p><strong>Synonyms:</strong> OmcZ nanowire; OmcZ filament</p>
 <p class="meta reference-attribution"><small>UniProt location names: <a href="https://www.uniprot.org/help/license">UniProt Consortium, CC BY 4.0</a>. <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/website/references.json">Reference label and route sources</a>.</small></p>
@@ -68,7 +69,7 @@ family; these are the specific entries behind it.</small></p>
 <h3 id="causal_graphs-branched_heme_omcz_nanowire_conduction">OmcZ subunits branch hemes for nanowire conduction <small>(FUNCTION)</small></h3>
 <p>OmcZ octaheme c-type cytochromes polymerize into an extracellular filament whose branched heme arrangement and surface-exposed heme site provide a candidate structural basis for conductive OmcZ nanowires.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Mechanism evidence: OmcZ subunits branch hemes for nanowire conduction">
 <table><thead><tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Evidence</th></tr></thead><tbody>
-<tr><td>OmcZ octaheme c-type cytochrome</td><td>polymerizes into</td><td>OmcZ cytochrome nanowire <small>(<code>cellstructuremech:omcz_cytochrome_nanowire</code>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.81551"><code>DOI:10.7554/eLife.81551</code></a> <small>Wang et al. 2022 determined a cryo-EM structure of Geobacter sulfurreducens OmcZ filaments formed from the OmcZ octaheme cytochrome.</small></li></ul></td></tr>
+<tr><td>OmcZ octaheme c-type cytochrome</td><td>polymerizes into</td><td>OmcZ cytochrome nanowire <small>(<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/omcz_cytochrome_nanowire.yaml"><code>cellstructuremech:omcz_cytochrome_nanowire</code></a>)</small></td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.81551"><code>DOI:10.7554/eLife.81551</code></a> <small>Wang et al. 2022 determined a cryo-EM structure of Geobacter sulfurreducens OmcZ filaments formed from the OmcZ octaheme cytochrome.</small></li></ul></td></tr>
 <tr><td>OmcZ octaheme c-type cytochrome</td><td>arranges</td><td>branched heme network</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.81551"><code>DOI:10.7554/eLife.81551</code></a> <small>Wang et al. 2022 reported that OmcZ heme packing and between-subunit coordination differ from the linear OmcS and OmcE heme chains.</small></li></ul></td></tr>
 <tr><td>branched heme network</td><td>exposes</td><td>surface-exposed heme site</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.81551"><code>DOI:10.7554/eLife.81551</code></a> <small>Wang et al. 2022 proposed that the surface-exposed heme in each OmcZ subunit may help explain conductive biofilm network formation.</small></li></ul></td></tr>
 <tr><td>branched heme network</td><td>supports</td><td>long-range extracellular electron transfer</td><td><ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.81551"><code>DOI:10.7554/eLife.81551</code></a> <small>Wang et al. 2022 proposed that the branched OmcZ heme architecture could account for highly conductive cytochrome filaments.</small></li></ul></td></tr>
@@ -83,11 +84,13 @@ family; these are the specific entries behind it.</small></p>
 <ul class="evidence"><li><a href="https://doi.org/10.7554/eLife.81551"><code>DOI:10.7554/eLife.81551</code></a> <small>Wang, Chan, Suciu et al. 2022, Structure of Geobacter OmcZ filaments suggests extracellular cytochrome polymers evolved independently multiple times, eLife.</small></li><li><a href="https://www.rcsb.org/structure/8D9M"><code>PDB:8D9M</code></a> <small>RCSB PDB entry 8D9M is a 4.2 A helical cryo-EM model of Geobacter sulfurreducens OmcZ nanowires associated with EMDB map EMD-27266.</small></li><li><a href="https://doi.org/10.1038/s41564-022-01315-5"><code>DOI:10.1038/s41564-022-01315-5</code></a> <small>Gu, Guberman-Pfeffer, Srikanth et al. 2023, Structure of Geobacter cytochrome OmcZ identifies mechanism of nanowire assembly and conductivity, Nature Microbiology.</small></li><li><a href="https://www.rcsb.org/structure/7LQ5"><code>PDB:7LQ5</code></a> <small>RCSB PDB entry 7LQ5 is a 3.4 A cryo-EM model of polymerized OmcZ from Geobacter sulfurreducens PCA associated with EMDB map EMD-23481.</small></li></ul>
 
 <h2>Curation history</h2>
-<ul class="history"><li><code>2026-09-11T15:14:09Z</code> codex · CREATED_RECORD — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T15:14:56Z</code> codex · EXPANDED_RECORD — Added OmcZ cytochrome nanowire synonymy, a label-only OmcZ component with a Geobacter sulfurreducens PCA UniProt example, Geobacter sulfurreducens source taxon rows, electron-transfer function evidence, a narrow OmcZ function graph, and a TODO for exact OmcZ family grounding.</li><li><code>2026-09-11T15:24:08Z</code> codex · ADDRESS_REVIEW — Resolved #507 by narrowing OmcZ taxon rows to Geobacter sulfurreducens PCA and adding PDB:7LQ5 exact-strain evidence, and resolved #508 by marking the branched-heme conduction path as a candidate structural model.</li></ul>
-<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/omcz_cytochrome_nanowire.yaml"><code>data/structures/appendage/omcz_cytochrome_nanowire.yaml</code></a></p>
+<p class="meta">3 of 3 events marked <code>llm_assisted</code> in the record.</p>
+<ul class="history"><li><code>2026-09-11T15:14:09Z</code> codex · CREATED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Scaffolded by scripts/new_record.py</li><li><code>2026-09-11T15:14:56Z</code> codex · EXPANDED_RECORD · <span class="llm-assisted">LLM-assisted</span> — Added OmcZ cytochrome nanowire synonymy, a label-only OmcZ component with a Geobacter sulfurreducens PCA UniProt example, Geobacter sulfurreducens source taxon rows, electron-transfer function evidence, a narrow OmcZ function graph, and a TODO for exact OmcZ family grounding.</li><li><code>2026-09-11T15:24:08Z</code> codex · ADDRESS_REVIEW · <span class="llm-assisted">LLM-assisted</span> — Resolved #507 by narrowing OmcZ taxon rows to Geobacter sulfurreducens PCA and adding PDB:7LQ5 exact-strain evidence, and resolved #508 by marking the branched-heme conduction path as a candidate structural model.</li></ul>
+<p class="source">Source: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/data/structures/appendage/omcz_cytochrome_nanowire.yaml"><code>data/structures/appendage/omcz_cytochrome_nanowire.yaml</code></a> · <a class="report" href="https://github.com/CultureBotAI/CellStructureMech/issues/new?title=Problem+with+cellstructuremech%3Aomcz_cytochrome_nanowire&amp;body=https%3A%2F%2Fculturebotai.github.io%2FCellStructureMech%2Fpages%2Fstructures%2Fappendage%2Fomcz_cytochrome_nanowire.html">Report a problem with this record</a></p>
 </main>
 <footer>
-  <p><strong>CellStructureMech</strong> · project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · third-party terms apply · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">LinkML schema</a> · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p><strong>CellStructureMech</strong> · <a href="../../corpus.json">corpus JSON</a> · <a href="../../index.json">index JSON</a> · <a href="../../schema.html">LinkML schema</a> (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml">YAML</a>) · generated by <code>scripts/render_pages.py</code> · corpus as of <code>2026-10-25 15:35:00 UTC</code> (digest <code>93a8e4d4cfb3</code>, 1001 records)</p>
+  <p class="license">Project data: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party source material keeps its own terms (<a href="https://github.com/CultureBotAI/CellStructureMech/blob/main/LICENSE">licence scope</a>).</p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <a href="https://culturebotai.github.io/AntibioticMech/">AntibioticMech</a> · <span class="self">CellStructureMech</span></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
