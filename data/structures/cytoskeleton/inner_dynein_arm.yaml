@@ -50,6 +50,12 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s); removed 1 non-matching protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-30T06:37:11Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 4 Stage 3 protein_examples curation: added 1 verified UniProtKB
+    protein_example (UniProtKB:Q96389 for DHC2 in Chlamydomonas reinhardtii).'
+  llm_assisted: true
 parent_structures:
 - GO:0005858
 part_of:
@@ -94,6 +100,21 @@ components:
         for gene DHC1 in Chlamydomonas reinhardtii. Establishes the accession and
         gene identity only; the component's membership in this structure rests on
         the record's own sources.
+  - uniprot_id: UniProtKB:Q96389
+    protein_label: Dynein heavy chain 2
+    gene_symbol: Dhc2
+    taxon_id: NCBITaxon:3055
+    taxon_label: Chlamydomonas reinhardtii
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-30'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene DHC2 in Chlamydomonas
+      reinhardtii. Identifier for the component's declared gene symbol; it is not
+      itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q96389
+      notes: UniProtKB unreviewed (TrEMBL) entry Q96389 for gene DHC2 in Chlamydomonas
+        reinhardtii. Establishes the accession and gene identity only; the component's
+        membership in this structure rests on the record's own sources.
   - uniprot_id: UniProtKB:Q96392
     protein_label: Dynein heavy chain 5
     gene_symbol: Dhc5

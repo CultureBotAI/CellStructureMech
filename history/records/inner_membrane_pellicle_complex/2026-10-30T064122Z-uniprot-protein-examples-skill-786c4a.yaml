@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  slug: inner_membrane_pellicle_complex
+session:
+  id: 2026-10-30T064122Z-uniprot-protein-examples-skill-786c4a
+  timestamp: '2026-10-30T06:41:22Z'
+  actors:
+  - type: ai_agent
+    name: uniprot-protein-examples-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Cycle 4 Stage 3 protein_examples curation: added 3 verified UniProtKB protein_examples
+    (O97228, Q8IK01, Q8I3K7) to alveolin_subpellicular_network.'
+  details: 'Cycle 4 Stage 3 protein_examples curation: added 3 verified Plasmodium falciparum
+    3D7 (NCBITaxon:36329) UniProtKB protein_examples (O97228 PF3D7_0304000 IMC1a, Q8IK01 PF3D7_1003600
+    IMC1c, Q8I3K7 PF3D7_0525800 IMC1g) to alveolin_subpellicular_network, promoting causal_graphs
+    node alveolin_subpellicular_network to COVERED. Validated via write_validated_structure
+    and uniprot_genes.py --verify.'

@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1001,
- "corpus_updated": "2026-10-30 04:54:33 UTC",
- "corpus_digest": "bb643db4b9f8",
+ "corpus_updated": "2026-10-30 06:37:11 UTC",
+ "corpus_digest": "33e3f615649c",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -50837,6 +50837,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s); removed 1 non-matching protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T06:37:11Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 4 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example (UniProtKB:Q96389 for DHC2 in Chlamydomonas reinhardtii).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -50885,6 +50892,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q9SMH3",
          "notes": "UniProtKB reviewed (Swiss-Prot) entry Q9SMH3, the single reviewed entry for gene DHC1 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q96389",
+       "protein_label": "Dynein heavy chain 2",
+       "gene_symbol": "Dhc2",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene DHC2 in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q96389",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q96389 for gene DHC2 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       },
@@ -142599,6 +142622,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T06:37:11Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 4 Stage 3 protein_examples curation: added 3 verified UniProtKB protein_example(s) for IMC1a, IMC1c, and IMC1g in Plasmodium falciparum 3D7.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -142655,6 +142685,56 @@
       "IMC1a",
       "IMC1c",
       "IMC1g"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O97228",
+       "protein_label": "Inner membrane complex protein 1a, putative",
+       "gene_symbol": "PF3D7_0304000",
+       "taxon_id": "NCBITaxon:36329",
+       "taxon_label": "Plasmodium falciparum 3D7",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene IMC1a, which UniProt lists under the primary name PF3D7_0304000, in Plasmodium falciparum 3D7. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/O97228",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry O97228 for gene IMC1a (PF3D7_0304000) in Plasmodium falciparum 3D7. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q8IK01",
+       "protein_label": "Inner membrane complex protein 1c, putative",
+       "gene_symbol": "PF3D7_1003600",
+       "taxon_id": "NCBITaxon:36329",
+       "taxon_label": "Plasmodium falciparum 3D7",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene IMC1c, which UniProt lists under the primary name PF3D7_1003600, in Plasmodium falciparum 3D7. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q8IK01",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q8IK01 for gene IMC1c (PF3D7_1003600) in Plasmodium falciparum 3D7. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q8I3K7",
+       "protein_label": "Inner membrane complex protein 1g, putative",
+       "gene_symbol": "PF3D7_0525800",
+       "taxon_id": "NCBITaxon:36329",
+       "taxon_label": "Plasmodium falciparum 3D7",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene IMC1g, which UniProt lists under the primary name PF3D7_0525800, in Plasmodium falciparum 3D7. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q8I3K7",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q8I3K7 for gene IMC1g (PF3D7_0525800) in Plasmodium falciparum 3D7. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      }
      ]
     }
    ],
@@ -187277,6 +187357,13 @@
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Added source-backed FUNCTION causal graph 'bindosome_sugar_capture' with 3 nodes and 2 edges.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T06:37:11Z",
+     "curator": "antigravity",
+     "action": "EDIT",
+     "changes": "Cycle 4 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example (UniProtKB:Q97UF5 for araS/SSO3066 in Saccharolobus solfataricus P2).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -187321,6 +187408,22 @@
         {
          "reference": "https://www.uniprot.org/uniprotkb/Q97UZ1",
          "notes": "UniProtKB reviewed (Swiss-Prot) entry Q97UZ1, the single reviewed entry for gene glcS in Saccharolobus solfataricus P2. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q97UF5",
+       "protein_label": "Arabinose ABC transporter, arabinose binding protein",
+       "gene_symbol": "SSO3066",
+       "taxon_id": "NCBITaxon:273057",
+       "taxon_label": "Saccharolobus solfataricus P2",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene araS, which UniProt lists under the primary name SSO3066, in Saccharolobus solfataricus P2. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q97UF5",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q97UF5 for gene araS (SSO3066) in Saccharolobus solfataricus P2. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
