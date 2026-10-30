@@ -1,0 +1,19 @@
+# Cycle 4, Stage 4 Validation Report (`record_review`)
+
+- **Run ID**: `mech-goal-sequence-20261019`
+- **Cycle / Stage**: Cycle 4, Stage 4 (`record_review`)
+- **Evaluated Commit**: `5c642e4080ef3a0f026845843c559d3b46de8871`
+
+## Validation Commands & Receipts
+
+| Check | Command | Exit Code | Output SHA-256 | Summary |
+|---|---|---|---|---|
+| Strict validation (`validate_strict.py`) | `.venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv` | `0` | `1ebf6e7daebc19797861570fcac0d3cf8b06c18f7f40abf3277d35ef5867f442` | `Strict validation passed: 1001 files, 0 errors.` |
+| History validation (`validate_history.py`) | `.venv/bin/python scripts/validate_history.py` | `0` | `8bcb91b216ec775bac08188426f9ef860888b78f91561be1e471ea4a2159ad3b` | `2082 history record(s) valid against src/cellstructuremech/schema/history.yaml` |
+| Pathway links (`check_pathway_links.py`) | `.venv/bin/python scripts/check_pathway_links.py` | `0` | `19688121d930c04c7ad1def60f0887d3c3afc1da1b02b8d237e4d9de925ed745` | `OK: 6 pathway links match the pinned target snapshot` |
+| Trait links (`check_trait_links.py --check`) | `.venv/bin/python scripts/check_trait_links.py --check` | `0` | `b72beb2110478e45fe40ffd5d18de74cf3a54b86f40dd22e3c428ce5f53d61c1` | `TraitMech index: 1130 traits from https://culturebotai.github.io/TraitMech/pages/data/trait_graph.json` |
+| Source queue (`check_source_queue.py`) | `.venv/bin/python scripts/check_source_queue.py` | `0` | `85a8963cd339ac333ef76fcb1a713ff52ca0fdd42f21ac824e10b5ee57942061` | `next up: ncbifam (P1, candidate, components), pride_archive (P1, candidate, datasets), swissbiopics (P1, candidate, images)` |
+| Docs stats check (`check_docs.py --check`) | `.venv/bin/python scripts/check_docs.py --check` | `0` | `4a94b906cdba02e2e8ced2fcb762b685ebd3095afb4efd580ddf8ccb228da626` | `README.md corpus block is current` |
+| Text embedding map (`build_text_embedding_map.py --check`) | `.venv/bin/python scripts/build_text_embedding_map.py --check` | `0` | `9dc5533b94714ea1e3211724d61217d9cb1be8ab3986a990d311b15d6f2e4953` | `text embedding map is current: 1001 records, 384 dimensions, sentence-transformers/all-MiniLM-L6-v2` |
+| Rendered pages drift check (`render_pages.py --check`) | `.venv/bin/python scripts/render_pages.py --check` | `0` | `b798d21a609b296cdc2aeb317f68fc259c4e86ee43942b4a3c5008b32b9bfa5e` | `pages/ is current` |
+| Structured review bundles (`record_review.py check`) | `.venv/bin/python scripts/record_review.py check --require-reviews --base main` | `0` | `6e7e1ebad783df2bd8ead19e7f19d7074a990792b3aae4d8cad55d76351a85bd` | `313 valid structured review bundles verified (including 11 new Cycle 4 Stage 4 review bundles covering all 1,001 corpus records).` |

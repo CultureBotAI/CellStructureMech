@@ -1,0 +1,231 @@
+schema_version: 1.0.0
+review_id: 20261030T082002Z-mis12-mind-outer-kinetochore-parthood
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Record review of MIS12/MIND-type complex (GO:0000444): outer kinetochore (GO:0000940)
+  modeled as parent_structures instead of part_of'
+started_at: '2026-10-30T08:06:00Z'
+finished_at: '2026-10-30T08:20:02Z'
+reviewer:
+  identity: antigravity-c4s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 4 Stage 4 record_review against committed
+    git revision 5c642e4080ef3a0f026845843c559d3b46de8871 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'MIS12/MIND-type complex (GO:0000444, data/structures/other/mis12_mind_type_complex.yaml)
+  accurately captures the heterotetrameric Mtw1/Mis12, Dsn1/Mis13, Nnf1, and Nsl1/Mis14
+  subunits across Saccharomyces cerevisiae S288C and Schizosaccharomyces pombe 972h-
+  (PMID:14699074, PMID:30929735). However, it places GO:0000940 (outer kinetochore,
+  structure_kind: SUBCELLULAR_REGION) in parent_structures (is-a) rather than part_of
+  (parthood) and declares causal edge ''mis12_mind_type_complex is a outer_kinetochore''
+  in causal_graphs[0].edges[1], contradicting GO:0000444 (rdfs:subClassOf GO:0032991,
+  BFO:0000050 GO:0000940), outer_kinetochore.yaml (has_part: [GO:0000444]), and sibling
+  ndc80_complex.yaml (issue #1016).'
+source:
+  git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/other/mis12_mind_type_complex.yaml
+    sha256: ef073bc37dc32c87de547fdbdc6753e7f368563941c88b009a751979f0a0969a
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Single-record audit of MIS12/MIND-type complex (GO:0000444) covering
+    ontology hierarchy, parthood with outer kinetochore (GO:0000940), subunit composition,
+    and causal graph edges.
+  selection: Targeted single-record review of Cycle 4 Stage 2 updated record data/structures/other/mis12_mind_type_complex.yaml.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000444
+targets:
+- target_id: GO:0000444
+  path: data/structures/other/mis12_mind_type_complex.yaml
+  label: MIS12/MIND-type complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ef073bc37dc32c87de547fdbdc6753e7f368563941c88b009a751979f0a0969a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mis12_mind_type_complex.yaml
+    role: maintained_record
+checks:
+- check_id: schema_mis12
+  name: LinkML schema validation on mis12_mind_type_complex.yaml
+  status: passed
+  required: true
+  summary: No LinkML schema issues found for mis12_mind_type_complex.yaml.
+  target_ids:
+  - GO:0000444
+  command: .venv/bin/linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/mis12_mind_type_complex.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_schema_mis12
+- check_id: strict_mis12
+  name: Strict instance validator on mis12_mind_type_complex.yaml
+  status: passed
+  required: true
+  summary: Zero strict validator errors on mis12_mind_type_complex.yaml.
+  target_ids:
+  - GO:0000444
+  command: .venv/bin/python scripts/validate_strict.py data/structures/other/mis12_mind_type_complex.yaml
+    --out /tmp/mis12_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_mis12
+evidence:
+- evidence_id: ev_mis12_parent_and_edge
+  kind: record_content
+  reference: data/structures/other/mis12_mind_type_complex.yaml
+  locator: parent_structures (lines 11-12) and causal_graphs[0].edges[1] (lines 204-213)
+  accessed_at: '2026-10-30T08:11:00Z'
+  support: supports
+  summary: mis12_mind_type_complex.yaml places GO:0000940 (outer kinetochore) in parent_structures
+    instead of part_of and uses predicate 'is a' on causal_graphs[0].edges[1].
+  quote: "parent_structures:\n- GO:0000940\n...\n  - subject: mis12_mind_type_complex\n\
+    \    predicate: is a\n    object: outer_kinetochore"
+  snapshot_sha256: ef073bc37dc32c87de547fdbdc6753e7f368563941c88b009a751979f0a0969a
+- evidence_id: ev_schema_mis12
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: schema_mis12 receipt
+  accessed_at: '2026-10-30T08:20:02Z'
+  support: supports
+  summary: linkml-validate exited 0 on mis12_mind_type_complex.yaml.
+  snapshot_sha256: de6087f4be8c0adc015333597cd864406ad889bbde42d9ee20db0df5932bb2de
+- evidence_id: ev_strict_mis12
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_mis12 receipt
+  accessed_at: '2026-10-30T08:20:02Z'
+  support: supports
+  summary: validate_strict.py exited 0 on mis12_mind_type_complex.yaml.
+  snapshot_sha256: d0d417e9a5323918dcbeae689463ba76469e6c2e9bb308ccfc532acbaec30201
+assessments:
+- assessment_id: assess_mis12_subunits
+  area: representation
+  topic: Heterotetrameric Mtw1/Mis12, Dsn1/Mis13, Nnf1, and Nsl1/Mis14 subunit curation
+  outcome: supported
+  summary: All four MIND/Mis12 subunits (MTW1/mis12, DSN1/mis13, NNF1/nnf1, NSL1/mis14)
+    carry verified InterPro families, S. cerevisiae and S. pombe UniProtKB accessions,
+    and primary citations (PMID:14699074, PMID:30929735).
+  target_ids:
+  - GO:0000444
+  evidence_ids:
+  - ev_schema_mis12
+  - ev_strict_mis12
+- assessment_id: assess_mis12_parthood
+  area: representation
+  topic: Parthood vs is-a relation between MIS12/MIND-type complex (GO:0000444) and
+    outer kinetochore (GO:0000940)
+  outcome: concern
+  summary: 'GO:0000444 (COMPLEX) is part_of GO:0000940 (outer kinetochore, SUBCELLULAR_REGION)
+    and is_a GO:0032991 (protein-containing complex), but is currently modeled with
+    parent_structures: [GO:0000940] and causal edge ''is a'' outer_kinetochore.'
+  target_ids:
+  - GO:0000444
+  evidence_ids:
+  - ev_mis12_parent_and_edge
+findings:
+- finding_id: F1
+  issue_key: mis12-mind-outer-kinetochore-parthood
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: mis12_mind_type_complex.yaml places GO:0000940 (outer kinetochore) in parent_structures
+    instead of part_of and uses 'is a' in causal_graphs[0].edges[1]
+  description: 'In data/structures/other/mis12_mind_type_complex.yaml (GO:0000444,
+    structure_kind: COMPLEX), GO:0000940 (outer kinetochore, structure_kind: SUBCELLULAR_REGION)
+    is listed in parent_structures (lines 11-12) instead of part_of, and causal_graphs[0].edges[1]
+    (lines 204-213) uses predicate ''is a'' from mis12_mind_type_complex to outer_kinetochore.
+    In Gene Ontology, GO:0000444 (''A multisubunit protein complex that forms part
+    of the outer kinetochore'') has direct rdfs:subClassOf GO:0032991 (protein-containing
+    complex) and direct BFO:0000050 (part_of) GO:0000940 (outer kinetochore). Furthermore,
+    data/structures/other/outer_kinetochore.yaml (GO:0000940) already lists GO:0000444
+    in has_part and as CONSTITUENT component mis12_mind_type_complex with causal edge
+    ''is part of'' outer_kinetochore, and sibling data/structures/other/ndc80_complex.yaml
+    (GO:0031262, issue #1016) moved GO:0000940 from parent_structures to part_of and
+    updated the causal edge predicate to ''is part of''.'
+  target_ids:
+  - GO:0000444
+  field_paths:
+  - parent_structures
+  - part_of
+  - causal_graphs[0].edges[1].predicate
+  evidence_ids:
+  - ev_mis12_parent_and_edge
+  rule_id: docs/CURATION.md:parent_structures-vs-part_of
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mis12_mind_type_complex.yaml
+    role: maintained_record
+  tags:
+  - hierarchy
+  - parthood
+  - causal-graphs
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: 'Move GO:0000940 from parent_structures to part_of in data/structures/other/mis12_mind_type_complex.yaml
+    (setting parent_structures: [GO:0032991] with GO:0032991 in top-level evidence),
+    update causal_graphs[0].edges[1].predicate from ''is a'' to ''is part of'', and
+    record the curation event and history ledger entry.'
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0000444
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mis12_mind_type_complex.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py data/structures/other/mis12_mind_type_complex.yaml
+    --out /tmp/mis12_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+limitations:
+- Record edits are deferred to Cycle 4 Stage 5 (resolve_review_findings) per the Stage
+  4 review-only workflow contract.
+tags:
+- stage4
+- record-review
+- mis12-mind-type-complex

@@ -1,0 +1,113 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 4
+stage: 4
+revision: 1
+outcome: completed
+summary: Reviewed all 1,001 eligible CellStructureRecord YAML files across all 13 category folders at
+  frozen git revision 5c642e4080ef3a0f026845843c559d3b46de8871 (100% full coverage). Saved 11 native structured
+  RecordReview bundles under reviews/structured/ (2 single-record reviews and 9 category reviews; 313
+  total valid bundles) and recorded 12 open findings (4 major, 8 minor across 18 unique records) in carry_forward_ids
+  for Stage 5 grouped remediation, plus infrastructure task cellstructuremech-infra-0007 (#2457) in INFRA_TASKS.md.
+source_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/evidence.yaml
+  sha256: 4237492297a2b023ff4ef673d989f522e15880131191ac8d701960b70b1cca91
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/review_report.md
+  sha256: 9aaa133999d138da6ca0b0d7741f75cf8bc303d717db21b95b75bf2c0ff0d672
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/review_findings.md
+  sha256: d08f7d27d87360efc321985cc6e148c739177666b12661fafe3e8b8c453f5d01
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/validation.md
+  sha256: f33fce9a00d805f59bb87ea4df8d59886a3b3a367275ac457183f21c2111d27b
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/coverage_inventory.json
+  sha256: 09ec29ac3ce70845fac5861d991a313a3624a619da24c32786180722167dbfbc
+  kind: supporting
+findings:
+- finding_id: ftsqbl-complex-parent-partof-duplication
+  status: open
+  summary: 'ftsqbl_complex.yaml (GO:1990587) lists GO:1990586 (divisome complex) in both parent_structures
+    and part_of (native reviews: 20261030T082001Z-ftsqbl-complex-parent-partof-duplication F1, 20261030T082005Z-division-machinery-category-review
+    F1, severity major).'
+- finding_id: mis12-mind-outer-kinetochore-parthood
+  status: open
+  summary: 'mis12_mind_type_complex.yaml (GO:0000444) places GO:0000940 (outer kinetochore) in parent_structures
+    instead of part_of and uses predicate ''is a'' on causal_graphs[0].edges[1] (native reviews: 20261030T082002Z-mis12-mind-outer-kinetochore-parthood
+    F1, 20261030T082009Z-other-category-review F1, severity major).'
+- finding_id: other-cytostome-plasma-membrane-parthood
+  status: open
+  summary: 'cytostome.yaml (GO:0031910) places GO:0005886 (plasma membrane) in parent_structures instead
+    of part_of (native review: 20261030T082009Z-other-category-review F2, severity major).'
+- finding_id: ribonucleoprotein-supraspliceosomal-parent-constituent-conflation
+  status: open
+  summary: 'supraspliceosomal_complex.yaml (GO:0044530) lists GO:0005681 (spliceosomal complex) in parent_structures
+    while simultaneously modeling GO:0005681 as a stoichiometry-''4'' CONSTITUENT component without has_part
+    (native review: 20261030T082010Z-ribonucleoprotein-category-review F1, severity major).'
+- finding_id: appendage-flagellum-filament-node-and-archaeal-has-part
+  status: open
+  summary: 'bacterial_type_flagellum.yaml (GO:0009288) causal_graphs[0].nodes[2] (filament, STRUCTURE,
+    GO:0009420) sets component_ref: flagellin (PROTEIN, InterPro:IPR001492) and archaeal_type_flagellum.yaml
+    (GO:0097589) omits has_part links to filament/motor child records (native review: 20261030T082003Z-appendage-category-review
+    F1, severity minor).'
+- finding_id: cytoskeleton-eisosome-filament-bar-core-component-type
+  status: open
+  summary: 'eisosome_filament.yaml (GO:0036286) types heterodimeric pil1_lsp1_bar_core ([PIL1, LSP1])
+    as PROTEIN instead of PROTEIN_COMPLEX (native review: 20261030T082004Z-cytoskeleton-category-review
+    F1, severity minor).'
+- finding_id: energy-complex-phycobilisome-core-type-and-has-part
+  status: open
+  summary: 'phycobilisome.yaml (GO:0030089) types heteromeric allophycocyanin_core ([apcA, apcB, apcD,
+    apcF]) as PROTEIN instead of PROTEIN_COMPLEX and omits has_part links to phycobilisome_core and phycobilisome_rod
+    (native review: 20261030T082006Z-energy-complex-category-review F1, severity minor).'
+- finding_id: membrane-organelle-subcomplex-types-and-anammoxosome-has-part
+  status: open
+  summary: 'glycosome.yaml (GO:0020015) and golgi_apparatus.yaml (GO:0005794) type multi-subunit machineries
+    as PROTEIN instead of PROTEIN_COMPLEX and anammoxosome.yaml (GO:0044222) omits has_part for anammoxosome_membrane
+    (native review: 20261030T082007Z-membrane-organelle-category-review F1, severity minor).'
+- finding_id: microcompartment-carboxysome-shell-node-component-ref
+  status: open
+  summary: 'carboxysome.yaml (GO:0031470) causal_graphs[0].nodes[0] (shell, STRUCTURE) sets component_ref:
+    bmc_h (PROTEIN), whereas causal_graphs[1].nodes[3] (shell, STRUCTURE) omits component_ref (native
+    review: 20261030T082008Z-microcompartment-category-review F1, severity minor).'
+- finding_id: other-pas-eisosome-component-types-and-micos-has-part
+  status: open
+  summary: 'phagophore_assembly_site.yaml (GO:0000407) and eisosome.yaml (GO:0032126) type multi-subunit
+    complexes as PROTEIN instead of PROTEIN_COMPLEX and micos_complex.yaml (GO:0061617) omits has_part
+    for mic10_subcomplex and mic60_mic19_complex (native review: 20261030T082009Z-other-category-review
+    F3, severity minor).'
+- finding_id: ribonucleoprotein-box-cd-snornp-type-and-evidence-notes
+  status: open
+  summary: 'box_c_d_methylation_guide_snornp_complex.yaml (GO:0031428) types 4-subunit nop1_nop56_nop58_snu13_core
+    as PROTEIN instead of PROTEIN_COMPLEX and box_c_d_rnp_complex.yaml (GO:0170049) retains two multi-paper
+    notes on single-PMID EvidenceItem entries (native review: 20261030T082010Z-ribonucleoprotein-category-review
+    F2, severity minor).'
+- finding_id: secretion-system-sec-complex-has-part-secyeg
+  status: open
+  summary: 'cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) omits reciprocal has_part: [cellstructuremech:secyeg_translocon_complex]
+    (native review: 20261030T082011Z-secretion-system-category-review F1, severity minor).'
+groups: []
+carry_forward_ids:
+- ftsqbl-complex-parent-partof-duplication
+- mis12-mind-outer-kinetochore-parthood
+- other-cytostome-plasma-membrane-parthood
+- ribonucleoprotein-supraspliceosomal-parent-constituent-conflation
+- appendage-flagellum-filament-node-and-archaeal-has-part
+- cytoskeleton-eisosome-filament-bar-core-component-type
+- energy-complex-phycobilisome-core-type-and-has-part
+- membrane-organelle-subcomplex-types-and-anammoxosome-has-part
+- microcompartment-carboxysome-shell-node-component-ref
+- other-pas-eisosome-component-types-and-micos-has-part
+- ribonucleoprotein-box-cd-snornp-type-and-evidence-notes
+- secretion-system-sec-complex-has-part-secyeg
+infra_tasks:
+- task_id: cellstructuremech-infra-0007
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2457
+  status: open
+  summary: Extend src/cellstructuremech/validation/validator.py to check hierarchy/component relation
+    disjointness and CausalNode component_ref grounding consistency
+  disposition: Queued in INFRA_TASKS.md for Cycle 4 Stage 6 (infrastructure_upgrade).

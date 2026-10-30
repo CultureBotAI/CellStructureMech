@@ -64,6 +64,10 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2428
     disposition: Extended validate_causal_graphs() and validate_discussion_issue_links() and added validate_curation_history() in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics, write_validated_structure, and scripts/validate_strict.py); verified 0 errors across all 993 structure records and added unit and corpus-integrity tests in tests/test_validator.py and tests/test_corpus_integrity.py.
+  - task_id: cellstructuremech-infra-0007
+    summary: Extend src/cellstructuremech/validation/validator.py to check hierarchy/component relation disjointness and CausalNode component_ref grounding consistency
+    status: open
+    issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2457
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -140,6 +144,18 @@ tasks:
 - **Desired outcome**: Extend `src/cellstructuremech/validation/validator.py` (`validate_record_semantics` / `validate_causal_graphs` / `validate_discussion_issue_links`) to flag `CausalNode` items with `component_ref` lacking `grounding` when the referenced component has `grounding`, `CURATED_CAUSAL_GRAPH` `curation_history[].changes` entries referencing nonexistent `causal_graphs[].graph_id` slugs, and `DOI`/`PMID` citations in `discussions[].notes` lacking matching structured `discussion.evidence` entries.
 - **Resolution**: Extended `validate_causal_graphs()` and `validate_discussion_issue_links()` and added `validate_curation_history()` in `src/cellstructuremech/validation/validator.py` (wired into `validate_record_semantics()`, `write_validated_structure()`, and `scripts/validate_strict.py`), verified 0 errors across all 993 corpus records, and added unit and corpus-integrity tests in `tests/test_validator.py` and `tests/test_corpus_integrity.py`.
 - **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `tests/test_validator.py`, `tests/test_corpus_integrity.py`, `reviews/structured/20261025T071001Z-static-microtubule-bundle-reference-attribution/review.yaml`, `reviews/structured/20261025T071002Z-primosome-complex-pmid-citation-misattribution/review.yaml`, `reviews/structured/20261025T071003Z-appendage-category-review/review.yaml`, `reviews/structured/20261025T071004Z-cytoskeleton-category-review/review.yaml`, `reviews/structured/20261025T071005Z-division-machinery-category-review/review.yaml`, `reviews/structured/20261025T071006Z-energy-complex-category-review/review.yaml`, `reviews/structured/20261025T071007Z-envelope-category-review/review.yaml`, `reviews/structured/20261025T071008Z-inclusion-category-review/review.yaml`, `reviews/structured/20261025T071009Z-membrane-organelle-category-review/review.yaml`, `reviews/structured/20261025T071010Z-other-category-review/review.yaml`, `reviews/structured/20261025T071011Z-ribonucleoprotein-category-review/review.yaml`, `reviews/structured/20261025T071012Z-secretion-system-category-review/review.yaml`, `reviews/structured/20261025T071013Z-spore-category-review/review.yaml`
+
+### `cellstructuremech-infra-0007` — Extend `src/cellstructuremech/validation/validator.py` to check hierarchy/component relation disjointness and `CausalNode` `component_ref` grounding consistency
+
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 4, Stage 4 (`record_review`)
+- **Issue**: https://github.com/CultureBotAI/CellStructureMech/issues/2457
+- **Status**: `open`
+- **Priority**: P2
+- **Dependencies**: None
+- **Observation**: During the Cycle 4 Stage 4 whole-corpus audit of all 1,001 records: (1) `src/cellstructuremech/validation/validator.py` does not check whether the same CURIE appears in more than one of `parent_structures` (is-a), `part_of` (parthood), and `has_part` / `components[].grounding` (`component_role: CONSTITUENT`), allowing `data/structures/division_machinery/ftsqbl_complex.yaml` (`GO:1990587`) to list `GO:1990586` (`divisome complex`) in both `parent_structures` and `part_of` and `data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml` (`GO:0044530`) to list `GO:0005681` (`spliceosomal complex`) in both `parent_structures` and `components#spliceosomal_complex` (`grounding: GO:0005681`, `component_role: CONSTITUENT`); and (2) `validator.py` (`validate_causal_graphs`) checks whether a `CausalNode` with `component_ref` omits `grounding` when the referenced component has `grounding`, but does not check whether `CausalNode.grounding` conflicts with `referenced_component.grounding` or whether a `CausalNode` with `component_ref` uses `node_type: STRUCTURE` when `referenced_component.component_type == "PROTEIN"` (affecting `bacterial_type_flagellum.yaml#filament`, `carboxysome.yaml#shell`, and `phagophore_assembly_site.yaml#pas_atg_machinery`).
+- **Desired outcome**: Extend `src/cellstructuremech/validation/validator.py` (`validate_record_semantics` / `validate_causal_graphs`) to flag records where the same CURIE is duplicated across `parent_structures`, `part_of`, and `has_part` / `components[].grounding`, and flag `CausalNode` entries with `component_ref` whose `grounding` conflicts with `referenced_component.grounding` or whose `node_type` is `STRUCTURE` when `referenced_component.component_type == "PROTEIN"`.
+- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `tests/test_validator.py`, `tests/test_corpus_integrity.py`, `reviews/structured/20261030T082001Z-ftsqbl-complex-parent-partof-duplication/review.yaml`, `reviews/structured/20261030T082003Z-appendage-category-review/review.yaml`, `reviews/structured/20261030T082005Z-division-machinery-category-review/review.yaml`, `reviews/structured/20261030T082008Z-microcompartment-category-review/review.yaml`, `reviews/structured/20261030T082009Z-other-category-review/review.yaml`, `reviews/structured/20261030T082010Z-ribonucleoprotein-category-review/review.yaml`
+
 
 
 
