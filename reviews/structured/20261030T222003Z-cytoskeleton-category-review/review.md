@@ -1,0 +1,4263 @@
+# Category review of data/structures/cytoskeleton/ (179 records)
+
+- Review: 20261030T222003Z-cytoskeleton-category-review
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-30T22:17:00Z
+- Finished UTC: 2026-10-30T22:20:03Z
+- Reviewer: antigravity-c5s4-record-review (independent)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Full-cohort audit of all 179 CYTOSKELETON records in data/structures/cytoskeleton/. Lump/split boundaries across bacterial cytomotive filaments, fungal septin/microtubule arrays, and protist cortical/axonemal arrays are clean, and the Cycle 4 finding on eisosome_filament.yaml was verified resolved. One cross-record consistency issue was identified across three S. pombe microtubule bundle records (cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml, static_microtubule_bundle.yaml), where alpha_tubulin protein_examples[1] (UniProtKB:P04689) uses synonym gene_symbol: atb2 instead of UniProtKB's primary gene symbol tub1 used across the five other S. pombe microtubule records in the same category. (A separate single-record review 20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols covers the missing gene_symbols list on post_anaphase_microtubule_array.yaml#emtoc.)
+
+## Scope And Provenance
+
+Full-cohort review of all 179 CellStructureRecord YAML files under data/structures/cytoskeleton/.
+
+Selection: Complete folder cohort data/structures/cytoskeleton/*.yaml in the frozen 1,008-record Cycle 5 Stage 4 inventory.
+Coverage: full; 179 reviewed / 179 in the declared population.
+Source: git_commit at Git base a94f6deb809dd50c8344fb03284de9801c0aa298.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0097649 | data/structures/cytoskeleton/a_axonemal_microtubule.yaml | maintained | A axonemal microtubule |
+| GO:0099079 | data/structures/cytoskeleton/actin_body.yaml | maintained | actin body |
+| GO:0030479 | data/structures/cytoskeleton/actin_cortical_patch.yaml | maintained | actin cortical patch |
+| GO:0005826 | data/structures/cytoskeleton/actomyosin_contractile_ring.yaml | maintained | actomyosin contractile ring |
+| GO:0110131 | data/structures/cytoskeleton/aim21_tda2_complex.yaml | maintained | Aim21-Tda2 complex |
+| cellstructuremech:alfa_filament | data/structures/cytoskeleton/alfa_filament.yaml | maintained | AlfA filament |
+| GO:0005885 | data/structures/cytoskeleton/arp2_3_protein_complex.yaml | maintained | Arp2/3 protein complex |
+| GO:0005818 | data/structures/cytoskeleton/aster.yaml | maintained | aster |
+| GO:0000235 | data/structures/cytoskeleton/astral_microtubule.yaml | maintained | astral microtubule |
+| GO:0160111 | data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml | maintained | axonemal A tubule inner sheath |
+| GO:0160112 | data/structures/cytoskeleton/axonemal_b_tubule_inner_sheath.yaml | maintained | axonemal B tubule inner sheath |
+| GO:1990716 | data/structures/cytoskeleton/axonemal_central_apparatus.yaml | maintained | axonemal central apparatus |
+| GO:1990717 | data/structures/cytoskeleton/axonemal_central_bridge.yaml | maintained | axonemal central bridge |
+| GO:0097540 | data/structures/cytoskeleton/axonemal_central_pair.yaml | maintained | axonemal central pair |
+| GO:1990718 | data/structures/cytoskeleton/axonemal_central_pair_projection.yaml | maintained | axonemal central pair projection |
+| GO:0097545 | data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml | maintained | axonemal doublet microtubule |
+| GO:0005858 | data/structures/cytoskeleton/axonemal_dynein_complex.yaml | maintained | axonemal dynein complex |
+| GO:0005879 | data/structures/cytoskeleton/axonemal_microtubule.yaml | maintained | axonemal microtubule |
+| GO:0160113 | data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_junction.yaml | maintained | axonemal microtubule doublet inner junction |
+| GO:0160110 | data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml | maintained | axonemal microtubule doublet inner sheath |
+| GO:0160114 | data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml | maintained | axonemal microtubule doublet outer junction |
+| GO:0160115 | data/structures/cytoskeleton/axonemal_microtubule_doublet_ribbon.yaml | maintained | axonemal microtubule doublet ribbon |
+| GO:0005931 | data/structures/cytoskeleton/axonemal_nexin_link.yaml | maintained | axonemal nexin link |
+| GO:0005930 | data/structures/cytoskeleton/axoneme.yaml | maintained | axoneme |
+| GO:0097650 | data/structures/cytoskeleton/b_axonemal_microtubule.yaml | maintained | B axonemal microtubule |
+| cellstructuremech:bactofilin_filament | data/structures/cytoskeleton/bactofilin_filament.yaml | maintained | bactofilin filament |
+| cellstructuremech:basal_body_a_b_inner_junction | data/structures/cytoskeleton/basal_body_a_b_inner_junction.yaml | maintained | basal body A-B inner junction |
+| cellstructuremech:basal_body_a_c_linker | data/structures/cytoskeleton/basal_body_a_c_linker.yaml | maintained | basal body A-C linker |
+| cellstructuremech:basal_body_a_tusk | data/structures/cytoskeleton/basal_body_a_tusk.yaml | maintained | basal body A-tusk |
+| cellstructuremech:basal_body_b_c_inner_junction | data/structures/cytoskeleton/basal_body_b_c_inner_junction.yaml | maintained | basal body B-C inner junction |
+| cellstructuremech:basal_body_c_tubule_hook | data/structures/cytoskeleton/basal_body_c_tubule_hook.yaml | maintained | basal body C-tubule hook |
+| cellstructuremech:basal_body_c_tubule_luminal_filament | data/structures/cytoskeleton/basal_body_c_tubule_luminal_filament.yaml | maintained | basal body C-tubule luminal filament |
+| cellstructuremech:basal_body_cartwheel | data/structures/cytoskeleton/basal_body_cartwheel.yaml | maintained | basal body cartwheel |
+| cellstructuremech:basal_body_cartwheel_inner_density | data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml | maintained | basal body cartwheel inner density |
+| cellstructuremech:basal_body_d2_rod | data/structures/cytoskeleton/basal_body_d2_rod.yaml | maintained | basal body D2-rod |
+| cellstructuremech:basal_body_filamentous_cartwheel_inner_density | data/structures/cytoskeleton/basal_body_filamentous_cartwheel_inner_density.yaml | maintained | basal body filamentous cartwheel inner density |
+| cellstructuremech:basal_body_inner_scaffold | data/structures/cytoskeleton/basal_body_inner_scaffold.yaml | maintained | basal body inner scaffold |
+| cellstructuremech:basal_body_pinhead | data/structures/cytoskeleton/basal_body_pinhead.yaml | maintained | basal body pinhead |
+| cellstructuremech:basal_body_triplet_base | data/structures/cytoskeleton/basal_body_triplet_base.yaml | maintained | basal body triplet base |
+| GO:0020032 | data/structures/cytoskeleton/basal_ring_of_apical_complex.yaml | maintained | basal ring of apical complex |
+| GO:0120120 | data/structures/cytoskeleton/bilobe_structure.yaml | maintained | bilobe structure |
+| cellstructuremech:btubab_bacterial_microtubule | data/structures/cytoskeleton/btubab_bacterial_microtubule.yaml | maintained | BtubAB bacterial microtubule |
+| GO:1990719 | data/structures/cytoskeleton/c1_axonemal_microtubule.yaml | maintained | C1 axonemal microtubule |
+| GO:1990720 | data/structures/cytoskeleton/c2_axonemal_microtubule.yaml | maintained | C2 axonemal microtubule |
+| GO:0000142 | data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml | maintained | cellular bud neck contractile ring |
+| GO:0032174 | data/structures/cytoskeleton/cellular_bud_neck_septin_collar.yaml | maintained | cellular bud neck septin collar |
+| GO:0000144 | data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml | maintained | cellular bud neck septin ring |
+| GO:0032177 | data/structures/cytoskeleton/cellular_bud_neck_split_septin_rings.yaml | maintained | cellular bud neck split septin rings |
+| GO:0061493 | data/structures/cytoskeleton/central_plaque_of_mitotic_spindle_pole_body.yaml | maintained | central plaque of mitotic spindle pole body |
+| GO:0005823 | data/structures/cytoskeleton/central_plaque_of_spindle_pole_body.yaml | maintained | central plaque of spindle pole body |
+| cellstructuremech:cetz_filament | data/structures/cytoskeleton/cetz_filament.yaml | maintained | CetZ filament |
+| GO:0032166 | data/structures/cytoskeleton/chlamydospore_septin_filament_array.yaml | maintained | chlamydospore septin filament array |
+| GO:0036064 | data/structures/cytoskeleton/ciliary_basal_body.yaml | maintained | ciliary basal body |
+| GO:0120269 | data/structures/cytoskeleton/ciliary_centrin_arm.yaml | maintained | ciliary centrin arm |
+| GO:1990900 | data/structures/cytoskeleton/ciliary_pocket_collar.yaml | maintained | ciliary pocket collar |
+| GO:0120280 | data/structures/cytoskeleton/ciliary_pro_basal_body.yaml | maintained | ciliary pro-basal body |
+| GO:0035253 | data/structures/cytoskeleton/ciliary_rootlet.yaml | maintained | ciliary rootlet |
+| GO:0032161 | data/structures/cytoskeleton/cleavage_apparatus_septin_structure.yaml | maintained | cleavage apparatus septin structure |
+| GO:0020010 | data/structures/cytoskeleton/conoid.yaml | maintained | conoid |
+| GO:0030864 | data/structures/cytoskeleton/cortical_actin_cytoskeleton.yaml | maintained | cortical actin cytoskeleton |
+| GO:0030981 | data/structures/cytoskeleton/cortical_microtubule_cytoskeleton.yaml | maintained | cortical microtubule cytoskeleton |
+| cellstructuremech:crescentin_filament | data/structures/cytoskeleton/crescentin_filament.yaml | maintained | crescentin filament |
+| cellstructuremech:cryptophyte_cortical_centrin_network | data/structures/cytoskeleton/cryptophyte_cortical_centrin_network.yaml | maintained | cryptophyte cortical centrin network |
+| GO:0097268 | data/structures/cytoskeleton/cytoophidium.yaml | maintained | cytoophidium |
+| GO:0005881 | data/structures/cytoskeleton/cytoplasmic_microtubule.yaml | maintained | cytoplasmic microtubule |
+| GO:1905720 | data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml | maintained | cytoplasmic microtubule bundle |
+| cellstructuremech:cytostomal_cord | data/structures/cytoskeleton/cytostomal_cord.yaml | maintained | cytostomal cord |
+| GO:0032123 | data/structures/cytoskeleton/deep_fiber.yaml | maintained | deep fiber |
+| cellstructuremech:distal_connecting_fiber | data/structures/cytoskeleton/distal_connecting_fiber.yaml | maintained | distal connecting fiber |
+| GO:0036286 | data/structures/cytoskeleton/eisosome_filament.yaml | maintained | eisosome filament |
+| GO:0061645 | data/structures/cytoskeleton/endocytic_patch.yaml | maintained | endocytic patch |
+| cellstructuremech:entodiniomorphid_subkinetal_myoneme_system | data/structures/cytoskeleton/entodiniomorphid_subkinetal_myoneme_system.yaml | maintained | Entodiniomorphid subkinetal myoneme system |
+| GO:0000923 | data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml | maintained | equatorial microtubule organizing center |
+| GO:0120119 | data/structures/cytoskeleton/flagellum_attachment_zone.yaml | maintained | flagellum attachment zone |
+| cellstructuremech:funis | data/structures/cytoskeleton/funis.yaml | maintained | funis |
+| GO:0000930 | data/structures/cytoskeleton/gamma_tubulin_complex.yaml | maintained | gamma-tubulin complex |
+| GO:0000931 | data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml | maintained | gamma-tubulin ring complex |
+| GO:0008275 | data/structures/cytoskeleton/gamma_tubulin_small_complex.yaml | maintained | gamma-tubulin small complex |
+| GO:0032171 | data/structures/cytoskeleton/germ_tube_septin_cap.yaml | maintained | germ tube septin cap |
+| GO:0032172 | data/structures/cytoskeleton/germ_tube_septin_ring.yaml | maintained | germ tube septin ring |
+| GO:1990317 | data/structures/cytoskeleton/gin4_complex.yaml | maintained | Gin4 complex |
+| GO:0061496 | data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml | maintained | half bridge of mitotic spindle pole body |
+| GO:0005825 | data/structures/cytoskeleton/half_bridge_of_spindle_pole_body.yaml | maintained | half bridge of spindle pole body |
+| GO:0032117 | data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml | maintained | horsetail-astral microtubule array |
+| GO:0062140 | data/structures/cytoskeleton/hyphae_septin_collar.yaml | maintained | hyphae septin collar |
+| GO:0032163 | data/structures/cytoskeleton/hyphal_septin_band.yaml | maintained | hyphal septin band |
+| GO:0032164 | data/structures/cytoskeleton/hyphal_septin_cap.yaml | maintained | hyphal septin cap |
+| GO:0032168 | data/structures/cytoskeleton/hyphal_septin_ring.yaml | maintained | hyphal septin ring |
+| cellstructuremech:icl1e_complex | data/structures/cytoskeleton/icl1e_complex.yaml | maintained | ICL1e complex |
+| cellstructuremech:infraciliary_lattice | data/structures/cytoskeleton/infraciliary_lattice.yaml | maintained | infraciliary lattice |
+| GO:0036156 | data/structures/cytoskeleton/inner_dynein_arm.yaml | maintained | inner dynein arm |
+| GO:0061497 | data/structures/cytoskeleton/inner_plaque_of_mitotic_spindle_pole_body.yaml | maintained | inner plaque of mitotic spindle pole body |
+| GO:0005822 | data/structures/cytoskeleton/inner_plaque_of_spindle_pole_body.yaml | maintained | inner plaque of spindle pole body |
+| GO:0061498 | data/structures/cytoskeleton/intermediate_layer_of_mitotic_spindle_pole_body.yaml | maintained | intermediate layer of mitotic spindle pole body |
+| GO:0005821 | data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml | maintained | intermediate layer of spindle pole body |
+| GO:0031021 | data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml | maintained | interphase microtubule organizing center |
+| GO:0160066 | data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml | maintained | interphase SIN signaling complex |
+| GO:0033289 | data/structures/cytoskeleton/intraconoid_microtubule.yaml | maintained | intraconoid microtubule |
+| cellstructuremech:mamk_filament | data/structures/cytoskeleton/mamk_filament.yaml | maintained | MamK filament |
+| GO:1990819 | data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml | maintained | mating projection actin fusion focus |
+| GO:0032162 | data/structures/cytoskeleton/mating_projection_septin_band.yaml | maintained | mating projection septin band |
+| GO:0032175 | data/structures/cytoskeleton/mating_projection_septin_ring.yaml | maintained | mating projection septin ring |
+| GO:0036391 | data/structures/cytoskeleton/medial_cortex_septin_ring.yaml | maintained | medial cortex septin ring |
+| GO:0097568 | data/structures/cytoskeleton/median_body.yaml | maintained | median body |
+| GO:0110086 | data/structures/cytoskeleton/meiotic_actomyosin_contractile_ring.yaml | maintained | meiotic actomyosin contractile ring |
+| GO:0034993 | data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml | maintained | meiotic nuclear membrane microtubule tethering complex |
+| cellstructuremech:meiotic_outer_plaque | data/structures/cytoskeleton/meiotic_outer_plaque.yaml | maintained | meiotic outer plaque |
+| GO:0032152 | data/structures/cytoskeleton/meiotic_septin_complex.yaml | maintained | meiotic septin complex |
+| GO:0035974 | data/structures/cytoskeleton/meiotic_spindle_pole_body.yaml | maintained | meiotic spindle pole body |
+| GO:0005874 | data/structures/cytoskeleton/microtubule.yaml | maintained | microtubule |
+| GO:0110085 | data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml | maintained | mitotic actomyosin contractile ring |
+| GO:0032151 | data/structures/cytoskeleton/mitotic_septin_complex.yaml | maintained | mitotic septin complex |
+| GO:0072686 | data/structures/cytoskeleton/mitotic_spindle.yaml | maintained | mitotic spindle |
+| GO:0044732 | data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml | maintained | mitotic spindle pole body |
+| cellstructuremech:mreb_filament | data/structures/cytoskeleton/mreb_filament.yaml | maintained | MreB filament |
+| GO:0071958 | data/structures/cytoskeleton/new_mitotic_spindle_pole_body.yaml | maintained | new mitotic spindle pole body |
+| GO:0160067 | data/structures/cytoskeleton/new_spindle_pole_body_sin_signaling_complex.yaml | maintained | new spindle pole body SIN signaling complex |
+| GO:0106094 | data/structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.yaml | maintained | nuclear membrane microtubule tethering complex |
+| GO:0005880 | data/structures/cytoskeleton/nuclear_microtubule.yaml | maintained | nuclear microtubule |
+| cellstructuremech:nucleus_basal_body_connector | data/structures/cytoskeleton/nucleus_basal_body_connector.yaml | maintained | nucleus-basal body connector |
+| GO:0071957 | data/structures/cytoskeleton/old_mitotic_spindle_pole_body.yaml | maintained | old mitotic spindle pole body |
+| GO:0036157 | data/structures/cytoskeleton/outer_dynein_arm.yaml | maintained | outer dynein arm |
+| GO:0061499 | data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml | maintained | outer plaque of mitotic spindle pole body |
+| GO:0005824 | data/structures/cytoskeleton/outer_plaque_of_spindle_pole_body.yaml | maintained | outer plaque of spindle pole body |
+| cellstructuremech:parm_filament | data/structures/cytoskeleton/parm_filament.yaml | maintained | ParM filament |
+| cellstructuremech:peritrich_body_myoneme_system | data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml | maintained | Peritrich body myoneme system |
+| cellstructuremech:phuz_spindle | data/structures/cytoskeleton/phuz_spindle.yaml | maintained | PhuZ spindle |
+| GO:0020031 | data/structures/cytoskeleton/polar_ring_of_apical_complex.yaml | maintained | polar ring of apical complex |
+| GO:1990295 | data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml | maintained | post-anaphase microtubule array |
+| GO:0032157 | data/structures/cytoskeleton/prospore_contractile_ring.yaml | maintained | prospore contractile ring |
+| GO:0032165 | data/structures/cytoskeleton/prospore_septin_filament_array.yaml | maintained | prospore septin filament array |
+| GO:0032169 | data/structures/cytoskeleton/prospore_septin_ring.yaml | maintained | prospore septin ring |
+| GO:0032170 | data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml | maintained | pseudohyphal septin ring |
+| cellstructuremech:quiescent_cell_microtubule_bundle | data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml | maintained | quiescent cell microtubule bundle |
+| cellstructuremech:quiescent_nuclear_microtubule_bundle | data/structures/cytoskeleton/quiescent_nuclear_microtubule_bundle.yaml | maintained | quiescent nuclear microtubule bundle |
+| cellstructuremech:radial_microtubule_organizing_center | data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml | maintained | radial microtubule organizing center |
+| GO:0001534 | data/structures/cytoskeleton/radial_spoke.yaml | maintained | radial spoke |
+| GO:0001535 | data/structures/cytoskeleton/radial_spoke_head.yaml | maintained | radial spoke head |
+| GO:0120343 | data/structures/cytoskeleton/radial_spoke_neck.yaml | maintained | radial spoke neck |
+| GO:0001536 | data/structures/cytoskeleton/radial_spoke_stalk.yaml | maintained | radial spoke stalk |
+| GO:1990612 | data/structures/cytoskeleton/sad1_kms1_linc_complex.yaml | maintained | Sad1-Kms1 LINC complex |
+| GO:0032158 | data/structures/cytoskeleton/septin_band.yaml | maintained | septin band |
+| GO:0032159 | data/structures/cytoskeleton/septin_cap.yaml | maintained | septin cap |
+| GO:0032173 | data/structures/cytoskeleton/septin_collar.yaml | maintained | septin collar |
+| GO:0031105 | data/structures/cytoskeleton/septin_complex.yaml | maintained | septin complex |
+| GO:0032156 | data/structures/cytoskeleton/septin_cytoskeleton.yaml | maintained | septin cytoskeleton |
+| GO:0032160 | data/structures/cytoskeleton/septin_filament_array.yaml | maintained | septin filament array |
+| GO:0005940 | data/structures/cytoskeleton/septin_ring.yaml | maintained | septin ring |
+| GO:0160065 | data/structures/cytoskeleton/sin_men_signaling_complex.yaml | maintained | SIN/MEN signaling complex |
+| GO:1990334 | data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml | maintained | SIN/MEN two-component GAP complex |
+| cellstructuremech:sinister_fiber | data/structures/cytoskeleton/sinister_fiber.yaml | maintained | sinister fiber |
+| GO:0005819 | data/structures/cytoskeleton/spindle.yaml | maintained | spindle |
+| GO:0005876 | data/structures/cytoskeleton/spindle_microtubule.yaml | maintained | spindle microtubule |
+| GO:0051233 | data/structures/cytoskeleton/spindle_midzone.yaml | maintained | spindle midzone |
+| GO:0000922 | data/structures/cytoskeleton/spindle_pole.yaml | maintained | spindle pole |
+| GO:0005816 | data/structures/cytoskeleton/spindle_pole_body.yaml | maintained | spindle pole body |
+| cellstructuremech:spindle_pole_body_duplication_plaque | data/structures/cytoskeleton/spindle_pole_body_duplication_plaque.yaml | maintained | spindle pole body duplication plaque |
+| cellstructuremech:spindle_pole_body_satellite | data/structures/cytoskeleton/spindle_pole_body_satellite.yaml | maintained | spindle pole body satellite |
+| cellstructuremech:spirostomum_myoneme_fishnet | data/structures/cytoskeleton/spirostomum_myoneme_fishnet.yaml | maintained | Spirostomum myoneme fishnet |
+| GO:0032176 | data/structures/cytoskeleton/split_septin_rings.yaml | maintained | split septin rings |
+| cellstructuremech:stalk_spasmoneme | data/structures/cytoskeleton/stalk_spasmoneme.yaml | maintained | Stalk spasmoneme |
+| GO:0099070 | data/structures/cytoskeleton/static_microtubule_bundle.yaml | maintained | static microtubule bundle |
+| cellstructuremech:stentor_km_fiber | data/structures/cytoskeleton/stentor_km_fiber.yaml | maintained | Stentor Km fiber |
+| cellstructuremech:stentor_myoneme_system | data/structures/cytoskeleton/stentor_myoneme_system.yaml | maintained | Stentor myoneme system |
+| cellstructuremech:stentor_perialgal_microtubule_meshwork | data/structures/cytoskeleton/stentor_perialgal_microtubule_meshwork.yaml | maintained | Stentor perialgal microtubule meshwork |
+| GO:0020025 | data/structures/cytoskeleton/subpellicular_microtubule.yaml | maintained | subpellicular microtubule |
+| GO:0070850 | data/structures/cytoskeleton/tacc_tog_complex.yaml | maintained | TACC/TOG complex |
+| cellstructuremech:telocentrosome | data/structures/cytoskeleton/telocentrosome.yaml | maintained | telocentrosome |
+| cellstructuremech:transition_zone_stellate_fiber_system | data/structures/cytoskeleton/transition_zone_stellate_fiber_system.yaml | maintained | transition zone stellate fiber system |
+| GO:0120121 | data/structures/cytoskeleton/tripartite_attachment_complex.yaml | maintained | tripartite attachment complex |
+| cellstructuremech:tubulin_spool | data/structures/cytoskeleton/tubulin_spool.yaml | maintained | tubulin spool |
+| cellstructuremech:tubz_filament | data/structures/cytoskeleton/tubz_filament.yaml | maintained | TubZ filament |
+| GO:0097597 | data/structures/cytoskeleton/ventral_disc.yaml | maintained | ventral disc |
+| GO:0097595 | data/structures/cytoskeleton/ventral_disc_crossbridge.yaml | maintained | ventral disc crossbridge |
+| GO:0097594 | data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml | maintained | ventral disc dorsal microribbon |
+| GO:0097591 | data/structures/cytoskeleton/ventral_disc_lateral_crest.yaml | maintained | ventral disc lateral crest |
+| GO:0097593 | data/structures/cytoskeleton/ventral_disc_microtubule_array.yaml | maintained | ventral disc microtubule array |
+| GO:0097592 | data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml | maintained | ventral disc overlap zone |
+| GO:0097596 | data/structures/cytoskeleton/ventral_disc_supernumerary_microtubule_array.yaml | maintained | ventral disc supernumerary microtubule array |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Strict corpus validation covering cytoskeleton cohort | passed | True | GO:0097649, GO:0099079, GO:0030479, GO:0005826, GO:0110131, cellstructuremech:alfa_filament, GO:0005885, GO:0005818, GO:0000235, GO:0160111, GO:0160112, GO:1990716, GO:1990717, GO:0097540, GO:1990718, GO:0097545, GO:0005858, GO:0005879, GO:0160113, GO:0160110, GO:0160114, GO:0160115, GO:0005931, GO:0005930, GO:0097650, cellstructuremech:bactofilin_filament, cellstructuremech:basal_body_a_b_inner_junction, cellstructuremech:basal_body_a_c_linker, cellstructuremech:basal_body_a_tusk, cellstructuremech:basal_body_b_c_inner_junction, cellstructuremech:basal_body_c_tubule_hook, cellstructuremech:basal_body_c_tubule_luminal_filament, cellstructuremech:basal_body_cartwheel, cellstructuremech:basal_body_cartwheel_inner_density, cellstructuremech:basal_body_d2_rod, cellstructuremech:basal_body_filamentous_cartwheel_inner_density, cellstructuremech:basal_body_inner_scaffold, cellstructuremech:basal_body_pinhead, cellstructuremech:basal_body_triplet_base, GO:0020032, GO:0120120, cellstructuremech:btubab_bacterial_microtubule, GO:1990719, GO:1990720, GO:0000142, GO:0032174, GO:0000144, GO:0032177, GO:0061493, GO:0005823, cellstructuremech:cetz_filament, GO:0032166, GO:0036064, GO:0120269, GO:1990900, GO:0120280, GO:0035253, GO:0032161, GO:0020010, GO:0030864, GO:0030981, cellstructuremech:crescentin_filament, cellstructuremech:cryptophyte_cortical_centrin_network, GO:0097268, GO:0005881, GO:1905720, cellstructuremech:cytostomal_cord, GO:0032123, cellstructuremech:distal_connecting_fiber, GO:0036286, GO:0061645, cellstructuremech:entodiniomorphid_subkinetal_myoneme_system, GO:0000923, GO:0120119, cellstructuremech:funis, GO:0000930, GO:0000931, GO:0008275, GO:0032171, GO:0032172, GO:1990317, GO:0061496, GO:0005825, GO:0032117, GO:0062140, GO:0032163, GO:0032164, GO:0032168, cellstructuremech:icl1e_complex, cellstructuremech:infraciliary_lattice, GO:0036156, GO:0061497, GO:0005822, GO:0061498, GO:0005821, GO:0031021, GO:0160066, GO:0033289, cellstructuremech:mamk_filament, GO:1990819, GO:0032162, GO:0032175, GO:0036391, GO:0097568, GO:0110086, GO:0034993, cellstructuremech:meiotic_outer_plaque, GO:0032152, GO:0035974, GO:0005874, GO:0110085, GO:0032151, GO:0072686, GO:0044732, cellstructuremech:mreb_filament, GO:0071958, GO:0160067, GO:0106094, GO:0005880, cellstructuremech:nucleus_basal_body_connector, GO:0071957, GO:0036157, GO:0061499, GO:0005824, cellstructuremech:parm_filament, cellstructuremech:peritrich_body_myoneme_system, cellstructuremech:phuz_spindle, GO:0020031, GO:1990295, GO:0032157, GO:0032165, GO:0032169, GO:0032170, cellstructuremech:quiescent_cell_microtubule_bundle, cellstructuremech:quiescent_nuclear_microtubule_bundle, cellstructuremech:radial_microtubule_organizing_center, GO:0001534, GO:0001535, GO:0120343, GO:0001536, GO:1990612, GO:0032158, GO:0032159, GO:0032173, GO:0031105, GO:0032156, GO:0032160, GO:0005940, GO:0160065, GO:1990334, cellstructuremech:sinister_fiber, GO:0005819, GO:0005876, GO:0051233, GO:0000922, GO:0005816, cellstructuremech:spindle_pole_body_duplication_plaque, cellstructuremech:spindle_pole_body_satellite, cellstructuremech:spirostomum_myoneme_fishnet, GO:0032176, cellstructuremech:stalk_spasmoneme, GO:0099070, cellstructuremech:stentor_km_fiber, cellstructuremech:stentor_myoneme_system, cellstructuremech:stentor_perialgal_microtubule_meshwork, GO:0020025, GO:0070850, cellstructuremech:telocentrosome, cellstructuremech:transition_zone_stellate_fiber_system, GO:0120121, cellstructuremech:tubulin_spool, cellstructuremech:tubz_filament, GO:0097597, GO:0097595, GO:0097594, GO:0097591, GO:0097593, GO:0097592, GO:0097596 | All 179 cytoskeleton records pass strict LinkML and semantic validation. |
+| History ledger validation covering cytoskeleton cohort | passed | True | GO:0097649, GO:0099079, GO:0030479, GO:0005826, GO:0110131, cellstructuremech:alfa_filament, GO:0005885, GO:0005818, GO:0000235, GO:0160111, GO:0160112, GO:1990716, GO:1990717, GO:0097540, GO:1990718, GO:0097545, GO:0005858, GO:0005879, GO:0160113, GO:0160110, GO:0160114, GO:0160115, GO:0005931, GO:0005930, GO:0097650, cellstructuremech:bactofilin_filament, cellstructuremech:basal_body_a_b_inner_junction, cellstructuremech:basal_body_a_c_linker, cellstructuremech:basal_body_a_tusk, cellstructuremech:basal_body_b_c_inner_junction, cellstructuremech:basal_body_c_tubule_hook, cellstructuremech:basal_body_c_tubule_luminal_filament, cellstructuremech:basal_body_cartwheel, cellstructuremech:basal_body_cartwheel_inner_density, cellstructuremech:basal_body_d2_rod, cellstructuremech:basal_body_filamentous_cartwheel_inner_density, cellstructuremech:basal_body_inner_scaffold, cellstructuremech:basal_body_pinhead, cellstructuremech:basal_body_triplet_base, GO:0020032, GO:0120120, cellstructuremech:btubab_bacterial_microtubule, GO:1990719, GO:1990720, GO:0000142, GO:0032174, GO:0000144, GO:0032177, GO:0061493, GO:0005823, cellstructuremech:cetz_filament, GO:0032166, GO:0036064, GO:0120269, GO:1990900, GO:0120280, GO:0035253, GO:0032161, GO:0020010, GO:0030864, GO:0030981, cellstructuremech:crescentin_filament, cellstructuremech:cryptophyte_cortical_centrin_network, GO:0097268, GO:0005881, GO:1905720, cellstructuremech:cytostomal_cord, GO:0032123, cellstructuremech:distal_connecting_fiber, GO:0036286, GO:0061645, cellstructuremech:entodiniomorphid_subkinetal_myoneme_system, GO:0000923, GO:0120119, cellstructuremech:funis, GO:0000930, GO:0000931, GO:0008275, GO:0032171, GO:0032172, GO:1990317, GO:0061496, GO:0005825, GO:0032117, GO:0062140, GO:0032163, GO:0032164, GO:0032168, cellstructuremech:icl1e_complex, cellstructuremech:infraciliary_lattice, GO:0036156, GO:0061497, GO:0005822, GO:0061498, GO:0005821, GO:0031021, GO:0160066, GO:0033289, cellstructuremech:mamk_filament, GO:1990819, GO:0032162, GO:0032175, GO:0036391, GO:0097568, GO:0110086, GO:0034993, cellstructuremech:meiotic_outer_plaque, GO:0032152, GO:0035974, GO:0005874, GO:0110085, GO:0032151, GO:0072686, GO:0044732, cellstructuremech:mreb_filament, GO:0071958, GO:0160067, GO:0106094, GO:0005880, cellstructuremech:nucleus_basal_body_connector, GO:0071957, GO:0036157, GO:0061499, GO:0005824, cellstructuremech:parm_filament, cellstructuremech:peritrich_body_myoneme_system, cellstructuremech:phuz_spindle, GO:0020031, GO:1990295, GO:0032157, GO:0032165, GO:0032169, GO:0032170, cellstructuremech:quiescent_cell_microtubule_bundle, cellstructuremech:quiescent_nuclear_microtubule_bundle, cellstructuremech:radial_microtubule_organizing_center, GO:0001534, GO:0001535, GO:0120343, GO:0001536, GO:1990612, GO:0032158, GO:0032159, GO:0032173, GO:0031105, GO:0032156, GO:0032160, GO:0005940, GO:0160065, GO:1990334, cellstructuremech:sinister_fiber, GO:0005819, GO:0005876, GO:0051233, GO:0000922, GO:0005816, cellstructuremech:spindle_pole_body_duplication_plaque, cellstructuremech:spindle_pole_body_satellite, cellstructuremech:spirostomum_myoneme_fishnet, GO:0032176, cellstructuremech:stalk_spasmoneme, GO:0099070, cellstructuremech:stentor_km_fiber, cellstructuremech:stentor_myoneme_system, cellstructuremech:stentor_perialgal_microtubule_meshwork, GO:0020025, GO:0070850, cellstructuremech:telocentrosome, cellstructuremech:transition_zone_stellate_fiber_system, GO:0120121, cellstructuremech:tubulin_spool, cellstructuremech:tubz_filament, GO:0097597, GO:0097595, GO:0097594, GO:0097591, GO:0097593, GO:0097592, GO:0097596 | All history ledger records covering cytoskeleton validate cleanly. |
+
+## Scientific And Domain Assessments
+
+### Identity, boundaries, causal graphs, and ontology grounding across data/structures/cytoskeleton/
+
+scope: supported. Targets: GO:0097649, GO:0099079, GO:0030479, GO:0005826, GO:0110131, cellstructuremech:alfa_filament, GO:0005885, GO:0005818, GO:0000235, GO:0160111, GO:0160112, GO:1990716, GO:1990717, GO:0097540, GO:1990718, GO:0097545, GO:0005858, GO:0005879, GO:0160113, GO:0160110, GO:0160114, GO:0160115, GO:0005931, GO:0005930, GO:0097650, cellstructuremech:bactofilin_filament, cellstructuremech:basal_body_a_b_inner_junction, cellstructuremech:basal_body_a_c_linker, cellstructuremech:basal_body_a_tusk, cellstructuremech:basal_body_b_c_inner_junction, cellstructuremech:basal_body_c_tubule_hook, cellstructuremech:basal_body_c_tubule_luminal_filament, cellstructuremech:basal_body_cartwheel, cellstructuremech:basal_body_cartwheel_inner_density, cellstructuremech:basal_body_d2_rod, cellstructuremech:basal_body_filamentous_cartwheel_inner_density, cellstructuremech:basal_body_inner_scaffold, cellstructuremech:basal_body_pinhead, cellstructuremech:basal_body_triplet_base, GO:0020032, GO:0120120, cellstructuremech:btubab_bacterial_microtubule, GO:1990719, GO:1990720, GO:0000142, GO:0032174, GO:0000144, GO:0032177, GO:0061493, GO:0005823, cellstructuremech:cetz_filament, GO:0032166, GO:0036064, GO:0120269, GO:1990900, GO:0120280, GO:0035253, GO:0032161, GO:0020010, GO:0030864, GO:0030981, cellstructuremech:crescentin_filament, cellstructuremech:cryptophyte_cortical_centrin_network, GO:0097268, GO:0005881, GO:1905720, cellstructuremech:cytostomal_cord, GO:0032123, cellstructuremech:distal_connecting_fiber, GO:0036286, GO:0061645, cellstructuremech:entodiniomorphid_subkinetal_myoneme_system, GO:0000923, GO:0120119, cellstructuremech:funis, GO:0000930, GO:0000931, GO:0008275, GO:0032171, GO:0032172, GO:1990317, GO:0061496, GO:0005825, GO:0032117, GO:0062140, GO:0032163, GO:0032164, GO:0032168, cellstructuremech:icl1e_complex, cellstructuremech:infraciliary_lattice, GO:0036156, GO:0061497, GO:0005822, GO:0061498, GO:0005821, GO:0031021, GO:0160066, GO:0033289, cellstructuremech:mamk_filament, GO:1990819, GO:0032162, GO:0032175, GO:0036391, GO:0097568, GO:0110086, GO:0034993, cellstructuremech:meiotic_outer_plaque, GO:0032152, GO:0035974, GO:0005874, GO:0110085, GO:0032151, GO:0072686, GO:0044732, cellstructuremech:mreb_filament, GO:0071958, GO:0160067, GO:0106094, GO:0005880, cellstructuremech:nucleus_basal_body_connector, GO:0071957, GO:0036157, GO:0061499, GO:0005824, cellstructuremech:parm_filament, cellstructuremech:peritrich_body_myoneme_system, cellstructuremech:phuz_spindle, GO:0020031, GO:1990295, GO:0032157, GO:0032165, GO:0032169, GO:0032170, cellstructuremech:quiescent_cell_microtubule_bundle, cellstructuremech:quiescent_nuclear_microtubule_bundle, cellstructuremech:radial_microtubule_organizing_center, GO:0001534, GO:0001535, GO:0120343, GO:0001536, GO:1990612, GO:0032158, GO:0032159, GO:0032173, GO:0031105, GO:0032156, GO:0032160, GO:0005940, GO:0160065, GO:1990334, cellstructuremech:sinister_fiber, GO:0005819, GO:0005876, GO:0051233, GO:0000922, GO:0005816, cellstructuremech:spindle_pole_body_duplication_plaque, cellstructuremech:spindle_pole_body_satellite, cellstructuremech:spirostomum_myoneme_fishnet, GO:0032176, cellstructuremech:stalk_spasmoneme, GO:0099070, cellstructuremech:stentor_km_fiber, cellstructuremech:stentor_myoneme_system, cellstructuremech:stentor_perialgal_microtubule_meshwork, GO:0020025, GO:0070850, cellstructuremech:telocentrosome, cellstructuremech:transition_zone_stellate_fiber_system, GO:0120121, cellstructuremech:tubulin_spool, cellstructuremech:tubz_filament, GO:0097597, GO:0097595, GO:0097594, GO:0097591, GO:0097593, GO:0097592, GO:0097596.
+
+All 179 records in data/structures/cytoskeleton/ represent distinct microbial cytoskeletal structures or subcomplexes with valid schema and history provenance.
+
+### Cross-record consistency of UniProtKB:P04689 primary gene symbol (tub1 vs synonym atb2) across S. pombe microtubule records
+
+representation: concern. Targets: GO:1905720, cellstructuremech:quiescent_cell_microtubule_bundle, GO:0099070.
+
+Three S. pombe microtubule bundle records record synonym atb2 instead of UniProtKB primary gene symbol tub1 for UniProtKB:P04689.
+
+## Findings
+
+### F1: Three S. pombe microtubule bundle records use synonym gene_symbol atb2 instead of primary UniProtKB symbol tub1 on UniProtKB:P04689
+
+minor / open / confirmed; issue key: cytoskeleton-spombe-p04689-primary-gene-symbol-tub1.
+
+In cytoplasmic_microtubule_bundle.yaml (GO:1905720), quiescent_cell_microtubule_bundle.yaml (cellstructuremech:quiescent_cell_microtubule_bundle), and static_microtubule_bundle.yaml (GO:0099070), components[0] (alpha_tubulin) lists gene_symbols: [nda2, atb2] and its protein_examples[1] entry for UniProtKB:P04689 (Tubulin alpha-2 chain, NCBITaxon:284812) records gene_symbol: atb2. In UniProtKB, P04689's primary gene symbol is tub1 (with atb2 as a synonym), and all five other S. pombe microtubule records in data/structures/cytoskeleton/ (aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml, horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml) include tub1 in components[0].gene_symbols, set gene_symbol: tub1 on UniProtKB:P04689, and disclose '(also declared as synonym atb2)' in role.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Update components[0] (alpha_tubulin) in cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml so gene_symbols is [nda2, tub1, atb2] and protein_examples[1] (UniProtKB:P04689) uses primary gene_symbol: tub1 with role disclosing synonym atb2.
+
+- .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+- .venv/bin/python scripts/validate_history.py
+
+## Category Boundaries
+
+- retain: GO:0097649, GO:0099079, GO:0030479, GO:0005826, GO:0110131, cellstructuremech:alfa_filament, GO:0005885, GO:0005818, GO:0000235, GO:0160111, GO:0160112, GO:1990716, GO:1990717, GO:0097540, GO:1990718, GO:0097545, GO:0005858, GO:0005879, GO:0160113, GO:0160110, GO:0160114, GO:0160115, GO:0005931, GO:0005930, GO:0097650, cellstructuremech:bactofilin_filament, cellstructuremech:basal_body_a_b_inner_junction, cellstructuremech:basal_body_a_c_linker, cellstructuremech:basal_body_a_tusk, cellstructuremech:basal_body_b_c_inner_junction, cellstructuremech:basal_body_c_tubule_hook, cellstructuremech:basal_body_c_tubule_luminal_filament, cellstructuremech:basal_body_cartwheel, cellstructuremech:basal_body_cartwheel_inner_density, cellstructuremech:basal_body_d2_rod, cellstructuremech:basal_body_filamentous_cartwheel_inner_density, cellstructuremech:basal_body_inner_scaffold, cellstructuremech:basal_body_pinhead, cellstructuremech:basal_body_triplet_base, GO:0020032, GO:0120120, cellstructuremech:btubab_bacterial_microtubule, GO:1990719, GO:1990720, GO:0000142, GO:0032174, GO:0000144, GO:0032177, GO:0061493, GO:0005823, cellstructuremech:cetz_filament, GO:0032166, GO:0036064, GO:0120269, GO:1990900, GO:0120280, GO:0035253, GO:0032161, GO:0020010, GO:0030864, GO:0030981, cellstructuremech:crescentin_filament, cellstructuremech:cryptophyte_cortical_centrin_network, GO:0097268, GO:0005881, GO:1905720, cellstructuremech:cytostomal_cord, GO:0032123, cellstructuremech:distal_connecting_fiber, GO:0036286, GO:0061645, cellstructuremech:entodiniomorphid_subkinetal_myoneme_system, GO:0000923, GO:0120119, cellstructuremech:funis, GO:0000930, GO:0000931, GO:0008275, GO:0032171, GO:0032172, GO:1990317, GO:0061496, GO:0005825, GO:0032117, GO:0062140, GO:0032163, GO:0032164, GO:0032168, cellstructuremech:icl1e_complex, cellstructuremech:infraciliary_lattice, GO:0036156, GO:0061497, GO:0005822, GO:0061498, GO:0005821, GO:0031021, GO:0160066, GO:0033289, cellstructuremech:mamk_filament, GO:1990819, GO:0032162, GO:0032175, GO:0036391, GO:0097568, GO:0110086, GO:0034993, cellstructuremech:meiotic_outer_plaque, GO:0032152, GO:0035974, GO:0005874, GO:0110085, GO:0032151, GO:0072686, GO:0044732, cellstructuremech:mreb_filament, GO:0071958, GO:0160067, GO:0106094, GO:0005880, cellstructuremech:nucleus_basal_body_connector, GO:0071957, GO:0036157, GO:0061499, GO:0005824, cellstructuremech:parm_filament, cellstructuremech:peritrich_body_myoneme_system, cellstructuremech:phuz_spindle, GO:0020031, GO:1990295, GO:0032157, GO:0032165, GO:0032169, GO:0032170, cellstructuremech:quiescent_cell_microtubule_bundle, cellstructuremech:quiescent_nuclear_microtubule_bundle, cellstructuremech:radial_microtubule_organizing_center, GO:0001534, GO:0001535, GO:0120343, GO:0001536, GO:1990612, GO:0032158, GO:0032159, GO:0032173, GO:0031105, GO:0032156, GO:0032160, GO:0005940, GO:0160065, GO:1990334, cellstructuremech:sinister_fiber, GO:0005819, GO:0005876, GO:0051233, GO:0000922, GO:0005816, cellstructuremech:spindle_pole_body_duplication_plaque, cellstructuremech:spindle_pole_body_satellite, cellstructuremech:spirostomum_myoneme_fishnet, GO:0032176, cellstructuremech:stalk_spasmoneme, GO:0099070, cellstructuremech:stentor_km_fiber, cellstructuremech:stentor_myoneme_system, cellstructuremech:stentor_perialgal_microtubule_meshwork, GO:0020025, GO:0070850, cellstructuremech:telocentrosome, cellstructuremech:transition_zone_stellate_fiber_system, GO:0120121, cellstructuremech:tubulin_spool, cellstructuremech:tubz_filament, GO:0097597, GO:0097595, GO:0097594, GO:0097591, GO:0097593, GO:0097592, GO:0097596. All 179 cytoskeleton records represent distinct filaments, arrays, or subcomplexes without duplicate ontology groundings.
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev_strict_cytoskeleton | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,008 records including all 179 cytoskeleton records. |
+| ev_history_cytoskeleton | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,140 history records covering cytoskeleton. |
+| ev_cyto_spombe_p04689_atb2 | data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml; components[0] (lines 48-77) vs aster.yaml components[0] | supports | cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml list gene_symbols: [nda2, atb2] and gene_symbol: atb2 for UniProtKB:P04689, whereas aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml, horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml use UniProtKB primary gene symbol tub1. |
+
+## Limits And Additional Notes
+
+- Record edits for cytoskeleton cohort findings are queued for Cycle 5 Stage 5 (resolve_review_findings).
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261030T222003Z-cytoskeleton-category-review
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: Category review of data/structures/cytoskeleton/ (179 records)
+started_at: '2026-10-30T22:17:00Z'
+finished_at: '2026-10-30T22:20:03Z'
+reviewer:
+  identity: antigravity-c5s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 5 Stage 4 record_review against committed
+    git revision a94f6deb809dd50c8344fb03284de9801c0aa298 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
+scientific_review: true
+summary: 'Full-cohort audit of all 179 CYTOSKELETON records in data/structures/cytoskeleton/.
+  Lump/split boundaries across bacterial cytomotive filaments, fungal septin/microtubule
+  arrays, and protist cortical/axonemal arrays are clean, and the Cycle 4 finding
+  on eisosome_filament.yaml was verified resolved. One cross-record consistency issue
+  was identified across three S. pombe microtubule bundle records (cytoplasmic_microtubule_bundle.yaml,
+  quiescent_cell_microtubule_bundle.yaml, static_microtubule_bundle.yaml), where alpha_tubulin
+  protein_examples[1] (UniProtKB:P04689) uses synonym gene_symbol: atb2 instead of
+  UniProtKB''s primary gene symbol tub1 used across the five other S. pombe microtubule
+  records in the same category. (A separate single-record review 20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols
+  covers the missing gene_symbols list on post_anaphase_microtubule_array.yaml#emtoc.)'
+source:
+  git_revision: a94f6deb809dd50c8344fb03284de9801c0aa298
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+    sha256: ce35e4855b506178485b229b515c89a717ddee0a5a9d26fff88ba991fac5b06b
+    role: target
+  - path: data/structures/cytoskeleton/actin_body.yaml
+    sha256: b0abd6f5cb40fec99ab2d5a23a56b7307041f4ac8eda2a32b9db8d57680f22ea
+    role: target
+  - path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    sha256: 595b2fa8e39b9993b34bde4f2102dadcb72ae99e6a18a28160f82537a7ea46cd
+    role: target
+  - path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+    sha256: 8876e95f0d7f8046d816cde2038818cced5d3b5996858dfb564d41b4ecac47ff
+    role: target
+  - path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    sha256: 0ac6977eb76db7660a6379547b0abf29a9794cd1178d7a7b5dbd9805dd4a7ace
+    role: target
+  - path: data/structures/cytoskeleton/alfa_filament.yaml
+    sha256: 9869708619647267114ce2cb97912536765e482595c4026025d6307f849e02ba
+    role: target
+  - path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+    sha256: 05b7cc75eaf5f65fb7a4839055dcd086303a6c26cf1fb781ad41baf541bd8ecc
+    role: target
+  - path: data/structures/cytoskeleton/aster.yaml
+    sha256: ead65813443a3277dee3611ec40e32b7bc4c3882d8c31508eb352f6fffdfd6df
+    role: target
+  - path: data/structures/cytoskeleton/astral_microtubule.yaml
+    sha256: 45c1ec56a960d58bde433d88317824b726ff48473bc9b0b1d4429c6e2f57041d
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+    sha256: 23bcdab335f1f6b6f39da802471c2336ab47ed2083b4986133b9558f42d4f7c0
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_b_tubule_inner_sheath.yaml
+    sha256: d1b0e481219c8b248e22e069aaa333074857a9ef8cae74d159e9a9e1f33a733e
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+    sha256: 74e419f358ba3717a764cd93cb5c0e4e892c7015094ed6457518994526ee1899
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+    sha256: 488bf49e662fd058a77ae30e822399a25c8079ea423dc663a8523f364de07e71
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_central_pair.yaml
+    sha256: 5e6d9301edf395d718469728f33d6fd7aad90d01bea8bf84b31ba6a742e7cf75
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    sha256: 6a360531856b39ca7b2c28005379440636a32e6e0ca0ce7259870729a9036d60
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml
+    sha256: d365f00f2cdb6708fc172742dc030e2b6eb945d4092d525d8a96f84177d0c783
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_dynein_complex.yaml
+    sha256: 9158b3b827892de2d3f14320353af5fbd6ef8ef3cfae114687b9e6725f7ce44e
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_microtubule.yaml
+    sha256: 480cd29d1f2e87c07c19dd8d60e50768cdcce29223b28ce2df1d4c956dc46282
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_junction.yaml
+    sha256: b2b8871710df39db8cea586df9f0ad41f852297f6061e0efb6a6e33bd39b5adf
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml
+    sha256: 9e9be5e7f27009254e123e548fe1c5bbfd4bbacb87f856eec8f868fb605c0f9e
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+    sha256: 226a02455cd0afbaedc49a3c74a986e5f6bab41d60e1240d98249ee656e5ac10
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_ribbon.yaml
+    sha256: 8ea3c6d990a9c78f1382b295ca98d9df4ce7596d09c7d467b222f53d40ae7eb2
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+    sha256: d55ca69b76b3b435e76e88185ee89256f4133ce7a0da1e819c5f3a18e5264188
+    role: target
+  - path: data/structures/cytoskeleton/axoneme.yaml
+    sha256: 0b91b4cd41d1a34bdc3883d988f31009effc74347b881cdc5c9b66014704e223
+    role: target
+  - path: data/structures/cytoskeleton/b_axonemal_microtubule.yaml
+    sha256: 14dc7bee2d7f4dbaf766868cb49cb2e0145765a5de184a80452664871a7db50f
+    role: target
+  - path: data/structures/cytoskeleton/bactofilin_filament.yaml
+    sha256: 622cf3533ca2672077d567c9fc018232e73a2638b40d4ed56ad6db296c535cfd
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_a_b_inner_junction.yaml
+    sha256: 6ca65191f50d079b7e7b0d807e6df7e2b1651eed1671d8a55029b7241bc80be4
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_a_c_linker.yaml
+    sha256: 62cdcb9bc61eed86542e3c0d82cc2a314be23b66f06dda93001fb27149c8723b
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_a_tusk.yaml
+    sha256: f82923b0febf504980e0c7e006d03d72c9cfdd2b38e225b6ad82adaac4d754c1
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_b_c_inner_junction.yaml
+    sha256: 9c4967f2edcd2ccc044157dd3bc03ed3f066d5bcd7205e2f5cc30da20e858ea1
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_c_tubule_hook.yaml
+    sha256: 492ed1f70c96fec1ccf2f5eb0efbb7ed4950b46f69031242a1869c9c820ee383
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_c_tubule_luminal_filament.yaml
+    sha256: a7abec342419ed1f405caf67d4fbaf85d1ce7587db5391a73bfeb136509aa1b1
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_cartwheel.yaml
+    sha256: bdd863ed130a8a2b226fe920cc7f6c6327a2cc1ea90602bf051d952f27e56e17
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml
+    sha256: 84b8a7319dbcbf9ec053bcdb2b1e88c920c0ad31e69524ed6a3e13ae1f3b342b
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_d2_rod.yaml
+    sha256: acd457cb1d0121248e5d11bdebc1d70a815a42f240f31e02eaa556bc54e7bc27
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_filamentous_cartwheel_inner_density.yaml
+    sha256: 5fc268e1a3493fde87ab6856fae60c61025633bdbc9c7d29c08c794c5678d8df
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+    sha256: 40a6d03ee9aefd5eab50c48f90976e90aedb1e9be33ac13aceccbcc6b5fb6c0e
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_pinhead.yaml
+    sha256: ef3da1eee8d7e92150c0bf3ab1c6e2c67a410aa366416ab03454e3929e25bff2
+    role: target
+  - path: data/structures/cytoskeleton/basal_body_triplet_base.yaml
+    sha256: c88a6c10f311bce934e37d5583f122fee6cae6f45950117728cb6d1a7905e6f8
+    role: target
+  - path: data/structures/cytoskeleton/basal_ring_of_apical_complex.yaml
+    sha256: 72cfdcad53fe8d4a31deb6bfcab9454b8ef840b5ea6aebefb35256140e4fc649
+    role: target
+  - path: data/structures/cytoskeleton/bilobe_structure.yaml
+    sha256: e9773e92e7c1414e2124d38c525927487c6fe03a7efd44440f00e19755de8a63
+    role: target
+  - path: data/structures/cytoskeleton/btubab_bacterial_microtubule.yaml
+    sha256: cfd4cb0c8ba5958bda186e8eb4bc395c85461a3337bfd947b622c7d4e04ef4bf
+    role: target
+  - path: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+    sha256: 2f4f420d4958d3133a60a7b072e517361d7c2c4908acb4e307bd2033095f18f4
+    role: target
+  - path: data/structures/cytoskeleton/c2_axonemal_microtubule.yaml
+    sha256: 97c8666ddef318d146a2d902a225f8b0313468bcf54fa32d81d5f1d127798a44
+    role: target
+  - path: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+    sha256: 98f13751880cb87993310078d3409a400df4ccbaad0f9499f9b76a2be4538280
+    role: target
+  - path: data/structures/cytoskeleton/cellular_bud_neck_septin_collar.yaml
+    sha256: 2901b13c5e8db9e171b7c1f93caf816991d0e58ba9456339c5db7f7f3716ae0e
+    role: target
+  - path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+    sha256: 6ef4f3536140aa328f20854cf2ef1db86b5508676f475e9a3282f932819546d1
+    role: target
+  - path: data/structures/cytoskeleton/cellular_bud_neck_split_septin_rings.yaml
+    sha256: c76ed8c617acf9966daa42ca587f49cc352795bc3e2b9fe702359075c49a9cff
+    role: target
+  - path: data/structures/cytoskeleton/central_plaque_of_mitotic_spindle_pole_body.yaml
+    sha256: 7276a4205e01b2df88459ebd1d3dcd58ddf53677cd21be367e0d9e3667db70f5
+    role: target
+  - path: data/structures/cytoskeleton/central_plaque_of_spindle_pole_body.yaml
+    sha256: b81ebcb1048c0454cde531ad51c3b0df92769b6c7236e07012ce9e3cef369527
+    role: target
+  - path: data/structures/cytoskeleton/cetz_filament.yaml
+    sha256: 63215aac67bf4bbcdb4d43b73b27c0fef9420bca2eedda06d78cceacf63f253e
+    role: target
+  - path: data/structures/cytoskeleton/chlamydospore_septin_filament_array.yaml
+    sha256: 716764f6ed0bcbbb41f86d89e51272e96c0ac83ca56ef41c71dd5ff23f7a3481
+    role: target
+  - path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+    sha256: 46027bf3d3d8b3011803fa72d1229a892d34b7233d48ca290466b9afefb6b7ef
+    role: target
+  - path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+    sha256: 459a2b5ece1620d7d617ef459cca0bd2a1020441201b80e83ecaa09c78299ec6
+    role: target
+  - path: data/structures/cytoskeleton/ciliary_pocket_collar.yaml
+    sha256: df0530c9582d0a40d8e0c646cdaa88cc0872d1e6e034cbdcd068b2a3f426ec3a
+    role: target
+  - path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    sha256: 87d2aa0682028aa4f14a6d76543eaeb475598817b8fa5fb9a29a639e8793d4e4
+    role: target
+  - path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+    sha256: a4ce875de28c94730588bfb1549dd6dc38b28658e3f3d66b8cb6fe66859433b3
+    role: target
+  - path: data/structures/cytoskeleton/cleavage_apparatus_septin_structure.yaml
+    sha256: 07dd82a0f5ad6f6a473e9305c85bf0de6ca336f573878668664e2ee44dbc90e1
+    role: target
+  - path: data/structures/cytoskeleton/conoid.yaml
+    sha256: f45c77a22694ab07d2abdf0954141d0a99579150924d64e605387e067cf0a501
+    role: target
+  - path: data/structures/cytoskeleton/cortical_actin_cytoskeleton.yaml
+    sha256: 0b6b0c6cc04fba22316c5a53839853c4ab42b5f1fab3ef7a75bccbd2467dfc63
+    role: target
+  - path: data/structures/cytoskeleton/cortical_microtubule_cytoskeleton.yaml
+    sha256: bba19acfea1dbe31a868481aaee15bfaa65e87a25ad84fd537f989bd9dff24e9
+    role: target
+  - path: data/structures/cytoskeleton/crescentin_filament.yaml
+    sha256: 0664231e5020673ef694490db53b85f340f6eb1efd85e1c09a3f8190b1626db7
+    role: target
+  - path: data/structures/cytoskeleton/cryptophyte_cortical_centrin_network.yaml
+    sha256: cb0d5b64a7ea83ca03ae0ec91abad982f682314b29d0e89fe0f62cbaa2072819
+    role: target
+  - path: data/structures/cytoskeleton/cytoophidium.yaml
+    sha256: abb4483d61715985721f809fed05b5331b30993ee09b8ce9f1ce275524a6bb78
+    role: target
+  - path: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+    sha256: 23b89e56b6a009464465814315eaa0f663df8429a15f78dc62bcc79711b82005
+    role: target
+  - path: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+    sha256: 4f42862d1735d7b07301c9c183f9ace1e024061c363ab4a5197c150328565db2
+    role: target
+  - path: data/structures/cytoskeleton/cytostomal_cord.yaml
+    sha256: 24269590b15ed4830dc083638b561e5b79f141d7d36b3b6199602a1a4ae633dd
+    role: target
+  - path: data/structures/cytoskeleton/deep_fiber.yaml
+    sha256: 7868013c7bf3ce1c327c9106136b716f305afebe4efe5d49412e69278d26d702
+    role: target
+  - path: data/structures/cytoskeleton/distal_connecting_fiber.yaml
+    sha256: 3fbecc2d7d51c4e4ea53cdbc4d6e49251a300430f23fc0d76d00a3412a2a8d79
+    role: target
+  - path: data/structures/cytoskeleton/eisosome_filament.yaml
+    sha256: 0a59cc075da50578f12a4950252cb8f7133ba55c99703a0843bf3f8651e366c0
+    role: target
+  - path: data/structures/cytoskeleton/endocytic_patch.yaml
+    sha256: 1712d71180fdc41b66ee9e20b120788b2db93b91e2f6638930ff08b2310c12bd
+    role: target
+  - path: data/structures/cytoskeleton/entodiniomorphid_subkinetal_myoneme_system.yaml
+    sha256: d2a4795123a8de62db9e270237cc7e5c1b3f2fb29655f4d3af6f158e6d0ebaeb
+    role: target
+  - path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+    sha256: 26bd7de69933174332da78d7a19cb4b196af4354de44e56efe78a4258f68e59b
+    role: target
+  - path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+    sha256: 1477cd38547a428f9625e08f7bf061c7a3f320b5710cfe736a7d722700221b8f
+    role: target
+  - path: data/structures/cytoskeleton/funis.yaml
+    sha256: f4410ba245ffdd163c6cbff4adf7292cb348b39ff2952c7484091aaeed4aa9be
+    role: target
+  - path: data/structures/cytoskeleton/gamma_tubulin_complex.yaml
+    sha256: 99fd52614b713f1cc678720626553f27f33f5cc4ee0d43b6adfe22108687798d
+    role: target
+  - path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    sha256: d8eb02a102133174291f4bdbcf09e2d2dfacdc46b217bea636a9bf598ff3d626
+    role: target
+  - path: data/structures/cytoskeleton/gamma_tubulin_small_complex.yaml
+    sha256: 231626322f95f06e53ca5d2dcff46f9227d686cd3e73dcfd2e5d99696121f7c3
+    role: target
+  - path: data/structures/cytoskeleton/germ_tube_septin_cap.yaml
+    sha256: 2b38e6f9051b64b36fe4bb52206122b35d060e5146d548622573303fe0378732
+    role: target
+  - path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+    sha256: f1420625e020c7842cf281f96450b246edd350c32060c3d3186130d45ec012a0
+    role: target
+  - path: data/structures/cytoskeleton/gin4_complex.yaml
+    sha256: 92702fe584fd086c30d5fee9fe8aaee5d8ec0e8938606710a09e6c2954428f43
+    role: target
+  - path: data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+    sha256: 774a31a26d3323f1395c6db0de2a0f68cdeaa17d1d68b97900e364455c3b43d4
+    role: target
+  - path: data/structures/cytoskeleton/half_bridge_of_spindle_pole_body.yaml
+    sha256: c9420adeab4b1029037608be6b66ee738a0d5b6b1559fd7aa8742b256ce4f3bb
+    role: target
+  - path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+    sha256: 567b5def97463ac69a319318e8de9b0d02cbbb670f78212dbe1aa4dcdc4c204d
+    role: target
+  - path: data/structures/cytoskeleton/hyphae_septin_collar.yaml
+    sha256: ed5dee404bf6012b8658764b8ef572b1824f6894f7bca94f007dbd9b0120eef7
+    role: target
+  - path: data/structures/cytoskeleton/hyphal_septin_band.yaml
+    sha256: ca28b60ce59664d282f0379709392c10f211dbc1be34fc1bab90840285a429d7
+    role: target
+  - path: data/structures/cytoskeleton/hyphal_septin_cap.yaml
+    sha256: ca2f4c8585ae8b00261d85983033efe1b63fc690a5f316d4b0506200927a9d2f
+    role: target
+  - path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+    sha256: 9b8a399ed470a314cf73b6a4df6c4e14bf8d2cda618eb091f7c02f557c5252cf
+    role: target
+  - path: data/structures/cytoskeleton/icl1e_complex.yaml
+    sha256: 1c27b35fb37f183dd5aa251395e359541721525d3a76f76263664d0d09a379e0
+    role: target
+  - path: data/structures/cytoskeleton/infraciliary_lattice.yaml
+    sha256: efaad61e54060d444fb49818a35c206e070af3d9521b64bc9355330a76b840e1
+    role: target
+  - path: data/structures/cytoskeleton/inner_dynein_arm.yaml
+    sha256: 7510f353313bde16c52bee9dd7320db71b83abc3f07fd485079fefc8c3ff63ab
+    role: target
+  - path: data/structures/cytoskeleton/inner_plaque_of_mitotic_spindle_pole_body.yaml
+    sha256: c7d1f6c1fa0f5928a0d3bc67d245eb0d3e655798fc62e719990248707765aff8
+    role: target
+  - path: data/structures/cytoskeleton/inner_plaque_of_spindle_pole_body.yaml
+    sha256: 663b2ccb7bf2a427807d0156bb33feb5c96ce978649f091ed5a9a2b4723a0dba
+    role: target
+  - path: data/structures/cytoskeleton/intermediate_layer_of_mitotic_spindle_pole_body.yaml
+    sha256: 6babc40661cf4080adb6b1c5e18c42a78c7b1cffddae612a3288fee4926c98e5
+    role: target
+  - path: data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+    sha256: 3c889767d96b20dae86ccb3327892d5d33a5892591133cd4dcea4ad17a4b07c0
+    role: target
+  - path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+    sha256: 5ef265cc6fcc3c2c281479cd4aeacaa5d770d1f3a4a682a37a2d897e1562ba75
+    role: target
+  - path: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+    sha256: b3a359eac1e3973709e48eea87d5b9b7ecdc16ad1372d573b15bcc88ad91ef40
+    role: target
+  - path: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+    sha256: 05bbd0386adfcb20430612c84125efd7f4b7c9c0a224356ac89e9110d28902ac
+    role: target
+  - path: data/structures/cytoskeleton/mamk_filament.yaml
+    sha256: fb273942dd11b99a71c61834f5ca331829a340b6a271e0f73e050c1b0128ca64
+    role: target
+  - path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+    sha256: e0b5696c74beabb751e5334fd04492a057d4b3fceeedf87f7b1c59978e172b1e
+    role: target
+  - path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+    sha256: e68377ea65b5be456416810adb14479747220176a957b97f6d3ce3f5e731354d
+    role: target
+  - path: data/structures/cytoskeleton/mating_projection_septin_ring.yaml
+    sha256: 1829e9907009f5d72966b7b14936288c5bb5d141ea0fb043058a6e1939a078b6
+    role: target
+  - path: data/structures/cytoskeleton/medial_cortex_septin_ring.yaml
+    sha256: 9286b6cd14a1d4ee846f71768e3e2c167d3254af72efc0e9437738dd16caddb6
+    role: target
+  - path: data/structures/cytoskeleton/median_body.yaml
+    sha256: 0db987ccc4976e3045c1d47b7aa74591aeee8e1c92c1b3b991d4498410ab5e42
+    role: target
+  - path: data/structures/cytoskeleton/meiotic_actomyosin_contractile_ring.yaml
+    sha256: 482e30c182b04c65329ec8652cc472449ece53ac9c60657f1ae6bb6ceface019
+    role: target
+  - path: data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml
+    sha256: b88b24ae10c1c8ceb36cb1489992fabe20600bff7e85e71a9fd3048d02e15b00
+    role: target
+  - path: data/structures/cytoskeleton/meiotic_outer_plaque.yaml
+    sha256: 5482b05be175efef27e7e2acd73c2a7fb6cddbd69ebe7c430ed0adc3f858bfe9
+    role: target
+  - path: data/structures/cytoskeleton/meiotic_septin_complex.yaml
+    sha256: 4f10be6c6b32a3c71f43f28570d1eefac729c757657a1a28d29ff41f890aebe9
+    role: target
+  - path: data/structures/cytoskeleton/meiotic_spindle_pole_body.yaml
+    sha256: 2a99651652ccaa1b26dd8149e44976824366dbe2157a708fb1df0560323b8a75
+    role: target
+  - path: data/structures/cytoskeleton/microtubule.yaml
+    sha256: 170483f42c69e1b91f2e11ace0483b30aa3beeba791119a77c644c99da1decc6
+    role: target
+  - path: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+    sha256: d74335a45d6c7037868c200e25a7fe12bc73121536cd32e68be983a3ebf6e9ac
+    role: target
+  - path: data/structures/cytoskeleton/mitotic_septin_complex.yaml
+    sha256: 99bf85740532379d8f9d88a2f07563cf9853a42e00a367fc5453d598ad308d1e
+    role: target
+  - path: data/structures/cytoskeleton/mitotic_spindle.yaml
+    sha256: 85b2e3d0b8037dec88990c0d95901bd9005766e7d01067c5744c46894ec3d1a6
+    role: target
+  - path: data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+    sha256: 6f26eef2c9a8c923eb0c851b4d65b90a696322095208e731be170b6b0c9f0329
+    role: target
+  - path: data/structures/cytoskeleton/mreb_filament.yaml
+    sha256: 1133efe4361d35b4b82ab6ca05241eca7dc6b894064d484a508d172cb397127e
+    role: target
+  - path: data/structures/cytoskeleton/new_mitotic_spindle_pole_body.yaml
+    sha256: 33ac955370a7476c7bb3f3fca4cfc9464120890e6a3e57fcb3b32d5e2504fb82
+    role: target
+  - path: data/structures/cytoskeleton/new_spindle_pole_body_sin_signaling_complex.yaml
+    sha256: 84ade1d5217bae8fa401f096724d0892e76378469bec45c6ea25e961a0e28cae
+    role: target
+  - path: data/structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.yaml
+    sha256: a4458d3e0be617506557e7896258e186266872195a65d308b65390609fd539a7
+    role: target
+  - path: data/structures/cytoskeleton/nuclear_microtubule.yaml
+    sha256: 09096977c74bdb36271d09b2a8aa1ac4c269ff8f3adbc854beae8b348f8aa252
+    role: target
+  - path: data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+    sha256: 89e5e96440535f65493ee4b2928b835f415f79358200f32d877ec59487300f0d
+    role: target
+  - path: data/structures/cytoskeleton/old_mitotic_spindle_pole_body.yaml
+    sha256: 84c9dc88c397f90a6c90dc61031b9f5334baa65580eaecc16cc851cacc54840b
+    role: target
+  - path: data/structures/cytoskeleton/outer_dynein_arm.yaml
+    sha256: 7d4052f8fea3bc0deb66545f7b7d6cc9c90f3dff49508d18ce0abd290182d5e6
+    role: target
+  - path: data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+    sha256: 9197bc8f9b1fed339d56314bb682274576fa41bb94b26e2d09823e14a26ec226
+    role: target
+  - path: data/structures/cytoskeleton/outer_plaque_of_spindle_pole_body.yaml
+    sha256: 2aa7db5e2c632a9934dda8fbc3c57a85d1742c6aa7322e769f6f162103f17142
+    role: target
+  - path: data/structures/cytoskeleton/parm_filament.yaml
+    sha256: d021bb88e2999e696f67403cff71a22b39801ad248f2c1aa86d8e9360a33024b
+    role: target
+  - path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+    sha256: 85563af4f17c846111f087a0c6bd31b6480a9b5fff05df9a3eff79e0b25418f9
+    role: target
+  - path: data/structures/cytoskeleton/phuz_spindle.yaml
+    sha256: 5ca807c30f30ab3cc2e5eacb7035a229d6193dbf304dcc5b44e52b2ef4e4ae93
+    role: target
+  - path: data/structures/cytoskeleton/polar_ring_of_apical_complex.yaml
+    sha256: ec70822af034fd9e33585bf8fa8894a6fd97cf8c2127fb6e29d91d842efd278b
+    role: target
+  - path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    sha256: ac97344d35ac58bc4d21294879b0fc23684fca5f7da6956a4b075108a326a225
+    role: target
+  - path: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+    sha256: 86ff161d77dbd6b182aab5d48cf4fa4376ad69ec739305c9b3c25c8aef103e51
+    role: target
+  - path: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+    sha256: 39df294524bcae01b5a3c70410172ac4d19c6fb936a7bf970fda23a043220bfa
+    role: target
+  - path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+    sha256: 56b764eb06dde6d49e5ad5135ab577218f765b63791ffe0483147d4186498da5
+    role: target
+  - path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+    sha256: 725c892c096cf75b48bb0a26a1aad5d657d9e5e716851f07211b161ba4d04533
+    role: target
+  - path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+    sha256: 6228e65ead4750033cd105250a703ffce6dfba328d05e94de0d26ae06b100bc8
+    role: target
+  - path: data/structures/cytoskeleton/quiescent_nuclear_microtubule_bundle.yaml
+    sha256: 87b29df8262cfbc32a1bae44f4777edb2ba44663fe0bee22733cc95bc78400ea
+    role: target
+  - path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    sha256: a6a2e4d87b3159afe989f1f838da6988395c5c2b0fc1b24bf1cde154f2dbc364
+    role: target
+  - path: data/structures/cytoskeleton/radial_spoke.yaml
+    sha256: 68b0664e9de437d32f85b8b53e3b312ef49cc77c67c1593cfd468a94c3c6c70a
+    role: target
+  - path: data/structures/cytoskeleton/radial_spoke_head.yaml
+    sha256: bec66030c7916b9cf537e93d924b97e92b7590e049547920896e39108b19adaa
+    role: target
+  - path: data/structures/cytoskeleton/radial_spoke_neck.yaml
+    sha256: d7bc78c922e2eba8845feaa53b30928dae3f18cba81d3d79d83ff970f080f327
+    role: target
+  - path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+    sha256: cc046821244f0eec6e2f7c3b416c2368ee19062123f21cb92a6b1e12527aae86
+    role: target
+  - path: data/structures/cytoskeleton/sad1_kms1_linc_complex.yaml
+    sha256: 4bf976f7c39fe18c961e155a1e4304153986b271209d2d35aa520a8406c03c65
+    role: target
+  - path: data/structures/cytoskeleton/septin_band.yaml
+    sha256: 41d269f0b9bd3a3814d8fd2bb5e3e26e933763e1b06c42a30e8b13e20f2865da
+    role: target
+  - path: data/structures/cytoskeleton/septin_cap.yaml
+    sha256: 5dccebc18f9349148bd4ef1e64e29e42648d4df485e0f407c989be0d1b13f8ba
+    role: target
+  - path: data/structures/cytoskeleton/septin_collar.yaml
+    sha256: c16f869099afaf1a608e229fb19f217583156684f4a7311549af622691b556d9
+    role: target
+  - path: data/structures/cytoskeleton/septin_complex.yaml
+    sha256: 4de023faea51c1ea084592fda0f5db6a95ae91f1a8de69de44a208099fcd8373
+    role: target
+  - path: data/structures/cytoskeleton/septin_cytoskeleton.yaml
+    sha256: a4ed43de8b89ae2f50cf586ff1b041a7865a7a717bb13c2f1885a50666627e9e
+    role: target
+  - path: data/structures/cytoskeleton/septin_filament_array.yaml
+    sha256: 8413e81f4ac3c0daf46af8a81bbc0c819380242af370486f07865114e2edc1a0
+    role: target
+  - path: data/structures/cytoskeleton/septin_ring.yaml
+    sha256: a29add3311f4b53bf4b50c2ec527d5ef450cfff625eadd312324d625b8790b93
+    role: target
+  - path: data/structures/cytoskeleton/sin_men_signaling_complex.yaml
+    sha256: 59f188a29d48dab89d1c7a36aee3bd8f67efe3110c7c981bbac7b60df20d8f4b
+    role: target
+  - path: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+    sha256: 922665d09fdb8ddf24c904aefc3ccd0ec99a36f92d4d33f71a42c732036ecbdd
+    role: target
+  - path: data/structures/cytoskeleton/sinister_fiber.yaml
+    sha256: 9227477d7ba7b31e708bd60156ccb5d24f7051d3e0451b9138e6b3380d3664e5
+    role: target
+  - path: data/structures/cytoskeleton/spindle.yaml
+    sha256: da0b1e5a86542a84962f0f7ac3319c458a44941b0094d724488e8095e62d3e0e
+    role: target
+  - path: data/structures/cytoskeleton/spindle_microtubule.yaml
+    sha256: bd8d435d59b948878bdcc978f015029ba6f6cc236b43eab0a5a5fe8b1a350fb9
+    role: target
+  - path: data/structures/cytoskeleton/spindle_midzone.yaml
+    sha256: 7292732ff2a699422cc1b243dd2ad0651a568da206ed79f514aa6c19e2e59661
+    role: target
+  - path: data/structures/cytoskeleton/spindle_pole.yaml
+    sha256: c456f99ee99fc90e9b8fcf99e303abddf46bfa0c9c0f473ec3059ed8a0044204
+    role: target
+  - path: data/structures/cytoskeleton/spindle_pole_body.yaml
+    sha256: 50885e021c246e17e29beb27f7dc98e37ee4d34878648fea4fd8b565bbb2fc78
+    role: target
+  - path: data/structures/cytoskeleton/spindle_pole_body_duplication_plaque.yaml
+    sha256: e321abc96c81de9d3b524b7a68e2cefc4f28aaf72df105b42c96e1c6b8e994c3
+    role: target
+  - path: data/structures/cytoskeleton/spindle_pole_body_satellite.yaml
+    sha256: a6a16f2dc3c09895fb7f4af93e1cad023c01b75dd424b99a1177ce93b516acb3
+    role: target
+  - path: data/structures/cytoskeleton/spirostomum_myoneme_fishnet.yaml
+    sha256: 23c2668330bc68a88153d7ed54feb0a5626a88d4ae53a8da6e250d2dda8d71af
+    role: target
+  - path: data/structures/cytoskeleton/split_septin_rings.yaml
+    sha256: 580abb6f00c144e871e1fded7fbb2dca8584ecf0d47a599f646558642c3027ff
+    role: target
+  - path: data/structures/cytoskeleton/stalk_spasmoneme.yaml
+    sha256: a3de4646f57551323b08c225176359cf3737eff71eaab9da598131d646920bdb
+    role: target
+  - path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+    sha256: 5012c99d4bde9606c2de8efff620ee9e72437cebb4cf6dbded06fe463286f09b
+    role: target
+  - path: data/structures/cytoskeleton/stentor_km_fiber.yaml
+    sha256: 66b91b45477653bcafdf1f875b9820681ea1bdeddf36f9d37f74fabe9408cae6
+    role: target
+  - path: data/structures/cytoskeleton/stentor_myoneme_system.yaml
+    sha256: 8396ff930730d215b773b9b9f40d5b0a4444e3e2c6581cde72dbd47358570941
+    role: target
+  - path: data/structures/cytoskeleton/stentor_perialgal_microtubule_meshwork.yaml
+    sha256: 3a0c8634cf4fca1f7d9253d399b2f6d343d806cd6e3b81e5d92ebf6ff9ab7daf
+    role: target
+  - path: data/structures/cytoskeleton/subpellicular_microtubule.yaml
+    sha256: e4693fab5e378ed1550b5129a42d2cd810e9ba2369b299e28be1bb0f55ee4bdf
+    role: target
+  - path: data/structures/cytoskeleton/tacc_tog_complex.yaml
+    sha256: 7d2c57864f3928f8ab9bbc0d7e702aa142292ae00252b385f40a5a8dbcd7b787
+    role: target
+  - path: data/structures/cytoskeleton/telocentrosome.yaml
+    sha256: 7eb101d943b736d756d5ea90d304e6cc2b6dc59a11224203f2c5e7ea30cabc8b
+    role: target
+  - path: data/structures/cytoskeleton/transition_zone_stellate_fiber_system.yaml
+    sha256: ee5fc36bcda7810c550cfef29146f6b124f79703e6b73832b6f005583884ba36
+    role: target
+  - path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+    sha256: 4b20e1ac242cf6e988ee0ec52eefb537bdd7b1270c1c32c238183baa66c7dd52
+    role: target
+  - path: data/structures/cytoskeleton/tubulin_spool.yaml
+    sha256: 1180c5c0b3a5c67f58a23b99913f7b78202beb8cf3e01c40ca5aac9c56dcf072
+    role: target
+  - path: data/structures/cytoskeleton/tubz_filament.yaml
+    sha256: 0399b1e1569592d6be671444cb03e37d481ca5022d52a476dd3a75f21337355e
+    role: target
+  - path: data/structures/cytoskeleton/ventral_disc.yaml
+    sha256: da4539d720be1cfa7e1e1b5ca12d86f57ededaebc6a869bdd2fc4bf13fb5680b
+    role: target
+  - path: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+    sha256: bb35ddad7c8b15916d19fa6e5ad334ca3476221330372020fdf4adc8565db67b
+    role: target
+  - path: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+    sha256: 6bcdbfaaf84c4b6152147340dcbb6f5958d6dc6aca2288e034c3f2c357819425
+    role: target
+  - path: data/structures/cytoskeleton/ventral_disc_lateral_crest.yaml
+    sha256: 6a8127a748d9dcdb2e429d05d817626c02ffed35eb545eb501c0b101758db32b
+    role: target
+  - path: data/structures/cytoskeleton/ventral_disc_microtubule_array.yaml
+    sha256: 184540d5a0f41b8f04fa8e4cac937dc657481eaa999e5420ec315476801a07e3
+    role: target
+  - path: data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+    sha256: 983f27caa2fde019c9ab576e64c54bd354b6528a65e0f9ef9cdfbb87abb365ce
+    role: target
+  - path: data/structures/cytoskeleton/ventral_disc_supernumerary_microtubule_array.yaml
+    sha256: 54772643689f75f239cddf783180ab3eb0443695ea60080d966cbeb2fb0efe1f
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Full-cohort review of all 179 CellStructureRecord YAML files under
+    data/structures/cytoskeleton/.
+  selection: Complete folder cohort data/structures/cytoskeleton/*.yaml in the frozen
+    1,008-record Cycle 5 Stage 4 inventory.
+  coverage: full
+  population_size: 179
+  reviewed_target_ids:
+  - GO:0097649
+  - GO:0099079
+  - GO:0030479
+  - GO:0005826
+  - GO:0110131
+  - cellstructuremech:alfa_filament
+  - GO:0005885
+  - GO:0005818
+  - GO:0000235
+  - GO:0160111
+  - GO:0160112
+  - GO:1990716
+  - GO:1990717
+  - GO:0097540
+  - GO:1990718
+  - GO:0097545
+  - GO:0005858
+  - GO:0005879
+  - GO:0160113
+  - GO:0160110
+  - GO:0160114
+  - GO:0160115
+  - GO:0005931
+  - GO:0005930
+  - GO:0097650
+  - cellstructuremech:bactofilin_filament
+  - cellstructuremech:basal_body_a_b_inner_junction
+  - cellstructuremech:basal_body_a_c_linker
+  - cellstructuremech:basal_body_a_tusk
+  - cellstructuremech:basal_body_b_c_inner_junction
+  - cellstructuremech:basal_body_c_tubule_hook
+  - cellstructuremech:basal_body_c_tubule_luminal_filament
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - cellstructuremech:basal_body_d2_rod
+  - cellstructuremech:basal_body_filamentous_cartwheel_inner_density
+  - cellstructuremech:basal_body_inner_scaffold
+  - cellstructuremech:basal_body_pinhead
+  - cellstructuremech:basal_body_triplet_base
+  - GO:0020032
+  - GO:0120120
+  - cellstructuremech:btubab_bacterial_microtubule
+  - GO:1990719
+  - GO:1990720
+  - GO:0000142
+  - GO:0032174
+  - GO:0000144
+  - GO:0032177
+  - GO:0061493
+  - GO:0005823
+  - cellstructuremech:cetz_filament
+  - GO:0032166
+  - GO:0036064
+  - GO:0120269
+  - GO:1990900
+  - GO:0120280
+  - GO:0035253
+  - GO:0032161
+  - GO:0020010
+  - GO:0030864
+  - GO:0030981
+  - cellstructuremech:crescentin_filament
+  - cellstructuremech:cryptophyte_cortical_centrin_network
+  - GO:0097268
+  - GO:0005881
+  - GO:1905720
+  - cellstructuremech:cytostomal_cord
+  - GO:0032123
+  - cellstructuremech:distal_connecting_fiber
+  - GO:0036286
+  - GO:0061645
+  - cellstructuremech:entodiniomorphid_subkinetal_myoneme_system
+  - GO:0000923
+  - GO:0120119
+  - cellstructuremech:funis
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0032171
+  - GO:0032172
+  - GO:1990317
+  - GO:0061496
+  - GO:0005825
+  - GO:0032117
+  - GO:0062140
+  - GO:0032163
+  - GO:0032164
+  - GO:0032168
+  - cellstructuremech:icl1e_complex
+  - cellstructuremech:infraciliary_lattice
+  - GO:0036156
+  - GO:0061497
+  - GO:0005822
+  - GO:0061498
+  - GO:0005821
+  - GO:0031021
+  - GO:0160066
+  - GO:0033289
+  - cellstructuremech:mamk_filament
+  - GO:1990819
+  - GO:0032162
+  - GO:0032175
+  - GO:0036391
+  - GO:0097568
+  - GO:0110086
+  - GO:0034993
+  - cellstructuremech:meiotic_outer_plaque
+  - GO:0032152
+  - GO:0035974
+  - GO:0005874
+  - GO:0110085
+  - GO:0032151
+  - GO:0072686
+  - GO:0044732
+  - cellstructuremech:mreb_filament
+  - GO:0071958
+  - GO:0160067
+  - GO:0106094
+  - GO:0005880
+  - cellstructuremech:nucleus_basal_body_connector
+  - GO:0071957
+  - GO:0036157
+  - GO:0061499
+  - GO:0005824
+  - cellstructuremech:parm_filament
+  - cellstructuremech:peritrich_body_myoneme_system
+  - cellstructuremech:phuz_spindle
+  - GO:0020031
+  - GO:1990295
+  - GO:0032157
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - cellstructuremech:quiescent_nuclear_microtubule_bundle
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001534
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:1990612
+  - GO:0032158
+  - GO:0032159
+  - GO:0032173
+  - GO:0031105
+  - GO:0032156
+  - GO:0032160
+  - GO:0005940
+  - GO:0160065
+  - GO:1990334
+  - cellstructuremech:sinister_fiber
+  - GO:0005819
+  - GO:0005876
+  - GO:0051233
+  - GO:0000922
+  - GO:0005816
+  - cellstructuremech:spindle_pole_body_duplication_plaque
+  - cellstructuremech:spindle_pole_body_satellite
+  - cellstructuremech:spirostomum_myoneme_fishnet
+  - GO:0032176
+  - cellstructuremech:stalk_spasmoneme
+  - GO:0099070
+  - cellstructuremech:stentor_km_fiber
+  - cellstructuremech:stentor_myoneme_system
+  - cellstructuremech:stentor_perialgal_microtubule_meshwork
+  - GO:0020025
+  - GO:0070850
+  - cellstructuremech:telocentrosome
+  - cellstructuremech:transition_zone_stellate_fiber_system
+  - GO:0120121
+  - cellstructuremech:tubulin_spool
+  - cellstructuremech:tubz_filament
+  - GO:0097597
+  - GO:0097595
+  - GO:0097594
+  - GO:0097591
+  - GO:0097593
+  - GO:0097592
+  - GO:0097596
+targets:
+- target_id: GO:0097649
+  path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+  label: A axonemal microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ce35e4855b506178485b229b515c89a717ddee0a5a9d26fff88ba991fac5b06b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/a_axonemal_microtubule.yaml
+    role: maintained_record
+- target_id: GO:0099079
+  path: data/structures/cytoskeleton/actin_body.yaml
+  label: actin body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b0abd6f5cb40fec99ab2d5a23a56b7307041f4ac8eda2a32b9db8d57680f22ea
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/actin_body.yaml
+    role: maintained_record
+- target_id: GO:0030479
+  path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+  label: actin cortical patch
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 595b2fa8e39b9993b34bde4f2102dadcb72ae99e6a18a28160f82537a7ea46cd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/actin_cortical_patch.yaml
+    role: maintained_record
+- target_id: GO:0005826
+  path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+  label: actomyosin contractile ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8876e95f0d7f8046d816cde2038818cced5d3b5996858dfb564d41b4ecac47ff
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/actomyosin_contractile_ring.yaml
+    role: maintained_record
+- target_id: GO:0110131
+  path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+  label: Aim21-Tda2 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0ac6977eb76db7660a6379547b0abf29a9794cd1178d7a7b5dbd9805dd4a7ace
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aim21_tda2_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:alfa_filament
+  path: data/structures/cytoskeleton/alfa_filament.yaml
+  label: AlfA filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9869708619647267114ce2cb97912536765e482595c4026025d6307f849e02ba
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/alfa_filament.yaml
+    role: maintained_record
+- target_id: GO:0005885
+  path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+  label: Arp2/3 protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 05b7cc75eaf5f65fb7a4839055dcd086303a6c26cf1fb781ad41baf541bd8ecc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:0005818
+  path: data/structures/cytoskeleton/aster.yaml
+  label: aster
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ead65813443a3277dee3611ec40e32b7bc4c3882d8c31508eb352f6fffdfd6df
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aster.yaml
+    role: maintained_record
+- target_id: GO:0000235
+  path: data/structures/cytoskeleton/astral_microtubule.yaml
+  label: astral microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 45c1ec56a960d58bde433d88317824b726ff48473bc9b0b1d4429c6e2f57041d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/astral_microtubule.yaml
+    role: maintained_record
+- target_id: GO:0160111
+  path: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+  label: axonemal A tubule inner sheath
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 23bcdab335f1f6b6f39da802471c2336ab47ed2083b4986133b9558f42d4f7c0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+    role: maintained_record
+- target_id: GO:0160112
+  path: data/structures/cytoskeleton/axonemal_b_tubule_inner_sheath.yaml
+  label: axonemal B tubule inner sheath
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d1b0e481219c8b248e22e069aaa333074857a9ef8cae74d159e9a9e1f33a733e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_b_tubule_inner_sheath.yaml
+    role: maintained_record
+- target_id: GO:1990716
+  path: data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+  label: axonemal central apparatus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 74e419f358ba3717a764cd93cb5c0e4e892c7015094ed6457518994526ee1899
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_apparatus.yaml
+    role: maintained_record
+- target_id: GO:1990717
+  path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+  label: axonemal central bridge
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 488bf49e662fd058a77ae30e822399a25c8079ea423dc663a8523f364de07e71
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_bridge.yaml
+    role: maintained_record
+- target_id: GO:0097540
+  path: data/structures/cytoskeleton/axonemal_central_pair.yaml
+  label: axonemal central pair
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5e6d9301edf395d718469728f33d6fd7aad90d01bea8bf84b31ba6a742e7cf75
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_pair.yaml
+    role: maintained_record
+- target_id: GO:1990718
+  path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+  label: axonemal central pair projection
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6a360531856b39ca7b2c28005379440636a32e6e0ca0ce7259870729a9036d60
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_central_pair_projection.yaml
+    role: maintained_record
+- target_id: GO:0097545
+  path: data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml
+  label: axonemal doublet microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d365f00f2cdb6708fc172742dc030e2b6eb945d4092d525d8a96f84177d0c783
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_doublet_microtubule.yaml
+    role: maintained_record
+- target_id: GO:0005858
+  path: data/structures/cytoskeleton/axonemal_dynein_complex.yaml
+  label: axonemal dynein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9158b3b827892de2d3f14320353af5fbd6ef8ef3cfae114687b9e6725f7ce44e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_dynein_complex.yaml
+    role: maintained_record
+- target_id: GO:0005879
+  path: data/structures/cytoskeleton/axonemal_microtubule.yaml
+  label: axonemal microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 480cd29d1f2e87c07c19dd8d60e50768cdcce29223b28ce2df1d4c956dc46282
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_microtubule.yaml
+    role: maintained_record
+- target_id: GO:0160113
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_junction.yaml
+  label: axonemal microtubule doublet inner junction
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b2b8871710df39db8cea586df9f0ad41f852297f6061e0efb6a6e33bd39b5adf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_junction.yaml
+    role: maintained_record
+- target_id: GO:0160110
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml
+  label: axonemal microtubule doublet inner sheath
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9e9be5e7f27009254e123e548fe1c5bbfd4bbacb87f856eec8f868fb605c0f9e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml
+    role: maintained_record
+- target_id: GO:0160114
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+  label: axonemal microtubule doublet outer junction
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 226a02455cd0afbaedc49a3c74a986e5f6bab41d60e1240d98249ee656e5ac10
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_microtubule_doublet_outer_junction.yaml
+    role: maintained_record
+- target_id: GO:0160115
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_ribbon.yaml
+  label: axonemal microtubule doublet ribbon
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8ea3c6d990a9c78f1382b295ca98d9df4ce7596d09c7d467b222f53d40ae7eb2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_microtubule_doublet_ribbon.yaml
+    role: maintained_record
+- target_id: GO:0005931
+  path: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+  label: axonemal nexin link
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d55ca69b76b3b435e76e88185ee89256f4133ce7a0da1e819c5f3a18e5264188
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_nexin_link.yaml
+    role: maintained_record
+- target_id: GO:0005930
+  path: data/structures/cytoskeleton/axoneme.yaml
+  label: axoneme
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0b91b4cd41d1a34bdc3883d988f31009effc74347b881cdc5c9b66014704e223
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axoneme.yaml
+    role: maintained_record
+- target_id: GO:0097650
+  path: data/structures/cytoskeleton/b_axonemal_microtubule.yaml
+  label: B axonemal microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 14dc7bee2d7f4dbaf766868cb49cb2e0145765a5de184a80452664871a7db50f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/b_axonemal_microtubule.yaml
+    role: maintained_record
+- target_id: cellstructuremech:bactofilin_filament
+  path: data/structures/cytoskeleton/bactofilin_filament.yaml
+  label: bactofilin filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 622cf3533ca2672077d567c9fc018232e73a2638b40d4ed56ad6db296c535cfd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/bactofilin_filament.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_a_b_inner_junction
+  path: data/structures/cytoskeleton/basal_body_a_b_inner_junction.yaml
+  label: basal body A-B inner junction
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6ca65191f50d079b7e7b0d807e6df7e2b1651eed1671d8a55029b7241bc80be4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_a_b_inner_junction.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_a_c_linker
+  path: data/structures/cytoskeleton/basal_body_a_c_linker.yaml
+  label: basal body A-C linker
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 62cdcb9bc61eed86542e3c0d82cc2a314be23b66f06dda93001fb27149c8723b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_a_c_linker.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_a_tusk
+  path: data/structures/cytoskeleton/basal_body_a_tusk.yaml
+  label: basal body A-tusk
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f82923b0febf504980e0c7e006d03d72c9cfdd2b38e225b6ad82adaac4d754c1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_a_tusk.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_b_c_inner_junction
+  path: data/structures/cytoskeleton/basal_body_b_c_inner_junction.yaml
+  label: basal body B-C inner junction
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9c4967f2edcd2ccc044157dd3bc03ed3f066d5bcd7205e2f5cc30da20e858ea1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_b_c_inner_junction.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_c_tubule_hook
+  path: data/structures/cytoskeleton/basal_body_c_tubule_hook.yaml
+  label: basal body C-tubule hook
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 492ed1f70c96fec1ccf2f5eb0efbb7ed4950b46f69031242a1869c9c820ee383
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_c_tubule_hook.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_c_tubule_luminal_filament
+  path: data/structures/cytoskeleton/basal_body_c_tubule_luminal_filament.yaml
+  label: basal body C-tubule luminal filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a7abec342419ed1f405caf67d4fbaf85d1ce7587db5391a73bfeb136509aa1b1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_c_tubule_luminal_filament.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_cartwheel
+  path: data/structures/cytoskeleton/basal_body_cartwheel.yaml
+  label: basal body cartwheel
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bdd863ed130a8a2b226fe920cc7f6c6327a2cc1ea90602bf051d952f27e56e17
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_cartwheel.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_cartwheel_inner_density
+  path: data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml
+  label: basal body cartwheel inner density
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 84b8a7319dbcbf9ec053bcdb2b1e88c920c0ad31e69524ed6a3e13ae1f3b342b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_cartwheel_inner_density.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_d2_rod
+  path: data/structures/cytoskeleton/basal_body_d2_rod.yaml
+  label: basal body D2-rod
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: acd457cb1d0121248e5d11bdebc1d70a815a42f240f31e02eaa556bc54e7bc27
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_d2_rod.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_filamentous_cartwheel_inner_density
+  path: data/structures/cytoskeleton/basal_body_filamentous_cartwheel_inner_density.yaml
+  label: basal body filamentous cartwheel inner density
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5fc268e1a3493fde87ab6856fae60c61025633bdbc9c7d29c08c794c5678d8df
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_filamentous_cartwheel_inner_density.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_inner_scaffold
+  path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+  label: basal body inner scaffold
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 40a6d03ee9aefd5eab50c48f90976e90aedb1e9be33ac13aceccbcc6b5fb6c0e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_inner_scaffold.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_pinhead
+  path: data/structures/cytoskeleton/basal_body_pinhead.yaml
+  label: basal body pinhead
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ef3da1eee8d7e92150c0bf3ab1c6e2c67a410aa366416ab03454e3929e25bff2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_pinhead.yaml
+    role: maintained_record
+- target_id: cellstructuremech:basal_body_triplet_base
+  path: data/structures/cytoskeleton/basal_body_triplet_base.yaml
+  label: basal body triplet base
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c88a6c10f311bce934e37d5583f122fee6cae6f45950117728cb6d1a7905e6f8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_body_triplet_base.yaml
+    role: maintained_record
+- target_id: GO:0020032
+  path: data/structures/cytoskeleton/basal_ring_of_apical_complex.yaml
+  label: basal ring of apical complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 72cfdcad53fe8d4a31deb6bfcab9454b8ef840b5ea6aebefb35256140e4fc649
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/basal_ring_of_apical_complex.yaml
+    role: maintained_record
+- target_id: GO:0120120
+  path: data/structures/cytoskeleton/bilobe_structure.yaml
+  label: bilobe structure
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e9773e92e7c1414e2124d38c525927487c6fe03a7efd44440f00e19755de8a63
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/bilobe_structure.yaml
+    role: maintained_record
+- target_id: cellstructuremech:btubab_bacterial_microtubule
+  path: data/structures/cytoskeleton/btubab_bacterial_microtubule.yaml
+  label: BtubAB bacterial microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cfd4cb0c8ba5958bda186e8eb4bc395c85461a3337bfd947b622c7d4e04ef4bf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/btubab_bacterial_microtubule.yaml
+    role: maintained_record
+- target_id: GO:1990719
+  path: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+  label: C1 axonemal microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2f4f420d4958d3133a60a7b072e517361d7c2c4908acb4e307bd2033095f18f4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+    role: maintained_record
+- target_id: GO:1990720
+  path: data/structures/cytoskeleton/c2_axonemal_microtubule.yaml
+  label: C2 axonemal microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 97c8666ddef318d146a2d902a225f8b0313468bcf54fa32d81d5f1d127798a44
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/c2_axonemal_microtubule.yaml
+    role: maintained_record
+- target_id: GO:0000142
+  path: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+  label: cellular bud neck contractile ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 98f13751880cb87993310078d3409a400df4ccbaad0f9499f9b76a2be4538280
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+    role: maintained_record
+- target_id: GO:0032174
+  path: data/structures/cytoskeleton/cellular_bud_neck_septin_collar.yaml
+  label: cellular bud neck septin collar
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2901b13c5e8db9e171b7c1f93caf816991d0e58ba9456339c5db7f7f3716ae0e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cellular_bud_neck_septin_collar.yaml
+    role: maintained_record
+- target_id: GO:0000144
+  path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+  label: cellular bud neck septin ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6ef4f3536140aa328f20854cf2ef1db86b5508676f475e9a3282f932819546d1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cellular_bud_neck_septin_ring.yaml
+    role: maintained_record
+- target_id: GO:0032177
+  path: data/structures/cytoskeleton/cellular_bud_neck_split_septin_rings.yaml
+  label: cellular bud neck split septin rings
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c76ed8c617acf9966daa42ca587f49cc352795bc3e2b9fe702359075c49a9cff
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cellular_bud_neck_split_septin_rings.yaml
+    role: maintained_record
+- target_id: GO:0061493
+  path: data/structures/cytoskeleton/central_plaque_of_mitotic_spindle_pole_body.yaml
+  label: central plaque of mitotic spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7276a4205e01b2df88459ebd1d3dcd58ddf53677cd21be367e0d9e3667db70f5
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/central_plaque_of_mitotic_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0005823
+  path: data/structures/cytoskeleton/central_plaque_of_spindle_pole_body.yaml
+  label: central plaque of spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b81ebcb1048c0454cde531ad51c3b0df92769b6c7236e07012ce9e3cef369527
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/central_plaque_of_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: cellstructuremech:cetz_filament
+  path: data/structures/cytoskeleton/cetz_filament.yaml
+  label: CetZ filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 63215aac67bf4bbcdb4d43b73b27c0fef9420bca2eedda06d78cceacf63f253e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cetz_filament.yaml
+    role: maintained_record
+- target_id: GO:0032166
+  path: data/structures/cytoskeleton/chlamydospore_septin_filament_array.yaml
+  label: chlamydospore septin filament array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 716764f6ed0bcbbb41f86d89e51272e96c0ac83ca56ef41c71dd5ff23f7a3481
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/chlamydospore_septin_filament_array.yaml
+    role: maintained_record
+- target_id: GO:0036064
+  path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+  label: ciliary basal body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 46027bf3d3d8b3011803fa72d1229a892d34b7233d48ca290466b9afefb6b7ef
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_basal_body.yaml
+    role: maintained_record
+- target_id: GO:0120269
+  path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+  label: ciliary centrin arm
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 459a2b5ece1620d7d617ef459cca0bd2a1020441201b80e83ecaa09c78299ec6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_centrin_arm.yaml
+    role: maintained_record
+- target_id: GO:1990900
+  path: data/structures/cytoskeleton/ciliary_pocket_collar.yaml
+  label: ciliary pocket collar
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: df0530c9582d0a40d8e0c646cdaa88cc0872d1e6e034cbdcd068b2a3f426ec3a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_pocket_collar.yaml
+    role: maintained_record
+- target_id: GO:0120280
+  path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+  label: ciliary pro-basal body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 87d2aa0682028aa4f14a6d76543eaeb475598817b8fa5fb9a29a639e8793d4e4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_pro_basal_body.yaml
+    role: maintained_record
+- target_id: GO:0035253
+  path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+  label: ciliary rootlet
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a4ce875de28c94730588bfb1549dd6dc38b28658e3f3d66b8cb6fe66859433b3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ciliary_rootlet.yaml
+    role: maintained_record
+- target_id: GO:0032161
+  path: data/structures/cytoskeleton/cleavage_apparatus_septin_structure.yaml
+  label: cleavage apparatus septin structure
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 07dd82a0f5ad6f6a473e9305c85bf0de6ca336f573878668664e2ee44dbc90e1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cleavage_apparatus_septin_structure.yaml
+    role: maintained_record
+- target_id: GO:0020010
+  path: data/structures/cytoskeleton/conoid.yaml
+  label: conoid
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f45c77a22694ab07d2abdf0954141d0a99579150924d64e605387e067cf0a501
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/conoid.yaml
+    role: maintained_record
+- target_id: GO:0030864
+  path: data/structures/cytoskeleton/cortical_actin_cytoskeleton.yaml
+  label: cortical actin cytoskeleton
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0b6b0c6cc04fba22316c5a53839853c4ab42b5f1fab3ef7a75bccbd2467dfc63
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cortical_actin_cytoskeleton.yaml
+    role: maintained_record
+- target_id: GO:0030981
+  path: data/structures/cytoskeleton/cortical_microtubule_cytoskeleton.yaml
+  label: cortical microtubule cytoskeleton
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bba19acfea1dbe31a868481aaee15bfaa65e87a25ad84fd537f989bd9dff24e9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cortical_microtubule_cytoskeleton.yaml
+    role: maintained_record
+- target_id: cellstructuremech:crescentin_filament
+  path: data/structures/cytoskeleton/crescentin_filament.yaml
+  label: crescentin filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0664231e5020673ef694490db53b85f340f6eb1efd85e1c09a3f8190b1626db7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/crescentin_filament.yaml
+    role: maintained_record
+- target_id: cellstructuremech:cryptophyte_cortical_centrin_network
+  path: data/structures/cytoskeleton/cryptophyte_cortical_centrin_network.yaml
+  label: cryptophyte cortical centrin network
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cb0d5b64a7ea83ca03ae0ec91abad982f682314b29d0e89fe0f62cbaa2072819
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cryptophyte_cortical_centrin_network.yaml
+    role: maintained_record
+- target_id: GO:0097268
+  path: data/structures/cytoskeleton/cytoophidium.yaml
+  label: cytoophidium
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: abb4483d61715985721f809fed05b5331b30993ee09b8ce9f1ce275524a6bb78
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cytoophidium.yaml
+    role: maintained_record
+- target_id: GO:0005881
+  path: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+  label: cytoplasmic microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 23b89e56b6a009464465814315eaa0f663df8429a15f78dc62bcc79711b82005
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cytoplasmic_microtubule.yaml
+    role: maintained_record
+- target_id: GO:1905720
+  path: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+  label: cytoplasmic microtubule bundle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4f42862d1735d7b07301c9c183f9ace1e024061c363ab4a5197c150328565db2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:cytostomal_cord
+  path: data/structures/cytoskeleton/cytostomal_cord.yaml
+  label: cytostomal cord
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 24269590b15ed4830dc083638b561e5b79f141d7d36b3b6199602a1a4ae633dd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cytostomal_cord.yaml
+    role: maintained_record
+- target_id: GO:0032123
+  path: data/structures/cytoskeleton/deep_fiber.yaml
+  label: deep fiber
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7868013c7bf3ce1c327c9106136b716f305afebe4efe5d49412e69278d26d702
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/deep_fiber.yaml
+    role: maintained_record
+- target_id: cellstructuremech:distal_connecting_fiber
+  path: data/structures/cytoskeleton/distal_connecting_fiber.yaml
+  label: distal connecting fiber
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3fbecc2d7d51c4e4ea53cdbc4d6e49251a300430f23fc0d76d00a3412a2a8d79
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/distal_connecting_fiber.yaml
+    role: maintained_record
+- target_id: GO:0036286
+  path: data/structures/cytoskeleton/eisosome_filament.yaml
+  label: eisosome filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0a59cc075da50578f12a4950252cb8f7133ba55c99703a0843bf3f8651e366c0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/eisosome_filament.yaml
+    role: maintained_record
+- target_id: GO:0061645
+  path: data/structures/cytoskeleton/endocytic_patch.yaml
+  label: endocytic patch
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1712d71180fdc41b66ee9e20b120788b2db93b91e2f6638930ff08b2310c12bd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/endocytic_patch.yaml
+    role: maintained_record
+- target_id: cellstructuremech:entodiniomorphid_subkinetal_myoneme_system
+  path: data/structures/cytoskeleton/entodiniomorphid_subkinetal_myoneme_system.yaml
+  label: Entodiniomorphid subkinetal myoneme system
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d2a4795123a8de62db9e270237cc7e5c1b3f2fb29655f4d3af6f158e6d0ebaeb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/entodiniomorphid_subkinetal_myoneme_system.yaml
+    role: maintained_record
+- target_id: GO:0000923
+  path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+  label: equatorial microtubule organizing center
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 26bd7de69933174332da78d7a19cb4b196af4354de44e56efe78a4258f68e59b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/equatorial_microtubule_organizing_center.yaml
+    role: maintained_record
+- target_id: GO:0120119
+  path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+  label: flagellum attachment zone
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1477cd38547a428f9625e08f7bf061c7a3f320b5710cfe736a7d722700221b8f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/flagellum_attachment_zone.yaml
+    role: maintained_record
+- target_id: cellstructuremech:funis
+  path: data/structures/cytoskeleton/funis.yaml
+  label: funis
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f4410ba245ffdd163c6cbff4adf7292cb348b39ff2952c7484091aaeed4aa9be
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/funis.yaml
+    role: maintained_record
+- target_id: GO:0000930
+  path: data/structures/cytoskeleton/gamma_tubulin_complex.yaml
+  label: gamma-tubulin complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 99fd52614b713f1cc678720626553f27f33f5cc4ee0d43b6adfe22108687798d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_complex.yaml
+    role: maintained_record
+- target_id: GO:0000931
+  path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+  label: gamma-tubulin ring complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d8eb02a102133174291f4bdbcf09e2d2dfacdc46b217bea636a9bf598ff3d626
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    role: maintained_record
+- target_id: GO:0008275
+  path: data/structures/cytoskeleton/gamma_tubulin_small_complex.yaml
+  label: gamma-tubulin small complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 231626322f95f06e53ca5d2dcff46f9227d686cd3e73dcfd2e5d99696121f7c3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_small_complex.yaml
+    role: maintained_record
+- target_id: GO:0032171
+  path: data/structures/cytoskeleton/germ_tube_septin_cap.yaml
+  label: germ tube septin cap
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2b38e6f9051b64b36fe4bb52206122b35d060e5146d548622573303fe0378732
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/germ_tube_septin_cap.yaml
+    role: maintained_record
+- target_id: GO:0032172
+  path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+  label: germ tube septin ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f1420625e020c7842cf281f96450b246edd350c32060c3d3186130d45ec012a0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/germ_tube_septin_ring.yaml
+    role: maintained_record
+- target_id: GO:1990317
+  path: data/structures/cytoskeleton/gin4_complex.yaml
+  label: Gin4 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 92702fe584fd086c30d5fee9fe8aaee5d8ec0e8938606710a09e6c2954428f43
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gin4_complex.yaml
+    role: maintained_record
+- target_id: GO:0061496
+  path: data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+  label: half bridge of mitotic spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 774a31a26d3323f1395c6db0de2a0f68cdeaa17d1d68b97900e364455c3b43d4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/half_bridge_of_mitotic_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0005825
+  path: data/structures/cytoskeleton/half_bridge_of_spindle_pole_body.yaml
+  label: half bridge of spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c9420adeab4b1029037608be6b66ee738a0d5b6b1559fd7aa8742b256ce4f3bb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/half_bridge_of_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0032117
+  path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+  label: horsetail-astral microtubule array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 567b5def97463ac69a319318e8de9b0d02cbbb670f78212dbe1aa4dcdc4c204d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+    role: maintained_record
+- target_id: GO:0062140
+  path: data/structures/cytoskeleton/hyphae_septin_collar.yaml
+  label: hyphae septin collar
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ed5dee404bf6012b8658764b8ef572b1824f6894f7bca94f007dbd9b0120eef7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/hyphae_septin_collar.yaml
+    role: maintained_record
+- target_id: GO:0032163
+  path: data/structures/cytoskeleton/hyphal_septin_band.yaml
+  label: hyphal septin band
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ca28b60ce59664d282f0379709392c10f211dbc1be34fc1bab90840285a429d7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/hyphal_septin_band.yaml
+    role: maintained_record
+- target_id: GO:0032164
+  path: data/structures/cytoskeleton/hyphal_septin_cap.yaml
+  label: hyphal septin cap
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ca2f4c8585ae8b00261d85983033efe1b63fc690a5f316d4b0506200927a9d2f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/hyphal_septin_cap.yaml
+    role: maintained_record
+- target_id: GO:0032168
+  path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+  label: hyphal septin ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9b8a399ed470a314cf73b6a4df6c4e14bf8d2cda618eb091f7c02f557c5252cf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+    role: maintained_record
+- target_id: cellstructuremech:icl1e_complex
+  path: data/structures/cytoskeleton/icl1e_complex.yaml
+  label: ICL1e complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1c27b35fb37f183dd5aa251395e359541721525d3a76f76263664d0d09a379e0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/icl1e_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:infraciliary_lattice
+  path: data/structures/cytoskeleton/infraciliary_lattice.yaml
+  label: infraciliary lattice
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: efaad61e54060d444fb49818a35c206e070af3d9521b64bc9355330a76b840e1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/infraciliary_lattice.yaml
+    role: maintained_record
+- target_id: GO:0036156
+  path: data/structures/cytoskeleton/inner_dynein_arm.yaml
+  label: inner dynein arm
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7510f353313bde16c52bee9dd7320db71b83abc3f07fd485079fefc8c3ff63ab
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/inner_dynein_arm.yaml
+    role: maintained_record
+- target_id: GO:0061497
+  path: data/structures/cytoskeleton/inner_plaque_of_mitotic_spindle_pole_body.yaml
+  label: inner plaque of mitotic spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c7d1f6c1fa0f5928a0d3bc67d245eb0d3e655798fc62e719990248707765aff8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/inner_plaque_of_mitotic_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0005822
+  path: data/structures/cytoskeleton/inner_plaque_of_spindle_pole_body.yaml
+  label: inner plaque of spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 663b2ccb7bf2a427807d0156bb33feb5c96ce978649f091ed5a9a2b4723a0dba
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/inner_plaque_of_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0061498
+  path: data/structures/cytoskeleton/intermediate_layer_of_mitotic_spindle_pole_body.yaml
+  label: intermediate layer of mitotic spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6babc40661cf4080adb6b1c5e18c42a78c7b1cffddae612a3288fee4926c98e5
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/intermediate_layer_of_mitotic_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0005821
+  path: data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+  label: intermediate layer of spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3c889767d96b20dae86ccb3327892d5d33a5892591133cd4dcea4ad17a4b07c0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/intermediate_layer_of_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0031021
+  path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+  label: interphase microtubule organizing center
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5ef265cc6fcc3c2c281479cd4aeacaa5d770d1f3a4a682a37a2d897e1562ba75
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/interphase_microtubule_organizing_center.yaml
+    role: maintained_record
+- target_id: GO:0160066
+  path: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+  label: interphase SIN signaling complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b3a359eac1e3973709e48eea87d5b9b7ecdc16ad1372d573b15bcc88ad91ef40
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/interphase_sin_signaling_complex.yaml
+    role: maintained_record
+- target_id: GO:0033289
+  path: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+  label: intraconoid microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 05bbd0386adfcb20430612c84125efd7f4b7c9c0a224356ac89e9110d28902ac
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/intraconoid_microtubule.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mamk_filament
+  path: data/structures/cytoskeleton/mamk_filament.yaml
+  label: MamK filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fb273942dd11b99a71c61834f5ca331829a340b6a271e0f73e050c1b0128ca64
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mamk_filament.yaml
+    role: maintained_record
+- target_id: GO:1990819
+  path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+  label: mating projection actin fusion focus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e0b5696c74beabb751e5334fd04492a057d4b3fceeedf87f7b1c59978e172b1e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+    role: maintained_record
+- target_id: GO:0032162
+  path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+  label: mating projection septin band
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e68377ea65b5be456416810adb14479747220176a957b97f6d3ce3f5e731354d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mating_projection_septin_band.yaml
+    role: maintained_record
+- target_id: GO:0032175
+  path: data/structures/cytoskeleton/mating_projection_septin_ring.yaml
+  label: mating projection septin ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1829e9907009f5d72966b7b14936288c5bb5d141ea0fb043058a6e1939a078b6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mating_projection_septin_ring.yaml
+    role: maintained_record
+- target_id: GO:0036391
+  path: data/structures/cytoskeleton/medial_cortex_septin_ring.yaml
+  label: medial cortex septin ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9286b6cd14a1d4ee846f71768e3e2c167d3254af72efc0e9437738dd16caddb6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/medial_cortex_septin_ring.yaml
+    role: maintained_record
+- target_id: GO:0097568
+  path: data/structures/cytoskeleton/median_body.yaml
+  label: median body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0db987ccc4976e3045c1d47b7aa74591aeee8e1c92c1b3b991d4498410ab5e42
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/median_body.yaml
+    role: maintained_record
+- target_id: GO:0110086
+  path: data/structures/cytoskeleton/meiotic_actomyosin_contractile_ring.yaml
+  label: meiotic actomyosin contractile ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 482e30c182b04c65329ec8652cc472449ece53ac9c60657f1ae6bb6ceface019
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/meiotic_actomyosin_contractile_ring.yaml
+    role: maintained_record
+- target_id: GO:0034993
+  path: data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml
+  label: meiotic nuclear membrane microtubule tethering complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b88b24ae10c1c8ceb36cb1489992fabe20600bff7e85e71a9fd3048d02e15b00
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:meiotic_outer_plaque
+  path: data/structures/cytoskeleton/meiotic_outer_plaque.yaml
+  label: meiotic outer plaque
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5482b05be175efef27e7e2acd73c2a7fb6cddbd69ebe7c430ed0adc3f858bfe9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/meiotic_outer_plaque.yaml
+    role: maintained_record
+- target_id: GO:0032152
+  path: data/structures/cytoskeleton/meiotic_septin_complex.yaml
+  label: meiotic septin complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4f10be6c6b32a3c71f43f28570d1eefac729c757657a1a28d29ff41f890aebe9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/meiotic_septin_complex.yaml
+    role: maintained_record
+- target_id: GO:0035974
+  path: data/structures/cytoskeleton/meiotic_spindle_pole_body.yaml
+  label: meiotic spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2a99651652ccaa1b26dd8149e44976824366dbe2157a708fb1df0560323b8a75
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/meiotic_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0005874
+  path: data/structures/cytoskeleton/microtubule.yaml
+  label: microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 170483f42c69e1b91f2e11ace0483b30aa3beeba791119a77c644c99da1decc6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/microtubule.yaml
+    role: maintained_record
+- target_id: GO:0110085
+  path: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+  label: mitotic actomyosin contractile ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d74335a45d6c7037868c200e25a7fe12bc73121536cd32e68be983a3ebf6e9ac
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_actomyosin_contractile_ring.yaml
+    role: maintained_record
+- target_id: GO:0032151
+  path: data/structures/cytoskeleton/mitotic_septin_complex.yaml
+  label: mitotic septin complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 99bf85740532379d8f9d88a2f07563cf9853a42e00a367fc5453d598ad308d1e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_septin_complex.yaml
+    role: maintained_record
+- target_id: GO:0072686
+  path: data/structures/cytoskeleton/mitotic_spindle.yaml
+  label: mitotic spindle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 85b2e3d0b8037dec88990c0d95901bd9005766e7d01067c5744c46894ec3d1a6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_spindle.yaml
+    role: maintained_record
+- target_id: GO:0044732
+  path: data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+  label: mitotic spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6f26eef2c9a8c923eb0c851b4d65b90a696322095208e731be170b6b0c9f0329
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mreb_filament
+  path: data/structures/cytoskeleton/mreb_filament.yaml
+  label: MreB filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1133efe4361d35b4b82ab6ca05241eca7dc6b894064d484a508d172cb397127e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mreb_filament.yaml
+    role: maintained_record
+- target_id: GO:0071958
+  path: data/structures/cytoskeleton/new_mitotic_spindle_pole_body.yaml
+  label: new mitotic spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 33ac955370a7476c7bb3f3fca4cfc9464120890e6a3e57fcb3b32d5e2504fb82
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/new_mitotic_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0160067
+  path: data/structures/cytoskeleton/new_spindle_pole_body_sin_signaling_complex.yaml
+  label: new spindle pole body SIN signaling complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 84ade1d5217bae8fa401f096724d0892e76378469bec45c6ea25e961a0e28cae
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/new_spindle_pole_body_sin_signaling_complex.yaml
+    role: maintained_record
+- target_id: GO:0106094
+  path: data/structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.yaml
+  label: nuclear membrane microtubule tethering complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a4458d3e0be617506557e7896258e186266872195a65d308b65390609fd539a7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.yaml
+    role: maintained_record
+- target_id: GO:0005880
+  path: data/structures/cytoskeleton/nuclear_microtubule.yaml
+  label: nuclear microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 09096977c74bdb36271d09b2a8aa1ac4c269ff8f3adbc854beae8b348f8aa252
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/nuclear_microtubule.yaml
+    role: maintained_record
+- target_id: cellstructuremech:nucleus_basal_body_connector
+  path: data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+  label: nucleus-basal body connector
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 89e5e96440535f65493ee4b2928b835f415f79358200f32d877ec59487300f0d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/nucleus_basal_body_connector.yaml
+    role: maintained_record
+- target_id: GO:0071957
+  path: data/structures/cytoskeleton/old_mitotic_spindle_pole_body.yaml
+  label: old mitotic spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 84c9dc88c397f90a6c90dc61031b9f5334baa65580eaecc16cc851cacc54840b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/old_mitotic_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0036157
+  path: data/structures/cytoskeleton/outer_dynein_arm.yaml
+  label: outer dynein arm
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7d4052f8fea3bc0deb66545f7b7d6cc9c90f3dff49508d18ce0abd290182d5e6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/outer_dynein_arm.yaml
+    role: maintained_record
+- target_id: GO:0061499
+  path: data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+  label: outer plaque of mitotic spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9197bc8f9b1fed339d56314bb682274576fa41bb94b26e2d09823e14a26ec226
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/outer_plaque_of_mitotic_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: GO:0005824
+  path: data/structures/cytoskeleton/outer_plaque_of_spindle_pole_body.yaml
+  label: outer plaque of spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2aa7db5e2c632a9934dda8fbc3c57a85d1742c6aa7322e769f6f162103f17142
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/outer_plaque_of_spindle_pole_body.yaml
+    role: maintained_record
+- target_id: cellstructuremech:parm_filament
+  path: data/structures/cytoskeleton/parm_filament.yaml
+  label: ParM filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d021bb88e2999e696f67403cff71a22b39801ad248f2c1aa86d8e9360a33024b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/parm_filament.yaml
+    role: maintained_record
+- target_id: cellstructuremech:peritrich_body_myoneme_system
+  path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+  label: Peritrich body myoneme system
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 85563af4f17c846111f087a0c6bd31b6480a9b5fff05df9a3eff79e0b25418f9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/peritrich_body_myoneme_system.yaml
+    role: maintained_record
+- target_id: cellstructuremech:phuz_spindle
+  path: data/structures/cytoskeleton/phuz_spindle.yaml
+  label: PhuZ spindle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5ca807c30f30ab3cc2e5eacb7035a229d6193dbf304dcc5b44e52b2ef4e4ae93
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/phuz_spindle.yaml
+    role: maintained_record
+- target_id: GO:0020031
+  path: data/structures/cytoskeleton/polar_ring_of_apical_complex.yaml
+  label: polar ring of apical complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ec70822af034fd9e33585bf8fa8894a6fd97cf8c2127fb6e29d91d842efd278b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/polar_ring_of_apical_complex.yaml
+    role: maintained_record
+- target_id: GO:1990295
+  path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  label: post-anaphase microtubule array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ac97344d35ac58bc4d21294879b0fc23684fca5f7da6956a4b075108a326a225
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    role: maintained_record
+- target_id: GO:0032157
+  path: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+  label: prospore contractile ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 86ff161d77dbd6b182aab5d48cf4fa4376ad69ec739305c9b3c25c8aef103e51
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_contractile_ring.yaml
+    role: maintained_record
+- target_id: GO:0032165
+  path: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+  label: prospore septin filament array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 39df294524bcae01b5a3c70410172ac4d19c6fb936a7bf970fda23a043220bfa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_filament_array.yaml
+    role: maintained_record
+- target_id: GO:0032169
+  path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+  label: prospore septin ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 56b764eb06dde6d49e5ad5135ab577218f765b63791ffe0483147d4186498da5
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/prospore_septin_ring.yaml
+    role: maintained_record
+- target_id: GO:0032170
+  path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+  label: pseudohyphal septin ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 725c892c096cf75b48bb0a26a1aad5d657d9e5e716851f07211b161ba4d04533
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/pseudohyphal_septin_ring.yaml
+    role: maintained_record
+- target_id: cellstructuremech:quiescent_cell_microtubule_bundle
+  path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+  label: quiescent cell microtubule bundle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6228e65ead4750033cd105250a703ffce6dfba328d05e94de0d26ae06b100bc8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:quiescent_nuclear_microtubule_bundle
+  path: data/structures/cytoskeleton/quiescent_nuclear_microtubule_bundle.yaml
+  label: quiescent nuclear microtubule bundle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 87b29df8262cfbc32a1bae44f4777edb2ba44663fe0bee22733cc95bc78400ea
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/quiescent_nuclear_microtubule_bundle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:radial_microtubule_organizing_center
+  path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+  label: radial microtubule organizing center
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a6a2e4d87b3159afe989f1f838da6988395c5c2b0fc1b24bf1cde154f2dbc364
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_microtubule_organizing_center.yaml
+    role: maintained_record
+- target_id: GO:0001534
+  path: data/structures/cytoskeleton/radial_spoke.yaml
+  label: radial spoke
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 68b0664e9de437d32f85b8b53e3b312ef49cc77c67c1593cfd468a94c3c6c70a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke.yaml
+    role: maintained_record
+- target_id: GO:0001535
+  path: data/structures/cytoskeleton/radial_spoke_head.yaml
+  label: radial spoke head
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bec66030c7916b9cf537e93d924b97e92b7590e049547920896e39108b19adaa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke_head.yaml
+    role: maintained_record
+- target_id: GO:0120343
+  path: data/structures/cytoskeleton/radial_spoke_neck.yaml
+  label: radial spoke neck
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d7bc78c922e2eba8845feaa53b30928dae3f18cba81d3d79d83ff970f080f327
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke_neck.yaml
+    role: maintained_record
+- target_id: GO:0001536
+  path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+  label: radial spoke stalk
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cc046821244f0eec6e2f7c3b416c2368ee19062123f21cb92a6b1e12527aae86
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/radial_spoke_stalk.yaml
+    role: maintained_record
+- target_id: GO:1990612
+  path: data/structures/cytoskeleton/sad1_kms1_linc_complex.yaml
+  label: Sad1-Kms1 LINC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4bf976f7c39fe18c961e155a1e4304153986b271209d2d35aa520a8406c03c65
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/sad1_kms1_linc_complex.yaml
+    role: maintained_record
+- target_id: GO:0032158
+  path: data/structures/cytoskeleton/septin_band.yaml
+  label: septin band
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 41d269f0b9bd3a3814d8fd2bb5e3e26e933763e1b06c42a30e8b13e20f2865da
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_band.yaml
+    role: maintained_record
+- target_id: GO:0032159
+  path: data/structures/cytoskeleton/septin_cap.yaml
+  label: septin cap
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5dccebc18f9349148bd4ef1e64e29e42648d4df485e0f407c989be0d1b13f8ba
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cap.yaml
+    role: maintained_record
+- target_id: GO:0032173
+  path: data/structures/cytoskeleton/septin_collar.yaml
+  label: septin collar
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c16f869099afaf1a608e229fb19f217583156684f4a7311549af622691b556d9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_collar.yaml
+    role: maintained_record
+- target_id: GO:0031105
+  path: data/structures/cytoskeleton/septin_complex.yaml
+  label: septin complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4de023faea51c1ea084592fda0f5db6a95ae91f1a8de69de44a208099fcd8373
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_complex.yaml
+    role: maintained_record
+- target_id: GO:0032156
+  path: data/structures/cytoskeleton/septin_cytoskeleton.yaml
+  label: septin cytoskeleton
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a4ed43de8b89ae2f50cf586ff1b041a7865a7a717bb13c2f1885a50666627e9e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_cytoskeleton.yaml
+    role: maintained_record
+- target_id: GO:0032160
+  path: data/structures/cytoskeleton/septin_filament_array.yaml
+  label: septin filament array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8413e81f4ac3c0daf46af8a81bbc0c819380242af370486f07865114e2edc1a0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_filament_array.yaml
+    role: maintained_record
+- target_id: GO:0005940
+  path: data/structures/cytoskeleton/septin_ring.yaml
+  label: septin ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a29add3311f4b53bf4b50c2ec527d5ef450cfff625eadd312324d625b8790b93
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/septin_ring.yaml
+    role: maintained_record
+- target_id: GO:0160065
+  path: data/structures/cytoskeleton/sin_men_signaling_complex.yaml
+  label: SIN/MEN signaling complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 59f188a29d48dab89d1c7a36aee3bd8f67efe3110c7c981bbac7b60df20d8f4b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/sin_men_signaling_complex.yaml
+    role: maintained_record
+- target_id: GO:1990334
+  path: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+  label: SIN/MEN two-component GAP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 922665d09fdb8ddf24c904aefc3ccd0ec99a36f92d4d33f71a42c732036ecbdd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/sin_men_two_component_gap_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:sinister_fiber
+  path: data/structures/cytoskeleton/sinister_fiber.yaml
+  label: sinister fiber
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9227477d7ba7b31e708bd60156ccb5d24f7051d3e0451b9138e6b3380d3664e5
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/sinister_fiber.yaml
+    role: maintained_record
+- target_id: GO:0005819
+  path: data/structures/cytoskeleton/spindle.yaml
+  label: spindle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: da0b1e5a86542a84962f0f7ac3319c458a44941b0094d724488e8095e62d3e0e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/spindle.yaml
+    role: maintained_record
+- target_id: GO:0005876
+  path: data/structures/cytoskeleton/spindle_microtubule.yaml
+  label: spindle microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bd8d435d59b948878bdcc978f015029ba6f6cc236b43eab0a5a5fe8b1a350fb9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/spindle_microtubule.yaml
+    role: maintained_record
+- target_id: GO:0051233
+  path: data/structures/cytoskeleton/spindle_midzone.yaml
+  label: spindle midzone
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7292732ff2a699422cc1b243dd2ad0651a568da206ed79f514aa6c19e2e59661
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/spindle_midzone.yaml
+    role: maintained_record
+- target_id: GO:0000922
+  path: data/structures/cytoskeleton/spindle_pole.yaml
+  label: spindle pole
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c456f99ee99fc90e9b8fcf99e303abddf46bfa0c9c0f473ec3059ed8a0044204
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/spindle_pole.yaml
+    role: maintained_record
+- target_id: GO:0005816
+  path: data/structures/cytoskeleton/spindle_pole_body.yaml
+  label: spindle pole body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 50885e021c246e17e29beb27f7dc98e37ee4d34878648fea4fd8b565bbb2fc78
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/spindle_pole_body.yaml
+    role: maintained_record
+- target_id: cellstructuremech:spindle_pole_body_duplication_plaque
+  path: data/structures/cytoskeleton/spindle_pole_body_duplication_plaque.yaml
+  label: spindle pole body duplication plaque
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e321abc96c81de9d3b524b7a68e2cefc4f28aaf72df105b42c96e1c6b8e994c3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/spindle_pole_body_duplication_plaque.yaml
+    role: maintained_record
+- target_id: cellstructuremech:spindle_pole_body_satellite
+  path: data/structures/cytoskeleton/spindle_pole_body_satellite.yaml
+  label: spindle pole body satellite
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a6a16f2dc3c09895fb7f4af93e1cad023c01b75dd424b99a1177ce93b516acb3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/spindle_pole_body_satellite.yaml
+    role: maintained_record
+- target_id: cellstructuremech:spirostomum_myoneme_fishnet
+  path: data/structures/cytoskeleton/spirostomum_myoneme_fishnet.yaml
+  label: Spirostomum myoneme fishnet
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 23c2668330bc68a88153d7ed54feb0a5626a88d4ae53a8da6e250d2dda8d71af
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/spirostomum_myoneme_fishnet.yaml
+    role: maintained_record
+- target_id: GO:0032176
+  path: data/structures/cytoskeleton/split_septin_rings.yaml
+  label: split septin rings
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 580abb6f00c144e871e1fded7fbb2dca8584ecf0d47a599f646558642c3027ff
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/split_septin_rings.yaml
+    role: maintained_record
+- target_id: cellstructuremech:stalk_spasmoneme
+  path: data/structures/cytoskeleton/stalk_spasmoneme.yaml
+  label: Stalk spasmoneme
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a3de4646f57551323b08c225176359cf3737eff71eaab9da598131d646920bdb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/stalk_spasmoneme.yaml
+    role: maintained_record
+- target_id: GO:0099070
+  path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+  label: static microtubule bundle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5012c99d4bde9606c2de8efff620ee9e72437cebb4cf6dbded06fe463286f09b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+    role: maintained_record
+- target_id: cellstructuremech:stentor_km_fiber
+  path: data/structures/cytoskeleton/stentor_km_fiber.yaml
+  label: Stentor Km fiber
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 66b91b45477653bcafdf1f875b9820681ea1bdeddf36f9d37f74fabe9408cae6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/stentor_km_fiber.yaml
+    role: maintained_record
+- target_id: cellstructuremech:stentor_myoneme_system
+  path: data/structures/cytoskeleton/stentor_myoneme_system.yaml
+  label: Stentor myoneme system
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8396ff930730d215b773b9b9f40d5b0a4444e3e2c6581cde72dbd47358570941
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/stentor_myoneme_system.yaml
+    role: maintained_record
+- target_id: cellstructuremech:stentor_perialgal_microtubule_meshwork
+  path: data/structures/cytoskeleton/stentor_perialgal_microtubule_meshwork.yaml
+  label: Stentor perialgal microtubule meshwork
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3a0c8634cf4fca1f7d9253d399b2f6d343d806cd6e3b81e5d92ebf6ff9ab7daf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/stentor_perialgal_microtubule_meshwork.yaml
+    role: maintained_record
+- target_id: GO:0020025
+  path: data/structures/cytoskeleton/subpellicular_microtubule.yaml
+  label: subpellicular microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e4693fab5e378ed1550b5129a42d2cd810e9ba2369b299e28be1bb0f55ee4bdf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/subpellicular_microtubule.yaml
+    role: maintained_record
+- target_id: GO:0070850
+  path: data/structures/cytoskeleton/tacc_tog_complex.yaml
+  label: TACC/TOG complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7d2c57864f3928f8ab9bbc0d7e702aa142292ae00252b385f40a5a8dbcd7b787
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tacc_tog_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:telocentrosome
+  path: data/structures/cytoskeleton/telocentrosome.yaml
+  label: telocentrosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7eb101d943b736d756d5ea90d304e6cc2b6dc59a11224203f2c5e7ea30cabc8b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/telocentrosome.yaml
+    role: maintained_record
+- target_id: cellstructuremech:transition_zone_stellate_fiber_system
+  path: data/structures/cytoskeleton/transition_zone_stellate_fiber_system.yaml
+  label: transition zone stellate fiber system
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ee5fc36bcda7810c550cfef29146f6b124f79703e6b73832b6f005583884ba36
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/transition_zone_stellate_fiber_system.yaml
+    role: maintained_record
+- target_id: GO:0120121
+  path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+  label: tripartite attachment complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4b20e1ac242cf6e988ee0ec52eefb537bdd7b1270c1c32c238183baa66c7dd52
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tripartite_attachment_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:tubulin_spool
+  path: data/structures/cytoskeleton/tubulin_spool.yaml
+  label: tubulin spool
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1180c5c0b3a5c67f58a23b99913f7b78202beb8cf3e01c40ca5aac9c56dcf072
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tubulin_spool.yaml
+    role: maintained_record
+- target_id: cellstructuremech:tubz_filament
+  path: data/structures/cytoskeleton/tubz_filament.yaml
+  label: TubZ filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0399b1e1569592d6be671444cb03e37d481ca5022d52a476dd3a75f21337355e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/tubz_filament.yaml
+    role: maintained_record
+- target_id: GO:0097597
+  path: data/structures/cytoskeleton/ventral_disc.yaml
+  label: ventral disc
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: da4539d720be1cfa7e1e1b5ca12d86f57ededaebc6a869bdd2fc4bf13fb5680b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc.yaml
+    role: maintained_record
+- target_id: GO:0097595
+  path: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+  label: ventral disc crossbridge
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bb35ddad7c8b15916d19fa6e5ad334ca3476221330372020fdf4adc8565db67b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc_crossbridge.yaml
+    role: maintained_record
+- target_id: GO:0097594
+  path: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+  label: ventral disc dorsal microribbon
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6bcdbfaaf84c4b6152147340dcbb6f5958d6dc6aca2288e034c3f2c357819425
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc_dorsal_microribbon.yaml
+    role: maintained_record
+- target_id: GO:0097591
+  path: data/structures/cytoskeleton/ventral_disc_lateral_crest.yaml
+  label: ventral disc lateral crest
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6a8127a748d9dcdb2e429d05d817626c02ffed35eb545eb501c0b101758db32b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc_lateral_crest.yaml
+    role: maintained_record
+- target_id: GO:0097593
+  path: data/structures/cytoskeleton/ventral_disc_microtubule_array.yaml
+  label: ventral disc microtubule array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 184540d5a0f41b8f04fa8e4cac937dc657481eaa999e5420ec315476801a07e3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc_microtubule_array.yaml
+    role: maintained_record
+- target_id: GO:0097592
+  path: data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+  label: ventral disc overlap zone
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 983f27caa2fde019c9ab576e64c54bd354b6528a65e0f9ef9cdfbb87abb365ce
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+    role: maintained_record
+- target_id: GO:0097596
+  path: data/structures/cytoskeleton/ventral_disc_supernumerary_microtubule_array.yaml
+  label: ventral disc supernumerary microtubule array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 54772643689f75f239cddf783180ab3eb0443695ea60080d966cbeb2fb0efe1f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc_supernumerary_microtubule_array.yaml
+    role: maintained_record
+checks:
+- check_id: strict_cytoskeleton
+  name: Strict corpus validation covering cytoskeleton cohort
+  status: passed
+  required: true
+  summary: All 179 cytoskeleton records pass strict LinkML and semantic validation.
+  target_ids:
+  - GO:0097649
+  - GO:0099079
+  - GO:0030479
+  - GO:0005826
+  - GO:0110131
+  - cellstructuremech:alfa_filament
+  - GO:0005885
+  - GO:0005818
+  - GO:0000235
+  - GO:0160111
+  - GO:0160112
+  - GO:1990716
+  - GO:1990717
+  - GO:0097540
+  - GO:1990718
+  - GO:0097545
+  - GO:0005858
+  - GO:0005879
+  - GO:0160113
+  - GO:0160110
+  - GO:0160114
+  - GO:0160115
+  - GO:0005931
+  - GO:0005930
+  - GO:0097650
+  - cellstructuremech:bactofilin_filament
+  - cellstructuremech:basal_body_a_b_inner_junction
+  - cellstructuremech:basal_body_a_c_linker
+  - cellstructuremech:basal_body_a_tusk
+  - cellstructuremech:basal_body_b_c_inner_junction
+  - cellstructuremech:basal_body_c_tubule_hook
+  - cellstructuremech:basal_body_c_tubule_luminal_filament
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - cellstructuremech:basal_body_d2_rod
+  - cellstructuremech:basal_body_filamentous_cartwheel_inner_density
+  - cellstructuremech:basal_body_inner_scaffold
+  - cellstructuremech:basal_body_pinhead
+  - cellstructuremech:basal_body_triplet_base
+  - GO:0020032
+  - GO:0120120
+  - cellstructuremech:btubab_bacterial_microtubule
+  - GO:1990719
+  - GO:1990720
+  - GO:0000142
+  - GO:0032174
+  - GO:0000144
+  - GO:0032177
+  - GO:0061493
+  - GO:0005823
+  - cellstructuremech:cetz_filament
+  - GO:0032166
+  - GO:0036064
+  - GO:0120269
+  - GO:1990900
+  - GO:0120280
+  - GO:0035253
+  - GO:0032161
+  - GO:0020010
+  - GO:0030864
+  - GO:0030981
+  - cellstructuremech:crescentin_filament
+  - cellstructuremech:cryptophyte_cortical_centrin_network
+  - GO:0097268
+  - GO:0005881
+  - GO:1905720
+  - cellstructuremech:cytostomal_cord
+  - GO:0032123
+  - cellstructuremech:distal_connecting_fiber
+  - GO:0036286
+  - GO:0061645
+  - cellstructuremech:entodiniomorphid_subkinetal_myoneme_system
+  - GO:0000923
+  - GO:0120119
+  - cellstructuremech:funis
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0032171
+  - GO:0032172
+  - GO:1990317
+  - GO:0061496
+  - GO:0005825
+  - GO:0032117
+  - GO:0062140
+  - GO:0032163
+  - GO:0032164
+  - GO:0032168
+  - cellstructuremech:icl1e_complex
+  - cellstructuremech:infraciliary_lattice
+  - GO:0036156
+  - GO:0061497
+  - GO:0005822
+  - GO:0061498
+  - GO:0005821
+  - GO:0031021
+  - GO:0160066
+  - GO:0033289
+  - cellstructuremech:mamk_filament
+  - GO:1990819
+  - GO:0032162
+  - GO:0032175
+  - GO:0036391
+  - GO:0097568
+  - GO:0110086
+  - GO:0034993
+  - cellstructuremech:meiotic_outer_plaque
+  - GO:0032152
+  - GO:0035974
+  - GO:0005874
+  - GO:0110085
+  - GO:0032151
+  - GO:0072686
+  - GO:0044732
+  - cellstructuremech:mreb_filament
+  - GO:0071958
+  - GO:0160067
+  - GO:0106094
+  - GO:0005880
+  - cellstructuremech:nucleus_basal_body_connector
+  - GO:0071957
+  - GO:0036157
+  - GO:0061499
+  - GO:0005824
+  - cellstructuremech:parm_filament
+  - cellstructuremech:peritrich_body_myoneme_system
+  - cellstructuremech:phuz_spindle
+  - GO:0020031
+  - GO:1990295
+  - GO:0032157
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - cellstructuremech:quiescent_nuclear_microtubule_bundle
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001534
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:1990612
+  - GO:0032158
+  - GO:0032159
+  - GO:0032173
+  - GO:0031105
+  - GO:0032156
+  - GO:0032160
+  - GO:0005940
+  - GO:0160065
+  - GO:1990334
+  - cellstructuremech:sinister_fiber
+  - GO:0005819
+  - GO:0005876
+  - GO:0051233
+  - GO:0000922
+  - GO:0005816
+  - cellstructuremech:spindle_pole_body_duplication_plaque
+  - cellstructuremech:spindle_pole_body_satellite
+  - cellstructuremech:spirostomum_myoneme_fishnet
+  - GO:0032176
+  - cellstructuremech:stalk_spasmoneme
+  - GO:0099070
+  - cellstructuremech:stentor_km_fiber
+  - cellstructuremech:stentor_myoneme_system
+  - cellstructuremech:stentor_perialgal_microtubule_meshwork
+  - GO:0020025
+  - GO:0070850
+  - cellstructuremech:telocentrosome
+  - cellstructuremech:transition_zone_stellate_fiber_system
+  - GO:0120121
+  - cellstructuremech:tubulin_spool
+  - cellstructuremech:tubz_filament
+  - GO:0097597
+  - GO:0097595
+  - GO:0097594
+  - GO:0097591
+  - GO:0097593
+  - GO:0097592
+  - GO:0097596
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_cytoskeleton
+- check_id: history_cytoskeleton
+  name: History ledger validation covering cytoskeleton cohort
+  status: passed
+  required: true
+  summary: All history ledger records covering cytoskeleton validate cleanly.
+  target_ids:
+  - GO:0097649
+  - GO:0099079
+  - GO:0030479
+  - GO:0005826
+  - GO:0110131
+  - cellstructuremech:alfa_filament
+  - GO:0005885
+  - GO:0005818
+  - GO:0000235
+  - GO:0160111
+  - GO:0160112
+  - GO:1990716
+  - GO:1990717
+  - GO:0097540
+  - GO:1990718
+  - GO:0097545
+  - GO:0005858
+  - GO:0005879
+  - GO:0160113
+  - GO:0160110
+  - GO:0160114
+  - GO:0160115
+  - GO:0005931
+  - GO:0005930
+  - GO:0097650
+  - cellstructuremech:bactofilin_filament
+  - cellstructuremech:basal_body_a_b_inner_junction
+  - cellstructuremech:basal_body_a_c_linker
+  - cellstructuremech:basal_body_a_tusk
+  - cellstructuremech:basal_body_b_c_inner_junction
+  - cellstructuremech:basal_body_c_tubule_hook
+  - cellstructuremech:basal_body_c_tubule_luminal_filament
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - cellstructuremech:basal_body_d2_rod
+  - cellstructuremech:basal_body_filamentous_cartwheel_inner_density
+  - cellstructuremech:basal_body_inner_scaffold
+  - cellstructuremech:basal_body_pinhead
+  - cellstructuremech:basal_body_triplet_base
+  - GO:0020032
+  - GO:0120120
+  - cellstructuremech:btubab_bacterial_microtubule
+  - GO:1990719
+  - GO:1990720
+  - GO:0000142
+  - GO:0032174
+  - GO:0000144
+  - GO:0032177
+  - GO:0061493
+  - GO:0005823
+  - cellstructuremech:cetz_filament
+  - GO:0032166
+  - GO:0036064
+  - GO:0120269
+  - GO:1990900
+  - GO:0120280
+  - GO:0035253
+  - GO:0032161
+  - GO:0020010
+  - GO:0030864
+  - GO:0030981
+  - cellstructuremech:crescentin_filament
+  - cellstructuremech:cryptophyte_cortical_centrin_network
+  - GO:0097268
+  - GO:0005881
+  - GO:1905720
+  - cellstructuremech:cytostomal_cord
+  - GO:0032123
+  - cellstructuremech:distal_connecting_fiber
+  - GO:0036286
+  - GO:0061645
+  - cellstructuremech:entodiniomorphid_subkinetal_myoneme_system
+  - GO:0000923
+  - GO:0120119
+  - cellstructuremech:funis
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0032171
+  - GO:0032172
+  - GO:1990317
+  - GO:0061496
+  - GO:0005825
+  - GO:0032117
+  - GO:0062140
+  - GO:0032163
+  - GO:0032164
+  - GO:0032168
+  - cellstructuremech:icl1e_complex
+  - cellstructuremech:infraciliary_lattice
+  - GO:0036156
+  - GO:0061497
+  - GO:0005822
+  - GO:0061498
+  - GO:0005821
+  - GO:0031021
+  - GO:0160066
+  - GO:0033289
+  - cellstructuremech:mamk_filament
+  - GO:1990819
+  - GO:0032162
+  - GO:0032175
+  - GO:0036391
+  - GO:0097568
+  - GO:0110086
+  - GO:0034993
+  - cellstructuremech:meiotic_outer_plaque
+  - GO:0032152
+  - GO:0035974
+  - GO:0005874
+  - GO:0110085
+  - GO:0032151
+  - GO:0072686
+  - GO:0044732
+  - cellstructuremech:mreb_filament
+  - GO:0071958
+  - GO:0160067
+  - GO:0106094
+  - GO:0005880
+  - cellstructuremech:nucleus_basal_body_connector
+  - GO:0071957
+  - GO:0036157
+  - GO:0061499
+  - GO:0005824
+  - cellstructuremech:parm_filament
+  - cellstructuremech:peritrich_body_myoneme_system
+  - cellstructuremech:phuz_spindle
+  - GO:0020031
+  - GO:1990295
+  - GO:0032157
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - cellstructuremech:quiescent_nuclear_microtubule_bundle
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001534
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:1990612
+  - GO:0032158
+  - GO:0032159
+  - GO:0032173
+  - GO:0031105
+  - GO:0032156
+  - GO:0032160
+  - GO:0005940
+  - GO:0160065
+  - GO:1990334
+  - cellstructuremech:sinister_fiber
+  - GO:0005819
+  - GO:0005876
+  - GO:0051233
+  - GO:0000922
+  - GO:0005816
+  - cellstructuremech:spindle_pole_body_duplication_plaque
+  - cellstructuremech:spindle_pole_body_satellite
+  - cellstructuremech:spirostomum_myoneme_fishnet
+  - GO:0032176
+  - cellstructuremech:stalk_spasmoneme
+  - GO:0099070
+  - cellstructuremech:stentor_km_fiber
+  - cellstructuremech:stentor_myoneme_system
+  - cellstructuremech:stentor_perialgal_microtubule_meshwork
+  - GO:0020025
+  - GO:0070850
+  - cellstructuremech:telocentrosome
+  - cellstructuremech:transition_zone_stellate_fiber_system
+  - GO:0120121
+  - cellstructuremech:tubulin_spool
+  - cellstructuremech:tubz_filament
+  - GO:0097597
+  - GO:0097595
+  - GO:0097594
+  - GO:0097591
+  - GO:0097593
+  - GO:0097592
+  - GO:0097596
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_cytoskeleton
+evidence:
+- evidence_id: ev_strict_cytoskeleton
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_all receipt
+  accessed_at: '2026-10-30T22:18:00Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 1,008 records including all 179
+    cytoskeleton records.
+  snapshot_sha256: 329bb133ea2e12c21ccc1a052d09c48f3e848ddfb3fb3b49eea6c450c113025c
+- evidence_id: ev_history_cytoskeleton
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history_all receipt
+  accessed_at: '2026-10-30T22:18:00Z'
+  support: supports
+  summary: validate_history.py exited 0 across all 2,140 history records covering
+    cytoskeleton.
+  snapshot_sha256: 2e78c9efe24b4f187f74b59202639b36457409bff8485a4e23924569d89058e6
+- evidence_id: ev_cyto_spombe_p04689_atb2
+  kind: record_content
+  reference: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+  locator: components[0] (lines 48-77) vs aster.yaml components[0]
+  accessed_at: '2026-10-30T22:18:30Z'
+  support: supports
+  summary: 'cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml,
+    and static_microtubule_bundle.yaml list gene_symbols: [nda2, atb2] and gene_symbol:
+    atb2 for UniProtKB:P04689, whereas aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml,
+    horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml
+    use UniProtKB primary gene symbol tub1.'
+  quote: "- component_id: alpha_tubulin\n  label: alpha-tubulin\n  component_type:\
+    \ PROTEIN\n  component_role: STRUCTURAL_CORE\n  grounding: InterPro:IPR002453\n\
+    \  gene_symbols:\n  - nda2\n  - atb2\n...\n  - uniprot_id: UniProtKB:P04689\n\
+    \    protein_label: Tubulin alpha-2 chain\n    gene_symbol: atb2\n    taxon_id:\
+    \ NCBITaxon:284812\n    taxon_label: Schizosaccharomyces pombe 972h-\n    entry_status:\
+    \ REVIEWED\n    role: Identifier for the component's declared gene symbol"
+  snapshot_sha256: 4f42862d1735d7b07301c9c183f9ace1e024061c363ab4a5197c150328565db2
+assessments:
+- assessment_id: assess_cytoskeleton_cohort
+  area: scope
+  topic: Identity, boundaries, causal graphs, and ontology grounding across data/structures/cytoskeleton/
+  outcome: supported
+  summary: All 179 records in data/structures/cytoskeleton/ represent distinct microbial
+    cytoskeletal structures or subcomplexes with valid schema and history provenance.
+  target_ids:
+  - GO:0097649
+  - GO:0099079
+  - GO:0030479
+  - GO:0005826
+  - GO:0110131
+  - cellstructuremech:alfa_filament
+  - GO:0005885
+  - GO:0005818
+  - GO:0000235
+  - GO:0160111
+  - GO:0160112
+  - GO:1990716
+  - GO:1990717
+  - GO:0097540
+  - GO:1990718
+  - GO:0097545
+  - GO:0005858
+  - GO:0005879
+  - GO:0160113
+  - GO:0160110
+  - GO:0160114
+  - GO:0160115
+  - GO:0005931
+  - GO:0005930
+  - GO:0097650
+  - cellstructuremech:bactofilin_filament
+  - cellstructuremech:basal_body_a_b_inner_junction
+  - cellstructuremech:basal_body_a_c_linker
+  - cellstructuremech:basal_body_a_tusk
+  - cellstructuremech:basal_body_b_c_inner_junction
+  - cellstructuremech:basal_body_c_tubule_hook
+  - cellstructuremech:basal_body_c_tubule_luminal_filament
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - cellstructuremech:basal_body_d2_rod
+  - cellstructuremech:basal_body_filamentous_cartwheel_inner_density
+  - cellstructuremech:basal_body_inner_scaffold
+  - cellstructuremech:basal_body_pinhead
+  - cellstructuremech:basal_body_triplet_base
+  - GO:0020032
+  - GO:0120120
+  - cellstructuremech:btubab_bacterial_microtubule
+  - GO:1990719
+  - GO:1990720
+  - GO:0000142
+  - GO:0032174
+  - GO:0000144
+  - GO:0032177
+  - GO:0061493
+  - GO:0005823
+  - cellstructuremech:cetz_filament
+  - GO:0032166
+  - GO:0036064
+  - GO:0120269
+  - GO:1990900
+  - GO:0120280
+  - GO:0035253
+  - GO:0032161
+  - GO:0020010
+  - GO:0030864
+  - GO:0030981
+  - cellstructuremech:crescentin_filament
+  - cellstructuremech:cryptophyte_cortical_centrin_network
+  - GO:0097268
+  - GO:0005881
+  - GO:1905720
+  - cellstructuremech:cytostomal_cord
+  - GO:0032123
+  - cellstructuremech:distal_connecting_fiber
+  - GO:0036286
+  - GO:0061645
+  - cellstructuremech:entodiniomorphid_subkinetal_myoneme_system
+  - GO:0000923
+  - GO:0120119
+  - cellstructuremech:funis
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0032171
+  - GO:0032172
+  - GO:1990317
+  - GO:0061496
+  - GO:0005825
+  - GO:0032117
+  - GO:0062140
+  - GO:0032163
+  - GO:0032164
+  - GO:0032168
+  - cellstructuremech:icl1e_complex
+  - cellstructuremech:infraciliary_lattice
+  - GO:0036156
+  - GO:0061497
+  - GO:0005822
+  - GO:0061498
+  - GO:0005821
+  - GO:0031021
+  - GO:0160066
+  - GO:0033289
+  - cellstructuremech:mamk_filament
+  - GO:1990819
+  - GO:0032162
+  - GO:0032175
+  - GO:0036391
+  - GO:0097568
+  - GO:0110086
+  - GO:0034993
+  - cellstructuremech:meiotic_outer_plaque
+  - GO:0032152
+  - GO:0035974
+  - GO:0005874
+  - GO:0110085
+  - GO:0032151
+  - GO:0072686
+  - GO:0044732
+  - cellstructuremech:mreb_filament
+  - GO:0071958
+  - GO:0160067
+  - GO:0106094
+  - GO:0005880
+  - cellstructuremech:nucleus_basal_body_connector
+  - GO:0071957
+  - GO:0036157
+  - GO:0061499
+  - GO:0005824
+  - cellstructuremech:parm_filament
+  - cellstructuremech:peritrich_body_myoneme_system
+  - cellstructuremech:phuz_spindle
+  - GO:0020031
+  - GO:1990295
+  - GO:0032157
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - cellstructuremech:quiescent_nuclear_microtubule_bundle
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001534
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:1990612
+  - GO:0032158
+  - GO:0032159
+  - GO:0032173
+  - GO:0031105
+  - GO:0032156
+  - GO:0032160
+  - GO:0005940
+  - GO:0160065
+  - GO:1990334
+  - cellstructuremech:sinister_fiber
+  - GO:0005819
+  - GO:0005876
+  - GO:0051233
+  - GO:0000922
+  - GO:0005816
+  - cellstructuremech:spindle_pole_body_duplication_plaque
+  - cellstructuremech:spindle_pole_body_satellite
+  - cellstructuremech:spirostomum_myoneme_fishnet
+  - GO:0032176
+  - cellstructuremech:stalk_spasmoneme
+  - GO:0099070
+  - cellstructuremech:stentor_km_fiber
+  - cellstructuremech:stentor_myoneme_system
+  - cellstructuremech:stentor_perialgal_microtubule_meshwork
+  - GO:0020025
+  - GO:0070850
+  - cellstructuremech:telocentrosome
+  - cellstructuremech:transition_zone_stellate_fiber_system
+  - GO:0120121
+  - cellstructuremech:tubulin_spool
+  - cellstructuremech:tubz_filament
+  - GO:0097597
+  - GO:0097595
+  - GO:0097594
+  - GO:0097591
+  - GO:0097593
+  - GO:0097592
+  - GO:0097596
+  evidence_ids:
+  - ev_strict_cytoskeleton
+  - ev_history_cytoskeleton
+- assessment_id: assess_cytoskeleton_spombe_p04689_gene_symbol
+  area: representation
+  topic: Cross-record consistency of UniProtKB:P04689 primary gene symbol (tub1 vs
+    synonym atb2) across S. pombe microtubule records
+  outcome: concern
+  summary: Three S. pombe microtubule bundle records record synonym atb2 instead of
+    UniProtKB primary gene symbol tub1 for UniProtKB:P04689.
+  target_ids:
+  - GO:1905720
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  evidence_ids:
+  - ev_cyto_spombe_p04689_atb2
+findings:
+- finding_id: F1
+  issue_key: cytoskeleton-spombe-p04689-primary-gene-symbol-tub1
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Three S. pombe microtubule bundle records use synonym gene_symbol atb2 instead
+    of primary UniProtKB symbol tub1 on UniProtKB:P04689
+  description: 'In cytoplasmic_microtubule_bundle.yaml (GO:1905720), quiescent_cell_microtubule_bundle.yaml
+    (cellstructuremech:quiescent_cell_microtubule_bundle), and static_microtubule_bundle.yaml
+    (GO:0099070), components[0] (alpha_tubulin) lists gene_symbols: [nda2, atb2] and
+    its protein_examples[1] entry for UniProtKB:P04689 (Tubulin alpha-2 chain, NCBITaxon:284812)
+    records gene_symbol: atb2. In UniProtKB, P04689''s primary gene symbol is tub1
+    (with atb2 as a synonym), and all five other S. pombe microtubule records in data/structures/cytoskeleton/
+    (aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml,
+    horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml)
+    include tub1 in components[0].gene_symbols, set gene_symbol: tub1 on UniProtKB:P04689,
+    and disclose ''(also declared as synonym atb2)'' in role.'
+  target_ids:
+  - GO:1905720
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  field_paths:
+  - components[0].gene_symbols
+  - components[0].protein_examples[1].gene_symbol
+  - components[0].protein_examples[1].role
+  evidence_ids:
+  - ev_cyto_spombe_p04689_atb2
+  rule_id: .claude/skills/uniprot-protein-examples/SKILL.md:primary-gene-symbol
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+    role: maintained_record
+  tags:
+  - cytoskeleton
+  - gene-symbol
+  - uniprot-consistency
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: 'Update components[0] (alpha_tubulin) in cytoplasmic_microtubule_bundle.yaml,
+    quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml so
+    gene_symbols is [nda2, tub1, atb2] and protein_examples[1] (UniProtKB:P04689)
+    uses primary gene_symbol: tub1 with role disclosing synonym atb2.'
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1905720
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0097649
+  - GO:0099079
+  - GO:0030479
+  - GO:0005826
+  - GO:0110131
+  - cellstructuremech:alfa_filament
+  - GO:0005885
+  - GO:0005818
+  - GO:0000235
+  - GO:0160111
+  - GO:0160112
+  - GO:1990716
+  - GO:1990717
+  - GO:0097540
+  - GO:1990718
+  - GO:0097545
+  - GO:0005858
+  - GO:0005879
+  - GO:0160113
+  - GO:0160110
+  - GO:0160114
+  - GO:0160115
+  - GO:0005931
+  - GO:0005930
+  - GO:0097650
+  - cellstructuremech:bactofilin_filament
+  - cellstructuremech:basal_body_a_b_inner_junction
+  - cellstructuremech:basal_body_a_c_linker
+  - cellstructuremech:basal_body_a_tusk
+  - cellstructuremech:basal_body_b_c_inner_junction
+  - cellstructuremech:basal_body_c_tubule_hook
+  - cellstructuremech:basal_body_c_tubule_luminal_filament
+  - cellstructuremech:basal_body_cartwheel
+  - cellstructuremech:basal_body_cartwheel_inner_density
+  - cellstructuremech:basal_body_d2_rod
+  - cellstructuremech:basal_body_filamentous_cartwheel_inner_density
+  - cellstructuremech:basal_body_inner_scaffold
+  - cellstructuremech:basal_body_pinhead
+  - cellstructuremech:basal_body_triplet_base
+  - GO:0020032
+  - GO:0120120
+  - cellstructuremech:btubab_bacterial_microtubule
+  - GO:1990719
+  - GO:1990720
+  - GO:0000142
+  - GO:0032174
+  - GO:0000144
+  - GO:0032177
+  - GO:0061493
+  - GO:0005823
+  - cellstructuremech:cetz_filament
+  - GO:0032166
+  - GO:0036064
+  - GO:0120269
+  - GO:1990900
+  - GO:0120280
+  - GO:0035253
+  - GO:0032161
+  - GO:0020010
+  - GO:0030864
+  - GO:0030981
+  - cellstructuremech:crescentin_filament
+  - cellstructuremech:cryptophyte_cortical_centrin_network
+  - GO:0097268
+  - GO:0005881
+  - GO:1905720
+  - cellstructuremech:cytostomal_cord
+  - GO:0032123
+  - cellstructuremech:distal_connecting_fiber
+  - GO:0036286
+  - GO:0061645
+  - cellstructuremech:entodiniomorphid_subkinetal_myoneme_system
+  - GO:0000923
+  - GO:0120119
+  - cellstructuremech:funis
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0032171
+  - GO:0032172
+  - GO:1990317
+  - GO:0061496
+  - GO:0005825
+  - GO:0032117
+  - GO:0062140
+  - GO:0032163
+  - GO:0032164
+  - GO:0032168
+  - cellstructuremech:icl1e_complex
+  - cellstructuremech:infraciliary_lattice
+  - GO:0036156
+  - GO:0061497
+  - GO:0005822
+  - GO:0061498
+  - GO:0005821
+  - GO:0031021
+  - GO:0160066
+  - GO:0033289
+  - cellstructuremech:mamk_filament
+  - GO:1990819
+  - GO:0032162
+  - GO:0032175
+  - GO:0036391
+  - GO:0097568
+  - GO:0110086
+  - GO:0034993
+  - cellstructuremech:meiotic_outer_plaque
+  - GO:0032152
+  - GO:0035974
+  - GO:0005874
+  - GO:0110085
+  - GO:0032151
+  - GO:0072686
+  - GO:0044732
+  - cellstructuremech:mreb_filament
+  - GO:0071958
+  - GO:0160067
+  - GO:0106094
+  - GO:0005880
+  - cellstructuremech:nucleus_basal_body_connector
+  - GO:0071957
+  - GO:0036157
+  - GO:0061499
+  - GO:0005824
+  - cellstructuremech:parm_filament
+  - cellstructuremech:peritrich_body_myoneme_system
+  - cellstructuremech:phuz_spindle
+  - GO:0020031
+  - GO:1990295
+  - GO:0032157
+  - GO:0032165
+  - GO:0032169
+  - GO:0032170
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - cellstructuremech:quiescent_nuclear_microtubule_bundle
+  - cellstructuremech:radial_microtubule_organizing_center
+  - GO:0001534
+  - GO:0001535
+  - GO:0120343
+  - GO:0001536
+  - GO:1990612
+  - GO:0032158
+  - GO:0032159
+  - GO:0032173
+  - GO:0031105
+  - GO:0032156
+  - GO:0032160
+  - GO:0005940
+  - GO:0160065
+  - GO:1990334
+  - cellstructuremech:sinister_fiber
+  - GO:0005819
+  - GO:0005876
+  - GO:0051233
+  - GO:0000922
+  - GO:0005816
+  - cellstructuremech:spindle_pole_body_duplication_plaque
+  - cellstructuremech:spindle_pole_body_satellite
+  - cellstructuremech:spirostomum_myoneme_fishnet
+  - GO:0032176
+  - cellstructuremech:stalk_spasmoneme
+  - GO:0099070
+  - cellstructuremech:stentor_km_fiber
+  - cellstructuremech:stentor_myoneme_system
+  - cellstructuremech:stentor_perialgal_microtubule_meshwork
+  - GO:0020025
+  - GO:0070850
+  - cellstructuremech:telocentrosome
+  - cellstructuremech:transition_zone_stellate_fiber_system
+  - GO:0120121
+  - cellstructuremech:tubulin_spool
+  - cellstructuremech:tubz_filament
+  - GO:0097597
+  - GO:0097595
+  - GO:0097594
+  - GO:0097591
+  - GO:0097593
+  - GO:0097592
+  - GO:0097596
+  rationale: All 179 cytoskeleton records represent distinct filaments, arrays, or
+    subcomplexes without duplicate ontology groundings.
+  evidence_ids:
+  - ev_strict_cytoskeleton
+  - ev_history_cytoskeleton
+limitations:
+- Record edits for cytoskeleton cohort findings are queued for Cycle 5 Stage 5 (resolve_review_findings).
+tags:
+- stage4
+- category-review
+- cytoskeleton
+```

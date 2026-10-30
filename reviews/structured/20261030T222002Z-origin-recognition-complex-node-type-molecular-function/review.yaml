@@ -1,0 +1,225 @@
+schema_version: 1.0.0
+review_id: 20261030T222002Z-origin-recognition-complex-node-type-molecular-function
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Single-record review of origin recognition complex (GO:0000808): causal node
+  GO:0003688 mistyped as BIOLOGICAL_PROCESS'
+started_at: '2026-10-30T22:16:00Z'
+finished_at: '2026-10-30T22:20:02Z'
+reviewer:
+  identity: antigravity-c5s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 5 Stage 4 record_review against committed
+    git revision a94f6deb809dd50c8344fb03284de9801c0aa298 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'Single-record audit of origin_recognition_complex.yaml (GO:0000808, origin
+  recognition complex). Subunit composition (Orc1-Orc6 in S. cerevisiae S288C), GO
+  hierarchy (parent_structures: GO:0140513 nuclear protein-containing complex; part_of:
+  GO:0005656 nuclear pre-replicative complex), and function annotations are accurate.
+  However, in causal_graphs[0] (origin_recognition_complex_mechanism), nodes[6] (node_id:
+  dna_replication_origin_binding, label: DNA replication origin binding, grounding:
+  GO:0003688) is typed node_type: BIOLOGICAL_PROCESS, whereas GO:0003688 is a Gene
+  Ontology molecular_function term (as explicitly noted on functions[1] and record
+  evidence[2]).'
+source:
+  git_revision: a94f6deb809dd50c8344fb03284de9801c0aa298
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/other/origin_recognition_complex.yaml
+    sha256: 32edb24d8b6f6a1b1528149347c7d933ff4478c2bdf992535fe93a8ba6829f3c
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Single-record review of data/structures/other/origin_recognition_complex.yaml
+    (GO:0000808).
+  selection: Targeted single-record audit of origin_recognition_complex.yaml (enriched
+    in Cycle 5 Stage 2) during Cycle 5 Stage 4 inspection.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000808
+targets:
+- target_id: GO:0000808
+  path: data/structures/other/origin_recognition_complex.yaml
+  label: origin recognition complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 32edb24d8b6f6a1b1528149347c7d933ff4478c2bdf992535fe93a8ba6829f3c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/origin_recognition_complex.yaml
+    role: maintained_record
+checks:
+- check_id: strict_origin_recognition_complex
+  name: Strict corpus validation covering origin_recognition_complex.yaml
+  status: passed
+  required: true
+  summary: origin_recognition_complex.yaml passes current strict LinkML validation
+    because CausalNode.node_type is not yet cross-checked against GO ontology aspect.
+  target_ids:
+  - GO:0000808
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_orc
+- check_id: history_origin_recognition_complex
+  name: History ledger validation covering origin_recognition_complex.yaml
+  status: passed
+  required: true
+  summary: History ledger records covering origin_recognition_complex.yaml validate
+    cleanly.
+  target_ids:
+  - GO:0000808
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_orc
+evidence:
+- evidence_id: ev_strict_orc
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_all receipt
+  accessed_at: '2026-10-30T22:18:00Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 1,008 records.
+  snapshot_sha256: 329bb133ea2e12c21ccc1a052d09c48f3e848ddfb3fb3b49eea6c450c113025c
+- evidence_id: ev_history_orc
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history_all receipt
+  accessed_at: '2026-10-30T22:18:00Z'
+  support: supports
+  summary: validate_history.py exited 0 across all 2,140 history records.
+  snapshot_sha256: 2e78c9efe24b4f187f74b59202639b36457409bff8485a4e23924569d89058e6
+- evidence_id: ev_orc_causal_node_type
+  kind: record_content
+  reference: data/structures/other/origin_recognition_complex.yaml
+  locator: functions[1] (lines 247-259) and causal_graphs[0].nodes[6] (lines 345-350)
+  accessed_at: '2026-10-30T22:17:00Z'
+  support: supports
+  summary: 'functions[1] explicitly states GO:0003688 is the molecular_function term
+    for DNA replication origin binding, whereas causal_graphs[0].nodes[6] sets node_type:
+    BIOLOGICAL_PROCESS on GO:0003688.'
+  quote: "  - reference: GO:0003688\n    supports: SUPPORT\n    evidence_source: OTHER\n\
+    \    explanation: GO:0003688 is the molecular_function term for DNA replication\
+    \ origin\n      binding.\n...\n  - node_id: dna_replication_origin_binding\n \
+    \   label: DNA replication origin binding\n    node_type: BIOLOGICAL_PROCESS\n\
+    \    grounding: GO:0003688"
+  snapshot_sha256: 32edb24d8b6f6a1b1528149347c7d933ff4478c2bdf992535fe93a8ba6829f3c
+assessments:
+- assessment_id: assess_orc_identity_and_components
+  area: identity
+  topic: GO identity, hierarchy, and hexameric Orc1-Orc6 subunit composition in origin_recognition_complex.yaml
+  outcome: supported
+  summary: GO:0000808, its hierarchy under GO:0140513 and parthood in GO:0005656,
+    and all six reviewed S. cerevisiae S288C Orc1-Orc6 subunit groundings are verified.
+  target_ids:
+  - GO:0000808
+  evidence_ids:
+  - ev_strict_orc
+  - ev_history_orc
+- assessment_id: assess_orc_causal_node_type
+  area: representation
+  topic: CausalNodeTypeEnum value for GO:0003688 (DNA replication origin binding)
+    in causal_graphs[0].nodes[6]
+  outcome: concern
+  summary: causal_graphs[0].nodes[6] (dna_replication_origin_binding, GO:0003688)
+    is typed BIOLOGICAL_PROCESS instead of MOLECULAR_FUNCTION.
+  target_ids:
+  - GO:0000808
+  evidence_ids:
+  - ev_orc_causal_node_type
+findings:
+- finding_id: F1
+  issue_key: origin-recognition-complex-node-type-molecular-function
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: origin_recognition_complex.yaml causal_graphs[0].nodes[6] types molecular_function
+    term GO:0003688 as BIOLOGICAL_PROCESS
+  description: 'In data/structures/other/origin_recognition_complex.yaml (GO:0000808,
+    lines 345-350), causal_graphs[0] (origin_recognition_complex_mechanism) nodes[6]
+    (node_id: dna_replication_origin_binding, label: ''DNA replication origin binding'',
+    grounding: GO:0003688) sets node_type: BIOLOGICAL_PROCESS. However, GO:0003688
+    is a Gene Ontology molecular_function term, as the record itself notes in functions[1].evidence[0]
+    (line 257: ''GO:0003688 is the molecular_function term for DNA replication origin
+    binding'') and evidence[2] (line 273). It should be typed node_type: MOLECULAR_FUNCTION
+    (tracked for validator enforcement in cellstructuremech-infra-0008).'
+  target_ids:
+  - GO:0000808
+  field_paths:
+  - causal_graphs[0].nodes[6].node_type
+  evidence_ids:
+  - ev_orc_causal_node_type
+  rule_id: docs/SCHEMA.md:CausalNodeTypeEnum.MOLECULAR_FUNCTION
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/origin_recognition_complex.yaml
+    role: maintained_record
+  tags:
+  - other
+  - causal-graphs
+  - node-type
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: Change causal_graphs[0].nodes[6].node_type from BIOLOGICAL_PROCESS
+    to MOLECULAR_FUNCTION in data/structures/other/origin_recognition_complex.yaml
+    with a curation event and history entry.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0000808
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/origin_recognition_complex.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+limitations:
+- Record edits for origin_recognition_complex.yaml are queued for Cycle 5 Stage 5
+  (resolve_review_findings).
+tags:
+- stage4
+- record-review
+- other

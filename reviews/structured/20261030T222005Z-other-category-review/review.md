@@ -1,0 +1,7330 @@
+# Category review of data/structures/other/ (314 records)
+
+- Review: 20261030T222005Z-other-category-review
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-30T22:19:00Z
+- Finished UTC: 2026-10-30T22:20:05Z
+- Reviewer: antigravity-c5s4-record-review (independent)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Full-cohort audit of all 314 OTHER records in data/structures/other/, including rent_complex.yaml (GO:0030870) added in Cycle 5 Stage 1, 12 DNA replication/chromatin complexes enriched with causal graphs in Cycle 5 Stage 2, and 7 complexes enriched with protein examples in Cycle 5 Stage 3. Lump/split boundaries across chromatin remodeling, transcription, DNA replication/repair, and signaling complexes are clean, and all Cycle 4 findings were verified resolved. Two minor consistency findings were identified in this cohort: (F1) primosome_complex.yaml (GO:1990077) uses the outdated UniProtKB protein_label 'DNA replication protein DnaC' on UniProtKB:P0AEF0 (where sibling records dnab_dnac_complex.yaml and pre_primosome_complex.yaml use the current UniProtKB recommended name 'Replicative helicase loader DnaC') and omits record-level evidence entries for its parent_structures (GO:0032993) and part_of (GO:0030894) links; and (F2) cmg_complex.yaml (GO:0071162), nuclear_replisome.yaml (GO:0043601), and replisome.yaml (GO:0030894) label reference strain NCBITaxon:284812 as 'Schizosaccharomyces pombe' (the species label for NCBITaxon:4896) instead of its canonical NCBI Taxonomy scientific name 'Schizosaccharomyces pombe 972h-' used across all 170 other NCBITaxon:284812 occurrences in the corpus. (A separate single-record review 20261030T222002Z-origin-recognition-complex-node-type-molecular-function covers the mistyped causal node on origin_recognition_complex.yaml.)
+
+## Scope And Provenance
+
+Full-cohort review of all 314 CellStructureRecord YAML files under data/structures/other/.
+
+Selection: Complete folder cohort data/structures/other/*.yaml in the frozen 1,008-record Cycle 5 Stage 4 inventory.
+Coverage: full; 314 reviewed / 314 in the declared population.
+Source: git_commit at Git base a94f6deb809dd50c8344fb03284de9801c0aa298.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0000148 | data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml | maintained | 1,3-beta-D-glucan synthase complex |
+| GO:0009334 | data/structures/other/3_phenylpropionate_dioxygenase_complex.yaml | maintained | 3-phenylpropionate dioxygenase complex |
+| GO:0016590 | data/structures/other/acf_complex.yaml | maintained | ACF complex |
+| cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex | data/structures/other/acrab_tolc_multidrug_efflux_transport_complex.yaml | maintained | AcrAB-TolC multidrug efflux transport complex |
+| cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml | maintained | AcrAD-TolC multidrug efflux transport complex |
+| cellstructuremech:acref_tolc_multidrug_efflux_transport_complex | data/structures/other/acref_tolc_multidrug_efflux_transport_complex.yaml | maintained | AcrEF-TolC multidrug efflux transport complex |
+| GO:0140671 | data/structures/other/ada_complex.yaml | maintained | ADA complex |
+| GO:1990201 | data/structures/other/alkanesulfonate_monooxygenase_complex.yaml | maintained | alkanesulfonate monooxygenase complex |
+| GO:0005658 | data/structures/other/alpha_dna_polymerase_primase_complex.yaml | maintained | alpha DNA polymerase:primase complex |
+| GO:0110067 | data/structures/other/ammonium_transmembrane_transporter_complex.yaml | maintained | ammonium transmembrane transporter complex |
+| GO:0030121 | data/structures/other/ap_1_adaptor_complex.yaml | maintained | AP-1 adaptor complex |
+| GO:0030122 | data/structures/other/ap_2_adaptor_complex.yaml | maintained | AP-2 adaptor complex |
+| GO:0030123 | data/structures/other/ap_3_adaptor_complex.yaml | maintained | AP-3 adaptor complex |
+| GO:0030124 | data/structures/other/ap_4_adaptor_complex.yaml | maintained | AP-4 adaptor complex |
+| GO:0044599 | data/structures/other/ap_5_adaptor_complex.yaml | maintained | AP-5 adaptor complex |
+| GO:0030119 | data/structures/other/ap_type_membrane_coat_adaptor_complex.yaml | maintained | AP-type membrane coat adaptor complex |
+| GO:0020007 | data/structures/other/apical_complex.yaml | maintained | apical complex |
+| GO:0097691 | data/structures/other/bacterial_extracellular_vesicle.yaml | maintained | bacterial extracellular vesicle |
+| GO:0061701 | data/structures/other/bacterial_outer_membrane_vesicle.yaml | maintained | bacterial outer membrane vesicle |
+| GO:0036389 | data/structures/other/bacterial_pre_replicative_complex.yaml | maintained | bacterial pre-replicative complex |
+| GO:1990063 | data/structures/other/bam_protein_complex.yaml | maintained | Bam protein complex |
+| GO:7770042 | data/structures/other/bindosome_complex.yaml | maintained | bindosome complex |
+| GO:0033186 | data/structures/other/caf_1_complex.yaml | maintained | CAF-1 complex |
+| GO:0031518 | data/structures/other/cbf3_complex.yaml | maintained | CBF3 complex |
+| GO:0030015 | data/structures/other/ccr4_not_core_complex.yaml | maintained | CCR4-NOT core complex |
+| GO:0005938 | data/structures/other/cell_cortex.yaml | maintained | cell cortex |
+| GO:0097610 | data/structures/other/cell_surface_furrow.yaml | maintained | cell surface furrow |
+| GO:0005933 | data/structures/other/cellular_bud.yaml | maintained | cellular bud |
+| GO:0005935 | data/structures/other/cellular_bud_neck.yaml | maintained | cellular bud neck |
+| GO:0031560 | data/structures/other/cellular_bud_neck_polarisome.yaml | maintained | cellular bud neck polarisome |
+| GO:0005934 | data/structures/other/cellular_bud_tip.yaml | maintained | cellular bud tip |
+| GO:0031561 | data/structures/other/cellular_bud_tip_polarisome.yaml | maintained | cellular bud tip polarisome |
+| GO:0043263 | data/structures/other/cellulosome.yaml | maintained | cellulosome |
+| GO:0016465 | data/structures/other/chaperonin_atpase_complex.yaml | maintained | chaperonin ATPase complex |
+| GO:0005832 | data/structures/other/chaperonin_containing_t_complex.yaml | maintained | chaperonin-containing T-complex |
+| GO:0030896 | data/structures/other/checkpoint_clamp_complex.yaml | maintained | checkpoint clamp complex |
+| GO:0008623 | data/structures/other/chrac.yaml | maintained | CHRAC |
+| GO:0000775 | data/structures/other/chromosome_centromeric_region.yaml | maintained | chromosome, centromeric region |
+| GO:0099115 | data/structures/other/chromosome_subtelomeric_region.yaml | maintained | chromosome, subtelomeric region |
+| GO:0000781 | data/structures/other/chromosome_telomeric_region.yaml | maintained | chromosome, telomeric region |
+| GO:0030118 | data/structures/other/clathrin_coat.yaml | maintained | clathrin coat |
+| GO:0030132 | data/structures/other/clathrin_coat_of_coated_pit.yaml | maintained | clathrin coat of coated pit |
+| GO:0030128 | data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml | maintained | clathrin coat of endocytic vesicle |
+| GO:0030130 | data/structures/other/clathrin_coat_of_trans_golgi_network_vesicle.yaml | maintained | clathrin coat of trans-Golgi network vesicle |
+| GO:0005905 | data/structures/other/clathrin_coated_pit.yaml | maintained | clathrin-coated pit |
+| GO:0030125 | data/structures/other/clathrin_vesicle_coat.yaml | maintained | clathrin vesicle coat |
+| GO:0071920 | data/structures/other/cleavage_body.yaml | maintained | cleavage body |
+| GO:0071162 | data/structures/other/cmg_complex.yaml | maintained | CMG complex |
+| GO:0017119 | data/structures/other/cog_complex.yaml | maintained | COG complex |
+| GO:0000817 | data/structures/other/coma_complex.yaml | maintained | COMA complex |
+| GO:0030126 | data/structures/other/copi_vesicle_coat.yaml | maintained | COPI vesicle coat |
+| GO:0030127 | data/structures/other/copii_vesicle_coat.yaml | maintained | COPII vesicle coat |
+| GO:1990098 | data/structures/other/core_primosome_complex.yaml | maintained | core primosome complex |
+| GO:0000438 | data/structures/other/core_tfiih_complex_portion_of_holo_tfiih_complex.yaml | maintained | core TFIIH complex portion of holo TFIIH complex |
+| GO:0000440 | data/structures/other/core_tfiih_complex_portion_of_nef3_complex.yaml | maintained | core TFIIH complex portion of NEF3 complex |
+| GO:0033263 | data/structures/other/corvet_complex.yaml | maintained | CORVET complex |
+| cellstructuremech:crl4wdr1_ubiquitin_ligase_complex | data/structures/other/crl4wdr1_ubiquitin_ligase_complex.yaml | maintained | CRL4WDR1 ubiquitin ligase complex |
+| GO:0031390 | data/structures/other/ctf18_rfc_like_complex.yaml | maintained | Ctf18 RFC-like complex |
+| cellstructuremech:cullin_e_ubiquitin_ligase_complex | data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml | maintained | Cullin-E ubiquitin ligase complex |
+| GO:0034270 | data/structures/other/cvt_complex.yaml | maintained | Cvt complex |
+| GO:0031910 | data/structures/other/cytostome.yaml | maintained | cytostome |
+| GO:0042729 | data/structures/other/dash_complex.yaml | maintained | DASH complex |
+| GO:0031431 | data/structures/other/dbf4_dependent_protein_kinase_complex.yaml | maintained | Dbf4-dependent protein kinase complex |
+| GO:0043625 | data/structures/other/delta_dna_polymerase_complex.yaml | maintained | delta DNA polymerase complex |
+| GO:1990125 | data/structures/other/diaa_complex.yaml | maintained | DiaA complex |
+| GO:0097684 | data/structures/other/dinoflagellate_antapex.yaml | maintained | dinoflagellate antapex |
+| GO:0097687 | data/structures/other/dinoflagellate_antapical_horn.yaml | maintained | dinoflagellate antapical horn |
+| GO:0097683 | data/structures/other/dinoflagellate_apex.yaml | maintained | dinoflagellate apex |
+| GO:0097685 | data/structures/other/dinoflagellate_apical_groove.yaml | maintained | dinoflagellate apical groove |
+| GO:0097686 | data/structures/other/dinoflagellate_apical_horn.yaml | maintained | dinoflagellate apical horn |
+| GO:0097611 | data/structures/other/dinoflagellate_cingulum.yaml | maintained | dinoflagellate cingulum |
+| GO:0097613 | data/structures/other/dinoflagellate_epicone.yaml | maintained | dinoflagellate epicone |
+| GO:0097614 | data/structures/other/dinoflagellate_hypocone.yaml | maintained | dinoflagellate hypocone |
+| GO:0097618 | data/structures/other/dinoflagellate_sulcal_notch.yaml | maintained | dinoflagellate sulcal notch |
+| GO:0097612 | data/structures/other/dinoflagellate_sulcus.yaml | maintained | dinoflagellate sulcus |
+| GO:0120217 | data/structures/other/dna_gyrase_complex.yaml | maintained | DNA gyrase complex |
+| GO:0044775 | data/structures/other/dna_polymerase_iii_beta_sliding_clamp_processivity_factor_complex.yaml | maintained | DNA polymerase III, beta sliding clamp processivity factor complex |
+| GO:0043847 | data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml | maintained | DNA polymerase III, clamp loader chi/psi subcomplex |
+| GO:0043846 | data/structures/other/dna_polymerase_iii_clamp_loader_complex.yaml | maintained | DNA polymerase III, clamp loader complex |
+| GO:0009360 | data/structures/other/dna_polymerase_iii_complex.yaml | maintained | DNA polymerase III complex |
+| GO:0044776 | data/structures/other/dna_polymerase_iii_core_complex.yaml | maintained | DNA polymerase III, core complex |
+| GO:0005662 | data/structures/other/dna_replication_factor_a_complex.yaml | maintained | DNA replication factor A complex |
+| GO:0005663 | data/structures/other/dna_replication_factor_c_complex.yaml | maintained | DNA replication factor C complex |
+| GO:0031261 | data/structures/other/dna_replication_preinitiation_complex.yaml | maintained | DNA replication preinitiation complex |
+| GO:0009340 | data/structures/other/dna_topoisomerase_iv_complex.yaml | maintained | DNA topoisomerase IV complex |
+| GO:1990102 | data/structures/other/dnaa_diaa_complex.yaml | maintained | DnaA-DiaA complex |
+| GO:1990157 | data/structures/other/dnaa_dnab_dnac_complex.yaml | maintained | DnaA-DnaB-DnaC complex |
+| GO:1990084 | data/structures/other/dnaa_dps_complex.yaml | maintained | DnaA-Dps complex |
+| GO:1990083 | data/structures/other/dnaa_hda_complex.yaml | maintained | DnaA-Hda complex |
+| GO:1990103 | data/structures/other/dnaa_hu_complex.yaml | maintained | DnaA-HU complex |
+| GO:1990082 | data/structures/other/dnaa_l2_complex.yaml | maintained | DnaA-L2 complex |
+| GO:1990101 | data/structures/other/dnaa_oric_complex.yaml | maintained | DnaA-oriC complex |
+| GO:1990100 | data/structures/other/dnab_dnac_complex.yaml | maintained | DnaB-DnaC complex |
+| GO:1990158 | data/structures/other/dnab_dnac_dnat_pria_prib_complex.yaml | maintained | DnaB-DnaC-DnaT-PriA-PriB complex |
+| GO:1990159 | data/structures/other/dnab_dnac_dnat_pria_pric_complex.yaml | maintained | DnaB-DnaC-DnaT-PriA-PriC complex |
+| GO:1990160 | data/structures/other/dnab_dnac_rep_pric_complex.yaml | maintained | DnaB-DnaC-Rep-PriC complex |
+| GO:1990156 | data/structures/other/dnab_dnag_complex.yaml | maintained | DnaB-DnaG complex |
+| GO:1990161 | data/structures/other/dnab_helicase_complex.yaml | maintained | DnaB helicase complex |
+| GO:0070939 | data/structures/other/dsl1_nzr_complex.yaml | maintained | Dsl1/NZR complex |
+| GO:0071819 | data/structures/other/dubm_complex.yaml | maintained | DUBm complex |
+| GO:1990065 | data/structures/other/dxr_protein_complex.yaml | maintained | Dxr protein complex |
+| GO:0032126 | data/structures/other/eisosome.yaml | maintained | eisosome |
+| cellstructuremech:ejectisome | data/structures/other/ejectisome.yaml | maintained | ejectisome |
+| GO:0031391 | data/structures/other/elg1_rfc_like_complex.yaml | maintained | Elg1 RFC-like complex |
+| GO:0033588 | data/structures/other/elongator_holoenzyme_complex.yaml | maintained | elongator holoenzyme complex |
+| GO:0072546 | data/structures/other/emc_complex.yaml | maintained | EMC complex |
+| cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex | data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml | maintained | EmrAB-TolC multidrug efflux transport complex |
+| GO:1990207 | data/structures/other/emre_multidrug_transporter_complex.yaml | maintained | EmrE multidrug transporter complex |
+| cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex | data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml | maintained | EmrKY-TolC multidrug efflux transport complex |
+| GO:0031205 | data/structures/other/endoplasmic_reticulum_sec_complex.yaml | maintained | endoplasmic reticulum Sec complex |
+| GO:0008622 | data/structures/other/epsilon_dna_polymerase_complex.yaml | maintained | epsilon DNA polymerase complex |
+| GO:0032865 | data/structures/other/ermes_complex.yaml | maintained | ERMES complex |
+| GO:0033565 | data/structures/other/escrt_0_complex.yaml | maintained | ESCRT-0 complex |
+| GO:0036452 | data/structures/other/escrt_complex.yaml | maintained | ESCRT complex |
+| GO:0000813 | data/structures/other/escrt_i_complex.yaml | maintained | ESCRT I complex |
+| GO:0000814 | data/structures/other/escrt_ii_complex.yaml | maintained | ESCRT II complex |
+| GO:0000815 | data/structures/other/escrt_iii_complex.yaml | maintained | ESCRT III complex |
+| GO:1990621 | data/structures/other/escrt_iv_complex.yaml | maintained | ESCRT IV complex |
+| GO:0000145 | data/structures/other/exocyst.yaml | maintained | exocyst |
+| GO:0009338 | data/structures/other/exodeoxyribonuclease_v_complex.yaml | maintained | exodeoxyribonuclease V complex |
+| GO:0034044 | data/structures/other/exomer_complex.yaml | maintained | exomer complex |
+| GO:0035101 | data/structures/other/fact_complex.yaml | maintained | FACT complex |
+| GO:1990202 | data/structures/other/fmn_reductase_complex.yaml | maintained | FMN reductase complex |
+| GO:0005760 | data/structures/other/gamma_dna_polymerase_complex.yaml | maintained | gamma DNA polymerase complex |
+| GO:0000938 | data/structures/other/garp_complex.yaml | maintained | GARP complex |
+| GO:1990130 | data/structures/other/gator1_complex.yaml | maintained | GATOR1 complex |
+| GO:0061700 | data/structures/other/gator2_complex.yaml | maintained | GATOR2 complex |
+| GO:0097504 | data/structures/other/gemini_of_cajal_bodies.yaml | maintained | Gemini of Cajal bodies |
+| GO:0043529 | data/structures/other/get_complex.yaml | maintained | GET complex |
+| GO:0000811 | data/structures/other/gins_complex.yaml | maintained | GINS complex |
+| GO:0160055 | data/structures/other/glideosome.yaml | maintained | glideosome |
+| GO:0031026 | data/structures/other/glutamate_synthase_complex.yaml | maintained | glutamate synthase complex |
+| GO:0009342 | data/structures/other/glutamate_synthase_complex_nadph.yaml | maintained | glutamate synthase complex (NADPH) |
+| GO:0005960 | data/structures/other/glycine_cleavage_complex.yaml | maintained | glycine cleavage complex |
+| GO:0030700 | data/structures/other/glycine_reductase_complex.yaml | maintained | glycine reductase complex |
+| GO:0042765 | data/structures/other/gpi_anchor_transamidase_complex.yaml | maintained | GPI-anchor transamidase complex |
+| GO:1990220 | data/structures/other/groel_groes_complex.yaml | maintained | GroEL-GroES complex |
+| GO:1990131 | data/structures/other/gtr1_gtr2_gtpase_complex.yaml | maintained | Gtr1-Gtr2 GTPase complex |
+| GO:0070823 | data/structures/other/hda1_complex.yaml | maintained | HDA1 complex |
+| GO:1990085 | data/structures/other/hda_beta_clamp_complex.yaml | maintained | Hda-beta clamp complex |
+| GO:0000417 | data/structures/other/hir_complex.yaml | maintained | HIR complex |
+| cellstructuremech:holdfast | data/structures/other/holdfast.yaml | maintained | holdfast |
+| GO:0030897 | data/structures/other/hops_complex.yaml | maintained | HOPS complex |
+| cellstructuremech:hsp78_chaperone_complex | data/structures/other/hsp78_chaperone_complex.yaml | maintained | Hsp78 chaperone complex |
+| GO:0001411 | data/structures/other/hyphal_tip.yaml | maintained | hyphal tip |
+| GO:0031562 | data/structures/other/hyphal_tip_polarisome.yaml | maintained | hyphal tip polarisome |
+| GO:0031942 | data/structures/other/i_aaa_complex.yaml | maintained | i-AAA complex |
+| GO:0031011 | data/structures/other/ino80_complex.yaml | maintained | Ino80 complex |
+| GO:0016587 | data/structures/other/isw1_complex.yaml | maintained | Isw1 complex |
+| GO:0036436 | data/structures/other/isw1a_complex.yaml | maintained | Isw1a complex |
+| GO:0036437 | data/structures/other/isw1b_complex.yaml | maintained | Isw1b complex |
+| GO:0000776 | data/structures/other/kinetochore.yaml | maintained | kinetochore |
+| GO:0043564 | data/structures/other/ku70_ku80_complex.yaml | maintained | Ku70:Ku80 complex |
+| GO:0062051 | data/structures/other/lipopolysaccharide_transport_system.yaml | maintained | lipopolysaccharide transport system |
+| cellstructuremech:lolcde_lipoprotein_abc_transporter_complex | data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml | maintained | LolCDE lipoprotein ABC transporter complex |
+| GO:0016606 | data/structures/other/lysp100_associated_nuclear_domain.yaml | maintained | LYSP100-associated nuclear domain |
+| GO:0005745 | data/structures/other/m_aaa_complex.yaml | maintained | m-AAA complex |
+| GO:1990196 | data/structures/other/macab_tolc_complex.yaml | maintained | MacAB-TolC complex |
+| GO:0043332 | data/structures/other/mating_projection_tip.yaml | maintained | mating projection tip |
+| GO:0031563 | data/structures/other/mating_projection_tip_polarisome.yaml | maintained | mating projection tip polarisome |
+| GO:0042555 | data/structures/other/mcm_complex.yaml | maintained | MCM complex |
+| cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex | data/structures/other/mdtabc_tolc_multidrug_efflux_transport_complex.yaml | maintained | MdtABC-TolC multidrug efflux transport complex |
+| GO:1990203 | data/structures/other/mdtbc_complex.yaml | maintained | MdtBC Complex |
+| cellstructuremech:meiotic_telomere_bouquet | data/structures/other/meiotic_telomere_bouquet.yaml | maintained | meiotic telomere bouquet |
+| GO:0030117 | data/structures/other/membrane_coat.yaml | maintained | membrane coat |
+| GO:1990197 | data/structures/other/methionine_importing_abc_transporter_complex.yaml | maintained | methionine-importing ABC transporter complex |
+| GO:0098561 | data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml | maintained | methyl accepting chemotaxis protein complex |
+| GO:0140275 | data/structures/other/mib_complex.yaml | maintained | MIB complex |
+| cellstructuremech:mic10_subcomplex | data/structures/other/mic10_subcomplex.yaml | maintained | MIC10 subcomplex |
+| cellstructuremech:mic60_mic19_complex | data/structures/other/mic60_mic19_complex.yaml | maintained | Mic60-Mic19 complex |
+| GO:0061617 | data/structures/other/micos_complex.yaml | maintained | MICOS complex |
+| GO:0120155 | data/structures/other/mih_complex.yaml | maintained | MIH complex |
+| GO:0140595 | data/structures/other/mim_complex.yaml | maintained | MIM complex |
+| GO:0000444 | data/structures/other/mis12_mind_type_complex.yaml | maintained | MIS12/MIND type complex |
+| GO:0042720 | data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml | maintained | mitochondrial inner membrane peptidase complex |
+| cellstructuremech:mitochondrial_lon_protease_complex | data/structures/other/mitochondrial_lon_protease_complex.yaml | maintained | mitochondrial Lon protease complex |
+| cellstructuremech:mitochondrial_multifunctional_assembly | data/structures/other/mitochondrial_multifunctional_assembly.yaml | maintained | mitochondrial multifunctional assembly |
+| GO:0005742 | data/structures/other/mitochondrial_outer_membrane_translocase_complex.yaml | maintained | mitochondrial outer membrane translocase complex |
+| GO:0035632 | data/structures/other/mitochondrial_prohibitin_complex.yaml | maintained | mitochondrial prohibitin complex |
+| GO:0030678 | data/structures/other/mitochondrial_ribonuclease_p_complex.yaml | maintained | mitochondrial ribonuclease P complex |
+| cellstructuremech:mlafedb_lipid_transport_complex | data/structures/other/mlafedb_lipid_transport_complex.yaml | maintained | MlaFEDB lipid transport complex |
+| GO:1990198 | data/structures/other/mode_complex.yaml | maintained | ModE complex |
+| GO:0035658 | data/structures/other/mon1_ccz1_complex.yaml | maintained | Mon1-Ccz1 complex |
+| GO:0033551 | data/structures/other/monopolin_complex.yaml | maintained | monopolin complex |
+| GO:0034457 | data/structures/other/mpp10_complex.yaml | maintained | Mpp10 complex |
+| GO:0030870 | data/structures/other/mre11_complex.yaml | maintained | Mre11 complex |
+| GO:0031533 | data/structures/other/mrna_capping_enzyme_complex.yaml | maintained | mRNA capping enzyme complex |
+| GO:1990199 | data/structures/other/msba_transporter_complex.yaml | maintained | MsbA transporter complex |
+| GO:0036410 | data/structures/other/mst2_histone_acetyltransferase_complex.yaml | maintained | Mst2 histone acetyltransferase complex |
+| GO:1990710 | data/structures/other/muts_complex.yaml | maintained | MutS complex |
+| GO:0031415 | data/structures/other/nata_complex.yaml | maintained | NatA complex |
+| GO:0031416 | data/structures/other/natb_complex.yaml | maintained | NatB complex |
+| GO:0031417 | data/structures/other/natc_complex.yaml | maintained | NatC complex |
+| GO:0031262 | data/structures/other/ndc80_complex.yaml | maintained | Ndc80 complex |
+| GO:0030690 | data/structures/other/noc1p_noc2p_complex.yaml | maintained | Noc1p-Noc2p complex |
+| GO:0030691 | data/structures/other/noc2p_noc3p_complex.yaml | maintained | Noc2p-Noc3p complex |
+| GO:0030692 | data/structures/other/noc4p_nop14p_complex.yaml | maintained | Noc4p-Nop14p complex |
+| GO:0030689 | data/structures/other/noc_complex.yaml | maintained | Noc complex |
+| GO:0033100 | data/structures/other/nua3_histone_acetyltransferase_complex.yaml | maintained | NuA3 histone acetyltransferase complex |
+| GO:1990467 | data/structures/other/nua3a_histone_acetyltransferase_complex.yaml | maintained | NuA3a histone acetyltransferase complex |
+| GO:1990468 | data/structures/other/nua3b_histone_acetyltransferase_complex.yaml | maintained | NuA3b histone acetyltransferase complex |
+| GO:0035267 | data/structures/other/nua4_histone_acetyltransferase_complex.yaml | maintained | NuA4 histone acetyltransferase complex |
+| GO:0000228 | data/structures/other/nuclear_chromosome.yaml | maintained | nuclear chromosome |
+| GO:0043599 | data/structures/other/nuclear_dna_replication_factor_c_complex.yaml | maintained | nuclear DNA replication factor C complex |
+| GO:1990251 | data/structures/other/nuclear_exosome_focus.yaml | maintained | nuclear exosome focus |
+| GO:0005664 | data/structures/other/nuclear_origin_of_replication_recognition_complex.yaml | maintained | nuclear origin of replication recognition complex |
+| GO:0005643 | data/structures/other/nuclear_pore.yaml | maintained | nuclear pore |
+| GO:0044613 | data/structures/other/nuclear_pore_central_transport_channel.yaml | maintained | nuclear pore central transport channel |
+| GO:0044614 | data/structures/other/nuclear_pore_cytoplasmic_filaments.yaml | maintained | nuclear pore cytoplasmic filaments |
+| GO:0044611 | data/structures/other/nuclear_pore_inner_ring.yaml | maintained | nuclear pore inner ring |
+| GO:0044612 | data/structures/other/nuclear_pore_linkers.yaml | maintained | nuclear pore linkers |
+| GO:0044615 | data/structures/other/nuclear_pore_nuclear_basket.yaml | maintained | nuclear pore nuclear basket |
+| GO:0031080 | data/structures/other/nuclear_pore_outer_ring.yaml | maintained | nuclear pore outer ring |
+| GO:0043596 | data/structures/other/nuclear_replication_fork.yaml | maintained | nuclear replication fork |
+| GO:0043601 | data/structures/other/nuclear_replisome.yaml | maintained | nuclear replisome |
+| GO:0030874 | data/structures/other/nucleolar_chromatin.yaml | maintained | nucleolar chromatin |
+| GO:0005730 | data/structures/other/nucleolus.yaml | maintained | nucleolus |
+| GO:0000786 | data/structures/other/nucleosome.yaml | maintained | nucleosome |
+| GO:0000110 | data/structures/other/nucleotide_excision_repair_factor_1_complex.yaml | maintained | nucleotide-excision repair factor 1 complex |
+| GO:0000111 | data/structures/other/nucleotide_excision_repair_factor_2_complex.yaml | maintained | nucleotide-excision repair factor 2 complex |
+| GO:0000112 | data/structures/other/nucleotide_excision_repair_factor_3_complex.yaml | maintained | nucleotide-excision repair factor 3 complex |
+| GO:0000113 | data/structures/other/nucleotide_excision_repair_factor_4_complex.yaml | maintained | nucleotide-excision repair factor 4 complex |
+| GO:0016581 | data/structures/other/nurd_complex.yaml | maintained | NuRD complex |
+| GO:0031912 | data/structures/other/oral_apparatus.yaml | maintained | oral apparatus |
+| GO:0000808 | data/structures/other/origin_recognition_complex.yaml | maintained | origin recognition complex |
+| GO:0000940 | data/structures/other/outer_kinetochore.yaml | maintained | outer kinetochore |
+| GO:0001405 | data/structures/other/pam_complex_tim23_associated_import_motor.yaml | maintained | PAM complex, Tim23 associated import motor |
+| GO:0031251 | data/structures/other/pan_complex.yaml | maintained | PAN complex |
+| cellstructuremech:phage_nucleus | data/structures/other/phage_nucleus.yaml | maintained | phage nucleus |
+| GO:0000407 | data/structures/other/phagophore_assembly_site.yaml | maintained | phagophore assembly site |
+| GO:0062077 | data/structures/other/phenylacetyl_coa_1_2_epoxidase_complex.yaml | maintained | phenylacetyl-CoA 1,2-epoxidase complex |
+| GO:0032777 | data/structures/other/piccolo_histone_acetyltransferase_complex.yaml | maintained | piccolo histone acetyltransferase complex |
+| GO:0016605 | data/structures/other/pml_body.yaml | maintained | PML body |
+| GO:0000133 | data/structures/other/polarisome.yaml | maintained | polarisome |
+| cellstructuremech:popz_polar_microdomain | data/structures/other/popz_polar_microdomain.yaml | maintained | PopZ polar microdomain |
+| cellstructuremech:potabcd_spermidine_abc_transporter_complex | data/structures/other/potabcd_spermidine_abc_transporter_complex.yaml | maintained | PotABCD spermidine ABC transporter complex |
+| GO:1990099 | data/structures/other/pre_primosome_complex.yaml | maintained | pre-primosome complex |
+| GO:0036387 | data/structures/other/pre_replicative_complex.yaml | maintained | pre-replicative complex |
+| GO:1990077 | data/structures/other/primosome_complex.yaml | maintained | primosome complex |
+| GO:0022624 | data/structures/other/proteasome_accessory_complex.yaml | maintained | proteasome accessory complex |
+| GO:0000502 | data/structures/other/proteasome_complex.yaml | maintained | proteasome complex |
+| GO:0005839 | data/structures/other/proteasome_core_complex.yaml | maintained | proteasome core complex |
+| GO:0005838 | data/structures/other/proteasome_regulatory_particle.yaml | maintained | proteasome regulatory particle |
+| GO:0008540 | data/structures/other/proteasome_regulatory_particle_base_subcomplex.yaml | maintained | proteasome regulatory particle, base subcomplex |
+| GO:0008541 | data/structures/other/proteasome_regulatory_particle_lid_subcomplex.yaml | maintained | proteasome regulatory particle, lid subcomplex |
+| GO:7770085 | data/structures/other/protocatechuate_3_4_dioxygenase_complex.yaml | maintained | protocatechuate 3,4-dioxygenase complex |
+| GO:0034388 | data/structures/other/pwp2p_containing_subcomplex_of_90s_preribosome.yaml | maintained | Pwp2p-containing subcomplex of 90S preribosome |
+| GO:1990732 | data/structures/other/pyrenoid.yaml | maintained | pyrenoid |
+| cellstructuremech:quiescent_telomere_hypercluster | data/structures/other/quiescent_telomere_hypercluster.yaml | maintained | quiescent telomere hypercluster |
+| GO:0031389 | data/structures/other/rad17_rfc_like_complex.yaml | maintained | Rad17 RFC-like complex |
+| GO:0071986 | data/structures/other/ragulator_complex.yaml | maintained | Ragulator complex |
+| GO:0043291 | data/structures/other/rave_complex.yaml | maintained | RAVE complex |
+| GO:0030875 | data/structures/other/rdna_protrusion.yaml | maintained | rDNA protrusion |
+| GO:0030869 | data/structures/other/rent_complex.yaml | maintained | RENT complex |
+| GO:0005657 | data/structures/other/replication_fork.yaml | maintained | replication fork |
+| GO:0030894 | data/structures/other/replisome.yaml | maintained | replisome |
+| GO:0030906 | data/structures/other/retromer_cargo_selective_complex.yaml | maintained | retromer, cargo-selective complex |
+| GO:0030904 | data/structures/other/retromer_complex.yaml | maintained | retromer complex |
+| GO:0030905 | data/structures/other/retromer_tubulation_complex.yaml | maintained | retromer, tubulation complex |
+| GO:0032299 | data/structures/other/ribonuclease_h2_complex.yaml | maintained | ribonuclease H2 complex |
+| GO:1903095 | data/structures/other/ribonuclease_iii_complex.yaml | maintained | ribonuclease III complex |
+| GO:0048492 | data/structures/other/ribulose_bisphosphate_carboxylase_complex.yaml | maintained | ribulose bisphosphate carboxylase complex |
+| GO:0005736 | data/structures/other/rna_polymerase_i_complex.yaml | maintained | RNA polymerase I complex |
+| GO:0033698 | data/structures/other/rpd3l_complex.yaml | maintained | Rpd3L complex |
+| GO:0070210 | data/structures/other/rpd3l_expanded_complex.yaml | maintained | Rpd3L-Expanded complex |
+| GO:0032221 | data/structures/other/rpd3s_complex.yaml | maintained | Rpd3S complex |
+| GO:0016586 | data/structures/other/rsc_type_complex.yaml | maintained | RSC-type complex |
+| GO:0000124 | data/structures/other/saga_complex.yaml | maintained | SAGA complex |
+| GO:0001401 | data/structures/other/sam_complex.yaml | maintained | SAM complex |
+| GO:0033255 | data/structures/other/sas_acetyltransferase_complex.yaml | maintained | SAS acetyltransferase complex |
+| GO:0005784 | data/structures/other/sec61_translocon_complex.yaml | maintained | Sec61 translocon complex |
+| GO:0031207 | data/structures/other/sec62_sec63_complex.yaml | maintained | Sec62/Sec63 complex |
+| GO:0035859 | data/structures/other/seh1_associated_complex.yaml | maintained | Seh1-associated complex |
+| GO:0048188 | data/structures/other/set1c_compass_complex.yaml | maintained | Set1C/COMPASS complex |
+| GO:0034967 | data/structures/other/set3_complex.yaml | maintained | Set3 complex |
+| GO:0070824 | data/structures/other/shrec_complex.yaml | maintained | SHREC complex |
+| GO:0044777 | data/structures/other/single_stranded_dna_binding_protein_complex.yaml | maintained | single-stranded DNA-binding protein complex |
+| GO:0046695 | data/structures/other/slik_saga_like_complex.yaml | maintained | SLIK (SAGA-like) complex |
+| GO:0070211 | data/structures/other/snt2c_complex.yaml | maintained | Snt2C complex |
+| GO:0031521 | data/structures/other/spitzenkorper.yaml | maintained | spitzenkorper |
+| GO:0071261 | data/structures/other/ssh1_translocon_complex.yaml | maintained | Ssh1 translocon complex |
+| GO:1990200 | data/structures/other/ssud_ssue_complex.yaml | maintained | SsuD-SsuE complex |
+| GO:0044570 | data/structures/other/starch_utilization_system_complex.yaml | maintained | starch utilization system complex |
+| cellstructuremech:stressosome | data/structures/other/stressosome.yaml | maintained | stressosome |
+| GO:0032798 | data/structures/other/swi5_sfr1_complex.yaml | maintained | Swi5-Sfr1 complex |
+| GO:0016514 | data/structures/other/swi_snf_complex.yaml | maintained | SWI/SNF complex |
+| GO:0000812 | data/structures/other/swr1_complex.yaml | maintained | Swr1 complex |
+| GO:0034455 | data/structures/other/t_utp_complex.yaml | maintained | t-UTP complex |
+| GO:1990205 | data/structures/other/taurine_dioxygenase_complex.yaml | maintained | taurine dioxygenase complex |
+| GO:0031500 | data/structures/other/tea1_cell_end_complex.yaml | maintained | Tea1 cell-end complex |
+| GO:0000347 | data/structures/other/tho_complex.yaml | maintained | THO complex |
+| GO:0000445 | data/structures/other/tho_complex_part_of_transcription_export_complex.yaml | maintained | THO complex part of transcription export complex |
+| GO:0031897 | data/structures/other/tic_complex.yaml | maintained | Tic complex |
+| GO:0042721 | data/structures/other/tim22_mitochondrial_import_inner_membrane_insertion_complex.yaml | maintained | TIM22 mitochondrial import inner membrane insertion complex |
+| GO:0005744 | data/structures/other/tim23_mitochondrial_import_inner_membrane_translocase_complex.yaml | maintained | TIM23 mitochondrial import inner membrane translocase complex |
+| GO:0010006 | data/structures/other/toc_complex.yaml | maintained | Toc complex |
+| GO:0031931 | data/structures/other/torc1_complex.yaml | maintained | TORC1 complex |
+| GO:0031932 | data/structures/other/torc2_complex.yaml | maintained | TORC2 complex |
+| GO:0031499 | data/structures/other/tramp_complex.yaml | maintained | TRAMP complex |
+| GO:0000346 | data/structures/other/transcription_export_complex.yaml | maintained | transcription export complex |
+| GO:0000439 | data/structures/other/transcription_factor_tfiih_core_complex.yaml | maintained | transcription factor TFIIH core complex |
+| GO:0005675 | data/structures/other/transcription_factor_tfiih_holo_complex.yaml | maintained | transcription factor TFIIH holo complex |
+| GO:0070985 | data/structures/other/transcription_factor_tfiik_complex.yaml | maintained | transcription factor TFIIK complex |
+| GO:0030008 | data/structures/other/trapp_complex.yaml | maintained | TRAPP complex |
+| GO:1990070 | data/structures/other/trappi_protein_complex.yaml | maintained | TRAPPI protein complex |
+| GO:1990071 | data/structures/other/trappii_protein_complex.yaml | maintained | TRAPPII protein complex |
+| GO:1990072 | data/structures/other/trappiii_protein_complex.yaml | maintained | TRAPPIII protein complex |
+| GO:0031317 | data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml | maintained | tripartite ATP-independent periplasmic transporter complex |
+| cellstructuremech:tusk_complex | data/structures/other/tusk_complex.yaml | maintained | TUSK complex |
+| GO:0043541 | data/structures/other/udp_n_acetylglucosamine_transferase_complex.yaml | maintained | UDP-N-acetylglucosamine transferase complex |
+| GO:0034456 | data/structures/other/utp_c_complex.yaml | maintained | UTP-C complex |
+| GO:0030120 | data/structures/other/vesicle_coat.yaml | maintained | vesicle coat |
+| GO:0071203 | data/structures/other/wash_complex.yaml | maintained | WASH complex |
+| GO:0016035 | data/structures/other/zeta_dna_polymerase_complex.yaml | maintained | zeta DNA polymerase complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Strict corpus validation covering other cohort | passed | True | GO:0000148, GO:0009334, GO:0016590, cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex, cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex, cellstructuremech:acref_tolc_multidrug_efflux_transport_complex, GO:0140671, GO:1990201, GO:0005658, GO:0110067, GO:0030121, GO:0030122, GO:0030123, GO:0030124, GO:0044599, GO:0030119, GO:0020007, GO:0097691, GO:0061701, GO:0036389, GO:1990063, GO:7770042, GO:0033186, GO:0031518, GO:0030015, GO:0005938, GO:0097610, GO:0005933, GO:0005935, GO:0031560, GO:0005934, GO:0031561, GO:0043263, GO:0016465, GO:0005832, GO:0030896, GO:0008623, GO:0000775, GO:0099115, GO:0000781, GO:0030118, GO:0030132, GO:0030128, GO:0030130, GO:0005905, GO:0030125, GO:0071920, GO:0071162, GO:0017119, GO:0000817, GO:0030126, GO:0030127, GO:1990098, GO:0000438, GO:0000440, GO:0033263, cellstructuremech:crl4wdr1_ubiquitin_ligase_complex, GO:0031390, cellstructuremech:cullin_e_ubiquitin_ligase_complex, GO:0034270, GO:0031910, GO:0042729, GO:0031431, GO:0043625, GO:1990125, GO:0097684, GO:0097687, GO:0097683, GO:0097685, GO:0097686, GO:0097611, GO:0097613, GO:0097614, GO:0097618, GO:0097612, GO:0120217, GO:0044775, GO:0043847, GO:0043846, GO:0009360, GO:0044776, GO:0005662, GO:0005663, GO:0031261, GO:0009340, GO:1990102, GO:1990157, GO:1990084, GO:1990083, GO:1990103, GO:1990082, GO:1990101, GO:1990100, GO:1990158, GO:1990159, GO:1990160, GO:1990156, GO:1990161, GO:0070939, GO:0071819, GO:1990065, GO:0032126, cellstructuremech:ejectisome, GO:0031391, GO:0033588, GO:0072546, cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex, GO:1990207, cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex, GO:0031205, GO:0008622, GO:0032865, GO:0033565, GO:0036452, GO:0000813, GO:0000814, GO:0000815, GO:1990621, GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504, GO:0043529, GO:0000811, GO:0160055, GO:0031026, GO:0009342, GO:0005960, GO:0030700, GO:0042765, GO:1990220, GO:1990131, GO:0070823, GO:1990085, GO:0000417, cellstructuremech:holdfast, GO:0030897, cellstructuremech:hsp78_chaperone_complex, GO:0001411, GO:0031562, GO:0031942, GO:0031011, GO:0016587, GO:0036436, GO:0036437, GO:0000776, GO:0043564, GO:0062051, cellstructuremech:lolcde_lipoprotein_abc_transporter_complex, GO:0016606, GO:0005745, GO:1990196, GO:0043332, GO:0031563, GO:0042555, cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex, GO:1990203, cellstructuremech:meiotic_telomere_bouquet, GO:0030117, GO:1990197, GO:0098561, GO:0140275, cellstructuremech:mic10_subcomplex, cellstructuremech:mic60_mic19_complex, GO:0061617, GO:0120155, GO:0140595, GO:0000444, GO:0042720, cellstructuremech:mitochondrial_lon_protease_complex, cellstructuremech:mitochondrial_multifunctional_assembly, GO:0005742, GO:0035632, GO:0030678, cellstructuremech:mlafedb_lipid_transport_complex, GO:1990198, GO:0035658, GO:0033551, GO:0034457, GO:0030870, GO:0031533, GO:1990199, GO:0036410, GO:1990710, GO:0031415, GO:0031416, GO:0031417, GO:0031262, GO:0030690, GO:0030691, GO:0030692, GO:0030689, GO:0033100, GO:1990467, GO:1990468, GO:0035267, GO:0000228, GO:0043599, GO:1990251, GO:0005664, GO:0005643, GO:0044613, GO:0044614, GO:0044611, GO:0044612, GO:0044615, GO:0031080, GO:0043596, GO:0043601, GO:0030874, GO:0005730, GO:0000786, GO:0000110, GO:0000111, GO:0000112, GO:0000113, GO:0016581, GO:0031912, GO:0000808, GO:0000940, GO:0001405, GO:0031251, cellstructuremech:phage_nucleus, GO:0000407, GO:0062077, GO:0032777, GO:0016605, GO:0000133, cellstructuremech:popz_polar_microdomain, cellstructuremech:potabcd_spermidine_abc_transporter_complex, GO:1990099, GO:0036387, GO:1990077, GO:0022624, GO:0000502, GO:0005839, GO:0005838, GO:0008540, GO:0008541, GO:7770085, GO:0034388, GO:1990732, cellstructuremech:quiescent_telomere_hypercluster, GO:0031389, GO:0071986, GO:0043291, GO:0030875, GO:0030869, GO:0005657, GO:0030894, GO:0030906, GO:0030904, GO:0030905, GO:0032299, GO:1903095, GO:0048492, GO:0005736, GO:0033698, GO:0070210, GO:0032221, GO:0016586, GO:0000124, GO:0001401, GO:0033255, GO:0005784, GO:0031207, GO:0035859, GO:0048188, GO:0034967, GO:0070824, GO:0044777, GO:0046695, GO:0070211, GO:0031521, GO:0071261, GO:1990200, GO:0044570, cellstructuremech:stressosome, GO:0032798, GO:0016514, GO:0000812, GO:0034455, GO:1990205, GO:0031500, GO:0000347, GO:0000445, GO:0031897, GO:0042721, GO:0005744, GO:0010006, GO:0031931, GO:0031932, GO:0031499, GO:0000346, GO:0000439, GO:0005675, GO:0070985, GO:0030008, GO:1990070, GO:1990071, GO:1990072, GO:0031317, cellstructuremech:tusk_complex, GO:0043541, GO:0034456, GO:0030120, GO:0071203, GO:0016035 | All 314 other records pass strict LinkML and semantic validation. |
+| History ledger validation covering other cohort | passed | True | GO:0000148, GO:0009334, GO:0016590, cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex, cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex, cellstructuremech:acref_tolc_multidrug_efflux_transport_complex, GO:0140671, GO:1990201, GO:0005658, GO:0110067, GO:0030121, GO:0030122, GO:0030123, GO:0030124, GO:0044599, GO:0030119, GO:0020007, GO:0097691, GO:0061701, GO:0036389, GO:1990063, GO:7770042, GO:0033186, GO:0031518, GO:0030015, GO:0005938, GO:0097610, GO:0005933, GO:0005935, GO:0031560, GO:0005934, GO:0031561, GO:0043263, GO:0016465, GO:0005832, GO:0030896, GO:0008623, GO:0000775, GO:0099115, GO:0000781, GO:0030118, GO:0030132, GO:0030128, GO:0030130, GO:0005905, GO:0030125, GO:0071920, GO:0071162, GO:0017119, GO:0000817, GO:0030126, GO:0030127, GO:1990098, GO:0000438, GO:0000440, GO:0033263, cellstructuremech:crl4wdr1_ubiquitin_ligase_complex, GO:0031390, cellstructuremech:cullin_e_ubiquitin_ligase_complex, GO:0034270, GO:0031910, GO:0042729, GO:0031431, GO:0043625, GO:1990125, GO:0097684, GO:0097687, GO:0097683, GO:0097685, GO:0097686, GO:0097611, GO:0097613, GO:0097614, GO:0097618, GO:0097612, GO:0120217, GO:0044775, GO:0043847, GO:0043846, GO:0009360, GO:0044776, GO:0005662, GO:0005663, GO:0031261, GO:0009340, GO:1990102, GO:1990157, GO:1990084, GO:1990083, GO:1990103, GO:1990082, GO:1990101, GO:1990100, GO:1990158, GO:1990159, GO:1990160, GO:1990156, GO:1990161, GO:0070939, GO:0071819, GO:1990065, GO:0032126, cellstructuremech:ejectisome, GO:0031391, GO:0033588, GO:0072546, cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex, GO:1990207, cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex, GO:0031205, GO:0008622, GO:0032865, GO:0033565, GO:0036452, GO:0000813, GO:0000814, GO:0000815, GO:1990621, GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504, GO:0043529, GO:0000811, GO:0160055, GO:0031026, GO:0009342, GO:0005960, GO:0030700, GO:0042765, GO:1990220, GO:1990131, GO:0070823, GO:1990085, GO:0000417, cellstructuremech:holdfast, GO:0030897, cellstructuremech:hsp78_chaperone_complex, GO:0001411, GO:0031562, GO:0031942, GO:0031011, GO:0016587, GO:0036436, GO:0036437, GO:0000776, GO:0043564, GO:0062051, cellstructuremech:lolcde_lipoprotein_abc_transporter_complex, GO:0016606, GO:0005745, GO:1990196, GO:0043332, GO:0031563, GO:0042555, cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex, GO:1990203, cellstructuremech:meiotic_telomere_bouquet, GO:0030117, GO:1990197, GO:0098561, GO:0140275, cellstructuremech:mic10_subcomplex, cellstructuremech:mic60_mic19_complex, GO:0061617, GO:0120155, GO:0140595, GO:0000444, GO:0042720, cellstructuremech:mitochondrial_lon_protease_complex, cellstructuremech:mitochondrial_multifunctional_assembly, GO:0005742, GO:0035632, GO:0030678, cellstructuremech:mlafedb_lipid_transport_complex, GO:1990198, GO:0035658, GO:0033551, GO:0034457, GO:0030870, GO:0031533, GO:1990199, GO:0036410, GO:1990710, GO:0031415, GO:0031416, GO:0031417, GO:0031262, GO:0030690, GO:0030691, GO:0030692, GO:0030689, GO:0033100, GO:1990467, GO:1990468, GO:0035267, GO:0000228, GO:0043599, GO:1990251, GO:0005664, GO:0005643, GO:0044613, GO:0044614, GO:0044611, GO:0044612, GO:0044615, GO:0031080, GO:0043596, GO:0043601, GO:0030874, GO:0005730, GO:0000786, GO:0000110, GO:0000111, GO:0000112, GO:0000113, GO:0016581, GO:0031912, GO:0000808, GO:0000940, GO:0001405, GO:0031251, cellstructuremech:phage_nucleus, GO:0000407, GO:0062077, GO:0032777, GO:0016605, GO:0000133, cellstructuremech:popz_polar_microdomain, cellstructuremech:potabcd_spermidine_abc_transporter_complex, GO:1990099, GO:0036387, GO:1990077, GO:0022624, GO:0000502, GO:0005839, GO:0005838, GO:0008540, GO:0008541, GO:7770085, GO:0034388, GO:1990732, cellstructuremech:quiescent_telomere_hypercluster, GO:0031389, GO:0071986, GO:0043291, GO:0030875, GO:0030869, GO:0005657, GO:0030894, GO:0030906, GO:0030904, GO:0030905, GO:0032299, GO:1903095, GO:0048492, GO:0005736, GO:0033698, GO:0070210, GO:0032221, GO:0016586, GO:0000124, GO:0001401, GO:0033255, GO:0005784, GO:0031207, GO:0035859, GO:0048188, GO:0034967, GO:0070824, GO:0044777, GO:0046695, GO:0070211, GO:0031521, GO:0071261, GO:1990200, GO:0044570, cellstructuremech:stressosome, GO:0032798, GO:0016514, GO:0000812, GO:0034455, GO:1990205, GO:0031500, GO:0000347, GO:0000445, GO:0031897, GO:0042721, GO:0005744, GO:0010006, GO:0031931, GO:0031932, GO:0031499, GO:0000346, GO:0000439, GO:0005675, GO:0070985, GO:0030008, GO:1990070, GO:1990071, GO:1990072, GO:0031317, cellstructuremech:tusk_complex, GO:0043541, GO:0034456, GO:0030120, GO:0071203, GO:0016035 | All history ledger records covering other validate cleanly. |
+
+## Scientific And Domain Assessments
+
+### Identity, boundaries, causal graphs, and ontology grounding across data/structures/other/
+
+scope: supported. Targets: GO:0000148, GO:0009334, GO:0016590, cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex, cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex, cellstructuremech:acref_tolc_multidrug_efflux_transport_complex, GO:0140671, GO:1990201, GO:0005658, GO:0110067, GO:0030121, GO:0030122, GO:0030123, GO:0030124, GO:0044599, GO:0030119, GO:0020007, GO:0097691, GO:0061701, GO:0036389, GO:1990063, GO:7770042, GO:0033186, GO:0031518, GO:0030015, GO:0005938, GO:0097610, GO:0005933, GO:0005935, GO:0031560, GO:0005934, GO:0031561, GO:0043263, GO:0016465, GO:0005832, GO:0030896, GO:0008623, GO:0000775, GO:0099115, GO:0000781, GO:0030118, GO:0030132, GO:0030128, GO:0030130, GO:0005905, GO:0030125, GO:0071920, GO:0071162, GO:0017119, GO:0000817, GO:0030126, GO:0030127, GO:1990098, GO:0000438, GO:0000440, GO:0033263, cellstructuremech:crl4wdr1_ubiquitin_ligase_complex, GO:0031390, cellstructuremech:cullin_e_ubiquitin_ligase_complex, GO:0034270, GO:0031910, GO:0042729, GO:0031431, GO:0043625, GO:1990125, GO:0097684, GO:0097687, GO:0097683, GO:0097685, GO:0097686, GO:0097611, GO:0097613, GO:0097614, GO:0097618, GO:0097612, GO:0120217, GO:0044775, GO:0043847, GO:0043846, GO:0009360, GO:0044776, GO:0005662, GO:0005663, GO:0031261, GO:0009340, GO:1990102, GO:1990157, GO:1990084, GO:1990083, GO:1990103, GO:1990082, GO:1990101, GO:1990100, GO:1990158, GO:1990159, GO:1990160, GO:1990156, GO:1990161, GO:0070939, GO:0071819, GO:1990065, GO:0032126, cellstructuremech:ejectisome, GO:0031391, GO:0033588, GO:0072546, cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex, GO:1990207, cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex, GO:0031205, GO:0008622, GO:0032865, GO:0033565, GO:0036452, GO:0000813, GO:0000814, GO:0000815, GO:1990621, GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504, GO:0043529, GO:0000811, GO:0160055, GO:0031026, GO:0009342, GO:0005960, GO:0030700, GO:0042765, GO:1990220, GO:1990131, GO:0070823, GO:1990085, GO:0000417, cellstructuremech:holdfast, GO:0030897, cellstructuremech:hsp78_chaperone_complex, GO:0001411, GO:0031562, GO:0031942, GO:0031011, GO:0016587, GO:0036436, GO:0036437, GO:0000776, GO:0043564, GO:0062051, cellstructuremech:lolcde_lipoprotein_abc_transporter_complex, GO:0016606, GO:0005745, GO:1990196, GO:0043332, GO:0031563, GO:0042555, cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex, GO:1990203, cellstructuremech:meiotic_telomere_bouquet, GO:0030117, GO:1990197, GO:0098561, GO:0140275, cellstructuremech:mic10_subcomplex, cellstructuremech:mic60_mic19_complex, GO:0061617, GO:0120155, GO:0140595, GO:0000444, GO:0042720, cellstructuremech:mitochondrial_lon_protease_complex, cellstructuremech:mitochondrial_multifunctional_assembly, GO:0005742, GO:0035632, GO:0030678, cellstructuremech:mlafedb_lipid_transport_complex, GO:1990198, GO:0035658, GO:0033551, GO:0034457, GO:0030870, GO:0031533, GO:1990199, GO:0036410, GO:1990710, GO:0031415, GO:0031416, GO:0031417, GO:0031262, GO:0030690, GO:0030691, GO:0030692, GO:0030689, GO:0033100, GO:1990467, GO:1990468, GO:0035267, GO:0000228, GO:0043599, GO:1990251, GO:0005664, GO:0005643, GO:0044613, GO:0044614, GO:0044611, GO:0044612, GO:0044615, GO:0031080, GO:0043596, GO:0043601, GO:0030874, GO:0005730, GO:0000786, GO:0000110, GO:0000111, GO:0000112, GO:0000113, GO:0016581, GO:0031912, GO:0000808, GO:0000940, GO:0001405, GO:0031251, cellstructuremech:phage_nucleus, GO:0000407, GO:0062077, GO:0032777, GO:0016605, GO:0000133, cellstructuremech:popz_polar_microdomain, cellstructuremech:potabcd_spermidine_abc_transporter_complex, GO:1990099, GO:0036387, GO:1990077, GO:0022624, GO:0000502, GO:0005839, GO:0005838, GO:0008540, GO:0008541, GO:7770085, GO:0034388, GO:1990732, cellstructuremech:quiescent_telomere_hypercluster, GO:0031389, GO:0071986, GO:0043291, GO:0030875, GO:0030869, GO:0005657, GO:0030894, GO:0030906, GO:0030904, GO:0030905, GO:0032299, GO:1903095, GO:0048492, GO:0005736, GO:0033698, GO:0070210, GO:0032221, GO:0016586, GO:0000124, GO:0001401, GO:0033255, GO:0005784, GO:0031207, GO:0035859, GO:0048188, GO:0034967, GO:0070824, GO:0044777, GO:0046695, GO:0070211, GO:0031521, GO:0071261, GO:1990200, GO:0044570, cellstructuremech:stressosome, GO:0032798, GO:0016514, GO:0000812, GO:0034455, GO:1990205, GO:0031500, GO:0000347, GO:0000445, GO:0031897, GO:0042721, GO:0005744, GO:0010006, GO:0031931, GO:0031932, GO:0031499, GO:0000346, GO:0000439, GO:0005675, GO:0070985, GO:0030008, GO:1990070, GO:1990071, GO:1990072, GO:0031317, cellstructuremech:tusk_complex, GO:0043541, GO:0034456, GO:0030120, GO:0071203, GO:0016035.
+
+All 314 records in data/structures/other/ represent distinct multi-protein complexes or cellular structures with valid schema and history provenance.
+
+### UniProtKB:P0AEF0 protein_label consistency and hierarchy evidence in primosome_complex.yaml
+
+consistency: concern. Targets: GO:1990077.
+
+primosome_complex.yaml uses an older UniProtKB protein_label ('DNA replication protein DnaC') for P0AEF0 than sibling records ('Replicative helicase loader DnaC') and omits record-level evidence for GO:0032993 and GO:0030894.
+
+### Canonical NCBI Taxonomy scientific name for NCBITaxon:284812 across cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml
+
+consistency: concern. Targets: GO:0071162, GO:0043601, GO:0030894.
+
+cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml use 'Schizosaccharomyces pombe' instead of 'Schizosaccharomyces pombe 972h-' for NCBITaxon:284812.
+
+## Findings
+
+### F1: primosome_complex.yaml uses outdated UniProtKB:P0AEF0 protein_label and omits GO:0032993/GO:0030894 hierarchy evidence
+
+minor / open / confirmed; issue key: primosome-complex-dnac-protein-label-and-hierarchy-evidence.
+
+In data/structures/other/primosome_complex.yaml (GO:1990077), components[2] (helicase_chaperone_protein) protein_examples[0] (UniProtKB:P0AEF0, dnaC, NCBITaxon:83333, lines 103-110) uses the older label 'DNA replication protein DnaC' (retrieved_on: '2026-08-30'), whereas sibling records dnab_dnac_complex.yaml and pre_primosome_complex.yaml use the current UniProtKB recommended name 'Replicative helicase loader DnaC' (retrieved_on: '2026-10-17'). In addition, primosome_complex.yaml declares parent_structures: [GO:0032993] and part_of: [GO:0030894] without corresponding GO:0032993 and GO:0030894 entries in record-level evidence.
+
+### F2: cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml use species label 'Schizosaccharomyces pombe' for strain NCBITaxon:284812
+
+minor / open / confirmed; issue key: other-eukaryotic-replisome-ncbitaxon-284812-strain-label.
+
+Across data/structures/other/cmg_complex.yaml (GO:0071162), data/structures/other/nuclear_replisome.yaml (GO:0043601), and data/structures/other/replisome.yaml (GO:0030894), components[0] (cdc45_protein) protein_examples[0] (UniProtKB:O74113, taxon_id: NCBITaxon:284812) and canonical_examples[0] (taxon_id: NCBITaxon:284812) set taxon_label: 'Schizosaccharomyces pombe' (the species label for NCBITaxon:4896) instead of the canonical NCBI Taxonomy scientific name 'Schizosaccharomyces pombe 972h-' used across all 170 other NCBITaxon:284812 occurrences in the corpus.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Update components[2].protein_examples[0].protein_label on UniProtKB:P0AEF0 to 'Replicative helicase loader DnaC' (retrieved_on: '2026-10-17') and add record-level evidence entries for GO:0032993 (parent_structures) and GO:0030894 (part_of) in data/structures/other/primosome_complex.yaml.
+
+- .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+- .venv/bin/python scripts/validate_history.py
+
+### A2
+
+Update taxon_label for NCBITaxon:284812 from 'Schizosaccharomyces pombe' to 'Schizosaccharomyces pombe 972h-' in components[0].protein_examples[0] and canonical_examples[0] across cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml.
+
+- .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+- .venv/bin/python scripts/validate_history.py
+
+## Category Boundaries
+
+- retain: GO:0000148, GO:0009334, GO:0016590, cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex, cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex, cellstructuremech:acref_tolc_multidrug_efflux_transport_complex, GO:0140671, GO:1990201, GO:0005658, GO:0110067, GO:0030121, GO:0030122, GO:0030123, GO:0030124, GO:0044599, GO:0030119, GO:0020007, GO:0097691, GO:0061701, GO:0036389, GO:1990063, GO:7770042, GO:0033186, GO:0031518, GO:0030015, GO:0005938, GO:0097610, GO:0005933, GO:0005935, GO:0031560, GO:0005934, GO:0031561, GO:0043263, GO:0016465, GO:0005832, GO:0030896, GO:0008623, GO:0000775, GO:0099115, GO:0000781, GO:0030118, GO:0030132, GO:0030128, GO:0030130, GO:0005905, GO:0030125, GO:0071920, GO:0071162, GO:0017119, GO:0000817, GO:0030126, GO:0030127, GO:1990098, GO:0000438, GO:0000440, GO:0033263, cellstructuremech:crl4wdr1_ubiquitin_ligase_complex, GO:0031390, cellstructuremech:cullin_e_ubiquitin_ligase_complex, GO:0034270, GO:0031910, GO:0042729, GO:0031431, GO:0043625, GO:1990125, GO:0097684, GO:0097687, GO:0097683, GO:0097685, GO:0097686, GO:0097611, GO:0097613, GO:0097614, GO:0097618, GO:0097612, GO:0120217, GO:0044775, GO:0043847, GO:0043846, GO:0009360, GO:0044776, GO:0005662, GO:0005663, GO:0031261, GO:0009340, GO:1990102, GO:1990157, GO:1990084, GO:1990083, GO:1990103, GO:1990082, GO:1990101, GO:1990100, GO:1990158, GO:1990159, GO:1990160, GO:1990156, GO:1990161, GO:0070939, GO:0071819, GO:1990065, GO:0032126, cellstructuremech:ejectisome, GO:0031391, GO:0033588, GO:0072546, cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex, GO:1990207, cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex, GO:0031205, GO:0008622, GO:0032865, GO:0033565, GO:0036452, GO:0000813, GO:0000814, GO:0000815, GO:1990621, GO:0000145, GO:0009338, GO:0034044, GO:0035101, GO:1990202, GO:0005760, GO:0000938, GO:1990130, GO:0061700, GO:0097504, GO:0043529, GO:0000811, GO:0160055, GO:0031026, GO:0009342, GO:0005960, GO:0030700, GO:0042765, GO:1990220, GO:1990131, GO:0070823, GO:1990085, GO:0000417, cellstructuremech:holdfast, GO:0030897, cellstructuremech:hsp78_chaperone_complex, GO:0001411, GO:0031562, GO:0031942, GO:0031011, GO:0016587, GO:0036436, GO:0036437, GO:0000776, GO:0043564, GO:0062051, cellstructuremech:lolcde_lipoprotein_abc_transporter_complex, GO:0016606, GO:0005745, GO:1990196, GO:0043332, GO:0031563, GO:0042555, cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex, GO:1990203, cellstructuremech:meiotic_telomere_bouquet, GO:0030117, GO:1990197, GO:0098561, GO:0140275, cellstructuremech:mic10_subcomplex, cellstructuremech:mic60_mic19_complex, GO:0061617, GO:0120155, GO:0140595, GO:0000444, GO:0042720, cellstructuremech:mitochondrial_lon_protease_complex, cellstructuremech:mitochondrial_multifunctional_assembly, GO:0005742, GO:0035632, GO:0030678, cellstructuremech:mlafedb_lipid_transport_complex, GO:1990198, GO:0035658, GO:0033551, GO:0034457, GO:0030870, GO:0031533, GO:1990199, GO:0036410, GO:1990710, GO:0031415, GO:0031416, GO:0031417, GO:0031262, GO:0030690, GO:0030691, GO:0030692, GO:0030689, GO:0033100, GO:1990467, GO:1990468, GO:0035267, GO:0000228, GO:0043599, GO:1990251, GO:0005664, GO:0005643, GO:0044613, GO:0044614, GO:0044611, GO:0044612, GO:0044615, GO:0031080, GO:0043596, GO:0043601, GO:0030874, GO:0005730, GO:0000786, GO:0000110, GO:0000111, GO:0000112, GO:0000113, GO:0016581, GO:0031912, GO:0000808, GO:0000940, GO:0001405, GO:0031251, cellstructuremech:phage_nucleus, GO:0000407, GO:0062077, GO:0032777, GO:0016605, GO:0000133, cellstructuremech:popz_polar_microdomain, cellstructuremech:potabcd_spermidine_abc_transporter_complex, GO:1990099, GO:0036387, GO:1990077, GO:0022624, GO:0000502, GO:0005839, GO:0005838, GO:0008540, GO:0008541, GO:7770085, GO:0034388, GO:1990732, cellstructuremech:quiescent_telomere_hypercluster, GO:0031389, GO:0071986, GO:0043291, GO:0030875, GO:0030869, GO:0005657, GO:0030894, GO:0030906, GO:0030904, GO:0030905, GO:0032299, GO:1903095, GO:0048492, GO:0005736, GO:0033698, GO:0070210, GO:0032221, GO:0016586, GO:0000124, GO:0001401, GO:0033255, GO:0005784, GO:0031207, GO:0035859, GO:0048188, GO:0034967, GO:0070824, GO:0044777, GO:0046695, GO:0070211, GO:0031521, GO:0071261, GO:1990200, GO:0044570, cellstructuremech:stressosome, GO:0032798, GO:0016514, GO:0000812, GO:0034455, GO:1990205, GO:0031500, GO:0000347, GO:0000445, GO:0031897, GO:0042721, GO:0005744, GO:0010006, GO:0031931, GO:0031932, GO:0031499, GO:0000346, GO:0000439, GO:0005675, GO:0070985, GO:0030008, GO:1990070, GO:1990071, GO:1990072, GO:0031317, cellstructuremech:tusk_complex, GO:0043541, GO:0034456, GO:0030120, GO:0071203, GO:0016035. All 314 other records represent distinct multi-protein complexes or cellular structures without duplicate ontology groundings.
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev_strict_other | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,008 records including all 314 other records. |
+| ev_history_other | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,140 history records covering other. |
+| ev_primosome_dnac_and_hierarchy | data/structures/other/primosome_complex.yaml; parent_structures/part_of (lines 36-39), components[2].protein_examples[0] (lines 103-110), and evidence (lines 195-210) | supports | primosome_complex.yaml uses outdated protein_label 'DNA replication protein DnaC' for UniProtKB:P0AEF0 (where dnab_dnac_complex.yaml and pre_primosome_complex.yaml use 'Replicative helicase loader DnaC') and omits GO:0032993 and GO:0030894 from record-level evidence. |
+| ev_other_replisome_ncbitaxon_284812_label | data/structures/other/cmg_complex.yaml; components[0].protein_examples[0] (lines 48-55) and canonical_examples[0] (lines 201-205) | supports | cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml pair taxon_id: NCBITaxon:284812 with species label 'Schizosaccharomyces pombe' instead of canonical strain label 'Schizosaccharomyces pombe 972h-'. |
+
+## Limits And Additional Notes
+
+- Record edits for other cohort findings are queued for Cycle 5 Stage 5 (resolve_review_findings).
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261030T222005Z-other-category-review
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: Category review of data/structures/other/ (314 records)
+started_at: '2026-10-30T22:19:00Z'
+finished_at: '2026-10-30T22:20:05Z'
+reviewer:
+  identity: antigravity-c5s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 5 Stage 4 record_review against committed
+    git revision a94f6deb809dd50c8344fb03284de9801c0aa298 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
+scientific_review: true
+summary: 'Full-cohort audit of all 314 OTHER records in data/structures/other/, including
+  rent_complex.yaml (GO:0030870) added in Cycle 5 Stage 1, 12 DNA replication/chromatin
+  complexes enriched with causal graphs in Cycle 5 Stage 2, and 7 complexes enriched
+  with protein examples in Cycle 5 Stage 3. Lump/split boundaries across chromatin
+  remodeling, transcription, DNA replication/repair, and signaling complexes are clean,
+  and all Cycle 4 findings were verified resolved. Two minor consistency findings
+  were identified in this cohort: (F1) primosome_complex.yaml (GO:1990077) uses the
+  outdated UniProtKB protein_label ''DNA replication protein DnaC'' on UniProtKB:P0AEF0
+  (where sibling records dnab_dnac_complex.yaml and pre_primosome_complex.yaml use
+  the current UniProtKB recommended name ''Replicative helicase loader DnaC'') and
+  omits record-level evidence entries for its parent_structures (GO:0032993) and part_of
+  (GO:0030894) links; and (F2) cmg_complex.yaml (GO:0071162), nuclear_replisome.yaml
+  (GO:0043601), and replisome.yaml (GO:0030894) label reference strain NCBITaxon:284812
+  as ''Schizosaccharomyces pombe'' (the species label for NCBITaxon:4896) instead
+  of its canonical NCBI Taxonomy scientific name ''Schizosaccharomyces pombe 972h-''
+  used across all 170 other NCBITaxon:284812 occurrences in the corpus. (A separate
+  single-record review 20261030T222002Z-origin-recognition-complex-node-type-molecular-function
+  covers the mistyped causal node on origin_recognition_complex.yaml.)'
+source:
+  git_revision: a94f6deb809dd50c8344fb03284de9801c0aa298
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+    sha256: 3dedbfa89047d1949a9d4691dcb873546c76dcd836c17494c43160462b9626bc
+    role: target
+  - path: data/structures/other/3_phenylpropionate_dioxygenase_complex.yaml
+    sha256: 168a39bc1efe333cd3f4d7217f3bfa978db90e560135e1cfaea564df1ea67f2e
+    role: target
+  - path: data/structures/other/acf_complex.yaml
+    sha256: 27edd08119e44be1f4b50bd981e4642df134f6bbc3df8266b5c5b8a41d18905d
+    role: target
+  - path: data/structures/other/acrab_tolc_multidrug_efflux_transport_complex.yaml
+    sha256: 781dd7e152917915b204ac297248d0caa8f290a2f815b9bf9ed41f43b8819c25
+    role: target
+  - path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    sha256: d425921342020294e8af9bc08ca22808b4479493a6f690b01afe51ea4ec78f51
+    role: target
+  - path: data/structures/other/acref_tolc_multidrug_efflux_transport_complex.yaml
+    sha256: d5cddae7fee04a1a72ce4514d49664e93f4e102b6199dbfe8a7a61ce4cbeff45
+    role: target
+  - path: data/structures/other/ada_complex.yaml
+    sha256: 19ddd1561eca805686597eff4dff9a4984339e1245e743c82c616267fac35406
+    role: target
+  - path: data/structures/other/alkanesulfonate_monooxygenase_complex.yaml
+    sha256: ac8fbeb8ff0cc8842c6a4dc579722d2860064fff15bb3011c0b726caa440a7ba
+    role: target
+  - path: data/structures/other/alpha_dna_polymerase_primase_complex.yaml
+    sha256: efa26498f03abfddfde91ca7cb10b78740b65eac7cbd1a9c81436d884a2f5a76
+    role: target
+  - path: data/structures/other/ammonium_transmembrane_transporter_complex.yaml
+    sha256: 5817cfb54453674b3d5c595474173ea79cca6f9d88c6ac8ea97f3445e1e775a4
+    role: target
+  - path: data/structures/other/ap_1_adaptor_complex.yaml
+    sha256: 07e8041b35a2b239cc863b961dcea341b80d8b9afc3db0482cf001a4d3f1c03e
+    role: target
+  - path: data/structures/other/ap_2_adaptor_complex.yaml
+    sha256: 7e977e9b968a49ccfe219389d742097a6f905f31ee9b00631f7ecf528cc67a36
+    role: target
+  - path: data/structures/other/ap_3_adaptor_complex.yaml
+    sha256: b47759292491bad87010aea3770b522c9d3f3e48b6ea253eb6c9c1af4cae9371
+    role: target
+  - path: data/structures/other/ap_4_adaptor_complex.yaml
+    sha256: e5f16d7db120bac359a5e922826eebea96ee57839a61ec70e12ad1663593a38e
+    role: target
+  - path: data/structures/other/ap_5_adaptor_complex.yaml
+    sha256: d951b48b8f9fe05db066c722dd2dad8277f04eb4af1ac36bf4a5c03932ac82dc
+    role: target
+  - path: data/structures/other/ap_type_membrane_coat_adaptor_complex.yaml
+    sha256: a16a52e7091df279f222b922baa48be321173ab9dc132e1c2be2384d48ca626b
+    role: target
+  - path: data/structures/other/apical_complex.yaml
+    sha256: 72b670707751292b450e4c8bccddb25a4a14e482fc0eaaa85975681694f55952
+    role: target
+  - path: data/structures/other/bacterial_extracellular_vesicle.yaml
+    sha256: 43f0f6e0dfef8fc8533bbbac4c5a1583adc6626873f52b92f2edbc32560137d2
+    role: target
+  - path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    sha256: ae635da7dc9351f59de2b4283aa2d572b200cf9eba187147c027e5e86b445a34
+    role: target
+  - path: data/structures/other/bacterial_pre_replicative_complex.yaml
+    sha256: a4a8871a963f0b0eb3e32d9a677f099afdf3f6246dc7964f1890b61b3f01b62a
+    role: target
+  - path: data/structures/other/bam_protein_complex.yaml
+    sha256: ac284bcf4e0ec8021b0f218143e2337a0845c36113edb097e79c950ac1688cde
+    role: target
+  - path: data/structures/other/bindosome_complex.yaml
+    sha256: 360a186c82ed29ddaae42fdbcb445a37b8482be97bed64a6d077792b8fdce375
+    role: target
+  - path: data/structures/other/caf_1_complex.yaml
+    sha256: 9cfaf9ce52f019ddb3125428f3c6ce7cb17ae2e476fbd0fb9be2e0bcad652576
+    role: target
+  - path: data/structures/other/cbf3_complex.yaml
+    sha256: 9cf3d32f5094ac6a00417cb7b7c125b45a4329e364d8e721314f19349baf44f2
+    role: target
+  - path: data/structures/other/ccr4_not_core_complex.yaml
+    sha256: 504a2fab8f0e45f9bad27454f7ff8c51b0aa9caba8dcefa65b8e6647037559a8
+    role: target
+  - path: data/structures/other/cell_cortex.yaml
+    sha256: 5335ecdc090d19feeccf80b52e7f52231efcc7a92bfa2a00f920704673038b2d
+    role: target
+  - path: data/structures/other/cell_surface_furrow.yaml
+    sha256: 6b0093967543186f49c224cfbb592d8131bc723930752e1b17a5536ebc11219d
+    role: target
+  - path: data/structures/other/cellular_bud.yaml
+    sha256: fbf8f5612bc661a91f8f2991018db67cae34dd7859360b981ef05a99a9582ea8
+    role: target
+  - path: data/structures/other/cellular_bud_neck.yaml
+    sha256: 5c7f0d1c4c048d162593483fc2e0210697dff88f4dcf5d7e3b1d194f35e7e6e8
+    role: target
+  - path: data/structures/other/cellular_bud_neck_polarisome.yaml
+    sha256: aae60b7cc1209dc95937db2c0514862f03f52a2f8848fcf0fec6ca461bb4bfaa
+    role: target
+  - path: data/structures/other/cellular_bud_tip.yaml
+    sha256: c5e468cb63bf8195e8d5c7567d1737bca98fb2f466bbc1982cc66df390dbd1bc
+    role: target
+  - path: data/structures/other/cellular_bud_tip_polarisome.yaml
+    sha256: a76a9766b8a57ddf49ccd2ec08f36447edbd1b059469c12180aded338fb48f91
+    role: target
+  - path: data/structures/other/cellulosome.yaml
+    sha256: 160396ff8915ffdeb5209c04f051ecdde8e51ef687cc99cc71f86567a4799383
+    role: target
+  - path: data/structures/other/chaperonin_atpase_complex.yaml
+    sha256: e50b4bf3c80a0ca3b39458a019e4725f898abe94900259149e4234948062f4ce
+    role: target
+  - path: data/structures/other/chaperonin_containing_t_complex.yaml
+    sha256: 4274a8163f3bdd1939542d87eb5bca53a4897c7c760c027091440c72448b6e7b
+    role: target
+  - path: data/structures/other/checkpoint_clamp_complex.yaml
+    sha256: ca0a307eaff1114aa1125b0301c053e2681f113318ceb0ccd743d9bcb163acaf
+    role: target
+  - path: data/structures/other/chrac.yaml
+    sha256: d31b095249c6c8d73ddbb45f8c090f2ad0f94e14916bbd42886ad96dcd10e2ba
+    role: target
+  - path: data/structures/other/chromosome_centromeric_region.yaml
+    sha256: 063b4d4c70c63cc15495e82781cb948b4a550ab1e4ee940111028fc6d4496415
+    role: target
+  - path: data/structures/other/chromosome_subtelomeric_region.yaml
+    sha256: a0c561b4963ea38c35a805a56e743a6925f9956deec3ea678ac80b38e8a5c2ed
+    role: target
+  - path: data/structures/other/chromosome_telomeric_region.yaml
+    sha256: 89a1d67ddff9dd2563524f59efe3b3ab802200b930b0179cebef7a4dbac27485
+    role: target
+  - path: data/structures/other/clathrin_coat.yaml
+    sha256: 7b118032d28ca3f850fb2a1bb3070ff32923f58df02ae50e326e97e61d2092f7
+    role: target
+  - path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+    sha256: 859f324aa6a2b9ddd65cb2658a052bec387e3f2afd56d1cd49faf42ae663f55e
+    role: target
+  - path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    sha256: 04cd29ffe90456d0dc2acbe6dbba20bd061587015653a0bea6d7259c1c7f6220
+    role: target
+  - path: data/structures/other/clathrin_coat_of_trans_golgi_network_vesicle.yaml
+    sha256: 3cbc1e64e95b6793c1036c808b404b5c6f3b81724fc4f901d2c74c385db5c6a7
+    role: target
+  - path: data/structures/other/clathrin_coated_pit.yaml
+    sha256: d64704a67303020e2f3c92a40d1d64ebc830398938e57acd568dc7e29e723e83
+    role: target
+  - path: data/structures/other/clathrin_vesicle_coat.yaml
+    sha256: cef674eb9fc2b08323c1780daa340012db00fd43e3f89c7de880ac972594e17d
+    role: target
+  - path: data/structures/other/cleavage_body.yaml
+    sha256: 790cd51917a39d31d033994a33784891cd76bd8d06ca98d0f43cfdba2aef65c2
+    role: target
+  - path: data/structures/other/cmg_complex.yaml
+    sha256: c7ce81a2d35df2983545756bf9b962097d595b50ddeb4fa8de3e08e07cfd1ee4
+    role: target
+  - path: data/structures/other/cog_complex.yaml
+    sha256: 63a87323bc5724de1cae502db180cb5a1cca96f62a851cb596469216865421ac
+    role: target
+  - path: data/structures/other/coma_complex.yaml
+    sha256: 12d58998e16ab86e55d0c70e47de8fd7cf3a797e528ede3cc99bbff4e8854da5
+    role: target
+  - path: data/structures/other/copi_vesicle_coat.yaml
+    sha256: 1b264ad3800f2c5c8c78d327f63a32bdc73888a003e3be3fcad778bb9f993195
+    role: target
+  - path: data/structures/other/copii_vesicle_coat.yaml
+    sha256: 3b7c89b408581ddfd7f40203a1810eda738e87b1d2457812209b8586abbb0ef2
+    role: target
+  - path: data/structures/other/core_primosome_complex.yaml
+    sha256: 3f26d4c8ff702a0d53da6fd3c5f94e95420bfcc8be686b3dfdce317245b78bac
+    role: target
+  - path: data/structures/other/core_tfiih_complex_portion_of_holo_tfiih_complex.yaml
+    sha256: 16e82cc28bc358b34fa885dce05ecffea9022fbd529ce122ad9b31f2a0df68d5
+    role: target
+  - path: data/structures/other/core_tfiih_complex_portion_of_nef3_complex.yaml
+    sha256: 22ce0324ba1c1113c0ac5ef1d6e8642132923e6f6130a6d5aedeab654f0e8009
+    role: target
+  - path: data/structures/other/corvet_complex.yaml
+    sha256: a3bf0da311e1d6b869043ba0b102130ef6e9e1dcb5009a8996058b43c40945a0
+    role: target
+  - path: data/structures/other/crl4wdr1_ubiquitin_ligase_complex.yaml
+    sha256: 15951ee1c5321044ae8654b108d88de8388e09c2d10706fc7134d5ba32280ac4
+    role: target
+  - path: data/structures/other/ctf18_rfc_like_complex.yaml
+    sha256: abd597266840ca232631d6d1ca9478dda5ec941daf084b31e7815f4660cef6f3
+    role: target
+  - path: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+    sha256: 24cfaf2e2cd189ff59a4b9889fbbb3fe13e8f30fed4d282f41323e21c78e4c96
+    role: target
+  - path: data/structures/other/cvt_complex.yaml
+    sha256: 29ffd90803735e2db2a3869531eae7e439bac79b868049f6d7766c6c9a694902
+    role: target
+  - path: data/structures/other/cytostome.yaml
+    sha256: 083f8800483f67a23bdb303aaf95d8d853d3bf67240e7ac2926e87ab66c89926
+    role: target
+  - path: data/structures/other/dash_complex.yaml
+    sha256: 068456fa61be361559f04a3267867351f2adda6537a706aa6b152f62439f81fb
+    role: target
+  - path: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    sha256: 5b0ecddabbb2373c35df54bb5993715956ea5d74dd7e42d6b3e37f6a2271a433
+    role: target
+  - path: data/structures/other/delta_dna_polymerase_complex.yaml
+    sha256: 4669ff292f802ea0157d1496279723caa0330ddb676bb6fa63a6f1399b414fdf
+    role: target
+  - path: data/structures/other/diaa_complex.yaml
+    sha256: 69949691e84f66d54da7945f2c9b0bd20d109d4a2ebea4931b72dc5829e5f158
+    role: target
+  - path: data/structures/other/dinoflagellate_antapex.yaml
+    sha256: 1379be0377e9b86e39f36a4a2a8946b02ab5aa9004aa2576e25b8691147c7fb9
+    role: target
+  - path: data/structures/other/dinoflagellate_antapical_horn.yaml
+    sha256: 17b0c9dcaaa5110c51d7120d3d7fb6bf6ac9a483981418b9ada4be51b700ccc7
+    role: target
+  - path: data/structures/other/dinoflagellate_apex.yaml
+    sha256: 5c8d91554cc820c9434886f0022093eff4f766f4ad608fed12ded740860d0749
+    role: target
+  - path: data/structures/other/dinoflagellate_apical_groove.yaml
+    sha256: 7577f4358ce9bcc9753ec38e0295a7e496261827869f77353480ef2b130ad1f4
+    role: target
+  - path: data/structures/other/dinoflagellate_apical_horn.yaml
+    sha256: 77b2ec19b71236a91786a44611abcc34eb6a7e927763f6ff641f2c879813c344
+    role: target
+  - path: data/structures/other/dinoflagellate_cingulum.yaml
+    sha256: c29822ebb0e810421c4516a4db5b8e6d648739e5c563e491d584850a65011513
+    role: target
+  - path: data/structures/other/dinoflagellate_epicone.yaml
+    sha256: 30e41a70bae04d4698b3b0bc40226fb51727a9f8664c4031c3ae8145216dfcdd
+    role: target
+  - path: data/structures/other/dinoflagellate_hypocone.yaml
+    sha256: 0a596b02f63ce6799d10b49b4cf34a921fb2ae92e1208ee599a96ed47c5f40a1
+    role: target
+  - path: data/structures/other/dinoflagellate_sulcal_notch.yaml
+    sha256: 0e3dace360a1a70bc43f318649972ebb63a50628897c7681bb81c9c75f18c7b1
+    role: target
+  - path: data/structures/other/dinoflagellate_sulcus.yaml
+    sha256: b3606a5c03fbc85a602f3ea6927c22e49eedbcd00d1e9607c85ac080205bd356
+    role: target
+  - path: data/structures/other/dna_gyrase_complex.yaml
+    sha256: 5e7e1a94281ec5bb4c72ea205e6e44bc4545175d4051eab98df531f709ac35b8
+    role: target
+  - path: data/structures/other/dna_polymerase_iii_beta_sliding_clamp_processivity_factor_complex.yaml
+    sha256: 0369f6dedbb1719e899d2bc9895033ab1dc7652865adb0597e10901b4e5ce664
+    role: target
+  - path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    sha256: ae7299b0c7b889f3f035fe582e2b6c8fddb1a507dd0e1ceadda8c1d8e73a60cb
+    role: target
+  - path: data/structures/other/dna_polymerase_iii_clamp_loader_complex.yaml
+    sha256: d577d4fffb8f72d79620d78bfc245c04ed3481af7ab41b626ea4b7f21f0b166a
+    role: target
+  - path: data/structures/other/dna_polymerase_iii_complex.yaml
+    sha256: c807793b2a1531837a29634bbc50dcbf9e75f9c5e812c495086756a755baa55d
+    role: target
+  - path: data/structures/other/dna_polymerase_iii_core_complex.yaml
+    sha256: d3f7d2562674074de9eac445b01e2e20a566e590840dba0edac515a22b02d47b
+    role: target
+  - path: data/structures/other/dna_replication_factor_a_complex.yaml
+    sha256: 875ef33eba1336b1bfd61e3c5bc9f0ade5f2c37a93d25793797fa5b9ac34c133
+    role: target
+  - path: data/structures/other/dna_replication_factor_c_complex.yaml
+    sha256: 2b0c2b755fa48c66cfe831211cc2eb3abeb7691e2d7c16ddb938d3ff2698aa1f
+    role: target
+  - path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    sha256: d38de0da7f792e34b56e5ef225160a88221fb8a9b64e309e2b28f34bc7038b88
+    role: target
+  - path: data/structures/other/dna_topoisomerase_iv_complex.yaml
+    sha256: fb14ab25e6bf5e766d86b767a0f20597e77782d62fae6c5b48ed82dcee0ef070
+    role: target
+  - path: data/structures/other/dnaa_diaa_complex.yaml
+    sha256: fc2f791efd2e63545ba7786349b16f68ed0655623cac1e8e4fea5e39ba1c43f4
+    role: target
+  - path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+    sha256: a49c1990539aacfc5c45ca3e85ad447d25d1de1e4608396c5233d16bf5ec4e56
+    role: target
+  - path: data/structures/other/dnaa_dps_complex.yaml
+    sha256: 2b89c667acb0f20b397cc83da72c84987b12fbddcf156f5159fd6225a8b35f87
+    role: target
+  - path: data/structures/other/dnaa_hda_complex.yaml
+    sha256: 483a497d765d330fb525a7294da3190f44406843dd7acf5e563fedd971533a8e
+    role: target
+  - path: data/structures/other/dnaa_hu_complex.yaml
+    sha256: c1a75c31a02371a7ae84e7732e2f45e97398bcb9ddf28247bec3026cd6f802f3
+    role: target
+  - path: data/structures/other/dnaa_l2_complex.yaml
+    sha256: 02922dc2d03f7d1dce3a07650d55d6ac6e827b61b9c09ebc3b5dee50a58e8afd
+    role: target
+  - path: data/structures/other/dnaa_oric_complex.yaml
+    sha256: af3deef66bb9816ea02f79adee17921b145d8170bd97434ab260f709fa346976
+    role: target
+  - path: data/structures/other/dnab_dnac_complex.yaml
+    sha256: 049bf3ed905aec42853fdf025e35d4cb71ecd89a7b8b89328042c39491aaa180
+    role: target
+  - path: data/structures/other/dnab_dnac_dnat_pria_prib_complex.yaml
+    sha256: 587fd3510ffd8ae95259dff336a7f2e984b50d34417d746277a41081a5b4ddb5
+    role: target
+  - path: data/structures/other/dnab_dnac_dnat_pria_pric_complex.yaml
+    sha256: af55566f43167e28b8f1cca9fc819d6914d7281179845fc6f3bfb153e67cae43
+    role: target
+  - path: data/structures/other/dnab_dnac_rep_pric_complex.yaml
+    sha256: 50dccdc4d855065a8319372f4350453a2628309608fad038483bbf6524b0bb8f
+    role: target
+  - path: data/structures/other/dnab_dnag_complex.yaml
+    sha256: 6dae9176d717fa24dc9f2f32f9af9f307bd12111d249a4cd164d5f6e29ea917c
+    role: target
+  - path: data/structures/other/dnab_helicase_complex.yaml
+    sha256: 2d0d0d647439c6e937f1aeb202b477fffc50813668a1c8ac5d42dd5b76932e99
+    role: target
+  - path: data/structures/other/dsl1_nzr_complex.yaml
+    sha256: 409b4fadc71763d017e404c80cddc9aa152421baa38806ebd7f4d032d5ab25c0
+    role: target
+  - path: data/structures/other/dubm_complex.yaml
+    sha256: 8d25f0c0e04576f7afff2783cf0c88c5c4ee7f5b3a627df47ecdad6eefcbd591
+    role: target
+  - path: data/structures/other/dxr_protein_complex.yaml
+    sha256: 0a9e8c00028f315a781db6e7d819a864d844254eaa639b885573f818907bae5e
+    role: target
+  - path: data/structures/other/eisosome.yaml
+    sha256: 3f96297240ba46e169dab4e79338949cf92ac200ffd75c509938b12240b1b89c
+    role: target
+  - path: data/structures/other/ejectisome.yaml
+    sha256: 1ae5e8bacf85f2f83a40e9b76f75ac829ccf490bf1765498abeb2efa3be829a8
+    role: target
+  - path: data/structures/other/elg1_rfc_like_complex.yaml
+    sha256: 15926e2b4d166dd9d443b67080b160309d5d9bf7fa3c7db299ab0d386f509837
+    role: target
+  - path: data/structures/other/elongator_holoenzyme_complex.yaml
+    sha256: 3071ca4a7c4adde264f84e0613da05118ef23a2d9ffcfbdd74a37897ba8f3c1d
+    role: target
+  - path: data/structures/other/emc_complex.yaml
+    sha256: 5b6483b187c333f4d7499642810417cc509133fa247436a8907f1263e0d07f54
+    role: target
+  - path: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    sha256: 2ecd59317bfeae525a312c7ba1427b4ad561dfb25b621ff647b42e2205c150d6
+    role: target
+  - path: data/structures/other/emre_multidrug_transporter_complex.yaml
+    sha256: 7a4055fadb4512ab96308689f737202f1b82dfd99e0fe4046fa82e1e22f6a0e0
+    role: target
+  - path: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+    sha256: 7537240a1770406c3b0b6272ef277be10afa2a64fe43e40d9e75729ae00bae4a
+    role: target
+  - path: data/structures/other/endoplasmic_reticulum_sec_complex.yaml
+    sha256: 9c518bbd838470051ecd41f44fade19a7575e189a7ee995022f6447240cbae4f
+    role: target
+  - path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+    sha256: d2ba24b44d526b14423e20d02b567e0564f8cf162bc811572fa69fce15878635
+    role: target
+  - path: data/structures/other/ermes_complex.yaml
+    sha256: 461d942cf1aedc1f89e6ed617555ce0e3377d103e971b63c8902bcccc66e31f9
+    role: target
+  - path: data/structures/other/escrt_0_complex.yaml
+    sha256: 0ce6528df8bc94b7bb2547b04f8eae797b056cc925a27f04328b6b5f6913666d
+    role: target
+  - path: data/structures/other/escrt_complex.yaml
+    sha256: 355f25710a97cee7e56f5b1438b71d21194f6130f84904091250df6e695bd17e
+    role: target
+  - path: data/structures/other/escrt_i_complex.yaml
+    sha256: 6a62d3c1153274b4912ddbcae5322b2eeecbca045005db9a88c81babbfb406dc
+    role: target
+  - path: data/structures/other/escrt_ii_complex.yaml
+    sha256: e95b7f2a0dfdc218f0b5ffb7918966f72a844bdfe8ccf82accc075c116c98ec7
+    role: target
+  - path: data/structures/other/escrt_iii_complex.yaml
+    sha256: 9e1b8327f85a97301be8e84633176829e518d1272b35d43515e85cce4a2ceaa8
+    role: target
+  - path: data/structures/other/escrt_iv_complex.yaml
+    sha256: 54158602625f36ee41851b9d01628d95d5147bc2f27bf4b23bc47f5f2a1f41e2
+    role: target
+  - path: data/structures/other/exocyst.yaml
+    sha256: 23b99475e342fbc7e4f75a3d591209ef67a0c7af74ddc519e9ab974cb297b3eb
+    role: target
+  - path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+    sha256: f7a26afc35a5fcb19ee05eb2e4e101d99dae0bd4cf251da58b55d766db128d11
+    role: target
+  - path: data/structures/other/exomer_complex.yaml
+    sha256: 55a7b002a5fa16fd9f559b79056daa52a6699576bb1f5849bcb8f4ad42dbd02a
+    role: target
+  - path: data/structures/other/fact_complex.yaml
+    sha256: 28c014acbd668aedf2ce72673a18af6d53f64b73c4bed22ebc321068b823219a
+    role: target
+  - path: data/structures/other/fmn_reductase_complex.yaml
+    sha256: 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453
+    role: target
+  - path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    sha256: 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff
+    role: target
+  - path: data/structures/other/garp_complex.yaml
+    sha256: cc04996bbf2529caccbbf7fc6e5bd1d5a28d4aef15d23f99034a7ea90b8e038b
+    role: target
+  - path: data/structures/other/gator1_complex.yaml
+    sha256: 7baf105999145f4439e69771264fb5c37a524efbc9a879d20cf1f365430c4ed6
+    role: target
+  - path: data/structures/other/gator2_complex.yaml
+    sha256: 32924c59d1fa042e719e851ad1488c1c18550ec2e442d916d29360fa3e5dac8f
+    role: target
+  - path: data/structures/other/gemini_of_cajal_bodies.yaml
+    sha256: 362feff8235f1f310a4d3783b8cb36902f7d683cf1ffd3525995a71843e53ac3
+    role: target
+  - path: data/structures/other/get_complex.yaml
+    sha256: d4135074d17c507ff77f421100ae094ec373452ad92594a56cd293e8b3744d6c
+    role: target
+  - path: data/structures/other/gins_complex.yaml
+    sha256: 485835a6777e1752fc93d1e3149d8ff1416f7ee1d24755ad5e636e591e57c048
+    role: target
+  - path: data/structures/other/glideosome.yaml
+    sha256: 6ccd650ec4a95188fbfdc310b09544c02d4b128a89f8e5c1689aaf529da69f79
+    role: target
+  - path: data/structures/other/glutamate_synthase_complex.yaml
+    sha256: 23058436ce8a0db4f794546c7afc6a50d364c0bec3a8672cd3fd7fb129c698c0
+    role: target
+  - path: data/structures/other/glutamate_synthase_complex_nadph.yaml
+    sha256: 04c0c5ee78f2b2d61429ca85fb8ec94ed837bd2eac5618b0b99dbceb8f7f6f2c
+    role: target
+  - path: data/structures/other/glycine_cleavage_complex.yaml
+    sha256: ed9aa4b2b2c567992efd6dee30006ab8457d55ebdc3d264ba3c9f88a3e615200
+    role: target
+  - path: data/structures/other/glycine_reductase_complex.yaml
+    sha256: 7df61164fbbf00d11b56de5cf7e21e2bcc813413167c4cdafba4becb74002cd6
+    role: target
+  - path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+    sha256: 34aa791d0757c8844c6c8bf61a743e7860f48e6d35ba78971d608a6bbee51764
+    role: target
+  - path: data/structures/other/groel_groes_complex.yaml
+    sha256: 5bd7ae78b674326f62d256614b83b15d516633140537514a676383e169999ce1
+    role: target
+  - path: data/structures/other/gtr1_gtr2_gtpase_complex.yaml
+    sha256: 069c3ddba8ffaaaabdb29ea4ba4292a841f54dbd7e4cd40a8ed13007911d086e
+    role: target
+  - path: data/structures/other/hda1_complex.yaml
+    sha256: 6b19f4b66623b018af2496a92442c707fecaf0e551591afaff220957c2bb7b90
+    role: target
+  - path: data/structures/other/hda_beta_clamp_complex.yaml
+    sha256: 17d71a8e1991caf8baa03ec95079930ae623433d2f04a1c063211c4b127f4bfb
+    role: target
+  - path: data/structures/other/hir_complex.yaml
+    sha256: 8875028f235995bd024fa461075f1ff3053824ea228ba8565d2ccad03bb9fb52
+    role: target
+  - path: data/structures/other/holdfast.yaml
+    sha256: 3875b459c05e557e38d7b4ec9b227a1cc2ddcdbcbb55296f2926deaf9cacc862
+    role: target
+  - path: data/structures/other/hops_complex.yaml
+    sha256: 17afe9c90b6a51d94e588059cea7c0cb63c37a04e8b9c656b868c5ac1ec2a57f
+    role: target
+  - path: data/structures/other/hsp78_chaperone_complex.yaml
+    sha256: ce4cf652d09ceed2af98370e674ca290bb9c878039fc2db47b2b982c3f0e7262
+    role: target
+  - path: data/structures/other/hyphal_tip.yaml
+    sha256: d33af9efa38fa45e9d44a06739b952ee6c2b009b85d597f51b8e981084c3c7d4
+    role: target
+  - path: data/structures/other/hyphal_tip_polarisome.yaml
+    sha256: 69417314e33e5f9ef62038f48149ff6a8099a77ca45c1227b8bb6d52ac269667
+    role: target
+  - path: data/structures/other/i_aaa_complex.yaml
+    sha256: f6877406ef9d82f3c18666e77b2ae3bb8c0a8c8c582c35bfba92d7cffafacda9
+    role: target
+  - path: data/structures/other/ino80_complex.yaml
+    sha256: 0903c3843e1e1d782fa1437c3ec324bc1c5aae25f19cb4cbe5452a3d36e865c4
+    role: target
+  - path: data/structures/other/isw1_complex.yaml
+    sha256: 5662405c6e9c5ce9d246c4ea52175ca1cce9eee337ac704e5cb405e66f0ce912
+    role: target
+  - path: data/structures/other/isw1a_complex.yaml
+    sha256: 1f8db379fbf44a20126d11fe7418076ec4361066f6564871614361ad31273865
+    role: target
+  - path: data/structures/other/isw1b_complex.yaml
+    sha256: da27a6000afe1a8e535d8586b2841416d6f10e07058b226e446d785541c37137
+    role: target
+  - path: data/structures/other/kinetochore.yaml
+    sha256: ea8645dec5b13874441be4fa7a2db0b477265d3c23ecd399aa9559824428640d
+    role: target
+  - path: data/structures/other/ku70_ku80_complex.yaml
+    sha256: 6f49f9f9be4112bd44c0c606a4cc485466092240af95a3dce5107a46e117de44
+    role: target
+  - path: data/structures/other/lipopolysaccharide_transport_system.yaml
+    sha256: 7ce50d437cce77aa049b4340bd3c95899875c156a208e23cb92b38fd4ba0e32e
+    role: target
+  - path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    sha256: 96bf1ce75ce606af29c2d8a549c345e9487f0e426ac1f86823f14db22c651866
+    role: target
+  - path: data/structures/other/lysp100_associated_nuclear_domain.yaml
+    sha256: 1ab946fc5be33e183cca56f752088cfc96ff3c898c908039b43ed4007e3b1493
+    role: target
+  - path: data/structures/other/m_aaa_complex.yaml
+    sha256: 9686eb96f5b95da3c8b9dbb002841e31ac5c884c66e4af52f05706b375ea87a7
+    role: target
+  - path: data/structures/other/macab_tolc_complex.yaml
+    sha256: b2f794251b4bbc18fa1e7c1bdc93d9fc0098d20d1160e8230ee4b0a9b247e636
+    role: target
+  - path: data/structures/other/mating_projection_tip.yaml
+    sha256: ec2a7085e4d50080981c50bd9b523d8ffabf4de5739bbe1b696c382fddb7e1ad
+    role: target
+  - path: data/structures/other/mating_projection_tip_polarisome.yaml
+    sha256: 5502f8d8c35e2a2c4f05054f1b8560ecf19c88374581927f3107e46512996afe
+    role: target
+  - path: data/structures/other/mcm_complex.yaml
+    sha256: ab0128d7b27c918540dfdfc193258526bc2fc072bc24803fdb83246aed34c25d
+    role: target
+  - path: data/structures/other/mdtabc_tolc_multidrug_efflux_transport_complex.yaml
+    sha256: 814313e51e521a17fc163a2b16e7bb8bd9528ef8dcba59bb431368c1419376bc
+    role: target
+  - path: data/structures/other/mdtbc_complex.yaml
+    sha256: c89b2ca25a4a0f79dde997d4df92cf552d7a7e34c523850879a1a06812967f7b
+    role: target
+  - path: data/structures/other/meiotic_telomere_bouquet.yaml
+    sha256: 0902106290c0af4891af4481d6d0e57e26f89048da1a01b639f1bc1837a7d61e
+    role: target
+  - path: data/structures/other/membrane_coat.yaml
+    sha256: 9073c1cdc0933d5d06be86c723bdc6ca142420034739d82499bcbd38e3b8968c
+    role: target
+  - path: data/structures/other/methionine_importing_abc_transporter_complex.yaml
+    sha256: d142adebc4594df832813af4688c91daa5e93e59681fc6cfdf08a885d95cdc37
+    role: target
+  - path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    sha256: 7f6f49e960cabe5c4f6f4346e73f877cc8786bd5b29a8f9472aec97ede4e1dad
+    role: target
+  - path: data/structures/other/mib_complex.yaml
+    sha256: 1a8bd9a823976370cee61ab389dfc2d1e03b9f422de8d9454177f95c52ed4f78
+    role: target
+  - path: data/structures/other/mic10_subcomplex.yaml
+    sha256: 9d98461e5b91bf4eb28fffe1797678d45d3f6aa51391b289282b7b6155a22601
+    role: target
+  - path: data/structures/other/mic60_mic19_complex.yaml
+    sha256: f69ade5a57e4946d6bb529c33ab623059348fd9a4c43609cea0b33b50d591cb7
+    role: target
+  - path: data/structures/other/micos_complex.yaml
+    sha256: 756a5b48fd9109266e6ace5805f5f9fd4aaac9940ff39660960bb8603374f5aa
+    role: target
+  - path: data/structures/other/mih_complex.yaml
+    sha256: 2c54dd8f5851517678e87255d978996b2a681140da72a40d21e7e10b0bc005ac
+    role: target
+  - path: data/structures/other/mim_complex.yaml
+    sha256: 61bfb31d9aca0a2be252843e729f32e2b8ff9f3d02c77ba43e06d6f5a9229916
+    role: target
+  - path: data/structures/other/mis12_mind_type_complex.yaml
+    sha256: 029ac75e12045a39ff6da937c63cff087715e76aadf1b65ad773f30bdfc4e944
+    role: target
+  - path: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    sha256: 8eb6f174c969fc2aef5a84a2a473fe42a66158531ae26422ccfd8ae3407227e0
+    role: target
+  - path: data/structures/other/mitochondrial_lon_protease_complex.yaml
+    sha256: 22c985cbd94a32e0a04e1ba4b7f77e796ef99815390b9165a3b15b987429d5d6
+    role: target
+  - path: data/structures/other/mitochondrial_multifunctional_assembly.yaml
+    sha256: bb1a36eee48a44140250e04951a42f149f5de60affd5e146ba8f89f8a6e48858
+    role: target
+  - path: data/structures/other/mitochondrial_outer_membrane_translocase_complex.yaml
+    sha256: a9facce19eda1794aefb3bef7b36fe07ba5c3a942220a4379c5569de4150022e
+    role: target
+  - path: data/structures/other/mitochondrial_prohibitin_complex.yaml
+    sha256: a2a0c89fc814c0dba32ef8a1b90246ced003e274382c67d78794cbd86e9b7453
+    role: target
+  - path: data/structures/other/mitochondrial_ribonuclease_p_complex.yaml
+    sha256: 00c2bfe5567576213bd36b0ac68169c143c04f1a677e96f4b4bc2dbf4b78dd5c
+    role: target
+  - path: data/structures/other/mlafedb_lipid_transport_complex.yaml
+    sha256: ecbbe2e1d054fcc0748e70d3fdac4aa9399a960b393a907915288fee45601d18
+    role: target
+  - path: data/structures/other/mode_complex.yaml
+    sha256: be482c2a30679f616a100d624959210fd1d60187ecbb7f81584d38ede3db29d6
+    role: target
+  - path: data/structures/other/mon1_ccz1_complex.yaml
+    sha256: b52a280b2e52f6656e200741adb1b323151d2cbf2c85bc95a3a530e0b50a0d8b
+    role: target
+  - path: data/structures/other/monopolin_complex.yaml
+    sha256: b549cc4866975edd6f620c84983b2f22ceca0dd461a26a6d5fa8dc78f2824918
+    role: target
+  - path: data/structures/other/mpp10_complex.yaml
+    sha256: 6bf32fcf28495ebdb11c5498d3d44a98933b39fd7ec86e7ba0fc1e46b0773809
+    role: target
+  - path: data/structures/other/mre11_complex.yaml
+    sha256: 51cfa599aa779c1d9c92c29309dfa6eb24a838bf76c6711b6ed3f7120842d884
+    role: target
+  - path: data/structures/other/mrna_capping_enzyme_complex.yaml
+    sha256: 56e15932f5aa10dc25335a5c8b451b13e6d838caa2d338ce63690caed18c3925
+    role: target
+  - path: data/structures/other/msba_transporter_complex.yaml
+    sha256: d240b636c58ddfdcf8d92ad0f46a6b8efe55dc651a6527b99b16b3d54982e5db
+    role: target
+  - path: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    sha256: ddbf7f44b54b5ac0f78470f3abf7551780aac7fd80849df29b75e77dd9d39a7c
+    role: target
+  - path: data/structures/other/muts_complex.yaml
+    sha256: 9a71adc820bd45323620f0866099de2b096d75ca2a9237651adbb0f3126a63ca
+    role: target
+  - path: data/structures/other/nata_complex.yaml
+    sha256: 1ee712cccdee79e722e1f9867b71dfbf6fdd3eb060461ccfed6a4b7e4e003acc
+    role: target
+  - path: data/structures/other/natb_complex.yaml
+    sha256: 2e2492e9da872efa583ad9d8cecf57eb0cc1a70bb458454b6801e5237228857a
+    role: target
+  - path: data/structures/other/natc_complex.yaml
+    sha256: 3fe75c4bf45553a6c6ce2feb51fa23f605c166b4e712ad1769fa7cb158736742
+    role: target
+  - path: data/structures/other/ndc80_complex.yaml
+    sha256: 2c647b1c92d7fff1c1836a954ef9618877ea8e607a52113a5e6be0a6c3289102
+    role: target
+  - path: data/structures/other/noc1p_noc2p_complex.yaml
+    sha256: 0eefb3ec907ac78baec71ffc04b6b7a84427a9cbadbbe68a764f69cf68151166
+    role: target
+  - path: data/structures/other/noc2p_noc3p_complex.yaml
+    sha256: b95e2eb5102558ea71ad66f47f8159d3e2ffa8afbac6941aa7c56bde8df5292b
+    role: target
+  - path: data/structures/other/noc4p_nop14p_complex.yaml
+    sha256: 43273aac01f54b6c913923b850f0d70c40134c9a57d4d00f840a5ac7a47206e9
+    role: target
+  - path: data/structures/other/noc_complex.yaml
+    sha256: 6e28101e082172d851e5000c0cf22a8fd7294913ffea2e7f820bb5151e6e3995
+    role: target
+  - path: data/structures/other/nua3_histone_acetyltransferase_complex.yaml
+    sha256: d578083c38e0c1c54dbdfa4be6cc492101dea38ca24424e7368e70e39d05a928
+    role: target
+  - path: data/structures/other/nua3a_histone_acetyltransferase_complex.yaml
+    sha256: 5342d4998689bcdf3fea5bca835def421be4578a749bc669d58cb045e8d093e2
+    role: target
+  - path: data/structures/other/nua3b_histone_acetyltransferase_complex.yaml
+    sha256: 07b25b203568b044d4cf8eb9dbcd740062d86209dd85d0d46fe0c6c6311686e5
+    role: target
+  - path: data/structures/other/nua4_histone_acetyltransferase_complex.yaml
+    sha256: 3cdf6cf91ba18b9a0cbd3dba4d08487c5476f9aeb301c0373f5fae5f909117a1
+    role: target
+  - path: data/structures/other/nuclear_chromosome.yaml
+    sha256: 2606bddf876c415eac0b3f79709f2034169e2509ae5591a4ccfc7da0f8bd2fba
+    role: target
+  - path: data/structures/other/nuclear_dna_replication_factor_c_complex.yaml
+    sha256: 2fd3e6c106d1ca776c79af33b4cde62f714753aa11d93259ea7f26988349adc1
+    role: target
+  - path: data/structures/other/nuclear_exosome_focus.yaml
+    sha256: 5b22cc3c9405c262a80dd8a4ab05b8dc3f413478c54dd489b4267302b0d10efe
+    role: target
+  - path: data/structures/other/nuclear_origin_of_replication_recognition_complex.yaml
+    sha256: b9d44bba3d6ddcf02197563e3f316435a3261e45d647cb576098c744928bbc65
+    role: target
+  - path: data/structures/other/nuclear_pore.yaml
+    sha256: 525253b829ed4587c148153cbd039afeefad6bc6eb658f6f3e26680423870f54
+    role: target
+  - path: data/structures/other/nuclear_pore_central_transport_channel.yaml
+    sha256: 9a5cf127dc5350153c489d1d255b9bded124699823b6f76beee74ec0a2356a63
+    role: target
+  - path: data/structures/other/nuclear_pore_cytoplasmic_filaments.yaml
+    sha256: 474a7000d5f7a2ae21acbb66d34fde013380eda02fd727e083df1aa2d05fb195
+    role: target
+  - path: data/structures/other/nuclear_pore_inner_ring.yaml
+    sha256: eb86957ecff92da6fe2a0c590712b02268e0fdc8df86faf585bced92f10a33b6
+    role: target
+  - path: data/structures/other/nuclear_pore_linkers.yaml
+    sha256: d07b0c8edd11002256fa5ecb79a039f6ca4f975406ea04706cb1dedc4d9c0a64
+    role: target
+  - path: data/structures/other/nuclear_pore_nuclear_basket.yaml
+    sha256: 217964a66ac4054ad49587ee19fa0680ab49214f419d048b48de4f775e55f0ef
+    role: target
+  - path: data/structures/other/nuclear_pore_outer_ring.yaml
+    sha256: 5368afaeeb0f6368207b663844a5483b3043b18248cdaea1aabcdc120e2dbbb2
+    role: target
+  - path: data/structures/other/nuclear_replication_fork.yaml
+    sha256: dcc4ecd3ee1622f96e65e07139cbf05075e2d460ff3bd38224f5296690dc7d4d
+    role: target
+  - path: data/structures/other/nuclear_replisome.yaml
+    sha256: 6e7dc55a683789da75a67ab865268b5549e2e23b001cc773f5c8f02d5cfa2c69
+    role: target
+  - path: data/structures/other/nucleolar_chromatin.yaml
+    sha256: a1c1814baea6b1976e41908e87d7008402a7c33c5cd073c5d2ee62bb2afc14e4
+    role: target
+  - path: data/structures/other/nucleolus.yaml
+    sha256: ec59e6c4e557d2037eefbe620e1a1b0921370dd910cf62d90e851231a91ea20a
+    role: target
+  - path: data/structures/other/nucleosome.yaml
+    sha256: 7f1981ed2a46be4d9d62c98104737d5502d69668fcb5f082d2e6db75e30a4f7d
+    role: target
+  - path: data/structures/other/nucleotide_excision_repair_factor_1_complex.yaml
+    sha256: bff50dfcb52aab10fa81bef96074573868fd77c2068adb9e10f242f45d2e7fff
+    role: target
+  - path: data/structures/other/nucleotide_excision_repair_factor_2_complex.yaml
+    sha256: 4caad1132c40bdc274c2923cc72c066bbc57968dc9d7567d98209b8ef5195a36
+    role: target
+  - path: data/structures/other/nucleotide_excision_repair_factor_3_complex.yaml
+    sha256: f4ee95e4c73aa511c8ecd55854973e6c5ea82f84bae620aae68476263d258129
+    role: target
+  - path: data/structures/other/nucleotide_excision_repair_factor_4_complex.yaml
+    sha256: 38eee9dd2cf2aae9ac051764f03de844520e3060cdaf2f1b0a9769629e190093
+    role: target
+  - path: data/structures/other/nurd_complex.yaml
+    sha256: 81f7a95948ddccc377a71453664bf51633856a03e605c9273bb4eafb97e73078
+    role: target
+  - path: data/structures/other/oral_apparatus.yaml
+    sha256: 55dd7652482846930c83b0340be155e52c094dbdf9232427bc76580cbe65a372
+    role: target
+  - path: data/structures/other/origin_recognition_complex.yaml
+    sha256: 32edb24d8b6f6a1b1528149347c7d933ff4478c2bdf992535fe93a8ba6829f3c
+    role: target
+  - path: data/structures/other/outer_kinetochore.yaml
+    sha256: 797a33b5a274156af43edbccf35716c21129cb9bfd75fa3ff632a2982b3a7797
+    role: target
+  - path: data/structures/other/pam_complex_tim23_associated_import_motor.yaml
+    sha256: 8d5d6d5f281250b1aa3b59f61f0b53f4a3a72f92a365496941e4cee01298b3a2
+    role: target
+  - path: data/structures/other/pan_complex.yaml
+    sha256: ed3a5006bf015cf7aadfa916c8eb1c665adc76fe092225569abc61470396fd5b
+    role: target
+  - path: data/structures/other/phage_nucleus.yaml
+    sha256: 859ad55bf41189216081c7718939889eef1ceb54378f842cfbfa447c8f7a9390
+    role: target
+  - path: data/structures/other/phagophore_assembly_site.yaml
+    sha256: 2c2244c5d7e387f0151316c562f95a15cba997cae405b2f1dc147dc241e502bf
+    role: target
+  - path: data/structures/other/phenylacetyl_coa_1_2_epoxidase_complex.yaml
+    sha256: 4e8bd2fd5411ee27b7018ef9fa16202caa00a1a2283697f0bb80b3f498bb4a5a
+    role: target
+  - path: data/structures/other/piccolo_histone_acetyltransferase_complex.yaml
+    sha256: 22179d5d2c6383448a673a2094e0b48919b5c4fd007eeba1f0ccb763a7c07bcb
+    role: target
+  - path: data/structures/other/pml_body.yaml
+    sha256: db71f664549f94cfba77701a7b4942a64e10bacfad2cf051296feaaf5c6d74a9
+    role: target
+  - path: data/structures/other/polarisome.yaml
+    sha256: 9b62b423b4edbb40c6e0a6fd974d1ad18ac0fa36763679593eb9982404b79772
+    role: target
+  - path: data/structures/other/popz_polar_microdomain.yaml
+    sha256: 1bb11f0304a9c9b486655b84393741cb8d03314f7345bd7bd4988b7f0734f058
+    role: target
+  - path: data/structures/other/potabcd_spermidine_abc_transporter_complex.yaml
+    sha256: 4d4f880c179d4451b6edc186b2e2fa900901455aead199926520a8562fadebdf
+    role: target
+  - path: data/structures/other/pre_primosome_complex.yaml
+    sha256: da04d8bb093ff5dcca79ac66bdae56a5788af120fbd536a40237bbc3d27e4e90
+    role: target
+  - path: data/structures/other/pre_replicative_complex.yaml
+    sha256: e2f36f8446b9e33eefdfa73a980dc7eae5b0e1fb2cba3ad88da19ba962aeebb4
+    role: target
+  - path: data/structures/other/primosome_complex.yaml
+    sha256: c49ced918d744a9dad27176acbfdff2738373f9b6c32aa00af0a7d9e4c648afb
+    role: target
+  - path: data/structures/other/proteasome_accessory_complex.yaml
+    sha256: 9a75c108c01fa4e8f2e7ee677672f87df8b28d9a5e7e9b5a89f5dfb6f7d70afd
+    role: target
+  - path: data/structures/other/proteasome_complex.yaml
+    sha256: 8436f82f453dbc3bee76dda9eb51f56000dc4b5277e353a69b700555db984a15
+    role: target
+  - path: data/structures/other/proteasome_core_complex.yaml
+    sha256: fd4039a524baa94acf4adbeb2d82d05cf70fbd2e6b7b105e211996ff3eb61dbe
+    role: target
+  - path: data/structures/other/proteasome_regulatory_particle.yaml
+    sha256: e3ec223ee05206105796f9bd7304a9da9f3d4575a0190f0ae00d74f0c4892c6c
+    role: target
+  - path: data/structures/other/proteasome_regulatory_particle_base_subcomplex.yaml
+    sha256: bf62675358e567eeea996090d0c2c24a9f9a8f50c2322615d88c37f7b3e5135f
+    role: target
+  - path: data/structures/other/proteasome_regulatory_particle_lid_subcomplex.yaml
+    sha256: f0b747b7164b47e3dc93a71fe161292cbcb76f35a0381a841983b509130f740c
+    role: target
+  - path: data/structures/other/protocatechuate_3_4_dioxygenase_complex.yaml
+    sha256: bd75931bd8713630bb8cb0833974b2add0022946ff9fd11626cf0cbce4b93b7b
+    role: target
+  - path: data/structures/other/pwp2p_containing_subcomplex_of_90s_preribosome.yaml
+    sha256: 07f60de2df05a2ee93d02ac6dde0eba1faa8a3a926d01eaceea8ca718723baed
+    role: target
+  - path: data/structures/other/pyrenoid.yaml
+    sha256: bdaff3023422d77a8c9a8b8c5d45e254fa3ab2322076eb5aa27cb0e1e954bfc7
+    role: target
+  - path: data/structures/other/quiescent_telomere_hypercluster.yaml
+    sha256: 06f22013b1709e5dae74847f41f940c8523801262475077655e6923102974f22
+    role: target
+  - path: data/structures/other/rad17_rfc_like_complex.yaml
+    sha256: 72b5963fce7fdb6827dd502efb117d4fc496e0dc882dce44ad0e14e8c6d546f8
+    role: target
+  - path: data/structures/other/ragulator_complex.yaml
+    sha256: 3f1ab9fc2088e36737f5d2b6ac4a130857c2c637d05fa85535804d886b8bf8cb
+    role: target
+  - path: data/structures/other/rave_complex.yaml
+    sha256: a084d9615994641c15b2f425268f1fe4e9088dab227165c8fd7f751c212e468b
+    role: target
+  - path: data/structures/other/rdna_protrusion.yaml
+    sha256: bbce31a505909fd1ddec859a874bb12edaf330fe2385428f5dd7463422e83833
+    role: target
+  - path: data/structures/other/rent_complex.yaml
+    sha256: c0f746b3f8dd388b84dc7921e962b5ad99aa420bf2dc37915a7100ef6982cb20
+    role: target
+  - path: data/structures/other/replication_fork.yaml
+    sha256: 3c26284ce88683c82e4b3c19642ee3db0ce651271d053a50f890f9333442bc8a
+    role: target
+  - path: data/structures/other/replisome.yaml
+    sha256: 3a9dccdc2b6e8d2ae52ce3f79e4419144996fba6783e1f35d8f1151e1587449d
+    role: target
+  - path: data/structures/other/retromer_cargo_selective_complex.yaml
+    sha256: 15f57377dae1342f7f720f73d643272fcc1e598b1c78f0175d077cb776d425b7
+    role: target
+  - path: data/structures/other/retromer_complex.yaml
+    sha256: 60196846b0791d8d83f97289c425f0f2e200fb9eeb6ad358a344d0e4a2c7ea6d
+    role: target
+  - path: data/structures/other/retromer_tubulation_complex.yaml
+    sha256: ba4fdda9721b6bb99c1a0a2718546d588d192fbb6d3ec99f188fd7ee9669417a
+    role: target
+  - path: data/structures/other/ribonuclease_h2_complex.yaml
+    sha256: e27e7c2e73bb5366bed6064bdacfef6801d3ddf5f03e1c1f695184d6bab63463
+    role: target
+  - path: data/structures/other/ribonuclease_iii_complex.yaml
+    sha256: 14c45d19a0c0cbe7a76e09e7cdd3b3a3b5a603ca599c29551ba8745421d8d261
+    role: target
+  - path: data/structures/other/ribulose_bisphosphate_carboxylase_complex.yaml
+    sha256: 640f360f7141c37d640d72a9a56933ff4ff748ed1914e6cb1ed26e7b1bace36a
+    role: target
+  - path: data/structures/other/rna_polymerase_i_complex.yaml
+    sha256: 90644215362242b9ae57eba3ecb080556c5a1a30bac6c2873e2cc400d5e4a492
+    role: target
+  - path: data/structures/other/rpd3l_complex.yaml
+    sha256: 496405771f74893263e850d2734ccac7b5335bd7f68adbf371ff471e639fd130
+    role: target
+  - path: data/structures/other/rpd3l_expanded_complex.yaml
+    sha256: 0f0f67d4290934733b2837685f4b9591a6d9a7a8041b939af220cb40ffed2e00
+    role: target
+  - path: data/structures/other/rpd3s_complex.yaml
+    sha256: 0424e22459de9b32afc529d1e29b3fbbd69778b4e2fb2e3039f2870425bf3d5c
+    role: target
+  - path: data/structures/other/rsc_type_complex.yaml
+    sha256: d27880de3449bf83c21b07f2aeaf1778554647f1e23aa9ca2858781b15c52c55
+    role: target
+  - path: data/structures/other/saga_complex.yaml
+    sha256: 4f9cec8ba60fb724884c77417391ff3859f78c6506908d57e7b52570f0668744
+    role: target
+  - path: data/structures/other/sam_complex.yaml
+    sha256: 2bc84256eb4920012e9d89333f77477f6045cab93b65b725791d9eac229ff8e0
+    role: target
+  - path: data/structures/other/sas_acetyltransferase_complex.yaml
+    sha256: f6749d3c8c2dac44d85319936790b24e5e01b00567d41bc658a2b2a1a52f148a
+    role: target
+  - path: data/structures/other/sec61_translocon_complex.yaml
+    sha256: 9935187223bfdfd8bbb792a09034a9053c2e2aba3242176e18bfbe7dcbb7f52d
+    role: target
+  - path: data/structures/other/sec62_sec63_complex.yaml
+    sha256: 6a49ddb8fd15e9d529b09a2620fbe831ac22d744ac894a1848482ae261709837
+    role: target
+  - path: data/structures/other/seh1_associated_complex.yaml
+    sha256: aa110facbd709a90000d5c80df314569df57d857ab1884f395ed651731a322b7
+    role: target
+  - path: data/structures/other/set1c_compass_complex.yaml
+    sha256: 842cc91c8fe7ade5d6d3740bfcbfa79cabc16b6dc8c7396bbd5ce9bca4287371
+    role: target
+  - path: data/structures/other/set3_complex.yaml
+    sha256: 88eb925c6678847803a4571c22d8d77177085afc875c82ffab204fb3d78a68f1
+    role: target
+  - path: data/structures/other/shrec_complex.yaml
+    sha256: 9f3220603badab6d23de3294decc23e2aaeddff46fcee7cdd3260d99387a6dc3
+    role: target
+  - path: data/structures/other/single_stranded_dna_binding_protein_complex.yaml
+    sha256: 04c92893dd9473c91792524b05ceec79c2fb386b68e5535b12a6d2186b0bbe08
+    role: target
+  - path: data/structures/other/slik_saga_like_complex.yaml
+    sha256: 4614b467ae2ff6daf74573fcf1aef807873c001d7eb1b2d6c7697f4a906795d6
+    role: target
+  - path: data/structures/other/snt2c_complex.yaml
+    sha256: 59062da0458495844385a94756b4e47f346cb5abcc021d2a0cceafdf37ad6e68
+    role: target
+  - path: data/structures/other/spitzenkorper.yaml
+    sha256: b269c0b10ff3fed28a04246778322fb283c22efb470ab8f5f4cc76b24fe387ea
+    role: target
+  - path: data/structures/other/ssh1_translocon_complex.yaml
+    sha256: 85002fa0125f06d53fb3058400943011a338d271b899ac1aa3cd1b819af7e13c
+    role: target
+  - path: data/structures/other/ssud_ssue_complex.yaml
+    sha256: 5534ffab974de7e904bd854fc19ba066e411bb871d502e4703151ac4f623f2ca
+    role: target
+  - path: data/structures/other/starch_utilization_system_complex.yaml
+    sha256: 7bf8670c19dad15559bfcfb60604b75d6cbc796add226e4f1b25ad75e7285da6
+    role: target
+  - path: data/structures/other/stressosome.yaml
+    sha256: 3ff9d247df5b1ac7e5d5e0891bb4a55bcc80351ebb56b7e57155612ae12126fb
+    role: target
+  - path: data/structures/other/swi5_sfr1_complex.yaml
+    sha256: b3feec30c701813a9ed8eaf8be4064e7bb3d46671f2918e9555926fa92581f1a
+    role: target
+  - path: data/structures/other/swi_snf_complex.yaml
+    sha256: 33755e6d10ded2ceb6ea8f5c875e460d5edc3cbc165a6e57461644c5921f559d
+    role: target
+  - path: data/structures/other/swr1_complex.yaml
+    sha256: 44ec94814237caa8898d6af15b1792dd21137dd370d5bbb102fb5acd74b6e61e
+    role: target
+  - path: data/structures/other/t_utp_complex.yaml
+    sha256: 0feedc8e65cc7a37a577015c38b9d736c4e3981997c756a38a4b637da082f034
+    role: target
+  - path: data/structures/other/taurine_dioxygenase_complex.yaml
+    sha256: a26387426c04b3224ab12116403b746fa1af945ff0f01491aef490e98c7cabf6
+    role: target
+  - path: data/structures/other/tea1_cell_end_complex.yaml
+    sha256: 101c05283ca3b984dd09423eae44834b7ece1dc77d0eb39363043b2db73f3041
+    role: target
+  - path: data/structures/other/tho_complex.yaml
+    sha256: 33167513d48d5678728a31ec5a65a0434febecee913d946d4c2a53b5eca9e1fc
+    role: target
+  - path: data/structures/other/tho_complex_part_of_transcription_export_complex.yaml
+    sha256: 580e6e603e82631cdba5c1726f3557a3e6e6f1641a720c049bf14f30f288d7ee
+    role: target
+  - path: data/structures/other/tic_complex.yaml
+    sha256: cd8f5b7f05824912638c6b30aebe92c61c670f53500118326f0141445b605260
+    role: target
+  - path: data/structures/other/tim22_mitochondrial_import_inner_membrane_insertion_complex.yaml
+    sha256: 0f9e0b89f374989f70112419dd0535213c5bf6374ae554cae7d63c0d0e328b66
+    role: target
+  - path: data/structures/other/tim23_mitochondrial_import_inner_membrane_translocase_complex.yaml
+    sha256: bd5c9514184447f824a0d33c4da12bcd4feacd627f05ccfdba2f6e971b9946b1
+    role: target
+  - path: data/structures/other/toc_complex.yaml
+    sha256: 8035eb7a9f3d6ab43b1f95d895825b38c4609581f0aaaf9b1b227ed807d6c5c3
+    role: target
+  - path: data/structures/other/torc1_complex.yaml
+    sha256: 97a3baf2a75dff0aa4c5096247657283d3c698b1ec98d7558e67415bffad383f
+    role: target
+  - path: data/structures/other/torc2_complex.yaml
+    sha256: 8228b84b64d7a7343c234f6cf7f4889a52162b9232cb1a1bc36cf6559f9b0038
+    role: target
+  - path: data/structures/other/tramp_complex.yaml
+    sha256: 15816827409a6df217a7594cdcac88791248a4b171e6832ffab81b6002776dae
+    role: target
+  - path: data/structures/other/transcription_export_complex.yaml
+    sha256: 2dfb876c2f593468f6b323e054335c836f54fd944c65a7eb286391a43b33cdc9
+    role: target
+  - path: data/structures/other/transcription_factor_tfiih_core_complex.yaml
+    sha256: 00bb30bcd0c208645b8eb5b9c97a7d06f644f38e01ddc9ca1de3a13d5d6f9e84
+    role: target
+  - path: data/structures/other/transcription_factor_tfiih_holo_complex.yaml
+    sha256: 513ba62b6d80b6aa573c6cd4004ff8aa8580d87427652b4dcc9c046271d76b02
+    role: target
+  - path: data/structures/other/transcription_factor_tfiik_complex.yaml
+    sha256: dfd04ec13de36b56ef0e5b2094c972643be293d63200b1caca0303c0023fdec6
+    role: target
+  - path: data/structures/other/trapp_complex.yaml
+    sha256: acd2f78c20f4aa1fccaa3450e852f4186b98bf001c99b2f25f72b67281e7d2f9
+    role: target
+  - path: data/structures/other/trappi_protein_complex.yaml
+    sha256: 3714b2688015b048223851e9e5e223c4a23f3b13f4f048441f66a734d1e3fc5b
+    role: target
+  - path: data/structures/other/trappii_protein_complex.yaml
+    sha256: 6450dd7be9fc420509cd1327400242ec04dff389117263a0fcd8cdcc5fa5338c
+    role: target
+  - path: data/structures/other/trappiii_protein_complex.yaml
+    sha256: 5dd6b0d4556ef0d3093fc6d62b20770e3fc9441ab4814baa692b3aa213944edb
+    role: target
+  - path: data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml
+    sha256: 4435eff8e0024d5e50c99597042e8de0f568b0cbf248ca317d55000af663e7cb
+    role: target
+  - path: data/structures/other/tusk_complex.yaml
+    sha256: 7a9a0cf8cd8769230f4615ba041200b8f03aa74a8eefcb7afa9908840f7d60df
+    role: target
+  - path: data/structures/other/udp_n_acetylglucosamine_transferase_complex.yaml
+    sha256: 991766e4b622b64a0e4ed095ccf82e3e3829e01e2949368ef77c9b31c7236f2f
+    role: target
+  - path: data/structures/other/utp_c_complex.yaml
+    sha256: 8f0c251d5cf532bacffd6864670931fd80f6af639d883ba9eaef058ff78952ff
+    role: target
+  - path: data/structures/other/vesicle_coat.yaml
+    sha256: d8bd367b310d26010f7c909b47b7e5b8676be216b22e81a69eab083d506c3818
+    role: target
+  - path: data/structures/other/wash_complex.yaml
+    sha256: cd98c7cdf56f6b1801df96aa63d4c5f455cd89b745f4a0a65e72febd7630fbb5
+    role: target
+  - path: data/structures/other/zeta_dna_polymerase_complex.yaml
+    sha256: 3e3998b879767678973cc7ad7a6bff5231a24c33c612bfa1d47b0b3f01f6b41e
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Full-cohort review of all 314 CellStructureRecord YAML files under
+    data/structures/other/.
+  selection: Complete folder cohort data/structures/other/*.yaml in the frozen 1,008-record
+    Cycle 5 Stage 4 inventory.
+  coverage: full
+  population_size: 314
+  reviewed_target_ids:
+  - GO:0000148
+  - GO:0009334
+  - GO:0016590
+  - cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acref_tolc_multidrug_efflux_transport_complex
+  - GO:0140671
+  - GO:1990201
+  - GO:0005658
+  - GO:0110067
+  - GO:0030121
+  - GO:0030122
+  - GO:0030123
+  - GO:0030124
+  - GO:0044599
+  - GO:0030119
+  - GO:0020007
+  - GO:0097691
+  - GO:0061701
+  - GO:0036389
+  - GO:1990063
+  - GO:7770042
+  - GO:0033186
+  - GO:0031518
+  - GO:0030015
+  - GO:0005938
+  - GO:0097610
+  - GO:0005933
+  - GO:0005935
+  - GO:0031560
+  - GO:0005934
+  - GO:0031561
+  - GO:0043263
+  - GO:0016465
+  - GO:0005832
+  - GO:0030896
+  - GO:0008623
+  - GO:0000775
+  - GO:0099115
+  - GO:0000781
+  - GO:0030118
+  - GO:0030132
+  - GO:0030128
+  - GO:0030130
+  - GO:0005905
+  - GO:0030125
+  - GO:0071920
+  - GO:0071162
+  - GO:0017119
+  - GO:0000817
+  - GO:0030126
+  - GO:0030127
+  - GO:1990098
+  - GO:0000438
+  - GO:0000440
+  - GO:0033263
+  - cellstructuremech:crl4wdr1_ubiquitin_ligase_complex
+  - GO:0031390
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  - GO:0034270
+  - GO:0031910
+  - GO:0042729
+  - GO:0031431
+  - GO:0043625
+  - GO:1990125
+  - GO:0097684
+  - GO:0097687
+  - GO:0097683
+  - GO:0097685
+  - GO:0097686
+  - GO:0097611
+  - GO:0097613
+  - GO:0097614
+  - GO:0097618
+  - GO:0097612
+  - GO:0120217
+  - GO:0044775
+  - GO:0043847
+  - GO:0043846
+  - GO:0009360
+  - GO:0044776
+  - GO:0005662
+  - GO:0005663
+  - GO:0031261
+  - GO:0009340
+  - GO:1990102
+  - GO:1990157
+  - GO:1990084
+  - GO:1990083
+  - GO:1990103
+  - GO:1990082
+  - GO:1990101
+  - GO:1990100
+  - GO:1990158
+  - GO:1990159
+  - GO:1990160
+  - GO:1990156
+  - GO:1990161
+  - GO:0070939
+  - GO:0071819
+  - GO:1990065
+  - GO:0032126
+  - cellstructuremech:ejectisome
+  - GO:0031391
+  - GO:0033588
+  - GO:0072546
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  - GO:1990207
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  - GO:0031205
+  - GO:0008622
+  - GO:0032865
+  - GO:0033565
+  - GO:0036452
+  - GO:0000813
+  - GO:0000814
+  - GO:0000815
+  - GO:1990621
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  - GO:0043529
+  - GO:0000811
+  - GO:0160055
+  - GO:0031026
+  - GO:0009342
+  - GO:0005960
+  - GO:0030700
+  - GO:0042765
+  - GO:1990220
+  - GO:1990131
+  - GO:0070823
+  - GO:1990085
+  - GO:0000417
+  - cellstructuremech:holdfast
+  - GO:0030897
+  - cellstructuremech:hsp78_chaperone_complex
+  - GO:0001411
+  - GO:0031562
+  - GO:0031942
+  - GO:0031011
+  - GO:0016587
+  - GO:0036436
+  - GO:0036437
+  - GO:0000776
+  - GO:0043564
+  - GO:0062051
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  - GO:0016606
+  - GO:0005745
+  - GO:1990196
+  - GO:0043332
+  - GO:0031563
+  - GO:0042555
+  - cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex
+  - GO:1990203
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0030117
+  - GO:1990197
+  - GO:0098561
+  - GO:0140275
+  - cellstructuremech:mic10_subcomplex
+  - cellstructuremech:mic60_mic19_complex
+  - GO:0061617
+  - GO:0120155
+  - GO:0140595
+  - GO:0000444
+  - GO:0042720
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  - cellstructuremech:mitochondrial_multifunctional_assembly
+  - GO:0005742
+  - GO:0035632
+  - GO:0030678
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  - GO:1990198
+  - GO:0035658
+  - GO:0033551
+  - GO:0034457
+  - GO:0030870
+  - GO:0031533
+  - GO:1990199
+  - GO:0036410
+  - GO:1990710
+  - GO:0031415
+  - GO:0031416
+  - GO:0031417
+  - GO:0031262
+  - GO:0030690
+  - GO:0030691
+  - GO:0030692
+  - GO:0030689
+  - GO:0033100
+  - GO:1990467
+  - GO:1990468
+  - GO:0035267
+  - GO:0000228
+  - GO:0043599
+  - GO:1990251
+  - GO:0005664
+  - GO:0005643
+  - GO:0044613
+  - GO:0044614
+  - GO:0044611
+  - GO:0044612
+  - GO:0044615
+  - GO:0031080
+  - GO:0043596
+  - GO:0043601
+  - GO:0030874
+  - GO:0005730
+  - GO:0000786
+  - GO:0000110
+  - GO:0000111
+  - GO:0000112
+  - GO:0000113
+  - GO:0016581
+  - GO:0031912
+  - GO:0000808
+  - GO:0000940
+  - GO:0001405
+  - GO:0031251
+  - cellstructuremech:phage_nucleus
+  - GO:0000407
+  - GO:0062077
+  - GO:0032777
+  - GO:0016605
+  - GO:0000133
+  - cellstructuremech:popz_polar_microdomain
+  - cellstructuremech:potabcd_spermidine_abc_transporter_complex
+  - GO:1990099
+  - GO:0036387
+  - GO:1990077
+  - GO:0022624
+  - GO:0000502
+  - GO:0005839
+  - GO:0005838
+  - GO:0008540
+  - GO:0008541
+  - GO:7770085
+  - GO:0034388
+  - GO:1990732
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0031389
+  - GO:0071986
+  - GO:0043291
+  - GO:0030875
+  - GO:0030869
+  - GO:0005657
+  - GO:0030894
+  - GO:0030906
+  - GO:0030904
+  - GO:0030905
+  - GO:0032299
+  - GO:1903095
+  - GO:0048492
+  - GO:0005736
+  - GO:0033698
+  - GO:0070210
+  - GO:0032221
+  - GO:0016586
+  - GO:0000124
+  - GO:0001401
+  - GO:0033255
+  - GO:0005784
+  - GO:0031207
+  - GO:0035859
+  - GO:0048188
+  - GO:0034967
+  - GO:0070824
+  - GO:0044777
+  - GO:0046695
+  - GO:0070211
+  - GO:0031521
+  - GO:0071261
+  - GO:1990200
+  - GO:0044570
+  - cellstructuremech:stressosome
+  - GO:0032798
+  - GO:0016514
+  - GO:0000812
+  - GO:0034455
+  - GO:1990205
+  - GO:0031500
+  - GO:0000347
+  - GO:0000445
+  - GO:0031897
+  - GO:0042721
+  - GO:0005744
+  - GO:0010006
+  - GO:0031931
+  - GO:0031932
+  - GO:0031499
+  - GO:0000346
+  - GO:0000439
+  - GO:0005675
+  - GO:0070985
+  - GO:0030008
+  - GO:1990070
+  - GO:1990071
+  - GO:1990072
+  - GO:0031317
+  - cellstructuremech:tusk_complex
+  - GO:0043541
+  - GO:0034456
+  - GO:0030120
+  - GO:0071203
+  - GO:0016035
+targets:
+- target_id: GO:0000148
+  path: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+  label: 1,3-beta-D-glucan synthase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3dedbfa89047d1949a9d4691dcb873546c76dcd836c17494c43160462b9626bc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/1_3_beta_d_glucan_synthase_complex.yaml
+    role: maintained_record
+- target_id: GO:0009334
+  path: data/structures/other/3_phenylpropionate_dioxygenase_complex.yaml
+  label: 3-phenylpropionate dioxygenase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 168a39bc1efe333cd3f4d7217f3bfa978db90e560135e1cfaea564df1ea67f2e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/3_phenylpropionate_dioxygenase_complex.yaml
+    role: maintained_record
+- target_id: GO:0016590
+  path: data/structures/other/acf_complex.yaml
+  label: ACF complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 27edd08119e44be1f4b50bd981e4642df134f6bbc3df8266b5c5b8a41d18905d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/acf_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex
+  path: data/structures/other/acrab_tolc_multidrug_efflux_transport_complex.yaml
+  label: AcrAB-TolC multidrug efflux transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 781dd7e152917915b204ac297248d0caa8f290a2f815b9bf9ed41f43b8819c25
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/acrab_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  label: AcrAD-TolC multidrug efflux transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d425921342020294e8af9bc08ca22808b4479493a6f690b01afe51ea4ec78f51
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:acref_tolc_multidrug_efflux_transport_complex
+  path: data/structures/other/acref_tolc_multidrug_efflux_transport_complex.yaml
+  label: AcrEF-TolC multidrug efflux transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d5cddae7fee04a1a72ce4514d49664e93f4e102b6199dbfe8a7a61ce4cbeff45
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/acref_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained_record
+- target_id: GO:0140671
+  path: data/structures/other/ada_complex.yaml
+  label: ADA complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 19ddd1561eca805686597eff4dff9a4984339e1245e743c82c616267fac35406
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ada_complex.yaml
+    role: maintained_record
+- target_id: GO:1990201
+  path: data/structures/other/alkanesulfonate_monooxygenase_complex.yaml
+  label: alkanesulfonate monooxygenase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ac8fbeb8ff0cc8842c6a4dc579722d2860064fff15bb3011c0b726caa440a7ba
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/alkanesulfonate_monooxygenase_complex.yaml
+    role: maintained_record
+- target_id: GO:0005658
+  path: data/structures/other/alpha_dna_polymerase_primase_complex.yaml
+  label: alpha DNA polymerase:primase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: efa26498f03abfddfde91ca7cb10b78740b65eac7cbd1a9c81436d884a2f5a76
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/alpha_dna_polymerase_primase_complex.yaml
+    role: maintained_record
+- target_id: GO:0110067
+  path: data/structures/other/ammonium_transmembrane_transporter_complex.yaml
+  label: ammonium transmembrane transporter complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5817cfb54453674b3d5c595474173ea79cca6f9d88c6ac8ea97f3445e1e775a4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ammonium_transmembrane_transporter_complex.yaml
+    role: maintained_record
+- target_id: GO:0030121
+  path: data/structures/other/ap_1_adaptor_complex.yaml
+  label: AP-1 adaptor complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 07e8041b35a2b239cc863b961dcea341b80d8b9afc3db0482cf001a4d3f1c03e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ap_1_adaptor_complex.yaml
+    role: maintained_record
+- target_id: GO:0030122
+  path: data/structures/other/ap_2_adaptor_complex.yaml
+  label: AP-2 adaptor complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7e977e9b968a49ccfe219389d742097a6f905f31ee9b00631f7ecf528cc67a36
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ap_2_adaptor_complex.yaml
+    role: maintained_record
+- target_id: GO:0030123
+  path: data/structures/other/ap_3_adaptor_complex.yaml
+  label: AP-3 adaptor complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b47759292491bad87010aea3770b522c9d3f3e48b6ea253eb6c9c1af4cae9371
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ap_3_adaptor_complex.yaml
+    role: maintained_record
+- target_id: GO:0030124
+  path: data/structures/other/ap_4_adaptor_complex.yaml
+  label: AP-4 adaptor complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e5f16d7db120bac359a5e922826eebea96ee57839a61ec70e12ad1663593a38e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ap_4_adaptor_complex.yaml
+    role: maintained_record
+- target_id: GO:0044599
+  path: data/structures/other/ap_5_adaptor_complex.yaml
+  label: AP-5 adaptor complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d951b48b8f9fe05db066c722dd2dad8277f04eb4af1ac36bf4a5c03932ac82dc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ap_5_adaptor_complex.yaml
+    role: maintained_record
+- target_id: GO:0030119
+  path: data/structures/other/ap_type_membrane_coat_adaptor_complex.yaml
+  label: AP-type membrane coat adaptor complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a16a52e7091df279f222b922baa48be321173ab9dc132e1c2be2384d48ca626b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ap_type_membrane_coat_adaptor_complex.yaml
+    role: maintained_record
+- target_id: GO:0020007
+  path: data/structures/other/apical_complex.yaml
+  label: apical complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 72b670707751292b450e4c8bccddb25a4a14e482fc0eaaa85975681694f55952
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/apical_complex.yaml
+    role: maintained_record
+- target_id: GO:0097691
+  path: data/structures/other/bacterial_extracellular_vesicle.yaml
+  label: bacterial extracellular vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 43f0f6e0dfef8fc8533bbbac4c5a1583adc6626873f52b92f2edbc32560137d2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bacterial_extracellular_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0061701
+  path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+  label: bacterial outer membrane vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ae635da7dc9351f59de2b4283aa2d572b200cf9eba187147c027e5e86b445a34
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bacterial_outer_membrane_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0036389
+  path: data/structures/other/bacterial_pre_replicative_complex.yaml
+  label: bacterial pre-replicative complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a4a8871a963f0b0eb3e32d9a677f099afdf3f6246dc7964f1890b61b3f01b62a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bacterial_pre_replicative_complex.yaml
+    role: maintained_record
+- target_id: GO:1990063
+  path: data/structures/other/bam_protein_complex.yaml
+  label: Bam protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ac284bcf4e0ec8021b0f218143e2337a0845c36113edb097e79c950ac1688cde
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bam_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:7770042
+  path: data/structures/other/bindosome_complex.yaml
+  label: bindosome complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 360a186c82ed29ddaae42fdbcb445a37b8482be97bed64a6d077792b8fdce375
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/bindosome_complex.yaml
+    role: maintained_record
+- target_id: GO:0033186
+  path: data/structures/other/caf_1_complex.yaml
+  label: CAF-1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9cfaf9ce52f019ddb3125428f3c6ce7cb17ae2e476fbd0fb9be2e0bcad652576
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/caf_1_complex.yaml
+    role: maintained_record
+- target_id: GO:0031518
+  path: data/structures/other/cbf3_complex.yaml
+  label: CBF3 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9cf3d32f5094ac6a00417cb7b7c125b45a4329e364d8e721314f19349baf44f2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cbf3_complex.yaml
+    role: maintained_record
+- target_id: GO:0030015
+  path: data/structures/other/ccr4_not_core_complex.yaml
+  label: CCR4-NOT core complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 504a2fab8f0e45f9bad27454f7ff8c51b0aa9caba8dcefa65b8e6647037559a8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ccr4_not_core_complex.yaml
+    role: maintained_record
+- target_id: GO:0005938
+  path: data/structures/other/cell_cortex.yaml
+  label: cell cortex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5335ecdc090d19feeccf80b52e7f52231efcc7a92bfa2a00f920704673038b2d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cell_cortex.yaml
+    role: maintained_record
+- target_id: GO:0097610
+  path: data/structures/other/cell_surface_furrow.yaml
+  label: cell surface furrow
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6b0093967543186f49c224cfbb592d8131bc723930752e1b17a5536ebc11219d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cell_surface_furrow.yaml
+    role: maintained_record
+- target_id: GO:0005933
+  path: data/structures/other/cellular_bud.yaml
+  label: cellular bud
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fbf8f5612bc661a91f8f2991018db67cae34dd7859360b981ef05a99a9582ea8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cellular_bud.yaml
+    role: maintained_record
+- target_id: GO:0005935
+  path: data/structures/other/cellular_bud_neck.yaml
+  label: cellular bud neck
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5c7f0d1c4c048d162593483fc2e0210697dff88f4dcf5d7e3b1d194f35e7e6e8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cellular_bud_neck.yaml
+    role: maintained_record
+- target_id: GO:0031560
+  path: data/structures/other/cellular_bud_neck_polarisome.yaml
+  label: cellular bud neck polarisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: aae60b7cc1209dc95937db2c0514862f03f52a2f8848fcf0fec6ca461bb4bfaa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cellular_bud_neck_polarisome.yaml
+    role: maintained_record
+- target_id: GO:0005934
+  path: data/structures/other/cellular_bud_tip.yaml
+  label: cellular bud tip
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c5e468cb63bf8195e8d5c7567d1737bca98fb2f466bbc1982cc66df390dbd1bc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cellular_bud_tip.yaml
+    role: maintained_record
+- target_id: GO:0031561
+  path: data/structures/other/cellular_bud_tip_polarisome.yaml
+  label: cellular bud tip polarisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a76a9766b8a57ddf49ccd2ec08f36447edbd1b059469c12180aded338fb48f91
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cellular_bud_tip_polarisome.yaml
+    role: maintained_record
+- target_id: GO:0043263
+  path: data/structures/other/cellulosome.yaml
+  label: cellulosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 160396ff8915ffdeb5209c04f051ecdde8e51ef687cc99cc71f86567a4799383
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cellulosome.yaml
+    role: maintained_record
+- target_id: GO:0016465
+  path: data/structures/other/chaperonin_atpase_complex.yaml
+  label: chaperonin ATPase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e50b4bf3c80a0ca3b39458a019e4725f898abe94900259149e4234948062f4ce
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chaperonin_atpase_complex.yaml
+    role: maintained_record
+- target_id: GO:0005832
+  path: data/structures/other/chaperonin_containing_t_complex.yaml
+  label: chaperonin-containing T-complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4274a8163f3bdd1939542d87eb5bca53a4897c7c760c027091440c72448b6e7b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chaperonin_containing_t_complex.yaml
+    role: maintained_record
+- target_id: GO:0030896
+  path: data/structures/other/checkpoint_clamp_complex.yaml
+  label: checkpoint clamp complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ca0a307eaff1114aa1125b0301c053e2681f113318ceb0ccd743d9bcb163acaf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/checkpoint_clamp_complex.yaml
+    role: maintained_record
+- target_id: GO:0008623
+  path: data/structures/other/chrac.yaml
+  label: CHRAC
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d31b095249c6c8d73ddbb45f8c090f2ad0f94e14916bbd42886ad96dcd10e2ba
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chrac.yaml
+    role: maintained_record
+- target_id: GO:0000775
+  path: data/structures/other/chromosome_centromeric_region.yaml
+  label: chromosome, centromeric region
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 063b4d4c70c63cc15495e82781cb948b4a550ab1e4ee940111028fc6d4496415
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chromosome_centromeric_region.yaml
+    role: maintained_record
+- target_id: GO:0099115
+  path: data/structures/other/chromosome_subtelomeric_region.yaml
+  label: chromosome, subtelomeric region
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a0c561b4963ea38c35a805a56e743a6925f9956deec3ea678ac80b38e8a5c2ed
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chromosome_subtelomeric_region.yaml
+    role: maintained_record
+- target_id: GO:0000781
+  path: data/structures/other/chromosome_telomeric_region.yaml
+  label: chromosome, telomeric region
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 89a1d67ddff9dd2563524f59efe3b3ab802200b930b0179cebef7a4dbac27485
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/chromosome_telomeric_region.yaml
+    role: maintained_record
+- target_id: GO:0030118
+  path: data/structures/other/clathrin_coat.yaml
+  label: clathrin coat
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7b118032d28ca3f850fb2a1bb3070ff32923f58df02ae50e326e97e61d2092f7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat.yaml
+    role: maintained_record
+- target_id: GO:0030132
+  path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+  label: clathrin coat of coated pit
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 859f324aa6a2b9ddd65cb2658a052bec387e3f2afd56d1cd49faf42ae663f55e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_coated_pit.yaml
+    role: maintained_record
+- target_id: GO:0030128
+  path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+  label: clathrin coat of endocytic vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 04cd29ffe90456d0dc2acbe6dbba20bd061587015653a0bea6d7259c1c7f6220
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0030130
+  path: data/structures/other/clathrin_coat_of_trans_golgi_network_vesicle.yaml
+  label: clathrin coat of trans-Golgi network vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3cbc1e64e95b6793c1036c808b404b5c6f3b81724fc4f901d2c74c385db5c6a7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_trans_golgi_network_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0005905
+  path: data/structures/other/clathrin_coated_pit.yaml
+  label: clathrin-coated pit
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d64704a67303020e2f3c92a40d1d64ebc830398938e57acd568dc7e29e723e83
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coated_pit.yaml
+    role: maintained_record
+- target_id: GO:0030125
+  path: data/structures/other/clathrin_vesicle_coat.yaml
+  label: clathrin vesicle coat
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cef674eb9fc2b08323c1780daa340012db00fd43e3f89c7de880ac972594e17d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_vesicle_coat.yaml
+    role: maintained_record
+- target_id: GO:0071920
+  path: data/structures/other/cleavage_body.yaml
+  label: cleavage body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 790cd51917a39d31d033994a33784891cd76bd8d06ca98d0f43cfdba2aef65c2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cleavage_body.yaml
+    role: maintained_record
+- target_id: GO:0071162
+  path: data/structures/other/cmg_complex.yaml
+  label: CMG complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c7ce81a2d35df2983545756bf9b962097d595b50ddeb4fa8de3e08e07cfd1ee4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cmg_complex.yaml
+    role: maintained_record
+- target_id: GO:0017119
+  path: data/structures/other/cog_complex.yaml
+  label: COG complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 63a87323bc5724de1cae502db180cb5a1cca96f62a851cb596469216865421ac
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cog_complex.yaml
+    role: maintained_record
+- target_id: GO:0000817
+  path: data/structures/other/coma_complex.yaml
+  label: COMA complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 12d58998e16ab86e55d0c70e47de8fd7cf3a797e528ede3cc99bbff4e8854da5
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/coma_complex.yaml
+    role: maintained_record
+- target_id: GO:0030126
+  path: data/structures/other/copi_vesicle_coat.yaml
+  label: COPI vesicle coat
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1b264ad3800f2c5c8c78d327f63a32bdc73888a003e3be3fcad778bb9f993195
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/copi_vesicle_coat.yaml
+    role: maintained_record
+- target_id: GO:0030127
+  path: data/structures/other/copii_vesicle_coat.yaml
+  label: COPII vesicle coat
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3b7c89b408581ddfd7f40203a1810eda738e87b1d2457812209b8586abbb0ef2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/copii_vesicle_coat.yaml
+    role: maintained_record
+- target_id: GO:1990098
+  path: data/structures/other/core_primosome_complex.yaml
+  label: core primosome complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3f26d4c8ff702a0d53da6fd3c5f94e95420bfcc8be686b3dfdce317245b78bac
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/core_primosome_complex.yaml
+    role: maintained_record
+- target_id: GO:0000438
+  path: data/structures/other/core_tfiih_complex_portion_of_holo_tfiih_complex.yaml
+  label: core TFIIH complex portion of holo TFIIH complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 16e82cc28bc358b34fa885dce05ecffea9022fbd529ce122ad9b31f2a0df68d5
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/core_tfiih_complex_portion_of_holo_tfiih_complex.yaml
+    role: maintained_record
+- target_id: GO:0000440
+  path: data/structures/other/core_tfiih_complex_portion_of_nef3_complex.yaml
+  label: core TFIIH complex portion of NEF3 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 22ce0324ba1c1113c0ac5ef1d6e8642132923e6f6130a6d5aedeab654f0e8009
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/core_tfiih_complex_portion_of_nef3_complex.yaml
+    role: maintained_record
+- target_id: GO:0033263
+  path: data/structures/other/corvet_complex.yaml
+  label: CORVET complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a3bf0da311e1d6b869043ba0b102130ef6e9e1dcb5009a8996058b43c40945a0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/corvet_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:crl4wdr1_ubiquitin_ligase_complex
+  path: data/structures/other/crl4wdr1_ubiquitin_ligase_complex.yaml
+  label: CRL4WDR1 ubiquitin ligase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 15951ee1c5321044ae8654b108d88de8388e09c2d10706fc7134d5ba32280ac4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/crl4wdr1_ubiquitin_ligase_complex.yaml
+    role: maintained_record
+- target_id: GO:0031390
+  path: data/structures/other/ctf18_rfc_like_complex.yaml
+  label: Ctf18 RFC-like complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: abd597266840ca232631d6d1ca9478dda5ec941daf084b31e7815f4660cef6f3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ctf18_rfc_like_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  path: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+  label: Cullin-E ubiquitin ligase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 24cfaf2e2cd189ff59a4b9889fbbb3fe13e8f30fed4d282f41323e21c78e4c96
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cullin_e_ubiquitin_ligase_complex.yaml
+    role: maintained_record
+- target_id: GO:0034270
+  path: data/structures/other/cvt_complex.yaml
+  label: Cvt complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 29ffd90803735e2db2a3869531eae7e439bac79b868049f6d7766c6c9a694902
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cvt_complex.yaml
+    role: maintained_record
+- target_id: GO:0031910
+  path: data/structures/other/cytostome.yaml
+  label: cytostome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 083f8800483f67a23bdb303aaf95d8d853d3bf67240e7ac2926e87ab66c89926
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cytostome.yaml
+    role: maintained_record
+- target_id: GO:0042729
+  path: data/structures/other/dash_complex.yaml
+  label: DASH complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 068456fa61be361559f04a3267867351f2adda6537a706aa6b152f62439f81fb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dash_complex.yaml
+    role: maintained_record
+- target_id: GO:0031431
+  path: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+  label: Dbf4-dependent protein kinase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5b0ecddabbb2373c35df54bb5993715956ea5d74dd7e42d6b3e37f6a2271a433
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dbf4_dependent_protein_kinase_complex.yaml
+    role: maintained_record
+- target_id: GO:0043625
+  path: data/structures/other/delta_dna_polymerase_complex.yaml
+  label: delta DNA polymerase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4669ff292f802ea0157d1496279723caa0330ddb676bb6fa63a6f1399b414fdf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/delta_dna_polymerase_complex.yaml
+    role: maintained_record
+- target_id: GO:1990125
+  path: data/structures/other/diaa_complex.yaml
+  label: DiaA complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 69949691e84f66d54da7945f2c9b0bd20d109d4a2ebea4931b72dc5829e5f158
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/diaa_complex.yaml
+    role: maintained_record
+- target_id: GO:0097684
+  path: data/structures/other/dinoflagellate_antapex.yaml
+  label: dinoflagellate antapex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1379be0377e9b86e39f36a4a2a8946b02ab5aa9004aa2576e25b8691147c7fb9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_antapex.yaml
+    role: maintained_record
+- target_id: GO:0097687
+  path: data/structures/other/dinoflagellate_antapical_horn.yaml
+  label: dinoflagellate antapical horn
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 17b0c9dcaaa5110c51d7120d3d7fb6bf6ac9a483981418b9ada4be51b700ccc7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_antapical_horn.yaml
+    role: maintained_record
+- target_id: GO:0097683
+  path: data/structures/other/dinoflagellate_apex.yaml
+  label: dinoflagellate apex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5c8d91554cc820c9434886f0022093eff4f766f4ad608fed12ded740860d0749
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_apex.yaml
+    role: maintained_record
+- target_id: GO:0097685
+  path: data/structures/other/dinoflagellate_apical_groove.yaml
+  label: dinoflagellate apical groove
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7577f4358ce9bcc9753ec38e0295a7e496261827869f77353480ef2b130ad1f4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_apical_groove.yaml
+    role: maintained_record
+- target_id: GO:0097686
+  path: data/structures/other/dinoflagellate_apical_horn.yaml
+  label: dinoflagellate apical horn
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 77b2ec19b71236a91786a44611abcc34eb6a7e927763f6ff641f2c879813c344
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_apical_horn.yaml
+    role: maintained_record
+- target_id: GO:0097611
+  path: data/structures/other/dinoflagellate_cingulum.yaml
+  label: dinoflagellate cingulum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c29822ebb0e810421c4516a4db5b8e6d648739e5c563e491d584850a65011513
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_cingulum.yaml
+    role: maintained_record
+- target_id: GO:0097613
+  path: data/structures/other/dinoflagellate_epicone.yaml
+  label: dinoflagellate epicone
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 30e41a70bae04d4698b3b0bc40226fb51727a9f8664c4031c3ae8145216dfcdd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_epicone.yaml
+    role: maintained_record
+- target_id: GO:0097614
+  path: data/structures/other/dinoflagellate_hypocone.yaml
+  label: dinoflagellate hypocone
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0a596b02f63ce6799d10b49b4cf34a921fb2ae92e1208ee599a96ed47c5f40a1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_hypocone.yaml
+    role: maintained_record
+- target_id: GO:0097618
+  path: data/structures/other/dinoflagellate_sulcal_notch.yaml
+  label: dinoflagellate sulcal notch
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0e3dace360a1a70bc43f318649972ebb63a50628897c7681bb81c9c75f18c7b1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_sulcal_notch.yaml
+    role: maintained_record
+- target_id: GO:0097612
+  path: data/structures/other/dinoflagellate_sulcus.yaml
+  label: dinoflagellate sulcus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b3606a5c03fbc85a602f3ea6927c22e49eedbcd00d1e9607c85ac080205bd356
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dinoflagellate_sulcus.yaml
+    role: maintained_record
+- target_id: GO:0120217
+  path: data/structures/other/dna_gyrase_complex.yaml
+  label: DNA gyrase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5e7e1a94281ec5bb4c72ea205e6e44bc4545175d4051eab98df531f709ac35b8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_gyrase_complex.yaml
+    role: maintained_record
+- target_id: GO:0044775
+  path: data/structures/other/dna_polymerase_iii_beta_sliding_clamp_processivity_factor_complex.yaml
+  label: DNA polymerase III, beta sliding clamp processivity factor complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0369f6dedbb1719e899d2bc9895033ab1dc7652865adb0597e10901b4e5ce664
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_polymerase_iii_beta_sliding_clamp_processivity_factor_complex.yaml
+    role: maintained_record
+- target_id: GO:0043847
+  path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+  label: DNA polymerase III, clamp loader chi/psi subcomplex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ae7299b0c7b889f3f035fe582e2b6c8fddb1a507dd0e1ceadda8c1d8e73a60cb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_polymerase_iii_clamp_loader_chi_psi_subcomplex.yaml
+    role: maintained_record
+- target_id: GO:0043846
+  path: data/structures/other/dna_polymerase_iii_clamp_loader_complex.yaml
+  label: DNA polymerase III, clamp loader complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d577d4fffb8f72d79620d78bfc245c04ed3481af7ab41b626ea4b7f21f0b166a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_polymerase_iii_clamp_loader_complex.yaml
+    role: maintained_record
+- target_id: GO:0009360
+  path: data/structures/other/dna_polymerase_iii_complex.yaml
+  label: DNA polymerase III complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c807793b2a1531837a29634bbc50dcbf9e75f9c5e812c495086756a755baa55d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_polymerase_iii_complex.yaml
+    role: maintained_record
+- target_id: GO:0044776
+  path: data/structures/other/dna_polymerase_iii_core_complex.yaml
+  label: DNA polymerase III, core complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d3f7d2562674074de9eac445b01e2e20a566e590840dba0edac515a22b02d47b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_polymerase_iii_core_complex.yaml
+    role: maintained_record
+- target_id: GO:0005662
+  path: data/structures/other/dna_replication_factor_a_complex.yaml
+  label: DNA replication factor A complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 875ef33eba1336b1bfd61e3c5bc9f0ade5f2c37a93d25793797fa5b9ac34c133
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_factor_a_complex.yaml
+    role: maintained_record
+- target_id: GO:0005663
+  path: data/structures/other/dna_replication_factor_c_complex.yaml
+  label: DNA replication factor C complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2b0c2b755fa48c66cfe831211cc2eb3abeb7691e2d7c16ddb938d3ff2698aa1f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_factor_c_complex.yaml
+    role: maintained_record
+- target_id: GO:0031261
+  path: data/structures/other/dna_replication_preinitiation_complex.yaml
+  label: DNA replication preinitiation complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d38de0da7f792e34b56e5ef225160a88221fb8a9b64e309e2b28f34bc7038b88
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_replication_preinitiation_complex.yaml
+    role: maintained_record
+- target_id: GO:0009340
+  path: data/structures/other/dna_topoisomerase_iv_complex.yaml
+  label: DNA topoisomerase IV complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fb14ab25e6bf5e766d86b767a0f20597e77782d62fae6c5b48ed82dcee0ef070
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dna_topoisomerase_iv_complex.yaml
+    role: maintained_record
+- target_id: GO:1990102
+  path: data/structures/other/dnaa_diaa_complex.yaml
+  label: DnaA-DiaA complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fc2f791efd2e63545ba7786349b16f68ed0655623cac1e8e4fea5e39ba1c43f4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_diaa_complex.yaml
+    role: maintained_record
+- target_id: GO:1990157
+  path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+  label: DnaA-DnaB-DnaC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a49c1990539aacfc5c45ca3e85ad447d25d1de1e4608396c5233d16bf5ec4e56
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_dnab_dnac_complex.yaml
+    role: maintained_record
+- target_id: GO:1990084
+  path: data/structures/other/dnaa_dps_complex.yaml
+  label: DnaA-Dps complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2b89c667acb0f20b397cc83da72c84987b12fbddcf156f5159fd6225a8b35f87
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_dps_complex.yaml
+    role: maintained_record
+- target_id: GO:1990083
+  path: data/structures/other/dnaa_hda_complex.yaml
+  label: DnaA-Hda complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 483a497d765d330fb525a7294da3190f44406843dd7acf5e563fedd971533a8e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_hda_complex.yaml
+    role: maintained_record
+- target_id: GO:1990103
+  path: data/structures/other/dnaa_hu_complex.yaml
+  label: DnaA-HU complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c1a75c31a02371a7ae84e7732e2f45e97398bcb9ddf28247bec3026cd6f802f3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_hu_complex.yaml
+    role: maintained_record
+- target_id: GO:1990082
+  path: data/structures/other/dnaa_l2_complex.yaml
+  label: DnaA-L2 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 02922dc2d03f7d1dce3a07650d55d6ac6e827b61b9c09ebc3b5dee50a58e8afd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_l2_complex.yaml
+    role: maintained_record
+- target_id: GO:1990101
+  path: data/structures/other/dnaa_oric_complex.yaml
+  label: DnaA-oriC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: af3deef66bb9816ea02f79adee17921b145d8170bd97434ab260f709fa346976
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnaa_oric_complex.yaml
+    role: maintained_record
+- target_id: GO:1990100
+  path: data/structures/other/dnab_dnac_complex.yaml
+  label: DnaB-DnaC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 049bf3ed905aec42853fdf025e35d4cb71ecd89a7b8b89328042c39491aaa180
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnab_dnac_complex.yaml
+    role: maintained_record
+- target_id: GO:1990158
+  path: data/structures/other/dnab_dnac_dnat_pria_prib_complex.yaml
+  label: DnaB-DnaC-DnaT-PriA-PriB complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 587fd3510ffd8ae95259dff336a7f2e984b50d34417d746277a41081a5b4ddb5
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnab_dnac_dnat_pria_prib_complex.yaml
+    role: maintained_record
+- target_id: GO:1990159
+  path: data/structures/other/dnab_dnac_dnat_pria_pric_complex.yaml
+  label: DnaB-DnaC-DnaT-PriA-PriC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: af55566f43167e28b8f1cca9fc819d6914d7281179845fc6f3bfb153e67cae43
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnab_dnac_dnat_pria_pric_complex.yaml
+    role: maintained_record
+- target_id: GO:1990160
+  path: data/structures/other/dnab_dnac_rep_pric_complex.yaml
+  label: DnaB-DnaC-Rep-PriC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 50dccdc4d855065a8319372f4350453a2628309608fad038483bbf6524b0bb8f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnab_dnac_rep_pric_complex.yaml
+    role: maintained_record
+- target_id: GO:1990156
+  path: data/structures/other/dnab_dnag_complex.yaml
+  label: DnaB-DnaG complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6dae9176d717fa24dc9f2f32f9af9f307bd12111d249a4cd164d5f6e29ea917c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnab_dnag_complex.yaml
+    role: maintained_record
+- target_id: GO:1990161
+  path: data/structures/other/dnab_helicase_complex.yaml
+  label: DnaB helicase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2d0d0d647439c6e937f1aeb202b477fffc50813668a1c8ac5d42dd5b76932e99
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dnab_helicase_complex.yaml
+    role: maintained_record
+- target_id: GO:0070939
+  path: data/structures/other/dsl1_nzr_complex.yaml
+  label: Dsl1/NZR complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 409b4fadc71763d017e404c80cddc9aa152421baa38806ebd7f4d032d5ab25c0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dsl1_nzr_complex.yaml
+    role: maintained_record
+- target_id: GO:0071819
+  path: data/structures/other/dubm_complex.yaml
+  label: DUBm complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8d25f0c0e04576f7afff2783cf0c88c5c4ee7f5b3a627df47ecdad6eefcbd591
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dubm_complex.yaml
+    role: maintained_record
+- target_id: GO:1990065
+  path: data/structures/other/dxr_protein_complex.yaml
+  label: Dxr protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0a9e8c00028f315a781db6e7d819a864d844254eaa639b885573f818907bae5e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/dxr_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:0032126
+  path: data/structures/other/eisosome.yaml
+  label: eisosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3f96297240ba46e169dab4e79338949cf92ac200ffd75c509938b12240b1b89c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/eisosome.yaml
+    role: maintained_record
+- target_id: cellstructuremech:ejectisome
+  path: data/structures/other/ejectisome.yaml
+  label: ejectisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1ae5e8bacf85f2f83a40e9b76f75ac829ccf490bf1765498abeb2efa3be829a8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ejectisome.yaml
+    role: maintained_record
+- target_id: GO:0031391
+  path: data/structures/other/elg1_rfc_like_complex.yaml
+  label: Elg1 RFC-like complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 15926e2b4d166dd9d443b67080b160309d5d9bf7fa3c7db299ab0d386f509837
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/elg1_rfc_like_complex.yaml
+    role: maintained_record
+- target_id: GO:0033588
+  path: data/structures/other/elongator_holoenzyme_complex.yaml
+  label: elongator holoenzyme complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3071ca4a7c4adde264f84e0613da05118ef23a2d9ffcfbdd74a37897ba8f3c1d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/elongator_holoenzyme_complex.yaml
+    role: maintained_record
+- target_id: GO:0072546
+  path: data/structures/other/emc_complex.yaml
+  label: EMC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5b6483b187c333f4d7499642810417cc509133fa247436a8907f1263e0d07f54
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emc_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  path: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+  label: EmrAB-TolC multidrug efflux transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2ecd59317bfeae525a312c7ba1427b4ad561dfb25b621ff647b42e2205c150d6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained_record
+- target_id: GO:1990207
+  path: data/structures/other/emre_multidrug_transporter_complex.yaml
+  label: EmrE multidrug transporter complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7a4055fadb4512ab96308689f737202f1b82dfd99e0fe4046fa82e1e22f6a0e0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emre_multidrug_transporter_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  path: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+  label: EmrKY-TolC multidrug efflux transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7537240a1770406c3b0b6272ef277be10afa2a64fe43e40d9e75729ae00bae4a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emrky_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained_record
+- target_id: GO:0031205
+  path: data/structures/other/endoplasmic_reticulum_sec_complex.yaml
+  label: endoplasmic reticulum Sec complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9c518bbd838470051ecd41f44fade19a7575e189a7ee995022f6447240cbae4f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/endoplasmic_reticulum_sec_complex.yaml
+    role: maintained_record
+- target_id: GO:0008622
+  path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+  label: epsilon DNA polymerase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d2ba24b44d526b14423e20d02b567e0564f8cf162bc811572fa69fce15878635
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/epsilon_dna_polymerase_complex.yaml
+    role: maintained_record
+- target_id: GO:0032865
+  path: data/structures/other/ermes_complex.yaml
+  label: ERMES complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 461d942cf1aedc1f89e6ed617555ce0e3377d103e971b63c8902bcccc66e31f9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ermes_complex.yaml
+    role: maintained_record
+- target_id: GO:0033565
+  path: data/structures/other/escrt_0_complex.yaml
+  label: ESCRT-0 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0ce6528df8bc94b7bb2547b04f8eae797b056cc925a27f04328b6b5f6913666d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/escrt_0_complex.yaml
+    role: maintained_record
+- target_id: GO:0036452
+  path: data/structures/other/escrt_complex.yaml
+  label: ESCRT complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 355f25710a97cee7e56f5b1438b71d21194f6130f84904091250df6e695bd17e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/escrt_complex.yaml
+    role: maintained_record
+- target_id: GO:0000813
+  path: data/structures/other/escrt_i_complex.yaml
+  label: ESCRT I complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6a62d3c1153274b4912ddbcae5322b2eeecbca045005db9a88c81babbfb406dc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/escrt_i_complex.yaml
+    role: maintained_record
+- target_id: GO:0000814
+  path: data/structures/other/escrt_ii_complex.yaml
+  label: ESCRT II complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e95b7f2a0dfdc218f0b5ffb7918966f72a844bdfe8ccf82accc075c116c98ec7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/escrt_ii_complex.yaml
+    role: maintained_record
+- target_id: GO:0000815
+  path: data/structures/other/escrt_iii_complex.yaml
+  label: ESCRT III complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9e1b8327f85a97301be8e84633176829e518d1272b35d43515e85cce4a2ceaa8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/escrt_iii_complex.yaml
+    role: maintained_record
+- target_id: GO:1990621
+  path: data/structures/other/escrt_iv_complex.yaml
+  label: ESCRT IV complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 54158602625f36ee41851b9d01628d95d5147bc2f27bf4b23bc47f5f2a1f41e2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/escrt_iv_complex.yaml
+    role: maintained_record
+- target_id: GO:0000145
+  path: data/structures/other/exocyst.yaml
+  label: exocyst
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 23b99475e342fbc7e4f75a3d591209ef67a0c7af74ddc519e9ab974cb297b3eb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exocyst.yaml
+    role: maintained_record
+- target_id: GO:0009338
+  path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+  label: exodeoxyribonuclease V complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f7a26afc35a5fcb19ee05eb2e4e101d99dae0bd4cf251da58b55d766db128d11
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exodeoxyribonuclease_v_complex.yaml
+    role: maintained_record
+- target_id: GO:0034044
+  path: data/structures/other/exomer_complex.yaml
+  label: exomer complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 55a7b002a5fa16fd9f559b79056daa52a6699576bb1f5849bcb8f4ad42dbd02a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/exomer_complex.yaml
+    role: maintained_record
+- target_id: GO:0035101
+  path: data/structures/other/fact_complex.yaml
+  label: FACT complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 28c014acbd668aedf2ce72673a18af6d53f64b73c4bed22ebc321068b823219a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/fact_complex.yaml
+    role: maintained_record
+- target_id: GO:1990202
+  path: data/structures/other/fmn_reductase_complex.yaml
+  label: FMN reductase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 14c19d15ada68c7cee1db02bec287690679ab1fdc09767a311af7e41c9795453
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/fmn_reductase_complex.yaml
+    role: maintained_record
+- target_id: GO:0005760
+  path: data/structures/other/gamma_dna_polymerase_complex.yaml
+  label: gamma DNA polymerase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    role: maintained_record
+- target_id: GO:0000938
+  path: data/structures/other/garp_complex.yaml
+  label: GARP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cc04996bbf2529caccbbf7fc6e5bd1d5a28d4aef15d23f99034a7ea90b8e038b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/garp_complex.yaml
+    role: maintained_record
+- target_id: GO:1990130
+  path: data/structures/other/gator1_complex.yaml
+  label: GATOR1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7baf105999145f4439e69771264fb5c37a524efbc9a879d20cf1f365430c4ed6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gator1_complex.yaml
+    role: maintained_record
+- target_id: GO:0061700
+  path: data/structures/other/gator2_complex.yaml
+  label: GATOR2 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 32924c59d1fa042e719e851ad1488c1c18550ec2e442d916d29360fa3e5dac8f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gator2_complex.yaml
+    role: maintained_record
+- target_id: GO:0097504
+  path: data/structures/other/gemini_of_cajal_bodies.yaml
+  label: Gemini of Cajal bodies
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 362feff8235f1f310a4d3783b8cb36902f7d683cf1ffd3525995a71843e53ac3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gemini_of_cajal_bodies.yaml
+    role: maintained_record
+- target_id: GO:0043529
+  path: data/structures/other/get_complex.yaml
+  label: GET complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d4135074d17c507ff77f421100ae094ec373452ad92594a56cd293e8b3744d6c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/get_complex.yaml
+    role: maintained_record
+- target_id: GO:0000811
+  path: data/structures/other/gins_complex.yaml
+  label: GINS complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 485835a6777e1752fc93d1e3149d8ff1416f7ee1d24755ad5e636e591e57c048
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gins_complex.yaml
+    role: maintained_record
+- target_id: GO:0160055
+  path: data/structures/other/glideosome.yaml
+  label: glideosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6ccd650ec4a95188fbfdc310b09544c02d4b128a89f8e5c1689aaf529da69f79
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/glideosome.yaml
+    role: maintained_record
+- target_id: GO:0031026
+  path: data/structures/other/glutamate_synthase_complex.yaml
+  label: glutamate synthase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 23058436ce8a0db4f794546c7afc6a50d364c0bec3a8672cd3fd7fb129c698c0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/glutamate_synthase_complex.yaml
+    role: maintained_record
+- target_id: GO:0009342
+  path: data/structures/other/glutamate_synthase_complex_nadph.yaml
+  label: glutamate synthase complex (NADPH)
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 04c0c5ee78f2b2d61429ca85fb8ec94ed837bd2eac5618b0b99dbceb8f7f6f2c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/glutamate_synthase_complex_nadph.yaml
+    role: maintained_record
+- target_id: GO:0005960
+  path: data/structures/other/glycine_cleavage_complex.yaml
+  label: glycine cleavage complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ed9aa4b2b2c567992efd6dee30006ab8457d55ebdc3d264ba3c9f88a3e615200
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/glycine_cleavage_complex.yaml
+    role: maintained_record
+- target_id: GO:0030700
+  path: data/structures/other/glycine_reductase_complex.yaml
+  label: glycine reductase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7df61164fbbf00d11b56de5cf7e21e2bcc813413167c4cdafba4becb74002cd6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/glycine_reductase_complex.yaml
+    role: maintained_record
+- target_id: GO:0042765
+  path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+  label: GPI-anchor transamidase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 34aa791d0757c8844c6c8bf61a743e7860f48e6d35ba78971d608a6bbee51764
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gpi_anchor_transamidase_complex.yaml
+    role: maintained_record
+- target_id: GO:1990220
+  path: data/structures/other/groel_groes_complex.yaml
+  label: GroEL-GroES complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5bd7ae78b674326f62d256614b83b15d516633140537514a676383e169999ce1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/groel_groes_complex.yaml
+    role: maintained_record
+- target_id: GO:1990131
+  path: data/structures/other/gtr1_gtr2_gtpase_complex.yaml
+  label: Gtr1-Gtr2 GTPase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 069c3ddba8ffaaaabdb29ea4ba4292a841f54dbd7e4cd40a8ed13007911d086e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gtr1_gtr2_gtpase_complex.yaml
+    role: maintained_record
+- target_id: GO:0070823
+  path: data/structures/other/hda1_complex.yaml
+  label: HDA1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6b19f4b66623b018af2496a92442c707fecaf0e551591afaff220957c2bb7b90
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hda1_complex.yaml
+    role: maintained_record
+- target_id: GO:1990085
+  path: data/structures/other/hda_beta_clamp_complex.yaml
+  label: Hda-beta clamp complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 17d71a8e1991caf8baa03ec95079930ae623433d2f04a1c063211c4b127f4bfb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hda_beta_clamp_complex.yaml
+    role: maintained_record
+- target_id: GO:0000417
+  path: data/structures/other/hir_complex.yaml
+  label: HIR complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8875028f235995bd024fa461075f1ff3053824ea228ba8565d2ccad03bb9fb52
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hir_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:holdfast
+  path: data/structures/other/holdfast.yaml
+  label: holdfast
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3875b459c05e557e38d7b4ec9b227a1cc2ddcdbcbb55296f2926deaf9cacc862
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/holdfast.yaml
+    role: maintained_record
+- target_id: GO:0030897
+  path: data/structures/other/hops_complex.yaml
+  label: HOPS complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 17afe9c90b6a51d94e588059cea7c0cb63c37a04e8b9c656b868c5ac1ec2a57f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hops_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:hsp78_chaperone_complex
+  path: data/structures/other/hsp78_chaperone_complex.yaml
+  label: Hsp78 chaperone complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ce4cf652d09ceed2af98370e674ca290bb9c878039fc2db47b2b982c3f0e7262
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hsp78_chaperone_complex.yaml
+    role: maintained_record
+- target_id: GO:0001411
+  path: data/structures/other/hyphal_tip.yaml
+  label: hyphal tip
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d33af9efa38fa45e9d44a06739b952ee6c2b009b85d597f51b8e981084c3c7d4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hyphal_tip.yaml
+    role: maintained_record
+- target_id: GO:0031562
+  path: data/structures/other/hyphal_tip_polarisome.yaml
+  label: hyphal tip polarisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 69417314e33e5f9ef62038f48149ff6a8099a77ca45c1227b8bb6d52ac269667
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/hyphal_tip_polarisome.yaml
+    role: maintained_record
+- target_id: GO:0031942
+  path: data/structures/other/i_aaa_complex.yaml
+  label: i-AAA complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f6877406ef9d82f3c18666e77b2ae3bb8c0a8c8c582c35bfba92d7cffafacda9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/i_aaa_complex.yaml
+    role: maintained_record
+- target_id: GO:0031011
+  path: data/structures/other/ino80_complex.yaml
+  label: Ino80 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0903c3843e1e1d782fa1437c3ec324bc1c5aae25f19cb4cbe5452a3d36e865c4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ino80_complex.yaml
+    role: maintained_record
+- target_id: GO:0016587
+  path: data/structures/other/isw1_complex.yaml
+  label: Isw1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5662405c6e9c5ce9d246c4ea52175ca1cce9eee337ac704e5cb405e66f0ce912
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/isw1_complex.yaml
+    role: maintained_record
+- target_id: GO:0036436
+  path: data/structures/other/isw1a_complex.yaml
+  label: Isw1a complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1f8db379fbf44a20126d11fe7418076ec4361066f6564871614361ad31273865
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/isw1a_complex.yaml
+    role: maintained_record
+- target_id: GO:0036437
+  path: data/structures/other/isw1b_complex.yaml
+  label: Isw1b complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: da27a6000afe1a8e535d8586b2841416d6f10e07058b226e446d785541c37137
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/isw1b_complex.yaml
+    role: maintained_record
+- target_id: GO:0000776
+  path: data/structures/other/kinetochore.yaml
+  label: kinetochore
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ea8645dec5b13874441be4fa7a2db0b477265d3c23ecd399aa9559824428640d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/kinetochore.yaml
+    role: maintained_record
+- target_id: GO:0043564
+  path: data/structures/other/ku70_ku80_complex.yaml
+  label: Ku70:Ku80 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6f49f9f9be4112bd44c0c606a4cc485466092240af95a3dce5107a46e117de44
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ku70_ku80_complex.yaml
+    role: maintained_record
+- target_id: GO:0062051
+  path: data/structures/other/lipopolysaccharide_transport_system.yaml
+  label: lipopolysaccharide transport system
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7ce50d437cce77aa049b4340bd3c95899875c156a208e23cb92b38fd4ba0e32e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lipopolysaccharide_transport_system.yaml
+    role: maintained_record
+- target_id: cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+  label: LolCDE lipoprotein ABC transporter complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 96bf1ce75ce606af29c2d8a549c345e9487f0e426ac1f86823f14db22c651866
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+    role: maintained_record
+- target_id: GO:0016606
+  path: data/structures/other/lysp100_associated_nuclear_domain.yaml
+  label: LYSP100-associated nuclear domain
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1ab946fc5be33e183cca56f752088cfc96ff3c898c908039b43ed4007e3b1493
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lysp100_associated_nuclear_domain.yaml
+    role: maintained_record
+- target_id: GO:0005745
+  path: data/structures/other/m_aaa_complex.yaml
+  label: m-AAA complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9686eb96f5b95da3c8b9dbb002841e31ac5c884c66e4af52f05706b375ea87a7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/m_aaa_complex.yaml
+    role: maintained_record
+- target_id: GO:1990196
+  path: data/structures/other/macab_tolc_complex.yaml
+  label: MacAB-TolC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b2f794251b4bbc18fa1e7c1bdc93d9fc0098d20d1160e8230ee4b0a9b247e636
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/macab_tolc_complex.yaml
+    role: maintained_record
+- target_id: GO:0043332
+  path: data/structures/other/mating_projection_tip.yaml
+  label: mating projection tip
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ec2a7085e4d50080981c50bd9b523d8ffabf4de5739bbe1b696c382fddb7e1ad
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mating_projection_tip.yaml
+    role: maintained_record
+- target_id: GO:0031563
+  path: data/structures/other/mating_projection_tip_polarisome.yaml
+  label: mating projection tip polarisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5502f8d8c35e2a2c4f05054f1b8560ecf19c88374581927f3107e46512996afe
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mating_projection_tip_polarisome.yaml
+    role: maintained_record
+- target_id: GO:0042555
+  path: data/structures/other/mcm_complex.yaml
+  label: MCM complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ab0128d7b27c918540dfdfc193258526bc2fc072bc24803fdb83246aed34c25d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mcm_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex
+  path: data/structures/other/mdtabc_tolc_multidrug_efflux_transport_complex.yaml
+  label: MdtABC-TolC multidrug efflux transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 814313e51e521a17fc163a2b16e7bb8bd9528ef8dcba59bb431368c1419376bc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mdtabc_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained_record
+- target_id: GO:1990203
+  path: data/structures/other/mdtbc_complex.yaml
+  label: MdtBC Complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c89b2ca25a4a0f79dde997d4df92cf552d7a7e34c523850879a1a06812967f7b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mdtbc_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:meiotic_telomere_bouquet
+  path: data/structures/other/meiotic_telomere_bouquet.yaml
+  label: meiotic telomere bouquet
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0902106290c0af4891af4481d6d0e57e26f89048da1a01b639f1bc1837a7d61e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/meiotic_telomere_bouquet.yaml
+    role: maintained_record
+- target_id: GO:0030117
+  path: data/structures/other/membrane_coat.yaml
+  label: membrane coat
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9073c1cdc0933d5d06be86c723bdc6ca142420034739d82499bcbd38e3b8968c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/membrane_coat.yaml
+    role: maintained_record
+- target_id: GO:1990197
+  path: data/structures/other/methionine_importing_abc_transporter_complex.yaml
+  label: methionine-importing ABC transporter complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d142adebc4594df832813af4688c91daa5e93e59681fc6cfdf08a885d95cdc37
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/methionine_importing_abc_transporter_complex.yaml
+    role: maintained_record
+- target_id: GO:0098561
+  path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+  label: methyl accepting chemotaxis protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7f6f49e960cabe5c4f6f4346e73f877cc8786bd5b29a8f9472aec97ede4e1dad
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/methyl_accepting_chemotaxis_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:0140275
+  path: data/structures/other/mib_complex.yaml
+  label: MIB complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1a8bd9a823976370cee61ab389dfc2d1e03b9f422de8d9454177f95c52ed4f78
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mib_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mic10_subcomplex
+  path: data/structures/other/mic10_subcomplex.yaml
+  label: MIC10 subcomplex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9d98461e5b91bf4eb28fffe1797678d45d3f6aa51391b289282b7b6155a22601
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mic10_subcomplex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mic60_mic19_complex
+  path: data/structures/other/mic60_mic19_complex.yaml
+  label: Mic60-Mic19 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f69ade5a57e4946d6bb529c33ab623059348fd9a4c43609cea0b33b50d591cb7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mic60_mic19_complex.yaml
+    role: maintained_record
+- target_id: GO:0061617
+  path: data/structures/other/micos_complex.yaml
+  label: MICOS complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 756a5b48fd9109266e6ace5805f5f9fd4aaac9940ff39660960bb8603374f5aa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/micos_complex.yaml
+    role: maintained_record
+- target_id: GO:0120155
+  path: data/structures/other/mih_complex.yaml
+  label: MIH complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2c54dd8f5851517678e87255d978996b2a681140da72a40d21e7e10b0bc005ac
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mih_complex.yaml
+    role: maintained_record
+- target_id: GO:0140595
+  path: data/structures/other/mim_complex.yaml
+  label: MIM complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 61bfb31d9aca0a2be252843e729f32e2b8ff9f3d02c77ba43e06d6f5a9229916
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mim_complex.yaml
+    role: maintained_record
+- target_id: GO:0000444
+  path: data/structures/other/mis12_mind_type_complex.yaml
+  label: MIS12/MIND type complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 029ac75e12045a39ff6da937c63cff087715e76aadf1b65ad773f30bdfc4e944
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mis12_mind_type_complex.yaml
+    role: maintained_record
+- target_id: GO:0042720
+  path: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+  label: mitochondrial inner membrane peptidase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8eb6f174c969fc2aef5a84a2a473fe42a66158531ae26422ccfd8ae3407227e0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mitochondrial_lon_protease_complex
+  path: data/structures/other/mitochondrial_lon_protease_complex.yaml
+  label: mitochondrial Lon protease complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 22c985cbd94a32e0a04e1ba4b7f77e796ef99815390b9165a3b15b987429d5d6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mitochondrial_lon_protease_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mitochondrial_multifunctional_assembly
+  path: data/structures/other/mitochondrial_multifunctional_assembly.yaml
+  label: mitochondrial multifunctional assembly
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bb1a36eee48a44140250e04951a42f149f5de60affd5e146ba8f89f8a6e48858
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mitochondrial_multifunctional_assembly.yaml
+    role: maintained_record
+- target_id: GO:0005742
+  path: data/structures/other/mitochondrial_outer_membrane_translocase_complex.yaml
+  label: mitochondrial outer membrane translocase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a9facce19eda1794aefb3bef7b36fe07ba5c3a942220a4379c5569de4150022e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mitochondrial_outer_membrane_translocase_complex.yaml
+    role: maintained_record
+- target_id: GO:0035632
+  path: data/structures/other/mitochondrial_prohibitin_complex.yaml
+  label: mitochondrial prohibitin complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a2a0c89fc814c0dba32ef8a1b90246ced003e274382c67d78794cbd86e9b7453
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mitochondrial_prohibitin_complex.yaml
+    role: maintained_record
+- target_id: GO:0030678
+  path: data/structures/other/mitochondrial_ribonuclease_p_complex.yaml
+  label: mitochondrial ribonuclease P complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 00c2bfe5567576213bd36b0ac68169c143c04f1a677e96f4b4bc2dbf4b78dd5c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mitochondrial_ribonuclease_p_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:mlafedb_lipid_transport_complex
+  path: data/structures/other/mlafedb_lipid_transport_complex.yaml
+  label: MlaFEDB lipid transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ecbbe2e1d054fcc0748e70d3fdac4aa9399a960b393a907915288fee45601d18
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mlafedb_lipid_transport_complex.yaml
+    role: maintained_record
+- target_id: GO:1990198
+  path: data/structures/other/mode_complex.yaml
+  label: ModE complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: be482c2a30679f616a100d624959210fd1d60187ecbb7f81584d38ede3db29d6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mode_complex.yaml
+    role: maintained_record
+- target_id: GO:0035658
+  path: data/structures/other/mon1_ccz1_complex.yaml
+  label: Mon1-Ccz1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b52a280b2e52f6656e200741adb1b323151d2cbf2c85bc95a3a530e0b50a0d8b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mon1_ccz1_complex.yaml
+    role: maintained_record
+- target_id: GO:0033551
+  path: data/structures/other/monopolin_complex.yaml
+  label: monopolin complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b549cc4866975edd6f620c84983b2f22ceca0dd461a26a6d5fa8dc78f2824918
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/monopolin_complex.yaml
+    role: maintained_record
+- target_id: GO:0034457
+  path: data/structures/other/mpp10_complex.yaml
+  label: Mpp10 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6bf32fcf28495ebdb11c5498d3d44a98933b39fd7ec86e7ba0fc1e46b0773809
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mpp10_complex.yaml
+    role: maintained_record
+- target_id: GO:0030870
+  path: data/structures/other/mre11_complex.yaml
+  label: Mre11 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 51cfa599aa779c1d9c92c29309dfa6eb24a838bf76c6711b6ed3f7120842d884
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mre11_complex.yaml
+    role: maintained_record
+- target_id: GO:0031533
+  path: data/structures/other/mrna_capping_enzyme_complex.yaml
+  label: mRNA capping enzyme complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 56e15932f5aa10dc25335a5c8b451b13e6d838caa2d338ce63690caed18c3925
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mrna_capping_enzyme_complex.yaml
+    role: maintained_record
+- target_id: GO:1990199
+  path: data/structures/other/msba_transporter_complex.yaml
+  label: MsbA transporter complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d240b636c58ddfdcf8d92ad0f46a6b8efe55dc651a6527b99b16b3d54982e5db
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/msba_transporter_complex.yaml
+    role: maintained_record
+- target_id: GO:0036410
+  path: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+  label: Mst2 histone acetyltransferase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ddbf7f44b54b5ac0f78470f3abf7551780aac7fd80849df29b75e77dd9d39a7c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mst2_histone_acetyltransferase_complex.yaml
+    role: maintained_record
+- target_id: GO:1990710
+  path: data/structures/other/muts_complex.yaml
+  label: MutS complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9a71adc820bd45323620f0866099de2b096d75ca2a9237651adbb0f3126a63ca
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/muts_complex.yaml
+    role: maintained_record
+- target_id: GO:0031415
+  path: data/structures/other/nata_complex.yaml
+  label: NatA complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1ee712cccdee79e722e1f9867b71dfbf6fdd3eb060461ccfed6a4b7e4e003acc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nata_complex.yaml
+    role: maintained_record
+- target_id: GO:0031416
+  path: data/structures/other/natb_complex.yaml
+  label: NatB complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2e2492e9da872efa583ad9d8cecf57eb0cc1a70bb458454b6801e5237228857a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/natb_complex.yaml
+    role: maintained_record
+- target_id: GO:0031417
+  path: data/structures/other/natc_complex.yaml
+  label: NatC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3fe75c4bf45553a6c6ce2feb51fa23f605c166b4e712ad1769fa7cb158736742
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/natc_complex.yaml
+    role: maintained_record
+- target_id: GO:0031262
+  path: data/structures/other/ndc80_complex.yaml
+  label: Ndc80 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2c647b1c92d7fff1c1836a954ef9618877ea8e607a52113a5e6be0a6c3289102
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ndc80_complex.yaml
+    role: maintained_record
+- target_id: GO:0030690
+  path: data/structures/other/noc1p_noc2p_complex.yaml
+  label: Noc1p-Noc2p complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0eefb3ec907ac78baec71ffc04b6b7a84427a9cbadbbe68a764f69cf68151166
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/noc1p_noc2p_complex.yaml
+    role: maintained_record
+- target_id: GO:0030691
+  path: data/structures/other/noc2p_noc3p_complex.yaml
+  label: Noc2p-Noc3p complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b95e2eb5102558ea71ad66f47f8159d3e2ffa8afbac6941aa7c56bde8df5292b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/noc2p_noc3p_complex.yaml
+    role: maintained_record
+- target_id: GO:0030692
+  path: data/structures/other/noc4p_nop14p_complex.yaml
+  label: Noc4p-Nop14p complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 43273aac01f54b6c913923b850f0d70c40134c9a57d4d00f840a5ac7a47206e9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/noc4p_nop14p_complex.yaml
+    role: maintained_record
+- target_id: GO:0030689
+  path: data/structures/other/noc_complex.yaml
+  label: Noc complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6e28101e082172d851e5000c0cf22a8fd7294913ffea2e7f820bb5151e6e3995
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/noc_complex.yaml
+    role: maintained_record
+- target_id: GO:0033100
+  path: data/structures/other/nua3_histone_acetyltransferase_complex.yaml
+  label: NuA3 histone acetyltransferase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d578083c38e0c1c54dbdfa4be6cc492101dea38ca24424e7368e70e39d05a928
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nua3_histone_acetyltransferase_complex.yaml
+    role: maintained_record
+- target_id: GO:1990467
+  path: data/structures/other/nua3a_histone_acetyltransferase_complex.yaml
+  label: NuA3a histone acetyltransferase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5342d4998689bcdf3fea5bca835def421be4578a749bc669d58cb045e8d093e2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nua3a_histone_acetyltransferase_complex.yaml
+    role: maintained_record
+- target_id: GO:1990468
+  path: data/structures/other/nua3b_histone_acetyltransferase_complex.yaml
+  label: NuA3b histone acetyltransferase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 07b25b203568b044d4cf8eb9dbcd740062d86209dd85d0d46fe0c6c6311686e5
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nua3b_histone_acetyltransferase_complex.yaml
+    role: maintained_record
+- target_id: GO:0035267
+  path: data/structures/other/nua4_histone_acetyltransferase_complex.yaml
+  label: NuA4 histone acetyltransferase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3cdf6cf91ba18b9a0cbd3dba4d08487c5476f9aeb301c0373f5fae5f909117a1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nua4_histone_acetyltransferase_complex.yaml
+    role: maintained_record
+- target_id: GO:0000228
+  path: data/structures/other/nuclear_chromosome.yaml
+  label: nuclear chromosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2606bddf876c415eac0b3f79709f2034169e2509ae5591a4ccfc7da0f8bd2fba
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_chromosome.yaml
+    role: maintained_record
+- target_id: GO:0043599
+  path: data/structures/other/nuclear_dna_replication_factor_c_complex.yaml
+  label: nuclear DNA replication factor C complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2fd3e6c106d1ca776c79af33b4cde62f714753aa11d93259ea7f26988349adc1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_dna_replication_factor_c_complex.yaml
+    role: maintained_record
+- target_id: GO:1990251
+  path: data/structures/other/nuclear_exosome_focus.yaml
+  label: nuclear exosome focus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5b22cc3c9405c262a80dd8a4ab05b8dc3f413478c54dd489b4267302b0d10efe
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_exosome_focus.yaml
+    role: maintained_record
+- target_id: GO:0005664
+  path: data/structures/other/nuclear_origin_of_replication_recognition_complex.yaml
+  label: nuclear origin of replication recognition complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b9d44bba3d6ddcf02197563e3f316435a3261e45d647cb576098c744928bbc65
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_origin_of_replication_recognition_complex.yaml
+    role: maintained_record
+- target_id: GO:0005643
+  path: data/structures/other/nuclear_pore.yaml
+  label: nuclear pore
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 525253b829ed4587c148153cbd039afeefad6bc6eb658f6f3e26680423870f54
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_pore.yaml
+    role: maintained_record
+- target_id: GO:0044613
+  path: data/structures/other/nuclear_pore_central_transport_channel.yaml
+  label: nuclear pore central transport channel
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9a5cf127dc5350153c489d1d255b9bded124699823b6f76beee74ec0a2356a63
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_pore_central_transport_channel.yaml
+    role: maintained_record
+- target_id: GO:0044614
+  path: data/structures/other/nuclear_pore_cytoplasmic_filaments.yaml
+  label: nuclear pore cytoplasmic filaments
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 474a7000d5f7a2ae21acbb66d34fde013380eda02fd727e083df1aa2d05fb195
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_pore_cytoplasmic_filaments.yaml
+    role: maintained_record
+- target_id: GO:0044611
+  path: data/structures/other/nuclear_pore_inner_ring.yaml
+  label: nuclear pore inner ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: eb86957ecff92da6fe2a0c590712b02268e0fdc8df86faf585bced92f10a33b6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_pore_inner_ring.yaml
+    role: maintained_record
+- target_id: GO:0044612
+  path: data/structures/other/nuclear_pore_linkers.yaml
+  label: nuclear pore linkers
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d07b0c8edd11002256fa5ecb79a039f6ca4f975406ea04706cb1dedc4d9c0a64
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_pore_linkers.yaml
+    role: maintained_record
+- target_id: GO:0044615
+  path: data/structures/other/nuclear_pore_nuclear_basket.yaml
+  label: nuclear pore nuclear basket
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 217964a66ac4054ad49587ee19fa0680ab49214f419d048b48de4f775e55f0ef
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_pore_nuclear_basket.yaml
+    role: maintained_record
+- target_id: GO:0031080
+  path: data/structures/other/nuclear_pore_outer_ring.yaml
+  label: nuclear pore outer ring
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5368afaeeb0f6368207b663844a5483b3043b18248cdaea1aabcdc120e2dbbb2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_pore_outer_ring.yaml
+    role: maintained_record
+- target_id: GO:0043596
+  path: data/structures/other/nuclear_replication_fork.yaml
+  label: nuclear replication fork
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: dcc4ecd3ee1622f96e65e07139cbf05075e2d460ff3bd38224f5296690dc7d4d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_replication_fork.yaml
+    role: maintained_record
+- target_id: GO:0043601
+  path: data/structures/other/nuclear_replisome.yaml
+  label: nuclear replisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6e7dc55a683789da75a67ab865268b5549e2e23b001cc773f5c8f02d5cfa2c69
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_replisome.yaml
+    role: maintained_record
+- target_id: GO:0030874
+  path: data/structures/other/nucleolar_chromatin.yaml
+  label: nucleolar chromatin
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a1c1814baea6b1976e41908e87d7008402a7c33c5cd073c5d2ee62bb2afc14e4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nucleolar_chromatin.yaml
+    role: maintained_record
+- target_id: GO:0005730
+  path: data/structures/other/nucleolus.yaml
+  label: nucleolus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ec59e6c4e557d2037eefbe620e1a1b0921370dd910cf62d90e851231a91ea20a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nucleolus.yaml
+    role: maintained_record
+- target_id: GO:0000786
+  path: data/structures/other/nucleosome.yaml
+  label: nucleosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7f1981ed2a46be4d9d62c98104737d5502d69668fcb5f082d2e6db75e30a4f7d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nucleosome.yaml
+    role: maintained_record
+- target_id: GO:0000110
+  path: data/structures/other/nucleotide_excision_repair_factor_1_complex.yaml
+  label: nucleotide-excision repair factor 1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bff50dfcb52aab10fa81bef96074573868fd77c2068adb9e10f242f45d2e7fff
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nucleotide_excision_repair_factor_1_complex.yaml
+    role: maintained_record
+- target_id: GO:0000111
+  path: data/structures/other/nucleotide_excision_repair_factor_2_complex.yaml
+  label: nucleotide-excision repair factor 2 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4caad1132c40bdc274c2923cc72c066bbc57968dc9d7567d98209b8ef5195a36
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nucleotide_excision_repair_factor_2_complex.yaml
+    role: maintained_record
+- target_id: GO:0000112
+  path: data/structures/other/nucleotide_excision_repair_factor_3_complex.yaml
+  label: nucleotide-excision repair factor 3 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f4ee95e4c73aa511c8ecd55854973e6c5ea82f84bae620aae68476263d258129
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nucleotide_excision_repair_factor_3_complex.yaml
+    role: maintained_record
+- target_id: GO:0000113
+  path: data/structures/other/nucleotide_excision_repair_factor_4_complex.yaml
+  label: nucleotide-excision repair factor 4 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 38eee9dd2cf2aae9ac051764f03de844520e3060cdaf2f1b0a9769629e190093
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nucleotide_excision_repair_factor_4_complex.yaml
+    role: maintained_record
+- target_id: GO:0016581
+  path: data/structures/other/nurd_complex.yaml
+  label: NuRD complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 81f7a95948ddccc377a71453664bf51633856a03e605c9273bb4eafb97e73078
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nurd_complex.yaml
+    role: maintained_record
+- target_id: GO:0031912
+  path: data/structures/other/oral_apparatus.yaml
+  label: oral apparatus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 55dd7652482846930c83b0340be155e52c094dbdf9232427bc76580cbe65a372
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/oral_apparatus.yaml
+    role: maintained_record
+- target_id: GO:0000808
+  path: data/structures/other/origin_recognition_complex.yaml
+  label: origin recognition complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 32edb24d8b6f6a1b1528149347c7d933ff4478c2bdf992535fe93a8ba6829f3c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/origin_recognition_complex.yaml
+    role: maintained_record
+- target_id: GO:0000940
+  path: data/structures/other/outer_kinetochore.yaml
+  label: outer kinetochore
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 797a33b5a274156af43edbccf35716c21129cb9bfd75fa3ff632a2982b3a7797
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/outer_kinetochore.yaml
+    role: maintained_record
+- target_id: GO:0001405
+  path: data/structures/other/pam_complex_tim23_associated_import_motor.yaml
+  label: PAM complex, Tim23 associated import motor
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8d5d6d5f281250b1aa3b59f61f0b53f4a3a72f92a365496941e4cee01298b3a2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/pam_complex_tim23_associated_import_motor.yaml
+    role: maintained_record
+- target_id: GO:0031251
+  path: data/structures/other/pan_complex.yaml
+  label: PAN complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ed3a5006bf015cf7aadfa916c8eb1c665adc76fe092225569abc61470396fd5b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/pan_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:phage_nucleus
+  path: data/structures/other/phage_nucleus.yaml
+  label: phage nucleus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 859ad55bf41189216081c7718939889eef1ceb54378f842cfbfa447c8f7a9390
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/phage_nucleus.yaml
+    role: maintained_record
+- target_id: GO:0000407
+  path: data/structures/other/phagophore_assembly_site.yaml
+  label: phagophore assembly site
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2c2244c5d7e387f0151316c562f95a15cba997cae405b2f1dc147dc241e502bf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/phagophore_assembly_site.yaml
+    role: maintained_record
+- target_id: GO:0062077
+  path: data/structures/other/phenylacetyl_coa_1_2_epoxidase_complex.yaml
+  label: phenylacetyl-CoA 1,2-epoxidase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4e8bd2fd5411ee27b7018ef9fa16202caa00a1a2283697f0bb80b3f498bb4a5a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/phenylacetyl_coa_1_2_epoxidase_complex.yaml
+    role: maintained_record
+- target_id: GO:0032777
+  path: data/structures/other/piccolo_histone_acetyltransferase_complex.yaml
+  label: piccolo histone acetyltransferase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 22179d5d2c6383448a673a2094e0b48919b5c4fd007eeba1f0ccb763a7c07bcb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/piccolo_histone_acetyltransferase_complex.yaml
+    role: maintained_record
+- target_id: GO:0016605
+  path: data/structures/other/pml_body.yaml
+  label: PML body
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: db71f664549f94cfba77701a7b4942a64e10bacfad2cf051296feaaf5c6d74a9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/pml_body.yaml
+    role: maintained_record
+- target_id: GO:0000133
+  path: data/structures/other/polarisome.yaml
+  label: polarisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9b62b423b4edbb40c6e0a6fd974d1ad18ac0fa36763679593eb9982404b79772
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/polarisome.yaml
+    role: maintained_record
+- target_id: cellstructuremech:popz_polar_microdomain
+  path: data/structures/other/popz_polar_microdomain.yaml
+  label: PopZ polar microdomain
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1bb11f0304a9c9b486655b84393741cb8d03314f7345bd7bd4988b7f0734f058
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/popz_polar_microdomain.yaml
+    role: maintained_record
+- target_id: cellstructuremech:potabcd_spermidine_abc_transporter_complex
+  path: data/structures/other/potabcd_spermidine_abc_transporter_complex.yaml
+  label: PotABCD spermidine ABC transporter complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4d4f880c179d4451b6edc186b2e2fa900901455aead199926520a8562fadebdf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/potabcd_spermidine_abc_transporter_complex.yaml
+    role: maintained_record
+- target_id: GO:1990099
+  path: data/structures/other/pre_primosome_complex.yaml
+  label: pre-primosome complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: da04d8bb093ff5dcca79ac66bdae56a5788af120fbd536a40237bbc3d27e4e90
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/pre_primosome_complex.yaml
+    role: maintained_record
+- target_id: GO:0036387
+  path: data/structures/other/pre_replicative_complex.yaml
+  label: pre-replicative complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e2f36f8446b9e33eefdfa73a980dc7eae5b0e1fb2cba3ad88da19ba962aeebb4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/pre_replicative_complex.yaml
+    role: maintained_record
+- target_id: GO:1990077
+  path: data/structures/other/primosome_complex.yaml
+  label: primosome complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c49ced918d744a9dad27176acbfdff2738373f9b6c32aa00af0a7d9e4c648afb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/primosome_complex.yaml
+    role: maintained_record
+- target_id: GO:0022624
+  path: data/structures/other/proteasome_accessory_complex.yaml
+  label: proteasome accessory complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9a75c108c01fa4e8f2e7ee677672f87df8b28d9a5e7e9b5a89f5dfb6f7d70afd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/proteasome_accessory_complex.yaml
+    role: maintained_record
+- target_id: GO:0000502
+  path: data/structures/other/proteasome_complex.yaml
+  label: proteasome complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8436f82f453dbc3bee76dda9eb51f56000dc4b5277e353a69b700555db984a15
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/proteasome_complex.yaml
+    role: maintained_record
+- target_id: GO:0005839
+  path: data/structures/other/proteasome_core_complex.yaml
+  label: proteasome core complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: fd4039a524baa94acf4adbeb2d82d05cf70fbd2e6b7b105e211996ff3eb61dbe
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/proteasome_core_complex.yaml
+    role: maintained_record
+- target_id: GO:0005838
+  path: data/structures/other/proteasome_regulatory_particle.yaml
+  label: proteasome regulatory particle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e3ec223ee05206105796f9bd7304a9da9f3d4575a0190f0ae00d74f0c4892c6c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/proteasome_regulatory_particle.yaml
+    role: maintained_record
+- target_id: GO:0008540
+  path: data/structures/other/proteasome_regulatory_particle_base_subcomplex.yaml
+  label: proteasome regulatory particle, base subcomplex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bf62675358e567eeea996090d0c2c24a9f9a8f50c2322615d88c37f7b3e5135f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/proteasome_regulatory_particle_base_subcomplex.yaml
+    role: maintained_record
+- target_id: GO:0008541
+  path: data/structures/other/proteasome_regulatory_particle_lid_subcomplex.yaml
+  label: proteasome regulatory particle, lid subcomplex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f0b747b7164b47e3dc93a71fe161292cbcb76f35a0381a841983b509130f740c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/proteasome_regulatory_particle_lid_subcomplex.yaml
+    role: maintained_record
+- target_id: GO:7770085
+  path: data/structures/other/protocatechuate_3_4_dioxygenase_complex.yaml
+  label: protocatechuate 3,4-dioxygenase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bd75931bd8713630bb8cb0833974b2add0022946ff9fd11626cf0cbce4b93b7b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/protocatechuate_3_4_dioxygenase_complex.yaml
+    role: maintained_record
+- target_id: GO:0034388
+  path: data/structures/other/pwp2p_containing_subcomplex_of_90s_preribosome.yaml
+  label: Pwp2p-containing subcomplex of 90S preribosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 07f60de2df05a2ee93d02ac6dde0eba1faa8a3a926d01eaceea8ca718723baed
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/pwp2p_containing_subcomplex_of_90s_preribosome.yaml
+    role: maintained_record
+- target_id: GO:1990732
+  path: data/structures/other/pyrenoid.yaml
+  label: pyrenoid
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bdaff3023422d77a8c9a8b8c5d45e254fa3ab2322076eb5aa27cb0e1e954bfc7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/pyrenoid.yaml
+    role: maintained_record
+- target_id: cellstructuremech:quiescent_telomere_hypercluster
+  path: data/structures/other/quiescent_telomere_hypercluster.yaml
+  label: quiescent telomere hypercluster
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 06f22013b1709e5dae74847f41f940c8523801262475077655e6923102974f22
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/quiescent_telomere_hypercluster.yaml
+    role: maintained_record
+- target_id: GO:0031389
+  path: data/structures/other/rad17_rfc_like_complex.yaml
+  label: Rad17 RFC-like complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 72b5963fce7fdb6827dd502efb117d4fc496e0dc882dce44ad0e14e8c6d546f8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/rad17_rfc_like_complex.yaml
+    role: maintained_record
+- target_id: GO:0071986
+  path: data/structures/other/ragulator_complex.yaml
+  label: Ragulator complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3f1ab9fc2088e36737f5d2b6ac4a130857c2c637d05fa85535804d886b8bf8cb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ragulator_complex.yaml
+    role: maintained_record
+- target_id: GO:0043291
+  path: data/structures/other/rave_complex.yaml
+  label: RAVE complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a084d9615994641c15b2f425268f1fe4e9088dab227165c8fd7f751c212e468b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/rave_complex.yaml
+    role: maintained_record
+- target_id: GO:0030875
+  path: data/structures/other/rdna_protrusion.yaml
+  label: rDNA protrusion
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bbce31a505909fd1ddec859a874bb12edaf330fe2385428f5dd7463422e83833
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/rdna_protrusion.yaml
+    role: maintained_record
+- target_id: GO:0030869
+  path: data/structures/other/rent_complex.yaml
+  label: RENT complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c0f746b3f8dd388b84dc7921e962b5ad99aa420bf2dc37915a7100ef6982cb20
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/rent_complex.yaml
+    role: maintained_record
+- target_id: GO:0005657
+  path: data/structures/other/replication_fork.yaml
+  label: replication fork
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3c26284ce88683c82e4b3c19642ee3db0ce651271d053a50f890f9333442bc8a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/replication_fork.yaml
+    role: maintained_record
+- target_id: GO:0030894
+  path: data/structures/other/replisome.yaml
+  label: replisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3a9dccdc2b6e8d2ae52ce3f79e4419144996fba6783e1f35d8f1151e1587449d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/replisome.yaml
+    role: maintained_record
+- target_id: GO:0030906
+  path: data/structures/other/retromer_cargo_selective_complex.yaml
+  label: retromer, cargo-selective complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 15f57377dae1342f7f720f73d643272fcc1e598b1c78f0175d077cb776d425b7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/retromer_cargo_selective_complex.yaml
+    role: maintained_record
+- target_id: GO:0030904
+  path: data/structures/other/retromer_complex.yaml
+  label: retromer complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 60196846b0791d8d83f97289c425f0f2e200fb9eeb6ad358a344d0e4a2c7ea6d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/retromer_complex.yaml
+    role: maintained_record
+- target_id: GO:0030905
+  path: data/structures/other/retromer_tubulation_complex.yaml
+  label: retromer, tubulation complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ba4fdda9721b6bb99c1a0a2718546d588d192fbb6d3ec99f188fd7ee9669417a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/retromer_tubulation_complex.yaml
+    role: maintained_record
+- target_id: GO:0032299
+  path: data/structures/other/ribonuclease_h2_complex.yaml
+  label: ribonuclease H2 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e27e7c2e73bb5366bed6064bdacfef6801d3ddf5f03e1c1f695184d6bab63463
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ribonuclease_h2_complex.yaml
+    role: maintained_record
+- target_id: GO:1903095
+  path: data/structures/other/ribonuclease_iii_complex.yaml
+  label: ribonuclease III complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 14c45d19a0c0cbe7a76e09e7cdd3b3a3b5a603ca599c29551ba8745421d8d261
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ribonuclease_iii_complex.yaml
+    role: maintained_record
+- target_id: GO:0048492
+  path: data/structures/other/ribulose_bisphosphate_carboxylase_complex.yaml
+  label: ribulose bisphosphate carboxylase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 640f360f7141c37d640d72a9a56933ff4ff748ed1914e6cb1ed26e7b1bace36a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ribulose_bisphosphate_carboxylase_complex.yaml
+    role: maintained_record
+- target_id: GO:0005736
+  path: data/structures/other/rna_polymerase_i_complex.yaml
+  label: RNA polymerase I complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 90644215362242b9ae57eba3ecb080556c5a1a30bac6c2873e2cc400d5e4a492
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/rna_polymerase_i_complex.yaml
+    role: maintained_record
+- target_id: GO:0033698
+  path: data/structures/other/rpd3l_complex.yaml
+  label: Rpd3L complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 496405771f74893263e850d2734ccac7b5335bd7f68adbf371ff471e639fd130
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/rpd3l_complex.yaml
+    role: maintained_record
+- target_id: GO:0070210
+  path: data/structures/other/rpd3l_expanded_complex.yaml
+  label: Rpd3L-Expanded complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0f0f67d4290934733b2837685f4b9591a6d9a7a8041b939af220cb40ffed2e00
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/rpd3l_expanded_complex.yaml
+    role: maintained_record
+- target_id: GO:0032221
+  path: data/structures/other/rpd3s_complex.yaml
+  label: Rpd3S complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0424e22459de9b32afc529d1e29b3fbbd69778b4e2fb2e3039f2870425bf3d5c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/rpd3s_complex.yaml
+    role: maintained_record
+- target_id: GO:0016586
+  path: data/structures/other/rsc_type_complex.yaml
+  label: RSC-type complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d27880de3449bf83c21b07f2aeaf1778554647f1e23aa9ca2858781b15c52c55
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/rsc_type_complex.yaml
+    role: maintained_record
+- target_id: GO:0000124
+  path: data/structures/other/saga_complex.yaml
+  label: SAGA complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4f9cec8ba60fb724884c77417391ff3859f78c6506908d57e7b52570f0668744
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/saga_complex.yaml
+    role: maintained_record
+- target_id: GO:0001401
+  path: data/structures/other/sam_complex.yaml
+  label: SAM complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2bc84256eb4920012e9d89333f77477f6045cab93b65b725791d9eac229ff8e0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/sam_complex.yaml
+    role: maintained_record
+- target_id: GO:0033255
+  path: data/structures/other/sas_acetyltransferase_complex.yaml
+  label: SAS acetyltransferase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f6749d3c8c2dac44d85319936790b24e5e01b00567d41bc658a2b2a1a52f148a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/sas_acetyltransferase_complex.yaml
+    role: maintained_record
+- target_id: GO:0005784
+  path: data/structures/other/sec61_translocon_complex.yaml
+  label: Sec61 translocon complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9935187223bfdfd8bbb792a09034a9053c2e2aba3242176e18bfbe7dcbb7f52d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/sec61_translocon_complex.yaml
+    role: maintained_record
+- target_id: GO:0031207
+  path: data/structures/other/sec62_sec63_complex.yaml
+  label: Sec62/Sec63 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6a49ddb8fd15e9d529b09a2620fbe831ac22d744ac894a1848482ae261709837
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/sec62_sec63_complex.yaml
+    role: maintained_record
+- target_id: GO:0035859
+  path: data/structures/other/seh1_associated_complex.yaml
+  label: Seh1-associated complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: aa110facbd709a90000d5c80df314569df57d857ab1884f395ed651731a322b7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/seh1_associated_complex.yaml
+    role: maintained_record
+- target_id: GO:0048188
+  path: data/structures/other/set1c_compass_complex.yaml
+  label: Set1C/COMPASS complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 842cc91c8fe7ade5d6d3740bfcbfa79cabc16b6dc8c7396bbd5ce9bca4287371
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/set1c_compass_complex.yaml
+    role: maintained_record
+- target_id: GO:0034967
+  path: data/structures/other/set3_complex.yaml
+  label: Set3 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 88eb925c6678847803a4571c22d8d77177085afc875c82ffab204fb3d78a68f1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/set3_complex.yaml
+    role: maintained_record
+- target_id: GO:0070824
+  path: data/structures/other/shrec_complex.yaml
+  label: SHREC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9f3220603badab6d23de3294decc23e2aaeddff46fcee7cdd3260d99387a6dc3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/shrec_complex.yaml
+    role: maintained_record
+- target_id: GO:0044777
+  path: data/structures/other/single_stranded_dna_binding_protein_complex.yaml
+  label: single-stranded DNA-binding protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 04c92893dd9473c91792524b05ceec79c2fb386b68e5535b12a6d2186b0bbe08
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/single_stranded_dna_binding_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:0046695
+  path: data/structures/other/slik_saga_like_complex.yaml
+  label: SLIK (SAGA-like) complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4614b467ae2ff6daf74573fcf1aef807873c001d7eb1b2d6c7697f4a906795d6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/slik_saga_like_complex.yaml
+    role: maintained_record
+- target_id: GO:0070211
+  path: data/structures/other/snt2c_complex.yaml
+  label: Snt2C complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 59062da0458495844385a94756b4e47f346cb5abcc021d2a0cceafdf37ad6e68
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/snt2c_complex.yaml
+    role: maintained_record
+- target_id: GO:0031521
+  path: data/structures/other/spitzenkorper.yaml
+  label: spitzenkorper
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b269c0b10ff3fed28a04246778322fb283c22efb470ab8f5f4cc76b24fe387ea
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/spitzenkorper.yaml
+    role: maintained_record
+- target_id: GO:0071261
+  path: data/structures/other/ssh1_translocon_complex.yaml
+  label: Ssh1 translocon complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 85002fa0125f06d53fb3058400943011a338d271b899ac1aa3cd1b819af7e13c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ssh1_translocon_complex.yaml
+    role: maintained_record
+- target_id: GO:1990200
+  path: data/structures/other/ssud_ssue_complex.yaml
+  label: SsuD-SsuE complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5534ffab974de7e904bd854fc19ba066e411bb871d502e4703151ac4f623f2ca
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ssud_ssue_complex.yaml
+    role: maintained_record
+- target_id: GO:0044570
+  path: data/structures/other/starch_utilization_system_complex.yaml
+  label: starch utilization system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7bf8670c19dad15559bfcfb60604b75d6cbc796add226e4f1b25ad75e7285da6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/starch_utilization_system_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:stressosome
+  path: data/structures/other/stressosome.yaml
+  label: stressosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3ff9d247df5b1ac7e5d5e0891bb4a55bcc80351ebb56b7e57155612ae12126fb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/stressosome.yaml
+    role: maintained_record
+- target_id: GO:0032798
+  path: data/structures/other/swi5_sfr1_complex.yaml
+  label: Swi5-Sfr1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b3feec30c701813a9ed8eaf8be4064e7bb3d46671f2918e9555926fa92581f1a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/swi5_sfr1_complex.yaml
+    role: maintained_record
+- target_id: GO:0016514
+  path: data/structures/other/swi_snf_complex.yaml
+  label: SWI/SNF complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 33755e6d10ded2ceb6ea8f5c875e460d5edc3cbc165a6e57461644c5921f559d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/swi_snf_complex.yaml
+    role: maintained_record
+- target_id: GO:0000812
+  path: data/structures/other/swr1_complex.yaml
+  label: Swr1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 44ec94814237caa8898d6af15b1792dd21137dd370d5bbb102fb5acd74b6e61e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/swr1_complex.yaml
+    role: maintained_record
+- target_id: GO:0034455
+  path: data/structures/other/t_utp_complex.yaml
+  label: t-UTP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0feedc8e65cc7a37a577015c38b9d736c4e3981997c756a38a4b637da082f034
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/t_utp_complex.yaml
+    role: maintained_record
+- target_id: GO:1990205
+  path: data/structures/other/taurine_dioxygenase_complex.yaml
+  label: taurine dioxygenase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a26387426c04b3224ab12116403b746fa1af945ff0f01491aef490e98c7cabf6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/taurine_dioxygenase_complex.yaml
+    role: maintained_record
+- target_id: GO:0031500
+  path: data/structures/other/tea1_cell_end_complex.yaml
+  label: Tea1 cell-end complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 101c05283ca3b984dd09423eae44834b7ece1dc77d0eb39363043b2db73f3041
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/tea1_cell_end_complex.yaml
+    role: maintained_record
+- target_id: GO:0000347
+  path: data/structures/other/tho_complex.yaml
+  label: THO complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 33167513d48d5678728a31ec5a65a0434febecee913d946d4c2a53b5eca9e1fc
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/tho_complex.yaml
+    role: maintained_record
+- target_id: GO:0000445
+  path: data/structures/other/tho_complex_part_of_transcription_export_complex.yaml
+  label: THO complex part of transcription export complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 580e6e603e82631cdba5c1726f3557a3e6e6f1641a720c049bf14f30f288d7ee
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/tho_complex_part_of_transcription_export_complex.yaml
+    role: maintained_record
+- target_id: GO:0031897
+  path: data/structures/other/tic_complex.yaml
+  label: Tic complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cd8f5b7f05824912638c6b30aebe92c61c670f53500118326f0141445b605260
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/tic_complex.yaml
+    role: maintained_record
+- target_id: GO:0042721
+  path: data/structures/other/tim22_mitochondrial_import_inner_membrane_insertion_complex.yaml
+  label: TIM22 mitochondrial import inner membrane insertion complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0f9e0b89f374989f70112419dd0535213c5bf6374ae554cae7d63c0d0e328b66
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/tim22_mitochondrial_import_inner_membrane_insertion_complex.yaml
+    role: maintained_record
+- target_id: GO:0005744
+  path: data/structures/other/tim23_mitochondrial_import_inner_membrane_translocase_complex.yaml
+  label: TIM23 mitochondrial import inner membrane translocase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bd5c9514184447f824a0d33c4da12bcd4feacd627f05ccfdba2f6e971b9946b1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/tim23_mitochondrial_import_inner_membrane_translocase_complex.yaml
+    role: maintained_record
+- target_id: GO:0010006
+  path: data/structures/other/toc_complex.yaml
+  label: Toc complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8035eb7a9f3d6ab43b1f95d895825b38c4609581f0aaaf9b1b227ed807d6c5c3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/toc_complex.yaml
+    role: maintained_record
+- target_id: GO:0031931
+  path: data/structures/other/torc1_complex.yaml
+  label: TORC1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 97a3baf2a75dff0aa4c5096247657283d3c698b1ec98d7558e67415bffad383f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/torc1_complex.yaml
+    role: maintained_record
+- target_id: GO:0031932
+  path: data/structures/other/torc2_complex.yaml
+  label: TORC2 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8228b84b64d7a7343c234f6cf7f4889a52162b9232cb1a1bc36cf6559f9b0038
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/torc2_complex.yaml
+    role: maintained_record
+- target_id: GO:0031499
+  path: data/structures/other/tramp_complex.yaml
+  label: TRAMP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 15816827409a6df217a7594cdcac88791248a4b171e6832ffab81b6002776dae
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/tramp_complex.yaml
+    role: maintained_record
+- target_id: GO:0000346
+  path: data/structures/other/transcription_export_complex.yaml
+  label: transcription export complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2dfb876c2f593468f6b323e054335c836f54fd944c65a7eb286391a43b33cdc9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/transcription_export_complex.yaml
+    role: maintained_record
+- target_id: GO:0000439
+  path: data/structures/other/transcription_factor_tfiih_core_complex.yaml
+  label: transcription factor TFIIH core complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 00bb30bcd0c208645b8eb5b9c97a7d06f644f38e01ddc9ca1de3a13d5d6f9e84
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/transcription_factor_tfiih_core_complex.yaml
+    role: maintained_record
+- target_id: GO:0005675
+  path: data/structures/other/transcription_factor_tfiih_holo_complex.yaml
+  label: transcription factor TFIIH holo complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 513ba62b6d80b6aa573c6cd4004ff8aa8580d87427652b4dcc9c046271d76b02
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/transcription_factor_tfiih_holo_complex.yaml
+    role: maintained_record
+- target_id: GO:0070985
+  path: data/structures/other/transcription_factor_tfiik_complex.yaml
+  label: transcription factor TFIIK complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: dfd04ec13de36b56ef0e5b2094c972643be293d63200b1caca0303c0023fdec6
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/transcription_factor_tfiik_complex.yaml
+    role: maintained_record
+- target_id: GO:0030008
+  path: data/structures/other/trapp_complex.yaml
+  label: TRAPP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: acd2f78c20f4aa1fccaa3450e852f4186b98bf001c99b2f25f72b67281e7d2f9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/trapp_complex.yaml
+    role: maintained_record
+- target_id: GO:1990070
+  path: data/structures/other/trappi_protein_complex.yaml
+  label: TRAPPI protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3714b2688015b048223851e9e5e223c4a23f3b13f4f048441f66a734d1e3fc5b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/trappi_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:1990071
+  path: data/structures/other/trappii_protein_complex.yaml
+  label: TRAPPII protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6450dd7be9fc420509cd1327400242ec04dff389117263a0fcd8cdcc5fa5338c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/trappii_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:1990072
+  path: data/structures/other/trappiii_protein_complex.yaml
+  label: TRAPPIII protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5dd6b0d4556ef0d3093fc6d62b20770e3fc9441ab4814baa692b3aa213944edb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/trappiii_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:0031317
+  path: data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml
+  label: tripartite ATP-independent periplasmic transporter complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4435eff8e0024d5e50c99597042e8de0f568b0cbf248ca317d55000af663e7cb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/tripartite_atp_independent_periplasmic_transporter_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:tusk_complex
+  path: data/structures/other/tusk_complex.yaml
+  label: TUSK complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 7a9a0cf8cd8769230f4615ba041200b8f03aa74a8eefcb7afa9908840f7d60df
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/tusk_complex.yaml
+    role: maintained_record
+- target_id: GO:0043541
+  path: data/structures/other/udp_n_acetylglucosamine_transferase_complex.yaml
+  label: UDP-N-acetylglucosamine transferase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 991766e4b622b64a0e4ed095ccf82e3e3829e01e2949368ef77c9b31c7236f2f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/udp_n_acetylglucosamine_transferase_complex.yaml
+    role: maintained_record
+- target_id: GO:0034456
+  path: data/structures/other/utp_c_complex.yaml
+  label: UTP-C complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8f0c251d5cf532bacffd6864670931fd80f6af639d883ba9eaef058ff78952ff
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/utp_c_complex.yaml
+    role: maintained_record
+- target_id: GO:0030120
+  path: data/structures/other/vesicle_coat.yaml
+  label: vesicle coat
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d8bd367b310d26010f7c909b47b7e5b8676be216b22e81a69eab083d506c3818
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/vesicle_coat.yaml
+    role: maintained_record
+- target_id: GO:0071203
+  path: data/structures/other/wash_complex.yaml
+  label: WASH complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cd98c7cdf56f6b1801df96aa63d4c5f455cd89b745f4a0a65e72febd7630fbb5
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/wash_complex.yaml
+    role: maintained_record
+- target_id: GO:0016035
+  path: data/structures/other/zeta_dna_polymerase_complex.yaml
+  label: zeta DNA polymerase complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3e3998b879767678973cc7ad7a6bff5231a24c33c612bfa1d47b0b3f01f6b41e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/zeta_dna_polymerase_complex.yaml
+    role: maintained_record
+checks:
+- check_id: strict_other
+  name: Strict corpus validation covering other cohort
+  status: passed
+  required: true
+  summary: All 314 other records pass strict LinkML and semantic validation.
+  target_ids:
+  - GO:0000148
+  - GO:0009334
+  - GO:0016590
+  - cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acref_tolc_multidrug_efflux_transport_complex
+  - GO:0140671
+  - GO:1990201
+  - GO:0005658
+  - GO:0110067
+  - GO:0030121
+  - GO:0030122
+  - GO:0030123
+  - GO:0030124
+  - GO:0044599
+  - GO:0030119
+  - GO:0020007
+  - GO:0097691
+  - GO:0061701
+  - GO:0036389
+  - GO:1990063
+  - GO:7770042
+  - GO:0033186
+  - GO:0031518
+  - GO:0030015
+  - GO:0005938
+  - GO:0097610
+  - GO:0005933
+  - GO:0005935
+  - GO:0031560
+  - GO:0005934
+  - GO:0031561
+  - GO:0043263
+  - GO:0016465
+  - GO:0005832
+  - GO:0030896
+  - GO:0008623
+  - GO:0000775
+  - GO:0099115
+  - GO:0000781
+  - GO:0030118
+  - GO:0030132
+  - GO:0030128
+  - GO:0030130
+  - GO:0005905
+  - GO:0030125
+  - GO:0071920
+  - GO:0071162
+  - GO:0017119
+  - GO:0000817
+  - GO:0030126
+  - GO:0030127
+  - GO:1990098
+  - GO:0000438
+  - GO:0000440
+  - GO:0033263
+  - cellstructuremech:crl4wdr1_ubiquitin_ligase_complex
+  - GO:0031390
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  - GO:0034270
+  - GO:0031910
+  - GO:0042729
+  - GO:0031431
+  - GO:0043625
+  - GO:1990125
+  - GO:0097684
+  - GO:0097687
+  - GO:0097683
+  - GO:0097685
+  - GO:0097686
+  - GO:0097611
+  - GO:0097613
+  - GO:0097614
+  - GO:0097618
+  - GO:0097612
+  - GO:0120217
+  - GO:0044775
+  - GO:0043847
+  - GO:0043846
+  - GO:0009360
+  - GO:0044776
+  - GO:0005662
+  - GO:0005663
+  - GO:0031261
+  - GO:0009340
+  - GO:1990102
+  - GO:1990157
+  - GO:1990084
+  - GO:1990083
+  - GO:1990103
+  - GO:1990082
+  - GO:1990101
+  - GO:1990100
+  - GO:1990158
+  - GO:1990159
+  - GO:1990160
+  - GO:1990156
+  - GO:1990161
+  - GO:0070939
+  - GO:0071819
+  - GO:1990065
+  - GO:0032126
+  - cellstructuremech:ejectisome
+  - GO:0031391
+  - GO:0033588
+  - GO:0072546
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  - GO:1990207
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  - GO:0031205
+  - GO:0008622
+  - GO:0032865
+  - GO:0033565
+  - GO:0036452
+  - GO:0000813
+  - GO:0000814
+  - GO:0000815
+  - GO:1990621
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  - GO:0043529
+  - GO:0000811
+  - GO:0160055
+  - GO:0031026
+  - GO:0009342
+  - GO:0005960
+  - GO:0030700
+  - GO:0042765
+  - GO:1990220
+  - GO:1990131
+  - GO:0070823
+  - GO:1990085
+  - GO:0000417
+  - cellstructuremech:holdfast
+  - GO:0030897
+  - cellstructuremech:hsp78_chaperone_complex
+  - GO:0001411
+  - GO:0031562
+  - GO:0031942
+  - GO:0031011
+  - GO:0016587
+  - GO:0036436
+  - GO:0036437
+  - GO:0000776
+  - GO:0043564
+  - GO:0062051
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  - GO:0016606
+  - GO:0005745
+  - GO:1990196
+  - GO:0043332
+  - GO:0031563
+  - GO:0042555
+  - cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex
+  - GO:1990203
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0030117
+  - GO:1990197
+  - GO:0098561
+  - GO:0140275
+  - cellstructuremech:mic10_subcomplex
+  - cellstructuremech:mic60_mic19_complex
+  - GO:0061617
+  - GO:0120155
+  - GO:0140595
+  - GO:0000444
+  - GO:0042720
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  - cellstructuremech:mitochondrial_multifunctional_assembly
+  - GO:0005742
+  - GO:0035632
+  - GO:0030678
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  - GO:1990198
+  - GO:0035658
+  - GO:0033551
+  - GO:0034457
+  - GO:0030870
+  - GO:0031533
+  - GO:1990199
+  - GO:0036410
+  - GO:1990710
+  - GO:0031415
+  - GO:0031416
+  - GO:0031417
+  - GO:0031262
+  - GO:0030690
+  - GO:0030691
+  - GO:0030692
+  - GO:0030689
+  - GO:0033100
+  - GO:1990467
+  - GO:1990468
+  - GO:0035267
+  - GO:0000228
+  - GO:0043599
+  - GO:1990251
+  - GO:0005664
+  - GO:0005643
+  - GO:0044613
+  - GO:0044614
+  - GO:0044611
+  - GO:0044612
+  - GO:0044615
+  - GO:0031080
+  - GO:0043596
+  - GO:0043601
+  - GO:0030874
+  - GO:0005730
+  - GO:0000786
+  - GO:0000110
+  - GO:0000111
+  - GO:0000112
+  - GO:0000113
+  - GO:0016581
+  - GO:0031912
+  - GO:0000808
+  - GO:0000940
+  - GO:0001405
+  - GO:0031251
+  - cellstructuremech:phage_nucleus
+  - GO:0000407
+  - GO:0062077
+  - GO:0032777
+  - GO:0016605
+  - GO:0000133
+  - cellstructuremech:popz_polar_microdomain
+  - cellstructuremech:potabcd_spermidine_abc_transporter_complex
+  - GO:1990099
+  - GO:0036387
+  - GO:1990077
+  - GO:0022624
+  - GO:0000502
+  - GO:0005839
+  - GO:0005838
+  - GO:0008540
+  - GO:0008541
+  - GO:7770085
+  - GO:0034388
+  - GO:1990732
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0031389
+  - GO:0071986
+  - GO:0043291
+  - GO:0030875
+  - GO:0030869
+  - GO:0005657
+  - GO:0030894
+  - GO:0030906
+  - GO:0030904
+  - GO:0030905
+  - GO:0032299
+  - GO:1903095
+  - GO:0048492
+  - GO:0005736
+  - GO:0033698
+  - GO:0070210
+  - GO:0032221
+  - GO:0016586
+  - GO:0000124
+  - GO:0001401
+  - GO:0033255
+  - GO:0005784
+  - GO:0031207
+  - GO:0035859
+  - GO:0048188
+  - GO:0034967
+  - GO:0070824
+  - GO:0044777
+  - GO:0046695
+  - GO:0070211
+  - GO:0031521
+  - GO:0071261
+  - GO:1990200
+  - GO:0044570
+  - cellstructuremech:stressosome
+  - GO:0032798
+  - GO:0016514
+  - GO:0000812
+  - GO:0034455
+  - GO:1990205
+  - GO:0031500
+  - GO:0000347
+  - GO:0000445
+  - GO:0031897
+  - GO:0042721
+  - GO:0005744
+  - GO:0010006
+  - GO:0031931
+  - GO:0031932
+  - GO:0031499
+  - GO:0000346
+  - GO:0000439
+  - GO:0005675
+  - GO:0070985
+  - GO:0030008
+  - GO:1990070
+  - GO:1990071
+  - GO:1990072
+  - GO:0031317
+  - cellstructuremech:tusk_complex
+  - GO:0043541
+  - GO:0034456
+  - GO:0030120
+  - GO:0071203
+  - GO:0016035
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_other
+- check_id: history_other
+  name: History ledger validation covering other cohort
+  status: passed
+  required: true
+  summary: All history ledger records covering other validate cleanly.
+  target_ids:
+  - GO:0000148
+  - GO:0009334
+  - GO:0016590
+  - cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acref_tolc_multidrug_efflux_transport_complex
+  - GO:0140671
+  - GO:1990201
+  - GO:0005658
+  - GO:0110067
+  - GO:0030121
+  - GO:0030122
+  - GO:0030123
+  - GO:0030124
+  - GO:0044599
+  - GO:0030119
+  - GO:0020007
+  - GO:0097691
+  - GO:0061701
+  - GO:0036389
+  - GO:1990063
+  - GO:7770042
+  - GO:0033186
+  - GO:0031518
+  - GO:0030015
+  - GO:0005938
+  - GO:0097610
+  - GO:0005933
+  - GO:0005935
+  - GO:0031560
+  - GO:0005934
+  - GO:0031561
+  - GO:0043263
+  - GO:0016465
+  - GO:0005832
+  - GO:0030896
+  - GO:0008623
+  - GO:0000775
+  - GO:0099115
+  - GO:0000781
+  - GO:0030118
+  - GO:0030132
+  - GO:0030128
+  - GO:0030130
+  - GO:0005905
+  - GO:0030125
+  - GO:0071920
+  - GO:0071162
+  - GO:0017119
+  - GO:0000817
+  - GO:0030126
+  - GO:0030127
+  - GO:1990098
+  - GO:0000438
+  - GO:0000440
+  - GO:0033263
+  - cellstructuremech:crl4wdr1_ubiquitin_ligase_complex
+  - GO:0031390
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  - GO:0034270
+  - GO:0031910
+  - GO:0042729
+  - GO:0031431
+  - GO:0043625
+  - GO:1990125
+  - GO:0097684
+  - GO:0097687
+  - GO:0097683
+  - GO:0097685
+  - GO:0097686
+  - GO:0097611
+  - GO:0097613
+  - GO:0097614
+  - GO:0097618
+  - GO:0097612
+  - GO:0120217
+  - GO:0044775
+  - GO:0043847
+  - GO:0043846
+  - GO:0009360
+  - GO:0044776
+  - GO:0005662
+  - GO:0005663
+  - GO:0031261
+  - GO:0009340
+  - GO:1990102
+  - GO:1990157
+  - GO:1990084
+  - GO:1990083
+  - GO:1990103
+  - GO:1990082
+  - GO:1990101
+  - GO:1990100
+  - GO:1990158
+  - GO:1990159
+  - GO:1990160
+  - GO:1990156
+  - GO:1990161
+  - GO:0070939
+  - GO:0071819
+  - GO:1990065
+  - GO:0032126
+  - cellstructuremech:ejectisome
+  - GO:0031391
+  - GO:0033588
+  - GO:0072546
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  - GO:1990207
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  - GO:0031205
+  - GO:0008622
+  - GO:0032865
+  - GO:0033565
+  - GO:0036452
+  - GO:0000813
+  - GO:0000814
+  - GO:0000815
+  - GO:1990621
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  - GO:0043529
+  - GO:0000811
+  - GO:0160055
+  - GO:0031026
+  - GO:0009342
+  - GO:0005960
+  - GO:0030700
+  - GO:0042765
+  - GO:1990220
+  - GO:1990131
+  - GO:0070823
+  - GO:1990085
+  - GO:0000417
+  - cellstructuremech:holdfast
+  - GO:0030897
+  - cellstructuremech:hsp78_chaperone_complex
+  - GO:0001411
+  - GO:0031562
+  - GO:0031942
+  - GO:0031011
+  - GO:0016587
+  - GO:0036436
+  - GO:0036437
+  - GO:0000776
+  - GO:0043564
+  - GO:0062051
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  - GO:0016606
+  - GO:0005745
+  - GO:1990196
+  - GO:0043332
+  - GO:0031563
+  - GO:0042555
+  - cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex
+  - GO:1990203
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0030117
+  - GO:1990197
+  - GO:0098561
+  - GO:0140275
+  - cellstructuremech:mic10_subcomplex
+  - cellstructuremech:mic60_mic19_complex
+  - GO:0061617
+  - GO:0120155
+  - GO:0140595
+  - GO:0000444
+  - GO:0042720
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  - cellstructuremech:mitochondrial_multifunctional_assembly
+  - GO:0005742
+  - GO:0035632
+  - GO:0030678
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  - GO:1990198
+  - GO:0035658
+  - GO:0033551
+  - GO:0034457
+  - GO:0030870
+  - GO:0031533
+  - GO:1990199
+  - GO:0036410
+  - GO:1990710
+  - GO:0031415
+  - GO:0031416
+  - GO:0031417
+  - GO:0031262
+  - GO:0030690
+  - GO:0030691
+  - GO:0030692
+  - GO:0030689
+  - GO:0033100
+  - GO:1990467
+  - GO:1990468
+  - GO:0035267
+  - GO:0000228
+  - GO:0043599
+  - GO:1990251
+  - GO:0005664
+  - GO:0005643
+  - GO:0044613
+  - GO:0044614
+  - GO:0044611
+  - GO:0044612
+  - GO:0044615
+  - GO:0031080
+  - GO:0043596
+  - GO:0043601
+  - GO:0030874
+  - GO:0005730
+  - GO:0000786
+  - GO:0000110
+  - GO:0000111
+  - GO:0000112
+  - GO:0000113
+  - GO:0016581
+  - GO:0031912
+  - GO:0000808
+  - GO:0000940
+  - GO:0001405
+  - GO:0031251
+  - cellstructuremech:phage_nucleus
+  - GO:0000407
+  - GO:0062077
+  - GO:0032777
+  - GO:0016605
+  - GO:0000133
+  - cellstructuremech:popz_polar_microdomain
+  - cellstructuremech:potabcd_spermidine_abc_transporter_complex
+  - GO:1990099
+  - GO:0036387
+  - GO:1990077
+  - GO:0022624
+  - GO:0000502
+  - GO:0005839
+  - GO:0005838
+  - GO:0008540
+  - GO:0008541
+  - GO:7770085
+  - GO:0034388
+  - GO:1990732
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0031389
+  - GO:0071986
+  - GO:0043291
+  - GO:0030875
+  - GO:0030869
+  - GO:0005657
+  - GO:0030894
+  - GO:0030906
+  - GO:0030904
+  - GO:0030905
+  - GO:0032299
+  - GO:1903095
+  - GO:0048492
+  - GO:0005736
+  - GO:0033698
+  - GO:0070210
+  - GO:0032221
+  - GO:0016586
+  - GO:0000124
+  - GO:0001401
+  - GO:0033255
+  - GO:0005784
+  - GO:0031207
+  - GO:0035859
+  - GO:0048188
+  - GO:0034967
+  - GO:0070824
+  - GO:0044777
+  - GO:0046695
+  - GO:0070211
+  - GO:0031521
+  - GO:0071261
+  - GO:1990200
+  - GO:0044570
+  - cellstructuremech:stressosome
+  - GO:0032798
+  - GO:0016514
+  - GO:0000812
+  - GO:0034455
+  - GO:1990205
+  - GO:0031500
+  - GO:0000347
+  - GO:0000445
+  - GO:0031897
+  - GO:0042721
+  - GO:0005744
+  - GO:0010006
+  - GO:0031931
+  - GO:0031932
+  - GO:0031499
+  - GO:0000346
+  - GO:0000439
+  - GO:0005675
+  - GO:0070985
+  - GO:0030008
+  - GO:1990070
+  - GO:1990071
+  - GO:1990072
+  - GO:0031317
+  - cellstructuremech:tusk_complex
+  - GO:0043541
+  - GO:0034456
+  - GO:0030120
+  - GO:0071203
+  - GO:0016035
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_other
+evidence:
+- evidence_id: ev_strict_other
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_all receipt
+  accessed_at: '2026-10-30T22:19:30Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 1,008 records including all 314
+    other records.
+  snapshot_sha256: 329bb133ea2e12c21ccc1a052d09c48f3e848ddfb3fb3b49eea6c450c113025c
+- evidence_id: ev_history_other
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history_all receipt
+  accessed_at: '2026-10-30T22:19:30Z'
+  support: supports
+  summary: validate_history.py exited 0 across all 2,140 history records covering
+    other.
+  snapshot_sha256: 2e78c9efe24b4f187f74b59202639b36457409bff8485a4e23924569d89058e6
+- evidence_id: ev_primosome_dnac_and_hierarchy
+  kind: record_content
+  reference: data/structures/other/primosome_complex.yaml
+  locator: parent_structures/part_of (lines 36-39), components[2].protein_examples[0]
+    (lines 103-110), and evidence (lines 195-210)
+  accessed_at: '2026-10-30T22:19:15Z'
+  support: supports
+  summary: primosome_complex.yaml uses outdated protein_label 'DNA replication protein
+    DnaC' for UniProtKB:P0AEF0 (where dnab_dnac_complex.yaml and pre_primosome_complex.yaml
+    use 'Replicative helicase loader DnaC') and omits GO:0032993 and GO:0030894 from
+    record-level evidence.
+  quote: "parent_structures:\n- GO:0032993\npart_of:\n- GO:0030894\n...\n  protein_examples:\n\
+    \  - uniprot_id: UniProtKB:P0AEF0\n    protein_label: DNA replication protein\
+    \ DnaC\n    gene_symbol: dnaC\n    taxon_id: NCBITaxon:83333\n    taxon_label:\
+    \ Escherichia coli K-12\n    entry_status: REVIEWED"
+  snapshot_sha256: c49ced918d744a9dad27176acbfdff2738373f9b6c32aa00af0a7d9e4c648afb
+- evidence_id: ev_other_replisome_ncbitaxon_284812_label
+  kind: record_content
+  reference: data/structures/other/cmg_complex.yaml
+  locator: components[0].protein_examples[0] (lines 48-55) and canonical_examples[0]
+    (lines 201-205)
+  accessed_at: '2026-10-30T22:19:20Z'
+  support: supports
+  summary: 'cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml pair taxon_id:
+    NCBITaxon:284812 with species label ''Schizosaccharomyces pombe'' instead of canonical
+    strain label ''Schizosaccharomyces pombe 972h-''.'
+  quote: "  protein_examples:\n  - uniprot_id: UniProtKB:O74113\n    protein_label:\
+    \ Cell division control protein 45\n    gene_symbol: cdc45\n    taxon_id: NCBITaxon:284812\n\
+    \    taxon_label: Schizosaccharomyces pombe\n    entry_status: REVIEWED\n...\n\
+    canonical_examples:\n- organism: Schizosaccharomyces pombe (fission yeast)\n \
+    \ taxon_id: NCBITaxon:284812\n  taxon_label: Schizosaccharomyces pombe"
+  snapshot_sha256: c7ce81a2d35df2983545756bf9b962097d595b50ddeb4fa8de3e08e07cfd1ee4
+assessments:
+- assessment_id: assess_other_cohort
+  area: scope
+  topic: Identity, boundaries, causal graphs, and ontology grounding across data/structures/other/
+  outcome: supported
+  summary: All 314 records in data/structures/other/ represent distinct multi-protein
+    complexes or cellular structures with valid schema and history provenance.
+  target_ids:
+  - GO:0000148
+  - GO:0009334
+  - GO:0016590
+  - cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acref_tolc_multidrug_efflux_transport_complex
+  - GO:0140671
+  - GO:1990201
+  - GO:0005658
+  - GO:0110067
+  - GO:0030121
+  - GO:0030122
+  - GO:0030123
+  - GO:0030124
+  - GO:0044599
+  - GO:0030119
+  - GO:0020007
+  - GO:0097691
+  - GO:0061701
+  - GO:0036389
+  - GO:1990063
+  - GO:7770042
+  - GO:0033186
+  - GO:0031518
+  - GO:0030015
+  - GO:0005938
+  - GO:0097610
+  - GO:0005933
+  - GO:0005935
+  - GO:0031560
+  - GO:0005934
+  - GO:0031561
+  - GO:0043263
+  - GO:0016465
+  - GO:0005832
+  - GO:0030896
+  - GO:0008623
+  - GO:0000775
+  - GO:0099115
+  - GO:0000781
+  - GO:0030118
+  - GO:0030132
+  - GO:0030128
+  - GO:0030130
+  - GO:0005905
+  - GO:0030125
+  - GO:0071920
+  - GO:0071162
+  - GO:0017119
+  - GO:0000817
+  - GO:0030126
+  - GO:0030127
+  - GO:1990098
+  - GO:0000438
+  - GO:0000440
+  - GO:0033263
+  - cellstructuremech:crl4wdr1_ubiquitin_ligase_complex
+  - GO:0031390
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  - GO:0034270
+  - GO:0031910
+  - GO:0042729
+  - GO:0031431
+  - GO:0043625
+  - GO:1990125
+  - GO:0097684
+  - GO:0097687
+  - GO:0097683
+  - GO:0097685
+  - GO:0097686
+  - GO:0097611
+  - GO:0097613
+  - GO:0097614
+  - GO:0097618
+  - GO:0097612
+  - GO:0120217
+  - GO:0044775
+  - GO:0043847
+  - GO:0043846
+  - GO:0009360
+  - GO:0044776
+  - GO:0005662
+  - GO:0005663
+  - GO:0031261
+  - GO:0009340
+  - GO:1990102
+  - GO:1990157
+  - GO:1990084
+  - GO:1990083
+  - GO:1990103
+  - GO:1990082
+  - GO:1990101
+  - GO:1990100
+  - GO:1990158
+  - GO:1990159
+  - GO:1990160
+  - GO:1990156
+  - GO:1990161
+  - GO:0070939
+  - GO:0071819
+  - GO:1990065
+  - GO:0032126
+  - cellstructuremech:ejectisome
+  - GO:0031391
+  - GO:0033588
+  - GO:0072546
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  - GO:1990207
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  - GO:0031205
+  - GO:0008622
+  - GO:0032865
+  - GO:0033565
+  - GO:0036452
+  - GO:0000813
+  - GO:0000814
+  - GO:0000815
+  - GO:1990621
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  - GO:0043529
+  - GO:0000811
+  - GO:0160055
+  - GO:0031026
+  - GO:0009342
+  - GO:0005960
+  - GO:0030700
+  - GO:0042765
+  - GO:1990220
+  - GO:1990131
+  - GO:0070823
+  - GO:1990085
+  - GO:0000417
+  - cellstructuremech:holdfast
+  - GO:0030897
+  - cellstructuremech:hsp78_chaperone_complex
+  - GO:0001411
+  - GO:0031562
+  - GO:0031942
+  - GO:0031011
+  - GO:0016587
+  - GO:0036436
+  - GO:0036437
+  - GO:0000776
+  - GO:0043564
+  - GO:0062051
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  - GO:0016606
+  - GO:0005745
+  - GO:1990196
+  - GO:0043332
+  - GO:0031563
+  - GO:0042555
+  - cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex
+  - GO:1990203
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0030117
+  - GO:1990197
+  - GO:0098561
+  - GO:0140275
+  - cellstructuremech:mic10_subcomplex
+  - cellstructuremech:mic60_mic19_complex
+  - GO:0061617
+  - GO:0120155
+  - GO:0140595
+  - GO:0000444
+  - GO:0042720
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  - cellstructuremech:mitochondrial_multifunctional_assembly
+  - GO:0005742
+  - GO:0035632
+  - GO:0030678
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  - GO:1990198
+  - GO:0035658
+  - GO:0033551
+  - GO:0034457
+  - GO:0030870
+  - GO:0031533
+  - GO:1990199
+  - GO:0036410
+  - GO:1990710
+  - GO:0031415
+  - GO:0031416
+  - GO:0031417
+  - GO:0031262
+  - GO:0030690
+  - GO:0030691
+  - GO:0030692
+  - GO:0030689
+  - GO:0033100
+  - GO:1990467
+  - GO:1990468
+  - GO:0035267
+  - GO:0000228
+  - GO:0043599
+  - GO:1990251
+  - GO:0005664
+  - GO:0005643
+  - GO:0044613
+  - GO:0044614
+  - GO:0044611
+  - GO:0044612
+  - GO:0044615
+  - GO:0031080
+  - GO:0043596
+  - GO:0043601
+  - GO:0030874
+  - GO:0005730
+  - GO:0000786
+  - GO:0000110
+  - GO:0000111
+  - GO:0000112
+  - GO:0000113
+  - GO:0016581
+  - GO:0031912
+  - GO:0000808
+  - GO:0000940
+  - GO:0001405
+  - GO:0031251
+  - cellstructuremech:phage_nucleus
+  - GO:0000407
+  - GO:0062077
+  - GO:0032777
+  - GO:0016605
+  - GO:0000133
+  - cellstructuremech:popz_polar_microdomain
+  - cellstructuremech:potabcd_spermidine_abc_transporter_complex
+  - GO:1990099
+  - GO:0036387
+  - GO:1990077
+  - GO:0022624
+  - GO:0000502
+  - GO:0005839
+  - GO:0005838
+  - GO:0008540
+  - GO:0008541
+  - GO:7770085
+  - GO:0034388
+  - GO:1990732
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0031389
+  - GO:0071986
+  - GO:0043291
+  - GO:0030875
+  - GO:0030869
+  - GO:0005657
+  - GO:0030894
+  - GO:0030906
+  - GO:0030904
+  - GO:0030905
+  - GO:0032299
+  - GO:1903095
+  - GO:0048492
+  - GO:0005736
+  - GO:0033698
+  - GO:0070210
+  - GO:0032221
+  - GO:0016586
+  - GO:0000124
+  - GO:0001401
+  - GO:0033255
+  - GO:0005784
+  - GO:0031207
+  - GO:0035859
+  - GO:0048188
+  - GO:0034967
+  - GO:0070824
+  - GO:0044777
+  - GO:0046695
+  - GO:0070211
+  - GO:0031521
+  - GO:0071261
+  - GO:1990200
+  - GO:0044570
+  - cellstructuremech:stressosome
+  - GO:0032798
+  - GO:0016514
+  - GO:0000812
+  - GO:0034455
+  - GO:1990205
+  - GO:0031500
+  - GO:0000347
+  - GO:0000445
+  - GO:0031897
+  - GO:0042721
+  - GO:0005744
+  - GO:0010006
+  - GO:0031931
+  - GO:0031932
+  - GO:0031499
+  - GO:0000346
+  - GO:0000439
+  - GO:0005675
+  - GO:0070985
+  - GO:0030008
+  - GO:1990070
+  - GO:1990071
+  - GO:1990072
+  - GO:0031317
+  - cellstructuremech:tusk_complex
+  - GO:0043541
+  - GO:0034456
+  - GO:0030120
+  - GO:0071203
+  - GO:0016035
+  evidence_ids:
+  - ev_strict_other
+  - ev_history_other
+- assessment_id: assess_primosome_dnac_and_hierarchy
+  area: consistency
+  topic: UniProtKB:P0AEF0 protein_label consistency and hierarchy evidence in primosome_complex.yaml
+  outcome: concern
+  summary: primosome_complex.yaml uses an older UniProtKB protein_label ('DNA replication
+    protein DnaC') for P0AEF0 than sibling records ('Replicative helicase loader DnaC')
+    and omits record-level evidence for GO:0032993 and GO:0030894.
+  target_ids:
+  - GO:1990077
+  evidence_ids:
+  - ev_primosome_dnac_and_hierarchy
+- assessment_id: assess_other_replisome_ncbitaxon_284812_label
+  area: consistency
+  topic: Canonical NCBI Taxonomy scientific name for NCBITaxon:284812 across cmg_complex.yaml,
+    nuclear_replisome.yaml, and replisome.yaml
+  outcome: concern
+  summary: cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml use 'Schizosaccharomyces
+    pombe' instead of 'Schizosaccharomyces pombe 972h-' for NCBITaxon:284812.
+  target_ids:
+  - GO:0071162
+  - GO:0043601
+  - GO:0030894
+  evidence_ids:
+  - ev_other_replisome_ncbitaxon_284812_label
+findings:
+- finding_id: F1
+  issue_key: primosome-complex-dnac-protein-label-and-hierarchy-evidence
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: primosome_complex.yaml uses outdated UniProtKB:P0AEF0 protein_label and omits
+    GO:0032993/GO:0030894 hierarchy evidence
+  description: 'In data/structures/other/primosome_complex.yaml (GO:1990077), components[2]
+    (helicase_chaperone_protein) protein_examples[0] (UniProtKB:P0AEF0, dnaC, NCBITaxon:83333,
+    lines 103-110) uses the older label ''DNA replication protein DnaC'' (retrieved_on:
+    ''2026-08-30''), whereas sibling records dnab_dnac_complex.yaml and pre_primosome_complex.yaml
+    use the current UniProtKB recommended name ''Replicative helicase loader DnaC''
+    (retrieved_on: ''2026-10-17''). In addition, primosome_complex.yaml declares parent_structures:
+    [GO:0032993] and part_of: [GO:0030894] without corresponding GO:0032993 and GO:0030894
+    entries in record-level evidence.'
+  target_ids:
+  - GO:1990077
+  field_paths:
+  - components[2].protein_examples[0].protein_label
+  - evidence
+  evidence_ids:
+  - ev_primosome_dnac_and_hierarchy
+  rule_id: .claude/skills/uniprot-protein-examples/SKILL.md:recommended-protein-label
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/primosome_complex.yaml
+    role: maintained_record
+  tags:
+  - other
+  - uniprot-consistency
+  - hierarchy-evidence
+  - stage4-record-review
+- finding_id: F2
+  issue_key: other-eukaryotic-replisome-ncbitaxon-284812-strain-label
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml use species
+    label 'Schizosaccharomyces pombe' for strain NCBITaxon:284812
+  description: 'Across data/structures/other/cmg_complex.yaml (GO:0071162), data/structures/other/nuclear_replisome.yaml
+    (GO:0043601), and data/structures/other/replisome.yaml (GO:0030894), components[0]
+    (cdc45_protein) protein_examples[0] (UniProtKB:O74113, taxon_id: NCBITaxon:284812)
+    and canonical_examples[0] (taxon_id: NCBITaxon:284812) set taxon_label: ''Schizosaccharomyces
+    pombe'' (the species label for NCBITaxon:4896) instead of the canonical NCBI Taxonomy
+    scientific name ''Schizosaccharomyces pombe 972h-'' used across all 170 other
+    NCBITaxon:284812 occurrences in the corpus.'
+  target_ids:
+  - GO:0071162
+  - GO:0043601
+  - GO:0030894
+  field_paths:
+  - components[0].protein_examples[0].taxon_label
+  - canonical_examples[0].taxon_label
+  evidence_ids:
+  - ev_other_replisome_ncbitaxon_284812_label
+  rule_id: .claude/skills/id-label-correspondence/SKILL.md:ncbitaxon-canonical-label
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cmg_complex.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_replisome.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/replisome.yaml
+    role: maintained_record
+  tags:
+  - other
+  - taxon-label
+  - id-label-correspondence
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: 'Update components[2].protein_examples[0].protein_label on UniProtKB:P0AEF0
+    to ''Replicative helicase loader DnaC'' (retrieved_on: ''2026-10-17'') and add
+    record-level evidence entries for GO:0032993 (parent_structures) and GO:0030894
+    (part_of) in data/structures/other/primosome_complex.yaml.'
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990077
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/primosome_complex.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+- action_id: A2
+  description: Update taxon_label for NCBITaxon:284812 from 'Schizosaccharomyces pombe'
+    to 'Schizosaccharomyces pombe 972h-' in components[0].protein_examples[0] and
+    canonical_examples[0] across cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml.
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0071162
+  - GO:0043601
+  - GO:0030894
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cmg_complex.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_replisome.yaml
+    role: maintained_record
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/replisome.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0000148
+  - GO:0009334
+  - GO:0016590
+  - cellstructuremech:acrab_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  - cellstructuremech:acref_tolc_multidrug_efflux_transport_complex
+  - GO:0140671
+  - GO:1990201
+  - GO:0005658
+  - GO:0110067
+  - GO:0030121
+  - GO:0030122
+  - GO:0030123
+  - GO:0030124
+  - GO:0044599
+  - GO:0030119
+  - GO:0020007
+  - GO:0097691
+  - GO:0061701
+  - GO:0036389
+  - GO:1990063
+  - GO:7770042
+  - GO:0033186
+  - GO:0031518
+  - GO:0030015
+  - GO:0005938
+  - GO:0097610
+  - GO:0005933
+  - GO:0005935
+  - GO:0031560
+  - GO:0005934
+  - GO:0031561
+  - GO:0043263
+  - GO:0016465
+  - GO:0005832
+  - GO:0030896
+  - GO:0008623
+  - GO:0000775
+  - GO:0099115
+  - GO:0000781
+  - GO:0030118
+  - GO:0030132
+  - GO:0030128
+  - GO:0030130
+  - GO:0005905
+  - GO:0030125
+  - GO:0071920
+  - GO:0071162
+  - GO:0017119
+  - GO:0000817
+  - GO:0030126
+  - GO:0030127
+  - GO:1990098
+  - GO:0000438
+  - GO:0000440
+  - GO:0033263
+  - cellstructuremech:crl4wdr1_ubiquitin_ligase_complex
+  - GO:0031390
+  - cellstructuremech:cullin_e_ubiquitin_ligase_complex
+  - GO:0034270
+  - GO:0031910
+  - GO:0042729
+  - GO:0031431
+  - GO:0043625
+  - GO:1990125
+  - GO:0097684
+  - GO:0097687
+  - GO:0097683
+  - GO:0097685
+  - GO:0097686
+  - GO:0097611
+  - GO:0097613
+  - GO:0097614
+  - GO:0097618
+  - GO:0097612
+  - GO:0120217
+  - GO:0044775
+  - GO:0043847
+  - GO:0043846
+  - GO:0009360
+  - GO:0044776
+  - GO:0005662
+  - GO:0005663
+  - GO:0031261
+  - GO:0009340
+  - GO:1990102
+  - GO:1990157
+  - GO:1990084
+  - GO:1990083
+  - GO:1990103
+  - GO:1990082
+  - GO:1990101
+  - GO:1990100
+  - GO:1990158
+  - GO:1990159
+  - GO:1990160
+  - GO:1990156
+  - GO:1990161
+  - GO:0070939
+  - GO:0071819
+  - GO:1990065
+  - GO:0032126
+  - cellstructuremech:ejectisome
+  - GO:0031391
+  - GO:0033588
+  - GO:0072546
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  - GO:1990207
+  - cellstructuremech:emrky_tolc_multidrug_efflux_transport_complex
+  - GO:0031205
+  - GO:0008622
+  - GO:0032865
+  - GO:0033565
+  - GO:0036452
+  - GO:0000813
+  - GO:0000814
+  - GO:0000815
+  - GO:1990621
+  - GO:0000145
+  - GO:0009338
+  - GO:0034044
+  - GO:0035101
+  - GO:1990202
+  - GO:0005760
+  - GO:0000938
+  - GO:1990130
+  - GO:0061700
+  - GO:0097504
+  - GO:0043529
+  - GO:0000811
+  - GO:0160055
+  - GO:0031026
+  - GO:0009342
+  - GO:0005960
+  - GO:0030700
+  - GO:0042765
+  - GO:1990220
+  - GO:1990131
+  - GO:0070823
+  - GO:1990085
+  - GO:0000417
+  - cellstructuremech:holdfast
+  - GO:0030897
+  - cellstructuremech:hsp78_chaperone_complex
+  - GO:0001411
+  - GO:0031562
+  - GO:0031942
+  - GO:0031011
+  - GO:0016587
+  - GO:0036436
+  - GO:0036437
+  - GO:0000776
+  - GO:0043564
+  - GO:0062051
+  - cellstructuremech:lolcde_lipoprotein_abc_transporter_complex
+  - GO:0016606
+  - GO:0005745
+  - GO:1990196
+  - GO:0043332
+  - GO:0031563
+  - GO:0042555
+  - cellstructuremech:mdtabc_tolc_multidrug_efflux_transport_complex
+  - GO:1990203
+  - cellstructuremech:meiotic_telomere_bouquet
+  - GO:0030117
+  - GO:1990197
+  - GO:0098561
+  - GO:0140275
+  - cellstructuremech:mic10_subcomplex
+  - cellstructuremech:mic60_mic19_complex
+  - GO:0061617
+  - GO:0120155
+  - GO:0140595
+  - GO:0000444
+  - GO:0042720
+  - cellstructuremech:mitochondrial_lon_protease_complex
+  - cellstructuremech:mitochondrial_multifunctional_assembly
+  - GO:0005742
+  - GO:0035632
+  - GO:0030678
+  - cellstructuremech:mlafedb_lipid_transport_complex
+  - GO:1990198
+  - GO:0035658
+  - GO:0033551
+  - GO:0034457
+  - GO:0030870
+  - GO:0031533
+  - GO:1990199
+  - GO:0036410
+  - GO:1990710
+  - GO:0031415
+  - GO:0031416
+  - GO:0031417
+  - GO:0031262
+  - GO:0030690
+  - GO:0030691
+  - GO:0030692
+  - GO:0030689
+  - GO:0033100
+  - GO:1990467
+  - GO:1990468
+  - GO:0035267
+  - GO:0000228
+  - GO:0043599
+  - GO:1990251
+  - GO:0005664
+  - GO:0005643
+  - GO:0044613
+  - GO:0044614
+  - GO:0044611
+  - GO:0044612
+  - GO:0044615
+  - GO:0031080
+  - GO:0043596
+  - GO:0043601
+  - GO:0030874
+  - GO:0005730
+  - GO:0000786
+  - GO:0000110
+  - GO:0000111
+  - GO:0000112
+  - GO:0000113
+  - GO:0016581
+  - GO:0031912
+  - GO:0000808
+  - GO:0000940
+  - GO:0001405
+  - GO:0031251
+  - cellstructuremech:phage_nucleus
+  - GO:0000407
+  - GO:0062077
+  - GO:0032777
+  - GO:0016605
+  - GO:0000133
+  - cellstructuremech:popz_polar_microdomain
+  - cellstructuremech:potabcd_spermidine_abc_transporter_complex
+  - GO:1990099
+  - GO:0036387
+  - GO:1990077
+  - GO:0022624
+  - GO:0000502
+  - GO:0005839
+  - GO:0005838
+  - GO:0008540
+  - GO:0008541
+  - GO:7770085
+  - GO:0034388
+  - GO:1990732
+  - cellstructuremech:quiescent_telomere_hypercluster
+  - GO:0031389
+  - GO:0071986
+  - GO:0043291
+  - GO:0030875
+  - GO:0030869
+  - GO:0005657
+  - GO:0030894
+  - GO:0030906
+  - GO:0030904
+  - GO:0030905
+  - GO:0032299
+  - GO:1903095
+  - GO:0048492
+  - GO:0005736
+  - GO:0033698
+  - GO:0070210
+  - GO:0032221
+  - GO:0016586
+  - GO:0000124
+  - GO:0001401
+  - GO:0033255
+  - GO:0005784
+  - GO:0031207
+  - GO:0035859
+  - GO:0048188
+  - GO:0034967
+  - GO:0070824
+  - GO:0044777
+  - GO:0046695
+  - GO:0070211
+  - GO:0031521
+  - GO:0071261
+  - GO:1990200
+  - GO:0044570
+  - cellstructuremech:stressosome
+  - GO:0032798
+  - GO:0016514
+  - GO:0000812
+  - GO:0034455
+  - GO:1990205
+  - GO:0031500
+  - GO:0000347
+  - GO:0000445
+  - GO:0031897
+  - GO:0042721
+  - GO:0005744
+  - GO:0010006
+  - GO:0031931
+  - GO:0031932
+  - GO:0031499
+  - GO:0000346
+  - GO:0000439
+  - GO:0005675
+  - GO:0070985
+  - GO:0030008
+  - GO:1990070
+  - GO:1990071
+  - GO:1990072
+  - GO:0031317
+  - cellstructuremech:tusk_complex
+  - GO:0043541
+  - GO:0034456
+  - GO:0030120
+  - GO:0071203
+  - GO:0016035
+  rationale: All 314 other records represent distinct multi-protein complexes or cellular
+    structures without duplicate ontology groundings.
+  evidence_ids:
+  - ev_strict_other
+  - ev_history_other
+limitations:
+- Record edits for other cohort findings are queued for Cycle 5 Stage 5 (resolve_review_findings).
+tags:
+- stage4
+- category-review
+- other
+```

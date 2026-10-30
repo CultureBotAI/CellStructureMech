@@ -1,0 +1,77 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 5
+stage: 4
+revision: 1
+outcome: completed
+summary: Reviewed all 1,008 eligible CellStructureRecord YAML files across all 13 category folders at
+  frozen git revision a94f6deb809dd50c8344fb03284de9801c0aa298 (100% full coverage). Saved 5 native structured
+  RecordReview bundles under reviews/structured/ (2 single-record reviews and 3 category reviews; 319
+  total valid bundles) and recorded 6 unique open findings (2 major, 4 minor across 9 unique records)
+  in carry_forward_ids for Stage 5 grouped remediation, plus infrastructure task cellstructuremech-infra-0008
+  (#2472) in INFRA_TASKS.md.
+source_revision: a94f6deb809dd50c8344fb03284de9801c0aa298
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/evidence.yaml
+  sha256: 1e7109ae253b89dc556220b808c930222e40db93795a68592b9cdac04e672352
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_report.md
+  sha256: 6488cd995783868486f9ecb3b85ec0bc6523daf30dbc72cd30fbbe69dcbac3e4
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_findings.md
+  sha256: 02307599f311b7ecea647d7029f4873ec7bfd2a05c4ee24be150428d6632bd32
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/validation.md
+  sha256: 97427591a66e599a91dc6270d0e01eb3b29cc238aa39aa67900ff0cd9ec3a49e
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/coverage_inventory.json
+  sha256: b8353df66defdde2c43d46fac9bf8f9437ddf6415d96dd9dd614a6b90e28f0a6
+  kind: supporting
+findings:
+- finding_id: post-anaphase-microtubule-array-emtoc-missing-gene-symbols
+  status: open
+  summary: 'post_anaphase_microtubule_array.yaml (GO:1990295) components[2] (emtoc, equatorial microtubule
+    organizing center, GO:0000923) omits gene_symbols: [mto1, mto2] while carrying reviewed protein_examples
+    for UniProtKB:O94488 (mto1) and UniProtKB:Q9USP7 (mto2) in NCBITaxon:284812 whose role strings claim
+    declared gene symbols (native review: 20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols
+    F1, severity major).'
+- finding_id: origin-recognition-complex-node-type-molecular-function
+  status: open
+  summary: 'origin_recognition_complex.yaml (GO:0000808) causal_graphs[0].nodes[6] (dna_replication_origin_binding,
+    GO:0003688) sets node_type: BIOLOGICAL_PROCESS instead of MOLECULAR_FUNCTION (native review: 20261030T222002Z-origin-recognition-complex-node-type-molecular-function
+    F1, severity major).'
+- finding_id: cytoskeleton-spombe-p04689-primary-gene-symbol-tub1
+  status: open
+  summary: 'cytoplasmic_microtubule_bundle.yaml (GO:1905720), quiescent_cell_microtubule_bundle.yaml (cellstructuremech:quiescent_cell_microtubule_bundle),
+    and static_microtubule_bundle.yaml (GO:0099070) use synonym gene_symbol: atb2 instead of UniProtKB
+    primary gene symbol tub1 on UniProtKB:P04689 (native review: 20261030T222003Z-cytoskeleton-category-review
+    F1, severity minor).'
+- finding_id: autophagosome-macroautophagy-function-missing-go-grounding
+  status: open
+  summary: 'autophagosome.yaml (GO:0005776) functions[0] (macroautophagy) omits grounding: GO:0016236
+    while functions[0].evidence[0] cites GO:0016236 and causal_graphs[0].nodes[6] is grounded to GO:0016236
+    (native review: 20261030T222004Z-membrane-organelle-category-review F1, severity minor).'
+- finding_id: primosome-complex-dnac-protein-label-and-hierarchy-evidence
+  status: open
+  summary: 'primosome_complex.yaml (GO:1990077) components[2] (helicase_chaperone_protein) protein_examples[0]
+    (UniProtKB:P0AEF0, dnaC) uses older protein_label ''DNA replication protein DnaC'' instead of current
+    UniProtKB RecName ''Replicative helicase loader DnaC'' and omits record-level evidence for GO:0032993
+    (parent_structures) and GO:0030894 (part_of) (native review: 20261030T222005Z-other-category-review
+    F1, severity minor).'
+- finding_id: other-eukaryotic-replisome-ncbitaxon-284812-strain-label
+  status: open
+  summary: 'cmg_complex.yaml (GO:0071162), nuclear_replisome.yaml (GO:0043601), and replisome.yaml (GO:0030894)
+    use species-level label ''Schizosaccharomyces pombe'' on strain taxon NCBITaxon:284812 instead of
+    ''Schizosaccharomyces pombe 972h-'' on components[0].protein_examples[0] (UniProtKB:O74113) and canonical_examples[0]
+    (native review: 20261030T222005Z-other-category-review F2, severity minor).'
+groups: []
+carry_forward_ids:
+- post-anaphase-microtubule-array-emtoc-missing-gene-symbols
+- origin-recognition-complex-node-type-molecular-function
+- cytoskeleton-spombe-p04689-primary-gene-symbol-tub1
+- autophagosome-macroautophagy-function-missing-go-grounding
+- primosome-complex-dnac-protein-label-and-hierarchy-evidence
+- other-eukaryotic-replisome-ncbitaxon-284812-strain-label
+infra_tasks: []
