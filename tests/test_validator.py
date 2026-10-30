@@ -1,4 +1,4 @@
-"""Unit tests for semantic record validation in validator.py (#2408, #2410, #2417, #2428)."""
+"""Unit tests for semantic record validation in validator.py (#2408, #2410, #2417, #2428, #2457)."""
 
 from __future__ import annotations
 
@@ -9,6 +9,7 @@ from cellstructuremech.validation.validator import (
     validate_component_protein_examples,
     validate_curation_history,
     validate_discussion_issue_links,
+    validate_hierarchy_relations,
     validate_record_semantics,
 )
 from cellstructuremech.validation.write_validated import (
@@ -477,5 +478,137 @@ def test_discussion_referencing_doi_or_pmid_requires_structured_evidence():
     }
     assert validate_discussion_issue_links(complete_citation_doc) == []
     assert validate_structure(complete_citation_doc) == []
+
+
+def test_hierarchy_relation_disjointness():
+    dup_parent_part_of_doc = {
+        **BASE_RECORD,
+        "parent_structures": ["GO:1990586"],
+        "part_of": ["GO:1990586"],
+    }
+    errors = validate_hierarchy_relations(dup_parent_part_of_doc)
+    assert len(errors) == 1
+    assert "'GO:1990586' appears in both parent_structures (is-a) and part_of (parthood)" in errors[0]
+    assert validate_structure(dup_parent_part_of_doc)
+
+    dup_parent_component_doc = {
+        **BASE_RECORD,
+        "parent_structures": ["GO:0005681"],
+        "components": [
+            {
+                "component_id": "spliceosomal_complex",
+                "label": "spliceosomal complex",
+                "component_type": "PROTEIN_COMPLEX",
+                "component_role": "CONSTITUENT",
+                "grounding": "GO:0005681",
+                "evidence": [{"reference": "PMID:12345678", "notes": "Component evidence."}],
+            }
+        ],
+    }
+    comp_errors = validate_hierarchy_relations(dup_parent_component_doc)
+    assert len(comp_errors) == 1
+    assert "CONSTITUENT grounding 'GO:0005681' duplicates parent_structures (is-a)" in comp_errors[0]
+    assert validate_structure(dup_parent_component_doc)
+
+    disjoint_doc = {
+        **BASE_RECORD,
+        "parent_structures": ["GO:0032991"],
+        "part_of": ["GO:1990586"],
+        "has_part": ["GO:0015934"],
+        "components": [
+            {
+                "component_id": "large_subunit",
+                "label": "large ribosomal subunit",
+                "component_type": "PROTEIN_COMPLEX",
+                "component_role": "CONSTITUENT",
+                "grounding": "GO:0015934",
+                "evidence": [{"reference": "PMID:12345678", "notes": "Component evidence."}],
+            }
+        ],
+    }
+    assert validate_hierarchy_relations(disjoint_doc) == []
+    assert validate_structure(disjoint_doc) == []
+
+
+def test_causal_node_component_ref_grounding_and_type_consistency():
+    mismatch_doc = {
+        **BASE_RECORD,
+        "components": [
+            {
+                "component_id": "flagellin",
+                "label": "flagellin",
+                "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
+                "grounding": "InterPro:IPR001029",
+                "evidence": [{"reference": "PMID:12345678", "notes": "Component evidence."}],
+            }
+        ],
+        "causal_graphs": [
+            {
+                "graph_id": "flagellar_assembly",
+                "graph_kind": "ASSEMBLY",
+                "scope_status": "MECHANISTIC",
+                "nodes": [
+                    {
+                        "node_id": "filament",
+                        "label": "flagellar filament",
+                        "node_type": "STRUCTURE",
+                        "component_ref": "flagellin",
+                        "grounding": "GO:0009420",
+                    },
+                    {"node_id": "hook", "label": "flagellar hook", "node_type": "STRUCTURE"},
+                ],
+                "edges": [
+                    {
+                        "subject": "hook",
+                        "predicate": "nucleates",
+                        "object": "filament",
+                        "description": "The hook-filament junction nucleates flagellin polymerization.",
+                        "evidence": [{"reference": "PMID:12345678", "notes": "Assay."}],
+                    }
+                ],
+            }
+        ],
+    }
+    errors = validate_causal_graphs(mismatch_doc)
+    assert len(errors) == 2
+    assert any("referencing PROTEIN component 'flagellin' (expected 'GENE_OR_PROTEIN')" in e for e in errors)
+    assert any(
+        "grounding 'GO:0009420' conflicting with referenced component grounding 'InterPro:IPR001029'"
+        in e
+        for e in errors
+    )
+    assert validate_structure(mismatch_doc)
+
+    fixed_doc = {
+        **mismatch_doc,
+        "causal_graphs": [
+            {
+                **mismatch_doc["causal_graphs"][0],
+                "nodes": [
+                    {
+                        "node_id": "flagellin_monomer",
+                        "label": "flagellin",
+                        "node_type": "GENE_OR_PROTEIN",
+                        "component_ref": "flagellin",
+                        "grounding": "InterPro:IPR001029",
+                    },
+                    {"node_id": "filament", "label": "flagellar filament", "node_type": "STRUCTURE"},
+                ],
+                "edges": [
+                    {
+                        "subject": "flagellin_monomer",
+                        "predicate": "polymerizes into",
+                        "object": "filament",
+                        "description": "Flagellin monomers polymerize into the helical filament.",
+                        "evidence": [{"reference": "PMID:12345678", "notes": "Assay."}],
+                    }
+                ],
+            }
+        ],
+    }
+    assert validate_causal_graphs(fixed_doc) == []
+    assert validate_structure(fixed_doc) == []
+
 
 

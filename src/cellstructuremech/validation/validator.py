@@ -1,14 +1,18 @@
-"""Semantic validation checks for CellStructureRecord documents (#2408, #2410, #2417, #2428).
+"""Semantic validation checks for CellStructureRecord documents (#2408, #2410, #2417, #2428, #2457).
 
 Complements closed-schema LinkML validation (``write_validated.py``) with
 cross-field and graph-completeness invariants that JSON Schema alone cannot
 express:
 
+- ``parent_structures`` (is-a), ``part_of`` (parthood), and ``has_part`` /
+  ``CONSTITUENT`` ``components[].grounding`` are pairwise disjoint.
 - Every ``CausalEdge.subject`` and ``CausalEdge.object`` references a declared
   ``CausalNode.node_id`` in the same graph.
 - Every ``CausalNode.component_ref`` resolves to a declared ``component_id`` on
-  the record and propagates the referenced component's ``grounding`` (unless
-  the node description explicitly documents a sub-region grounding omission).
+  the record, propagates and agrees with the referenced component's
+  ``grounding`` (unless the node description explicitly documents a sub-region
+  grounding omission), and does not type a ``PROTEIN`` component as
+  ``node_type: STRUCTURE``.
 - Every declared ``CausalNode`` participates in at least one incident
   ``CausalEdge`` (no isolated nodes).
 - Every ``CausalEdge`` carries a non-blank ``description``.
@@ -124,6 +128,15 @@ def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
                     f"expected 'STRUCTURE')"
                 )
             elif (
+                node.get("node_type") == "STRUCTURE"
+                and ref_comp
+                and ref_comp.get("component_type") == "PROTEIN"
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} has node_type 'STRUCTURE' referencing "
+                    f"PROTEIN component {cref!r} (expected 'GENE_OR_PROTEIN')"
+                )
+            elif (
                 ref_comp
                 and comp_grounding
                 and not grounding
@@ -133,6 +146,65 @@ def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
                     f"{gid}: node {nid!r} with component_ref {cref!r} omits "
                     f"grounding {comp_grounding!r} from referenced component"
                 )
+            if (
+                ref_comp
+                and comp_grounding
+                and grounding
+                and grounding != comp_grounding
+            ):
+                errors.append(
+                    f"{gid}: node {nid!r} with component_ref {cref!r} has "
+                    f"grounding {grounding!r} conflicting with referenced component "
+                    f"grounding {comp_grounding!r}"
+                )
+    return errors
+
+
+def validate_hierarchy_relations(doc: dict[str, Any]) -> list[str]:
+    """Return error strings when CURIEs collide across hierarchy, parthood, or constituent fields."""
+    errors: list[str] = []
+    parents = {
+        str(x).strip()
+        for x in (doc.get("parent_structures") or [])
+        if x is not None and str(x).strip()
+    }
+    part_of = {
+        str(x).strip()
+        for x in (doc.get("part_of") or [])
+        if x is not None and str(x).strip()
+    }
+    has_part = {
+        str(x).strip()
+        for x in (doc.get("has_part") or [])
+        if x is not None and str(x).strip()
+    }
+    for curie in sorted(parents & part_of):
+        errors.append(
+            f"hierarchy: {curie!r} appears in both parent_structures (is-a) and part_of (parthood)"
+        )
+    for curie in sorted(parents & has_part):
+        errors.append(
+            f"hierarchy: {curie!r} appears in both parent_structures (is-a) and has_part"
+        )
+    for curie in sorted(part_of & has_part):
+        errors.append(
+            f"hierarchy: {curie!r} appears in both part_of and has_part"
+        )
+    for comp in doc.get("components") or []:
+        if not isinstance(comp, dict) or comp.get("component_role") != "CONSTITUENT":
+            continue
+        cid = comp.get("component_id") or "<component>"
+        cg = str(comp.get("grounding") or "").strip()
+        if not cg:
+            continue
+        if cg in parents:
+            errors.append(
+                f"components#{cid}: CONSTITUENT grounding {cg!r} duplicates parent_structures (is-a)"
+            )
+        if cg in part_of:
+            errors.append(
+                f"components#{cid}: CONSTITUENT grounding {cg!r} duplicates part_of (enclosing structure)"
+            )
     return errors
 
 
@@ -293,6 +365,7 @@ def validate_record_semantics(
 ) -> list[str]:
     """Run all semantic record checks on ``doc``."""
     return [
+        *validate_hierarchy_relations(doc),
         *validate_causal_graphs(doc),
         *validate_component_protein_examples(doc),
         *validate_curation_history(doc),
