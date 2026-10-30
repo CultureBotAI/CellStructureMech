@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1001,
- "corpus_updated": "2026-10-30 06:37:11 UTC",
- "corpus_digest": "33e3f615649c",
+ "corpus_updated": "2026-10-30 11:55:00 UTC",
+ "corpus_digest": "b33675d6d3e8",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -825,6 +825,13 @@
      "action": "EDIT",
      "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s); disclosed 6 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_PARTHOOD",
+     "changes": "Added has_part links to cellstructuremech:archaeal_type_flagellum_filament and cellstructuremech:archaeal_type_flagellum_motor to reciprocate their part_of GO:0097589 links (#2463).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -841,6 +848,10 @@
    ],
    "parent_structures": [
     "GO:0042995"
+   ],
+   "has_part": [
+    "cellstructuremech:archaeal_type_flagellum_filament",
+    "cellstructuremech:archaeal_type_flagellum_motor"
    ],
    "components": [
     {
@@ -3891,8 +3902,7 @@
        "node_id": "filament",
        "label": "flagellar filament",
        "node_type": "STRUCTURE",
-       "grounding": "GO:0009420",
-       "component_ref": "flagellin"
+       "grounding": "GO:0009420"
       },
       {
        "node_id": "swimming",
@@ -4158,6 +4168,13 @@
      "curator": "claude-code",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2421: Added hag to components#flagellin.gene_symbols and fliY to components#c_ring.gene_symbols to match curated Bacillus subtilis protein_examples.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Removed component_ref: flagellin from STRUCTURE node filament (GO:0009420) in flagellum_torque_generation since GENE_OR_PROTEIN node flic already carries component_ref: flagellin (#2463).",
      "llm_assisted": true
     }
    ],
@@ -44297,6 +44314,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 2 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_COMPONENTS",
+     "changes": "Updated pil1_lsp1_bar_core component_type from PROTEIN to PROTEIN_COMPLEX for the heterodimeric Pil1/Lsp1 BAR-domain core complex (#2462).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -44310,7 +44334,7 @@
     {
      "component_id": "pil1_lsp1_bar_core",
      "label": "Pil1/Lsp1 BAR-domain eisosome core",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "grounding": "InterPro:IPR028245",
      "gene_symbols": [
@@ -79527,7 +79551,7 @@
     {
      "component_id": "mrec_mred",
      "label": "MreC and MreD",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "mreC",
@@ -79776,6 +79800,13 @@
      "curator": "antigravity",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2431 (finding elongasome-curation-history-causal-graph-id-mismatch): aligned curation_history[12] graph_id to elongasome_sidewall_elongation.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_COMPONENTS",
+     "changes": "Updated mrec_mred component_type from PROTEIN to PROTEIN_COMPLEX for the MreC-MreD transmembrane subcomplex (#2462).",
      "llm_assisted": true
     }
    ],
@@ -80372,9 +80403,6 @@
    "parent_structures": [
     "GO:1990586"
    ],
-   "part_of": [
-    "GO:1990586"
-   ],
    "has_part": [
     "GO:1990588"
    ],
@@ -80746,6 +80774,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:1990587 (FtsQBL complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_HIERARCHY_AND_PARTHOOD",
+     "changes": "Removed duplicate GO:1990586 (divisome complex) from part_of so GO:1990586 remains only in parent_structures (#2461).",
      "llm_assisted": true
     }
    ]
@@ -88896,6 +88931,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "#2304: Correct PCC 6803 source attribution and qualify core-dependent architecture with the coreless antenna exception.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_COMPONENTS_AND_PARTHOOD",
+     "changes": "Updated allophycocyanin_core component_type from PROTEIN to PROTEIN_COMPLEX and added has_part links to cellstructuremech:phycobilisome_core and cellstructuremech:phycobilisome_rod (#2462).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -88910,6 +88952,10 @@
    ],
    "part_of": [
     "GO:0042651"
+   ],
+   "has_part": [
+    "cellstructuremech:phycobilisome_core",
+    "cellstructuremech:phycobilisome_rod"
    ],
    "components": [
     {
@@ -88975,7 +89021,7 @@
     {
      "component_id": "allophycocyanin_core",
      "label": "allophycocyanin core cylinders",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "apcA",
@@ -113055,10 +113101,20 @@
      "action": "EDIT",
      "changes": "added 4 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_PARTHOOD",
+     "changes": "Added has_part link to cellstructuremech:anammoxosome_membrane to reciprocate anammoxosome_membrane part_of GO:0044222 (#2462).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
     "GO:0043231"
+   ],
+   "has_part": [
+    "cellstructuremech:anammoxosome_membrane"
    ],
    "components": [
     {
@@ -138263,6 +138319,13 @@
      "action": "EDIT",
      "changes": "Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_COMPONENTS",
+     "changes": "Updated peroxin_import_machinery component_type from PROTEIN to PROTEIN_COMPLEX for the multi-protein PEX5/PEX7/PEX14/PEX13/PEX2/PEX10/PEX12 peroxin import translocon (#2462).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -138421,7 +138484,7 @@
     {
      "component_id": "peroxin_import_machinery",
      "label": "glycosomal peroxin import machinery",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "essentiality": "UNKNOWN",
      "gene_symbols": [
@@ -139923,6 +139986,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 6 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_COMPONENTS",
+     "changes": "Updated golgi_snare_trafficking_machinery component_type from PROTEIN to PROTEIN_COMPLEX for the Sed5-containing cis-Golgi SNARE complex (#2462).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -140025,7 +140095,7 @@
     {
      "component_id": "golgi_snare_trafficking_machinery",
      "label": "Golgi SNARE trafficking machinery",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "ASSOCIATED_MACHINERY",
      "grounding_status": "REVIEWED_LABEL_ONLY",
      "grounding_notes": "SNARE domains and SNARE superfamilies are broader than the Golgi trafficking machinery curated here, so no single InterPro or Pfam CURIE was used for this cohort.",
@@ -175607,8 +175677,7 @@
       {
        "node_id": "shell",
        "label": "carboxysome shell",
-       "node_type": "STRUCTURE",
-       "component_ref": "bmc_h"
+       "node_type": "STRUCTURE"
       },
       {
        "node_id": "bicarbonate",
@@ -176049,6 +176118,13 @@
      "curator": "claude-code",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2421: Added beta-carboxysome hexamer paralogue symbols ccmK3 and ccmK4 to components#bmc_h.gene_symbols to match Synechococcus elongatus PCC 7942 protein_examples.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Removed component_ref: bmc_h from composite STRUCTURE node shell in carboxysome_co2_concentrating since the icosahedral shell is built from both bmc_h hexamers and bmc_p pentamers (#2463).",
      "llm_assisted": true
     }
    ],
@@ -203809,9 +203885,19 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Addressed PR #770 review issue #771 by narrowing the Trypanosoma cruzi distribution note to structural characterization in epimastigotes and removing unsupported developmental-regulation wording.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_HIERARCHY_AND_PARTHOOD",
+     "changes": "Moved GO:0005886 (plasma membrane) from parent_structures to part_of and set parent_structures to GO:0110165 (cellular anatomical structure) per GO hierarchy (#2461).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
+    "GO:0110165"
+   ],
+   "part_of": [
     "GO:0005886"
    ],
    "taxonomic_distribution": [
@@ -203864,6 +203950,14 @@
     {
      "reference": "DOI:10.3389/fcimb.2019.00445",
      "notes": "Chasen et al. 2020, Identification and Localization of the First Known Proteins of the Trypanosoma cruzi Cytostome Cytopharynx Endocytic Complex, Frontiers in Cellular and Infection Microbiology."
+    },
+    {
+     "reference": "GO:0110165",
+     "notes": "Gene Ontology cellular-component parent term for cellular anatomical structure."
+    },
+    {
+     "reference": "GO:0005886",
+     "notes": "Gene Ontology cellular-component parthood term for plasma membrane."
     }
    ],
    "causal_graphs": [
@@ -217869,6 +217963,13 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): pil1_lsp1_bar_core (InterPro:IPR028245).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_COMPONENTS",
+     "changes": "Updated pil1_lsp1_bar_core component_type from PROTEIN to PROTEIN_COMPLEX for the Pil1/Lsp1 BAR-domain core complex (#2462).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -217886,7 +217987,7 @@
     {
      "component_id": "pil1_lsp1_bar_core",
      "label": "Pil1/Lsp1 BAR-domain eisosome core",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "grounding": "InterPro:IPR028245",
      "gene_symbols": [
@@ -247315,6 +247416,13 @@
      "action": "REVIEW_FIXES",
      "changes": "Resolved PR #1184 review issue #1185 by retyping the MICOS inner-membrane-organization graph as FUNCTION rather than ASSEMBLY.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_PARTHOOD",
+     "changes": "Added has_part links to cellstructuremech:mic10_subcomplex and cellstructuremech:mic60_mic19_complex to reciprocate their part_of GO:0061617 links (#2462).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -247344,6 +247452,10 @@
    ],
    "part_of": [
     "GO:0005743"
+   ],
+   "has_part": [
+    "cellstructuremech:mic10_subcomplex",
+    "cellstructuremech:mic60_mic19_complex"
    ],
    "taxonomic_distribution": [
     {
@@ -248379,6 +248491,13 @@
      "action": "CURATED_CAUSAL_GRAPH",
      "changes": "Added component_ref causal nodes and source-backed constituent edges for MIS12/Mtw1, Dsn1, Nsl1, and Nnf1/PMF1 to mis12_mind_type_complex.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_HIERARCHY_AND_PARTHOOD",
+     "changes": "Replaced parent_structures GO:0000940 (outer kinetochore) with GO:0032991 (protein-containing complex), added GO:0000940 to part_of alongside GO:0000776, and updated causal graph edge predicate from 'is a' to 'is part of' (#2461).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -248404,9 +248523,10 @@
     }
    ],
    "parent_structures": [
-    "GO:0000940"
+    "GO:0032991"
    ],
    "part_of": [
+    "GO:0000940",
     "GO:0000776"
    ],
    "components": [
@@ -248649,8 +248769,12 @@
      "notes": "Gene Ontology cellular-component term for the MIS12/MIND type complex."
     },
     {
+     "reference": "GO:0032991",
+     "notes": "Gene Ontology cellular-component parent term for protein-containing complex."
+    },
+    {
      "reference": "GO:0000940",
-     "notes": "Gene Ontology cellular-component parent term for outer kinetochore."
+     "notes": "Gene Ontology cellular-component parthood term for outer kinetochore."
     },
     {
      "reference": "GO:0000776",
@@ -248730,13 +248854,13 @@
      "edges": [
       {
        "subject": "mis12_mind_type_complex",
-       "predicate": "is a",
+       "predicate": "is part of",
        "object": "outer_kinetochore",
-       "description": "GO places the MIS12/MIND type complex under the outer kinetochore cellular component.",
+       "description": "GO places the MIS12/MIND type complex as part of the outer kinetochore cellular component.",
        "evidence": [
         {
          "reference": "GO:0000444",
-         "notes": "GO:0000444 is a child of GO:0000940 outer kinetochore."
+         "notes": "GO:0000444 is part_of GO:0000940 outer kinetochore."
         }
        ]
       },
@@ -269441,6 +269565,13 @@
      "action": "EDIT",
      "changes": "added 5 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_COMPONENTS",
+     "changes": "Updated phagophore_assembly_site_atg_machinery component_type from PROTEIN to PROTEIN_COMPLEX for the multi-protein Atg1-Atg13-Atg17-Atg29-Atg31 initiation complex (#2462).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -269468,7 +269599,7 @@
     {
      "component_id": "phagophore_assembly_site_atg_machinery",
      "label": "phagophore assembly site Atg machinery",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "essentiality": "ESSENTIAL",
      "grounding_status": "REVIEWED_LABEL_ONLY",
@@ -311544,7 +311675,7 @@
     {
      "component_id": "nop1_nop56_nop58_snu13_core",
      "label": "box C/D snoRNP core methyltransferase and scaffold subunits (Nop1/Fibrillarin, Nop56, Nop58, Snu13)",
-     "component_type": "PROTEIN",
+     "component_type": "PROTEIN_COMPLEX",
      "component_role": "CONSTITUENT",
      "gene_symbols": [
       "NOP1",
@@ -311740,6 +311871,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 4 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_COMPONENTS",
+     "changes": "Updated nop1_nop56_nop58_snu13_core component_type from PROTEIN to PROTEIN_COMPLEX to match box_c_d_snornp_complex and box_c_d_rnp_complex (#2462).",
+     "llm_assisted": true
     }
    ],
    "taxonomic_distribution": [
@@ -311875,7 +312013,7 @@
        "evidence": [
         {
          "reference": "PMID:9632712",
-         "notes": "Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol; Wu P et al. 1998, J Biol Chem."
+         "notes": "Wu P et al. 1998, 'Nop5p is a small nucleolar ribonucleoprotein component required for pre-18 S rRNA processing in yeast.', J Biol Chem."
         }
        ]
       },
@@ -311891,7 +312029,7 @@
        "evidence": [
         {
          "reference": "PMID:9372940",
-         "notes": "Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol; Wu P et al. 1998, J Biol Chem."
+         "notes": "Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol."
         }
        ]
       },
@@ -312096,6 +312234,13 @@
      "curator": "antigravity",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2430 and #2431 (findings ribonucleoprotein-box-rnp-reference-misattribution, ribonucleoprotein-subcomplex-types-and-history-graph-ids): replaced misattributed DOI:10.1016/j.molcel.2007.01.024 and PMID:10982895 citations, corrected PMID:9372940/PMID:9632712 bibliographic notes, updated nop1_nop56_nop58_snu13_core to PROTEIN_COMPLEX, and aligned curation_history[1] graph_id to box_c_d_rnp_rrna_processing.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_EVIDENCE",
+     "changes": "Added bibliographic evidence notes to NOP56 (PMID:9632712) and NOP58 (PMID:9372940) protein_examples on nop1_nop56_nop58_snu13_core (#2462).",
      "llm_assisted": true
     }
    ]
@@ -328586,6 +328731,13 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added the GO exact synonym, spliceosomal-complex parentage, GO-grounded four-spliceosomal-complex and reviewed-label-only pre-mRNA components, a conservative constituent graph and a TODO for exact native-spliceosome and pre-mRNA boundaries.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_HIERARCHY_AND_PARTHOOD",
+     "changes": "Changed parent_structures from GO:0005681 (spliceosomal complex) to GO:1990904 (ribonucleoprotein complex), added has_part GO:0005681 for the four constituent native spliceosomes, and updated GO:0005681 evidence notes (#2461).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -328596,7 +328748,7 @@
     }
    ],
    "parent_structures": [
-    "GO:0005681"
+    "GO:1990904"
    ],
    "components": [
     {
@@ -328640,8 +328792,12 @@
      "notes": "Gene Ontology cellular-component term for supraspliceosomal complex and its exact synonym."
     },
     {
+     "reference": "GO:1990904",
+     "notes": "Gene Ontology cellular-component parent term for ribonucleoprotein complex."
+    },
+    {
      "reference": "GO:0005681",
-     "notes": "Gene Ontology cellular-component parent term for spliceosomal complex."
+     "notes": "Gene Ontology cellular-component term for constituent spliceosomal complex."
     }
    ],
    "causal_graphs": [
@@ -328686,7 +328842,7 @@
         },
         {
          "reference": "GO:0005681",
-         "notes": "GO:0005681 is the parent spliceosomal-complex term."
+         "notes": "GO:0005681 is the constituent spliceosomal-complex term."
         }
        ]
       },
@@ -328728,6 +328884,9 @@
      "posed_by": "codex",
      "posed_date": "2026-09-25"
     }
+   ],
+   "has_part": [
+    "GO:0005681"
    ]
   },
   {
@@ -336417,7 +336576,17 @@
      "action": "CREATED",
      "changes": "Initial curation of cell envelope Sec protein transport complex (GO:0031522) in category SECRETION_SYSTEM with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T11:55:00Z",
+     "curator": "claude",
+     "action": "CURATED_PARTHOOD",
+     "changes": "Added has_part link to cellstructuremech:secyeg_translocon_complex to reciprocate secyeg_translocon_complex part_of GO:0031522 (#2461).",
+     "llm_assisted": true
     }
+   ],
+   "has_part": [
+    "cellstructuremech:secyeg_translocon_complex"
    ]
   },
   {

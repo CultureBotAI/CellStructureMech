@@ -50,6 +50,13 @@ curation_history:
   changes: 'Cycle 2 Stage 3 protein_examples curation: added 1 verified UniProtKB
     protein_example(s).'
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_COMPONENTS
+  changes: Updated peroxin_import_machinery component_type from PROTEIN to PROTEIN_COMPLEX
+    for the multi-protein PEX5/PEX7/PEX14/PEX13/PEX2/PEX10/PEX12 peroxin import translocon
+    (#2462).
+  llm_assisted: true
 parent_structures:
 - GO:0005777
 has_part:
@@ -192,7 +199,7 @@ components:
         own sources.
 - component_id: peroxin_import_machinery
   label: glycosomal peroxin import machinery
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   essentiality: UNKNOWN
   gene_symbols:

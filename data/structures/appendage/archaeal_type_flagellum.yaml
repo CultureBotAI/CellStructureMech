@@ -64,6 +64,13 @@ curation_history:
     protein_example(s); disclosed 6 same-gene synonym/locus-tag mapping(s) on existing
     protein_examples.'
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_PARTHOOD
+  changes: Added has_part links to cellstructuremech:archaeal_type_flagellum_filament
+    and cellstructuremech:archaeal_type_flagellum_motor to reciprocate their part_of
+    GO:0097589 links (#2463).
+  llm_assisted: true
 synonyms:
 - synonym_text: archaellum
   synonym_type: EXACT_SYNONYM
@@ -73,6 +80,9 @@ synonyms:
   source: GO:0097589
 parent_structures:
 - GO:0042995
+has_part:
+- cellstructuremech:archaeal_type_flagellum_filament
+- cellstructuremech:archaeal_type_flagellum_motor
 components:
 - component_id: archaellins
   label: archaellin filament subunits

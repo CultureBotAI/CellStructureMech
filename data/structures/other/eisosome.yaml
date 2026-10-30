@@ -51,6 +51,12 @@ curation_history:
     verified component grounding to causal_graphs component_ref node(s): pil1_lsp1_bar_core
     (InterPro:IPR028245).'
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_COMPONENTS
+  changes: Updated pil1_lsp1_bar_core component_type from PROTEIN to PROTEIN_COMPLEX
+    for the Pil1/Lsp1 BAR-domain core complex (#2462).
+  llm_assisted: true
 synonyms:
 - synonym_text: MCC/eisosome
   synonym_type: RELATED_SYNONYM
@@ -61,7 +67,7 @@ has_part:
 components:
 - component_id: pil1_lsp1_bar_core
   label: Pil1/Lsp1 BAR-domain eisosome core
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   grounding: InterPro:IPR028245
   gene_symbols:

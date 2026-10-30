@@ -48,7 +48,7 @@ components:
 - component_id: nop1_nop56_nop58_snu13_core
   label: box C/D snoRNP core methyltransferase and scaffold subunits (Nop1/Fibrillarin,
     Nop56, Nop58, Snu13)
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - NOP1
@@ -235,6 +235,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_COMPONENTS
+  changes: Updated nop1_nop56_nop58_snu13_core component_type from PROTEIN to PROTEIN_COMPLEX
+    to match box_c_d_snornp_complex and box_c_d_rnp_complex (#2462).
+  llm_assisted: true
 taxonomic_distribution:
 - taxon_id: NCBITaxon:2759
   taxon_label: Eukaryota

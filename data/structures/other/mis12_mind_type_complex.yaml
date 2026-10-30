@@ -48,6 +48,13 @@ curation_history:
   changes: Added component_ref causal nodes and source-backed constituent edges for
     MIS12/Mtw1, Dsn1, Nsl1, and Nnf1/PMF1 to mis12_mind_type_complex.
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_HIERARCHY_AND_PARTHOOD
+  changes: Replaced parent_structures GO:0000940 (outer kinetochore) with GO:0032991
+    (protein-containing complex), added GO:0000940 to part_of alongside GO:0000776,
+    and updated causal graph edge predicate from 'is a' to 'is part of' (#2461).
+  llm_assisted: true
 synonyms:
 - synonym_text: MIND complex
   synonym_type: EXACT_SYNONYM
@@ -62,8 +69,9 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GO:0000444
 parent_structures:
-- GO:0000940
+- GO:0032991
 part_of:
+- GO:0000940
 - GO:0000776
 components:
 - component_id: mis12_mtw1_subunit
@@ -265,8 +273,10 @@ functions:
 evidence:
 - reference: GO:0000444
   notes: Gene Ontology cellular-component term for the MIS12/MIND type complex.
+- reference: GO:0032991
+  notes: Gene Ontology cellular-component parent term for protein-containing complex.
 - reference: GO:0000940
-  notes: Gene Ontology cellular-component parent term for outer kinetochore.
+  notes: Gene Ontology cellular-component parthood term for outer kinetochore.
 - reference: GO:0000776
   notes: Gene Ontology cellular-component term for kinetochore.
 - reference: DOI:10.1101/gad.1144403
@@ -324,13 +334,13 @@ causal_graphs:
     component_ref: nnf1_pmf1_subunit
   edges:
   - subject: mis12_mind_type_complex
-    predicate: is a
+    predicate: is part of
     object: outer_kinetochore
-    description: GO places the MIS12/MIND type complex under the outer kinetochore
+    description: GO places the MIS12/MIND type complex as part of the outer kinetochore
       cellular component.
     evidence:
     - reference: GO:0000444
-      notes: GO:0000444 is a child of GO:0000940 outer kinetochore.
+      notes: GO:0000444 is part_of GO:0000940 outer kinetochore.
   - subject: outer_kinetochore
     predicate: is part of
     object: kinetochore

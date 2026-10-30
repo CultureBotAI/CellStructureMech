@@ -27,6 +27,12 @@ curation_history:
   changes: 'Resolved PR #1184 review issue #1185 by retyping the MICOS inner-membrane-organization
     graph as FUNCTION rather than ASSEMBLY.'
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_PARTHOOD
+  changes: Added has_part links to cellstructuremech:mic10_subcomplex and cellstructuremech:mic60_mic19_complex
+    to reciprocate their part_of GO:0061617 links (#2462).
+  llm_assisted: true
 synonyms:
 - synonym_text: Fcj1 complex
   synonym_type: EXACT_SYNONYM
@@ -44,6 +50,9 @@ parent_structures:
 - GO:0098800
 part_of:
 - GO:0005743
+has_part:
+- cellstructuremech:mic10_subcomplex
+- cellstructuremech:mic60_mic19_complex
 taxonomic_distribution:
 - taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae

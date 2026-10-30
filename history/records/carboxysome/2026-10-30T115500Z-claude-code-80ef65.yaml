@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/carboxysome.yaml
+  slug: carboxysome
+session:
+  id: 2026-10-30T115500Z-claude-code-80ef65
+  timestamp: '2026-10-30T11:55:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2463
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Removed component_ref: bmc_h from composite STRUCTURE node shell in carboxysome_co2_concentrating
+    since the icosahedral shell is built from both bmc_h hexamers and bmc_p pentamers (#2463).'
+  details: 'Resolved finding microcompartment-carboxysome-shell-node-component-ref (#2463):
+    In causal_graphs[0] (carboxysome_co2_concentrating), STRUCTURE node shell (''carboxysome
+    shell'') represents the assembled multi-component icosahedral shell built from both hexameric
+    BMC-H facets (bmc_h) and pentameric BMC-P vertices (bmc_p). Removed single-component component_ref:
+    bmc_h from STRUCTURE node shell.'

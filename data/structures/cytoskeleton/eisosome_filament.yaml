@@ -39,6 +39,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_COMPONENTS
+  changes: Updated pil1_lsp1_bar_core component_type from PROTEIN to PROTEIN_COMPLEX
+    for the heterodimeric Pil1/Lsp1 BAR-domain core complex (#2462).
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -47,7 +53,7 @@ part_of:
 components:
 - component_id: pil1_lsp1_bar_core
   label: Pil1/Lsp1 BAR-domain eisosome core
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   grounding: InterPro:IPR028245
   gene_symbols:

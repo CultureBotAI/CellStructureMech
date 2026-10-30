@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/phycobilisome.yaml
+  slug: phycobilisome
+session:
+  id: 2026-10-30T115500Z-claude-code-374533
+  timestamp: '2026-10-30T11:55:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2462
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - has_part
+  - components
+  - curation_history
+  summary: Updated allophycocyanin_core component_type from PROTEIN to PROTEIN_COMPLEX and
+    added has_part links to cellstructuremech:phycobilisome_core and cellstructuremech:phycobilisome_rod
+    (#2462).
+  details: 'Resolved finding energy-complex-phycobilisome-core-type-and-has-part (#2462):
+    Updated allophycocyanin_core (''allophycocyanin core complex'', ApcA/ApcB/ApcE) from component_type
+    PROTEIN to PROTEIN_COMPLEX, and added reciprocal has_part links to cellstructuremech:phycobilisome_core
+    and cellstructuremech:phycobilisome_rod.'

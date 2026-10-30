@@ -78,9 +78,8 @@ components:
     role: Reviewed UniProtKB entry for gene NOP56 in Saccharomyces cerevisiae S288C.
     evidence:
     - reference: PMID:9632712
-      notes: Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p
-        interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol;
-        Wu P et al. 1998, J Biol Chem.
+      notes: Wu P et al. 1998, 'Nop5p is a small nucleolar ribonucleoprotein component
+        required for pre-18 S rRNA processing in yeast.', J Biol Chem.
   - uniprot_id: UniProtKB:Q12499
     protein_label: Nucleolar protein 58
     gene_symbol: NOP58
@@ -92,8 +91,7 @@ components:
     evidence:
     - reference: PMID:9372940
       notes: Gautier T et al. 1997, 'Nucleolar KKE/D repeat proteins Nop56p and Nop58p
-        interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol;
-        Wu P et al. 1998, J Biol Chem.
+        interact with Nop1p and are required for ribosome biogenesis.', Mol Cell Biol.
   - uniprot_id: UniProtKB:P39990
     protein_label: 13 kDa ribonucleoprotein-associated protein
     gene_symbol: SNU13
@@ -247,4 +245,10 @@ curation_history:
     DOI:10.1016/j.molcel.2007.01.024 and PMID:10982895 citations, corrected PMID:9372940/PMID:9632712
     bibliographic notes, updated nop1_nop56_nop58_snu13_core to PROTEIN_COMPLEX, and
     aligned curation_history[1] graph_id to box_c_d_rnp_rrna_processing.'
+  llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_EVIDENCE
+  changes: Added bibliographic evidence notes to NOP56 (PMID:9632712) and NOP58 (PMID:9372940)
+    protein_examples on nop1_nop56_nop58_snu13_core (#2462).
   llm_assisted: true

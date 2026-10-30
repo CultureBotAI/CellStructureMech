@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/phagophore_assembly_site.yaml
+  slug: phagophore_assembly_site
+session:
+  id: 2026-10-30T115500Z-claude-code-d042ea
+  timestamp: '2026-10-30T11:55:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2462
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: Updated phagophore_assembly_site_atg_machinery component_type from PROTEIN to PROTEIN_COMPLEX
+    for the multi-protein Atg1-Atg13-Atg17-Atg29-Atg31 initiation complex (#2462).
+  details: 'Resolved finding other-pas-eisosome-component-types-and-micos-has-part on phagophore_assembly_site.yaml
+    (#2462): phagophore_assembly_site_atg_machinery (''Atg autophagy initiation machinery'')
+    represents the multi-protein Atg1-Atg13-Atg17-Atg29-Atg31 initiation complex and Atg9
+    vesicles. Updated component_type from PROTEIN to PROTEIN_COMPLEX.'
