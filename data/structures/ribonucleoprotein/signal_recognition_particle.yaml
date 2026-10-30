@@ -47,6 +47,12 @@ curation_history:
   changes: added 1 verified UniProtKB protein_example(s); added 1 verified UniProtKB
     xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:38Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected srp_rna and ffh_srp54_gtpase to the bacterial_srp structure node
+    in bacterial_srp_membrane_targeting.
+  llm_assisted: true
 synonyms:
 - synonym_text: SRP
   synonym_type: EXACT_SYNONYM
@@ -245,6 +251,30 @@ causal_graphs:
     - reference: DOI:10.1093/emboj/16.16.4880
       notes: Powers and Walter 1997 reconstituted E. coli SRP-dependent cotranslational
         targeting.
+  - subject: srp_rna
+    predicate: contributes to
+    object: bacterial_srp
+    description: The 4.5S/7S SRP RNA scaffold is an essential structural and functional
+      component of the bacterial signal recognition particle.
+    evidence:
+    - reference: DOI:10.1016/j.bbamcr.2013.10.013
+      notes: Akopian et al. 2013 reviewed the composition and mechanism of the bacterial
+        4.5S RNA-Ffh signal recognition particle.
+    - reference: DOI:10.1093/emboj/16.16.4880
+      notes: Jagath et al. 1997 characterized assembly of E. coli 4.5S SRP RNA and
+        Ffh into the functional SRP complex.
+  - subject: ffh_srp54_gtpase
+    predicate: contributes to
+    object: bacterial_srp
+    description: The Ffh/SRP54 signal-sequence-binding GTPase subunit is an essential
+      structural and functional component of the bacterial signal recognition particle.
+    evidence:
+    - reference: DOI:10.1016/j.bbamcr.2013.10.013
+      notes: Akopian et al. 2013 reviewed the composition and mechanism of the bacterial
+        4.5S RNA-Ffh signal recognition particle.
+    - reference: DOI:10.1093/emboj/16.16.4880
+      notes: Jagath et al. 1997 characterized assembly of E. coli 4.5S SRP RNA and
+        Ffh into the functional SRP complex.
 discussions:
 - discussion_id: resolve_srp_component_groundings
   prompt: Resolve exact source-neutral InterPro, Pfam or NCBIfam groundings for Ffh/SRP54

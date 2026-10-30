@@ -22,6 +22,12 @@ curation_history:
     ABC-type polyamine and putrescine transporter activities, a compact function graph,
     CPX-4383 heteropentamer source composition, and a component-family grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected pota, potb, potc, and potd subunit nodes to the potabcd structure
+    node in potabcd_polyamine_import.
+  llm_assisted: true
 synonyms:
 - synonym_text: Spermidine ABC transporter complex
   synonym_type: EXACT_SYNONYM
@@ -350,6 +356,42 @@ causal_graphs:
     evidence:
     - reference: GO:0015417
       notes: GO:0015417 states the outside-to-inside polyamine ABC-transporter reaction.
+  - subject: pota
+    predicate: contributes to
+    object: potabcd
+    description: The PotA ATP-binding cassette subunit is an essential stoichiometric
+      component of the PotABCD polyamine ABC importer complex.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: ComplexPortal CPX-4383 defines PotA, PotB, PotC, and PotD as the subunits
+        of the E. coli spermidine/putrescine ABC transporter PotABCD.
+  - subject: potb
+    predicate: contributes to
+    object: potabcd
+    description: The PotB transmembrane permease subunit is an essential stoichiometric
+      component of the PotABCD polyamine ABC importer complex.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: ComplexPortal CPX-4383 defines PotA, PotB, PotC, and PotD as the subunits
+        of the E. coli spermidine/putrescine ABC transporter PotABCD.
+  - subject: potc
+    predicate: contributes to
+    object: potabcd
+    description: The PotC transmembrane permease subunit is an essential stoichiometric
+      component of the PotABCD polyamine ABC importer complex.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: ComplexPortal CPX-4383 defines PotA, PotB, PotC, and PotD as the subunits
+        of the E. coli spermidine/putrescine ABC transporter PotABCD.
+  - subject: potd
+    predicate: contributes to
+    object: potabcd
+    description: The PotD periplasmic spermidine/putrescine-binding subunit is an
+      essential stoichiometric component of the PotABCD polyamine ABC importer complex.
+    evidence:
+    - reference: ComplexPortal:CPX-4383
+      notes: ComplexPortal CPX-4383 defines PotA, PotB, PotC, and PotD as the subunits
+        of the E. coli spermidine/putrescine ABC transporter PotABCD.
 discussions:
 - discussion_id: resolve_potabcd_component_family_groundings
   prompt: Resolve exact source-neutral protein-family groundings for PotA, PotB, PotC,

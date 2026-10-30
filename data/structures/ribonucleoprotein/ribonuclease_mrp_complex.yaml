@@ -43,6 +43,12 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:38Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected rnase_mrp_rna, shared_rnase_p_mrp_protein_subunits, and mrp_specific_protein_subunits
+    to ribonuclease_mrp_complex and linked the complex to ribonuclease_mrp_activity.
+  llm_assisted: true
 synonyms:
 - synonym_text: RNase MRP complex
   synonym_type: EXACT_SYNONYM
@@ -454,6 +460,54 @@ causal_graphs:
     - reference: DOI:10.1128/mcb.13.12.7935-7941.1993
       notes: Schmitt and Clayton 1993 showed that nuclear RNase MRP is required for
         correct pre-5.8S rRNA processing in S. cerevisiae.
+  - subject: rnase_mrp_rna
+    predicate: contributes to
+    object: ribonuclease_mrp_complex
+    description: The NME1 catalytic RNase MRP RNA scaffold assemble into the eukaryotic
+      ribonuclease MRP ribonucleoprotein complex.
+    evidence:
+    - reference: GO:0000172
+      notes: GO:0000172 defines the ribonuclease MRP complex as a multimeric ribonucleoprotein
+        containing the catalytic RNA and protein subunits.
+    - reference: DOI:10.1093/nar/gkm553
+      notes: Esakova and Krasilnikov 2010 reviewed yeast RNase MRP RNA and its shared
+        and MRP-specific protein subunits.
+  - subject: shared_rnase_p_mrp_protein_subunits
+    predicate: contributes to
+    object: ribonuclease_mrp_complex
+    description: The shared RNase P/MRP Pop and Rpp protein subunits assemble into
+      the eukaryotic ribonuclease MRP ribonucleoprotein complex.
+    evidence:
+    - reference: GO:0000172
+      notes: GO:0000172 defines the ribonuclease MRP complex as a multimeric ribonucleoprotein
+        containing the catalytic RNA and protein subunits.
+    - reference: DOI:10.1093/nar/gkm553
+      notes: Esakova and Krasilnikov 2010 reviewed yeast RNase MRP RNA and its shared
+        and MRP-specific protein subunits.
+  - subject: mrp_specific_protein_subunits
+    predicate: contributes to
+    object: ribonuclease_mrp_complex
+    description: The Snm1 and Rmp1 RNase MRP-specific protein subunits assemble into
+      the eukaryotic ribonuclease MRP ribonucleoprotein complex.
+    evidence:
+    - reference: GO:0000172
+      notes: GO:0000172 defines the ribonuclease MRP complex as a multimeric ribonucleoprotein
+        containing the catalytic RNA and protein subunits.
+    - reference: DOI:10.1093/nar/gkm553
+      notes: Esakova and Krasilnikov 2010 reviewed yeast RNase MRP RNA and its shared
+        and MRP-specific protein subunits.
+  - subject: ribonuclease_mrp_complex
+    predicate: enables
+    object: ribonuclease_mrp_activity
+    description: The assembled ribonuclease MRP ribonucleoprotein complex enables
+      site-specific endoribonucleolytic cleavage of pre-rRNA and specific mRNAs.
+    evidence:
+    - reference: GO:0000172
+      notes: GO:0000172 defines the ribonuclease MRP complex and its endoribonuclease
+        role in pre-rRNA processing.
+    - reference: DOI:10.1093/nar/gkm553
+      notes: Esakova and Krasilnikov 2010 reviewed the catalytic activity of the assembled
+        RNase MRP holoenzyme.
 discussions:
 - discussion_id: resolve_rnase_mrp_protein_groundings
   prompt: Resolve exact source-neutral InterPro, Pfam, NCBIfam, GO or Complex Portal

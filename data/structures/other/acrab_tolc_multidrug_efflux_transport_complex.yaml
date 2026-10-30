@@ -28,6 +28,12 @@ curation_history:
     InterPro:IPR058622 and narrowing the open component-family grounding TODO to AcrA
     and AcrB.'
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected tripartite efflux subunits to acrab_tolc and linked xenobiotic_transport
+    to outer_membrane_export.
+  llm_assisted: true
 parent_structures:
 - GO:1990281
 components:
@@ -254,6 +260,45 @@ causal_graphs:
     - reference: PDB:5V5S
       notes: PDB:5V5S resolves the AcrB, AcrA, and TolC proteins in one three-protein
         AcrAB-TolC structure.
+  - subject: acrb
+    predicate: contributes to
+    object: acrab_tolc
+    description: Multidrug efflux pump subunit AcrB assembles into the envelope-spanning
+      tripartite acrab_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4263
+      notes: ComplexPortal:CPX-4263 curates Multidrug efflux pump subunit AcrB as
+        an essential stoichiometric subunit of the tripartite acrab_tolc efflux pump
+        complex.
+    - reference: PDB:5V5S
+      notes: Cryo-EM structure PDB:5V5S resolves the complete AcrAB-TolC tripartite
+        multidrug efflux pump.
+  - subject: acra
+    predicate: contributes to
+    object: acrab_tolc
+    description: Multidrug efflux pump subunit AcrA assembles into the envelope-spanning
+      tripartite acrab_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4263
+      notes: ComplexPortal:CPX-4263 curates Multidrug efflux pump subunit AcrA as
+        an essential stoichiometric subunit of the tripartite acrab_tolc efflux pump
+        complex.
+    - reference: PDB:5V5S
+      notes: Cryo-EM structure PDB:5V5S resolves the complete AcrAB-TolC tripartite
+        multidrug efflux pump.
+  - subject: tolc
+    predicate: contributes to
+    object: acrab_tolc
+    description: Outer membrane channel protein TolC assembles into the envelope-spanning
+      tripartite acrab_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-4263
+      notes: ComplexPortal:CPX-4263 curates Outer membrane channel protein TolC as
+        an essential stoichiometric subunit of the tripartite acrab_tolc efflux pump
+        complex.
+    - reference: PDB:5V5S
+      notes: Cryo-EM structure PDB:5V5S resolves the complete AcrAB-TolC tripartite
+        multidrug efflux pump.
 discussions:
 - discussion_id: acrab_tolc_component_family_grounding
   prompt: Resolve exact source-neutral protein families for AcrA and AcrB before replacing

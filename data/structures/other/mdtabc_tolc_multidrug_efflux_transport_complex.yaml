@@ -27,6 +27,12 @@ curation_history:
   changes: Adjusted MdtABC-TolC substrate wording to avoid presenting zinc as a xenobiotic
     while preserving the CPX-2119 substrate list.
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected tripartite efflux subunits to mdtabc_tolc and linked xenobiotic_transport
+    to outer_membrane_export.
+  llm_assisted: true
 parent_structures:
 - GO:1990281
 components:
@@ -330,6 +336,59 @@ causal_graphs:
     - reference: GO:0140330
       notes: GO:0140330 describes reducing xenobiotic toxicity by export through the
         outer membrane.
+  - subject: mdtb
+    predicate: contributes to
+    object: mdtabc_tolc
+    description: Multidrug resistance protein MdtB assembles into the envelope-spanning
+      tripartite mdtabc_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-2119
+      notes: ComplexPortal:CPX-2119 curates Multidrug resistance protein MdtB as an
+        essential stoichiometric subunit of the tripartite mdtabc_tolc efflux pump
+        complex.
+  - subject: mdtc
+    predicate: contributes to
+    object: mdtabc_tolc
+    description: Multidrug resistance protein MdtC assembles into the envelope-spanning
+      tripartite mdtabc_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-2119
+      notes: ComplexPortal:CPX-2119 curates Multidrug resistance protein MdtC as an
+        essential stoichiometric subunit of the tripartite mdtabc_tolc efflux pump
+        complex.
+  - subject: mdta
+    predicate: contributes to
+    object: mdtabc_tolc
+    description: Multidrug resistance protein MdtA assembles into the envelope-spanning
+      tripartite mdtabc_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-2119
+      notes: ComplexPortal:CPX-2119 curates Multidrug resistance protein MdtA as an
+        essential stoichiometric subunit of the tripartite mdtabc_tolc efflux pump
+        complex.
+  - subject: tolc
+    predicate: contributes to
+    object: mdtabc_tolc
+    description: Outer membrane channel protein TolC assembles into the envelope-spanning
+      tripartite mdtabc_tolc multidrug efflux pump.
+    evidence:
+    - reference: ComplexPortal:CPX-2119
+      notes: ComplexPortal:CPX-2119 curates Outer membrane channel protein TolC as
+        an essential stoichiometric subunit of the tripartite mdtabc_tolc efflux pump
+        complex.
+  - subject: xenobiotic_transport
+    predicate: contributes to
+    object: outer_membrane_export
+    description: Active xenobiotic transport by the inner-membrane antiporter and
+      periplasmic adaptor drives substrate export across the outer membrane through
+      the TolC channel.
+    evidence:
+    - reference: ComplexPortal:CPX-2119
+      notes: ComplexPortal:CPX-2119 describes tripartite efflux coupling inner-membrane
+        drug transport to export across the outer membrane.
+    - reference: GO:0140330
+      notes: GO:0140330 describes export across the outer membrane mediated by the
+        tripartite efflux apparatus.
 complex_compositions:
 - composition_id: complex_portal_cpx_2119
   source: COMPLEX_PORTAL

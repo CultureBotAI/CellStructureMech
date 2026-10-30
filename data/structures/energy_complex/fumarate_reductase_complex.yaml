@@ -45,6 +45,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected frda_flavoprotein and frdb_iron_sulfur_subunit to the fumarate_reductase
+    structure node in fumarate_reductase_quinol_coupling.
+  llm_assisted: true
 synonyms:
 - synonym_text: quinol-fumarate reductase
   synonym_type: EXACT_SYNONYM
@@ -354,6 +360,29 @@ causal_graphs:
     - reference: GO:0045283
       notes: GO:0045283 records succinate production as the reduced side of the quinol:fumarate
         reaction.
+  - subject: frda_flavoprotein
+    predicate: contributes to
+    object: fumarate_reductase
+    description: The FrdA flavoprotein subunit provides the covalent-FAD catalytic
+      fumarate-reducing domain of the fumarate reductase complex.
+    evidence:
+    - reference: GO:0045283
+      notes: GO:0045283 defines the fumarate reductase complex composed of its catalytic
+        flavoprotein, iron-sulfur, and membrane-anchor subunits.
+    - reference: InterPro:IPR005884
+      notes: InterPro family for the fumarate reductase flavoprotein subunit FrdA.
+  - subject: frdb_iron_sulfur_subunit
+    predicate: contributes to
+    object: fumarate_reductase
+    description: The FrdB iron-sulfur subunit bridges the FrdA catalytic subunit and
+      the FrdCD membrane anchor within the fumarate reductase complex.
+    evidence:
+    - reference: GO:0045283
+      notes: GO:0045283 defines the fumarate reductase complex composed of its catalytic
+        flavoprotein, iron-sulfur, and membrane-anchor subunits.
+    - reference: PDB:1KF6
+      notes: Crystal structure PDB:1KF6 resolves FrdA and FrdB assembled on the FrdCD
+        membrane anchor in E. coli quinol-fumarate reductase.
 discussions:
 - discussion_id: frdb_family_grounding
   prompt: Resolve an exact source-neutral protein-family identifier for fumarate reductase
