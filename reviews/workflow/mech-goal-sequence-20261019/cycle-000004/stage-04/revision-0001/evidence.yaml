@@ -113,10 +113,5 @@ carry_forward_ids:
 - other-pas-eisosome-component-types-and-micos-has-part
 - ribonucleoprotein-box-cd-snornp-type-and-evidence-notes
 - secretion-system-sec-complex-has-part-secyeg
-infra_tasks:
-- task_id: cellstructuremech-infra-0007
-  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2457
-  status: open
-  summary: Extend src/cellstructuremech/validation/validator.py to check hierarchy/component relation
-    disjointness and CausalNode component_ref grounding consistency
-  disposition: Queued in INFRA_TASKS.md for Cycle 4 Stage 6 (infrastructure_upgrade).
+infra_tasks: []
+
