@@ -1,0 +1,622 @@
+schema_version: 1.0.0
+review_id: 20261030T082011Z-secretion-system-category-review
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: Category review of data/structures/secretion_system/ (20 records)
+started_at: '2026-10-30T08:15:00Z'
+finished_at: '2026-10-30T08:20:11Z'
+reviewer:
+  identity: antigravity-c4s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 4 Stage 4 record_review against committed
+    git revision 5c642e4080ef3a0f026845843c559d3b46de8871 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
+scientific_review: true
+summary: 'Full cohort audit of all 20 SECRETION_SYSTEM records in data/structures/secretion_system/.
+  Lump/split boundaries across T1SS-T11SS, Sec, Tat, BAM, LOL, Lpt, and Tam holocomplexes
+  and subcomplexes are clean. One minor parthood reciprocity gap was identified in
+  cell_envelope_sec_protein_transport_complex.yaml (GO:0031522), which omits has_part:
+  [cellstructuremech:secyeg_translocon_complex] even though secyeg_translocon_complex.yaml
+  declares part_of: [GO:0031522, GO:0005886] and cell_envelope_sec_protein_transport_complex.yaml
+  models secyeg_channel as its core channel.'
+source:
+  git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+    sha256: 2164f385ec6847a1ba064f6975717b50373c080f563494e31af789d2946d3421
+    role: target
+  - path: data/structures/secretion_system/curli_secretion_complex.yaml
+    sha256: 0a0e0ec596146bd7c74bf065593dd4b922a5b6d863be94edcfdd9143ffa342c2
+    role: target
+  - path: data/structures/secretion_system/esx_3_type_vii_secretion_system_membrane_complex.yaml
+    sha256: a7d0bfe7a523a96f5fdf588c0b86e36e9f231d86cbd82e044fbf18c1803fb309
+    role: target
+  - path: data/structures/secretion_system/esx_5_type_vii_secretion_system_membrane_complex.yaml
+    sha256: 5b0858ffa6e346668aeb54928ed38273e399fa41507685b4a40d674a8481dc24
+    role: target
+  - path: data/structures/secretion_system/holo_translocon_secyeg_secdf_yajc_yidc_complex.yaml
+    sha256: 9708598993ddff4eafa0a28f4b5f9aa4ddc66b20e8c63b346f838a623942f979
+    role: target
+  - path: data/structures/secretion_system/secyeg_translocon_complex.yaml
+    sha256: 97cfcee7198dc3907db94d83f0245ad5d8e8a4cd50aa04fe7c07e4a746a7bb41
+    role: target
+  - path: data/structures/secretion_system/tam_protein_secretion_complex.yaml
+    sha256: d072c0e8a5d468669a2550868dad4bfc014c87be2748a74ab58bfa1fec69ba21
+    role: target
+  - path: data/structures/secretion_system/tat_protein_transport_complex.yaml
+    sha256: f86a56c2a993ad7398bb2bedc50fb7baf54cbcc36a3d2a41a63a854808120b9e
+    role: target
+  - path: data/structures/secretion_system/type_i_protein_secretion_system_complex.yaml
+    sha256: b64a9bfd3bebcd55ac53298d8198fddb4d49ae2a139c9629d68edae489f3349f
+    role: target
+  - path: data/structures/secretion_system/type_ii_protein_secretion_system_complex.yaml
+    sha256: ff7fffa248ac48ed1f3cc8f708645ef4e6fe642e2474beb2cb9eec21915e4a20
+    role: target
+  - path: data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+    sha256: 23b0a0c7ee687a7ee8e1eb121c19a0c7726cc21a339e560de5cf8ebdd6678fd2
+    role: target
+  - path: data/structures/secretion_system/type_iv_secretion_system_complex.yaml
+    sha256: 917a40542c722b785ce4dbbf1ffd166fdcbc1bac2a89087eb13cce450fc05741
+    role: target
+  - path: data/structures/secretion_system/type_ix_protein_secretion_system_complex.yaml
+    sha256: 98b0aa1e83134011b0d3c8eb6056daba4d006fbb8949bd5a5f078bd867a5978e
+    role: target
+  - path: data/structures/secretion_system/type_v_protein_secretion_system_complex.yaml
+    sha256: 20546ba3699057a447efdaad8a89677dbaeb1f3fde4e091b843aceb25fe8a523
+    role: target
+  - path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+    sha256: bd7deca396467201aeaef7b83a8fedb1ed74f6734636e101c242b568f95f04bb
+    role: target
+  - path: data/structures/secretion_system/type_vi_secretion_system_baseplate.yaml
+    sha256: f7744ff6d16cead92c82eb953141e1b95f1fb380e860b2dd6824a5c8e0aeb292
+    role: target
+  - path: data/structures/secretion_system/type_vi_secretion_system_contractile_sheath.yaml
+    sha256: 5e91aa5fcb24b73809a4889c793e130750e8df16cc8f78d52fb0abbe7a51d336
+    role: target
+  - path: data/structures/secretion_system/type_vi_secretion_system_hcp_tube.yaml
+    sha256: 0eee4d20e69c006410ffa6432d6b72915a3fa90ed07e8c4da7fda28400d3d106
+    role: target
+  - path: data/structures/secretion_system/type_vi_secretion_system_membrane_complex.yaml
+    sha256: 6c040ffcffa8e435d6c9e0558d279ebc6b6118524c91de377cf19bc9b02f77b9
+    role: target
+  - path: data/structures/secretion_system/type_vi_secretion_system_vgrg_paar_spike_complex.yaml
+    sha256: 5b2a010a304b7a2e84d9978ddf4658b45317b9b45039b95b63d0ffa988117da8
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Full-cohort review of all 20 CellStructureRecord YAML files under data/structures/secretion_system/.
+  selection: Complete folder cohort data/structures/secretion_system/*.yaml in the
+    frozen 1,001-record Cycle 4 Stage 4 inventory.
+  coverage: full
+  population_size: 20
+  reviewed_target_ids:
+  - GO:0031522
+  - GO:0062155
+  - cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex
+  - cellstructuremech:secyeg_translocon_complex
+  - GO:0097347
+  - GO:0033281
+  - GO:0030256
+  - GO:0015627
+  - GO:0030257
+  - GO:0043684
+  - cellstructuremech:type_ix_protein_secretion_system_complex
+  - GO:0098046
+  - GO:0033104
+  - cellstructuremech:type_vi_secretion_system_baseplate
+  - cellstructuremech:type_vi_secretion_system_contractile_sheath
+  - cellstructuremech:type_vi_secretion_system_hcp_tube
+  - cellstructuremech:type_vi_secretion_system_membrane_complex
+  - cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex
+targets:
+- target_id: GO:0031522
+  path: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+  label: cell envelope Sec protein transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2164f385ec6847a1ba064f6975717b50373c080f563494e31af789d2946d3421
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+    role: maintained_record
+- target_id: GO:0062155
+  path: data/structures/secretion_system/curli_secretion_complex.yaml
+  label: curli secretion complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0a0e0ec596146bd7c74bf065593dd4b922a5b6d863be94edcfdd9143ffa342c2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/curli_secretion_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex
+  path: data/structures/secretion_system/esx_3_type_vii_secretion_system_membrane_complex.yaml
+  label: ESX-3 type VII secretion system membrane complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a7d0bfe7a523a96f5fdf588c0b86e36e9f231d86cbd82e044fbf18c1803fb309
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/esx_3_type_vii_secretion_system_membrane_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex
+  path: data/structures/secretion_system/esx_5_type_vii_secretion_system_membrane_complex.yaml
+  label: ESX-5 type VII secretion system membrane complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5b0858ffa6e346668aeb54928ed38273e399fa41507685b4a40d674a8481dc24
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/esx_5_type_vii_secretion_system_membrane_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex
+  path: data/structures/secretion_system/holo_translocon_secyeg_secdf_yajc_yidc_complex.yaml
+  label: Holo-translocon SecYEG-SecDF-YajC-YidC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 9708598993ddff4eafa0a28f4b5f9aa4ddc66b20e8c63b346f838a623942f979
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/holo_translocon_secyeg_secdf_yajc_yidc_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:secyeg_translocon_complex
+  path: data/structures/secretion_system/secyeg_translocon_complex.yaml
+  label: SecYEG translocon complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 97cfcee7198dc3907db94d83f0245ad5d8e8a4cd50aa04fe7c07e4a746a7bb41
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/secyeg_translocon_complex.yaml
+    role: maintained_record
+- target_id: GO:0097347
+  path: data/structures/secretion_system/tam_protein_secretion_complex.yaml
+  label: TAM protein secretion complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d072c0e8a5d468669a2550868dad4bfc014c87be2748a74ab58bfa1fec69ba21
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/tam_protein_secretion_complex.yaml
+    role: maintained_record
+- target_id: GO:0033281
+  path: data/structures/secretion_system/tat_protein_transport_complex.yaml
+  label: TAT protein transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f86a56c2a993ad7398bb2bedc50fb7baf54cbcc36a3d2a41a63a854808120b9e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/tat_protein_transport_complex.yaml
+    role: maintained_record
+- target_id: GO:0030256
+  path: data/structures/secretion_system/type_i_protein_secretion_system_complex.yaml
+  label: type I protein secretion system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b64a9bfd3bebcd55ac53298d8198fddb4d49ae2a139c9629d68edae489f3349f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_i_protein_secretion_system_complex.yaml
+    role: maintained_record
+- target_id: GO:0015627
+  path: data/structures/secretion_system/type_ii_protein_secretion_system_complex.yaml
+  label: type II protein secretion system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ff7fffa248ac48ed1f3cc8f708645ef4e6fe642e2474beb2cb9eec21915e4a20
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_ii_protein_secretion_system_complex.yaml
+    role: maintained_record
+- target_id: GO:0030257
+  path: data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+  label: type III protein secretion system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 23b0a0c7ee687a7ee8e1eb121c19a0c7726cc21a339e560de5cf8ebdd6678fd2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+    role: maintained_record
+- target_id: GO:0043684
+  path: data/structures/secretion_system/type_iv_secretion_system_complex.yaml
+  label: type IV secretion system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 917a40542c722b785ce4dbbf1ffd166fdcbc1bac2a89087eb13cce450fc05741
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_iv_secretion_system_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:type_ix_protein_secretion_system_complex
+  path: data/structures/secretion_system/type_ix_protein_secretion_system_complex.yaml
+  label: type IX protein secretion system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 98b0aa1e83134011b0d3c8eb6056daba4d006fbb8949bd5a5f078bd867a5978e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_ix_protein_secretion_system_complex.yaml
+    role: maintained_record
+- target_id: GO:0098046
+  path: data/structures/secretion_system/type_v_protein_secretion_system_complex.yaml
+  label: type V protein secretion system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 20546ba3699057a447efdaad8a89677dbaeb1f3fde4e091b843aceb25fe8a523
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_v_protein_secretion_system_complex.yaml
+    role: maintained_record
+- target_id: GO:0033104
+  path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+  label: type VI protein secretion system complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bd7deca396467201aeaef7b83a8fedb1ed74f6734636e101c242b568f95f04bb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:type_vi_secretion_system_baseplate
+  path: data/structures/secretion_system/type_vi_secretion_system_baseplate.yaml
+  label: type VI secretion system baseplate
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f7744ff6d16cead92c82eb953141e1b95f1fb380e860b2dd6824a5c8e0aeb292
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_vi_secretion_system_baseplate.yaml
+    role: maintained_record
+- target_id: cellstructuremech:type_vi_secretion_system_contractile_sheath
+  path: data/structures/secretion_system/type_vi_secretion_system_contractile_sheath.yaml
+  label: type VI secretion system contractile sheath
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5e91aa5fcb24b73809a4889c793e130750e8df16cc8f78d52fb0abbe7a51d336
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_vi_secretion_system_contractile_sheath.yaml
+    role: maintained_record
+- target_id: cellstructuremech:type_vi_secretion_system_hcp_tube
+  path: data/structures/secretion_system/type_vi_secretion_system_hcp_tube.yaml
+  label: type VI secretion system Hcp tube
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0eee4d20e69c006410ffa6432d6b72915a3fa90ed07e8c4da7fda28400d3d106
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_vi_secretion_system_hcp_tube.yaml
+    role: maintained_record
+- target_id: cellstructuremech:type_vi_secretion_system_membrane_complex
+  path: data/structures/secretion_system/type_vi_secretion_system_membrane_complex.yaml
+  label: type VI secretion system membrane complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6c040ffcffa8e435d6c9e0558d279ebc6b6118524c91de377cf19bc9b02f77b9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_vi_secretion_system_membrane_complex.yaml
+    role: maintained_record
+- target_id: cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex
+  path: data/structures/secretion_system/type_vi_secretion_system_vgrg_paar_spike_complex.yaml
+  label: type VI secretion system VgrG/PAAR spike complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 5b2a010a304b7a2e84d9978ddf4658b45317b9b45039b95b63d0ffa988117da8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/type_vi_secretion_system_vgrg_paar_spike_complex.yaml
+    role: maintained_record
+checks:
+- check_id: strict_secretion_system
+  name: Strict corpus validation covering secretion_system cohort
+  status: passed
+  required: true
+  summary: All 20 secretion_system records pass strict LinkML and semantic validation.
+  target_ids:
+  - GO:0031522
+  - GO:0062155
+  - cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex
+  - cellstructuremech:secyeg_translocon_complex
+  - GO:0097347
+  - GO:0033281
+  - GO:0030256
+  - GO:0015627
+  - GO:0030257
+  - GO:0043684
+  - cellstructuremech:type_ix_protein_secretion_system_complex
+  - GO:0098046
+  - GO:0033104
+  - cellstructuremech:type_vi_secretion_system_baseplate
+  - cellstructuremech:type_vi_secretion_system_contractile_sheath
+  - cellstructuremech:type_vi_secretion_system_hcp_tube
+  - cellstructuremech:type_vi_secretion_system_membrane_complex
+  - cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_secretion_system
+- check_id: history_secretion_system
+  name: History ledger validation covering secretion_system cohort
+  status: passed
+  required: true
+  summary: All history ledger records covering secretion_system validate cleanly.
+  target_ids:
+  - GO:0031522
+  - GO:0062155
+  - cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex
+  - cellstructuremech:secyeg_translocon_complex
+  - GO:0097347
+  - GO:0033281
+  - GO:0030256
+  - GO:0015627
+  - GO:0030257
+  - GO:0043684
+  - cellstructuremech:type_ix_protein_secretion_system_complex
+  - GO:0098046
+  - GO:0033104
+  - cellstructuremech:type_vi_secretion_system_baseplate
+  - cellstructuremech:type_vi_secretion_system_contractile_sheath
+  - cellstructuremech:type_vi_secretion_system_hcp_tube
+  - cellstructuremech:type_vi_secretion_system_membrane_complex
+  - cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_secretion_system
+evidence:
+- evidence_id: ev_strict_secretion_system
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_all receipt
+  accessed_at: '2026-10-30T08:20:11Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 1,001 records including all 20 secretion_system
+    records.
+  snapshot_sha256: 1ebf6e7daebc19797861570fcac0d3cf8b06c18f7f40abf3277d35ef5867f442
+- evidence_id: ev_history_secretion_system
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history_all receipt
+  accessed_at: '2026-10-30T08:20:11Z'
+  support: supports
+  summary: validate_history.py exited 0 across all 2,082 history records covering
+    secretion_system.
+  snapshot_sha256: 8bcb91b216ec775bac08188426f9ef860888b78f91561be1e471ea4a2159ad3b
+- evidence_id: ev_secsys_sec_complex
+  kind: record_content
+  reference: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+  locator: parent_structures (lines 17-18)
+  accessed_at: '2026-10-30T08:18:00Z'
+  support: supports
+  summary: 'cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) declares
+    parent_structures: [GO:0140535] and omits has_part: [cellstructuremech:secyeg_translocon_complex].'
+  quote: 'parent_structures:
+
+    - GO:0140535'
+  snapshot_sha256: 2164f385ec6847a1ba064f6975717b50373c080f563494e31af789d2946d3421
+assessments:
+- assessment_id: assess_secretion_system_cohort
+  area: scope
+  topic: Identity, boundaries, causal graphs, and ontology grounding across data/structures/secretion_system/
+  outcome: supported
+  summary: All 20 records in data/structures/secretion_system/ represent distinct
+    microbial cell structures or subcomplexes with valid schema and history provenance.
+  target_ids:
+  - GO:0031522
+  - GO:0062155
+  - cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex
+  - cellstructuremech:secyeg_translocon_complex
+  - GO:0097347
+  - GO:0033281
+  - GO:0030256
+  - GO:0015627
+  - GO:0030257
+  - GO:0043684
+  - cellstructuremech:type_ix_protein_secretion_system_complex
+  - GO:0098046
+  - GO:0033104
+  - cellstructuremech:type_vi_secretion_system_baseplate
+  - cellstructuremech:type_vi_secretion_system_contractile_sheath
+  - cellstructuremech:type_vi_secretion_system_hcp_tube
+  - cellstructuremech:type_vi_secretion_system_membrane_complex
+  - cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex
+  evidence_ids:
+  - ev_strict_secretion_system
+  - ev_history_secretion_system
+- assessment_id: assess_secsys_sec_has_part
+  area: representation
+  topic: Reciprocal has_part between Sec holotranslocon (GO:0031522) and SecYEG translocon
+    complex
+  outcome: concern
+  summary: 'secyeg_translocon_complex.yaml declares part_of: [GO:0031522, GO:0005886],
+    but cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) omits has_part:
+    [cellstructuremech:secyeg_translocon_complex].'
+  target_ids:
+  - GO:0031522
+  evidence_ids:
+  - ev_secsys_sec_complex
+findings:
+- finding_id: F1
+  issue_key: secretion-system-sec-complex-has-part-secyeg
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: 'cell_envelope_sec_protein_transport_complex.yaml omits reciprocal has_part:
+    [cellstructuremech:secyeg_translocon_complex]'
+  description: 'In data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+    (GO:0031522, lines 17-18), has_part is omitted even though sibling data/structures/secretion_system/secyeg_translocon_complex.yaml
+    (cellstructuremech:secyeg_translocon_complex) declares part_of: [GO:0031522, GO:0005886]
+    and cell_envelope_sec_protein_transport_complex.yaml models the SecYEG channel
+    as its central transmembrane pore.'
+  target_ids:
+  - GO:0031522
+  field_paths:
+  - has_part
+  evidence_ids:
+  - ev_secsys_sec_complex
+  rule_id: docs/SCHEMA.md:has_part
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+    role: maintained_record
+  tags:
+  - secretion-system
+  - has-part
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: 'Add has_part: [cellstructuremech:secyeg_translocon_complex] (and top-level
+    evidence grounding) to data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml.'
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0031522
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0031522
+  - GO:0062155
+  - cellstructuremech:esx_3_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:esx_5_type_vii_secretion_system_membrane_complex
+  - cellstructuremech:holo_translocon_secyeg_secdf_yajc_yidc_complex
+  - cellstructuremech:secyeg_translocon_complex
+  - GO:0097347
+  - GO:0033281
+  - GO:0030256
+  - GO:0015627
+  - GO:0030257
+  - GO:0043684
+  - cellstructuremech:type_ix_protein_secretion_system_complex
+  - GO:0098046
+  - GO:0033104
+  - cellstructuremech:type_vi_secretion_system_baseplate
+  - cellstructuremech:type_vi_secretion_system_contractile_sheath
+  - cellstructuremech:type_vi_secretion_system_hcp_tube
+  - cellstructuremech:type_vi_secretion_system_membrane_complex
+  - cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex
+  rationale: All 20 secretion_system records represent distinct translocation/secretion
+    machineries or core pore subcomplexes.
+  evidence_ids:
+  - ev_strict_secretion_system
+  - ev_history_secretion_system
+limitations:
+- Record edits for secretion_system cohort findings are queued for Cycle 4 Stage 5
+  (resolve_review_findings).
+tags:
+- stage4
+- category-review
+- secretion-system
