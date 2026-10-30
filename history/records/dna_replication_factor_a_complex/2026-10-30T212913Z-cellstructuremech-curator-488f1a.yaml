@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_replication_factor_a_complex.yaml
+  slug: dna_replication_factor_a_complex
+session:
+  id: 2026-10-30T212913Z-cellstructuremech-curator-488f1a
+  timestamp: '2026-10-30T21:29:13Z'
+  actors:
+  - type: ai_agent
+    name: cellstructuremech-curator
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2470
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2469
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Add Wold 1997 (PMID:9242902) evidence to RPA subunit components, causal edges,
+    and top-level evidence
+  details: 'Resolved #2470 by adding Wold 1997 (PMID:9242902) literature evidence to rpa_70_kda_subunit,
+    rpa_30_kda_subunit, and rpa_14_kda_subunit component and causal-graph edge evidence lists
+    and expanding the top-level PMID:9242902 note.'

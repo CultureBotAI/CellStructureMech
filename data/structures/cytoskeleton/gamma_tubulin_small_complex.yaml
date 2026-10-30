@@ -98,6 +98,9 @@ components:
   - reference: DOI:10.1091/mbc.E17-06-0397
     notes: Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2)
       and Alp6 (GCP3).
+  - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+    notes: Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing
+      the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3).
   protein_examples:
   - uniprot_id: UniProtKB:Q9Y705
     protein_label: Spindle pole body component alp4
@@ -278,6 +281,9 @@ causal_graphs:
     - reference: DOI:10.1091/mbc.E17-06-0397
       notes: Characterizes the fission yeast gamma-tubulin complex containing Alp4
         (GCP2) and Alp6 (GCP3).
+    - reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+      notes: Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing
+        the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3).
   - subject: gamma_tubulin_small_complex
     predicate: mediates
     object: microtubule_organization
@@ -332,4 +338,11 @@ curation_history:
     and resolved 3 reviewed Swiss-Prot protein_examples (UniProtKB:P53378 for TUB4,
     UniProtKB:P38863 for SPC97, and UniProtKB:P53540 for SPC98) on gamma_tubulin_subunit
     and gcp2_gcp3_spoke_subunits.
+  llm_assisted: true
+- timestamp: '2026-10-30T21:27:56Z'
+  curator: antigravity
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #2470: added Jaspersen and Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106)
+    literature evidence for budding-yeast Spc97 (SPC97) and Spc98 (SPC98) to gcp2_gcp3_spoke_subunits
+    component and assembly edge evidence.'
   llm_assisted: true

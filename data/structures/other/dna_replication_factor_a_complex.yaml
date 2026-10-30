@@ -28,6 +28,13 @@ curation_history:
     resolving 3 reviewed Swiss-Prot protein_examples (UniProtKB:P22336, UniProtKB:P26754,
     and UniProtKB:P26755) across all three RPA subunit components.
   llm_assisted: true
+- timestamp: '2026-10-30T21:27:55Z'
+  curator: antigravity
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #2470: added Wold 1997 (PMID:9242902) literature evidence to
+    rpa_70_kda_subunit, rpa_30_kda_subunit, and rpa_14_kda_subunit component and causal-graph
+    edge evidence lists and expanded top-level PMID:9242902 note.'
+  llm_assisted: true
 synonyms:
 - synonym_text: replication protein A
   synonym_type: EXACT_SYNONYM
@@ -53,6 +60,10 @@ components:
   - reference: GO:0005662
     notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
       complex composed of approximately 70, 30 and 14 kDa subunits.
+  - reference: PMID:9242902
+    notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+      Replication Protein A complex and its Saccharomyces cerevisiae Rfa1p (RFA1,
+      70 kDa) subunit.
   gene_symbols:
   - RFA1
   protein_examples:
@@ -87,6 +98,10 @@ components:
   - reference: GO:0005662
     notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
       complex composed of approximately 70, 30 and 14 kDa subunits.
+  - reference: PMID:9242902
+    notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+      Replication Protein A complex and its Saccharomyces cerevisiae Rfa2p (RFA2,
+      30 kDa) subunit.
   gene_symbols:
   - RFA2
   protein_examples:
@@ -121,6 +136,10 @@ components:
   - reference: GO:0005662
     notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
       complex composed of approximately 70, 30 and 14 kDa subunits.
+  - reference: PMID:9242902
+    notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+      Replication Protein A complex and its Saccharomyces cerevisiae Rfa3p (RFA3,
+      14 kDa) subunit.
   gene_symbols:
   - RFA3
   protein_examples:
@@ -169,7 +188,9 @@ evidence:
 - reference: GO:0003697
   notes: Gene Ontology molecular-function term for single-stranded DNA binding.
 - reference: PMID:9242902
-  notes: PubMed identifier listed by GO:0005662 as its definition cross-reference.
+  notes: 'Wold MS 1997, ''Replication protein A: a heterotrimeric, single-stranded
+    DNA-binding protein required for eukaryotic DNA metabolism'', Annual Review of
+    Biochemistry 66:61-92, listed by GO:0005662 as its definition cross-reference.'
 causal_graphs:
 - graph_id: rpa_single_stranded_dna_binding
   title: RPA binds single-stranded DNA
@@ -211,6 +232,10 @@ causal_graphs:
     - reference: GO:0005662
       notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
         complex composed of approximately 70, 30 and 14 kDa subunits.
+    - reference: PMID:9242902
+      notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+        Replication Protein A complex and its Saccharomyces cerevisiae Rfa1p (RFA1,
+        70 kDa) subunit.
   - subject: rpa_30_kda_subunit
     predicate: contributes to
     object: dna_replication_factor_a_complex
@@ -220,6 +245,10 @@ causal_graphs:
     - reference: GO:0005662
       notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
         complex composed of approximately 70, 30 and 14 kDa subunits.
+    - reference: PMID:9242902
+      notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+        Replication Protein A complex and its Saccharomyces cerevisiae Rfa2p (RFA2,
+        30 kDa) subunit.
   - subject: rpa_14_kda_subunit
     predicate: contributes to
     object: dna_replication_factor_a_complex
@@ -229,6 +258,10 @@ causal_graphs:
     - reference: GO:0005662
       notes: GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic
         complex composed of approximately 70, 30 and 14 kDa subunits.
+    - reference: PMID:9242902
+      notes: Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric
+        Replication Protein A complex and its Saccharomyces cerevisiae Rfa3p (RFA3,
+        14 kDa) subunit.
   - subject: dna_replication_factor_a_complex
     predicate: supports
     object: single_stranded_dna_binding

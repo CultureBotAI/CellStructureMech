@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_i_protein_secretion_system_complex.yaml
+  slug: type_i_protein_secretion_system_complex
+session:
+  id: 2026-10-30T212916Z-cellstructuremech-curator-970564
+  timestamp: '2026-10-30T21:29:16Z'
+  actors:
+  - type: ai_agent
+    name: cellstructuremech-curator
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2471
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2469
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Align secretion_substrate node description and edge evidence with Delepelaire 2004
+    and Kanonenberg et al. 2018
+  details: 'Resolved #2471 by aligning secretion_substrate node description and causal-graph
+    edge evidence with Delepelaire 2004 (DOI:10.1016/j.bbamcr.2004.05.001) and Kanonenberg
+    et al. 2018 (DOI:10.1093/femsle/fny094).'

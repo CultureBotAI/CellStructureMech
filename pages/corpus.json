@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1008,
- "corpus_updated": "2026-10-30 20:35:53 UTC",
- "corpus_digest": "d9d114030738",
+ "corpus_updated": "2026-10-30 21:27:56 UTC",
+ "corpus_digest": "724eba4d2c4f",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -46716,6 +46716,10 @@
       {
        "reference": "DOI:10.1091/mbc.E17-06-0397",
        "notes": "Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2) and Alp6 (GCP3)."
+      },
+      {
+       "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
+       "notes": "Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3)."
       }
      ],
      "protein_examples": [
@@ -46930,6 +46934,10 @@
         {
          "reference": "DOI:10.1091/mbc.E17-06-0397",
          "notes": "Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2) and Alp6 (GCP3)."
+        },
+        {
+         "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
+         "notes": "Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3)."
         }
        ]
       },
@@ -47005,6 +47013,13 @@
      "curator": "antigravity",
      "action": "CURATED_PROTEIN_EXAMPLES",
      "changes": "Added Saccharomyces cerevisiae S288C (NCBITaxon:559292) canonical example backed by Jaspersen and Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106) and resolved 3 reviewed Swiss-Prot protein_examples (UniProtKB:P53378 for TUB4, UniProtKB:P38863 for SPC97, and UniProtKB:P53540 for SPC98) on gamma_tubulin_subunit and gcp2_gcp3_spoke_subunits.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:56Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2470: added Jaspersen and Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106) literature evidence for budding-yeast Spc97 (SPC97) and Spc98 (SPC98) to gcp2_gcp3_spoke_subunits component and assembly edge evidence.",
      "llm_assisted": true
     }
    ]
@@ -47609,6 +47624,10 @@
       {
        "reference": "DOI:10.1091/mbc.E17-06-0397",
        "notes": "Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2) and Alp6 (GCP3)."
+      },
+      {
+       "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
+       "notes": "Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3)."
       }
      ],
      "protein_examples": [
@@ -47816,6 +47835,10 @@
         {
          "reference": "DOI:10.1091/mbc.E17-06-0397",
          "notes": "Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2) and Alp6 (GCP3)."
+        },
+        {
+         "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
+         "notes": "Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3)."
         }
        ]
       },
@@ -47879,6 +47902,13 @@
      "curator": "antigravity",
      "action": "CURATED_PROTEIN_EXAMPLES",
      "changes": "Added Saccharomyces cerevisiae S288C (NCBITaxon:559292) canonical example backed by Jaspersen and Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106) and resolved 3 reviewed Swiss-Prot protein_examples (UniProtKB:P53378 for TUB4, UniProtKB:P38863 for SPC97, and UniProtKB:P53540 for SPC98) on gamma_tubulin_subunit and gcp2_gcp3_spoke_subunits.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:56Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2470: added Jaspersen and Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106) literature evidence for budding-yeast Spc97 (SPC97) and Spc98 (SPC98) to gcp2_gcp3_spoke_subunits component and assembly edge evidence.",
      "llm_assisted": true
     }
    ]
@@ -188770,6 +188800,13 @@
      "action": "CURATED_PROTEIN_EXAMPLES",
      "changes": "Anchored causal_graphs#bam_omp_folding_and_insertion nodes unfolded_omp_substrate and outer_membrane_beta_barrel with verified Escherichia coli K-12 Swiss-Prot accession UniProtKB:P09169 (ompT, Protease 7) reconstituted in Hagan, Kim and Kahne 2010 (DOI:10.1126/science.1188919).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:56Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2471: added Escherichia coli K-12 (NCBITaxon:83333) to canonical_examples and UniProtKB:P09169 (ompT) to top-level evidence.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -189052,6 +189089,12 @@
      "taxon_label": "Escherichia coli",
      "note": "The purified E. coli BamA-E complex was reconstituted in proteoliposomes and shown to assemble the OmpT beta-barrel substrate.",
      "reference": "DOI:10.1126/science.1188919"
+    },
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference laboratory strain in which the BamA-E complex subunits and the OmpT (UniProtKB:P09169) outer-membrane beta-barrel assembly substrate are annotated.",
+     "reference": "DOI:10.1126/science.1188919"
     }
    ],
    "functions": [
@@ -189096,6 +189139,10 @@
     {
      "reference": "DOI:10.1038/ncomms12865",
      "notes": "Iadanza MG et al. 2016, 'Lateral opening in the intact beta-barrel assembly machinery captured by cryo-EM', Nature Communications."
+    },
+    {
+     "reference": "UniProtKB:P09169",
+     "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 Protease 7 (ompT), the outer-membrane beta-barrel substrate reconstituted with purified BamABCDE by Hagan, Kim and Kahne 2010."
     }
    ],
    "causal_graphs": [
@@ -212357,6 +212404,13 @@
      "action": "CURATED_PROTEIN_EXAMPLES",
      "changes": "Added Saccharomyces cerevisiae S288C (NCBITaxon:559292) canonical example and budding-yeast gene symbols RFA1, RFA2, and RFA3 backed by Wold 1997 (PMID:9242902), resolving 3 reviewed Swiss-Prot protein_examples (UniProtKB:P22336, UniProtKB:P26754, and UniProtKB:P26755) across all three RPA subunit components.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:55Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2470: added Wold 1997 (PMID:9242902) literature evidence to rpa_70_kda_subunit, rpa_30_kda_subunit, and rpa_14_kda_subunit component and causal-graph edge evidence lists and expanded top-level PMID:9242902 note.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -212388,6 +212442,10 @@
       {
        "reference": "GO:0005662",
        "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+      },
+      {
+       "reference": "PMID:9242902",
+       "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa1p (RFA1, 70 kDa) subunit."
       }
      ],
      "gene_symbols": [
@@ -212425,6 +212483,10 @@
       {
        "reference": "GO:0005662",
        "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+      },
+      {
+       "reference": "PMID:9242902",
+       "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa2p (RFA2, 30 kDa) subunit."
       }
      ],
      "gene_symbols": [
@@ -212462,6 +212524,10 @@
       {
        "reference": "GO:0005662",
        "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+      },
+      {
+       "reference": "PMID:9242902",
+       "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa3p (RFA3, 14 kDa) subunit."
       }
      ],
      "gene_symbols": [
@@ -212529,7 +212595,7 @@
     },
     {
      "reference": "PMID:9242902",
-     "notes": "PubMed identifier listed by GO:0005662 as its definition cross-reference."
+     "notes": "Wold MS 1997, 'Replication protein A: a heterotrimeric, single-stranded DNA-binding protein required for eukaryotic DNA metabolism', Annual Review of Biochemistry 66:61-92, listed by GO:0005662 as its definition cross-reference."
     }
    ],
    "causal_graphs": [
@@ -212582,6 +212648,10 @@
         {
          "reference": "GO:0005662",
          "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+        },
+        {
+         "reference": "PMID:9242902",
+         "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa1p (RFA1, 70 kDa) subunit."
         }
        ]
       },
@@ -212594,6 +212664,10 @@
         {
          "reference": "GO:0005662",
          "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+        },
+        {
+         "reference": "PMID:9242902",
+         "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa2p (RFA2, 30 kDa) subunit."
         }
        ]
       },
@@ -212606,6 +212680,10 @@
         {
          "reference": "GO:0005662",
          "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+        },
+        {
+         "reference": "PMID:9242902",
+         "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa3p (RFA3, 14 kDa) subunit."
         }
        ]
       },
@@ -343851,6 +343929,13 @@
      "action": "CURATED_PROTEIN_EXAMPLES",
      "changes": "Anchored causal_graphs#abc_mfp_tolc_one_step_export node secretion_substrate with verified Escherichia coli Swiss-Prot accession UniProtKB:P09983 (hlyA, chromosomal hemolysin) backed by Delepelaire 2004 (DOI:10.1016/j.bbamcr.2004.05.001) and Kanonenberg et al. 2018 (DOI:10.1093/femsle/fny094).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:56Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2471: aligned secretion_substrate node description and causal-graph edge evidence with Delepelaire 2004 (DOI:10.1016/j.bbamcr.2004.05.001) and Kanonenberg et al. 2018 (DOI:10.1093/femsle/fny094).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -344062,7 +344147,7 @@
        "xrefs": [
         "UniProtKB:P09983"
        ],
-       "description": "Unfolded C-terminal secretion-signal-bearing polypeptide substrate recognized by the inner-membrane ABC transporter and exported in one step through the tripartite tunnel, exemplified in Escherichia coli by chromosomal alpha-hemolysin HlyA (UniProtKB:P09983; DOI:10.1016/j.bbamcr.2004.05.001)."
+       "description": "Unfolded C-terminal secretion-signal-bearing polypeptide substrate recognized by the inner-membrane ABC transporter and exported in one step through the tripartite tunnel, exemplified in Escherichia coli by chromosomal alpha-hemolysin HlyA (UniProtKB:P09983; DOI:10.1016/j.bbamcr.2004.05.001; DOI:10.1093/femsle/fny094)."
       },
       {
        "node_id": "t1ss",
@@ -344086,6 +344171,10 @@
         {
          "reference": "DOI:10.1093/femsle/fny094",
          "notes": "Kanonenberg et al. 2018 review the substrate signal and ABC transporter role in type I secretion."
+        },
+        {
+         "reference": "DOI:10.1016/j.bbamcr.2004.05.001",
+         "notes": "Delepelaire 2004 reviews recognition of C-terminal secretion signals on RTX substrates such as Escherichia coli HlyA by the type I ABC transporter."
         }
        ]
       },
@@ -344134,6 +344223,10 @@
         {
          "reference": "DOI:10.1016/j.bbamcr.2004.05.001",
          "notes": "Delepelaire 2004 reviews type I secretion as direct export from the cytoplasm to the external medium."
+        },
+        {
+         "reference": "DOI:10.1093/femsle/fny094",
+         "notes": "Kanonenberg et al. 2018 review one-step type I secretion of RTX substrates such as Escherichia coli HlyA across both membranes."
         }
        ]
       }
