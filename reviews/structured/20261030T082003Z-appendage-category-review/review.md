@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full cohort audit of all 58 APPENDAGE records in data/structures/appendage/. Lump/split boundaries across bacterial flagellum subcomplexes, archaeal archaellum subassemblies, type IV pili, chaperone-usher fimbriae, curli, hami, cannulae, and bacteriophage tail fibers are sound. Two minor graph/parthood symmetry gaps were identified: bacterial_type_flagellum.yaml (GO:0009288) causal_graphs[0].nodes[2] (filament, node_type: STRUCTURE, grounding: GO:0009420) sets component_ref: flagellin (component_type: PROTEIN, grounding: InterPro:IPR001492), and archaeal_type_flagellum.yaml (GO:0097589) omits reciprocal has_part links to cellstructuremech:archaeal_type_flagellum_filament and cellstructuremech:archaeal_type_flagellum_motor.
+Full cohort audit of all 58 APPENDAGE records in data/structures/appendage/. Lump/split boundaries across bacterial flagellum subcomplexes, archaeal archaellum subassemblies, type IV pili, chaperone-usher fimbriae, curli, hami, cannulae, and bacteriophage tail fibers are sound. Two minor graph/parthood symmetry gaps were identified: bacterial_type_flagellum.yaml (GO:0009288) causal_graphs[0].nodes[4] (node_id: filament, label: flagellar filament, node_type: STRUCTURE, grounding: GO:0009420) sets component_ref: flagellin (components[0], label: flagellin (FliC), component_type: PROTEIN), and archaeal_type_flagellum.yaml (GO:0097589) omits reciprocal has_part links to cellstructuremech:archaeal_type_flagellum_filament and cellstructuremech:archaeal_type_flagellum_motor.
 
 ## Scope And Provenance
 
@@ -102,21 +102,21 @@ All 58 records in data/structures/appendage/ represent distinct microbial cell s
 
 graph: concern. Targets: GO:0009288, GO:0097589.
 
-bacterial_type_flagellum.yaml binds STRUCTURE node filament (GO:0009420) to PROTEIN component flagellin via component_ref, and archaeal_type_flagellum.yaml omits has_part links to its two child subassembly records.
+bacterial_type_flagellum.yaml binds STRUCTURE node filament (GO:0009420) in causal_graphs[0].nodes[4] to PROTEIN component flagellin via component_ref, and archaeal_type_flagellum.yaml omits has_part links to its two child subassembly records.
 
 ## Findings
 
-### F1: bacterial_type_flagellum.yaml binds STRUCTURE node filament (GO:0009420) to PROTEIN component flagellin and archaeal_type_flagellum.yaml omits has_part links to filament/motor child records
+### F1: bacterial_type_flagellum.yaml binds STRUCTURE node filament (GO:0009420) in causal_graphs[0].nodes[4] to PROTEIN component flagellin and archaeal_type_flagellum.yaml omits has_part links to filament/motor child records
 
 minor / open / confirmed; issue key: appendage-flagellum-filament-node-and-archaeal-has-part.
 
-In data/structures/appendage/bacterial_type_flagellum.yaml (GO:0009288), causal_graphs[0].nodes[2] (id: filament, label: Flagellar filament, node_type: STRUCTURE, grounding: GO:0009420) sets component_ref: flagellin (components[0], component_type: PROTEIN, grounding: InterPro:IPR001492), conflating the polymeric filament subassembly with its monomeric subunit protein. In data/structures/appendage/archaeal_type_flagellum.yaml (GO:0097589), has_part is omitted even though child records archaeal_type_flagellum_filament.yaml and archaeal_type_flagellum_motor.yaml declare part_of: [GO:0097589].
+In data/structures/appendage/bacterial_type_flagellum.yaml (GO:0009288), causal_graphs[0].nodes[4] (lines 666-670, node_id: filament, label: flagellar filament, node_type: STRUCTURE, grounding: GO:0009420) sets component_ref: flagellin (components[0], lines 23-29, label: flagellin (FliC), component_type: PROTEIN), conflating the polymeric filament subassembly with its monomeric subunit protein. In data/structures/appendage/archaeal_type_flagellum.yaml (GO:0097589, lines 74-75), has_part is omitted even though child records archaeal_type_flagellum_filament.yaml and archaeal_type_flagellum_motor.yaml declare part_of: [GO:0097589].
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Remove component_ref: flagellin from STRUCTURE node filament (GO:0009420) in bacterial_type_flagellum.yaml (or split flagellin monomer vs filament STRUCTURE node), and add has_part: [cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor] to archaeal_type_flagellum.yaml.
+Remove component_ref: flagellin from causal_graphs[0].nodes[4] (filament, GO:0009420) in bacterial_type_flagellum.yaml (or split flagellin monomer vs filament STRUCTURE node), and add has_part: [cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor] to archaeal_type_flagellum.yaml.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -131,8 +131,9 @@ Remove component_ref: flagellin from STRUCTURE node filament (GO:0009420) in bac
 | --- | --- | --- | --- |
 | ev_strict_appendage | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,001 records including all 58 appendage records. |
 | ev_history_appendage | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,082 history records covering appendage. |
-| ev_appendage_bflag_filament | data/structures/appendage/bacterial_type_flagellum.yaml; components[0] (lines 28-33) and causal_graphs[0].nodes[2] (lines 177-182) | supports | bacterial_type_flagellum.yaml STRUCTURE node filament (GO:0009420) references PROTEIN component flagellin (InterPro:IPR001492). |
-| ev_appendage_aflag_has_part | data/structures/appendage/archaeal_type_flagellum.yaml; parent_structures and part_of (lines 12-15) | supports | archaeal_type_flagellum.yaml (GO:0097589) omits has_part for archaeal_type_flagellum_filament and archaeal_type_flagellum_motor. |
+| ev_appendage_bflag_comp | data/structures/appendage/bacterial_type_flagellum.yaml; components[0] (lines 23-29) | supports | bacterial_type_flagellum.yaml components[0] defines flagellin (FliC) with component_type: PROTEIN. |
+| ev_appendage_bflag_node | data/structures/appendage/bacterial_type_flagellum.yaml; causal_graphs[0].nodes[4] (lines 666-670) | supports | bacterial_type_flagellum.yaml causal_graphs[0].nodes[4] (filament, STRUCTURE, GO:0009420) sets component_ref: flagellin. |
+| ev_appendage_aflag_has_part | data/structures/appendage/archaeal_type_flagellum.yaml; parent_structures (lines 74-75) | supports | archaeal_type_flagellum.yaml (GO:0097589) declares parent_structures: [GO:0042995] and omits has_part for archaeal_type_flagellum_filament and archaeal_type_flagellum_motor. |
 
 ## Limits And Additional Notes
 
@@ -167,11 +168,11 @@ summary: 'Full cohort audit of all 58 APPENDAGE records in data/structures/appen
   Lump/split boundaries across bacterial flagellum subcomplexes, archaeal archaellum
   subassemblies, type IV pili, chaperone-usher fimbriae, curli, hami, cannulae, and
   bacteriophage tail fibers are sound. Two minor graph/parthood symmetry gaps were
-  identified: bacterial_type_flagellum.yaml (GO:0009288) causal_graphs[0].nodes[2]
-  (filament, node_type: STRUCTURE, grounding: GO:0009420) sets component_ref: flagellin
-  (component_type: PROTEIN, grounding: InterPro:IPR001492), and archaeal_type_flagellum.yaml
-  (GO:0097589) omits reciprocal has_part links to cellstructuremech:archaeal_type_flagellum_filament
-  and cellstructuremech:archaeal_type_flagellum_motor.'
+  identified: bacterial_type_flagellum.yaml (GO:0009288) causal_graphs[0].nodes[4]
+  (node_id: filament, label: flagellar filament, node_type: STRUCTURE, grounding:
+  GO:0009420) sets component_ref: flagellin (components[0], label: flagellin (FliC),
+  component_type: PROTEIN), and archaeal_type_flagellum.yaml (GO:0097589) omits reciprocal
+  has_part links to cellstructuremech:archaeal_type_flagellum_filament and cellstructuremech:archaeal_type_flagellum_motor.'
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
   state: git_commit
@@ -1355,39 +1356,39 @@ evidence:
   summary: validate_history.py exited 0 across all 2,082 history records covering
     appendage.
   snapshot_sha256: 8bcb91b216ec775bac08188426f9ef860888b78f91561be1e471ea4a2159ad3b
-- evidence_id: ev_appendage_bflag_filament
+- evidence_id: ev_appendage_bflag_comp
   kind: record_content
   reference: data/structures/appendage/bacterial_type_flagellum.yaml
-  locator: components[0] (lines 28-33) and causal_graphs[0].nodes[2] (lines 177-182)
+  locator: components[0] (lines 23-29)
   accessed_at: '2026-10-30T08:12:00Z'
   support: supports
-  summary: bacterial_type_flagellum.yaml STRUCTURE node filament (GO:0009420) references
-    PROTEIN component flagellin (InterPro:IPR001492).
-  quote: 'id: filament
-
-    label: Flagellar filament
-
-    node_type: STRUCTURE
-
-    component_ref: flagellin
-
-    grounding: GO:0009420'
+  summary: 'bacterial_type_flagellum.yaml components[0] defines flagellin (FliC) with
+    component_type: PROTEIN.'
+  quote: "- component_id: flagellin\n  label: flagellin (FliC)\n  component_type:\
+    \ PROTEIN\n  component_role: CONSTITUENT\n  gene_symbols:\n  - fliC\n  - fljB"
+  snapshot_sha256: 95ba125172ad6d65d33e178c0ebb32e3ee547828d509819263848b4789252b3c
+- evidence_id: ev_appendage_bflag_node
+  kind: record_content
+  reference: data/structures/appendage/bacterial_type_flagellum.yaml
+  locator: causal_graphs[0].nodes[4] (lines 666-670)
+  accessed_at: '2026-10-30T08:12:00Z'
+  support: supports
+  summary: 'bacterial_type_flagellum.yaml causal_graphs[0].nodes[4] (filament, STRUCTURE,
+    GO:0009420) sets component_ref: flagellin.'
+  quote: "  - node_id: filament\n    label: flagellar filament\n    node_type: STRUCTURE\n\
+    \    grounding: GO:0009420\n    component_ref: flagellin"
   snapshot_sha256: 95ba125172ad6d65d33e178c0ebb32e3ee547828d509819263848b4789252b3c
 - evidence_id: ev_appendage_aflag_has_part
   kind: record_content
   reference: data/structures/appendage/archaeal_type_flagellum.yaml
-  locator: parent_structures and part_of (lines 12-15)
+  locator: parent_structures (lines 74-75)
   accessed_at: '2026-10-30T08:12:00Z'
   support: supports
-  summary: archaeal_type_flagellum.yaml (GO:0097589) omits has_part for archaeal_type_flagellum_filament
-    and archaeal_type_flagellum_motor.
+  summary: 'archaeal_type_flagellum.yaml (GO:0097589) declares parent_structures:
+    [GO:0042995] and omits has_part for archaeal_type_flagellum_filament and archaeal_type_flagellum_motor.'
   quote: 'parent_structures:
 
-    - GO:0042995
-
-    part_of:
-
-    - GO:0030312'
+    - GO:0042995'
   snapshot_sha256: 232666b57617c55114e53b239a2b849f2324fa436f34ad3c4ea8186e653888d9
 assessments:
 - assessment_id: assess_appendage_cohort
@@ -1463,13 +1464,15 @@ assessments:
   topic: CausalNode component_ref alignment and archaellum has_part reciprocity
   outcome: concern
   summary: bacterial_type_flagellum.yaml binds STRUCTURE node filament (GO:0009420)
-    to PROTEIN component flagellin via component_ref, and archaeal_type_flagellum.yaml
-    omits has_part links to its two child subassembly records.
+    in causal_graphs[0].nodes[4] to PROTEIN component flagellin via component_ref,
+    and archaeal_type_flagellum.yaml omits has_part links to its two child subassembly
+    records.
   target_ids:
   - GO:0009288
   - GO:0097589
   evidence_ids:
-  - ev_appendage_bflag_filament
+  - ev_appendage_bflag_comp
+  - ev_appendage_bflag_node
   - ev_appendage_aflag_has_part
 findings:
 - finding_id: F1
@@ -1479,23 +1482,25 @@ findings:
   status: open
   certainty: confirmed
   title: bacterial_type_flagellum.yaml binds STRUCTURE node filament (GO:0009420)
-    to PROTEIN component flagellin and archaeal_type_flagellum.yaml omits has_part
-    links to filament/motor child records
+    in causal_graphs[0].nodes[4] to PROTEIN component flagellin and archaeal_type_flagellum.yaml
+    omits has_part links to filament/motor child records
   description: 'In data/structures/appendage/bacterial_type_flagellum.yaml (GO:0009288),
-    causal_graphs[0].nodes[2] (id: filament, label: Flagellar filament, node_type:
-    STRUCTURE, grounding: GO:0009420) sets component_ref: flagellin (components[0],
-    component_type: PROTEIN, grounding: InterPro:IPR001492), conflating the polymeric
-    filament subassembly with its monomeric subunit protein. In data/structures/appendage/archaeal_type_flagellum.yaml
-    (GO:0097589), has_part is omitted even though child records archaeal_type_flagellum_filament.yaml
+    causal_graphs[0].nodes[4] (lines 666-670, node_id: filament, label: flagellar
+    filament, node_type: STRUCTURE, grounding: GO:0009420) sets component_ref: flagellin
+    (components[0], lines 23-29, label: flagellin (FliC), component_type: PROTEIN),
+    conflating the polymeric filament subassembly with its monomeric subunit protein.
+    In data/structures/appendage/archaeal_type_flagellum.yaml (GO:0097589, lines 74-75),
+    has_part is omitted even though child records archaeal_type_flagellum_filament.yaml
     and archaeal_type_flagellum_motor.yaml declare part_of: [GO:0097589].'
   target_ids:
   - GO:0009288
   - GO:0097589
   field_paths:
-  - causal_graphs[0].nodes[2].component_ref
+  - causal_graphs[0].nodes[4].component_ref
   - has_part
   evidence_ids:
-  - ev_appendage_bflag_filament
+  - ev_appendage_bflag_comp
+  - ev_appendage_bflag_node
   - ev_appendage_aflag_has_part
   rule_id: docs/SCHEMA.md:CausalNode.component_ref-and-has_part
   owner_paths:
@@ -1512,9 +1517,9 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Remove component_ref: flagellin from STRUCTURE node filament (GO:0009420)
-    in bacterial_type_flagellum.yaml (or split flagellin monomer vs filament STRUCTURE
-    node), and add has_part: [cellstructuremech:archaeal_type_flagellum_filament,
+  description: 'Remove component_ref: flagellin from causal_graphs[0].nodes[4] (filament,
+    GO:0009420) in bacterial_type_flagellum.yaml (or split flagellin monomer vs filament
+    STRUCTURE node), and add has_part: [cellstructuremech:archaeal_type_flagellum_filament,
     cellstructuremech:archaeal_type_flagellum_motor] to archaeal_type_flagellum.yaml.'
   finding_ids:
   - F1

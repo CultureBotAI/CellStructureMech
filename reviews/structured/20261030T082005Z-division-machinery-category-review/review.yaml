@@ -15,13 +15,18 @@ reviewer:
     this stage.
 skill: .claude/skills/review-yaml-category/SKILL.md
 completion: completed
-verdict: needs_curation
-native_verdict: NEEDS_CURATION
+verdict: pass_with_limitations
+native_verdict: PASS_WITH_FOLLOW_UP
 scientific_review: true
-summary: Full cohort audit of all 4 DIVISION_MACHINERY records in data/structures/division_machinery/
-  (divisome_complex, elongasome, ftsbl_complex, ftsqbl_complex). Three records are
-  clean; ftsqbl_complex.yaml (GO:1990587) duplicates GO:1990586 (divisome complex)
-  across parent_structures and part_of (shared issue_key ftsqbl-complex-parent-partof-duplication).
+summary: 'Full cohort audit of all 4 DIVISION_MACHINERY records in data/structures/division_machinery/
+  (divisome_complex, elongasome, ftsbl_complex, ftsqbl_complex). Note: the major hierarchy
+  duplication on ftsqbl_complex.yaml (GO:1990587) is reported in dedicated single-record
+  review bundle 20261030T082001Z-ftsqbl-complex-parent-partof-duplication (issue_key
+  ftsqbl-complex-parent-partof-duplication) and is not duplicated here. Across the
+  remaining cohort records, one minor component_type consistency issue was identified
+  in elongasome.yaml (cellstructuremech:elongasome): components[2] (component_id:
+  mrec_mred, label: MreC and MreD, gene_symbols: [mreC, mreD], referenced by causal_graphs[0].nodes[9]
+  ''MreC-MreD transmembrane scaffold'') is typed PROTEIN instead of PROTEIN_COMPLEX.'
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
   state: git_commit
@@ -179,27 +184,28 @@ evidence:
   summary: validate_history.py exited 0 across all 2,082 history records covering
     division_machinery.
   snapshot_sha256: 8bcb91b216ec775bac08188426f9ef860888b78f91561be1e471ea4a2159ad3b
-- evidence_id: ev_divmach_ftsqbl
+- evidence_id: ev_divmach_elongasome_comp
   kind: record_content
-  reference: data/structures/division_machinery/ftsqbl_complex.yaml
-  locator: parent_structures and part_of (lines 12-16)
+  reference: data/structures/division_machinery/elongasome.yaml
+  locator: components[2] (lines 98-105)
   accessed_at: '2026-10-30T08:14:00Z'
   support: supports
-  summary: ftsqbl_complex.yaml lists GO:1990586 in both parent_structures and part_of.
-  quote: 'parent_structures:
-
-    - GO:1990586
-
-    - GO:0098797
-
-    part_of:
-
-    - GO:1990586
-
-    has_part:
-
-    - GO:1990588'
-  snapshot_sha256: c6563e47cef93b8807aaebfdd48e746d54d985e1b42f35b1ff42f0eab32e296a
+  summary: elongasome.yaml components[2] (mrec_mred, [mreC, mreD]) is typed PROTEIN.
+  quote: "- component_id: mrec_mred\n  label: MreC and MreD\n  component_type: PROTEIN\n\
+    \  component_role: CONSTITUENT\n  gene_symbols:\n  - mreC\n  - mreD\n  essentiality:\
+    \ ESSENTIAL"
+  snapshot_sha256: 17ec224fdda023f226646f624729b1e0f84fe4be24fe5976407d4d9c7f69221b
+- evidence_id: ev_divmach_elongasome_node
+  kind: record_content
+  reference: data/structures/division_machinery/elongasome.yaml
+  locator: causal_graphs[0].nodes[9] (lines 443-446)
+  accessed_at: '2026-10-30T08:14:00Z'
+  support: supports
+  summary: elongasome.yaml causal_graphs[0].nodes[9] labels mrec_mred as 'MreC-MreD
+    transmembrane scaffold'.
+  quote: "  - node_id: mrec_mred\n    label: MreC-MreD transmembrane scaffold\n  \
+    \  node_type: GENE_OR_PROTEIN\n    component_ref: mrec_mred"
+  snapshot_sha256: 17ec224fdda023f226646f624729b1e0f84fe4be24fe5976407d4d9c7f69221b
 assessments:
 - assessment_id: assess_division_machinery_cohort
   area: scope
@@ -215,56 +221,65 @@ assessments:
   evidence_ids:
   - ev_strict_division_machinery
   - ev_history_division_machinery
-- assessment_id: assess_divmach_ftsqbl_hierarchy
+- assessment_id: assess_divmach_elongasome_mrec_mred
   area: representation
-  topic: Divisome complex (GO:1990586) hierarchy consistency between ftsqbl_complex
-    and ftsbl_complex
+  topic: ComponentTypeEnum typing of heteromeric MreC-MreD transmembrane scaffold
+    in elongasome.yaml
   outcome: concern
-  summary: ftsbl_complex.yaml (GO:1990588) places GO:1990586 only in parent_structures
-    and GO:1990587 in part_of, whereas ftsqbl_complex.yaml places GO:1990586 in both
-    parent_structures and part_of.
+  summary: elongasome.yaml components[2] (mrec_mred, [mreC, mreD]) represents the
+    two-subunit MreC-MreD transmembrane scaffold subcomplex (UniProtKB:P16926 and
+    P0ABH4) and should be typed PROTEIN_COMPLEX rather than PROTEIN (matching components[2]
+    septal_pg_synthase in divisome_complex.yaml).
   target_ids:
-  - GO:1990587
+  - cellstructuremech:elongasome
   evidence_ids:
-  - ev_divmach_ftsqbl
+  - ev_divmach_elongasome_comp
+  - ev_divmach_elongasome_node
 findings:
 - finding_id: F1
-  issue_key: ftsqbl-complex-parent-partof-duplication
-  category: representation
-  severity: major
+  issue_key: division-machinery-elongasome-mrec-mred-component-type
+  category: consistency
+  severity: minor
   status: open
   certainty: confirmed
-  title: ftsqbl_complex.yaml lists GO:1990586 (divisome complex) in both parent_structures
-    and part_of
-  description: In data/structures/division_machinery/ftsqbl_complex.yaml (GO:1990587),
-    GO:1990586 (divisome complex) appears in both parent_structures and part_of. In
-    GO, GO:1990587 is an is_a child of GO:1990586 with no part_of edge.
+  title: elongasome.yaml types heteromeric components[2] (mrec_mred, [mreC, mreD])
+    as PROTEIN instead of PROTEIN_COMPLEX
+  description: 'In data/structures/division_machinery/elongasome.yaml (cellstructuremech:elongasome,
+    lines 98-105), components[2] (component_id: mrec_mred, label: ''MreC and MreD'',
+    gene_symbols: [mreC, mreD], referenced as ''MreC-MreD transmembrane scaffold''
+    in causal_graphs[0].nodes[9] at lines 443-446) combines two distinct membrane/periplasmic
+    subunits (MreC UniProtKB:P16926 and MreD UniProtKB:P0ABH4 in Escherichia coli
+    K-12, PMID:15612918) into a single scaffold subcomplex entry but sets component_type:
+    PROTEIN instead of PROTEIN_COMPLEX (unlike sibling divisome_complex.yaml, which
+    types two-subunit septal_pg_synthase [ftsW, ftsI] as PROTEIN_COMPLEX).'
   target_ids:
-  - GO:1990587
+  - cellstructuremech:elongasome
   field_paths:
-  - parent_structures
-  - part_of
+  - components[2].component_type
   evidence_ids:
-  - ev_divmach_ftsqbl
-  rule_id: docs/CURATION.md:parent_structures-vs-part_of
+  - ev_divmach_elongasome_comp
+  - ev_divmach_elongasome_node
+  rule_id: docs/SCHEMA.md:ComponentTypeEnum.PROTEIN_COMPLEX
   owner_paths:
   - repository: CultureBotAI/CellStructureMech
-    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    path: data/structures/division_machinery/elongasome.yaml
     role: maintained_record
   tags:
   - division-machinery
-  - hierarchy
+  - component-type
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Remove part_of: [GO:1990586] from data/structures/division_machinery/ftsqbl_complex.yaml.'
+  description: Update components[2].component_type from PROTEIN to PROTEIN_COMPLEX
+    in data/structures/division_machinery/elongasome.yaml and record the curation
+    event and history ledger entry.
   finding_ids:
   - F1
   target_ids:
-  - GO:1990587
+  - cellstructuremech:elongasome
   owner_paths:
   - repository: CultureBotAI/CellStructureMech
-    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    path: data/structures/division_machinery/elongasome.yaml
     role: maintained_record
   acceptance_checks:
   - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv

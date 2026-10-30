@@ -21,14 +21,14 @@ scientific_review: true
 summary: 'Full cohort audit of all 88 RIBONUCLEOPROTEIN records in data/structures/ribonucleoprotein/.
   One major hierarchy/parthood conflation and one minor component_type/evidence-notes
   bundle were identified across 3 records: (F1) supraspliceosomal_complex.yaml (GO:0044530)
-  lists GO:0005681 (spliceosomal complex) in parent_structures (is-a) while simultaneously
-  modeling components[0] (spliceosomal_complex, grounding: GO:0005681, component_role:
-  CONSTITUENT, stoichiometry: ''4'') as its tetrameric subunit without has_part: [GO:0005681];
-  and (F2) box_c_d_methylation_guide_snornp_complex.yaml (GO:0031428) types 4-subunit
-  nop1_nop56_nop58_snu13_core ([NOP1, NOP56, NOP58, SNU13]) as PROTEIN instead of
-  PROTEIN_COMPLEX, while box_c_d_rnp_complex.yaml (GO:0170049) components[1].protein_examples[2,3]
-  evidence[0].notes still concatenate two paper citations on single-PMID EvidenceItem
-  entries.'
+  lists GO:0005681 (spliceosomal complex) in parent_structures (is-a) at lines 28-29
+  while simultaneously modeling components[0] (spliceosomal_complex, grounding: GO:0005681,
+  component_role: CONSTITUENT, stoichiometry: ''4'') at lines 31-36 as its tetrameric
+  subunit without has_part: [GO:0005681]; and (F2) box_c_d_methylation_guide_snornp_complex.yaml
+  (GO:0031428) types 4-subunit components[1] (nop1_nop56_nop58_snu13_core, [NOP1,
+  NOP56, NOP58, SNU13]) as PROTEIN instead of PROTEIN_COMPLEX, while box_c_d_rnp_complex.yaml
+  (GO:0170049) components[1].protein_examples[1,2].evidence[0].notes still concatenate
+  two paper citations on single-PMID EvidenceItem entries.'
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
   state: git_commit
@@ -1785,52 +1785,54 @@ evidence:
 - evidence_id: ev_rnp_supraspliceosome
   kind: record_content
   reference: data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml
-  locator: parent_structures (lines 11-13) and components[0] (lines 25-33)
+  locator: parent_structures and components[0] (lines 28-36)
   accessed_at: '2026-10-30T08:17:00Z'
   support: supports
   summary: supraspliceosomal_complex.yaml lists GO:0005681 in parent_structures and
     also as CONSTITUENT component spliceosomal_complex (stoichiometry '4') without
     has_part.
-  quote: "parent_structures:\n- GO:0005681\n- GO:1990904\n...\n- id: spliceosomal_complex\n\
-    \  label: Native spliceosome monomer\n  component_type: PROTEIN_COMPLEX\n  component_role:\
-    \ CONSTITUENT\n  stoichiometry: '4'\n  grounding: GO:0005681"
+  quote: "parent_structures:\n- GO:0005681\ncomponents:\n- component_id: spliceosomal_complex\n\
+    \  label: spliceosomal complex\n  component_type: PROTEIN_COMPLEX\n  component_role:\
+    \ CONSTITUENT\n  grounding: GO:0005681\n  stoichiometry: '4'"
   snapshot_sha256: f6a171b986c156afe089e0c906e9342d97262d424781b84c8edb831f7fcbd4b1
 - evidence_id: ev_rnp_boxcd_guide
   kind: record_content
   reference: data/structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.yaml
-  locator: components[1] (lines 38-47)
+  locator: components[1] (lines 48-57)
   accessed_at: '2026-10-30T08:17:00Z'
   support: supports
-  summary: box_c_d_methylation_guide_snornp_complex.yaml types 4-subunit nop1_nop56_nop58_snu13_core
-    ([NOP1, NOP56, NOP58, SNU13]) as PROTEIN.
-  quote: 'id: nop1_nop56_nop58_snu13_core
-
-    label: Nop1/Nop56/Nop58/Snu13 core protein subcomplex
-
-    component_type: PROTEIN
-
-    component_role: CATALYTIC
-
-    gene_symbols:
-
-    - NOP1
-
-    - NOP56
-
-    - NOP58
-
-    - SNU13'
+  summary: box_c_d_methylation_guide_snornp_complex.yaml components[1] types 4-subunit
+    nop1_nop56_nop58_snu13_core ([NOP1, NOP56, NOP58, SNU13]) as PROTEIN.
+  quote: "- component_id: nop1_nop56_nop58_snu13_core\n  label: box C/D snoRNP core\
+    \ methyltransferase and scaffold subunits (Nop1/Fibrillarin,\n    Nop56, Nop58,\
+    \ Snu13)\n  component_type: PROTEIN\n  component_role: CONSTITUENT\n  gene_symbols:\n\
+    \  - NOP1\n  - NOP56\n  - NOP58\n  - SNU13"
   snapshot_sha256: 7d7114176d9060702b20554665e0fb1b701894343d82f8677ee85540cf058b9e
-- evidence_id: ev_rnp_boxcd_notes
+- evidence_id: ev_rnp_boxcd_note1
   kind: record_content
   reference: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
-  locator: components[1].protein_examples[2,3].evidence[0] (lines 90-108)
+  locator: components[1].protein_examples[1].evidence[0] (lines 80-83)
   accessed_at: '2026-10-30T08:17:00Z'
   support: supports
-  summary: box_c_d_rnp_complex.yaml components[1].protein_examples[2,3].evidence[0].notes
-    concatenate Gautier T et al. 1997 and Wu P et al. 1998 on single-PMID entries.
-  quote: "reference: PMID:9632712\nnotes: Gautier T et al. 1997 (Mol Cell Biol) and\
-    \ Lafontaine DL & Tollervey D 1999\n  (RNA); Wu P et al. 1998 (Genes Dev)"
+  summary: box_c_d_rnp_complex.yaml components[1].protein_examples[1].evidence[0].notes
+    (PMID:9632712) concatenates Gautier T et al. 1997 and Wu P et al. 1998.
+  quote: "    - reference: PMID:9632712\n      notes: Gautier T et al. 1997, 'Nucleolar\
+    \ KKE/D repeat proteins Nop56p and Nop58p\n        interact with Nop1p and are\
+    \ required for ribosome biogenesis.', Mol Cell Biol;\n        Wu P et al. 1998,\
+    \ J Biol Chem."
+  snapshot_sha256: 8624ea357233062f8239ffc2ee70c3ea23fbba7f17b5904682222afeb350e0be
+- evidence_id: ev_rnp_boxcd_note2
+  kind: record_content
+  reference: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
+  locator: components[1].protein_examples[2].evidence[0] (lines 93-96)
+  accessed_at: '2026-10-30T08:17:00Z'
+  support: supports
+  summary: box_c_d_rnp_complex.yaml components[1].protein_examples[2].evidence[0].notes
+    (PMID:9372940) concatenates Gautier T et al. 1997 and Wu P et al. 1998.
+  quote: "    - reference: PMID:9372940\n      notes: Gautier T et al. 1997, 'Nucleolar\
+    \ KKE/D repeat proteins Nop56p and Nop58p\n        interact with Nop1p and are\
+    \ required for ribosome biogenesis.', Mol Cell Biol;\n        Wu P et al. 1998,\
+    \ J Biol Chem."
   snapshot_sha256: 8624ea357233062f8239ffc2ee70c3ea23fbba7f17b5904682222afeb350e0be
 assessments:
 - assessment_id: assess_ribonucleoprotein_cohort
@@ -1956,7 +1958,8 @@ assessments:
   - GO:0170049
   evidence_ids:
   - ev_rnp_boxcd_guide
-  - ev_rnp_boxcd_notes
+  - ev_rnp_boxcd_note1
+  - ev_rnp_boxcd_note2
 findings:
 - finding_id: F1
   issue_key: ribonucleoprotein-supraspliceosomal-parent-constituent-conflation
@@ -1968,14 +1971,14 @@ findings:
     parent_structures while modeling GO:0005681 as a stoichiometry-'4' CONSTITUENT
     component without has_part
   description: 'In data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml
-    (GO:0044530), GO:0005681 (spliceosomal complex) is listed in parent_structures
-    (lines 11-13) and simultaneously as components[0] (id: spliceosomal_complex, label:
-    ''Native spliceosome monomer'', component_type: PROTEIN_COMPLEX, component_role:
-    CONSTITUENT, stoichiometry: ''4'', grounding: GO:0005681), while has_part is omitted.
-    Because the supraspliceosome is a tetrameric assembly of four native spliceosomes
-    alongside 5''-splice-site RNP factors (GO:1990904 ribonucleoprotein complex),
-    GO:0005681 is a parthood constituent (has_part: [GO:0005681]) rather than simultaneously
-    an is-a parent and a constituent part.'
+    (GO:0044530, lines 28-36), GO:0005681 (spliceosomal complex) is listed in parent_structures
+    (lines 28-29) and simultaneously as components[0] (lines 31-36, component_id:
+    spliceosomal_complex, label: ''spliceosomal complex'', component_type: PROTEIN_COMPLEX,
+    component_role: CONSTITUENT, grounding: GO:0005681, stoichiometry: ''4''), while
+    has_part is omitted. Because the supraspliceosome is a tetrameric assembly of
+    four native spliceosomes alongside 5''-splice-site RNP factors (GO:1990904 ribonucleoprotein
+    complex), GO:0005681 is a parthood constituent (has_part: [GO:0005681]) rather
+    than simultaneously an is-a parent and a constituent part.'
   target_ids:
   - GO:0044530
   field_paths:
@@ -2004,25 +2007,28 @@ findings:
     as PROTEIN and box_c_d_rnp_complex.yaml retains two multi-paper notes on single-PMID
     EvidenceItem entries
   description: 'In data/structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.yaml
-    (GO:0031428), components[1] (nop1_nop56_nop58_snu13_core, ''Nop1/Nop56/Nop58/Snu13
-    core protein subcomplex'', gene_symbols: [NOP1, NOP56, NOP58, SNU13]) is typed
-    PROTEIN instead of PROTEIN_COMPLEX (unlike sibling box_c_d_rnp_complex.yaml, where
-    nop1_nop56_nop58_snu13_core is typed PROTEIN_COMPLEX). Additionally, in data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
-    (GO:0170049), components[1].protein_examples[2].evidence[0].notes (PMID:9632712,
-    Wu P et al. 1998) and components[1].protein_examples[3].evidence[0].notes (PMID:9372940,
-    Watkins NJ et al. 2000 / Snu13) still concatenate ''Gautier T et al. 1997 (Mol
-    Cell Biol) and Lafontaine DL & Tollervey D 1999 (RNA); Wu P et al. 1998 (Genes
-    Dev)'' on single-PMID entries.'
+    (GO:0031428, lines 48-57), components[1] (component_id: nop1_nop56_nop58_snu13_core,
+    label: ''box C/D snoRNP core methyltransferase and scaffold subunits (Nop1/Fibrillarin,
+    Nop56, Nop58, Snu13)'', gene_symbols: [NOP1, NOP56, NOP58, SNU13]) is typed PROTEIN
+    instead of PROTEIN_COMPLEX (unlike sibling box_c_d_rnp_complex.yaml, where nop1_nop56_nop58_snu13_core
+    is typed PROTEIN_COMPLEX). Additionally, in data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
+    (GO:0170049), components[1].protein_examples[1].evidence[0].notes (lines 80-83,
+    PMID:9632712, Nop56 / Q12460) and components[1].protein_examples[2].evidence[0].notes
+    (lines 93-96, PMID:9372940, Nop58 / Q12499) still concatenate "Gautier T et al.
+    1997, ''Nucleolar KKE/D repeat proteins Nop56p and Nop58p interact with Nop1p
+    and are required for ribosome biogenesis.'', Mol Cell Biol; Wu P et al. 1998,
+    J Biol Chem." on single-PMID entries.'
   target_ids:
   - GO:0031428
   - GO:0170049
   field_paths:
   - components[1].component_type
+  - components[1].protein_examples[1].evidence[0].notes
   - components[1].protein_examples[2].evidence[0].notes
-  - components[1].protein_examples[3].evidence[0].notes
   evidence_ids:
   - ev_rnp_boxcd_guide
-  - ev_rnp_boxcd_notes
+  - ev_rnp_boxcd_note1
+  - ev_rnp_boxcd_note2
   rule_id: docs/SCHEMA.md:ComponentTypeEnum.PROTEIN_COMPLEX-and-EvidenceItem
   owner_paths:
   - repository: CultureBotAI/CellStructureMech
@@ -2038,8 +2044,9 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Move GO:0005681 from parent_structures to has_part in data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml
-    (retaining parent_structures: [GO:1990904] and has_part: [GO:0005681]).'
+  description: 'Move GO:0005681 from parent_structures to has_part: [GO:0005681] in
+    data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml and set parent_structures:
+    [GO:1990904] with top-level GO:1990904 evidence.'
   finding_ids:
   - F1
   target_ids:
@@ -2053,7 +2060,7 @@ actions:
   - .venv/bin/python scripts/validate_history.py
 - action_id: A2
   description: Update components[1].component_type from PROTEIN to PROTEIN_COMPLEX
-    in box_c_d_methylation_guide_snornp_complex.yaml, and align components[1].protein_examples[2,3].evidence[0].notes
+    in box_c_d_methylation_guide_snornp_complex.yaml, and align components[1].protein_examples[1,2].evidence[0].notes
     in box_c_d_rnp_complex.yaml with their single cited PMIDs (PMID:9632712 and PMID:9372940).
   finding_ids:
   - F2

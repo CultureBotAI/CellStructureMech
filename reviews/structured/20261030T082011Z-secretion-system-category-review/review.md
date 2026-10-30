@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full cohort audit of all 20 SECRETION_SYSTEM records in data/structures/secretion_system/. Lump/split boundaries across T1SS-T11SS, Sec, Tat, BAM, LOL, Lpt, and Tam holocomplexes and subcomplexes are clean. One minor parthood reciprocity gap was identified in cell_envelope_sec_protein_transport_complex.yaml (GO:0031522), which omits has_part: [cellstructuremech:secyeg_translocon_complex] even though secyeg_translocon_complex.yaml declares part_of: [GO:0031522] and cell_envelope_sec_protein_transport_complex.yaml models secyeg_channel as its core channel.
+Full cohort audit of all 20 SECRETION_SYSTEM records in data/structures/secretion_system/. Lump/split boundaries across T1SS-T11SS, Sec, Tat, BAM, LOL, Lpt, and Tam holocomplexes and subcomplexes are clean. One minor parthood reciprocity gap was identified in cell_envelope_sec_protein_transport_complex.yaml (GO:0031522), which omits has_part: [cellstructuremech:secyeg_translocon_complex] even though secyeg_translocon_complex.yaml declares part_of: [GO:0031522, GO:0005886] and cell_envelope_sec_protein_transport_complex.yaml models secyeg_channel as its core channel.
 
 ## Scope And Provenance
 
@@ -64,7 +64,7 @@ All 20 records in data/structures/secretion_system/ represent distinct microbial
 
 representation: concern. Targets: GO:0031522.
 
-secyeg_translocon_complex.yaml declares part_of: [GO:0031522], but cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) omits has_part: [cellstructuremech:secyeg_translocon_complex].
+secyeg_translocon_complex.yaml declares part_of: [GO:0031522, GO:0005886], but cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) omits has_part: [cellstructuremech:secyeg_translocon_complex].
 
 ## Findings
 
@@ -72,7 +72,7 @@ secyeg_translocon_complex.yaml declares part_of: [GO:0031522], but cell_envelope
 
 minor / open / confirmed; issue key: secretion-system-sec-complex-has-part-secyeg.
 
-In data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml (GO:0031522), has_part is omitted even though sibling data/structures/secretion_system/secyeg_translocon_complex.yaml (cellstructuremech:secyeg_translocon_complex) declares part_of: [GO:0031522, GO:0005886] and cell_envelope_sec_protein_transport_complex.yaml models the SecYEG channel as its central transmembrane pore.
+In data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml (GO:0031522, lines 17-18), has_part is omitted even though sibling data/structures/secretion_system/secyeg_translocon_complex.yaml (cellstructuremech:secyeg_translocon_complex) declares part_of: [GO:0031522, GO:0005886] and cell_envelope_sec_protein_transport_complex.yaml models the SecYEG channel as its central transmembrane pore.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -93,7 +93,7 @@ Add has_part: [cellstructuremech:secyeg_translocon_complex] (and top-level evide
 | --- | --- | --- | --- |
 | ev_strict_secretion_system | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,001 records including all 20 secretion_system records. |
 | ev_history_secretion_system | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,082 history records covering secretion_system. |
-| ev_secsys_sec_complex | data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml; parent_structures and part_of (lines 11-16) | supports | cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) omits has_part: [cellstructuremech:secyeg_translocon_complex]. |
+| ev_secsys_sec_complex | data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml; parent_structures (lines 17-18) | supports | cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) declares parent_structures: [GO:0140535] and omits has_part: [cellstructuremech:secyeg_translocon_complex]. |
 
 ## Limits And Additional Notes
 
@@ -129,7 +129,7 @@ summary: 'Full cohort audit of all 20 SECRETION_SYSTEM records in data/structure
   and subcomplexes are clean. One minor parthood reciprocity gap was identified in
   cell_envelope_sec_protein_transport_complex.yaml (GO:0031522), which omits has_part:
   [cellstructuremech:secyeg_translocon_complex] even though secyeg_translocon_complex.yaml
-  declares part_of: [GO:0031522] and cell_envelope_sec_protein_transport_complex.yaml
+  declares part_of: [GO:0031522, GO:0005886] and cell_envelope_sec_protein_transport_complex.yaml
   models secyeg_channel as its core channel.'
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
@@ -595,20 +595,14 @@ evidence:
 - evidence_id: ev_secsys_sec_complex
   kind: record_content
   reference: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
-  locator: parent_structures and part_of (lines 11-16)
+  locator: parent_structures (lines 17-18)
   accessed_at: '2026-10-30T08:18:00Z'
   support: supports
-  summary: 'cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) omits has_part:
-    [cellstructuremech:secyeg_translocon_complex].'
+  summary: 'cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) declares
+    parent_structures: [GO:0140535] and omits has_part: [cellstructuremech:secyeg_translocon_complex].'
   quote: 'parent_structures:
 
-    - GO:0098797
-
-    part_of:
-
-    - GO:0030313
-
-    - GO:0005886'
+    - GO:0140535'
   snapshot_sha256: 2164f385ec6847a1ba064f6975717b50373c080f563494e31af789d2946d3421
 assessments:
 - assessment_id: assess_secretion_system_cohort
@@ -646,8 +640,9 @@ assessments:
   topic: Reciprocal has_part between Sec holotranslocon (GO:0031522) and SecYEG translocon
     complex
   outcome: concern
-  summary: 'secyeg_translocon_complex.yaml declares part_of: [GO:0031522], but cell_envelope_sec_protein_transport_complex.yaml
-    (GO:0031522) omits has_part: [cellstructuremech:secyeg_translocon_complex].'
+  summary: 'secyeg_translocon_complex.yaml declares part_of: [GO:0031522, GO:0005886],
+    but cell_envelope_sec_protein_transport_complex.yaml (GO:0031522) omits has_part:
+    [cellstructuremech:secyeg_translocon_complex].'
   target_ids:
   - GO:0031522
   evidence_ids:
@@ -662,7 +657,7 @@ findings:
   title: 'cell_envelope_sec_protein_transport_complex.yaml omits reciprocal has_part:
     [cellstructuremech:secyeg_translocon_complex]'
   description: 'In data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
-    (GO:0031522), has_part is omitted even though sibling data/structures/secretion_system/secyeg_translocon_complex.yaml
+    (GO:0031522, lines 17-18), has_part is omitted even though sibling data/structures/secretion_system/secyeg_translocon_complex.yaml
     (cellstructuremech:secyeg_translocon_complex) declares part_of: [GO:0031522, GO:0005886]
     and cell_envelope_sec_protein_transport_complex.yaml models the SecYEG channel
     as its central transmembrane pore.'

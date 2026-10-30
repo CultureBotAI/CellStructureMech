@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full cohort audit of all 179 CYTOSKELETON records in data/structures/cytoskeleton/. Lump/split boundaries across bacterial cytomotive filaments (MreB, FtsZ, ParM, MamK, bactofilins, crenactin, cetZ), fungal septin and eisosome filaments, and protist microtubule/epiplasmic/glideosome arrays are clean. One minor component_type inconsistency was found in eisosome_filament.yaml (GO:0036286), where heterodimeric components[0] (pil1_lsp1_bar_core, Pil1-Lsp1 BAR-domain heterodimer core, gene_symbols: [PIL1, LSP1]) is typed PROTEIN instead of PROTEIN_COMPLEX.
+Full cohort audit of all 179 CYTOSKELETON records in data/structures/cytoskeleton/. Lump/split boundaries across bacterial cytomotive filaments (MreB, FtsZ, ParM, MamK, bactofilins, crenactin, cetZ), fungal septin and eisosome filaments, and protist microtubule/epiplasmic/glideosome arrays are clean. One minor component_type inconsistency was found in eisosome_filament.yaml (GO:0036286), where heterodimeric components[0] (pil1_lsp1_bar_core, label: Pil1/Lsp1 BAR-domain eisosome core, gene_symbols: [PIL1, LSP1]) is typed PROTEIN instead of PROTEIN_COMPLEX.
 
 ## Scope And Provenance
 
@@ -219,7 +219,7 @@ scope: supported. Targets: GO:0097649, GO:0099079, GO:0030479, GO:0005826, GO:01
 
 All 179 records in data/structures/cytoskeleton/ represent distinct microbial cell structures or subcomplexes with valid schema and history provenance.
 
-### ComponentTypeEnum typing of heterodimeric Pil1-Lsp1 BAR-domain core in eisosome_filament.yaml
+### ComponentTypeEnum typing of heterodimeric Pil1/Lsp1 BAR-domain core in eisosome_filament.yaml
 
 representation: concern. Targets: GO:0036286.
 
@@ -231,13 +231,13 @@ pil1_lsp1_bar_core in eisosome_filament.yaml is a Pil1-Lsp1 heterodimer with two
 
 minor / open / confirmed; issue key: cytoskeleton-eisosome-filament-bar-core-component-type.
 
-In data/structures/cytoskeleton/eisosome_filament.yaml (GO:0036286), components[0] (id: pil1_lsp1_bar_core, label: 'Pil1–Lsp1 BAR-domain heterodimer core', gene_symbols: [PIL1, LSP1]) combines two distinct paralogous BAR-domain subunits (Pil1 and Lsp1, UniProtKB:P53252 and Q12230 in Saccharomyces cerevisiae S288C) into a heterodimer complex entry but sets component_type: PROTEIN instead of PROTEIN_COMPLEX.
+In data/structures/cytoskeleton/eisosome_filament.yaml (GO:0036286, lines 48-55), components[0] (component_id: pil1_lsp1_bar_core, label: 'Pil1/Lsp1 BAR-domain eisosome core', gene_symbols: [PIL1, LSP1]) combines two distinct paralogous BAR-domain subunits (Pil1 and Lsp1, UniProtKB:P53252 and Q12230 in Saccharomyces cerevisiae S288C) into a heterodimer complex entry but sets component_type: PROTEIN instead of PROTEIN_COMPLEX.
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Update components[0].component_type from PROTEIN to PROTEIN_COMPLEX in data/structures/cytoskeleton/eisosome_filament.yaml (and update corresponding causal_graphs node type if needed) with a curation event and history entry.
+Update components[0].component_type from PROTEIN to PROTEIN_COMPLEX in data/structures/cytoskeleton/eisosome_filament.yaml with a curation event and history entry.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -252,7 +252,7 @@ Update components[0].component_type from PROTEIN to PROTEIN_COMPLEX in data/stru
 | --- | --- | --- | --- |
 | ev_strict_cytoskeleton | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,001 records including all 179 cytoskeleton records. |
 | ev_history_cytoskeleton | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,082 history records covering cytoskeleton. |
-| ev_cytoskeleton_eisosome_filament | data/structures/cytoskeleton/eisosome_filament.yaml; components[0] (lines 28-35) | supports | eisosome_filament.yaml types heterodimeric pil1_lsp1_bar_core ([PIL1, LSP1]) as PROTEIN. |
+| ev_cytoskeleton_eisosome_filament | data/structures/cytoskeleton/eisosome_filament.yaml; components[0] (lines 48-55) | supports | eisosome_filament.yaml components[0] types heterodimeric pil1_lsp1_bar_core ([PIL1, LSP1]) as PROTEIN. |
 
 ## Limits And Additional Notes
 
@@ -288,7 +288,7 @@ summary: 'Full cohort audit of all 179 CYTOSKELETON records in data/structures/c
   bactofilins, crenactin, cetZ), fungal septin and eisosome filaments, and protist
   microtubule/epiplasmic/glideosome arrays are clean. One minor component_type inconsistency
   was found in eisosome_filament.yaml (GO:0036286), where heterodimeric components[0]
-  (pil1_lsp1_bar_core, Pil1-Lsp1 BAR-domain heterodimer core, gene_symbols: [PIL1,
+  (pil1_lsp1_bar_core, label: Pil1/Lsp1 BAR-domain eisosome core, gene_symbols: [PIL1,
   LSP1]) is typed PROTEIN instead of PROTEIN_COMPLEX.'
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
@@ -3776,24 +3776,14 @@ evidence:
 - evidence_id: ev_cytoskeleton_eisosome_filament
   kind: record_content
   reference: data/structures/cytoskeleton/eisosome_filament.yaml
-  locator: components[0] (lines 28-35)
+  locator: components[0] (lines 48-55)
   accessed_at: '2026-10-30T08:13:00Z'
   support: supports
-  summary: eisosome_filament.yaml types heterodimeric pil1_lsp1_bar_core ([PIL1, LSP1])
-    as PROTEIN.
-  quote: 'id: pil1_lsp1_bar_core
-
-    label: Pil1–Lsp1 BAR-domain heterodimer core
-
-    component_type: PROTEIN
-
-    component_role: STRUCTURAL
-
-    gene_symbols:
-
-    - PIL1
-
-    - LSP1'
+  summary: eisosome_filament.yaml components[0] types heterodimeric pil1_lsp1_bar_core
+    ([PIL1, LSP1]) as PROTEIN.
+  quote: "- component_id: pil1_lsp1_bar_core\n  label: Pil1/Lsp1 BAR-domain eisosome\
+    \ core\n  component_type: PROTEIN\n  component_role: CONSTITUENT\n  grounding:\
+    \ InterPro:IPR028245\n  gene_symbols:\n  - PIL1\n  - LSP1"
   snapshot_sha256: dba11b89f8cc8d874eae359238715f5fdb0d8a3da2ff551cc43b58b8aacd156b
 assessments:
 - assessment_id: assess_cytoskeleton_cohort
@@ -3987,7 +3977,7 @@ assessments:
   - ev_history_cytoskeleton
 - assessment_id: assess_cytoskeleton_eisosome_filament_type
   area: representation
-  topic: ComponentTypeEnum typing of heterodimeric Pil1-Lsp1 BAR-domain core in eisosome_filament.yaml
+  topic: ComponentTypeEnum typing of heterodimeric Pil1/Lsp1 BAR-domain core in eisosome_filament.yaml
   outcome: concern
   summary: pil1_lsp1_bar_core in eisosome_filament.yaml is a Pil1-Lsp1 heterodimer
     with two distinct gene symbols ([PIL1, LSP1]) and should be typed PROTEIN_COMPLEX.
@@ -4004,12 +3994,12 @@ findings:
   certainty: confirmed
   title: eisosome_filament.yaml types heterodimeric pil1_lsp1_bar_core ([PIL1, LSP1])
     as PROTEIN instead of PROTEIN_COMPLEX
-  description: 'In data/structures/cytoskeleton/eisosome_filament.yaml (GO:0036286),
-    components[0] (id: pil1_lsp1_bar_core, label: ''Pil1–Lsp1 BAR-domain heterodimer
-    core'', gene_symbols: [PIL1, LSP1]) combines two distinct paralogous BAR-domain
-    subunits (Pil1 and Lsp1, UniProtKB:P53252 and Q12230 in Saccharomyces cerevisiae
-    S288C) into a heterodimer complex entry but sets component_type: PROTEIN instead
-    of PROTEIN_COMPLEX.'
+  description: 'In data/structures/cytoskeleton/eisosome_filament.yaml (GO:0036286,
+    lines 48-55), components[0] (component_id: pil1_lsp1_bar_core, label: ''Pil1/Lsp1
+    BAR-domain eisosome core'', gene_symbols: [PIL1, LSP1]) combines two distinct
+    paralogous BAR-domain subunits (Pil1 and Lsp1, UniProtKB:P53252 and Q12230 in
+    Saccharomyces cerevisiae S288C) into a heterodimer complex entry but sets component_type:
+    PROTEIN instead of PROTEIN_COMPLEX.'
   target_ids:
   - GO:0036286
   field_paths:
@@ -4028,8 +4018,8 @@ findings:
 actions:
 - action_id: A1
   description: Update components[0].component_type from PROTEIN to PROTEIN_COMPLEX
-    in data/structures/cytoskeleton/eisosome_filament.yaml (and update corresponding
-    causal_graphs node type if needed) with a curation event and history entry.
+    in data/structures/cytoskeleton/eisosome_filament.yaml with a curation event and
+    history entry.
   finding_ids:
   - F1
   target_ids:

@@ -11,7 +11,7 @@
 
 ## Summary
 
-FtsQBL complex (GO:1990587, data/structures/division_machinery/ftsqbl_complex.yaml) has accurate GO cellular-component identity, heterotrimeric FtsQ/DivIB-FtsB/DivIC-FtsL subunit composition (UniProtKB:P06136, P0A6S5, P0AEN4 in Escherichia coli K-12 and UniProtKB:P16655, P37471, Q06006 in Bacillus subtilis 168), and source-backed divisome allosteric regulation causal graph (PMID:15547266, PMID:29379009, PMID:37095708). However, GO:1990586 (divisome complex) is placed simultaneously in parent_structures (is-a) and part_of (parthood), whereas in Gene Ontology GO:1990587 is an is_a child of GO:1990586 (any protein complex involved in bacterial cell division) with no part_of edge to GO:1990586, matching sibling ftsbl_complex.yaml (GO:1990588).
+FtsQBL complex (GO:1990587, data/structures/division_machinery/ftsqbl_complex.yaml) has accurate GO cellular-component identity, heterotrimeric FtsQ/DivIB-FtsB/DivIC-FtsL subunit composition (UniProtKB:P06136, P0A6S5, P0AEN4 in Escherichia coli K-12 and UniProtKB:P16655, P37471, Q06006 in Bacillus subtilis 168), and source-backed divisome allosteric regulation causal graph (PMID:15547266, PMID:29379009, PMID:37095708). However, GO:1990586 (divisome complex) is placed simultaneously in parent_structures (is-a) and part_of (parthood) at lines 15-20, whereas in Gene Ontology GO:1990587 is an is_a child of GO:1990586 (any protein complex involved in bacterial cell division) with no part_of edge to GO:1990586, matching sibling ftsbl_complex.yaml (GO:1990588).
 
 ## Scope And Provenance
 
@@ -39,7 +39,7 @@ Working-tree hashes do not imply those bytes were committed.
 
 representation: supported. Targets: GO:1990587.
 
-GO:1990587 identity, FtsQ/DivIB, FtsB/DivIC, and FtsL subunit groundings (InterPro:IPR005548, IPR007157, IPR018190), E. coli and B. subtilis UniProtKB protein_examples, and PMID:15547266 / PMID:29379009 / PMID:37095708 citations are verified.
+GO:1990587 identity, FtsQ/DivIB, FtsB/DivIC, and FtsL subunit groundings (InterPro:IPR005548, IPR023081, IPR011922), E. coli and B. subtilis UniProtKB protein_examples, and PMID:15547266 / PMID:29379009 / PMID:37095708 citations are verified.
 
 ### Disjointness of parent_structures (is-a) and part_of (parthood) for GO:1990586
 
@@ -53,13 +53,13 @@ GO:1990586 (divisome complex) is listed in both parent_structures and part_of; i
 
 major / open / confirmed; issue key: ftsqbl-complex-parent-partof-duplication.
 
-In data/structures/division_machinery/ftsqbl_complex.yaml (GO:1990587, lines 12-16), GO:1990586 (divisome complex) is placed in both parent_structures (is-a) and part_of (parthood). In Gene Ontology, GO:1990587 (FtsQBL complex) is a direct rdfs:subClassOf (is_a) child of GO:1990586 ('Any protein complex involved in bacterial cell division') and has no BFO:0000050 (part_of) relationship to GO:1990586, matching sibling data/structures/division_machinery/ftsbl_complex.yaml (GO:1990588), which lists GO:1990586 only in parent_structures and GO:1990587 in part_of.
+In data/structures/division_machinery/ftsqbl_complex.yaml (GO:1990587, lines 15-20), GO:1990586 (divisome complex) is placed in both parent_structures (is-a) and part_of (parthood). In Gene Ontology, GO:1990587 (FtsQBL complex) is a direct rdfs:subClassOf (is_a) child of GO:1990586 ('Any protein complex involved in bacterial cell division') and has no BFO:0000050 (part_of) relationship to GO:1990586, matching sibling data/structures/division_machinery/ftsbl_complex.yaml (GO:1990588), which lists GO:1990586 only in parent_structures and GO:1990587 in part_of.
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Remove part_of: [GO:1990586] from data/structures/division_machinery/ftsqbl_complex.yaml while retaining parent_structures: [GO:1990586, GO:0098797] and has_part: [GO:1990588], and record the curation event and history ledger entry.
+Remove part_of: [GO:1990586] from data/structures/division_machinery/ftsqbl_complex.yaml while retaining parent_structures: [GO:1990586] and has_part: [GO:1990588], and record the curation event and history ledger entry.
 
 - .venv/bin/python scripts/validate_strict.py data/structures/division_machinery/ftsqbl_complex.yaml --out /tmp/ftsqbl_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -71,7 +71,7 @@ Remove part_of: [GO:1990586] from data/structures/division_machinery/ftsqbl_comp
 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
-| ev_ftsqbl_hierarchy_dup | data/structures/division_machinery/ftsqbl_complex.yaml; parent_structures and part_of (lines 12-16) | supports | ftsqbl_complex.yaml lists GO:1990586 (divisome complex) in both parent_structures and part_of. |
+| ev_ftsqbl_hierarchy_dup | data/structures/division_machinery/ftsqbl_complex.yaml; parent_structures, part_of, and has_part (lines 15-20) | supports | ftsqbl_complex.yaml lists GO:1990586 (divisome complex) in both parent_structures and part_of. |
 | ev_schema_ftsqbl | scripts/validate_strict.py; schema_ftsqbl receipt | supports | linkml-validate exited 0 on ftsqbl_complex.yaml. |
 | ev_strict_ftsqbl | scripts/validate_strict.py; strict_ftsqbl receipt | supports | validate_strict.py exited 0 on ftsqbl_complex.yaml. |
 
@@ -111,9 +111,9 @@ summary: FtsQBL complex (GO:1990587, data/structures/division_machinery/ftsqbl_c
   UniProtKB:P16655, P37471, Q06006 in Bacillus subtilis 168), and source-backed divisome
   allosteric regulation causal graph (PMID:15547266, PMID:29379009, PMID:37095708).
   However, GO:1990586 (divisome complex) is placed simultaneously in parent_structures
-  (is-a) and part_of (parthood), whereas in Gene Ontology GO:1990587 is an is_a child
-  of GO:1990586 (any protein complex involved in bacterial cell division) with no
-  part_of edge to GO:1990586, matching sibling ftsbl_complex.yaml (GO:1990588).
+  (is-a) and part_of (parthood) at lines 15-20, whereas in Gene Ontology GO:1990587
+  is an is_a child of GO:1990586 (any protein complex involved in bacterial cell division)
+  with no part_of edge to GO:1990586, matching sibling ftsbl_complex.yaml (GO:1990588).
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
   state: git_commit
@@ -202,7 +202,7 @@ evidence:
 - evidence_id: ev_ftsqbl_hierarchy_dup
   kind: record_content
   reference: data/structures/division_machinery/ftsqbl_complex.yaml
-  locator: parent_structures and part_of (lines 12-16)
+  locator: parent_structures, part_of, and has_part (lines 15-20)
   accessed_at: '2026-10-30T08:10:00Z'
   support: supports
   summary: ftsqbl_complex.yaml lists GO:1990586 (divisome complex) in both parent_structures
@@ -210,8 +210,6 @@ evidence:
   quote: 'parent_structures:
 
     - GO:1990586
-
-    - GO:0098797
 
     part_of:
 
@@ -244,7 +242,7 @@ assessments:
     causal graph
   outcome: supported
   summary: GO:1990587 identity, FtsQ/DivIB, FtsB/DivIC, and FtsL subunit groundings
-    (InterPro:IPR005548, IPR007157, IPR018190), E. coli and B. subtilis UniProtKB
+    (InterPro:IPR005548, IPR023081, IPR011922), E. coli and B. subtilis UniProtKB
     protein_examples, and PMID:15547266 / PMID:29379009 / PMID:37095708 citations
     are verified.
   target_ids:
@@ -272,7 +270,7 @@ findings:
   title: ftsqbl_complex.yaml lists GO:1990586 (divisome complex) in both parent_structures
     and part_of
   description: In data/structures/division_machinery/ftsqbl_complex.yaml (GO:1990587,
-    lines 12-16), GO:1990586 (divisome complex) is placed in both parent_structures
+    lines 15-20), GO:1990586 (divisome complex) is placed in both parent_structures
     (is-a) and part_of (parthood). In Gene Ontology, GO:1990587 (FtsQBL complex) is
     a direct rdfs:subClassOf (is_a) child of GO:1990586 ('Any protein complex involved
     in bacterial cell division') and has no BFO:0000050 (part_of) relationship to
@@ -299,8 +297,8 @@ findings:
 actions:
 - action_id: A1
   description: 'Remove part_of: [GO:1990586] from data/structures/division_machinery/ftsqbl_complex.yaml
-    while retaining parent_structures: [GO:1990586, GO:0098797] and has_part: [GO:1990588],
-    and record the curation event and history ledger entry.'
+    while retaining parent_structures: [GO:1990586] and has_part: [GO:1990588], and
+    record the curation event and history ledger entry.'
   finding_ids:
   - F1
   target_ids:

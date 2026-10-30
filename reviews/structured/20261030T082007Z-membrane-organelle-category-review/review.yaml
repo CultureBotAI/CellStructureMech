@@ -21,8 +21,8 @@ scientific_review: true
 summary: 'Full cohort audit of all 226 MEMBRANE_ORGANELLE records in data/structures/membrane_organelle/.
   Organelle and membrane-anchored complex boundaries are well separated across prokaryotic
   and eukaryotic microbes. Three minor consistency gaps were identified: glycosome.yaml
-  (GO:0020015) components[1] (peroxin_import_machinery, [PEX5, PEX7, PEX14]) and golgi_apparatus.yaml
-  (GO:0005794) components[0] (golgi_snare_trafficking_machinery, [SED5, TLG2, SEC22])
+  (GO:0020015) components[2] (peroxin_import_machinery, [PEX5, PEX7, PEX14]) and golgi_apparatus.yaml
+  (GO:0005794) components[1] (golgi_snare_trafficking_machinery, [SED5, TLG2, SEC22])
   type multi-subunit machineries as PROTEIN instead of PROTEIN_COMPLEX, and anammoxosome.yaml
   (GO:0044222) omits reciprocal has_part: [cellstructuremech:anammoxosome_membrane].'
 source:
@@ -4404,65 +4404,45 @@ evidence:
 - evidence_id: ev_memorg_glycosome
   kind: record_content
   reference: data/structures/membrane_organelle/glycosome.yaml
-  locator: components[1] (lines 51-59)
+  locator: components[2] (lines 193-201)
   accessed_at: '2026-10-30T08:15:00Z'
   support: supports
-  summary: glycosome.yaml types multi-subunit peroxin_import_machinery ([PEX5, PEX7,
-    PEX14]) as PROTEIN.
-  quote: 'id: peroxin_import_machinery
-
-    label: Peroxin import machinery (PEX5/PEX7/PEX14)
-
-    component_type: PROTEIN
-
-    component_role:BIOGENESIS
-
-    gene_symbols:
-
-    - PEX5
-
-    - PEX7
-
-    - PEX14'
+  summary: glycosome.yaml components[2] types multi-subunit peroxin_import_machinery
+    ([PEX5, PEX7, PEX14]) as PROTEIN.
+  quote: "- component_id: peroxin_import_machinery\n  label: glycosomal peroxin import\
+    \ machinery\n  component_type: PROTEIN\n  component_role: CONSTITUENT\n  essentiality:\
+    \ UNKNOWN\n  gene_symbols:\n  - PEX5\n  - PEX7\n  - PEX14"
   snapshot_sha256: 79383aea821433fbb6a6e2cc904578d9b106b549f5a5e97244b562190ed21c9b
 - evidence_id: ev_memorg_golgi
   kind: record_content
   reference: data/structures/membrane_organelle/golgi_apparatus.yaml
-  locator: components[0] (lines 28-36)
+  locator: components[1] (lines 128-146)
   accessed_at: '2026-10-30T08:15:00Z'
   support: supports
-  summary: golgi_apparatus.yaml types multi-subunit golgi_snare_trafficking_machinery
+  summary: golgi_apparatus.yaml components[1] types multi-subunit golgi_snare_trafficking_machinery
     ([SED5, TLG2, SEC22]) as PROTEIN.
-  quote: 'id: golgi_snare_trafficking_machinery
-
-    label: Golgi SNARE vesicle-fusion machinery (Sed5/Tlg2/Sec22)
-
-    component_type: PROTEIN
-
-    component_role: TRAFFICKING
-
-    gene_symbols:
-
-    - SED5
-
-    - TLG2
-
-    - SEC22'
+  quote: "- component_id: golgi_snare_trafficking_machinery\n  label: Golgi SNARE\
+    \ trafficking machinery\n  component_type: PROTEIN\n  component_role: ASSOCIATED_MACHINERY\n\
+    \  grounding_status: REVIEWED_LABEL_ONLY\n  grounding_notes: SNARE domains and\
+    \ SNARE superfamilies are broader than the Golgi\n    trafficking machinery curated\
+    \ here, so no single InterPro or Pfam CURIE was used\n    for this cohort.\n \
+    \ essentiality: UNKNOWN\n  role: Membrane-fusion machinery that helps organize\
+    \ vesicular traffic to and from\n    Golgi cisternae.\n  evidence:\n  - reference:\
+    \ DOI:10.1016/j.ceb.2014.04.010\n    notes: Papanikou and Glick 2014 review Golgi\
+    \ identity as depending on vesicle\n      capture and fusion machinery, including\
+    \ SNARE pairing.\n  gene_symbols:\n  - SED5\n  - TLG2\n  - SEC22"
   snapshot_sha256: b064dc1116ec2814e2ecb946d8ebd554a4b176494c2259ff7e458bac0d3e5eb1
 - evidence_id: ev_memorg_anammoxosome
   kind: record_content
   reference: data/structures/membrane_organelle/anammoxosome.yaml
-  locator: parent_structures and part_of (lines 11-14)
+  locator: parent_structures (lines 34-35)
   accessed_at: '2026-10-30T08:15:00Z'
   support: supports
-  summary: 'anammoxosome.yaml (GO:0044222) omits has_part: [cellstructuremech:anammoxosome_membrane].'
+  summary: 'anammoxosome.yaml (GO:0044222) declares parent_structures: [GO:0043231]
+    and omits has_part: [cellstructuremech:anammoxosome_membrane].'
   quote: 'parent_structures:
 
-    - GO:0043227
-
-    part_of:
-
-    - GO:0005737'
+    - GO:0043231'
   snapshot_sha256: c98e06c7ce32979c1cb1a54179f4395700a59adfcc5c0a1947c5b30f9fb34b84
 assessments:
 - assessment_id: assess_membrane_organelle_cohort
@@ -4705,8 +4685,9 @@ assessments:
   area: representation
   topic: Multi-subunit machinery component_type and anammoxosome has_part reciprocity
   outcome: concern
-  summary: glycosome.yaml and golgi_apparatus.yaml type multi-gene import/SNARE complexes
-    as PROTEIN, and anammoxosome.yaml omits has_part for anammoxosome_membrane.
+  summary: glycosome.yaml components[2] and golgi_apparatus.yaml components[1] type
+    multi-gene import/SNARE complexes as PROTEIN, and anammoxosome.yaml omits has_part
+    for anammoxosome_membrane.
   target_ids:
   - GO:0020015
   - GO:0005794
@@ -4722,24 +4703,25 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: glycosome.yaml and golgi_apparatus.yaml type multi-subunit machineries as
-    PROTEIN and anammoxosome.yaml omits has_part for anammoxosome_membrane
-  description: 'In data/structures/membrane_organelle/glycosome.yaml (GO:0020015),
-    components[1] (peroxin_import_machinery, ''Peroxin import machinery (PEX5/PEX7/PEX14)'',
-    gene_symbols: [PEX5, PEX7, PEX14]) is typed PROTEIN instead of PROTEIN_COMPLEX.
-    In data/structures/membrane_organelle/golgi_apparatus.yaml (GO:0005794), components[0]
-    (golgi_snare_trafficking_machinery, ''Golgi SNARE vesicle-fusion machinery (Sed5/Tlg2/Sec22)'',
-    gene_symbols: [SED5, TLG2, SEC22]) is typed PROTEIN instead of PROTEIN_COMPLEX.
-    In data/structures/membrane_organelle/anammoxosome.yaml (GO:0044222), has_part
-    is omitted even though data/structures/membrane_organelle/anammoxosome_membrane.yaml
+  title: glycosome.yaml components[2] and golgi_apparatus.yaml components[1] type
+    multi-subunit machineries as PROTEIN and anammoxosome.yaml omits has_part for
+    anammoxosome_membrane
+  description: 'In data/structures/membrane_organelle/glycosome.yaml (GO:0020015,
+    lines 193-201), components[2] (component_id: peroxin_import_machinery, label:
+    ''glycosomal peroxin import machinery'', gene_symbols: [PEX5, PEX7, PEX14]) is
+    typed PROTEIN instead of PROTEIN_COMPLEX. In data/structures/membrane_organelle/golgi_apparatus.yaml
+    (GO:0005794, lines 128-146), components[1] (component_id: golgi_snare_trafficking_machinery,
+    label: ''Golgi SNARE trafficking machinery'', gene_symbols: [SED5, TLG2, SEC22])
+    is typed PROTEIN instead of PROTEIN_COMPLEX. In data/structures/membrane_organelle/anammoxosome.yaml
+    (GO:0044222, lines 34-35), has_part is omitted even though data/structures/membrane_organelle/anammoxosome_membrane.yaml
     (cellstructuremech:anammoxosome_membrane) declares part_of: [GO:0044222].'
   target_ids:
   - GO:0020015
   - GO:0005794
   - GO:0044222
   field_paths:
+  - components[2].component_type
   - components[1].component_type
-  - components[0].component_type
   - has_part
   evidence_ids:
   - ev_memorg_glycosome
@@ -4763,8 +4745,9 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Update peroxin_import_machinery in glycosome.yaml and golgi_snare_trafficking_machinery
-    in golgi_apparatus.yaml from PROTEIN to PROTEIN_COMPLEX, and add has_part: [cellstructuremech:anammoxosome_membrane]
+  description: 'Update components[2] (peroxin_import_machinery) in glycosome.yaml
+    and components[1] (golgi_snare_trafficking_machinery) in golgi_apparatus.yaml
+    from PROTEIN to PROTEIN_COMPLEX, and add has_part: [cellstructuremech:anammoxosome_membrane]
     to anammoxosome.yaml.'
   finding_ids:
   - F1

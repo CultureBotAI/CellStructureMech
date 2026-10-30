@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full cohort audit of all 6 MICROCOMPARTMENT records in data/structures/microcompartment/ (bacterial_microcompartment, carboxysome, alpha_carboxysome, beta_carboxysome, propanediol_utilization_microcompartment, ethanolamine_utilization_microcompartment). Hierarchy and parthood across general and subtype BMCs are clean. One minor causal-graph node alignment issue was found in carboxysome.yaml (GO:0031470): causal_graphs[0].nodes[0] (shell, node_type: STRUCTURE) sets component_ref: bmc_h (component_type: PROTEIN, InterPro:IPR000249), whereas causal_graphs[1].nodes[3] (shell, node_type: STRUCTURE) in the same record omits component_ref because the icosahedral shell is formed jointly by bmc_h, bmc_t, and bmc_p.
+Full cohort audit of all 6 MICROCOMPARTMENT records in data/structures/microcompartment/ (bacterial_microcompartment, carboxysome, carboxysome_shell, encapsulin_nanocompartment, ethanolamine_degradation_polyhedral_organelle, propanediol_degradation_polyhedral_organelle). Hierarchy and parthood across bacterial microcompartments, shell subassemblies, and encapsulin nanocompartments are clean. One minor causal-graph node alignment issue was found in carboxysome.yaml (GO:0031470): causal_graphs[0].nodes[0] (node_id: shell, label: carboxysome shell, node_type: STRUCTURE) sets component_ref: bmc_h (components[0], component_type: PROTEIN, InterPro:IPR000249), whereas causal_graphs[1].nodes[7] (node_id: shell, label: carboxysome shell, node_type: STRUCTURE) in the same record omits component_ref because the icosahedral shell is formed jointly by bmc_h, bmc_t, and bmc_p.
 
 ## Scope And Provenance
 
@@ -50,7 +50,7 @@ All 6 records in data/structures/microcompartment/ represent distinct microbial 
 
 graph: concern. Targets: GO:0031470.
 
-In carboxysome.yaml, causal_graphs[0] binds STRUCTURE node shell to single hexamer family bmc_h via component_ref, whereas causal_graphs[1] models shell as the composite icosahedral shell formed by bmc_h, bmc_t, and bmc_p.
+In carboxysome.yaml, causal_graphs[0].nodes[0] binds STRUCTURE node shell to single hexamer family bmc_h via component_ref, whereas causal_graphs[1].nodes[7] models shell as the composite icosahedral shell formed by bmc_h, bmc_t, and bmc_p.
 
 ## Findings
 
@@ -58,7 +58,7 @@ In carboxysome.yaml, causal_graphs[0] binds STRUCTURE node shell to single hexam
 
 minor / open / confirmed; issue key: microcompartment-carboxysome-shell-node-component-ref.
 
-In data/structures/microcompartment/carboxysome.yaml (GO:0031470), causal_graphs[0].nodes[0] (id: shell, label: 'Carboxysome protein shell', node_type: STRUCTURE) sets component_ref: bmc_h (components[0], component_type: PROTEIN, grounding: InterPro:IPR000249), whereas causal_graphs[1].nodes[3] (id: shell, label: 'Icosahedral protein shell', node_type: STRUCTURE) in the same file omits component_ref because the shell is assembled from three distinct shell protein families (bmc_h, bmc_t, and bmc_p).
+In data/structures/microcompartment/carboxysome.yaml (GO:0031470), causal_graphs[0].nodes[0] (lines 631-634, node_id: shell, label: 'carboxysome shell', node_type: STRUCTURE) sets component_ref: bmc_h (components[0], component_type: PROTEIN, grounding: InterPro:IPR000249), whereas causal_graphs[1].nodes[7] (lines 738-740, node_id: shell, label: 'carboxysome shell', node_type: STRUCTURE) in the same file omits component_ref because the shell is assembled from three distinct shell protein families (bmc_h, bmc_t, and bmc_p).
 
 ## Recommended Actions And Acceptance Checks
 
@@ -71,7 +71,7 @@ Remove component_ref: bmc_h from causal_graphs[0].nodes[0] (shell, node_type: ST
 
 ## Category Boundaries
 
-- retain: GO:0031469, GO:0031470, cellstructuremech:carboxysome_shell, GO:0140737, GO:0031471, GO:0031472. All 6 microcompartment records represent distinct bacterial microcompartment classes with clean parent_structures hierarchy.
+- retain: GO:0031469, GO:0031470, cellstructuremech:carboxysome_shell, GO:0140737, GO:0031471, GO:0031472. All 6 microcompartment records represent distinct bacterial microcompartment or nanocompartment classes and shell subassemblies with clean parent_structures hierarchy.
 
 ## Evidence
 
@@ -79,7 +79,8 @@ Remove component_ref: bmc_h from causal_graphs[0].nodes[0] (shell, node_type: ST
 | --- | --- | --- | --- |
 | ev_strict_microcompartment | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,001 records including all 6 microcompartment records. |
 | ev_history_microcompartment | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,082 history records covering microcompartment. |
-| ev_microcomp_carboxysome_shell | data/structures/microcompartment/carboxysome.yaml; causal_graphs[0].nodes[0] (lines 167-171) vs causal_graphs[1].nodes[3] (lines 222-225) | supports | carboxysome.yaml causal_graphs[0].nodes[0] (shell, STRUCTURE) sets component_ref: bmc_h (PROTEIN), whereas causal_graphs[1].nodes[3] (shell, STRUCTURE) does not. |
+| ev_microcomp_cbx_g0_shell | data/structures/microcompartment/carboxysome.yaml; causal_graphs[0].nodes[0] (lines 631-634) | supports | carboxysome.yaml causal_graphs[0].nodes[0] (shell, STRUCTURE) sets component_ref: bmc_h (PROTEIN). |
+| ev_microcomp_cbx_g1_shell | data/structures/microcompartment/carboxysome.yaml; causal_graphs[1].nodes[7] (lines 738-740) | supports | carboxysome.yaml causal_graphs[1].nodes[7] (shell, STRUCTURE) omits component_ref. |
 
 ## Limits And Additional Notes
 
@@ -111,14 +112,16 @@ verdict: pass_with_limitations
 native_verdict: PASS_WITH_FOLLOW_UP
 scientific_review: true
 summary: 'Full cohort audit of all 6 MICROCOMPARTMENT records in data/structures/microcompartment/
-  (bacterial_microcompartment, carboxysome, alpha_carboxysome, beta_carboxysome, propanediol_utilization_microcompartment,
-  ethanolamine_utilization_microcompartment). Hierarchy and parthood across general
-  and subtype BMCs are clean. One minor causal-graph node alignment issue was found
-  in carboxysome.yaml (GO:0031470): causal_graphs[0].nodes[0] (shell, node_type: STRUCTURE)
-  sets component_ref: bmc_h (component_type: PROTEIN, InterPro:IPR000249), whereas
-  causal_graphs[1].nodes[3] (shell, node_type: STRUCTURE) in the same record omits
-  component_ref because the icosahedral shell is formed jointly by bmc_h, bmc_t, and
-  bmc_p.'
+  (bacterial_microcompartment, carboxysome, carboxysome_shell, encapsulin_nanocompartment,
+  ethanolamine_degradation_polyhedral_organelle, propanediol_degradation_polyhedral_organelle).
+  Hierarchy and parthood across bacterial microcompartments, shell subassemblies,
+  and encapsulin nanocompartments are clean. One minor causal-graph node alignment
+  issue was found in carboxysome.yaml (GO:0031470): causal_graphs[0].nodes[0] (node_id:
+  shell, label: carboxysome shell, node_type: STRUCTURE) sets component_ref: bmc_h
+  (components[0], component_type: PROTEIN, InterPro:IPR000249), whereas causal_graphs[1].nodes[7]
+  (node_id: shell, label: carboxysome shell, node_type: STRUCTURE) in the same record
+  omits component_ref because the icosahedral shell is formed jointly by bmc_h, bmc_t,
+  and bmc_p.'
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
   state: git_commit
@@ -314,17 +317,25 @@ evidence:
   summary: validate_history.py exited 0 across all 2,082 history records covering
     microcompartment.
   snapshot_sha256: 8bcb91b216ec775bac08188426f9ef860888b78f91561be1e471ea4a2159ad3b
-- evidence_id: ev_microcomp_carboxysome_shell
+- evidence_id: ev_microcomp_cbx_g0_shell
   kind: record_content
   reference: data/structures/microcompartment/carboxysome.yaml
-  locator: causal_graphs[0].nodes[0] (lines 167-171) vs causal_graphs[1].nodes[3]
-    (lines 222-225)
+  locator: causal_graphs[0].nodes[0] (lines 631-634)
   accessed_at: '2026-10-30T08:15:30Z'
   support: supports
   summary: 'carboxysome.yaml causal_graphs[0].nodes[0] (shell, STRUCTURE) sets component_ref:
-    bmc_h (PROTEIN), whereas causal_graphs[1].nodes[3] (shell, STRUCTURE) does not.'
-  quote: "  - id: shell\n    label: Carboxysome protein shell\n    node_type: STRUCTURE\n\
+    bmc_h (PROTEIN).'
+  quote: "  - node_id: shell\n    label: carboxysome shell\n    node_type: STRUCTURE\n\
     \    component_ref: bmc_h"
+  snapshot_sha256: 2d532dcd3f7267b41e377c7a595a93507b3aa7c139c57da0c6c58d6d36cae58a
+- evidence_id: ev_microcomp_cbx_g1_shell
+  kind: record_content
+  reference: data/structures/microcompartment/carboxysome.yaml
+  locator: causal_graphs[1].nodes[7] (lines 738-740)
+  accessed_at: '2026-10-30T08:15:30Z'
+  support: supports
+  summary: carboxysome.yaml causal_graphs[1].nodes[7] (shell, STRUCTURE) omits component_ref.
+  quote: "  - node_id: shell\n    label: carboxysome shell\n    node_type: STRUCTURE"
   snapshot_sha256: 2d532dcd3f7267b41e377c7a595a93507b3aa7c139c57da0c6c58d6d36cae58a
 assessments:
 - assessment_id: assess_microcompartment_cohort
@@ -348,13 +359,14 @@ assessments:
   topic: Consistency of STRUCTURE node 'shell' across carboxysome_ccm and carboxysome_assembly
     causal graphs
   outcome: concern
-  summary: In carboxysome.yaml, causal_graphs[0] binds STRUCTURE node shell to single
-    hexamer family bmc_h via component_ref, whereas causal_graphs[1] models shell
-    as the composite icosahedral shell formed by bmc_h, bmc_t, and bmc_p.
+  summary: In carboxysome.yaml, causal_graphs[0].nodes[0] binds STRUCTURE node shell
+    to single hexamer family bmc_h via component_ref, whereas causal_graphs[1].nodes[7]
+    models shell as the composite icosahedral shell formed by bmc_h, bmc_t, and bmc_p.
   target_ids:
   - GO:0031470
   evidence_ids:
-  - ev_microcomp_carboxysome_shell
+  - ev_microcomp_cbx_g0_shell
+  - ev_microcomp_cbx_g1_shell
 findings:
 - finding_id: F1
   issue_key: microcompartment-carboxysome-shell-node-component-ref
@@ -365,18 +377,19 @@ findings:
   title: 'carboxysome.yaml causal_graphs[0].nodes[0] (shell, node_type: STRUCTURE)
     sets component_ref: bmc_h (component_type: PROTEIN)'
   description: 'In data/structures/microcompartment/carboxysome.yaml (GO:0031470),
-    causal_graphs[0].nodes[0] (id: shell, label: ''Carboxysome protein shell'', node_type:
-    STRUCTURE) sets component_ref: bmc_h (components[0], component_type: PROTEIN,
-    grounding: InterPro:IPR000249), whereas causal_graphs[1].nodes[3] (id: shell,
-    label: ''Icosahedral protein shell'', node_type: STRUCTURE) in the same file omits
-    component_ref because the shell is assembled from three distinct shell protein
-    families (bmc_h, bmc_t, and bmc_p).'
+    causal_graphs[0].nodes[0] (lines 631-634, node_id: shell, label: ''carboxysome
+    shell'', node_type: STRUCTURE) sets component_ref: bmc_h (components[0], component_type:
+    PROTEIN, grounding: InterPro:IPR000249), whereas causal_graphs[1].nodes[7] (lines
+    738-740, node_id: shell, label: ''carboxysome shell'', node_type: STRUCTURE) in
+    the same file omits component_ref because the shell is assembled from three distinct
+    shell protein families (bmc_h, bmc_t, and bmc_p).'
   target_ids:
   - GO:0031470
   field_paths:
   - causal_graphs[0].nodes[0].component_ref
   evidence_ids:
-  - ev_microcomp_carboxysome_shell
+  - ev_microcomp_cbx_g0_shell
+  - ev_microcomp_cbx_g1_shell
   rule_id: docs/SCHEMA.md:CausalNode.component_ref
   owner_paths:
   - repository: CultureBotAI/CellStructureMech
@@ -413,7 +426,8 @@ boundary_decisions:
   - GO:0031471
   - GO:0031472
   rationale: All 6 microcompartment records represent distinct bacterial microcompartment
-    classes with clean parent_structures hierarchy.
+    or nanocompartment classes and shell subassemblies with clean parent_structures
+    hierarchy.
   evidence_ids:
   - ev_strict_microcompartment
   - ev_history_microcompartment

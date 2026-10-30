@@ -21,10 +21,11 @@ scientific_review: true
 summary: 'Full cohort audit of all 41 ENERGY_COMPLEX records in data/structures/energy_complex/.
   Lump/split boundaries across respiratory complexes I-IV, ATP synthases, photosystems,
   light-harvesting antennas, chlorosome subassemblies, and methanogenic energy-converting
-  complexes are clean. In phycobilisome.yaml (GO:0030089), heteromeric components[0]
-  (allophycocyanin_core, gene_symbols: [apcA, apcB, apcD, apcF]) is typed PROTEIN
-  instead of PROTEIN_COMPLEX, and reciprocal has_part links to child records cellstructuremech:phycobilisome_core
-  and cellstructuremech:phycobilisome_rod are omitted.'
+  complexes are clean. In phycobilisome.yaml (GO:0030089), heteromeric components[1]
+  (allophycocyanin_core, label: allophycocyanin core cylinders, gene_symbols: [apcA,
+  apcB, apcD, apcF]) is typed PROTEIN instead of PROTEIN_COMPLEX, and reciprocal has_part
+  links to child records cellstructuremech:phycobilisome_core and cellstructuremech:phycobilisome_rod
+  are omitted.'
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
   state: git_commit
@@ -885,31 +886,33 @@ evidence:
   summary: validate_history.py exited 0 across all 2,082 history records covering
     energy_complex.
   snapshot_sha256: 8bcb91b216ec775bac08188426f9ef860888b78f91561be1e471ea4a2159ad3b
-- evidence_id: ev_energy_phycobilisome
+- evidence_id: ev_energy_pbs_hierarchy
   kind: record_content
   reference: data/structures/energy_complex/phycobilisome.yaml
-  locator: parent_structures/part_of (lines 13-16) and components[0] (lines 38-47)
+  locator: parent_structures and part_of (lines 41-44)
   accessed_at: '2026-10-30T08:14:30Z'
   support: supports
-  summary: phycobilisome.yaml types heteromeric allophycocyanin_core ([apcA, apcB,
-    apcD, apcF]) as PROTEIN and omits has_part for phycobilisome_core and phycobilisome_rod.
-  quote: 'id: allophycocyanin_core
+  summary: 'phycobilisome.yaml declares parent_structures: [GO:0030076] and part_of:
+    [GO:0042651] without has_part for phycobilisome_core and phycobilisome_rod.'
+  quote: 'parent_structures:
 
-    label: Allophycocyanin core (ApcA/ApcB/ApcD/ApcF)
+    - GO:0030076
 
-    component_type: PROTEIN
+    part_of:
 
-    component_role: STRUCTURAL
-
-    gene_symbols:
-
-    - apcA
-
-    - apcB
-
-    - apcD
-
-    - apcF'
+    - GO:0042651'
+  snapshot_sha256: b05c823a9d1bea4fb41a69a9ab7361be702d0b0d0a60f6536c73eb08c0ec9b40
+- evidence_id: ev_energy_pbs_comp
+  kind: record_content
+  reference: data/structures/energy_complex/phycobilisome.yaml
+  locator: components[1] (lines 104-112)
+  accessed_at: '2026-10-30T08:14:30Z'
+  support: supports
+  summary: phycobilisome.yaml components[1] types heteromeric allophycocyanin_core
+    ([apcA, apcB, apcD, apcF]) as PROTEIN.
+  quote: "- component_id: allophycocyanin_core\n  label: allophycocyanin core cylinders\n\
+    \  component_type: PROTEIN\n  component_role: CONSTITUENT\n  gene_symbols:\n \
+    \ - apcA\n  - apcB\n  - apcD\n  - apcF"
   snapshot_sha256: b05c823a9d1bea4fb41a69a9ab7361be702d0b0d0a60f6536c73eb08c0ec9b40
 assessments:
 - assessment_id: assess_energy_complex_cohort
@@ -968,12 +971,14 @@ assessments:
   topic: Phycobilisome core component typing and has_part reciprocity with phycobilisome_core
     and phycobilisome_rod
   outcome: concern
-  summary: phycobilisome.yaml types four-subunit allophycocyanin_core as PROTEIN rather
-    than PROTEIN_COMPLEX and omits has_part links to its two child subassembly records.
+  summary: phycobilisome.yaml types four-subunit components[1] allophycocyanin_core
+    as PROTEIN rather than PROTEIN_COMPLEX and omits has_part links to its two child
+    subassembly records.
   target_ids:
   - GO:0030089
   evidence_ids:
-  - ev_energy_phycobilisome
+  - ev_energy_pbs_hierarchy
+  - ev_energy_pbs_comp
 findings:
 - finding_id: F1
   issue_key: energy-complex-phycobilisome-core-type-and-has-part
@@ -981,23 +986,25 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: phycobilisome.yaml types heteromeric allophycocyanin_core ([apcA, apcB, apcD,
-    apcF]) as PROTEIN and omits has_part links to phycobilisome_core and phycobilisome_rod
+  title: phycobilisome.yaml types heteromeric components[1] allophycocyanin_core ([apcA,
+    apcB, apcD, apcF]) as PROTEIN and omits has_part links to phycobilisome_core and
+    phycobilisome_rod
   description: 'In data/structures/energy_complex/phycobilisome.yaml (GO:0030089),
-    components[0] (id: allophycocyanin_core, label: ''Allophycocyanin core (ApcA/ApcB/ApcD/ApcF)'',
-    gene_symbols: [apcA, apcB, apcD, apcF]) represents the multi-subunit allophycocyanin
-    core assembly (referencing ApcA, ApcB, ApcD, and ApcF in Synechocystis sp. PCC
-    6803) but is typed PROTEIN instead of PROTEIN_COMPLEX. In addition, phycobilisome.yaml
-    omits has_part: [cellstructuremech:phycobilisome_core, cellstructuremech:phycobilisome_rod]
+    components[1] (lines 104-112, component_id: allophycocyanin_core, label: ''allophycocyanin
+    core cylinders'', gene_symbols: [apcA, apcB, apcD, apcF]) represents the multi-subunit
+    allophycocyanin core assembly (referencing ApcA, ApcB, ApcD, and ApcF in Synechocystis
+    sp. PCC 6803) but is typed PROTEIN instead of PROTEIN_COMPLEX. In addition, phycobilisome.yaml
+    (lines 41-44) omits has_part: [cellstructuremech:phycobilisome_core, cellstructuremech:phycobilisome_rod]
     even though phycobilisome_core.yaml and phycobilisome_rod.yaml both declare part_of:
     [GO:0030089].'
   target_ids:
   - GO:0030089
   field_paths:
-  - components[0].component_type
+  - components[1].component_type
   - has_part
   evidence_ids:
-  - ev_energy_phycobilisome
+  - ev_energy_pbs_hierarchy
+  - ev_energy_pbs_comp
   rule_id: docs/SCHEMA.md:ComponentTypeEnum.PROTEIN_COMPLEX-and-has_part
   owner_paths:
   - repository: CultureBotAI/CellStructureMech
@@ -1010,7 +1017,7 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Update components[0].component_type from PROTEIN to PROTEIN_COMPLEX
+  description: 'Update components[1].component_type from PROTEIN to PROTEIN_COMPLEX
     and add has_part: [cellstructuremech:phycobilisome_core, cellstructuremech:phycobilisome_rod]
     (with supporting evidence) in data/structures/energy_complex/phycobilisome.yaml.'
   finding_ids:

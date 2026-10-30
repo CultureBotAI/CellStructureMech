@@ -19,16 +19,18 @@ verdict: needs_curation
 native_verdict: NEEDS_CURATION
 scientific_review: true
 summary: 'Full cohort audit of all 311 OTHER/COMPLEX/SUBCELLULAR_REGION records in
-  data/structures/other/. Two major hierarchy/parthood issues and one minor component_type/has_part
-  consistency bundle were identified across 5 records: (F1) mis12_mind_type_complex.yaml
-  (GO:0000444) places GO:0000940 (outer kinetochore) in parent_structures instead
-  of part_of and uses ''is a'' in causal_graphs[0].edges[1]; (F2) cytostome.yaml (GO:0031910)
-  places GO:0005886 (plasma membrane) in parent_structures instead of part_of (with
-  GO:0110165 as its GO is_a parent); and (F3) phagophore_assembly_site.yaml (GO:0000407)
-  components[0] (phagophore_assembly_site_atg_machinery, [ATG1, ATG8, ATG9, ATG13,
-  ATG17]) and eisosome.yaml (GO:0032126) components[0] (pil1_lsp1_bar_core, [PIL1,
-  LSP1]) are typed PROTEIN instead of PROTEIN_COMPLEX, while micos_complex.yaml (GO:0061617)
-  omits reciprocal has_part links to cellstructuremech:mic10_subcomplex and cellstructuremech:mic60_mic19_complex.'
+  data/structures/other/. Note: the major parthood/hierarchy finding on mis12_mind_type_complex.yaml
+  (GO:0000444) is reported in dedicated single-record review bundle 20261030T082002Z-mis12-mind-outer-kinetochore-parthood
+  (issue_key mis12-mind-outer-kinetochore-parthood) and is not duplicated here. Across
+  the remaining cohort records, one major hierarchy/parthood finding and one minor
+  component_type/has_part consistency bundle were identified across 4 records: (F1)
+  cytostome.yaml (GO:0031910) places GO:0005886 (plasma membrane) in parent_structures
+  instead of part_of (with GO:0110165 as its GO is_a parent); and (F2) phagophore_assembly_site.yaml
+  (GO:0000407) components[0] (phagophore_assembly_site_atg_machinery, [ATG1, ATG8,
+  ATG9, ATG13, ATG17]) and eisosome.yaml (GO:0032126) components[0] (pil1_lsp1_bar_core,
+  [PIL1, LSP1]) are typed PROTEIN instead of PROTEIN_COMPLEX, while micos_complex.yaml
+  (GO:0061617) omits reciprocal has_part links to cellstructuremech:mic10_subcomplex
+  and cellstructuremech:mic60_mic19_complex.'
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
   state: git_commit
@@ -6020,101 +6022,79 @@ evidence:
   summary: validate_history.py exited 0 across all 2,082 history records covering
     other.
   snapshot_sha256: 8bcb91b216ec775bac08188426f9ef860888b78f91561be1e471ea4a2159ad3b
-- evidence_id: ev_other_mis12
-  kind: record_content
-  reference: data/structures/other/mis12_mind_type_complex.yaml
-  locator: parent_structures (lines 11-12) and causal_graphs[0].edges[1] (lines 204-213)
-  accessed_at: '2026-10-30T08:16:00Z'
-  support: supports
-  summary: mis12_mind_type_complex.yaml places GO:0000940 in parent_structures instead
-    of part_of and uses 'is a' on causal_graphs[0].edges[1].
-  quote: "parent_structures:\n- GO:0000940\n...\n  - subject: mis12_mind_type_complex\n\
-    \    predicate: is a\n    object: outer_kinetochore"
-  snapshot_sha256: ef073bc37dc32c87de547fdbdc6753e7f368563941c88b009a751979f0a0969a
 - evidence_id: ev_other_cytostome
   kind: record_content
   reference: data/structures/other/cytostome.yaml
-  locator: parent_structures and part_of (lines 12-15)
+  locator: parent_structures (lines 30-31)
   accessed_at: '2026-10-30T08:16:00Z'
   support: supports
   summary: cytostome.yaml (GO:0031910) places GO:0005886 (plasma membrane) in parent_structures
-    instead of part_of.
+    and omits part_of.
   quote: 'parent_structures:
 
-    - GO:0005886
-
-    part_of:
-
-    - GO:0031909'
+    - GO:0005886'
   snapshot_sha256: e098724aea296245130198ea537eab00b38dd2429c7d91aeac78d09efab7d735
-- evidence_id: ev_other_pas
+- evidence_id: ev_other_pas_comp
   kind: record_content
   reference: data/structures/other/phagophore_assembly_site.yaml
-  locator: components[0] (lines 28-38) and causal_graphs[0].nodes[0] (lines 84-88)
+  locator: components[0] (lines 60-84)
   accessed_at: '2026-10-30T08:16:00Z'
   support: supports
-  summary: phagophore_assembly_site.yaml types 5-subunit phagophore_assembly_site_atg_machinery
-    ([ATG1, ATG8, ATG9, ATG13, ATG17]) as PROTEIN while referencing it from STRUCTURE
-    node pas_atg_machinery.
-  quote: 'id: phagophore_assembly_site_atg_machinery
-
-    label: Atg1/Atg13/Atg17/Atg9/Atg8 PAS core machinery
-
-    component_type: PROTEIN
-
-    component_role: BIOGENESIS
-
-    gene_symbols:
-
-    - ATG1
-
-    - ATG8
-
-    - ATG9
-
-    - ATG13
-
-    - ATG17'
+  summary: phagophore_assembly_site.yaml components[0] types 5-subunit phagophore_assembly_site_atg_machinery
+    ([ATG1, ATG8, ATG9, ATG13, ATG17]) as PROTEIN.
+  quote: "- component_id: phagophore_assembly_site_atg_machinery\n  label: phagophore\
+    \ assembly site Atg machinery\n  component_type: PROTEIN\n  component_role: CONSTITUENT\n\
+    \  essentiality: ESSENTIAL\n  grounding_status: REVIEWED_LABEL_ONLY\n  grounding_notes:\
+    \ The phagophore assembly site is defined by assembled Atg autophagosome-formation\n\
+    \    machinery, but the exact cohort varies by autophagy mode and organism. No\
+    \ single\n    source-neutral protein-family or protein-complex CURIE was curated\
+    \ for the full\n    PAS-associated Atg machinery.\n  role: Atg protein machinery\
+    \ that concentrates at the PAS and organizes phagophore\n    expansion during\
+    \ autophagosome formation.\n  evidence:\n  - reference: GO:0000407\n    notes:\
+    \ GO:0000407 defines the phagophore assembly site as a punctate site where\n \
+    \     Atg machinery assembles upon autophagy induction.\n  - reference: DOI:10.1093/emboj/20.21.5971\n\
+    \    notes: Suzuki et al. 2001 localized multiple Apg proteins to the yeast pre-autophagosomal\n\
+    \      structure and showed APG gene function is required for its organization.\n\
+    \  gene_symbols:\n  - ATG1\n  - ATG8\n  - ATG9\n  - ATG13\n  - ATG17"
+  snapshot_sha256: 4140c864659162062258f9a3d75cde8f892193a610b640e31afa49dbb1f41358
+- evidence_id: ev_other_pas_node
+  kind: record_content
+  reference: data/structures/other/phagophore_assembly_site.yaml
+  locator: causal_graphs[0].nodes[0] (lines 245-248)
+  accessed_at: '2026-10-30T08:16:00Z'
+  support: supports
+  summary: phagophore_assembly_site.yaml causal_graphs[0].nodes[0] (pas_atg_machinery,
+    STRUCTURE) references phagophore_assembly_site_atg_machinery.
+  quote: "  - node_id: pas_atg_machinery\n    label: phagophore assembly site Atg\
+    \ machinery\n    node_type: STRUCTURE\n    component_ref: phagophore_assembly_site_atg_machinery"
   snapshot_sha256: 4140c864659162062258f9a3d75cde8f892193a610b640e31afa49dbb1f41358
 - evidence_id: ev_other_eisosome
   kind: record_content
   reference: data/structures/other/eisosome.yaml
-  locator: components[0] (lines 29-36)
+  locator: components[0] (lines 62-69)
   accessed_at: '2026-10-30T08:16:00Z'
   support: supports
-  summary: eisosome.yaml types heterodimeric pil1_lsp1_bar_core ([PIL1, LSP1]) as
-    PROTEIN.
-  quote: 'id: pil1_lsp1_bar_core
-
-    label: Pil1–Lsp1 BAR-domain heterodimer core
-
-    component_type: PROTEIN
-
-    component_role: STRUCTURAL
-
-    gene_symbols:
-
-    - PIL1
-
-    - LSP1'
+  summary: eisosome.yaml components[0] types heterodimeric pil1_lsp1_bar_core ([PIL1,
+    LSP1]) as PROTEIN.
+  quote: "- component_id: pil1_lsp1_bar_core\n  label: Pil1/Lsp1 BAR-domain eisosome\
+    \ core\n  component_type: PROTEIN\n  component_role: CONSTITUENT\n  grounding:\
+    \ InterPro:IPR028245\n  gene_symbols:\n  - PIL1\n  - LSP1"
   snapshot_sha256: e8a50201f81f4feeb8556e21927282e68b128b8eb9636b5b26111500bd67d886
 - evidence_id: ev_other_micos
   kind: record_content
   reference: data/structures/other/micos_complex.yaml
-  locator: parent_structures and part_of (lines 12-16)
+  locator: parent_structures and part_of (lines 43-46)
   accessed_at: '2026-10-30T08:16:00Z'
   support: supports
-  summary: micos_complex.yaml (GO:0061617) omits has_part links to mic10_subcomplex
-    and mic60_mic19_complex.
+  summary: 'micos_complex.yaml (GO:0061617) declares parent_structures: [GO:0098800]
+    and part_of: [GO:0005743] without has_part links to mic10_subcomplex and mic60_mic19_complex.'
   quote: 'parent_structures:
 
-    - GO:0098798
+    - GO:0098800
 
     part_of:
 
-    - GO:0005743
-
-    - GO:0044284'
+    - GO:0005743'
   snapshot_sha256: 95c3aa4af71bf436a4c5dbbd527d47ff46c73d484843425fdd9c44615782375f
 assessments:
 - assessment_id: assess_other_cohort
@@ -6438,18 +6418,15 @@ assessments:
   evidence_ids:
   - ev_strict_other
   - ev_history_other
-- assessment_id: assess_other_hierarchy_parthood
+- assessment_id: assess_other_cytostome_parthood
   area: representation
-  topic: GO is_a vs part_of alignment in mis12_mind_type_complex.yaml and cytostome.yaml
+  topic: GO is_a vs part_of alignment in cytostome.yaml (GO:0031910)
   outcome: concern
-  summary: Both mis12_mind_type_complex.yaml (GO:0000444) and cytostome.yaml (GO:0031910)
-    place GO BFO:0000050 (part_of) targets (GO:0000940 outer kinetochore and GO:0005886
-    plasma membrane) in parent_structures instead of part_of.
+  summary: cytostome.yaml (GO:0031910) places GO BFO:0000050 (part_of) target GO:0005886
+    (plasma membrane) in parent_structures instead of part_of.
   target_ids:
-  - GO:0000444
   - GO:0031910
   evidence_ids:
-  - ev_other_mis12
   - ev_other_cytostome
 - assessment_id: assess_other_consistency
   area: representation
@@ -6464,42 +6441,12 @@ assessments:
   - GO:0032126
   - GO:0061617
   evidence_ids:
-  - ev_other_pas
+  - ev_other_pas_comp
+  - ev_other_pas_node
   - ev_other_eisosome
   - ev_other_micos
 findings:
 - finding_id: F1
-  issue_key: mis12-mind-outer-kinetochore-parthood
-  category: representation
-  severity: major
-  status: open
-  certainty: confirmed
-  title: mis12_mind_type_complex.yaml places GO:0000940 (outer kinetochore) in parent_structures
-    instead of part_of and uses 'is a' in causal_graphs[0].edges[1]
-  description: In data/structures/other/mis12_mind_type_complex.yaml (GO:0000444),
-    GO:0000940 (outer kinetochore, SUBCELLULAR_REGION) is listed in parent_structures
-    instead of part_of and causal_graphs[0].edges[1] uses predicate 'is a' to outer_kinetochore,
-    whereas in GO GO:0000444 is rdfs:subClassOf GO:0032991 (protein-containing complex)
-    and BFO:0000050 (part_of) GO:0000940.
-  target_ids:
-  - GO:0000444
-  field_paths:
-  - parent_structures
-  - part_of
-  - causal_graphs[0].edges[1].predicate
-  evidence_ids:
-  - ev_other_mis12
-  rule_id: docs/CURATION.md:parent_structures-vs-part_of
-  owner_paths:
-  - repository: CultureBotAI/CellStructureMech
-    path: data/structures/other/mis12_mind_type_complex.yaml
-    role: maintained_record
-  tags:
-  - other
-  - hierarchy
-  - parthood
-  - stage4-record-review
-- finding_id: F2
   issue_key: other-cytostome-plasma-membrane-parthood
   category: representation
   severity: major
@@ -6507,15 +6454,14 @@ findings:
   certainty: confirmed
   title: cytostome.yaml places GO:0005886 (plasma membrane) in parent_structures instead
     of part_of
-  description: In data/structures/other/cytostome.yaml (GO:0031910, lines 12-15),
-    GO:0005886 (plasma membrane) is listed in parent_structures (is-a) rather than
-    part_of (parthood), and top-level evidence only cites GO:0031910 and GO:0031909.
-    In Gene Ontology, GO:0031910 (cytostome, 'A specialized region of the plasma membrane
-    that functions in phagocytosis, found in protozoa with a pellicle...') has direct
-    rdfs:subClassOf GO:0110165 (cellular anatomical structure) and BFO:0000050 (part_of)
-    GO:0005886 (plasma membrane) and GO:0031909 (cytopharynx). A specialized invaginated
-    region of the plasma membrane is part_of the plasma membrane, not an is-a subtype
-    of an entire plasma membrane.
+  description: In data/structures/other/cytostome.yaml (GO:0031910, lines 30-31),
+    GO:0005886 (plasma membrane) is listed in parent_structures (is-a) and part_of
+    is omitted. In Gene Ontology, GO:0031910 (cytostome, 'A specialized region of
+    the plasma membrane that functions in phagocytosis, found in protozoa with a pellicle...')
+    has direct rdfs:subClassOf GO:0110165 (cellular anatomical structure) and BFO:0000050
+    (part_of) GO:0005886 (plasma membrane) and GO:0031909 (cytopharynx). A specialized
+    invaginated region of the plasma membrane is part_of the plasma membrane, not
+    an is-a subtype of an entire plasma membrane.
   target_ids:
   - GO:0031910
   field_paths:
@@ -6534,7 +6480,7 @@ findings:
   - hierarchy
   - parthood
   - stage4-record-review
-- finding_id: F3
+- finding_id: F2
   issue_key: other-pas-eisosome-component-types-and-micos-has-part
   category: consistency
   severity: minor
@@ -6542,14 +6488,15 @@ findings:
   certainty: confirmed
   title: phagophore_assembly_site.yaml and eisosome.yaml type multi-subunit complexes
     as PROTEIN and micos_complex.yaml omits has_part for mic10 and mic60/mic19 subcomplexes
-  description: 'In data/structures/other/phagophore_assembly_site.yaml (GO:0000407),
-    components[0] (phagophore_assembly_site_atg_machinery, ''Atg1/Atg13/Atg17/Atg9/Atg8
-    PAS core machinery'', gene_symbols: [ATG1, ATG8, ATG9, ATG13, ATG17], referenced
-    by STRUCTURE node pas_atg_machinery in causal_graphs[0].nodes[0]) is typed PROTEIN
-    instead of PROTEIN_COMPLEX. In data/structures/other/eisosome.yaml (GO:0032126),
-    components[0] (pil1_lsp1_bar_core, ''Pil1–Lsp1 BAR-domain heterodimer core'',
-    gene_symbols: [PIL1, LSP1]) is typed PROTEIN instead of PROTEIN_COMPLEX. In data/structures/other/micos_complex.yaml
-    (GO:0061617), has_part is omitted even though mic10_subcomplex.yaml (cellstructuremech:mic10_subcomplex)
+  description: 'In data/structures/other/phagophore_assembly_site.yaml (GO:0000407,
+    lines 60-84), components[0] (component_id: phagophore_assembly_site_atg_machinery,
+    label: ''phagophore assembly site Atg machinery'', gene_symbols: [ATG1, ATG8,
+    ATG9, ATG13, ATG17], referenced by STRUCTURE node pas_atg_machinery in causal_graphs[0].nodes[0]
+    at lines 245-248) is typed PROTEIN instead of PROTEIN_COMPLEX. In data/structures/other/eisosome.yaml
+    (GO:0032126, lines 62-69), components[0] (component_id: pil1_lsp1_bar_core, label:
+    ''Pil1/Lsp1 BAR-domain eisosome core'', gene_symbols: [PIL1, LSP1]) is typed PROTEIN
+    instead of PROTEIN_COMPLEX. In data/structures/other/micos_complex.yaml (GO:0061617,
+    lines 43-46), has_part is omitted even though mic10_subcomplex.yaml (cellstructuremech:mic10_subcomplex)
     and mic60_mic19_complex.yaml (cellstructuremech:mic60_mic19_complex) both declare
     part_of: [GO:0061617].'
   target_ids:
@@ -6560,7 +6507,8 @@ findings:
   - components[0].component_type
   - has_part
   evidence_ids:
-  - ev_other_pas
+  - ev_other_pas_comp
+  - ev_other_pas_node
   - ev_other_eisosome
   - ev_other_micos
   rule_id: docs/SCHEMA.md:ComponentTypeEnum.PROTEIN_COMPLEX-and-has_part
@@ -6581,20 +6529,13 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'In mis12_mind_type_complex.yaml, move GO:0000940 from parent_structures
-    to part_of (with parent_structures: [GO:0032991]) and change causal_graphs[0].edges[1].predicate
-    to ''is part of''. In cytostome.yaml, move GO:0005886 from parent_structures to
-    part_of and set parent_structures: [GO:0110165] with updated top-level evidence.'
+  description: 'In cytostome.yaml, move GO:0005886 from parent_structures to part_of
+    and set parent_structures: [GO:0110165] with updated top-level evidence.'
   finding_ids:
   - F1
-  - F2
   target_ids:
-  - GO:0000444
   - GO:0031910
   owner_paths:
-  - repository: CultureBotAI/CellStructureMech
-    path: data/structures/other/mis12_mind_type_complex.yaml
-    role: maintained_record
   - repository: CultureBotAI/CellStructureMech
     path: data/structures/other/cytostome.yaml
     role: maintained_record
@@ -6606,7 +6547,7 @@ actions:
     in phagophore_assembly_site.yaml and eisosome.yaml, and add has_part: [cellstructuremech:mic10_subcomplex,
     cellstructuremech:mic60_mic19_complex] to micos_complex.yaml.'
   finding_ids:
-  - F3
+  - F2
   target_ids:
   - GO:0000407
   - GO:0032126

@@ -11,7 +11,7 @@
 
 ## Summary
 
-MIS12/MIND-type complex (GO:0000444, data/structures/other/mis12_mind_type_complex.yaml) accurately captures the heterotetrameric Mtw1/Mis12, Dsn1/Mis13, Nnf1, and Nsl1/Mis14 subunits across Saccharomyces cerevisiae S288C and Schizosaccharomyces pombe 972h- (PMID:14699074, PMID:30929735). However, it places GO:0000940 (outer kinetochore, structure_kind: SUBCELLULAR_REGION) in parent_structures (is-a) rather than part_of (parthood) and declares causal edge 'mis12_mind_type_complex is a outer_kinetochore' in causal_graphs[0].edges[1], contradicting GO:0000444 (rdfs:subClassOf GO:0032991, BFO:0000050 GO:0000940), outer_kinetochore.yaml (has_part: [GO:0000444]), and sibling ndc80_complex.yaml (issue #1016).
+MIS12/MIND-type complex (GO:0000444, data/structures/other/mis12_mind_type_complex.yaml) accurately captures the heterotetrameric Mtw1/Mis12, Dsn1/Mis13, Nnf1, and Nsl1/Mis14 subunits across Saccharomyces cerevisiae S288C and Schizosaccharomyces pombe 972h- (PMID:14699074, PMID:30929735). However, it places GO:0000940 (outer kinetochore, structure_kind: SUBCELLULAR_REGION) in parent_structures (is-a) rather than part_of (parthood) at lines 64-67 and declares causal edge 'mis12_mind_type_complex is a outer_kinetochore' in causal_graphs[0].edges[0] at lines 326-333, contradicting GO:0000444 (rdfs:subClassOf GO:0032991, BFO:0000050 GO:0000940), outer_kinetochore.yaml (has_part: [GO:0000444]), and sibling ndc80_complex.yaml (issue #1016).
 
 ## Scope And Provenance
 
@@ -45,21 +45,21 @@ All four MIND/Mis12 subunits (MTW1/mis12, DSN1/mis13, NNF1/nnf1, NSL1/mis14) car
 
 representation: concern. Targets: GO:0000444.
 
-GO:0000444 (COMPLEX) is part_of GO:0000940 (outer kinetochore, SUBCELLULAR_REGION) and is_a GO:0032991 (protein-containing complex), but is currently modeled with parent_structures: [GO:0000940] and causal edge 'is a' outer_kinetochore.
+GO:0000444 (COMPLEX) is part_of GO:0000940 (outer kinetochore, SUBCELLULAR_REGION) and is_a GO:0032991 (protein-containing complex), but is currently modeled with parent_structures: [GO:0000940] and causal_graphs[0].edges[0] predicate 'is a' outer_kinetochore.
 
 ## Findings
 
-### F1: mis12_mind_type_complex.yaml places GO:0000940 (outer kinetochore) in parent_structures instead of part_of and uses 'is a' in causal_graphs[0].edges[1]
+### F1: mis12_mind_type_complex.yaml places GO:0000940 (outer kinetochore) in parent_structures instead of part_of and uses 'is a' in causal_graphs[0].edges[0]
 
 major / open / confirmed; issue key: mis12-mind-outer-kinetochore-parthood.
 
-In data/structures/other/mis12_mind_type_complex.yaml (GO:0000444, structure_kind: COMPLEX), GO:0000940 (outer kinetochore, structure_kind: SUBCELLULAR_REGION) is listed in parent_structures (lines 11-12) instead of part_of, and causal_graphs[0].edges[1] (lines 204-213) uses predicate 'is a' from mis12_mind_type_complex to outer_kinetochore. In Gene Ontology, GO:0000444 ('A multisubunit protein complex that forms part of the outer kinetochore') has direct rdfs:subClassOf GO:0032991 (protein-containing complex) and direct BFO:0000050 (part_of) GO:0000940 (outer kinetochore). Furthermore, data/structures/other/outer_kinetochore.yaml (GO:0000940) already lists GO:0000444 in has_part and as CONSTITUENT component mis12_mind_type_complex with causal edge 'is part of' outer_kinetochore, and sibling data/structures/other/ndc80_complex.yaml (GO:0031262, issue #1016) moved GO:0000940 from parent_structures to part_of and updated the causal edge predicate to 'is part of'.
+In data/structures/other/mis12_mind_type_complex.yaml (GO:0000444, structure_kind: COMPLEX), GO:0000940 (outer kinetochore, structure_kind: SUBCELLULAR_REGION) is listed in parent_structures (lines 64-67) instead of part_of, and causal_graphs[0].edges[0] (lines 326-333) uses predicate 'is a' from mis12_mind_type_complex to outer_kinetochore. In Gene Ontology, GO:0000444 ('A multisubunit protein complex that forms part of the outer kinetochore') has direct rdfs:subClassOf GO:0032991 (protein-containing complex) and direct BFO:0000050 (part_of) GO:0000940 (outer kinetochore). Furthermore, data/structures/other/outer_kinetochore.yaml (GO:0000940) already lists GO:0000444 in has_part and as CONSTITUENT component mis12_mind_type_complex with causal edge 'is part of' outer_kinetochore, and sibling data/structures/other/ndc80_complex.yaml (GO:0031262, issue #1016) moved GO:0000940 from parent_structures to part_of and updated the causal edge predicate to 'is part of'.
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Move GO:0000940 from parent_structures to part_of in data/structures/other/mis12_mind_type_complex.yaml (setting parent_structures: [GO:0032991] with GO:0032991 in top-level evidence), update causal_graphs[0].edges[1].predicate from 'is a' to 'is part of', and record the curation event and history ledger entry.
+Move GO:0000940 from parent_structures to part_of in data/structures/other/mis12_mind_type_complex.yaml (setting parent_structures: [GO:0032991] with GO:0032991 in top-level evidence), update causal_graphs[0].edges[0].predicate from 'is a' to 'is part of', and record the curation event and history ledger entry.
 
 - .venv/bin/python scripts/validate_strict.py data/structures/other/mis12_mind_type_complex.yaml --out /tmp/mis12_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -71,7 +71,8 @@ Move GO:0000940 from parent_structures to part_of in data/structures/other/mis12
 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
-| ev_mis12_parent_and_edge | data/structures/other/mis12_mind_type_complex.yaml; parent_structures (lines 11-12) and causal_graphs[0].edges[1] (lines 204-213) | supports | mis12_mind_type_complex.yaml places GO:0000940 (outer kinetochore) in parent_structures instead of part_of and uses predicate 'is a' on causal_graphs[0].edges[1]. |
+| ev_mis12_hierarchy | data/structures/other/mis12_mind_type_complex.yaml; parent_structures and part_of (lines 64-67) | supports | mis12_mind_type_complex.yaml places GO:0000940 (outer kinetochore) in parent_structures instead of part_of. |
+| ev_mis12_edge | data/structures/other/mis12_mind_type_complex.yaml; causal_graphs[0].edges[0] (lines 326-333) | supports | mis12_mind_type_complex.yaml causal_graphs[0].edges[0] uses predicate 'is a' from mis12_mind_type_complex to outer_kinetochore. |
 | ev_schema_mis12 | scripts/validate_strict.py; schema_mis12 receipt | supports | linkml-validate exited 0 on mis12_mind_type_complex.yaml. |
 | ev_strict_mis12 | scripts/validate_strict.py; strict_mis12 receipt | supports | validate_strict.py exited 0 on mis12_mind_type_complex.yaml. |
 
@@ -110,10 +111,10 @@ summary: 'MIS12/MIND-type complex (GO:0000444, data/structures/other/mis12_mind_
   subunits across Saccharomyces cerevisiae S288C and Schizosaccharomyces pombe 972h-
   (PMID:14699074, PMID:30929735). However, it places GO:0000940 (outer kinetochore,
   structure_kind: SUBCELLULAR_REGION) in parent_structures (is-a) rather than part_of
-  (parthood) and declares causal edge ''mis12_mind_type_complex is a outer_kinetochore''
-  in causal_graphs[0].edges[1], contradicting GO:0000444 (rdfs:subClassOf GO:0032991,
-  BFO:0000050 GO:0000940), outer_kinetochore.yaml (has_part: [GO:0000444]), and sibling
-  ndc80_complex.yaml (issue #1016).'
+  (parthood) at lines 64-67 and declares causal edge ''mis12_mind_type_complex is
+  a outer_kinetochore'' in causal_graphs[0].edges[0] at lines 326-333, contradicting
+  GO:0000444 (rdfs:subClassOf GO:0032991, BFO:0000050 GO:0000940), outer_kinetochore.yaml
+  (has_part: [GO:0000444]), and sibling ndc80_complex.yaml (issue #1016).'
 source:
   git_revision: 5c642e4080ef3a0f026845843c559d3b46de8871
   state: git_commit
@@ -199,16 +200,34 @@ checks:
   evidence_ids:
   - ev_strict_mis12
 evidence:
-- evidence_id: ev_mis12_parent_and_edge
+- evidence_id: ev_mis12_hierarchy
   kind: record_content
   reference: data/structures/other/mis12_mind_type_complex.yaml
-  locator: parent_structures (lines 11-12) and causal_graphs[0].edges[1] (lines 204-213)
+  locator: parent_structures and part_of (lines 64-67)
   accessed_at: '2026-10-30T08:11:00Z'
   support: supports
   summary: mis12_mind_type_complex.yaml places GO:0000940 (outer kinetochore) in parent_structures
-    instead of part_of and uses predicate 'is a' on causal_graphs[0].edges[1].
-  quote: "parent_structures:\n- GO:0000940\n...\n  - subject: mis12_mind_type_complex\n\
-    \    predicate: is a\n    object: outer_kinetochore"
+    instead of part_of.
+  quote: 'parent_structures:
+
+    - GO:0000940
+
+    part_of:
+
+    - GO:0000776'
+  snapshot_sha256: ef073bc37dc32c87de547fdbdc6753e7f368563941c88b009a751979f0a0969a
+- evidence_id: ev_mis12_edge
+  kind: record_content
+  reference: data/structures/other/mis12_mind_type_complex.yaml
+  locator: causal_graphs[0].edges[0] (lines 326-333)
+  accessed_at: '2026-10-30T08:11:00Z'
+  support: supports
+  summary: mis12_mind_type_complex.yaml causal_graphs[0].edges[0] uses predicate 'is
+    a' from mis12_mind_type_complex to outer_kinetochore.
+  quote: "  - subject: mis12_mind_type_complex\n    predicate: is a\n    object: outer_kinetochore\n\
+    \    description: GO places the MIS12/MIND type complex under the outer kinetochore\n\
+    \      cellular component.\n    evidence:\n    - reference: GO:0000444\n     \
+    \ notes: GO:0000444 is a child of GO:0000940 outer kinetochore."
   snapshot_sha256: ef073bc37dc32c87de547fdbdc6753e7f368563941c88b009a751979f0a0969a
 - evidence_id: ev_schema_mis12
   kind: validation
@@ -246,11 +265,13 @@ assessments:
   outcome: concern
   summary: 'GO:0000444 (COMPLEX) is part_of GO:0000940 (outer kinetochore, SUBCELLULAR_REGION)
     and is_a GO:0032991 (protein-containing complex), but is currently modeled with
-    parent_structures: [GO:0000940] and causal edge ''is a'' outer_kinetochore.'
+    parent_structures: [GO:0000940] and causal_graphs[0].edges[0] predicate ''is a''
+    outer_kinetochore.'
   target_ids:
   - GO:0000444
   evidence_ids:
-  - ev_mis12_parent_and_edge
+  - ev_mis12_hierarchy
+  - ev_mis12_edge
 findings:
 - finding_id: F1
   issue_key: mis12-mind-outer-kinetochore-parthood
@@ -259,11 +280,11 @@ findings:
   status: open
   certainty: confirmed
   title: mis12_mind_type_complex.yaml places GO:0000940 (outer kinetochore) in parent_structures
-    instead of part_of and uses 'is a' in causal_graphs[0].edges[1]
+    instead of part_of and uses 'is a' in causal_graphs[0].edges[0]
   description: 'In data/structures/other/mis12_mind_type_complex.yaml (GO:0000444,
     structure_kind: COMPLEX), GO:0000940 (outer kinetochore, structure_kind: SUBCELLULAR_REGION)
-    is listed in parent_structures (lines 11-12) instead of part_of, and causal_graphs[0].edges[1]
-    (lines 204-213) uses predicate ''is a'' from mis12_mind_type_complex to outer_kinetochore.
+    is listed in parent_structures (lines 64-67) instead of part_of, and causal_graphs[0].edges[0]
+    (lines 326-333) uses predicate ''is a'' from mis12_mind_type_complex to outer_kinetochore.
     In Gene Ontology, GO:0000444 (''A multisubunit protein complex that forms part
     of the outer kinetochore'') has direct rdfs:subClassOf GO:0032991 (protein-containing
     complex) and direct BFO:0000050 (part_of) GO:0000940 (outer kinetochore). Furthermore,
@@ -277,9 +298,10 @@ findings:
   field_paths:
   - parent_structures
   - part_of
-  - causal_graphs[0].edges[1].predicate
+  - causal_graphs[0].edges[0].predicate
   evidence_ids:
-  - ev_mis12_parent_and_edge
+  - ev_mis12_hierarchy
+  - ev_mis12_edge
   rule_id: docs/CURATION.md:parent_structures-vs-part_of
   owner_paths:
   - repository: CultureBotAI/CellStructureMech
@@ -294,7 +316,7 @@ actions:
 - action_id: A1
   description: 'Move GO:0000940 from parent_structures to part_of in data/structures/other/mis12_mind_type_complex.yaml
     (setting parent_structures: [GO:0032991] with GO:0032991 in top-level evidence),
-    update causal_graphs[0].edges[1].predicate from ''is a'' to ''is part of'', and
+    update causal_graphs[0].edges[0].predicate from ''is a'' to ''is part of'', and
     record the curation event and history ledger entry.'
   finding_ids:
   - F1
