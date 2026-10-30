@@ -1,0 +1,295 @@
+identifier: GO:0030869
+label: RENT complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that mediates transcriptional silencing at the rDNA
+  locus (the name derives from regulator of nucleolar silencing and telophase). In
+  Saccharomyces the complex contains Net1p, Sir2p, Cdc14p, and at least one more subunit.
+definition_source: GO:0030869
+mapping_status: PROPOSED
+xrefs:
+- ComplexPortal:CPX-1669
+parent_structures:
+- GO:0005677
+part_of:
+- GO:0005730
+components:
+- component_id: net1_nucleolar_scaffold_subunit
+  label: Nucleolar protein NET1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR043185
+  gene_symbols:
+  - NET1
+  - CFI1
+  essentiality: ESSENTIAL
+  role: Core nucleolar scaffold subunit (Net1p / Cfi1p) of the RENT complex that binds
+    both Sir2p and Cdc14p, anchoring Sir2p at rDNA repeats for rDNA chromatin silencing
+    and sequestering Cdc14p in the nucleolus in an inactive state until anaphase.
+  evidence:
+  - reference: GO:0030869
+    notes: GO:0030869 names Net1p as a core subunit of the Saccharomyces RENT complex.
+  - reference: PMID:10219245
+    notes: Straight et al. 1999 (DOI:10.1016/s0092-8674(00)80734-5) identified Net1
+      as the scaffold of the nucleolar RENT complex that recruits Sir2 to rDNA and
+      sequesters Cdc14 until telophase.
+  - reference: PMID:11511359
+    notes: Shou et al. 2001 (DOI:10.1016/s1097-2765(01)00291-x) mapped separate functional
+      domains of Net1 that bind Cdc14, Sir2, and RNA polymerase I in the RENT complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P47035
+    protein_label: Nucleolar protein NET1
+    gene_symbol: NET1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Net1p (also declared as synonym
+      CFI1) core scaffold subunit of the nucleolar RENT complex.
+    evidence:
+    - reference: UniProtKB:P47035
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C nucleolar
+        protein NET1.
+    - reference: PMID:10219245
+      notes: Straight et al. 1999 characterized S. cerevisiae Net1p as the scaffold
+        of the RENT complex.
+- component_id: sir2_histone_deacetylase_subunit
+  label: NAD-dependent histone deacetylase SIR2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR003000
+  gene_symbols:
+  - SIR2
+  essentiality: ESSENTIAL
+  role: NAD-dependent histone deacetylase catalytic subunit recruited by Net1p to
+    nucleolar rDNA repeats, where it deacetylates histones to mediate rDNA transcriptional
+    silencing and suppress rDNA recombination.
+  evidence:
+  - reference: GO:0030869
+    notes: GO:0030869 names Sir2p as a constituent subunit of the Saccharomyces RENT
+      complex.
+  - reference: PMID:10219245
+    notes: Straight et al. 1999 demonstrated that Net1p binds Sir2p in the RENT complex
+      and is required for Sir2p localization and transcriptional silencing at rDNA.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06700
+    protein_label: NAD-dependent histone deacetylase SIR2
+    gene_symbol: SIR2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Sir2p NAD-dependent histone deacetylase
+      subunit of the RENT complex.
+    evidence:
+    - reference: UniProtKB:P06700
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C NAD-dependent
+        histone deacetylase SIR2.
+    - reference: PMID:10219245
+      notes: Straight et al. 1999 identified Sir2p as a subunit of the nucleolar RENT
+        complex.
+- component_id: cdc14_phosphatase_subunit
+  label: Tyrosine-protein phosphatase CDC14
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR044506
+  gene_symbols:
+  - CDC14
+  essentiality: ESSENTIAL
+  role: Dual-specificity protein phosphatase subunit held inactive by Net1p in the
+    nucleolar RENT complex during interphase and early mitosis, and released in anaphase
+    to dephosphorylate Cdk substrates and trigger mitotic exit.
+  evidence:
+  - reference: GO:0030869
+    notes: GO:0030869 names Cdc14p as a core subunit of the Saccharomyces RENT complex.
+  - reference: PMID:10219245
+    notes: Straight et al. 1999 showed that Net1p sequesters and inhibits Cdc14p within
+      the nucleolar RENT complex until telophase.
+  - reference: PMID:12056824
+    notes: Yoshida and Toh-e 2002 demonstrated how budding yeast Cdc5 phosphorylates
+      Net1 and assists Cdc14 release from the nucleolar RENT complex during mitotic
+      exit.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q00684
+    protein_label: Tyrosine-protein phosphatase CDC14
+    gene_symbol: CDC14
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Cdc14p phosphatase subunit of the
+      nucleolar RENT complex.
+    evidence:
+    - reference: UniProtKB:Q00684
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C tyrosine-protein
+        phosphatase CDC14.
+    - reference: PMID:10219245
+      notes: Straight et al. 1999 identified Cdc14p as a subunit of the nucleolar
+        RENT complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  presence: COMMON
+  note: Budding yeast reference strain in which the nucleolar Net1p-Sir2p-Cdc14p RENT
+    complex (ComplexPortal:CPX-1669) mediates rDNA silencing and mitotic exit regulation.
+  reference: PMID:10219245
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Model organism in which Straight et al. 1999 and Shou et al. 2001 purified
+    and functionally dissected the nucleolar Net1p-Sir2p-Cdc14p RENT complex.
+  reference: PMID:10219245
+functions:
+- function_id: rdna_heterochromatin_silencing
+  label: rDNA heterochromatin formation
+  grounding: GO:0000183
+  description: Anchors NAD-dependent histone deacetylase Sir2p at nucleolar ribosomal
+    DNA repeats via Net1p to establish silent rDNA chromatin and suppress unequal
+    rDNA sister-chromatid recombination.
+  evidence:
+  - reference: GO:0030869
+    notes: GO:0030869 defines the RENT complex as mediating transcriptional silencing
+      at the rDNA locus.
+  - reference: PMID:10219245
+    notes: Straight et al. 1999 demonstrated that Net1p recruits Sir2p to the rDNA
+      locus for rDNA transcriptional silencing.
+- function_id: mitotic_exit_regulation
+  label: regulation of exit from mitosis
+  grounding: GO:0007096
+  description: Sequesters and inhibits the Cdc14p protein phosphatase in the nucleolus
+    through interphase and early mitosis before releasing active Cdc14p in anaphase
+    to drive mitotic exit.
+  evidence:
+  - reference: PMID:10219245
+    notes: Straight et al. 1999 showed that Net1p tethers Cdc14p in the nucleolus
+      until telophase.
+  - reference: PMID:11511359
+    notes: Shou et al. 2001 dissected the Net1p domain that binds and inhibits Cdc14p
+      until mitotic exit.
+evidence:
+- reference: GO:0030869
+  notes: Gene Ontology cellular-component term for the RENT complex.
+- reference: GO:0005677
+  notes: Parent Gene Ontology cellular-component term for chromatin silencing complexes.
+- reference: GO:0005730
+  notes: Gene Ontology cellular-component term for the nucleolus.
+- reference: ComplexPortal:CPX-1669
+  notes: EBI Complex Portal entry for the Saccharomyces cerevisiae RENT complex (Net1-Sir2-Cdc14).
+- reference: PMID:10219245
+  notes: Straight et al. 1999 (DOI:10.1016/s0092-8674(00)80734-5), Net1, a Sir2-associated
+    nucleolar protein required for rDNA silencing and nucleolar integrity, Cell.
+- reference: PMID:11511359
+  notes: Shou et al. 2001 (DOI:10.1016/s1097-2765(01)00291-x), Net1 stimulates RNA
+    polymerase I transcription and regulates nucleolar structure independently of
+    controlling mitotic exit, Molecular Cell.
+- reference: PMID:12056824
+  notes: Yoshida and Toh-e 2002, Budding yeast Cdc5 phosphorylates Net1 and assists
+    Cdc14 release from the nucleolus, Biochemical and Biophysical Research Communications.
+causal_graphs:
+- graph_id: rent_complex_nucleolar_silencing_and_cdc14_sequestration
+  title: Net1p scaffolds Sir2p and Cdc14p in the nucleolar RENT complex for rDNA silencing
+    and mitotic exit control
+  description: In Saccharomyces cerevisiae, Net1p binds Sir2p and Cdc14p to assemble
+    the nucleolar RENT complex, recruiting Sir2p to mediate rDNA heterochromatin formation
+    while sequestering Cdc14p to regulate exit from mitosis.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Captures core Net1p-Sir2p-Cdc14p assembly in the nucleolus and its
+    dual roles in rDNA silencing and mitotic-exit regulation; FEAR/MEN kinase signaling
+    cascades are omitted.
+  nodes:
+  - node_id: net1_nucleolar_scaffold_subunit
+    label: Nucleolar protein NET1
+    node_type: GENE_OR_PROTEIN
+    component_ref: net1_nucleolar_scaffold_subunit
+    grounding: InterPro:IPR043185
+    xrefs:
+    - UniProtKB:P47035
+    description: Net1p nucleolar scaffold subunit of the RENT complex.
+  - node_id: sir2_histone_deacetylase_subunit
+    label: NAD-dependent histone deacetylase SIR2
+    node_type: GENE_OR_PROTEIN
+    component_ref: sir2_histone_deacetylase_subunit
+    grounding: InterPro:IPR003000
+    xrefs:
+    - UniProtKB:P06700
+    description: Sir2p NAD-dependent histone deacetylase subunit.
+  - node_id: cdc14_phosphatase_subunit
+    label: Tyrosine-protein phosphatase CDC14
+    node_type: GENE_OR_PROTEIN
+    component_ref: cdc14_phosphatase_subunit
+    grounding: InterPro:IPR044506
+    xrefs:
+    - UniProtKB:Q00684
+    description: Cdc14p dual-specificity phosphatase subunit.
+  - node_id: rent_complex_node
+    label: RENT complex
+    node_type: STRUCTURE
+    grounding: GO:0030869
+    description: Assembled nucleolar Net1p-Sir2p-Cdc14p RENT complex.
+  - node_id: rdna_silencing_process
+    label: rDNA heterochromatin formation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000183
+    description: Transcriptional silencing and chromatin condensation at nucleolar
+      rDNA repeats.
+  - node_id: mitotic_exit_regulation_process
+    label: regulation of exit from mitosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007096
+    description: Control of mitotic exit timing via nucleolar sequestration and anaphase
+      release of Cdc14p.
+  edges:
+  - subject: net1_nucleolar_scaffold_subunit
+    predicate: RO:0002436
+    object: rent_complex_node
+    description: Net1p forms the nucleolar scaffold that binds Sir2p and Cdc14p through
+      distinct domains to assemble the RENT complex.
+    evidence:
+    - reference: PMID:11511359
+      notes: Shou et al. 2001 mapped separate domains of Net1p that bind Sir2p and
+        Cdc14p in the RENT complex.
+  - subject: sir2_histone_deacetylase_subunit
+    predicate: RO:0002436
+    object: rent_complex_node
+    description: Sir2p associates with Net1p within the nucleolar RENT complex at
+      ribosomal DNA chromatin.
+    evidence:
+    - reference: PMID:10219245
+      notes: Straight et al. 1999 demonstrated that Sir2p co-purifies with Net1p in
+        the RENT complex.
+  - subject: cdc14_phosphatase_subunit
+    predicate: RO:0002436
+    object: rent_complex_node
+    description: Cdc14p binds the N-terminal regulatory region of Net1p in the RENT
+      complex, where its phosphatase activity is inhibited until anaphase.
+    evidence:
+    - reference: PMID:10219245
+      notes: Straight et al. 1999 showed that Net1p binds and sequesters Cdc14p in
+        the nucleolar RENT complex.
+  - subject: rent_complex_node
+    predicate: RO:0002213
+    object: rdna_silencing_process
+    description: The RENT complex anchors Sir2p at nucleolar rDNA repeats to promote
+      rDNA heterochromatin formation and transcriptional silencing.
+    evidence:
+    - reference: PMID:10219245
+      notes: Straight et al. 1999 showed that the RENT complex is required for Sir2p-mediated
+        rDNA silencing.
+  - subject: rent_complex_node
+    predicate: RO:0002211
+    object: mitotic_exit_regulation_process
+    description: By sequestering Cdc14p in the nucleolus until anaphase, the RENT
+      complex regulates the timing of exit from mitosis.
+    evidence:
+    - reference: PMID:10219245
+      notes: Straight et al. 1999 and Shou et al. 2001 established that RENT complex
+        sequestration of Cdc14p regulates mitotic exit.
+curation_history:
+- timestamp: '2026-10-30T15:25:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0030869 (RENT complex) with verified
+    GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
+    distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true

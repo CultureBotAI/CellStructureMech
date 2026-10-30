@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/rits_complex.yaml
+  slug: rits_complex
+session:
+  id: 2026-10-30T152500Z-claude-opus-4-6-c5s105
+  timestamp: '2026-10-30T15:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for RITS complex (GO:0030958) in ribonucleoprotein.
+  details: Authored data/structures/ribonucleoprotein/rits_complex.yaml for RITS complex
+    (GO:0030958) with verified GO hierarchy, taxonomic distribution, UniProtKB protein
+    examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

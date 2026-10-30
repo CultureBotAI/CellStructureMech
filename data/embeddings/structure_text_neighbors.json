@@ -7821,6 +7821,37 @@
       ]
     },
     {
+      "identifier": "GO:0016611",
+      "label": "iron-iron nitrogenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.92979004
+        },
+        {
+          "identifier": "GO:0016613",
+          "label": "vanadium-iron nitrogenase complex",
+          "cosine_similarity": 0.92121672
+        },
+        {
+          "identifier": "GO:0016610",
+          "label": "nitrogenase complex",
+          "cosine_similarity": 0.8362705
+        },
+        {
+          "identifier": "GO:0009325",
+          "label": "nitrate reductase complex",
+          "cosine_similarity": 0.73874629
+        },
+        {
+          "identifier": "GO:0009326",
+          "label": "formate dehydrogenase complex",
+          "cosine_similarity": 0.73125236
+        }
+      ]
+    },
+    {
       "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
       "label": "LH2 peripheral light-harvesting antenna complex",
       "neighbors": [
@@ -7914,6 +7945,37 @@
       ]
     },
     {
+      "identifier": "GO:0016612",
+      "label": "molybdenum-iron nitrogenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016611",
+          "label": "iron-iron nitrogenase complex",
+          "cosine_similarity": 0.92979004
+        },
+        {
+          "identifier": "GO:0016613",
+          "label": "vanadium-iron nitrogenase complex",
+          "cosine_similarity": 0.87998554
+        },
+        {
+          "identifier": "GO:0016610",
+          "label": "nitrogenase complex",
+          "cosine_similarity": 0.87445706
+        },
+        {
+          "identifier": "GO:0009325",
+          "label": "nitrate reductase complex",
+          "cosine_similarity": 0.7661376
+        },
+        {
+          "identifier": "GO:0044799",
+          "label": "NarGHI complex",
+          "cosine_similarity": 0.73425956
+        }
+      ]
+    },
+    {
       "identifier": "GO:0044799",
       "label": "NarGHI complex",
       "neighbors": [
@@ -7964,14 +8026,14 @@
           "cosine_similarity": 0.79433411
         },
         {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.7661376
+        },
+        {
           "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
           "label": "formate dehydrogenase N complex",
           "cosine_similarity": 0.76543321
-        },
-        {
-          "identifier": "GO:0031026",
-          "label": "glutamate synthase complex",
-          "cosine_similarity": 0.73311516
         }
       ]
     },
@@ -7979,6 +8041,21 @@
       "identifier": "GO:0016610",
       "label": "nitrogenase complex",
       "neighbors": [
+        {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.87445706
+        },
+        {
+          "identifier": "GO:0016613",
+          "label": "vanadium-iron nitrogenase complex",
+          "cosine_similarity": 0.85586877
+        },
+        {
+          "identifier": "GO:0016611",
+          "label": "iron-iron nitrogenase complex",
+          "cosine_similarity": 0.8362705
+        },
         {
           "identifier": "GO:0009325",
           "label": "nitrate reductase complex",
@@ -7988,21 +8065,6 @@
           "identifier": "GO:0044799",
           "label": "NarGHI complex",
           "cosine_similarity": 0.78143219
-        },
-        {
-          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
-          "label": "formate dehydrogenase N complex",
-          "cosine_similarity": 0.75800857
-        },
-        {
-          "identifier": "GO:0009326",
-          "label": "formate dehydrogenase complex",
-          "cosine_similarity": 0.70705635
-        },
-        {
-          "identifier": "GO:1990202",
-          "label": "FMN reductase complex",
-          "cosine_similarity": 0.70369888
         }
       ]
     },
@@ -8747,6 +8809,37 @@
           "identifier": "GO:0033179",
           "label": "proton-transporting V-type ATPase, V0 domain",
           "cosine_similarity": 0.94605891
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0016613",
+      "label": "vanadium-iron nitrogenase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016611",
+          "label": "iron-iron nitrogenase complex",
+          "cosine_similarity": 0.92121672
+        },
+        {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.87998554
+        },
+        {
+          "identifier": "GO:0016610",
+          "label": "nitrogenase complex",
+          "cosine_similarity": 0.85586877
+        },
+        {
+          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
+          "label": "formate dehydrogenase N complex",
+          "cosine_similarity": 0.69920133
+        },
+        {
+          "identifier": "GO:0009325",
+          "label": "nitrate reductase complex",
+          "cosine_similarity": 0.69740276
         }
       ]
     },
@@ -17342,6 +17435,11 @@
       "label": "1,3-beta-D-glucan synthase complex",
       "neighbors": [
         {
+          "identifier": "GO:0043541",
+          "label": "UDP-N-acetylglucosamine transferase complex",
+          "cosine_similarity": 0.76909326
+        },
+        {
           "identifier": "GO:1990131",
           "label": "Gtr1-Gtr2 GTPase complex",
           "cosine_similarity": 0.70043015
@@ -17360,11 +17458,6 @@
           "identifier": "GO:0043291",
           "label": "RAVE complex",
           "cosine_similarity": 0.69489664
-        },
-        {
-          "identifier": "GO:0031415",
-          "label": "NatA complex",
-          "cosine_similarity": 0.69420243
         }
       ]
     },
@@ -22980,6 +23073,37 @@
       ]
     },
     {
+      "identifier": "GO:0035658",
+      "label": "Mon1-Ccz1 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0034270",
+          "label": "Cvt complex",
+          "cosine_similarity": 0.7707678
+        },
+        {
+          "identifier": "GO:0034044",
+          "label": "exomer complex",
+          "cosine_similarity": 0.76821985
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.76540223
+        },
+        {
+          "identifier": "GO:1990334",
+          "label": "SIN/MEN two-component GAP complex",
+          "cosine_similarity": 0.76296909
+        },
+        {
+          "identifier": "GO:1990131",
+          "label": "Gtr1-Gtr2 GTPase complex",
+          "cosine_similarity": 0.76273969
+        }
+      ]
+    },
+    {
       "identifier": "GO:0033551",
       "label": "monopolin complex",
       "neighbors": [
@@ -25150,6 +25274,37 @@
       ]
     },
     {
+      "identifier": "GO:0030869",
+      "label": "RENT complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0035101",
+          "label": "FACT complex",
+          "cosine_similarity": 0.80650857
+        },
+        {
+          "identifier": "GO:0030874",
+          "label": "nucleolar chromatin",
+          "cosine_similarity": 0.79352531
+        },
+        {
+          "identifier": "GO:0000347",
+          "label": "THO complex",
+          "cosine_similarity": 0.77877148
+        },
+        {
+          "identifier": "GO:0016581",
+          "label": "NuRD complex",
+          "cosine_similarity": 0.77760187
+        },
+        {
+          "identifier": "GO:1990468",
+          "label": "NuA3b histone acetyltransferase complex",
+          "cosine_similarity": 0.76938785
+        }
+      ]
+    },
+    {
       "identifier": "GO:0005657",
       "label": "replication fork",
       "neighbors": [
@@ -26855,6 +27010,37 @@
       ]
     },
     {
+      "identifier": "GO:0043541",
+      "label": "UDP-N-acetylglucosamine transferase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0000148",
+          "label": "1,3-beta-D-glucan synthase complex",
+          "cosine_similarity": 0.76909326
+        },
+        {
+          "identifier": "GO:0031415",
+          "label": "NatA complex",
+          "cosine_similarity": 0.70544119
+        },
+        {
+          "identifier": "GO:0031416",
+          "label": "NatB complex",
+          "cosine_similarity": 0.69865653
+        },
+        {
+          "identifier": "GO:0031417",
+          "label": "NatC complex",
+          "cosine_similarity": 0.68611489
+        },
+        {
+          "identifier": "GO:0140671",
+          "label": "ADA complex",
+          "cosine_similarity": 0.65759781
+        }
+      ]
+    },
+    {
       "identifier": "GO:0034456",
       "label": "UTP-C complex",
       "neighbors": [
@@ -28339,6 +28525,37 @@
           "identifier": "GO:0030688",
           "label": "preribosome, small subunit precursor",
           "cosine_similarity": 0.79665034
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0030958",
+      "label": "RITS complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0170049",
+          "label": "box C/D RNP complex",
+          "cosine_similarity": 0.76398872
+        },
+        {
+          "identifier": "GO:0030874",
+          "label": "nucleolar chromatin",
+          "cosine_similarity": 0.76397919
+        },
+        {
+          "identifier": "GO:0030869",
+          "label": "RENT complex",
+          "cosine_similarity": 0.76277103
+        },
+        {
+          "identifier": "GO:0099115",
+          "label": "chromosome, subtelomeric region",
+          "cosine_similarity": 0.74996314
+        },
+        {
+          "identifier": "GO:0000172",
+          "label": "ribonuclease MRP complex",
+          "cosine_similarity": 0.74909518
         }
       ]
     },

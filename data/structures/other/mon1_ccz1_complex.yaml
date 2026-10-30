@@ -1,0 +1,246 @@
+identifier: GO:0035658
+label: Mon1-Ccz1 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A protein complex that functions as a guanine nucleotide exchange factor
+  (GEF) and converts Rab-GDP to Rab-GTP. In S. cerevisiae, this complex consists of
+  at least Mon1 and Ccz1, and serves as a GEF for the Rab Ypt7p.
+definition_source: GO:0035658
+mapping_status: PROPOSED
+xrefs:
+- ComplexPortal:CPX-1674
+parent_structures:
+- GO:0032045
+part_of:
+- GO:0005770
+components:
+- component_id: mon1_longin_subunit
+  label: Vacuolar fusion protein MON1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR004353
+  gene_symbols:
+  - MON1
+  stoichiometry: 1 copy per Mon1-Ccz1 heterodimer
+  essentiality: ESSENTIAL
+  role: Tri-longin-domain subunit (Mon1p) that heterodimerizes with Ccz1p to form
+    the catalytic Rab7/Ypt7p guanine nucleotide exchange factor (GEF) interface on
+    late endosomes and vacuoles.
+  evidence:
+  - reference: GO:0035658
+    notes: GO:0035658 defines the Saccharomyces cerevisiae Mon1-Ccz1 complex as consisting
+      of Mon1 and Ccz1.
+  - reference: PMID:20797862
+    notes: Nordmann et al. 2010 (DOI:10.1016/j.cub.2010.08.002) demonstrated that
+      neither Mon1 nor Ccz1 alone has GEF activity, whereas the assembled Mon1-Ccz1
+      heterodimer directly catalyzes nucleotide exchange on the Rab GTPase Ypt7p.
+  - reference: PMID:12364329
+    notes: Wang et al. 2002 (DOI:10.1074/jbc.m208191200) showed that S. cerevisiae
+      Mon1p and Ccz1p form a stable complex required for vacuole fusion and endosome-to-vacuole
+      trafficking.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53129
+    protein_label: Vacuolar fusion protein MON1
+    gene_symbol: MON1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Mon1p subunit of the Mon1-Ccz1 Ypt7p
+      GEF complex (ComplexPortal:CPX-1674).
+    evidence:
+    - reference: UniProtKB:P53129
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C vacuolar
+        fusion protein MON1.
+    - reference: PMID:20797862
+      notes: Nordmann et al. 2010 characterized S. cerevisiae Mon1p within the Mon1-Ccz1
+        Ypt7p GEF complex.
+- component_id: ccz1_longin_subunit
+  label: Vacuolar fusion protein CCZ1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR013176
+  gene_symbols:
+  - CCZ1
+  stoichiometry: 1 copy per Mon1-Ccz1 heterodimer
+  essentiality: ESSENTIAL
+  role: Tri-longin-domain partner subunit (Ccz1p) that pairs with Mon1p to remodel
+    the nucleotide-binding pocket of Ypt7p and promote GDP-to-GTP exchange on late
+    endosomal and vacuolar membranes.
+  evidence:
+  - reference: GO:0035658
+    notes: GO:0035658 names Ccz1 as an essential subunit of the S. cerevisiae Mon1-Ccz1
+      complex.
+  - reference: PMID:20797862
+    notes: Nordmann et al. 2010 showed that Ccz1p is required with Mon1p to constitute
+      the active Ypt7p guanine nucleotide exchange factor.
+  - reference: PMID:12364329
+    notes: Wang et al. 2002 demonstrated that Ccz1p and Mon1p co-immunoprecipitate
+      as a stable complex on vacuolar and endosomal membranes.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38273
+    protein_label: Vacuolar fusion protein CCZ1
+    gene_symbol: CCZ1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Ccz1p subunit of the Mon1-Ccz1 Ypt7p
+      GEF complex (ComplexPortal:CPX-1674).
+    evidence:
+    - reference: UniProtKB:P38273
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C vacuolar
+        fusion protein CCZ1.
+    - reference: PMID:20797862
+      notes: Nordmann et al. 2010 characterized S. cerevisiae Ccz1p in the Mon1-Ccz1
+        Ypt7p GEF complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  presence: COMMON
+  note: Budding yeast reference strain in which the heterodimeric Mon1p-Ccz1p complex
+    (ComplexPortal:CPX-1674) activates the Rab GTPase Ypt7p on late endosomes and
+    vacuoles.
+  reference: PMID:20797862
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Model organism in which Wang et al. 2002 identified the Mon1p-Ccz1p complex
+    and Nordmann et al. 2010 established its direct guanine nucleotide exchange factor
+    activity toward Ypt7p.
+  reference: PMID:20797862
+functions:
+- function_id: ypt7_rab_guanyl_nucleotide_exchange
+  label: guanyl-nucleotide exchange factor activity
+  grounding: GO:0005085
+  description: Catalyzes the exchange of bound GDP for GTP on the late-endosomal and
+    vacuolar Rab GTPase Ypt7p, driving Rab5-to-Rab7 (Vps21p-to-Ypt7p) endosomal maturation
+    and HOPS-mediated vacuolar membrane fusion.
+  evidence:
+  - reference: GO:0035658
+    notes: GO:0035658 defines the Mon1-Ccz1 complex as a GEF that converts Rab-GDP
+      to Rab-GTP (specifically Ypt7p in S. cerevisiae).
+  - reference: PMID:20797862
+    notes: Nordmann et al. 2010 reconstituted Ypt7p GDP-to-GTP exchange catalyzed
+      by purified S. cerevisiae Mon1-Ccz1.
+evidence:
+- reference: GO:0035658
+  notes: Gene Ontology cellular-component term for the Mon1-Ccz1 complex.
+- reference: GO:0032045
+  notes: Parent Gene Ontology cellular-component term for guanyl-nucleotide exchange
+    factor complexes.
+- reference: GO:0005770
+  notes: Gene Ontology cellular-component term for the late endosome.
+- reference: ComplexPortal:CPX-1674
+  notes: EBI Complex Portal entry for the Saccharomyces cerevisiae Mon1-Ccz1 guanyl-nucleotide
+    exchange factor complex.
+- reference: PMID:20797862
+  notes: Nordmann et al. 2010 (DOI:10.1016/j.cub.2010.08.002), The Mon1-Ccz1 complex
+    is the GEF of the late endosomal Rab7 homolog Ypt7, Current Biology.
+- reference: PMID:12364329
+  notes: Wang et al. 2002 (DOI:10.1074/jbc.m208191200), The Ccz1-Mon1 protein complex
+    is required for the late step of multiple vacuole delivery pathways, Journal of
+    Biological Chemistry.
+causal_graphs:
+- graph_id: mon1_ccz1_complex_assembly_and_ypt7_activation
+  title: Mon1p and Ccz1p assemble the late-endosomal Mon1-Ccz1 GEF complex to activate
+    Ypt7p
+  description: In Saccharomyces cerevisiae, Mon1p and Ccz1p heterodimerize on the
+    late endosome membrane to form the Mon1-Ccz1 complex, which enables guanyl-nucleotide
+    exchange factor activity toward the Rab GTPase Ypt7p.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Captures Mon1p-Ccz1p heterodimer assembly on late endosomes and direct
+    GEF activation of Ypt7p (UniProtKB:P32939).
+  nodes:
+  - node_id: mon1_longin_subunit
+    label: Vacuolar fusion protein MON1
+    node_type: GENE_OR_PROTEIN
+    component_ref: mon1_longin_subunit
+    grounding: InterPro:IPR004353
+    xrefs:
+    - UniProtKB:P53129
+    description: Mon1p tri-longin-domain subunit of the Mon1-Ccz1 complex.
+  - node_id: ccz1_longin_subunit
+    label: Vacuolar fusion protein CCZ1
+    node_type: GENE_OR_PROTEIN
+    component_ref: ccz1_longin_subunit
+    grounding: InterPro:IPR013176
+    xrefs:
+    - UniProtKB:P38273
+    description: Ccz1p tri-longin-domain partner subunit of the Mon1-Ccz1 complex.
+  - node_id: mon1_ccz1_complex_node
+    label: Mon1-Ccz1 complex
+    node_type: STRUCTURE
+    grounding: GO:0035658
+    description: Assembled heterodimeric Mon1p-Ccz1p Rab GEF complex.
+  - node_id: late_endosome_compartment
+    label: late endosome
+    node_type: STRUCTURE
+    grounding: GO:0005770
+    description: Late endosomal compartment where Mon1-Ccz1 localizes.
+  - node_id: ypt7_rab_gtpase
+    label: GTP-binding protein YPT7
+    node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P32939
+    description: Rab7-family GTPase Ypt7p substrate activated by the Mon1-Ccz1 complex.
+  - node_id: rab_gef_activity
+    label: guanyl-nucleotide exchange factor activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0005085
+    description: Catalysis of GDP-to-GTP exchange on Ypt7p.
+  edges:
+  - subject: mon1_longin_subunit
+    predicate: RO:0002436
+    object: mon1_ccz1_complex_node
+    description: Mon1p pairs with Ccz1p via conserved longin domains to assemble the
+      heterodimeric Mon1-Ccz1 complex.
+    evidence:
+    - reference: PMID:12364329
+      notes: Wang et al. 2002 demonstrated that Mon1p and Ccz1p assemble into a stable
+        heteromeric complex.
+  - subject: ccz1_longin_subunit
+    predicate: RO:0002436
+    object: mon1_ccz1_complex_node
+    description: Ccz1p heterodimerizes with Mon1p to form the catalytically competent
+      Mon1-Ccz1 GEF complex.
+    evidence:
+    - reference: PMID:20797862
+      notes: Nordmann et al. 2010 showed that Ccz1p is an obligate subunit of the
+        active Mon1-Ccz1 heterodimer.
+  - subject: mon1_ccz1_complex_node
+    predicate: BFO:0000050
+    object: late_endosome_compartment
+    description: The Mon1-Ccz1 complex localizes to the late endosome membrane during
+      endosomal maturation.
+    evidence:
+    - reference: PMID:20797862
+      notes: Nordmann et al. 2010 demonstrated late-endosomal localization of the
+        Mon1-Ccz1 complex.
+  - subject: mon1_ccz1_complex_node
+    predicate: RO:0002327
+    object: rab_gef_activity
+    description: The assembled Mon1-Ccz1 heterodimer enables guanyl-nucleotide exchange
+      factor activity.
+    evidence:
+    - reference: PMID:20797862
+      notes: Nordmann et al. 2010 demonstrated that the Mon1-Ccz1 heterodimer directly
+        catalyzes nucleotide exchange.
+  - subject: mon1_ccz1_complex_node
+    predicate: RO:0002436
+    object: ypt7_rab_gtpase
+    description: The Mon1-Ccz1 complex directly binds GDP-bound Ypt7p to promote GDP
+      release and GTP loading.
+    evidence:
+    - reference: PMID:20797862
+      notes: Nordmann et al. 2010 showed direct physical interaction and nucleotide
+        exchange between Mon1-Ccz1 and Ypt7p.
+curation_history:
+- timestamp: '2026-10-30T15:25:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0035658 (Mon1-Ccz1 complex) with verified
+    GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
+    distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true

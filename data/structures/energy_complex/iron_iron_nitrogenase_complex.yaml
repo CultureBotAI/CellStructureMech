@@ -1,0 +1,391 @@
+identifier: GO:0016611
+label: iron-iron nitrogenase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An alternative nitrogenase enzyme complex containing an iron-only active-site
+  cluster (FeFe-cofactor) expressed when both molybdenum and vanadium are depleted
+  in diazotrophs such as Rhodobacter capsulatus and Azotobacter vinelandii. Although
+  the GO:0016611 ontology definition describes an older alpha1-beta2 or alpha2-beta2
+  dinitrogenase stoichiometry, crystallographic and cryo-EM structures (PDB:8BOQ,
+  PDB:8OIE) demonstrate a heterohexameric alpha2beta2delta2 catalytic component (AnfD2K2G2)
+  partnered with a homodimeric iron-protein nitrogenase reductase (AnfH2).
+definition_source: DOI:10.1038/s41594-023-01124-2
+mapping_status: PROPOSED
+parent_structures:
+- GO:0016610
+components:
+- component_id: anfd_alpha_subunit
+  label: Nitrogenase iron-iron protein alpha chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011290
+  gene_symbols:
+  - anfD
+  stoichiometry: 2 copies per AnfD2K2G2 iron-iron dinitrogenase heterohexamer
+  essentiality: ESSENTIAL
+  role: Catalytic alpha subunit of the iron-iron dinitrogenase (FeFe protein) that
+    coordinates the active-site [8Fe-9S-C-homocitrate] FeFe-cofactor and binds the
+    AnfG delta subunit.
+  evidence:
+  - reference: PMID:38062208
+    notes: Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2; PDB:8OIE) resolved
+      the Rhodobacter capsulatus AnfD2K2G2-(AnfH2)2 iron nitrogenase complex and the
+      FeFe-cofactor binding site in AnfD.
+  - reference: PMID:8332060
+    notes: Schueddekopf et al. 1993 (DOI:10.1111/j.1365-2958.1993.tb01611.x) sequenced
+      and mutated the R. capsulatus anfHDGK operon, showing that anfD is essential
+      for iron-only nitrogenase activity.
+  - reference: PMID:2644222
+    notes: Joerger et al. 1989 (DOI:10.1128/jb.171.2.1075-1086.1989) determined the
+      Azotobacter vinelandii anfHDGKOR operon sequence.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07933
+    protein_label: Nitrogenase iron-iron protein alpha chain
+    gene_symbol: anfD
+    taxon_id: NCBITaxon:1061
+    taxon_label: Rhodobacter capsulatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Rhodobacter capsulatus AnfD alpha chain of the iron-iron nitrogenase
+      complex.
+    evidence:
+    - reference: UniProtKB:Q07933
+      notes: Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-iron
+        protein alpha chain (anfD).
+    - reference: PMID:8332060
+      notes: Schueddekopf et al. 1993 characterized R. capsulatus anfD.
+  - uniprot_id: UniProtKB:P16266
+    protein_label: Nitrogenase iron-iron protein alpha chain
+    gene_symbol: anfD
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii AnfD alpha chain of the iron-iron nitrogenase
+      complex.
+    evidence:
+    - reference: UniProtKB:P16266
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-iron
+        protein alpha chain (anfD).
+    - reference: PMID:2644222
+      notes: Joerger et al. 1989 characterized A. vinelandii anfD.
+- component_id: anfk_beta_subunit
+  label: Nitrogenase iron-iron protein beta chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR014280
+  gene_symbols:
+  - anfK
+  stoichiometry: 2 copies per AnfD2K2G2 iron-iron dinitrogenase heterohexamer
+  essentiality: ESSENTIAL
+  role: Beta subunit of the iron-iron dinitrogenase (FeFe protein) that forms the
+    alpha2beta2 core with AnfD and co-ligates the interfacial [8Fe-7S] P-cluster.
+  evidence:
+  - reference: PMID:38062208
+    notes: Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2; PDB:8OIE) resolved
+      AnfK in the R. capsulatus AnfD2K2G2 catalytic component.
+  - reference: PMID:8332060
+    notes: Schueddekopf et al. 1993 characterized R. capsulatus anfK in the anfHDGK
+      operon.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07935
+    protein_label: Nitrogenase iron-iron protein beta chain
+    gene_symbol: anfK
+    taxon_id: NCBITaxon:1061
+    taxon_label: Rhodobacter capsulatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Rhodobacter capsulatus AnfK beta chain of the iron-iron nitrogenase
+      complex.
+    evidence:
+    - reference: UniProtKB:Q07935
+      notes: Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-iron
+        protein beta chain (anfK).
+    - reference: PMID:8332060
+      notes: Schueddekopf et al. 1993 characterized R. capsulatus anfK.
+  - uniprot_id: UniProtKB:P16267
+    protein_label: Nitrogenase iron-iron protein beta chain
+    gene_symbol: anfK
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii AnfK beta chain of the iron-iron nitrogenase
+      complex.
+    evidence:
+    - reference: UniProtKB:P16267
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-iron
+        protein beta chain (anfK).
+    - reference: PMID:2644222
+      notes: Joerger et al. 1989 characterized A. vinelandii anfK.
+- component_id: anfg_delta_subunit
+  label: Nitrogenase iron-iron protein delta chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR014278
+  gene_symbols:
+  - anfG
+  stoichiometry: 2 copies per AnfD2K2G2 iron-iron dinitrogenase heterohexamer
+  essentiality: ESSENTIAL
+  role: Helical delta subunit (AnfG) bound to the AnfD2K2 core to form the heterohexameric
+    AnfD2K2G2 catalytic component required for molybdenum- and vanadium-independent
+    diazotrophic growth.
+  evidence:
+  - reference: PMID:38062208
+    notes: Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2; PDB:8OIE) resolved
+      two AnfG delta subunits in the R. capsulatus AnfD2K2G2 catalytic hexamer, correcting
+      older alpha1beta2/alpha2beta2 descriptions.
+  - reference: PMID:8332060
+    notes: Schueddekopf et al. 1993 showed that R. capsulatus anfG is co-transcribed
+      in the anfHDGK operon and required for functional iron nitrogenase.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07934
+    protein_label: Nitrogenase iron-iron protein delta chain
+    gene_symbol: anfG
+    taxon_id: NCBITaxon:1061
+    taxon_label: Rhodobacter capsulatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Rhodobacter capsulatus AnfG delta chain of the iron-iron nitrogenase
+      complex.
+    evidence:
+    - reference: UniProtKB:Q07934
+      notes: Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-iron
+        protein delta chain (anfG).
+    - reference: PMID:8332060
+      notes: Schueddekopf et al. 1993 characterized R. capsulatus anfG.
+  - uniprot_id: UniProtKB:P16268
+    protein_label: Nitrogenase iron-iron protein delta chain
+    gene_symbol: anfG
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii AnfG delta chain of the iron-iron nitrogenase
+      complex.
+    evidence:
+    - reference: UniProtKB:P16268
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-iron
+        protein delta chain (anfG).
+    - reference: PMID:2644222
+      notes: Joerger et al. 1989 characterized A. vinelandii anfG.
+- component_id: anfh_reductase_subunit
+  label: Nitrogenase iron-only iron protein
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005977
+  gene_symbols:
+  - anfH
+  stoichiometry: 2 copies per AnfH2 reductase homodimer (two AnfH2 homodimers bind
+    per AnfD2K2G2 hexamer in the ADP-AlF3-trapped PDB:8OIE complex)
+  essentiality: ESSENTIAL
+  role: ATP-dependent iron-protein reductase subunit (AnfH; member of InterPro:IPR005977
+    alongside NifH and VnfH) that forms a [4Fe-4S]-bridged homodimer and docks onto
+    AnfD2K2G2 to drive electron transfer into the P-cluster.
+  evidence:
+  - reference: PMID:38062208
+    notes: Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2; PDB:8OIE) resolved
+      two AnfH2 homodimers bound to the R. capsulatus AnfD2K2G2 hexamer in an ADP-AlF3-trapped
+      state.
+  - reference: PMID:8332060
+    notes: Schueddekopf et al. 1993 characterized R. capsulatus anfH as encoding the
+      Fe protein reductase of the iron-only nitrogenase.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q07942
+    protein_label: Nitrogenase iron-only iron protein
+    gene_symbol: anfH
+    taxon_id: NCBITaxon:1061
+    taxon_label: Rhodobacter capsulatus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Rhodobacter capsulatus AnfH iron-protein reductase subunit of the
+      iron-iron nitrogenase complex.
+    evidence:
+    - reference: UniProtKB:Q07942
+      notes: Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-only
+        iron protein (anfH).
+    - reference: PMID:8332060
+      notes: Schueddekopf et al. 1993 characterized R. capsulatus anfH.
+  - uniprot_id: UniProtKB:P16269
+    protein_label: Nitrogenase iron-only iron protein
+    gene_symbol: anfH
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii AnfH iron-protein reductase subunit of the
+      iron-iron nitrogenase complex.
+    evidence:
+    - reference: UniProtKB:P16269
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-only
+        iron protein (anfH).
+    - reference: PMID:2644222
+      notes: Joerger et al. 1989 characterized A. vinelandii anfH.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:1061
+  taxon_label: Rhodobacter capsulatus
+  presence: COMMON
+  note: Purple nonsulfur alphaproteobacterium named in GO:0016611 in which the AnfD2K2G2-(AnfH2)2
+    iron-only nitrogenase complex was resolved by cryo-EM (PDB:8OIE).
+  reference: PMID:38062208
+- taxon_id: NCBITaxon:354
+  taxon_label: Azotobacter vinelandii
+  presence: COMMON
+  note: Aerobic diazotroph encoding the anfHDGKOR operon for iron-only nitrogenase
+    (PDB:8BOQ).
+  reference: PMID:2644222
+canonical_examples:
+- taxon_id: NCBITaxon:1061
+  taxon_label: Rhodobacter capsulatus
+  note: Reference organism named in GO:0016611 and source of the cryo-EM structure
+    of the ADP-AlF3-trapped AnfD2K2G2-(AnfH2)2 iron-iron nitrogenase complex (PDB:8OIE).
+  reference: PMID:38062208
+- taxon_id: NCBITaxon:354
+  taxon_label: Azotobacter vinelandii
+  note: Reference diazotroph in which the anfHDGKOR gene cluster was characterized
+    and the AnfD2K2G2 FeFe protein crystal structure (PDB:8BOQ) was determined.
+  reference: PMID:2644222
+functions:
+- function_id: iron_iron_nitrogenase_activity
+  label: nitrogenase activity
+  grounding: GO:0016163
+  description: Catalyzes ATP-dependent reduction of dinitrogen to ammonium and dihydrogen
+    at the iron-only FeFe-cofactor when molybdenum and vanadium are unavailable.
+  evidence:
+  - reference: GO:0016163
+    notes: GO:0016163 defines nitrogenase activity.
+  - reference: PMID:38062208
+    notes: Schmidt et al. 2024 characterized dinitrogen and carbon dioxide reduction
+      by the R. capsulatus AnfD2K2G2-AnfH2 iron-only nitrogenase complex.
+evidence:
+- reference: GO:0016611
+  notes: Gene Ontology cellular-component term for the iron-iron nitrogenase complex;
+    note that GO:0016611 retains older alpha1-beta2/alpha2-beta2 wording superseded
+    by resolved AnfD2K2G2 structures (PDB:8OIE, PDB:8BOQ).
+- reference: GO:0016610
+  notes: Parent Gene Ontology cellular-component term for the generic nitrogenase
+    complex.
+- reference: PMID:38062208
+  notes: Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2), structure and mechanism
+    of the Rhodobacter capsulatus iron-only nitrogenase complex (PDB:8OIE).
+- reference: PMID:8332060
+  notes: Schueddekopf et al. 1993 (DOI:10.1111/j.1365-2958.1993.tb01611.x), characterization
+    of the Rhodobacter capsulatus anfHDGK operon.
+- reference: PMID:2644222
+  notes: Joerger et al. 1989 (DOI:10.1128/jb.171.2.1075-1086.1989), nucleotide sequence
+    of the Azotobacter vinelandii anfHDGKOR gene cluster.
+- reference: PDB:8OIE
+  notes: RCSB PDB entry for the Rhodobacter capsulatus ADP-AlF3-stabilized iron-only
+    nitrogenase complex.
+causal_graphs:
+- graph_id: iron_iron_nitrogenase_assembly_and_catalysis
+  title: AnfD2K2G2 and AnfH2 assembly and catalysis in the iron-iron nitrogenase complex
+  description: AnfD alpha, AnfK beta, and AnfG delta chains assemble the heterohexameric
+    FeFe catalytic component that docks with homodimeric AnfH reductase to form the
+    iron-iron nitrogenase complex and catalyze ATP-dependent dinitrogen reduction.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Captures the R. capsulatus and A. vinelandii AnfD2K2G2-AnfH2 subunit
+    architecture and GO:0016163 nitrogenase activity without modeling FeFe-cofactor
+    biosynthesis.
+  nodes:
+  - node_id: anfd_alpha_subunit
+    label: Nitrogenase iron-iron protein alpha chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: anfd_alpha_subunit
+    grounding: InterPro:IPR011290
+    xrefs:
+    - UniProtKB:Q07933
+    - UniProtKB:P16266
+    description: AnfD alpha subunit housing the FeFe-cofactor.
+  - node_id: anfk_beta_subunit
+    label: Nitrogenase iron-iron protein beta chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: anfk_beta_subunit
+    grounding: InterPro:IPR014280
+    xrefs:
+    - UniProtKB:Q07935
+    - UniProtKB:P16267
+    description: AnfK beta subunit partnering with AnfD in the catalytic core.
+  - node_id: anfg_delta_subunit
+    label: Nitrogenase iron-iron protein delta chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: anfg_delta_subunit
+    grounding: InterPro:IPR014278
+    xrefs:
+    - UniProtKB:Q07934
+    - UniProtKB:P16268
+    description: AnfG delta subunit bound to AnfD on the catalytic hexamer.
+  - node_id: anfh_reductase_subunit
+    label: Nitrogenase iron-only iron protein
+    node_type: GENE_OR_PROTEIN
+    component_ref: anfh_reductase_subunit
+    grounding: InterPro:IPR005977
+    xrefs:
+    - UniProtKB:Q07942
+    - UniProtKB:P16269
+    description: Homodimeric AnfH iron-protein reductase subunit.
+  - node_id: fefe_nitrogenase_complex_node
+    label: iron-iron nitrogenase complex
+    node_type: STRUCTURE
+    grounding: GO:0016611
+    description: Assembled AnfD2K2G2-AnfH2 iron-iron nitrogenase complex.
+  - node_id: nitrogenase_activity_node
+    label: nitrogenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0016163
+    description: ATP-dependent dinitrogen reduction to ammonium and dihydrogen.
+  edges:
+  - subject: anfd_alpha_subunit
+    predicate: RO:0002436
+    object: fefe_nitrogenase_complex_node
+    description: Two AnfD alpha chains assemble with AnfK and AnfG to form the FeFe-cofactor-containing
+      catalytic component.
+    evidence:
+    - reference: PMID:38062208
+      notes: Schmidt et al. 2024 (PDB:8OIE) resolved AnfD in the R. capsulatus AnfD2K2G2-(AnfH2)2
+        complex.
+  - subject: anfk_beta_subunit
+    predicate: RO:0002436
+    object: fefe_nitrogenase_complex_node
+    description: Two AnfK beta chains pair with AnfD to form the alpha2beta2 core
+      and coordinate the P-cluster.
+    evidence:
+    - reference: PMID:38062208
+      notes: Schmidt et al. 2024 (PDB:8OIE) resolved AnfK in the AnfD2K2G2 catalytic
+        component.
+  - subject: anfg_delta_subunit
+    predicate: RO:0002436
+    object: fefe_nitrogenase_complex_node
+    description: Two AnfG delta chains bind to AnfD on the alpha2beta2 core to complete
+      the AnfD2K2G2 catalytic hexamer.
+    evidence:
+    - reference: PMID:38062208
+      notes: Schmidt et al. 2024 resolved two AnfG subunits bound to the AnfD2K2 core.
+  - subject: anfh_reductase_subunit
+    predicate: RO:0002436
+    object: fefe_nitrogenase_complex_node
+    description: Homodimeric AnfH reductase docks onto the AnfD2K2G2 catalytic component
+      to deliver ATP-coupled electrons into the P-cluster.
+    evidence:
+    - reference: PMID:38062208
+      notes: Schmidt et al. 2024 (PDB:8OIE) resolved two AnfH2 dimers bound to the
+        AnfD2K2G2 hexamer.
+  - subject: fefe_nitrogenase_complex_node
+    predicate: RO:0002327
+    object: nitrogenase_activity_node
+    description: The assembled iron-iron nitrogenase complex enables ATP-dependent
+      dinitrogen reduction to ammonium.
+    evidence:
+    - reference: PMID:38062208
+      notes: Schmidt et al. 2024 demonstrated dinitrogen reduction by the purified
+        R. capsulatus iron-only nitrogenase complex.
+curation_history:
+- timestamp: '2026-10-30T15:25:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0016611 (iron-iron nitrogenase complex)
+    with verified GO identity, source-backed components, reviewed UniProtKB protein
+    examples, taxonomic distribution, canonical examples, functions, and mechanistic
+    causal graph.
+  llm_assisted: true
