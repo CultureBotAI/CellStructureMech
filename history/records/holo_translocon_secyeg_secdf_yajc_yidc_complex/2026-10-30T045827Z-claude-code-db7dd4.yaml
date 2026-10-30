@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/holo_translocon_secyeg_secdf_yajc_yidc_complex.yaml
+  slug: holo_translocon_secyeg_secdf_yajc_yidc_complex
+session:
+  id: 2026-10-30T045827Z-claude-code-db7dd4
+  timestamp: '2026-10-30T04:58:27Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added component_ref causal nodes and constituent edges for SecY/E/G and SecD/F/YajC
+  details: Connected SecY, SecE, and SecG to secyeg_core and SecD, SecF, and YajC to secdf_yajc_module
+    via component_ref GENE_OR_PROTEIN nodes and directed contributes to edges backed by ComplexPortal:CPX-1095
+    and Botte et al. 2016 (PMID:27435098). Validated via write_validated_structure.

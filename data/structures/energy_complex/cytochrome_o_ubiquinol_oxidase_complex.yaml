@@ -31,6 +31,12 @@ curation_history:
   action: EDIT
   changes: added 4 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-30T04:54:33Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added InterPro-grounded component_ref causal nodes and source-backed constituent
+    edges for CyoB, CyoA, CyoC, and CyoD to cytochrome_o_oxidase.
+  llm_assisted: true
 parent_structures:
 - GO:0098803
 components:
@@ -253,6 +259,26 @@ causal_graphs:
     label: cytochrome bo3 ubiquinol oxidase activity
     node_type: MOLECULAR_FUNCTION
     grounding: GO:0009486
+  - node_id: cyo_subunit_i
+    label: Cytochrome o ubiquinol oxidase, subunit I
+    node_type: GENE_OR_PROTEIN
+    component_ref: cyo_subunit_i
+    grounding: InterPro:IPR014207
+  - node_id: cyo_subunit_ii
+    label: Cytochrome o ubiquinol oxidase subunit II
+    node_type: GENE_OR_PROTEIN
+    component_ref: cyo_subunit_ii
+    grounding: InterPro:IPR006333
+  - node_id: cyo_subunit_iii
+    label: Cytochrome o ubiquinol oxidase, subunit III
+    node_type: GENE_OR_PROTEIN
+    component_ref: cyo_subunit_iii
+    grounding: InterPro:IPR014206
+  - node_id: cyo_subunit_iv
+    label: Cytochrome o ubiquinol oxidase subunit IV
+    node_type: GENE_OR_PROTEIN
+    component_ref: cyo_subunit_iv
+    grounding: InterPro:IPR014210
   edges:
   - subject: cytochrome_o_oxidase
     predicate: enables
@@ -306,3 +332,57 @@ causal_graphs:
     - reference: GO:0009486
       notes: The GO:0009486 reaction accounts for protons moved to the periplasmic
         side during cytochrome bo3 ubiquinol oxidase activity.
+  - subject: cyo_subunit_i
+    predicate: contributes to
+    object: cytochrome_o_oxidase
+    description: Large membrane-embedded subunit of cytochrome bo3 terminal oxidase.
+    evidence:
+    - reference: InterPro:IPR014207
+      notes: InterPro IPR014207 is the source-neutral family for CyoB, subunit I of
+        cytochrome o ubiquinol oxidase.
+    - reference: PDB:1FFT
+      notes: The PDB:1FFT deposition maps polymer entity 1 of the E. coli ubiquinol
+        oxidase structure to UniProtKB:P0ABI8/CYOB_ECOLI.
+  - subject: cyo_subunit_ii
+    predicate: contributes to
+    object: cytochrome_o_oxidase
+    description: Subunit II (CyoA) of the cytochrome o ubiquinol oxidase terminal
+      oxidase; this structural assignment does not by itself locate the quinol-binding
+      site.
+    evidence:
+    - reference: InterPro:IPR006333
+      notes: InterPro IPR006333 is the source-neutral family for cytochrome o ubiquinol
+        oxidase subunit II.
+    - reference: PDB:1FFT
+      notes: The PDB:1FFT deposition maps polymer entity 2 of the E. coli ubiquinol
+        oxidase structure to UniProtKB:P0ABJ1/CYOA_ECOLI.
+    - reference: DOI:10.1038/82824
+      notes: Abramson et al. 2000 abstract assigns the candidate quinone-binding polar
+        cluster to subunit I (CyoB).
+    - reference: DOI:10.1021/bi9809977
+      notes: Tsatsos et al. 1998 abstract reports a sixfold increase in apparent ubiquinol
+        Km for CyoA W136A, suggesting proximity to or involvement in quinol binding;
+        this is not an exclusive structural localization of the site to CyoA.
+  - subject: cyo_subunit_iii
+    predicate: contributes to
+    object: cytochrome_o_oxidase
+    description: Membrane subunit of the cytochrome o ubiquinol oxidase terminal oxidase.
+    evidence:
+    - reference: InterPro:IPR014206
+      notes: InterPro IPR014206 is the source-neutral family for CyoC, subunit III
+        of cytochrome o ubiquinol oxidase.
+    - reference: PDB:1FFT
+      notes: The PDB:1FFT deposition maps polymer entity 3 of the E. coli ubiquinol
+        oxidase structure to UniProtKB:P0ABJ3/CYOC_ECOLI.
+  - subject: cyo_subunit_iv
+    predicate: contributes to
+    object: cytochrome_o_oxidase
+    description: Small fourth membrane subunit of the cytochrome o ubiquinol oxidase
+      terminal oxidase.
+    evidence:
+    - reference: InterPro:IPR014210
+      notes: InterPro IPR014210 is the source-neutral family for CyoD, subunit IV
+        of cytochrome o ubiquinol oxidase.
+    - reference: UniProtKB:P0ABJ6
+      notes: Reviewed UniProtKB entry P0ABJ6 records E. coli cyoD as cytochrome bo3
+        ubiquinol oxidase subunit 4.

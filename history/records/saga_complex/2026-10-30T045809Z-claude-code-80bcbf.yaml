@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/saga_complex.yaml
+  slug: saga_complex
+session:
+  id: 2026-10-30T045809Z-claude-code-80bcbf
+  timestamp: '2026-10-30T04:58:09Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added component_ref causal nodes and constituent edges for 17 SAGA subunits
+  details: Connected the 17 previously unreferenced SAGA components (Tra1, TAF5/6/9/10/12,
+    Spt3/7/8/20, Ada1/2/3, Sgf11/29/73, Sus1) to saga_complex via component_ref GENE_OR_PROTEIN
+    nodes and directed contributes to edges backed by Wang et al. 2020 (DOI:10.1038/s41586-020-1933-5).
+    Validated via write_validated_structure.
