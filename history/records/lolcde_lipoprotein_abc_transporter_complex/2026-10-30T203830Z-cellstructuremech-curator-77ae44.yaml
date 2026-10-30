@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/lolcde_lipoprotein_abc_transporter_complex.yaml
+  slug: lolcde_lipoprotein_abc_transporter_complex
+session:
+  id: 2026-10-30T203830Z-cellstructuremech-curator-77ae44
+  timestamp: '2026-10-30T20:38:30Z'
+  actors:
+  - type: ai_agent
+    name: cellstructuremech-curator
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Anchor mature_outer_membrane_lipoprotein causal-graph node with verified Swiss-Prot
+    Lpp and Pal xrefs
+  details: Added reviewed Escherichia coli K-12 Swiss-Prot accessions UniProtKB:P69776 (lpp,
+    Major outer membrane prolipoprotein Lpp) and UniProtKB:P0A912 (pal, Peptidoglycan-associated
+    lipoprotein) to xrefs on causal_graphs#lolcde_lipoprotein_release node mature_outer_membrane_lipoprotein,
+    backed by Yakushi et al. 2000 (PMID:10783239).

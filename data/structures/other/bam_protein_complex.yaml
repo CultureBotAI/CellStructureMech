@@ -58,6 +58,14 @@ curation_history:
   changes: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
     verified component grounding to causal_graphs component_ref node(s): bam_a (InterPro:IPR023707).'
   llm_assisted: true
+- timestamp: '2026-10-30T20:34:51Z'
+  curator: antigravity
+  action: CURATED_PROTEIN_EXAMPLES
+  changes: Anchored causal_graphs#bam_omp_folding_and_insertion nodes unfolded_omp_substrate
+    and outer_membrane_beta_barrel with verified Escherichia coli K-12 Swiss-Prot
+    accession UniProtKB:P09169 (ompT, Protease 7) reconstituted in Hagan, Kim and
+    Kahne 2010 (DOI:10.1126/science.1188919).
+  llm_assisted: true
 synonyms:
 - synonym_text: BAM complex
   synonym_type: EXACT_SYNONYM
@@ -335,6 +343,11 @@ causal_graphs:
   - node_id: unfolded_omp_substrate
     label: unfolded outer-membrane beta-barrel protein substrate
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P09169
+    description: Chaperone-delivered unfolded outer-membrane beta-barrel protein precursor,
+      exemplified in Escherichia coli K-12 by OmpT (UniProtKB:P09169) reconstituted
+      by Hagan, Kim and Kahne 2010 (DOI:10.1126/science.1188919).
   - node_id: bam_b
     label: Outer membrane protein assembly factor BamB
     node_type: GENE_OR_PROTEIN
@@ -378,6 +391,11 @@ causal_graphs:
   - node_id: outer_membrane_beta_barrel
     label: assembled outer-membrane beta-barrel protein
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P09169
+    description: Folded beta-barrel outer-membrane protein inserted into the lipid
+      bilayer by the BAM complex, exemplified in Escherichia coli K-12 by OmpT (UniProtKB:P09169;
+      DOI:10.1126/science.1188919).
   - node_id: cell_outer_membrane
     label: cell outer membrane
     node_type: STRUCTURE

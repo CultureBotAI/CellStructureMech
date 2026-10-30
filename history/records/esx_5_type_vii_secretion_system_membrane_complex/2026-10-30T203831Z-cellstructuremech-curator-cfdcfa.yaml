@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/esx_5_type_vii_secretion_system_membrane_complex.yaml
+  slug: esx_5_type_vii_secretion_system_membrane_complex
+session:
+  id: 2026-10-30T203831Z-cellstructuremech-curator-cfdcfa
+  timestamp: '2026-10-30T20:38:31Z'
+  actors:
+  - type: ai_agent
+    name: cellstructuremech-curator
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Anchor type_vii_substrates causal-graph node with verified Swiss-Prot EsxN, PE25,
+    and PPE41 xrefs
+  details: Added reviewed Mycobacterium tuberculosis H37Rv Swiss-Prot accessions UniProtKB:P9WNJ3
+    (esxN/Rv1793), UniProtKB:I6X486 (PE25/Rv2431c), and UniProtKB:Q79FE1 (PPE41/Rv2430c) to
+    xrefs on causal_graphs#esx5_membrane_complex_export node type_vii_substrates, backed by
+    Houben et al. 2014 (DOI:10.1016/j.bbamcr.2013.11.003).

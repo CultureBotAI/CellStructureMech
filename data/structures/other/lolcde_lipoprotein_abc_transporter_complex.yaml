@@ -28,6 +28,13 @@ curation_history:
   changes: Connected lolc, lold, and lole subunits to lolcde and linked lipoprotein_release
     to outer_membrane_lipoprotein_localization.
   llm_assisted: true
+- timestamp: '2026-10-30T20:32:20Z'
+  curator: antigravity
+  action: CURATED_PROTEIN_EXAMPLES
+  changes: Anchored causal_graphs#lolcde_lipoprotein_release node mature_outer_membrane_lipoprotein
+    with verified Escherichia coli K-12 Swiss-Prot accessions UniProtKB:P69776 (lpp)
+    and UniProtKB:P0A912 (pal) assayed in Yakushi et al. 2000 (PMID:10783239).
+  llm_assisted: true
 synonyms:
 - synonym_text: LolCDE complex
   synonym_type: EXACT_SYNONYM
@@ -241,6 +248,13 @@ causal_graphs:
   - node_id: mature_outer_membrane_lipoprotein
     label: mature outer-membrane lipoprotein
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P69776
+    - UniProtKB:P0A912
+    description: Triacylated outer-membrane-destined lipoprotein substrate lacking
+      the inner-membrane Asp(+2) retention signal, exemplified in Escherichia coli
+      K-12 by Lpp (UniProtKB:P69776) and Pal (UniProtKB:P0A912) assayed in Yakushi
+      et al. 2000 (PMID:10783239).
   - node_id: inner_membrane
     label: inner membrane
     node_type: CELLULAR_LOCALIZATION
