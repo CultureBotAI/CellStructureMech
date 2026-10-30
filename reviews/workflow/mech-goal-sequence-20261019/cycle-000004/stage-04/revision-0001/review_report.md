@@ -6,8 +6,8 @@
 - **Frozen Source Revision**: `5c642e4080ef3a0f026845843c559d3b46de8871`
 - **Previous Review Lineage**: `reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/evidence.yaml` (`sha256: 4237492297a2b023ff4ef673d989f522e15880131191ac8d701960b70b1cca91`)
 - **Frozen Inventory Size**: `1,001` `CellStructureRecord` YAML files across `13` category folders (`100%` full coverage, including the `8` new Cycle 4 Stage 1 records)
-- **Prior Structured Reviews Checked**: `293` existing bundles in `reviews/structured/` (`0` unresolved `open`/`deferred` findings carried from Cycle 3 Stage 5)
-- **New Native Structured Review Bundles Saved**: `11` (`2` single-record reviews via `.claude/skills/review-yaml-record/SKILL.md`, `9` full-category reviews via `.claude/skills/review-yaml-category/SKILL.md`; `304` total valid bundles in `reviews/structured/`)
+- **Prior Structured Reviews Checked**: `302` existing bundles in `reviews/structured/` (`0` unresolved `open`/`deferred` findings carried from Cycle 3 Stage 5)
+- **New Native Structured Review Bundles Saved**: `11` (`2` single-record reviews via `.claude/skills/review-yaml-record/SKILL.md`, `9` full-category reviews via `.claude/skills/review-yaml-category/SKILL.md`; `313` total valid bundles in `reviews/structured/`)
 - **Open Findings Carried Forward to Stage 5**: `13` unique `issue_key` findings (`13` non-overlapping bundle-level finding entries: `4` major, `9` minor across `19` unique records)
 
 ## Cohort & Category Coverage Summary

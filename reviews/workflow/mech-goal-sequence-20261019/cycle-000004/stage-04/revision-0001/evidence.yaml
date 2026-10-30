@@ -8,7 +8,7 @@ revision: 1
 outcome: completed
 summary: Reviewed all 1,001 eligible CellStructureRecord YAML files across all 13 category folders at
   frozen git revision 5c642e4080ef3a0f026845843c559d3b46de8871 (100% full coverage). Saved 11 native structured
-  RecordReview bundles under reviews/structured/ (2 single-record reviews and 9 category reviews; 304
+  RecordReview bundles under reviews/structured/ (2 single-record reviews and 9 category reviews; 313
   total valid bundles) and recorded 13 unique open findings (4 major, 9 minor across 19 unique records)
   in carry_forward_ids for Stage 5 grouped remediation, plus infrastructure task cellstructuremech-infra-0007
   (#2457) in INFRA_TASKS.md.
@@ -18,13 +18,13 @@ previous_evidence:
   sha256: 4237492297a2b023ff4ef673d989f522e15880131191ac8d701960b70b1cca91
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/review_report.md
-  sha256: 89d783a3b1099d36e7201bfe80d6cd30e011cc8fa02b335707be64dde3206abf
+  sha256: a92ca9dbf3e0f5faeb7c9d19fc220575fad51234bd0bae225c2a15d1fc6ae225
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/review_findings.md
-  sha256: 45c9f8b68dd94b6f41078689a4e68ff29f67bba71b1d06f749990235a2817149
+  sha256: 813176da98d5b7ed501290611c9fdcf9d14c2338d40a3ed565f781b3c4750e2e
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/validation.md
-  sha256: 2db7fb7d58f7fb655d1f421bfaf53e270d93596710a1de69fbb68fbe751e2cbf
+  sha256: e4372464167b8f68d86e919b5b0795d90320d51d693c3a3f5b50ee0cc2111693
   kind: validation
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/coverage_inventory.json
   sha256: 09ec29ac3ce70845fac5861d991a313a3624a619da24c32786180722167dbfbc
@@ -62,13 +62,14 @@ findings:
     F1, severity minor).'
 - finding_id: division-machinery-elongasome-mrec-mred-component-type
   status: open
-  summary: 'elongasome.yaml (GO:0043188) components[2] (mrec_mred, [mreC, mreD]) is typed PROTEIN instead
-    of PROTEIN_COMPLEX while causal_graphs[0].nodes[9] uses node_type PROTEIN_COMPLEX (native review:
-    20261030T082005Z-division-machinery-category-review F1, severity minor).'
+  summary: 'elongasome.yaml (cellstructuremech:elongasome) components[2] (mrec_mred, MreC and MreD, [mreC,
+    mreD]) is typed PROTEIN instead of PROTEIN_COMPLEX while causal_graphs[0].nodes[9] models the dimeric
+    MreC-MreD transmembrane scaffold (native review: 20261030T082005Z-division-machinery-category-review
+    F1, severity minor).'
 - finding_id: energy-complex-phycobilisome-core-type-and-has-part
   status: open
-  summary: 'phycobilisome.yaml (GO:0030089) types heteromeric allophycocyanin_core ([apcA, apcB, apcD,
-    apcF]) as PROTEIN instead of PROTEIN_COMPLEX and omits has_part links to phycobilisome_core and phycobilisome_rod
+  summary: 'phycobilisome.yaml (GO:0030089) components[1] (allophycocyanin_core, [apcA, apcB, apcD, apcF])
+    is typed PROTEIN instead of PROTEIN_COMPLEX and omits has_part links to phycobilisome_core and phycobilisome_rod
     (native review: 20261030T082006Z-energy-complex-category-review F1, severity minor).'
 - finding_id: membrane-organelle-subcomplex-types-and-anammoxosome-has-part
   status: open
@@ -83,7 +84,7 @@ findings:
     review: 20261030T082008Z-microcompartment-category-review F1, severity minor).'
 - finding_id: other-pas-eisosome-component-types-and-micos-has-part
   status: open
-  summary: 'phagophore_assembly_site.yaml (GO:0000407) components[1] and eisosome.yaml (GO:0032126) components[0]
+  summary: 'phagophore_assembly_site.yaml (GO:0000407) components[0] and eisosome.yaml (GO:0032126) components[0]
     type multi-subunit complexes as PROTEIN instead of PROTEIN_COMPLEX and micos_complex.yaml (GO:0061617)
     omits has_part for mic10_subcomplex and mic60_mic19_complex (native review: 20261030T082009Z-other-category-review
     F2, severity minor).'
