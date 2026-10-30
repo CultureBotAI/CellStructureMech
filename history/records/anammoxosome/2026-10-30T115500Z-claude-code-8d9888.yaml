@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/anammoxosome.yaml
+  slug: anammoxosome
+session:
+  id: 2026-10-30T115500Z-claude-code-8d9888
+  timestamp: '2026-10-30T11:55:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2462
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - has_part
+  - curation_history
+  summary: Added has_part link to cellstructuremech:anammoxosome_membrane to reciprocate anammoxosome_membrane
+    part_of GO:0044222 (#2462).
+  details: 'Resolved finding membrane-organelle-subcomplex-types-and-anammoxosome-has-part
+    on anammoxosome.yaml (#2462): anammoxosome_membrane (cellstructuremech:anammoxosome_membrane)
+    declares part_of: [GO:0044222] (anammoxosome). Added reciprocal has_part: [cellstructuremech:anammoxosome_membrane].'

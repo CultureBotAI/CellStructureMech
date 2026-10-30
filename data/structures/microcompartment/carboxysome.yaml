@@ -631,7 +631,6 @@ causal_graphs:
   - node_id: shell
     label: carboxysome shell
     node_type: STRUCTURE
-    component_ref: bmc_h
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -971,6 +970,13 @@ curation_history:
   changes: 'Addressed #2421: Added beta-carboxysome hexamer paralogue symbols ccmK3
     and ccmK4 to components#bmc_h.gene_symbols to match Synechococcus elongatus PCC
     7942 protein_examples.'
+  llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: 'Removed component_ref: bmc_h from composite STRUCTURE node shell in carboxysome_co2_concentrating
+    since the icosahedral shell is built from both bmc_h hexamers and bmc_p pentamers
+    (#2463).'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034

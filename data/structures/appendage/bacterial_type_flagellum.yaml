@@ -667,7 +667,6 @@ causal_graphs:
     label: flagellar filament
     node_type: STRUCTURE
     grounding: GO:0009420
-    component_ref: flagellin
   - node_id: swimming
     label: bacterial-type flagellum-dependent cell motility
     node_type: BIOLOGICAL_PROCESS
@@ -915,6 +914,13 @@ curation_history:
   action: ADDRESS_SAVED_REVIEW
   changes: 'Addressed #2421: Added hag to components#flagellin.gene_symbols and fliY
     to components#c_ring.gene_symbols to match curated Bacillus subtilis protein_examples.'
+  llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: 'Removed component_ref: flagellin from STRUCTURE node filament (GO:0009420)
+    in flagellum_torque_generation since GENE_OR_PROTEIN node flic already carries
+    component_ref: flagellin (#2463).'
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0307

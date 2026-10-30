@@ -27,7 +27,16 @@ curation_history:
     distribution note to structural characterization in epimastigotes and removing
     unsupported developmental-regulation wording.'
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_HIERARCHY_AND_PARTHOOD
+  changes: Moved GO:0005886 (plasma membrane) from parent_structures to part_of and
+    set parent_structures to GO:0110165 (cellular anatomical structure) per GO hierarchy
+    (#2461).
+  llm_assisted: true
 parent_structures:
+- GO:0110165
+part_of:
 - GO:0005886
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5693
@@ -69,6 +78,10 @@ evidence:
   notes: Chasen et al. 2020, Identification and Localization of the First Known Proteins
     of the Trypanosoma cruzi Cytostome Cytopharynx Endocytic Complex, Frontiers in
     Cellular and Infection Microbiology.
+- reference: GO:0110165
+  notes: Gene Ontology cellular-component parent term for cellular anatomical structure.
+- reference: GO:0005886
+  notes: Gene Ontology cellular-component parthood term for plasma membrane.
 causal_graphs:
 - graph_id: cytostome_endocytic_entry
   title: Cytostome entry feeds the reservosome endocytic route

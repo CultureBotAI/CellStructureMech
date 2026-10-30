@@ -271,3 +271,11 @@ curation_history:
     in category SECRETION_SYSTEM with verified GO hierarchy, components, UniProtKB
     protein examples, causal mechanism graph, and literature evidence.
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_PARTHOOD
+  changes: Added has_part link to cellstructuremech:secyeg_translocon_complex to reciprocate
+    secyeg_translocon_complex part_of GO:0031522 (#2461).
+  llm_assisted: true
+has_part:
+- cellstructuremech:secyeg_translocon_complex

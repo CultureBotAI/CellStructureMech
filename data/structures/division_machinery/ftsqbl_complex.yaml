@@ -14,8 +14,6 @@ synonyms:
   source: GO:1990587
 parent_structures:
 - GO:1990586
-part_of:
-- GO:1990586
 has_part:
 - GO:1990588
 components:
@@ -311,4 +309,10 @@ curation_history:
   changes: Create new CellStructureRecord GO:1990587 (FtsQBL complex) with verified
     GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
     distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_HIERARCHY_AND_PARTHOOD
+  changes: Removed duplicate GO:1990586 (divisome complex) from part_of so GO:1990586
+    remains only in parent_structures (#2461).
   llm_assisted: true

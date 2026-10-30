@@ -1,0 +1,828 @@
+# Post-remediation verification review of all 19 CellStructureRecord files remediated in Cycle 4 Stage 5 (#2461, #2462, #2463)
+
+- Review: 20261030T122500Z-c4-stage5-remediation-verification
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-30T12:20:00Z
+- Finished UTC: 2026-10-30T12:25:00Z
+- Reviewer: antigravity-c4-stage5-remediation-review (self_review)
+- Completion: completed
+- Verdict: pass
+- Scientific review: true
+
+## Summary
+
+Fresh post-remediation review of all 19 CellStructureRecord YAML files modified in Cycle 4 Stage 5 (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353) resolving all 13 open findings carried forward from Cycle 4 Stage 4 across issues #2461 (hierarchy, parthood, and subcomplex has_part links in ftsqbl_complex, mis12_mind_type_complex, cytostome, supraspliceosomal_complex, and cell_envelope_sec_protein_transport_complex), #2462 (component_type: PROTEIN_COMPLEX for 8 multi-subunit subcomplex components across 8 records, reciprocal has_part links in phycobilisome, anammoxosome, and micos_complex, and decoupled single-PMID protein_examples evidence notes in box_c_d_rnp_complex), and #2463 (removal of monomer component_ref bindings from composite STRUCTURE causal-graph nodes in bacterial_type_flagellum and carboxysome plus reciprocal has_part links to filament and motor records in archaeal_type_flagellum). All 19 records pass strict validation, ID-label correspondence, UniProt verification, offline CURIE cache check, history ledger validation, and page regeneration checks with zero open findings.
+
+## Scope And Provenance
+
+Complete cohort of all 19 CellStructureRecord YAML files remediated in Cycle 4 Stage 5 to resolve the 13 carried-forward Stage 4 findings.
+
+Selection: All 19 records modified in commit 31fd33d9556ea5627b36d50ab608ccb9464f9353 for issues #2461, #2462, and #2463.
+Coverage: full; 19 reviewed / 19 in the declared population.
+Source: git_commit at Git base 31fd33d9556ea5627b36d50ab608ccb9464f9353.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0097589 | data/structures/appendage/archaeal_type_flagellum.yaml | maintained | archaeal-type flagellum |
+| GO:0009288 | data/structures/appendage/bacterial_type_flagellum.yaml | maintained | bacterial-type flagellum |
+| GO:0036286 | data/structures/cytoskeleton/eisosome_filament.yaml | maintained | eisosome filament |
+| cellstructuremech:elongasome | data/structures/division_machinery/elongasome.yaml | maintained | elongasome |
+| GO:1990587 | data/structures/division_machinery/ftsqbl_complex.yaml | maintained | FtsQBL complex |
+| GO:0030089 | data/structures/energy_complex/phycobilisome.yaml | maintained | phycobilisome |
+| GO:0044222 | data/structures/membrane_organelle/anammoxosome.yaml | maintained | anammoxosome |
+| GO:0020015 | data/structures/membrane_organelle/glycosome.yaml | maintained | glycosome |
+| GO:0005794 | data/structures/membrane_organelle/golgi_apparatus.yaml | maintained | Golgi apparatus |
+| GO:0031470 | data/structures/microcompartment/carboxysome.yaml | maintained | carboxysome |
+| GO:0031910 | data/structures/other/cytostome.yaml | maintained | cytostome |
+| GO:0032126 | data/structures/other/eisosome.yaml | maintained | eisosome |
+| GO:0061617 | data/structures/other/micos_complex.yaml | maintained | MICOS complex |
+| GO:0000444 | data/structures/other/mis12_mind_type_complex.yaml | maintained | MIS12/MIND type complex |
+| GO:0000407 | data/structures/other/phagophore_assembly_site.yaml | maintained | phagophore assembly site |
+| GO:0031428 | data/structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.yaml | maintained | box C/D methylation guide snoRNP complex |
+| GO:0170049 | data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml | maintained | box C/D RNP complex |
+| GO:0044530 | data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml | maintained | supraspliceosomal complex |
+| GO:0031522 | data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml | maintained | cell envelope Sec protein transport complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Strict corpus validation covering all 19 remediated records | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All 1001 corpus records including the 19 remediated records pass strict LinkML and semantic validation with 0 errors. |
+| ID-label correspondence across corpus and generated products | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All ontology ID-label pairs across the corpus (4103 canonical, 50 synonym, 6 exception) correspond to authoritative ontology labels. |
+| UniProtKB protein_examples and causal_graphs xref verification | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All UniProtKB protein_examples and causal_graphs xrefs across the corpus pass verification. |
+| Offline CURIE liveness check across corpus | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All 5858 resolved CURIEs (including newly added GO:0032991, GO:0110165, GO:1990904, and cellstructuremech: subcomplex has_part links) pass offline liveness verification. |
+| Repository history link and LinkML HistoryRecord validation | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All 2101 repository history files (including the 19 newly added Cycle 4 Stage 5 history ledger records) pass link and LinkML HistoryRecord schema validation. |
+
+## Scientific And Domain Assessments
+
+### Hierarchy, parthood, and subcomplex has_part disambiguation (#2461)
+
+consistency: supported. Targets: GO:1990587, GO:0000444, GO:0031910, GO:0044530, GO:0031522.
+
+All 5 records in Group 1 (#2461) cleanly separate is-a (parent_structures) and parthood (part_of / has_part): ftsqbl_complex.yaml removes duplicate part_of: [GO:1990586] (divisome complex) so GO:1990586 is retained solely in parent_structures alongside has_part: [GO:1990588]; mis12_mind_type_complex.yaml replaces parent_structures: [GO:0000940] (outer kinetochore) with parent_structures: [GO:0032991] (protein-containing complex), moves GO:0000940 to part_of alongside GO:0000776 (part_of: [GO:0000940, GO:0000776]), adds top-level evidence for GO:0032991, and changes causal_graphs[0].edges[0].predicate (mis12_mind -&gt; outer_kinetochore) from 'is a' to 'is part of'; cytostome.yaml moves GO:0005886 (plasma membrane) from parent_structures to part_of: [GO:0005886], sets parent_structures: [GO:0110165] (cellular anatomical structure), and adds top-level evidence for GO:0110165; supraspliceosomal_complex.yaml replaces parent_structures: [GO:0005681] with parent_structures: [GO:1990904] (ribonucleoprotein complex), moves GO:0005681 (spliceosomal complex) to has_part: [GO:0005681] while retaining part_of: [GO:0005654] (nucleoplasm), and updates top-level evidence notes for GO:1990904 and GO:0005681; and cell_envelope_sec_protein_transport_complex.yaml adds has_part: [cellstructuremech:secyeg_translocon_complex] as the reciprocal parthood link to secyeg_translocon_complex.yaml.
+
+### PROTEIN_COMPLEX typing for multi-subunit subcomplexes, reciprocal has_part links, and single-PMID evidence notes (#2462)
+
+representation: supported. Targets: GO:0036286, cellstructuremech:elongasome, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0000407, GO:0032126, GO:0061617, GO:0031428, GO:0170049.
+
+All 8 multi-subunit subcomplex components across 8 records in Group 2 (#2462) now use component_type: PROTEIN_COMPLEX (pil1_lsp1_bar_core in eisosome_filament.yaml and eisosome.yaml; mrec_mred in elongasome.yaml; allophycocyanin_core in phycobilisome.yaml; peroxin_import_machinery in glycosome.yaml; golgi_snare_trafficking_machinery in golgi_apparatus.yaml; phagophore_assembly_site_atg_machinery in phagophore_assembly_site.yaml; and nop1_nop56_nop58_snu13_core in box_c_d_methylation_guide_snornp_complex.yaml); phycobilisome.yaml adds has_part: [cellstructuremech:phycobilisome_core, cellstructuremech:phycobilisome_rod]; anammoxosome.yaml adds has_part: [cellstructuremech:anammoxosome_membrane]; micos_complex.yaml adds has_part: [cellstructuremech:mic10_subcomplex, cellstructuremech:mic60_mic19_complex]; and box_c_d_rnp_complex.yaml decouples the concatenated two-paper .notes strings on components[1].protein_examples[1] (UniProtKB:Q12460, NOP56, PMID:9632712 -&gt; Wu P et al. 1998 J Biol Chem) and components[1].protein_examples[2] (UniProtKB:Q12499, NOP58, PMID:9372940 -&gt; Gautier T et al. 1997 Mol Cell Biol).
+
+### Causal graph STRUCTURE node component_ref alignment and archaeal flagellum has_part links (#2463)
+
+graph: supported. Targets: GO:0097589, GO:0009288, GO:0031470.
+
+All 3 records in Group 3 (#2463) cleanly distinguish composite STRUCTURE nodes from monomer PROTEIN components and complete reciprocal child parthood: bacterial_type_flagellum.yaml removes component_ref: flagellin from node_id: filament (GO:0009420) in flagellum_torque_generation; carboxysome.yaml removes component_ref: bmc_h from node_id: shell in carboxysome_co2_concentrating; and archaeal_type_flagellum.yaml adds has_part: [cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor].
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+- retain: GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522. All 19 remediated records preserve their existing structure boundaries and canonical GO/CSM identifiers while resolving all 13 Cycle 4 Stage 4 review findings.
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev_strict_c4_stage5 | scripts/validate_strict.py; strict validation summary | supports | validate_strict.py scanned 1001 files with 0 ERROR rows. |
+| ev_labels_c4_stage5 | scripts/validate_id_label_correspondence.py; id-label correspondence summary | supports | validate_id_label_correspondence.py verified 4103 canonical, 50 synonym, and 6 exception pairs with 0 mismatches. |
+| ev_uniprot_c4_stage5 | scripts/uniprot_genes.py; uniprot_genes --verify summary | supports | uniprot_genes.py --verify confirmed all UniProtKB protein_examples and causal_graphs xrefs verified ok. |
+| ev_curies_c4_stage5 | scripts/check_curies.py; check_curies --offline --check summary | supports | check_curies.py --offline --check verified 5858 OK and 252 SKIPPED identifiers. |
+| ev_history_c4_stage5 | scripts/validate_history.py; history link and schema validation | supports | 2101 history records validated with 0 invalid links and 0 HistoryRecord schema errors. |
+
+## Limits And Additional Notes
+
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261030T122500Z-c4-stage5-remediation-verification
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: 'Post-remediation verification review of all 19 CellStructureRecord files remediated
+  in Cycle 4 Stage 5 (#2461, #2462, #2463)'
+started_at: '2026-10-30T12:20:00Z'
+finished_at: '2026-10-30T12:25:00Z'
+reviewer:
+  identity: antigravity-c4-stage5-remediation-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: 'Post-remediation verification review against committed git
+    revision 31fd33d9556ea5627b36d50ab608ccb9464f9353 covering all 19 records modified
+    to resolve the 13 Cycle 4 Stage 4 review findings across GitHub issues #2461,
+    #2462, and #2463.'
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: true
+summary: 'Fresh post-remediation review of all 19 CellStructureRecord YAML files modified
+  in Cycle 4 Stage 5 (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353) resolving all
+  13 open findings carried forward from Cycle 4 Stage 4 across issues #2461 (hierarchy,
+  parthood, and subcomplex has_part links in ftsqbl_complex, mis12_mind_type_complex,
+  cytostome, supraspliceosomal_complex, and cell_envelope_sec_protein_transport_complex),
+  #2462 (component_type: PROTEIN_COMPLEX for 8 multi-subunit subcomplex components
+  across 8 records, reciprocal has_part links in phycobilisome, anammoxosome, and
+  micos_complex, and decoupled single-PMID protein_examples evidence notes in box_c_d_rnp_complex),
+  and #2463 (removal of monomer component_ref bindings from composite STRUCTURE causal-graph
+  nodes in bacterial_type_flagellum and carboxysome plus reciprocal has_part links
+  to filament and motor records in archaeal_type_flagellum). All 19 records pass strict
+  validation, ID-label correspondence, UniProt verification, offline CURIE cache check,
+  history ledger validation, and page regeneration checks with zero open findings.'
+source:
+  git_revision: 31fd33d9556ea5627b36d50ab608ccb9464f9353
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/appendage/archaeal_type_flagellum.yaml
+    sha256: e4f22511df1a560b6025bbe7a85b4a795916188f7c96886eabeddcdbc93adb74
+    role: target
+  - path: data/structures/appendage/bacterial_type_flagellum.yaml
+    sha256: 8ba7d0cb67f31e11a3199e41e88016ea2ff5863b838de8896e769e24c0d4c7c2
+    role: target
+  - path: data/structures/cytoskeleton/eisosome_filament.yaml
+    sha256: 0a59cc075da50578f12a4950252cb8f7133ba55c99703a0843bf3f8651e366c0
+    role: target
+  - path: data/structures/division_machinery/elongasome.yaml
+    sha256: f171e665166960f1a9d089a68a47bca9e2391dea47806cf18729ea1513f4ddc4
+    role: target
+  - path: data/structures/division_machinery/ftsqbl_complex.yaml
+    sha256: a263ecd81be12dcf19f10d8d594369c0dd66f6e28213262383e468d49b75a98b
+    role: target
+  - path: data/structures/energy_complex/phycobilisome.yaml
+    sha256: c32d070b3be266e711cfd913c3aee6f5ae15126c22030a4be2073ed67308bdca
+    role: target
+  - path: data/structures/membrane_organelle/anammoxosome.yaml
+    sha256: 50adeae38935dda1315b70ceec936b8224d4e6db33f07cd5caf60da96e95b1fa
+    role: target
+  - path: data/structures/membrane_organelle/glycosome.yaml
+    sha256: c31397edde14cca6a35fa8574d38fdd77f1c6d49bbe95f145d6f1a8e872b033b
+    role: target
+  - path: data/structures/membrane_organelle/golgi_apparatus.yaml
+    sha256: e3df76cd9d71ba04df9e5349475bd4191c31f93156acd422ef6b0223b88facca
+    role: target
+  - path: data/structures/microcompartment/carboxysome.yaml
+    sha256: 99f1d726b5ca6e04a689b7e72c564ba8a2ed8abf5ce5aa862df40213723c9b61
+    role: target
+  - path: data/structures/other/cytostome.yaml
+    sha256: 083f8800483f67a23bdb303aaf95d8d853d3bf67240e7ac2926e87ab66c89926
+    role: target
+  - path: data/structures/other/eisosome.yaml
+    sha256: 3f96297240ba46e169dab4e79338949cf92ac200ffd75c509938b12240b1b89c
+    role: target
+  - path: data/structures/other/micos_complex.yaml
+    sha256: 756a5b48fd9109266e6ace5805f5f9fd4aaac9940ff39660960bb8603374f5aa
+    role: target
+  - path: data/structures/other/mis12_mind_type_complex.yaml
+    sha256: 029ac75e12045a39ff6da937c63cff087715e76aadf1b65ad773f30bdfc4e944
+    role: target
+  - path: data/structures/other/phagophore_assembly_site.yaml
+    sha256: 2c2244c5d7e387f0151316c562f95a15cba997cae405b2f1dc147dc241e502bf
+    role: target
+  - path: data/structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.yaml
+    sha256: 2020fa318fbd5b347b19aca04fc51cdc5288de37384ef4a1cb9daf4f5a955ea9
+    role: target
+  - path: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
+    sha256: 3054b5faf809ecc17a7cb136cca745a3ef23cc856b7e8dbf91f2bbbac0cb8116
+    role: target
+  - path: data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml
+    sha256: afef7eb542a1cb8aca2dc60cc384ad3b913998d52a1dfb4b8b2d176a5923ea7e
+    role: target
+  - path: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+    sha256: bb3ec5edd16d45783e4516759b891a7c4fac51f899d1429d944ed1a6d3c31c62
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Complete cohort of all 19 CellStructureRecord YAML files remediated
+    in Cycle 4 Stage 5 to resolve the 13 carried-forward Stage 4 findings.
+  selection: 'All 19 records modified in commit 31fd33d9556ea5627b36d50ab608ccb9464f9353
+    for issues #2461, #2462, and #2463.'
+  coverage: full
+  population_size: 19
+  reviewed_target_ids:
+  - GO:0097589
+  - GO:0009288
+  - GO:0036286
+  - cellstructuremech:elongasome
+  - GO:1990587
+  - GO:0030089
+  - GO:0044222
+  - GO:0020015
+  - GO:0005794
+  - GO:0031470
+  - GO:0031910
+  - GO:0032126
+  - GO:0061617
+  - GO:0000444
+  - GO:0000407
+  - GO:0031428
+  - GO:0170049
+  - GO:0044530
+  - GO:0031522
+targets:
+- target_id: GO:0097589
+  path: data/structures/appendage/archaeal_type_flagellum.yaml
+  label: archaeal-type flagellum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e4f22511df1a560b6025bbe7a85b4a795916188f7c96886eabeddcdbc93adb74
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/archaeal_type_flagellum.yaml
+    role: maintained_record
+- target_id: GO:0009288
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  label: bacterial-type flagellum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 8ba7d0cb67f31e11a3199e41e88016ea2ff5863b838de8896e769e24c0d4c7c2
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained_record
+- target_id: GO:0036286
+  path: data/structures/cytoskeleton/eisosome_filament.yaml
+  label: eisosome filament
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0a59cc075da50578f12a4950252cb8f7133ba55c99703a0843bf3f8651e366c0
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/eisosome_filament.yaml
+    role: maintained_record
+- target_id: cellstructuremech:elongasome
+  path: data/structures/division_machinery/elongasome.yaml
+  label: elongasome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f171e665166960f1a9d089a68a47bca9e2391dea47806cf18729ea1513f4ddc4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/elongasome.yaml
+    role: maintained_record
+- target_id: GO:1990587
+  path: data/structures/division_machinery/ftsqbl_complex.yaml
+  label: FtsQBL complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a263ecd81be12dcf19f10d8d594369c0dd66f6e28213262383e468d49b75a98b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/ftsqbl_complex.yaml
+    role: maintained_record
+- target_id: GO:0030089
+  path: data/structures/energy_complex/phycobilisome.yaml
+  label: phycobilisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c32d070b3be266e711cfd913c3aee6f5ae15126c22030a4be2073ed67308bdca
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/phycobilisome.yaml
+    role: maintained_record
+- target_id: GO:0044222
+  path: data/structures/membrane_organelle/anammoxosome.yaml
+  label: anammoxosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 50adeae38935dda1315b70ceec936b8224d4e6db33f07cd5caf60da96e95b1fa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/anammoxosome.yaml
+    role: maintained_record
+- target_id: GO:0020015
+  path: data/structures/membrane_organelle/glycosome.yaml
+  label: glycosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c31397edde14cca6a35fa8574d38fdd77f1c6d49bbe95f145d6f1a8e872b033b
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glycosome.yaml
+    role: maintained_record
+- target_id: GO:0005794
+  path: data/structures/membrane_organelle/golgi_apparatus.yaml
+  label: Golgi apparatus
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: e3df76cd9d71ba04df9e5349475bd4191c31f93156acd422ef6b0223b88facca
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/golgi_apparatus.yaml
+    role: maintained_record
+- target_id: GO:0031470
+  path: data/structures/microcompartment/carboxysome.yaml
+  label: carboxysome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 99f1d726b5ca6e04a689b7e72c564ba8a2ed8abf5ce5aa862df40213723c9b61
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained_record
+- target_id: GO:0031910
+  path: data/structures/other/cytostome.yaml
+  label: cytostome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 083f8800483f67a23bdb303aaf95d8d853d3bf67240e7ac2926e87ab66c89926
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cytostome.yaml
+    role: maintained_record
+- target_id: GO:0032126
+  path: data/structures/other/eisosome.yaml
+  label: eisosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3f96297240ba46e169dab4e79338949cf92ac200ffd75c509938b12240b1b89c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/eisosome.yaml
+    role: maintained_record
+- target_id: GO:0061617
+  path: data/structures/other/micos_complex.yaml
+  label: MICOS complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 756a5b48fd9109266e6ace5805f5f9fd4aaac9940ff39660960bb8603374f5aa
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/micos_complex.yaml
+    role: maintained_record
+- target_id: GO:0000444
+  path: data/structures/other/mis12_mind_type_complex.yaml
+  label: MIS12/MIND type complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 029ac75e12045a39ff6da937c63cff087715e76aadf1b65ad773f30bdfc4e944
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mis12_mind_type_complex.yaml
+    role: maintained_record
+- target_id: GO:0000407
+  path: data/structures/other/phagophore_assembly_site.yaml
+  label: phagophore assembly site
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2c2244c5d7e387f0151316c562f95a15cba997cae405b2f1dc147dc241e502bf
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/phagophore_assembly_site.yaml
+    role: maintained_record
+- target_id: GO:0031428
+  path: data/structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.yaml
+  label: box C/D methylation guide snoRNP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2020fa318fbd5b347b19aca04fc51cdc5288de37384ef4a1cb9daf4f5a955ea9
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.yaml
+    role: maintained_record
+- target_id: GO:0170049
+  path: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
+  label: box C/D RNP complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 3054b5faf809ecc17a7cb136cca745a3ef23cc856b7e8dbf91f2bbbac0cb8116
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/ribonucleoprotein/box_c_d_rnp_complex.yaml
+    role: maintained_record
+- target_id: GO:0044530
+  path: data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml
+  label: supraspliceosomal complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: afef7eb542a1cb8aca2dc60cc384ad3b913998d52a1dfb4b8b2d176a5923ea7e
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/ribonucleoprotein/supraspliceosomal_complex.yaml
+    role: maintained_record
+- target_id: GO:0031522
+  path: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+  label: cell envelope Sec protein transport complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bb3ec5edd16d45783e4516759b891a7c4fac51f899d1429d944ed1a6d3c31c62
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/secretion_system/cell_envelope_sec_protein_transport_complex.yaml
+    role: maintained_record
+checks:
+- check_id: strict_remediated_cohort
+  name: Strict corpus validation covering all 19 remediated records
+  status: passed
+  required: true
+  summary: All 1001 corpus records including the 19 remediated records pass strict
+    LinkML and semantic validation with 0 errors.
+  target_ids:
+  - GO:0097589
+  - GO:0009288
+  - GO:0036286
+  - cellstructuremech:elongasome
+  - GO:1990587
+  - GO:0030089
+  - GO:0044222
+  - GO:0020015
+  - GO:0005794
+  - GO:0031470
+  - GO:0031910
+  - GO:0032126
+  - GO:0061617
+  - GO:0000444
+  - GO:0000407
+  - GO:0031428
+  - GO:0170049
+  - GO:0044530
+  - GO:0031522
+  command: .venv/bin/python scripts/validate_strict.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_c4_stage5
+- check_id: labels_remediated_cohort
+  name: ID-label correspondence across corpus and generated products
+  status: passed
+  required: true
+  summary: All ontology ID-label pairs across the corpus (4103 canonical, 50 synonym,
+    6 exception) correspond to authoritative ontology labels.
+  target_ids:
+  - GO:0097589
+  - GO:0009288
+  - GO:0036286
+  - cellstructuremech:elongasome
+  - GO:1990587
+  - GO:0030089
+  - GO:0044222
+  - GO:0020015
+  - GO:0005794
+  - GO:0031470
+  - GO:0031910
+  - GO:0032126
+  - GO:0061617
+  - GO:0000444
+  - GO:0000407
+  - GO:0031428
+  - GO:0170049
+  - GO:0044530
+  - GO:0031522
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_labels_c4_stage5
+- check_id: uniprot_remediated_cohort
+  name: UniProtKB protein_examples and causal_graphs xref verification
+  status: passed
+  required: true
+  summary: All UniProtKB protein_examples and causal_graphs xrefs across the corpus
+    pass verification.
+  target_ids:
+  - GO:0097589
+  - GO:0009288
+  - GO:0036286
+  - cellstructuremech:elongasome
+  - GO:1990587
+  - GO:0030089
+  - GO:0044222
+  - GO:0020015
+  - GO:0005794
+  - GO:0031470
+  - GO:0031910
+  - GO:0032126
+  - GO:0061617
+  - GO:0000444
+  - GO:0000407
+  - GO:0031428
+  - GO:0170049
+  - GO:0044530
+  - GO:0031522
+  command: .venv/bin/python scripts/uniprot_genes.py --verify
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_uniprot_c4_stage5
+- check_id: curies_remediated_cohort
+  name: Offline CURIE liveness check across corpus
+  status: passed
+  required: true
+  summary: 'All 5858 resolved CURIEs (including newly added GO:0032991, GO:0110165,
+    GO:1990904, and cellstructuremech: subcomplex has_part links) pass offline liveness
+    verification.'
+  target_ids:
+  - GO:0097589
+  - GO:0009288
+  - GO:0036286
+  - cellstructuremech:elongasome
+  - GO:1990587
+  - GO:0030089
+  - GO:0044222
+  - GO:0020015
+  - GO:0005794
+  - GO:0031470
+  - GO:0031910
+  - GO:0032126
+  - GO:0061617
+  - GO:0000444
+  - GO:0000407
+  - GO:0031428
+  - GO:0170049
+  - GO:0044530
+  - GO:0031522
+  command: .venv/bin/python scripts/check_curies.py --offline --check
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_curies_c4_stage5
+- check_id: history_remediated_cohort
+  name: Repository history link and LinkML HistoryRecord validation
+  status: passed
+  required: true
+  summary: All 2101 repository history files (including the 19 newly added Cycle 4
+    Stage 5 history ledger records) pass link and LinkML HistoryRecord schema validation.
+  target_ids:
+  - GO:0097589
+  - GO:0009288
+  - GO:0036286
+  - cellstructuremech:elongasome
+  - GO:1990587
+  - GO:0030089
+  - GO:0044222
+  - GO:0020015
+  - GO:0005794
+  - GO:0031470
+  - GO:0031910
+  - GO:0032126
+  - GO:0061617
+  - GO:0000444
+  - GO:0000407
+  - GO:0031428
+  - GO:0170049
+  - GO:0044530
+  - GO:0031522
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_c4_stage5
+evidence:
+- evidence_id: ev_strict_c4_stage5
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict validation summary
+  accessed_at: '2026-10-30T12:21:00Z'
+  support: supports
+  summary: validate_strict.py scanned 1001 files with 0 ERROR rows.
+  snapshot_sha256: f4051603ed64a21061f128d11309b7d6582d437055a16752ee4202e8abe0b85b
+- evidence_id: ev_labels_c4_stage5
+  kind: validation
+  reference: scripts/validate_id_label_correspondence.py
+  locator: id-label correspondence summary
+  accessed_at: '2026-10-30T12:22:00Z'
+  support: supports
+  summary: validate_id_label_correspondence.py verified 4103 canonical, 50 synonym,
+    and 6 exception pairs with 0 mismatches.
+  snapshot_sha256: 1baa28a7d4c6f57d7bd7c03e48e669f42ecbeaab48b06f6efcf036cf0a2aae3d
+- evidence_id: ev_uniprot_c4_stage5
+  kind: validation
+  reference: scripts/uniprot_genes.py
+  locator: uniprot_genes --verify summary
+  accessed_at: '2026-10-30T12:22:30Z'
+  support: supports
+  summary: uniprot_genes.py --verify confirmed all UniProtKB protein_examples and
+    causal_graphs xrefs verified ok.
+  snapshot_sha256: dabe89518ab8897ed1ed44ecb20225b1f350da8b50e599266229f523b2218ec3
+- evidence_id: ev_curies_c4_stage5
+  kind: validation
+  reference: scripts/check_curies.py
+  locator: check_curies --offline --check summary
+  accessed_at: '2026-10-30T12:23:00Z'
+  support: supports
+  summary: check_curies.py --offline --check verified 5858 OK and 252 SKIPPED identifiers.
+  snapshot_sha256: 6ddfd7a6582116577ebf506b365f2675340641ca4ade972f274f29915a4967cf
+- evidence_id: ev_history_c4_stage5
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history link and schema validation
+  accessed_at: '2026-10-30T12:23:30Z'
+  support: supports
+  summary: 2101 history records validated with 0 invalid links and 0 HistoryRecord
+    schema errors.
+  snapshot_sha256: 7b2065780662b074bd73c95c77f7d284bef9b6f8c75122bc2e0d040181ded306
+assessments:
+- assessment_id: assess_group1_hierarchy_parthood_has_part
+  area: consistency
+  topic: Hierarchy, parthood, and subcomplex has_part disambiguation (#2461)
+  outcome: supported
+  summary: 'All 5 records in Group 1 (#2461) cleanly separate is-a (parent_structures)
+    and parthood (part_of / has_part): ftsqbl_complex.yaml removes duplicate part_of:
+    [GO:1990586] (divisome complex) so GO:1990586 is retained solely in parent_structures
+    alongside has_part: [GO:1990588]; mis12_mind_type_complex.yaml replaces parent_structures:
+    [GO:0000940] (outer kinetochore) with parent_structures: [GO:0032991] (protein-containing
+    complex), moves GO:0000940 to part_of alongside GO:0000776 (part_of: [GO:0000940,
+    GO:0000776]), adds top-level evidence for GO:0032991, and changes causal_graphs[0].edges[0].predicate
+    (mis12_mind -> outer_kinetochore) from ''is a'' to ''is part of''; cytostome.yaml
+    moves GO:0005886 (plasma membrane) from parent_structures to part_of: [GO:0005886],
+    sets parent_structures: [GO:0110165] (cellular anatomical structure), and adds
+    top-level evidence for GO:0110165; supraspliceosomal_complex.yaml replaces parent_structures:
+    [GO:0005681] with parent_structures: [GO:1990904] (ribonucleoprotein complex),
+    moves GO:0005681 (spliceosomal complex) to has_part: [GO:0005681] while retaining
+    part_of: [GO:0005654] (nucleoplasm), and updates top-level evidence notes for
+    GO:1990904 and GO:0005681; and cell_envelope_sec_protein_transport_complex.yaml
+    adds has_part: [cellstructuremech:secyeg_translocon_complex] as the reciprocal
+    parthood link to secyeg_translocon_complex.yaml.'
+  target_ids:
+  - GO:1990587
+  - GO:0000444
+  - GO:0031910
+  - GO:0044530
+  - GO:0031522
+  evidence_ids:
+  - ev_strict_c4_stage5
+  - ev_labels_c4_stage5
+  - ev_curies_c4_stage5
+- assessment_id: assess_group2_subcomplex_types_has_part_and_notes
+  area: representation
+  topic: PROTEIN_COMPLEX typing for multi-subunit subcomplexes, reciprocal has_part
+    links, and single-PMID evidence notes (#2462)
+  outcome: supported
+  summary: 'All 8 multi-subunit subcomplex components across 8 records in Group 2
+    (#2462) now use component_type: PROTEIN_COMPLEX (pil1_lsp1_bar_core in eisosome_filament.yaml
+    and eisosome.yaml; mrec_mred in elongasome.yaml; allophycocyanin_core in phycobilisome.yaml;
+    peroxin_import_machinery in glycosome.yaml; golgi_snare_trafficking_machinery
+    in golgi_apparatus.yaml; phagophore_assembly_site_atg_machinery in phagophore_assembly_site.yaml;
+    and nop1_nop56_nop58_snu13_core in box_c_d_methylation_guide_snornp_complex.yaml);
+    phycobilisome.yaml adds has_part: [cellstructuremech:phycobilisome_core, cellstructuremech:phycobilisome_rod];
+    anammoxosome.yaml adds has_part: [cellstructuremech:anammoxosome_membrane]; micos_complex.yaml
+    adds has_part: [cellstructuremech:mic10_subcomplex, cellstructuremech:mic60_mic19_complex];
+    and box_c_d_rnp_complex.yaml decouples the concatenated two-paper .notes strings
+    on components[1].protein_examples[1] (UniProtKB:Q12460, NOP56, PMID:9632712 ->
+    Wu P et al. 1998 J Biol Chem) and components[1].protein_examples[2] (UniProtKB:Q12499,
+    NOP58, PMID:9372940 -> Gautier T et al. 1997 Mol Cell Biol).'
+  target_ids:
+  - GO:0036286
+  - cellstructuremech:elongasome
+  - GO:0030089
+  - GO:0044222
+  - GO:0020015
+  - GO:0005794
+  - GO:0000407
+  - GO:0032126
+  - GO:0061617
+  - GO:0031428
+  - GO:0170049
+  evidence_ids:
+  - ev_strict_c4_stage5
+  - ev_labels_c4_stage5
+  - ev_curies_c4_stage5
+- assessment_id: assess_group3_causal_structure_node_component_refs
+  area: graph
+  topic: Causal graph STRUCTURE node component_ref alignment and archaeal flagellum
+    has_part links (#2463)
+  outcome: supported
+  summary: 'All 3 records in Group 3 (#2463) cleanly distinguish composite STRUCTURE
+    nodes from monomer PROTEIN components and complete reciprocal child parthood:
+    bacterial_type_flagellum.yaml removes component_ref: flagellin from node_id: filament
+    (GO:0009420) in flagellum_torque_generation; carboxysome.yaml removes component_ref:
+    bmc_h from node_id: shell in carboxysome_co2_concentrating; and archaeal_type_flagellum.yaml
+    adds has_part: [cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor].'
+  target_ids:
+  - GO:0097589
+  - GO:0009288
+  - GO:0031470
+  evidence_ids:
+  - ev_strict_c4_stage5
+  - ev_labels_c4_stage5
+  - ev_history_c4_stage5
+findings: []
+actions: []
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0097589
+  - GO:0009288
+  - GO:0036286
+  - cellstructuremech:elongasome
+  - GO:1990587
+  - GO:0030089
+  - GO:0044222
+  - GO:0020015
+  - GO:0005794
+  - GO:0031470
+  - GO:0031910
+  - GO:0032126
+  - GO:0061617
+  - GO:0000444
+  - GO:0000407
+  - GO:0031428
+  - GO:0170049
+  - GO:0044530
+  - GO:0031522
+  rationale: All 19 remediated records preserve their existing structure boundaries
+    and canonical GO/CSM identifiers while resolving all 13 Cycle 4 Stage 4 review
+    findings.
+  evidence_ids:
+  - ev_strict_c4_stage5
+  - ev_labels_c4_stage5
+  - ev_uniprot_c4_stage5
+  - ev_curies_c4_stage5
+  - ev_history_c4_stage5
+limitations: []
+tags:
+- stage5
+- cycle4
+- post-remediation
+- verification-review
+```

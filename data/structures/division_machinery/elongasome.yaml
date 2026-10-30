@@ -97,7 +97,7 @@ components:
         by UniProt for the 'Cell inner membrane' localisation of P0AD65.
 - component_id: mrec_mred
   label: MreC and MreD
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - mreC
@@ -327,6 +327,12 @@ curation_history:
   action: ADDRESS_SAVED_REVIEW
   changes: 'Addressed #2431 (finding elongasome-curation-history-causal-graph-id-mismatch):
     aligned curation_history[12] graph_id to elongasome_sidewall_elongation.'
+  llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_COMPONENTS
+  changes: Updated mrec_mred component_type from PROTEIN to PROTEIN_COMPLEX for the
+    MreC-MreD transmembrane subcomplex (#2462).
   llm_assisted: true
 associated_traits:
 - trait_id: METPO:1000681
