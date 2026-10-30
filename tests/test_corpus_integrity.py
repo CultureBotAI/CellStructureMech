@@ -10,6 +10,7 @@ from cellstructuremech.validation.validator import (
     validate_component_protein_examples,
     validate_curation_history,
     validate_discussion_issue_links,
+    validate_hierarchy_relations,
 )
 from cellstructuremech.validation.write_validated import validate_structure
 from scripts.corpus import record_path
@@ -111,6 +112,17 @@ def test_curated_causal_graph_history_targets_match_record_graphs(records):
         for err in validate_curation_history(doc):
             bad.append(f"{path.name}:{err}")
     assert not bad, f"CURATED_CAUSAL_GRAPH history target mismatch: {bad}"
+
+
+def test_hierarchy_and_component_relations_are_disjoint(records):
+    """`parent_structures` (is-a), `part_of` (parthood), and `has_part` /
+    `CONSTITUENT` `components[].grounding` must not share CURIEs on the same
+    record (#2457)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_hierarchy_relations(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"hierarchy/parthood/component relation collision: {bad}"
 
 
 def test_local_ids_are_unique_within_record(records):
