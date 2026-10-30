@@ -46,6 +46,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected peripheral_arm to nadh_ubiquinone_activity in complex_i_nadh_quinone_proton_coupling
+    so the NADH-oxidizing arm and proton-pumping arm form a connected mechanism graph.
+  llm_assisted: true
 synonyms:
 - synonym_text: NADH dehydrogenase (ubiquinone) complex
   synonym_type: EXACT_SYNONYM
@@ -449,6 +455,20 @@ causal_graphs:
     - reference: PMID:23417064
       notes: Baradaran et al. 2013 resolved the intact enzyme that couples NADH:ubiquinone
         electron transfer to proton translocation.
+  - subject: peripheral_arm
+    predicate: contributes to
+    object: nadh_ubiquinone_activity
+    description: The hydrophilic peripheral arm provides the FMN NADH-oxidation site
+      and chain of iron-sulfur clusters required for NADH:ubiquinone oxidoreductase
+      activity.
+    evidence:
+    - reference: PMID:23417064
+      notes: Baradaran et al. 2013 resolved the complete Thermus thermophilus respiratory
+        complex I structure, showing how the peripheral arm's NADH-oxidizing and Fe-S
+        relay modules couple to quinone reduction.
+    - reference: GO:0045271
+      notes: GO:0045271 defines respiratory chain complex I and its peripheral electron-transfer
+        and membrane proton-pumping arms.
 discussions:
 - discussion_id: complex_i_component_groundings
   prompt: Resolve exact source-neutral groundings for the conserved Nuo/Nqo NADH-dehydrogenase,

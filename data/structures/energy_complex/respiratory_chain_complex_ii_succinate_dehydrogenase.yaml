@@ -53,6 +53,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected flavoprotein, iron_sulfur_subunit, and membrane_anchor to the
+    complex_ii structure node in complex_ii_succinate_quinone_coupling.
+  llm_assisted: true
 synonyms:
 - synonym_text: electron transport complex II
   synonym_type: RELATED_SYNONYM
@@ -313,6 +319,51 @@ causal_graphs:
     - reference: PDB:1NEK
       notes: PDB:1NEK resolves the E. coli complex II SdhA, SdhB, SdhC, and SdhD proteins
         in one four-polymer structure.
+  - subject: flavoprotein
+    predicate: contributes to
+    object: complex_ii
+    description: The SdhA flavoprotein subunit forms the catalytic succinate-oxidizing
+      head of respiratory chain complex II.
+    evidence:
+    - reference: GO:0045273
+      notes: GO:0045273 defines respiratory chain complex II (succinate dehydrogenase)
+        as comprising the flavoprotein, iron-sulfur, and membrane-anchor subunits.
+    - reference: PDB:1NEK
+      notes: PDB:1NEK resolves the assembled SdhABCD succinate dehydrogenase complex
+        in Escherichia coli.
+    - reference: DOI:10.1126/science.1079605
+      notes: Yankovskaya et al. 2003 determined the crystal structure and subunit
+        architecture of E. coli complex II.
+  - subject: iron_sulfur_subunit
+    predicate: contributes to
+    object: complex_ii
+    description: The SdhB iron-sulfur subunit forms the [2Fe-2S], [4Fe-4S], and [3Fe-4S]
+      electron-relay core of respiratory chain complex II.
+    evidence:
+    - reference: GO:0045273
+      notes: GO:0045273 defines respiratory chain complex II (succinate dehydrogenase)
+        as comprising the flavoprotein, iron-sulfur, and membrane-anchor subunits.
+    - reference: PDB:1NEK
+      notes: PDB:1NEK resolves the assembled SdhABCD succinate dehydrogenase complex
+        in Escherichia coli.
+    - reference: DOI:10.1126/science.1079605
+      notes: Yankovskaya et al. 2003 determined the crystal structure and subunit
+        architecture of E. coli complex II.
+  - subject: membrane_anchor
+    predicate: contributes to
+    object: complex_ii
+    description: The SdhCD hydrophobic cytochrome b membrane anchor forms the quinone-binding
+      transmembrane domain of respiratory chain complex II.
+    evidence:
+    - reference: GO:0045273
+      notes: GO:0045273 defines respiratory chain complex II (succinate dehydrogenase)
+        as comprising the flavoprotein, iron-sulfur, and membrane-anchor subunits.
+    - reference: PDB:1NEK
+      notes: PDB:1NEK resolves the assembled SdhABCD succinate dehydrogenase complex
+        in Escherichia coli.
+    - reference: DOI:10.1126/science.1079605
+      notes: Yankovskaya et al. 2003 determined the crystal structure and subunit
+        architecture of E. coli complex II.
 discussions:
 - discussion_id: complex_ii_component_groundings
   prompt: Resolve exact source-neutral InterPro, Pfam, NCBIfam, or Complex Portal

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/potabcd_spermidine_abc_transporter_complex.yaml
+  slug: potabcd_spermidine_abc_transporter_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-8245e2
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect PotA, PotB, PotC, and PotD subunit nodes to potabcd structure node
+  details: Added contributes to edges from pota, potb, potc, and potd to potabcd backed by
+    ComplexPortal:CPX-4383.

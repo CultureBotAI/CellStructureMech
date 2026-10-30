@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/narghi_complex.yaml
+  slug: narghi_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-b582e7
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect NarI-NarH-NarG electron relay and subunit contributions to NarGHI complex
+  details: Added nari_gamma passes electrons to narh_beta, narg_alpha contributes to nitrate_reductase_quinone_activity,
+    and contributes to edges from nari_gamma, narh_beta, and narg_alpha to narghi backed by
+    PMID:12910261, ComplexPortal:CPX-1974, and GO:0044799.

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/dimeric_ribonuclease_p_complex.yaml
+  slug: dimeric_ribonuclease_p_complex
+session:
+  id: 2026-10-30T191015Z-claude-code-76503a
+  timestamp: '2026-10-30T19:10:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2468
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2467
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Fix GO:0030680 stoichiometry notes on dimeric RNase P assembly edges (#2468)
+  details: 'Resolved PR #2467 review issue #2468 by correcting GO:0030680 and Kazantsev and
+    Pace 2006 stoichiometry notes on the rnase_p_rna and rnpa_protein subunit-to-complex edges
+    to describe the 1-RNA plus 1-protein heterodimer.'

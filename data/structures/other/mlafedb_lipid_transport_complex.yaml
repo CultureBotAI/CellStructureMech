@@ -38,6 +38,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected mlae, mlaf, and mlab subunit nodes to the mlafedb structure node
+    in mlafedb_phospholipid_transport.
+  llm_assisted: true
 synonyms:
 - synonym_text: MlaFEDB complex
   synonym_type: EXACT_SYNONYM
@@ -340,6 +346,42 @@ causal_graphs:
     - reference: ComplexPortal:CPX-3464
       notes: Complex Portal cross-references GO:0015914 on the E. coli K-12 MlaFEDB
         lipid transport complex.
+  - subject: mlae
+    predicate: contributes to
+    object: mlafedb
+    description: The MlaE transmembrane phospholipid permease subunit assembles into
+      the inner-membrane MlaFEDB phospholipid ABC transporter complex.
+    evidence:
+    - reference: ComplexPortal:CPX-3464
+      notes: ComplexPortal CPX-3464 defines the MlaFEDB complex with stoichiometry
+        MlaF2:MlaE2:MlaD6:MlaB2.
+    - reference: PDB:7CGE
+      notes: Cryo-EM structure PDB:7CGE resolves MlaE, MlaF, MlaD, and MlaB in the
+        assembled E. coli MlaFEDB complex.
+  - subject: mlaf
+    predicate: contributes to
+    object: mlafedb
+    description: The MlaF ATP-binding cassette catalytic subunit assembles into the
+      inner-membrane MlaFEDB phospholipid ABC transporter complex.
+    evidence:
+    - reference: ComplexPortal:CPX-3464
+      notes: ComplexPortal CPX-3464 defines the MlaFEDB complex with stoichiometry
+        MlaF2:MlaE2:MlaD6:MlaB2.
+    - reference: PDB:7CGE
+      notes: Cryo-EM structure PDB:7CGE resolves MlaE, MlaF, MlaD, and MlaB in the
+        assembled E. coli MlaFEDB complex.
+  - subject: mlab
+    predicate: contributes to
+    object: mlafedb
+    description: The MlaB cytoplasmic STAS-domain regulatory subunit assembles into
+      the inner-membrane MlaFEDB phospholipid ABC transporter complex.
+    evidence:
+    - reference: ComplexPortal:CPX-3464
+      notes: ComplexPortal CPX-3464 defines the MlaFEDB complex with stoichiometry
+        MlaF2:MlaE2:MlaD6:MlaB2.
+    - reference: PDB:7CGE
+      notes: Cryo-EM structure PDB:7CGE resolves MlaE, MlaF, MlaD, and MlaB in the
+        assembled E. coli MlaFEDB complex.
 discussions:
 - discussion_id: mlaf_component_family_grounding
   prompt: Resolve an exact source-neutral MlaF protein family before replacing its

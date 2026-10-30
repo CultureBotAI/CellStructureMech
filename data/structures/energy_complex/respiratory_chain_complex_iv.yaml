@@ -55,6 +55,12 @@ curation_history:
   changes: added 1 verified UniProtKB protein_example(s); added 1 verified UniProtKB
     xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added subunit_iii and subunit_iv causal graph nodes with component_ref
+    and connected all four subunits to the complex_iv structure node.
+  llm_assisted: true
 synonyms:
 - synonym_text: cytochrome c oxidase complex
   synonym_type: EXACT_SYNONYM
@@ -292,9 +298,10 @@ causal_graphs:
     to water, and contributes to a proton motive force across the respiratory membrane.
   graph_kind: FUNCTION
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures the GO-level cytochrome-c oxidase reaction and the
-    two catalytic core subunits without resolving heme a, heme a3, CuA, CuB, proton-channel,
-    or metal-ligation chemistry.
+  scope_notes: The graph captures the conserved subunit I, II, and III core together
+    with the bacterial aa3-type subunit IV and the coupled ferrocytochrome c oxidation,
+    oxygen reduction, and proton-pumping reactions without resolving individual heme
+    a, heme a3, CuA, or CuB electron-transfer intermediates.
   nodes:
   - node_id: complex_iv
     label: respiratory chain complex IV
@@ -327,6 +334,18 @@ causal_graphs:
     label: cytochrome-c oxidase activity
     node_type: MOLECULAR_FUNCTION
     grounding: GO:0004129
+  - node_id: subunit_iii
+    label: cytochrome c oxidase subunit III
+    node_type: GENE_OR_PROTEIN
+    component_ref: cytochrome_c_oxidase_subunit_iii
+    description: Conserved polytopic membrane subunit lacking redox cofactors that
+      stabilizes the subunit I-II catalytic core and forms part of the dioxygen channel.
+  - node_id: subunit_iv
+    label: bacterial aa3-type cytochrome c oxidase subunit IV
+    node_type: GENE_OR_PROTEIN
+    component_ref: bacterial_aa3_subunit_iv
+    description: Single-transmembrane accessory polypeptide present in four-subunit
+      bacterial aa3-type cytochrome c oxidases.
   edges:
   - subject: complex_iv
     predicate: enables
@@ -389,6 +408,66 @@ causal_graphs:
     - reference: GO:0004129
       notes: GO:0004129 defines cytochrome-c oxidase activity as oxygen reduction
         coupled to proton movement.
+  - subject: subunit_i
+    predicate: contributes to
+    object: complex_iv
+    description: Subunit I forms the heme a and heme a3-CuB catalytic transmembrane
+      core of respiratory chain complex IV.
+    evidence:
+    - reference: GO:0045277
+      notes: GO:0045277 defines respiratory chain complex IV as the cytochrome c oxidase
+        complex of the respiratory chain.
+    - reference: PDB:1QLE
+      notes: PDB:1QLE resolves subunits I, II, III, and IV in the four-subunit Paracoccus
+        denitrificans aa3-type cytochrome c oxidase complex.
+    - reference: PMID:10559205
+      notes: Harrenga and Michel 1999 determined the four-subunit P. denitrificans
+        cytochrome c oxidase structure.
+  - subject: subunit_ii
+    predicate: contributes to
+    object: complex_iv
+    description: Subunit II contributes the CuA-containing cytochrome c docking and
+      electron-entry domain of respiratory chain complex IV.
+    evidence:
+    - reference: GO:0045277
+      notes: GO:0045277 defines respiratory chain complex IV as the cytochrome c oxidase
+        complex of the respiratory chain.
+    - reference: PDB:1QLE
+      notes: PDB:1QLE resolves subunits I, II, III, and IV in the four-subunit Paracoccus
+        denitrificans aa3-type cytochrome c oxidase complex.
+    - reference: PMID:10559205
+      notes: Harrenga and Michel 1999 determined the four-subunit P. denitrificans
+        cytochrome c oxidase structure.
+  - subject: subunit_iii
+    predicate: contributes to
+    object: complex_iv
+    description: Subunit III is an integral membrane core subunit that stabilizes
+      subunits I and II and shapes the oxygen diffusion pathway in complex IV.
+    evidence:
+    - reference: GO:0045277
+      notes: GO:0045277 defines respiratory chain complex IV as the cytochrome c oxidase
+        complex of the respiratory chain.
+    - reference: PDB:1QLE
+      notes: PDB:1QLE resolves subunits I, II, III, and IV in the four-subunit Paracoccus
+        denitrificans aa3-type cytochrome c oxidase complex.
+    - reference: PMID:10559205
+      notes: Harrenga and Michel 1999 determined the four-subunit P. denitrificans
+        cytochrome c oxidase structure.
+  - subject: subunit_iv
+    predicate: contributes to
+    object: complex_iv
+    description: Bacterial aa3-type subunit IV packs as a single transmembrane helix
+      against the core subunits in four-subunit bacterial cytochrome c oxidases.
+    evidence:
+    - reference: GO:0045277
+      notes: GO:0045277 defines respiratory chain complex IV as the cytochrome c oxidase
+        complex of the respiratory chain.
+    - reference: PDB:1QLE
+      notes: PDB:1QLE resolves subunits I, II, III, and IV in the four-subunit Paracoccus
+        denitrificans aa3-type cytochrome c oxidase complex.
+    - reference: PMID:10559205
+      notes: Harrenga and Michel 1999 determined the four-subunit P. denitrificans
+        cytochrome c oxidase structure.
 discussions:
 - discussion_id: complex_iv_component_groundings
   prompt: Resolve exact source-neutral families for cytochrome c oxidase subunits

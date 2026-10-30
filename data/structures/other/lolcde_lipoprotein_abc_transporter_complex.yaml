@@ -22,6 +22,12 @@ curation_history:
     lipoprotein-release graph, CPX-4262 heterotetramer source composition, and a component-family
     grounding TODO.
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected lolc, lold, and lole subunits to lolcde and linked lipoprotein_release
+    to outer_membrane_lipoprotein_localization.
+  llm_assisted: true
 synonyms:
 - synonym_text: LolCDE complex
   synonym_type: EXACT_SYNONYM
@@ -296,6 +302,55 @@ causal_graphs:
     - reference: GO:0044874
       notes: GO:0044874 is the biological-process term for localization of lipoproteins
         to an outer membrane.
+  - subject: lolc
+    predicate: contributes to
+    object: lolcde
+    description: The LolC transmembrane periplasmic-coupling subunit is an essential
+      stoichiometric subunit of the heterotetrameric LolCDE ABC transporter complex.
+    evidence:
+    - reference: ComplexPortal:CPX-4262
+      notes: ComplexPortal CPX-4262 defines the E. coli LolCDE lipoprotein-releasing
+        ABC transporter with stoichiometry LolC1:LolD2:LolE1.
+    - reference: PDB:7MDY
+      notes: Cryo-EM structure PDB:7MDY resolves LolC, LolD, and LolE assembled in
+        the LolCDE heterotetramer.
+  - subject: lold
+    predicate: contributes to
+    object: lolcde
+    description: The LolD ATP-binding cassette subunit is an essential stoichiometric
+      subunit of the heterotetrameric LolCDE ABC transporter complex.
+    evidence:
+    - reference: ComplexPortal:CPX-4262
+      notes: ComplexPortal CPX-4262 defines the E. coli LolCDE lipoprotein-releasing
+        ABC transporter with stoichiometry LolC1:LolD2:LolE1.
+    - reference: PDB:7MDY
+      notes: Cryo-EM structure PDB:7MDY resolves LolC, LolD, and LolE assembled in
+        the LolCDE heterotetramer.
+  - subject: lole
+    predicate: contributes to
+    object: lolcde
+    description: The LolE lipoprotein-binding transmembrane subunit is an essential
+      stoichiometric subunit of the heterotetrameric LolCDE ABC transporter complex.
+    evidence:
+    - reference: ComplexPortal:CPX-4262
+      notes: ComplexPortal CPX-4262 defines the E. coli LolCDE lipoprotein-releasing
+        ABC transporter with stoichiometry LolC1:LolD2:LolE1.
+    - reference: PDB:7MDY
+      notes: Cryo-EM structure PDB:7MDY resolves LolC, LolD, and LolE assembled in
+        the LolCDE heterotetramer.
+  - subject: lipoprotein_release
+    predicate: contributes to
+    object: outer_membrane_lipoprotein_localization
+    description: ATP-driven extraction and release of triacylated lipoproteins from
+      the inner membrane by LolCDE initiates their periplasmic transfer and localization
+      to the outer membrane.
+    evidence:
+    - reference: ComplexPortal:CPX-4262
+      notes: ComplexPortal CPX-4262 describes LolCDE-catalyzed inner-membrane lipoprotein
+        release as the initiating step of outer-membrane lipoprotein sorting.
+    - reference: GO:0140306
+      notes: GO:0140306 describes lipoprotein localization to the outer membrane initiated
+        by LolCDE release.
 discussions:
 - discussion_id: resolve_lolcde_component_family_groundings
   prompt: Resolve exact source-neutral protein-family groundings for LolC, LolD, and

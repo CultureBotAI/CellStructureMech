@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/esx_5_type_vii_secretion_system_membrane_complex.yaml
+  slug: esx_5_type_vii_secretion_system_membrane_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-abdf95
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect EccC5 ATPase motor and esx5_membrane_complex to protein_export
+  details: Added eccc5_atpase_motor contributes to esx5_membrane_complex (DOI:10.1038/s41586-021-03517-z,
+    DOI:10.1038/nmicrobiol.2017.47) and esx5_membrane_complex mediates protein_export (DOI:10.1038/s41586-021-03517-z,
+    DOI:10.1016/j.bbamcr.2013.11.003).

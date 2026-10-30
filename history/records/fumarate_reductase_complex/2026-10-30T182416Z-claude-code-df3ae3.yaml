@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/fumarate_reductase_complex.yaml
+  slug: fumarate_reductase_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-df3ae3
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect FrdA and FrdB subunits to the fumarate_reductase structure node
+  details: Added contributes to edges from frda_flavoprotein and frdb_iron_sulfur_subunit
+    to fumarate_reductase backed by GO:0045283, InterPro:IPR005884, and PDB:1KF6, unifying
+    the FrdAB peripheral dimer and FrdCD membrane anchor into a single connected mechanism
+    graph.

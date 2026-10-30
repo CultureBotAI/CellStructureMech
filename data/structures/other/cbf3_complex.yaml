@@ -35,6 +35,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-30T18:22:37Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected ctf13_subunit and skp1_subunit to the cbf3_complex structure
+    node via assembles into edges.
+  llm_assisted: true
 parent_structures:
 - GO:0140513
 part_of:
@@ -292,6 +298,30 @@ causal_graphs:
     - reference: DOI:10.1038/s41594-018-0154-1
       notes: Yan et al. 2018 structurally analyzed the budding-yeast CBF3-centromere
         complex.
+  - subject: ctf13_subunit
+    predicate: assembles into
+    object: cbf3_complex
+    description: The Ctf13 F-box core subunit of the Ctf13-Skp1 heterodimer assembles
+      with Cep3 and Ndc10 into the yeast CBF3 centromere-binding complex.
+    evidence:
+    - reference: DOI:10.15252/embj.201798134
+      notes: Cryo-EM structure of the core CBF3 complex resolves the Ctf13-Skp1 heterodimer
+        assembled with the Cep3 homodimer.
+    - reference: GO:0031518
+      notes: GO:0031518 defines the yeast CBF3 complex composed of Ndc10, Cep3, Ctf13,
+        and Skp1.
+  - subject: skp1_subunit
+    predicate: assembles into
+    object: cbf3_complex
+    description: The Skp1 adapter subunit of the Ctf13-Skp1 heterodimer assembles
+      with Cep3 and Ndc10 into the yeast CBF3 centromere-binding complex.
+    evidence:
+    - reference: DOI:10.15252/embj.201798134
+      notes: Cryo-EM structure of the core CBF3 complex resolves the Ctf13-Skp1 heterodimer
+        assembled with the Cep3 homodimer.
+    - reference: GO:0031518
+      notes: GO:0031518 defines the yeast CBF3 complex composed of Ndc10, Cep3, Ctf13,
+        and Skp1.
 discussions:
 - discussion_id: resolve_cbf3_subunit_groundings
   prompt: Resolve exact source-neutral family groundings and essentiality calls for
