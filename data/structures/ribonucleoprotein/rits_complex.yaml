@@ -1,0 +1,326 @@
+identifier: GO:0030958
+label: RITS complex
+structure_category: RIBONUCLEOPROTEIN
+structure_kind: RIBONUCLEOPROTEIN_COMPLEX
+definition: A protein complex required for heterochromatin assembly; contains an Argonaute
+  homolog, a chromodomain protein, and at least one additional protein; named for
+  RNA-induced initiation of transcriptional gene silencing.
+definition_source: GO:0030958
+mapping_status: PROPOSED
+xrefs:
+- ComplexPortal:CPX-25777
+parent_structures:
+- GO:0031332
+- GO:0140513
+part_of:
+- GO:0000785
+- GO:0000228
+components:
+- component_id: ago1_argonaute_subunit
+  label: Protein argonaute
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR045246
+  gene_symbols:
+  - ago1
+  stoichiometry: 1 copy per RITS complex
+  essentiality: ESSENTIAL
+  role: Argonaute family endoribonuclease and siRNA-binding effector subunit (Ago1)
+    of the Schizosaccharomyces pombe RITS complex that binds centromeric and heterochromatic
+    small interfering RNAs to target nascent noncoding transcripts.
+  evidence:
+  - reference: GO:0030958
+    notes: GO:0030958 defines the RITS complex as containing an Argonaute homolog.
+  - reference: PMID:14704433
+    notes: Verdel et al. 2004 (DOI:10.1126/science.1093686) purified the S. pombe
+      RITS complex containing Ago1, Chp1, Tas3, and Dicer-generated centromeric siRNAs.
+  - reference: PMID:15607976
+    notes: Motamedi et al. 2004 (DOI:10.1016/j.cell.2004.11.034) showed that Ago1
+      in the RITS complex couples RNA-dependent RNA polymerase complex (RDRC) recruitment
+      to heterochromatin assembly.
+  protein_examples:
+  - uniprot_id: UniProtKB:O74957
+    protein_label: Protein argonaute
+    gene_symbol: ago1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Schizosaccharomyces pombe 972h- Ago1 subunit of the RITS complex
+      (ComplexPortal:CPX-25777).
+    evidence:
+    - reference: UniProtKB:O74957
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- protein
+        argonaute (ago1).
+    - reference: PMID:14704433
+      notes: Verdel et al. 2004 identified Ago1 as a core subunit of the S. pombe
+        RITS complex.
+- component_id: chp1_chromodomain_subunit
+  label: Chromo domain-containing protein 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR049937
+  gene_symbols:
+  - chp1
+  stoichiometry: 1 copy per RITS complex
+  essentiality: ESSENTIAL
+  role: Chromodomain subunit (Chp1) that binds histone H3 methylated at lysine 9 (H3K9me)
+    to anchor the RITS complex at centromeric, telomeric, and mating-type heterochromatin.
+  evidence:
+  - reference: GO:0030958
+    notes: GO:0030958 defines the RITS complex as containing a chromodomain protein
+      required for heterochromatin assembly.
+  - reference: PMID:14704433
+    notes: Verdel et al. 2004 demonstrated that Chp1 co-purifies with Ago1 and Tas3
+      in the RITS complex and requires Clr4-mediated H3K9 methylation to tether RITS
+      to heterochromatin.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q10103
+    protein_label: Chromo domain-containing protein 1
+    gene_symbol: chp1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Schizosaccharomyces pombe 972h- Chp1 chromodomain subunit of the
+      RITS complex.
+    evidence:
+    - reference: UniProtKB:Q10103
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- chromo
+        domain-containing protein 1 (chp1).
+    - reference: PMID:14704433
+      notes: Verdel et al. 2004 identified Chp1 as the chromodomain subunit of S.
+        pombe RITS.
+- component_id: tas3_bridging_subunit
+  label: RNA-induced transcriptional silencing complex protein tas3
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR049112
+  gene_symbols:
+  - tas3
+  stoichiometry: 1 copy per RITS complex
+  essentiality: ESSENTIAL
+  role: GW-hook bridging subunit (Tas3) that links the Argonaute subunit Ago1 to the
+    chromodomain subunit Chp1 and self-associates via its C-terminal alpha-helical
+    motif to promote RITS spreading across heterochromatic domains.
+  evidence:
+  - reference: PMID:14704433
+    notes: Verdel et al. 2004 identified Tas3 as an essential bridging protein of
+      the S. pombe Ago1-Chp1-Tas3 RITS complex.
+  - reference: PMID:15607976
+    notes: Motamedi et al. 2004 demonstrated that the Ago1-Chp1-Tas3 RITS complex
+      physically interacts with RDRC on heterochromatic transcripts.
+  protein_examples:
+  - uniprot_id: UniProtKB:O94687
+    protein_label: RNA-induced transcriptional silencing complex protein tas3
+    gene_symbol: tas3
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Schizosaccharomyces pombe 972h- Tas3 bridging subunit of the RITS
+      complex.
+    evidence:
+    - reference: UniProtKB:O94687
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- RITS complex
+        protein tas3.
+    - reference: PMID:14704433
+      notes: Verdel et al. 2004 discovered and named Tas3 as the third protein subunit
+        of S. pombe RITS.
+- component_id: sirna_guide_strand
+  label: small interfering RNA guide strand
+  component_type: RNA
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: Kept label-only for the heterogeneous pool of Dcr1-generated centromeric
+    and heterochromatic siRNA guide strands bound by Ago1 in the S. pombe RITS ribonucleoprotein
+    complex.
+  role: Single-stranded small interfering RNA guide (~21-23 nt) bound by Ago1 that
+    directs the RITS complex by base-pairing to nascent noncoding pericentromeric
+    and heterochromatic transcripts.
+  evidence:
+  - reference: PMID:14704433
+    notes: Verdel et al. 2004 demonstrated that the purified S. pombe RITS complex
+      contains Dicer-generated centromeric siRNAs required for RITS localization to
+      heterochromatin.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  presence: COMMON
+  note: Fission yeast reference strain in which the Ago1-Chp1-Tas3-siRNA RITS ribonucleoprotein
+    complex (ComplexPortal:CPX-25777) directs co-transcriptional heterochromatin assembly.
+  reference: PMID:14704433
+canonical_examples:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  note: Model organism in which Verdel et al. 2004 and Motamedi et al. 2004 purified
+    the Ago1-Chp1-Tas3-siRNA RITS complex and established its role in RNAi-directed
+    heterochromatin formation.
+  reference: PMID:14704433
+functions:
+- function_id: rnai_mediated_heterochromatin_formation
+  label: heterochromatin formation
+  grounding: GO:0031507
+  description: Uses Ago1-bound siRNAs and the Chp1 H3K9me-binding chromodomain to
+    engage nascent pericentromeric transcripts and recruit the Clr4 methyltransferase
+    and RDRC machinery for heterochromatin assembly.
+  evidence:
+  - reference: GO:0030958
+    notes: GO:0030958 defines the RITS complex as required for heterochromatin assembly.
+  - reference: PMID:14704433
+    notes: Verdel et al. 2004 showed that RITS is required for H3K9 methylation and
+      Swi6/HP1 recruitment at centromeric heterochromatin.
+- function_id: ncrna_mediated_gene_silencing
+  label: regulatory ncRNA-mediated gene silencing
+  grounding: GO:0031047
+  description: Mediates co-transcriptional and transcriptional gene silencing at heterochromatic
+    repeats via siRNA-guided recognition of nascent noncoding transcripts.
+  evidence:
+  - reference: PMID:14704433
+    notes: Verdel et al. 2004 demonstrated siRNA-dependent transcriptional gene silencing
+      by the RITS complex.
+  - reference: PMID:15607976
+    notes: Motamedi et al. 2004 showed that RITS couples siRNA-guided nascent transcript
+      recognition to RDRC-dependent dsRNA synthesis and silencing.
+evidence:
+- reference: GO:0030958
+  notes: Gene Ontology cellular-component term for the RITS complex.
+- reference: GO:0031332
+  notes: Parent Gene Ontology cellular-component term for RNAi effector complexes.
+- reference: GO:0140513
+  notes: Parent Gene Ontology cellular-component term for nuclear protein-containing
+    complexes.
+- reference: GO:0000785
+  notes: Gene Ontology cellular-component term for chromatin.
+- reference: GO:0000228
+  notes: Gene Ontology cellular-component term for nuclear chromosome.
+- reference: ComplexPortal:CPX-25777
+  notes: EBI Complex Portal entry for the Schizosaccharomyces pombe RITS complex (Ago1-Chp1-Tas3-siRNA).
+- reference: PMID:14704433
+  notes: Verdel et al. 2004 (DOI:10.1126/science.1093686), RNAi-mediated targeting
+    of heterochromatin by the RITS complex, Science.
+- reference: PMID:15607976
+  notes: Motamedi et al. 2004 (DOI:10.1016/j.cell.2004.11.034), Two RNAi complexes,
+    RITS and RDRC, physically interact and localize to noncoding centromeric RNAs,
+    Cell.
+causal_graphs:
+- graph_id: rits_complex_assembly_and_heterochromatin_silencing
+  title: Ago1, Chp1, Tas3, and siRNAs assemble the RITS complex to direct heterochromatin
+    formation
+  description: In Schizosaccharomyces pombe, Tas3 bridges Ago1 and Chp1 together with
+    Ago1-bound siRNAs to assemble the RITS ribonucleoprotein complex, which promotes
+    heterochromatin formation and regulatory ncRNA-mediated gene silencing.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Captures Ago1-Chp1-Tas3-siRNA assembly into the S. pombe RITS complex
+    and its positive regulation of heterochromatin formation and ncRNA-mediated silencing.
+  nodes:
+  - node_id: ago1_argonaute_subunit
+    label: Protein argonaute
+    node_type: GENE_OR_PROTEIN
+    component_ref: ago1_argonaute_subunit
+    grounding: InterPro:IPR045246
+    xrefs:
+    - UniProtKB:O74957
+    description: Ago1 Argonaute effector subunit of RITS.
+  - node_id: chp1_chromodomain_subunit
+    label: Chromo domain-containing protein 1
+    node_type: GENE_OR_PROTEIN
+    component_ref: chp1_chromodomain_subunit
+    grounding: InterPro:IPR049937
+    xrefs:
+    - UniProtKB:Q10103
+    description: Chp1 H3K9me-binding chromodomain subunit of RITS.
+  - node_id: tas3_bridging_subunit
+    label: RNA-induced transcriptional silencing complex protein tas3
+    node_type: GENE_OR_PROTEIN
+    component_ref: tas3_bridging_subunit
+    grounding: InterPro:IPR049112
+    xrefs:
+    - UniProtKB:O94687
+    description: Tas3 GW-domain subunit bridging Ago1 and Chp1.
+  - node_id: sirna_guide_strand
+    label: small interfering RNA guide strand
+    node_type: RNA
+    component_ref: sirna_guide_strand
+    description: Dcr1-generated centromeric siRNA guide strand bound by Ago1.
+  - node_id: rits_complex_node
+    label: RITS complex
+    node_type: STRUCTURE
+    grounding: GO:0030958
+    description: Assembled Ago1-Chp1-Tas3-siRNA RITS ribonucleoprotein complex.
+  - node_id: heterochromatin_formation_process
+    label: heterochromatin formation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031507
+    description: RNAi-directed H3K9 methylation and heterochromatin assembly.
+  - node_id: ncrna_gene_silencing_process
+    label: regulatory ncRNA-mediated gene silencing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031047
+    description: Silencing of pericentromeric and heterochromatic repeats directed
+      by siRNAs.
+  edges:
+  - subject: ago1_argonaute_subunit
+    predicate: RO:0002436
+    object: rits_complex_node
+    description: Ago1 binds the GW-hook domain of Tas3 and loads centromeric siRNAs
+      within the RITS complex.
+    evidence:
+    - reference: PMID:14704433
+      notes: Verdel et al. 2004 showed that Ago1 stably associates with Tas3, Chp1,
+        and siRNAs in RITS.
+  - subject: chp1_chromodomain_subunit
+    predicate: RO:0002436
+    object: rits_complex_node
+    description: Chp1 binds Tas3 to provide the H3K9me-recognizing chromodomain of
+      the RITS complex.
+    evidence:
+    - reference: PMID:14704433
+      notes: Verdel et al. 2004 demonstrated that Chp1 co-purifies with Ago1 and Tas3
+        in RITS.
+  - subject: tas3_bridging_subunit
+    predicate: RO:0002436
+    object: rits_complex_node
+    description: Tas3 bridges Ago1 and Chp1 to assemble the three-protein core of
+      the RITS complex.
+    evidence:
+    - reference: PMID:14704433
+      notes: Verdel et al. 2004 identified Tas3 as the essential scaffold bridging
+        Ago1 and Chp1.
+  - subject: sirna_guide_strand
+    predicate: RO:0002436
+    object: rits_complex_node
+    description: Dcr1-generated centromeric siRNA guide strands are incorporated into
+      Ago1 to form the functional RITS ribonucleoprotein complex.
+    evidence:
+    - reference: PMID:14704433
+      notes: Verdel et al. 2004 showed that centromeric siRNAs co-purify with RITS
+        and are required for its chromatin targeting.
+  - subject: rits_complex_node
+    predicate: RO:0002213
+    object: heterochromatin_formation_process
+    description: The RITS complex targets nascent noncoding transcripts and H3K9-methylated
+      nucleosomes to promote heterochromatin assembly.
+    evidence:
+    - reference: PMID:14704433
+      notes: Verdel et al. 2004 demonstrated that RITS is essential for heterochromatin
+        assembly at centromeres.
+  - subject: rits_complex_node
+    predicate: RO:0002213
+    object: ncrna_gene_silencing_process
+    description: The RITS complex recruits RDRC and chromatin-modifying activities
+      to mediate siRNA-directed gene silencing.
+    evidence:
+    - reference: PMID:15607976
+      notes: Motamedi et al. 2004 demonstrated that RITS physically recruits RDRC
+        to drive RNAi-mediated heterochromatic gene silencing.
+curation_history:
+- timestamp: '2026-10-30T15:25:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0030958 (RITS complex) with verified
+    GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic
+    distribution, canonical examples, functions, and mechanistic causal graph.
+  llm_assisted: true

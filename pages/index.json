@@ -2520,6 +2520,16 @@
   "synonyms": "quinol-fumarate reductase"
  },
  {
+  "identifier": "GO:0016611",
+  "label": "iron-iron nitrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/iron_iron_nitrogenase_complex.html",
+  "definition": "An alternative nitrogenase enzyme complex containing an iron-only active-site cluster (FeFe-cofactor) expressed when both molybdenum and vanadium are depleted in diazotrophs such as Rhodobacter capsulatus and Azotobacter vinelandii. Although the GO:0016611 ontology definition describes an older alpha1-beta2 or alpha2-beta2 dinitrogenase stoichiometry, crystallographic and cryo-EM structures (PDB:8BOQ, PDB:8OIE) demonstrate a heterohexameric alpha2beta2delta2 catalytic component (AnfD2K2G2) partnered with a homodimeric iron-protein nitrogenase reductase (AnfH2).",
+  "synonyms": ""
+ },
+ {
   "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
   "label": "LH2 peripheral light-harvesting antenna complex",
   "category": "ENERGY_COMPLEX",
@@ -2547,6 +2557,16 @@
   "status": "PROPOSED",
   "page": "structures/energy_complex/methyl_coenzyme_m_reductase_complex.html",
   "definition": "Methyl coenzyme M reductase complex is a hexameric alpha2 beta2 gamma2 enzyme complex that catalyzes coenzyme B-dependent reduction of methyl-coenzyme M to methane during the terminal step of methanogenesis.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0016612",
+  "label": "molybdenum-iron nitrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/molybdenum_iron_nitrogenase_complex.html",
+  "definition": "An enzyme complex containing a molybdenum-iron cluster found in many diazotrophic species. It is composed of two component proteins, molybdenum-iron dinitrogenase (MoFe protein, an alpha2beta2 heterotetramer NifD2K2 carrying P-clusters and active-site FeMo-cofactors) and nitrogenase reductase (Fe protein, a homodimer NifH2 carrying a subunit-bridging [4Fe-4S] cluster) that transiently dock to couple MgATP hydrolysis to electron transfer and dinitrogen reduction.",
   "synonyms": ""
  },
  {
@@ -2818,6 +2838,16 @@
   "page": "structures/energy_complex/vacuolar_proton_transporting_v_type_atpase_v1_domain.html",
   "definition": "The V1 domain of a proton-transporting V-type ATPase found in the vacuolar membrane.",
   "synonyms": "vacuolar hydrogen ion-transporting ATPase V1 domain"
+ },
+ {
+  "identifier": "GO:0016613",
+  "label": "vanadium-iron nitrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/vanadium_iron_nitrogenase_complex.html",
+  "definition": "An alternative nitrogenase enzyme complex containing a vanadium-iron active-site cluster (FeV-cofactor) expressed under molybdenum depletion in species such as Azotobacter vinelandii. Although the GO:0016613 ontology definition retains older generic alpha2-beta2 tetramer wording, structural resolution of the A. vinelandii VFe protein (PDB:5N6Y) shows a heterohexameric alpha2beta2delta2 catalytic dinitrogenase component (VnfD2K2G2) partnered with a homodimeric iron-protein nitrogenase reductase (VnfH2).",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0042603",
@@ -7410,6 +7440,16 @@
   "synonyms": "ModE dimer"
  },
  {
+  "identifier": "GO:0035658",
+  "label": "Mon1-Ccz1 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mon1_ccz1_complex.html",
+  "definition": "A protein complex that functions as a guanine nucleotide exchange factor (GEF) and converts Rab-GDP to Rab-GTP. In S. cerevisiae, this complex consists of at least Mon1 and Ccz1, and serves as a GEF for the Rab Ypt7p.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0033551",
   "label": "monopolin complex",
   "category": "OTHER",
@@ -8110,6 +8150,16 @@
   "synonyms": "nucleolar rDNA loop"
  },
  {
+  "identifier": "GO:0030869",
+  "label": "RENT complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/rent_complex.html",
+  "definition": "A protein complex that mediates transcriptional silencing at the rDNA locus (the name derives from regulator of nucleolar silencing and telophase). In Saccharomyces the complex contains Net1p, Sir2p, Cdc14p, and at least one more subunit.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0005657",
   "label": "replication fork",
   "category": "OTHER",
@@ -8660,6 +8710,16 @@
   "synonyms": "TUSK TUS complex TUS deubiquitinase complex"
  },
  {
+  "identifier": "GO:0043541",
+  "label": "UDP-N-acetylglucosamine transferase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/udp_n_acetylglucosamine_transferase_complex.html",
+  "definition": "A multienzyme, heterooligomeric complex involved in dolichyl-linked oligosaccharide synthesis. In yeast the complex is composed of Alg7p, which catalyzes the first step (GlcNAc1-PP-Dol from dolichol-phosphate and UDP-GlcNAc), and Alg13p plus Alg14p, the catalytic and anchoring subunits respectively, which together catalyze the second step (GlcNAc2-PP-dolichol from GlcNAc1-PP-Dol and UDP-GlcNAc) of dolichyl-linked oligosaccharide synthesis.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0034456",
   "label": "UTP-C complex",
   "category": "OTHER",
@@ -9138,6 +9198,16 @@
   "page": "structures/ribonucleoprotein/ribosome.html",
   "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial and archaeal 70S ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. This record details that 70S form and the functional core shared with the larger eukaryotic cytosolic 80S ribosome; it does not enumerate 80S-specific components.",
   "synonyms": "70S ribosome"
+ },
+ {
+  "identifier": "GO:0030958",
+  "label": "RITS complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/rits_complex.html",
+  "definition": "A protein complex required for heterochromatin assembly; contains an Argonaute homolog, a chromodomain protein, and at least one additional protein; named for RNA-induced initiation of transcriptional gene silencing.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0140365",

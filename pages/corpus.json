@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
- "record_count": 1001,
- "corpus_updated": "2026-10-30 11:55:00 UTC",
- "corpus_digest": "b33675d6d3e8",
+ "record_count": 1008,
+ "corpus_updated": "2026-10-30 15:25:00 UTC",
+ "corpus_digest": "529ece4dee1f",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -85386,6 +85386,503 @@
    ]
   },
   {
+   "identifier": "GO:0016611",
+   "label": "iron-iron nitrogenase complex",
+   "structure_category": "ENERGY_COMPLEX",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "An alternative nitrogenase enzyme complex containing an iron-only active-site cluster (FeFe-cofactor) expressed when both molybdenum and vanadium are depleted in diazotrophs such as Rhodobacter capsulatus and Azotobacter vinelandii. Although the GO:0016611 ontology definition describes an older alpha1-beta2 or alpha2-beta2 dinitrogenase stoichiometry, crystallographic and cryo-EM structures (PDB:8BOQ, PDB:8OIE) demonstrate a heterohexameric alpha2beta2delta2 catalytic component (AnfD2K2G2) partnered with a homodimeric iron-protein nitrogenase reductase (AnfH2).",
+   "definition_source": "DOI:10.1038/s41594-023-01124-2",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0016610"
+   ],
+   "components": [
+    {
+     "component_id": "anfd_alpha_subunit",
+     "label": "Nitrogenase iron-iron protein alpha chain",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR011290",
+     "gene_symbols": [
+      "anfD"
+     ],
+     "stoichiometry": "2 copies per AnfD2K2G2 iron-iron dinitrogenase heterohexamer",
+     "essentiality": "ESSENTIAL",
+     "role": "Catalytic alpha subunit of the iron-iron dinitrogenase (FeFe protein) that coordinates the active-site [8Fe-9S-C-homocitrate] FeFe-cofactor and binds the AnfG delta subunit.",
+     "evidence": [
+      {
+       "reference": "PMID:38062208",
+       "notes": "Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2; PDB:8OIE) resolved the Rhodobacter capsulatus AnfD2K2G2-(AnfH2)2 iron nitrogenase complex and the FeFe-cofactor binding site in AnfD."
+      },
+      {
+       "reference": "PMID:8332060",
+       "notes": "Schueddekopf et al. 1993 (DOI:10.1111/j.1365-2958.1993.tb01611.x) sequenced and mutated the R. capsulatus anfHDGK operon, showing that anfD is essential for iron-only nitrogenase activity."
+      },
+      {
+       "reference": "PMID:2644222",
+       "notes": "Joerger et al. 1989 (DOI:10.1128/jb.171.2.1075-1086.1989) determined the Azotobacter vinelandii anfHDGKOR operon sequence."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q07933",
+       "protein_label": "Nitrogenase iron-iron protein alpha chain",
+       "gene_symbol": "anfD",
+       "taxon_id": "NCBITaxon:1061",
+       "taxon_label": "Rhodobacter capsulatus",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Rhodobacter capsulatus AnfD alpha chain of the iron-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q07933",
+         "notes": "Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-iron protein alpha chain (anfD)."
+        },
+        {
+         "reference": "PMID:8332060",
+         "notes": "Schueddekopf et al. 1993 characterized R. capsulatus anfD."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P16266",
+       "protein_label": "Nitrogenase iron-iron protein alpha chain",
+       "gene_symbol": "anfD",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii AnfD alpha chain of the iron-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P16266",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-iron protein alpha chain (anfD)."
+        },
+        {
+         "reference": "PMID:2644222",
+         "notes": "Joerger et al. 1989 characterized A. vinelandii anfD."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "anfk_beta_subunit",
+     "label": "Nitrogenase iron-iron protein beta chain",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR014280",
+     "gene_symbols": [
+      "anfK"
+     ],
+     "stoichiometry": "2 copies per AnfD2K2G2 iron-iron dinitrogenase heterohexamer",
+     "essentiality": "ESSENTIAL",
+     "role": "Beta subunit of the iron-iron dinitrogenase (FeFe protein) that forms the alpha2beta2 core with AnfD and co-ligates the interfacial [8Fe-7S] P-cluster.",
+     "evidence": [
+      {
+       "reference": "PMID:38062208",
+       "notes": "Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2; PDB:8OIE) resolved AnfK in the R. capsulatus AnfD2K2G2 catalytic component."
+      },
+      {
+       "reference": "PMID:8332060",
+       "notes": "Schueddekopf et al. 1993 characterized R. capsulatus anfK in the anfHDGK operon."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q07935",
+       "protein_label": "Nitrogenase iron-iron protein beta chain",
+       "gene_symbol": "anfK",
+       "taxon_id": "NCBITaxon:1061",
+       "taxon_label": "Rhodobacter capsulatus",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Rhodobacter capsulatus AnfK beta chain of the iron-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q07935",
+         "notes": "Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-iron protein beta chain (anfK)."
+        },
+        {
+         "reference": "PMID:8332060",
+         "notes": "Schueddekopf et al. 1993 characterized R. capsulatus anfK."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P16267",
+       "protein_label": "Nitrogenase iron-iron protein beta chain",
+       "gene_symbol": "anfK",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii AnfK beta chain of the iron-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P16267",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-iron protein beta chain (anfK)."
+        },
+        {
+         "reference": "PMID:2644222",
+         "notes": "Joerger et al. 1989 characterized A. vinelandii anfK."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "anfg_delta_subunit",
+     "label": "Nitrogenase iron-iron protein delta chain",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR014278",
+     "gene_symbols": [
+      "anfG"
+     ],
+     "stoichiometry": "2 copies per AnfD2K2G2 iron-iron dinitrogenase heterohexamer",
+     "essentiality": "ESSENTIAL",
+     "role": "Helical delta subunit (AnfG) bound to the AnfD2K2 core to form the heterohexameric AnfD2K2G2 catalytic component required for molybdenum- and vanadium-independent diazotrophic growth.",
+     "evidence": [
+      {
+       "reference": "PMID:38062208",
+       "notes": "Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2; PDB:8OIE) resolved two AnfG delta subunits in the R. capsulatus AnfD2K2G2 catalytic hexamer, correcting older alpha1beta2/alpha2beta2 descriptions."
+      },
+      {
+       "reference": "PMID:8332060",
+       "notes": "Schueddekopf et al. 1993 showed that R. capsulatus anfG is co-transcribed in the anfHDGK operon and required for functional iron nitrogenase."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q07934",
+       "protein_label": "Nitrogenase iron-iron protein delta chain",
+       "gene_symbol": "anfG",
+       "taxon_id": "NCBITaxon:1061",
+       "taxon_label": "Rhodobacter capsulatus",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Rhodobacter capsulatus AnfG delta chain of the iron-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q07934",
+         "notes": "Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-iron protein delta chain (anfG)."
+        },
+        {
+         "reference": "PMID:8332060",
+         "notes": "Schueddekopf et al. 1993 characterized R. capsulatus anfG."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P16268",
+       "protein_label": "Nitrogenase iron-iron protein delta chain",
+       "gene_symbol": "anfG",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii AnfG delta chain of the iron-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P16268",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-iron protein delta chain (anfG)."
+        },
+        {
+         "reference": "PMID:2644222",
+         "notes": "Joerger et al. 1989 characterized A. vinelandii anfG."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "anfh_reductase_subunit",
+     "label": "Nitrogenase iron-only iron protein",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR005977",
+     "gene_symbols": [
+      "anfH"
+     ],
+     "stoichiometry": "2 copies per AnfH2 reductase homodimer (two AnfH2 homodimers bind per AnfD2K2G2 hexamer in the ADP-AlF3-trapped PDB:8OIE complex)",
+     "essentiality": "ESSENTIAL",
+     "role": "ATP-dependent iron-protein reductase subunit (AnfH; member of InterPro:IPR005977 alongside NifH and VnfH) that forms a [4Fe-4S]-bridged homodimer and docks onto AnfD2K2G2 to drive electron transfer into the P-cluster.",
+     "evidence": [
+      {
+       "reference": "PMID:38062208",
+       "notes": "Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2; PDB:8OIE) resolved two AnfH2 homodimers bound to the R. capsulatus AnfD2K2G2 hexamer in an ADP-AlF3-trapped state."
+      },
+      {
+       "reference": "PMID:8332060",
+       "notes": "Schueddekopf et al. 1993 characterized R. capsulatus anfH as encoding the Fe protein reductase of the iron-only nitrogenase."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q07942",
+       "protein_label": "Nitrogenase iron-only iron protein",
+       "gene_symbol": "anfH",
+       "taxon_id": "NCBITaxon:1061",
+       "taxon_label": "Rhodobacter capsulatus",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Rhodobacter capsulatus AnfH iron-protein reductase subunit of the iron-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q07942",
+         "notes": "Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-only iron protein (anfH)."
+        },
+        {
+         "reference": "PMID:8332060",
+         "notes": "Schueddekopf et al. 1993 characterized R. capsulatus anfH."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P16269",
+       "protein_label": "Nitrogenase iron-only iron protein",
+       "gene_symbol": "anfH",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii AnfH iron-protein reductase subunit of the iron-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P16269",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-only iron protein (anfH)."
+        },
+        {
+         "reference": "PMID:2644222",
+         "notes": "Joerger et al. 1989 characterized A. vinelandii anfH."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:1061",
+     "taxon_label": "Rhodobacter capsulatus",
+     "presence": "COMMON",
+     "note": "Purple nonsulfur alphaproteobacterium named in GO:0016611 in which the AnfD2K2G2-(AnfH2)2 iron-only nitrogenase complex was resolved by cryo-EM (PDB:8OIE).",
+     "reference": "PMID:38062208"
+    },
+    {
+     "taxon_id": "NCBITaxon:354",
+     "taxon_label": "Azotobacter vinelandii",
+     "presence": "COMMON",
+     "note": "Aerobic diazotroph encoding the anfHDGKOR operon for iron-only nitrogenase (PDB:8BOQ).",
+     "reference": "PMID:2644222"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:1061",
+     "taxon_label": "Rhodobacter capsulatus",
+     "note": "Reference organism named in GO:0016611 and source of the cryo-EM structure of the ADP-AlF3-trapped AnfD2K2G2-(AnfH2)2 iron-iron nitrogenase complex (PDB:8OIE).",
+     "reference": "PMID:38062208"
+    },
+    {
+     "taxon_id": "NCBITaxon:354",
+     "taxon_label": "Azotobacter vinelandii",
+     "note": "Reference diazotroph in which the anfHDGKOR gene cluster was characterized and the AnfD2K2G2 FeFe protein crystal structure (PDB:8BOQ) was determined.",
+     "reference": "PMID:2644222"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "iron_iron_nitrogenase_activity",
+     "label": "nitrogenase activity",
+     "grounding": "GO:0016163",
+     "description": "Catalyzes ATP-dependent reduction of dinitrogen to ammonium and dihydrogen at the iron-only FeFe-cofactor when molybdenum and vanadium are unavailable.",
+     "evidence": [
+      {
+       "reference": "GO:0016163",
+       "notes": "GO:0016163 defines nitrogenase activity."
+      },
+      {
+       "reference": "PMID:38062208",
+       "notes": "Schmidt et al. 2024 characterized dinitrogen and carbon dioxide reduction by the R. capsulatus AnfD2K2G2-AnfH2 iron-only nitrogenase complex."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0016611",
+     "notes": "Gene Ontology cellular-component term for the iron-iron nitrogenase complex; note that GO:0016611 retains older alpha1-beta2/alpha2-beta2 wording superseded by resolved AnfD2K2G2 structures (PDB:8OIE, PDB:8BOQ)."
+    },
+    {
+     "reference": "GO:0016610",
+     "notes": "Parent Gene Ontology cellular-component term for the generic nitrogenase complex."
+    },
+    {
+     "reference": "PMID:38062208",
+     "notes": "Schmidt et al. 2024 (DOI:10.1038/s41594-023-01124-2), structure and mechanism of the Rhodobacter capsulatus iron-only nitrogenase complex (PDB:8OIE)."
+    },
+    {
+     "reference": "PMID:8332060",
+     "notes": "Schueddekopf et al. 1993 (DOI:10.1111/j.1365-2958.1993.tb01611.x), characterization of the Rhodobacter capsulatus anfHDGK operon."
+    },
+    {
+     "reference": "PMID:2644222",
+     "notes": "Joerger et al. 1989 (DOI:10.1128/jb.171.2.1075-1086.1989), nucleotide sequence of the Azotobacter vinelandii anfHDGKOR gene cluster."
+    },
+    {
+     "reference": "PDB:8OIE",
+     "notes": "RCSB PDB entry for the Rhodobacter capsulatus ADP-AlF3-stabilized iron-only nitrogenase complex."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "iron_iron_nitrogenase_assembly_and_catalysis",
+     "title": "AnfD2K2G2 and AnfH2 assembly and catalysis in the iron-iron nitrogenase complex",
+     "description": "AnfD alpha, AnfK beta, and AnfG delta chains assemble the heterohexameric FeFe catalytic component that docks with homodimeric AnfH reductase to form the iron-iron nitrogenase complex and catalyze ATP-dependent dinitrogen reduction.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Captures the R. capsulatus and A. vinelandii AnfD2K2G2-AnfH2 subunit architecture and GO:0016163 nitrogenase activity without modeling FeFe-cofactor biosynthesis.",
+     "nodes": [
+      {
+       "node_id": "anfd_alpha_subunit",
+       "label": "Nitrogenase iron-iron protein alpha chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "anfd_alpha_subunit",
+       "grounding": "InterPro:IPR011290",
+       "xrefs": [
+        "UniProtKB:Q07933",
+        "UniProtKB:P16266"
+       ],
+       "description": "AnfD alpha subunit housing the FeFe-cofactor."
+      },
+      {
+       "node_id": "anfk_beta_subunit",
+       "label": "Nitrogenase iron-iron protein beta chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "anfk_beta_subunit",
+       "grounding": "InterPro:IPR014280",
+       "xrefs": [
+        "UniProtKB:Q07935",
+        "UniProtKB:P16267"
+       ],
+       "description": "AnfK beta subunit partnering with AnfD in the catalytic core."
+      },
+      {
+       "node_id": "anfg_delta_subunit",
+       "label": "Nitrogenase iron-iron protein delta chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "anfg_delta_subunit",
+       "grounding": "InterPro:IPR014278",
+       "xrefs": [
+        "UniProtKB:Q07934",
+        "UniProtKB:P16268"
+       ],
+       "description": "AnfG delta subunit bound to AnfD on the catalytic hexamer."
+      },
+      {
+       "node_id": "anfh_reductase_subunit",
+       "label": "Nitrogenase iron-only iron protein",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "anfh_reductase_subunit",
+       "grounding": "InterPro:IPR005977",
+       "xrefs": [
+        "UniProtKB:Q07942",
+        "UniProtKB:P16269"
+       ],
+       "description": "Homodimeric AnfH iron-protein reductase subunit."
+      },
+      {
+       "node_id": "fefe_nitrogenase_complex_node",
+       "label": "iron-iron nitrogenase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0016611",
+       "description": "Assembled AnfD2K2G2-AnfH2 iron-iron nitrogenase complex."
+      },
+      {
+       "node_id": "nitrogenase_activity_node",
+       "label": "nitrogenase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0016163",
+       "description": "ATP-dependent dinitrogen reduction to ammonium and dihydrogen."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "anfd_alpha_subunit",
+       "predicate": "RO:0002436",
+       "object": "fefe_nitrogenase_complex_node",
+       "description": "Two AnfD alpha chains assemble with AnfK and AnfG to form the FeFe-cofactor-containing catalytic component.",
+       "evidence": [
+        {
+         "reference": "PMID:38062208",
+         "notes": "Schmidt et al. 2024 (PDB:8OIE) resolved AnfD in the R. capsulatus AnfD2K2G2-(AnfH2)2 complex."
+        }
+       ]
+      },
+      {
+       "subject": "anfk_beta_subunit",
+       "predicate": "RO:0002436",
+       "object": "fefe_nitrogenase_complex_node",
+       "description": "Two AnfK beta chains pair with AnfD to form the alpha2beta2 core and coordinate the P-cluster.",
+       "evidence": [
+        {
+         "reference": "PMID:38062208",
+         "notes": "Schmidt et al. 2024 (PDB:8OIE) resolved AnfK in the AnfD2K2G2 catalytic component."
+        }
+       ]
+      },
+      {
+       "subject": "anfg_delta_subunit",
+       "predicate": "RO:0002436",
+       "object": "fefe_nitrogenase_complex_node",
+       "description": "Two AnfG delta chains bind to AnfD on the alpha2beta2 core to complete the AnfD2K2G2 catalytic hexamer.",
+       "evidence": [
+        {
+         "reference": "PMID:38062208",
+         "notes": "Schmidt et al. 2024 resolved two AnfG subunits bound to the AnfD2K2 core."
+        }
+       ]
+      },
+      {
+       "subject": "anfh_reductase_subunit",
+       "predicate": "RO:0002436",
+       "object": "fefe_nitrogenase_complex_node",
+       "description": "Homodimeric AnfH reductase docks onto the AnfD2K2G2 catalytic component to deliver ATP-coupled electrons into the P-cluster.",
+       "evidence": [
+        {
+         "reference": "PMID:38062208",
+         "notes": "Schmidt et al. 2024 (PDB:8OIE) resolved two AnfH2 dimers bound to the AnfD2K2G2 hexamer."
+        }
+       ]
+      },
+      {
+       "subject": "fefe_nitrogenase_complex_node",
+       "predicate": "RO:0002327",
+       "object": "nitrogenase_activity_node",
+       "description": "The assembled iron-iron nitrogenase complex enables ATP-dependent dinitrogen reduction to ammonium.",
+       "evidence": [
+        {
+         "reference": "PMID:38062208",
+         "notes": "Schmidt et al. 2024 demonstrated dinitrogen reduction by the purified R. capsulatus iron-only nitrogenase complex."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-30T15:25:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0016611 (iron-iron nitrogenase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
    "label": "LH2 peripheral light-harvesting antenna complex",
    "structure_category": "ENERGY_COMPLEX",
@@ -86537,6 +87034,361 @@
        ]
       }
      ]
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0016612",
+   "label": "molybdenum-iron nitrogenase complex",
+   "structure_category": "ENERGY_COMPLEX",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "An enzyme complex containing a molybdenum-iron cluster found in many diazotrophic species. It is composed of two component proteins, molybdenum-iron dinitrogenase (MoFe protein, an alpha2beta2 heterotetramer NifD2K2 carrying P-clusters and active-site FeMo-cofactors) and nitrogenase reductase (Fe protein, a homodimer NifH2 carrying a subunit-bridging [4Fe-4S] cluster) that transiently dock to couple MgATP hydrolysis to electron transfer and dinitrogen reduction.",
+   "definition_source": "GO:0016612",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0016610"
+   ],
+   "components": [
+    {
+     "component_id": "nifd_alpha_subunit",
+     "label": "Nitrogenase molybdenum-iron protein alpha chain",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR005972",
+     "gene_symbols": [
+      "nifD"
+     ],
+     "stoichiometry": "2 copies per NifD2K2 molybdenum-iron dinitrogenase heterotetramer",
+     "essentiality": "ESSENTIAL",
+     "role": "Catalytic alpha subunit of the molybdenum-iron dinitrogenase (MoFe protein) that houses the active-site FeMo-cofactor ([Mo-7Fe-9S-C-homocitrate]) and forms the alpha-beta interface coordinating the [8Fe-7S] P-cluster.",
+     "evidence": [
+      {
+       "reference": "GO:0016612",
+       "notes": "GO:0016612 defines the molybdenum-iron dinitrogenase component as an alpha2-beta2 heterotetramer."
+      },
+      {
+       "reference": "PMID:9163420",
+       "notes": "Schindelin et al. 1997 (DOI:10.1038/387370a0; PDB:1N2C) resolved the Azotobacter vinelandii MoFe protein alpha chain (NifD) in the ADP-AlF4--stabilized nitrogenase complex."
+      },
+      {
+       "reference": "PMID:12215645",
+       "notes": "Einsle et al. 2002 (DOI:10.1126/science.1073877) resolved the 1.16-Angstrom crystal structure of Azotobacter vinelandii MoFe protein and the interstitial ligand at the center of the NifD FeMo-cofactor."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P07328",
+       "protein_label": "Nitrogenase molybdenum-iron protein alpha chain",
+       "gene_symbol": "nifD",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii NifD alpha chain of the canonical molybdenum-iron nitrogenase complex resolved in PDB:1N2C.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P07328",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase molybdenum-iron protein alpha chain (nifD)."
+        },
+        {
+         "reference": "PMID:9163420",
+         "notes": "Schindelin et al. 1997 (PDB:1N2C) resolved A. vinelandii NifD within the trapped Mo-nitrogenase complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "nifk_beta_subunit",
+     "label": "Nitrogenase molybdenum-iron protein beta chain",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR005976",
+     "gene_symbols": [
+      "nifK"
+     ],
+     "stoichiometry": "2 copies per NifD2K2 molybdenum-iron dinitrogenase heterotetramer",
+     "essentiality": "ESSENTIAL",
+     "role": "Beta subunit of the molybdenum-iron dinitrogenase (MoFe protein) that pairs with NifD to form the alpha2beta2 catalytic core and co-ligates the [8Fe-7S] P-cluster at the alpha-beta subunit interface.",
+     "evidence": [
+      {
+       "reference": "GO:0016612",
+       "notes": "GO:0016612 defines the molybdenum-iron dinitrogenase component as an alpha2-beta2 heterotetramer."
+      },
+      {
+       "reference": "PMID:9163420",
+       "notes": "Schindelin et al. 1997 (DOI:10.1038/387370a0; PDB:1N2C) resolved the Azotobacter vinelandii MoFe protein beta chain (NifK) partnered with NifD and NifH."
+      },
+      {
+       "reference": "PMID:3863780",
+       "notes": "Brigle et al. 1985 (DOI:10.1016/0378-1119(85)90255-0) determined the Azotobacter vinelandii nifD and nifK gene organization and sequence."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P07329",
+       "protein_label": "Nitrogenase molybdenum-iron protein beta chain",
+       "gene_symbol": "nifK",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii NifK beta chain of the canonical molybdenum-iron nitrogenase complex resolved in PDB:1N2C.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P07329",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase molybdenum-iron protein beta chain (nifK)."
+        },
+        {
+         "reference": "PMID:9163420",
+         "notes": "Schindelin et al. 1997 (PDB:1N2C) resolved A. vinelandii NifK within the trapped Mo-nitrogenase complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "nifh_reductase_subunit",
+     "label": "Nitrogenase iron protein 1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR005977",
+     "gene_symbols": [
+      "nifH1",
+      "nifH"
+     ],
+     "stoichiometry": "2 copies per NifH2 reductase homodimer (two NifH2 homodimers bind one NifD2K2 tetramer in the trapped PDB:1N2C assembly)",
+     "essentiality": "ESSENTIAL",
+     "role": "ATP-binding iron-protein reductase subunit that forms a homodimer bridging a single [4Fe-4S] cluster and transiently docks onto the NifD2K2 MoFe protein to couple MgATP hydrolysis to electron transfer into the P-cluster.",
+     "evidence": [
+      {
+       "reference": "GO:0016612",
+       "notes": "GO:0016612 defines the molybdenum-iron nitrogenase complex as containing a homodimeric nitrogenase reductase paired with the alpha2-beta2 dinitrogenase."
+      },
+      {
+       "reference": "PMID:9163420",
+       "notes": "Schindelin et al. 1997 (DOI:10.1038/387370a0; PDB:1N2C) resolved two NifH2 homodimers docked on the NifD2K2 tetramer in the ADP-AlF4--stabilized transition-state complex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P00459",
+       "protein_label": "Nitrogenase iron protein 1",
+       "gene_symbol": "nifH1",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii NifH1 (also declared as synonym nifH) iron-protein reductase subunit resolved in PDB:1N2C.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P00459",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron protein 1 (nifH1 / nifH)."
+        },
+        {
+         "reference": "PMID:9163420",
+         "notes": "Schindelin et al. 1997 (PDB:1N2C) resolved A. vinelandii NifH1 bound to the MoFe protein."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:354",
+     "taxon_label": "Azotobacter vinelandii",
+     "presence": "COMMON",
+     "note": "Aerobic diazotrophic gammaproteobacterium in which the canonical NifD2K2-NifH2 molybdenum-iron nitrogenase complex was structurally resolved (PDB:1N2C).",
+     "reference": "PMID:9163420"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:354",
+     "taxon_label": "Azotobacter vinelandii",
+     "note": "Source organism for the ADP-AlF4--stabilized NifD2K2-(NifH2)2 molybdenum-iron nitrogenase crystal structure (PDB:1N2C) and high-resolution MoFe protein structure (PMID:12215645).",
+     "reference": "PDB:1N2C"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "molybdenum_iron_nitrogenase_activity",
+     "label": "nitrogenase activity",
+     "grounding": "GO:0016163",
+     "description": "Catalyzes ATP-dependent reduction of dinitrogen (N2) to ammonium coupled to obligately evolved dihydrogen (H2) and oxidation of reduced ferredoxin or flavodoxin at the FeMo-cofactor active site.",
+     "evidence": [
+      {
+       "reference": "GO:0016163",
+       "notes": "GO:0016163 defines nitrogenase activity."
+      },
+      {
+       "reference": "PMID:9163420",
+       "notes": "Schindelin et al. 1997 demonstrated how MgATP-driven NifH2 conformational change gates electron transfer into the NifD2K2 MoFe protein for dinitrogen reduction."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0016612",
+     "notes": "Gene Ontology cellular-component term for the molybdenum-iron nitrogenase complex."
+    },
+    {
+     "reference": "GO:0016610",
+     "notes": "Parent Gene Ontology cellular-component term for the generic nitrogenase complex."
+    },
+    {
+     "reference": "PMID:9163420",
+     "notes": "Schindelin et al. 1997 (DOI:10.1038/387370a0), crystal structure of the ADP-AlF4--stabilized Azotobacter vinelandii molybdenum-iron nitrogenase complex (PDB:1N2C)."
+    },
+    {
+     "reference": "PMID:12215645",
+     "notes": "Einsle et al. 2002 (DOI:10.1126/science.1073877), 1.16-Angstrom resolution structure of Azotobacter vinelandii MoFe nitrogenase."
+    },
+    {
+     "reference": "PMID:3863780",
+     "notes": "Brigle et al. 1985 (DOI:10.1016/0378-1119(85)90255-0), nucleotide sequence of the Azotobacter vinelandii nifD and nifK genes."
+    },
+    {
+     "reference": "PDB:1N2C",
+     "notes": "RCSB PDB entry for the Azotobacter vinelandii molybdenum-iron nitrogenase complex stabilized by ADP-tetrafluoroaluminate."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "molybdenum_iron_nitrogenase_assembly_and_catalysis",
+     "title": "Assembly and ATP-coupled dinitrogen reduction by the molybdenum-iron nitrogenase complex",
+     "description": "NifD alpha and NifK beta chains assemble the heterotetrameric MoFe dinitrogenase core that docks with homodimeric NifH1 iron-protein reductase to form the molybdenum-iron nitrogenase complex and catalyze ATP-dependent dinitrogen reduction.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Captures NifD/NifK/NifH1 subunit assembly into the A. vinelandii molybdenum-iron nitrogenase complex and its catalysis of dinitrogen reduction; NifB/NifEN-mediated FeMo-cofactor biosynthesis is omitted.",
+     "nodes": [
+      {
+       "node_id": "nifd_alpha_subunit",
+       "label": "Nitrogenase molybdenum-iron protein alpha chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nifd_alpha_subunit",
+       "grounding": "InterPro:IPR005972",
+       "xrefs": [
+        "UniProtKB:P07328"
+       ],
+       "description": "Catalytic NifD alpha subunit housing the FeMo-cofactor."
+      },
+      {
+       "node_id": "nifk_beta_subunit",
+       "label": "Nitrogenase molybdenum-iron protein beta chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nifk_beta_subunit",
+       "grounding": "InterPro:IPR005976",
+       "xrefs": [
+        "UniProtKB:P07329"
+       ],
+       "description": "NifK beta subunit partnering with NifD in the alpha2beta2 MoFe core."
+      },
+      {
+       "node_id": "nifh_reductase_subunit",
+       "label": "Nitrogenase iron protein 1",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nifh_reductase_subunit",
+       "grounding": "InterPro:IPR005977",
+       "xrefs": [
+        "UniProtKB:P00459"
+       ],
+       "description": "Homodimeric NifH1 iron-protein reductase subunit."
+      },
+      {
+       "node_id": "mofe_nitrogenase_complex_node",
+       "label": "molybdenum-iron nitrogenase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0016612",
+       "description": "Assembled NifD2K2-NifH2 molybdenum-iron nitrogenase complex."
+      },
+      {
+       "node_id": "dinitrogen_substrate",
+       "label": "dinitrogen",
+       "node_type": "CHEMICAL",
+       "description": "Molecular dinitrogen (N2) substrate reduced at the FeMo-cofactor."
+      },
+      {
+       "node_id": "nitrogenase_activity_node",
+       "label": "nitrogenase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0016163",
+       "description": "ATP-dependent reduction of dinitrogen to ammonium and dihydrogen."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "nifd_alpha_subunit",
+       "predicate": "RO:0002436",
+       "object": "mofe_nitrogenase_complex_node",
+       "description": "Two NifD alpha chains assemble with two NifK beta chains to form the FeMo-cofactor-bearing catalytic core of the molybdenum-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "PMID:9163420",
+         "notes": "Schindelin et al. 1997 (PDB:1N2C) resolved the alpha2beta2 NifD2K2 core in the A. vinelandii Mo-nitrogenase complex."
+        }
+       ]
+      },
+      {
+       "subject": "nifk_beta_subunit",
+       "predicate": "RO:0002436",
+       "object": "mofe_nitrogenase_complex_node",
+       "description": "Two NifK beta chains pair with NifD to complete the alpha2beta2 MoFe dinitrogenase component and coordinate the interfacial P-clusters.",
+       "evidence": [
+        {
+         "reference": "PMID:9163420",
+         "notes": "Schindelin et al. 1997 (PDB:1N2C) resolved NifK in the alpha2beta2 MoFe catalytic component."
+        }
+       ]
+      },
+      {
+       "subject": "nifh_reductase_subunit",
+       "predicate": "RO:0002436",
+       "object": "mofe_nitrogenase_complex_node",
+       "description": "Homodimeric NifH1 iron-protein reductase docks onto the NifD2K2 MoFe protein to juxtapose its [4Fe-4S] cluster with the P-cluster.",
+       "evidence": [
+        {
+         "reference": "PMID:9163420",
+         "notes": "Schindelin et al. 1997 captured NifH1 homodimers docked onto the MoFe protein in the ADP-AlF4--stabilized complex."
+        }
+       ]
+      },
+      {
+       "subject": "mofe_nitrogenase_complex_node",
+       "predicate": "RO:0002327",
+       "object": "nitrogenase_activity_node",
+       "description": "The assembled molybdenum-iron nitrogenase complex enables ATP-coupled electron transfer and dinitrogen reduction to ammonium.",
+       "evidence": [
+        {
+         "reference": "GO:0016612",
+         "notes": "GO:0016612 and GO:0016163 link the molybdenum-iron nitrogenase complex to nitrogenase activity."
+        }
+       ]
+      },
+      {
+       "subject": "dinitrogen_substrate",
+       "predicate": "RO:0000056",
+       "object": "nitrogenase_activity_node",
+       "description": "Dinitrogen participates as the terminal electron acceptor reduced to ammonium during nitrogenase catalysis.",
+       "evidence": [
+        {
+         "reference": "GO:0016163",
+         "notes": "GO:0016163 defines dinitrogen as the substrate reduced to ammonium."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-30T15:25:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0016612 (molybdenum-iron nitrogenase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
@@ -96944,6 +97796,402 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-15"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0016613",
+   "label": "vanadium-iron nitrogenase complex",
+   "structure_category": "ENERGY_COMPLEX",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "An alternative nitrogenase enzyme complex containing a vanadium-iron active-site cluster (FeV-cofactor) expressed under molybdenum depletion in species such as Azotobacter vinelandii. Although the GO:0016613 ontology definition retains older generic alpha2-beta2 tetramer wording, structural resolution of the A. vinelandii VFe protein (PDB:5N6Y) shows a heterohexameric alpha2beta2delta2 catalytic dinitrogenase component (VnfD2K2G2) partnered with a homodimeric iron-protein nitrogenase reductase (VnfH2).",
+   "definition_source": "DOI:10.1038/nchembio.2428",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:0016610"
+   ],
+   "components": [
+    {
+     "component_id": "vnfd_alpha_subunit",
+     "label": "Nitrogenase vanadium-iron protein alpha chain",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR010142",
+     "gene_symbols": [
+      "vnfD"
+     ],
+     "stoichiometry": "2 copies per VnfD2K2G2 vanadium-iron dinitrogenase heterohexamer",
+     "essentiality": "ESSENTIAL",
+     "role": "Catalytic alpha subunit of the vanadium-iron dinitrogenase (VFe protein) that coordinates the active-site FeV-cofactor and forms the VnfG-binding contact surface.",
+     "evidence": [
+      {
+       "reference": "PMID:28692069",
+       "notes": "Sippel and Einsle 2017 (DOI:10.1038/nchembio.2428; PDB:5N6Y) resolved the 1.35-Angstrom structure of Azotobacter vinelandii VnfD2K2G2 vanadium nitrogenase, showing VnfD housing the FeV-cofactor and binding VnfG."
+      },
+      {
+       "reference": "PMID:2345152",
+       "notes": "Joerger et al. 1990 (DOI:10.1128/jb.172.6.3400-3408.1990) characterized the Azotobacter vinelandii vnfDGK operon encoding the vanadium-dependent nitrogenase subunits."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P16855",
+       "protein_label": "Nitrogenase vanadium-iron protein alpha chain",
+       "gene_symbol": "vnfD",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii VnfD alpha chain of the vanadium-iron nitrogenase complex resolved in PDB:5N6Y.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P16855",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase vanadium-iron protein alpha chain (vnfD)."
+        },
+        {
+         "reference": "PMID:28692069",
+         "notes": "Sippel and Einsle 2017 (PDB:5N6Y) resolved A. vinelandii VnfD in the VnfD2K2G2 catalytic component."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "vnfk_beta_subunit",
+     "label": "Nitrogenase vanadium-iron protein beta chain",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR014281",
+     "gene_symbols": [
+      "vnfK"
+     ],
+     "stoichiometry": "2 copies per VnfD2K2G2 vanadium-iron dinitrogenase heterohexamer",
+     "essentiality": "ESSENTIAL",
+     "role": "Beta subunit of the vanadium-iron dinitrogenase (VFe protein) that forms the alpha2beta2 core with VnfD and coordinates the interfacial P-cluster.",
+     "evidence": [
+      {
+       "reference": "PMID:28692069",
+       "notes": "Sippel and Einsle 2017 (DOI:10.1038/nchembio.2428; PDB:5N6Y) resolved VnfK in the A. vinelandii VnfD2K2G2 heterohexamer."
+      },
+      {
+       "reference": "PMID:2345152",
+       "notes": "Joerger et al. 1990 (DOI:10.1128/jb.172.6.3400-3408.1990) sequenced vnfK in the A. vinelandii vnfDGK gene cluster."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P16856",
+       "protein_label": "Nitrogenase vanadium-iron protein beta chain",
+       "gene_symbol": "vnfK",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii VnfK beta chain of the vanadium-iron nitrogenase complex resolved in PDB:5N6Y.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P16856",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase vanadium-iron protein beta chain (vnfK)."
+        },
+        {
+         "reference": "PMID:28692069",
+         "notes": "Sippel and Einsle 2017 (PDB:5N6Y) resolved A. vinelandii VnfK in the VnfD2K2G2 catalytic component."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "vnfg_delta_subunit",
+     "label": "Nitrogenase vanadium-iron protein delta chain",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR014279",
+     "gene_symbols": [
+      "vnfG"
+     ],
+     "stoichiometry": "2 copies per VnfD2K2G2 vanadium-iron dinitrogenase heterohexamer",
+     "essentiality": "ESSENTIAL",
+     "role": "Four-helix-bundle delta subunit (VnfG) bound exclusively to the VnfD alpha subunit on the periphery of the VnfD2K2G2 catalytic component and required for diazotrophic growth with vanadium.",
+     "evidence": [
+      {
+       "reference": "PMID:28692069",
+       "notes": "Sippel and Einsle 2017 (DOI:10.1038/nchembio.2428; PDB:5N6Y) resolved two four-helix VnfG subunits bound to VnfD in the A. vinelandii VnfD2K2G2 heterohexamer, refuting older generic tetramer assumptions."
+      },
+      {
+       "reference": "PMID:2345152",
+       "notes": "Joerger et al. 1990 (DOI:10.1128/jb.172.6.3400-3408.1990) demonstrated that vnfG lies between vnfD and vnfK and is required for vanadium-dependent diazotrophic growth."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P16857",
+       "protein_label": "Nitrogenase vanadium-iron protein delta chain",
+       "gene_symbol": "vnfG",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii VnfG delta chain of the vanadium-iron nitrogenase complex resolved in PDB:5N6Y.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P16857",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase vanadium-iron protein delta chain (vnfG)."
+        },
+        {
+         "reference": "PMID:28692069",
+         "notes": "Sippel and Einsle 2017 (PDB:5N6Y) resolved A. vinelandii VnfG bound to VnfD."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "vnfh_reductase_subunit",
+     "label": "Nitrogenase iron protein 2",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR005977",
+     "gene_symbols": [
+      "vnfH"
+     ],
+     "stoichiometry": "2 copies per VnfH2 reductase homodimer",
+     "essentiality": "ESSENTIAL",
+     "role": "ATP-dependent iron-protein 2 reductase subunit (VnfH) that forms a [4Fe-4S]-bridged homodimer delivering electrons to the VnfD2K2G2 catalytic component during vanadium-dependent nitrogen fixation.",
+     "evidence": [
+      {
+       "reference": "GO:0016613",
+       "notes": "GO:0016613 defines the vanadium-iron nitrogenase complex as containing a homodimeric nitrogenase reductase paired with the vanadium-iron dinitrogenase."
+      },
+      {
+       "reference": "PMID:3226421",
+       "notes": "Raina et al. 1988 (DOI:10.1007/bf00340189) cloned and sequenced the Azotobacter vinelandii vnfH gene encoding the iron-protein reductase of the vanadium nitrogenase system."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P15335",
+       "protein_label": "Nitrogenase iron protein 2",
+       "gene_symbol": "vnfH",
+       "taxon_id": "NCBITaxon:354",
+       "taxon_label": "Azotobacter vinelandii",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Azotobacter vinelandii VnfH iron-protein 2 reductase subunit of the vanadium-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P15335",
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron protein 2 (vnfH)."
+        },
+        {
+         "reference": "PMID:3226421",
+         "notes": "Raina et al. 1988 characterized the A. vinelandii vnfH gene encoding nitrogenase iron protein 2."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:354",
+     "taxon_label": "Azotobacter vinelandii",
+     "presence": "COMMON",
+     "note": "Diazotrophic bacterium that expresses the VnfD2K2G2-VnfH2 vanadium-iron nitrogenase under molybdenum deprivation in the presence of vanadium.",
+     "reference": "PMID:28692069"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:354",
+     "taxon_label": "Azotobacter vinelandii",
+     "note": "Source organism for the 1.35-Angstrom crystal structure of the heterohexameric VnfD2K2G2 vanadium-iron nitrogenase catalytic component (PDB:5N6Y) and characterized VnfH2 reductase.",
+     "reference": "PDB:5N6Y"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "vanadium_iron_nitrogenase_activity",
+     "label": "nitrogenase activity",
+     "grounding": "GO:0016163",
+     "description": "Catalyzes ATP-dependent reduction of dinitrogen to ammonium and dihydrogen at the vanadium-containing FeV-cofactor under molybdenum-limiting conditions.",
+     "evidence": [
+      {
+       "reference": "GO:0016163",
+       "notes": "GO:0016163 defines nitrogenase activity."
+      },
+      {
+       "reference": "PMID:28692069",
+       "notes": "Sippel and Einsle 2017 resolved the FeV-cofactor active site of A. vinelandii vanadium nitrogenase that catalyzes dinitrogen and carbon monoxide reduction."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0016613",
+     "notes": "Gene Ontology cellular-component term for the vanadium-iron nitrogenase complex; note that GO:0016613 retains older tetramer wording superseded for A. vinelandii by PDB:5N6Y."
+    },
+    {
+     "reference": "GO:0016610",
+     "notes": "Parent Gene Ontology cellular-component term for the generic nitrogenase complex."
+    },
+    {
+     "reference": "PMID:28692069",
+     "notes": "Sippel and Einsle 2017 (DOI:10.1038/nchembio.2428), crystal structure of the Azotobacter vinelandii vanadium nitrogenase VnfD2K2G2 catalytic component at 1.35-Angstrom resolution (PDB:5N6Y)."
+    },
+    {
+     "reference": "PMID:2345152",
+     "notes": "Joerger et al. 1990 (DOI:10.1128/jb.172.6.3400-3408.1990), sequence and mutational analysis of the Azotobacter vinelandii vnfDGK operon."
+    },
+    {
+     "reference": "PMID:3226421",
+     "notes": "Raina et al. 1988 (DOI:10.1007/bf00340189), nucleotide sequence of the Azotobacter vinelandii vnfH gene."
+    },
+    {
+     "reference": "PDB:5N6Y",
+     "notes": "RCSB PDB entry for the Azotobacter vinelandii VnfD2K2G2 vanadium-iron nitrogenase structure."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "vanadium_iron_nitrogenase_assembly_and_catalysis",
+     "title": "VnfD2K2G2 and VnfH2 assembly and catalysis in the vanadium-iron nitrogenase complex",
+     "description": "In Azotobacter vinelandii, VnfD alpha, VnfK beta, and VnfG delta subunits assemble the heterohexameric VFe catalytic component that partners with the homodimeric VnfH reductase to form the vanadium-iron nitrogenase complex and catalyze dinitrogen reduction.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Represents the A. vinelandii VnfD2K2G2-VnfH2 subunit architecture (PDB:5N6Y) and GO:0016163 nitrogenase activity without modeling VnfEN-mediated FeV-cofactor maturation.",
+     "nodes": [
+      {
+       "node_id": "vnfd_alpha_subunit",
+       "label": "Nitrogenase vanadium-iron protein alpha chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "vnfd_alpha_subunit",
+       "grounding": "InterPro:IPR010142",
+       "xrefs": [
+        "UniProtKB:P16855"
+       ],
+       "description": "VnfD alpha subunit housing the FeV-cofactor."
+      },
+      {
+       "node_id": "vnfk_beta_subunit",
+       "label": "Nitrogenase vanadium-iron protein beta chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "vnfk_beta_subunit",
+       "grounding": "InterPro:IPR014281",
+       "xrefs": [
+        "UniProtKB:P16856"
+       ],
+       "description": "VnfK beta subunit partnering with VnfD in the catalytic core."
+      },
+      {
+       "node_id": "vnfg_delta_subunit",
+       "label": "Nitrogenase vanadium-iron protein delta chain",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "vnfg_delta_subunit",
+       "grounding": "InterPro:IPR014279",
+       "xrefs": [
+        "UniProtKB:P16857"
+       ],
+       "description": "Four-helix VnfG delta subunit bound to VnfD."
+      },
+      {
+       "node_id": "vnfh_reductase_subunit",
+       "label": "Nitrogenase iron protein 2",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "vnfh_reductase_subunit",
+       "grounding": "InterPro:IPR005977",
+       "xrefs": [
+        "UniProtKB:P15335"
+       ],
+       "description": "Homodimeric VnfH iron-protein reductase subunit."
+      },
+      {
+       "node_id": "vfe_nitrogenase_complex_node",
+       "label": "vanadium-iron nitrogenase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0016613",
+       "description": "Assembled VnfD2K2G2-VnfH2 vanadium-iron nitrogenase complex."
+      },
+      {
+       "node_id": "nitrogenase_activity_node",
+       "label": "nitrogenase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0016163",
+       "description": "ATP-dependent dinitrogen reduction to ammonium and dihydrogen."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "vnfd_alpha_subunit",
+       "predicate": "RO:0002436",
+       "object": "vfe_nitrogenase_complex_node",
+       "description": "Two VnfD alpha chains assemble with VnfK and VnfG to form the FeV-cofactor-containing VFe catalytic component.",
+       "evidence": [
+        {
+         "reference": "PMID:28692069",
+         "notes": "Sippel and Einsle 2017 (PDB:5N6Y) resolved VnfD within the A. vinelandii VnfD2K2G2 heterohexamer."
+        }
+       ]
+      },
+      {
+       "subject": "vnfk_beta_subunit",
+       "predicate": "RO:0002436",
+       "object": "vfe_nitrogenase_complex_node",
+       "description": "Two VnfK beta chains pair with VnfD to form the alpha2beta2 core and coordinate the P-cluster of the vanadium-iron nitrogenase complex.",
+       "evidence": [
+        {
+         "reference": "PMID:28692069",
+         "notes": "Sippel and Einsle 2017 (PDB:5N6Y) resolved VnfK in the VnfD2K2G2 catalytic component."
+        }
+       ]
+      },
+      {
+       "subject": "vnfg_delta_subunit",
+       "predicate": "RO:0002436",
+       "object": "vfe_nitrogenase_complex_node",
+       "description": "Two VnfG delta chains bind specifically to VnfD on the alpha2beta2 core to complete the VnfD2K2G2 catalytic hexamer.",
+       "evidence": [
+        {
+         "reference": "PMID:28692069",
+         "notes": "Sippel and Einsle 2017 showed that VnfG contacts VnfD exclusively in the VnfD2K2G2 hexamer."
+        }
+       ]
+      },
+      {
+       "subject": "vnfh_reductase_subunit",
+       "predicate": "RO:0002436",
+       "object": "vfe_nitrogenase_complex_node",
+       "description": "Homodimeric VnfH reductase partners with the VnfD2K2G2 catalytic component to supply ATP-coupled electrons.",
+       "evidence": [
+        {
+         "reference": "GO:0016613",
+         "notes": "GO:0016613 and PMID:3226421 establish VnfH2 as the reductase component of vanadium-iron nitrogenase."
+        }
+       ]
+      },
+      {
+       "subject": "vfe_nitrogenase_complex_node",
+       "predicate": "RO:0002327",
+       "object": "nitrogenase_activity_node",
+       "description": "The assembled vanadium-iron nitrogenase complex enables ATP-dependent dinitrogen reduction to ammonium.",
+       "evidence": [
+        {
+         "reference": "PMID:28692069",
+         "notes": "Sippel and Einsle 2017 characterized dinitrogen reduction by the A. vinelandii vanadium-iron nitrogenase."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-30T15:25:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0016613 (vanadium-iron nitrogenase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
@@ -251578,6 +252826,320 @@
    ]
   },
   {
+   "identifier": "GO:0035658",
+   "label": "Mon1-Ccz1 complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A protein complex that functions as a guanine nucleotide exchange factor (GEF) and converts Rab-GDP to Rab-GTP. In S. cerevisiae, this complex consists of at least Mon1 and Ccz1, and serves as a GEF for the Rab Ypt7p.",
+   "definition_source": "GO:0035658",
+   "mapping_status": "PROPOSED",
+   "xrefs": [
+    "ComplexPortal:CPX-1674"
+   ],
+   "parent_structures": [
+    "GO:0032045"
+   ],
+   "part_of": [
+    "GO:0005770"
+   ],
+   "components": [
+    {
+     "component_id": "mon1_longin_subunit",
+     "label": "Vacuolar fusion protein MON1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR004353",
+     "gene_symbols": [
+      "MON1"
+     ],
+     "stoichiometry": "1 copy per Mon1-Ccz1 heterodimer",
+     "essentiality": "ESSENTIAL",
+     "role": "Tri-longin-domain subunit (Mon1p) that heterodimerizes with Ccz1p to form the catalytic Rab7/Ypt7p guanine nucleotide exchange factor (GEF) interface on late endosomes and vacuoles.",
+     "evidence": [
+      {
+       "reference": "GO:0035658",
+       "notes": "GO:0035658 defines the Saccharomyces cerevisiae Mon1-Ccz1 complex as consisting of Mon1 and Ccz1."
+      },
+      {
+       "reference": "PMID:20797862",
+       "notes": "Nordmann et al. 2010 (DOI:10.1016/j.cub.2010.08.002) demonstrated that neither Mon1 nor Ccz1 alone has GEF activity, whereas the assembled Mon1-Ccz1 heterodimer directly catalyzes nucleotide exchange on the Rab GTPase Ypt7p."
+      },
+      {
+       "reference": "PMID:12364329",
+       "notes": "Wang et al. 2002 (DOI:10.1074/jbc.m208191200) showed that S. cerevisiae Mon1p and Ccz1p form a stable complex required for vacuole fusion and endosome-to-vacuole trafficking."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P53129",
+       "protein_label": "Vacuolar fusion protein MON1",
+       "gene_symbol": "MON1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Mon1p subunit of the Mon1-Ccz1 Ypt7p GEF complex (ComplexPortal:CPX-1674).",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P53129",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C vacuolar fusion protein MON1."
+        },
+        {
+         "reference": "PMID:20797862",
+         "notes": "Nordmann et al. 2010 characterized S. cerevisiae Mon1p within the Mon1-Ccz1 Ypt7p GEF complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "ccz1_longin_subunit",
+     "label": "Vacuolar fusion protein CCZ1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR013176",
+     "gene_symbols": [
+      "CCZ1"
+     ],
+     "stoichiometry": "1 copy per Mon1-Ccz1 heterodimer",
+     "essentiality": "ESSENTIAL",
+     "role": "Tri-longin-domain partner subunit (Ccz1p) that pairs with Mon1p to remodel the nucleotide-binding pocket of Ypt7p and promote GDP-to-GTP exchange on late endosomal and vacuolar membranes.",
+     "evidence": [
+      {
+       "reference": "GO:0035658",
+       "notes": "GO:0035658 names Ccz1 as an essential subunit of the S. cerevisiae Mon1-Ccz1 complex."
+      },
+      {
+       "reference": "PMID:20797862",
+       "notes": "Nordmann et al. 2010 showed that Ccz1p is required with Mon1p to constitute the active Ypt7p guanine nucleotide exchange factor."
+      },
+      {
+       "reference": "PMID:12364329",
+       "notes": "Wang et al. 2002 demonstrated that Ccz1p and Mon1p co-immunoprecipitate as a stable complex on vacuolar and endosomal membranes."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P38273",
+       "protein_label": "Vacuolar fusion protein CCZ1",
+       "gene_symbol": "CCZ1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Ccz1p subunit of the Mon1-Ccz1 Ypt7p GEF complex (ComplexPortal:CPX-1674).",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P38273",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C vacuolar fusion protein CCZ1."
+        },
+        {
+         "reference": "PMID:20797862",
+         "notes": "Nordmann et al. 2010 characterized S. cerevisiae Ccz1p in the Mon1-Ccz1 Ypt7p GEF complex."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "presence": "COMMON",
+     "note": "Budding yeast reference strain in which the heterodimeric Mon1p-Ccz1p complex (ComplexPortal:CPX-1674) activates the Rab GTPase Ypt7p on late endosomes and vacuoles.",
+     "reference": "PMID:20797862"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Model organism in which Wang et al. 2002 identified the Mon1p-Ccz1p complex and Nordmann et al. 2010 established its direct guanine nucleotide exchange factor activity toward Ypt7p.",
+     "reference": "PMID:20797862"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "ypt7_rab_guanyl_nucleotide_exchange",
+     "label": "guanyl-nucleotide exchange factor activity",
+     "grounding": "GO:0005085",
+     "description": "Catalyzes the exchange of bound GDP for GTP on the late-endosomal and vacuolar Rab GTPase Ypt7p, driving Rab5-to-Rab7 (Vps21p-to-Ypt7p) endosomal maturation and HOPS-mediated vacuolar membrane fusion.",
+     "evidence": [
+      {
+       "reference": "GO:0035658",
+       "notes": "GO:0035658 defines the Mon1-Ccz1 complex as a GEF that converts Rab-GDP to Rab-GTP (specifically Ypt7p in S. cerevisiae)."
+      },
+      {
+       "reference": "PMID:20797862",
+       "notes": "Nordmann et al. 2010 reconstituted Ypt7p GDP-to-GTP exchange catalyzed by purified S. cerevisiae Mon1-Ccz1."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0035658",
+     "notes": "Gene Ontology cellular-component term for the Mon1-Ccz1 complex."
+    },
+    {
+     "reference": "GO:0032045",
+     "notes": "Parent Gene Ontology cellular-component term for guanyl-nucleotide exchange factor complexes."
+    },
+    {
+     "reference": "GO:0005770",
+     "notes": "Gene Ontology cellular-component term for the late endosome."
+    },
+    {
+     "reference": "ComplexPortal:CPX-1674",
+     "notes": "EBI Complex Portal entry for the Saccharomyces cerevisiae Mon1-Ccz1 guanyl-nucleotide exchange factor complex."
+    },
+    {
+     "reference": "PMID:20797862",
+     "notes": "Nordmann et al. 2010 (DOI:10.1016/j.cub.2010.08.002), The Mon1-Ccz1 complex is the GEF of the late endosomal Rab7 homolog Ypt7, Current Biology."
+    },
+    {
+     "reference": "PMID:12364329",
+     "notes": "Wang et al. 2002 (DOI:10.1074/jbc.m208191200), Yeast Ccz1p and Mon1p form a complex required for the Cvt and endosome-to-vacuole pathways, Journal of Biological Chemistry."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "mon1_ccz1_complex_assembly_and_ypt7_activation",
+     "title": "Mon1p and Ccz1p assemble the late-endosomal Mon1-Ccz1 GEF complex to activate Ypt7p",
+     "description": "In Saccharomyces cerevisiae, Mon1p and Ccz1p heterodimerize on the late endosome membrane to form the Mon1-Ccz1 complex, which enables guanyl-nucleotide exchange factor activity toward the Rab GTPase Ypt7p.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Captures Mon1p-Ccz1p heterodimer assembly on late endosomes and direct GEF activation of Ypt7p (UniProtKB:P32939).",
+     "nodes": [
+      {
+       "node_id": "mon1_longin_subunit",
+       "label": "Vacuolar fusion protein MON1",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "mon1_longin_subunit",
+       "grounding": "InterPro:IPR004353",
+       "xrefs": [
+        "UniProtKB:P53129"
+       ],
+       "description": "Mon1p tri-longin-domain subunit of the Mon1-Ccz1 complex."
+      },
+      {
+       "node_id": "ccz1_longin_subunit",
+       "label": "Vacuolar fusion protein CCZ1",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ccz1_longin_subunit",
+       "grounding": "InterPro:IPR013176",
+       "xrefs": [
+        "UniProtKB:P38273"
+       ],
+       "description": "Ccz1p tri-longin-domain partner subunit of the Mon1-Ccz1 complex."
+      },
+      {
+       "node_id": "mon1_ccz1_complex_node",
+       "label": "Mon1-Ccz1 complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0035658",
+       "description": "Assembled heterodimeric Mon1p-Ccz1p Rab GEF complex."
+      },
+      {
+       "node_id": "late_endosome_compartment",
+       "label": "late endosome",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0005770",
+       "description": "Late endosomal compartment where Mon1-Ccz1 localizes."
+      },
+      {
+       "node_id": "ypt7_rab_gtpase",
+       "label": "GTP-binding protein YPT7",
+       "node_type": "GENE_OR_PROTEIN",
+       "xrefs": [
+        "UniProtKB:P32939"
+       ],
+       "description": "Rab7-family GTPase Ypt7p substrate activated by the Mon1-Ccz1 complex."
+      },
+      {
+       "node_id": "rab_gef_activity",
+       "label": "guanyl-nucleotide exchange factor activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0005085",
+       "description": "Catalysis of GDP-to-GTP exchange on Ypt7p."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "mon1_longin_subunit",
+       "predicate": "RO:0002436",
+       "object": "mon1_ccz1_complex_node",
+       "description": "Mon1p pairs with Ccz1p via conserved longin domains to assemble the heterodimeric Mon1-Ccz1 complex.",
+       "evidence": [
+        {
+         "reference": "PMID:12364329",
+         "notes": "Wang et al. 2002 demonstrated that Mon1p and Ccz1p assemble into a stable heteromeric complex."
+        }
+       ]
+      },
+      {
+       "subject": "ccz1_longin_subunit",
+       "predicate": "RO:0002436",
+       "object": "mon1_ccz1_complex_node",
+       "description": "Ccz1p heterodimerizes with Mon1p to form the catalytically competent Mon1-Ccz1 GEF complex.",
+       "evidence": [
+        {
+         "reference": "PMID:20797862",
+         "notes": "Nordmann et al. 2010 showed that Ccz1p is an obligate subunit of the active Mon1-Ccz1 heterodimer."
+        }
+       ]
+      },
+      {
+       "subject": "mon1_ccz1_complex_node",
+       "predicate": "BFO:0000050",
+       "object": "late_endosome_compartment",
+       "description": "The Mon1-Ccz1 complex localizes to the late endosome membrane during endosomal maturation.",
+       "evidence": [
+        {
+         "reference": "PMID:20797862",
+         "notes": "Nordmann et al. 2010 demonstrated late-endosomal localization of the Mon1-Ccz1 complex."
+        }
+       ]
+      },
+      {
+       "subject": "mon1_ccz1_complex_node",
+       "predicate": "RO:0002327",
+       "object": "rab_gef_activity",
+       "description": "The assembled Mon1-Ccz1 heterodimer enables guanyl-nucleotide exchange factor activity.",
+       "evidence": [
+        {
+         "reference": "PMID:20797862",
+         "notes": "Nordmann et al. 2010 demonstrated that the Mon1-Ccz1 heterodimer directly catalyzes nucleotide exchange."
+        }
+       ]
+      },
+      {
+       "subject": "mon1_ccz1_complex_node",
+       "predicate": "RO:0002436",
+       "object": "ypt7_rab_gtpase",
+       "description": "The Mon1-Ccz1 complex directly binds GDP-bound Ypt7p to promote GDP release and GTP loading.",
+       "evidence": [
+        {
+         "reference": "PMID:20797862",
+         "notes": "Nordmann et al. 2010 showed direct physical interaction and nucleotide exchange between Mon1-Ccz1 and Ypt7p."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-30T15:25:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0035658 (Mon1-Ccz1 complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "GO:0033551",
    "label": "monopolin complex",
    "structure_category": "OTHER",
@@ -279619,6 +281181,385 @@
      "synonym_text": "nucleolar rDNA loop",
      "synonym_type": "RELATED_SYNONYM",
      "source": "GO:0030875"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0030869",
+   "label": "RENT complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A protein complex that mediates transcriptional silencing at the rDNA locus (the name derives from regulator of nucleolar silencing and telophase). In Saccharomyces the complex contains Net1p, Sir2p, Cdc14p, and at least one more subunit.",
+   "definition_source": "GO:0030869",
+   "mapping_status": "PROPOSED",
+   "xrefs": [
+    "ComplexPortal:CPX-1669"
+   ],
+   "parent_structures": [
+    "GO:0005677"
+   ],
+   "part_of": [
+    "GO:0005730"
+   ],
+   "components": [
+    {
+     "component_id": "net1_nucleolar_scaffold_subunit",
+     "label": "Nucleolar protein NET1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR043185",
+     "gene_symbols": [
+      "NET1",
+      "CFI1"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Core nucleolar scaffold subunit (Net1p / Cfi1p) of the RENT complex that binds both Sir2p and Cdc14p, anchoring Sir2p at rDNA repeats for rDNA chromatin silencing and sequestering Cdc14p in the nucleolus in an inactive state until anaphase.",
+     "evidence": [
+      {
+       "reference": "GO:0030869",
+       "notes": "GO:0030869 names Net1p as a core subunit of the Saccharomyces RENT complex."
+      },
+      {
+       "reference": "PMID:10219245",
+       "notes": "Straight et al. 1999 (DOI:10.1016/s0092-8674(00)80734-5) identified Net1 as the scaffold of the nucleolar RENT complex that recruits Sir2 to rDNA and sequesters Cdc14 until telophase."
+      },
+      {
+       "reference": "PMID:11511359",
+       "notes": "Shou et al. 2001 (DOI:10.1016/s1097-2765(01)00291-x) mapped separate functional domains of Net1 that bind Cdc14, Sir2, and RNA polymerase I in the RENT complex."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P47035",
+       "protein_label": "Nucleolar protein NET1",
+       "gene_symbol": "NET1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Net1p (also declared as synonym CFI1) core scaffold subunit of the nucleolar RENT complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P47035",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C nucleolar protein NET1."
+        },
+        {
+         "reference": "PMID:10219245",
+         "notes": "Straight et al. 1999 characterized S. cerevisiae Net1p as the scaffold of the RENT complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "sir2_histone_deacetylase_subunit",
+     "label": "NAD-dependent histone deacetylase SIR2",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR003000",
+     "gene_symbols": [
+      "SIR2"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "NAD-dependent histone deacetylase catalytic subunit recruited by Net1p to nucleolar rDNA repeats, where it deacetylates histones to mediate rDNA transcriptional silencing and suppress rDNA recombination.",
+     "evidence": [
+      {
+       "reference": "GO:0030869",
+       "notes": "GO:0030869 names Sir2p as a constituent subunit of the Saccharomyces RENT complex."
+      },
+      {
+       "reference": "PMID:10219245",
+       "notes": "Straight et al. 1999 demonstrated that Net1p binds Sir2p in the RENT complex and is required for Sir2p localization and transcriptional silencing at rDNA."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P06700",
+       "protein_label": "NAD-dependent histone deacetylase SIR2",
+       "gene_symbol": "SIR2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Sir2p NAD-dependent histone deacetylase subunit of the RENT complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P06700",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C NAD-dependent histone deacetylase SIR2."
+        },
+        {
+         "reference": "PMID:10219245",
+         "notes": "Straight et al. 1999 identified Sir2p as a subunit of the nucleolar RENT complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "cdc14_phosphatase_subunit",
+     "label": "Tyrosine-protein phosphatase CDC14",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR044506",
+     "gene_symbols": [
+      "CDC14"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Dual-specificity protein phosphatase subunit held inactive by Net1p in the nucleolar RENT complex during interphase and early mitosis, and released in anaphase to dephosphorylate Cdk substrates and trigger mitotic exit.",
+     "evidence": [
+      {
+       "reference": "GO:0030869",
+       "notes": "GO:0030869 names Cdc14p as a core subunit of the Saccharomyces RENT complex."
+      },
+      {
+       "reference": "PMID:10219245",
+       "notes": "Straight et al. 1999 showed that Net1p sequesters and inhibits Cdc14p within the nucleolar RENT complex until telophase."
+      },
+      {
+       "reference": "PMID:12056824",
+       "notes": "Yoshida and Toh-e 2002 (DOI:10.1016/s0006-291x(02)00544-2) demonstrated how budding yeast Cdc14 release from Net1 in the RENT complex is regulated during mitotic exit."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q00684",
+       "protein_label": "Tyrosine-protein phosphatase CDC14",
+       "gene_symbol": "CDC14",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Cdc14p phosphatase subunit of the nucleolar RENT complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q00684",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C tyrosine-protein phosphatase CDC14."
+        },
+        {
+         "reference": "PMID:10219245",
+         "notes": "Straight et al. 1999 identified Cdc14p as a subunit of the nucleolar RENT complex."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "presence": "COMMON",
+     "note": "Budding yeast reference strain in which the nucleolar Net1p-Sir2p-Cdc14p RENT complex (ComplexPortal:CPX-1669) mediates rDNA silencing and mitotic exit regulation.",
+     "reference": "PMID:10219245"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Model organism in which Straight et al. 1999 and Shou et al. 2001 purified and functionally dissected the nucleolar Net1p-Sir2p-Cdc14p RENT complex.",
+     "reference": "PMID:10219245"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "rdna_heterochromatin_silencing",
+     "label": "rDNA heterochromatin formation",
+     "grounding": "GO:0000183",
+     "description": "Anchors NAD-dependent histone deacetylase Sir2p at nucleolar ribosomal DNA repeats via Net1p to establish silent rDNA chromatin and suppress unequal rDNA sister-chromatid recombination.",
+     "evidence": [
+      {
+       "reference": "GO:0030869",
+       "notes": "GO:0030869 defines the RENT complex as mediating transcriptional silencing at the rDNA locus."
+      },
+      {
+       "reference": "PMID:10219245",
+       "notes": "Straight et al. 1999 demonstrated that Net1p recruits Sir2p to the rDNA locus for rDNA transcriptional silencing."
+      }
+     ]
+    },
+    {
+     "function_id": "mitotic_exit_regulation",
+     "label": "regulation of exit from mitosis",
+     "grounding": "GO:0007096",
+     "description": "Sequesters and inhibits the Cdc14p protein phosphatase in the nucleolus through interphase and early mitosis before releasing active Cdc14p in anaphase to drive mitotic exit.",
+     "evidence": [
+      {
+       "reference": "PMID:10219245",
+       "notes": "Straight et al. 1999 showed that Net1p tethers Cdc14p in the nucleolus until telophase."
+      },
+      {
+       "reference": "PMID:11511359",
+       "notes": "Shou et al. 2001 dissected the Net1p domain that binds and inhibits Cdc14p until mitotic exit."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0030869",
+     "notes": "Gene Ontology cellular-component term for the RENT complex."
+    },
+    {
+     "reference": "GO:0005677",
+     "notes": "Parent Gene Ontology cellular-component term for chromatin silencing complexes."
+    },
+    {
+     "reference": "GO:0005730",
+     "notes": "Gene Ontology cellular-component term for the nucleolus."
+    },
+    {
+     "reference": "ComplexPortal:CPX-1669",
+     "notes": "EBI Complex Portal entry for the Saccharomyces cerevisiae RENT complex (Net1-Sir2-Cdc14)."
+    },
+    {
+     "reference": "PMID:10219245",
+     "notes": "Straight et al. 1999 (DOI:10.1016/s0092-8674(00)80734-5), Net1, a Sir2-associated nucleolar protein required for rDNA silencing and nucleolar integrity, Cell."
+    },
+    {
+     "reference": "PMID:11511359",
+     "notes": "Shou et al. 2001 (DOI:10.1016/s1097-2765(01)00291-x), Net1 stimulates RNA polymerase I transcription and regulates nucleolar structure independently of controlling mitotic exit, Molecular Cell."
+    },
+    {
+     "reference": "PMID:12056824",
+     "notes": "Yoshida and Toh-e 2002 (DOI:10.1016/s0006-291x(02)00544-2), budding yeast Cdc5 phosphorylates Net1 and assists Cdc14 release from the nucleolus."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "rent_complex_nucleolar_silencing_and_cdc14_sequestration",
+     "title": "Net1p scaffolds Sir2p and Cdc14p in the nucleolar RENT complex for rDNA silencing and mitotic exit control",
+     "description": "In Saccharomyces cerevisiae, Net1p binds Sir2p and Cdc14p to assemble the nucleolar RENT complex, recruiting Sir2p to mediate rDNA heterochromatin formation while sequestering Cdc14p to regulate exit from mitosis.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Captures core Net1p-Sir2p-Cdc14p assembly in the nucleolus and its dual roles in rDNA silencing and mitotic-exit regulation; FEAR/MEN kinase signaling cascades are omitted.",
+     "nodes": [
+      {
+       "node_id": "net1_nucleolar_scaffold_subunit",
+       "label": "Nucleolar protein NET1",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "net1_nucleolar_scaffold_subunit",
+       "grounding": "InterPro:IPR043185",
+       "xrefs": [
+        "UniProtKB:P47035"
+       ],
+       "description": "Net1p nucleolar scaffold subunit of the RENT complex."
+      },
+      {
+       "node_id": "sir2_histone_deacetylase_subunit",
+       "label": "NAD-dependent histone deacetylase SIR2",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sir2_histone_deacetylase_subunit",
+       "grounding": "InterPro:IPR003000",
+       "xrefs": [
+        "UniProtKB:P06700"
+       ],
+       "description": "Sir2p NAD-dependent histone deacetylase subunit."
+      },
+      {
+       "node_id": "cdc14_phosphatase_subunit",
+       "label": "Tyrosine-protein phosphatase CDC14",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "cdc14_phosphatase_subunit",
+       "grounding": "InterPro:IPR044506",
+       "xrefs": [
+        "UniProtKB:Q00684"
+       ],
+       "description": "Cdc14p dual-specificity phosphatase subunit."
+      },
+      {
+       "node_id": "rent_complex_node",
+       "label": "RENT complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0030869",
+       "description": "Assembled nucleolar Net1p-Sir2p-Cdc14p RENT complex."
+      },
+      {
+       "node_id": "rdna_silencing_process",
+       "label": "rDNA heterochromatin formation",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0000183",
+       "description": "Transcriptional silencing and chromatin condensation at nucleolar rDNA repeats."
+      },
+      {
+       "node_id": "mitotic_exit_regulation_process",
+       "label": "regulation of exit from mitosis",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0007096",
+       "description": "Control of mitotic exit timing via nucleolar sequestration and anaphase release of Cdc14p."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "net1_nucleolar_scaffold_subunit",
+       "predicate": "RO:0002436",
+       "object": "rent_complex_node",
+       "description": "Net1p forms the nucleolar scaffold that binds Sir2p and Cdc14p through distinct domains to assemble the RENT complex.",
+       "evidence": [
+        {
+         "reference": "PMID:11511359",
+         "notes": "Shou et al. 2001 mapped separate domains of Net1p that bind Sir2p and Cdc14p in the RENT complex."
+        }
+       ]
+      },
+      {
+       "subject": "sir2_histone_deacetylase_subunit",
+       "predicate": "RO:0002436",
+       "object": "rent_complex_node",
+       "description": "Sir2p associates with Net1p within the nucleolar RENT complex at ribosomal DNA chromatin.",
+       "evidence": [
+        {
+         "reference": "PMID:10219245",
+         "notes": "Straight et al. 1999 demonstrated that Sir2p co-purifies with Net1p in the RENT complex."
+        }
+       ]
+      },
+      {
+       "subject": "cdc14_phosphatase_subunit",
+       "predicate": "RO:0002436",
+       "object": "rent_complex_node",
+       "description": "Cdc14p binds the N-terminal regulatory region of Net1p in the RENT complex, where its phosphatase activity is inhibited until anaphase.",
+       "evidence": [
+        {
+         "reference": "PMID:10219245",
+         "notes": "Straight et al. 1999 showed that Net1p binds and sequesters Cdc14p in the nucleolar RENT complex."
+        }
+       ]
+      },
+      {
+       "subject": "rent_complex_node",
+       "predicate": "RO:0002213",
+       "object": "rdna_silencing_process",
+       "description": "The RENT complex anchors Sir2p at nucleolar rDNA repeats to promote rDNA heterochromatin formation and transcriptional silencing.",
+       "evidence": [
+        {
+         "reference": "PMID:10219245",
+         "notes": "Straight et al. 1999 showed that the RENT complex is required for Sir2p-mediated rDNA silencing."
+        }
+       ]
+      },
+      {
+       "subject": "rent_complex_node",
+       "predicate": "RO:0002211",
+       "object": "mitotic_exit_regulation_process",
+       "description": "By sequestering Cdc14p in the nucleolus until anaphase, the RENT complex regulates the timing of exit from mitosis.",
+       "evidence": [
+        {
+         "reference": "PMID:10219245",
+         "notes": "Straight et al. 1999 and Shou et al. 2001 established that RENT complex sequestration of Cdc14p regulates mitotic exit."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-30T15:25:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0030869 (RENT complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
@@ -308318,6 +310259,394 @@
    ]
   },
   {
+   "identifier": "GO:0043541",
+   "label": "UDP-N-acetylglucosamine transferase complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A multienzyme, heterooligomeric complex involved in dolichyl-linked oligosaccharide synthesis. In yeast the complex is composed of Alg7p, which catalyzes the first step (GlcNAc1-PP-Dol from dolichol-phosphate and UDP-GlcNAc), and Alg13p plus Alg14p, the catalytic and anchoring subunits respectively, which together catalyze the second step (GlcNAc2-PP-dolichol from GlcNAc1-PP-Dol and UDP-GlcNAc) of dolichyl-linked oligosaccharide synthesis.",
+   "definition_source": "GO:0043541",
+   "mapping_status": "PROPOSED",
+   "xrefs": [
+    "ComplexPortal:CPX-1643"
+   ],
+   "parent_structures": [
+    "GO:0098796",
+    "GO:0140534",
+    "GO:0061695"
+   ],
+   "part_of": [
+    "GO:0005789"
+   ],
+   "components": [
+    {
+     "component_id": "alg7_phosphotransferase_subunit",
+     "label": "UDP-N-acetylglucosamine--dolichyl-phosphate N-acetylglucosaminephosphotransferase",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR033895",
+     "gene_symbols": [
+      "ALG7"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Polytopic endoplasmic-reticulum membrane phosphotransferase subunit (Alg7p) that catalyzes the first committed step of dolichol-linked oligosaccharide biosynthesis (transfer of GlcNAc-1-P from UDP-GlcNAc to dolichyl phosphate) and associates with the Alg13p-Alg14p heterodimer.",
+     "evidence": [
+      {
+       "reference": "GO:0043541",
+       "notes": "GO:0043541 defines the yeast complex as composed of Alg7p together with Alg13p and Alg14p."
+      },
+      {
+       "reference": "PMID:6096695",
+       "notes": "Barnes et al. 1984 (DOI:10.1128/mcb.4.11.2381-2388.1984) characterized Saccharomyces cerevisiae ALG7 as the essential gene encoding UDP-N-acetylglucosamine-1-P transferase."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P07286",
+       "protein_label": "UDP-N-acetylglucosamine--dolichyl-phosphate N-acetylglucosaminephosphotransferase",
+       "gene_symbol": "ALG7",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Alg7p catalytic subunit of the ER UDP-N-acetylglucosamine transferase complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P07286",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C ALG7."
+        },
+        {
+         "reference": "PMID:6096695",
+         "notes": "Barnes et al. 1984 characterized S. cerevisiae ALG7."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "alg13_catalytic_subunit",
+     "label": "UDP-N-acetylglucosamine transferase subunit ALG13",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR052474",
+     "gene_symbols": [
+      "ALG13"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Soluble cytosolic glycosyltransferase catalytic subunit (Alg13p) recruited to the cytosolic face of the ER membrane by Alg14p to catalyze transfer of the second N-acetylglucosamine residue from UDP-GlcNAc to GlcNAc-PP-dolichol.",
+     "evidence": [
+      {
+       "reference": "GO:0043541",
+       "notes": "GO:0043541 defines Alg13p as the catalytic subunit partnered with Alg14p for the second step of dolichyl-linked oligosaccharide synthesis."
+      },
+      {
+       "reference": "PMID:15615718",
+       "notes": "Bickel et al. 2005 (DOI:10.1074/jbc.m413941200) demonstrated that S. cerevisiae Alg13p and Alg14p form a heterooligomeric UDP-GlcNAc glycosyltransferase on the ER membrane."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P53178",
+       "protein_label": "UDP-N-acetylglucosamine transferase subunit ALG13",
+       "gene_symbol": "ALG13",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Alg13p catalytic subunit of the UDP-N-acetylglucosamine transferase complex (ComplexPortal:CPX-1643).",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P53178",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C UDP-N-acetylglucosamine transferase subunit ALG13."
+        },
+        {
+         "reference": "PMID:15615718",
+         "notes": "Bickel et al. 2005 characterized S. cerevisiae Alg13p as the soluble catalytic subunit anchored by Alg14p."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "alg14_membrane_anchor_subunit",
+     "label": "UDP-N-acetylglucosamine transferase subunit ALG14",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR013969",
+     "gene_symbols": [
+      "ALG14"
+     ],
+     "essentiality": "ESSENTIAL",
+     "role": "Integral endoplasmic-reticulum membrane anchoring subunit (Alg14p) that tethers cytosolic Alg13p to the ER membrane and coordinates with Alg7p to form the active UDP-N-acetylglucosamine transferase complex.",
+     "evidence": [
+      {
+       "reference": "GO:0043541",
+       "notes": "GO:0043541 defines Alg14p as the membrane-anchoring subunit of the yeast UDP-N-acetylglucosamine transferase complex."
+      },
+      {
+       "reference": "PMID:15615718",
+       "notes": "Bickel et al. 2005 showed that integral ER membrane protein Alg14p recruits Alg13p to the ER membrane and is essential for GlcNAc2-PP-dolichol synthesis."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P38242",
+       "protein_label": "UDP-N-acetylglucosamine transferase subunit ALG14",
+       "gene_symbol": "ALG14",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Alg14p membrane-anchoring subunit of the UDP-N-acetylglucosamine transferase complex (ComplexPortal:CPX-1643).",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P38242",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C UDP-N-acetylglucosamine transferase subunit ALG14."
+        },
+        {
+         "reference": "PMID:15615718",
+         "notes": "Bickel et al. 2005 identified S. cerevisiae Alg14p as the ER membrane anchor for Alg13p."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "presence": "COMMON",
+     "note": "Budding yeast reference strain in which the ER-membrane Alg7p-Alg13p-Alg14p UDP-N-acetylglucosamine transferase complex synthesizes the core chitobiose-dolichol precursor for N-linked glycosylation.",
+     "reference": "PMID:15615718"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Model organism in which Barnes et al. 1984 and Bickel et al. 2005 characterized Alg7p, Alg13p, and Alg14p in the ER-membrane UDP-N-acetylglucosamine transferase complex.",
+     "reference": "PMID:15615718"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "dolichyl_phosphate_glcnac_phosphotransferase",
+     "label": "UDP-N-acetylglucosamine-dolichyl-phosphate N-acetylglucosaminephosphotransferase activity",
+     "grounding": "GO:0003975",
+     "description": "Catalyzes the transfer of N-acetylglucosamine-1-phosphate from UDP-GlcNAc onto dolichyl phosphate via Alg7p to form GlcNAc-PP-dolichol, initiating lipid-linked oligosaccharide assembly.",
+     "evidence": [
+      {
+       "reference": "GO:0043541",
+       "notes": "GO:0043541 defines Alg7p in the complex as catalyzing GlcNAc1-PP-Dol synthesis from dolichol-phosphate and UDP-GlcNAc."
+      },
+      {
+       "reference": "PMID:6096695",
+       "notes": "Barnes et al. 1984 established that S. cerevisiae Alg7p catalyzes the first step of dolichol-linked oligosaccharide synthesis."
+      }
+     ]
+    },
+    {
+     "function_id": "chitobiosyl_diphosphodolichol_biosynthesis_for_n_glycosylation",
+     "label": "protein N-linked glycosylation",
+     "grounding": "GO:0006487",
+     "description": "Synthesizes the GlcNAc2-PP-dolichol core on the cytoplasmic face of the endoplasmic reticulum membrane via sequential Alg7p and Alg13p-Alg14p reactions required for protein N-linked glycosylation.",
+     "evidence": [
+      {
+       "reference": "GO:0043541",
+       "notes": "GO:0043541 defines the complex as catalyzing the first two steps of dolichyl-linked oligosaccharide synthesis."
+      },
+      {
+       "reference": "PMID:15615718",
+       "notes": "Bickel et al. 2005 demonstrated that the Alg13p-Alg14p heterodimer catalyzes the second step of dolichol-linked core oligosaccharide assembly."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0043541",
+     "notes": "Gene Ontology cellular-component term for the UDP-N-acetylglucosamine transferase complex."
+    },
+    {
+     "reference": "GO:0098796",
+     "notes": "Parent Gene Ontology cellular-component term for membrane protein complexes."
+    },
+    {
+     "reference": "GO:0140534",
+     "notes": "Parent Gene Ontology cellular-component term for endoplasmic reticulum protein-containing complexes."
+    },
+    {
+     "reference": "GO:0061695",
+     "notes": "Parent Gene Ontology cellular-component term for transferase complexes transferring phosphorus-containing groups."
+    },
+    {
+     "reference": "GO:0005789",
+     "notes": "Gene Ontology cellular-component term for the endoplasmic reticulum membrane."
+    },
+    {
+     "reference": "ComplexPortal:CPX-1643",
+     "notes": "EBI Complex Portal entry for the Saccharomyces cerevisiae Alg13-Alg14 UDP-N-acetylglucosamine transferase subcomplex."
+    },
+    {
+     "reference": "PMID:15615718",
+     "notes": "Bickel et al. 2005 (DOI:10.1074/jbc.m413941200), Biosynthesis of lipid-linked oligosaccharides in Saccharomyces cerevisiae: Alg13p and Alg14p form a novel heterooligomeric UDP-GlcNAc transferase, Journal of Biological Chemistry."
+    },
+    {
+     "reference": "PMID:6096695",
+     "notes": "Barnes et al. 1984 (DOI:10.1128/mcb.4.11.2381-2388.1984), Tunicamycin-resistant mutants of yeast overproduce UDP-N-acetylglucosamine-1-P transferase (ALG7), Molecular and Cellular Biology."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "udp_glcnac_transferase_complex_assembly_and_dolichol_glycosylation",
+     "title": "Alg7p, Alg13p, and Alg14p assemble on the ER membrane to synthesize GlcNAc2-PP-dolichol",
+     "description": "In Saccharomyces cerevisiae, integral ER membrane protein Alg14p recruits catalytic Alg13p and associates with Alg7p to form the UDP-N-acetylglucosamine transferase complex, catalyzing the first two steps of dolichol-linked oligosaccharide synthesis for protein N-linked glycosylation.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Captures Alg7p-Alg13p-Alg14p assembly in the ER membrane and sequential catalysis of GlcNAc1-PP-Dol and GlcNAc2-PP-Dol synthesis.",
+     "nodes": [
+      {
+       "node_id": "alg7_phosphotransferase_subunit",
+       "label": "UDP-N-acetylglucosamine--dolichyl-phosphate N-acetylglucosaminephosphotransferase",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "alg7_phosphotransferase_subunit",
+       "grounding": "InterPro:IPR033895",
+       "xrefs": [
+        "UniProtKB:P07286"
+       ],
+       "description": "Alg7p ER membrane GlcNAc-1-P phosphotransferase subunit."
+      },
+      {
+       "node_id": "alg13_catalytic_subunit",
+       "label": "UDP-N-acetylglucosamine transferase subunit ALG13",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "alg13_catalytic_subunit",
+       "grounding": "InterPro:IPR052474",
+       "xrefs": [
+        "UniProtKB:P53178"
+       ],
+       "description": "Alg13p soluble cytosolic beta-1,4-GlcNAc transferase catalytic subunit."
+      },
+      {
+       "node_id": "alg14_membrane_anchor_subunit",
+       "label": "UDP-N-acetylglucosamine transferase subunit ALG14",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "alg14_membrane_anchor_subunit",
+       "grounding": "InterPro:IPR013969",
+       "xrefs": [
+        "UniProtKB:P38242"
+       ],
+       "description": "Alg14p integral ER membrane anchoring subunit."
+      },
+      {
+       "node_id": "udp_glcnac_transferase_complex_node",
+       "label": "UDP-N-acetylglucosamine transferase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0043541",
+       "description": "Assembled ER-membrane Alg7p-Alg13p-Alg14p multienzyme complex."
+      },
+      {
+       "node_id": "glcnac1_phosphotransferase_activity",
+       "label": "UDP-N-acetylglucosamine-dolichyl-phosphate N-acetylglucosaminephosphotransferase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0003975",
+       "description": "First step of dolichol-linked oligosaccharide synthesis (GlcNAc1-PP-Dol formation)."
+      },
+      {
+       "node_id": "protein_n_linked_glycosylation_process",
+       "label": "protein N-linked glycosylation",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0006487",
+       "description": "Biosynthesis of the lipid-linked core oligosaccharide required for N-glycosylation."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "alg14_membrane_anchor_subunit",
+       "predicate": "RO:0002436",
+       "object": "alg13_catalytic_subunit",
+       "description": "Integral ER membrane subunit Alg14p directly binds and recruits soluble cytosolic Alg13p to the cytoplasmic face of the ER membrane.",
+       "evidence": [
+        {
+         "reference": "PMID:15615718",
+         "notes": "Bickel et al. 2005 demonstrated that Alg14p tethers Alg13p to the ER membrane."
+        }
+       ]
+      },
+      {
+       "subject": "alg14_membrane_anchor_subunit",
+       "predicate": "RO:0002436",
+       "object": "udp_glcnac_transferase_complex_node",
+       "description": "Alg14p provides the membrane-spanning scaffold that anchors the UDP-N-acetylglucosamine transferase complex in the ER membrane.",
+       "evidence": [
+        {
+         "reference": "PMID:15615718",
+         "notes": "Bickel et al. 2005 identified Alg14p as the membrane anchor of the UDP-GlcNAc transferase complex."
+        }
+       ]
+      },
+      {
+       "subject": "alg13_catalytic_subunit",
+       "predicate": "RO:0002436",
+       "object": "udp_glcnac_transferase_complex_node",
+       "description": "Alg13p assembles with Alg14p and Alg7p to contribute the second-step UDP-GlcNAc glycosyltransferase active site.",
+       "evidence": [
+        {
+         "reference": "PMID:15615718",
+         "notes": "Bickel et al. 2005 showed that Alg13p provides the catalytic domain for GlcNAc2-PP-Dol synthesis."
+        }
+       ]
+      },
+      {
+       "subject": "alg7_phosphotransferase_subunit",
+       "predicate": "RO:0002436",
+       "object": "udp_glcnac_transferase_complex_node",
+       "description": "Alg7p associates with the Alg13p-Alg14p heterodimer in the ER membrane to couple the first and second steps of dolichol-linked chitobiose synthesis.",
+       "evidence": [
+        {
+         "reference": "GO:0043541",
+         "notes": "GO:0043541 defines the multienzyme complex as comprising Alg7p together with Alg13p and Alg14p."
+        }
+       ]
+      },
+      {
+       "subject": "udp_glcnac_transferase_complex_node",
+       "predicate": "RO:0002327",
+       "object": "glcnac1_phosphotransferase_activity",
+       "description": "Via its Alg7p subunit, the complex catalyzes transfer of GlcNAc-1-P from UDP-GlcNAc to dolichyl phosphate.",
+       "evidence": [
+        {
+         "reference": "PMID:6096695",
+         "notes": "Barnes et al. 1984 established the UDP-GlcNAc-1-P phosphotransferase activity of S. cerevisiae Alg7p."
+        }
+       ]
+      },
+      {
+       "subject": "udp_glcnac_transferase_complex_node",
+       "predicate": "RO:0002213",
+       "object": "protein_n_linked_glycosylation_process",
+       "description": "Sequential synthesis of GlcNAc1-PP-Dol and GlcNAc2-PP-Dol by the Alg7p-Alg13p-Alg14p complex initiates lipid-linked oligosaccharide assembly for protein N-linked glycosylation.",
+       "evidence": [
+        {
+         "reference": "PMID:15615718",
+         "notes": "Bickel et al. 2005 showed that the complex is essential for core oligosaccharide assembly in N-linked glycosylation."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-30T15:25:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0043541 (UDP-N-acetylglucosamine transferase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "GO:0034456",
    "label": "UTP-C complex",
    "structure_category": "OTHER",
@@ -325953,6 +328282,424 @@
      ],
      "retrieved_on": "2026-08-30",
      "notes": "Curator-scoped import: E. coli 50S subunit; part of, not equivalent to, the whole ribosome. Source evidence: inferred by curator. The accession was resolved through the Complex Portal accession endpoint; no equivalence xref was inferred."
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0030958",
+   "label": "RITS complex",
+   "structure_category": "RIBONUCLEOPROTEIN",
+   "structure_kind": "RIBONUCLEOPROTEIN_COMPLEX",
+   "definition": "A protein complex required for heterochromatin assembly; contains an Argonaute homolog, a chromodomain protein, and at least one additional protein; named for RNA-induced initiation of transcriptional gene silencing.",
+   "definition_source": "GO:0030958",
+   "mapping_status": "PROPOSED",
+   "xrefs": [
+    "ComplexPortal:CPX-25777"
+   ],
+   "parent_structures": [
+    "GO:0031332",
+    "GO:0140513"
+   ],
+   "part_of": [
+    "GO:0000785",
+    "GO:0000228"
+   ],
+   "components": [
+    {
+     "component_id": "ago1_argonaute_subunit",
+     "label": "Protein argonaute",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR045246",
+     "gene_symbols": [
+      "ago1"
+     ],
+     "stoichiometry": "1 copy per RITS complex",
+     "essentiality": "ESSENTIAL",
+     "role": "Argonaute family endoribonuclease and siRNA-binding effector subunit (Ago1) of the Schizosaccharomyces pombe RITS complex that binds centromeric and heterochromatic small interfering RNAs to target nascent noncoding transcripts.",
+     "evidence": [
+      {
+       "reference": "GO:0030958",
+       "notes": "GO:0030958 defines the RITS complex as containing an Argonaute homolog."
+      },
+      {
+       "reference": "PMID:14704433",
+       "notes": "Verdel et al. 2004 (DOI:10.1126/science.1093686) purified the S. pombe RITS complex containing Ago1, Chp1, Tas3, and Dicer-generated centromeric siRNAs."
+      },
+      {
+       "reference": "PMID:15607976",
+       "notes": "Motamedi et al. 2004 (DOI:10.1016/j.cell.2004.11.034) showed that Ago1 in the RITS complex couples RNA-dependent RNA polymerase complex (RDRC) recruitment to heterochromatin assembly."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O74957",
+       "protein_label": "Protein argonaute",
+       "gene_symbol": "ago1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Schizosaccharomyces pombe 972h- Ago1 subunit of the RITS complex (ComplexPortal:CPX-25777).",
+       "evidence": [
+        {
+         "reference": "UniProtKB:O74957",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- protein argonaute (ago1)."
+        },
+        {
+         "reference": "PMID:14704433",
+         "notes": "Verdel et al. 2004 identified Ago1 as a core subunit of the S. pombe RITS complex."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "chp1_chromodomain_subunit",
+     "label": "Chromo domain-containing protein 1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR049937",
+     "gene_symbols": [
+      "chp1"
+     ],
+     "stoichiometry": "1 copy per RITS complex",
+     "essentiality": "ESSENTIAL",
+     "role": "Chromodomain subunit (Chp1) that binds histone H3 methylated at lysine 9 (H3K9me) to anchor the RITS complex at centromeric, telomeric, and mating-type heterochromatin.",
+     "evidence": [
+      {
+       "reference": "GO:0030958",
+       "notes": "GO:0030958 defines the RITS complex as containing a chromodomain protein required for heterochromatin assembly."
+      },
+      {
+       "reference": "PMID:14704433",
+       "notes": "Verdel et al. 2004 demonstrated that Chp1 co-purifies with Ago1 and Tas3 in the RITS complex and requires Clr4-mediated H3K9 methylation to tether RITS to heterochromatin."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q10103",
+       "protein_label": "Chromo domain-containing protein 1",
+       "gene_symbol": "chp1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Schizosaccharomyces pombe 972h- Chp1 chromodomain subunit of the RITS complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q10103",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- chromo domain-containing protein 1 (chp1)."
+        },
+        {
+         "reference": "PMID:14704433",
+         "notes": "Verdel et al. 2004 identified Chp1 as the chromodomain subunit of S. pombe RITS."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "tas3_bridging_subunit",
+     "label": "RNA-induced transcriptional silencing complex protein tas3",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR049112",
+     "gene_symbols": [
+      "tas3"
+     ],
+     "stoichiometry": "1 copy per RITS complex",
+     "essentiality": "ESSENTIAL",
+     "role": "GW-hook bridging subunit (Tas3) that links the Argonaute subunit Ago1 to the chromodomain subunit Chp1 and self-associates via its C-terminal alpha-helical motif to promote RITS spreading across heterochromatic domains.",
+     "evidence": [
+      {
+       "reference": "PMID:14704433",
+       "notes": "Verdel et al. 2004 identified Tas3 as an essential bridging protein of the S. pombe Ago1-Chp1-Tas3 RITS complex."
+      },
+      {
+       "reference": "PMID:15607976",
+       "notes": "Motamedi et al. 2004 demonstrated that the Ago1-Chp1-Tas3 RITS complex physically interacts with RDRC on heterochromatic transcripts."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O94687",
+       "protein_label": "RNA-induced transcriptional silencing complex protein tas3",
+       "gene_symbol": "tas3",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Schizosaccharomyces pombe 972h- Tas3 bridging subunit of the RITS complex.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:O94687",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- RITS complex protein tas3."
+        },
+        {
+         "reference": "PMID:14704433",
+         "notes": "Verdel et al. 2004 discovered and named Tas3 as the third protein subunit of S. pombe RITS."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "component_id": "sirna_guide_strand",
+     "label": "small interfering RNA guide strand",
+     "component_type": "RNA",
+     "component_role": "CONSTITUENT",
+     "essentiality": "ESSENTIAL",
+     "grounding_status": "REVIEWED_LABEL_ONLY",
+     "grounding_notes": "Kept label-only for the heterogeneous pool of Dcr1-generated centromeric and heterochromatic siRNA guide strands bound by Ago1 in the S. pombe RITS ribonucleoprotein complex.",
+     "role": "Single-stranded small interfering RNA guide (~21-23 nt) bound by Ago1 that directs the RITS complex by base-pairing to nascent noncoding pericentromeric and heterochromatic transcripts.",
+     "evidence": [
+      {
+       "reference": "PMID:14704433",
+       "notes": "Verdel et al. 2004 demonstrated that the purified S. pombe RITS complex contains Dicer-generated centromeric siRNAs required for RITS localization to heterochromatin."
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:284812",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
+     "presence": "COMMON",
+     "note": "Fission yeast reference strain in which the Ago1-Chp1-Tas3-siRNA RITS ribonucleoprotein complex (ComplexPortal:CPX-25777) directs co-transcriptional heterochromatin assembly.",
+     "reference": "PMID:14704433"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:284812",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
+     "note": "Model organism in which Verdel et al. 2004 and Motamedi et al. 2004 purified the Ago1-Chp1-Tas3-siRNA RITS complex and established its role in RNAi-directed heterochromatin formation.",
+     "reference": "PMID:14704433"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "rnai_mediated_heterochromatin_formation",
+     "label": "heterochromatin formation",
+     "grounding": "GO:0031507",
+     "description": "Uses Ago1-bound siRNAs and the Chp1 H3K9me-binding chromodomain to engage nascent pericentromeric transcripts and recruit the Clr4 methyltransferase and RDRC machinery for heterochromatin assembly.",
+     "evidence": [
+      {
+       "reference": "GO:0030958",
+       "notes": "GO:0030958 defines the RITS complex as required for heterochromatin assembly."
+      },
+      {
+       "reference": "PMID:14704433",
+       "notes": "Verdel et al. 2004 showed that RITS is required for H3K9 methylation and Swi6/HP1 recruitment at centromeric heterochromatin."
+      }
+     ]
+    },
+    {
+     "function_id": "ncrna_mediated_gene_silencing",
+     "label": "regulatory ncRNA-mediated gene silencing",
+     "grounding": "GO:0031047",
+     "description": "Mediates co-transcriptional and transcriptional gene silencing at heterochromatic repeats via siRNA-guided recognition of nascent noncoding transcripts.",
+     "evidence": [
+      {
+       "reference": "PMID:14704433",
+       "notes": "Verdel et al. 2004 demonstrated siRNA-dependent transcriptional gene silencing by the RITS complex."
+      },
+      {
+       "reference": "PMID:15607976",
+       "notes": "Motamedi et al. 2004 showed that RITS couples siRNA-guided nascent transcript recognition to RDRC-dependent dsRNA synthesis and silencing."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0030958",
+     "notes": "Gene Ontology cellular-component term for the RITS complex."
+    },
+    {
+     "reference": "GO:0031332",
+     "notes": "Parent Gene Ontology cellular-component term for RNAi effector complexes."
+    },
+    {
+     "reference": "GO:0140513",
+     "notes": "Parent Gene Ontology cellular-component term for nuclear protein-containing complexes."
+    },
+    {
+     "reference": "GO:0000785",
+     "notes": "Gene Ontology cellular-component term for chromatin."
+    },
+    {
+     "reference": "GO:0000228",
+     "notes": "Gene Ontology cellular-component term for nuclear chromosome."
+    },
+    {
+     "reference": "ComplexPortal:CPX-25777",
+     "notes": "EBI Complex Portal entry for the Schizosaccharomyces pombe RITS complex (Ago1-Chp1-Tas3-siRNA)."
+    },
+    {
+     "reference": "PMID:14704433",
+     "notes": "Verdel et al. 2004 (DOI:10.1126/science.1093686), RNAi-mediated targeting of heterochromatin by the RITS complex, Science."
+    },
+    {
+     "reference": "PMID:15607976",
+     "notes": "Motamedi et al. 2004 (DOI:10.1016/j.cell.2004.11.034), Two RNAi complexes, RITS and RDRC, physically interact and localize to noncoding centromeric RNAs, Cell."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "rits_complex_assembly_and_heterochromatin_silencing",
+     "title": "Ago1, Chp1, Tas3, and siRNAs assemble the RITS complex to direct heterochromatin formation",
+     "description": "In Schizosaccharomyces pombe, Tas3 bridges Ago1 and Chp1 together with Ago1-bound siRNAs to assemble the RITS ribonucleoprotein complex, which promotes heterochromatin formation and regulatory ncRNA-mediated gene silencing.",
+     "graph_kind": "ASSEMBLY",
+     "scope_status": "MECHANISTIC",
+     "scope_notes": "Captures Ago1-Chp1-Tas3-siRNA assembly into the S. pombe RITS complex and its positive regulation of heterochromatin formation and ncRNA-mediated silencing.",
+     "nodes": [
+      {
+       "node_id": "ago1_argonaute_subunit",
+       "label": "Protein argonaute",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ago1_argonaute_subunit",
+       "grounding": "InterPro:IPR045246",
+       "xrefs": [
+        "UniProtKB:O74957"
+       ],
+       "description": "Ago1 Argonaute effector subunit of RITS."
+      },
+      {
+       "node_id": "chp1_chromodomain_subunit",
+       "label": "Chromo domain-containing protein 1",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "chp1_chromodomain_subunit",
+       "grounding": "InterPro:IPR049937",
+       "xrefs": [
+        "UniProtKB:Q10103"
+       ],
+       "description": "Chp1 H3K9me-binding chromodomain subunit of RITS."
+      },
+      {
+       "node_id": "tas3_bridging_subunit",
+       "label": "RNA-induced transcriptional silencing complex protein tas3",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "tas3_bridging_subunit",
+       "grounding": "InterPro:IPR049112",
+       "xrefs": [
+        "UniProtKB:O94687"
+       ],
+       "description": "Tas3 GW-domain subunit bridging Ago1 and Chp1."
+      },
+      {
+       "node_id": "sirna_guide_strand",
+       "label": "small interfering RNA guide strand",
+       "node_type": "RNA",
+       "component_ref": "sirna_guide_strand",
+       "description": "Dcr1-generated centromeric siRNA guide strand bound by Ago1."
+      },
+      {
+       "node_id": "rits_complex_node",
+       "label": "RITS complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0030958",
+       "description": "Assembled Ago1-Chp1-Tas3-siRNA RITS ribonucleoprotein complex."
+      },
+      {
+       "node_id": "heterochromatin_formation_process",
+       "label": "heterochromatin formation",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0031507",
+       "description": "RNAi-directed H3K9 methylation and heterochromatin assembly."
+      },
+      {
+       "node_id": "ncrna_gene_silencing_process",
+       "label": "regulatory ncRNA-mediated gene silencing",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0031047",
+       "description": "Silencing of pericentromeric and heterochromatic repeats directed by siRNAs."
+      }
+     ],
+     "edges": [
+      {
+       "subject": "ago1_argonaute_subunit",
+       "predicate": "RO:0002436",
+       "object": "rits_complex_node",
+       "description": "Ago1 binds the GW-hook domain of Tas3 and loads centromeric siRNAs within the RITS complex.",
+       "evidence": [
+        {
+         "reference": "PMID:14704433",
+         "notes": "Verdel et al. 2004 showed that Ago1 stably associates with Tas3, Chp1, and siRNAs in RITS."
+        }
+       ]
+      },
+      {
+       "subject": "chp1_chromodomain_subunit",
+       "predicate": "RO:0002436",
+       "object": "rits_complex_node",
+       "description": "Chp1 binds Tas3 to provide the H3K9me-recognizing chromodomain of the RITS complex.",
+       "evidence": [
+        {
+         "reference": "PMID:14704433",
+         "notes": "Verdel et al. 2004 demonstrated that Chp1 co-purifies with Ago1 and Tas3 in RITS."
+        }
+       ]
+      },
+      {
+       "subject": "tas3_bridging_subunit",
+       "predicate": "RO:0002436",
+       "object": "rits_complex_node",
+       "description": "Tas3 bridges Ago1 and Chp1 to assemble the three-protein core of the RITS complex.",
+       "evidence": [
+        {
+         "reference": "PMID:14704433",
+         "notes": "Verdel et al. 2004 identified Tas3 as the essential scaffold bridging Ago1 and Chp1."
+        }
+       ]
+      },
+      {
+       "subject": "sirna_guide_strand",
+       "predicate": "RO:0002436",
+       "object": "rits_complex_node",
+       "description": "Dcr1-generated centromeric siRNA guide strands are incorporated into Ago1 to form the functional RITS ribonucleoprotein complex.",
+       "evidence": [
+        {
+         "reference": "PMID:14704433",
+         "notes": "Verdel et al. 2004 showed that centromeric siRNAs co-purify with RITS and are required for its chromatin targeting."
+        }
+       ]
+      },
+      {
+       "subject": "rits_complex_node",
+       "predicate": "RO:0002213",
+       "object": "heterochromatin_formation_process",
+       "description": "The RITS complex targets nascent noncoding transcripts and H3K9-methylated nucleosomes to promote heterochromatin assembly.",
+       "evidence": [
+        {
+         "reference": "PMID:14704433",
+         "notes": "Verdel et al. 2004 demonstrated that RITS is essential for heterochromatin assembly at centromeres."
+        }
+       ]
+      },
+      {
+       "subject": "rits_complex_node",
+       "predicate": "RO:0002213",
+       "object": "ncrna_gene_silencing_process",
+       "description": "The RITS complex recruits RDRC and chromatin-modifying activities to mediate siRNA-directed gene silencing.",
+       "evidence": [
+        {
+         "reference": "PMID:15607976",
+         "notes": "Motamedi et al. 2004 demonstrated that RITS physically recruits RDRC to drive RNAi-mediated heterochromatic gene silencing."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-30T15:25:00Z",
+     "curator": "add-cell-structure",
+     "action": "CREATED",
+     "changes": "Create new CellStructureRecord GO:0030958 (RITS complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },

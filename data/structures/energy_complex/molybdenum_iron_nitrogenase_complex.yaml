@@ -1,0 +1,288 @@
+identifier: GO:0016612
+label: molybdenum-iron nitrogenase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An enzyme complex containing a molybdenum-iron cluster found in many diazotrophic
+  species. It is composed of two component proteins, molybdenum-iron dinitrogenase
+  (MoFe protein, an alpha2beta2 heterotetramer NifD2K2 carrying P-clusters and active-site
+  FeMo-cofactors) and nitrogenase reductase (Fe protein, a homodimer NifH2 carrying
+  a subunit-bridging [4Fe-4S] cluster) that transiently dock to couple MgATP hydrolysis
+  to electron transfer and dinitrogen reduction.
+definition_source: GO:0016612
+mapping_status: PROPOSED
+parent_structures:
+- GO:0016610
+components:
+- component_id: nifd_alpha_subunit
+  label: Nitrogenase molybdenum-iron protein alpha chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005972
+  gene_symbols:
+  - nifD
+  stoichiometry: 2 copies per NifD2K2 molybdenum-iron dinitrogenase heterotetramer
+  essentiality: ESSENTIAL
+  role: Catalytic alpha subunit of the molybdenum-iron dinitrogenase (MoFe protein)
+    that houses the active-site FeMo-cofactor ([Mo-7Fe-9S-C-homocitrate]) and forms
+    the alpha-beta interface coordinating the [8Fe-7S] P-cluster.
+  evidence:
+  - reference: GO:0016612
+    notes: GO:0016612 defines the molybdenum-iron dinitrogenase component as an alpha2-beta2
+      heterotetramer.
+  - reference: PMID:9163420
+    notes: Schindelin et al. 1997 (DOI:10.1038/387370a0; PDB:1N2C) resolved the Azotobacter
+      vinelandii MoFe protein alpha chain (NifD) in the ADP-AlF4--stabilized nitrogenase
+      complex.
+  - reference: PMID:12215645
+    notes: Einsle et al. 2002 (DOI:10.1126/science.1073877) resolved the 1.16-Angstrom
+      crystal structure of Azotobacter vinelandii MoFe protein and the interstitial
+      ligand at the center of the NifD FeMo-cofactor.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07328
+    protein_label: Nitrogenase molybdenum-iron protein alpha chain
+    gene_symbol: nifD
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii NifD alpha chain of the canonical molybdenum-iron
+      nitrogenase complex resolved in PDB:1N2C.
+    evidence:
+    - reference: UniProtKB:P07328
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase molybdenum-iron
+        protein alpha chain (nifD).
+    - reference: PMID:9163420
+      notes: Schindelin et al. 1997 (PDB:1N2C) resolved A. vinelandii NifD within
+        the trapped Mo-nitrogenase complex.
+- component_id: nifk_beta_subunit
+  label: Nitrogenase molybdenum-iron protein beta chain
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005976
+  gene_symbols:
+  - nifK
+  stoichiometry: 2 copies per NifD2K2 molybdenum-iron dinitrogenase heterotetramer
+  essentiality: ESSENTIAL
+  role: Beta subunit of the molybdenum-iron dinitrogenase (MoFe protein) that pairs
+    with NifD to form the alpha2beta2 catalytic core and co-ligates the [8Fe-7S] P-cluster
+    at the alpha-beta subunit interface.
+  evidence:
+  - reference: GO:0016612
+    notes: GO:0016612 defines the molybdenum-iron dinitrogenase component as an alpha2-beta2
+      heterotetramer.
+  - reference: PMID:9163420
+    notes: Schindelin et al. 1997 (DOI:10.1038/387370a0; PDB:1N2C) resolved the Azotobacter
+      vinelandii MoFe protein beta chain (NifK) partnered with NifD and NifH.
+  - reference: PMID:3863780
+    notes: Brigle et al. 1985 (DOI:10.1016/0378-1119(85)90255-0) determined the Azotobacter
+      vinelandii nifD and nifK gene organization and sequence.
+  protein_examples:
+  - uniprot_id: UniProtKB:P07329
+    protein_label: Nitrogenase molybdenum-iron protein beta chain
+    gene_symbol: nifK
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii NifK beta chain of the canonical molybdenum-iron
+      nitrogenase complex resolved in PDB:1N2C.
+    evidence:
+    - reference: UniProtKB:P07329
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase molybdenum-iron
+        protein beta chain (nifK).
+    - reference: PMID:9163420
+      notes: Schindelin et al. 1997 (PDB:1N2C) resolved A. vinelandii NifK within
+        the trapped Mo-nitrogenase complex.
+- component_id: nifh_reductase_subunit
+  label: Nitrogenase iron protein 1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005977
+  gene_symbols:
+  - nifH1
+  - nifH
+  stoichiometry: 2 copies per NifH2 reductase homodimer (two NifH2 homodimers bind
+    one NifD2K2 tetramer in the trapped PDB:1N2C assembly)
+  essentiality: ESSENTIAL
+  role: ATP-binding iron-protein reductase subunit that forms a homodimer bridging
+    a single [4Fe-4S] cluster and transiently docks onto the NifD2K2 MoFe protein
+    to couple MgATP hydrolysis to electron transfer into the P-cluster.
+  evidence:
+  - reference: GO:0016612
+    notes: GO:0016612 defines the molybdenum-iron nitrogenase complex as containing
+      a homodimeric nitrogenase reductase paired with the alpha2-beta2 dinitrogenase.
+  - reference: PMID:9163420
+    notes: Schindelin et al. 1997 (DOI:10.1038/387370a0; PDB:1N2C) resolved two NifH2
+      homodimers docked on the NifD2K2 tetramer in the ADP-AlF4--stabilized transition-state
+      complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P00459
+    protein_label: Nitrogenase iron protein 1
+    gene_symbol: nifH1
+    taxon_id: NCBITaxon:354
+    taxon_label: Azotobacter vinelandii
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Azotobacter vinelandii NifH1 (also declared as synonym nifH) iron-protein
+      reductase subunit resolved in PDB:1N2C.
+    evidence:
+    - reference: UniProtKB:P00459
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron
+        protein 1 (nifH1 / nifH).
+    - reference: PMID:9163420
+      notes: Schindelin et al. 1997 (PDB:1N2C) resolved A. vinelandii NifH1 bound
+        to the MoFe protein.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:354
+  taxon_label: Azotobacter vinelandii
+  presence: COMMON
+  note: Aerobic diazotrophic gammaproteobacterium in which the canonical NifD2K2-NifH2
+    molybdenum-iron nitrogenase complex was structurally resolved (PDB:1N2C).
+  reference: PMID:9163420
+canonical_examples:
+- taxon_id: NCBITaxon:354
+  taxon_label: Azotobacter vinelandii
+  note: Source organism for the ADP-AlF4--stabilized NifD2K2-(NifH2)2 molybdenum-iron
+    nitrogenase crystal structure (PDB:1N2C) and high-resolution MoFe protein structure
+    (PMID:12215645).
+  reference: PDB:1N2C
+functions:
+- function_id: molybdenum_iron_nitrogenase_activity
+  label: nitrogenase activity
+  grounding: GO:0016163
+  description: Catalyzes ATP-dependent reduction of dinitrogen (N2) to ammonium coupled
+    to obligately evolved dihydrogen (H2) and oxidation of reduced ferredoxin or flavodoxin
+    at the FeMo-cofactor active site.
+  evidence:
+  - reference: GO:0016163
+    notes: GO:0016163 defines nitrogenase activity.
+  - reference: PMID:9163420
+    notes: Schindelin et al. 1997 demonstrated how MgATP-driven NifH2 conformational
+      change gates electron transfer into the NifD2K2 MoFe protein for dinitrogen
+      reduction.
+evidence:
+- reference: GO:0016612
+  notes: Gene Ontology cellular-component term for the molybdenum-iron nitrogenase
+    complex.
+- reference: GO:0016610
+  notes: Parent Gene Ontology cellular-component term for the generic nitrogenase
+    complex.
+- reference: PMID:9163420
+  notes: Schindelin et al. 1997 (DOI:10.1038/387370a0), crystal structure of the ADP-AlF4--stabilized
+    Azotobacter vinelandii molybdenum-iron nitrogenase complex (PDB:1N2C).
+- reference: PMID:12215645
+  notes: Einsle et al. 2002 (DOI:10.1126/science.1073877), 1.16-Angstrom resolution
+    structure of Azotobacter vinelandii MoFe nitrogenase.
+- reference: PMID:3863780
+  notes: Brigle et al. 1985 (DOI:10.1016/0378-1119(85)90255-0), nucleotide sequence
+    of the Azotobacter vinelandii nifD and nifK genes.
+- reference: PDB:1N2C
+  notes: RCSB PDB entry for the Azotobacter vinelandii molybdenum-iron nitrogenase
+    complex stabilized by ADP-tetrafluoroaluminate.
+causal_graphs:
+- graph_id: molybdenum_iron_nitrogenase_assembly_and_catalysis
+  title: Assembly and ATP-coupled dinitrogen reduction by the molybdenum-iron nitrogenase
+    complex
+  description: NifD alpha and NifK beta chains assemble the heterotetrameric MoFe
+    dinitrogenase core that docks with homodimeric NifH1 iron-protein reductase to
+    form the molybdenum-iron nitrogenase complex and catalyze ATP-dependent dinitrogen
+    reduction.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  scope_notes: Captures NifD/NifK/NifH1 subunit assembly into the A. vinelandii molybdenum-iron
+    nitrogenase complex and its catalysis of dinitrogen reduction; NifB/NifEN-mediated
+    FeMo-cofactor biosynthesis is omitted.
+  nodes:
+  - node_id: nifd_alpha_subunit
+    label: Nitrogenase molybdenum-iron protein alpha chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: nifd_alpha_subunit
+    grounding: InterPro:IPR005972
+    xrefs:
+    - UniProtKB:P07328
+    description: Catalytic NifD alpha subunit housing the FeMo-cofactor.
+  - node_id: nifk_beta_subunit
+    label: Nitrogenase molybdenum-iron protein beta chain
+    node_type: GENE_OR_PROTEIN
+    component_ref: nifk_beta_subunit
+    grounding: InterPro:IPR005976
+    xrefs:
+    - UniProtKB:P07329
+    description: NifK beta subunit partnering with NifD in the alpha2beta2 MoFe core.
+  - node_id: nifh_reductase_subunit
+    label: Nitrogenase iron protein 1
+    node_type: GENE_OR_PROTEIN
+    component_ref: nifh_reductase_subunit
+    grounding: InterPro:IPR005977
+    xrefs:
+    - UniProtKB:P00459
+    description: Homodimeric NifH1 iron-protein reductase subunit.
+  - node_id: mofe_nitrogenase_complex_node
+    label: molybdenum-iron nitrogenase complex
+    node_type: STRUCTURE
+    grounding: GO:0016612
+    description: Assembled NifD2K2-NifH2 molybdenum-iron nitrogenase complex.
+  - node_id: dinitrogen_substrate
+    label: dinitrogen
+    node_type: CHEMICAL
+    description: Molecular dinitrogen (N2) substrate reduced at the FeMo-cofactor.
+  - node_id: nitrogenase_activity_node
+    label: nitrogenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0016163
+    description: ATP-dependent reduction of dinitrogen to ammonium and dihydrogen.
+  edges:
+  - subject: nifd_alpha_subunit
+    predicate: RO:0002436
+    object: mofe_nitrogenase_complex_node
+    description: Two NifD alpha chains assemble with two NifK beta chains to form
+      the FeMo-cofactor-bearing catalytic core of the molybdenum-iron nitrogenase
+      complex.
+    evidence:
+    - reference: PMID:9163420
+      notes: Schindelin et al. 1997 (PDB:1N2C) resolved the alpha2beta2 NifD2K2 core
+        in the A. vinelandii Mo-nitrogenase complex.
+  - subject: nifk_beta_subunit
+    predicate: RO:0002436
+    object: mofe_nitrogenase_complex_node
+    description: Two NifK beta chains pair with NifD to complete the alpha2beta2 MoFe
+      dinitrogenase component and coordinate the interfacial P-clusters.
+    evidence:
+    - reference: PMID:9163420
+      notes: Schindelin et al. 1997 (PDB:1N2C) resolved NifK in the alpha2beta2 MoFe
+        catalytic component.
+  - subject: nifh_reductase_subunit
+    predicate: RO:0002436
+    object: mofe_nitrogenase_complex_node
+    description: Homodimeric NifH1 iron-protein reductase docks onto the NifD2K2 MoFe
+      protein to juxtapose its [4Fe-4S] cluster with the P-cluster.
+    evidence:
+    - reference: PMID:9163420
+      notes: Schindelin et al. 1997 captured NifH1 homodimers docked onto the MoFe
+        protein in the ADP-AlF4--stabilized complex.
+  - subject: mofe_nitrogenase_complex_node
+    predicate: RO:0002327
+    object: nitrogenase_activity_node
+    description: The assembled molybdenum-iron nitrogenase complex enables ATP-coupled
+      electron transfer and dinitrogen reduction to ammonium.
+    evidence:
+    - reference: GO:0016612
+      notes: GO:0016612 and GO:0016163 link the molybdenum-iron nitrogenase complex
+        to nitrogenase activity.
+  - subject: dinitrogen_substrate
+    predicate: RO:0000056
+    object: nitrogenase_activity_node
+    description: Dinitrogen participates as the terminal electron acceptor reduced
+      to ammonium during nitrogenase catalysis.
+    evidence:
+    - reference: GO:0016163
+      notes: GO:0016163 defines dinitrogen as the substrate reduced to ammonium.
+curation_history:
+- timestamp: '2026-10-30T15:25:00Z'
+  curator: add-cell-structure
+  action: CREATED
+  changes: Create new CellStructureRecord GO:0016612 (molybdenum-iron nitrogenase
+    complex) with verified GO identity, source-backed components, reviewed UniProtKB
+    protein examples, taxonomic distribution, canonical examples, functions, and mechanistic
+    causal graph.
+  llm_assisted: true

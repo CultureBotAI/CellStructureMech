@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/molybdenum_iron_nitrogenase_complex.yaml
+  slug: molybdenum_iron_nitrogenase_complex
+session:
+  id: 2026-10-30T152500Z-claude-opus-4-6-c5s101
+  timestamp: '2026-10-30T15:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for molybdenum-iron nitrogenase complex (GO:0016612)
+    in energy_complex.
+  details: Authored data/structures/energy_complex/molybdenum_iron_nitrogenase_complex.yaml
+    for molybdenum-iron nitrogenase complex (GO:0016612) with verified GO hierarchy,
+    taxonomic distribution, UniProtKB protein examples, functions, literature evidence,
+    and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence
