@@ -10,8 +10,6 @@ definition: A multienzyme, heterooligomeric complex involved in dolichyl-linked 
   oligosaccharide synthesis.
 definition_source: GO:0043541
 mapping_status: PROPOSED
-xrefs:
-- ComplexPortal:CPX-1643
 parent_structures:
 - GO:0098796
 - GO:0140534
@@ -70,9 +68,9 @@ components:
     notes: GO:0043541 defines Alg13p as the catalytic subunit partnered with Alg14p
       for the second step of dolichyl-linked oligosaccharide synthesis.
   - reference: PMID:15615718
-    notes: Bickel et al. 2005 (DOI:10.1074/jbc.m413941200) demonstrated that S. cerevisiae
-      Alg13p and Alg14p form a heterooligomeric UDP-GlcNAc glycosyltransferase on
-      the ER membrane.
+    notes: Chantret et al. 2005 (DOI:10.1074/jbc.m413941200) demonstrated that S.
+      cerevisiae Alg13p and Alg14p form a heterooligomeric UDP-GlcNAc glycosyltransferase
+      on the ER membrane.
   protein_examples:
   - uniprot_id: UniProtKB:P53178
     protein_label: UDP-N-acetylglucosamine transferase subunit ALG13
@@ -88,7 +86,7 @@ components:
       notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C UDP-N-acetylglucosamine
         transferase subunit ALG13.
     - reference: PMID:15615718
-      notes: Bickel et al. 2005 characterized S. cerevisiae Alg13p as the soluble
+      notes: Chantret et al. 2005 characterized S. cerevisiae Alg13p as the soluble
         catalytic subunit anchored by Alg14p.
 - component_id: alg14_membrane_anchor_subunit
   label: UDP-N-acetylglucosamine transferase subunit ALG14
@@ -106,7 +104,7 @@ components:
     notes: GO:0043541 defines Alg14p as the membrane-anchoring subunit of the yeast
       UDP-N-acetylglucosamine transferase complex.
   - reference: PMID:15615718
-    notes: Bickel et al. 2005 showed that integral ER membrane protein Alg14p recruits
+    notes: Chantret et al. 2005 showed that integral ER membrane protein Alg14p recruits
       Alg13p to the ER membrane and is essential for GlcNAc2-PP-dolichol synthesis.
   protein_examples:
   - uniprot_id: UniProtKB:P38242
@@ -123,7 +121,7 @@ components:
       notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C UDP-N-acetylglucosamine
         transferase subunit ALG14.
     - reference: PMID:15615718
-      notes: Bickel et al. 2005 identified S. cerevisiae Alg14p as the ER membrane
+      notes: Chantret et al. 2005 identified S. cerevisiae Alg14p as the ER membrane
         anchor for Alg13p.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:559292
@@ -136,7 +134,7 @@ taxonomic_distribution:
 canonical_examples:
 - taxon_id: NCBITaxon:559292
   taxon_label: Saccharomyces cerevisiae S288C
-  note: Model organism in which Barnes et al. 1984 and Bickel et al. 2005 characterized
+  note: Model organism in which Barnes et al. 1984 and Chantret et al. 2005 characterized
     Alg7p, Alg13p, and Alg14p in the ER-membrane UDP-N-acetylglucosamine transferase
     complex.
   reference: PMID:15615718
@@ -166,7 +164,7 @@ functions:
     notes: GO:0043541 defines the complex as catalyzing the first two steps of dolichyl-linked
       oligosaccharide synthesis.
   - reference: PMID:15615718
-    notes: Bickel et al. 2005 demonstrated that the Alg13p-Alg14p heterodimer catalyzes
+    notes: Chantret et al. 2005 demonstrated that the Alg13p-Alg14p heterodimer catalyzes
       the second step of dolichol-linked core oligosaccharide assembly.
 evidence:
 - reference: GO:0043541
@@ -186,13 +184,14 @@ evidence:
   notes: EBI Complex Portal entry for the Saccharomyces cerevisiae Alg13-Alg14 UDP-N-acetylglucosamine
     transferase subcomplex.
 - reference: PMID:15615718
-  notes: 'Bickel et al. 2005 (DOI:10.1074/jbc.m413941200), Biosynthesis of lipid-linked
-    oligosaccharides in Saccharomyces cerevisiae: Alg13p and Alg14p form a novel heterooligomeric
-    UDP-GlcNAc transferase, Journal of Biological Chemistry.'
+  notes: Chantret et al. 2005 (DOI:10.1074/jbc.m413941200), Two proteins homologous
+    to the N- and C-terminal domains of the bacterial glycosyltransferase MurG are
+    required for the second step of dolichyl-linked oligosaccharide synthesis in Saccharomyces
+    cerevisiae, Journal of Biological Chemistry.
 - reference: PMID:6096695
-  notes: Barnes et al. 1984 (DOI:10.1128/mcb.4.11.2381-2388.1984), Tunicamycin-resistant
-    mutants of yeast overproduce UDP-N-acetylglucosamine-1-P transferase (ALG7), Molecular
-    and Cellular Biology.
+  notes: 'Barnes et al. 1984 (DOI:10.1128/mcb.4.11.2381-2388.1984), Asparagine-linked
+    glycosylation in Saccharomyces cerevisiae: genetic analysis of an early step in
+    the pathway, Molecular and Cellular Biology.'
 causal_graphs:
 - graph_id: udp_glcnac_transferase_complex_assembly_and_dolichol_glycosylation
   title: Alg7p, Alg13p, and Alg14p assemble on the ER membrane to synthesize GlcNAc2-PP-dolichol
@@ -255,7 +254,7 @@ causal_graphs:
       cytosolic Alg13p to the cytoplasmic face of the ER membrane.
     evidence:
     - reference: PMID:15615718
-      notes: Bickel et al. 2005 demonstrated that Alg14p tethers Alg13p to the ER
+      notes: Chantret et al. 2005 demonstrated that Alg14p tethers Alg13p to the ER
         membrane.
   - subject: alg14_membrane_anchor_subunit
     predicate: RO:0002436
@@ -264,8 +263,8 @@ causal_graphs:
       transferase complex in the ER membrane.
     evidence:
     - reference: PMID:15615718
-      notes: Bickel et al. 2005 identified Alg14p as the membrane anchor of the UDP-GlcNAc
-        transferase complex.
+      notes: Chantret et al. 2005 identified Alg14p as the membrane anchor of the
+        UDP-GlcNAc transferase complex.
   - subject: alg13_catalytic_subunit
     predicate: RO:0002436
     object: udp_glcnac_transferase_complex_node
@@ -273,8 +272,8 @@ causal_graphs:
       UDP-GlcNAc glycosyltransferase active site.
     evidence:
     - reference: PMID:15615718
-      notes: Bickel et al. 2005 showed that Alg13p provides the catalytic domain for
-        GlcNAc2-PP-Dol synthesis.
+      notes: Chantret et al. 2005 showed that Alg13p provides the catalytic domain
+        for GlcNAc2-PP-Dol synthesis.
   - subject: alg7_phosphotransferase_subunit
     predicate: RO:0002436
     object: udp_glcnac_transferase_complex_node
@@ -301,7 +300,7 @@ causal_graphs:
       for protein N-linked glycosylation.
     evidence:
     - reference: PMID:15615718
-      notes: Bickel et al. 2005 showed that the complex is essential for core oligosaccharide
+      notes: Chantret et al. 2005 showed that the complex is essential for core oligosaccharide
         assembly in N-linked glycosylation.
 curation_history:
 - timestamp: '2026-10-30T15:25:00Z'

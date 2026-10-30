@@ -2,7 +2,7 @@
  "corpus": "CellStructureMech",
  "record_count": 1008,
  "corpus_updated": "2026-10-30 15:25:00 UTC",
- "corpus_digest": "529ece4dee1f",
+ "corpus_digest": "fa7f5619ad03",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -253000,7 +253000,7 @@
     },
     {
      "reference": "PMID:12364329",
-     "notes": "Wang et al. 2002 (DOI:10.1074/jbc.m208191200), Yeast Ccz1p and Mon1p form a complex required for the Cvt and endosome-to-vacuole pathways, Journal of Biological Chemistry."
+     "notes": "Wang et al. 2002 (DOI:10.1074/jbc.m208191200), The Ccz1-Mon1 protein complex is required for the late step of multiple vacuole delivery pathways, Journal of Biological Chemistry."
     }
    ],
    "causal_graphs": [
@@ -281317,7 +281317,7 @@
       },
       {
        "reference": "PMID:12056824",
-       "notes": "Yoshida and Toh-e 2002 (DOI:10.1016/s0006-291x(02)00544-2) demonstrated how budding yeast Cdc14 release from Net1 in the RENT complex is regulated during mitotic exit."
+       "notes": "Yoshida and Toh-e 2002 demonstrated how budding yeast Cdc5 phosphorylates Net1 and assists Cdc14 release from the nucleolar RENT complex during mitotic exit."
       }
      ],
      "protein_examples": [
@@ -281422,7 +281422,7 @@
     },
     {
      "reference": "PMID:12056824",
-     "notes": "Yoshida and Toh-e 2002 (DOI:10.1016/s0006-291x(02)00544-2), budding yeast Cdc5 phosphorylates Net1 and assists Cdc14 release from the nucleolus."
+     "notes": "Yoshida and Toh-e 2002, Budding yeast Cdc5 phosphorylates Net1 and assists Cdc14 release from the nucleolus, Biochemical and Biophysical Research Communications."
     }
    ],
    "causal_graphs": [
@@ -310266,9 +310266,6 @@
    "definition": "A multienzyme, heterooligomeric complex involved in dolichyl-linked oligosaccharide synthesis. In yeast the complex is composed of Alg7p, which catalyzes the first step (GlcNAc1-PP-Dol from dolichol-phosphate and UDP-GlcNAc), and Alg13p plus Alg14p, the catalytic and anchoring subunits respectively, which together catalyze the second step (GlcNAc2-PP-dolichol from GlcNAc1-PP-Dol and UDP-GlcNAc) of dolichyl-linked oligosaccharide synthesis.",
    "definition_source": "GO:0043541",
    "mapping_status": "PROPOSED",
-   "xrefs": [
-    "ComplexPortal:CPX-1643"
-   ],
    "parent_structures": [
     "GO:0098796",
     "GO:0140534",
@@ -310340,7 +310337,7 @@
       },
       {
        "reference": "PMID:15615718",
-       "notes": "Bickel et al. 2005 (DOI:10.1074/jbc.m413941200) demonstrated that S. cerevisiae Alg13p and Alg14p form a heterooligomeric UDP-GlcNAc glycosyltransferase on the ER membrane."
+       "notes": "Chantret et al. 2005 (DOI:10.1074/jbc.m413941200) demonstrated that S. cerevisiae Alg13p and Alg14p form a heterooligomeric UDP-GlcNAc glycosyltransferase on the ER membrane."
       }
      ],
      "protein_examples": [
@@ -310360,7 +310357,7 @@
         },
         {
          "reference": "PMID:15615718",
-         "notes": "Bickel et al. 2005 characterized S. cerevisiae Alg13p as the soluble catalytic subunit anchored by Alg14p."
+         "notes": "Chantret et al. 2005 characterized S. cerevisiae Alg13p as the soluble catalytic subunit anchored by Alg14p."
         }
        ]
       }
@@ -310384,7 +310381,7 @@
       },
       {
        "reference": "PMID:15615718",
-       "notes": "Bickel et al. 2005 showed that integral ER membrane protein Alg14p recruits Alg13p to the ER membrane and is essential for GlcNAc2-PP-dolichol synthesis."
+       "notes": "Chantret et al. 2005 showed that integral ER membrane protein Alg14p recruits Alg13p to the ER membrane and is essential for GlcNAc2-PP-dolichol synthesis."
       }
      ],
      "protein_examples": [
@@ -310404,7 +310401,7 @@
         },
         {
          "reference": "PMID:15615718",
-         "notes": "Bickel et al. 2005 identified S. cerevisiae Alg14p as the ER membrane anchor for Alg13p."
+         "notes": "Chantret et al. 2005 identified S. cerevisiae Alg14p as the ER membrane anchor for Alg13p."
         }
        ]
       }
@@ -310424,7 +310421,7 @@
     {
      "taxon_id": "NCBITaxon:559292",
      "taxon_label": "Saccharomyces cerevisiae S288C",
-     "note": "Model organism in which Barnes et al. 1984 and Bickel et al. 2005 characterized Alg7p, Alg13p, and Alg14p in the ER-membrane UDP-N-acetylglucosamine transferase complex.",
+     "note": "Model organism in which Barnes et al. 1984 and Chantret et al. 2005 characterized Alg7p, Alg13p, and Alg14p in the ER-membrane UDP-N-acetylglucosamine transferase complex.",
      "reference": "PMID:15615718"
     }
    ],
@@ -310457,7 +310454,7 @@
       },
       {
        "reference": "PMID:15615718",
-       "notes": "Bickel et al. 2005 demonstrated that the Alg13p-Alg14p heterodimer catalyzes the second step of dolichol-linked core oligosaccharide assembly."
+       "notes": "Chantret et al. 2005 demonstrated that the Alg13p-Alg14p heterodimer catalyzes the second step of dolichol-linked core oligosaccharide assembly."
       }
      ]
     }
@@ -310489,11 +310486,11 @@
     },
     {
      "reference": "PMID:15615718",
-     "notes": "Bickel et al. 2005 (DOI:10.1074/jbc.m413941200), Biosynthesis of lipid-linked oligosaccharides in Saccharomyces cerevisiae: Alg13p and Alg14p form a novel heterooligomeric UDP-GlcNAc transferase, Journal of Biological Chemistry."
+     "notes": "Chantret et al. 2005 (DOI:10.1074/jbc.m413941200), Two proteins homologous to the N- and C-terminal domains of the bacterial glycosyltransferase MurG are required for the second step of dolichyl-linked oligosaccharide synthesis in Saccharomyces cerevisiae, Journal of Biological Chemistry."
     },
     {
      "reference": "PMID:6096695",
-     "notes": "Barnes et al. 1984 (DOI:10.1128/mcb.4.11.2381-2388.1984), Tunicamycin-resistant mutants of yeast overproduce UDP-N-acetylglucosamine-1-P transferase (ALG7), Molecular and Cellular Biology."
+     "notes": "Barnes et al. 1984 (DOI:10.1128/mcb.4.11.2381-2388.1984), Asparagine-linked glycosylation in Saccharomyces cerevisiae: genetic analysis of an early step in the pathway, Molecular and Cellular Biology."
     }
    ],
    "causal_graphs": [
@@ -310569,7 +310566,7 @@
        "evidence": [
         {
          "reference": "PMID:15615718",
-         "notes": "Bickel et al. 2005 demonstrated that Alg14p tethers Alg13p to the ER membrane."
+         "notes": "Chantret et al. 2005 demonstrated that Alg14p tethers Alg13p to the ER membrane."
         }
        ]
       },
@@ -310581,7 +310578,7 @@
        "evidence": [
         {
          "reference": "PMID:15615718",
-         "notes": "Bickel et al. 2005 identified Alg14p as the membrane anchor of the UDP-GlcNAc transferase complex."
+         "notes": "Chantret et al. 2005 identified Alg14p as the membrane anchor of the UDP-GlcNAc transferase complex."
         }
        ]
       },
@@ -310593,7 +310590,7 @@
        "evidence": [
         {
          "reference": "PMID:15615718",
-         "notes": "Bickel et al. 2005 showed that Alg13p provides the catalytic domain for GlcNAc2-PP-Dol synthesis."
+         "notes": "Chantret et al. 2005 showed that Alg13p provides the catalytic domain for GlcNAc2-PP-Dol synthesis."
         }
        ]
       },
@@ -310629,7 +310626,7 @@
        "evidence": [
         {
          "reference": "PMID:15615718",
-         "notes": "Bickel et al. 2005 showed that the complex is essential for core oligosaccharide assembly in N-linked glycosylation."
+         "notes": "Chantret et al. 2005 showed that the complex is essential for core oligosaccharide assembly in N-linked glycosylation."
         }
        ]
       }

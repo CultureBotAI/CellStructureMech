@@ -106,9 +106,9 @@ components:
     notes: Straight et al. 1999 showed that Net1p sequesters and inhibits Cdc14p within
       the nucleolar RENT complex until telophase.
   - reference: PMID:12056824
-    notes: Yoshida and Toh-e 2002 (DOI:10.1016/s0006-291x(02)00544-2) demonstrated
-      how budding yeast Cdc14 release from Net1 in the RENT complex is regulated during
-      mitotic exit.
+    notes: Yoshida and Toh-e 2002 demonstrated how budding yeast Cdc5 phosphorylates
+      Net1 and assists Cdc14 release from the nucleolar RENT complex during mitotic
+      exit.
   protein_examples:
   - uniprot_id: UniProtKB:Q00684
     protein_label: Tyrosine-protein phosphatase CDC14
@@ -183,8 +183,8 @@ evidence:
     polymerase I transcription and regulates nucleolar structure independently of
     controlling mitotic exit, Molecular Cell.
 - reference: PMID:12056824
-  notes: Yoshida and Toh-e 2002 (DOI:10.1016/s0006-291x(02)00544-2), budding yeast
-    Cdc5 phosphorylates Net1 and assists Cdc14 release from the nucleolus.
+  notes: Yoshida and Toh-e 2002, Budding yeast Cdc5 phosphorylates Net1 and assists
+    Cdc14 release from the nucleolus, Biochemical and Biophysical Research Communications.
 causal_graphs:
 - graph_id: rent_complex_nucleolar_silencing_and_cdc14_sequestration
   title: Net1p scaffolds Sir2p and Cdc14p in the nucleolar RENT complex for rDNA silencing
