@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_i_protein_secretion_system_complex.yaml
+  slug: type_i_protein_secretion_system_complex
+session:
+  id: 2026-10-30T203835Z-cellstructuremech-curator-e153c6
+  timestamp: '2026-10-30T20:38:35Z'
+  actors:
+  - type: ai_agent
+    name: cellstructuremech-curator
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Anchor secretion_substrate causal-graph node with verified Swiss-Prot HlyA xref
+  details: Added reviewed Escherichia coli Swiss-Prot accession UniProtKB:P09983 (hlyA, Hemolysin,
+    chromosomal) to xrefs on causal_graphs#abc_mfp_tolc_one_step_export node secretion_substrate,
+    backed by Delepelaire 2004 (DOI:10.1016/j.bbamcr.2004.05.001).

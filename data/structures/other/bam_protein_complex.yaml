@@ -58,6 +58,20 @@ curation_history:
   changes: 'Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated
     verified component grounding to causal_graphs component_ref node(s): bam_a (InterPro:IPR023707).'
   llm_assisted: true
+- timestamp: '2026-10-30T20:34:51Z'
+  curator: antigravity
+  action: CURATED_PROTEIN_EXAMPLES
+  changes: Anchored causal_graphs#bam_omp_folding_and_insertion nodes unfolded_omp_substrate
+    and outer_membrane_beta_barrel with verified Escherichia coli K-12 Swiss-Prot
+    accession UniProtKB:P09169 (ompT, Protease 7) reconstituted in Hagan, Kim and
+    Kahne 2010 (DOI:10.1126/science.1188919).
+  llm_assisted: true
+- timestamp: '2026-10-30T21:27:56Z'
+  curator: antigravity
+  action: ADDRESS_REVIEW
+  changes: 'Resolved #2471: added Escherichia coli K-12 (NCBITaxon:83333) to canonical_examples
+    and UniProtKB:P09169 (ompT) to top-level evidence.'
+  llm_assisted: true
 synonyms:
 - synonym_text: BAM complex
   synonym_type: EXACT_SYNONYM
@@ -289,6 +303,11 @@ canonical_examples:
   note: The purified E. coli BamA-E complex was reconstituted in proteoliposomes and
     shown to assemble the OmpT beta-barrel substrate.
   reference: DOI:10.1126/science.1188919
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference laboratory strain in which the BamA-E complex subunits and the OmpT
+    (UniProtKB:P09169) outer-membrane beta-barrel assembly substrate are annotated.
+  reference: DOI:10.1126/science.1188919
 functions:
 - function_id: outer_membrane_beta_barrel_assembly
   label: outer-membrane beta-barrel protein folding and insertion
@@ -320,6 +339,10 @@ evidence:
 - reference: DOI:10.1038/ncomms12865
   notes: Iadanza MG et al. 2016, 'Lateral opening in the intact beta-barrel assembly
     machinery captured by cryo-EM', Nature Communications.
+- reference: UniProtKB:P09169
+  notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 Protease 7 (ompT), the
+    outer-membrane beta-barrel substrate reconstituted with purified BamABCDE by Hagan,
+    Kim and Kahne 2010.
 causal_graphs:
 - graph_id: bam_omp_folding_and_insertion
   title: BAM folds and inserts beta-barrel OMP substrates
@@ -335,6 +358,11 @@ causal_graphs:
   - node_id: unfolded_omp_substrate
     label: unfolded outer-membrane beta-barrel protein substrate
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P09169
+    description: Chaperone-delivered unfolded outer-membrane beta-barrel protein precursor,
+      exemplified in Escherichia coli K-12 by OmpT (UniProtKB:P09169) reconstituted
+      by Hagan, Kim and Kahne 2010 (DOI:10.1126/science.1188919).
   - node_id: bam_b
     label: Outer membrane protein assembly factor BamB
     node_type: GENE_OR_PROTEIN
@@ -378,6 +406,11 @@ causal_graphs:
   - node_id: outer_membrane_beta_barrel
     label: assembled outer-membrane beta-barrel protein
     node_type: GENE_OR_PROTEIN
+    xrefs:
+    - UniProtKB:P09169
+    description: Folded beta-barrel outer-membrane protein inserted into the lipid
+      bilayer by the BAM complex, exemplified in Escherichia coli K-12 by OmpT (UniProtKB:P09169;
+      DOI:10.1126/science.1188919).
   - node_id: cell_outer_membrane
     label: cell outer membrane
     node_type: STRUCTURE

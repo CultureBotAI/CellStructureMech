@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1008,
- "corpus_updated": "2026-10-30 19:09:24 UTC",
- "corpus_digest": "147521c48433",
+ "corpus_updated": "2026-10-30 21:27:56 UTC",
+ "corpus_digest": "724eba4d2c4f",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -46680,6 +46680,22 @@
          "notes": "UniProtKB reviewed (Swiss-Prot) entry P25295 for Tubulin gamma chain (gene gtb1 / tug1, SPBC32F12.04) in Schizosaccharomyces pombe 972h-. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P53378",
+       "protein_label": "Tubulin gamma chain",
+       "gene_symbol": "TUB4",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "The single reviewed UniProtKB entry for gene TUB4 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P53378",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P53378, the single reviewed entry for gene TUB4 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     },
@@ -46700,6 +46716,10 @@
       {
        "reference": "DOI:10.1091/mbc.E17-06-0397",
        "notes": "Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2) and Alp6 (GCP3)."
+      },
+      {
+       "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
+       "notes": "Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3)."
       }
      ],
      "protein_examples": [
@@ -46742,6 +46762,38 @@
          "notes": "Vardy L et al. 2000, ‘The fission yeast gamma-tubulin complex is required in G(1) phase and is a component of the spindle assembly checkpoint.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of Q9USQ2."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P38863",
+       "protein_label": "Spindle pole body component SPC97",
+       "gene_symbol": "SPC97",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "The single reviewed UniProtKB entry for gene SPC97 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P38863",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P38863, the single reviewed entry for gene SPC97 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P53540",
+       "protein_label": "Spindle pole body component SPC98",
+       "gene_symbol": "SPC98",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "The single reviewed UniProtKB entry for gene SPC98 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P53540",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P53540, the single reviewed entry for gene SPC98 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -46761,6 +46813,12 @@
      "taxon_label": "Schizosaccharomyces pombe 972h-",
      "note": "Model fission yeast in which gamma-TuSC (Gtb1/Alp4/Alp6) assembly and Mto1/Mto2-driven MTOC nucleation were dissected.",
      "reference": "DOI:10.1091/mbc.E17-06-0397"
+    },
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Model budding yeast in which the Tub4p-Spc97p-Spc98p gamma-tubulin complex at the spindle pole body was characterized.",
+     "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106"
     }
    ],
    "functions": [
@@ -46876,6 +46934,10 @@
         {
          "reference": "DOI:10.1091/mbc.E17-06-0397",
          "notes": "Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2) and Alp6 (GCP3)."
+        },
+        {
+         "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
+         "notes": "Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3)."
         }
        ]
       },
@@ -46944,6 +47006,20 @@
      "curator": "claude-code",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2420: Updated components#gcp2_gcp3_spoke_subunits from component_type PROTEIN to PROTEIN_COMPLEX.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T20:29:57Z",
+     "curator": "antigravity",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Added Saccharomyces cerevisiae S288C (NCBITaxon:559292) canonical example backed by Jaspersen and Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106) and resolved 3 reviewed Swiss-Prot protein_examples (UniProtKB:P53378 for TUB4, UniProtKB:P38863 for SPC97, and UniProtKB:P53540 for SPC98) on gamma_tubulin_subunit and gcp2_gcp3_spoke_subunits.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:56Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2470: added Jaspersen and Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106) literature evidence for budding-yeast Spc97 (SPC97) and Spc98 (SPC98) to gcp2_gcp3_spoke_subunits component and assembly edge evidence.",
      "llm_assisted": true
     }
    ]
@@ -47512,6 +47588,22 @@
          "notes": "UniProtKB reviewed (Swiss-Prot) entry P25295 for Tubulin gamma chain (gene gtb1 / tug1, SPBC32F12.04) in Schizosaccharomyces pombe 972h-. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P53378",
+       "protein_label": "Tubulin gamma chain",
+       "gene_symbol": "TUB4",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "The single reviewed UniProtKB entry for gene TUB4 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P53378",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P53378, the single reviewed entry for gene TUB4 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     },
@@ -47532,6 +47624,10 @@
       {
        "reference": "DOI:10.1091/mbc.E17-06-0397",
        "notes": "Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2) and Alp6 (GCP3)."
+      },
+      {
+       "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
+       "notes": "Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3)."
       }
      ],
      "protein_examples": [
@@ -47574,6 +47670,38 @@
          "notes": "Vardy L et al. 2000, ‘The fission yeast gamma-tubulin complex is required in G(1) phase and is a component of the spindle assembly checkpoint.’, EMBO J. ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body' localisation of Q9USQ2."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P38863",
+       "protein_label": "Spindle pole body component SPC97",
+       "gene_symbol": "SPC97",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "The single reviewed UniProtKB entry for gene SPC97 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P38863",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P38863, the single reviewed entry for gene SPC97 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P53540",
+       "protein_label": "Spindle pole body component SPC98",
+       "gene_symbol": "SPC98",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "The single reviewed UniProtKB entry for gene SPC98 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P53540",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P53540, the single reviewed entry for gene SPC98 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -47593,6 +47721,12 @@
      "taxon_label": "Schizosaccharomyces pombe 972h-",
      "note": "Model fission yeast in which gamma-TuSC (Gtb1/Alp4/Alp6) assembly and Mto1/Mto2-driven MTOC nucleation were dissected.",
      "reference": "DOI:10.1091/mbc.E17-06-0397"
+    },
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Model budding yeast in which the heterotetrameric Tub4p-Spc97p-Spc98p gamma-tubulin small complex (gamma-TuSC) at the spindle pole body was characterized.",
+     "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106"
     }
    ],
    "functions": [
@@ -47701,6 +47835,10 @@
         {
          "reference": "DOI:10.1091/mbc.E17-06-0397",
          "notes": "Characterizes the fission yeast gamma-tubulin complex containing Alp4 (GCP2) and Alp6 (GCP3)."
+        },
+        {
+         "reference": "DOI:10.1146/annurev.cellbio.20.022003.114106",
+         "notes": "Jaspersen and Winey 2004 review the budding-yeast Tub4 complex containing the spoke scaffold subunits Spc97 (SPC97, GCP2) and Spc98 (SPC98, GCP3)."
         }
        ]
       },
@@ -47757,6 +47895,20 @@
      "curator": "claude-code",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2420: Updated components#gcp2_gcp3_spoke_subunits from component_type PROTEIN to PROTEIN_COMPLEX.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T20:30:01Z",
+     "curator": "antigravity",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Added Saccharomyces cerevisiae S288C (NCBITaxon:559292) canonical example backed by Jaspersen and Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106) and resolved 3 reviewed Swiss-Prot protein_examples (UniProtKB:P53378 for TUB4, UniProtKB:P38863 for SPC97, and UniProtKB:P53540 for SPC98) on gamma_tubulin_subunit and gcp2_gcp3_spoke_subunits.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:56Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2470: added Jaspersen and Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106) literature evidence for budding-yeast Spc97 (SPC97) and Spc98 (SPC98) to gcp2_gcp3_spoke_subunits component and assembly edge evidence.",
      "llm_assisted": true
     }
    ]
@@ -188641,6 +188793,20 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2432 (finding other-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): bam_a (InterPro:IPR023707).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T20:34:51Z",
+     "curator": "antigravity",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Anchored causal_graphs#bam_omp_folding_and_insertion nodes unfolded_omp_substrate and outer_membrane_beta_barrel with verified Escherichia coli K-12 Swiss-Prot accession UniProtKB:P09169 (ompT, Protease 7) reconstituted in Hagan, Kim and Kahne 2010 (DOI:10.1126/science.1188919).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:56Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2471: added Escherichia coli K-12 (NCBITaxon:83333) to canonical_examples and UniProtKB:P09169 (ompT) to top-level evidence.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -188923,6 +189089,12 @@
      "taxon_label": "Escherichia coli",
      "note": "The purified E. coli BamA-E complex was reconstituted in proteoliposomes and shown to assemble the OmpT beta-barrel substrate.",
      "reference": "DOI:10.1126/science.1188919"
+    },
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference laboratory strain in which the BamA-E complex subunits and the OmpT (UniProtKB:P09169) outer-membrane beta-barrel assembly substrate are annotated.",
+     "reference": "DOI:10.1126/science.1188919"
     }
    ],
    "functions": [
@@ -188967,6 +189139,10 @@
     {
      "reference": "DOI:10.1038/ncomms12865",
      "notes": "Iadanza MG et al. 2016, 'Lateral opening in the intact beta-barrel assembly machinery captured by cryo-EM', Nature Communications."
+    },
+    {
+     "reference": "UniProtKB:P09169",
+     "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 Protease 7 (ompT), the outer-membrane beta-barrel substrate reconstituted with purified BamABCDE by Hagan, Kim and Kahne 2010."
     }
    ],
    "causal_graphs": [
@@ -188981,7 +189157,11 @@
       {
        "node_id": "unfolded_omp_substrate",
        "label": "unfolded outer-membrane beta-barrel protein substrate",
-       "node_type": "GENE_OR_PROTEIN"
+       "node_type": "GENE_OR_PROTEIN",
+       "xrefs": [
+        "UniProtKB:P09169"
+       ],
+       "description": "Chaperone-delivered unfolded outer-membrane beta-barrel protein precursor, exemplified in Escherichia coli K-12 by OmpT (UniProtKB:P09169) reconstituted by Hagan, Kim and Kahne 2010 (DOI:10.1126/science.1188919)."
       },
       {
        "node_id": "bam_b",
@@ -189043,7 +189223,11 @@
       {
        "node_id": "outer_membrane_beta_barrel",
        "label": "assembled outer-membrane beta-barrel protein",
-       "node_type": "GENE_OR_PROTEIN"
+       "node_type": "GENE_OR_PROTEIN",
+       "xrefs": [
+        "UniProtKB:P09169"
+       ],
+       "description": "Folded beta-barrel outer-membrane protein inserted into the lipid bilayer by the BAM complex, exemplified in Escherichia coli K-12 by OmpT (UniProtKB:P09169; DOI:10.1126/science.1188919)."
       },
       {
        "node_id": "cell_outer_membrane",
@@ -212213,6 +212397,20 @@
      "action": "EXPANDED_RECORD",
      "changes": "Added GO RPA synonymy, nuclear protein-containing-complex parentage, three reviewed-label-only size-class constituent rows, Eukaryota scope, single-stranded DNA-binding function evidence, GO/PubMed evidence, a nonmechanistic function graph, and an RPA subunit-grounding TODO.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T20:30:04Z",
+     "curator": "antigravity",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Added Saccharomyces cerevisiae S288C (NCBITaxon:559292) canonical example and budding-yeast gene symbols RFA1, RFA2, and RFA3 backed by Wold 1997 (PMID:9242902), resolving 3 reviewed Swiss-Prot protein_examples (UniProtKB:P22336, UniProtKB:P26754, and UniProtKB:P26755) across all three RPA subunit components.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:55Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2470: added Wold 1997 (PMID:9242902) literature evidence to rpa_70_kda_subunit, rpa_30_kda_subunit, and rpa_14_kda_subunit component and causal-graph edge evidence lists and expanded top-level PMID:9242902 note.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -212244,6 +212442,31 @@
       {
        "reference": "GO:0005662",
        "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+      },
+      {
+       "reference": "PMID:9242902",
+       "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa1p (RFA1, 70 kDa) subunit."
+      }
+     ],
+     "gene_symbols": [
+      "RFA1"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P22336",
+       "protein_label": "Replication factor A protein 1",
+       "gene_symbol": "RFA1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "The single reviewed UniProtKB entry for gene RFA1 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P22336",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P22336, the single reviewed entry for gene RFA1 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     },
@@ -212260,6 +212483,31 @@
       {
        "reference": "GO:0005662",
        "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+      },
+      {
+       "reference": "PMID:9242902",
+       "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa2p (RFA2, 30 kDa) subunit."
+      }
+     ],
+     "gene_symbols": [
+      "RFA2"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P26754",
+       "protein_label": "Replication factor A protein 2",
+       "gene_symbol": "RFA2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "The single reviewed UniProtKB entry for gene RFA2 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P26754",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P26754, the single reviewed entry for gene RFA2 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     },
@@ -212276,6 +212524,31 @@
       {
        "reference": "GO:0005662",
        "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+      },
+      {
+       "reference": "PMID:9242902",
+       "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa3p (RFA3, 14 kDa) subunit."
+      }
+     ],
+     "gene_symbols": [
+      "RFA3"
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P26755",
+       "protein_label": "Replication factor A protein 3",
+       "gene_symbol": "RFA3",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "The single reviewed UniProtKB entry for gene RFA3 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P26755",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P26755, the single reviewed entry for gene RFA3 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -212322,7 +212595,7 @@
     },
     {
      "reference": "PMID:9242902",
-     "notes": "PubMed identifier listed by GO:0005662 as its definition cross-reference."
+     "notes": "Wold MS 1997, 'Replication protein A: a heterotrimeric, single-stranded DNA-binding protein required for eukaryotic DNA metabolism', Annual Review of Biochemistry 66:61-92, listed by GO:0005662 as its definition cross-reference."
     }
    ],
    "causal_graphs": [
@@ -212375,6 +212648,10 @@
         {
          "reference": "GO:0005662",
          "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+        },
+        {
+         "reference": "PMID:9242902",
+         "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa1p (RFA1, 70 kDa) subunit."
         }
        ]
       },
@@ -212387,6 +212664,10 @@
         {
          "reference": "GO:0005662",
          "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+        },
+        {
+         "reference": "PMID:9242902",
+         "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa2p (RFA2, 30 kDa) subunit."
         }
        ]
       },
@@ -212399,6 +212680,10 @@
         {
          "reference": "GO:0005662",
          "notes": "GO:0005662 defines DNA replication factor A as a heterotrimeric eukaryotic complex composed of approximately 70, 30 and 14 kDa subunits."
+        },
+        {
+         "reference": "PMID:9242902",
+         "notes": "Wold MS 1997 (Annu Rev Biochem 66:61-92) reviews the eukaryotic heterotrimeric Replication Protein A complex and its Saccharomyces cerevisiae Rfa3p (RFA3, 14 kDa) subunit."
         }
        ]
       },
@@ -212441,6 +212726,14 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-27"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Model budding yeast in which heterotrimeric Replication Factor A (Rfa1p-Rfa2p-Rfa3p) single-stranded DNA binding and DNA replication functions were characterized.",
+     "reference": "PMID:9242902"
     }
    ]
   },
@@ -242209,6 +242502,13 @@
      "action": "CURATED_CAUSAL_GRAPHS",
      "changes": "Connected lolc, lold, and lole subunits to lolcde and linked lipoprotein_release to outer_membrane_lipoprotein_localization.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T20:32:20Z",
+     "curator": "antigravity",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Anchored causal_graphs#lolcde_lipoprotein_release node mature_outer_membrane_lipoprotein with verified Escherichia coli K-12 Swiss-Prot accessions UniProtKB:P69776 (lpp) and UniProtKB:P0A912 (pal) assayed in Yakushi et al. 2000 (PMID:10783239).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -242494,7 +242794,12 @@
       {
        "node_id": "mature_outer_membrane_lipoprotein",
        "label": "mature outer-membrane lipoprotein",
-       "node_type": "GENE_OR_PROTEIN"
+       "node_type": "GENE_OR_PROTEIN",
+       "xrefs": [
+        "UniProtKB:P69776",
+        "UniProtKB:P0A912"
+       ],
+       "description": "Triacylated outer-membrane-destined lipoprotein substrate lacking the inner-membrane Asp(+2) retention signal, exemplified in Escherichia coli K-12 by Lpp (UniProtKB:P69776) and Pal (UniProtKB:P0A912) assayed in Yakushi et al. 2000 (PMID:10783239)."
       },
       {
        "node_id": "inner_membrane",
@@ -341112,6 +341417,13 @@
      "action": "CURATED_CAUSAL_GRAPHS",
      "changes": "Connected eccc5_atpase_motor to esx5_membrane_complex and linked esx5_membrane_complex to protein_export.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T20:33:43Z",
+     "curator": "antigravity",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Anchored causal_graphs#esx5_membrane_complex_export node type_vii_substrates with verified Mycobacterium tuberculosis H37Rv Swiss-Prot accessions UniProtKB:P9WNJ3 (esxN/Rv1793), UniProtKB:I6X486 (PE25/Rv2431c), and UniProtKB:Q79FE1 (PPE41/Rv2430c) backed by Houben et al. 2014 (DOI:10.1016/j.bbamcr.2013.11.003).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -341437,7 +341749,13 @@
       {
        "node_id": "type_vii_substrates",
        "label": "ESX-5 type VII secretion substrates",
-       "node_type": "GENE_OR_PROTEIN"
+       "node_type": "GENE_OR_PROTEIN",
+       "xrefs": [
+        "UniProtKB:P9WNJ3",
+        "UniProtKB:I6X486",
+        "UniProtKB:Q79FE1"
+       ],
+       "description": "Mycobacterial proteins exported across the envelope by the ESX-5 secretion apparatus, exemplified in Mycobacterium tuberculosis H37Rv by EsxN (UniProtKB:P9WNJ3) and the PE25-PPE41 heterodimer (UniProtKB:I6X486, UniProtKB:Q79FE1) reviewed in Houben et al. 2014 (DOI:10.1016/j.bbamcr.2013.11.003)."
       },
       {
        "node_id": "protein_export",
@@ -343604,6 +343922,20 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T20:35:53Z",
+     "curator": "antigravity",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Anchored causal_graphs#abc_mfp_tolc_one_step_export node secretion_substrate with verified Escherichia coli Swiss-Prot accession UniProtKB:P09983 (hlyA, chromosomal hemolysin) backed by Delepelaire 2004 (DOI:10.1016/j.bbamcr.2004.05.001) and Kanonenberg et al. 2018 (DOI:10.1093/femsle/fny094).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T21:27:56Z",
+     "curator": "antigravity",
+     "action": "ADDRESS_REVIEW",
+     "changes": "Resolved #2471: aligned secretion_substrate node description and causal-graph edge evidence with Delepelaire 2004 (DOI:10.1016/j.bbamcr.2004.05.001) and Kanonenberg et al. 2018 (DOI:10.1093/femsle/fny094).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -343811,7 +344143,11 @@
       {
        "node_id": "secretion_substrate",
        "label": "C-terminal type I secretion substrate",
-       "node_type": "GENE_OR_PROTEIN"
+       "node_type": "GENE_OR_PROTEIN",
+       "xrefs": [
+        "UniProtKB:P09983"
+       ],
+       "description": "Unfolded C-terminal secretion-signal-bearing polypeptide substrate recognized by the inner-membrane ABC transporter and exported in one step through the tripartite tunnel, exemplified in Escherichia coli by chromosomal alpha-hemolysin HlyA (UniProtKB:P09983; DOI:10.1016/j.bbamcr.2004.05.001; DOI:10.1093/femsle/fny094)."
       },
       {
        "node_id": "t1ss",
@@ -343835,6 +344171,10 @@
         {
          "reference": "DOI:10.1093/femsle/fny094",
          "notes": "Kanonenberg et al. 2018 review the substrate signal and ABC transporter role in type I secretion."
+        },
+        {
+         "reference": "DOI:10.1016/j.bbamcr.2004.05.001",
+         "notes": "Delepelaire 2004 reviews recognition of C-terminal secretion signals on RTX substrates such as Escherichia coli HlyA by the type I ABC transporter."
         }
        ]
       },
@@ -343883,6 +344223,10 @@
         {
          "reference": "DOI:10.1016/j.bbamcr.2004.05.001",
          "notes": "Delepelaire 2004 reviews type I secretion as direct export from the cytoplasm to the external medium."
+        },
+        {
+         "reference": "DOI:10.1093/femsle/fny094",
+         "notes": "Kanonenberg et al. 2018 review one-step type I secretion of RTX substrates such as Escherichia coli HlyA across both membranes."
         }
        ]
       }

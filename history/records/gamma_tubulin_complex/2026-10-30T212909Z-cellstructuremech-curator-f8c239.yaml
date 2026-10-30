@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/gamma_tubulin_complex.yaml
+  slug: gamma_tubulin_complex
+session:
+  id: 2026-10-30T212909Z-cellstructuremech-curator-f8c239
+  timestamp: '2026-10-30T21:29:09Z'
+  actors:
+  - type: ai_agent
+    name: cellstructuremech-curator
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2470
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2469
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - causal_graphs
+  - curation_history
+  summary: Add Jaspersen and Winey 2004 evidence to gcp2_gcp3_spoke_subunits and assembly
+    edge
+  details: 'Resolved #2470 by adding Jaspersen & Winey 2004 (DOI:10.1146/annurev.cellbio.20.022003.114106)
+    literature evidence for budding-yeast Spc97 (SPC97) and Spc98 (SPC98) to gcp2_gcp3_spoke_subunits
+    component and assembly edge evidence.'

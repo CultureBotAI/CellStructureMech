@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/gamma_tubulin_small_complex.yaml
+  slug: gamma_tubulin_small_complex
+session:
+  id: 2026-10-30T203826Z-cellstructuremech-curator-1a3dba
+  timestamp: '2026-10-30T20:38:26Z'
+  actors:
+  - type: ai_agent
+    name: cellstructuremech-curator
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - components
+  - curation_history
+  summary: Add Saccharomyces cerevisiae S288C canonical example and reviewed Swiss-Prot protein_examples
+    for Tub4/Spc97/Spc98
+  details: Added Saccharomyces cerevisiae S288C (NCBITaxon:559292, backed by Jaspersen & Winey
+    2004 DOI:10.1146/annurev.cellbio.20.022003.114106) to canonical_examples and seeded reviewed
+    Swiss-Prot protein_examples on gamma_tubulin_subunit (TUB4 -> UniProtKB:P53378) and gcp2_gcp3_spoke_subunits
+    (SPC97 -> UniProtKB:P38863, SPC98 -> UniProtKB:P53540), converting both causal_graphs
+    GENE_OR_PROTEIN nodes from PARTIAL_EXAMPLES to COVERED.
