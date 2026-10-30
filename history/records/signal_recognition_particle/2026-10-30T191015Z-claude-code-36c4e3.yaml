@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/signal_recognition_particle.yaml
+  slug: signal_recognition_particle
+session:
+  id: 2026-10-30T191015Z-claude-code-36c4e3
+  timestamp: '2026-10-30T19:10:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2468
+  prs:
+  - https://github.com/CultureBotAI/CellStructureMech/pull/2467
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Fix bacterial SRP assembly edge DOI-to-author attributions (#2468)
+  details: 'Resolved PR #2467 review issue #2468 by matching DOI:10.1016/j.bbamcr.2013.10.013
+    (Saraogi and Shan 2014), DOI:10.1146/annurev-biochem-072711-164732 (Akopian et al. 2013),
+    and DOI:10.1093/emboj/16.16.4880 (Powers and Walter 1997) to their exact author attributions
+    on the bacterial_srp assembly edges.'

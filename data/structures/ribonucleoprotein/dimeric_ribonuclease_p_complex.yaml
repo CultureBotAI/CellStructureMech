@@ -34,6 +34,13 @@ curation_history:
   changes: Connected rnase_p_rna and rnpa_protein to dimeric_rnase_p and linked dimeric_rnase_p
     to ribonuclease_p_activity.
   llm_assisted: true
+- timestamp: '2026-10-30T19:09:23Z'
+  curator: claude-opus-4-6
+  action: REVIEW_FIX
+  changes: 'Resolved PR #2467 review issue #2468 by correcting GO:0030680 and Kazantsev
+    and Pace 2006 stoichiometry notes on the rnase_p_rna and rnpa_protein subunit-to-complex
+    edges.'
+  llm_assisted: true
 synonyms:
 - synonym_text: dimeric RNase P complex
   synonym_type: EXACT_SYNONYM
@@ -241,11 +248,11 @@ causal_graphs:
       of the bacterial dimeric ribonuclease P ribonucleoprotein complex.
     evidence:
     - reference: GO:0030680
-      notes: GO:0030680 defines the dimeric ribonuclease P complex composed of two
-        RNase P RNA molecules and two protein subunits.
+      notes: GO:0030680 defines the dimeric ribonuclease P complex by one RNA molecule
+        and one protein molecule.
     - reference: DOI:10.1038/nrmicro1491
-      notes: Kazantsev and Pace 2006 reviewed bacterial RNase P holoenzyme composition
-        and dimerization of the RNA-RnpA heterodimer.
+      notes: Kazantsev and Pace 2006 reviewed the two-component bacterial RNase P
+        ribonucleoprotein holoenzyme composed of one RNase P RNA and one RnpA protein.
   - subject: rnpa_protein
     predicate: contributes to
     object: dimeric_rnase_p
@@ -253,11 +260,11 @@ causal_graphs:
       bacterial dimeric ribonuclease P ribonucleoprotein complex.
     evidence:
     - reference: GO:0030680
-      notes: GO:0030680 defines the dimeric ribonuclease P complex composed of two
-        RNase P RNA molecules and two protein subunits.
+      notes: GO:0030680 defines the dimeric ribonuclease P complex by one RNA molecule
+        and one protein molecule.
     - reference: DOI:10.1038/nrmicro1491
-      notes: Kazantsev and Pace 2006 reviewed bacterial RNase P holoenzyme composition
-        and dimerization of the RNA-RnpA heterodimer.
+      notes: Kazantsev and Pace 2006 reviewed the two-component bacterial RNase P
+        ribonucleoprotein holoenzyme composed of one RNase P RNA and one RnpA protein.
   - subject: dimeric_rnase_p
     predicate: enables
     object: ribonuclease_p_activity

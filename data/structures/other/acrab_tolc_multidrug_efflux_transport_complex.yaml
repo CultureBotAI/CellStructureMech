@@ -31,8 +31,8 @@ curation_history:
 - timestamp: '2026-10-30T18:22:37Z'
   curator: claude-opus-4-6
   action: CURATED_CAUSAL_GRAPHS
-  changes: Connected tripartite efflux subunits to acrab_tolc and linked xenobiotic_transport
-    to outer_membrane_export.
+  changes: Connected AcrA, AcrB, and TolC subunit nodes to the AcrAB-TolC complex
+    node in the function causal graph.
   llm_assisted: true
 parent_structures:
 - GO:1990281

@@ -53,6 +53,14 @@ curation_history:
   changes: Connected srp_rna and ffh_srp54_gtpase to the bacterial_srp structure node
     in bacterial_srp_membrane_targeting.
   llm_assisted: true
+- timestamp: '2026-10-30T19:09:24Z'
+  curator: claude-opus-4-6
+  action: REVIEW_FIX
+  changes: 'Resolved PR #2467 review issue #2468 by matching DOI:10.1016/j.bbamcr.2013.10.013
+    (Saraogi and Shan 2014), DOI:10.1146/annurev-biochem-072711-164732 (Akopian et
+    al. 2013), and DOI:10.1093/emboj/16.16.4880 (Powers and Walter 1997) to their
+    exact author attributions on the bacterial_srp assembly edges.'
+  llm_assisted: true
 synonyms:
 - synonym_text: SRP
   synonym_type: EXACT_SYNONYM
@@ -258,11 +266,14 @@ causal_graphs:
       component of the bacterial signal recognition particle.
     evidence:
     - reference: DOI:10.1016/j.bbamcr.2013.10.013
-      notes: Akopian et al. 2013 reviewed the composition and mechanism of the bacterial
+      notes: Saraogi and Shan 2014 reviewed the composition and mechanism of the bacterial
         4.5S RNA-Ffh signal recognition particle.
+    - reference: DOI:10.1146/annurev-biochem-072711-164732
+      notes: Akopian et al. 2013 reviewed the conserved SRP RNA and SRP54/Ffh ribonucleoprotein
+        core of the signal recognition particle.
     - reference: DOI:10.1093/emboj/16.16.4880
-      notes: Jagath et al. 1997 characterized assembly of E. coli 4.5S SRP RNA and
-        Ffh into the functional SRP complex.
+      notes: Powers and Walter 1997 reconstituted co-translational protein targeting
+        using the E. coli 4.5S SRP RNA and Ffh signal recognition particle.
   - subject: ffh_srp54_gtpase
     predicate: contributes to
     object: bacterial_srp
@@ -270,11 +281,14 @@ causal_graphs:
       structural and functional component of the bacterial signal recognition particle.
     evidence:
     - reference: DOI:10.1016/j.bbamcr.2013.10.013
-      notes: Akopian et al. 2013 reviewed the composition and mechanism of the bacterial
+      notes: Saraogi and Shan 2014 reviewed the composition and mechanism of the bacterial
         4.5S RNA-Ffh signal recognition particle.
+    - reference: DOI:10.1146/annurev-biochem-072711-164732
+      notes: Akopian et al. 2013 reviewed the conserved SRP RNA and SRP54/Ffh ribonucleoprotein
+        core of the signal recognition particle.
     - reference: DOI:10.1093/emboj/16.16.4880
-      notes: Jagath et al. 1997 characterized assembly of E. coli 4.5S SRP RNA and
-        Ffh into the functional SRP complex.
+      notes: Powers and Walter 1997 reconstituted co-translational protein targeting
+        using the E. coli 4.5S SRP RNA and Ffh signal recognition particle.
 discussions:
 - discussion_id: resolve_srp_component_groundings
   prompt: Resolve exact source-neutral InterPro, Pfam or NCBIfam groundings for Ffh/SRP54

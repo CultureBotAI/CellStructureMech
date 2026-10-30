@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1008,
- "corpus_updated": "2026-10-30 18:22:38 UTC",
- "corpus_digest": "b9f3d789098b",
+ "corpus_updated": "2026-10-30 19:09:24 UTC",
+ "corpus_digest": "147521c48433",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -182328,7 +182328,7 @@
      "timestamp": "2026-10-30T18:22:37Z",
      "curator": "claude-opus-4-6",
      "action": "CURATED_CAUSAL_GRAPHS",
-     "changes": "Connected tripartite efflux subunits to acrab_tolc and linked xenobiotic_transport to outer_membrane_export.",
+     "changes": "Connected AcrA, AcrB, and TolC subunit nodes to the AcrAB-TolC complex node in the function causal graph.",
      "llm_assisted": true
     }
    ],
@@ -318123,6 +318123,13 @@
      "action": "CURATED_CAUSAL_GRAPHS",
      "changes": "Connected rnase_p_rna and rnpa_protein to dimeric_rnase_p and linked dimeric_rnase_p to ribonuclease_p_activity.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T19:09:23Z",
+     "curator": "claude-opus-4-6",
+     "action": "REVIEW_FIX",
+     "changes": "Resolved PR #2467 review issue #2468 by correcting GO:0030680 and Kazantsev and Pace 2006 stoichiometry notes on the rnase_p_rna and rnpa_protein subunit-to-complex edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -318417,11 +318424,11 @@
        "evidence": [
         {
          "reference": "GO:0030680",
-         "notes": "GO:0030680 defines the dimeric ribonuclease P complex composed of two RNase P RNA molecules and two protein subunits."
+         "notes": "GO:0030680 defines the dimeric ribonuclease P complex by one RNA molecule and one protein molecule."
         },
         {
          "reference": "DOI:10.1038/nrmicro1491",
-         "notes": "Kazantsev and Pace 2006 reviewed bacterial RNase P holoenzyme composition and dimerization of the RNA-RnpA heterodimer."
+         "notes": "Kazantsev and Pace 2006 reviewed the two-component bacterial RNase P ribonucleoprotein holoenzyme composed of one RNase P RNA and one RnpA protein."
         }
        ]
       },
@@ -318433,11 +318440,11 @@
        "evidence": [
         {
          "reference": "GO:0030680",
-         "notes": "GO:0030680 defines the dimeric ribonuclease P complex composed of two RNase P RNA molecules and two protein subunits."
+         "notes": "GO:0030680 defines the dimeric ribonuclease P complex by one RNA molecule and one protein molecule."
         },
         {
          "reference": "DOI:10.1038/nrmicro1491",
-         "notes": "Kazantsev and Pace 2006 reviewed bacterial RNase P holoenzyme composition and dimerization of the RNA-RnpA heterodimer."
+         "notes": "Kazantsev and Pace 2006 reviewed the two-component bacterial RNase P ribonucleoprotein holoenzyme composed of one RNase P RNA and one RnpA protein."
         }
        ]
       },
@@ -327392,6 +327399,13 @@
      "action": "CURATED_CAUSAL_GRAPHS",
      "changes": "Connected rnase_mrp_rna, shared_rnase_p_mrp_protein_subunits, and mrp_specific_protein_subunits to ribonuclease_mrp_complex and linked the complex to ribonuclease_mrp_activity.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T19:09:24Z",
+     "curator": "claude-opus-4-6",
+     "action": "REVIEW_FIX",
+     "changes": "Resolved PR #2467 review issue #2468 by aligning Aspinall et al. 2007 (DOI:10.1093/nar/gkm553) and Esakova and Krasilnikov 2010 (DOI:10.1261/rna.2214510) edge citations and softening the rnase_mrp_rna edge description consistently with #1487.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -327899,14 +327913,18 @@
        "subject": "rnase_mrp_rna",
        "predicate": "contributes to",
        "object": "ribonuclease_mrp_complex",
-       "description": "The NME1 catalytic RNase MRP RNA scaffold assemble into the eukaryotic ribonuclease MRP ribonucleoprotein complex.",
+       "description": "The NME1 RNase MRP RNA component assembles into the eukaryotic ribonuclease MRP ribonucleoprotein complex.",
        "evidence": [
         {
          "reference": "GO:0000172",
-         "notes": "GO:0000172 defines the ribonuclease MRP complex as a multimeric ribonucleoprotein containing the catalytic RNA and protein subunits."
+         "notes": "GO:0000172 defines the ribonuclease MRP complex as a multimeric ribonucleoprotein containing the RNase MRP RNA and protein subunits."
         },
         {
          "reference": "DOI:10.1093/nar/gkm553",
+         "notes": "Aspinall et al. 2007 mapped subunit interactions assembling NME1 MRP RNA with shared and MRP-specific proteins in S. cerevisiae RNase MRP."
+        },
+        {
+         "reference": "DOI:10.1261/rna.2214510",
          "notes": "Esakova and Krasilnikov 2010 reviewed yeast RNase MRP RNA and its shared and MRP-specific protein subunits."
         }
        ]
@@ -327919,10 +327937,14 @@
        "evidence": [
         {
          "reference": "GO:0000172",
-         "notes": "GO:0000172 defines the ribonuclease MRP complex as a multimeric ribonucleoprotein containing the catalytic RNA and protein subunits."
+         "notes": "GO:0000172 defines the ribonuclease MRP complex as a multimeric ribonucleoprotein containing the RNase MRP RNA and protein subunits."
         },
         {
          "reference": "DOI:10.1093/nar/gkm553",
+         "notes": "Aspinall et al. 2007 mapped subunit interactions assembling S. cerevisiae RNase MRP shared and MRP-specific proteins with MRP RNA."
+        },
+        {
+         "reference": "DOI:10.1261/rna.2214510",
          "notes": "Esakova and Krasilnikov 2010 reviewed yeast RNase MRP RNA and its shared and MRP-specific protein subunits."
         }
        ]
@@ -327935,10 +327957,14 @@
        "evidence": [
         {
          "reference": "GO:0000172",
-         "notes": "GO:0000172 defines the ribonuclease MRP complex as a multimeric ribonucleoprotein containing the catalytic RNA and protein subunits."
+         "notes": "GO:0000172 defines the ribonuclease MRP complex as a multimeric ribonucleoprotein containing the RNase MRP RNA and protein subunits."
         },
         {
          "reference": "DOI:10.1093/nar/gkm553",
+         "notes": "Aspinall et al. 2007 mapped subunit interactions assembling S. cerevisiae RNase MRP shared and MRP-specific proteins with MRP RNA."
+        },
+        {
+         "reference": "DOI:10.1261/rna.2214510",
          "notes": "Esakova and Krasilnikov 2010 reviewed yeast RNase MRP RNA and its shared and MRP-specific protein subunits."
         }
        ]
@@ -327954,7 +327980,7 @@
          "notes": "GO:0000172 defines the ribonuclease MRP complex and its endoribonuclease role in pre-rRNA processing."
         },
         {
-         "reference": "DOI:10.1093/nar/gkm553",
+         "reference": "DOI:10.1261/rna.2214510",
          "notes": "Esakova and Krasilnikov 2010 reviewed the catalytic activity of the assembled RNase MRP holoenzyme."
         }
        ]
@@ -330366,6 +330392,13 @@
      "action": "CURATED_CAUSAL_GRAPHS",
      "changes": "Connected srp_rna and ffh_srp54_gtpase to the bacterial_srp structure node in bacterial_srp_membrane_targeting.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T19:09:24Z",
+     "curator": "claude-opus-4-6",
+     "action": "REVIEW_FIX",
+     "changes": "Resolved PR #2467 review issue #2468 by matching DOI:10.1016/j.bbamcr.2013.10.013 (Saraogi and Shan 2014), DOI:10.1146/annurev-biochem-072711-164732 (Akopian et al. 2013), and DOI:10.1093/emboj/16.16.4880 (Powers and Walter 1997) to their exact author attributions on the bacterial_srp assembly edges.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -330640,11 +330673,15 @@
        "evidence": [
         {
          "reference": "DOI:10.1016/j.bbamcr.2013.10.013",
-         "notes": "Akopian et al. 2013 reviewed the composition and mechanism of the bacterial 4.5S RNA-Ffh signal recognition particle."
+         "notes": "Saraogi and Shan 2014 reviewed the composition and mechanism of the bacterial 4.5S RNA-Ffh signal recognition particle."
+        },
+        {
+         "reference": "DOI:10.1146/annurev-biochem-072711-164732",
+         "notes": "Akopian et al. 2013 reviewed the conserved SRP RNA and SRP54/Ffh ribonucleoprotein core of the signal recognition particle."
         },
         {
          "reference": "DOI:10.1093/emboj/16.16.4880",
-         "notes": "Jagath et al. 1997 characterized assembly of E. coli 4.5S SRP RNA and Ffh into the functional SRP complex."
+         "notes": "Powers and Walter 1997 reconstituted co-translational protein targeting using the E. coli 4.5S SRP RNA and Ffh signal recognition particle."
         }
        ]
       },
@@ -330656,11 +330693,15 @@
        "evidence": [
         {
          "reference": "DOI:10.1016/j.bbamcr.2013.10.013",
-         "notes": "Akopian et al. 2013 reviewed the composition and mechanism of the bacterial 4.5S RNA-Ffh signal recognition particle."
+         "notes": "Saraogi and Shan 2014 reviewed the composition and mechanism of the bacterial 4.5S RNA-Ffh signal recognition particle."
+        },
+        {
+         "reference": "DOI:10.1146/annurev-biochem-072711-164732",
+         "notes": "Akopian et al. 2013 reviewed the conserved SRP RNA and SRP54/Ffh ribonucleoprotein core of the signal recognition particle."
         },
         {
          "reference": "DOI:10.1093/emboj/16.16.4880",
-         "notes": "Jagath et al. 1997 characterized assembly of E. coli 4.5S SRP RNA and Ffh into the functional SRP complex."
+         "notes": "Powers and Walter 1997 reconstituted co-translational protein targeting using the E. coli 4.5S SRP RNA and Ffh signal recognition particle."
         }
        ]
       }
