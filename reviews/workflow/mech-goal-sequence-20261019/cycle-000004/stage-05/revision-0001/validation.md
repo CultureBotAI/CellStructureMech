@@ -1,7 +1,7 @@
 # Cycle 4 Stage 5 — Validation Summary
 
 - **Remediation Commit:** `31fd33d9556ea5627b36d50ab608ccb9464f9353`
-- **Post-Remediation Structured Review Bundle:** `reviews/structured/20261030T122500Z-c4-stage5-remediation-verification/review.yaml` (`sha256: 365e0031d408fab726567421544c37fa3483fb77755e9405c9cfde87e1ec6857`)
+- **Post-Remediation Structured Review Bundle:** `reviews/structured/20261030T122500Z-c4-stage5-remediation-verification/review.yaml` (`sha256: 92b533c9903987b0e70e1d7ebbe188fe7880d52cfa63b4379c7310a8cb29aa4f`)
 
 ## Validation Gates Executed
 
@@ -20,4 +20,4 @@
 
 ## Immutability Verification of Stage 4 Review Artifacts
 
-All 12 Stage 4 structured review bundles (`20261030T071001Z-ftsqbl-complex-parent-partof-duplication` through `20261030T071012Z-secretion-system-category-review`) and `reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml` (`sha256: 898a10c8ecaef3546e1c415c2f64dbb2a33cc62161793db073d6866f7f1ca5aa`) remain byte-identical.
+All 11 Stage 4 structured review bundles (`20261030T082001Z-ftsqbl-complex-parent-partof-duplication` through `20261030T082011Z-secretion-system-category-review`) and `reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml` (`sha256: 898a10c8ecaef3546e1c415c2f64dbb2a33cc62161793db073d6866f7f1ca5aa`) remain byte-identical.

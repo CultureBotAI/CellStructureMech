@@ -11,7 +11,7 @@
 
 ## Summary
 
-Fresh post-remediation review of all 19 CellStructureRecord YAML files modified in Cycle 4 Stage 5 (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353) resolving all 13 open findings carried forward from Cycle 4 Stage 4 across issues #2461 (hierarchy, parthood, and subcomplex has_part links in ftsqbl_complex, mis12_mind_type_complex, cytostome, supraspliceosomal_complex, and cell_envelope_sec_protein_transport_complex), #2462 (component_type: PROTEIN_COMPLEX for 10 heteromeric subcomplex components across 8 records, structured has_part links in phycobilisome, anammoxosome, and micos_complex, and publication year reconciliation in box_c_d_methylation_guide_snornp_complex and box_c_d_rnp_complex), and #2463 (causal_graphs STRUCTURE node component_ref alignment in bacterial_type_flagellum and carboxysome plus archaeal flagellar filament has_part GO:0097592 in archaeal_type_flagellum). All 19 records pass strict validation, ID-label correspondence, UniProt verification, offline CURIE cache check, history ledger validation, and page regeneration checks with zero open findings.
+Fresh post-remediation review of all 19 CellStructureRecord YAML files modified in Cycle 4 Stage 5 (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353) resolving all 13 open findings carried forward from Cycle 4 Stage 4 across issues #2461 (hierarchy, parthood, and subcomplex has_part links in ftsqbl_complex, mis12_mind_type_complex, cytostome, supraspliceosomal_complex, and cell_envelope_sec_protein_transport_complex), #2462 (component_type: PROTEIN_COMPLEX for 8 multi-subunit subcomplex components across 8 records, reciprocal has_part links in phycobilisome, anammoxosome, and micos_complex, and decoupled single-PMID protein_examples evidence notes in box_c_d_rnp_complex), and #2463 (removal of monomer component_ref bindings from composite STRUCTURE causal-graph nodes in bacterial_type_flagellum and carboxysome plus reciprocal has_part links to filament and motor records in archaeal_type_flagellum). All 19 records pass strict validation, ID-label correspondence, UniProt verification, offline CURIE cache check, history ledger validation, and page regeneration checks with zero open findings.
 
 ## Scope And Provenance
 
@@ -51,7 +51,7 @@ Working-tree hashes do not imply those bytes were committed.
 | Strict corpus validation covering all 19 remediated records | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All 1001 corpus records including the 19 remediated records pass strict LinkML and semantic validation with 0 errors. |
 | ID-label correspondence across corpus and generated products | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All ontology ID-label pairs across the corpus (4103 canonical, 50 synonym, 6 exception) correspond to authoritative ontology labels. |
 | UniProtKB protein_examples and causal_graphs xref verification | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All UniProtKB protein_examples and causal_graphs xrefs across the corpus pass verification. |
-| Offline CURIE liveness check across corpus | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All 5858 resolved CURIEs (including newly added GO:0000940, GO:0005886, GO:0031523, GO:0030090, GO:0097592, and cellstructuremech: subcomplex links) pass offline liveness verification. |
+| Offline CURIE liveness check across corpus | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All 5858 resolved CURIEs (including newly added GO:0032991, GO:0110165, GO:1990904, and cellstructuremech: subcomplex has_part links) pass offline liveness verification. |
 | Repository history link and LinkML HistoryRecord validation | passed | True | GO:0097589, GO:0009288, GO:0036286, cellstructuremech:elongasome, GO:1990587, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0031470, GO:0031910, GO:0032126, GO:0061617, GO:0000444, GO:0000407, GO:0031428, GO:0170049, GO:0044530, GO:0031522 | All 2101 repository history files (including the 19 newly added Cycle 4 Stage 5 history ledger records) pass link and LinkML HistoryRecord schema validation. |
 
 ## Scientific And Domain Assessments
@@ -60,19 +60,19 @@ Working-tree hashes do not imply those bytes were committed.
 
 consistency: supported. Targets: GO:1990587, GO:0000444, GO:0031910, GO:0044530, GO:0031522.
 
-All 5 records in Group 1 (#2461) cleanly separate is-a (parent_structures) and parthood (part_of / has_part): ftsqbl_complex.yaml removes GO:0032153 (cell division site) from parent_structures while retaining it in part_of and GO:0098797 in parent_structures; mis12_mind_type_complex.yaml replaces broad GO:0000776 (kinetochore) in part_of with GO:0000940 (condensed chromosome outer kinetochore); cytostome.yaml adds GO:0005886 (plasma membrane) to part_of; supraspliceosomal_complex.yaml moves GO:0005681 (spliceosomal complex) from parent_structures to has_part alongside GO:0120114 (Sm-like protein family complex) in parent_structures; and cell_envelope_sec_protein_transport_complex.yaml adds GO:0031523 (plasma membrane Sec complex) to has_part.
+All 5 records in Group 1 (#2461) cleanly separate is-a (parent_structures) and parthood (part_of / has_part): ftsqbl_complex.yaml removes duplicate part_of: [GO:1990586] (divisome complex) so GO:1990586 is retained solely in parent_structures alongside has_part: [GO:1990588]; mis12_mind_type_complex.yaml replaces parent_structures: [GO:0000940] (outer kinetochore) with parent_structures: [GO:0032991] (protein-containing complex), moves GO:0000940 to part_of alongside GO:0000776 (part_of: [GO:0000940, GO:0000776]), adds top-level evidence for GO:0032991, and changes causal_graphs[0].edges[0].predicate (mis12_mind -&gt; outer_kinetochore) from 'is a' to 'is part of'; cytostome.yaml moves GO:0005886 (plasma membrane) from parent_structures to part_of: [GO:0005886], sets parent_structures: [GO:0110165] (cellular anatomical structure), and adds top-level evidence for GO:0110165; supraspliceosomal_complex.yaml replaces parent_structures: [GO:0005681] with parent_structures: [GO:1990904] (ribonucleoprotein complex), moves GO:0005681 (spliceosomal complex) to has_part: [GO:0005681] while retaining part_of: [GO:0005654] (nucleoplasm), and updates top-level evidence notes for GO:1990904 and GO:0005681; and cell_envelope_sec_protein_transport_complex.yaml adds has_part: [cellstructuremech:secyeg_translocon_complex] as the reciprocal parthood link to secyeg_translocon_complex.yaml.
 
-### PROTEIN_COMPLEX typing for heteromeric subcomplexes, structured has_part links, and bibliographic note alignment (#2462)
+### PROTEIN_COMPLEX typing for multi-subunit subcomplexes, reciprocal has_part links, and single-PMID evidence notes (#2462)
 
 representation: supported. Targets: GO:0036286, cellstructuremech:elongasome, GO:0030089, GO:0044222, GO:0020015, GO:0005794, GO:0000407, GO:0032126, GO:0061617, GO:0031428, GO:0170049.
 
-All 10 heteromeric subcomplex components across 8 records in Group 2 (#2462) now use component_type: PROTEIN_COMPLEX (pil1_lsp1_bar_domain_core in eisosome_filament.yaml and eisosome.yaml; mrec_mred_scaffold_subcomplex in elongasome.yaml; allophycocyanin_core_cylinders in phycobilisome.yaml; pex14_pex13_docking_subcomplex and pex5_pex7_pts_receptor_complex in glycosome.yaml; coat_vesicle_trafficking_machinery in golgi_apparatus.yaml; atg1_kinase_initiation_complex and atg12_atg5_atg16_lipidation_machinery in phagophore_assembly_site.yaml; and nop1_nop56_nop58_snu13_core in box_c_d_methylation_guide_snornp_complex.yaml); phycobilisome.yaml adds GO:0030090 (phycobilisome core) to has_part; anammoxosome.yaml adds GO:0009324 (nitrite oxidoreductase complex), cellstructuremech:hydrazine_synthase_complex, and cellstructuremech:hydrazine_dehydrogenase_complex to has_part; micos_complex.yaml adds cellstructuremech:mic60_mic19_subcomplex and cellstructuremech:mic10_subcomplex to has_part; and box_c_d_methylation_guide_snornp_complex.yaml and box_c_d_rnp_complex.yaml align PMID:10339557 notes to Lafontaine DLJ &amp; Tollervey D 1999 (RNA).
+All 8 multi-subunit subcomplex components across 8 records in Group 2 (#2462) now use component_type: PROTEIN_COMPLEX (pil1_lsp1_bar_core in eisosome_filament.yaml and eisosome.yaml; mrec_mred in elongasome.yaml; allophycocyanin_core in phycobilisome.yaml; peroxin_import_machinery in glycosome.yaml; golgi_snare_trafficking_machinery in golgi_apparatus.yaml; phagophore_assembly_site_atg_machinery in phagophore_assembly_site.yaml; and nop1_nop56_nop58_snu13_core in box_c_d_methylation_guide_snornp_complex.yaml); phycobilisome.yaml adds has_part: [cellstructuremech:phycobilisome_core, cellstructuremech:phycobilisome_rod]; anammoxosome.yaml adds has_part: [cellstructuremech:anammoxosome_membrane]; micos_complex.yaml adds has_part: [cellstructuremech:mic10_subcomplex, cellstructuremech:mic60_mic19_complex]; and box_c_d_rnp_complex.yaml decouples the concatenated two-paper .notes strings on components[1].protein_examples[1] (UniProtKB:Q12460, NOP56, PMID:9632712 -&gt; Wu P et al. 1998 J Biol Chem) and components[1].protein_examples[2] (UniProtKB:Q12499, NOP58, PMID:9372940 -&gt; Gautier T et al. 1997 Mol Cell Biol).
 
-### Causal graph STRUCTURE node component_ref alignment and archaeal flagellum filament has_part (#2463)
+### Causal graph STRUCTURE node component_ref alignment and archaeal flagellum has_part links (#2463)
 
 graph: supported. Targets: GO:0097589, GO:0009288, GO:0031470.
 
-All 3 records in Group 3 (#2463) cleanly distinguish whole-substructure STRUCTURE nodes from single-subunit PROTEIN components: bacterial_type_flagellum.yaml removes component_ref: fliC from node_id: filament (GO:0009420) in flagellum_torque_generation; carboxysome.yaml removes component_ref: bmc_h from node_id: shell (GO:0031472) in carboxysome_co2_concentrating; and archaeal_type_flagellum.yaml adds GO:0097592 (archaeal-type flagellum filament) to has_part.
+All 3 records in Group 3 (#2463) cleanly distinguish composite STRUCTURE nodes from monomer PROTEIN components and complete reciprocal child parthood: bacterial_type_flagellum.yaml removes component_ref: flagellin from node_id: filament (GO:0009420) in flagellum_torque_generation; carboxysome.yaml removes component_ref: bmc_h from node_id: shell in carboxysome_co2_concentrating; and archaeal_type_flagellum.yaml adds has_part: [cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor].
 
 ## Findings
 
@@ -129,14 +129,14 @@ summary: 'Fresh post-remediation review of all 19 CellStructureRecord YAML files
   13 open findings carried forward from Cycle 4 Stage 4 across issues #2461 (hierarchy,
   parthood, and subcomplex has_part links in ftsqbl_complex, mis12_mind_type_complex,
   cytostome, supraspliceosomal_complex, and cell_envelope_sec_protein_transport_complex),
-  #2462 (component_type: PROTEIN_COMPLEX for 10 heteromeric subcomplex components
-  across 8 records, structured has_part links in phycobilisome, anammoxosome, and
-  micos_complex, and publication year reconciliation in box_c_d_methylation_guide_snornp_complex
-  and box_c_d_rnp_complex), and #2463 (causal_graphs STRUCTURE node component_ref
-  alignment in bacterial_type_flagellum and carboxysome plus archaeal flagellar filament
-  has_part GO:0097592 in archaeal_type_flagellum). All 19 records pass strict validation,
-  ID-label correspondence, UniProt verification, offline CURIE cache check, history
-  ledger validation, and page regeneration checks with zero open findings.'
+  #2462 (component_type: PROTEIN_COMPLEX for 8 multi-subunit subcomplex components
+  across 8 records, reciprocal has_part links in phycobilisome, anammoxosome, and
+  micos_complex, and decoupled single-PMID protein_examples evidence notes in box_c_d_rnp_complex),
+  and #2463 (removal of monomer component_ref bindings from composite STRUCTURE causal-graph
+  nodes in bacterial_type_flagellum and carboxysome plus reciprocal has_part links
+  to filament and motor records in archaeal_type_flagellum). All 19 records pass strict
+  validation, ID-label correspondence, UniProt verification, offline CURIE cache check,
+  history ledger validation, and page regeneration checks with zero open findings.'
 source:
   git_revision: 31fd33d9556ea5627b36d50ab608ccb9464f9353
   state: git_commit
@@ -598,9 +598,9 @@ checks:
   name: Offline CURIE liveness check across corpus
   status: passed
   required: true
-  summary: 'All 5858 resolved CURIEs (including newly added GO:0000940, GO:0005886,
-    GO:0031523, GO:0030090, GO:0097592, and cellstructuremech: subcomplex links) pass
-    offline liveness verification.'
+  summary: 'All 5858 resolved CURIEs (including newly added GO:0032991, GO:0110165,
+    GO:1990904, and cellstructuremech: subcomplex has_part links) pass offline liveness
+    verification.'
   target_ids:
   - GO:0097589
   - GO:0009288
@@ -707,14 +707,22 @@ assessments:
   topic: Hierarchy, parthood, and subcomplex has_part disambiguation (#2461)
   outcome: supported
   summary: 'All 5 records in Group 1 (#2461) cleanly separate is-a (parent_structures)
-    and parthood (part_of / has_part): ftsqbl_complex.yaml removes GO:0032153 (cell
-    division site) from parent_structures while retaining it in part_of and GO:0098797
-    in parent_structures; mis12_mind_type_complex.yaml replaces broad GO:0000776 (kinetochore)
-    in part_of with GO:0000940 (condensed chromosome outer kinetochore); cytostome.yaml
-    adds GO:0005886 (plasma membrane) to part_of; supraspliceosomal_complex.yaml moves
-    GO:0005681 (spliceosomal complex) from parent_structures to has_part alongside
-    GO:0120114 (Sm-like protein family complex) in parent_structures; and cell_envelope_sec_protein_transport_complex.yaml
-    adds GO:0031523 (plasma membrane Sec complex) to has_part.'
+    and parthood (part_of / has_part): ftsqbl_complex.yaml removes duplicate part_of:
+    [GO:1990586] (divisome complex) so GO:1990586 is retained solely in parent_structures
+    alongside has_part: [GO:1990588]; mis12_mind_type_complex.yaml replaces parent_structures:
+    [GO:0000940] (outer kinetochore) with parent_structures: [GO:0032991] (protein-containing
+    complex), moves GO:0000940 to part_of alongside GO:0000776 (part_of: [GO:0000940,
+    GO:0000776]), adds top-level evidence for GO:0032991, and changes causal_graphs[0].edges[0].predicate
+    (mis12_mind -> outer_kinetochore) from ''is a'' to ''is part of''; cytostome.yaml
+    moves GO:0005886 (plasma membrane) from parent_structures to part_of: [GO:0005886],
+    sets parent_structures: [GO:0110165] (cellular anatomical structure), and adds
+    top-level evidence for GO:0110165; supraspliceosomal_complex.yaml replaces parent_structures:
+    [GO:0005681] with parent_structures: [GO:1990904] (ribonucleoprotein complex),
+    moves GO:0005681 (spliceosomal complex) to has_part: [GO:0005681] while retaining
+    part_of: [GO:0005654] (nucleoplasm), and updates top-level evidence notes for
+    GO:1990904 and GO:0005681; and cell_envelope_sec_protein_transport_complex.yaml
+    adds has_part: [cellstructuremech:secyeg_translocon_complex] as the reciprocal
+    parthood link to secyeg_translocon_complex.yaml.'
   target_ids:
   - GO:1990587
   - GO:0000444
@@ -727,22 +735,22 @@ assessments:
   - ev_curies_c4_stage5
 - assessment_id: assess_group2_subcomplex_types_has_part_and_notes
   area: representation
-  topic: PROTEIN_COMPLEX typing for heteromeric subcomplexes, structured has_part
-    links, and bibliographic note alignment (#2462)
+  topic: PROTEIN_COMPLEX typing for multi-subunit subcomplexes, reciprocal has_part
+    links, and single-PMID evidence notes (#2462)
   outcome: supported
-  summary: 'All 10 heteromeric subcomplex components across 8 records in Group 2 (#2462)
-    now use component_type: PROTEIN_COMPLEX (pil1_lsp1_bar_domain_core in eisosome_filament.yaml
-    and eisosome.yaml; mrec_mred_scaffold_subcomplex in elongasome.yaml; allophycocyanin_core_cylinders
-    in phycobilisome.yaml; pex14_pex13_docking_subcomplex and pex5_pex7_pts_receptor_complex
-    in glycosome.yaml; coat_vesicle_trafficking_machinery in golgi_apparatus.yaml;
-    atg1_kinase_initiation_complex and atg12_atg5_atg16_lipidation_machinery in phagophore_assembly_site.yaml;
+  summary: 'All 8 multi-subunit subcomplex components across 8 records in Group 2
+    (#2462) now use component_type: PROTEIN_COMPLEX (pil1_lsp1_bar_core in eisosome_filament.yaml
+    and eisosome.yaml; mrec_mred in elongasome.yaml; allophycocyanin_core in phycobilisome.yaml;
+    peroxin_import_machinery in glycosome.yaml; golgi_snare_trafficking_machinery
+    in golgi_apparatus.yaml; phagophore_assembly_site_atg_machinery in phagophore_assembly_site.yaml;
     and nop1_nop56_nop58_snu13_core in box_c_d_methylation_guide_snornp_complex.yaml);
-    phycobilisome.yaml adds GO:0030090 (phycobilisome core) to has_part; anammoxosome.yaml
-    adds GO:0009324 (nitrite oxidoreductase complex), cellstructuremech:hydrazine_synthase_complex,
-    and cellstructuremech:hydrazine_dehydrogenase_complex to has_part; micos_complex.yaml
-    adds cellstructuremech:mic60_mic19_subcomplex and cellstructuremech:mic10_subcomplex
-    to has_part; and box_c_d_methylation_guide_snornp_complex.yaml and box_c_d_rnp_complex.yaml
-    align PMID:10339557 notes to Lafontaine DLJ & Tollervey D 1999 (RNA).'
+    phycobilisome.yaml adds has_part: [cellstructuremech:phycobilisome_core, cellstructuremech:phycobilisome_rod];
+    anammoxosome.yaml adds has_part: [cellstructuremech:anammoxosome_membrane]; micos_complex.yaml
+    adds has_part: [cellstructuremech:mic10_subcomplex, cellstructuremech:mic60_mic19_complex];
+    and box_c_d_rnp_complex.yaml decouples the concatenated two-paper .notes strings
+    on components[1].protein_examples[1] (UniProtKB:Q12460, NOP56, PMID:9632712 ->
+    Wu P et al. 1998 J Biol Chem) and components[1].protein_examples[2] (UniProtKB:Q12499,
+    NOP58, PMID:9372940 -> Gautier T et al. 1997 Mol Cell Biol).'
   target_ids:
   - GO:0036286
   - cellstructuremech:elongasome
@@ -762,14 +770,14 @@ assessments:
 - assessment_id: assess_group3_causal_structure_node_component_refs
   area: graph
   topic: Causal graph STRUCTURE node component_ref alignment and archaeal flagellum
-    filament has_part (#2463)
+    has_part links (#2463)
   outcome: supported
-  summary: 'All 3 records in Group 3 (#2463) cleanly distinguish whole-substructure
-    STRUCTURE nodes from single-subunit PROTEIN components: bacterial_type_flagellum.yaml
-    removes component_ref: fliC from node_id: filament (GO:0009420) in flagellum_torque_generation;
-    carboxysome.yaml removes component_ref: bmc_h from node_id: shell (GO:0031472)
-    in carboxysome_co2_concentrating; and archaeal_type_flagellum.yaml adds GO:0097592
-    (archaeal-type flagellum filament) to has_part.'
+  summary: 'All 3 records in Group 3 (#2463) cleanly distinguish composite STRUCTURE
+    nodes from monomer PROTEIN components and complete reciprocal child parthood:
+    bacterial_type_flagellum.yaml removes component_ref: flagellin from node_id: filament
+    (GO:0009420) in flagellum_torque_generation; carboxysome.yaml removes component_ref:
+    bmc_h from node_id: shell in carboxysome_co2_concentrating; and archaeal_type_flagellum.yaml
+    adds has_part: [cellstructuremech:archaeal_type_flagellum_filament, cellstructuremech:archaeal_type_flagellum_motor].'
   target_ids:
   - GO:0097589
   - GO:0009288
