@@ -50,6 +50,12 @@ curation_history:
   action: EDIT
   changes: added 4 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-30T04:54:33Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added component_ref causal nodes and source-backed constituent edges for
+    Ctf19, Okp1, Mcm21, and Ame1 to coma_complex.
+  llm_assisted: true
 parent_structures:
 - GO:0140513
 part_of:
@@ -279,6 +285,22 @@ causal_graphs:
     - UniProtKB:P40460
     - UniProtKB:P33895
     - UniProtKB:Q04477
+  - node_id: ctf19_subunit
+    label: Ctf19 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ctf19_subunit
+  - node_id: okp1_subunit
+    label: Okp1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: okp1_subunit
+  - node_id: mcm21_subunit
+    label: Mcm21 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: mcm21_subunit
+  - node_id: ame1_subunit
+    label: Ame1 subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ame1_subunit
   edges:
   - subject: coma_complex
     predicate: is part of
@@ -311,6 +333,54 @@ causal_graphs:
     - reference: DOI:10.1101/gad.1144403
       notes: De Wulf, McAinsh and Sorger 2003 placed COMA between DNA-proximal and
         microtubule-bound budding-yeast kinetochore subcomplexes.
+  - subject: ctf19_subunit
+    predicate: contributes to
+    object: coma_complex
+    description: Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p
+      kinetochore complex.
+    evidence:
+    - reference: GO:0000817
+      notes: GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p,
+        Mcm21p and Ame1p.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 placed Ctf19p in the budding-yeast COMA
+        kinetochore subcomplex.
+  - subject: okp1_subunit
+    predicate: contributes to
+    object: coma_complex
+    description: Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p
+      kinetochore complex.
+    evidence:
+    - reference: GO:0000817
+      notes: GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p,
+        Mcm21p and Ame1p.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 placed Okp1p in the budding-yeast COMA
+        kinetochore subcomplex.
+  - subject: mcm21_subunit
+    predicate: contributes to
+    object: coma_complex
+    description: Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p
+      kinetochore complex.
+    evidence:
+    - reference: GO:0000817
+      notes: GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p,
+        Mcm21p and Ame1p.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 placed Mcm21p in the budding-yeast COMA
+        kinetochore subcomplex.
+  - subject: ame1_subunit
+    predicate: contributes to
+    object: coma_complex
+    description: Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p
+      kinetochore complex.
+    evidence:
+    - reference: GO:0000817
+      notes: GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p,
+        Mcm21p and Ame1p.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 placed Ame1p in the budding-yeast COMA
+        kinetochore subcomplex.
 discussions:
 - discussion_id: resolve_ctf19_ccan_boundaries
   prompt: Resolve the boundary between the yeast four-subunit COMA complex and the

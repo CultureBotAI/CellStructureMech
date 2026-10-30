@@ -36,6 +36,12 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: Connected isolated causal node(s) with 1 source-backed edge(s).
   llm_assisted: true
+- timestamp: '2026-10-30T04:54:33Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added component_ref causal nodes and source-backed constituent edges for
+    HycB-HycG to hyc_module and linked hyc_module to formate_hydrogenlyase.
+  llm_assisted: true
 synonyms:
 - synonym_text: FHL complex
   synonym_type: EXACT_SYNONYM
@@ -338,6 +344,30 @@ causal_graphs:
   - node_id: fhl_activity
     label: formate hydrogenlyase activity
     node_type: MOLECULAR_FUNCTION
+  - node_id: hycb_subunit
+    label: Formate hydrogenlyase subunit 2
+    node_type: GENE_OR_PROTEIN
+    component_ref: hycb_subunit
+  - node_id: hycc_subunit
+    label: Formate hydrogenlyase subunit 3
+    node_type: GENE_OR_PROTEIN
+    component_ref: hycc_subunit
+  - node_id: hycd_subunit
+    label: Formate hydrogenlyase subunit 4
+    node_type: GENE_OR_PROTEIN
+    component_ref: hycd_subunit
+  - node_id: hyce_subunit
+    label: Formate hydrogenlyase subunit 5
+    node_type: GENE_OR_PROTEIN
+    component_ref: hyce_subunit
+  - node_id: hycf_subunit
+    label: Formate hydrogenlyase subunit 6
+    node_type: GENE_OR_PROTEIN
+    component_ref: hycf_subunit
+  - node_id: hycg_subunit
+    label: Formate hydrogenlyase subunit 7
+    node_type: GENE_OR_PROTEIN
+    component_ref: hycg_subunit
   edges:
   - subject: formate_hydrogenlyase
     predicate: enables
@@ -386,6 +416,84 @@ causal_graphs:
     - reference: PMID:36104349
       notes: Steinhilper et al. 2022 describe proton reduction at the Hyc hydrogenase
         module coupled to formate oxidation.
+  - subject: hycb_subunit
+    predicate: contributes to
+    object: hyc_module
+    description: Electron-transfer subunit in the membrane-bound Hyc module.
+    evidence:
+    - reference: PDB:7Z0T
+      notes: RCSB maps PDB:7Z0T entity 3 to UniProtKB:P0AAK1 and describes it as Formate
+        hydrogenlyase subunit 2 from E. coli K-12.
+    - reference: PMID:36104349
+      notes: Steinhilper et al. 2022 resolved P0AAK1/hycB as one of seven protein
+        entities in the membrane-bound E. coli formate hydrogenlyase complex.
+  - subject: hycc_subunit
+    predicate: contributes to
+    object: hyc_module
+    description: Membrane subunit in the Hyc proton-reducing module.
+    evidence:
+    - reference: PDB:7Z0T
+      notes: RCSB maps PDB:7Z0T entity 1 to UniProtKB:P16429 and describes it as Formate
+        hydrogenlyase subunit 3 from E. coli K-12.
+    - reference: PMID:36104349
+      notes: Steinhilper et al. 2022 resolved P16429/hycC as one of seven protein
+        entities in the membrane-bound E. coli formate hydrogenlyase complex.
+  - subject: hycd_subunit
+    predicate: contributes to
+    object: hyc_module
+    description: Membrane subunit in the Hyc proton-reducing module.
+    evidence:
+    - reference: PDB:7Z0T
+      notes: RCSB maps PDB:7Z0T entity 6 to UniProtKB:P16430 and describes it as Formate
+        hydrogenlyase subunit 4 from E. coli K-12.
+    - reference: PMID:36104349
+      notes: Steinhilper et al. 2022 resolved P16430/hycD as one of seven protein
+        entities in the membrane-bound E. coli formate hydrogenlyase complex.
+  - subject: hyce_subunit
+    predicate: contributes to
+    object: hyc_module
+    description: Hydrogenase-3 large subunit in the Hyc module.
+    evidence:
+    - reference: PDB:7Z0T
+      notes: RCSB maps PDB:7Z0T entity 2 to UniProtKB:P16431 and describes it as Formate
+        hydrogenlyase subunit 5 from E. coli K-12.
+    - reference: PMID:36104349
+      notes: Steinhilper et al. 2022 resolved P16431/hycE as one of seven protein
+        entities in the membrane-bound E. coli formate hydrogenlyase complex.
+  - subject: hycf_subunit
+    predicate: contributes to
+    object: hyc_module
+    description: Hyc module constituent resolved in the membrane-bound FHL structure.
+    evidence:
+    - reference: PDB:7Z0T
+      notes: RCSB maps PDB:7Z0T entity 5 to UniProtKB:P16432 and describes it as Formate
+        hydrogenlyase subunit 6 from E. coli K-12.
+    - reference: PMID:36104349
+      notes: Steinhilper et al. 2022 resolved P16432/hycF as one of seven protein
+        entities in the membrane-bound E. coli formate hydrogenlyase complex.
+  - subject: hycg_subunit
+    predicate: contributes to
+    object: hyc_module
+    description: Hyc module constituent resolved in the membrane-bound FHL structure.
+    evidence:
+    - reference: PDB:7Z0T
+      notes: RCSB maps PDB:7Z0T entity 4 to UniProtKB:P16433 and describes it as Formate
+        hydrogenlyase subunit 7 from E. coli K-12.
+    - reference: PMID:36104349
+      notes: Steinhilper et al. 2022 resolved P16433/hycG as one of seven protein
+        entities in the membrane-bound E. coli formate hydrogenlyase complex.
+  - subject: hyc_module
+    predicate: contributes to
+    object: formate_hydrogenlyase
+    description: The six-subunit HycB-HycG membrane hydrogenase module is a constituent
+      subassembly of the E. coli formate hydrogenlyase complex.
+    evidence:
+    - reference: PDB:7Z0T
+      notes: PDB:7Z0T resolves the six HycB-HycG protein entities together with FdhF
+        in the E. coli formate hydrogenlyase complex.
+    - reference: PMID:36104349
+      notes: Steinhilper et al. 2022 resolved FdhF and HycB-HycG as the seven protein
+        entities of the membrane-bound E. coli formate hydrogenlyase complex.
 discussions:
 - discussion_id: fhl_component_family_grounding
   prompt: Resolve exact source-neutral protein families for FdhF and HycB-HycG before

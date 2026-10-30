@@ -45,6 +45,13 @@ curation_history:
   action: UPDATED_CAUSAL_GRAPHS
   changes: Connected isolated causal node(s) with 1 source-backed edge(s).
   llm_assisted: true
+- timestamp: '2026-10-30T04:54:33Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added component_ref causal nodes and source-backed constituent edges for
+    the 6 remaining exocyst subunits (Sec5, Sec6, Sec8, Sec10, Exo70, Exo84) and linked
+    Sec3 to exocyst so the graph forms a single connected component.
+  llm_assisted: true
 synonyms:
 - synonym_text: exocyst complex
   synonym_type: EXACT_SYNONYM
@@ -417,6 +424,30 @@ causal_graphs:
     label: exocytosis
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006887
+  - node_id: sec5_exocyst_subunit
+    label: Sec5 exocyst subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec5_exocyst_subunit
+  - node_id: sec6_exocyst_subunit
+    label: Sec6 exocyst subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec6_exocyst_subunit
+  - node_id: sec8_exocyst_subunit
+    label: Sec8 exocyst subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec8_exocyst_subunit
+  - node_id: sec10_exocyst_subunit
+    label: Sec10 exocyst subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sec10_exocyst_subunit
+  - node_id: exo70_exocyst_subunit
+    label: Exo70 exocyst subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: exo70_exocyst_subunit
+  - node_id: exo84_exocyst_subunit
+    label: Exo84 exocyst subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: exo84_exocyst_subunit
   edges:
   - subject: sec4p
     predicate: interacts with
@@ -465,6 +496,83 @@ causal_graphs:
     - reference: DOI:10.1093/emboj/18.4.1071
       notes: Exocyst targeting of secretory vesicles to polarized plasma-membrane
         sites supports exocytosis.
+  - subject: sec5_exocyst_subunit
+    predicate: contributes to
+    object: exocyst
+    description: Constituent of the yeast exocyst identified when the Sec6/Sec8/Sec15
+      complex was expanded.
+    evidence:
+    - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+      notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+        complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+        cerevisiae.
+  - subject: sec6_exocyst_subunit
+    predicate: contributes to
+    object: exocyst
+    description: Constituent of the yeast exocyst and of the original Sec6/Sec8/Sec15
+      complex.
+    evidence:
+    - reference: DOI:10.1083/jcb.130.2.299
+      notes: TerBush and Novick 1995 identified Sec6p, Sec8p, and Sec15p in a multisubunit
+        complex at small bud tips.
+    - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+      notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+        complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+        cerevisiae.
+  - subject: sec8_exocyst_subunit
+    predicate: contributes to
+    object: exocyst
+    description: Constituent of the yeast exocyst and of the original Sec6/Sec8/Sec15
+      complex.
+    evidence:
+    - reference: DOI:10.1083/jcb.130.2.299
+      notes: TerBush and Novick 1995 identified Sec6p, Sec8p, and Sec15p in a multisubunit
+        complex at small bud tips.
+    - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+      notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+        complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+        cerevisiae.
+  - subject: sec10_exocyst_subunit
+    predicate: contributes to
+    object: exocyst
+    description: Constituent of the yeast exocyst identified when the Sec6/Sec8/Sec15
+      complex was expanded.
+    evidence:
+    - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+      notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+        complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+        cerevisiae.
+  - subject: exo70_exocyst_subunit
+    predicate: contributes to
+    object: exocyst
+    description: Constituent of the yeast exocyst identified when the Sec6/Sec8/Sec15
+      complex was expanded.
+    evidence:
+    - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+      notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+        complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+        cerevisiae.
+  - subject: exo84_exocyst_subunit
+    predicate: contributes to
+    object: exocyst
+    description: Exocyst protein required for secretion in Saccharomyces cerevisiae.
+    evidence:
+    - reference: DOI:10.1074/jbc.274.33.23558
+      notes: Guo et al. 1999 identified Exo84p as an exocyst protein essential for
+        secretion.
+  - subject: sec3_exocyst_subunit
+    predicate: contributes to
+    object: exocyst
+    description: Exocyst subunit that marks polarized exocytic sites at the yeast
+      plasma membrane.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(00)80948-4
+      notes: Finger et al. 1998 characterized Sec3p as a spatial landmark for polarized
+        secretion in budding yeast.
+    - reference: DOI:10.1002/j.1460-2075.1996.tb01039.x
+      notes: TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p
+        complex the exocyst and showed that it is required for exocytosis in Saccharomyces
+        cerevisiae.
 discussions:
 - discussion_id: resolve_exocyst_subunit_family_groundings
   prompt: Resolve exact source-neutral family groundings for the eight S. cerevisiae

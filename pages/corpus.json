@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1001,
- "corpus_updated": "2026-10-25 15:35:00 UTC",
- "corpus_digest": "93a8e4d4cfb3",
+ "corpus_updated": "2026-10-30 04:54:33 UTC",
+ "corpus_digest": "bb643db4b9f8",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -82440,6 +82440,13 @@
      "action": "EDIT",
      "changes": "added 4 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T04:54:33Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added InterPro-grounded component_ref causal nodes and source-backed constituent edges for CyoB, CyoA, CyoC, and CyoD to cytochrome_o_oxidase.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -82716,6 +82723,34 @@
        "label": "cytochrome bo3 ubiquinol oxidase activity",
        "node_type": "MOLECULAR_FUNCTION",
        "grounding": "GO:0009486"
+      },
+      {
+       "node_id": "cyo_subunit_i",
+       "label": "Cytochrome o ubiquinol oxidase, subunit I",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "cyo_subunit_i",
+       "grounding": "InterPro:IPR014207"
+      },
+      {
+       "node_id": "cyo_subunit_ii",
+       "label": "Cytochrome o ubiquinol oxidase subunit II",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "cyo_subunit_ii",
+       "grounding": "InterPro:IPR006333"
+      },
+      {
+       "node_id": "cyo_subunit_iii",
+       "label": "Cytochrome o ubiquinol oxidase, subunit III",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "cyo_subunit_iii",
+       "grounding": "InterPro:IPR014206"
+      },
+      {
+       "node_id": "cyo_subunit_iv",
+       "label": "Cytochrome o ubiquinol oxidase subunit IV",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "cyo_subunit_iv",
+       "grounding": "InterPro:IPR014210"
       }
      ],
      "edges": [
@@ -82788,6 +82823,78 @@
         {
          "reference": "GO:0009486",
          "notes": "The GO:0009486 reaction accounts for protons moved to the periplasmic side during cytochrome bo3 ubiquinol oxidase activity."
+        }
+       ]
+      },
+      {
+       "subject": "cyo_subunit_i",
+       "predicate": "contributes to",
+       "object": "cytochrome_o_oxidase",
+       "description": "Large membrane-embedded subunit of cytochrome bo3 terminal oxidase.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR014207",
+         "notes": "InterPro IPR014207 is the source-neutral family for CyoB, subunit I of cytochrome o ubiquinol oxidase."
+        },
+        {
+         "reference": "PDB:1FFT",
+         "notes": "The PDB:1FFT deposition maps polymer entity 1 of the E. coli ubiquinol oxidase structure to UniProtKB:P0ABI8/CYOB_ECOLI."
+        }
+       ]
+      },
+      {
+       "subject": "cyo_subunit_ii",
+       "predicate": "contributes to",
+       "object": "cytochrome_o_oxidase",
+       "description": "Subunit II (CyoA) of the cytochrome o ubiquinol oxidase terminal oxidase; this structural assignment does not by itself locate the quinol-binding site.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR006333",
+         "notes": "InterPro IPR006333 is the source-neutral family for cytochrome o ubiquinol oxidase subunit II."
+        },
+        {
+         "reference": "PDB:1FFT",
+         "notes": "The PDB:1FFT deposition maps polymer entity 2 of the E. coli ubiquinol oxidase structure to UniProtKB:P0ABJ1/CYOA_ECOLI."
+        },
+        {
+         "reference": "DOI:10.1038/82824",
+         "notes": "Abramson et al. 2000 abstract assigns the candidate quinone-binding polar cluster to subunit I (CyoB)."
+        },
+        {
+         "reference": "DOI:10.1021/bi9809977",
+         "notes": "Tsatsos et al. 1998 abstract reports a sixfold increase in apparent ubiquinol Km for CyoA W136A, suggesting proximity to or involvement in quinol binding; this is not an exclusive structural localization of the site to CyoA."
+        }
+       ]
+      },
+      {
+       "subject": "cyo_subunit_iii",
+       "predicate": "contributes to",
+       "object": "cytochrome_o_oxidase",
+       "description": "Membrane subunit of the cytochrome o ubiquinol oxidase terminal oxidase.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR014206",
+         "notes": "InterPro IPR014206 is the source-neutral family for CyoC, subunit III of cytochrome o ubiquinol oxidase."
+        },
+        {
+         "reference": "PDB:1FFT",
+         "notes": "The PDB:1FFT deposition maps polymer entity 3 of the E. coli ubiquinol oxidase structure to UniProtKB:P0ABJ3/CYOC_ECOLI."
+        }
+       ]
+      },
+      {
+       "subject": "cyo_subunit_iv",
+       "predicate": "contributes to",
+       "object": "cytochrome_o_oxidase",
+       "description": "Small fourth membrane subunit of the cytochrome o ubiquinol oxidase terminal oxidase.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR014210",
+         "notes": "InterPro IPR014210 is the source-neutral family for CyoD, subunit IV of cytochrome o ubiquinol oxidase."
+        },
+        {
+         "reference": "UniProtKB:P0ABJ6",
+         "notes": "Reviewed UniProtKB entry P0ABJ6 records E. coli cyoD as cytochrome bo3 ubiquinol oxidase subunit 4."
         }
        ]
       }
@@ -84086,6 +84193,13 @@
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T04:54:33Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for HycB-HycG to hyc_module and linked hyc_module to formate_hydrogenlyase.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -84482,6 +84596,42 @@
        "node_id": "fhl_activity",
        "label": "formate hydrogenlyase activity",
        "node_type": "MOLECULAR_FUNCTION"
+      },
+      {
+       "node_id": "hycb_subunit",
+       "label": "Formate hydrogenlyase subunit 2",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "hycb_subunit"
+      },
+      {
+       "node_id": "hycc_subunit",
+       "label": "Formate hydrogenlyase subunit 3",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "hycc_subunit"
+      },
+      {
+       "node_id": "hycd_subunit",
+       "label": "Formate hydrogenlyase subunit 4",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "hycd_subunit"
+      },
+      {
+       "node_id": "hyce_subunit",
+       "label": "Formate hydrogenlyase subunit 5",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "hyce_subunit"
+      },
+      {
+       "node_id": "hycf_subunit",
+       "label": "Formate hydrogenlyase subunit 6",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "hycf_subunit"
+      },
+      {
+       "node_id": "hycg_subunit",
+       "label": "Formate hydrogenlyase subunit 7",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "hycg_subunit"
       }
      ],
      "edges": [
@@ -84552,6 +84702,118 @@
         {
          "reference": "PMID:36104349",
          "notes": "Steinhilper et al. 2022 describe proton reduction at the Hyc hydrogenase module coupled to formate oxidation."
+        }
+       ]
+      },
+      {
+       "subject": "hycb_subunit",
+       "predicate": "contributes to",
+       "object": "hyc_module",
+       "description": "Electron-transfer subunit in the membrane-bound Hyc module.",
+       "evidence": [
+        {
+         "reference": "PDB:7Z0T",
+         "notes": "RCSB maps PDB:7Z0T entity 3 to UniProtKB:P0AAK1 and describes it as Formate hydrogenlyase subunit 2 from E. coli K-12."
+        },
+        {
+         "reference": "PMID:36104349",
+         "notes": "Steinhilper et al. 2022 resolved P0AAK1/hycB as one of seven protein entities in the membrane-bound E. coli formate hydrogenlyase complex."
+        }
+       ]
+      },
+      {
+       "subject": "hycc_subunit",
+       "predicate": "contributes to",
+       "object": "hyc_module",
+       "description": "Membrane subunit in the Hyc proton-reducing module.",
+       "evidence": [
+        {
+         "reference": "PDB:7Z0T",
+         "notes": "RCSB maps PDB:7Z0T entity 1 to UniProtKB:P16429 and describes it as Formate hydrogenlyase subunit 3 from E. coli K-12."
+        },
+        {
+         "reference": "PMID:36104349",
+         "notes": "Steinhilper et al. 2022 resolved P16429/hycC as one of seven protein entities in the membrane-bound E. coli formate hydrogenlyase complex."
+        }
+       ]
+      },
+      {
+       "subject": "hycd_subunit",
+       "predicate": "contributes to",
+       "object": "hyc_module",
+       "description": "Membrane subunit in the Hyc proton-reducing module.",
+       "evidence": [
+        {
+         "reference": "PDB:7Z0T",
+         "notes": "RCSB maps PDB:7Z0T entity 6 to UniProtKB:P16430 and describes it as Formate hydrogenlyase subunit 4 from E. coli K-12."
+        },
+        {
+         "reference": "PMID:36104349",
+         "notes": "Steinhilper et al. 2022 resolved P16430/hycD as one of seven protein entities in the membrane-bound E. coli formate hydrogenlyase complex."
+        }
+       ]
+      },
+      {
+       "subject": "hyce_subunit",
+       "predicate": "contributes to",
+       "object": "hyc_module",
+       "description": "Hydrogenase-3 large subunit in the Hyc module.",
+       "evidence": [
+        {
+         "reference": "PDB:7Z0T",
+         "notes": "RCSB maps PDB:7Z0T entity 2 to UniProtKB:P16431 and describes it as Formate hydrogenlyase subunit 5 from E. coli K-12."
+        },
+        {
+         "reference": "PMID:36104349",
+         "notes": "Steinhilper et al. 2022 resolved P16431/hycE as one of seven protein entities in the membrane-bound E. coli formate hydrogenlyase complex."
+        }
+       ]
+      },
+      {
+       "subject": "hycf_subunit",
+       "predicate": "contributes to",
+       "object": "hyc_module",
+       "description": "Hyc module constituent resolved in the membrane-bound FHL structure.",
+       "evidence": [
+        {
+         "reference": "PDB:7Z0T",
+         "notes": "RCSB maps PDB:7Z0T entity 5 to UniProtKB:P16432 and describes it as Formate hydrogenlyase subunit 6 from E. coli K-12."
+        },
+        {
+         "reference": "PMID:36104349",
+         "notes": "Steinhilper et al. 2022 resolved P16432/hycF as one of seven protein entities in the membrane-bound E. coli formate hydrogenlyase complex."
+        }
+       ]
+      },
+      {
+       "subject": "hycg_subunit",
+       "predicate": "contributes to",
+       "object": "hyc_module",
+       "description": "Hyc module constituent resolved in the membrane-bound FHL structure.",
+       "evidence": [
+        {
+         "reference": "PDB:7Z0T",
+         "notes": "RCSB maps PDB:7Z0T entity 4 to UniProtKB:P16433 and describes it as Formate hydrogenlyase subunit 7 from E. coli K-12."
+        },
+        {
+         "reference": "PMID:36104349",
+         "notes": "Steinhilper et al. 2022 resolved P16433/hycG as one of seven protein entities in the membrane-bound E. coli formate hydrogenlyase complex."
+        }
+       ]
+      },
+      {
+       "subject": "hyc_module",
+       "predicate": "contributes to",
+       "object": "formate_hydrogenlyase",
+       "description": "The six-subunit HycB-HycG membrane hydrogenase module is a constituent subassembly of the E. coli formate hydrogenlyase complex.",
+       "evidence": [
+        {
+         "reference": "PDB:7Z0T",
+         "notes": "PDB:7Z0T resolves the six HycB-HycG protein entities together with FdhF in the E. coli formate hydrogenlyase complex."
+        },
+        {
+         "reference": "PMID:36104349",
+         "notes": "Steinhilper et al. 2022 resolved FdhF and HycB-HycG as the seven protein entities of the membrane-bound E. coli formate hydrogenlyase complex."
         }
        ]
       }
@@ -95097,6 +95359,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 6 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-30T04:54:33Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added InterPro-grounded component_ref causal nodes and source-backed constituent edges for NqrA-NqrF to nqr_complex.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -95483,6 +95752,48 @@
        "node_id": "sodium_pumping_nadh_quinone_activity",
        "label": "sodium-pumping NADH:quinone oxidoreductase activity",
        "node_type": "MOLECULAR_FUNCTION"
+      },
+      {
+       "node_id": "nqrA_subunit",
+       "label": "Na(+)-translocating NADH-quinone reductase subunit A",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nqrA_subunit",
+       "grounding": "InterPro:IPR008703"
+      },
+      {
+       "node_id": "nqrB_subunit",
+       "label": "Na(+)-translocating NADH-quinone reductase subunit B",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nqrB_subunit",
+       "grounding": "InterPro:IPR010966"
+      },
+      {
+       "node_id": "nqrC_subunit",
+       "label": "Na(+)-translocating NADH-quinone reductase subunit C",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nqrC_subunit",
+       "grounding": "InterPro:IPR010204"
+      },
+      {
+       "node_id": "nqrD_subunit",
+       "label": "Na(+)-translocating NADH-quinone reductase subunit D",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nqrD_subunit",
+       "grounding": "InterPro:IPR011292"
+      },
+      {
+       "node_id": "nqrE_subunit",
+       "label": "Na(+)-translocating NADH-quinone reductase subunit E",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nqrE_subunit",
+       "grounding": "InterPro:IPR010967"
+      },
+      {
+       "node_id": "nqrF_subunit",
+       "label": "Na(+)-translocating NADH-quinone reductase subunit F",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nqrF_subunit",
+       "grounding": "InterPro:IPR010205"
       }
      ],
      "edges": [
@@ -95555,6 +95866,106 @@
         {
          "reference": "DOI:10.1038/s41467-022-31718-1",
          "notes": "Kishikawa et al. 2022 describe Na+-NQR as generating an electrochemical Na+ gradient through coupled Na+ pumping."
+        }
+       ]
+      },
+      {
+       "subject": "nqrA_subunit",
+       "predicate": "contributes to",
+       "object": "nqr_complex",
+       "description": "NqrA constituent of the six-subunit sodium-pumping NADH:quinone oxidoreductase.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR008703",
+         "notes": "InterPro IPR008703 is a family entry named Na(+)-translocating NADH-quinone reductase subunit A."
+        },
+        {
+         "reference": "PDB:7XK3",
+         "notes": "RCSB maps PDB:7XK3 polymer entity 1 to Vibrio cholerae O395 Na(+)-translocating NADH-quinone reductase subunit A, UniProtKB:A5F5X1."
+        }
+       ]
+      },
+      {
+       "subject": "nqrB_subunit",
+       "predicate": "contributes to",
+       "object": "nqr_complex",
+       "description": "Hydrophobic, FMN-binding NqrB constituent of the six-subunit sodium-pumping complex.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR010966",
+         "notes": "InterPro IPR010966 is a family entry named Na(+)-translocating NADH-quinone reductase subunit B."
+        },
+        {
+         "reference": "PDB:7XK3",
+         "notes": "RCSB maps PDB:7XK3 polymer entity 2 to Vibrio cholerae O395 Na(+)-translocating NADH-quinone reductase subunit B, UniProtKB:A5F5X0."
+        }
+       ]
+      },
+      {
+       "subject": "nqrC_subunit",
+       "predicate": "contributes to",
+       "object": "nqr_complex",
+       "description": "FMN-binding NqrC constituent of the six-subunit sodium-pumping complex.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR010204",
+         "notes": "InterPro IPR010204 is a family entry named Na(+)-translocating NADH-quinone reductase subunit C."
+        },
+        {
+         "reference": "PDB:7XK3",
+         "notes": "RCSB maps PDB:7XK3 polymer entity 3 to Vibrio cholerae O395 Na(+)-translocating NADH-quinone reductase subunit C, UniProtKB:A5F5Y7."
+        }
+       ]
+      },
+      {
+       "subject": "nqrD_subunit",
+       "predicate": "contributes to",
+       "object": "nqr_complex",
+       "description": "Membrane NqrD constituent of the six-subunit sodium-pumping complex.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR011292",
+         "notes": "InterPro IPR011292 is a family entry named Na(+)-translocating NADH-quinone reductase subunit D."
+        },
+        {
+         "reference": "PDB:7XK3",
+         "notes": "RCSB maps PDB:7XK3 polymer entity 4 to Vibrio cholerae O395 Na(+)-translocating NADH-quinone reductase subunit D, UniProtKB:A5F5Y6."
+        }
+       ]
+      },
+      {
+       "subject": "nqrE_subunit",
+       "predicate": "contributes to",
+       "object": "nqr_complex",
+       "description": "Membrane NqrE constituent of the six-subunit sodium-pumping complex.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR010967",
+         "notes": "InterPro IPR010967 is a family entry named Na(+)-translocating NADH-quinone reductase subunit E."
+        },
+        {
+         "reference": "PDB:7XK3",
+         "notes": "RCSB maps PDB:7XK3 polymer entity 5 to Vibrio cholerae O395 Na(+)-translocating NADH-quinone reductase subunit E, UniProtKB:A5F5Y5."
+        }
+       ]
+      },
+      {
+       "subject": "nqrF_subunit",
+       "predicate": "contributes to",
+       "object": "nqr_complex",
+       "description": "NqrF constituent of the complex that carries FAD and an iron-sulfur center.",
+       "evidence": [
+        {
+         "reference": "InterPro:IPR010205",
+         "notes": "InterPro IPR010205 identifies the NqrF family and includes 2 iron, 2 sulfur cluster binding among its GO annotations; its inspected GO list does not include FAD binding."
+        },
+        {
+         "reference": "PDB:7XK3",
+         "notes": "RCSB maps PDB:7XK3 polymer entity 6 to Vibrio cholerae O395 Na(+)-translocating NADH-quinone reductase subunit F, UniProtKB:A5F5Y4."
+        },
+        {
+         "reference": "DOI:10.1038/s41467-022-31718-1",
+         "notes": "Kishikawa et al. 2022 identify FAD and the 2Fe-2S center in the NqrF structure (Results, NqrA/NqrF arrangement); this primary structure supports the FAD cofactor role."
         }
        ]
       }
@@ -197781,6 +198192,13 @@
      "action": "EDIT",
      "changes": "added 4 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T04:54:33Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for Ctf19, Okp1, Mcm21, and Ame1 to coma_complex.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -198062,6 +198480,30 @@
         "UniProtKB:P33895",
         "UniProtKB:Q04477"
        ]
+      },
+      {
+       "node_id": "ctf19_subunit",
+       "label": "Ctf19 subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ctf19_subunit"
+      },
+      {
+       "node_id": "okp1_subunit",
+       "label": "Okp1 subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "okp1_subunit"
+      },
+      {
+       "node_id": "mcm21_subunit",
+       "label": "Mcm21 subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "mcm21_subunit"
+      },
+      {
+       "node_id": "ame1_subunit",
+       "label": "Ame1 subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ame1_subunit"
       }
      ],
      "edges": [
@@ -198106,6 +198548,70 @@
         {
          "reference": "DOI:10.1101/gad.1144403",
          "notes": "De Wulf, McAinsh and Sorger 2003 placed COMA between DNA-proximal and microtubule-bound budding-yeast kinetochore subcomplexes."
+        }
+       ]
+      },
+      {
+       "subject": "ctf19_subunit",
+       "predicate": "contributes to",
+       "object": "coma_complex",
+       "description": "Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p kinetochore complex.",
+       "evidence": [
+        {
+         "reference": "GO:0000817",
+         "notes": "GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p, Mcm21p and Ame1p."
+        },
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "De Wulf, McAinsh and Sorger 2003 placed Ctf19p in the budding-yeast COMA kinetochore subcomplex."
+        }
+       ]
+      },
+      {
+       "subject": "okp1_subunit",
+       "predicate": "contributes to",
+       "object": "coma_complex",
+       "description": "Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p kinetochore complex.",
+       "evidence": [
+        {
+         "reference": "GO:0000817",
+         "notes": "GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p, Mcm21p and Ame1p."
+        },
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "De Wulf, McAinsh and Sorger 2003 placed Okp1p in the budding-yeast COMA kinetochore subcomplex."
+        }
+       ]
+      },
+      {
+       "subject": "mcm21_subunit",
+       "predicate": "contributes to",
+       "object": "coma_complex",
+       "description": "Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p kinetochore complex.",
+       "evidence": [
+        {
+         "reference": "GO:0000817",
+         "notes": "GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p, Mcm21p and Ame1p."
+        },
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "De Wulf, McAinsh and Sorger 2003 placed Mcm21p in the budding-yeast COMA kinetochore subcomplex."
+        }
+       ]
+      },
+      {
+       "subject": "ame1_subunit",
+       "predicate": "contributes to",
+       "object": "coma_complex",
+       "description": "Named COMA constituent in the budding-yeast Ctf19p-Okp1p-Mcm21p-Ame1p kinetochore complex.",
+       "evidence": [
+        {
+         "reference": "GO:0000817",
+         "notes": "GO:0000817 defines the yeast COMA complex as consisting of Ctf19p, Okp1p, Mcm21p and Ame1p."
+        },
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "De Wulf, McAinsh and Sorger 2003 placed Ame1p in the budding-yeast COMA kinetochore subcomplex."
         }
        ]
       }
@@ -203415,6 +203921,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T04:54:32Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for the 7 DASH subunits (Duo1, Dam1, Dad1, Dad2, Ask1, Spc19, Spc34) to dash_complex.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -203924,6 +204437,48 @@
        "label": "attachment of spindle microtubules to kinetochore",
        "node_type": "BIOLOGICAL_PROCESS",
        "grounding": "GO:0008608"
+      },
+      {
+       "node_id": "duo1_dash_subunit",
+       "label": "Duo1 DASH subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "duo1_dash_subunit"
+      },
+      {
+       "node_id": "dam1_dash_subunit",
+       "label": "Dam1 DASH subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "dam1_dash_subunit"
+      },
+      {
+       "node_id": "dad1_dash_subunit",
+       "label": "Dad1 DASH subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "dad1_dash_subunit"
+      },
+      {
+       "node_id": "dad2_dash_subunit",
+       "label": "Dad2 DASH subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "dad2_dash_subunit"
+      },
+      {
+       "node_id": "ask1_dash_subunit",
+       "label": "Ask1 DASH subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ask1_dash_subunit"
+      },
+      {
+       "node_id": "spc19_dash_subunit",
+       "label": "Spc19 DASH subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spc19_dash_subunit"
+      },
+      {
+       "node_id": "spc34_dash_subunit",
+       "label": "Spc34 DASH subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spc34_dash_subunit"
       }
      ],
      "edges": [
@@ -203968,6 +204523,146 @@
         {
          "reference": "DOI:10.1038/nsmb896",
          "notes": "Miranda et al. 2005 reconstituted the yeast DASH complex and showed that it can form closed rings on microtubules."
+        }
+       ]
+      },
+      {
+       "subject": "duo1_dash_subunit",
+       "predicate": "contributes to",
+       "object": "dash_complex",
+       "description": "Named Saccharomyces cerevisiae constituent of the DASH complex.",
+       "evidence": [
+        {
+         "reference": "GO:0042729",
+         "notes": "Gene Ontology cellular-component term for the DASH complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200109063",
+         "notes": "Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer kinetochore function."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/21.1.181",
+         "notes": "Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of the budding-yeast Duo1p-Dam1p-Dad1p complex."
+        }
+       ]
+      },
+      {
+       "subject": "dam1_dash_subunit",
+       "predicate": "contributes to",
+       "object": "dash_complex",
+       "description": "Named Saccharomyces cerevisiae constituent of the DASH complex.",
+       "evidence": [
+        {
+         "reference": "GO:0042729",
+         "notes": "Gene Ontology cellular-component term for the DASH complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200109063",
+         "notes": "Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer kinetochore function."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/21.1.181",
+         "notes": "Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of the budding-yeast Duo1p-Dam1p-Dad1p complex."
+        }
+       ]
+      },
+      {
+       "subject": "dad1_dash_subunit",
+       "predicate": "contributes to",
+       "object": "dash_complex",
+       "description": "Named Saccharomyces cerevisiae constituent of the DASH complex.",
+       "evidence": [
+        {
+         "reference": "GO:0042729",
+         "notes": "Gene Ontology cellular-component term for the DASH complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200109063",
+         "notes": "Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer kinetochore function."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/21.1.181",
+         "notes": "Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of the budding-yeast Duo1p-Dam1p-Dad1p complex."
+        }
+       ]
+      },
+      {
+       "subject": "dad2_dash_subunit",
+       "predicate": "contributes to",
+       "object": "dash_complex",
+       "description": "Named Saccharomyces cerevisiae constituent of the DASH complex.",
+       "evidence": [
+        {
+         "reference": "GO:0042729",
+         "notes": "Gene Ontology cellular-component term for the DASH complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200109063",
+         "notes": "Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer kinetochore function."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/21.1.181",
+         "notes": "Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of the budding-yeast Duo1p-Dam1p-Dad1p complex."
+        }
+       ]
+      },
+      {
+       "subject": "ask1_dash_subunit",
+       "predicate": "contributes to",
+       "object": "dash_complex",
+       "description": "Named Saccharomyces cerevisiae constituent of the DASH complex.",
+       "evidence": [
+        {
+         "reference": "GO:0042729",
+         "notes": "Gene Ontology cellular-component term for the DASH complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200109063",
+         "notes": "Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer kinetochore function."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/21.1.181",
+         "notes": "Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of the budding-yeast Duo1p-Dam1p-Dad1p complex."
+        }
+       ]
+      },
+      {
+       "subject": "spc19_dash_subunit",
+       "predicate": "contributes to",
+       "object": "dash_complex",
+       "description": "Named Saccharomyces cerevisiae constituent of the DASH complex.",
+       "evidence": [
+        {
+         "reference": "GO:0042729",
+         "notes": "Gene Ontology cellular-component term for the DASH complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200109063",
+         "notes": "Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer kinetochore function."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/21.1.181",
+         "notes": "Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of the budding-yeast Duo1p-Dam1p-Dad1p complex."
+        }
+       ]
+      },
+      {
+       "subject": "spc34_dash_subunit",
+       "predicate": "contributes to",
+       "object": "dash_complex",
+       "description": "Named Saccharomyces cerevisiae constituent of the DASH complex.",
+       "evidence": [
+        {
+         "reference": "GO:0042729",
+         "notes": "Gene Ontology cellular-component term for the DASH complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200109063",
+         "notes": "Cheeseman et al. 2001 purified a budding-yeast Dam1p complex containing Dam1p, Duo1p, Dad1p, Spc19p, Spc34p, Dad2p and Ask1p and linked the complex to outer kinetochore function."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/21.1.181",
+         "notes": "Janke et al. 2002 studied Ask1p, Dad2p, Spc19p and Spc34p as subunits of the budding-yeast Duo1p-Dam1p-Dad1p complex."
         }
        ]
       }
@@ -223461,6 +224156,13 @@
      "action": "UPDATED_CAUSAL_GRAPHS",
      "changes": "Connected isolated causal node(s) with 1 source-backed edge(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T04:54:33Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for the 6 remaining exocyst subunits (Sec5, Sec6, Sec8, Sec10, Exo70, Exo84) and linked Sec3 to exocyst so the graph forms a single connected component.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -223899,6 +224601,42 @@
        "label": "exocytosis",
        "node_type": "BIOLOGICAL_PROCESS",
        "grounding": "GO:0006887"
+      },
+      {
+       "node_id": "sec5_exocyst_subunit",
+       "label": "Sec5 exocyst subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sec5_exocyst_subunit"
+      },
+      {
+       "node_id": "sec6_exocyst_subunit",
+       "label": "Sec6 exocyst subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sec6_exocyst_subunit"
+      },
+      {
+       "node_id": "sec8_exocyst_subunit",
+       "label": "Sec8 exocyst subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sec8_exocyst_subunit"
+      },
+      {
+       "node_id": "sec10_exocyst_subunit",
+       "label": "Sec10 exocyst subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sec10_exocyst_subunit"
+      },
+      {
+       "node_id": "exo70_exocyst_subunit",
+       "label": "Exo70 exocyst subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "exo70_exocyst_subunit"
+      },
+      {
+       "node_id": "exo84_exocyst_subunit",
+       "label": "Exo84 exocyst subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "exo84_exocyst_subunit"
       }
      ],
      "edges": [
@@ -223963,6 +224701,102 @@
         {
          "reference": "DOI:10.1093/emboj/18.4.1071",
          "notes": "Exocyst targeting of secretory vesicles to polarized plasma-membrane sites supports exocytosis."
+        }
+       ]
+      },
+      {
+       "subject": "sec5_exocyst_subunit",
+       "predicate": "contributes to",
+       "object": "exocyst",
+       "description": "Constituent of the yeast exocyst identified when the Sec6/Sec8/Sec15 complex was expanded.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1002/j.1460-2075.1996.tb01039.x",
+         "notes": "TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p complex the exocyst and showed that it is required for exocytosis in Saccharomyces cerevisiae."
+        }
+       ]
+      },
+      {
+       "subject": "sec6_exocyst_subunit",
+       "predicate": "contributes to",
+       "object": "exocyst",
+       "description": "Constituent of the yeast exocyst and of the original Sec6/Sec8/Sec15 complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.130.2.299",
+         "notes": "TerBush and Novick 1995 identified Sec6p, Sec8p, and Sec15p in a multisubunit complex at small bud tips."
+        },
+        {
+         "reference": "DOI:10.1002/j.1460-2075.1996.tb01039.x",
+         "notes": "TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p complex the exocyst and showed that it is required for exocytosis in Saccharomyces cerevisiae."
+        }
+       ]
+      },
+      {
+       "subject": "sec8_exocyst_subunit",
+       "predicate": "contributes to",
+       "object": "exocyst",
+       "description": "Constituent of the yeast exocyst and of the original Sec6/Sec8/Sec15 complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.130.2.299",
+         "notes": "TerBush and Novick 1995 identified Sec6p, Sec8p, and Sec15p in a multisubunit complex at small bud tips."
+        },
+        {
+         "reference": "DOI:10.1002/j.1460-2075.1996.tb01039.x",
+         "notes": "TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p complex the exocyst and showed that it is required for exocytosis in Saccharomyces cerevisiae."
+        }
+       ]
+      },
+      {
+       "subject": "sec10_exocyst_subunit",
+       "predicate": "contributes to",
+       "object": "exocyst",
+       "description": "Constituent of the yeast exocyst identified when the Sec6/Sec8/Sec15 complex was expanded.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1002/j.1460-2075.1996.tb01039.x",
+         "notes": "TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p complex the exocyst and showed that it is required for exocytosis in Saccharomyces cerevisiae."
+        }
+       ]
+      },
+      {
+       "subject": "exo70_exocyst_subunit",
+       "predicate": "contributes to",
+       "object": "exocyst",
+       "description": "Constituent of the yeast exocyst identified when the Sec6/Sec8/Sec15 complex was expanded.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1002/j.1460-2075.1996.tb01039.x",
+         "notes": "TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p complex the exocyst and showed that it is required for exocytosis in Saccharomyces cerevisiae."
+        }
+       ]
+      },
+      {
+       "subject": "exo84_exocyst_subunit",
+       "predicate": "contributes to",
+       "object": "exocyst",
+       "description": "Exocyst protein required for secretion in Saccharomyces cerevisiae.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1074/jbc.274.33.23558",
+         "notes": "Guo et al. 1999 identified Exo84p as an exocyst protein essential for secretion."
+        }
+       ]
+      },
+      {
+       "subject": "sec3_exocyst_subunit",
+       "predicate": "contributes to",
+       "object": "exocyst",
+       "description": "Exocyst subunit that marks polarized exocytic sites at the yeast plasma membrane.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/S0092-8674(00)80948-4",
+         "notes": "Finger et al. 1998 characterized Sec3p as a spatial landmark for polarized secretion in budding yeast."
+        },
+        {
+         "reference": "DOI:10.1002/j.1460-2075.1996.tb01039.x",
+         "notes": "TerBush et al. 1996 named the Sec3p/Sec5p/Sec6p/Sec8p/Sec10p/Sec15p/Exo70p complex the exocyst and showed that it is required for exocytosis in Saccharomyces cerevisiae."
         }
        ]
       }
@@ -247435,6 +248269,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T04:54:33Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for MIS12/Mtw1, Dsn1, Nsl1, and Nnf1/PMF1 to mis12_mind_type_complex.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -247757,6 +248598,30 @@
         "UniProtKB:P33895",
         "UniProtKB:Q04477"
        ]
+      },
+      {
+       "node_id": "mis12_mtw1_subunit",
+       "label": "MIS12/Mtw1 subunit family",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "mis12_mtw1_subunit"
+      },
+      {
+       "node_id": "dsn1_subunit",
+       "label": "Dsn1 subunit family",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "dsn1_subunit"
+      },
+      {
+       "node_id": "nsl1_subunit",
+       "label": "Nsl1 subunit family",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nsl1_subunit"
+      },
+      {
+       "node_id": "nnf1_pmf1_subunit",
+       "label": "Nnf1/PMF1 subunit family",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nnf1_pmf1_subunit"
       }
      ],
      "edges": [
@@ -247809,6 +248674,86 @@
         {
          "reference": "DOI:10.1101/gad.1144403",
          "notes": "De Wulf, McAinsh and Sorger 2003 classified yeast MIND as a bridge between DNA-proximal and microtubule-bound kinetochore subunits."
+        }
+       ]
+      },
+      {
+       "subject": "mis12_mtw1_subunit",
+       "predicate": "contributes to",
+       "object": "mis12_mind_type_complex",
+       "description": "Named MIS12/Mtw1-family constituent of the MIS12/MIND type kinetochore subcomplex.",
+       "evidence": [
+        {
+         "reference": "GO:0000444",
+         "notes": "GO:0000444 names MIS12 and the budding-yeast Mtw1p complex as part of the same kinetochore subcomplex."
+        },
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "De Wulf, McAinsh and Sorger 2003 named Mtw1p as the M subunit of the budding-yeast MIND complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200509158",
+         "notes": "Kline et al. 2006 reconstituted the human Mis12 complex with hMis12 as one of four stable complex members."
+        }
+       ]
+      },
+      {
+       "subject": "dsn1_subunit",
+       "predicate": "contributes to",
+       "object": "mis12_mind_type_complex",
+       "description": "Conserved Dsn1-family constituent of the MIS12/MIND type kinetochore subcomplex.",
+       "evidence": [
+        {
+         "reference": "GO:0000444",
+         "notes": "GO:0000444 names Dsn1/DSN1 as part of MIS12/MIND type complexes."
+        },
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "De Wulf, McAinsh and Sorger 2003 included Dsn1p in the budding-yeast Mtw1/MIND complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200509158",
+         "notes": "Kline et al. 2006 found hDsn1 in a stable four-subunit human Mis12 complex."
+        }
+       ]
+      },
+      {
+       "subject": "nsl1_subunit",
+       "predicate": "contributes to",
+       "object": "mis12_mind_type_complex",
+       "description": "Conserved Nsl1-family constituent of the MIS12/MIND type kinetochore subcomplex.",
+       "evidence": [
+        {
+         "reference": "GO:0000444",
+         "notes": "GO:0000444 names Nsl1/NSL1 as part of MIS12/MIND type complexes."
+        },
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "De Wulf, McAinsh and Sorger 2003 included Nsl1p in the budding-yeast Mtw1/MIND complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200509158",
+         "notes": "Kline et al. 2006 found hNsl1 in a stable four-subunit human Mis12 complex."
+        }
+       ]
+      },
+      {
+       "subject": "nnf1_pmf1_subunit",
+       "predicate": "contributes to",
+       "object": "mis12_mind_type_complex",
+       "description": "Nnf1/PMF1-family constituent of the MIS12/MIND type kinetochore subcomplex.",
+       "evidence": [
+        {
+         "reference": "GO:0000444",
+         "notes": "GO:0000444 names budding-yeast Nnf1p and human PMF1 within MIS12/MIND type complexes."
+        },
+        {
+         "reference": "DOI:10.1101/gad.1144403",
+         "notes": "De Wulf, McAinsh and Sorger 2003 included Nnf1p in the budding-yeast Mtw1/MIND complex."
+        },
+        {
+         "reference": "DOI:10.1083/jcb.200509158",
+         "notes": "Kline et al. 2006 found hNnf1/PMF1 in a stable four-subunit human Mis12 complex."
         }
        ]
       }
@@ -253077,6 +254022,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 3 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-30T04:54:32Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for the Nat1 auxiliary and Nat5 subunits to nata_complex.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -253297,6 +254249,18 @@
        "label": "protein-N-terminal amino-acid acetyltransferase activity",
        "node_type": "MOLECULAR_FUNCTION",
        "grounding": "GO:0004596"
+      },
+      {
+       "node_id": "nat1_nata_auxiliary_subunit",
+       "label": "Nat1 NatA auxiliary subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nat1_nata_auxiliary_subunit"
+      },
+      {
+       "node_id": "nat5_nata_gnat_subunit",
+       "label": "Nat5 NatA GNAT-family subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nat5_nata_gnat_subunit"
       }
      ],
      "edges": [
@@ -253321,6 +254285,30 @@
         {
          "reference": "GO:0004596",
          "notes": "GO:0004596 is the molecular-function term for protein-N-terminal amino-acid acetyltransferase activity."
+        }
+       ]
+      },
+      {
+       "subject": "nat1_nata_auxiliary_subunit",
+       "predicate": "contributes to",
+       "object": "nata_complex",
+       "description": "Noncatalytic auxiliary constituent that anchors budding-yeast NatA to ribosomes and positions nascent polypeptides for N-terminal acetylation.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/MCB.23.20.7403-7414.2003",
+         "notes": "Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that Nat1p anchors the complex to ribosomes."
+        }
+       ]
+      },
+      {
+       "subject": "nat5_nata_gnat_subunit",
+       "predicate": "contributes to",
+       "object": "nata_complex",
+       "description": "GNAT-family NatA constituent that copurifies stoichiometrically with Nat1 and Ard1.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/MCB.23.20.7403-7414.2003",
+         "notes": "Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that Nat1p anchors the complex to ribosomes."
         }
        ]
       }
@@ -254073,6 +255061,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 4 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-30T04:54:33Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for Ndc80, Nuf2, Spc24, and Spc25 to ndc80_complex.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -254351,6 +255346,30 @@
        "node_id": "kinetochore_microtubule_attachment",
        "label": "kinetochore-microtubule attachment",
        "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "ndc80_subunit",
+       "label": "Ndc80 subunit family",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ndc80_subunit"
+      },
+      {
+       "node_id": "nuf2_subunit",
+       "label": "Nuf2 subunit family",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "nuf2_subunit"
+      },
+      {
+       "node_id": "spc24_subunit",
+       "label": "Spc24 subunit family",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spc24_subunit"
+      },
+      {
+       "node_id": "spc25_subunit",
+       "label": "Spc25 subunit family",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spc25_subunit"
       }
      ],
      "edges": [
@@ -254395,6 +255414,70 @@
         {
          "reference": "DOI:10.1534/genetics.112.145276",
          "notes": "Biggins 2013 reviewed Ndc80 complex function at the kinetochore-microtubule interface."
+        }
+       ]
+      },
+      {
+       "subject": "ndc80_subunit",
+       "predicate": "contributes to",
+       "object": "ndc80_complex",
+       "description": "Named Ndc80-family constituent of the conserved Ndc80 complex.",
+       "evidence": [
+        {
+         "reference": "GO:0031262",
+         "notes": "GO:0031262 names Ndc80 proteins as constituents of the conserved Ndc80 complex."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/20.4.777",
+         "notes": "Janke et al. 2001 analyzed budding-yeast Ndc80p within a complex that also contains Nuf2p, Spc24p and Spc25p."
+        }
+       ]
+      },
+      {
+       "subject": "nuf2_subunit",
+       "predicate": "contributes to",
+       "object": "ndc80_complex",
+       "description": "Named Ndc80-complex constituent that pairs with Ndc80-family subunits in the outer-kinetochore complex.",
+       "evidence": [
+        {
+         "reference": "GO:0031262",
+         "notes": "GO:0031262 names Nuf2 proteins as constituents of the conserved Ndc80 complex."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/20.4.777",
+         "notes": "Janke et al. 2001 identified budding-yeast Nuf2p with Ndc80p, Spc24p and Spc25p at the kinetochore."
+        }
+       ]
+      },
+      {
+       "subject": "spc24_subunit",
+       "predicate": "contributes to",
+       "object": "ndc80_complex",
+       "description": "Named Spc24-family constituent of the conserved Ndc80 complex.",
+       "evidence": [
+        {
+         "reference": "GO:0031262",
+         "notes": "GO:0031262 names Spc24 proteins as constituents of the conserved Ndc80 complex."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/20.4.777",
+         "notes": "Janke et al. 2001 identified budding-yeast Spc24p as an Ndc80-complex member."
+        }
+       ]
+      },
+      {
+       "subject": "spc25_subunit",
+       "predicate": "contributes to",
+       "object": "ndc80_complex",
+       "description": "Named Spc25-family constituent of the conserved Ndc80 complex.",
+       "evidence": [
+        {
+         "reference": "GO:0031262",
+         "notes": "GO:0031262 names Spc25 proteins as constituents of the conserved Ndc80 complex."
+        },
+        {
+         "reference": "DOI:10.1093/emboj/20.4.777",
+         "notes": "Janke et al. 2001 identified budding-yeast Spc25p as an Ndc80-complex member."
         }
        ]
       }
@@ -284382,6 +285465,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 17 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-30T04:54:32Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for the 15 remaining RSC subunits (Sfh1, Rsc6/8/9, Arp7/9, Rtt102, Npl6, Htl1, Ldb7, Rsc1/2, Rsc3/30, Rsc4, Rsc58) to rsc_type_complex.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -285118,6 +286208,96 @@
        "label": "chromatin remodeling",
        "node_type": "BIOLOGICAL_PROCESS",
        "grounding": "GO:0006338"
+      },
+      {
+       "node_id": "sfh1_rsc_core_subunit",
+       "label": "Sfh1 RSC core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sfh1_rsc_core_subunit"
+      },
+      {
+       "node_id": "rsc6_rsc_core_subunit",
+       "label": "Rsc6 RSC core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsc6_rsc_core_subunit"
+      },
+      {
+       "node_id": "rsc8_rsc_core_subunit",
+       "label": "Rsc8 RSC core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsc8_rsc_core_subunit"
+      },
+      {
+       "node_id": "rsc9_rsc_core_subunit",
+       "label": "Rsc9 RSC core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsc9_rsc_core_subunit"
+      },
+      {
+       "node_id": "arp7_rsc_arp_module_subunit",
+       "label": "Arp7 RSC Arp module subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "arp7_rsc_arp_module_subunit"
+      },
+      {
+       "node_id": "arp9_rsc_arp_module_subunit",
+       "label": "Arp9 RSC Arp module subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "arp9_rsc_arp_module_subunit"
+      },
+      {
+       "node_id": "rtt102_rsc_arp_module_subunit",
+       "label": "Rtt102 RSC Arp module subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rtt102_rsc_arp_module_subunit"
+      },
+      {
+       "node_id": "npl6_rsc_arm_lobe_subunit",
+       "label": "Npl6 RSC arm lobe subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "npl6_rsc_arm_lobe_subunit"
+      },
+      {
+       "node_id": "htl1_rsc_subunit",
+       "label": "Htl1 RSC subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "htl1_rsc_subunit"
+      },
+      {
+       "node_id": "ldb7_rsc_subunit",
+       "label": "Ldb7 RSC subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ldb7_rsc_subunit"
+      },
+      {
+       "node_id": "rsc1_rsc2_rsc_isoform_subunit",
+       "label": "Rsc1/Rsc2 RSC isoform subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsc1_rsc2_rsc_isoform_subunit"
+      },
+      {
+       "node_id": "rsc3_rsc_tail_subunit",
+       "label": "Rsc3 RSC tail subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsc3_rsc_tail_subunit"
+      },
+      {
+       "node_id": "rsc30_rsc_tail_subunit",
+       "label": "Rsc30 RSC tail subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsc30_rsc_tail_subunit"
+      },
+      {
+       "node_id": "rsc4_rsc_head_subunit",
+       "label": "Rsc4 RSC head subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsc4_rsc_head_subunit"
+      },
+      {
+       "node_id": "rsc58_rsc_head_body_subunit",
+       "label": "Rsc58 RSC head/body subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rsc58_rsc_head_body_subunit"
       }
      ],
      "edges": [
@@ -285142,6 +286322,186 @@
         {
          "reference": "GO:0006338",
          "notes": "GO:0006338 lists GO:0016586 as a cellular component capable of chromatin remodeling."
+        }
+       ]
+      },
+      {
+       "subject": "sfh1_rsc_core_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Evolutionarily conserved RSC core constituent that contributes to nucleosome engagement.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "rsc6_rsc_core_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Evolutionarily conserved core constituent of the body lobe.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "rsc8_rsc_core_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Dimeric backbone constituent that scaffolds the RSC head, body and arm lobes.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "rsc9_rsc_core_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Core body-lobe constituent of the budding-yeast RSC complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "arp7_rsc_arp_module_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Actin-related-protein constituent of the RSC Arp module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "arp9_rsc_arp_module_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Actin-related-protein constituent of the RSC Arp module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "rtt102_rsc_arp_module_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Constituent of the RSC Arp module with Arp7 and Arp9.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "npl6_rsc_arm_lobe_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Yeast-conserved constituent that completes the RSC arm lobe.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "htl1_rsc_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "RSC-specific scaffold constituent of the body-lobe helical bundle.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "ldb7_rsc_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "RSC-specific scaffold constituent assigned in the cryo-EM core.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "rsc1_rsc2_rsc_isoform_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Bromodomain- and BAH-domain-containing RSC-specific paralog slot supplied by either Rsc1 or Rsc2.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "rsc3_rsc_tail_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "RSC-specific tail-module constituent paired with Rsc30.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "rsc30_rsc_tail_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "RSC-specific tail-module constituent paired with Rsc3.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "rsc4_rsc_head_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Bromodomain-containing RSC-specific constituent of the head lobe.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
+        }
+       ]
+      },
+      {
+       "subject": "rsc58_rsc_head_body_subunit",
+       "predicate": "contributes to",
+       "object": "rsc_type_complex",
+       "description": "Bromodomain-containing RSC-specific constituent that spans the head and body lobes.",
+       "evidence": [
+        {
+         "reference": "DOI:10.7554/eLife.54449",
+         "notes": "Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit architecture."
         }
        ]
       }
@@ -285218,6 +286578,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T04:52:50Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for the 17 remaining SAGA subunits (Tra1, TAF5/6/9/10/12, Spt3/7/8/20, Ada1/2/3, Sgf11/29/73, Sus1) to saga_complex.",
      "llm_assisted": true
     }
    ],
@@ -286086,6 +287453,108 @@
        "label": "cysteine-type deubiquitinase activity",
        "node_type": "MOLECULAR_FUNCTION",
        "grounding": "GO:0004843"
+      },
+      {
+       "node_id": "tra1_saga_subunit",
+       "label": "Tra1 SAGA subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "tra1_saga_subunit"
+      },
+      {
+       "node_id": "taf5_saga_core_subunit",
+       "label": "Taf5 SAGA core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf5_saga_core_subunit"
+      },
+      {
+       "node_id": "taf6_saga_core_subunit",
+       "label": "Taf6 SAGA core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf6_saga_core_subunit"
+      },
+      {
+       "node_id": "taf9_saga_core_subunit",
+       "label": "Taf9 SAGA core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf9_saga_core_subunit"
+      },
+      {
+       "node_id": "taf10_saga_core_subunit",
+       "label": "Taf10 SAGA core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf10_saga_core_subunit"
+      },
+      {
+       "node_id": "taf12_saga_core_subunit",
+       "label": "Taf12 SAGA core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf12_saga_core_subunit"
+      },
+      {
+       "node_id": "spt3_saga_core_subunit",
+       "label": "Spt3 SAGA core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spt3_saga_core_subunit"
+      },
+      {
+       "node_id": "spt7_saga_core_subunit",
+       "label": "Spt7 SAGA core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spt7_saga_core_subunit"
+      },
+      {
+       "node_id": "spt20_saga_core_subunit",
+       "label": "Spt20 SAGA core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spt20_saga_core_subunit"
+      },
+      {
+       "node_id": "ada1_saga_core_subunit",
+       "label": "Ada1 SAGA core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ada1_saga_core_subunit"
+      },
+      {
+       "node_id": "spt8_saga_tbp_subunit",
+       "label": "Spt8 SAGA TBP-interacting subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spt8_saga_tbp_subunit"
+      },
+      {
+       "node_id": "ada2_saga_hat_subunit",
+       "label": "Ada2 SAGA HAT subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ada2_saga_hat_subunit"
+      },
+      {
+       "node_id": "ada3_saga_hat_subunit",
+       "label": "Ada3 SAGA HAT subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ada3_saga_hat_subunit"
+      },
+      {
+       "node_id": "sgf29_saga_hat_subunit",
+       "label": "Sgf29 SAGA HAT subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sgf29_saga_hat_subunit"
+      },
+      {
+       "node_id": "sgf11_saga_dub_subunit",
+       "label": "Sgf11 SAGA DUB subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sgf11_saga_dub_subunit"
+      },
+      {
+       "node_id": "sus1_saga_dub_subunit",
+       "label": "Sus1 SAGA DUB subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sus1_saga_dub_subunit"
+      },
+      {
+       "node_id": "sgf73_saga_dub_subunit",
+       "label": "Sgf73 SAGA DUB-anchor subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sgf73_saga_dub_subunit"
       }
      ],
      "edges": [
@@ -286134,6 +287603,210 @@
         {
          "reference": "DOI:10.1101/gad.1144003",
          "notes": "Henry et al. 2003 identified SAGA-associated Ubp8 as a mediator of histone H2B deubiquitylation."
+        }
+       ]
+      },
+      {
+       "subject": "tra1_saga_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Activator-binding module constituent of the budding-yeast SAGA coactivator complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "taf5_saga_core_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "WD40-propeller core-module constituent that links the octamer-like fold to the SAGA core.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "taf6_saga_core_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Core-module constituent of the Taf6-Taf9 histone-fold pair in budding-yeast SAGA.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "taf9_saga_core_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Core-module constituent of the Taf6-Taf9 histone-fold pair in budding-yeast SAGA.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "taf10_saga_core_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Core-module constituent of the Taf10-Spt7 histone-fold pair in budding-yeast SAGA.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "taf12_saga_core_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Core-module constituent of the Taf12-Ada1 histone-fold pair that also tethers the Tra1 module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "spt3_saga_core_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "TBP-interacting core-module constituent that contributes two histone-fold domains.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "spt7_saga_core_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Core-module constituent of the Taf10-Spt7 histone-fold pair in budding-yeast SAGA.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "spt20_saga_core_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Core-module constituent that stabilizes the Taf5-Taf6 submodule and tethers Tra1.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "ada1_saga_core_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Core-module constituent of the Taf12-Ada1 histone-fold pair in budding-yeast SAGA.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "spt8_saga_tbp_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "TBP-interacting budding-yeast SAGA constituent flexibly connected to the core module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "ada2_saga_hat_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Adaptor constituent of the SAGA histone acetyltransferase module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "ada3_saga_hat_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "Adaptor constituent of the SAGA histone acetyltransferase module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "sgf29_saga_hat_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "SGF-family constituent of the SAGA histone acetyltransferase module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "sgf11_saga_dub_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "SGF-family constituent of the SAGA deubiquitinating module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "sus1_saga_dub_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "ENY2/Sus1-family constituent of the SAGA deubiquitinating module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
+        }
+       ]
+      },
+      {
+       "subject": "sgf73_saga_dub_subunit",
+       "predicate": "contributes to",
+       "object": "saga_complex",
+       "description": "SAGA constituent whose N-terminal region belongs to the DUB module and whose central residues anchor DUBm to the core.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-020-1933-5",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae SAGA, reported all 19 subunits, and resolved the Tra1, core, HAT and DUB module architecture."
         }
        ]
       }
@@ -290123,6 +291796,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-30T04:54:31Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for the 16 remaining SLIK subunits (Tra1, TAF5/6/9/10/12, Spt3/7-truncated/20, Ada1/2/3, Sgf11/29/73, Sus1) to slik_saga_like_complex.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -290944,6 +292624,102 @@
        "label": "cysteine-type deubiquitinase activity",
        "node_type": "MOLECULAR_FUNCTION",
        "grounding": "GO:0004843"
+      },
+      {
+       "node_id": "tra1_slik_subunit",
+       "label": "Tra1 SLIK subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "tra1_slik_subunit"
+      },
+      {
+       "node_id": "taf5_slik_core_subunit",
+       "label": "Taf5 SLIK core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf5_slik_core_subunit"
+      },
+      {
+       "node_id": "taf6_slik_core_subunit",
+       "label": "Taf6 SLIK core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf6_slik_core_subunit"
+      },
+      {
+       "node_id": "taf9_slik_core_subunit",
+       "label": "Taf9 SLIK core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf9_slik_core_subunit"
+      },
+      {
+       "node_id": "taf10_slik_core_subunit",
+       "label": "Taf10 SLIK core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf10_slik_core_subunit"
+      },
+      {
+       "node_id": "taf12_slik_core_subunit",
+       "label": "Taf12 SLIK core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf12_slik_core_subunit"
+      },
+      {
+       "node_id": "spt3_slik_core_subunit",
+       "label": "Spt3 SLIK core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spt3_slik_core_subunit"
+      },
+      {
+       "node_id": "spt7_truncated_slik_core_subunit",
+       "label": "truncated Spt7 SLIK core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spt7_truncated_slik_core_subunit"
+      },
+      {
+       "node_id": "spt20_slik_core_subunit",
+       "label": "Spt20 SLIK core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "spt20_slik_core_subunit"
+      },
+      {
+       "node_id": "ada1_slik_core_subunit",
+       "label": "Ada1 SLIK core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ada1_slik_core_subunit"
+      },
+      {
+       "node_id": "ada2_slik_hat_subunit",
+       "label": "Ada2 SLIK HAT subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ada2_slik_hat_subunit"
+      },
+      {
+       "node_id": "ada3_slik_hat_subunit",
+       "label": "Ada3 SLIK HAT subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ada3_slik_hat_subunit"
+      },
+      {
+       "node_id": "sgf29_slik_hat_subunit",
+       "label": "Sgf29 SLIK HAT subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sgf29_slik_hat_subunit"
+      },
+      {
+       "node_id": "sgf11_slik_dub_subunit",
+       "label": "Sgf11 SLIK DUB subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sgf11_slik_dub_subunit"
+      },
+      {
+       "node_id": "sus1_slik_dub_subunit",
+       "label": "Sus1 SLIK DUB subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sus1_slik_dub_subunit"
+      },
+      {
+       "node_id": "sgf73_slik_dub_subunit",
+       "label": "Sgf73 SLIK DUB-anchor subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sgf73_slik_dub_subunit"
       }
      ],
      "edges": [
@@ -290988,6 +292764,198 @@
        "predicate": "supports",
        "object": "cysteine_type_deubiquitinase_activity",
        "description": "The Ubp8-containing SLIK DUB module supports deubiquitination activity.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified SLIK and showed SAGA and SLIK had identical deubiquitination activity on a minimal substrate."
+        }
+       ]
+      },
+      {
+       "subject": "tra1_slik_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "Activator-binding module constituent of the budding-yeast SLIK coactivator complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "taf5_slik_core_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "WD40-propeller core-module constituent of budding-yeast SLIK.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "taf6_slik_core_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "Core-module constituent of the Taf6-Taf9 histone-fold pair in budding-yeast SLIK.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "taf9_slik_core_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "Core-module constituent of the Taf6-Taf9 histone-fold pair in budding-yeast SLIK.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "taf10_slik_core_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "Core-module constituent of the Taf10-Spt7 histone-fold pair in budding-yeast SLIK.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "taf12_slik_core_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "Core-module constituent of the Taf12-Ada1 histone-fold pair in budding-yeast SLIK.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "spt3_slik_core_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "TBP-interacting core-module constituent of budding-yeast SLIK.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "spt7_truncated_slik_core_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "C-terminally processed Spt7 core-module constituent that distinguishes budding-yeast SLIK from SAGA.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "spt20_slik_core_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "Core-module constituent that helps organize budding-yeast SLIK.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "ada1_slik_core_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "Core-module constituent of the Taf12-Ada1 histone-fold pair in budding-yeast SLIK.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae, confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7 and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities with SAGA."
+        }
+       ]
+      },
+      {
+       "subject": "ada2_slik_hat_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "Adaptor constituent of the SLIK histone acetyltransferase module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3 peptide minimal substrate."
+        }
+       ]
+      },
+      {
+       "subject": "ada3_slik_hat_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "Adaptor constituent of the SLIK histone acetyltransferase module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3 peptide minimal substrate."
+        }
+       ]
+      },
+      {
+       "subject": "sgf29_slik_hat_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "SGF-family constituent of the SLIK histone acetyltransferase module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3 peptide minimal substrate."
+        }
+       ]
+      },
+      {
+       "subject": "sgf11_slik_dub_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "SGF-family constituent of the SLIK deubiquitinating module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified SLIK and showed SAGA and SLIK had identical deubiquitination activity on a minimal substrate."
+        }
+       ]
+      },
+      {
+       "subject": "sus1_slik_dub_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "ENY2/Sus1-family constituent of the SLIK deubiquitinating module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/j.jbc.2021.100671",
+         "notes": "Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified SLIK and showed SAGA and SLIK had identical deubiquitination activity on a minimal substrate."
+        }
+       ]
+      },
+      {
+       "subject": "sgf73_slik_dub_subunit",
+       "predicate": "contributes to",
+       "object": "slik_saga_like_complex",
+       "description": "DUB-module constituent of budding-yeast SLIK.",
        "evidence": [
         {
          "reference": "DOI:10.1016/j.jbc.2021.100671",
@@ -294065,6 +296033,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 12 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-30T04:54:32Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for the 11 remaining SWI/SNF subunits (Swi1, Swi3, Snf5/6/11/12, Swp82, Taf14, Arp7/9, Rtt102) to swi_snf_complex.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -294682,6 +296657,72 @@
        "label": "chromatin remodeling",
        "node_type": "BIOLOGICAL_PROCESS",
        "grounding": "GO:0006338"
+      },
+      {
+       "node_id": "swi1_swi_snf_core_subunit",
+       "label": "Swi1 SWI/SNF core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "swi1_swi_snf_core_subunit"
+      },
+      {
+       "node_id": "swi3_swi_snf_core_subunit",
+       "label": "Swi3 SWI/SNF core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "swi3_swi_snf_core_subunit"
+      },
+      {
+       "node_id": "snf5_swi_snf_core_subunit",
+       "label": "Snf5 SWI/SNF core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "snf5_swi_snf_core_subunit"
+      },
+      {
+       "node_id": "snf6_swi_snf_core_subunit",
+       "label": "Snf6 SWI/SNF core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "snf6_swi_snf_core_subunit"
+      },
+      {
+       "node_id": "snf12_swi_snf_core_subunit",
+       "label": "Snf12 SWI/SNF core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "snf12_swi_snf_core_subunit"
+      },
+      {
+       "node_id": "swp82_swi_snf_core_subunit",
+       "label": "Swp82 SWI/SNF core subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "swp82_swi_snf_core_subunit"
+      },
+      {
+       "node_id": "snf11_swi_snf_subunit",
+       "label": "Snf11 SWI/SNF subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "snf11_swi_snf_subunit"
+      },
+      {
+       "node_id": "taf14_swi_snf_subunit",
+       "label": "Taf14 SWI/SNF subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "taf14_swi_snf_subunit"
+      },
+      {
+       "node_id": "arp7_swi_snf_arp_module_subunit",
+       "label": "Arp7 SWI/SNF Arp module subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "arp7_swi_snf_arp_module_subunit"
+      },
+      {
+       "node_id": "arp9_swi_snf_arp_module_subunit",
+       "label": "Arp9 SWI/SNF Arp module subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "arp9_swi_snf_arp_module_subunit"
+      },
+      {
+       "node_id": "rtt102_swi_snf_arp_module_subunit",
+       "label": "Rtt102 SWI/SNF Arp module subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "rtt102_swi_snf_arp_module_subunit"
       }
      ],
      "edges": [
@@ -294706,6 +296747,182 @@
         {
          "reference": "GO:0006338",
          "notes": "GO:0006338 lists GO:0016514 as a cellular component capable of chromatin remodeling."
+        }
+       ]
+      },
+      {
+       "subject": "swi1_swi_snf_core_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Conserved base-module scaffold constituent that interacts with Swi3 and other core components.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "swi3_swi_snf_core_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Conserved base-module backbone constituent that helps form the coiled-coil domain.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "snf5_swi_snf_core_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Nucleosome-binding-module constituent of the budding-yeast SWI/SNF base.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "snf6_swi_snf_core_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Yeast-specific core constituent that stabilizes Snf2 binding to the SWI/SNF base module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "snf12_swi_snf_core_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Coiled-coil and core-module constituent of the budding-yeast SWI/SNF base.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "swp82_swi_snf_core_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Core constituent associated with the nucleosome-binding and preHSA-stabilization modules.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "snf11_swi_snf_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Mobile constituent of the purified budding-yeast SWI/SNF complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "taf14_swi_snf_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Mobile constituent of the purified budding-yeast SWI/SNF complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "arp7_swi_snf_arp_module_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Actin-related-protein constituent of the SWI/SNF Arp module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "arp9_swi_snf_arp_module_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Actin-related-protein constituent of the SWI/SNF Arp module.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
+        }
+       ]
+      },
+      {
+       "subject": "rtt102_swi_snf_arp_module_subunit",
+       "predicate": "contributes to",
+       "object": "swi_snf_complex",
+       "description": "Constituent of the Arp module associated with Arp7 and Arp9.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-17229-x",
+         "notes": "Wang et al. 2020 purified endogenous Saccharomyces cerevisiae Swi/Snf, described the intact 12-subunit complex, and resolved the Snf2-containing base and Arp-module architecture."
+        },
+        {
+         "reference": "DOI:10.1016/j.celrep.2017.01.058",
+         "notes": "Dutta et al. 2017 systematically purified wild-type and mutant Saccharomyces cerevisiae Swi/Snf complexes and organized the 12 subunits into Arp, Snf11-Snf12, Snf12-Snf6-Swi3, Taf14-Snf5-Swp82 and Swi1 modules."
         }
        ]
       }
@@ -335107,6 +337324,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 7 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-30T04:54:33Z",
+     "curator": "antigravity",
+     "action": "CURATED_CAUSAL_GRAPH",
+     "changes": "Added component_ref causal nodes and source-backed constituent edges for SecY/SecE/SecG to secyeg_core and SecD/SecF/YajC to secdf_yajc_module.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -335571,6 +337795,42 @@
        "label": "membrane insertase activity",
        "node_type": "MOLECULAR_FUNCTION",
        "grounding": "GO:0032977"
+      },
+      {
+       "node_id": "secy_channel_subunit",
+       "label": "Protein translocase subunit SecY",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "secy_channel_subunit"
+      },
+      {
+       "node_id": "sece_clamp_subunit",
+       "label": "Protein translocase subunit SecE",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "sece_clamp_subunit"
+      },
+      {
+       "node_id": "secg_accessory_subunit",
+       "label": "Protein-export membrane protein SecG",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "secg_accessory_subunit"
+      },
+      {
+       "node_id": "secd_subunit",
+       "label": "Protein translocase subunit SecD",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "secd_subunit"
+      },
+      {
+       "node_id": "secf_subunit",
+       "label": "Protein translocase subunit SecF",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "secf_subunit"
+      },
+      {
+       "node_id": "yajc_accessory_subunit",
+       "label": "Sec translocon accessory complex subunit YajC",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "yajc_accessory_subunit"
       }
      ],
      "edges": [
@@ -335663,6 +337923,102 @@
         {
          "reference": "ComplexPortal:CPX-1095",
          "notes": "Complex Portal cross-references GO:0032977 on the E. coli K-12 holo-translocon."
+        }
+       ]
+      },
+      {
+       "subject": "secy_channel_subunit",
+       "predicate": "contributes to",
+       "object": "secyeg_core",
+       "description": "Core protein-conducting channel subunit that forms the central pore and lateral gate used during secretion and membrane-protein insertion.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1095",
+         "notes": "Complex Portal CPX-1095 curates UniProtKB:P0AGA2/secY as a one-copy participant in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon."
+        },
+        {
+         "reference": "PMID:27435098",
+         "notes": "Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC supercomplex in the E. coli inner membrane."
+        }
+       ]
+      },
+      {
+       "subject": "sece_clamp_subunit",
+       "predicate": "contributes to",
+       "object": "secyeg_core",
+       "description": "Core channel constituent that braces SecY in the SecYEG module of the holo-translocon.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1095",
+         "notes": "Complex Portal CPX-1095 curates UniProtKB:P0AG96/secE as a one-copy participant in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon."
+        },
+        {
+         "reference": "PMID:27435098",
+         "notes": "Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC supercomplex in the E. coli inner membrane."
+        }
+       ]
+      },
+      {
+       "subject": "secg_accessory_subunit",
+       "predicate": "contributes to",
+       "object": "secyeg_core",
+       "description": "SecYEG channel constituent that completes the SecYEG module inside the larger holo-translocon.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1095",
+         "notes": "Complex Portal CPX-1095 curates UniProtKB:P0AG99/secG as a one-copy participant in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon."
+        },
+        {
+         "reference": "PMID:27435098",
+         "notes": "Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC supercomplex in the E. coli inner membrane."
+        }
+       ]
+      },
+      {
+       "subject": "secd_subunit",
+       "predicate": "contributes to",
+       "object": "secdf_yajc_module",
+       "description": "SecDF-YajC module constituent that links proton-motive-force assisted Sec protein transport to the SecYEG channel.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1095",
+         "notes": "Complex Portal CPX-1095 curates UniProtKB:P0AG90/secD as a one-copy participant in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon."
+        },
+        {
+         "reference": "PMID:27435098",
+         "notes": "Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC supercomplex in the E. coli inner membrane."
+        }
+       ]
+      },
+      {
+       "subject": "secf_subunit",
+       "predicate": "contributes to",
+       "object": "secdf_yajc_module",
+       "description": "SecDF-YajC module constituent in the proton-motive-force assisted branch of the Sec holo-translocon.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1095",
+         "notes": "Complex Portal CPX-1095 curates UniProtKB:P0AG93/secF as a one-copy participant in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon."
+        },
+        {
+         "reference": "PMID:27435098",
+         "notes": "Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC supercomplex in the E. coli inner membrane."
+        }
+       ]
+      },
+      {
+       "subject": "yajc_accessory_subunit",
+       "predicate": "contributes to",
+       "object": "secdf_yajc_module",
+       "description": "Accessory membrane constituent present with SecD and SecF in the seven-participant E. coli holo-translocon source complex.",
+       "evidence": [
+        {
+         "reference": "ComplexPortal:CPX-1095",
+         "notes": "Complex Portal CPX-1095 curates UniProtKB:P0ADZ7/yajC as a one-copy participant in the E. coli K-12 SecYEG-SecDF-YajC-YidC holo-translocon."
+        },
+        {
+         "reference": "PMID:27435098",
+         "notes": "Komar et al. 2016 describe the bacterial holo-translocon as a SecYEG-SecDF-YajC-YidC supercomplex in the E. coli inner membrane."
         }
        ]
       }

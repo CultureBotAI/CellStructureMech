@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/rsc_type_complex.yaml
+  slug: rsc_type_complex
+session:
+  id: 2026-10-30T045814Z-claude-code-531cd3
+  timestamp: '2026-10-30T04:58:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added component_ref causal nodes and constituent edges for 15 RSC subunits
+  details: Connected the 15 previously unreferenced RSC components (Sfh1, Rsc6/8/9, Arp7/9,
+    Rtt102, Npl6, Htl1, Ldb7, Rsc1/2, Rsc3/30, Rsc4, Rsc58) to rsc_type_complex via component_ref
+    GENE_OR_PROTEIN nodes and directed contributes to edges backed by Patel et al. 2019 (DOI:10.7554/eLife.54449).
+    Validated via write_validated_structure.

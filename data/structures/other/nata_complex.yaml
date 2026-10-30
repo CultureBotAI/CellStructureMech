@@ -38,6 +38,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-30T04:54:32Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added component_ref causal nodes and source-backed constituent edges for
+    the Nat1 auxiliary and Nat5 subunits to nata_complex.
+  llm_assisted: true
 synonyms:
 - synonym_text: N-terminal acetyltransferase A complex
   synonym_type: EXACT_SYNONYM
@@ -221,6 +227,14 @@ causal_graphs:
     label: protein-N-terminal amino-acid acetyltransferase activity
     node_type: MOLECULAR_FUNCTION
     grounding: GO:0004596
+  - node_id: nat1_nata_auxiliary_subunit
+    label: Nat1 NatA auxiliary subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: nat1_nata_auxiliary_subunit
+  - node_id: nat5_nata_gnat_subunit
+    label: Nat5 NatA GNAT-family subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: nat5_nata_gnat_subunit
   edges:
   - subject: ard1_nata_catalytic_subunit
     predicate: contributes to
@@ -239,6 +253,26 @@ causal_graphs:
     - reference: GO:0004596
       notes: GO:0004596 is the molecular-function term for protein-N-terminal amino-acid
         acetyltransferase activity.
+  - subject: nat1_nata_auxiliary_subunit
+    predicate: contributes to
+    object: nata_complex
+    description: Noncatalytic auxiliary constituent that anchors budding-yeast NatA
+      to ribosomes and positions nascent polypeptides for N-terminal acetylation.
+    evidence:
+    - reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+      notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
+        salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
+        Nat1p anchors the complex to ribosomes.
+  - subject: nat5_nata_gnat_subunit
+    predicate: contributes to
+    object: nata_complex
+    description: GNAT-family NatA constituent that copurifies stoichiometrically with
+      Nat1 and Ard1.
+    evidence:
+    - reference: DOI:10.1128/MCB.23.20.7403-7414.2003
+      notes: Gautschi et al. 2003 purified Saccharomyces cerevisiae NatA from ribosomal
+        salt wash, identified Nat1p, Ard1p and Nat5p in the complex, and showed that
+        Nat1p anchors the complex to ribosomes.
 discussions:
 - discussion_id: resolve_nata_subunit_groundings
   prompt: Resolve exact source-neutral family groundings for the curated budding-yeast

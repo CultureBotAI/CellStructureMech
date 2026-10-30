@@ -42,6 +42,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-30T04:54:33Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added component_ref causal nodes and source-backed constituent edges for
+    MIS12/Mtw1, Dsn1, Nsl1, and Nnf1/PMF1 to mis12_mind_type_complex.
+  llm_assisted: true
 synonyms:
 - synonym_text: MIND complex
   synonym_type: EXACT_SYNONYM
@@ -300,6 +306,22 @@ causal_graphs:
     - UniProtKB:P40460
     - UniProtKB:P33895
     - UniProtKB:Q04477
+  - node_id: mis12_mtw1_subunit
+    label: MIS12/Mtw1 subunit family
+    node_type: GENE_OR_PROTEIN
+    component_ref: mis12_mtw1_subunit
+  - node_id: dsn1_subunit
+    label: Dsn1 subunit family
+    node_type: GENE_OR_PROTEIN
+    component_ref: dsn1_subunit
+  - node_id: nsl1_subunit
+    label: Nsl1 subunit family
+    node_type: GENE_OR_PROTEIN
+    component_ref: nsl1_subunit
+  - node_id: nnf1_pmf1_subunit
+    label: Nnf1/PMF1 subunit family
+    node_type: GENE_OR_PROTEIN
+    component_ref: nnf1_pmf1_subunit
   edges:
   - subject: mis12_mind_type_complex
     predicate: is a
@@ -336,6 +358,61 @@ causal_graphs:
     - reference: DOI:10.1101/gad.1144403
       notes: De Wulf, McAinsh and Sorger 2003 classified yeast MIND as a bridge between
         DNA-proximal and microtubule-bound kinetochore subunits.
+  - subject: mis12_mtw1_subunit
+    predicate: contributes to
+    object: mis12_mind_type_complex
+    description: Named MIS12/Mtw1-family constituent of the MIS12/MIND type kinetochore
+      subcomplex.
+    evidence:
+    - reference: GO:0000444
+      notes: GO:0000444 names MIS12 and the budding-yeast Mtw1p complex as part of
+        the same kinetochore subcomplex.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 named Mtw1p as the M subunit of the
+        budding-yeast MIND complex.
+    - reference: DOI:10.1083/jcb.200509158
+      notes: Kline et al. 2006 reconstituted the human Mis12 complex with hMis12 as
+        one of four stable complex members.
+  - subject: dsn1_subunit
+    predicate: contributes to
+    object: mis12_mind_type_complex
+    description: Conserved Dsn1-family constituent of the MIS12/MIND type kinetochore
+      subcomplex.
+    evidence:
+    - reference: GO:0000444
+      notes: GO:0000444 names Dsn1/DSN1 as part of MIS12/MIND type complexes.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 included Dsn1p in the budding-yeast
+        Mtw1/MIND complex.
+    - reference: DOI:10.1083/jcb.200509158
+      notes: Kline et al. 2006 found hDsn1 in a stable four-subunit human Mis12 complex.
+  - subject: nsl1_subunit
+    predicate: contributes to
+    object: mis12_mind_type_complex
+    description: Conserved Nsl1-family constituent of the MIS12/MIND type kinetochore
+      subcomplex.
+    evidence:
+    - reference: GO:0000444
+      notes: GO:0000444 names Nsl1/NSL1 as part of MIS12/MIND type complexes.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 included Nsl1p in the budding-yeast
+        Mtw1/MIND complex.
+    - reference: DOI:10.1083/jcb.200509158
+      notes: Kline et al. 2006 found hNsl1 in a stable four-subunit human Mis12 complex.
+  - subject: nnf1_pmf1_subunit
+    predicate: contributes to
+    object: mis12_mind_type_complex
+    description: Nnf1/PMF1-family constituent of the MIS12/MIND type kinetochore subcomplex.
+    evidence:
+    - reference: GO:0000444
+      notes: GO:0000444 names budding-yeast Nnf1p and human PMF1 within MIS12/MIND
+        type complexes.
+    - reference: DOI:10.1101/gad.1144403
+      notes: De Wulf, McAinsh and Sorger 2003 included Nnf1p in the budding-yeast
+        Mtw1/MIND complex.
+    - reference: DOI:10.1083/jcb.200509158
+      notes: Kline et al. 2006 found hNnf1/PMF1 in a stable four-subunit human Mis12
+        complex.
 discussions:
 - discussion_id: mis12_mind_subunit_groundings_todo
   prompt: Resolve exact source-neutral family groundings for the MIS12/Mtw1, Dsn1,

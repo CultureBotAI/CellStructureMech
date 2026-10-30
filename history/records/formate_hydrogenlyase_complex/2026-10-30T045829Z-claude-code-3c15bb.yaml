@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/formate_hydrogenlyase_complex.yaml
+  slug: formate_hydrogenlyase_complex
+session:
+  id: 2026-10-30T045829Z-claude-code-3c15bb
+  timestamp: '2026-10-30T04:58:29Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added component_ref causal nodes and constituent edges for HycB-HycG subunits
+  details: Connected HycB, HycC, HycD, HycE, HycF, and HycG to hyc_module via component_ref
+    GENE_OR_PROTEIN nodes and linked hyc_module to formate_hydrogenlyase with directed contributes
+    to edges backed by PDB:7Z0T and Steinhilper et al. 2022 (PMID:36104349). Validated via
+    write_validated_structure.

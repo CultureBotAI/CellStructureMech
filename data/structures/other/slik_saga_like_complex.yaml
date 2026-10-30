@@ -34,6 +34,13 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-30T04:54:31Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added component_ref causal nodes and source-backed constituent edges for
+    the 16 remaining SLIK subunits (Tra1, TAF5/6/9/10/12, Spt3/7-truncated/20, Ada1/2/3,
+    Sgf11/29/73, Sus1) to slik_saga_like_complex.
+  llm_assisted: true
 synonyms:
 - synonym_text: SAGA (alt) complex
   synonym_type: EXACT_SYNONYM
@@ -773,6 +780,70 @@ causal_graphs:
     label: cysteine-type deubiquitinase activity
     node_type: MOLECULAR_FUNCTION
     grounding: GO:0004843
+  - node_id: tra1_slik_subunit
+    label: Tra1 SLIK subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: tra1_slik_subunit
+  - node_id: taf5_slik_core_subunit
+    label: Taf5 SLIK core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: taf5_slik_core_subunit
+  - node_id: taf6_slik_core_subunit
+    label: Taf6 SLIK core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: taf6_slik_core_subunit
+  - node_id: taf9_slik_core_subunit
+    label: Taf9 SLIK core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: taf9_slik_core_subunit
+  - node_id: taf10_slik_core_subunit
+    label: Taf10 SLIK core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: taf10_slik_core_subunit
+  - node_id: taf12_slik_core_subunit
+    label: Taf12 SLIK core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: taf12_slik_core_subunit
+  - node_id: spt3_slik_core_subunit
+    label: Spt3 SLIK core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: spt3_slik_core_subunit
+  - node_id: spt7_truncated_slik_core_subunit
+    label: truncated Spt7 SLIK core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: spt7_truncated_slik_core_subunit
+  - node_id: spt20_slik_core_subunit
+    label: Spt20 SLIK core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: spt20_slik_core_subunit
+  - node_id: ada1_slik_core_subunit
+    label: Ada1 SLIK core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ada1_slik_core_subunit
+  - node_id: ada2_slik_hat_subunit
+    label: Ada2 SLIK HAT subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ada2_slik_hat_subunit
+  - node_id: ada3_slik_hat_subunit
+    label: Ada3 SLIK HAT subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ada3_slik_hat_subunit
+  - node_id: sgf29_slik_hat_subunit
+    label: Sgf29 SLIK HAT subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sgf29_slik_hat_subunit
+  - node_id: sgf11_slik_dub_subunit
+    label: Sgf11 SLIK DUB subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sgf11_slik_dub_subunit
+  - node_id: sus1_slik_dub_subunit
+    label: Sus1 SLIK DUB subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sus1_slik_dub_subunit
+  - node_id: sgf73_slik_dub_subunit
+    label: Sgf73 SLIK DUB-anchor subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sgf73_slik_dub_subunit
   edges:
   - subject: gcn5_slik_hat_subunit
     predicate: contributes to
@@ -806,6 +877,167 @@ causal_graphs:
     predicate: supports
     object: cysteine_type_deubiquitinase_activity
     description: The Ubp8-containing SLIK DUB module supports deubiquitination activity.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified
+        SLIK and showed SAGA and SLIK had identical deubiquitination activity on a
+        minimal substrate.
+  - subject: tra1_slik_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: Activator-binding module constituent of the budding-yeast SLIK coactivator
+      complex.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: taf5_slik_core_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: WD40-propeller core-module constituent of budding-yeast SLIK.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: taf6_slik_core_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: Core-module constituent of the Taf6-Taf9 histone-fold pair in budding-yeast
+      SLIK.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: taf9_slik_core_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: Core-module constituent of the Taf6-Taf9 histone-fold pair in budding-yeast
+      SLIK.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: taf10_slik_core_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: Core-module constituent of the Taf10-Spt7 histone-fold pair in budding-yeast
+      SLIK.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: taf12_slik_core_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: Core-module constituent of the Taf12-Ada1 histone-fold pair in budding-yeast
+      SLIK.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: spt3_slik_core_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: TBP-interacting core-module constituent of budding-yeast SLIK.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: spt7_truncated_slik_core_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: C-terminally processed Spt7 core-module constituent that distinguishes
+      budding-yeast SLIK from SAGA.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: spt20_slik_core_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: Core-module constituent that helps organize budding-yeast SLIK.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: ada1_slik_core_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: Core-module constituent of the Taf12-Ada1 histone-fold pair in budding-yeast
+      SLIK.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 purified SAGA and SLIK from Saccharomyces cerevisiae,
+        confirmed the expected SLIK subunit stoichiometry, detected truncated Spt7
+        and Spt8 loss in SLIK, and compared its architecture and HAT/DUB activities
+        with SAGA.
+  - subject: ada2_slik_hat_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: Adaptor constituent of the SLIK histone acetyltransferase module.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified
+        SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3
+        peptide minimal substrate.
+  - subject: ada3_slik_hat_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: Adaptor constituent of the SLIK histone acetyltransferase module.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified
+        SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3
+        peptide minimal substrate.
+  - subject: sgf29_slik_hat_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: SGF-family constituent of the SLIK histone acetyltransferase module.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 detected the Ada2/Ada3/Gcn5/Sgf29 HAT module in purified
+        SLIK and showed SAGA and SLIK had indistinguishable HAT activity on an H3
+        peptide minimal substrate.
+  - subject: sgf11_slik_dub_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: SGF-family constituent of the SLIK deubiquitinating module.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified
+        SLIK and showed SAGA and SLIK had identical deubiquitination activity on a
+        minimal substrate.
+  - subject: sus1_slik_dub_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: ENY2/Sus1-family constituent of the SLIK deubiquitinating module.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2021.100671
+      notes: Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified
+        SLIK and showed SAGA and SLIK had identical deubiquitination activity on a
+        minimal substrate.
+  - subject: sgf73_slik_dub_subunit
+    predicate: contributes to
+    object: slik_saga_like_complex
+    description: DUB-module constituent of budding-yeast SLIK.
     evidence:
     - reference: DOI:10.1016/j.jbc.2021.100671
       notes: Adamus et al. 2021 detected the Ubp8/Sgf11/Sus1/Sgf73 DUB module in purified
