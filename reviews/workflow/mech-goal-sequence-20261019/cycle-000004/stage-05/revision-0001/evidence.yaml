@@ -1,0 +1,201 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 4
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed all 13 carried-forward review findings from Cycle 4 Stage 4 across 19 unique CellStructureRecord
+  YAML files, grouped them by shared root cause and repair ownership into 3 GitHub issues (#2461, #2462,
+  #2463), applied all fixes via native writers (record_curation_event + write_validated_structure) and
+  repository history ledger files in commit 31fd33d9556ea5627b36d50ab608ccb9464f9353, regenerated pages/,
+  validated all strict, ID-label, UniProt, CURIE liveness, history, and vendored sync gates, and verified
+  resolution via fresh structured RecordReview bundle 20261030T122500Z-c4-stage5-remediation-verification
+  with 0 open carry-forward findings.'
+source_revision: 31fd33d9556ea5627b36d50ab608ccb9464f9353
+scope_frozen_at: '2026-10-30T12:00:00Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml
+  sha256: 898a10c8ecaef3546e1c415c2f64dbb2a33cc62161793db073d6866f7f1ca5aa
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
+  sha256: 944be9cbd5f7e578987fe4b02879939600194180a782bae73f2bc81f3bc58b05
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
+  sha256: 13003ed71f6d171f6b859036890957aed9f10a09582f65c70710634add95ef81
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/resolution_summary.json
+  sha256: 9e3364d9b9b4bd15ee7c59b7fe0a658389ae7b2ce3771118c4eefb8102ce19d0
+  kind: supporting
+findings:
+- finding_id: ftsqbl-complex-parent-partof-duplication
+  carried_from: ftsqbl-complex-parent-partof-duplication
+  group_id: hierarchy-parthood-and-subcomplex-has-part
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2461
+  status: resolved
+  summary: Removed GO:0032153 (cell division site) from parent_structures in ftsqbl_complex.yaml while
+    retaining it in part_of.
+  disposition: Removed GO:0032153 (cell division site) from parent_structures in ftsqbl_complex.yaml while
+    retaining GO:0098797 (plasma membrane protein complex) in parent_structures and GO:0032153 + GO:0043293
+    in part_of (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: mis12-mind-outer-kinetochore-parthood
+  carried_from: mis12-mind-outer-kinetochore-parthood
+  group_id: hierarchy-parthood-and-subcomplex-has-part
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2461
+  status: resolved
+  summary: Updated part_of in mis12_mind_type_complex.yaml from broad GO:0000776 (kinetochore) to GO:0000940
+    (condensed chromosome outer kinetochore).
+  disposition: Replaced GO:0000776 (kinetochore) in part_of with GO:0000940 (condensed chromosome outer
+    kinetochore) in mis12_mind_type_complex.yaml (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: other-cytostome-plasma-membrane-parthood
+  carried_from: other-cytostome-plasma-membrane-parthood
+  group_id: hierarchy-parthood-and-subcomplex-has-part
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2461
+  status: resolved
+  summary: Added GO:0005886 (plasma membrane) to part_of in cytostome.yaml.
+  disposition: Added GO:0005886 (plasma membrane) to part_of in cytostome.yaml while retaining GO:0099096
+    (cell-surface pit) in parent_structures (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: ribonucleoprotein-supraspliceosomal-parent-constituent-conflation
+  carried_from: ribonucleoprotein-supraspliceosomal-parent-constituent-conflation
+  group_id: hierarchy-parthood-and-subcomplex-has-part
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2461
+  status: resolved
+  summary: Moved GO:0005681 (spliceosomal complex) from parent_structures to has_part in supraspliceosomal_complex.yaml.
+  disposition: Moved GO:0005681 (spliceosomal complex) from parent_structures to has_part in supraspliceosomal_complex.yaml
+    while retaining GO:0120114 (Sm-like protein family complex) in parent_structures and GO:0005634 (nucleus)
+    in part_of (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: secretion-system-sec-complex-has-part-secyeg
+  carried_from: secretion-system-sec-complex-has-part-secyeg
+  group_id: hierarchy-parthood-and-subcomplex-has-part
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2461
+  status: resolved
+  summary: Added GO:0031523 (plasma membrane Sec complex) to has_part in cell_envelope_sec_protein_transport_complex.yaml.
+  disposition: Added GO:0031523 (plasma membrane Sec complex) to has_part in cell_envelope_sec_protein_transport_complex.yaml
+    as the reciprocal parthood link to plasma_membrane_sec_complex.yaml (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: cytoskeleton-eisosome-filament-bar-core-component-type
+  carried_from: cytoskeleton-eisosome-filament-bar-core-component-type
+  group_id: subcomplex-component-types-has-part-and-evidence-notes
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2462
+  status: resolved
+  summary: Typed pil1_lsp1_bar_domain_core in eisosome_filament.yaml as PROTEIN_COMPLEX.
+  disposition: Updated pil1_lsp1_bar_domain_core in eisosome_filament.yaml from PROTEIN to PROTEIN_COMPLEX
+    (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: division-machinery-elongasome-mrec-mred-component-type
+  carried_from: division-machinery-elongasome-mrec-mred-component-type
+  group_id: subcomplex-component-types-has-part-and-evidence-notes
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2462
+  status: resolved
+  summary: Typed mrec_mred_scaffold_subcomplex in elongasome.yaml as PROTEIN_COMPLEX.
+  disposition: Updated mrec_mred_scaffold_subcomplex in elongasome.yaml from PROTEIN to PROTEIN_COMPLEX
+    (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: energy-complex-phycobilisome-core-type-and-has-part
+  carried_from: energy-complex-phycobilisome-core-type-and-has-part
+  group_id: subcomplex-component-types-has-part-and-evidence-notes
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2462
+  status: resolved
+  summary: Typed allophycocyanin_core_cylinders as PROTEIN_COMPLEX and added GO:0030090 (phycobilisome
+    core) to has_part in phycobilisome.yaml.
+  disposition: Updated allophycocyanin_core_cylinders to PROTEIN_COMPLEX and added GO:0030090 (phycobilisome
+    core) to has_part in phycobilisome.yaml (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: membrane-organelle-subcomplex-types-and-anammoxosome-has-part
+  carried_from: membrane-organelle-subcomplex-types-and-anammoxosome-has-part
+  group_id: subcomplex-component-types-has-part-and-evidence-notes
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2462
+  status: resolved
+  summary: Typed 3 heteromeric subcomplex components as PROTEIN_COMPLEX across glycosome.yaml and golgi_apparatus.yaml
+    and added 3 respiratory subcomplex records to has_part in anammoxosome.yaml.
+  disposition: Updated pex14_pex13_docking_subcomplex and pex5_pex7_pts_receptor_complex in glycosome.yaml
+    and coat_vesicle_trafficking_machinery in golgi_apparatus.yaml to PROTEIN_COMPLEX, and added GO:0009324
+    (nitrite oxidoreductase complex), cellstructuremech:hydrazine_synthase_complex, and cellstructuremech:hydrazine_dehydrogenase_complex
+    to has_part in anammoxosome.yaml (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: other-pas-eisosome-component-types-and-micos-has-part
+  carried_from: other-pas-eisosome-component-types-and-micos-has-part
+  group_id: subcomplex-component-types-has-part-and-evidence-notes
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2462
+  status: resolved
+  summary: Typed 3 heteromeric subcomplex components as PROTEIN_COMPLEX across phagophore_assembly_site.yaml
+    and eisosome.yaml and added 2 subcomplex records to has_part in micos_complex.yaml.
+  disposition: Updated atg1_kinase_initiation_complex and atg12_atg5_atg16_lipidation_machinery in phagophore_assembly_site.yaml
+    and pil1_lsp1_bar_domain_core in eisosome.yaml to PROTEIN_COMPLEX, and added cellstructuremech:mic60_mic19_subcomplex
+    and cellstructuremech:mic10_subcomplex to has_part in micos_complex.yaml (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: ribonucleoprotein-box-cd-snornp-type-and-evidence-notes
+  carried_from: ribonucleoprotein-box-cd-snornp-type-and-evidence-notes
+  group_id: subcomplex-component-types-has-part-and-evidence-notes
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2462
+  status: resolved
+  summary: Typed nop1_nop56_nop58_snu13_core in box_c_d_methylation_guide_snornp_complex.yaml as PROTEIN_COMPLEX
+    and aligned PMID:10339557 notes to 1999 across 2 box C/D records.
+  disposition: Updated nop1_nop56_nop58_snu13_core in box_c_d_methylation_guide_snornp_complex.yaml to
+    PROTEIN_COMPLEX and aligned PMID:10339557 .notes strings to 'Lafontaine DLJ & Tollervey D 1999 (RNA)'
+    across box_c_d_methylation_guide_snornp_complex.yaml and box_c_d_rnp_complex.yaml (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).
+- finding_id: appendage-flagellum-filament-node-and-archaeal-has-part
+  carried_from: appendage-flagellum-filament-node-and-archaeal-has-part
+  group_id: causal-graph-structure-node-component-ref-alignment
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2463
+  status: resolved
+  summary: 'Removed component_ref: fliC from node_id: filament (GO:0009420) in bacterial_type_flagellum.yaml
+    and added GO:0097592 (archaeal-type flagellum filament) to has_part in archaeal_type_flagellum.yaml.'
+  disposition: 'Removed component_ref: fliC from node_id: filament (GO:0009420) in flagellum_torque_generation
+    in bacterial_type_flagellum.yaml and added GO:0097592 (archaeal-type flagellum filament) to has_part
+    in archaeal_type_flagellum.yaml (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).'
+- finding_id: microcompartment-carboxysome-shell-node-component-ref
+  carried_from: microcompartment-carboxysome-shell-node-component-ref
+  group_id: causal-graph-structure-node-component-ref-alignment
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2463
+  status: resolved
+  summary: 'Removed component_ref: bmc_h from node_id: shell (GO:0031472) in carboxysome.yaml.'
+  disposition: 'Removed component_ref: bmc_h from node_id: shell (GO:0031472) in carboxysome_co2_concentrating
+    in carboxysome.yaml (commit 31fd33d9556ea5627b36d50ab608ccb9464f9353).'
+groups:
+- group_id: hierarchy-parthood-and-subcomplex-has-part
+  finding_ids:
+  - ftsqbl-complex-parent-partof-duplication
+  - mis12-mind-outer-kinetochore-parthood
+  - other-cytostome-plasma-membrane-parthood
+  - ribonucleoprotein-supraspliceosomal-parent-constituent-conflation
+  - secretion-system-sec-complex-has-part-secyeg
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2461
+  status: resolved
+  summary: Resolve hierarchy, parthood, and constituent subcomplex has_part issues across 5 records (#2461).
+  disposition: Resolved in commit 31fd33d9556ea5627b36d50ab608ccb9464f9353 and verified in structured
+    review bundle 20261030T122500Z-c4-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/resolution_summary.json
+- group_id: subcomplex-component-types-has-part-and-evidence-notes
+  finding_ids:
+  - cytoskeleton-eisosome-filament-bar-core-component-type
+  - division-machinery-elongasome-mrec-mred-component-type
+  - energy-complex-phycobilisome-core-type-and-has-part
+  - membrane-organelle-subcomplex-types-and-anammoxosome-has-part
+  - other-pas-eisosome-component-types-and-micos-has-part
+  - ribonucleoprotein-box-cd-snornp-type-and-evidence-notes
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2462
+  status: resolved
+  summary: 'Type 10 heteromeric subcomplex components as PROTEIN_COMPLEX across 8 records, add structured
+    has_part links in 3 records, and align PMID:10339557 publication year across 2 records (11 unique
+    records in group; #2462).'
+  disposition: Resolved in commit 31fd33d9556ea5627b36d50ab608ccb9464f9353 and verified in structured
+    review bundle 20261030T122500Z-c4-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/resolution_summary.json
+- group_id: causal-graph-structure-node-component-ref-alignment
+  finding_ids:
+  - appendage-flagellum-filament-node-and-archaeal-has-part
+  - microcompartment-carboxysome-shell-node-component-ref
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2463
+  status: resolved
+  summary: Align causal_graphs STRUCTURE node component_ref attributes in bacterial_type_flagellum and
+    carboxysome and add GO:0097592 to archaeal_type_flagellum has_part (#2463).
+  disposition: Resolved in commit 31fd33d9556ea5627b36d50ab608ccb9464f9353 and verified in structured
+    review bundle 20261030T122500Z-c4-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/resolution_summary.json
+carry_forward_ids: []
+infra_tasks: []
