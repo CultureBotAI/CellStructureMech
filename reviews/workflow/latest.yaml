@@ -1,11 +1,433 @@
+authority: verified_closure
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
 latest_verified_stage:
   run_id: mech-goal-sequence-20261019
   cycle_index: 5
-  stage_order: 5
-  stage_id: resolve_review_findings
+  stage_order: 6
+  stage_id: infrastructure
   revision: 1
-  evidence_path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/evidence.yaml
-  evidence_sha256: 4e7ffd3acfd2ac6af3a267d9b08461c792a034d26f4b43c5ff9b67978b7f5f7b
-  git_revision: ecd788f5a2090d23dddea6a1c8757ed55f7ddf68
-  verified_at: '2026-10-31T02:45:16.856265+00:00'
+  evidence_path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-06/revision-0001/evidence.yaml
+  evidence_sha256: 81afc15b2a06d687f1cf3419ad47a08629c3ea7848834b62c0bfca152849cbed
+  git_revision: 428a847b9ff0ee8b38a3523fc7fff23cd1eb5562
+  verified_at: '2026-10-31T04:00:15.616418+00:00'
   status: verified
+latest:
+  cycle: 5
+  stage: 6
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-06/revision-0001/evidence.yaml
+    sha256: 81afc15b2a06d687f1cf3419ad47a08629c3ea7848834b62c0bfca152849cbed
+  receipt_sha256: 87fcab7f3bcff77376c5cca734e265c7ece87652e57bf4e481b24cdb2cff305b
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    head_sha: 64e5607b2c7f56bce25415efb1781fa6ba30fb83
+    merge_commit_sha: 428a847b9ff0ee8b38a3523fc7fff23cd1eb5562
+    merged_at: '2026-10-31T03:47:23Z'
+    pr_number: 2479
+    status: merged
+    verified_at: '2026-10-31T04:00:15.616418+00:00'
+entries:
+- cycle: 1
+  stage: 4
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+    sha256: e8bddc4fab1e4fec6f1f08b9a6add66e309ea063b53a5098ab2a6c032ad6707f
+  receipt_sha256: 13a230bf4cf5f808f90f2d4f6cafb6550dd924e590f09e69b16f7722fe6159a9
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 2302933b4098abb18db3f4500e103c695229f891
+    merge_commit_sha: da6cead403f9cb770073a4b2bd29726175a3be34
+    merged_at: '2026-10-23T10:43:13Z'
+    pr_number: 2400
+    status: merged
+    verified_at: '2026-10-23T10:49:30.036243+00:00'
+- cycle: 1
+  stage: 5
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/evidence.yaml
+    sha256: 5cf3cac693cdddfb058eea9edaddbe48e0c63cfd9cec7205852bac95afbaf762
+  receipt_sha256: 2145e16e4a2817067688debc18ff6353b7607ff662b2f4f39c99daa51ec8ca25
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    head_sha: 6aa0a5596aeb3b5f4462cba0177dd9feca440208
+    merge_commit_sha: 0f5126a29f835e79c1eb25b3589ff57d94fc723b
+    merged_at: '2026-10-23T12:25:40Z'
+    pr_number: 2406
+    status: merged
+    verified_at: '2026-10-23T12:41:41.506101+00:00'
+- cycle: 1
+  stage: 6
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/evidence.yaml
+    sha256: e9c88f7be8b7f0b21b2e535c9c136a69a6216a2e4f359c83b1710afabfb873b0
+  receipt_sha256: 13799108f4ae1a5838a07809c524be146c5a841fe2487a5dd8bd6a1678bb088d
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 258cfde962d2a0b42f46cd4fd008450bd0cec1af
+    merge_commit_sha: 622e92be4063877ab6748a6db1d1ec8618cdd7b7
+    merged_at: '2026-10-23T14:03:19Z'
+    pr_number: 2411
+    status: merged
+    verified_at: '2026-10-23T14:12:43.445493+00:00'
+- cycle: 2
+  stage: 4
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml
+    sha256: d82e8d95fbabf37450deff6a3de9169f52b4e6b6af66536d101b5abf3673f945
+  receipt_sha256: f5e97eadbc407a32acde0ad7f620311a5f3dfac45ffceba298fe4d4c3e6b28a6
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 15fe0b8e90a2f01d7b3a2a5549e787fa01022639
+    merge_commit_sha: 1c123ff046f99dd9bfb8fcda676fc13b43044c0a
+    merged_at: '2026-10-23T23:54:12Z'
+    pr_number: 2418
+    status: merged
+    verified_at: '2026-10-24T00:07:08.435167+00:00'
+- cycle: 2
+  stage: 5
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/evidence.yaml
+    sha256: 0440b0090bcaa8047fb865bacbc74f604f2d06f1a3023dad3b8f5062a8edbb9b
+  receipt_sha256: ea920f23a57eea80c55632cfa997e8ba1d7da36548537a4c6d256027297ab465
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 70081475829b2586df8e55fdb6992d5dbf8b1f04
+    merge_commit_sha: ef2bb4d5c3ec8f83b02376510569b2186a2522d6
+    merged_at: '2026-10-24T01:21:41Z'
+    pr_number: 2422
+    status: merged
+    verified_at: '2026-10-24T01:33:57.455065+00:00'
+- cycle: 2
+  stage: 6
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/evidence.yaml
+    sha256: 74cbce5c00b17debeb29b1bd6fb82f442bd9b08b8a75c0428f61676b4d8b4d45
+  receipt_sha256: 49d11e534c256c7b085fdfdd8b948724fb7af3723f88a9027fab0eb7391ace00
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 80f25327dd79fab371c7a11fda0dcef7a2b0ccef
+    merge_commit_sha: 48a1717c7ed705ba698f230f3ac80e44f3135007
+    merged_at: '2026-10-24T02:33:32Z'
+    pr_number: 2423
+    status: merged
+    verified_at: '2026-10-24T02:48:24.062389+00:00'
+- cycle: 3
+  stage: 4
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml
+    sha256: 5c9d063bb0b141b352ef104a9e33ce39b7aa2ba418e55f76fe195e7d6fbae2d0
+  receipt_sha256: 686cf049c2a91d2e4848fb4dd114fee9503617644e14445c7ce5caef91bbb59d
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 30a683eca25dde6ef0888494ebe7ad043a94311e
+    merge_commit_sha: 7a576b4db730ecea3903e4842acdc21405a9483c
+    merged_at: '2026-10-25T11:46:05Z'
+    pr_number: 2429
+    status: merged
+    verified_at: '2026-10-25T11:51:58.301907+00:00'
+- cycle: 3
+  stage: 5
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/evidence.yaml
+    sha256: 4237492297a2b023ff4ef673d989f522e15880131191ac8d701960b70b1cca91
+  receipt_sha256: be6bbbe3c68de597d2310d793d2c64bd8e38b8183711dd1171327e21951ba323
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: facb1f613eeacfbc9d86e1a0f2c087df9ac4f1ab
+    merge_commit_sha: 08473198b32bffce4520313807aea4527a788a7e
+    merged_at: '2026-10-25T13:40:50Z'
+    pr_number: 2433
+    status: merged
+    verified_at: '2026-10-25T13:48:26.099770+00:00'
+- cycle: 3
+  stage: 6
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/evidence.yaml
+    sha256: cad8582c21e63db389de1d1d503fa2ca7ec7e674d7f4207d5f5dcc82e43d06a4
+  receipt_sha256: b97632e6e56b64b2fa810119932c82007c033565c2abc85d922538beb5210dfc
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 35b30b079f6f1f3fba547404ff610b60b3f22fbb
+    merge_commit_sha: 2cf0169e38061cc8976f6dc1f4bf452f89aa3759
+    merged_at: '2026-10-25T14:50:28Z'
+    pr_number: 2434
+    status: merged
+    verified_at: '2026-10-25T14:59:37.215974+00:00'
+- cycle: 4
+  stage: 4
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml
+    sha256: 898a10c8ecaef3546e1c415c2f64dbb2a33cc62161793db073d6866f7f1ca5aa
+  receipt_sha256: d7ea87572b736e7a0ec6edec0d89ae182c9dd04881d0b4a3af834fe8f6fd3790
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 1968c2a94b17058e906ab5194871e14a81fd1972
+    merge_commit_sha: 5924788d42c0383c0d2309faa096257ffca98034
+    merged_at: '2026-10-30T11:38:17Z'
+    pr_number: 2460
+    status: merged
+    verified_at: '2026-10-30T11:44:56.701568+00:00'
+- cycle: 4
+  stage: 5
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/evidence.yaml
+    sha256: 1e7109ae253b89dc556220b808c930222e40db93795a68592b9cdac04e672352
+  receipt_sha256: 0623166d4fc909a29f2e22584d51872f40e3aefa8ee6a29f0bab3aba872bee10
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: f74e47572582db127b1278bc34c34134e84526e4
+    merge_commit_sha: 6ba79ee3d9f23d0d754a91a9e558ef748a906c07
+    merged_at: '2026-10-30T13:18:32Z'
+    pr_number: 2464
+    status: merged
+    verified_at: '2026-10-30T13:29:07.450398+00:00'
+- cycle: 4
+  stage: 6
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/evidence.yaml
+    sha256: 2e6e6f0936180bfa45224f4369a23f8a53894c0071259604c23477173a10e270
+  receipt_sha256: db5ce1f8a3d8ff850cea86016b0b55f76f93e7085241d15f4bcf4629f8de719c
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 09f7003edbaad121390dc944dcf064d0e4cfd0b8
+    merge_commit_sha: 8a0bd12cab163b4aa69ba408ba35e0ce22f0bf4c
+    merged_at: '2026-10-30T14:42:14Z'
+    pr_number: 2465
+    status: merged
+    verified_at: '2026-10-30T14:51:23.993402+00:00'
+- cycle: 5
+  stage: 4
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml
+    sha256: 008cce72cea1a120bfef359392a32f3930ae39fa3af2b47ef9f79bda7608df12
+  receipt_sha256: 36fcebec416c2c42cabf0fdbb9c4ef591eee73625cffe2fd37118bd35f7e22c7
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: a090727f5d5b8665c8d337a9bf28219131baf388
+    merge_commit_sha: eaaef6a23e4fecacb058e320d423098be4592def
+    merged_at: '2026-10-31T00:54:13Z'
+    pr_number: 2473
+    status: merged
+    verified_at: '2026-10-31T01:05:27.266379+00:00'
+- cycle: 5
+  stage: 5
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/evidence.yaml
+    sha256: 4e7ffd3acfd2ac6af3a267d9b08461c792a034d26f4b43c5ff9b67978b7f5f7b
+  receipt_sha256: 9ad5034e3824810855f0faf339c054cc98023c020aa413b8adfb8a84033623ea
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: a1c901081f60daa69444481fb7f53e6f20696cbb
+    merge_commit_sha: ecd788f5a2090d23dddea6a1c8757ed55f7ddf68
+    merged_at: '2026-10-31T02:38:34Z'
+    pr_number: 2477
+    status: merged
+    verified_at: '2026-10-31T02:45:16.856265+00:00'
+- cycle: 5
+  stage: 6
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-06/revision-0001/evidence.yaml
+    sha256: 81afc15b2a06d687f1cf3419ad47a08629c3ea7848834b62c0bfca152849cbed
+  receipt_sha256: 87fcab7f3bcff77376c5cca734e265c7ece87652e57bf4e481b24cdb2cff305b
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    - bucket: pass
+      name: identifier-liveness
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    head_sha: 64e5607b2c7f56bce25415efb1781fa6ba30fb83
+    merge_commit_sha: 428a847b9ff0ee8b38a3523fc7fff23cd1eb5562
+    merged_at: '2026-10-31T03:47:23Z'
+    pr_number: 2479
+    status: merged
+    verified_at: '2026-10-31T04:00:15.616418+00:00'

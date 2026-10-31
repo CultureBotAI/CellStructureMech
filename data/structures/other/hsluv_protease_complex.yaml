@@ -1,0 +1,237 @@
+identifier: GO:0009376
+label: HslUV protease complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: An ATP-dependent protease complex present in many Bacteria and Eukarya,
+  composed of stacking HslU (ClpY) hexameric AAA+ ATPase rings and HslV (ClpQ) dodecameric
+  peptidase double rings; recognizes, unfolds, and translocates protein substrates
+  such as the cell division inhibitor SulA into the HslV proteolytic chamber.
+definition_source: GO:0009376
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: ClpYQ protease complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009376
+parent_structures:
+- GO:0031597
+part_of:
+- GO:0005737
+xrefs:
+- ComplexPortal:CPX-2104
+components:
+- component_id: hslu_atpase_subunit
+  label: ATP-dependent protease ATPase subunit HslU
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR050052
+  gene_symbols:
+  - hslU
+  - clpY
+  stoichiometry: 6 or 12
+  essentiality: ESSENTIAL
+  role: Hexameric AAA+ ATPase chaperone ring that recognizes, unfolds, and translocates
+    polypeptide substrates through its central pore into HslV.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A6H5
+    protein_label: ATP-dependent protease ATPase subunit HslU
+    gene_symbol: hslU
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 HslU (ClpY) AAA+ unfoldase subunit.
+    evidence:
+    - reference: UniProtKB:P0A6H5
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 HslU.
+    - reference: PMID:21803990
+      snippet: In Escherichia coli, ClpYQ (HslUV) is a two-component ATP-dependent
+        protease composed of ClpY (HslU), an ATPase with unfolding activity, and ClpQ
+        (HslV), a peptidase.
+      notes: Establishes ClpY (HslU) as the ATPase unfoldase subunit in E. coli.
+  evidence:
+  - reference: GO:0009376
+    notes: GO:0009376 defines the HslUV protease complex composed of HslU and HslV.
+  - reference: InterPro:IPR050052
+    notes: InterPro family entry for ATP-dependent protease ATPase subunit HslU.
+  - reference: PMID:20837023
+    snippet: HslU hexamers recognize and unfold native protein substrates and then
+      translocate the polypeptide into the degradation chamber of the HslV peptidase.
+    notes: Demonstrates HslU hexamer substrate recognition, unfolding, and translocation.
+- component_id: hslv_peptidase_subunit
+  label: ATP-dependent protease subunit HslV
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR022281
+  gene_symbols:
+  - hslV
+  - clpQ
+  stoichiometry: '12'
+  essentiality: ESSENTIAL
+  role: Dodecameric N-terminal threonine peptidase double ring forming the central
+    proteolytic chamber of the HslUV complex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A7B8
+    protein_label: ATP-dependent protease subunit HslV
+    gene_symbol: hslV
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 HslV (ClpQ) peptidase subunit.
+    evidence:
+    - reference: UniProtKB:P0A7B8
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 HslV.
+    - reference: PMID:21803990
+      snippet: In the ClpYQ proteolytic complex, the hexameric rings of ClpY (HslU)
+        are responsible for protein recognition, unfolding, and translocation into
+        the proteolytic inner chamber of the dodecameric ClpQ (HslV).
+      notes: Establishes dodecameric ClpQ (HslV) as the proteolytic inner chamber.
+  evidence:
+  - reference: GO:0009376
+    notes: GO:0009376 defines the HslUV protease complex.
+  - reference: InterPro:IPR022281
+    notes: InterPro entry for ATP-dependent protease subunit HslV.
+  - reference: PMID:21803990
+    snippet: In Escherichia coli, ClpYQ (HslUV) is a two-component ATP-dependent protease
+      composed of ClpY (HslU), an ATPase with unfolding activity, and ClpQ (HslV),
+      a peptidase.
+    notes: Confirms HslV as the peptidase component of the E. coli HslUV complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Widespread across bacterial lineages as a two-component AAA+ protease complex.
+  reference: PMID:20837023
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial strain in which HslUV (ClpYQ) hexamer-dodecamer architecture
+    and processive degradation of SulA were characterized.
+  reference: PMID:21803990
+functions:
+- function_id: atp_dependent_peptidase_activity
+  label: ATP-dependent peptidase activity
+  grounding: GO:0004176
+  description: Catalyzes ATP-dependent unfolding and peptide bond hydrolysis of intracellular
+    protein substrates inside the HslV chamber.
+  evidence:
+  - reference: GO:0004176
+    notes: GO molecular-function term for ATP-dependent peptidase activity.
+  - reference: PMID:21803990
+    snippet: These two central loops of ClpY are in the center of its hexameric ring
+      in which the energy of ATP hydrolysis allows substrate translocation and then
+      degradation by ClpQ.
+    notes: Shows coupling of HslU ATP hydrolysis to polypeptide translocation and
+      HslV proteolysis.
+- function_id: proteolysis
+  label: proteolysis
+  grounding: GO:0006508
+  description: Mediates intracellular protein quality control and turnover of regulatory
+    substrates such as the cell division inhibitor SulA.
+  evidence:
+  - reference: GO:0006508
+    notes: GO biological-process term for proteolysis.
+  - reference: PMID:20837023
+    snippet: Proteolysis is important for protein quality control and for the proper
+      regulation of many intracellular processes in prokaryotes and eukaryotes.
+    notes: Establishes the biological role of HslUV in bacterial proteolysis.
+evidence:
+- reference: GO:0009376
+  notes: GO cellular-component term for the HslUV protease complex.
+- reference: ComplexPortal:CPX-2104
+  notes: Complex Portal entry for the Escherichia coli K-12 HslUV protease complex.
+- reference: PMID:21803990
+  snippet: In Escherichia coli, ClpYQ (HslUV) is a two-component ATP-dependent protease
+    composed of ClpY (HslU), an ATPase with unfolding activity, and ClpQ (HslV), a
+    peptidase.
+  notes: Characterizes subunit roles and stepwise translocation in E. coli ClpYQ (HslUV).
+- reference: DOI:10.1128/jb.05128-11
+  notes: DOI for PMID:21803990.
+- reference: PMID:20837023
+  snippet: The Escherichia coli HslUV protease is a member of a major family of ATP-dependent
+    AAA+ degradation machines.
+  notes: Demonstrates terminal signal recognition and degradation by E. coli HslUV.
+- reference: DOI:10.1016/j.jmb.2010.09.008
+  notes: DOI for PMID:20837023.
+causal_graphs:
+- graph_id: hsluv_atp_dependent_proteolysis
+  title: HslUV ATP-Dependent Substrate Unfolding and Proteolysis
+  description: HslU hexamers recognize and unfold protein substrates using ATP hydrolysis
+    and translocate them into the HslV dodecameric chamber for proteolysis.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: hslu_atpase_subunit
+    label: ATP-dependent protease ATPase subunit HslU
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR050052
+    component_ref: hslu_atpase_subunit
+  - node_id: hslv_peptidase_subunit
+    label: ATP-dependent protease subunit HslV
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR022281
+    component_ref: hslv_peptidase_subunit
+  - node_id: hsluv_protease_complex
+    label: HslUV protease complex
+    node_type: STRUCTURE
+    grounding: GO:0009376
+  - node_id: atp_dependent_peptidase_activity
+    label: ATP-dependent peptidase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004176
+  - node_id: proteolysis
+    label: proteolysis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006508
+  edges:
+  - subject: hslu_atpase_subunit
+    predicate: translocates unfolded polypeptide substrates to
+    object: hslv_peptidase_subunit
+    description: HslU hexameric rings unfold native protein substrates and translocate
+      them through the central pore into the HslV peptidase chamber.
+    evidence:
+    - reference: PMID:20837023
+      snippet: HslU hexamers recognize and unfold native protein substrates and then
+        translocate the polypeptide into the degradation chamber of the HslV peptidase.
+      notes: Directly supports substrate unfolding and translocation from HslU to
+        HslV.
+  - subject: hslv_peptidase_subunit
+    predicate: assembles with HslU into
+    object: hsluv_protease_complex
+    description: Dodecameric HslV peptidase rings dock with ATP-bound HslU hexamers
+      to form the active HslUV protease complex.
+    evidence:
+    - reference: PMID:21803990
+      snippet: Our in vivo study of the ClpY mutants also revealed that an ATP-binding
+        site in domain N, separate from its role in polypeptide (ClpY) oligomerization,
+        is required for complex formation with ClpQ.
+      notes: Supports ATP-dependent assembly of HslU (ClpY) and HslV (ClpQ) into HslUV.
+  - subject: hsluv_protease_complex
+    predicate: enables
+    object: atp_dependent_peptidase_activity
+    description: The assembled HslUV complex couples ATP hydrolysis to processive
+      peptidase cleavage of translocated polypeptides.
+    evidence:
+    - reference: PMID:21803990
+      snippet: These two central loops of ClpY are in the center of its hexameric
+        ring in which the energy of ATP hydrolysis allows substrate translocation
+        and then degradation by ClpQ.
+      notes: Supports ATP-dependent peptidase catalysis by the ClpYQ (HslUV) complex.
+  - subject: atp_dependent_peptidase_activity
+    predicate: drives
+    object: proteolysis
+    description: ATP-dependent peptidase activity of HslUV mediates intracellular
+      proteolysis and regulatory protein turnover.
+    evidence:
+    - reference: PMID:20837023
+      snippet: Proteolysis is important for protein quality control and for the proper
+        regulation of many intracellular processes in prokaryotes and eukaryotes.
+      notes: Links HslUV ATP-dependent peptidase activity to cellular proteolysis.
+curation_history:
+- timestamp: '2026-10-31T05:52:58Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added HslUV protease complex (GO:0009376) with InterPro-grounded components,
+    reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
+    snippets, and a mechanistic causal graph.
+  llm_assisted: true

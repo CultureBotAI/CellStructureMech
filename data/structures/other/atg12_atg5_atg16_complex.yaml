@@ -1,0 +1,318 @@
+identifier: GO:0034274
+label: Atg12-Atg5-Atg16 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterohexameric ubiquitin-like E3 ligase complex localized to the phagophore
+  assembly site (pre-autophagosomal structure, PAS) in yeast and other eukaryotes,
+  formed by two copies of the covalent Atg12-Atg5 conjugate bound to a homodimer of
+  coiled-coil Atg16; stimulates Atg3-mediated conjugation of Atg8 to phosphatidylethanolamine
+  (PE) and scaffolds membrane shaping during autophagosome biogenesis.
+definition_source: GO:0034274
+mapping_status: PROPOSED
+parent_structures:
+- GO:1990234
+part_of:
+- GO:0000407
+xrefs:
+- ComplexPortal:CPX-1849
+components:
+- component_id: atg12_ubiquitin_like_modifier
+  label: Ubiquitin-like protein Atg12
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR007242
+  gene_symbols:
+  - ATG12
+  - APG12
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: Ubiquitin-like modifier protein covalently conjugated via its C-terminal glycine
+    to an internal lysine of Atg5; mediates PAS recruitment via Atg17 interaction
+    and activates the E2 enzyme Atg3.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38316
+    protein_label: Ubiquitin-like protein ATG12
+    gene_symbol: ATG12
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Atg12 ubiquitin-like subunit.
+    evidence:
+    - reference: UniProtKB:P38316
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Atg12.
+    - reference: PMID:40957983
+      snippet: The Atg12-Atg5-Atg16 E3 ligase complex for Atg8 lipidation is the most
+        efficiently condensed in the droplets through specific Atg12-Atg17 interaction,
+        which is also important for the PAS targeting of the E3 complex in vivo.
+      notes: Establishes Atg12 role in PAS droplet recruitment and E3 ligase function
+        in S. cerevisiae.
+  evidence:
+  - reference: GO:0034274
+    notes: GO:0034274 defines Atg12 as a core constituent of the Atg12-Atg5-Atg16
+      complex.
+  - reference: InterPro:IPR007242
+    notes: InterPro family entry for autophagy-related protein 12 (Atg12).
+  - reference: PMID:41457424
+    snippet: In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16
+      complex that functions as an E3-like enzyme to promote Atg8 conjugation with
+      phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.
+    notes: Confirms covalent Atg12-Atg5 conjugation in the Atg12-Atg5-Atg16 E3 complex.
+- component_id: atg5_conjugate_subunit
+  label: Autophagy protein Atg5
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR007239
+  gene_symbols:
+  - ATG5
+  - APG5
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: Core E3-like scaffold subunit that accepts covalent Atg12 conjugation, binds
+    the N-terminal domain of Atg16, and associates with phagophore membranes during
+    Atg8 lipidation.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q12380
+    protein_label: Autophagy protein 5
+    gene_symbol: ATG5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Atg5 subunit.
+    evidence:
+    - reference: UniProtKB:Q12380
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Atg5.
+    - reference: PMID:38057553
+      snippet: Atg8, a ubiquitin-like protein, is conjugated with phosphatidylethanolamine
+        (PE) via Atg7 (E1), Atg3 (E2) and Atg12-Atg5-Atg16 (E3) enzymatic cascade
+        and mediates autophagy.
+      notes: Confirms Atg5 as part of the yeast Atg12-Atg5-Atg16 E3 complex.
+  evidence:
+  - reference: GO:0034274
+    notes: GO:0034274 defines Atg5 as a core constituent of the Atg12-Atg5-Atg16 complex.
+  - reference: InterPro:IPR007239
+    notes: InterPro family entry for autophagy protein Atg5.
+  - reference: PMID:38057553
+    snippet: Atg8, a ubiquitin-like protein, is conjugated with phosphatidylethanolamine
+      (PE) via Atg7 (E1), Atg3 (E2) and Atg12-Atg5-Atg16 (E3) enzymatic cascade and
+      mediates autophagy.
+    notes: Demonstrates Atg5 participation in the E3 ligase complex.
+- component_id: atg16_coiled_coil_dimer_subunit
+  label: Autophagy protein Atg16
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR013923
+  gene_symbols:
+  - ATG16
+  - APG16
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: Coiled-coil homodimerization subunit that cross-links two Atg12-Atg5 conjugates
+    into a 2:2:2 hexameric complex and promotes membrane binding and scaffolding.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03818
+    protein_label: Autophagy protein 16
+    gene_symbol: ATG16
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Atg16 coiled-coil dimerization subunit.
+    evidence:
+    - reference: UniProtKB:Q03818
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Atg16.
+    - reference: PMID:38057553
+      snippet: Here we show that Saccharomyces cerevisiae Atg8-PE and E1-E2-E3 enzymes
+        together construct a stable, mobile membrane scaffold.
+      notes: Demonstrates S. cerevisiae Atg12-Atg5-Atg16 (E3) role in membrane scaffolding.
+  evidence:
+  - reference: GO:0034274
+    notes: GO:0034274 defines Atg16 as the dimerizing subunit of the Atg12-Atg5-Atg16
+      complex.
+  - reference: InterPro:IPR013923
+    notes: InterPro entry for autophagy protein 16 (Atg16).
+  - reference: PMID:41457424
+    snippet: In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16
+      complex that functions as an E3-like enzyme to promote Atg8 conjugation with
+      phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.
+    notes: Confirms Atg16 as an integral component of the E3-like ligase complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: Conserved across yeasts and filamentous fungi as the phagophore E3-like Atg8-PE
+    conjugation complex.
+  reference: PMID:41457424
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding yeast strain in which the heterohexameric Atg12-Atg5-Atg16
+    complex, its PAS recruitment via Atg17, and its Atg8-PE E3 ligase and membrane-shaping
+    activities were established.
+  reference: PMID:38057553
+functions:
+- function_id: atg8_family_ligase_activity
+  label: Atg8-family ligase activity
+  grounding: GO:0019776
+  description: Acts as a ubiquitin-like E3 enzyme that stimulates transfer of Atg8
+    from the E2 enzyme Atg3 onto the amino group of phosphatidylethanolamine (PE).
+  evidence:
+  - reference: GO:0019776
+    notes: GO molecular-function term for Atg8-family ligase activity.
+  - reference: PMID:41457424
+    snippet: In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16
+      complex that functions as an E3-like enzyme to promote Atg8 conjugation with
+      phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.
+    notes: Establishes the E3-like Atg8-PE ligase activity of the Atg12-Atg5-Atg16
+      complex.
+- function_id: autophagosome_assembly
+  label: autophagosome assembly
+  grounding: GO:0000045
+  description: Drives phagophore membrane expansion, vesicle condensation at the PAS,
+    and isolation-membrane shaping during autophagosome biogenesis.
+  evidence:
+  - reference: GO:0000045
+    notes: GO biological-process term for autophagosome assembly.
+  - reference: PMID:38057553
+    snippet: These data suggest that all six Atg proteins in the Atg8 conjugation
+      machinery control membrane shaping during autophagosome formation.
+    notes: Demonstrates the role of Atg12-Atg5-Atg16 in membrane shaping during autophagosome
+      assembly.
+evidence:
+- reference: GO:0034274
+  notes: GO cellular-component term for the Atg12-Atg5-Atg16 complex.
+- reference: ComplexPortal:CPX-1849
+  notes: Complex Portal entry for the Saccharomyces cerevisiae S288C Atg12-Atg5-Atg16
+    complex.
+- reference: PMID:38057553
+  snippet: Atg8, a ubiquitin-like protein, is conjugated with phosphatidylethanolamine
+    (PE) via Atg7 (E1), Atg3 (E2) and Atg12-Atg5-Atg16 (E3) enzymatic cascade and
+    mediates autophagy.
+  notes: Shows enzymatic and membrane-scaffolding functions of S. cerevisiae Atg12-Atg5-Atg16.
+- reference: DOI:10.1038/s41594-023-01132-2
+  notes: DOI for PMID:38057553.
+- reference: PMID:40957983
+  snippet: The Atg12-Atg5-Atg16 E3 ligase complex for Atg8 lipidation is the most
+    efficiently condensed in the droplets through specific Atg12-Atg17 interaction,
+    which is also important for the PAS targeting of the E3 complex in vivo.
+  notes: Demonstrates condensation of the Atg12-Atg5-Atg16 E3 complex into early PAS
+    droplets.
+- reference: DOI:10.1038/s41594-025-01678-3
+  notes: DOI for PMID:40957983.
+causal_graphs:
+- graph_id: atg12_atg5_atg16_atg8_lipidation
+  title: Atg12-Atg5-Atg16 E3 Ligase Assembly and Atg8 Lipidation at the PAS
+  description: Covalent Atg12-Atg5 conjugates dimerize with coiled-coil Atg16 to form
+    the Atg12-Atg5-Atg16 E3 complex at the PAS, stimulating Atg3-mediated Atg8 lipidation
+    to drive autophagosome assembly.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: atg12_ubiquitin_like_modifier
+    label: Ubiquitin-like protein Atg12
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR007242
+    component_ref: atg12_ubiquitin_like_modifier
+  - node_id: atg5_conjugate_subunit
+    label: Autophagy protein Atg5
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR007239
+    component_ref: atg5_conjugate_subunit
+  - node_id: atg16_coiled_coil_dimer_subunit
+    label: Autophagy protein Atg16
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR013923
+    component_ref: atg16_coiled_coil_dimer_subunit
+  - node_id: atg12_atg5_atg16_complex
+    label: Atg12-Atg5-Atg16 complex
+    node_type: STRUCTURE
+    grounding: GO:0034274
+  - node_id: atg3_e2_enzyme
+    label: Autophagy-related protein 3
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR006599
+    xrefs:
+    - UniProtKB:P40344
+  - node_id: atg8_family_ligase_activity
+    label: Atg8-family ligase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0019776
+  - node_id: autophagosome_assembly
+    label: autophagosome assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000045
+  edges:
+  - subject: atg12_ubiquitin_like_modifier
+    predicate: covalently conjugates to
+    object: atg5_conjugate_subunit
+    description: Atg12 covalently binds Atg5 via an isopeptide bond to form the Atg12-Atg5
+      conjugate.
+    evidence:
+    - reference: PMID:41457424
+      snippet: In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16
+        complex that functions as an E3-like enzyme to promote Atg8 conjugation with
+        phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.
+      notes: Directly supports covalent conjugation of Atg12 to Atg5.
+  - subject: atg5_conjugate_subunit
+    predicate: assembles with Atg16 into
+    object: atg12_atg5_atg16_complex
+    description: The Atg12-Atg5 conjugate associates with Atg16 to form the Atg12-Atg5-Atg16
+      E3 ligase complex.
+    evidence:
+    - reference: PMID:41457424
+      snippet: In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16
+        complex that functions as an E3-like enzyme to promote Atg8 conjugation with
+        phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.
+      notes: Supports assembly of Atg12-Atg5 with Atg16.
+  - subject: atg16_coiled_coil_dimer_subunit
+    predicate: scaffolds hexameric assembly of
+    object: atg12_atg5_atg16_complex
+    description: Coiled-coil Atg16 dimerizes to cross-link two Atg12-Atg5 conjugates
+      into the functional Atg12-Atg5-Atg16 complex.
+    evidence:
+    - reference: PMID:38057553
+      snippet: Here we show that Saccharomyces cerevisiae Atg8-PE and E1-E2-E3 enzymes
+        together construct a stable, mobile membrane scaffold.
+      notes: Supports the scaffolding role of the yeast Atg12-Atg5-Atg16 E3 complex.
+  - subject: atg12_atg5_atg16_complex
+    predicate: forms multivalent E2-E3 catalytic web with
+    object: atg3_e2_enzyme
+    description: The Atg12-Atg5-Atg16 E3 complex interacts with the E2 conjugating
+      enzyme Atg3 to stimulate Atg8 transfer onto phosphatidylethanolamine.
+    evidence:
+    - reference: PMID:38057553
+      snippet: Nuclear magnetic resonance analyses revealed that Atg8, E1, E2 and
+        E3 together form an interaction web through multivalent weak interactions,
+        where the intrinsically disordered regions in Atg3 play a central role.
+      notes: Demonstrates interaction between Atg12-Atg5-Atg16 (E3) and Atg3 (E2).
+  - subject: atg3_e2_enzyme
+    predicate: cooperates with E3 complex to execute
+    object: atg8_family_ligase_activity
+    description: Atg3 activated by the Atg12-Atg5-Atg16 E3 complex transfers Atg8
+      onto phosphatidylethanolamine.
+    evidence:
+    - reference: PMID:38057553
+      snippet: Atg8, a ubiquitin-like protein, is conjugated with phosphatidylethanolamine
+        (PE) via Atg7 (E1), Atg3 (E2) and Atg12-Atg5-Atg16 (E3) enzymatic cascade
+        and mediates autophagy.
+      notes: Establishes cooperative E2-E3 Atg8-PE conjugation.
+  - subject: atg8_family_ligase_activity
+    predicate: drives
+    object: autophagosome_assembly
+    description: Atg8-PE lipidation and E1-E2-E3 scaffolding drive vesicle condensation
+      and isolation-membrane shaping during autophagosome assembly.
+    evidence:
+    - reference: PMID:40957983
+      snippet: In vitro reconstitution demonstrates that E3-enriched early PAS droplets
+        promote Atg8 lipidation and that Atg8 coating of the vesicle membrane is both
+        necessary and sufficient for their condensation into the droplets.
+      notes: Links E3-promoted Atg8 lipidation to autophagosome assembly.
+curation_history:
+- timestamp: '2026-10-31T05:52:59Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added Atg12-Atg5-Atg16 complex (GO:0034274) with InterPro-grounded components,
+    reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
+    snippets, and a mechanistic causal graph.
+  llm_assisted: true

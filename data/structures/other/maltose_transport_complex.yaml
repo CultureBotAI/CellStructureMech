@@ -1,0 +1,358 @@
+identifier: GO:1990060
+label: maltose transport complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A pentameric ATP-binding cassette (ABC) importer complex (MalEFGK2) in
+  the bacterial inner membrane and periplasm, composed of the periplasmic maltose/maltodextrin-binding
+  protein MalE, heterodimeric transmembrane permease subunits MalF and MalG, and homodimeric
+  ATP-binding cassette subunits MalK2.
+definition_source: GO:1990060
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: maltose ABC transporter complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990060
+- synonym_text: maltose ATP-binding cassette transporter complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990060
+parent_structures:
+- GO:0043190
+part_of:
+- GO:0005886
+xrefs:
+- ComplexPortal:CPX-1932
+components:
+- component_id: male_periplasmic_binding_protein
+  label: Maltose/maltodextrin-binding periplasmic protein MalE
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006059
+  gene_symbols:
+  - malE
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Periplasmic substrate-binding protein that captures maltose and maltodextrins
+    and docks onto the MalFG periplasmic loops to stimulate MalK2 ATPase activity
+    and substrate translocation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AEX9
+    protein_label: Maltose/maltodextrin-binding periplasmic protein
+    gene_symbol: malE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 MalE periplasmic maltose-binding protein.
+    evidence:
+    - reference: UniProtKB:P0AEX9
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 MalE.
+    - reference: PMID:29194754
+      snippet: In addition to the TMDs and NBDs, the periplasmic maltose binding protein
+        MalE captures maltose and shuttle it to the transporter.
+      notes: Establishes MalE as the periplasmic maltose-capturing subunit in E. coli.
+  evidence:
+  - reference: GO:1990060
+    notes: GO:1990060 defines the pentameric maltose transport complex containing
+      MalE.
+  - reference: InterPro:IPR006059
+    notes: InterPro entry for periplasmic maltose-binding protein MalE.
+  - reference: PMID:26338707
+    snippet: We conclude that open-state MalE stabilizes MalFGK2 in the outward-facing
+      conformation until maltose triggers return to the inward-facing state for substrate
+      and Pi release.
+    notes: Demonstrates the mechanistic requirement for MalE in the MalFGK2 cycle.
+- component_id: malf_permease_subunit
+  label: Maltose/maltodextrin transport system permease protein MalF
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR035277
+  gene_symbols:
+  - malF
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Integral inner-membrane transmembrane permease subunit that pairs with MalG
+    to form the maltose translocation pathway and contacts MalE via its large periplasmic
+    P2 domain.
+  protein_examples:
+  - uniprot_id: UniProtKB:P02916
+    protein_label: Maltose/maltodextrin transport system permease protein MalF
+    gene_symbol: malF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 MalF transmembrane permease subunit.
+    evidence:
+    - reference: UniProtKB:P02916
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 MalF.
+    - reference: PMID:29194754
+      snippet: This protein is composed of heterodimeric transmembrane domains (TMDs)
+        MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2
+        .
+      notes: Establishes MalF as one of the heterodimeric transmembrane domains.
+  evidence:
+  - reference: GO:1990060
+    notes: GO:1990060 defines MalF as a transmembrane permease subunit of the maltose
+      transport complex.
+  - reference: InterPro:IPR035277
+    notes: InterPro entry for MalF permease subunit.
+  - reference: PMID:29194754
+    snippet: MalE binding suppressed the fluctuation of the TMDs and MalF periplasmic
+      region (MalF-P2), and thus prevented the incorrect arrangement of the MalF C-terminal
+      (TM8) helix.
+    notes: Characterizes the MalF-P2 periplasmic domain and TM8 helix in MalFGK2-E.
+- component_id: malg_permease_subunit
+  label: Maltose/maltodextrin transport system permease protein MalG
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR050901
+  gene_symbols:
+  - malG
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Integral inner-membrane transmembrane permease subunit that forms the heterodimeric
+    transmembrane channel with MalF.
+  protein_examples:
+  - uniprot_id: UniProtKB:P68183
+    protein_label: Maltose/maltodextrin transport system permease protein MalG
+    gene_symbol: malG
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 MalG transmembrane permease subunit.
+    evidence:
+    - reference: UniProtKB:P68183
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 MalG.
+    - reference: PMID:29194754
+      snippet: This protein is composed of heterodimeric transmembrane domains (TMDs)
+        MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2
+        .
+      notes: Establishes MalG as the partner transmembrane permease subunit in E.
+        coli.
+  evidence:
+  - reference: GO:1990060
+    notes: GO:1990060 defines MalG as a transmembrane permease subunit of the maltose
+      transport complex.
+  - reference: InterPro:IPR050901
+    notes: InterPro entry for MalG permease subunit.
+  - reference: PMID:29194754
+    snippet: This protein is composed of heterodimeric transmembrane domains (TMDs)
+      MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2 .
+    notes: Confirms MalG as part of the heterodimeric transmembrane pore.
+- component_id: malk_atp_binding_subunit
+  label: Maltose/maltodextrin import ATP-binding protein MalK
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR015855
+  gene_symbols:
+  - malK
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: Homodimeric nucleotide-binding domain (NBD) subunit that binds and hydrolyzes
+    ATP to power alternating-access conformational transitions of the MalFG transmembrane
+    core.
+  protein_examples:
+  - uniprot_id: UniProtKB:P68187
+    protein_label: Maltose/maltodextrin import ATP-binding protein MalK
+    gene_symbol: malK
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 MalK ATP-binding subunit.
+    evidence:
+    - reference: UniProtKB:P68187
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 MalK.
+    - reference: PMID:29194754
+      snippet: In this study, we performed all-atom molecular dynamics (MD) simulations
+        on the maltose transporter and found that both the binding of MalE to the
+        periplasmic side of the TMDs and binding of ATP to the MalK2 are necessary
+        to facilitate the conformational change from the inward-facing state to the
+        occluded state, in which MalK2 is completely dimerized.
+      notes: Shows ATP-dependent MalK2 dimerization driving conformational transitions.
+  evidence:
+  - reference: GO:1990060
+    notes: GO:1990060 defines the MalK homodimer as the ATP-binding cassette component.
+  - reference: InterPro:IPR015855
+    notes: InterPro entry for MalK OB-fold C-terminal regulatory domain.
+  - reference: PMID:29194754
+    snippet: This protein is composed of heterodimeric transmembrane domains (TMDs)
+      MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2 .
+    notes: Confirms homodimeric MalK2 nucleotide-binding domains.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Conserved across Enterobacterales and diverse Gram-negative and Gram-positive
+    bacteria for maltose and maltodextrin uptake.
+  reference: PMID:29194754
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Model type I ABC importer (MalEFGK2) in which alternating-access crystallographic
+    states and pre-steady-state ATPase coupling were defined.
+  reference: PMID:26338707
+functions:
+- function_id: abc_maltose_transporter_activity
+  label: ABC-type maltose transporter activity
+  grounding: GO:0015423
+  description: Couples ATP binding and hydrolysis by MalK2 to active translocation
+    of maltose and maltodextrins across the inner membrane.
+  evidence:
+  - reference: GO:0015423
+    notes: GO molecular-function term for ABC-type maltose transporter activity.
+  - reference: PMID:26338707
+    snippet: We conclude that open-state MalE stabilizes MalFGK2 in the outward-facing
+      conformation until maltose triggers return to the inward-facing state for substrate
+      and Pi release.
+    notes: Demonstrates the alternating-access ABC maltose transport cycle.
+- function_id: maltose_transport
+  label: maltose transport
+  grounding: GO:0015768
+  description: Imports periplasmic maltose and maltodextrins into the bacterial cytoplasm
+    for catabolism.
+  evidence:
+  - reference: GO:0015768
+    notes: GO biological-process term for maltose transport.
+  - reference: PMID:29194754
+    snippet: In addition to the TMDs and NBDs, the periplasmic maltose binding protein
+      MalE captures maltose and shuttle it to the transporter.
+    notes: Establishes maltose uptake mediated by MalEFGK2.
+evidence:
+- reference: GO:1990060
+  notes: GO cellular-component term for the maltose transport complex.
+- reference: ComplexPortal:CPX-1932
+  notes: Complex Portal entry for the Escherichia coli K-12 MalEFGK2 maltose transport
+    complex.
+- reference: PMID:26338707
+  snippet: We conclude that open-state MalE stabilizes MalFGK2 in the outward-facing
+    conformation until maltose triggers return to the inward-facing state for substrate
+    and Pi release.
+  notes: Dissects pre-steady-state coupling of MalE and maltose to MalFGK2 ATP hydrolysis.
+- reference: DOI:10.1074/jbc.m115.671826
+  notes: DOI for PMID:26338707.
+- reference: PMID:29194754
+  snippet: The Escherichia coli maltose transporter MalFGK2 -E belongs to the protein
+    superfamily of ATP-binding cassette (ABC) transporters.
+  notes: Characterizes MalE docking and ATP-induced MalK2 dimerization in MalEFGK2.
+- reference: DOI:10.1002/prot.25433
+  notes: DOI for PMID:29194754.
+causal_graphs:
+- graph_id: malefgk2_alternating_access_transport
+  title: MalEFGK2 Alternating-Access Maltose Import Cycle
+  description: MalE captures periplasmic maltose and docks with the MalF-MalG transmembrane
+    heterodimer, cooperating with MalK2 dimerization and ATP hydrolysis to drive maltose
+    import.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: male_periplasmic_binding_protein
+    label: Maltose/maltodextrin-binding periplasmic protein MalE
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR006059
+    component_ref: male_periplasmic_binding_protein
+  - node_id: malf_permease_subunit
+    label: Maltose/maltodextrin transport system permease protein MalF
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR035277
+    component_ref: malf_permease_subunit
+  - node_id: malg_permease_subunit
+    label: Maltose/maltodextrin transport system permease protein MalG
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR050901
+    component_ref: malg_permease_subunit
+  - node_id: malk_atp_binding_subunit
+    label: Maltose/maltodextrin import ATP-binding protein MalK
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR015855
+    component_ref: malk_atp_binding_subunit
+  - node_id: maltose_transport_complex
+    label: maltose transport complex
+    node_type: STRUCTURE
+    grounding: GO:1990060
+  - node_id: abc_maltose_transporter_activity
+    label: ABC-type maltose transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0015423
+  - node_id: maltose_transport
+    label: maltose transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015768
+  edges:
+  - subject: male_periplasmic_binding_protein
+    predicate: binds periplasmic region of
+    object: malf_permease_subunit
+    description: Periplasmic MalE docks onto the MalF-P2 region and transmembrane
+      domains, preventing MalF TM8 helix intrusion into the translocation pathway.
+    evidence:
+    - reference: PMID:29194754
+      snippet: MalE binding suppressed the fluctuation of the TMDs and MalF periplasmic
+        region (MalF-P2), and thus prevented the incorrect arrangement of the MalF
+        C-terminal (TM8) helix.
+      notes: Demonstrates MalE interaction with MalF-P2 and stabilization of TM8.
+  - subject: malf_permease_subunit
+    predicate: forms heterodimeric transmembrane pore with
+    object: malg_permease_subunit
+    description: MalF and MalG assemble as heterodimeric transmembrane domains forming
+      the substrate translocation pathway.
+    evidence:
+    - reference: PMID:29194754
+      snippet: This protein is composed of heterodimeric transmembrane domains (TMDs)
+        MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2
+        .
+      notes: Supports heterodimeric assembly of MalF and MalG.
+  - subject: malk_atp_binding_subunit
+    predicate: couples ATP dimerization with MalFG in
+    object: maltose_transport_complex
+    description: ATP binding to homodimeric MalK2 together with MalE docking drives
+      closure of MalK2 and transition of MalEFGK2 to the occluded/outward-facing state.
+    evidence:
+    - reference: PMID:29194754
+      snippet: In this study, we performed all-atom molecular dynamics (MD) simulations
+        on the maltose transporter and found that both the binding of MalE to the
+        periplasmic side of the TMDs and binding of ATP to the MalK2 are necessary
+        to facilitate the conformational change from the inward-facing state to the
+        occluded state, in which MalK2 is completely dimerized.
+      notes: Supports cooperative action of MalK2 ATP binding and MalE docking in
+        MalEFGK2.
+  - subject: malg_permease_subunit
+    predicate: constitutes transmembrane core of
+    object: maltose_transport_complex
+    description: MalG together with MalF forms the inner-membrane translocation channel
+      of the maltose transport complex.
+    evidence:
+    - reference: PMID:29194754
+      snippet: This protein is composed of heterodimeric transmembrane domains (TMDs)
+        MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2
+        .
+      notes: Confirms MalG as an essential transmembrane domain of the complex.
+  - subject: maltose_transport_complex
+    predicate: enables
+    object: abc_maltose_transporter_activity
+    description: The assembled MalEFGK2 complex catalyzes maltose-stimulated ATP cleavage
+      and alternating-access substrate translocation.
+    evidence:
+    - reference: PMID:26338707
+      snippet: We conclude that open-state MalE stabilizes MalFGK2 in the outward-facing
+        conformation until maltose triggers return to the inward-facing state for
+        substrate and Pi release.
+      notes: Establishes the catalytic mechanism of ABC-type maltose transporter activity.
+  - subject: abc_maltose_transporter_activity
+    predicate: drives
+    object: maltose_transport
+    description: ABC-type maltose transporter activity imports maltose across the
+      inner membrane into the bacterial cytoplasm.
+    evidence:
+    - reference: PMID:26338707
+      snippet: This concerted action explains why ATPase activity of MalFGK2 depends
+        on maltose, and why MalE is essential for transport.
+      notes: Links MalEFGK2 ATPase cycle directly to maltose transport.
+curation_history:
+- timestamp: '2026-10-31T05:52:59Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added maltose transport complex (GO:1990060) with InterPro-grounded components,
+    reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
+    snippets, and a mechanistic causal graph.
+  llm_assisted: true

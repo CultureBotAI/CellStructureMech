@@ -1,0 +1,327 @@
+identifier: GO:1990191
+label: cobalamin transport complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A type II ATP-binding cassette (ABC) importer complex (BtuCD-F) in the
+  bacterial inner membrane and periplasm, composed of the periplasmic cobalamin-binding
+  protein BtuF, homodimeric transmembrane permease subunits BtuC2, and homodimeric
+  ATP-binding cassette subunits BtuD2, which mediates ATP-driven import of vitamin
+  B12 (cobalamin) and cobinamide into the cytoplasm.
+definition_source: GO:1990191
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: BtuCDF complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990191
+- synonym_text: cobalamin-transporting BtuCDF complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990191
+- synonym_text: vitamin B12 transport complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990191
+- synonym_text: vitamin B12-transporting BtuCDF complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990191
+parent_structures:
+- GO:0043190
+part_of:
+- GO:0005886
+xrefs:
+- ComplexPortal:CPX-2105
+components:
+- component_id: btuf_periplasmic_binding_protein
+  label: Vitamin B12-binding protein BtuF
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR002491
+  gene_symbols:
+  - btuF
+  - yadT
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Periplasmic substrate-binding protein that binds cyanocobalamin and cobinamide
+    with high affinity (~15 nM) and docks onto the BtuC2 periplasmic face to deliver
+    substrate.
+  protein_examples:
+  - uniprot_id: UniProtKB:P37028
+    protein_label: Vitamin B12-binding protein
+    gene_symbol: btuF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 BtuF periplasmic vitamin B12-binding protein.
+    evidence:
+    - reference: UniProtKB:P37028
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 BtuF.
+    - reference: PMID:11790740
+      snippet: CN-Cbl-binding assays using radiolabeled substrate or isothermal titration
+        calorimetry showed that purified BtuF binds CN-Cbl with a binding constant
+        of around 15 nM.
+      notes: Identifies and characterizes E. coli BtuF as the periplasmic cobalamin-binding
+        protein.
+  evidence:
+  - reference: GO:1990191
+    notes: GO:1990191 defines BtuF as the periplasmic substrate-binding subunit of
+      the cobalamin transport complex.
+  - reference: InterPro:IPR002491
+    notes: InterPro entry for periplasmic binding protein domain in BtuF.
+  - reference: PMID:28128319
+    snippet: We synthesized radiolabeled cyano-cobinamide and demonstrated BtuCD-catalyzed
+      in vitro transport, which was ATP- and BtuF-dependent.
+    notes: Demonstrates essential requirement for BtuF in BtuCD-catalyzed transport.
+- component_id: btuc_permease_subunit
+  label: Vitamin B12 import system permease protein BtuC
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR023691
+  gene_symbols:
+  - btuC
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: Homodimeric transmembrane permease subunit (2 x 10 transmembrane helices)
+    forming the inner-membrane translocation channel for cobalamin.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06609
+    protein_label: Vitamin B12 import system permease protein BtuC
+    gene_symbol: btuC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 BtuC transmembrane permease subunit.
+    evidence:
+    - reference: UniProtKB:P06609
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 BtuC.
+    - reference: PMID:11790740
+      snippet: Transport across the cytoplasmic membrane (CM) requires the BtuC and
+        BtuD proteins, which are most related in sequence to the transmembrane and
+        ATP-binding cassette proteins of periplasmic permeases for iron-siderophore
+        transport.
+      notes: Establishes BtuC as the cytoplasmic-membrane permease component in E.
+        coli.
+  evidence:
+  - reference: GO:1990191
+    notes: GO:1990191 defines two BtuC subunits as the transmembrane permease core
+      of BtuCDF.
+  - reference: InterPro:IPR023691
+    notes: InterPro entry for vitamin B12 import system permease protein BtuC.
+  - reference: PMID:11790740
+    snippet: Hence, null mutations in btuC and btuD were constructed and revealed
+      that the btuC mutant had a strong impairment similar to that of the btuF mutant,
+      whereas the btuD defect was less pronounced.
+    notes: Genetic confirmation of btuC requirement for cytoplasmic membrane cobalamin
+      transport.
+- component_id: btud_atp_binding_subunit
+  label: Vitamin B12 import ATP-binding protein BtuD
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR023693
+  gene_symbols:
+  - btuD
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: Homodimeric nucleotide-binding cassette subunit that binds and hydrolyzes
+    ATP to power cobalamin translocation through BtuC2.
+  protein_examples:
+  - uniprot_id: UniProtKB:P06611
+    protein_label: Vitamin B12 import ATP-binding protein BtuD
+    gene_symbol: btuD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 BtuD ATP-binding subunit.
+    evidence:
+    - reference: UniProtKB:P06611
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 BtuD.
+    - reference: PMID:11790740
+      snippet: Transport across the cytoplasmic membrane (CM) requires the BtuC and
+        BtuD proteins, which are most related in sequence to the transmembrane and
+        ATP-binding cassette proteins of periplasmic permeases for iron-siderophore
+        transport.
+      notes: Establishes BtuD as the ATP-binding cassette subunit of the cobalamin
+        permease.
+  evidence:
+  - reference: GO:1990191
+    notes: GO:1990191 defines two BtuD subunits as the ATP-binding cassette component
+      of BtuCDF.
+  - reference: InterPro:IPR023693
+    notes: InterPro entry for vitamin B12 import ATP-binding protein BtuD.
+  - reference: PMID:28128319
+    snippet: We synthesized radiolabeled cyano-cobinamide and demonstrated BtuCD-catalyzed
+      in vitro transport, which was ATP- and BtuF-dependent.
+    notes: Confirms ATP-dependent transport catalyzed by BtuCD.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Widespread across Gram-negative and Gram-positive bacteria that import exogenous
+    cobalamin or cobinamide.
+  reference: PMID:27457716
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Archetypal type II ABC importer (BtuCD-F) in which periplasmic BtuF recognition
+    and ATP-driven cobalamin/cobinamide translocation were established.
+  reference: PMID:11790740
+functions:
+- function_id: abc_vitamin_b12_transporter_activity
+  label: ABC-type vitamin B12 transporter activity
+  grounding: GO:0015420
+  description: Catalyzes ATP-dependent active transmembrane transport of vitamin B12
+    (cobalamin) and cobinamide across the inner membrane.
+  evidence:
+  - reference: GO:0015420
+    notes: GO molecular-function term for ABC-type vitamin B12 transporter activity.
+  - reference: PMID:28128319
+    snippet: BtuCD-F is an ABC transporter that mediates cobalamin uptake into Escherichia
+      coli.
+    notes: Demonstrates ABC-type vitamin B12 and cobinamide transporter activity of
+      BtuCD-F.
+- function_id: cobalamin_transport
+  label: cobalamin transport
+  grounding: GO:0015889
+  description: Transports periplasmic cobalamin (delivered via outer-membrane BtuB)
+    across the cytoplasmic membrane into the bacterial cytosol.
+  evidence:
+  - reference: GO:0015889
+    notes: GO biological-process term for cobalamin transport.
+  - reference: PMID:11790740
+    snippet: A null mutation in btuF, but not in the flanking genes pfs and yadS,
+      strongly decreased CN-Cbl utilization and transport into the cytoplasm.
+    notes: Demonstrates cytoplasmic cobalamin transport mediated by the BtuCDF system.
+evidence:
+- reference: GO:1990191
+  notes: GO cellular-component term for the cobalamin transport complex (BtuCDF).
+- reference: ComplexPortal:CPX-2105
+  notes: Complex Portal entry for the Escherichia coli K-12 BtuCDF vitamin B12 transport
+    complex.
+- reference: PMID:11790740
+  snippet: Cells of Escherichia coli take up vitamin B(12) (cyano-cobalamin [CN-Cbl])
+    and iron chelates by use of sequential active transport processes.
+  notes: Identifies BtuF and establishes its collaboration with BtuC and BtuD in E.
+    coli cobalamin uptake.
+- reference: DOI:10.1128/jb.184.3.706-717.2002
+  notes: DOI for PMID:11790740.
+- reference: PMID:28128319
+  snippet: BtuCD-F is an ABC transporter that mediates cobalamin uptake into Escherichia
+    coli.
+  notes: Crystal structure and in vitro transport analysis of E. coli BtuCD-F.
+- reference: DOI:10.1038/srep41575
+  notes: DOI for PMID:28128319.
+causal_graphs:
+- graph_id: btucdf_cobalamin_import_mechanism
+  title: BtuCD-F Periplasmic Capture and ATP-Driven Cobalamin Import
+  description: Following TonB-dependent outer-membrane passage via BtuB, periplasmic
+    BtuF captures cyanocobalamin and docks onto the BtuC2-BtuD2 inner-membrane ABC
+    complex to drive ATP-dependent cytoplasmic import.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: btub_outer_membrane_transporter
+    label: Vitamin B12 transporter BtuB
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR010101
+    xrefs:
+    - UniProtKB:P06129
+  - node_id: btuf_periplasmic_binding_protein
+    label: Vitamin B12-binding protein BtuF
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002491
+    component_ref: btuf_periplasmic_binding_protein
+  - node_id: btuc_permease_subunit
+    label: Vitamin B12 import system permease protein BtuC
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023691
+    component_ref: btuc_permease_subunit
+  - node_id: btud_atp_binding_subunit
+    label: Vitamin B12 import ATP-binding protein BtuD
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023693
+    component_ref: btud_atp_binding_subunit
+  - node_id: cobalamin_transport_complex
+    label: cobalamin transport complex
+    node_type: STRUCTURE
+    grounding: GO:1990191
+  - node_id: abc_vitamin_b12_transporter_activity
+    label: ABC-type vitamin B12 transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0015420
+  - node_id: cobalamin_transport
+    label: cobalamin transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015889
+  edges:
+  - subject: btub_outer_membrane_transporter
+    predicate: delivers periplasmic cyanocobalamin to
+    object: btuf_periplasmic_binding_protein
+    description: TonB-dependent outer-membrane transporter BtuB translocates cyanocobalamin
+      into the periplasm, where it is captured by BtuF.
+    evidence:
+    - reference: PMID:11790740
+      snippet: Transport of CN-Cbl across the outer membrane and its accumulation
+        in the periplasm is mediated by the TonB-dependent transporter BtuB.
+      notes: Establishes sequential delivery from outer-membrane BtuB to periplasmic
+        BtuF.
+  - subject: btuf_periplasmic_binding_protein
+    predicate: docks with substrate onto
+    object: btuc_permease_subunit
+    description: Cobalamin-bound BtuF docks with the periplasmic face of the BtuC
+      transmembrane permease to form the productive BtuCD-F complex.
+    evidence:
+    - reference: PMID:29084999
+      snippet: The CDR3 loop of Nb9 reached into the substrate-binding pocket of BtuF,
+        preventing both B12 binding and BtuCD-F complex formation.
+      notes: Demonstrates substrate-coupled docking of BtuF onto BtuCD.
+  - subject: btuc_permease_subunit
+    predicate: assembles with BtuD and BtuF into
+    object: cobalamin_transport_complex
+    description: BtuC transmembrane dimers and BtuD ATPase dimers combine with BtuF
+      to form the functional BtuCD-F complex.
+    evidence:
+    - reference: PMID:11790740
+      snippet: Transport across the cytoplasmic membrane (CM) requires the BtuC and
+        BtuD proteins, which are most related in sequence to the transmembrane and
+        ATP-binding cassette proteins of periplasmic permeases for iron-siderophore
+        transport.
+      notes: Supports assembly of BtuC, BtuD, and BtuF as the inner-membrane permease
+        complex.
+  - subject: btud_atp_binding_subunit
+    predicate: powers ATP hydrolysis in
+    object: cobalamin_transport_complex
+    description: BtuD ATP binding and hydrolysis energize substrate translocation
+      through the BtuCD-F complex.
+    evidence:
+    - reference: PMID:28128319
+      snippet: We synthesized radiolabeled cyano-cobinamide and demonstrated BtuCD-catalyzed
+        in vitro transport, which was ATP- and BtuF-dependent.
+      notes: Confirms ATP dependence of BtuCD-F transport.
+  - subject: cobalamin_transport_complex
+    predicate: enables
+    object: abc_vitamin_b12_transporter_activity
+    description: The assembled BtuCD-F complex catalyzes ATP-dependent vitamin B12
+      transmembrane transport.
+    evidence:
+    - reference: PMID:28128319
+      snippet: BtuCD-F is an ABC transporter that mediates cobalamin uptake into Escherichia
+        coli.
+      notes: Directly supports ABC vitamin B12 transporter activity of BtuCD-F.
+  - subject: abc_vitamin_b12_transporter_activity
+    predicate: drives
+    object: cobalamin_transport
+    description: ABC-type vitamin B12 transporter activity imports cobalamin across
+      the cytoplasmic membrane into the cytoplasm.
+    evidence:
+    - reference: PMID:11790740
+      snippet: A null mutation in btuF, but not in the flanking genes pfs and yadS,
+        strongly decreased CN-Cbl utilization and transport into the cytoplasm.
+      notes: Links BtuCDF activity to cytoplasmic cobalamin transport.
+curation_history:
+- timestamp: '2026-10-31T05:52:59Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added cobalamin transport complex (GO:1990191) with InterPro-grounded components,
+    reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
+    snippets, and a mechanistic causal graph.
+  llm_assisted: true
