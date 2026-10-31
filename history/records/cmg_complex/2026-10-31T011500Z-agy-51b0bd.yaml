@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/cmg_complex.yaml
+  slug: cmg_complex
+session:
+  id: 2026-10-31T011500Z-agy-51b0bd
+  timestamp: '2026-10-31T01:15:00Z'
+  actors:
+  - type: ai_agent
+    name: agy
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2475
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - canonical_examples
+  summary: Align NCBITaxon:284812 strain label to Schizosaccharomyces pombe 972h- on CMG complex
+  details: Updated taxon_label and role on components[2].protein_examples[0] (UniProtKB:O74113,
+    sna41) and canonical_examples[0] for NCBITaxon:284812 to the canonical NCBI Taxonomy strain
+    label 'Schizosaccharomyces pombe 972h-' on data/structures/other/cmg_complex.yaml.

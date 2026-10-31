@@ -344,7 +344,7 @@ causal_graphs:
       origin recognition complex.
   - node_id: dna_replication_origin_binding
     label: DNA replication origin binding
-    node_type: BIOLOGICAL_PROCESS
+    node_type: MOLECULAR_FUNCTION
     grounding: GO:0003688
     description: The origin recognition complex recognizes DNA replication origins
       in an ATP-dependent manner.
@@ -440,4 +440,11 @@ curation_history:
   changes: Initial curation of origin recognition complex (GO:0000808) in category
     OTHER with verified GO hierarchy, components, UniProtKB protein examples, causal
     mechanism graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-31T01:15:00Z'
+  curator: agy
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Aligned causal node dna_replication_origin_binding (GO:0003688) node_type
+    to MOLECULAR_FUNCTION to match the Gene Ontology molecular_function namespace
+    (#2476).
   llm_assisted: true

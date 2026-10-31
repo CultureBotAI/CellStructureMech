@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  slug: post_anaphase_microtubule_array
+session:
+  id: 2026-10-31T011500Z-agy-b53f8c
+  timestamp: '2026-10-31T01:15:00Z'
+  actors:
+  - type: ai_agent
+    name: agy
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2475
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Add gene_symbols [mto1, mto2] to eMTOC component on post-anaphase microtubule array
+  details: 'Added gene_symbols: [mto1, mto2] to components[3] (emtoc, GO:0000923) on data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    so that the component-level gene_symbols list reflects the reviewed UniProtKB protein_examples
+    UniProtKB:O94488 (mto1) and UniProtKB:Q9USP7 (mto2) in Schizosaccharomyces pombe 972h-
+    (NCBITaxon:284812).'

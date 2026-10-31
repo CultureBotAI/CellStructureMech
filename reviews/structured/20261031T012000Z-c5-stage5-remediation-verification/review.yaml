@@ -1,0 +1,489 @@
+schema_version: 1.0.0
+review_id: 20261031T012000Z-c5-stage5-remediation-verification
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: 'Post-remediation verification review of all 10 CellStructureRecord files remediated
+  in Cycle 5 Stage 5 (#2475, #2476)'
+started_at: '2026-10-31T01:16:00Z'
+finished_at: '2026-10-31T01:20:00Z'
+reviewer:
+  identity: antigravity-c5-stage5-remediation-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: 'Post-remediation verification review against committed git
+    revision c4a8f347c314b5601cad86c334497d5aca756640 covering all 10 records modified
+    to resolve the 6 Cycle 5 Stage 4 review findings across GitHub issues #2475 and
+    #2476.'
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: true
+summary: 'Fresh post-remediation review of all 10 CellStructureRecord YAML files modified
+  in Cycle 5 Stage 5 (commit c4a8f347c314b5601cad86c334497d5aca756640) resolving all
+  6 open findings carried forward from Cycle 5 Stage 4 across issues #2475 (adding
+  gene_symbols: [mto1, mto2] on components[3] emtoc GO:0000923 to match existing reviewed
+  protein_examples UniProtKB:O94488 and UniProtKB:Q9USP7 in post_anaphase_microtubule_array.yaml;
+  adding tub1 to components[0].gene_symbols and updating components[0].protein_examples[0].gene_symbol
+  for UniProtKB:P04689 from synonym atb2 to primary symbol tub1 in cytoplasmic_microtubule_bundle.yaml,
+  quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml; and
+  standardizing taxon_label on NCBITaxon:284812 to ''Schizosaccharomyces pombe 972h-''
+  on components[2] cdc45_protein protein_examples[0] UniProtKB:O74113 and canonical_examples[0]
+  in cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml) and #2476 (updating
+  causal_graphs[0].nodes[8] dna_replication_origin_binding GO:0003688 from node_type:
+  BIOLOGICAL_PROCESS to MOLECULAR_FUNCTION in origin_recognition_complex.yaml; adding
+  grounding: GO:0016236 on functions[0] macroautophagy in autophagosome.yaml; and
+  updating components[2].protein_examples[0].protein_label for UniProtKB:P0AEF0 dnaC
+  to ''Replicative helicase loader DnaC'' plus adding top-level evidence entries for
+  GO:0032993 parent_structures and GO:0030894 part_of in primosome_complex.yaml).
+  All 10 records pass strict validation, ID-label correspondence, UniProt verification,
+  offline CURIE cache check, history ledger validation, and page regeneration checks
+  with zero open findings.'
+source:
+  git_revision: c4a8f347c314b5601cad86c334497d5aca756640
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+    sha256: 67b1f9acf1760bdc9effcfea0fcae0629e59b20c7b6e2658f51b92fa20207e64
+    role: target
+  - path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    sha256: 0ae45e8e67e64f0cd8404f85d96cb75ceb22ae037818cd5e0a08cbd2c5bbc61a
+    role: target
+  - path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+    sha256: ec1c274e3f986e1d0c897e2009de50ef840f292f1c2db42b165b2d63e4f8bd20
+    role: target
+  - path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+    sha256: d043fcacfc98671392cb55fbf75ecbf0395c99c4395835682792022fbd6a86d1
+    role: target
+  - path: data/structures/membrane_organelle/autophagosome.yaml
+    sha256: 08c1df95826ee2cb8b86b66592876f324eae999c7cafdc619d1ffad1607f6232
+    role: target
+  - path: data/structures/other/cmg_complex.yaml
+    sha256: 11354dfbf4a7fcf88c80dadedb922bf4e58320e02931281b811a37403ead12a1
+    role: target
+  - path: data/structures/other/nuclear_replisome.yaml
+    sha256: 43ba43b6ab3cfcbb471ddbf6cb5122dff3de81b68df2d3388ae6ed5c1d500616
+    role: target
+  - path: data/structures/other/origin_recognition_complex.yaml
+    sha256: f747dd3adbe4bdd2be87ea2941bb0a5dfd14487571e7b8a956ee3008b2abc159
+    role: target
+  - path: data/structures/other/primosome_complex.yaml
+    sha256: 6929a1257bd0a1f6a76901326a9f33a0cf3792f77b09b604f55dc73eacbdeace
+    role: target
+  - path: data/structures/other/replisome.yaml
+    sha256: bbcd49d74927e79b5c1880abcf07dcc55ba2468ce9607fee8d56bb3e386dacae
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Complete cohort of all 10 CellStructureRecord YAML files remediated
+    in Cycle 5 Stage 5 to resolve the 6 carried-forward Stage 4 findings.
+  selection: 'All 10 records modified in commit c4a8f347c314b5601cad86c334497d5aca756640
+    for issues #2475 and #2476.'
+  coverage: full
+  population_size: 10
+  reviewed_target_ids:
+  - GO:1905720
+  - GO:1990295
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  - GO:0005776
+  - GO:0071162
+  - GO:0043601
+  - GO:0000808
+  - GO:1990077
+  - GO:0030894
+targets:
+- target_id: GO:1905720
+  path: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+  label: cytoplasmic microtubule bundle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 67b1f9acf1760bdc9effcfea0fcae0629e59b20c7b6e2658f51b92fa20207e64
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
+    role: maintained_record
+- target_id: GO:1990295
+  path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  label: post-anaphase microtubule array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 0ae45e8e67e64f0cd8404f85d96cb75ceb22ae037818cd5e0a08cbd2c5bbc61a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    role: maintained_record
+- target_id: cellstructuremech:quiescent_cell_microtubule_bundle
+  path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+  label: quiescent-cell microtubule bundle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ec1c274e3f986e1d0c897e2009de50ef840f292f1c2db42b165b2d63e4f8bd20
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/quiescent_cell_microtubule_bundle.yaml
+    role: maintained_record
+- target_id: GO:0099070
+  path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+  label: static microtubule bundle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d043fcacfc98671392cb55fbf75ecbf0395c99c4395835682792022fbd6a86d1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+    role: maintained_record
+- target_id: GO:0005776
+  path: data/structures/membrane_organelle/autophagosome.yaml
+  label: autophagosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 08c1df95826ee2cb8b86b66592876f324eae999c7cafdc619d1ffad1607f6232
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/autophagosome.yaml
+    role: maintained_record
+- target_id: GO:0071162
+  path: data/structures/other/cmg_complex.yaml
+  label: CMG complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 11354dfbf4a7fcf88c80dadedb922bf4e58320e02931281b811a37403ead12a1
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cmg_complex.yaml
+    role: maintained_record
+- target_id: GO:0043601
+  path: data/structures/other/nuclear_replisome.yaml
+  label: nuclear replisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 43ba43b6ab3cfcbb471ddbf6cb5122dff3de81b68df2d3388ae6ed5c1d500616
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/nuclear_replisome.yaml
+    role: maintained_record
+- target_id: GO:0000808
+  path: data/structures/other/origin_recognition_complex.yaml
+  label: origin recognition complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: f747dd3adbe4bdd2be87ea2941bb0a5dfd14487571e7b8a956ee3008b2abc159
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/origin_recognition_complex.yaml
+    role: maintained_record
+- target_id: GO:1990077
+  path: data/structures/other/primosome_complex.yaml
+  label: primosome complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 6929a1257bd0a1f6a76901326a9f33a0cf3792f77b09b604f55dc73eacbdeace
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/primosome_complex.yaml
+    role: maintained_record
+- target_id: GO:0030894
+  path: data/structures/other/replisome.yaml
+  label: replisome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: bbcd49d74927e79b5c1880abcf07dcc55ba2468ce9607fee8d56bb3e386dacae
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/replisome.yaml
+    role: maintained_record
+checks:
+- check_id: strict_remediated_cohort
+  name: Strict corpus validation covering all 10 remediated records
+  status: passed
+  required: true
+  summary: All 1008 corpus records including the 10 remediated records pass strict
+    LinkML and semantic validation with 0 errors.
+  target_ids:
+  - GO:1905720
+  - GO:1990295
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  - GO:0005776
+  - GO:0071162
+  - GO:0043601
+  - GO:0000808
+  - GO:1990077
+  - GO:0030894
+  command: .venv/bin/python scripts/validate_strict.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_c5_stage5
+- check_id: labels_remediated_cohort
+  name: ID-label correspondence across corpus and generated products
+  status: passed
+  required: true
+  summary: All ontology ID-label pairs across the corpus (4139 canonical, 50 synonym,
+    6 exception) correspond to authoritative ontology labels.
+  target_ids:
+  - GO:1905720
+  - GO:1990295
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  - GO:0005776
+  - GO:0071162
+  - GO:0043601
+  - GO:0000808
+  - GO:1990077
+  - GO:0030894
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_labels_c5_stage5
+- check_id: uniprot_remediated_cohort
+  name: UniProtKB protein_examples and causal_graphs xref verification on remediated cohort
+  status: passed
+  required: true
+  summary: All UniProtKB protein_examples and causal_graphs xrefs across the 10 remediated
+    records pass verification with 0 issues.
+  target_ids:
+  - GO:1905720
+  - GO:1990295
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  - GO:0005776
+  - GO:0071162
+  - GO:0043601
+  - GO:0000808
+  - GO:1990077
+  - GO:0030894
+  command: .venv/bin/python scripts/uniprot_genes.py --verify --record data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_uniprot_c5_stage5
+- check_id: curies_remediated_cohort
+  name: Offline CURIE liveness check across corpus
+  status: passed
+  required: true
+  summary: All 5952 resolved CURIEs (including newly added GO:0016236 in autophagosome.yaml)
+    pass offline liveness verification.
+  target_ids:
+  - GO:1905720
+  - GO:1990295
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  - GO:0005776
+  - GO:0071162
+  - GO:0043601
+  - GO:0000808
+  - GO:1990077
+  - GO:0030894
+  command: .venv/bin/python scripts/check_curies.py --offline --check
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_curies_c5_stage5
+- check_id: history_remediated_cohort
+  name: Repository history link and LinkML HistoryRecord validation
+  status: passed
+  required: true
+  summary: All 2153 repository history files (including the 10 newly added Cycle 5
+    Stage 5 history ledger records) pass link and LinkML HistoryRecord schema validation.
+  target_ids:
+  - GO:1905720
+  - GO:1990295
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  - GO:0005776
+  - GO:0071162
+  - GO:0043601
+  - GO:0000808
+  - GO:1990077
+  - GO:0030894
+  command: .venv/bin/python scripts/validate_history.py history
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_c5_stage5
+evidence:
+- evidence_id: ev_strict_c5_stage5
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict validation summary
+  accessed_at: '2026-10-31T01:17:00Z'
+  support: supports
+  summary: validate_strict.py scanned 1008 files with 0 ERROR rows.
+  snapshot_sha256: 329bb133ea2e12c21ccc1a052d09c48f3e848ddfb3fb3b49eea6c450c113025c
+- evidence_id: ev_labels_c5_stage5
+  kind: validation
+  reference: scripts/validate_id_label_correspondence.py
+  locator: id-label correspondence summary
+  accessed_at: '2026-10-31T01:17:30Z'
+  support: supports
+  summary: validate_id_label_correspondence.py verified 4139 canonical, 50 synonym,
+    and 6 exception pairs with 0 mismatches.
+  snapshot_sha256: b5ff41bb52d24f5d7819fb12769e216440f75ec3fb3df3e3cb2c5082fffb40e0
+- evidence_id: ev_uniprot_c5_stage5
+  kind: validation
+  reference: scripts/uniprot_genes.py
+  locator: uniprot_genes --verify per remediated record
+  accessed_at: '2026-10-31T01:18:00Z'
+  support: supports
+  summary: uniprot_genes.py --verify confirmed 0 issues across all 10 remediated records.
+  snapshot_sha256: 8eaca44c9977fed92594e9bb2376d9e03a167546fd08932f2aa8b7d504605aa4
+- evidence_id: ev_curies_c5_stage5
+  kind: validation
+  reference: scripts/check_curies.py
+  locator: check_curies --offline --check summary
+  accessed_at: '2026-10-31T01:18:30Z'
+  support: supports
+  summary: check_curies.py --offline --check verified 5952 OK and 254 SKIPPED identifiers.
+  snapshot_sha256: a5e5e717786b9316e72b50abb05bbfaa1b18f1487c24abc052fec4bbbfdf4892
+- evidence_id: ev_history_c5_stage5
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history link and schema validation
+  accessed_at: '2026-10-31T01:19:00Z'
+  support: supports
+  summary: 2153 history records validated with 0 invalid links and 0 HistoryRecord
+    schema errors.
+  snapshot_sha256: 2e78c9efe24b4f187f74b59202639b36457409bff8485a4e23924569d89058e6
+assessments:
+- assessment_id: assess_group1_spombe_gene_symbols_and_taxon_labels
+  area: grounding
+  topic: S. pombe 972h- UniProtKB gene_symbols population, primary gene symbol alignment,
+    and strain taxon label consistency (#2475)
+  outcome: supported
+  summary: 'All 7 S. pombe 972h- (NCBITaxon:284812) records in Group 1 (#2475) resolve
+    their UniProtKB and taxon label findings: post_anaphase_microtubule_array.yaml
+    adds gene_symbols: [mto1, mto2] on components[3] (component_id: emtoc, GO:0000923,
+    equatorial microtubule organizing center) to match its existing reviewed protein_examples
+    UniProtKB:O94488 (mto1) and UniProtKB:Q9USP7 (mto2); cytoplasmic_microtubule_bundle.yaml,
+    quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml add
+    tub1 to components[0].gene_symbols, update components[0].protein_examples[0].gene_symbol
+    (UniProtKB:P04689) from synonym atb2 to primary symbol tub1, and note ''(also
+    declared as synonym atb2)'' in components[0].protein_examples[0].role; and cmg_complex.yaml,
+    nuclear_replisome.yaml, and replisome.yaml standardize taxon_label on NCBITaxon:284812
+    from ''Schizosaccharomyces pombe'' to ''Schizosaccharomyces pombe 972h-'' on components[2]
+    (cdc45_protein) protein_examples[0] (UniProtKB:O74113) and on canonical_examples[0].'
+  target_ids:
+  - GO:1905720
+  - GO:1990295
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  - GO:0071162
+  - GO:0043601
+  - GO:0030894
+  evidence_ids:
+  - ev_strict_c5_stage5
+  - ev_labels_c5_stage5
+  - ev_uniprot_c5_stage5
+- assessment_id: assess_group2_go_grounding_node_type_and_primosome_curation
+  area: representation
+  topic: Causal graph MOLECULAR_FUNCTION node typing, autophagosome GO:0016236 grounding,
+    and primosome DnaC label and hierarchy evidence (#2476)
+  outcome: supported
+  summary: 'All 3 records in Group 2 (#2476) resolve their GO grounding, causal node
+    typing, and protein/evidence curation findings: origin_recognition_complex.yaml
+    updates causal_graphs[0].nodes[8] (node_id: dna_replication_origin_binding, GO:0003688
+    DNA replication origin binding) from node_type: BIOLOGICAL_PROCESS to node_type:
+    MOLECULAR_FUNCTION; autophagosome.yaml adds scalar grounding: GO:0016236 to functions[0]
+    (macroautophagy); and primosome_complex.yaml updates components[2].protein_examples[0].protein_label
+    (UniProtKB:P0AEF0, dnaC) from ''DNA replication protein DnaC'' to ''Replicative
+    helicase loader DnaC'' (matching causal_graphs[0].nodes[1]) and adds top-level
+    evidence entries for GO:0032993 (parent_structures) and GO:0030894 (part_of).'
+  target_ids:
+  - GO:0005776
+  - GO:0000808
+  - GO:1990077
+  evidence_ids:
+  - ev_strict_c5_stage5
+  - ev_labels_c5_stage5
+  - ev_curies_c5_stage5
+  - ev_history_c5_stage5
+findings: []
+actions: []
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:1905720
+  - GO:1990295
+  - cellstructuremech:quiescent_cell_microtubule_bundle
+  - GO:0099070
+  - GO:0005776
+  - GO:0071162
+  - GO:0043601
+  - GO:0000808
+  - GO:1990077
+  - GO:0030894
+  rationale: All 10 remediated records preserve their existing structure boundaries
+    and canonical GO/CSM identifiers while resolving all 6 Cycle 5 Stage 4 review
+    findings.
+  evidence_ids:
+  - ev_strict_c5_stage5
+  - ev_labels_c5_stage5
+  - ev_uniprot_c5_stage5
+  - ev_curies_c5_stage5
+  - ev_history_c5_stage5
+limitations: []
+tags:
+- stage5
+- cycle5
+- post-remediation
+- verification-review
