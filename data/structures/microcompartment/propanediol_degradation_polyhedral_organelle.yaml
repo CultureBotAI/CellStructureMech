@@ -45,11 +45,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
-- timestamp: '2026-10-31T09:02:31Z'
+- timestamp: '2026-10-31T09:34:55Z'
   curator: claude-opus-4-6
   action: CURATED_CAUSAL_GRAPHS
   changes: Connected pdu_bmc_t_shell_proteins and pdu_lumen_enzyme_core to pdu_shell_cargo_complex
-    in pdu_shell_cargo_convergent_biogenesis.
+    in pdu_shell_cargo_convergent_biogenesis and aligned pducde_diol_dehydratase node_type
+    to STRUCTURE.
   llm_assisted: true
 synonyms:
 - synonym_text: Pdu microcompartment
@@ -481,7 +482,7 @@ causal_graphs:
     component_ref: pdun_vertex_shell_protein
   - node_id: pducde_diol_dehydratase
     label: PduCDE diol dehydratase
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: pducde_diol_dehydratase
   - node_id: pdu_lumen_enzyme_core
     label: Pdu lumen enzyme core

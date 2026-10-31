@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1015,
- "corpus_updated": "2026-10-31 09:02:32 UTC",
- "corpus_digest": "70147dc80421",
+ "corpus_updated": "2026-10-31 09:34:55 UTC",
+ "corpus_digest": "a91904416c20",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -10414,10 +10414,10 @@
      "llm_assisted": true
     },
     {
-     "timestamp": "2026-10-31T09:02:30Z",
+     "timestamp": "2026-10-31T09:34:54Z",
      "curator": "claude-opus-4-6",
      "action": "CURATED_CAUSAL_GRAPHS",
-     "changes": "Connected FliP, FliQ, FliR, and FlhB to secretion_apparatus and added FliH, FliI, and FliJ component nodes linked to the atpase node.",
+     "changes": "Connected FliP, FliQ, FliR, and FlhB to secretion_apparatus and linked FliH, FliI, and FliJ component nodes to the atpase node.",
      "llm_assisted": true
     }
    ],
@@ -11120,7 +11120,7 @@
          "notes": "Kuhlen et al. 2018 resolved the FliP5Q4R1 core of the flagellar type III secretion export apparatus."
         },
         {
-         "reference": "InterPro:IPR005882",
+         "reference": "InterPro:IPR005837",
          "notes": "InterPro family for flagellar biosynthetic protein FliP."
         }
        ]
@@ -11136,7 +11136,7 @@
          "notes": "Kuhlen et al. 2018 resolved four FliQ subunits in the FliP5Q4R1 flagellar export-gate core."
         },
         {
-         "reference": "InterPro:IPR005776",
+         "reference": "InterPro:IPR006305",
          "notes": "InterPro family for flagellar export-gate subunit FliQ."
         }
        ]
@@ -11152,7 +11152,7 @@
          "notes": "Kuhlen et al. 2018 resolved the single FliR subunit in the FliP5Q4R1 flagellar export-gate core."
         },
         {
-         "reference": "InterPro:IPR005837",
+         "reference": "InterPro:IPR006303",
          "notes": "InterPro family for flagellar export-gate subunit FliR."
         }
        ]
@@ -11168,7 +11168,7 @@
          "notes": "Kuhlen et al. 2020 resolved the FliP5Q4R1FlhB1 complex at the inner-membrane flagellar export gate."
         },
         {
-         "reference": "InterPro:IPR006135",
+         "reference": "InterPro:IPR006136",
          "notes": "InterPro family for flagellar biosynthetic protein FlhB."
         }
        ]
@@ -11184,8 +11184,8 @@
          "notes": "Imada et al. 2016 characterized the FliH-FliI-FliJ cytoplasmic export ATPase ring complex of the bacterial flagellar secretion apparatus."
         },
         {
-         "reference": "InterPro:IPR006301",
-         "notes": "InterPro:IPR006301 defines the conserved FLIH subunit family of the flagellar export ATPase complex."
+         "reference": "InterPro:IPR000563",
+         "notes": "InterPro:IPR000563 defines the conserved FLIH subunit family of the flagellar export ATPase complex."
         }
        ]
       },
@@ -11198,10 +11198,6 @@
         {
          "reference": "DOI:10.1073/pnas.1524025113",
          "notes": "Imada et al. 2016 characterized the FliH-FliI-FliJ cytoplasmic export ATPase ring complex of the bacterial flagellar secretion apparatus."
-        },
-        {
-         "reference": "InterPro:IPR005714",
-         "notes": "InterPro:IPR005714 defines the conserved FLII subunit family of the flagellar export ATPase complex."
         }
        ]
       },
@@ -11216,8 +11212,8 @@
          "notes": "Imada et al. 2016 characterized the FliH-FliI-FliJ cytoplasmic export ATPase ring complex of the bacterial flagellar secretion apparatus."
         },
         {
-         "reference": "InterPro:IPR006299",
-         "notes": "InterPro:IPR006299 defines the conserved FLIJ subunit family of the flagellar export ATPase complex."
+         "reference": "InterPro:IPR012823",
+         "notes": "InterPro:IPR012823 defines the conserved FLIJ subunit family of the flagellar export ATPase complex."
         }
        ]
       }
@@ -160815,7 +160811,7 @@
      "llm_assisted": true
     },
     {
-     "timestamp": "2026-10-31T09:02:31Z",
+     "timestamp": "2026-10-31T09:34:54Z",
      "curator": "claude-opus-4-6",
      "action": "CURATED_CAUSAL_GRAPHS",
      "changes": "Connected organellar_chromatophore_thylakoid_membrane to organellar_chromatophore.",
@@ -161126,7 +161122,7 @@
        "evidence": [
         {
          "reference": "GO:0070118",
-         "notes": "GO:0070118 places the organellar chromatophore thylakoid membrane as a part of the organellar chromatophore (GO:0070116)."
+         "notes": "GO:0070118 places the organellar chromatophore thylakoid membrane as a part of the organellar chromatophore (GO:0070111) via the organellar chromatophore thylakoid (GO:0070116)."
         },
         {
          "reference": "uniprot.location:SL-0351",
@@ -179362,7 +179358,7 @@
         },
         {
          "reference": "PMID:34406783",
-         "notes": "MacCready and Vecchiarelli 2021 reviewed McdAB-mediated positioning of assembled carboxysome shells in cyanobacteria and proteobacteria."
+         "notes": "Hakim et al. 2021 dissected how McdB-bound carboxysome shells interact with the McdA ATPase to drive carboxysome positioning along the nucleoid."
         }
        ]
       }
@@ -179518,7 +179514,7 @@
      "llm_assisted": true
     },
     {
-     "timestamp": "2026-10-31T09:02:31Z",
+     "timestamp": "2026-10-31T09:34:54Z",
      "curator": "claude-opus-4-6",
      "action": "CURATED_CAUSAL_GRAPHS",
      "changes": "Connected mcdb to shell in carboxysome_assembly and aligned rubisco node_type to STRUCTURE.",
@@ -180955,10 +180951,10 @@
      "llm_assisted": true
     },
     {
-     "timestamp": "2026-10-31T09:02:31Z",
+     "timestamp": "2026-10-31T09:34:55Z",
      "curator": "claude-opus-4-6",
      "action": "CURATED_CAUSAL_GRAPHS",
-     "changes": "Connected pdu_bmc_t_shell_proteins and pdu_lumen_enzyme_core to pdu_shell_cargo_complex in pdu_shell_cargo_convergent_biogenesis.",
+     "changes": "Connected pdu_bmc_t_shell_proteins and pdu_lumen_enzyme_core to pdu_shell_cargo_complex in pdu_shell_cargo_convergent_biogenesis and aligned pducde_diol_dehydratase node_type to STRUCTURE.",
      "llm_assisted": true
     }
    ],
@@ -181419,7 +181415,7 @@
       {
        "node_id": "pducde_diol_dehydratase",
        "label": "PduCDE diol dehydratase",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "component_ref": "pducde_diol_dehydratase"
       },
       {

@@ -844,8 +844,8 @@ causal_graphs:
       notes: MacCready et al. 2018 demonstrated that McdB localizes to carboxysome
         shells and interacts with McdA to distribute carboxysomes along the nucleoid.
     - reference: PMID:34406783
-      notes: MacCready and Vecchiarelli 2021 reviewed McdAB-mediated positioning of
-        assembled carboxysome shells in cyanobacteria and proteobacteria.
+      notes: Hakim et al. 2021 dissected how McdB-bound carboxysome shells interact
+        with the McdA ATPase to drive carboxysome positioning along the nucleoid.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-29T00:00:00Z'
@@ -991,7 +991,7 @@ curation_history:
     since the icosahedral shell is built from both bmc_h hexamers and bmc_p pentamers
     (#2463).'
   llm_assisted: true
-- timestamp: '2026-10-31T09:02:31Z'
+- timestamp: '2026-10-31T09:34:54Z'
   curator: claude-opus-4-6
   action: CURATED_CAUSAL_GRAPHS
   changes: Connected mcdb to shell in carboxysome_assembly and aligned rubisco node_type
