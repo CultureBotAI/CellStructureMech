@@ -76,6 +76,12 @@ curation_history:
     propagated verified component grounding to causal_graphs component_ref node(s):
     rc_lh1_pufx (cellstructuremech:rc_lh1_pufx_core_complex), cytochrome_bc1 (cellstructuremech:chromatophore_cytochrome_bc1_complex).'
   llm_assisted: true
+- timestamp: '2026-10-31T09:02:31Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected cytochrome_bc1 to proton_motive_force and rc_lh1_pufx to chromatophore_membrane,
+    and aligned PROTEIN_COMPLEX node types.
+  llm_assisted: true
 synonyms:
 - synonym_text: cellular chromatophore membrane
   synonym_type: EXACT_SYNONYM
@@ -362,7 +368,7 @@ causal_graphs:
     component_ref: chromatophore_lipid_bilayer
   - node_id: lh2
     label: LH2 peripheral light-harvesting antenna complexes
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: lh2_antenna_complexes
   - node_id: rc_lh1_pufx
     label: RC-LH1-PufX core complex
@@ -384,7 +390,7 @@ causal_graphs:
     node_type: STATE
   - node_id: f0f1_atp_synthase
     label: F0F1-ATP synthase
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: f0f1_atp_synthase
   - node_id: atp_synthesis
     label: photosynthetic phosphorylation
@@ -444,6 +450,29 @@ causal_graphs:
     - reference: DOI:10.1016/S0006-3495(02)75470-2
       notes: Feniouk et al. 2002 analyzed proton-driven ATP synthesis in bacterial
         chromatophore vesicles.
+  - subject: cytochrome_bc1
+    predicate: contributes to
+    object: proton_motive_force
+    description: Quinol oxidation by the cytochrome bc1 Q-cycle translocates protons
+      into the chromatophore vesicle lumen, generating the transmembrane proton motive
+      force.
+    evidence:
+    - reference: DOI:10.1016/S0006-3495(02)75470-2
+      notes: Feniouk et al. 2002 measured the transmembrane proton motive force generated
+        by cyclic electron transfer in Rhodobacter capsulatus chromatophore vesicles.
+    - reference: DOI:10.1074/jbc.M412088200
+      notes: Comayras, Jungas and Lavergne 2005 analyzed ubiquinol turnover between
+        the reaction center and cytochrome bc1 in isolated bacterial chromatophores.
+  - subject: rc_lh1_pufx
+    predicate: resides in
+    object: chromatophore_membrane
+    description: Dimeric RC-LH1-PufX core complexes are embedded in the intracytoplasmic
+      chromatophore membrane bilayer alongside LH2 antenna rings.
+    evidence:
+    - reference: DOI:10.1038/nature02823
+      notes: Bahatyrova et al. 2004 resolved the supramolecular organization of LH2
+        and RC-LH1-PufX complexes in native Rhodobacter sphaeroides chromatophore
+        membranes.
 discussions:
 - discussion_id: chromatophore_organellar_boundary
   kind: INTERPRETATION

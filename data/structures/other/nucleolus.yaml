@@ -42,6 +42,12 @@ curation_history:
   changes: Retyped the RNA polymerase I complex graph node from GENE_OR_PROTEIN to
     STRUCTURE.
   llm_assisted: true
+- timestamp: '2026-10-31T09:02:31Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected nucleolar_chromatin to nucleolus and linked small_subunit_processome
+    and box_haca_snornp_complex to ribosome_biogenesis.
+  llm_assisted: true
 part_of:
 - GO:0031981
 components:
@@ -272,6 +278,38 @@ causal_graphs:
     - reference: DOI:10.1038/nrm2184
       notes: Boisvert et al. 2007 review the nucleolus as a major site of eukaryotic
         ribosome biogenesis.
+  - subject: nucleolar_chromatin
+    predicate: is part of
+    object: nucleolus
+    description: Nucleolar rDNA chromatin forms the chromosomal organizer core around
+      which the nucleolus assembles.
+    evidence:
+    - reference: GO:0030874
+      notes: GO:0030874 defines nucleolar chromatin as the chromatin part of the nucleolus.
+  - subject: small_subunit_processome
+    predicate: contributes to
+    object: ribosome_biogenesis
+    description: Pre-rRNA modification and cleavage by the small-subunit processome
+      (90S preribosome) are essential steps of nucleolar ribosome biogenesis.
+    evidence:
+    - reference: GO:0032040
+      notes: GO:0032040 defines the small-subunit processome (90S preribosome) and
+        its role in nucleolar pre-rRNA processing during ribosome biogenesis.
+    - reference: DOI:10.1038/nature00769
+      notes: Dragon et al. 2002 identified the U3 snoRNA-containing SSU processome
+        required for nucleolar 18S rRNA biogenesis.
+  - subject: box_haca_snornp_complex
+    predicate: contributes to
+    object: ribosome_biogenesis
+    description: Pre-rRNA modification and cleavage by the box H/ACA snoRNP complex
+      are essential steps of nucleolar ribosome biogenesis.
+    evidence:
+    - reference: GO:0031429
+      notes: GO:0031429 defines the box H/ACA snoRNP complex and its role in nucleolar
+        pre-rRNA processing during ribosome biogenesis.
+    - reference: DOI:10.1146/annurev.genet.33.1.261
+      notes: Venema and Tollervey 1999 reviewed how nucleolar snoRNPs and processing
+        factors drive eukaryotic ribosome biogenesis.
 discussions:
 - discussion_id: extend_preribosomal_component_boundaries
   prompt: Resolve exact source-neutral nucleolar component boundaries for the remaining

@@ -43,6 +43,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-31T09:02:30Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected actin_fusion_focus to type_v_myosins and cell_wall_hydrolases
+    to cell_wall_dissolution in fus1_actin_focus_wall_dissolution.
+  llm_assisted: true
 synonyms:
 - synonym_text: actin fusion focus
   synonym_type: BROAD_SYNONYM
@@ -200,6 +206,27 @@ causal_graphs:
     - reference: DOI:10.1083/jcb.201411124
       notes: Dudin et al. 2015 linked the actin focus to localized cell-wall dissolution
         during fission-yeast cell fusion.
+  - subject: actin_fusion_focus
+    predicate: guides
+    object: type_v_myosins
+    description: Dense Fus1-nucleated actin filaments in the fusion focus serve as
+      polarized tracks that concentrate Myo51 and Myo52 type V myosins at the mating
+      contact zone.
+    evidence:
+    - reference: DOI:10.1083/jcb.201411124
+      notes: Dudin et al. 2015 showed that the Fus1-assembled actin fusion focus recruits
+        and concentrates type V myosins Myo52 and Myo51 at the cell-cell contact site.
+  - subject: cell_wall_hydrolases
+    predicate: mediate
+    object: cell_wall_dissolution
+    description: Focally delivered glucanase-containing secretory vesicles release
+      cell-wall hydrolases that locally digest the intervening cell walls to permit
+      plasma membrane fusion.
+    evidence:
+    - reference: DOI:10.1083/jcb.201411124
+      notes: Dudin et al. 2015 demonstrated that Myo52-delivered glucanase cargo at
+        the actin fusion focus drives local cell wall erosion during fission yeast
+        mating.
 discussions:
 - discussion_id: resolve_fus1_myo52_hydrolase_boundaries
   prompt: Resolve exact source-neutral groundings and component boundaries for Fus1

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/septin_ring.yaml
+  slug: septin_ring
+session:
+  id: 2026-10-31T090230Z-claude-code-11dc63
+  timestamp: '2026-10-31T09:02:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected septin_filaments to septin_ring in septin_oligomer_filament_ring_assembly.
+  details: Added a sourced 'organize into' edge from septin_filaments to septin_ring (GO:0005940,
+    DOI:10.3389/fcell.2016.00123) connecting septin filament polymerization to cortical ring
+    assembly at the cytokinesis site.

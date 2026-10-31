@@ -422,6 +422,29 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro.2016.99
       notes: Uebe & Schüler 2016 describe the chain's summed magnetic moment orienting
         the cell.
+  - subject: mamj
+    predicate: binds
+    object: membrane
+    description: The acidic connector protein MamJ associates with the magnetosome
+      membrane and couples individual magnetosome vesicles to the MamK actin-like
+      filament.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe and Schüler 2016 reviewed how membrane-associated MamJ tethers magnetosome
+        vesicles to the MamK cytomotive filament.
+    - reference: DOI:10.1002/pro.2827
+      notes: Barber-Zucker and Zarivach 2015 reviewed how magnetosome membrane proteins
+        including MamJ and the MamK filament organize magnetosome vesicles into a
+        chain.
+  - subject: crystal
+    predicate: is enclosed in
+    object: membrane
+    description: Each biomineralized magnetite or greigite nanocrystal is enclosed
+      within its own invaginated magnetosome membrane vesicle.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe and Schüler 2016 reviewed magnetite crystal biomineralization inside
+        the lumen of the magnetosome membrane vesicle.
 discussions:
 - discussion_id: no_image_yet
   prompt: Add a micrograph whose imaged organism is identified to species.
@@ -577,6 +600,11 @@ curation_history:
   changes: 'Addressed #2432 (finding membrane-organelle-causal-node-component-ref-grounding):
     propagated verified component grounding to causal_graphs component_ref node(s):
     crystal (CHEBI:46726).'
+  llm_assisted: true
+- timestamp: '2026-10-31T09:02:31Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected mamj and crystal to the magnetosome membrane node in magnetosome_chain_alignment.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0510

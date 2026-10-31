@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_iii_protein_secretion_system_complex.yaml
+  slug: type_iii_protein_secretion_system_complex
+session:
+  id: 2026-10-31T090232Z-claude-code-69688a
+  timestamp: '2026-10-31T09:02:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected inner_rings and export_apparatus to translocation_conduit in export_gate_needle_translocon_injection.
+  details: Added sourced edges from inner_rings and export_apparatus to translocation_conduit
+    (DOI:10.1038/nrmicro.2017.20, DOI:10.1016/j.cell.2018.01.034) so the inner-membrane export
+    gate and outer needle/translocon conduit form a connected T3SS mechanism graph.

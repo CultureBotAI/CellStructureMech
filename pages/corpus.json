@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1015,
- "corpus_updated": "2026-10-31 05:52:59 UTC",
- "corpus_digest": "58cc9a9c0211",
+ "corpus_updated": "2026-10-31 09:02:32 UTC",
+ "corpus_digest": "70147dc80421",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -832,6 +832,13 @@
      "action": "CURATED_PARTHOOD",
      "changes": "Added has_part links to cellstructuremech:archaeal_type_flagellum_filament and cellstructuremech:archaeal_type_flagellum_motor to reciprocate their part_of GO:0097589 links (#2463).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:29Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected prearchaellin maturation to archaellins and aligned PROTEIN_COMPLEX component_ref node types to STRUCTURE.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -1241,7 +1248,7 @@
       {
        "node_id": "arli_arlj",
        "label": "ArlI/ArlJ motor core",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "component_ref": "arli_arlj_motor"
       },
       {
@@ -1253,13 +1260,13 @@
       {
        "node_id": "scaffold",
        "label": "ArlX/ArlCDE cytosolic scaffold",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "component_ref": "cytosolic_scaffold"
       },
       {
        "node_id": "anchor",
        "label": "ArlF/ArlG S-layer anchor",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "component_ref": "arlfg_anchor"
       },
       {
@@ -1365,6 +1372,18 @@
         {
          "reference": "DOI:10.3389/fmicb.2015.00023",
          "notes": "Albers and Jarrell 2015 review archaellum rotation as the archaeal swimming mechanism."
+        }
+       ]
+      },
+      {
+       "subject": "prearchaellin",
+       "predicate": "is processed into",
+       "object": "archaellins",
+       "description": "N-terminally cleaved pre-archaellins mature into assembly-competent archaellin subunits that are incorporated at the base of the growing filament.",
+       "evidence": [
+        {
+         "reference": "DOI:10.3389/fmicb.2015.00023",
+         "notes": "Albers and Jarrell 2015 describe how ArlK/PibD cleavage of the class III signal peptide converts pre-archaellins into mature archaellin subunits that polymerize into the archaellum filament."
         }
        ]
       }
@@ -10393,6 +10412,13 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2432 (finding appendage-flagellum-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): flip (InterPro:IPR005837), fliq (InterPro:IPR006305), flir (InterPro:IPR006303), flha (InterPro:IPR006301), flhb (InterPro:IPR006136), flih (InterPro:IPR000563), flij (InterPro:IPR012823).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:30Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected FliP, FliQ, FliR, and FlhB to secretion_apparatus and added FliH, FliI, and FliJ component nodes linked to the atpase node.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -11080,6 +11106,118 @@
         {
          "reference": "DOI:10.1038/s41594-018-0086-9",
          "notes": "Kuhlen et al. 2018 reconstructed Salmonella Typhimurium FliP5-FliQ4-FliR1 by cryo-EM: FliP and FliR form a helical core with peripheral FliQ subunits. The structure does not by itself measure assembly order."
+        }
+       ]
+      },
+      {
+       "subject": "flip",
+       "predicate": "contributes to",
+       "object": "secretion_apparatus",
+       "description": "Five FliP subunits form the helical core of the FliP5Q4R1 inner-membrane export gate in the bacterial flagellar secretion apparatus.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41594-018-0086-9",
+         "notes": "Kuhlen et al. 2018 resolved the FliP5Q4R1 core of the flagellar type III secretion export apparatus."
+        },
+        {
+         "reference": "InterPro:IPR005882",
+         "notes": "InterPro family for flagellar biosynthetic protein FliP."
+        }
+       ]
+      },
+      {
+       "subject": "fliq",
+       "predicate": "contributes to",
+       "object": "secretion_apparatus",
+       "description": "Four FliQ subunits pack onto the FliP5R1 helical assembly at the base of the flagellar export gate.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41594-018-0086-9",
+         "notes": "Kuhlen et al. 2018 resolved four FliQ subunits in the FliP5Q4R1 flagellar export-gate core."
+        },
+        {
+         "reference": "InterPro:IPR005776",
+         "notes": "InterPro family for flagellar export-gate subunit FliQ."
+        }
+       ]
+      },
+      {
+       "subject": "flir",
+       "predicate": "contributes to",
+       "object": "secretion_apparatus",
+       "description": "A single FliR subunit bridges the FliP5 helix and FliQ4 ring in the FliP5Q4R1 flagellar export gate.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41594-018-0086-9",
+         "notes": "Kuhlen et al. 2018 resolved the single FliR subunit in the FliP5Q4R1 flagellar export-gate core."
+        },
+        {
+         "reference": "InterPro:IPR005837",
+         "notes": "InterPro family for flagellar export-gate subunit FliR."
+        }
+       ]
+      },
+      {
+       "subject": "flhb",
+       "predicate": "contributes to",
+       "object": "secretion_apparatus",
+       "description": "FlhB wraps around the FliP5Q4R1 export-gate core and provides the autocleavable substrate-specificity switch of the flagellar secretion apparatus.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-020-15071-9",
+         "notes": "Kuhlen et al. 2020 resolved the FliP5Q4R1FlhB1 complex at the inner-membrane flagellar export gate."
+        },
+        {
+         "reference": "InterPro:IPR006135",
+         "notes": "InterPro family for flagellar biosynthetic protein FlhB."
+        }
+       ]
+      },
+      {
+       "subject": "flih",
+       "predicate": "contributes to",
+       "object": "atpase",
+       "description": "FliH dimers form peripheral spoke linkers that anchor the FliI6J1 ATPase complex to the flagellar basal body.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1073/pnas.1524025113",
+         "notes": "Imada et al. 2016 characterized the FliH-FliI-FliJ cytoplasmic export ATPase ring complex of the bacterial flagellar secretion apparatus."
+        },
+        {
+         "reference": "InterPro:IPR006301",
+         "notes": "InterPro:IPR006301 defines the conserved FLIH subunit family of the flagellar export ATPase complex."
+        }
+       ]
+      },
+      {
+       "subject": "flii",
+       "predicate": "contributes to",
+       "object": "atpase",
+       "description": "Six FliI subunits assemble into the catalytic ATPase ring of the cytoplasmic FliH12I6J1 export ATPase complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1073/pnas.1524025113",
+         "notes": "Imada et al. 2016 characterized the FliH-FliI-FliJ cytoplasmic export ATPase ring complex of the bacterial flagellar secretion apparatus."
+        },
+        {
+         "reference": "InterPro:IPR005714",
+         "notes": "InterPro:IPR005714 defines the conserved FLII subunit family of the flagellar export ATPase complex."
+        }
+       ]
+      },
+      {
+       "subject": "flij",
+       "predicate": "contributes to",
+       "object": "atpase",
+       "description": "FliJ forms the central coiled-coil stalk inside the FliI6 hexamer of the flagellar export ATPase complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1073/pnas.1524025113",
+         "notes": "Imada et al. 2016 characterized the FliH-FliI-FliJ cytoplasmic export ATPase ring complex of the bacterial flagellar secretion apparatus."
+        },
+        {
+         "reference": "InterPro:IPR006299",
+         "notes": "InterPro:IPR006299 defines the conserved FLIJ subunit family of the flagellar export ATPase complex."
         }
        ]
       }
@@ -53941,6 +54079,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:30Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected actin_fusion_focus to type_v_myosins and cell_wall_hydrolases to cell_wall_dissolution in fus1_actin_focus_wall_dissolution.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -54148,6 +54293,30 @@
         {
          "reference": "DOI:10.1083/jcb.201411124",
          "notes": "Dudin et al. 2015 linked the actin focus to localized cell-wall dissolution during fission-yeast cell fusion."
+        }
+       ]
+      },
+      {
+       "subject": "actin_fusion_focus",
+       "predicate": "guides",
+       "object": "type_v_myosins",
+       "description": "Dense Fus1-nucleated actin filaments in the fusion focus serve as polarized tracks that concentrate Myo51 and Myo52 type V myosins at the mating contact zone.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201411124",
+         "notes": "Dudin et al. 2015 showed that the Fus1-assembled actin fusion focus recruits and concentrates type V myosins Myo52 and Myo51 at the cell-cell contact site."
+        }
+       ]
+      },
+      {
+       "subject": "cell_wall_hydrolases",
+       "predicate": "mediate",
+       "object": "cell_wall_dissolution",
+       "description": "Focally delivered glucanase-containing secretory vesicles release cell-wall hydrolases that locally digest the intervening cell walls to permit plasma membrane fusion.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1083/jcb.201411124",
+         "notes": "Dudin et al. 2015 demonstrated that Myo52-delivered glucanase cargo at the actin fusion focus drives local cell wall erosion during fission yeast mating."
         }
        ]
       }
@@ -69385,6 +69554,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 5 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-31T09:02:30Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected septin_filaments to septin_ring in septin_oligomer_filament_ring_assembly.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -69677,6 +69853,22 @@
         {
          "reference": "DOI:10.3389/fcell.2016.00123",
          "notes": "Glomb and Gronemeyer 2016 review septin-ring organization and cytokinesis functions at the budding-yeast bud neck."
+        }
+       ]
+      },
+      {
+       "subject": "septin_filaments",
+       "predicate": "organize into",
+       "object": "septin_ring",
+       "description": "Paired cortical septin filaments assemble and remodel into the higher-order septin ring and hourglass collar at the division site.",
+       "evidence": [
+        {
+         "reference": "GO:0005940",
+         "notes": "GO:0005940 defines the septin ring as a ring-shaped structure formed from septin filaments at the cytokinesis site."
+        },
+        {
+         "reference": "DOI:10.3389/fcell.2016.00123",
+         "notes": "Septin filaments recruited to the cortex organize into the nascent septin ring and mature hourglass collar at the mother-bud neck."
         }
        ]
       }
@@ -76512,6 +76704,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:30Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected exclusion_zone_filaments and mitochondrial_tac_membranes to tripartite_attachment_complex and added p166, tac40, and tac102 component nodes.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -76772,6 +76971,27 @@
        "node_id": "kinetoplast_segregation",
        "label": "basal-body-linked kinetoplast segregation",
        "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "p166",
+       "label": "inner-membrane TAC protein p166",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "p166",
+       "description": "Transmembrane inner mitochondrial membrane TAC protein that bridges the differentiated TAC membranes and the unilateral filaments."
+      },
+      {
+       "node_id": "tac40",
+       "label": "outer-membrane TAC beta-barrel protein TAC40",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "tac40",
+       "description": "Beta-barrel protein of the outer mitochondrial membrane essential for TAC integrity and kDNA segregation."
+      },
+      {
+       "node_id": "tac102",
+       "label": "unilateral filament protein TAC102",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "tac102",
+       "description": "Structural component of the intramitochondrial unilateral filament region linking the inner mitochondrial membrane to the kDNA disc."
       }
      ],
      "edges": [
@@ -76848,6 +77068,74 @@
         {
          "reference": "DOI:10.1371/journal.ppat.1005586",
          "notes": "Trikin et al. 2016 characterized TAC102 as a TAC component in the mitochondrial genome segregation machinery."
+        }
+       ]
+      },
+      {
+       "subject": "exclusion_zone_filaments",
+       "predicate": "form",
+       "object": "tripartite_attachment_complex",
+       "description": "The cytoplasmic exclusion zone filaments constitute one of the three serially connected structural zones of the tripartite attachment complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1091/mbc.E02-08-0525",
+         "notes": "Ogbadoyi et al. 2003 defined the tripartite attachment complex as comprising the exclusion zone filaments, differentiated mitochondrial membranes, and unilateral filaments."
+        },
+        {
+         "reference": "GO:0120121",
+         "notes": "GO:0120121 defines the tripartite attachment complex connecting the flagellar basal body across the mitochondrial membranes to the kDNA disc."
+        }
+       ]
+      },
+      {
+       "subject": "mitochondrial_tac_membranes",
+       "predicate": "form",
+       "object": "tripartite_attachment_complex",
+       "description": "The differentiated outer and inner mitochondrial TAC membranes constitute one of the three serially connected structural zones of the tripartite attachment complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1091/mbc.E02-08-0525",
+         "notes": "Ogbadoyi et al. 2003 defined the tripartite attachment complex as comprising the exclusion zone filaments, differentiated mitochondrial membranes, and unilateral filaments."
+        },
+        {
+         "reference": "GO:0120121",
+         "notes": "GO:0120121 defines the tripartite attachment complex connecting the flagellar basal body across the mitochondrial membranes to the kDNA disc."
+        }
+       ]
+      },
+      {
+       "subject": "p166",
+       "predicate": "contributes to",
+       "object": "mitochondrial_tac_membranes",
+       "description": "The transmembrane TAC protein p166 anchors in the inner mitochondrial membrane within the differentiated TAC membrane zone.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/sj.emboj.7601956",
+         "notes": "Zhao et al. 2008 identified p166 as the first inner-membrane component of the Trypanosoma brucei tripartite attachment complex."
+        }
+       ]
+      },
+      {
+       "subject": "tac40",
+       "predicate": "contributes to",
+       "object": "mitochondrial_tac_membranes",
+       "description": "The beta-barrel protein TAC40 resides in the outer mitochondrial membrane of the differentiated TAC membrane zone.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1073/pnas.1404854111",
+         "notes": "Schnarwiler et al. 2014 identified TAC40 as an outer mitochondrial membrane beta-barrel subunit of the tripartite attachment complex."
+        }
+       ]
+      },
+      {
+       "subject": "tac102",
+       "predicate": "contributes to",
+       "object": "unilateral_filaments",
+       "description": "TAC102 forms a core structural component of the intramitochondrial unilateral filaments linking the inner membrane to the kDNA disc.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1371/journal.ppat.1005586",
+         "notes": "Trikin et al. 2016 identified TAC102 as a core structural component of the unilateral filaments of the tripartite attachment complex."
         }
        ]
       }
@@ -104120,6 +104408,38 @@
          "notes": "Vollmer, Blanot and de Pedro 2008 review how peptidoglycan architecture gives bacteria a protective, shape-maintaining wall."
         }
        ]
+      },
+      {
+       "subject": "seds_polymerases",
+       "predicate": "utilize",
+       "object": "exported_lipid_ii",
+       "description": "SEDS-family and class A PBP glycosyltransferases utilize flipped Lipid II precursors at the outer face of the cytoplasmic membrane to polymerize nascent glycan chains.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nmicrobiol.2016.253",
+         "notes": "Emami et al. 2017 identified Bacillus subtilis RodA as a SEDS-family peptidoglycan glycosyltransferase that polymerizes Lipid II precursors into glycan strands."
+        },
+        {
+         "reference": "DOI:10.1038/s41579-020-0366-3",
+         "notes": "Egan, Errington and Vollmer 2020 reviewed how flipped Lipid II serves as the direct substrate for SEDS and class A PBP glycosyltransferases."
+        }
+       ]
+      },
+      {
+       "subject": "glycan_strands",
+       "predicate": "contribute to",
+       "object": "peptidoglycan",
+       "description": "Linear beta-(1,4)-linked GlcNAc-MurNAc glycan chains form the carbohydrate backbone that is cross-linked by transpeptidases into the load-bearing peptidoglycan sacculus.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1111/j.1574-6976.2007.00094.x",
+         "notes": "Vollmer, Blanot and de Pedro 2008 reviewed how polymerized GlcNAc-MurNAc glycan strands and peptide cross-links form the peptidoglycan meshwork."
+        },
+        {
+         "reference": "DOI:10.1038/s41579-020-0366-3",
+         "notes": "Egan, Errington and Vollmer 2020 reviewed the coupled polymerization of glycan strands and peptide cross-linking into the peptidoglycan sacculus."
+        }
+       ]
       }
      ]
     }
@@ -104173,6 +104493,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:30Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected seds_polymerases to exported_lipid_ii and glycan_strands to peptidoglycan in lipid_ii_polymerisation_crosslinking.",
      "llm_assisted": true
     }
    ],
@@ -115179,6 +115506,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-31T09:02:30Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Added acidocalcisome_lipid_bilayer node and connected proton_pumps and cation_transporters into acidocalcisome_membrane_ion_transport.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -115396,6 +115730,13 @@
        "node_id": "cation_store",
        "label": "acidocalcisome cation store",
        "node_type": "STATE"
+      },
+      {
+       "node_id": "acidocalcisome_lipid_bilayer",
+       "label": "acidocalcisome membrane lipid bilayer",
+       "node_type": "CHEMICAL",
+       "component_ref": "acidocalcisome_lipid_bilayer",
+       "description": "Single bounding phospholipid bilayer that encloses the electron-dense polyphosphate and cation matrix of the acidocalcisome."
       }
      ],
      "edges": [
@@ -115444,6 +115785,42 @@
         {
          "reference": "DOI:10.1038/nrmicro1097",
          "notes": "Docampo et al. 2005 describe acidity and cation storage as defining acidocalcisome properties."
+        }
+       ]
+      },
+      {
+       "subject": "acidocalcisome_lipid_bilayer",
+       "predicate": "forms",
+       "object": "acidocalcisome_membrane",
+       "description": "The single bounding phospholipid bilayer forms the continuous membrane matrix of the acidocalcisome membrane.",
+       "evidence": [
+        {
+         "reference": "GO:0033102",
+         "notes": "GO:0033102 defines the acidocalcisome membrane as the lipid bilayer surrounding an acidocalcisome."
+        }
+       ]
+      },
+      {
+       "subject": "proton_pumps",
+       "predicate": "reside in",
+       "object": "acidocalcisome_membrane",
+       "description": "Vacuolar H+-pyrophosphatase (V-PPase) and V-type H+-ATPase proton pumps are integral membrane complexes embedded in the acidocalcisome membrane.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nrmicro1097",
+         "notes": "Docampo et al. 2005 reviewed the localization of V-H+-PPase and V-H+-ATPase proton pumps in the acidocalcisome membrane."
+        }
+       ]
+      },
+      {
+       "subject": "cation_transporters",
+       "predicate": "contribute to",
+       "object": "cation_store",
+       "description": "Acidocalcisome membrane Ca2+-ATPases, Zn2+/Fe2+ transporters, and H+/cation exchangers drive uptake and accumulation of divalent and monovalent cations in the lumen.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/MMBR.00042-23",
+         "notes": "Docampo and Huang 2024 reviewed the acidocalcisome membrane transporter repertoire responsible for lumenal calcium and heavy-metal storage."
         }
        ]
       }
@@ -121838,6 +122215,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Resolved #734 by adding GO:0031976 plastid thylakoid parentage; resolved #735 by adding direct SL-0057/SL-0058 evidence for the lumen and membrane; resolved #736 by removing the imprecise membrane-bounds-whole-thylakoid topology edge.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:30Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected chloroplast_thylakoid_membrane and chloroplast_thylakoid_lumen to chloroplast_thylakoid.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -122054,6 +122438,38 @@
         {
          "reference": "uniprot.location:SL-0056",
          "notes": "UniProt SL-0056 describes chloroplast thylakoids as carrying out the light reactions of photosynthesis."
+        }
+       ]
+      },
+      {
+       "subject": "chloroplast_thylakoid_membrane",
+       "predicate": "is part of",
+       "object": "chloroplast_thylakoid",
+       "description": "The chloroplast thylakoid membrane is an anatomical subcompartment of the chloroplast thylakoid.",
+       "evidence": [
+        {
+         "reference": "GO:0009535",
+         "notes": "GO:0009535 places the chloroplast thylakoid membrane as a direct part of the chloroplast thylakoid (GO:0009534)."
+        },
+        {
+         "reference": "uniprot.location:SL-0058",
+         "notes": "uniprot.location:SL-0058 defines the chloroplast thylakoid membrane as a subcompartment of the plastid thylakoid."
+        }
+       ]
+      },
+      {
+       "subject": "chloroplast_thylakoid_lumen",
+       "predicate": "is part of",
+       "object": "chloroplast_thylakoid",
+       "description": "The chloroplast thylakoid lumen is an anatomical subcompartment of the chloroplast thylakoid.",
+       "evidence": [
+        {
+         "reference": "GO:0009543",
+         "notes": "GO:0009543 places the chloroplast thylakoid lumen as a direct part of the chloroplast thylakoid (GO:0009534)."
+        },
+        {
+         "reference": "uniprot.location:SL-0057",
+         "notes": "uniprot.location:SL-0057 defines the chloroplast thylakoid lumen as a subcompartment of the plastid thylakoid."
         }
        ]
       }
@@ -129739,6 +130155,13 @@
      "action": "REPLACED_UNREADABLE_EVIDENCE",
      "changes": "Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable cyanelle evidence for #1231.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected cyanelle_intermembrane_space, cyanelle_stroma, and cyanelle_thylakoid into a single cyanelle topology graph.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -130081,6 +130504,46 @@
         {
          "reference": "PMID:31098614",
          "notes": "Price et al. 2019 describe peptidoglycan and phycobilisomes as retained cyanobacterial plastid traits in glaucophytes."
+        }
+       ]
+      },
+      {
+       "subject": "cyanelle_intermembrane_space",
+       "predicate": "is part of",
+       "object": "cyanelle",
+       "description": "The cyanelle intermembrane space is a core anatomical compartment of the glaucophyte cyanelle.",
+       "evidence": [
+        {
+         "reference": "GO:0036014",
+         "notes": "GO:0036014 places the cyanelle intermembrane space as a direct part of the cyanelle (GO:0009842)."
+        }
+       ]
+      },
+      {
+       "subject": "cyanelle_stroma",
+       "predicate": "is part of",
+       "object": "cyanelle",
+       "description": "The cyanelle stroma is a core anatomical compartment of the glaucophyte cyanelle.",
+       "evidence": [
+        {
+         "reference": "GO:0034060",
+         "notes": "GO:0034060 places the cyanelle stroma as a direct part of the cyanelle (GO:0009842)."
+        }
+       ]
+      },
+      {
+       "subject": "cyanelle_thylakoid",
+       "predicate": "resides in",
+       "object": "cyanelle_stroma",
+       "description": "Concentric unstacked cyanelle thylakoids bearing phycobilisomes are suspended within the cyanelle stroma.",
+       "evidence": [
+        {
+         "reference": "GO:0009843",
+         "notes": "GO:0009843 defines the cyanelle thylakoid within the interior of the cyanelle."
+        },
+        {
+         "reference": "DOI:10.1104/pp.71.2.409",
+         "notes": "Giddings et al. 1983 resolved concentric cyanelle thylakoid lamellae embedded within the cyanelle stroma of Cyanophora paradoxa."
         }
        ]
       }
@@ -135571,6 +136034,13 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2404 (Stage 4 finding membrane-organelle-go-subcomplex-causal-node-types): retyped GO-grounded PROTEIN_COMPLEX causal-graph node sec61_translocon_complex (GO:0005784) from GENE_OR_PROTEIN to STRUCTURE.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected endoplasmic_reticulum to endoplasmic_reticulum_unfolded_protein_response and erad_quality_control_pathway.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -135873,6 +136343,38 @@
         {
          "reference": "DOI:10.1016/s0092-8674(00)80835-1",
          "notes": "Travers et al. 2000 showed coordination between the yeast unfolded protein response and ER-associated degradation."
+        }
+       ]
+      },
+      {
+       "subject": "endoplasmic_reticulum",
+       "predicate": "supports",
+       "object": "endoplasmic_reticulum_unfolded_protein_response",
+       "description": "The endoplasmic reticulum hosts the lumenal sensors and membrane machinery that execute the endoplasmic reticulum unfolded protein response.",
+       "evidence": [
+        {
+         "reference": "GO:0030968",
+         "notes": "GO:0030968 defines the endoplasmic reticulum unfolded protein response operating at the endoplasmic reticulum."
+        },
+        {
+         "reference": "DOI:10.1016/s0092-8674(00)80835-1",
+         "notes": "Travers et al. 2000 demonstrated the functional coupling of the ER unfolded protein response and ER-associated degradation in Saccharomyces cerevisiae."
+        }
+       ]
+      },
+      {
+       "subject": "endoplasmic_reticulum",
+       "predicate": "supports",
+       "object": "erad_quality_control_pathway",
+       "description": "The endoplasmic reticulum hosts the lumenal sensors and membrane machinery that execute the ERAD quality-control pathway.",
+       "evidence": [
+        {
+         "reference": "GO:0036503",
+         "notes": "GO:0036503 defines the ERAD quality-control pathway operating at the endoplasmic reticulum."
+        },
+        {
+         "reference": "DOI:10.1016/s0092-8674(00)80835-1",
+         "notes": "Travers et al. 2000 demonstrated the functional coupling of the ER unfolded protein response and ER-associated degradation in Saccharomyces cerevisiae."
         }
        ]
       }
@@ -140111,6 +140613,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected fungal_type_vacuole_membrane and fungal_type_vacuole_lumen to fungal_type_vacuole.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -140387,6 +140896,30 @@
         {
          "reference": "GO:0000324",
          "notes": "GO:0000324 describes the fungal vacuole as the primary compartment for degradation."
+        }
+       ]
+      },
+      {
+       "subject": "fungal_type_vacuole_membrane",
+       "predicate": "is part of",
+       "object": "fungal_type_vacuole",
+       "description": "The fungal-type vacuole membrane is a direct anatomical part of the fungal-type vacuole.",
+       "evidence": [
+        {
+         "reference": "GO:0000329",
+         "notes": "GO:0000329 places the fungal-type vacuole membrane as a direct part of the fungal-type vacuole (GO:0000324)."
+        }
+       ]
+      },
+      {
+       "subject": "fungal_type_vacuole_lumen",
+       "predicate": "is part of",
+       "object": "fungal_type_vacuole",
+       "description": "The fungal-type vacuole lumen is a direct anatomical part of the fungal-type vacuole.",
+       "evidence": [
+        {
+         "reference": "GO:0000328",
+         "notes": "GO:0000328 places the fungal-type vacuole lumen as a direct part of the fungal-type vacuole (GO:0000324)."
         }
        ]
       }
@@ -144804,6 +145337,13 @@
      "action": "ADDRESSED_REVIEW",
      "changes": "Retyped the hydrogenosome lumen graph node as CELLULAR_LOCALIZATION.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected hydrogenosome_lumen to hydrogenosome and hydrogenosomal_fe_s_machinery to hydrogenosome_lumen.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -145130,6 +145670,30 @@
         {
          "reference": "DOI:10.1016/j.ijpara.2011.10.001",
          "notes": "Schneider et al. 2011 cataloged the Trichomonas hydrogenosomal energy metabolism proteins."
+        }
+       ]
+      },
+      {
+       "subject": "hydrogenosome_lumen",
+       "predicate": "is part of",
+       "object": "hydrogenosome",
+       "description": "The hydrogenosome lumen (matrix) is the aqueous interior compartment enclosed by the double hydrogenosomal membrane.",
+       "evidence": [
+        {
+         "reference": "GO:0034492",
+         "notes": "GO:0034492 defines the hydrogenosome lumen as the volume enclosed by the inner membrane of the hydrogenosome."
+        }
+       ]
+      },
+      {
+       "subject": "hydrogenosomal_fe_s_machinery",
+       "predicate": "localizes to",
+       "object": "hydrogenosome_lumen",
+       "description": "The mitochondrial-type IscS/IscU iron-sulfur cluster assembly machinery resides in the hydrogenosome lumen where it matures [Fe-S] proteins.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1073/pnas.0401319101",
+         "notes": "Sutak et al. 2004 demonstrated that Trichomonas vaginalis hydrogenosomes house the lumenal IscS/IscU iron-sulfur cluster assembly machinery."
         }
        ]
       }
@@ -147902,6 +148466,34 @@
          "notes": "Uebe & Schüler 2016 describe the chain's summed magnetic moment orienting the cell."
         }
        ]
+      },
+      {
+       "subject": "mamj",
+       "predicate": "binds",
+       "object": "membrane",
+       "description": "The acidic connector protein MamJ associates with the magnetosome membrane and couples individual magnetosome vesicles to the MamK actin-like filament.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nrmicro.2016.99",
+         "notes": "Uebe and Schüler 2016 reviewed how membrane-associated MamJ tethers magnetosome vesicles to the MamK cytomotive filament."
+        },
+        {
+         "reference": "DOI:10.1002/pro.2827",
+         "notes": "Barber-Zucker and Zarivach 2015 reviewed how magnetosome membrane proteins including MamJ and the MamK filament organize magnetosome vesicles into a chain."
+        }
+       ]
+      },
+      {
+       "subject": "crystal",
+       "predicate": "is enclosed in",
+       "object": "membrane",
+       "description": "Each biomineralized magnetite or greigite nanocrystal is enclosed within its own invaginated magnetosome membrane vesicle.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nrmicro.2016.99",
+         "notes": "Uebe and Schüler 2016 reviewed magnetite crystal biomineralization inside the lumen of the magnetosome membrane vesicle."
+        }
+       ]
       }
      ]
     }
@@ -148062,6 +148654,13 @@
      "curator": "antigravity",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2432 (finding membrane-organelle-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): crystal (CHEBI:46726).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected mamj and crystal to the magnetosome membrane node in magnetosome_chain_alignment.",
      "llm_assisted": true
     }
    ],
@@ -160214,6 +160813,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Resolved #643 by adding GO:0009536 plastid as record-level evidence for the parent assertion; resolved #644 by removing the generic GO:0070112 organellar chromatophore membrane localization term from has_part and record-level evidence.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected organellar_chromatophore_thylakoid_membrane to organellar_chromatophore.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -160509,6 +161115,22 @@
         {
          "reference": "DOI:10.1073/pnas.1118800109",
          "notes": "Nowack and Grossman 2012 demonstrated protein trafficking into chromatophores."
+        }
+       ]
+      },
+      {
+       "subject": "organellar_chromatophore_thylakoid_membrane",
+       "predicate": "is part of",
+       "object": "organellar_chromatophore",
+       "description": "Concentric photosynthetic thylakoid membranes form the internal light-harvesting membrane system of the Paulinella organellar chromatophore.",
+       "evidence": [
+        {
+         "reference": "GO:0070118",
+         "notes": "GO:0070118 places the organellar chromatophore thylakoid membrane as a part of the organellar chromatophore (GO:0070116)."
+        },
+        {
+         "reference": "uniprot.location:SL-0351",
+         "notes": "UniProt SL-0351 defines the organellar chromatophore thylakoid membrane within the Paulinella chromatophore."
         }
        ]
       }
@@ -166123,6 +166745,13 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2432 (finding membrane-organelle-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): rc_lh1_pufx (cellstructuremech:rc_lh1_pufx_core_complex), cytochrome_bc1 (cellstructuremech:chromatophore_cytochrome_bc1_complex).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected cytochrome_bc1 to proton_motive_force and rc_lh1_pufx to chromatophore_membrane, and aligned PROTEIN_COMPLEX node types.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -166446,7 +167075,7 @@
       {
        "node_id": "lh2",
        "label": "LH2 peripheral light-harvesting antenna complexes",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "component_ref": "lh2_antenna_complexes"
       },
       {
@@ -166477,7 +167106,7 @@
       {
        "node_id": "f0f1_atp_synthase",
        "label": "F0F1-ATP synthase",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "component_ref": "f0f1_atp_synthase"
       },
       {
@@ -166556,6 +167185,34 @@
         {
          "reference": "DOI:10.1016/S0006-3495(02)75470-2",
          "notes": "Feniouk et al. 2002 analyzed proton-driven ATP synthesis in bacterial chromatophore vesicles."
+        }
+       ]
+      },
+      {
+       "subject": "cytochrome_bc1",
+       "predicate": "contributes to",
+       "object": "proton_motive_force",
+       "description": "Quinol oxidation by the cytochrome bc1 Q-cycle translocates protons into the chromatophore vesicle lumen, generating the transmembrane proton motive force.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1016/S0006-3495(02)75470-2",
+         "notes": "Feniouk et al. 2002 measured the transmembrane proton motive force generated by cyclic electron transfer in Rhodobacter capsulatus chromatophore vesicles."
+        },
+        {
+         "reference": "DOI:10.1074/jbc.M412088200",
+         "notes": "Comayras, Jungas and Lavergne 2005 analyzed ubiquinol turnover between the reaction center and cytochrome bc1 in isolated bacterial chromatophores."
+        }
+       ]
+      },
+      {
+       "subject": "rc_lh1_pufx",
+       "predicate": "resides in",
+       "object": "chromatophore_membrane",
+       "description": "Dimeric RC-LH1-PufX core complexes are embedded in the intracytoplasmic chromatophore membrane bilayer alongside LH2 antenna rings.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nature02823",
+         "notes": "Bahatyrova et al. 2004 resolved the supramolecular organization of LH2 and RC-LH1-PufX complexes in native Rhodobacter sphaeroides chromatophore membranes."
         }
        ]
       }
@@ -178417,7 +179074,7 @@
       {
        "node_id": "rubisco",
        "label": "RuBisCO",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "component_ref": "rubisco"
       },
       {
@@ -178519,7 +179176,7 @@
       {
        "node_id": "rubisco",
        "label": "RuBisCO",
-       "node_type": "GENE_OR_PROTEIN",
+       "node_type": "STRUCTURE",
        "component_ref": "rubisco"
       },
       {
@@ -178692,6 +179349,22 @@
          "notes": "UniProt cites this paper (Q8GJM6) for McdA and McdB together mediating carboxysome spacing."
         }
        ]
+      },
+      {
+       "subject": "mcdb",
+       "predicate": "binds",
+       "object": "shell",
+       "description": "The partner protein McdB associates with the outer surface of assembled carboxysome shells to couple carboxysomes to the nucleoid-bound McdA ATPase gradient.",
+       "evidence": [
+        {
+         "reference": "PMID:30520729",
+         "notes": "MacCready et al. 2018 demonstrated that McdB localizes to carboxysome shells and interacts with McdA to distribute carboxysomes along the nucleoid."
+        },
+        {
+         "reference": "PMID:34406783",
+         "notes": "MacCready and Vecchiarelli 2021 reviewed McdAB-mediated positioning of assembled carboxysome shells in cyanobacteria and proteobacteria."
+        }
+       ]
       }
      ]
     }
@@ -178842,6 +179515,13 @@
      "curator": "claude",
      "action": "CURATED_CAUSAL_GRAPH",
      "changes": "Removed component_ref: bmc_h from composite STRUCTURE node shell in carboxysome_co2_concentrating since the icosahedral shell is built from both bmc_h hexamers and bmc_p pentamers (#2463).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected mcdb to shell in carboxysome_assembly and aligned rubisco node_type to STRUCTURE.",
      "llm_assisted": true
     }
    ],
@@ -180273,6 +180953,13 @@
      "action": "EDIT",
      "changes": "added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected pdu_bmc_t_shell_proteins and pdu_lumen_enzyme_core to pdu_shell_cargo_complex in pdu_shell_cargo_convergent_biogenesis.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -180837,6 +181524,34 @@
         {
          "reference": "DOI:10.1038/s41467-022-30608-w",
          "notes": "Yang et al. proposed a hierarchical model in which independent shell and cargo assemblies converge during native Pdu metabolosome biogenesis."
+        }
+       ]
+      },
+      {
+       "subject": "pdu_bmc_t_shell_proteins",
+       "predicate": "tiles",
+       "object": "pdu_shell_cargo_complex",
+       "description": "PduB and PduT BMC-T tandem-domain trimers co-assemble with BMC-H hexamers into the facets of the encapsulating Pdu shell-cargo complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41467-022-30608-w",
+         "notes": "Yang et al. 2022 dissected convergent shell and cargo assembly pathways of the Salmonella Pdu metabolosome, showing that PduB N-terminal targeting links the lumenal enzyme cargo core to co-assembling BMC-T and BMC-H shell facets."
+        }
+       ]
+      },
+      {
+       "subject": "pdu_lumen_enzyme_core",
+       "predicate": "assembles into",
+       "object": "pdu_shell_cargo_complex",
+       "description": "Encapsulation-peptide-condensed Pdu enzyme aggregates co-assemble with shell facets and vertex proteins into the Pdu shell-cargo complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/JB.185.17.5086-5095.2003",
+         "notes": "Havemann and Bobik 2003 identified the Pdu enzymes and shell proteins that co-purify in the assembled Salmonella Pdu microcompartment."
+        },
+        {
+         "reference": "DOI:10.1038/s41467-022-30608-w",
+         "notes": "Yang et al. 2022 demonstrated convergent shell and cargo core assembly into the Salmonella Pdu metabolosome."
         }
        ]
       }
@@ -271249,6 +271964,13 @@
      "action": "ADDRESSED_REVIEW",
      "changes": "Retyped the RNA polymerase I complex graph node from GENE_OR_PROTEIN to STRUCTURE.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected nucleolar_chromatin to nucleolus and linked small_subunit_processome and box_haca_snornp_complex to ribosome_biogenesis.",
+     "llm_assisted": true
     }
    ],
    "part_of": [
@@ -271562,6 +272284,50 @@
         {
          "reference": "DOI:10.1038/nrm2184",
          "notes": "Boisvert et al. 2007 review the nucleolus as a major site of eukaryotic ribosome biogenesis."
+        }
+       ]
+      },
+      {
+       "subject": "nucleolar_chromatin",
+       "predicate": "is part of",
+       "object": "nucleolus",
+       "description": "Nucleolar rDNA chromatin forms the chromosomal organizer core around which the nucleolus assembles.",
+       "evidence": [
+        {
+         "reference": "GO:0030874",
+         "notes": "GO:0030874 defines nucleolar chromatin as the chromatin part of the nucleolus."
+        }
+       ]
+      },
+      {
+       "subject": "small_subunit_processome",
+       "predicate": "contributes to",
+       "object": "ribosome_biogenesis",
+       "description": "Pre-rRNA modification and cleavage by the small-subunit processome (90S preribosome) are essential steps of nucleolar ribosome biogenesis.",
+       "evidence": [
+        {
+         "reference": "GO:0032040",
+         "notes": "GO:0032040 defines the small-subunit processome (90S preribosome) and its role in nucleolar pre-rRNA processing during ribosome biogenesis."
+        },
+        {
+         "reference": "DOI:10.1038/nature00769",
+         "notes": "Dragon et al. 2002 identified the U3 snoRNA-containing SSU processome required for nucleolar 18S rRNA biogenesis."
+        }
+       ]
+      },
+      {
+       "subject": "box_haca_snornp_complex",
+       "predicate": "contributes to",
+       "object": "ribosome_biogenesis",
+       "description": "Pre-rRNA modification and cleavage by the box H/ACA snoRNP complex are essential steps of nucleolar ribosome biogenesis.",
+       "evidence": [
+        {
+         "reference": "GO:0031429",
+         "notes": "GO:0031429 defines the box H/ACA snoRNP complex and its role in nucleolar pre-rRNA processing during ribosome biogenesis."
+        },
+        {
+         "reference": "DOI:10.1146/annurev.genet.33.1.261",
+         "notes": "Venema and Tollervey 1999 reviewed how nucleolar snoRNPs and processing factors drive eukaryotic ribosome biogenesis."
         }
        ]
       }
@@ -324453,6 +325219,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 5 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-31T09:02:31Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Added rrna_5s and lsu_protein_cohort causal graph nodes with component_ref and connected them to large_ribosomal_subunit.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -324680,6 +325453,21 @@
        "label": "major large-subunit rRNA",
        "node_type": "RNA",
        "component_ref": "major_lsu_rrna"
+      },
+      {
+       "node_id": "rrna_5s",
+       "label": "5S rRNA",
+       "node_type": "RNA",
+       "grounding": "SO:0000652",
+       "component_ref": "rrna_5s",
+       "description": "Conserved ~120-nucleotide ribosomal RNA forming the central protuberance of the large ribosomal subunit."
+      },
+      {
+       "node_id": "lsu_protein_cohort",
+       "label": "large subunit ribosomal proteins (uL/bL/eL cohort)",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lsu_protein_cohort",
+       "description": "Universal and domain-specific ribosomal proteins that pack over the large-subunit rRNA surface and extend unstructured tails into the rRNA core."
       }
      ],
      "edges": [
@@ -324692,6 +325480,38 @@
         {
          "reference": "DOI:10.1126/science.289.5481.920",
          "notes": "Nissen et al. 2000 localized all 50S peptidyl-transferase-center contacts to 23S rRNA."
+        }
+       ]
+      },
+      {
+       "subject": "rrna_5s",
+       "predicate": "contributes to",
+       "object": "large_ribosomal_subunit",
+       "description": "The 5S rRNA assembles with ribosomal proteins uL5 and uL18 to form the central protuberance of the large ribosomal subunit.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1126/science.289.5481.905",
+         "notes": "Ban et al. 2000 resolved the atomic structure of the 50S large ribosomal subunit including the 23S rRNA, 5S rRNA, and ribosomal protein cohort."
+        },
+        {
+         "reference": "DOI:10.1128/MMBR.00013-07",
+         "notes": "Kaczanowska and Rydén-Aulin 2007 reviewed the assembly and structural organization of 5S rRNA and large-subunit ribosomal proteins in the 50S subunit."
+        }
+       ]
+      },
+      {
+       "subject": "lsu_protein_cohort",
+       "predicate": "contributes to",
+       "object": "large_ribosomal_subunit",
+       "description": "Large-subunit ribosomal proteins pack across the solvent-exposed surface of the 23S/28S and 5S rRNAs and stabilize the folded ribonucleoprotein subunit.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1126/science.289.5481.905",
+         "notes": "Ban et al. 2000 resolved the atomic structure of the 50S large ribosomal subunit including the 23S rRNA, 5S rRNA, and ribosomal protein cohort."
+        },
+        {
+         "reference": "DOI:10.1128/MMBR.00013-07",
+         "notes": "Kaczanowska and Rydén-Aulin 2007 reviewed the assembly and structural organization of 5S rRNA and large-subunit ribosomal proteins in the 50S subunit."
         }
        ]
       }
@@ -332152,6 +332972,36 @@
        "node_id": "translocation",
        "label": "ribosomal translocation",
        "node_type": "BIOLOGICAL_PROCESS"
+      },
+      {
+       "node_id": "rrna_16s",
+       "label": "16S rRNA (small-subunit rRNA)",
+       "node_type": "RNA",
+       "component_ref": "rrna_16s",
+       "description": "Small-subunit ribosomal RNA scaffold that forms the mRNA channel and decoding center.",
+       "grounding": "SO:0000650"
+      },
+      {
+       "node_id": "ssu_proteins",
+       "label": "small-subunit ribosomal proteins",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ssu_proteins",
+       "description": "Universal and bacterial-specific ribosomal proteins that fold and stabilize the 16S rRNA in the 30S subunit."
+      },
+      {
+       "node_id": "rrna_5s",
+       "label": "5S rRNA",
+       "node_type": "RNA",
+       "component_ref": "rrna_5s",
+       "description": "Small ribosomal RNA component of the 50S/60S central protuberance.",
+       "grounding": "SO:0000652"
+      },
+      {
+       "node_id": "lsu_proteins",
+       "label": "large-subunit ribosomal proteins",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "lsu_proteins",
+       "description": "Ribosomal proteins that pack over the 23S and 5S rRNAs and line the polypeptide exit tunnel of the large subunit."
       }
      ],
      "edges": [
@@ -332214,6 +333064,87 @@
         {
          "reference": "DOI:10.1038/nature08403",
          "notes": "Translocation is an intrinsic ribosomal motion accelerated by EF-G."
+        }
+       ]
+      },
+      {
+       "subject": "rrna_16s",
+       "predicate": "contributes to",
+       "object": "ssu",
+       "description": "The 16S rRNA forms the structural and decoding core of the small ribosomal subunit.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/35030006",
+         "notes": "Wimberly et al. 2000 resolved the 16S rRNA and small-subunit ribosomal protein architecture of the 30S ribosomal subunit."
+        }
+       ]
+      },
+      {
+       "subject": "ssu_proteins",
+       "predicate": "contributes to",
+       "object": "ssu",
+       "description": "Small-subunit ribosomal proteins bind and stabilize the 16S rRNA tertiary fold in the 30S subunit.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/35030006",
+         "notes": "Wimberly et al. 2000 resolved the 16S rRNA and small-subunit ribosomal protein architecture of the 30S ribosomal subunit."
+        }
+       ]
+      },
+      {
+       "subject": "rrna_5s",
+       "predicate": "contributes to",
+       "object": "ribosome",
+       "description": "The 5S rRNA forms the central protuberance of the large subunit in the assembled 70S/80S ribosome.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1126/science.289.5481.905",
+         "notes": "Ban et al. 2000 resolved the 5S rRNA and large-subunit ribosomal proteins within the large ribosomal subunit."
+        }
+       ]
+      },
+      {
+       "subject": "lsu_proteins",
+       "predicate": "contributes to",
+       "object": "ribosome",
+       "description": "Large-subunit ribosomal proteins stabilize the 23S and 5S rRNAs and form intersubunit bridges in the assembled ribosome.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1126/science.289.5481.905",
+         "notes": "Ban et al. 2000 resolved the 5S rRNA and large-subunit ribosomal proteins within the large ribosomal subunit."
+        }
+       ]
+      },
+      {
+       "subject": "ssu",
+       "predicate": "is part of",
+       "object": "ribosome",
+       "description": "The small ribosomal subunit joins with the large subunit across conserved intersubunit bridges to form the intact 70S/80S ribosome.",
+       "evidence": [
+        {
+         "reference": "GO:0015935",
+         "notes": "GO:0015935 defines the small ribosomal subunit as a constituent subunit of the ribosome."
+        },
+        {
+         "reference": "DOI:10.1126/science.1060089",
+         "notes": "Yusupov et al. 2001 resolved the coupled small and large subunits in the crystal structure of the intact 70S ribosome."
+        }
+       ]
+      },
+      {
+       "subject": "peptide_bond",
+       "predicate": "occurs in",
+       "predicate_id": "BFO:0000066",
+       "object": "ribosome",
+       "description": "23S/28S rRNA-catalyzed peptide bond formation takes place in the peptidyl transferase center of the translating ribosome prior to EF-G-driven translocation.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1126/science.289.5481.920",
+         "notes": "Nissen et al. 2000 showed that peptide bond synthesis occurs within the rRNA-lined active site of the ribosome."
+        },
+        {
+         "reference": "DOI:10.1038/nature08403",
+         "notes": "Schmeing and Ramakrishnan 2009 reviewed how decoding, peptide bond formation, and EF-G translocation proceed sequentially within the ribosome."
         }
        ]
       }
@@ -332355,6 +333286,13 @@
      "curator": "claude-opus-4-7",
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:32Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Added rrna_16s, ssu_proteins, rrna_5s, and lsu_proteins nodes and connected ssu and peptide_bond to ribosome.",
      "llm_assisted": true
     }
    ],
@@ -334518,6 +335456,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 5 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-31T09:02:32Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Added ssu_protein_cohort node with component_ref and connected it to small_ribosomal_subunit in ssu_decoding_center.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -334733,6 +335678,13 @@
        "node_id": "mrna_codon",
        "label": "mRNA codon",
        "node_type": "RNA"
+      },
+      {
+       "node_id": "ssu_protein_cohort",
+       "label": "small subunit ribosomal proteins (uS/bS/eS cohort)",
+       "node_type": "GENE_OR_PROTEIN",
+       "component_ref": "ssu_protein_cohort",
+       "description": "Universal and domain-specific ribosomal proteins that stabilize the head, body, and platform domains of the small-subunit rRNA."
       }
      ],
      "edges": [
@@ -334757,6 +335709,22 @@
         {
          "reference": "DOI:10.1126/science.1060612",
          "notes": "Ogle et al. 2001 structurally analyzed how the 30S subunit recognizes a cognate tRNA anticodon paired with mRNA."
+        }
+       ]
+      },
+      {
+       "subject": "ssu_protein_cohort",
+       "predicate": "contributes to",
+       "object": "small_ribosomal_subunit",
+       "description": "Small-subunit ribosomal proteins bind across the 16S/18S rRNA domains to stabilize the assembled small ribosomal subunit and shape the mRNA path.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/35030006",
+         "notes": "Wimberly et al. 2000 resolved the ribosomal protein cohort bound across the 16S rRNA domains in the 30S small ribosomal subunit."
+        },
+        {
+         "reference": "DOI:10.1128/MMBR.00013-07",
+         "notes": "Kaczanowska and Rydén-Aulin 2007 reviewed the structural and assembly roles of small-subunit ribosomal proteins."
         }
        ]
       }
@@ -348356,6 +349324,38 @@
          "notes": "Deng et al. 2017 review injectisome-mediated one-step effector delivery from bacteria into host cells."
         }
        ]
+      },
+      {
+       "subject": "inner_rings",
+       "predicate": "anchor",
+       "object": "translocation_conduit",
+       "description": "Concentric inner-membrane PrgH/PrgK (SctD/SctJ) basal-body rings cradle the export apparatus and anchor the base of the envelope-spanning translocation conduit.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nrmicro.2017.20",
+         "notes": "Deng et al. 2017 reviewed how the inner-membrane rings form the basal-body foundation of the T3SS injectisome conduit."
+        },
+        {
+         "reference": "DOI:10.1016/j.cell.2018.01.034",
+         "notes": "Galán and Waksman 2018 reviewed the continuous path from the inner-membrane basal-body rings and export apparatus into the needle filament."
+        }
+       ]
+      },
+      {
+       "subject": "export_apparatus",
+       "predicate": "feeds substrates into",
+       "object": "translocation_conduit",
+       "description": "The SctRSTUV inner-membrane export gate translocates unfolded effectors directly into the axial channel of the needle and translocon conduit.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/nrmicro.2017.20",
+         "notes": "Deng et al. 2017 reviewed how the inner-membrane export apparatus gates substrate entry into the continuous T3SS translocation channel."
+        },
+        {
+         "reference": "DOI:10.1016/j.cell.2018.01.034",
+         "notes": "Galán and Waksman 2018 reviewed how the SctRSTUV export gate feeds substrates into the axial lumen of the T3SS injectisome conduit."
+        }
+       ]
       }
      ]
     }
@@ -348463,6 +349463,13 @@
      "curator": "claude-code",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2405 (Stage 4 finding t3ss-complex-discussion-issue-evidence): added structured evidence references (DOI:10.1016/j.cell.2018.01.034 and GitHub issues #65 and #91) to discussion needle_dimensions_unsourced.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:32Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected inner_rings and export_apparatus to translocation_conduit in export_gate_needle_translocon_injection.",
      "llm_assisted": true
     }
    ],
@@ -349211,6 +350218,13 @@
      "action": "EDIT",
      "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:32Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected pork_porn_outer_membrane_ring to porw_ring_translocon_linker and sov_spra_outer_membrane_translocon to t9ss.",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -349621,6 +350635,30 @@
          "notes": "GO:0160303 defines the type IX secretion process as periplasm-to-outer-membrane protein movement via the T9SS."
         }
        ]
+      },
+      {
+       "subject": "pork_porn_outer_membrane_ring",
+       "predicate": "binds",
+       "object": "porw_ring_translocon_linker",
+       "description": "The periplasmic PorK/PorN outer-membrane ring binds the PorW lipoprotein spoke linker to position Sov/SprA translocons around the ring periphery.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/spectrum.01602-21",
+         "notes": "Gorasia et al. 2022 showed that PorW forms the structural bridge between the PorK/PorN ring and the Sov/SprA outer-membrane translocon."
+        }
+       ]
+      },
+      {
+       "subject": "sov_spra_outer_membrane_translocon",
+       "predicate": "forms outer-membrane channel of",
+       "object": "t9ss",
+       "description": "The 36-stranded Sov/SprA beta-barrel forms the outer-membrane protein translocation pore of the assembled T9SS complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1038/s41586-018-0693-y",
+         "notes": "Lauber et al. 2018 resolved the Sov/SprA 36-stranded outer-membrane protein translocon of the Bacteroidetes type IX secretion system."
+        }
+       ]
       }
      ]
     }
@@ -349851,6 +350889,13 @@
      "curator": "antigravity",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2432 (finding secretion-system-t6ss-causal-node-component-ref-grounding): propagated verified component grounding to causal_graphs component_ref node(s): membrane (cellstructuremech:type_vi_secretion_system_membrane_complex), baseplate (cellstructuremech:type_vi_secretion_system_baseplate), tube (cellstructuremech:type_vi_secretion_system_hcp_tube), sheath (cellstructuremech:type_vi_secretion_system_contractile_sheath), spike (cellstructuremech:type_vi_secretion_system_vgrg_paar_spike_complex).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T09:02:32Z",
+     "curator": "claude-opus-4-6",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Connected membrane, baseplate, tube, sheath, and spike subassemblies to the t6ss structure node in contractile_tube_injection.",
      "llm_assisted": true
     }
    ],
@@ -350445,6 +351490,86 @@
         {
          "reference": "DOI:10.1038/nature10846",
          "notes": "Basler et al. 2012 observed ClpV-dependent T6SS sheath turnover in Vibrio cholerae."
+        }
+       ]
+      },
+      {
+       "subject": "membrane",
+       "predicate": "contributes to",
+       "object": "t6ss",
+       "description": "The TssJLM trans-envelope membrane complex is an essential structural subassembly of the contractile type VI secretion system complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/microbiolspec.PSIB-0031-2019",
+         "notes": "Cherrak et al. 2019 reviewed how the TssJLM membrane complex, TssEFGK baseplate, Hcp tube, TssBC sheath, and VgrG-PAAR spike assemble into the functional T6SS nanomachine."
+        },
+        {
+         "reference": "GO:0033104",
+         "notes": "GO:0033104 defines the type VI protein secretion system complex composed of its membrane, baseplate, and contractile tail-like subassemblies."
+        }
+       ]
+      },
+      {
+       "subject": "baseplate",
+       "predicate": "contributes to",
+       "object": "t6ss",
+       "description": "The TssEFGK-VgrG cytoplasmic baseplate is an essential structural subassembly of the contractile type VI secretion system complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/microbiolspec.PSIB-0031-2019",
+         "notes": "Cherrak et al. 2019 reviewed how the TssJLM membrane complex, TssEFGK baseplate, Hcp tube, TssBC sheath, and VgrG-PAAR spike assemble into the functional T6SS nanomachine."
+        },
+        {
+         "reference": "GO:0033104",
+         "notes": "GO:0033104 defines the type VI protein secretion system complex composed of its membrane, baseplate, and contractile tail-like subassemblies."
+        }
+       ]
+      },
+      {
+       "subject": "tube",
+       "predicate": "contributes to",
+       "object": "t6ss",
+       "description": "The Hcp hexameric inner tube is an essential structural subassembly of the contractile type VI secretion system complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/microbiolspec.PSIB-0031-2019",
+         "notes": "Cherrak et al. 2019 reviewed how the TssJLM membrane complex, TssEFGK baseplate, Hcp tube, TssBC sheath, and VgrG-PAAR spike assemble into the functional T6SS nanomachine."
+        },
+        {
+         "reference": "GO:0033104",
+         "notes": "GO:0033104 defines the type VI protein secretion system complex composed of its membrane, baseplate, and contractile tail-like subassemblies."
+        }
+       ]
+      },
+      {
+       "subject": "sheath",
+       "predicate": "contributes to",
+       "object": "t6ss",
+       "description": "The TssBC contractile outer sheath is an essential structural subassembly of the contractile type VI secretion system complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/microbiolspec.PSIB-0031-2019",
+         "notes": "Cherrak et al. 2019 reviewed how the TssJLM membrane complex, TssEFGK baseplate, Hcp tube, TssBC sheath, and VgrG-PAAR spike assemble into the functional T6SS nanomachine."
+        },
+        {
+         "reference": "GO:0033104",
+         "notes": "GO:0033104 defines the type VI protein secretion system complex composed of its membrane, baseplate, and contractile tail-like subassemblies."
+        }
+       ]
+      },
+      {
+       "subject": "spike",
+       "predicate": "contributes to",
+       "object": "t6ss",
+       "description": "The VgrG-PAAR puncturing spike is an essential structural subassembly of the contractile type VI secretion system complex.",
+       "evidence": [
+        {
+         "reference": "DOI:10.1128/microbiolspec.PSIB-0031-2019",
+         "notes": "Cherrak et al. 2019 reviewed how the TssJLM membrane complex, TssEFGK baseplate, Hcp tube, TssBC sheath, and VgrG-PAAR spike assemble into the functional T6SS nanomachine."
+        },
+        {
+         "reference": "GO:0033104",
+         "notes": "GO:0033104 defines the type VI protein secretion system complex composed of its membrane, baseplate, and contractile tail-like subassemblies."
         }
        ]
       }

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/cyanelle.yaml
+  slug: cyanelle
+session:
+  id: 2026-10-31T090231Z-claude-code-bf122e
+  timestamp: '2026-10-31T09:02:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected cyanelle_intermembrane_space, cyanelle_stroma, and cyanelle_thylakoid
+    into a single cyanelle topology graph.
+  details: Added sourced parthood and localization edges connecting cyanelle_intermembrane_space
+    (GO:0036014) and cyanelle_stroma (GO:0034060) to cyanelle, and cyanelle_thylakoid to cyanelle_stroma
+    (GO:0009843, DOI:10.1104/pp.71.2.409).

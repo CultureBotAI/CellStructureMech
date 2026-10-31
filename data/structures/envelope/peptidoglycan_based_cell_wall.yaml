@@ -157,6 +157,33 @@ causal_graphs:
     - reference: DOI:10.1111/j.1574-6976.2007.00094.x
       notes: Vollmer, Blanot and de Pedro 2008 review how peptidoglycan architecture
         gives bacteria a protective, shape-maintaining wall.
+  - subject: seds_polymerases
+    predicate: utilize
+    object: exported_lipid_ii
+    description: SEDS-family and class A PBP glycosyltransferases utilize flipped
+      Lipid II precursors at the outer face of the cytoplasmic membrane to polymerize
+      nascent glycan chains.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.253
+      notes: Emami et al. 2017 identified Bacillus subtilis RodA as a SEDS-family
+        peptidoglycan glycosyltransferase that polymerizes Lipid II precursors into
+        glycan strands.
+    - reference: DOI:10.1038/s41579-020-0366-3
+      notes: Egan, Errington and Vollmer 2020 reviewed how flipped Lipid II serves
+        as the direct substrate for SEDS and class A PBP glycosyltransferases.
+  - subject: glycan_strands
+    predicate: contribute to
+    object: peptidoglycan
+    description: Linear beta-(1,4)-linked GlcNAc-MurNAc glycan chains form the carbohydrate
+      backbone that is cross-linked by transpeptidases into the load-bearing peptidoglycan
+      sacculus.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2007.00094.x
+      notes: Vollmer, Blanot and de Pedro 2008 reviewed how polymerized GlcNAc-MurNAc
+        glycan strands and peptide cross-links form the peptidoglycan meshwork.
+    - reference: DOI:10.1038/s41579-020-0366-3
+      notes: Egan, Errington and Vollmer 2020 reviewed the coupled polymerization
+        of glycan strands and peptide cross-linking into the peptidoglycan sacculus.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-30T19:30:00Z'
@@ -202,6 +229,12 @@ curation_history:
   curator: claude-opus-4-7
   action: EDIT
   changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
+  llm_assisted: true
+- timestamp: '2026-10-31T09:02:30Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected seds_polymerases to exported_lipid_ii and glycan_strands to peptidoglycan
+    in lipid_ii_polymerisation_crosslinking.
   llm_assisted: true
 related_records:
 - corpus: PathwayMech

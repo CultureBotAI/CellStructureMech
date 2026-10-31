@@ -40,6 +40,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-31T09:02:30Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added acidocalcisome_lipid_bilayer node and connected proton_pumps and
+    cation_transporters into acidocalcisome_membrane_ion_transport.
+  llm_assisted: true
 synonyms:
 - synonym_text: acidocalcisomal membrane
   synonym_type: EXACT_SYNONYM
@@ -210,6 +216,12 @@ causal_graphs:
   - node_id: cation_store
     label: acidocalcisome cation store
     node_type: STATE
+  - node_id: acidocalcisome_lipid_bilayer
+    label: acidocalcisome membrane lipid bilayer
+    node_type: CHEMICAL
+    component_ref: acidocalcisome_lipid_bilayer
+    description: Single bounding phospholipid bilayer that encloses the electron-dense
+      polyphosphate and cation matrix of the acidocalcisome.
   edges:
   - subject: acidocalcisome_membrane
     predicate: bounds
@@ -243,6 +255,34 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1097
       notes: Docampo et al. 2005 describe acidity and cation storage as defining acidocalcisome
         properties.
+  - subject: acidocalcisome_lipid_bilayer
+    predicate: forms
+    object: acidocalcisome_membrane
+    description: The single bounding phospholipid bilayer forms the continuous membrane
+      matrix of the acidocalcisome membrane.
+    evidence:
+    - reference: GO:0033102
+      notes: GO:0033102 defines the acidocalcisome membrane as the lipid bilayer surrounding
+        an acidocalcisome.
+  - subject: proton_pumps
+    predicate: reside in
+    object: acidocalcisome_membrane
+    description: Vacuolar H+-pyrophosphatase (V-PPase) and V-type H+-ATPase proton
+      pumps are integral membrane complexes embedded in the acidocalcisome membrane.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1097
+      notes: Docampo et al. 2005 reviewed the localization of V-H+-PPase and V-H+-ATPase
+        proton pumps in the acidocalcisome membrane.
+  - subject: cation_transporters
+    predicate: contribute to
+    object: cation_store
+    description: Acidocalcisome membrane Ca2+-ATPases, Zn2+/Fe2+ transporters, and
+      H+/cation exchangers drive uptake and accumulation of divalent and monovalent
+      cations in the lumen.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00042-23
+      notes: Docampo and Huang 2024 reviewed the acidocalcisome membrane transporter
+        repertoire responsible for lumenal calcium and heavy-metal storage.
 discussions:
 - discussion_id: ground_acidocalcisome_membrane_transporters
   prompt: Resolve exact acidocalcisome membrane lipid, proton-pump and cation-transporter

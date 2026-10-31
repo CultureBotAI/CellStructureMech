@@ -49,6 +49,12 @@ curation_history:
     retyped GO-grounded PROTEIN_COMPLEX causal-graph node sec61_translocon_complex
     (GO:0005784) from GENE_OR_PROTEIN to STRUCTURE.'
   llm_assisted: true
+- timestamp: '2026-10-31T09:02:31Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected endoplasmic_reticulum to endoplasmic_reticulum_unfolded_protein_response
+    and erad_quality_control_pathway.
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -284,6 +290,30 @@ causal_graphs:
     - reference: DOI:10.1016/s0092-8674(00)80835-1
       notes: Travers et al. 2000 showed coordination between the yeast unfolded protein
         response and ER-associated degradation.
+  - subject: endoplasmic_reticulum
+    predicate: supports
+    object: endoplasmic_reticulum_unfolded_protein_response
+    description: The endoplasmic reticulum hosts the lumenal sensors and membrane
+      machinery that execute the endoplasmic reticulum unfolded protein response.
+    evidence:
+    - reference: GO:0030968
+      notes: GO:0030968 defines the endoplasmic reticulum unfolded protein response
+        operating at the endoplasmic reticulum.
+    - reference: DOI:10.1016/s0092-8674(00)80835-1
+      notes: Travers et al. 2000 demonstrated the functional coupling of the ER unfolded
+        protein response and ER-associated degradation in Saccharomyces cerevisiae.
+  - subject: endoplasmic_reticulum
+    predicate: supports
+    object: erad_quality_control_pathway
+    description: The endoplasmic reticulum hosts the lumenal sensors and membrane
+      machinery that execute the ERAD quality-control pathway.
+    evidence:
+    - reference: GO:0036503
+      notes: GO:0036503 defines the ERAD quality-control pathway operating at the
+        endoplasmic reticulum.
+    - reference: DOI:10.1016/s0092-8674(00)80835-1
+      notes: Travers et al. 2000 demonstrated the functional coupling of the ER unfolded
+        protein response and ER-associated degradation in Saccharomyces cerevisiae.
 discussions:
 - discussion_id: ground_er_quality_control_components
   prompt: Resolve exact source-neutral component groundings for yeast ER unfolded-protein-response

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/hydrogenosome.yaml
+  slug: hydrogenosome
+session:
+  id: 2026-10-31T090231Z-claude-code-886e97
+  timestamp: '2026-10-31T09:02:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected hydrogenosome_lumen to hydrogenosome and hydrogenosomal_fe_s_machinery
+    to hydrogenosome_lumen.
+  details: Added a sourced 'is part of' edge from hydrogenosome_lumen to hydrogenosome (GO:0034492)
+    and a 'localizes to' edge from hydrogenosomal_fe_s_machinery to hydrogenosome_lumen (DOI:10.1073/pnas.0401319101).

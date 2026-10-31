@@ -35,6 +35,12 @@ curation_history:
   changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
     cyanelle evidence for #1231.'
   llm_assisted: true
+- timestamp: '2026-10-31T09:02:31Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected cyanelle_intermembrane_space, cyanelle_stroma, and cyanelle_thylakoid
+    into a single cyanelle topology graph.
+  llm_assisted: true
 parent_structures:
 - GO:0009536
 has_part:
@@ -284,6 +290,36 @@ causal_graphs:
     - reference: PMID:31098614
       notes: Price et al. 2019 describe peptidoglycan and phycobilisomes as retained
         cyanobacterial plastid traits in glaucophytes.
+  - subject: cyanelle_intermembrane_space
+    predicate: is part of
+    object: cyanelle
+    description: The cyanelle intermembrane space is a core anatomical compartment
+      of the glaucophyte cyanelle.
+    evidence:
+    - reference: GO:0036014
+      notes: GO:0036014 places the cyanelle intermembrane space as a direct part of
+        the cyanelle (GO:0009842).
+  - subject: cyanelle_stroma
+    predicate: is part of
+    object: cyanelle
+    description: The cyanelle stroma is a core anatomical compartment of the glaucophyte
+      cyanelle.
+    evidence:
+    - reference: GO:0034060
+      notes: GO:0034060 places the cyanelle stroma as a direct part of the cyanelle
+        (GO:0009842).
+  - subject: cyanelle_thylakoid
+    predicate: resides in
+    object: cyanelle_stroma
+    description: Concentric unstacked cyanelle thylakoids bearing phycobilisomes are
+      suspended within the cyanelle stroma.
+    evidence:
+    - reference: GO:0009843
+      notes: GO:0009843 defines the cyanelle thylakoid within the interior of the
+        cyanelle.
+    - reference: DOI:10.1104/pp.71.2.409
+      notes: Giddings et al. 1983 resolved concentric cyanelle thylakoid lamellae
+        embedded within the cyanelle stroma of Cyanophora paradoxa.
 discussions:
 - discussion_id: resolve_cyanelle_peptidoglycan_layer
   prompt: Resolve an exact source-neutral grounding for the peptidoglycan layer in

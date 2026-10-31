@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_ix_protein_secretion_system_complex.yaml
+  slug: type_ix_protein_secretion_system_complex
+session:
+  id: 2026-10-31T090232Z-claude-code-28e8c7
+  timestamp: '2026-10-31T09:02:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected pork_porn_outer_membrane_ring to porw_ring_translocon_linker and sov_spra_outer_membrane_translocon
+    to t9ss.
+  details: Added sourced edges linking pork_porn_outer_membrane_ring to porw_ring_translocon_linker
+    (DOI:10.1128/spectrum.01602-21) and sov_spra_outer_membrane_translocon to t9ss (DOI:10.1038/s41586-018-0693-y)
+    so the motor-ring and translocon-shuttle subgraphs form a single connected T9SS graph.

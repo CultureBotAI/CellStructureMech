@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/envelope/peptidoglycan_based_cell_wall.yaml
+  slug: peptidoglycan_based_cell_wall
+session:
+  id: 2026-10-31T090230Z-claude-code-edf184
+  timestamp: '2026-10-31T09:02:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected seds_polymerases to exported_lipid_ii and glycan_strands to peptidoglycan
+    in lipid_ii_polymerisation_crosslinking.
+  details: Added sourced edges linking seds_polymerases to exported_lipid_ii (DOI:10.1038/nmicrobiol.2016.253,
+    DOI:10.1038/s41579-020-0366-3) and glycan_strands to peptidoglycan (DOI:10.1111/j.1574-6976.2007.00094.x)
+    so precursor flipping, glycan polymerization, and transpeptidation form a connected causal
+    graph.

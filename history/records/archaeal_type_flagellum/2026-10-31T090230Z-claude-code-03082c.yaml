@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/archaeal_type_flagellum.yaml
+  slug: archaeal_type_flagellum
+session:
+  id: 2026-10-31T090230Z-claude-code-03082c
+  timestamp: '2026-10-31T09:02:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected prearchaellin maturation to archaellins and aligned PROTEIN_COMPLEX component_ref
+    node types to STRUCTURE.
+  details: Added a sourced 'is processed into' edge from prearchaellin to archaellins (DOI:10.3389/fmicb.2015.00023)
+    so prepilin-peptidase processing connects to filament assembly, and set node_type to STRUCTURE
+    on arli_arlj, scaffold, and anchor to match their PROTEIN_COMPLEX component_ref targets.

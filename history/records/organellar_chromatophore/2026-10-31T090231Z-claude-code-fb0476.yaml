@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+  slug: organellar_chromatophore
+session:
+  id: 2026-10-31T090231Z-claude-code-fb0476
+  timestamp: '2026-10-31T09:02:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected organellar_chromatophore_thylakoid_membrane to organellar_chromatophore.
+  details: Added a sourced 'is part of' edge from organellar_chromatophore_thylakoid_membrane
+    to organellar_chromatophore (GO:0070118, uniprot.location:SL-0351) connecting the photosynthetic
+    thylakoid subgraph to the chromatophore envelope and import subgraph.

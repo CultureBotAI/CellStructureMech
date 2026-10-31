@@ -34,6 +34,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-31T09:02:32Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added ssu_protein_cohort node with component_ref and connected it to small_ribosomal_subunit
+    in ssu_decoding_center.
+  llm_assisted: true
 synonyms:
 - synonym_text: ribosomal small subunit
   synonym_type: EXACT_SYNONYM
@@ -229,6 +235,12 @@ causal_graphs:
   - node_id: mrna_codon
     label: mRNA codon
     node_type: RNA
+  - node_id: ssu_protein_cohort
+    label: small subunit ribosomal proteins (uS/bS/eS cohort)
+    node_type: GENE_OR_PROTEIN
+    component_ref: ssu_protein_cohort
+    description: Universal and domain-specific ribosomal proteins that stabilize the
+      head, body, and platform domains of the small-subunit rRNA.
   edges:
   - subject: ssu_rrna
     predicate: forms decoding center of
@@ -247,6 +259,18 @@ causal_graphs:
     - reference: DOI:10.1126/science.1060612
       notes: Ogle et al. 2001 structurally analyzed how the 30S subunit recognizes
         a cognate tRNA anticodon paired with mRNA.
+  - subject: ssu_protein_cohort
+    predicate: contributes to
+    object: small_ribosomal_subunit
+    description: Small-subunit ribosomal proteins bind across the 16S/18S rRNA domains
+      to stabilize the assembled small ribosomal subunit and shape the mRNA path.
+    evidence:
+    - reference: DOI:10.1038/35030006
+      notes: Wimberly et al. 2000 resolved the ribosomal protein cohort bound across
+        the 16S rRNA domains in the 30S small ribosomal subunit.
+    - reference: DOI:10.1128/MMBR.00013-07
+      notes: Kaczanowska and Rydén-Aulin 2007 reviewed the structural and assembly
+        roles of small-subunit ribosomal proteins.
 discussions:
 - discussion_id: split_small_subunit_components
   prompt: Split exact small-subunit rRNA and protein families across bacterial, archaeal,

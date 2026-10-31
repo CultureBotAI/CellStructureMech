@@ -45,6 +45,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-31T09:02:31Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected pdu_bmc_t_shell_proteins and pdu_lumen_enzyme_core to pdu_shell_cargo_complex
+    in pdu_shell_cargo_convergent_biogenesis.
+  llm_assisted: true
 synonyms:
 - synonym_text: Pdu microcompartment
   synonym_type: EXACT_SYNONYM
@@ -553,3 +559,26 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-022-30608-w
       notes: Yang et al. proposed a hierarchical model in which independent shell
         and cargo assemblies converge during native Pdu metabolosome biogenesis.
+  - subject: pdu_bmc_t_shell_proteins
+    predicate: tiles
+    object: pdu_shell_cargo_complex
+    description: PduB and PduT BMC-T tandem-domain trimers co-assemble with BMC-H
+      hexamers into the facets of the encapsulating Pdu shell-cargo complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-30608-w
+      notes: Yang et al. 2022 dissected convergent shell and cargo assembly pathways
+        of the Salmonella Pdu metabolosome, showing that PduB N-terminal targeting
+        links the lumenal enzyme cargo core to co-assembling BMC-T and BMC-H shell
+        facets.
+  - subject: pdu_lumen_enzyme_core
+    predicate: assembles into
+    object: pdu_shell_cargo_complex
+    description: Encapsulation-peptide-condensed Pdu enzyme aggregates co-assemble
+      with shell facets and vertex proteins into the Pdu shell-cargo complex.
+    evidence:
+    - reference: DOI:10.1128/JB.185.17.5086-5095.2003
+      notes: Havemann and Bobik 2003 identified the Pdu enzymes and shell proteins
+        that co-purify in the assembled Salmonella Pdu microcompartment.
+    - reference: DOI:10.1038/s41467-022-30608-w
+      notes: Yang et al. 2022 demonstrated convergent shell and cargo core assembly
+        into the Salmonella Pdu metabolosome.

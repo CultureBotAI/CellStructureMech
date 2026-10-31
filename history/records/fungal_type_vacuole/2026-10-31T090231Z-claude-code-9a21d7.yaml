@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/fungal_type_vacuole.yaml
+  slug: fungal_type_vacuole
+session:
+  id: 2026-10-31T090231Z-claude-code-9a21d7
+  timestamp: '2026-10-31T09:02:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected fungal_type_vacuole_membrane and fungal_type_vacuole_lumen to fungal_type_vacuole.
+  details: Added sourced 'is part of' edges from fungal_type_vacuole_membrane (GO:0000329)
+    and fungal_type_vacuole_lumen (GO:0000328) to fungal_type_vacuole so the vacuolar subcompartments
+    and storage/degradation functions form a single connected graph.

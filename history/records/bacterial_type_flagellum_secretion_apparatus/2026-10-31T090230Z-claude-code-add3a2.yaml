@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/bacterial_type_flagellum_secretion_apparatus.yaml
+  slug: bacterial_type_flagellum_secretion_apparatus
+session:
+  id: 2026-10-31T090230Z-claude-code-add3a2
+  timestamp: '2026-10-31T09:02:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected FliP, FliQ, FliR, and FlhB to secretion_apparatus and added FliH, FliI,
+    and FliJ component nodes linked to the atpase node.
+  details: Linked the FliP5Q4R1FlhB1 export-gate subgraphs into the secretion_apparatus node
+    (DOI:10.1038/s41594-018-0086-9, DOI:10.1038/s41467-020-15071-9) and added causal nodes
+    with component_ref for flih, flii, and flij contributing to the cytoplasmic atpase complex
+    (DOI:10.1073/pnas.1524025113).
