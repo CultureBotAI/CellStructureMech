@@ -1,0 +1,726 @@
+# Pilus identity, generic composition and accession provenance
+
+- Review: 20261020T032926Z-pilus-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-19T23:36:06Z
+- Finished UTC: 2026-10-20T03:29:26Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The generic bacterial pilus identity, scoped examples, functions and two-edge graph are supported. One minor PapA accession-selection provenance overstatement needs narrowing.
+
+## Scope And Provenance
+
+Entire target and every material scientific surface assessed.
+
+Selection: Seventeenth originally unreviewed path, seventh record of batch2.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0009289 | data/structures/appendage/pilus.yaml | maintained | pilus |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Open schema validation | passed | True | GO:0009289 | Focused native check ran 2026-10-19T23:36:07Z to 2026-10-19T23:36:10Z. |
+| Closed schema validation | passed | True | GO:0009289 | Focused native check ran 2026-10-19T23:36:10Z to 2026-10-19T23:36:11Z. |
+| Claim-level source and identifier inspection | passed | True | GO:0009289 | Every scientific surface inspected using current source-native authorities and material full-body paper passages. One bounded provenance defect found. |
+| iModulonDB runner availability | unavailable | False | GO:0009289 | command -v kg-microbe-sources returned1; ignored-inclusive pyproject search under /Users/marcin/Documents/VIMSS/ontology/Mechs found comments referencing CLAW but no runner declaration. This bounded search does not establish absence elsewhere. Used UniProt/NCBI/GO structured authorities. No expression-module claim or negative inference. |
+| Target identifier coverage and resolver residuals | passed | True | GO:0009289 | Exact collected identifiers are resolved by shared report and scoped authority/local receipts; remaining scientific correctness is assessed separately. |
+| Full corpus QC | passed | True | GO:0009289 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0009289 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0009289 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0009289 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0009289 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### GO identity, synonyms, xref and class boundary
+
+identity: supported. Targets: GO:0009289.
+
+The exact bacterial GO appendage definition and synonyms match. Broader UniProt location cross-reference is explicit; no equivalence to all archaeal appendages is asserted. No parent or parthood relation is invented.
+
+### Generic constituent cohort and subtype examples
+
+completeness: supported. Targets: GO:0009289.
+
+A label-only protein aggregate avoids forcing unrelated pilin classes into one family. ESSENTIAL applies to protein subunits as a constituent category, not to either named gene universally. FimA and PapA are examples; their identities and rod membership are supported. Stoichiometry is deliberately unspecified.
+
+### Accession selection and uniqueness wording
+
+provenance: concern. Targets: GO:0009289.
+
+Both selected proteins match gene, taxon, name and reviewed status. The PapA evidence note overstates uniqueness: another reviewed entry at the exact species includes papA as a gene synonym. The accession itself is not wrong.
+
+### Conditional E. coli model occurrence
+
+scope: supported. Targets: GO:0009289.
+
+VARIABLE is explicitly qualified by strain and subclass diversity. The cited review uses UPEC type 1 and P pili as models; the row does not generalize their occurrence to every E. coli strain or all Bacteria.
+
+### Function and both graph edges
+
+graph: supported. Targets: GO:0009289.
+
+The nearest UniProt source explicitly covers protein polymerization into surface appendages and the stated subtype-dependent interaction functions. Both coarse edges are supported; NONMECHANISTIC correctly avoids a universal assembly pathway.
+
+### Open grounding TODO, status and history
+
+provenance: supported. Targets: GO:0009289.
+
+The bounded TODO seeks subtype-neutral identifiers without claiming absence of known subtype components. History documents prior scope correction; PROPOSED is retained. This review does not reopen or close historical GitHub issues.
+
+### Images, datasets, traits and quantitative properties
+
+completeness: not_applicable. Targets: GO:0009289.
+
+No image reuse, dataset, trait link or independently measured physical-property claim occurs. Optional omissions do not constitute defects; the definition dimension is assessed above.
+
+## Findings
+
+### F1: PapA example overstates uniqueness among reviewed UniProt entries
+
+minor / open / confirmed; issue key: pilus-papa-unqualified-uniprot-uniqueness.
+
+components[0].protein_examples[1].evidence[0].notes calls P04127 the single reviewed entry for papA in E. coli. Current exact-gene/exact-species query also returns reviewed P62607, whose documented synonym is papA. P04127 remains a correct representative; a primary-name-only selection rule would need to be stated explicitly. The review does not assert what the database contained on the earlier retrieval date.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In the maintained pilus YAML, describe P04127 as a representative reviewed PapA entry, or state and justify a primary-gene-name-only selection rule. Preserve the correct accession and species pairing.
+
+- Repeat current reviewed UniProt exact-gene/exact-species query including synonyms and verify the revised wording.
+- Run just validate and just validate-strict for data/structures/appendage/pilus.yaml and the native curation/history gates after any separately authorized scientific edit.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009289; GO:0009289 id, aspect, definition, synonyms | supports | Active cellular-component term; label, definition and four exact synonyms match. The 2–8 nm value is transcribed from GO, not a new universal measurement. |
+| location | https://rest.uniprot.org/locations/SL-0113.json; Definition, category and geneOntologies | supports | SL-0113 explicitly maps Fimbrium to GO:0009289 and describes polymeric surface appendages and all seven listed functional categories. Its bacterial-and-archaeal scope is broader than the bacterial GO definition; the record uses it as a cross-reference and limits its claims to bacteria. |
+| fima | https://rest.uniprot.org/uniprotkb/Q47223.json; Primary accession, recommended name, genes, organism, entryType | supports | Q47223 is reviewed FimA, Type-1 fimbrial protein A chain, at species taxon 562. Identity matches; the record correctly separates accession identity from membership evidence. |
+| papa | https://rest.uniprot.org/uniprotkb/P04127.json; Primary accession, recommended name, genes, organism, entryType | supports | P04127 is reviewed Pap fimbrial major pilin protein, primary gene papA, taxon 562. It remains a valid representative. |
+| unique | https://rest.uniprot.org/uniprotkb/search?query=%28organism_id%3A562%29+AND+%28reviewed%3Atrue%29+AND+%28gene_exact%3AfimA+OR+gene_exact%3ApapA%29&amp;format=json&amp;size=500; Full results, query and exact organism IDs | supports | The exact-gene query returns Q47223 for fimA and P04127 plus P62607 for papA at species taxon 562. Gene matching includes documented synonyms. |
+| papa-query | https://rest.uniprot.org/uniprotkb/search?query=%28organism_id%3A562%29+AND+%28reviewed%3Atrue%29+AND+%28gene_exact%3ApapA%29&amp;format=json&amp;size=500; All results; primaryAccessions P04127 and P62607 | refutes | A separate papA-only query confirms two reviewed matches, both at taxon 562. Thus unqualified single-entry wording is not supported by current UniProt. |
+| papa-alternative | https://rest.uniprot.org/uniprotkb/P62607.json; genes, entryType, organism | supports | P62607 is a reviewed E. coli F7-2 fimbrial protein; primary gene F7-2 and synonym papA. This is an exact documented gene-symbol alias, not a descendant-strain hit. |
+| taxon | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=562&amp;retmode=xml; Top-level Taxon identity and rank | supports | NCBI taxon 562 is the species Escherichia coli. |
+| doi | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/nrmicro.2017.40&amp;format=json; Exact DOI result | supports | Bibliographic identity resolves to Hospenthal, Costa and Waksman 2017, Nature Reviews Microbiology 15:365–379, PMID28496159. |
+| paper-pdf | https://discovery.ucl.ac.uk/id/eprint/1557577/1/Hospenthal%20et%20al%20%28NRM%29_Accepted%20%28002%29.pdf; UCL accepted manuscript; pp3–5 introduction/CU pili, p9 T4P background, curli text box; linked by UCL record1557577 to DOI10.1038/nrmicro.2017.40 | supports | The institutional accepted manuscript supports diverse polymeric pilus classes, E. coli type 1/P examples, FimA/PapA rod membership, subtype-dependent functions and curli boundaries. Material passages were read in full context. |
+| record | data/structures/appendage/pilus.yaml; Entire target, including two protein examples, two graph edges, discussion and curation_history | context_only | Complete maintained YAML read. Generic pilus is distinct from individual pilins and subtype-specific assembly systems. |
+| history | history/records/pilus/2026-09-12T144302Z-codex-031fa6.yaml; CREATE event and scope explanation | supports | Append-only history records creation and deliberate narrowing of distribution to the cited E. coli model. Native PROPOSED status remains appropriate. |
+| internal | data/structures/ and history/records/; Exact GO:0009289 and pilus_structural_subunits search | context_only | Target and type-I, P, type-IV and curli child references resolve in maintained records; target history resolves. |
+| target-resolver-coverage | just check-curies-strict; data/structures/appendage/pilus.yaml; scripts/check_curies.py collect(); shared reports/curie_check.tsv | supports | Exact target collection has 6 distinct CURIE-shaped scalars: {'OK': 6}. Every collected identifier is OK in the shared report. HTTP URLs and prose are outside collect(); separate source audit covers their claims. Identifier existence is distinct from biological correctness. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Current UniProt evidence establishes present query results, not historical database contents on 2026-10-17.
+- The generic class does not establish a universal subunit family, stoichiometry or assembly mechanism.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The user explicitly requests one validated bundle for every unreviewed record; clean observations are permitted without invented findings.
+- No maintained record, page, status or history was changed.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261020T032926Z-pilus-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Pilus identity, generic composition and accession provenance
+started_at: '2026-10-19T23:36:06Z'
+finished_at: '2026-10-20T03:29:26Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Isolated source review; historical agent authorship is not treated
+    as independent human validation.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The generic bacterial pilus identity, scoped examples, functions and two-edge
+  graph are supported. One minor PapA accession-selection provenance overstatement
+  needs narrowing.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/pilus.yaml
+    sha256: 9e7c9fc2628b1b72c3d2d289c485967d78b8be5b38b2e75300f46d6750316333
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: history/records/pilus/2026-09-12T144302Z-codex-031fa6.yaml
+    sha256: 245d69e03214c112e0795e777ad477d8c3a8e2147b88abb6e6af932ab7f7ca85
+    role: context
+targets:
+- target_id: GO:0009289
+  path: data/structures/appendage/pilus.yaml
+  label: pilus
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/pilus.yaml
+    role: maintained scientific record
+scope:
+  description: Entire target and every material scientific surface assessed.
+  selection: Seventeenth originally unreviewed path, seventh record of batch2.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0009289
+checks:
+- check_id: schema
+  name: Open schema validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009289
+  command: just validate data/structures/appendage/pilus.yaml
+  exit_code: 0
+  summary: Focused native check ran 2026-10-19T23:36:07Z to 2026-10-19T23:36:10Z.
+- check_id: strict
+  name: Closed schema validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009289
+  command: just validate-strict data/structures/appendage/pilus.yaml --out /private/tmp/cellstructure-batch2-20261019-52rdp0/pilus-strict.tsv
+  exit_code: 0
+  summary: Focused native check ran 2026-10-19T23:36:10Z to 2026-10-19T23:36:11Z.
+- check_id: source-claims
+  name: Claim-level source and identifier inspection
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009289
+  summary: Every scientific surface inspected using current source-native authorities
+    and material full-body paper passages. One bounded provenance defect found.
+  evidence_ids:
+  - go
+  - location
+  - fima
+  - papa
+  - unique
+  - papa-query
+  - papa-alternative
+  - taxon
+  - doi
+  - paper-pdf
+  - record
+  - history
+  - internal
+- check_id: structured-adapter
+  name: iModulonDB runner availability
+  status: unavailable
+  required: false
+  target_ids:
+  - GO:0009289
+  summary: command -v kg-microbe-sources returned1; ignored-inclusive pyproject search
+    under /Users/marcin/Documents/VIMSS/ontology/Mechs found comments referencing
+    CLAW but no runner declaration. This bounded search does not establish absence
+    elsewhere. Used UniProt/NCBI/GO structured authorities. No expression-module claim
+    or negative inference.
+  scope_note: Expression modules cannot establish physical pilus membership; no transcriptomic
+    dataset is claimed.
+- check_id: target-resolver-coverage
+  name: Target identifier coverage and resolver residuals
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009289
+  summary: Exact collected identifiers are resolved by shared report and scoped authority/local
+    receipts; remaining scientific correctness is assessed separately.
+  evidence_ids:
+  - target-resolver-coverage
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009289
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009289
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009289
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009289
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0009289
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch2 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009289
+  locator: GO:0009289 id, aspect, definition, synonyms
+  accessed_at: '2026-10-19T23:36:39.306562Z'
+  support: supports
+  summary: Active cellular-component term; label, definition and four exact synonyms
+    match. The 2–8 nm value is transcribed from GO, not a new universal measurement.
+  snapshot_sha256: bc564119fe5e6d56127346948989278deecab0f5ad24cb75366edb2d3d6d63cb
+- evidence_id: location
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0113.json
+  locator: Definition, category and geneOntologies
+  accessed_at: '2026-10-19T23:36:39.301570Z'
+  support: supports
+  summary: SL-0113 explicitly maps Fimbrium to GO:0009289 and describes polymeric
+    surface appendages and all seven listed functional categories. Its bacterial-and-archaeal
+    scope is broader than the bacterial GO definition; the record uses it as a cross-reference
+    and limits its claims to bacteria.
+  snapshot_sha256: 0e387abad13cc9d307c180b549fc18a6c39dc25f1881a084cfce87b53a1c1f4e
+- evidence_id: fima
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q47223.json
+  locator: Primary accession, recommended name, genes, organism, entryType
+  accessed_at: '2026-10-19T23:36:39.312513Z'
+  support: supports
+  summary: Q47223 is reviewed FimA, Type-1 fimbrial protein A chain, at species taxon
+    562. Identity matches; the record correctly separates accession identity from
+    membership evidence.
+  snapshot_sha256: 76774763fd58072f6086684cb00a3bd24e37dcc0d25c2ba2f92a4966e87b28f9
+- evidence_id: papa
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P04127.json
+  locator: Primary accession, recommended name, genes, organism, entryType
+  accessed_at: '2026-10-19T23:36:39.306496Z'
+  support: supports
+  summary: P04127 is reviewed Pap fimbrial major pilin protein, primary gene papA,
+    taxon 562. It remains a valid representative.
+  snapshot_sha256: c092b02ccb2543144eeb15f3f4a7ed9ae96618bbae30d2476df5056e73409803
+- evidence_id: unique
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28organism_id%3A562%29+AND+%28reviewed%3Atrue%29+AND+%28gene_exact%3AfimA+OR+gene_exact%3ApapA%29&format=json&size=500
+  locator: Full results, query and exact organism IDs
+  accessed_at: '2026-10-19T23:36:39.992543Z'
+  support: supports
+  summary: The exact-gene query returns Q47223 for fimA and P04127 plus P62607 for
+    papA at species taxon 562. Gene matching includes documented synonyms.
+  snapshot_sha256: 5659d18f0c3796b600d3fdb22ee022bccaa2f1bcae10ceca6e1061a9725f0ef4
+- evidence_id: papa-query
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28organism_id%3A562%29+AND+%28reviewed%3Atrue%29+AND+%28gene_exact%3ApapA%29&format=json&size=500
+  locator: All results; primaryAccessions P04127 and P62607
+  accessed_at: '2026-10-19T23:38:01.670367Z'
+  support: refutes
+  summary: A separate papA-only query confirms two reviewed matches, both at taxon
+    562. Thus unqualified single-entry wording is not supported by current UniProt.
+  snapshot_sha256: eb3e826ff478c8d72d5ae677305745989c23f4d0a0902c82e6ae4b74ef001380
+- evidence_id: papa-alternative
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P62607.json
+  locator: genes, entryType, organism
+  accessed_at: '2026-10-19T23:38:00.806809Z'
+  support: supports
+  summary: P62607 is a reviewed E. coli F7-2 fimbrial protein; primary gene F7-2 and
+    synonym papA. This is an exact documented gene-symbol alias, not a descendant-strain
+    hit.
+  snapshot_sha256: 40d3b34bf89d9c4847266f32e2e04f0e06e76800606328412be8e5f280cff6a6
+- evidence_id: taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=562&retmode=xml
+  locator: Top-level Taxon identity and rank
+  accessed_at: '2026-10-19T23:36:39.565862Z'
+  support: supports
+  summary: NCBI taxon 562 is the species Escherichia coli.
+  snapshot_sha256: 1d5618066f7d7b5fbf62b33b00b8928382362d9b9e017076caeb654151d980f8
+- evidence_id: doi
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/nrmicro.2017.40&format=json
+  locator: Exact DOI result
+  accessed_at: '2026-10-19T23:36:39.978686Z'
+  support: supports
+  summary: Bibliographic identity resolves to Hospenthal, Costa and Waksman 2017,
+    Nature Reviews Microbiology 15:365–379, PMID28496159.
+  snapshot_sha256: 071e123c1a0236161802e4c60cfdb39f6cf72f5de10df3c706c946d1cc1b10fa
+- evidence_id: paper-pdf
+  kind: primary_source
+  reference: https://discovery.ucl.ac.uk/id/eprint/1557577/1/Hospenthal%20et%20al%20%28NRM%29_Accepted%20%28002%29.pdf
+  locator: UCL accepted manuscript; pp3–5 introduction/CU pili, p9 T4P background,
+    curli text box; linked by UCL record1557577 to DOI10.1038/nrmicro.2017.40
+  accessed_at: '2026-10-19T23:36:40.842022Z'
+  support: supports
+  summary: The institutional accepted manuscript supports diverse polymeric pilus
+    classes, E. coli type 1/P examples, FimA/PapA rod membership, subtype-dependent
+    functions and curli boundaries. Material passages were read in full context.
+  snapshot_sha256: 0faaaef028c551eb3984b65bc01d747b7760d166ad8f4170f1f0e8bef80d0fc8
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/pilus.yaml
+  locator: Entire target, including two protein examples, two graph edges, discussion
+    and curation_history
+  accessed_at: '2026-10-19T23:38:42Z'
+  support: context_only
+  summary: Complete maintained YAML read. Generic pilus is distinct from individual
+    pilins and subtype-specific assembly systems.
+- evidence_id: history
+  kind: record_content
+  reference: history/records/pilus/2026-09-12T144302Z-codex-031fa6.yaml
+  locator: CREATE event and scope explanation
+  accessed_at: '2026-10-19T23:38:42Z'
+  support: supports
+  summary: Append-only history records creation and deliberate narrowing of distribution
+    to the cited E. coli model. Native PROPOSED status remains appropriate.
+- evidence_id: internal
+  kind: search
+  reference: data/structures/ and history/records/
+  locator: Exact GO:0009289 and pilus_structural_subunits search
+  accessed_at: '2026-10-19T23:38:42Z'
+  support: context_only
+  summary: Target and type-I, P, type-IV and curli child references resolve in maintained
+    records; target history resolves.
+  search_scope: rg --no-ignore --hidden -l over data/structures and history/records;
+    ignored files included. An earlier search also named nonexistent .cache and exited2;
+    the successful rerun excluded that invalid path. No global absence inferred.
+- evidence_id: target-resolver-coverage
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/pilus.yaml; scripts/check_curies.py collect();
+    shared reports/curie_check.tsv
+  accessed_at: '2026-10-19T23:41:41.324461Z'
+  support: supports
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+  summary: 'Exact target collection has 6 distinct CURIE-shaped scalars: {''OK'':
+    6}. Every collected identifier is OK in the shared report. HTTP URLs and prose
+    are outside collect(); separate source audit covers their claims. Identifier existence
+    is distinct from biological correctness.'
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: GO identity, synonyms, xref and class boundary
+  outcome: supported
+  summary: The exact bacterial GO appendage definition and synonyms match. Broader
+    UniProt location cross-reference is explicit; no equivalence to all archaeal appendages
+    is asserted. No parent or parthood relation is invented.
+  target_ids:
+  - GO:0009289
+  evidence_ids:
+  - record
+  - go
+  - location
+- assessment_id: components
+  area: completeness
+  topic: Generic constituent cohort and subtype examples
+  outcome: supported
+  summary: A label-only protein aggregate avoids forcing unrelated pilin classes into
+    one family. ESSENTIAL applies to protein subunits as a constituent category, not
+    to either named gene universally. FimA and PapA are examples; their identities
+    and rod membership are supported. Stoichiometry is deliberately unspecified.
+  target_ids:
+  - GO:0009289
+  evidence_ids:
+  - record
+  - go
+  - location
+  - fima
+  - papa
+  - paper-pdf
+- assessment_id: protein-provenance
+  area: provenance
+  topic: Accession selection and uniqueness wording
+  outcome: concern
+  summary: 'Both selected proteins match gene, taxon, name and reviewed status. The
+    PapA evidence note overstates uniqueness: another reviewed entry at the exact
+    species includes papA as a gene synonym. The accession itself is not wrong.'
+  target_ids:
+  - GO:0009289
+  evidence_ids:
+  - papa
+  - papa-alternative
+  - papa-query
+  - unique
+- assessment_id: taxon
+  area: scope
+  topic: Conditional E. coli model occurrence
+  outcome: supported
+  summary: VARIABLE is explicitly qualified by strain and subclass diversity. The
+    cited review uses UPEC type 1 and P pili as models; the row does not generalize
+    their occurrence to every E. coli strain or all Bacteria.
+  target_ids:
+  - GO:0009289
+  evidence_ids:
+  - taxon
+  - paper-pdf
+  - record
+- assessment_id: functions-graph
+  area: graph
+  topic: Function and both graph edges
+  outcome: supported
+  summary: The nearest UniProt source explicitly covers protein polymerization into
+    surface appendages and the stated subtype-dependent interaction functions. Both
+    coarse edges are supported; NONMECHANISTIC correctly avoids a universal assembly
+    pathway.
+  target_ids:
+  - GO:0009289
+  evidence_ids:
+  - location
+  - paper-pdf
+  - record
+- assessment_id: discussion
+  area: provenance
+  topic: Open grounding TODO, status and history
+  outcome: supported
+  summary: The bounded TODO seeks subtype-neutral identifiers without claiming absence
+    of known subtype components. History documents prior scope correction; PROPOSED
+    is retained. This review does not reopen or close historical GitHub issues.
+  target_ids:
+  - GO:0009289
+  evidence_ids:
+  - record
+  - go
+  - history
+  - internal
+- assessment_id: optional
+  area: completeness
+  topic: Images, datasets, traits and quantitative properties
+  outcome: not_applicable
+  summary: No image reuse, dataset, trait link or independently measured physical-property
+    claim occurs. Optional omissions do not constitute defects; the definition dimension
+    is assessed above.
+  target_ids:
+  - GO:0009289
+  evidence_ids:
+  - record
+  - go
+findings:
+- finding_id: F1
+  issue_key: pilus-papa-unqualified-uniprot-uniqueness
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: PapA example overstates uniqueness among reviewed UniProt entries
+  description: components[0].protein_examples[1].evidence[0].notes calls P04127 the
+    single reviewed entry for papA in E. coli. Current exact-gene/exact-species query
+    also returns reviewed P62607, whose documented synonym is papA. P04127 remains
+    a correct representative; a primary-name-only selection rule would need to be
+    stated explicitly. The review does not assert what the database contained on the
+    earlier retrieval date.
+  target_ids:
+  - GO:0009289
+  field_paths:
+  - components[0].protein_examples[1].evidence[0].notes
+  evidence_ids:
+  - record
+  - papa
+  - papa-alternative
+  - papa-query
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md#evidence-standard
+  native_severity: minor
+  normalization_reason: Non-blocking provenance overstatement; protein identity, structural
+    membership and record identity remain sound.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/pilus.yaml
+    role: maintained scientific record
+actions:
+- action_id: A1
+  description: In the maintained pilus YAML, describe P04127 as a representative reviewed
+    PapA entry, or state and justify a primary-gene-name-only selection rule. Preserve
+    the correct accession and species pairing.
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0009289
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/pilus.yaml
+    role: maintained scientific record
+  acceptance_checks:
+  - Repeat current reviewed UniProt exact-gene/exact-species query including synonyms
+    and verify the revised wording.
+  - Run just validate and just validate-strict for data/structures/appendage/pilus.yaml
+    and the native curation/history gates after any separately authorized scientific
+    edit.
+  generator: Scientific YAML owns the fix; run just render only after a separately
+    authorized validated curation change.
+limitations:
+- Current UniProt evidence establishes present query results, not historical database
+  contents on 2026-10-17.
+- The generic class does not establish a universal subunit family, stoichiometry or
+  assembly mechanism.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The user explicitly requests one validated bundle for every unreviewed record; clean
+  observations are permitted without invented findings.
+- No maintained record, page, status or history was changed.
+```
