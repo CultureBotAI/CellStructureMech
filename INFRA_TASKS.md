@@ -74,6 +74,10 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2472
     disposition: Extended validate_component_protein_examples() and validate_causal_graphs() in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics, write_validated_structure, and scripts/validate_strict.py); verified 0 errors across all 1,008 structure records and added unit and corpus-integrity tests in tests/test_validator.py and tests/test_corpus_integrity.py.
+  - task_id: cellstructuremech-infra-0009
+    summary: Extend src/cellstructuremech/validation/validator.py to check top-level PMID evidence parity and 2-node part_of-only CausalGraph scope_status
+    status: open
+    issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2486
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -174,6 +178,18 @@ tasks:
 - **Desired outcome**: Extend `src/cellstructuremech/validation/validator.py` (`validate_component_protein_examples` and `validate_causal_graphs`) to flag components that omit `gene_symbols` while declaring `protein_examples[].gene_symbol` (without explicit synonym/locus disclosure in `role`), `CausalNode` items whose `node_type` contradicts the GO aspect documented on the matching `functions[]` entry, and `functions[]` items that omit `grounding` when a matching `CausalNode` on the same record carries a `GO:` `grounding`.
 - **Resolution**: Extended `validate_component_protein_examples()` and `validate_causal_graphs()` in `src/cellstructuremech/validation/validator.py` (wired into `validate_record_semantics()`, `write_validated_structure()`, and `scripts/validate_strict.py`), verified 0 errors across all 1,008 corpus records, and added unit and corpus-integrity tests in `tests/test_validator.py` and `tests/test_corpus_integrity.py`.
 - **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `tests/test_validator.py`, `tests/test_corpus_integrity.py`, `reviews/structured/20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols/review.yaml`, `reviews/structured/20261030T222002Z-origin-recognition-complex-node-type-molecular-function/review.yaml`, `reviews/structured/20261030T222004Z-membrane-organelle-category-review/review.yaml`
+
+### `cellstructuremech-infra-0009` — Extend `src/cellstructuremech/validation/validator.py` to check top-level `PMID:` evidence parity and 2-node `part_of`-only `CausalGraph` `scope_status`
+
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 6, Stage 4 (`record_review`)
+- **Issue**: https://github.com/CultureBotAI/CellStructureMech/issues/2486
+- **Status**: `open`
+- **Priority**: P2
+- **Dependencies**: None
+- **Observation**: During the Cycle 6 Stage 4 whole-corpus audit of all 1,015 records: (1) `src/cellstructuremech/validation/validator.py` does not check whether primary literature `PMID:` references cited in sub-sections (`components`, `taxonomic_distribution`, `functions`, `causal_graphs`) are also included in top-level `evidence` when top-level `evidence` already cites primary literature `PMID:` references (affecting 4 newly added Cycle 6 Stage 1 records: `sid2_mob1_complex.yaml` `GO:0034973`, `potassium_ion_transporting_atpase_complex.yaml` `GO:0031004`, `atg12_atg5_atg16_complex.yaml` `GO:0034274`, and `cobalamin_transport_complex.yaml` `GO:1990191`); and (2) `validator.py` (`validate_causal_graphs`) does not check whether a 2-node, 1-edge `CausalGraph` whose sole edge predicate is `part_of` is marked `scope_status: MECHANISTIC` instead of `NONMECHANISTIC` (affecting `data/structures/membrane_organelle/reservosome_membrane.yaml` `GO:0106126`).
+- **Desired outcome**: Extend `src/cellstructuremech/validation/validator.py` (`validate_record_semantics` and `validate_causal_graphs`) to flag records that include `PMID:` entries in top-level `evidence` while omitting `PMID:` references cited in `components`, `taxonomic_distribution`, `functions`, or `causal_graphs` (outside `discussions` / `curation_history`), and flag 2-node, 1-edge `CausalGraph` entries whose sole edge predicate is `part_of` when `scope_status` is set to `MECHANISTIC` instead of `NONMECHANISTIC`.
+- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `reviews/structured/20261031T123501Z-sid2-mob1-complex-review/review.yaml`, `reviews/structured/20261031T123502Z-potassium-ion-transporting-atpase-complex-review/review.yaml`, `reviews/structured/20261031T123505Z-membrane-organelle-category-review/review.yaml`, `reviews/structured/20261031T123506Z-other-category-review/review.yaml`
+
 
 
 

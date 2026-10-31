@@ -1,0 +1,259 @@
+schema_version: 1.0.0
+review_id: 20261031T123501Z-sid2-mob1-complex-review
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: 'Single-record review of Sid2-Mob1 complex (GO:0034973): definition_source
+  attribution and top-level PMID evidence parity'
+started_at: '2026-10-31T12:30:00Z'
+finished_at: '2026-10-31T12:35:01Z'
+reviewer:
+  identity: antigravity-c6s4-record-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: independent
+  independence_basis: Reviewed in Cycle 6 Stage 4 record_review against committed
+    git revision 9634411be0aeec8d8f4b9cb9158e3165db87c150 without record edits in
+    this stage.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'Single-record audit of sid2_mob1_complex.yaml (GO:0034973, Sid2-Mob1 complex).
+  GO cellular_component identity, hierarchy (parent_structures: GO:0032991 protein-containing
+  complex; part_of: GO:0005816 spindle pole body), S. pombe and S. cerevisiae canonical
+  examples, and reviewed UniProtKB protein_examples (O14047 sid2, O74558 mob1, P22204
+  DBF2, P32328 DBF20, P40484 MOB1) are well-grounded. Two minor curation issues were
+  identified: (1) definition is a custom elaborated prose sentence while definition_source
+  is set to GO:0034973 instead of quoting the official GO:0034973 definition verbatim
+  and placing the elaboration in description; and (2) top-level evidence (lines 210-230)
+  omits PMID:29813053 (cited on components[0]) and PMID:35011608 (cited on components[1]).'
+source:
+  git_revision: 9634411be0aeec8d8f4b9cb9158e3165db87c150
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: AGENTS.md
+    sha256: ef74a980161b55cd24f1851e38d1c0b2e004fcf8837f1bc70da1874e4e8380f0
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/division_machinery/sid2_mob1_complex.yaml
+    sha256: 13b5b8e1a8aae357931a04464bf84b101cbd9aeccaa9c20dbd21853f8266e936
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Single-record review of data/structures/division_machinery/sid2_mob1_complex.yaml
+    (GO:0034973).
+  selection: Targeted single-record audit of newly added Cycle 6 Stage 1 record sid2_mob1_complex.yaml
+    during Cycle 6 Stage 4 full-corpus inspection.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0034973
+targets:
+- target_id: GO:0034973
+  path: data/structures/division_machinery/sid2_mob1_complex.yaml
+  label: Sid2-Mob1 complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 13b5b8e1a8aae357931a04464bf84b101cbd9aeccaa9c20dbd21853f8266e936
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/sid2_mob1_complex.yaml
+    role: maintained_record
+checks:
+- check_id: strict_sid2_mob1_complex
+  name: Strict corpus validation covering sid2_mob1_complex.yaml
+  status: passed
+  required: true
+  summary: sid2_mob1_complex.yaml passes current strict LinkML validation.
+  target_ids:
+  - GO:0034973
+  command: .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_sid2
+- check_id: history_sid2_mob1_complex
+  name: History ledger validation covering sid2_mob1_complex.yaml
+  status: passed
+  required: true
+  summary: History ledger records covering sid2_mob1_complex.yaml validate cleanly.
+  target_ids:
+  - GO:0034973
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_sid2
+evidence:
+- evidence_id: ev_strict_sid2
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict_all receipt
+  accessed_at: '2026-10-31T12:31:00Z'
+  support: supports
+  summary: validate_strict.py exited 0 across all 1,015 records.
+  snapshot_sha256: dac1304f2a7feba26c94eee3835f43b0d766af8799cf4ef6f24109717d585fbd
+- evidence_id: ev_history_sid2
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history_all receipt
+  accessed_at: '2026-10-31T12:31:00Z'
+  support: supports
+  summary: validate_history.py exited 0 across all 2,192 history records.
+  snapshot_sha256: 4f1459e8514fab4d9a4196c25cc7c27a6ec862b50ae111521446eb44924ae9db
+- evidence_id: ev_sid2_definition_and_evidence
+  kind: record_content
+  reference: data/structures/division_machinery/sid2_mob1_complex.yaml
+  locator: definition, definition_source, evidence, components[0..1].evidence (lines
+    5-11, 86-152, 210-230)
+  accessed_at: '2026-10-31T12:31:00Z'
+  support: supports
+  summary: 'sid2_mob1_complex.yaml sets definition_source: GO:0034973 on a custom
+    elaborated definition and cites PMID:29813053 and PMID:35011608 in components[0..1]
+    while omitting both PMIDs from top-level evidence.'
+  quote: "definition: A conserved fungal NDR-family protein kinase complex localized\
+    \ to the\n  spindle pole body and medial cell division site, composed of the catalytic\
+    \ serine/threonine\n  protein kinase Sid2 (fission yeast) or Dbf2/Dbf20 (budding\
+    \ yeast) bound to its regulatory\n  activator subunit Mob1; acts as the terminal\
+    \ effector kinase complex of the septation\n  initiation network (SIN) and mitotic\
+    \ exit network (MEN) to trigger mitotic exit,\n  Cdc14 release, and cytokinetic\
+    \ septum assembly.\ndefinition_source: GO:0034973"
+  snapshot_sha256: 13b5b8e1a8aae357931a04464bf84b101cbd9aeccaa9c20dbd21853f8266e936
+assessments:
+- assessment_id: assess_sid2_identity_and_components
+  area: identity
+  topic: GO cellular_component identity, hierarchy, and protein_examples of Sid2-Mob1
+    complex (GO:0034973)
+  outcome: supported
+  summary: GO:0034973 accurately identifies the fission yeast Sid2-Mob1 / budding
+    yeast Dbf2-Mob1 complex with verified UniProtKB protein_examples in S. pombe 972h-
+    and S. cerevisiae S288C.
+  target_ids:
+  - GO:0034973
+  evidence_ids:
+  - ev_strict_sid2
+  - ev_history_sid2
+- assessment_id: assess_sid2_definition_and_top_level_evidence
+  area: evidence
+  topic: Official GO:0034973 definition attribution and top-level PMID evidence parity
+  outcome: concern
+  summary: 'definition uses custom prose while setting definition_source: GO:0034973,
+    and top-level evidence omits PMID:29813053 and PMID:35011608 cited in components[0..1].'
+  target_ids:
+  - GO:0034973
+  evidence_ids:
+  - ev_sid2_definition_and_evidence
+findings:
+- finding_id: F1
+  issue_key: sid2-mob1-complex-definition-source-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: 'sid2_mob1_complex.yaml attributes a custom elaborated definition to definition_source:
+    GO:0034973'
+  description: 'In data/structures/division_machinery/sid2_mob1_complex.yaml (GO:0034973,
+    lines 5-11), definition is a custom elaborated sentence (''A conserved fungal
+    NDR-family protein kinase complex localized to the spindle pole body and medial
+    cell division site...'') while definition_source is set to GO:0034973. The official
+    GO:0034973 definition via OAK is: ''A protein complex that contains a protein
+    kinase (Sid2 in S. pombe) and its regulatory subunit (Mob1). The Sid2p-Mob1p kinase
+    complex is a component of the septation initiation network in fission yeast (called
+    the mitotic exit network in S. cerevisiae) and is required for cytokinesis. The
+    analogous complex in S. cerevisiae is called Dbf2p-Mob1p complex.'' Per docs/SCHEMA.md,
+    when definition_source cites a GO term, definition should match the official GO
+    definition and extended mechanistic synthesis belongs in description.'
+  target_ids:
+  - GO:0034973
+  field_paths:
+  - definition
+  - definition_source
+  - description
+  evidence_ids:
+  - ev_sid2_definition_and_evidence
+  rule_id: docs/SCHEMA.md:CellStructureRecord.definition_source
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/sid2_mob1_complex.yaml
+    role: maintained_record
+  tags:
+  - division_machinery
+  - definition-source
+  - stage4-record-review
+- finding_id: F2
+  issue_key: sid2-mob1-complex-missing-top-level-pmid-evidence
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: sid2_mob1_complex.yaml omits component-cited PMID:29813053 and PMID:35011608
+    from top-level evidence
+  description: In data/structures/division_machinery/sid2_mob1_complex.yaml (GO:0034973),
+    components[0] (sid2_dbf2_kinase_subunit) cites PMID:29813053 and components[1]
+    (mob1_activator_subunit) cites PMID:35011608, but top-level evidence (lines 210-230)
+    lists only GO:0034973, ComplexPortal:CPX-26510, ComplexPortal:CPX-1683, PMID:40385371,
+    and PMID:33481703 without including PMID:29813053 or PMID:35011608.
+  target_ids:
+  - GO:0034973
+  field_paths:
+  - evidence
+  evidence_ids:
+  - ev_sid2_definition_and_evidence
+  rule_id: .claude/skills/curate-yaml-record/SKILL.md:top-level-evidence
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/sid2_mob1_complex.yaml
+    role: maintained_record
+  tags:
+  - division_machinery
+  - evidence
+  - stage4-record-review
+actions:
+- action_id: A1
+  description: Set definition in data/structures/division_machinery/sid2_mob1_complex.yaml
+    to the official GO:0034973 definition text, preserve the mechanistic elaboration
+    in description, and add top-level evidence entries for PMID:29813053 and PMID:35011608.
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - GO:0034973
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/division_machinery/sid2_mob1_complex.yaml
+    role: maintained_record
+  acceptance_checks:
+  - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
+  - .venv/bin/python scripts/validate_history.py
+limitations:
+- Record edits for sid2_mob1_complex.yaml are queued for Cycle 6 Stage 5 (resolve_review_findings).
+tags:
+- stage4
+- record-review
+- division_machinery
