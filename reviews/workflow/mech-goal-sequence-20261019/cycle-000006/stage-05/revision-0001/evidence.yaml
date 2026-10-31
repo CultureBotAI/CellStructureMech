@@ -1,0 +1,169 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 6
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed all 10 carried-forward review findings from Cycle 6 Stage 4 across
+  12 unique CellStructureRecord YAML files, grouped them by shared root cause and
+  repair ownership into 2 GitHub issues (#2489, #2490), applied all fixes via native
+  writers (record_curation_event + write_validated_structure) and repository history
+  ledger files in commit c0423878c9544a29b0db748b5f228b081d978f92, refreshed text
+  embeddings and regenerated pages/, validated all strict, ID-label, CURIE liveness,
+  trait link, history, and vendored sync gates, and verified resolution via fresh
+  structured RecordReview bundle 20261031T155500Z-c6-stage5-remediation-verification
+  with 0 open carry-forward findings.'
+source_revision: c0423878c9544a29b0db748b5f228b081d978f92
+scope_frozen_at: '2026-10-31T15:53:00Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/evidence.yaml
+  sha256: ba3e8d38c2d0d9f8f3376bf70cae924a97685b4fa7c3cbc959613dd70c5992a5
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  sha256: 7568b2369f88f3e6522f19a09996269edfc448263ba7ade74252954506e7a346
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/validation.md
+  sha256: c39a19ec4f7b57b0c524fb374688b550f9cae5c93b12678513b5bf0f718ca3c6
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/resolution_summary.json
+  sha256: da6a205847471b2d9b0d56ca3da7d26a9a00662948f99ebd15057d9679482f09
+  kind: supporting
+findings:
+- finding_id: sid2-mob1-complex-definition-source-attribution
+  carried_from: sid2-mob1-complex-definition-source-attribution
+  group_id: cycle6-stage5-group-01
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2489
+  status: resolved
+  summary: Aligned definition to official GO:0034973 text in sid2_mob1_complex.yaml.
+  disposition: Replaced custom S. pombe summary in definition with official GO:0034973
+    text verified via OAK sqlite:obo:go in sid2_mob1_complex.yaml (commit c0423878c9544a29b0db748b5f228b081d978f92).
+- finding_id: sid2-mob1-complex-missing-top-level-pmid-evidence
+  carried_from: sid2-mob1-complex-missing-top-level-pmid-evidence
+  group_id: cycle6-stage5-group-01
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2489
+  status: resolved
+  summary: Added PMID:29813053 and PMID:35011608 to top-level evidence in sid2_mob1_complex.yaml.
+  disposition: Added PMID:29813053 and PMID:35011608 with verbatim snippets to top-level
+    evidence in sid2_mob1_complex.yaml (commit c0423878c9544a29b0db748b5f228b081d978f92).
+- finding_id: potassium-atpase-complex-definition-source-attribution
+  carried_from: potassium-atpase-complex-definition-source-attribution
+  group_id: cycle6-stage5-group-01
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2489
+  status: resolved
+  summary: Aligned definition to official GO:0031004 text in potassium_ion_transporting_atpase_complex.yaml.
+  disposition: Replaced custom mechanistic summary in definition with official GO:0031004
+    text verified via OAK sqlite:obo:go in potassium_ion_transporting_atpase_complex.yaml
+    (commit c0423878c9544a29b0db748b5f228b081d978f92).
+- finding_id: potassium-atpase-complex-missing-top-level-pmid-evidence
+  carried_from: potassium-atpase-complex-missing-top-level-pmid-evidence
+  group_id: cycle6-stage5-group-01
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2489
+  status: resolved
+  summary: Added PMID:41384914 to top-level evidence in potassium_ion_transporting_atpase_complex.yaml.
+  disposition: Added PMID:41384914 with verbatim snippet to top-level evidence in
+    potassium_ion_transporting_atpase_complex.yaml (commit c0423878c9544a29b0db748b5f228b081d978f92).
+- finding_id: other-cycle6-stage1-definition-source-attribution
+  carried_from: other-cycle6-stage1-definition-source-attribution
+  group_id: cycle6-stage5-group-01
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2489
+  status: resolved
+  summary: Aligned definitions across all 5 Stage 1 other/ complex records (atg12_atg5_atg16_complex,
+    cobalamin_transport_complex, ekc_keops_complex, hsluv_protease_complex, maltose_transport_complex)
+    to official GO IAO:0000115 text.
+  disposition: Replaced custom summaries in definition with official GO IAO:0000115
+    definitions verified via OAK sqlite:obo:go across atg12_atg5_atg16_complex.yaml
+    (GO:0034274), cobalamin_transport_complex.yaml (GO:1990191), ekc_keops_complex.yaml
+    (GO:0000408), hsluv_protease_complex.yaml (GO:0009376), and maltose_transport_complex.yaml
+    (GO:1990060) (commit c0423878c9544a29b0db748b5f228b081d978f92).
+- finding_id: other-cycle6-stage1-missing-top-level-pmid-evidence
+  carried_from: other-cycle6-stage1-missing-top-level-pmid-evidence
+  group_id: cycle6-stage5-group-01
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2489
+  status: resolved
+  summary: Added PMID:41457424 to top-level evidence in atg12_atg5_atg16_complex.yaml
+    and PMID:27457716/PMID:29084999 to top-level evidence in cobalamin_transport_complex.yaml.
+  disposition: Added PMID:41457424 with verbatim snippet to top-level evidence in
+    atg12_atg5_atg16_complex.yaml and added PMID:27457716 and PMID:29084999 with verbatim
+    snippets to top-level evidence in cobalamin_transport_complex.yaml (commit c0423878c9544a29b0db748b5f228b081d978f92).
+- finding_id: prostheca-missing-stalk-crossband-has-part
+  carried_from: prostheca-missing-stalk-crossband-has-part
+  group_id: cycle6-stage5-group-02
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2490
+  status: resolved
+  summary: Added reciprocal has_part link to cellstructuremech:stalk_crossband in
+    prostheca.yaml.
+  disposition: Appended cellstructuremech:stalk_crossband to has_part in prostheca.yaml
+    to reciprocate stalk_crossband.yaml's part_of link (commit c0423878c9544a29b0db748b5f228b081d978f92).
+- finding_id: cytoskeleton-non-reciprocal-substructure-has-part
+  carried_from: cytoskeleton-non-reciprocal-substructure-has-part
+  group_id: cycle6-stage5-group-02
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2490
+  status: resolved
+  summary: Added reciprocal has_part links on basal_body_cartwheel.yaml (3 child substructures)
+    and infraciliary_lattice.yaml (cytostomal_cord).
+  disposition: 'Added has_part: [cellstructuremech:basal_body_cartwheel_inner_density,
+    cellstructuremech:basal_body_d2_rod, cellstructuremech:basal_body_filamentous_cartwheel_inner_density]
+    to basal_body_cartwheel.yaml and has_part: [cellstructuremech:cytostomal_cord]
+    to infraciliary_lattice.yaml (commit c0423878c9544a29b0db748b5f228b081d978f92).'
+- finding_id: reservosome-missing-subcompartment-has-part-and-membrane-grounding
+  carried_from: reservosome-missing-subcompartment-has-part-and-membrane-grounding
+  group_id: cycle6-stage5-group-02
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2490
+  status: resolved
+  summary: Grounded reservosome_membrane component to GO:0106126 and added has_part
+    links [GO:0106124, GO:0106125, GO:0106126] in reservosome.yaml.
+  disposition: 'Set grounding: GO:0106126 with GO:0106126 evidence on components#reservosome_membrane
+    and added has_part: [GO:0106124, GO:0106125, GO:0106126] in reservosome.yaml (commit
+    c0423878c9544a29b0db748b5f228b081d978f92).'
+- finding_id: reservosome-membrane-definition-note-and-graph-scope
+  carried_from: reservosome-membrane-definition-note-and-graph-scope
+  group_id: cycle6-stage5-group-02
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2490
+  status: resolved
+  summary: 'Aligned definition to official GO:0106126 text, added life-stage note
+    for presence: VARIABLE on NCBITaxon:5693, and downgraded 2-node parthood graph
+    to FUNCTION/NONMECHANISTIC in reservosome_membrane.yaml.'
+  disposition: 'Aligned definition to official GO:0106126 text (''The lipid bilayer
+    surrounding a reservosome.''), added epimastigote vs amastigote/trypomastigote
+    life-stage note on taxonomic_distribution[0] (NCBITaxon:5693, presence: VARIABLE),
+    and updated causal_graphs[0] (reservosome_membrane_mechanism) to graph_kind: FUNCTION
+    and scope_status: NONMECHANISTIC in reservosome_membrane.yaml (commit c0423878c9544a29b0db748b5f228b081d978f92).'
+groups:
+- group_id: cycle6-stage5-group-01
+  finding_ids:
+  - sid2-mob1-complex-definition-source-attribution
+  - sid2-mob1-complex-missing-top-level-pmid-evidence
+  - potassium-atpase-complex-definition-source-attribution
+  - potassium-atpase-complex-missing-top-level-pmid-evidence
+  - other-cycle6-stage1-definition-source-attribution
+  - other-cycle6-stage1-missing-top-level-pmid-evidence
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2489
+  status: resolved
+  summary: Align GO IAO:0000115 definitions and top-level PMID evidence across 7 Cycle
+    6 Stage 1 protein-complex records (#2489).
+  disposition: Resolved in commit c0423878c9544a29b0db748b5f228b081d978f92 and verified
+    in structured review bundle 20261031T155500Z-c6-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/resolution_summary.json
+- group_id: cycle6-stage5-group-02
+  finding_ids:
+  - prostheca-missing-stalk-crossband-has-part
+  - cytoskeleton-non-reciprocal-substructure-has-part
+  - reservosome-missing-subcompartment-has-part-and-membrane-grounding
+  - reservosome-membrane-definition-note-and-graph-scope
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2490
+  status: resolved
+  summary: Add reciprocal has_part links and curate reservosome and reservosome_membrane
+    records across 5 records (#2490).
+  disposition: Resolved in commit c0423878c9544a29b0db748b5f228b081d978f92 and verified
+    in structured review bundle 20261031T155500Z-c6-stage5-remediation-verification.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/resolution_summary.json
+carry_forward_ids: []
+infra_tasks: []
