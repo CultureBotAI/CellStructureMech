@@ -1,0 +1,771 @@
+# Mitotic spindle pole body identity, topology and duplication review
+
+- Review: 20261021T074637Z-mitotic-spindle-pole-body-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T07:36:10Z
+- Finished UTC: 2026-10-21T07:46:37Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact mitotic SPB identity, budding-yeast scope, microtubule-organizing function and bounded duplication/topology edges are supported. Optional composition remains incomplete; no concrete curation defect was established.
+
+## Scope And Provenance
+
+Entire single target, all asserted native GO/taxon/DOI identities, cited review body, corroborating primary structural text and scoped native component candidates.
+
+Selection: Fourth selected unreviewed path in batch nine, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0044732 | data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml | maintained | mitotic spindle pole body |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0044732 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0044732 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0044732 | 6 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0044732 | No transcriptional-regulator or expression-module mechanism is asserted. Structural localization and optional constituent candidates are not inferred from expression modules. |
+| Claim-level scientific review | passed | True | GO:0044732 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0044732 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0044732 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0044732 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0044732 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0044732 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Mitotic-cell-cycle specialization
+
+identity: supported. Targets: GO:0044732.
+
+The exact name, definition and parent match GO. The whole mitotic SPB remains distinct from its half bridge, layers and associated gamma-tubulin complex.
+
+### Budding-yeast model and G1 duplication
+
+scope: supported. Targets: GO:0044732.
+
+The species example is supported. Mitotic cell cycle is not restricted to M phase: G1 duplication is compatible with the stated scope. COMMON is qualitative occurrence, not measured fungal or strain prevalence. Candidate S288C entries cannot establish universal strain composition.
+
+### Nuclear and cytoplasmic microtubule organization
+
+evidence: supported. Targets: GO:0044732.
+
+Native GO and inspected structural descriptions support the bounded microtubule-organizing function. The target does not assert a universal molecular nucleation mechanism or autonomous activity of the SPB scaffold independently of its associated machinery.
+
+### Subtype, parthood and half-bridge assembly-site edge
+
+graph: supported. Targets: GO:0044732.
+
+Native relations support the subtype and parthood edges. The half-bridge edge summarizes the reviewed duplication site next to the existing SPB; it does not impose a complete protein-recruitment order, direct binding or novel molecular mechanism.
+
+### Acknowledged plaque, bridge and nucleation-machine inventory
+
+completeness: supported. Targets: GO:0044732.
+
+The component TODO is partly resolvable from exact Spc42/gamma-tubulin families and curated subcomplexes, but a complete whole-SPB inventory is not established. Domain-level Spc110, broader GCP/Cnm67 family scope, layer-spanning proteins and complex-specific stoichiometry remain distinct. No erroneous component mapping is currently asserted, so the optional inventory is a limitation rather than a supported defect.
+
+### Review-tier citation and primary structural context
+
+provenance: supported. Targets: GO:0044732.
+
+The record-cited 2004 article is a literature review. Its inspected author-manuscript passages support the bounded claims; the 2017 primary study supplies corroborating architectural context. Database candidates establish identities, not new localization experiments.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml; Entire maintained YAML, including definition, history, species examples, all evidence, graph if present, and discussions | context_only | The complete PROPOSED record was read. Its scope and open composition discussion are assessed separately from optional future enrichment. No scientific content or status is changed. |
+| policy | docs/CURATION.md; Structure identity, hierarchy, component grounding, evidence and scientific-status rules | context_only | Whole structures, substructures, constituent protein families and transient regulatory localization require distinct scope. Empty optional component inventories do not by themselves establish a defect. |
+| mitotic-spb-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0044732%2CGO%3A0005816%2CGO%3A0061496%2CGO%3A0061498; All four returned term definitions, active flags and parent-term child relations | supports | Native GO confirms active GO0044732 under GO0005816, with GO0061496 half bridge and GO0061498 intermediate layer as mitotic-SPB substructures. The exact cell-cycle identity and graph relations are retained. |
+| mitotic-spb-agent-taxon | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; taxId, scientificName, rank and lineage | supports | ENA confirms species NCBITaxon4932, Saccharomyces cerevisiae. |
+| mitotic-spb-agent-strain | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; taxId, scientificName and strain rank; original retrieval timestamp retained | context_only | Candidate sequence and complex entries concern S. cerevisiae S288C, NCBITaxon559292; the record declares the species-level example. |
+| mitotic-spb-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.cellbio.20.022003.114106%20OR%20DOI:10.1091/mbc.E17-06-0397&amp;format=json&amp;resultType=core; Both returned title, author, DOI, PMID, year and journal records; original retrieval timestamp retained | supports | Native metadata confirms Jaspersen and Winey2004 DOI10.1146/annurev.cellbio.20.022003.114106 / PMID15473833 and corroborating Viswanath2017 DOI10.1091/mbc.E17-06-0397 / PMID28814505. |
+| mitotic-spb-agent-jaspersen-browser | https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function; Public author-manuscript pp5-10, SPB Structure and Core SPB; browser access2026-10-21T07:24:18Z to07:24:19Z. Serialized browser-extracted text, not native PDF bytes; review-tier synthesis. | supports | The cited literature review describes the budding-yeast SPB as a layered microtubule-organizing structure with nuclear and cytoplasmic faces and associated half bridge. |
+| mitotic-spb-agent-jaspersen-duplication-browser | https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function; Public author-manuscript pp16-20, The Duplication Pathway, and Figure3 legend; browser access2026-10-21T07:40:49Z to07:40:50Z. Related-article snippets outside the manuscript were not used. | supports | The review describes half-bridge elongation and satellite deposition at its distal tip, expansion into a duplication plaque, and insertion into the nuclear envelope. This supports the bounded half-bridge template edge and G1 duplication within the mitotic cell cycle. |
+| mitotic-spb-agent-viswanath2017 | https://pmc-oa-opendata.s3.amazonaws.com/PMC5687031.1/PMC5687031.1.xml; Native JATS Introduction, Figure1 caption and relevant layer-localization Results/Methods; original receipt retained | supports | The Introduction and Figure1 distinguish plaques, IL1/IL2 and nuclear/cytoplasmic nucleation sites. Its integrative model concerns the core rather than a complete reconstruction of every SPB constituent or duplication stage. |
+| mitotic-spb-agent-candidate-proteins | https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A559292%20AND%20%28gene_exact%3ASPC110%20OR%20gene_exact%3ATUB4%20OR%20gene_exact%3ASPC97%20OR%20gene_exact%3ASPC98%20OR%20gene_exact%3ACMD1%20OR%20gene_exact%3ASPC42%20OR%20gene_exact%3ACNM67%20OR%20gene_exact%3ASPC29%20OR%20gene_exact%3ANUD1%20OR%20gene_exact%3ASPC72%29&amp;format=json&amp;size=50; Relevant accession, reviewed status, name, genes, organism and native family/complex cross-references; optional candidates, not currently asserted examples | context_only | Reviewed S288C entries resolve Spc110 P32380, Spc97 P38863, Spc98 P53540, Tub4 P53378, Spc42 P36094, Cnm67 P53865, Spc29 P33419, Cmd1 P06787, Nud1 P32336 and Spc72 P39723 as possible inventory material. The historical TRM2/NUD1 alias hit is not adopted as Nud1. |
+| mitotic-spb-agent-CPX-1198 | https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-1198; complexAc, name, species, participants, systematicName, properties and evidenceType | context_only | CPX1198 is the S288C gamma-tubulin small complex, with Spc97, Spc98 and two Tub4 subunits. It is an associated constituent complex, not an identifier or copy count for the whole SPB. |
+| mitotic-spb-agent-CPX-1420 | https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-1420; complexAc, name, species, participants, properties and GO0005823 cross-reference | context_only | CPX1420 is the Spc42/Cnm67 intermediate-layer2 complex. Its narrower complex scope and its central-plaque GO cross-reference must not be collapsed into the whole SPB or all intermediate layers. |
+| mitotic-spb-agent-IPR002454 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002454/; Native metadata accession, name, type, description and relevant member/hierarchy fields | context_only | Gamma tubulin is a family-level candidate for Tub4; source localization remains a separate claim. |
+| mitotic-spb-agent-IPR007259 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007259/; Native metadata accession, name, type, description and relevant member/hierarchy fields | context_only | Gamma-tubulin complex component protein is a broader family covering several GCP paralogues, not an exact individual Spc97/Spc98 identity. |
+| mitotic-spb-agent-IPR021611 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021611/; Native metadata accession, name, type, description and relevant member/hierarchy fields | context_only | Spindle pole body component Spc42 is an exact named-family candidate. |
+| mitotic-spb-agent-IPR021750 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021750/; Native metadata accession, name, type, description and relevant member/hierarchy fields | context_only | Septation initiation Sid4-like includes Sid4, Ady3 and Cnm67 and is broader than a Cnm67-specific family. |
+| mitotic-spb-agent-IPR040593 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR040593/; Native metadata accession, name, type, description and relevant member/hierarchy fields | context_only | Spc110 C-terminal is a domain, not a whole-protein family; it cannot replace exact whole-component grounding. |
+| schema-result | just validate data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/mitotic_spindle_pole_body-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/mitotic_spindle_pole_body-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch9-20261021-t98tzqpa/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch9-20261021-t98tzqpa/mitotic_spindle_pole_body-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml; exact collect() scope; SHA-256 identifies the entire original resolver TSV at /private/tmp/cellstructure-record-reviews-UhRFh7/repo/reports/curie_check.tsv, not derived resolver-slice.json | supports | 6 of 6 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The 2004 source was read through public author-manuscript browser extraction. Publisher-version PDF byte identity was not established; not all underlying primary studies were independently reread.
+- The 2017 model, raw measurements, microscopy pixels and supplements were not reproduced or exhaustively reanalyzed.
+- Optional component candidates do not establish a complete SPB inventory, universal strain composition or whole-organelle stoichiometry. Exact whole-Spc110 and individual GCP/Cnm67 family boundaries remain unresolved here.
+- CPX1420 is an IL2 subcomplex with a central-plaque GO cross-reference; that database scope discrepancy is preserved and is not transferred into the target.
+- No image or quantitative dimensions are asserted in this target, and no source figure is reused.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The explicit user goal requests a review for every selected target, including records without a concrete issue. No finding was invented to satisfy that persistence instruction.
+- Only a review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Parent independently read the full target, source packet, draft, all source/input hashes and selected claim-bearing source sections. Source collaborator inspected the other cited sections and full local boundary context. Parent accepts these bounded assessments before saving.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T074637Z-mitotic-spindle-pole-body-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mitotic spindle pole body identity, topology and duplication review
+started_at: '2026-10-21T07:36:10Z'
+finished_at: '2026-10-21T07:46:37Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact mitotic SPB identity, budding-yeast scope, microtubule-organizing function
+  and bounded duplication/topology edges are supported. Optional composition remains
+  incomplete; no concrete curation defect was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+    sha256: 6f26eef2c9a8c923eb0c851b4d65b90a696322095208e731be170b6b0c9f0329
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0044732
+  path: data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+  label: mitotic spindle pole body
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, all asserted native GO/taxon/DOI identities,
+    cited review body, corroborating primary structural text and scoped native component
+    candidates.
+  selection: Fourth selected unreviewed path in batch nine, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0044732
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044732
+  command: just validate data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044732
+  command: just validate-strict data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+    --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/mitotic_spindle_pole_body-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044732
+  summary: 6 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0044732
+  summary: No transcriptional-regulator or expression-module mechanism is asserted.
+    Structural localization and optional constituent candidates are not inferred from
+    expression modules.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044732
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - mitotic-spb-agent-go
+  - mitotic-spb-agent-taxon
+  - mitotic-spb-agent-strain
+  - mitotic-spb-agent-epmc
+  - mitotic-spb-agent-jaspersen-browser
+  - mitotic-spb-agent-jaspersen-duplication-browser
+  - mitotic-spb-agent-viswanath2017
+  - mitotic-spb-agent-candidate-proteins
+  - mitotic-spb-agent-CPX-1198
+  - mitotic-spb-agent-CPX-1420
+  - mitotic-spb-agent-IPR002454
+  - mitotic-spb-agent-IPR007259
+  - mitotic-spb-agent-IPR021611
+  - mitotic-spb-agent-IPR021750
+  - mitotic-spb-agent-IPR040593
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044732
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044732
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044732
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044732
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0044732
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch9 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+  locator: Entire maintained YAML, including definition, history, species examples,
+    all evidence, graph if present, and discussions
+  accessed_at: '2026-10-21T07:45:50Z'
+  support: context_only
+  summary: The complete PROPOSED record was read. Its scope and open composition discussion
+    are assessed separately from optional future enrichment. No scientific content
+    or status is changed.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Structure identity, hierarchy, component grounding, evidence and scientific-status
+    rules
+  accessed_at: '2026-10-21T07:45:50Z'
+  support: context_only
+  summary: Whole structures, substructures, constituent protein families and transient
+    regulatory localization require distinct scope. Empty optional component inventories
+    do not by themselves establish a defect.
+- evidence_id: mitotic-spb-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0044732%2CGO%3A0005816%2CGO%3A0061496%2CGO%3A0061498
+  locator: All four returned term definitions, active flags and parent-term child
+    relations
+  accessed_at: '2026-10-21T07:36:47.664847Z'
+  support: supports
+  summary: Native GO confirms active GO0044732 under GO0005816, with GO0061496 half
+    bridge and GO0061498 intermediate layer as mitotic-SPB substructures. The exact
+    cell-cycle identity and graph relations are retained.
+  snapshot_sha256: 72afd525fe6e749fbdc185149e7c36d970a1eb78461b32b5a7011f042c10014d
+- evidence_id: mitotic-spb-agent-taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-21T07:36:47.664980Z'
+  support: supports
+  summary: ENA confirms species NCBITaxon4932, Saccharomyces cerevisiae.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: mitotic-spb-agent-strain
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: taxId, scientificName and strain rank; original retrieval timestamp retained
+  accessed_at: '2026-10-21T07:24:55.988431Z'
+  support: context_only
+  summary: Candidate sequence and complex entries concern S. cerevisiae S288C, NCBITaxon559292;
+    the record declares the species-level example.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: mitotic-spb-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.cellbio.20.022003.114106%20OR%20DOI:10.1091/mbc.E17-06-0397&format=json&resultType=core
+  locator: Both returned title, author, DOI, PMID, year and journal records; original
+    retrieval timestamp retained
+  accessed_at: '2026-10-21T07:04:09.393029Z'
+  support: supports
+  summary: Native metadata confirms Jaspersen and Winey2004 DOI10.1146/annurev.cellbio.20.022003.114106
+    / PMID15473833 and corroborating Viswanath2017 DOI10.1091/mbc.E17-06-0397 / PMID28814505.
+  snapshot_sha256: c03e88f13293f0e6a1c03a44e0c1aa2cf7fd5b4fc1ca21bcf036afe44015f741
+- evidence_id: mitotic-spb-agent-jaspersen-browser
+  kind: authority
+  reference: https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function
+  locator: Public author-manuscript pp5-10, SPB Structure and Core SPB; browser access2026-10-21T07:24:18Z
+    to07:24:19Z. Serialized browser-extracted text, not native PDF bytes; review-tier
+    synthesis.
+  accessed_at: '2026-10-21T07:24:18Z'
+  support: supports
+  summary: The cited literature review describes the budding-yeast SPB as a layered
+    microtubule-organizing structure with nuclear and cytoplasmic faces and associated
+    half bridge.
+  snapshot_sha256: 8aa2398ded5512b2450c936e832c11bc46d77ac317e4c01a2f7a6b9f1a4fce4e
+- evidence_id: mitotic-spb-agent-jaspersen-duplication-browser
+  kind: authority
+  reference: https://www.researchgate.net/publication/8241691_THE_BUDDING_YEAST_SPINDLE_POLE_BODY_Structure_Duplication_and_Function
+  locator: Public author-manuscript pp16-20, The Duplication Pathway, and Figure3
+    legend; browser access2026-10-21T07:40:49Z to07:40:50Z. Related-article snippets
+    outside the manuscript were not used.
+  accessed_at: '2026-10-21T07:40:49Z'
+  support: supports
+  summary: The review describes half-bridge elongation and satellite deposition at
+    its distal tip, expansion into a duplication plaque, and insertion into the nuclear
+    envelope. This supports the bounded half-bridge template edge and G1 duplication
+    within the mitotic cell cycle.
+  snapshot_sha256: 4995a36ec89d47c8e1fe3cf967df63ac1f3c357d9e16d69dd2b01c22408b7d05
+- evidence_id: mitotic-spb-agent-viswanath2017
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5687031.1/PMC5687031.1.xml
+  locator: Native JATS Introduction, Figure1 caption and relevant layer-localization
+    Results/Methods; original receipt retained
+  accessed_at: '2026-10-20T07:38:52.830471Z'
+  support: supports
+  summary: The Introduction and Figure1 distinguish plaques, IL1/IL2 and nuclear/cytoplasmic
+    nucleation sites. Its integrative model concerns the core rather than a complete
+    reconstruction of every SPB constituent or duplication stage.
+  snapshot_sha256: 004836a027b7fad21def4f6e9eebc94ec5f1e07679d123407a062241f6edb580
+- evidence_id: mitotic-spb-agent-candidate-proteins
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A559292%20AND%20%28gene_exact%3ASPC110%20OR%20gene_exact%3ATUB4%20OR%20gene_exact%3ASPC97%20OR%20gene_exact%3ASPC98%20OR%20gene_exact%3ACMD1%20OR%20gene_exact%3ASPC42%20OR%20gene_exact%3ACNM67%20OR%20gene_exact%3ASPC29%20OR%20gene_exact%3ANUD1%20OR%20gene_exact%3ASPC72%29&format=json&size=50
+  locator: Relevant accession, reviewed status, name, genes, organism and native family/complex
+    cross-references; optional candidates, not currently asserted examples
+  accessed_at: '2026-10-21T07:24:14.422164Z'
+  support: context_only
+  summary: Reviewed S288C entries resolve Spc110 P32380, Spc97 P38863, Spc98 P53540,
+    Tub4 P53378, Spc42 P36094, Cnm67 P53865, Spc29 P33419, Cmd1 P06787, Nud1 P32336
+    and Spc72 P39723 as possible inventory material. The historical TRM2/NUD1 alias
+    hit is not adopted as Nud1.
+  snapshot_sha256: 773c38e1acac076de463c8ca995c32fde95d19a569acc8605352db6fa2134126
+- evidence_id: mitotic-spb-agent-CPX-1198
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-1198
+  locator: complexAc, name, species, participants, systematicName, properties and
+    evidenceType
+  accessed_at: '2026-10-21T07:24:55.987262Z'
+  support: context_only
+  summary: CPX1198 is the S288C gamma-tubulin small complex, with Spc97, Spc98 and
+    two Tub4 subunits. It is an associated constituent complex, not an identifier
+    or copy count for the whole SPB.
+  snapshot_sha256: f05394b9065d166f761d6fd535af76985428be3b25a84eeed670e3c530221d6f
+- evidence_id: mitotic-spb-agent-CPX-1420
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-1420
+  locator: complexAc, name, species, participants, properties and GO0005823 cross-reference
+  accessed_at: '2026-10-21T07:24:55.987399Z'
+  support: context_only
+  summary: CPX1420 is the Spc42/Cnm67 intermediate-layer2 complex. Its narrower complex
+    scope and its central-plaque GO cross-reference must not be collapsed into the
+    whole SPB or all intermediate layers.
+  snapshot_sha256: 629216f46c134e503436c972d2879084e6065dce79a71fd68113f650ce6cca4c
+- evidence_id: mitotic-spb-agent-IPR002454
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002454/
+  locator: Native metadata accession, name, type, description and relevant member/hierarchy
+    fields
+  accessed_at: '2026-10-21T07:24:55.984750Z'
+  support: context_only
+  summary: Gamma tubulin is a family-level candidate for Tub4; source localization
+    remains a separate claim.
+  snapshot_sha256: 0cc07ff810e7acb2b8d24c24597c1bcabf177adb7e06ae6ddfabbb352fe0c668
+- evidence_id: mitotic-spb-agent-IPR007259
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007259/
+  locator: Native metadata accession, name, type, description and relevant member/hierarchy
+    fields
+  accessed_at: '2026-10-21T07:24:55.983561Z'
+  support: context_only
+  summary: Gamma-tubulin complex component protein is a broader family covering several
+    GCP paralogues, not an exact individual Spc97/Spc98 identity.
+  snapshot_sha256: 35abdb19f33d76f750dba5e51b97017071754f6c4def2ee06df37f41b461a389
+- evidence_id: mitotic-spb-agent-IPR021611
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021611/
+  locator: Native metadata accession, name, type, description and relevant member/hierarchy
+    fields
+  accessed_at: '2026-10-21T07:24:55.986255Z'
+  support: context_only
+  summary: Spindle pole body component Spc42 is an exact named-family candidate.
+  snapshot_sha256: aef911d443ea6bf22900e5ff3818f2d89f7d431d884a0cbb4c89b816e1175f34
+- evidence_id: mitotic-spb-agent-IPR021750
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR021750/
+  locator: Native metadata accession, name, type, description and relevant member/hierarchy
+    fields
+  accessed_at: '2026-10-21T07:24:55.986765Z'
+  support: context_only
+  summary: Septation initiation Sid4-like includes Sid4, Ady3 and Cnm67 and is broader
+    than a Cnm67-specific family.
+  snapshot_sha256: f1fe20d4b8df21ce0b199b723bafd32ae02fce926221a25124470b9b93f07def
+- evidence_id: mitotic-spb-agent-IPR040593
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR040593/
+  locator: Native metadata accession, name, type, description and relevant member/hierarchy
+    fields
+  accessed_at: '2026-10-21T07:24:55.985698Z'
+  support: context_only
+  summary: Spc110 C-terminal is a domain, not a whole-protein family; it cannot replace
+    exact whole-component grounding.
+  snapshot_sha256: ca33c3d4e076b45e58a018b0f87b2a26fa2b3292d0da42d0f16a82f76946092f
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:36:16Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml'
+  snapshot_sha256: f65d9286ecc7620636c9cebe0d10b935223f266872d6d09e62d948a78340c96c
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml
+    --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/mitotic_spindle_pole_body-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:36:24Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml\
+    \ --out /private/tmp/cellstructure-batch9-20261021-t98tzqpa/mitotic_spindle_pole_body-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch9-20261021-t98tzqpa/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch9-20261021-t98tzqpa/mitotic_spindle_pole_body-strict.tsv"
+  snapshot_sha256: 74b42d36d9c73abb8a26b8c44ad59b09eb7af204c0ecdaff36d380c2f62a7ddd
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/mitotic_spindle_pole_body.yaml; exact collect()
+    scope; SHA-256 identifies the entire original resolver TSV at /private/tmp/cellstructure-record-reviews-UhRFh7/repo/reports/curie_check.tsv,
+    not derived resolver-slice.json
+  accessed_at: '2026-10-21T07:45:50Z'
+  support: supports
+  summary: '6 of 6 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Mitotic-cell-cycle specialization
+  outcome: supported
+  target_ids:
+  - GO:0044732
+  summary: The exact name, definition and parent match GO. The whole mitotic SPB remains
+    distinct from its half bridge, layers and associated gamma-tubulin complex.
+  evidence_ids:
+  - mitotic-spb-agent-go
+  - mitotic-spb-agent-jaspersen-browser
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast model and G1 duplication
+  outcome: supported
+  target_ids:
+  - GO:0044732
+  summary: 'The species example is supported. Mitotic cell cycle is not restricted
+    to M phase: G1 duplication is compatible with the stated scope. COMMON is qualitative
+    occurrence, not measured fungal or strain prevalence. Candidate S288C entries
+    cannot establish universal strain composition.'
+  evidence_ids:
+  - mitotic-spb-agent-go
+  - mitotic-spb-agent-taxon
+  - mitotic-spb-agent-strain
+  - mitotic-spb-agent-jaspersen-browser
+  - mitotic-spb-agent-jaspersen-duplication-browser
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Nuclear and cytoplasmic microtubule organization
+  outcome: supported
+  target_ids:
+  - GO:0044732
+  summary: Native GO and inspected structural descriptions support the bounded microtubule-organizing
+    function. The target does not assert a universal molecular nucleation mechanism
+    or autonomous activity of the SPB scaffold independently of its associated machinery.
+  evidence_ids:
+  - mitotic-spb-agent-go
+  - mitotic-spb-agent-jaspersen-browser
+  - mitotic-spb-agent-viswanath2017
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Subtype, parthood and half-bridge assembly-site edge
+  outcome: supported
+  target_ids:
+  - GO:0044732
+  summary: Native relations support the subtype and parthood edges. The half-bridge
+    edge summarizes the reviewed duplication site next to the existing SPB; it does
+    not impose a complete protein-recruitment order, direct binding or novel molecular
+    mechanism.
+  evidence_ids:
+  - mitotic-spb-agent-go
+  - mitotic-spb-agent-jaspersen-duplication-browser
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: Acknowledged plaque, bridge and nucleation-machine inventory
+  outcome: supported
+  target_ids:
+  - GO:0044732
+  summary: The component TODO is partly resolvable from exact Spc42/gamma-tubulin
+    families and curated subcomplexes, but a complete whole-SPB inventory is not established.
+    Domain-level Spc110, broader GCP/Cnm67 family scope, layer-spanning proteins and
+    complex-specific stoichiometry remain distinct. No erroneous component mapping
+    is currently asserted, so the optional inventory is a limitation rather than a
+    supported defect.
+  evidence_ids:
+  - mitotic-spb-agent-candidate-proteins
+  - mitotic-spb-agent-CPX-1198
+  - mitotic-spb-agent-CPX-1420
+  - mitotic-spb-agent-strain
+  - mitotic-spb-agent-IPR002454
+  - mitotic-spb-agent-IPR007259
+  - mitotic-spb-agent-IPR021611
+  - mitotic-spb-agent-IPR021750
+  - mitotic-spb-agent-IPR040593
+  - mitotic-spb-agent-viswanath2017
+  - record
+  - policy
+- assessment_id: provenance
+  area: provenance
+  topic: Review-tier citation and primary structural context
+  outcome: supported
+  target_ids:
+  - GO:0044732
+  summary: The record-cited 2004 article is a literature review. Its inspected author-manuscript
+    passages support the bounded claims; the 2017 primary study supplies corroborating
+    architectural context. Database candidates establish identities, not new localization
+    experiments.
+  evidence_ids:
+  - mitotic-spb-agent-epmc
+  - mitotic-spb-agent-jaspersen-browser
+  - mitotic-spb-agent-jaspersen-duplication-browser
+  - mitotic-spb-agent-viswanath2017
+  - record
+  dimensions:
+  - name: cited_source_type
+    value: Literature review
+    definition: Jaspersen and Winey2004 synthesizes prior experiments; this audit
+      does not treat every statement as a new primary experiment.
+    evidence_ids:
+    - mitotic-spb-agent-epmc
+    - mitotic-spb-agent-jaspersen-browser
+    - mitotic-spb-agent-jaspersen-duplication-browser
+findings: []
+actions: []
+limitations:
+- The 2004 source was read through public author-manuscript browser extraction. Publisher-version
+  PDF byte identity was not established; not all underlying primary studies were independently
+  reread.
+- The 2017 model, raw measurements, microscopy pixels and supplements were not reproduced
+  or exhaustively reanalyzed.
+- Optional component candidates do not establish a complete SPB inventory, universal
+  strain composition or whole-organelle stoichiometry. Exact whole-Spc110 and individual
+  GCP/Cnm67 family boundaries remain unresolved here.
+- CPX1420 is an IL2 subcomplex with a central-plaque GO cross-reference; that database
+  scope discrepancy is preserved and is not transferred into the target.
+- No image or quantitative dimensions are asserted in this target, and no source figure
+  is reused.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The explicit user goal requests a review for every selected target, including records
+  without a concrete issue. No finding was invented to satisfy that persistence instruction.
+- Only a review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+- Parent independently read the full target, source packet, draft, all source/input
+  hashes and selected claim-bearing source sections. Source collaborator inspected
+  the other cited sections and full local boundary context. Parent accepts these bounded
+  assessments before saving.
+```
