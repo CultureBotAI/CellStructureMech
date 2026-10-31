@@ -1,0 +1,988 @@
+schema_version: 1.0.0
+review_id: 20261022T034128Z-rhoptry-neck-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of rhoptry neck
+started_at: '2026-10-22T03:25:17Z'
+finished_at: '2026-10-22T03:41:28Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One minor canonical citation correction is needed; neck identity, named RON
+  examples and the qualified deployment biology are supported.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/rhoptry.yaml
+    sha256: f36f8d4602ddfeb6fc27df4eebcfb3a127fa1e3720d689fac45f4300cb492709
+    role: context
+  - path: data/structures/membrane_organelle/rhoptry_lumen.yaml
+    sha256: 92b2f8d10c93bb944c4e7d33e5297e827292572cf0bc5ebb17f133eed2fc541f
+    role: context
+  - path: data/structures/membrane_organelle/rhoptry_membrane.yaml
+    sha256: 46a8bc0e8ce32d1b0bcfb24668ab3b2c08c1978ebaee578f6dadbd98190c771a
+    role: context
+  - path: data/structures/membrane_organelle/rhoptry_neck.yaml
+    sha256: 6a03bef47fa2182ce142ecc9819b386f0e0152d14338e4e8a45dc29c58c1c67f
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990225
+  path: data/structures/membrane_organelle/rhoptry_neck.yaml
+  label: rhoptry neck
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/rhoptry_neck.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target with the other three rhoptry records frozen
+    as boundary context. Exact identifiers, all claimed components/proteins and graphs,
+    source-specific support, taxonomic scope, formation-necessity semantics and historical
+    notes were reviewed.
+  selection: Batch40 fixed strict path order, index9; exactly one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990225
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  command: just validate data/structures/membrane_organelle/rhoptry_neck.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  command: just validate-strict data/structures/membrane_organelle/rhoptry_neck.yaml
+    --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/rhoptry_neck-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: focused-verify
+  name: Native focused verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  command: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/rhoptry_neck.yaml
+  exit_code: 0
+  summary: Read-only focused check passed.
+  evidence_ids:
+  - focused-verify
+- check_id: focused-causal-graphs
+  name: Native focused causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  command: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/rhoptry_neck.yaml
+  exit_code: 0
+  summary: Read-only focused check passed.
+  evidence_ids:
+  - focused-causal-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - local-rhoptry
+  - local-rhoptry_lumen
+  - local-rhoptry_membrane
+  - rhoptry-agent-go
+  - rhoptry-agent-go-rhoptry-isa
+  - rhoptry-agent-tax2759
+  - rhoptry-agent-tax5794
+  - rhoptry-agent-tax5811
+  - rhoptry-agent-tax508771
+  - rhoptry-agent-boothroyd2008-meta
+  - rhoptry-agent-waller2024-meta
+  - rhoptry-agent-alexander2005-meta
+  - rhoptry-agent-PMID-16002398
+  - rhoptry-agent-PMID-16244709
+  - rhoptry-agent-PMID-19247437
+  - rhoptry-agent-PMID-21347343
+  - rhoptry-agent-boothroyd2008-publisher
+  - rhoptry-agent-waller2024-jats
+  - rhoptry-agent-waller2024-numeric
+  - rhoptry-agent-waller2024-legacy
+  - rhoptry-agent-bradley2005-browser
+  - rhoptry-agent-bradley2005-browser2
+  - rhoptry-agent-alexander2005-jats
+  - rhoptry-agent-besteiro2009-jats
+  - rhoptry-agent-protein-B6KV60
+  - rhoptry-agent-protein-B6KJ32
+  - rhoptry-agent-protein-S8ERS3
+  - rhoptry-agent-protein-S8F1T4
+  - rhoptry-agent-reviewed-uniqueness
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  summary: '12 of 16 collected target identifiers returned OK. PMID:16002398: UNREACHABLE;
+    Exact native MED identity independently verifies PMID, title, DOI and PMC/null
+    mapping after bulk eutils414 failure. Abstract and body scientific scopes remain
+    separately bounded.; PMID:16244709: UNREACHABLE; Exact native MED identity independently
+    verifies PMID, title, DOI and PMC/null mapping after bulk eutils414 failure. Abstract
+    and body scientific scopes remain separately bounded.; PMID:19247437: UNREACHABLE;
+    Exact native MED identity independently verifies PMID, title, DOI and PMC/null
+    mapping after bulk eutils414 failure. Abstract and body scientific scopes remain
+    separately bounded.; PMID:21347343: UNREACHABLE; Exact native MED identity independently
+    verifies PMID, title, DOI and PMC/null mapping after bulk eutils414 failure. Abstract
+    and body scientific scopes remain separately bounded. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - rhoptry-agent-PMID-16002398
+  - rhoptry-agent-PMID-16244709
+  - rhoptry-agent-alexander2005-meta
+  - rhoptry-agent-PMID-19247437
+  - rhoptry-agent-PMID-21347343
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990225
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch40 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/rhoptry_neck.yaml
+  locator: Entire maintained YAML including every source note, component, protein
+    example, graph, history and discussion
+  accessed_at: '2026-10-22T03:35:49Z'
+  support: context_only
+  summary: Complete target bytes were read; historical statements retain their original
+    temporal scope.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ComponentTypeEnum, EssentialityEnum and graph semantics
+  accessed_at: '2026-10-22T03:35:49Z'
+  support: context_only
+  summary: An exact whole-membrane identity differs from LIPID material. Collective
+    bilayer constitution does not demonstrate individual protein formation necessity;
+    accurately typed OTHER structural constituents remain permissible.
+- evidence_id: local-rhoptry
+  kind: record_content
+  reference: data/structures/membrane_organelle/rhoptry.yaml
+  locator: Complete frozen sibling boundary record
+  accessed_at: '2026-10-22T03:35:49Z'
+  support: context_only
+  summary: The rhoptry quartet was read as boundary context. Neighbor interpretations
+    do not replace direct source inspection.
+- evidence_id: local-rhoptry_lumen
+  kind: record_content
+  reference: data/structures/membrane_organelle/rhoptry_lumen.yaml
+  locator: Complete frozen sibling boundary record
+  accessed_at: '2026-10-22T03:35:49Z'
+  support: context_only
+  summary: The rhoptry quartet was read as boundary context. Neighbor interpretations
+    do not replace direct source inspection.
+- evidence_id: local-rhoptry_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/rhoptry_membrane.yaml
+  locator: Complete frozen sibling boundary record
+  accessed_at: '2026-10-22T03:35:49Z'
+  support: context_only
+  summary: The rhoptry quartet was read as boundary context. Neighbor interpretations
+    do not replace direct source inspection.
+- evidence_id: rhoptry-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020008,GO:0034591,GO:0033016,GO:1990225,GO:0043231,GO:0020007,GO:0043233,GO:0031090
+  locator: 'Complete eight entries: GO0020008/0034591/0033016/1990225/0043231/0020007/0043233/0031090;
+    id/name/definition/isObsolete and typed children, preserving directions.'
+  accessed_at: '2026-10-22T03:29:26.800987Z'
+  support: supports
+  summary: The eight active GO entries distinguish rhoptry, lumen, membrane and neck.
+    Rhoptry children list those three parts; the apical-complex response lists rhoptry
+    part_of. The organelle-lumen and organelle-membrane responses list the exact child
+    is_a relations. The whole definition matches the record, including its conoid
+    wording.
+  snapshot_sha256: de068a7872b0a4ab9edc8fa0f4837c3cc5fefa1db8354e0a7016d24185e7a4a1
+- evidence_id: rhoptry-agent-go-rhoptry-isa
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020008/ancestors?relations=is_a
+  locator: GO0020008 complete response, ancestors under explicit relations=is_a.
+  accessed_at: '2026-10-22T03:29:56.346854Z'
+  support: supports
+  summary: The is_a-only rhoptry response returns GO0020008, GO0110165 and GO0005575,
+    not GO0043231. The broad membrane-bounded-organelle classification is assessed
+    from the physical definitions and primary morphology, not invented as a native
+    GO ancestry edge.
+  snapshot_sha256: 661785b382c87e4ac961bc099341c3d53f6095a57350e0a406811183d819e4c1
+- evidence_id: rhoptry-agent-tax2759
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759
+  locator: Complete taxId/scientificName/rank/lineage/otherNames; original B32 receipt
+    retained.
+  accessed_at: '2026-10-22T02:07:36.265539Z'
+  support: supports
+  summary: ENA taxId2759 identifies Eukaryota at rank domain; exact lineage/otherNames
+    were read. Identity is distinct from prevalence or experimental strain.
+  snapshot_sha256: 47d02c524bbdc511eb1fc377bdedc484b5cb6d3504611b0cbc6c280a65f140b4
+- evidence_id: rhoptry-agent-tax5794
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5794
+  locator: Complete taxId/scientificName/rank/lineage/otherNames; original B32 receipt
+    retained.
+  accessed_at: '2026-10-22T02:07:37.806555Z'
+  support: supports
+  summary: ENA taxId5794 identifies Apicomplexa at rank phylum; exact lineage/otherNames
+    were read. Identity is distinct from prevalence or experimental strain.
+  snapshot_sha256: 71f50f7adf0b7ad8670573c6c6ac0e6df37a9cf467fdec2ab20d612db477bc53
+- evidence_id: rhoptry-agent-tax5811
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5811
+  locator: Complete taxId/scientificName/rank/lineage/otherNames; original B32 receipt
+    retained.
+  accessed_at: '2026-10-22T02:07:36.265008Z'
+  support: supports
+  summary: ENA taxId5811 identifies Toxoplasma gondii at rank species; exact lineage/otherNames
+    were read. Identity is distinct from prevalence or experimental strain.
+  snapshot_sha256: 11679825fa4d00b18d5848862450ab6b3770aaa47ad6676d1196d9df61124b16
+- evidence_id: rhoptry-agent-tax508771
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/508771
+  locator: Complete taxId/scientificName/rank/lineage/otherNames; original B32 receipt
+    retained.
+  accessed_at: '2026-10-22T02:07:37.811994Z'
+  support: supports
+  summary: ENA taxId508771 identifies Toxoplasma gondii ME49 at rank strain; exact
+    lineage/otherNames were read. Identity is distinct from prevalence or experimental
+    strain.
+  snapshot_sha256: d1622dee69e1fe2abfea4351893585852f4200cfff6eac3b42e5a014283cd0b0
+- evidence_id: rhoptry-agent-boothroyd2008-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1038%2Fnrmicro1800
+  locator: Unique MED PMID/title/authors/year/DOI and complete abstract.
+  accessed_at: '2026-10-22T03:29:26.801944Z'
+  support: supports
+  summary: 'Exact MED18059289 identity matches Kiss and spit: the dual roles of Toxoplasma
+    rhoptries. and DOI10.1038/nrmicro1800. Complete abstract and publication metadata
+    were read; this row alone does not claim full-body access.'
+  snapshot_sha256: 7d57cb16729d0608d55d98a5a4dc026889009de35b12d64e1a88280f55d0ca47
+- evidence_id: rhoptry-agent-waller2024-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1128%2Fmmbr.00197-22
+  locator: Unique MED PMID/title/authors/year/DOI and complete abstract.
+  accessed_at: '2026-10-22T03:29:26.801552Z'
+  support: supports
+  summary: Exact MED39387588 identity matches Adaptations and metabolic evolution
+    of myzozoan protists across diverse lifestyles and environments. and DOI10.1128/mmbr.00197-22.
+    Complete abstract and publication metadata were read; this row alone does not
+    claim full-body access.
+  snapshot_sha256: 0ed29f91cb1c8f1462e50e75d9695efb08fc71a3d516ce821ec385e51225e049
+- evidence_id: rhoptry-agent-alexander2005-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1371%2Fjournal.ppat.0010017
+  locator: Unique MED PMID/title/authors/year/DOI and complete abstract.
+  accessed_at: '2026-10-22T03:29:26.802142Z'
+  support: supports
+  summary: 'Exact MED16244709 identity matches Identification of the moving junction
+    complex of Toxoplasma gondii: a collaboration between distinct secretory organelles.
+    and DOI10.1371/journal.ppat.0010017. Complete abstract and publication metadata
+    were read; this row alone does not claim full-body access.'
+  snapshot_sha256: 9aa7764a45241749853a8137a52981c956c21f32256ffb8aa1830c05b9b40616
+- evidence_id: rhoptry-agent-PMID-16002398
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A16002398%20AND%20SRC%3AMED
+  locator: Unique MED PMID/title/authors/year/DOI and complete abstract.
+  accessed_at: '2026-10-22T03:29:27.524722Z'
+  support: supports
+  summary: Exact MED16002398 identity matches Proteomic analysis of rhoptry organelles
+    reveals many novel constituents for host-parasite interactions in Toxoplasma gondii.
+    and DOI10.1074/jbc.m504158200. Complete abstract and publication metadata were
+    read; this row alone does not claim full-body access.
+  snapshot_sha256: 97a56df176d98595318e806679d0a56aeeea2c7f8c5cf333f8b2a3681ef1fdc2
+- evidence_id: rhoptry-agent-PMID-16244709
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A16244709%20AND%20SRC%3AMED
+  locator: Unique MED PMID/title/authors/year/DOI and complete abstract.
+  accessed_at: '2026-10-22T03:29:27.532805Z'
+  support: supports
+  summary: 'Exact MED16244709 identity matches Identification of the moving junction
+    complex of Toxoplasma gondii: a collaboration between distinct secretory organelles.
+    and DOI10.1371/journal.ppat.0010017. Complete abstract and publication metadata
+    were read; this row alone does not claim full-body access.'
+  snapshot_sha256: 93574190fbbdf1a16009423259ab0f9c9c9f6bc3689a91175e46c046928fc8a2
+- evidence_id: rhoptry-agent-PMID-19247437
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A19247437%20AND%20SRC%3AMED
+  locator: Unique MED PMID/title/authors/year/DOI and complete abstract.
+  accessed_at: '2026-10-22T03:29:27.537156Z'
+  support: supports
+  summary: Exact MED19247437 identity matches Export of a Toxoplasma gondii rhoptry
+    neck protein complex at the host cell membrane to form the moving junction during
+    invasion. and DOI10.1371/journal.ppat.1000309. Complete abstract and publication
+    metadata were read; this row alone does not claim full-body access.
+  snapshot_sha256: c0175f93793225a6a56cba62423faec34070667ab21a04a5d5823b13914449be
+- evidence_id: rhoptry-agent-PMID-21347343
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A21347343%20AND%20SRC%3AMED
+  locator: Unique MED PMID/title/authors/year/DOI and complete abstract.
+  accessed_at: '2026-10-22T03:29:27.529610Z'
+  support: supports
+  summary: Exact MED21347343 identity matches The RON2-AMA1 interaction is a critical
+    step in moving junction-dependent invasion by apicomplexan parasites. and DOI10.1371/journal.ppat.1001276.
+    Complete abstract and publication metadata were read; this row alone does not
+    claim full-body access.
+  snapshot_sha256: ca0cddb8760fc8af11ff83a36041058d5443498f1cb2fd71712b3d0b6d1d4ebc
+- evidence_id: rhoptry-agent-boothroyd2008-publisher
+  kind: primary_source
+  reference: https://www.nature.com/articles/nrmicro1800
+  locator: Complete Key Points, Abstract, Glossary rhoptry/moving-junction entries;
+    native HTTP200 HTML, not full article access.
+  accessed_at: '2026-10-22T03:29:55.599862Z'
+  support: supports
+  summary: The secondary review publisher page contains complete Key Points, Abstract
+    and Glossary. These support club-shaped neck/bulb organelles, secretion during
+    invasion, joint rhoptry/microneme participation at the moving junction, and host
+    manipulation. The page has subscription controls and does not supply the main
+    body.
+  snapshot_sha256: 2c706e02d816d68432cfbdd199d0cfe3b61808188fc09548fb3eaf357f7d7c6b
+- evidence_id: rhoptry-agent-waller2024-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11653781/fullTextXML
+  locator: Exact status and retained response body; only separately verified MED metadata/abstract
+    is treated as source content.
+  accessed_at: '2026-10-22T03:29:55.599092Z'
+  support: context_only
+  summary: The EPMC request returned HTTP500, with no article body.
+  snapshot_sha256: 6305fa3135fda94dc571ea410c722832de00908ec50d4ce7100cb6bb3f136141
+- evidence_id: rhoptry-agent-waller2024-numeric
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/11653781/
+  locator: Exact status and retained response body; only separately verified MED metadata/abstract
+    is treated as source content.
+  accessed_at: '2026-10-22T03:32:18.158865Z'
+  support: context_only
+  summary: The HTTP200 response is a reCAPTCHA challenge, not the Waller article body.
+  snapshot_sha256: 23f361de3bdd5bc6fbe916016287693a7a557b5b146bae52e55289486dfda97f
+- evidence_id: rhoptry-agent-waller2024-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11653781/
+  locator: Exact status and retained response body; only separately verified MED metadata/abstract
+    is treated as source content.
+  accessed_at: '2026-10-22T03:32:18.158624Z'
+  support: context_only
+  summary: The HTTP200 response is a reCAPTCHA challenge, not the Waller article body.
+  snapshot_sha256: 8ae77d102af03c584d4e769f19d382bf5afcb4e07bb7cf4fbe21c22d13e97936
+- evidence_id: rhoptry-agent-bradley2005-browser
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/7742726_Proteomic_Analysis_of_Rhoptry_Organelles_Reveals_Many_Novel_Constituents_for_Host-Parasite_Interactions_in_Toxoplasma_gondii
+  locator: Captured primary text pp34245–34246, Introduction and Experimental Procedures
+    lines192–662. Excludes unrelated platform recommendations; no figure pixels.
+  accessed_at: '2026-10-22T03:30:05Z'
+  support: supports
+  summary: The inspected primary-paper introduction and Methods describe RH tachyzoites,
+    rhoptry purification, proteomics, carbonate extraction and localization methods.
+    They distinguish soluble and membrane-associated material. This is browser-extracted
+    paper text with surrounding platform metadata, not native HTTP200 or a raw PDF.
+  snapshot_sha256: d1ea7165bb6aa64b82b1db415009c5d7fed2dbc9ea13d88c97fc6b84bbd15979
+- evidence_id: rhoptry-agent-bradley2005-browser2
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/7742726_Proteomic_Analysis_of_Rhoptry_Organelles_Reveals_Many_Novel_Constituents_for_Host-Parasite_Interactions_in_Toxoplasma_gondii
+  locator: 'Primary browser representation pp34252–34255: Results lines1097–1397 and
+    Discussion/context lines1585–1895, including RON4 localization and ROP topology
+    uncertainty; no figure pixels.'
+  accessed_at: '2026-10-22T03:31:48Z'
+  support: supports
+  summary: Bradley identifies bulb/neck proteins and confirms neck-localized RON4
+    by immunoEM; ROP16 is localized by epitope tagging. The read Results/Discussion
+    concern localization, predictions and trafficking; they do not report moving-junction
+    deployment. Predicted membrane domains are explicitly uncertain.
+  snapshot_sha256: a5117fd4d5ad65cbad8a418827308f60a52b65b7fbd253c65eb41a21657b465f
+- evidence_id: rhoptry-agent-alexander2005-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1262624/fullTextXML
+  locator: 'Genuine JATS: Introduction s1; complete Results s2c–s2g with their captions;
+    Methods s4a/s4b/s4c/s4d/s4e/s4f. Other Results and Discussion were inspected selectively,
+    not represented as fully read. No figure pixels/supplement experiments reanalyzed.'
+  accessed_at: '2026-10-22T03:29:55.599504Z'
+  support: supports
+  summary: The primary study directly examines RON4 at the moving junction and its
+    association with AMA1/RON2, using live-culture cross-linking and synchronized
+    invasion microscopy. RH-derived tachyzoites are used, with Prugniaud localization
+    confirmation; reduced AMA1 affects invasion. Failed RON4 deletion is explicitly
+    not definitive essentiality evidence.
+  snapshot_sha256: 07df336fddadbcb3a013299a58937e962ff6abd460c698466c60637c607e9f4f
+- evidence_id: rhoptry-agent-besteiro2009-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2642630/fullTextXML
+  locator: Genuine JATS complete Results s2a/s2b/s2g/s2h and captions; Methods s4a/s4c/s4d.
+    No supplemental table contents or figure pixels inspected.
+  accessed_at: '2026-10-22T03:29:55.599776Z'
+  support: supports
+  summary: RON8 is identified and all RON2/4/5/8 are supported at the neck/MJ with
+    assay-dependent accessibility. The primary experiments distinguish host-membrane
+    association and cytoplasmic exposure of RON4/5/8. They use RH-derived tachyzoites;
+    they do not establish identical mechanisms in every apicomplexan lineage or the
+    sequence identity of every ME49 example.
+  snapshot_sha256: 15a3f6a54ec16d46a47896770ba8853e54cf6e2edb3f8809653e1e9da3e6a149
+- evidence_id: rhoptry-agent-protein-B6KV60
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/B6KV60.json
+  locator: Complete accession/status/name/genes/organism fields; full SUBCELLULAR
+    LOCATION comments and cited bibliography; sequence fragment flag where present.
+  accessed_at: '2026-10-22T03:29:28.233925Z'
+  support: supports
+  summary: B6KV60 is UniProtKB reviewed (Swiss-Prot), gene RON2, taxon508771 (Toxoplasma
+    gondii (strain ATCC 50611 / Me49)). Native name, full subcellular-location comments
+    and their ECO/PMID links were inspected; unreviewed identity is not experimental
+    membership proof.
+  snapshot_sha256: ee6b4061831bc104484c3403457872f372c0bfb18fa4ef6bd5b26f1404591178
+- evidence_id: rhoptry-agent-protein-B6KJ32
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/B6KJ32.json
+  locator: Complete accession/status/name/genes/organism fields; full SUBCELLULAR
+    LOCATION comments and cited bibliography; sequence fragment flag where present.
+  accessed_at: '2026-10-22T03:29:28.234487Z'
+  support: supports
+  summary: B6KJ32 is UniProtKB reviewed (Swiss-Prot), gene RON4, taxon5811 (Toxoplasma
+    gondii). Native name, full subcellular-location comments and their ECO/PMID links
+    were inspected; unreviewed identity is not experimental membership proof.
+  snapshot_sha256: 9db16a8597a83db5fa2197cddf9032b4417ecbbf33beaa4228ce9a1fe1524331
+- evidence_id: rhoptry-agent-protein-S8ERS3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/S8ERS3.json
+  locator: Complete accession/status/name/genes/organism fields; full SUBCELLULAR
+    LOCATION comments and cited bibliography; sequence fragment flag where present.
+  accessed_at: '2026-10-22T03:29:28.236106Z'
+  support: supports
+  summary: S8ERS3 is UniProtKB unreviewed (TrEMBL), gene RON5, taxon508771 (Toxoplasma
+    gondii (strain ATCC 50611 / Me49)). Native name, full subcellular-location comments
+    and their ECO/PMID links were inspected; unreviewed identity is not experimental
+    membership proof.
+  snapshot_sha256: 74dee300d4115bf3f5f26d72150def76c7f37a14a55314fbb2c7dcbe2d67f7b9
+- evidence_id: rhoptry-agent-protein-S8F1T4
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/S8F1T4.json
+  locator: Complete accession/status/name/genes/organism fields; full SUBCELLULAR
+    LOCATION comments and cited bibliography; sequence fragment flag where present.
+  accessed_at: '2026-10-22T03:29:28.770399Z'
+  support: supports
+  summary: S8F1T4 is UniProtKB unreviewed (TrEMBL), gene RON8, taxon508771 (Toxoplasma
+    gondii (strain ATCC 50611 / Me49)). Native name, full subcellular-location comments
+    and their ECO/PMID links were inspected; unreviewed identity is not experimental
+    membership proof.
+  snapshot_sha256: 3c09f903604967dbac05ccb47228636e25a8d19e794ca1796ae588fced5c4c10
+- evidence_id: rhoptry-agent-reviewed-uniqueness
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=reviewed%3Atrue%20AND%20%28gene_exact%3ARON2%20OR%20gene_exact%3ARON4%20OR%20gene_exact%3AROP18%29%20AND%20%28taxonomy_id%3A5811%20OR%20taxonomy_id%3A508771%29
+  locator: Exact URL query reviewed:true, gene_exact RON2/RON4/ROP18, taxonomy5811/508771,
+    size500; all three returned entries read.
+  accessed_at: '2026-10-22T03:29:29.393802Z'
+  support: supports
+  summary: The bounded native reviewed-entry query returns exactly B6KV60/RON2, B6KJ32/RON4
+    and Q2PAY2/ROP18, with their distinct taxon IDs. It supports those declared uniqueness
+    claims; no broader family or unreviewed absence is inferred.
+  snapshot_sha256: 678b3f858800d9286b3ad7ad1fdad4043db05ab34ebf6e5f6c30407afbe5d413
+  search_scope: 'Remote UniProt query only: exact URL predicates reviewed:true and
+    named exact genes within taxonomy5811/508771, returned three entries, size500.
+    Ignored-file inclusion is not applicable to this remote search; no local-file
+    absence claim.'
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/rhoptry_neck.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:25:19Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/rhoptry_neck.yaml'
+  snapshot_sha256: 451c62f61c57ad4198ada9af6441404c84829493d6c981057dc175394f11b3e3
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/rhoptry_neck.yaml
+    --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/rhoptry_neck-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:25:20Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/rhoptry_neck.yaml\
+    \ --out /private/tmp/cellstructure-batch40-20261022-pllys1sh/rhoptry_neck-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch40-20261022-pllys1sh/rhoptry_neck-strict.tsv"
+  snapshot_sha256: 69dfce429948b9f30ba1f0c74bf4d1369e5c0c30f382e29b31d047556f862d1c
+- evidence_id: focused-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/membrane_organelle/rhoptry_neck.yaml
+  locator: Complete read-only native focused report
+  accessed_at: '2026-10-22T03:30:15.674995Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: focused-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch40-20261022-pllys1sh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/rhoptry_neck.yaml
+  locator: Complete read-only native focused report
+  accessed_at: '2026-10-22T03:30:16.084229Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/rhoptry_neck.yaml  (GO:1990225)\n \
+    \ rhoptry_neck_exports_rons\trhoptry_neck_proteins\tCOVERED\t->rhoptry_neck_proteins\
+    \ (UniProtKB:B6KV60, UniProtKB:B6KJ32, UniProtKB:S8ERS3, UniProtKB:S8F1T4)\n\n\
+    causal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED                 \
+    \  component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 018c46b88b1e4003d905451addfe4fbe15eff0f759bbf98444c89b34777985b1
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/rhoptry_neck.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '12 of 16 collected target identifiers returned OK. PMID:16002398: UNREACHABLE;
+    Exact native MED identity independently verifies PMID, title, DOI and PMC/null
+    mapping after bulk eutils414 failure. Abstract and body scientific scopes remain
+    separately bounded.; PMID:16244709: UNREACHABLE; Exact native MED identity independently
+    verifies PMID, title, DOI and PMC/null mapping after bulk eutils414 failure. Abstract
+    and body scientific scopes remain separately bounded.; PMID:19247437: UNREACHABLE;
+    Exact native MED identity independently verifies PMID, title, DOI and PMC/null
+    mapping after bulk eutils414 failure. Abstract and body scientific scopes remain
+    separately bounded.; PMID:21347343: UNREACHABLE; Exact native MED identity independently
+    verifies PMID, title, DOI and PMC/null mapping after bulk eutils414 failure. Abstract
+    and body scientific scopes remain separately bounded. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact authority and compartment boundaries
+  outcome: supported
+  target_ids:
+  - GO:1990225
+  summary: GO1990225 exactly identifies the narrow apical rhoptry domain; the shortened
+    record definition faithfully preserves identity and rhoptry parthood. The neck
+    is not presented as an independent membrane-bounded organelle.
+  evidence_ids:
+  - record
+  - rhoptry-agent-go
+  - rhoptry-agent-go-rhoptry-isa
+  - rhoptry-agent-boothroyd2008-publisher
+  - rhoptry-agent-bradley2005-browser
+  - rhoptry-agent-bradley2005-browser2
+- assessment_id: proteins
+  area: grounding
+  topic: Declared cohorts, identity and experimental context
+  outcome: supported
+  target_ids:
+  - GO:1990225
+  summary: The RON cohort is a localization/function grouping, not one protein family.
+    Bradley plus Alexander and the independently inspected Besteiro paper support
+    the named neck/MJ examples; the native accessions, statuses, genes and species/strain
+    pairs are correct. Annotation-source notes accurately report the native ECO/PMID
+    links, not independent proof of every experimental result. No exact universal
+    RON family or fixed stoichiometry is inferred.
+  evidence_ids:
+  - record
+  - rhoptry-agent-bradley2005-browser2
+  - rhoptry-agent-alexander2005-jats
+  - rhoptry-agent-besteiro2009-jats
+  - rhoptry-agent-protein-B6KV60
+  - rhoptry-agent-protein-B6KJ32
+  - rhoptry-agent-protein-S8ERS3
+  - rhoptry-agent-protein-S8F1T4
+  - rhoptry-agent-reviewed-uniqueness
+  - rhoptry-agent-boothroyd2008-meta
+  - rhoptry-agent-waller2024-meta
+  - rhoptry-agent-alexander2005-meta
+  - rhoptry-agent-PMID-16002398
+  - rhoptry-agent-PMID-16244709
+  - rhoptry-agent-PMID-19247437
+  - rhoptry-agent-PMID-21347343
+- assessment_id: necessity
+  area: grounding
+  topic: Unknown protein formation requirements
+  outcome: unknown
+  target_ids:
+  - GO:1990225
+  summary: Protein cohorts already use UNKNOWN. Localization, moving-junction activity
+    and invasion phenotypes do not establish necessity of each protein for forming
+    the rhoptry or neck. Alexander explicitly qualifies unsuccessful RON4 deletion;
+    no universal essentiality is inferred.
+  evidence_ids:
+  - record
+  - schema
+  - rhoptry-agent-alexander2005-jats
+  - rhoptry-agent-besteiro2009-jats
+- assessment_id: taxa
+  area: scope
+  topic: Apicomplexan context and Toxoplasma examples
+  outcome: supported
+  target_ids:
+  - GO:1990225
+  summary: Exact Eukaryota/Apicomplexa/Toxoplasma identities and any ME49 accession
+    pairs are verified. Primary experiments use their stated RH-derived cultures and
+    other explicitly reported strains; the record does not claim all accession examples
+    were the experimentally tested strain. Apicomplexan secretory-organelle context
+    is supported by native definitions and the inspected secondary glossary. COMMON
+    remains qualitative with lineage/stage variation, not a measured census; Waller
+    body-specific claims remain access-limited.
+  evidence_ids:
+  - record
+  - rhoptry-agent-go
+  - rhoptry-agent-go-rhoptry-isa
+  - rhoptry-agent-boothroyd2008-publisher
+  - rhoptry-agent-bradley2005-browser
+  - rhoptry-agent-bradley2005-browser2
+  - rhoptry-agent-tax2759
+  - rhoptry-agent-tax5794
+  - rhoptry-agent-tax5811
+  - rhoptry-agent-tax508771
+  - rhoptry-agent-waller2024-meta
+  - rhoptry-agent-alexander2005-jats
+  - rhoptry-agent-besteiro2009-jats
+- assessment_id: canonical
+  area: evidence
+  topic: Separate proteomics from moving-junction deployment
+  outcome: concern
+  target_ids:
+  - GO:1990225
+  summary: The canonical example combines two correct biological observations but
+    attaches only Bradley PMID16002398. Its inspected primary localization/proteomics
+    work does not demonstrate moving-junction deployment; Alexander directly provides
+    that experiment and is already cited elsewhere in the target. The canonical citation
+    should be split or supplemented.
+  evidence_ids:
+  - record
+  - rhoptry-agent-bradley2005-browser2
+  - rhoptry-agent-alexander2005-jats
+- assessment_id: graph
+  area: graph
+  topic: Exact graph claims and source scope
+  outcome: supported
+  target_ids:
+  - GO:1990225
+  summary: Four NONMECHANISTIC edges combine neck parthood, RON residence, MJ assembly
+    and invasion support. The description explicitly anchors RON deployment to Toxoplasma;
+    no universal identical molecular inventory is inferred.
+  evidence_ids:
+  - record
+  - rhoptry-agent-go
+  - rhoptry-agent-go-rhoptry-isa
+  - rhoptry-agent-boothroyd2008-publisher
+  - rhoptry-agent-bradley2005-browser
+  - rhoptry-agent-bradley2005-browser2
+  - rhoptry-agent-alexander2005-jats
+  - rhoptry-agent-besteiro2009-jats
+- assessment_id: coverage
+  area: completeness
+  topic: Complete record with bounded enrichment tasks
+  outcome: supported
+  target_ids:
+  - GO:1990225
+  summary: Every field, evidence placement, protein example where present, graph,
+    history and discussion was read. Heterogeneous RON/ROP cohort family withholding
+    and the membrane label-only material task do not require invented family or lipid
+    identifiers. Historical retrieval notes are not made false by current access.
+    No image or verbatim evidence snippet is asserted.
+  evidence_ids:
+  - record
+  - schema
+  - rhoptry-agent-go
+  - rhoptry-agent-boothroyd2008-publisher
+  - rhoptry-agent-bradley2005-browser2
+  - rhoptry-agent-alexander2005-jats
+findings:
+- finding_id: F1
+  issue_key: rhoptry_neck-canonical-source-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Attribute moving-junction deployment to its actual experiment
+  description: canonical_examples[0] attributes both rhoptry proteomics and RON moving-junction
+    deployment solely to PMID16002398. Bradley establishes protein identification/localization;
+    Alexander2005 directly studies moving-junction deployment. Supplement/split the
+    canonical reference or narrow the note to Bradley’s demonstrated scope.
+  target_ids:
+  - GO:1990225
+  field_paths:
+  - canonical_examples[0].note
+  - canonical_examples[0].reference
+  evidence_ids:
+  - record
+  - rhoptry-agent-bradley2005-browser2
+  - rhoptry-agent-alexander2005-jats
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/rhoptry_neck.yaml
+    role: maintained scientific record
+  rule_id: Exact typed identity and source-specific evidence placement
+  native_severity: minor
+  normalization_reason: The Toxoplasma biology is independently supported and the
+    deployment paper is already elsewhere in the record; this is a bounded source-attribution
+    correction.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990225
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/rhoptry_neck.yaml
+    role: maintained scientific record
+  description: In separate authorized curation, add the directly supporting moving-junction
+    source to the canonical example, or restrict its note to Bradley proteomics/localization.
+  acceptance_checks:
+  - Exact maintained claims and evidence placement match the directly supporting source.
+  - Supported parthood, organism context and protein identities remain intact.
+  - Native schema, strict, CURIE, protein, graph and history checks pass as applicable.
+limitations:
+- Boothroyd2008 publisher200 supplies Key Points/Abstract/Glossary only; its main
+  body was not read. Waller2024 complete native abstract/metadata were read, but EPMC500
+  and both native PMC200 challenge responses supplied no body. Those source-specific
+  claims remain access-limited.
+- Bradley2005 primary text was read only in the explicitly listed browser-captured
+  Methods/Results/Discussion extents. Representations have status:null and contain
+  platform context that is excluded. No claim of native PDF or entire-paper access
+  is made.
+- Alexander/Besteiro and, for whole rhoptry, Ben Chaabene genuine primary bodies were
+  inspected in the exact named sections. Captions were read; microscopy pixels, supplements
+  and raw experimental data were not reanalyzed. RH-derived experimental strains are
+  not silently replaced by ME49 example accessions.
+- The native annotation links and complete abstracts for the additional protein citation
+  studies were checked; their entire bodies were not independently read. Identity,
+  native experimental annotation, direct paper support and whole-cohort membership
+  remain distinct evidence levels.
+- Whole rhoptry has no GO0043231 entry in the inspected is_a-only ancestor list; the
+  biological membrane-bounded-organelle classification is definition/morphology-supported,
+  not a claimed native ancestry edge.
+- Individual molecular formation necessity, exact lipid composition and uniform freely
+  soluble topology of every ROP remain unknown. Heterogeneous localization cohorts
+  are not single protein families; no exhaustive taxonomic prevalence census was performed.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User expressly requests one review for every unreviewed record, including qualified
+  clean reviews. Scientific records and history were not edited.
+- 'iModulonDB is not applicable: these claims concern physical secretory compartments
+  and invasion rather than expression-module membership.'
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
