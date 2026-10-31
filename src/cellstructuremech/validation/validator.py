@@ -1,4 +1,4 @@
-"""Semantic validation checks for CellStructureRecord documents (#2408, #2410, #2417, #2428, #2457).
+"""Semantic validation checks for CellStructureRecord documents (#2408, #2410, #2417, #2428, #2457, #2472).
 
 Complements closed-schema LinkML validation (``write_validated.py``) with
 cross-field and graph-completeness invariants that JSON Schema alone cannot
@@ -20,9 +20,14 @@ express:
   or ``cellstructuremech:`` structure/complex ``grounding`` or references a
   ``PROTEIN_COMPLEX`` component grounded to ``GO:`` or ``cellstructuremech:``
   (such multiprotein complexes/substructures must use ``node_type: STRUCTURE``).
+- Every ``functions[]`` entry that matches a ``CausalNode`` by ``function_id`` /
+  ``node_id``, ``label``, or ``grounding`` agrees on ``GO:`` ``grounding`` and
+  does not contradict the GO aspect (``MOLECULAR_FUNCTION`` vs
+  ``BIOLOGICAL_PROCESS``) documented in the function or GO reference evidence.
 - Every ``components[].protein_examples[].gene_symbol`` is included in a
   non-empty parent ``components[].gene_symbols`` list or explicitly disclosed
-  as an organism-specific synonym/locus tag in ``protein_examples[].role``.
+  as an organism-specific synonym/locus tag in ``protein_examples[].role``
+  (including components whose ``gene_symbols`` list is empty).
 - Every ``curation_history`` entry with ``action == 'CURATED_CAUSAL_GRAPH'``
   that names a target causal-graph slug resolves to a declared
   ``causal_graphs[].graph_id`` on the record.
@@ -53,6 +58,8 @@ _SYNONYM_ROLE_RE = re.compile(
     r"\bgene ([^\s,()]+), which UniProt lists (?:under the primary name\b|without a gene symbol\b)"
 )
 _ALSO_SYNONYM_RE = re.compile(r"\(also declared as (?:synonym|locus tag)[s]? ([^)]+)\)")
+_MF_ASPECT_TOKENS = ("molecular-function", "molecular_function", "molecular function")
+_BP_ASPECT_TOKENS = ("biological-process", "biological_process", "biological process")
 
 
 def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
@@ -64,6 +71,15 @@ def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
         if isinstance(c, dict) and c.get("component_id")
     }
     comp_ids = set(comps_by_id)
+    funcs = [f for f in (doc.get("functions") or []) if isinstance(f, dict)]
+    record_go_ev_notes: dict[str, list[str]] = {}
+    for ev in doc.get("evidence") or []:
+        if not isinstance(ev, dict):
+            continue
+        ref = str(ev.get("reference") or "").strip()
+        notes = str(ev.get("notes") or "").strip()
+        if ref.startswith("GO:") and notes:
+            record_go_ev_notes.setdefault(ref, []).append(notes.lower())
     for graph in doc.get("causal_graphs") or []:
         if not isinstance(graph, dict):
             continue
@@ -73,6 +89,7 @@ def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
         node_ids = {n.get("node_id") for n in nodes if n.get("node_id")}
 
         incident: set[str] = set()
+        edge_go_ev_notes: dict[str, list[str]] = {}
         for idx, edge in enumerate(edges):
             subj = edge.get("subject")
             obj = edge.get("object")
@@ -93,6 +110,13 @@ def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
                 errors.append(
                     f"{gid}: edge[{idx}] ({subj} -> {obj}) lacks a non-empty description"
                 )
+            for ev in edge.get("evidence") or []:
+                if not isinstance(ev, dict):
+                    continue
+                ref = str(ev.get("reference") or "").strip()
+                notes = str(ev.get("notes") or "").strip()
+                if ref.startswith("GO:") and notes:
+                    edge_go_ev_notes.setdefault(ref, []).append(notes.lower())
 
         for node in nodes:
             nid = node.get("node_id")
@@ -157,6 +181,65 @@ def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
                     f"grounding {grounding!r} conflicting with referenced component "
                     f"grounding {comp_grounding!r}"
                 )
+
+            nid_str = str(nid or "").strip()
+            nlabel = str(node.get("label") or "").strip().lower()
+            ntype = node.get("node_type")
+            for fn in funcs:
+                fid = str(fn.get("function_id") or "").strip()
+                flabel = str(fn.get("label") or "").strip().lower()
+                fgrounding = str(fn.get("grounding") or "").strip()
+                same_id_or_label = (bool(fid) and fid == nid_str) or (
+                    bool(flabel) and flabel == nlabel
+                )
+                same_grounding = (
+                    bool(fgrounding) and bool(grounding) and fgrounding == grounding
+                )
+                if same_id_or_label:
+                    if not fgrounding and grounding.startswith("GO:"):
+                        errors.append(
+                            f"functions#{fid or '<function>'}: omits grounding {grounding!r} "
+                            f"present on matching CausalNode {nid_str!r} in {gid}"
+                        )
+                    elif fgrounding.startswith("GO:") and not grounding:
+                        errors.append(
+                            f"{gid}: node {nid_str!r} omits grounding {fgrounding!r} "
+                            f"from matching functions#{fid or '<function>'}"
+                        )
+                    elif fgrounding and grounding and fgrounding != grounding:
+                        errors.append(
+                            f"{gid}: node {nid_str!r} has grounding {grounding!r} "
+                            f"conflicting with matching functions#{fid or '<function>'} "
+                            f"grounding {fgrounding!r}"
+                        )
+                if same_id_or_label or same_grounding:
+                    go_curie = grounding or fgrounding
+                    fn_ev_notes = [
+                        str(ev.get("notes") or "").lower()
+                        for ev in (fn.get("evidence") or [])
+                        if isinstance(ev, dict)
+                    ]
+                    aspect_notes = " ".join(
+                        [
+                            *fn_ev_notes,
+                            *(record_go_ev_notes.get(go_curie) or []),
+                            *(edge_go_ev_notes.get(go_curie) or []),
+                        ]
+                    )
+                    has_mf = any(tok in aspect_notes for tok in _MF_ASPECT_TOKENS)
+                    has_bp = any(tok in aspect_notes for tok in _BP_ASPECT_TOKENS)
+                    if ntype == "BIOLOGICAL_PROCESS" and has_mf and not has_bp:
+                        errors.append(
+                            f"{gid}: node {nid_str!r} ({go_curie!r}) has node_type "
+                            f"'BIOLOGICAL_PROCESS' contradicting molecular_function aspect "
+                            f"on functions#{fid or '<function>'} (expected 'MOLECULAR_FUNCTION')"
+                        )
+                    elif ntype == "MOLECULAR_FUNCTION" and has_bp and not has_mf:
+                        errors.append(
+                            f"{gid}: node {nid_str!r} ({go_curie!r}) has node_type "
+                            f"'MOLECULAR_FUNCTION' contradicting biological_process aspect "
+                            f"on functions#{fid or '<function>'} (expected 'BIOLOGICAL_PROCESS')"
+                        )
     return errors
 
 
@@ -221,6 +304,21 @@ def validate_component_protein_examples(doc: dict[str, Any]) -> list[str]:
             if s is not None and str(s).strip()
         ]
         if not gs:
+            for pe in comp.get("protein_examples") or []:
+                if not isinstance(pe, dict):
+                    continue
+                pe_sym = str(pe.get("gene_symbol") or "").strip()
+                if not pe_sym:
+                    continue
+                role = str(pe.get("role") or "")
+                if "declared gene symbol" not in role.lower() and (
+                    _SYNONYM_ROLE_RE.search(role) or _ALSO_SYNONYM_RE.search(role)
+                ):
+                    continue
+                errors.append(
+                    f"components#{cid}: protein_example {pe.get('uniprot_id')!r} "
+                    f"declares gene_symbol {pe_sym!r} on a component with empty gene_symbols"
+                )
             continue
         gs_lower = {s.lower() for s in gs}
         for pe in comp.get("protein_examples") or []:
