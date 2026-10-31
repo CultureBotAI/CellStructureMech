@@ -2,10 +2,11 @@ identifier: GO:0009376
 label: HslUV protease complex
 structure_category: OTHER
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: An ATP-dependent protease complex present in many Bacteria and Eukarya,
-  composed of stacking HslU (ClpY) hexameric AAA+ ATPase rings and HslV (ClpQ) dodecameric
-  peptidase double rings; recognizes, unfolds, and translocates protein substrates
-  such as the cell division inhibitor SulA into the HslV proteolytic chamber.
+definition: A protein complex that possesses ATP-dependent protease activity; consists
+  of an ATPase large subunit with homology to other ClpX family ATPases and a peptidase
+  small subunit related to the proteasomal beta-subunits of eukaryotes. In the E.
+  coli complex, a double ring-shaped homohexamer of HslV is capped on each side by
+  a ring-shaped HslU homohexamer.
 definition_source: GO:0009376
 mapping_status: PROPOSED
 synonyms:
@@ -242,4 +243,9 @@ curation_history:
   action: CURATE_PROTEIN_EXAMPLES
   changes: Recorded declared clpY and clpQ synonym mappings on the reviewed Escherichia
     coli K-12 HslU and HslV UniProtKB protein_examples (P0A6H5, P0A7B8).
+  llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ALIGNED_GO_DEFINITION
+  changes: Aligned definition to official GO:0009376 text (#2489).
   llm_assisted: true

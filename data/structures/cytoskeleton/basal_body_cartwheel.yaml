@@ -29,6 +29,12 @@ curation_history:
     aligned discussions#newer_trichonympha_source prose citation with structured discussions[3].evidence
     (DOI:10.1073/pnas.2612170123).'
   llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ADDED_HAS_PART_LINKS
+  changes: Added reciprocal has_part links to basal_body_cartwheel_inner_density,
+    basal_body_d2_rod, and basal_body_filamentous_cartwheel_inner_density (#2490).
+  llm_assisted: true
 parent_structures:
 - GO:0032991
 part_of:
@@ -305,3 +311,7 @@ images:
     Original image visually inspected without modification. The JATS caption contains
     inconsistent panel lettering; the curated caption follows the graphic labels.
     Symmetrized panels are processed views, not raw observations.
+has_part:
+- cellstructuremech:basal_body_cartwheel_inner_density
+- cellstructuremech:basal_body_d2_rod
+- cellstructuremech:basal_body_filamentous_cartwheel_inner_density

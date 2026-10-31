@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/reservosome_membrane.yaml
+  slug: reservosome_membrane
+session:
+  id: 2026-10-31T150259Z-antigravity-3e2bf7
+  timestamp: '2026-10-31T15:02:59Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2490
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - taxonomic_distribution
+  - causal_graphs
+  - curation_history
+  summary: Align GO:0106126 definition, add VARIABLE presence note, and mark 2-node graph
+    NONMECHANISTIC
+  details: 'Replaced custom definition with official GO:0106126 text (''The lipid bilayer
+    surrounding a reservosome.''), added life-cycle stage explanation for presence: VARIABLE
+    on Trypanosoma cruzi (NCBITaxon:5693), and updated reservosome_membrane_mechanism to graph_kind:
+    FUNCTION and scope_status: NONMECHANISTIC (#2490).'

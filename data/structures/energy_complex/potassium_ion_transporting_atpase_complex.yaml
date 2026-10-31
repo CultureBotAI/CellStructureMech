@@ -2,10 +2,11 @@ identifier: GO:0031004
 label: potassium ion-transporting ATPase complex
 structure_category: ENERGY_COMPLEX
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: A heterotetrameric P-type ATPase complex (KdpFABC) in the prokaryotic
-  plasma membrane that couples ATP hydrolysis in the KdpB P-type ATPase subunit to
-  high-affinity potassium ion import through the channel-like KdpA selectivity filter
-  and inter-subunit intramembrane tunnel, stabilized by KdpC and KdpF.
+definition: 'Protein complex that carries out the reaction: ATP + H2O + K+(out) =
+  ADP + phosphate + K+(in). It is a high affinity potassium uptake system. The E.
+  coli complex consists of 4 proteins: KdpA is the potassium ion translocase, KdpB
+  is the ATPase, and KdpC and KdpF seem to be involved in assembly and stabilization
+  of the complex.'
 definition_source: GO:0031004
 mapping_status: PROPOSED
 synonyms:
@@ -229,6 +230,11 @@ evidence:
     of KdpFABC.
 - reference: DOI:10.1073/pnas.2105195118
   notes: DOI for PMID:34272288.
+- reference: PMID:41384914
+  snippet: KdpFABC is an ATP-dependent membrane complex that enables prokaryotes to
+    maintain potassium homeostasis under potassium-limited conditions.
+  notes: Establishes the physiological role of KdpFABC in prokaryotic potassium homeostasis
+    under potassium-limited conditions.
 causal_graphs:
 - graph_id: kdpfabc_potassium_pumping
   title: KdpFABC Inter-Subunit Tunnel Conduction and ATP-Driven Potassium Import
@@ -344,4 +350,10 @@ curation_history:
   changes: Added potassium ion-transporting ATPase complex (GO:0031004) with InterPro-grounded
     components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim
     literature snippets, and a mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ALIGNED_GO_DEFINITION_AND_EVIDENCE
+  changes: Aligned definition to official GO:0031004 text and added PMID:41384914
+    to top-level evidence (#2489).
   llm_assisted: true

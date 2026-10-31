@@ -2416,7 +2416,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/division_machinery/sid2_mob1_complex.html",
-  "definition": "A conserved fungal NDR-family protein kinase complex localized to the spindle pole body and medial cell division site, composed of the catalytic serine/threonine protein kinase Sid2 (fission yeast) or Dbf2/Dbf20 (budding yeast) bound to its regulatory activator subunit Mob1; acts as the terminal effector kinase complex of the septation initiation network (SIN) and mitotic exit network (MEN) to trigger mitotic exit, Cdc14 release, and cytokinetic septum assembly.",
+  "definition": "A protein complex that contains a protein kinase (Sid2 in S. pombe) and its regulatory subunit (Mob1). The Sid2p-Mob1p kinase complex is a component of the septation initiation network in fission yeast (called the mitotic exit network in S. cerevisiae) and is required for cytokinesis. The analogous complex in S. cerevisiae is called Dbf2p-Mob1p complex.",
   "synonyms": "Dbf2p-Mob1p complex Sid2-Mob1 kinase complex Sid2p-Mob1p complex"
  },
  {
@@ -2696,7 +2696,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/energy_complex/potassium_ion_transporting_atpase_complex.html",
-  "definition": "A heterotetrameric P-type ATPase complex (KdpFABC) in the prokaryotic plasma membrane that couples ATP hydrolysis in the KdpB P-type ATPase subunit to high-affinity potassium ion import through the channel-like KdpA selectivity filter and inter-subunit intramembrane tunnel, stabilized by KdpC and KdpF.",
+  "definition": "Protein complex that carries out the reaction: ATP + H2O + K+(out) = ADP + phosphate + K+(in). It is a high affinity potassium uptake system. The E. coli complex consists of 4 proteins: KdpA is the potassium ion translocase, KdpB is the ATPase, and KdpC and KdpF seem to be involved in assembly and stabilization of the complex.",
   "synonyms": "Kdp system complex"
  },
  {
@@ -5326,7 +5326,7 @@
   "kind": "MEMBRANE",
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/reservosome_membrane.html",
-  "definition": "The lipid bilayer surrounding a reservosome. The limiting lipid bilayer membrane surrounding the reservosome in Trypanosoma cruzi epimastigotes. It is enriched in ergosterol, P-type H+-ATPases, ABC transporters, and membrane-tethered Rab11 GTPases that mediate endocytic vesicle fusion, luminal acidification, and regulated lipid and protein mobilization during metacyclogenesis.",
+  "definition": "The lipid bilayer surrounding a reservosome.",
   "synonyms": ""
  },
  {
@@ -5816,7 +5816,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/other/atg12_atg5_atg16_complex.html",
-  "definition": "A heterohexameric ubiquitin-like E3 ligase complex localized to the phagophore assembly site (pre-autophagosomal structure, PAS) in yeast and other eukaryotes, formed by two copies of the covalent Atg12-Atg5 conjugate bound to a homodimer of coiled-coil Atg16; stimulates Atg3-mediated conjugation of Atg8 to phosphatidylethanolamine (PE) and scaffolds membrane shaping during autophagosome biogenesis.",
+  "definition": "A protein complex required for the expansion of the autophagosomal membrane. In budding yeast, this complex consists of Atg12p, Atg5p and Atg16p.",
   "synonyms": ""
  },
  {
@@ -6136,7 +6136,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/other/cobalamin_transport_complex.html",
-  "definition": "A type II ATP-binding cassette (ABC) importer complex (BtuCD-F) in the bacterial inner membrane and periplasm, composed of the periplasmic cobalamin-binding protein BtuF, homodimeric transmembrane permease subunits BtuC2, and homodimeric ATP-binding cassette subunits BtuD2, which mediates ATP-driven import of vitamin B12 (cobalamin) and cobinamide into the cytoplasm.",
+  "definition": "Protein complex facilitating ATP-dependent cobalamin (vitamin B12) transport through inner cell membrane (periplasm to cytoplasm) in Gram-negative bacteria. In E. coli the system is composed of a periplasmic cobalamin-binding protein (BtuF), an integral membrane homodimer, BtuC, and a cytoplasmic ATP-binding homodimer BtuD.",
   "synonyms": "BtuCDF complex cobalamin-transporting BtuCDF complex vitamin B12 transport complex vitamin B12-transporting BtuCDF complex"
  },
  {
@@ -6696,7 +6696,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/other/ekc_keops_complex.html",
-  "definition": "A multiprotein complex conserved across Archaea and Eukarya (composed of Kae1, Bud32, Cgi121, Pcc1, and in fungi/metazoa Gon7) that catalyzes the biosynthesis of the essential N(6)-L-threonylcarbamoyladenine (t6A) modification at position 37 of ANN-decoding tRNAs and supports telomere maintenance and transcription.",
+  "definition": "A protein complex involved in t6A tRNA modification. For example, in Saccharomyces cerevisiae the complex contains Bud32p, Kae1p, Gon7p, Cgi121p, and Pcc1p.",
   "synonyms": "KEOPS/EKC complex endopeptidase-like kinase chromatin-associated protein complex kinase, putative endopeptidase and other proteins of small size protein complex"
  },
  {
@@ -7106,7 +7106,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/other/hsluv_protease_complex.html",
-  "definition": "An ATP-dependent protease complex present in many Bacteria and Eukarya, composed of stacking HslU (ClpY) hexameric AAA+ ATPase rings and HslV (ClpQ) dodecameric peptidase double rings; recognizes, unfolds, and translocates protein substrates such as the cell division inhibitor SulA into the HslV proteolytic chamber.",
+  "definition": "A protein complex that possesses ATP-dependent protease activity; consists of an ATPase large subunit with homology to other ClpX family ATPases and a peptidase small subunit related to the proteasomal beta-subunits of eukaryotes. In the E. coli complex, a double ring-shaped homohexamer of HslV is capped on each side by a ring-shaped HslU homohexamer.",
   "synonyms": "ClpYQ protease complex"
  },
  {
@@ -7266,7 +7266,7 @@
   "kind": "MULTIPROTEIN_COMPLEX",
   "status": "PROPOSED",
   "page": "structures/other/maltose_transport_complex.html",
-  "definition": "A pentameric ATP-binding cassette (ABC) importer complex (MalEFGK2) in the bacterial inner membrane and periplasm, composed of the periplasmic maltose/maltodextrin-binding protein MalE, heterodimeric transmembrane permease subunits MalF and MalG, and homodimeric ATP-binding cassette subunits MalK2.",
+  "definition": "Protein complex facilitating ATP-dependent maltose transport through inner cell membrane (periplasm to cytoplasm) in Gram-negative bacteria. In E. coli the system is composed of a periplasmic maltose-binding protein (MBP), two integral membrane proteins, MalF and MalG, and two copies of the cytoplasmic ATP-binding cassette MalK.",
   "synonyms": "maltose ABC transporter complex maltose ATP-binding cassette transporter complex"
  },
  {

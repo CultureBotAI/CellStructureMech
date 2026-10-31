@@ -2,11 +2,7 @@ identifier: GO:0106126
 label: reservosome membrane
 structure_category: MEMBRANE_ORGANELLE
 structure_kind: MEMBRANE
-definition: The lipid bilayer surrounding a reservosome. The limiting lipid bilayer
-  membrane surrounding the reservosome in Trypanosoma cruzi epimastigotes. It is enriched
-  in ergosterol, P-type H+-ATPases, ABC transporters, and membrane-tethered Rab11
-  GTPases that mediate endocytic vesicle fusion, luminal acidification, and regulated
-  lipid and protein mobilization during metacyclogenesis.
+definition: The lipid bilayer surrounding a reservosome.
 definition_source: GO:0106126
 mapping_status: PROPOSED
 parent_structures:
@@ -17,8 +13,8 @@ taxonomic_distribution:
 - taxon_id: NCBITaxon:5693
   taxon_label: Trypanosoma cruzi
   presence: VARIABLE
-  note: Reservosome lumens occur in reservosomes of T. cruzi epimastigotes and are
-    absent from amastigote and trypomastigote life-cycle forms that lack reservosomes.
+  note: Reservosome membranes bound the reservosomes of T. cruzi epimastigotes and
+    are absent from amastigote and trypomastigote life-cycle forms that lack reservosomes.
   reference: DOI:10.1017/S0031182004005797
 canonical_examples:
 - taxon_id: NCBITaxon:5693
@@ -57,8 +53,8 @@ causal_graphs:
   title: Reservosome membrane assembly and functional mechanism
   description: Directed causal graph linking constituent components and compartmental
     context of reservosome membrane (GO:0106126) to its biological functions.
-  graph_kind: ASSEMBLY
-  scope_status: MECHANISTIC
+  graph_kind: FUNCTION
+  scope_status: NONMECHANISTIC
   nodes:
   - node_id: reservosome_membrane
     label: reservosome membrane
@@ -81,6 +77,9 @@ causal_graphs:
     - reference: PMID:18452191
       notes: PubMed record for the Sant'Anna et al. 2008 reservosome ultrastructure
         study.
+  scope_notes: Two-node structural parthood edge linking the reservosome membrane
+    to the reservosome organelle; specific membrane-trafficking and fusion steps remain
+    to be expanded.
 curation_history:
 - timestamp: '2026-10-19T05:27:39Z'
   curator: claude-opus-4-7
@@ -88,4 +87,11 @@ curation_history:
   changes: Initial curation of reservosome membrane (GO:0106126) in category MEMBRANE_ORGANELLE
     with verified GO hierarchy, compartmental context, causal mechanism graph, and
     literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ALIGNED_GO_DEFINITION_AND_GRAPH_METADATA
+  changes: 'Aligned definition to official GO:0106126 text, added life-stage note
+    for presence: VARIABLE on NCBITaxon:5693, and downgraded 2-node parthood causal
+    graph to FUNCTION/NONMECHANISTIC (#2490).'
   llm_assisted: true

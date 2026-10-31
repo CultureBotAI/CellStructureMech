@@ -2,10 +2,8 @@ identifier: GO:0000408
 label: EKC/KEOPS complex
 structure_category: OTHER
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: A multiprotein complex conserved across Archaea and Eukarya (composed
-  of Kae1, Bud32, Cgi121, Pcc1, and in fungi/metazoa Gon7) that catalyzes the biosynthesis
-  of the essential N(6)-L-threonylcarbamoyladenine (t6A) modification at position
-  37 of ANN-decoding tRNAs and supports telomere maintenance and transcription.
+definition: A protein complex involved in t6A tRNA modification. For example, in Saccharomyces
+  cerevisiae the complex contains Bud32p, Kae1p, Gon7p, Cgi121p, and Pcc1p.
 definition_source: GO:0000408
 mapping_status: PROPOSED
 synonyms:
@@ -408,4 +406,9 @@ curation_history:
   action: CURATE_PROTEIN_EXAMPLES
   changes: Recorded declared PCC2 synonym mapping on the reviewed Saccharomyces cerevisiae
     S288C Gon7 UniProtKB protein_example (P46984).
+  llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ALIGNED_GO_DEFINITION
+  changes: Aligned definition to official GO:0000408 text (#2489).
   llm_assisted: true

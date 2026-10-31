@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hsluv_protease_complex.yaml
+  slug: hsluv_protease_complex
+session:
+  id: 2026-10-31T150259Z-antigravity-c4e009
+  timestamp: '2026-10-31T15:02:59Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2489
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - curation_history
+  summary: Align definition with official GO:0009376 text
+  details: Replaced custom HslUV summary in definition with the official GO:0009376 definition
+    verified via OAK sqlite:obo:go (#2489).

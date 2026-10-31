@@ -2,11 +2,10 @@ identifier: GO:1990191
 label: cobalamin transport complex
 structure_category: OTHER
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: A type II ATP-binding cassette (ABC) importer complex (BtuCD-F) in the
-  bacterial inner membrane and periplasm, composed of the periplasmic cobalamin-binding
-  protein BtuF, homodimeric transmembrane permease subunits BtuC2, and homodimeric
-  ATP-binding cassette subunits BtuD2, which mediates ATP-driven import of vitamin
-  B12 (cobalamin) and cobinamide into the cytoplasm.
+definition: Protein complex facilitating ATP-dependent cobalamin (vitamin B12) transport
+  through inner cell membrane (periplasm to cytoplasm) in Gram-negative bacteria.
+  In E. coli the system is composed of a periplasmic cobalamin-binding protein (BtuF),
+  an integral membrane homodimer, BtuC, and a cytoplasmic ATP-binding homodimer BtuD.
 definition_source: GO:1990191
 mapping_status: PROPOSED
 synonyms:
@@ -211,6 +210,16 @@ evidence:
   notes: Crystal structure and in vitro transport analysis of E. coli BtuCD-F.
 - reference: DOI:10.1038/srep41575
   notes: DOI for PMID:28128319.
+- reference: PMID:27457716
+  snippet: The Escherichia coli vitamin B12 ABC transporter BtuCD-F imports cobalamin
+    across the inner membrane into the cytoplasm.
+  notes: Supports inner-membrane cobalamin import by the E. coli BtuCD-F ABC transporter
+    complex.
+- reference: PMID:29084999
+  snippet: ATP binding and hydrolysis by the BtuD dimer drive conformational transitions
+    in the BtuC transmembrane subunits that translocate vitamin B12 into the cytoplasm.
+  notes: Establishes ATP-driven conformational coupling between BtuD and BtuC during
+    cobalamin translocation.
 causal_graphs:
 - graph_id: btucdf_cobalamin_import_mechanism
   title: BtuCD-F Periplasmic Capture and ATP-Driven Cobalamin Import
@@ -331,4 +340,10 @@ curation_history:
   action: CURATE_PROTEIN_EXAMPLES
   changes: Recorded declared yadT synonym mapping on the reviewed Escherichia coli
     K-12 BtuF UniProtKB protein_example (P37028).
+  llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ALIGNED_GO_DEFINITION_AND_EVIDENCE
+  changes: Aligned definition to official GO:1990191 text and added PMID:27457716
+    and PMID:29084999 to top-level evidence (#2489).
   llm_assisted: true
