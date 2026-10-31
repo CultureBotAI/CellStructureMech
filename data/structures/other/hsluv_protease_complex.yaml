@@ -39,7 +39,8 @@ components:
     taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
     retrieved_on: '2026-10-30'
-    role: Reviewed Escherichia coli K-12 HslU (ClpY) AAA+ unfoldase subunit.
+    role: Reviewed Escherichia coli K-12 HslU (ClpY) AAA+ unfoldase subunit (also
+      declared as synonym clpY).
     evidence:
     - reference: UniProtKB:P0A6H5
       notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 HslU.
@@ -77,7 +78,8 @@ components:
     taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
     retrieved_on: '2026-10-30'
-    role: Reviewed Escherichia coli K-12 HslV (ClpQ) peptidase subunit.
+    role: Reviewed Escherichia coli K-12 HslV (ClpQ) peptidase subunit (also declared
+      as synonym clpQ).
     evidence:
     - reference: UniProtKB:P0A7B8
       notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 HslV.
@@ -234,4 +236,10 @@ curation_history:
   changes: Added HslUV protease complex (GO:0009376) with InterPro-grounded components,
     reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
     snippets, and a mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-31T10:56:58Z'
+  curator: antigravity
+  action: CURATE_PROTEIN_EXAMPLES
+  changes: Recorded declared clpY and clpQ synonym mappings on the reviewed Escherichia
+    coli K-12 HslU and HslV UniProtKB protein_examples (P0A6H5, P0A7B8).
   llm_assisted: true

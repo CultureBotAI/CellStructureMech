@@ -50,7 +50,8 @@ components:
     taxon_label: Escherichia coli K-12
     entry_status: REVIEWED
     retrieved_on: '2026-10-30'
-    role: Reviewed Escherichia coli K-12 BtuF periplasmic vitamin B12-binding protein.
+    role: Reviewed Escherichia coli K-12 BtuF periplasmic vitamin B12-binding protein
+      (also declared as synonym yadT).
     evidence:
     - reference: UniProtKB:P37028
       notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 BtuF.
@@ -324,4 +325,10 @@ curation_history:
   changes: Added cobalamin transport complex (GO:1990191) with InterPro-grounded components,
     reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
     snippets, and a mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-31T10:56:58Z'
+  curator: antigravity
+  action: CURATE_PROTEIN_EXAMPLES
+  changes: Recorded declared yadT synonym mapping on the reviewed Escherichia coli
+    K-12 BtuF UniProtKB protein_example (P37028).
   llm_assisted: true

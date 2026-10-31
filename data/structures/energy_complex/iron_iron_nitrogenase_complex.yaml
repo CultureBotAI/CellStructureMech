@@ -192,7 +192,7 @@ components:
       Fe protein reductase of the iron-only nitrogenase.
   protein_examples:
   - uniprot_id: UniProtKB:Q07942
-    protein_label: Nitrogenase iron-only iron protein
+    protein_label: Nitrogenase iron protein 2
     gene_symbol: anfH
     taxon_id: NCBITaxon:1061
     taxon_label: Rhodobacter capsulatus
@@ -202,12 +202,12 @@ components:
       iron-iron nitrogenase complex.
     evidence:
     - reference: UniProtKB:Q07942
-      notes: Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-only
-        iron protein (anfH).
+      notes: Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron
+        protein 2 (anfH).
     - reference: PMID:8332060
       notes: Schueddekopf et al. 1993 characterized R. capsulatus anfH.
   - uniprot_id: UniProtKB:P16269
-    protein_label: Nitrogenase iron-only iron protein
+    protein_label: Nitrogenase iron protein 3
     gene_symbol: anfH
     taxon_id: NCBITaxon:354
     taxon_label: Azotobacter vinelandii
@@ -217,8 +217,8 @@ components:
       iron-iron nitrogenase complex.
     evidence:
     - reference: UniProtKB:P16269
-      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-only
-        iron protein (anfH).
+      notes: Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron
+        protein 3 (anfH).
     - reference: PMID:2644222
       notes: Joerger et al. 1989 characterized A. vinelandii anfH.
 taxonomic_distribution:
@@ -388,4 +388,11 @@ curation_history:
     with verified GO identity, source-backed components, reviewed UniProtKB protein
     examples, taxonomic distribution, canonical examples, functions, and mechanistic
     causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-31T10:59:40Z'
+  curator: antigravity
+  action: CURATE_PROTEIN_EXAMPLES
+  changes: Aligned UniProtKB:Q07942 and UniProtKB:P16269 protein_label values on component
+    anfh_reductase_subunit to their canonical Swiss-Prot recommended names ('Nitrogenase
+    iron protein 2' and 'Nitrogenase iron protein 3').
   llm_assisted: true

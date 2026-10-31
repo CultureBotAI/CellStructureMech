@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/division_machinery/sid2_mob1_complex.yaml
+  slug: sid2_mob1_complex
+session:
+  id: 2026-10-31T110100Z-antigravity-37d954
+  timestamp: '2026-10-31T11:01:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Add reviewed UniProtKB:P32328 (DBF20) protein example to sid2_dbf2_kinase_subunit
+  details: Added reviewed Swiss-Prot entry UniProtKB:P32328 (Serine/threonine-protein kinase
+    DBF20) in Saccharomyces cerevisiae S288C (NCBITaxon:559292) to component sid2_dbf2_kinase_subunit
+    so all three declared gene symbols (sid2, DBF2, DBF20) on the component and its causal_graphs
+    node are covered.
