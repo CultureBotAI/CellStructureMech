@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/energy_complex/iron_iron_nitrogenase_complex.yaml
+  slug: iron_iron_nitrogenase_complex
+session:
+  id: 2026-10-31T110100Z-antigravity-e117ae
+  timestamp: '2026-10-31T11:01:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Align AnfH UniProtKB:Q07942 and UniProtKB:P16269 protein_label values with Swiss-Prot
+  details: Aligned protein_label values on component anfh_reductase_subunit for UniProtKB:Q07942
+    (Rhodobacter capsulatus) and UniProtKB:P16269 (Azotobacter vinelandii) to their canonical
+    Swiss-Prot recommended names ('Nitrogenase iron protein 2' and 'Nitrogenase iron protein
+    3') so scripts/uniprot_genes.py --verify passes cleanly.

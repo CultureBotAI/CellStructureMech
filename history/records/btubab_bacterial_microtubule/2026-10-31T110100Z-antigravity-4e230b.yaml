@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/btubab_bacterial_microtubule.yaml
+  slug: btubab_bacterial_microtubule
+session:
+  id: 2026-10-31T110100Z-antigravity-4e230b
+  timestamp: '2026-10-31T11:01:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Add verified Prosthecobacter vanneervenii BtubC (bklc) protein_example UniProtKB:A8Y5U5
+  details: Added unreviewed (TrEMBL) entry UniProtKB:A8Y5U5 (Bacterial kinesin light chain,
+    gene symbol bklc) in Prosthecobacter vanneervenii (NCBITaxon:48466) to component btubc
+    for declared symbol btubC, covering causal_graphs node btubc.

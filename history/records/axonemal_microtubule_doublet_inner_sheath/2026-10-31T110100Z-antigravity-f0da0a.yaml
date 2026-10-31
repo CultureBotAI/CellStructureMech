@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml
+  slug: axonemal_microtubule_doublet_inner_sheath
+session:
+  id: 2026-10-31T110100Z-antigravity-f0da0a
+  timestamp: '2026-10-31T11:01:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Add verified Chlamydomonas reinhardtii RIB72 protein_example UniProtKB:Q8LKK4
+  details: Added unreviewed (TrEMBL) entry UniProtKB:Q8LKK4 (RIB72 protein) in Chlamydomonas
+    reinhardtii (NCBITaxon:3055) to component inner_sheath_mips for declared gene symbol RIB72.

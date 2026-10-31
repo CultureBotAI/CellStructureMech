@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1015,
- "corpus_updated": "2026-10-31 09:34:55 UTC",
- "corpus_digest": "a91904416c20",
+ "corpus_updated": "2026-10-31 10:59:40 UTC",
+ "corpus_digest": "c67d6814f042",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -28964,6 +28964,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 2 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-31T10:56:58Z",
+     "curator": "antigravity",
+     "action": "CURATE_PROTEIN_EXAMPLES",
+     "changes": "Added unreviewed (TrEMBL) UniProtKB:Q8LKK4 (RIB72 protein) in Chlamydomonas reinhardtii (NCBITaxon:3055) to component inner_sheath_mips for declared gene symbol RIB72.",
+     "llm_assisted": true
     }
    ],
    "part_of": [
@@ -29034,6 +29041,22 @@
         {
          "reference": "PMID:15998802",
          "notes": "Pazour GJ et al. 2005, ‘Proteomic analysis of a eukaryotic cilium.’, J Cell Biol. ECO:0000269 experimental evidence cited by UniProt for the 'Cell projection, cilium, flagellum' localisation of A8ILK1."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:Q8LKK4",
+       "protein_label": "RIB72 protein",
+       "gene_symbol": "RIB72",
+       "taxon_id": "NCBITaxon:3055",
+       "taxon_label": "Chlamydomonas reinhardtii",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-31",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene RIB72, which UniProt lists without a gene symbol, in Chlamydomonas reinhardtii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/Q8LKK4",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry Q8LKK4 (RIB72 protein) for gene RIB72 in Chlamydomonas reinhardtii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
         }
        ]
       }
@@ -35988,6 +36011,13 @@
      "action": "EDIT",
      "changes": "added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T10:56:58Z",
+     "curator": "antigravity",
+     "action": "CURATE_PROTEIN_EXAMPLES",
+     "changes": "Added unreviewed (TrEMBL) UniProtKB:A8Y5U5 (bklc/btubC) in Prosthecobacter vanneervenii (NCBITaxon:48466) to component btubc, covering causal_graphs node btubc.",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -36116,6 +36146,24 @@
       {
        "reference": "DOI:10.1038/srep45668",
        "notes": "Akendengue et al. 2017 reported that Bklc/BtubC co-localizes with the bacterial tubulin cytoskeleton and links Btub filaments to membranes in vitro."
+      }
+     ],
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:A8Y5U5",
+       "protein_label": "Bacterial kinesin light chain",
+       "gene_symbol": "bklc",
+       "taxon_id": "NCBITaxon:48466",
+       "taxon_label": "Prosthecobacter vanneervenii",
+       "entry_status": "UNREVIEWED",
+       "retrieved_on": "2026-10-31",
+       "role": "Representative unreviewed (TrEMBL) UniProtKB entry for gene btubC, which UniProt lists under the primary name bklc, in Prosthecobacter vanneervenii. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/A8Y5U5",
+         "notes": "UniProtKB unreviewed (TrEMBL) entry A8Y5U5 for gene btubC (bklc) in Prosthecobacter vanneervenii. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ]
     }
@@ -81348,6 +81396,22 @@
          "notes": "Establishes Dbf2 as the catalytic subunit of the budding yeast Dbf2-Mob1 MEN complex."
         }
        ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P32328",
+       "protein_label": "Serine/threonine-protein kinase DBF20",
+       "gene_symbol": "DBF20",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-31",
+       "role": "The single reviewed UniProtKB entry for gene DBF20 in Saccharomyces cerevisiae S288C, a taxon this record names. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "evidence": [
+        {
+         "reference": "https://www.uniprot.org/uniprotkb/P32328",
+         "notes": "UniProtKB reviewed (Swiss-Prot) entry P32328, the single reviewed entry for gene DBF20 in Saccharomyces cerevisiae S288C. Establishes the accession and gene identity only; the component's membership in this structure rests on the record's own sources."
+        }
+       ]
       }
      ],
      "evidence": [
@@ -81656,6 +81720,13 @@
      "curator": "antigravity",
      "action": "CREATED_RECORD",
      "changes": "Added Sid2-Mob1 complex (GO:0034973) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T10:56:57Z",
+     "curator": "antigravity",
+     "action": "CURATE_PROTEIN_EXAMPLES",
+     "changes": "Added reviewed UniProtKB:P32328 (DBF20) in Saccharomyces cerevisiae S288C to sid2_dbf2_kinase_subunit so all three declared gene symbols (sid2, DBF2, DBF20) are covered.",
      "llm_assisted": true
     }
    ]
@@ -86638,7 +86709,7 @@
      "protein_examples": [
       {
        "uniprot_id": "UniProtKB:Q07942",
-       "protein_label": "Nitrogenase iron-only iron protein",
+       "protein_label": "Nitrogenase iron protein 2",
        "gene_symbol": "anfH",
        "taxon_id": "NCBITaxon:1061",
        "taxon_label": "Rhodobacter capsulatus",
@@ -86648,7 +86719,7 @@
        "evidence": [
         {
          "reference": "UniProtKB:Q07942",
-         "notes": "Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron-only iron protein (anfH)."
+         "notes": "Reviewed Swiss-Prot entry for Rhodobacter capsulatus nitrogenase iron protein 2 (anfH)."
         },
         {
          "reference": "PMID:8332060",
@@ -86658,7 +86729,7 @@
       },
       {
        "uniprot_id": "UniProtKB:P16269",
-       "protein_label": "Nitrogenase iron-only iron protein",
+       "protein_label": "Nitrogenase iron protein 3",
        "gene_symbol": "anfH",
        "taxon_id": "NCBITaxon:354",
        "taxon_label": "Azotobacter vinelandii",
@@ -86668,7 +86739,7 @@
        "evidence": [
         {
          "reference": "UniProtKB:P16269",
-         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron-only iron protein (anfH)."
+         "notes": "Reviewed Swiss-Prot entry for Azotobacter vinelandii nitrogenase iron protein 3 (anfH)."
         },
         {
          "reference": "PMID:2644222",
@@ -86895,6 +86966,13 @@
      "curator": "add-cell-structure",
      "action": "CREATED",
      "changes": "Create new CellStructureRecord GO:0016611 (iron-iron nitrogenase complex) with verified GO identity, source-backed components, reviewed UniProtKB protein examples, taxonomic distribution, canonical examples, functions, and mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T10:59:40Z",
+     "curator": "antigravity",
+     "action": "CURATE_PROTEIN_EXAMPLES",
+     "changes": "Aligned UniProtKB:Q07942 and UniProtKB:P16269 protein_label values on component anfh_reductase_subunit to their canonical Swiss-Prot recommended names ('Nitrogenase iron protein 2' and 'Nitrogenase iron protein 3').",
      "llm_assisted": true
     }
    ]
@@ -189491,7 +189569,7 @@
        "taxon_label": "Saccharomyces cerevisiae S288C",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-30",
-       "role": "Reviewed Saccharomyces cerevisiae S288C Atg12 ubiquitin-like subunit.",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Atg12 ubiquitin-like subunit (also declared as synonym APG12).",
        "evidence": [
         {
          "reference": "UniProtKB:P38316",
@@ -189543,7 +189621,7 @@
        "taxon_label": "Saccharomyces cerevisiae S288C",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-30",
-       "role": "Reviewed Saccharomyces cerevisiae S288C Atg5 subunit.",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Atg5 subunit (also declared as synonym APG5).",
        "evidence": [
         {
          "reference": "UniProtKB:Q12380",
@@ -189595,7 +189673,7 @@
        "taxon_label": "Saccharomyces cerevisiae S288C",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-30",
-       "role": "Reviewed Saccharomyces cerevisiae S288C Atg16 coiled-coil dimerization subunit.",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Atg16 coiled-coil dimerization subunit (also declared as synonym APG16).",
        "evidence": [
         {
          "reference": "UniProtKB:Q03818",
@@ -189852,6 +189930,13 @@
      "curator": "antigravity",
      "action": "CREATED_RECORD",
      "changes": "Added Atg12-Atg5-Atg16 complex (GO:0034274) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T10:56:58Z",
+     "curator": "antigravity",
+     "action": "CURATE_PROTEIN_EXAMPLES",
+     "changes": "Recorded declared APG12, APG5, and APG16 synonym mappings on the reviewed Saccharomyces cerevisiae S288C UniProtKB protein_examples (P38316, Q12380, Q03818).",
      "llm_assisted": true
     }
    ]
@@ -201721,7 +201806,7 @@
        "taxon_label": "Escherichia coli K-12",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-30",
-       "role": "Reviewed Escherichia coli K-12 BtuF periplasmic vitamin B12-binding protein.",
+       "role": "Reviewed Escherichia coli K-12 BtuF periplasmic vitamin B12-binding protein (also declared as synonym yadT).",
        "evidence": [
         {
          "reference": "UniProtKB:P37028",
@@ -202080,6 +202165,13 @@
      "curator": "antigravity",
      "action": "CREATED_RECORD",
      "changes": "Added cobalamin transport complex (GO:1990191) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T10:56:58Z",
+     "curator": "antigravity",
+     "action": "CURATE_PROTEIN_EXAMPLES",
+     "changes": "Recorded declared yadT synonym mapping on the reviewed Escherichia coli K-12 BtuF UniProtKB protein_example (P37028).",
      "llm_assisted": true
     }
    ]
@@ -223319,7 +223411,7 @@
        "taxon_label": "Saccharomyces cerevisiae S288C",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-30",
-       "role": "Reviewed Saccharomyces cerevisiae S288C Gon7 subunit.",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Gon7 subunit (also declared as synonym PCC2).",
        "evidence": [
         {
          "reference": "UniProtKB:P46984",
@@ -223601,6 +223693,13 @@
      "curator": "antigravity",
      "action": "CREATED_RECORD",
      "changes": "Added EKC/KEOPS complex (GO:0000408) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T10:56:58Z",
+     "curator": "antigravity",
+     "action": "CURATE_PROTEIN_EXAMPLES",
+     "changes": "Recorded declared PCC2 synonym mapping on the reviewed Saccharomyces cerevisiae S288C Gon7 UniProtKB protein_example (P46984).",
      "llm_assisted": true
     }
    ]
@@ -240250,7 +240349,7 @@
        "taxon_label": "Escherichia coli K-12",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-30",
-       "role": "Reviewed Escherichia coli K-12 HslU (ClpY) AAA+ unfoldase subunit.",
+       "role": "Reviewed Escherichia coli K-12 HslU (ClpY) AAA+ unfoldase subunit (also declared as synonym clpY).",
        "evidence": [
         {
          "reference": "UniProtKB:P0A6H5",
@@ -240302,7 +240401,7 @@
        "taxon_label": "Escherichia coli K-12",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-30",
-       "role": "Reviewed Escherichia coli K-12 HslV (ClpQ) peptidase subunit.",
+       "role": "Reviewed Escherichia coli K-12 HslV (ClpQ) peptidase subunit (also declared as synonym clpQ).",
        "evidence": [
         {
          "reference": "UniProtKB:P0A7B8",
@@ -240517,6 +240616,13 @@
      "curator": "antigravity",
      "action": "CREATED_RECORD",
      "changes": "Added HslUV protease complex (GO:0009376) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T10:56:58Z",
+     "curator": "antigravity",
+     "action": "CURATE_PROTEIN_EXAMPLES",
+     "changes": "Recorded declared clpY and clpQ synonym mappings on the reviewed Escherichia coli K-12 HslU and HslV UniProtKB protein_examples (P0A6H5, P0A7B8).",
      "llm_assisted": true
     }
    ]

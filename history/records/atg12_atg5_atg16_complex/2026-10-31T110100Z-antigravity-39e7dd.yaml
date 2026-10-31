@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/atg12_atg5_atg16_complex.yaml
+  slug: atg12_atg5_atg16_complex
+session:
+  id: 2026-10-31T110100Z-antigravity-39e7dd
+  timestamp: '2026-10-31T11:01:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  summary: Record APG12, APG5, and APG16 synonym mappings on S. cerevisiae protein_examples
+  details: Updated role descriptions on UniProtKB:P38316 (ATG12), UniProtKB:Q12380 (ATG5),
+    and UniProtKB:Q03818 (ATG16) in Saccharomyces cerevisiae S288C (NCBITaxon:559292) to explicitly
+    disclose the declared synonym symbols APG12, APG5, and APG16 carried by the same Swiss-Prot
+    entries.

@@ -37,7 +37,8 @@ components:
     taxon_label: Saccharomyces cerevisiae S288C
     entry_status: REVIEWED
     retrieved_on: '2026-10-30'
-    role: Reviewed Saccharomyces cerevisiae S288C Atg12 ubiquitin-like subunit.
+    role: Reviewed Saccharomyces cerevisiae S288C Atg12 ubiquitin-like subunit (also
+      declared as synonym APG12).
     evidence:
     - reference: UniProtKB:P38316
       notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Atg12.
@@ -79,7 +80,8 @@ components:
     taxon_label: Saccharomyces cerevisiae S288C
     entry_status: REVIEWED
     retrieved_on: '2026-10-30'
-    role: Reviewed Saccharomyces cerevisiae S288C Atg5 subunit.
+    role: Reviewed Saccharomyces cerevisiae S288C Atg5 subunit (also declared as synonym
+      APG5).
     evidence:
     - reference: UniProtKB:Q12380
       notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Atg5.
@@ -118,7 +120,8 @@ components:
     taxon_label: Saccharomyces cerevisiae S288C
     entry_status: REVIEWED
     retrieved_on: '2026-10-30'
-    role: Reviewed Saccharomyces cerevisiae S288C Atg16 coiled-coil dimerization subunit.
+    role: Reviewed Saccharomyces cerevisiae S288C Atg16 coiled-coil dimerization subunit
+      (also declared as synonym APG16).
     evidence:
     - reference: UniProtKB:Q03818
       notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Atg16.
@@ -315,4 +318,10 @@ curation_history:
   changes: Added Atg12-Atg5-Atg16 complex (GO:0034274) with InterPro-grounded components,
     reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
     snippets, and a mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-31T10:56:58Z'
+  curator: antigravity
+  action: CURATE_PROTEIN_EXAMPLES
+  changes: Recorded declared APG12, APG5, and APG16 synonym mappings on the reviewed
+    Saccharomyces cerevisiae S288C UniProtKB protein_examples (P38316, Q12380, Q03818).
   llm_assisted: true

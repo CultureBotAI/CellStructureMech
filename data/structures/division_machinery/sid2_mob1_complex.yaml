@@ -76,6 +76,22 @@ components:
         complex Dbf2-Mob1.
       notes: Establishes Dbf2 as the catalytic subunit of the budding yeast Dbf2-Mob1
         MEN complex.
+  - uniprot_id: UniProtKB:P32328
+    protein_label: Serine/threonine-protein kinase DBF20
+    gene_symbol: DBF20
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: The single reviewed UniProtKB entry for gene DBF20 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32328
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32328, the single reviewed entry
+        for gene DBF20 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
   evidence:
   - reference: GO:0034973
     notes: GO:0034973 defines Sid2p/Dbf2p as the catalytic protein kinase subunit
@@ -309,4 +325,11 @@ curation_history:
   changes: Added Sid2-Mob1 complex (GO:0034973) with InterPro-grounded components,
     reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
     snippets, and a mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-31T10:56:57Z'
+  curator: antigravity
+  action: CURATE_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P32328 (DBF20) in Saccharomyces cerevisiae S288C
+    to sid2_dbf2_kinase_subunit so all three declared gene symbols (sid2, DBF2, DBF20)
+    are covered.
   llm_assisted: true

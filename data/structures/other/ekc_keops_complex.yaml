@@ -192,7 +192,8 @@ components:
     taxon_label: Saccharomyces cerevisiae S288C
     entry_status: REVIEWED
     retrieved_on: '2026-10-30'
-    role: Reviewed Saccharomyces cerevisiae S288C Gon7 subunit.
+    role: Reviewed Saccharomyces cerevisiae S288C Gon7 subunit (also declared as synonym
+      PCC2).
     evidence:
     - reference: UniProtKB:P46984
       notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Gon7.
@@ -401,4 +402,10 @@ curation_history:
   changes: Added EKC/KEOPS complex (GO:0000408) with InterPro-grounded components,
     reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
     snippets, and a mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-31T10:56:58Z'
+  curator: antigravity
+  action: CURATE_PROTEIN_EXAMPLES
+  changes: Recorded declared PCC2 synonym mapping on the reviewed Saccharomyces cerevisiae
+    S288C Gon7 UniProtKB protein_example (P46984).
   llm_assisted: true
