@@ -1,0 +1,45 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 5
+stage: 6
+revision: 1
+outcome: completed
+summary: 'Froze INFRA_TASKS.md at 2026-10-31T02:45:18Z (sha256 581fae595ba5b8ea81028969e1da5cf5bfd0b939bfb9ca5d89259e7f9fe672f7),
+  mapped the bounded Cycle 5 infrastructure task (cellstructuremech-infra-0008) to
+  real GitHub issue #2472, implemented empty-gene_symbols component protein_examples
+  and function/CausalNode GO aspect and grounding consistency checks in
+  src/cellstructuremech/validation/validator.py in commit d8d60f29e79d1c2969c31e39b7fa2f1aa29f10d5,
+  updated INFRA_TASKS.md and reviews/workflow/latest.yaml, and passed all 10 quality
+  gates in scripts/run_qc.py (1,079 passed tests, 2,153 history records validated,
+  1,008 structure records validated with 0 errors and 0 deferred tasks).'
+source_revision: d8d60f29e79d1c2969c31e39b7fa2f1aa29f10d5
+scope_frozen_at: '2026-10-31T02:45:18Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-06/revision-0001/infra_snapshot.md
+  sha256: 581fae595ba5b8ea81028969e1da5cf5bfd0b939bfb9ca5d89259e7f9fe672f7
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-06/revision-0001/implementation_plan.md
+  sha256: 417ec1d6c09373c2e9867355bff3b89fa0403c494359039b4955cc15f8233492
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-06/revision-0001/validation.md
+  sha256: 64856fcfcafb6b48b3ce1e2419ad294ad1e031898638114f3c80a2e4cb8940e3
+  kind: validation
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: cellstructuremech-infra-0008
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2472
+  status: resolved
+  summary: Extend src/cellstructuremech/validation/validator.py to check empty-gene_symbols
+    component protein_examples and function/CausalNode GO aspect and grounding consistency
+  disposition: 'Extended validate_component_protein_examples() and validate_causal_graphs()
+    in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics,
+    write_validated_structure, and scripts/validate_strict.py); verified 0 errors
+    across all 1,008 structure records and added unit and corpus-integrity tests in
+    tests/test_validator.py and tests/test_corpus_integrity.py (commit d8d60f29e79d1c2969c31e39b7fa2f1aa29f10d5).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-06/revision-0001/validation.md
