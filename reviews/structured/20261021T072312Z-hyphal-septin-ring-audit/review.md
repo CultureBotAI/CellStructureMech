@@ -1,0 +1,605 @@
+# Hyphal septation-site septin ring evidence and family review
+
+- Review: 20261021T072312Z-hyphal-septin-ring-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T07:16:23Z
+- Finished UTC: 2026-10-21T07:23:12Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact structure identity and nonmechanistic topology are supported. One minor, resolvable generic-family grounding gap remains.
+
+## Scope And Provenance
+
+Entire single target, cited native identities, complete relevant review and primary body sections/captions.
+
+Selection: Eighth unreviewed path in batch seven, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0032168 | data/structures/cytoskeleton/hyphal_septin_ring.yaml | maintained | hyphal septin ring |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0032168 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0032168 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0032168 | 2 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0032168 | No transcriptional regulator or expression-module mechanism is asserted. |
+| Claim-level scientific review | passed | True | GO:0032168 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0032168 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0032168 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0032168 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0032168 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0032168 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Localized structure boundary
+
+identity: supported. Targets: GO:0032168.
+
+The exact hyphal ring identity and generic ring parent agree. Internal future-septation rings are distinct from the basal mother–germ-tube band and the apical cap.
+
+### Composition and localization
+
+graph: supported. Targets: GO:0032168.
+
+Both graph edges state composition and future-septation-site location. A location-only function was correctly removed historically; no molecular recruitment pathway is claimed.
+
+### Collective material versus individual necessity
+
+scope: supported. Targets: GO:0032168.
+
+ESSENTIAL is attached to the collective septin material class. It cannot be read as every paralog being individually required, a viability phenotype or a universal fungal experiment. The primary deletion results make this limitation explicit.
+
+### Generic family mapping
+
+grounding: concern. Targets: GO:0032168.
+
+A verified Septin family is available for the generic row. Its mapping can be added without resolving every localized paralog or septin-associated component.
+
+## Findings
+
+### F1: Localized-cohort criterion blocks verified Septin family grounding
+
+minor / open / confirmed; issue key: hyphal-septin-ring-family-grounding-scope.
+
+The generic septin-proteins row remains REVIEWED_LABEL_ONLY while its rationale waits for a family delimiting the localized cohort. Native IPR016491 identifies the generic Septin class. Reconcile this resolvable mapping with the status, notes and TODO; preserve the distinct unresolved paralog and associated-protein inventory.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Under separately authorized curation, ground the generic septin class to verified IPR016491 and reconcile the rationale and status while retaining unresolved membership boundaries.
+
+- Verify native Septin family name/type; retain independent localization evidence.
+- Do not infer individual paralog necessity, a complete cohort or universal fungal distribution.
+- Run native schema, strict, label, history and generated-page checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| hyphal-ring-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0032172,GO%3A0005940,GO%3A0032168,GO%3A0032170,GO%3A0032179; All returned terms and parent-term child edges | supports | Native GO verifies exact target identity, parent and the cited localized sibling definitions. |
+| hyphal-ring-agent-family | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016491/; Native metadata name, type, accession and description | supports | IPR016491 is the Septin family, appropriate to the generic class but not sufficient to identify a complete localized cohort. |
+| hyphal-cap-agent-douglas-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC1214204/; Native PMC1214204 sec17 items(i)–(iii) and sec18 | supports | Douglas2005 is a review. Its fungal sections distinguish septation rings, a diffuse basal band and a faint apical cap; developmental timing differs between Candida and Aspergillus. |
+| hyphal-cap-agent-warenda-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC117938/; Native PMC117938 Results sec9 and sec13, Figure2 and Figure8 captions | supports | Warenda2002 directly distinguishes faint apical signal, diffuse basal signal and successive internal hyphal rings. cdc10/cdc11 deletion strains retain rings in the tested37C hyphal condition; early apical Cdc12 signal was inconclusive. |
+| record | data/structures/cytoskeleton/hyphal_septin_ring.yaml; Entire target, graph and discussions | context_only | The record uses a generic septin-proteins class and explicitly NONMECHANISTIC topology. It has no taxon-specific sequence, fixed stoichiometry or quantitative dimension claim. |
+| policy | docs/CURATION.md; Components; source-neutral family grounding | context_only | Generic protein-family identity is separate from a localized assembly cohort and organism-specific membership evidence. |
+| schema-result | just validate data/structures/cytoskeleton/hyphal_septin_ring.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/hyphal_septin_ring.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/hyphal_septin_ring.yaml --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/hyphal_septin_ring-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/hyphal_septin_ring.yaml --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/hyphal_septin_ring-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch7-20261021-dz9x5cv0/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/hyphal_septin_ring-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/hyphal_septin_ring.yaml; exact collect() scope | supports | 2 of2 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The native HTML body sections and captions were read; article figure pixels, movies, raw data and supplements were not inspected.
+- Candida experiments support the scoped localization and conditional-paralog discussion; their strain, temperature and developmental context cannot be generalized to every fungus.
+- The exact septin-associated protein inventory remains unresolved; generic family grounding alone cannot supply it.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Source collaborator read neighboring YAMLs for preparation, but this review’s boundary assessment uses native GO and literature rather than those local files.
+- Only the review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T072312Z-hyphal-septin-ring-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Hyphal septation-site septin ring evidence and family review
+started_at: '2026-10-21T07:16:23Z'
+finished_at: '2026-10-21T07:23:12Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact structure identity and nonmechanistic topology are supported. One minor,
+  resolvable generic-family grounding gap remains.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+    sha256: 9b8a399ed470a314cf73b6a4df6c4e14bf8d2cda618eb091f7c02f557c5252cf
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0032168
+  path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+  label: hyphal septin ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, cited native identities, complete relevant review
+    and primary body sections/captions.
+  selection: Eighth unreviewed path in batch seven, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0032168
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032168
+  command: just validate data/structures/cytoskeleton/hyphal_septin_ring.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032168
+  command: just validate-strict data/structures/cytoskeleton/hyphal_septin_ring.yaml
+    --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/hyphal_septin_ring-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032168
+  summary: 2 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0032168
+  summary: No transcriptional regulator or expression-module mechanism is asserted.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032168
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - hyphal-ring-agent-go
+  - hyphal-ring-agent-family
+  - hyphal-cap-agent-douglas-pmc
+  - hyphal-cap-agent-warenda-pmc
+  - record
+  - policy
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032168
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032168
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032168
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032168
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032168
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch7 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: hyphal-ring-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0032172,GO%3A0005940,GO%3A0032168,GO%3A0032170,GO%3A0032179
+  locator: All returned terms and parent-term child edges
+  accessed_at: '2026-10-21T07:00:25.768315Z'
+  support: supports
+  summary: Native GO verifies exact target identity, parent and the cited localized
+    sibling definitions.
+  snapshot_sha256: f67b450da651273ad72ee2f687f7cc5239d27e68ad6fe0f98d295edef12334e9
+- evidence_id: hyphal-ring-agent-family
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016491/
+  locator: Native metadata name, type, accession and description
+  accessed_at: '2026-10-21T07:00:25.790089Z'
+  support: supports
+  summary: IPR016491 is the Septin family, appropriate to the generic class but not
+    sufficient to identify a complete localized cohort.
+  snapshot_sha256: 5797c626d192b641ed5b4b2231e729f9f179bfd6bb18f911689fa08253688c4a
+- evidence_id: hyphal-cap-agent-douglas-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1214204/
+  locator: Native PMC1214204 sec17 items(i)–(iii) and sec18
+  accessed_at: '2026-10-21T07:11:03.050463Z'
+  support: supports
+  summary: Douglas2005 is a review. Its fungal sections distinguish septation rings,
+    a diffuse basal band and a faint apical cap; developmental timing differs between
+    Candida and Aspergillus.
+  snapshot_sha256: 31a2dd0109697492854f84701ef3f1d1be31f62312b613ab8432223332b69dd3
+- evidence_id: hyphal-cap-agent-warenda-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC117938/
+  locator: Native PMC117938 Results sec9 and sec13, Figure2 and Figure8 captions
+  accessed_at: '2026-10-21T07:11:30.253945Z'
+  support: supports
+  summary: Warenda2002 directly distinguishes faint apical signal, diffuse basal signal
+    and successive internal hyphal rings. cdc10/cdc11 deletion strains retain rings
+    in the tested37C hyphal condition; early apical Cdc12 signal was inconclusive.
+  snapshot_sha256: 6591f16f002a6009029ce0ff23f1985e3af7ff1f3885e799e3d33be3200865bb
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+  locator: Entire target, graph and discussions
+  accessed_at: '2026-10-21T07:18:08Z'
+  support: context_only
+  summary: The record uses a generic septin-proteins class and explicitly NONMECHANISTIC
+    topology. It has no taxon-specific sequence, fixed stoichiometry or quantitative
+    dimension claim.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components; source-neutral family grounding
+  accessed_at: '2026-10-21T07:18:08Z'
+  support: context_only
+  summary: Generic protein-family identity is separate from a localized assembly cohort
+    and organism-specific membership evidence.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/hyphal_septin_ring.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:16:30Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/hyphal_septin_ring.yaml'
+  snapshot_sha256: ad59f47fe22ab79367dcf203bb3ad81ae5ddf5fa0ddbba07f0fcd2b53b4c4cdc
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/hyphal_septin_ring.yaml
+    --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/hyphal_septin_ring-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T07:16:36Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/hyphal_septin_ring.yaml\
+    \ --out /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/hyphal_septin_ring-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch7-20261021-dz9x5cv0/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch7-20261021-dz9x5cv0/hyphal_septin_ring-strict.tsv"
+  snapshot_sha256: 7146b6eb0455302e13dfe39e888f310203dee61ef9f46cdc1bbabe3bfc9a64c8
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/hyphal_septin_ring.yaml; exact collect() scope
+  accessed_at: '2026-10-21T07:18:08Z'
+  support: supports
+  summary: '2 of2 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Localized structure boundary
+  outcome: supported
+  target_ids:
+  - GO:0032168
+  summary: The exact hyphal ring identity and generic ring parent agree. Internal
+    future-septation rings are distinct from the basal mother–germ-tube band and the
+    apical cap.
+  evidence_ids:
+  - hyphal-ring-agent-go
+  - hyphal-cap-agent-douglas-pmc
+  - hyphal-cap-agent-warenda-pmc
+  - record
+- assessment_id: topology
+  area: graph
+  topic: Composition and localization
+  outcome: supported
+  target_ids:
+  - GO:0032168
+  summary: Both graph edges state composition and future-septation-site location.
+    A location-only function was correctly removed historically; no molecular recruitment
+    pathway is claimed.
+  evidence_ids:
+  - hyphal-ring-agent-go
+  - hyphal-cap-agent-douglas-pmc
+  - hyphal-cap-agent-warenda-pmc
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Collective material versus individual necessity
+  outcome: supported
+  target_ids:
+  - GO:0032168
+  summary: ESSENTIAL is attached to the collective septin material class. It cannot
+    be read as every paralog being individually required, a viability phenotype or
+    a universal fungal experiment. The primary deletion results make this limitation
+    explicit.
+  evidence_ids:
+  - hyphal-cap-agent-warenda-pmc
+  - hyphal-cap-agent-douglas-pmc
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Generic family mapping
+  outcome: concern
+  target_ids:
+  - GO:0032168
+  summary: A verified Septin family is available for the generic row. Its mapping
+    can be added without resolving every localized paralog or septin-associated component.
+  evidence_ids:
+  - hyphal-ring-agent-family
+  - policy
+  - record
+findings:
+- finding_id: F1
+  issue_key: hyphal-septin-ring-family-grounding-scope
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Localized-cohort criterion blocks verified Septin family grounding
+  description: The generic septin-proteins row remains REVIEWED_LABEL_ONLY while its
+    rationale waits for a family delimiting the localized cohort. Native IPR016491
+    identifies the generic Septin class. Reconcile this resolvable mapping with the
+    status, notes and TODO; preserve the distinct unresolved paralog and associated-protein
+    inventory.
+  target_ids:
+  - GO:0032168
+  field_paths:
+  - components[component_id=septin_proteins].grounding_status
+  - components[component_id=septin_proteins].grounding_notes
+  - discussions[discussion_id=resolve_hyphal_septin_ring_components]
+  evidence_ids:
+  - hyphal-ring-agent-family
+  - policy
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: Bounded family-mapping gap; exact assembly identity and topological
+    claims are supported.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0032168
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/hyphal_septin_ring.yaml
+    role: maintained scientific record
+  description: Under separately authorized curation, ground the generic septin class
+    to verified IPR016491 and reconcile the rationale and status while retaining unresolved
+    membership boundaries.
+  acceptance_checks:
+  - Verify native Septin family name/type; retain independent localization evidence.
+  - Do not infer individual paralog necessity, a complete cohort or universal fungal
+    distribution.
+  - Run native schema, strict, label, history and generated-page checks.
+  generator: Maintained structure YAML; just render derives pages.
+limitations:
+- The native HTML body sections and captions were read; article figure pixels, movies,
+  raw data and supplements were not inspected.
+- Candida experiments support the scoped localization and conditional-paralog discussion;
+  their strain, temperature and developmental context cannot be generalized to every
+  fungus.
+- The exact septin-associated protein inventory remains unresolved; generic family
+  grounding alone cannot supply it.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Source collaborator read neighboring YAMLs for preparation, but this review’s boundary
+  assessment uses native GO and literature rather than those local files.
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+```
