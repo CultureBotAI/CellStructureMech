@@ -1,0 +1,485 @@
+schema_version: 1.0.0
+review_id: 20261021T085850Z-ventral-disc-overlap-zone-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Giardia ventral-disc overlap-zone topology and imaging scope review
+started_at: '2026-10-21T08:41:08Z'
+finished_at: '2026-10-21T08:58:50Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The exact overlap-zone identity, disc parthood and self-overlap graph are
+  supported by native GO and the appropriate whole-cell/section tomography. The record
+  appropriately avoids duplicating generic tubulin composition. No concrete curation
+  issue was established.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+    sha256: 983f27caa2fde019c9ab576e64c54bd354b6528a65e0f9ef9cdfbb87abb365ce
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0097592
+  path: data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+  label: ventral disc overlap zone
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, all identity/synonym/taxon/graph/discussion claims;
+    exact native identifiers and preparation-specific primary geometry evidence.
+  selection: Third selected target in batch thirteen, fixed repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0097592
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097592
+  command: just validate data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097592
+  command: just validate-strict data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+    --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/ventral_disc_overlap_zone-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097592
+  summary: 5 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097592
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - overlap-agent-go
+  - overlap-agent-tax-5741
+  - overlap-agent-epmc
+  - overlap-agent-schwartz2012-jats
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097592
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097592
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097592
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097592
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097592
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch13 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+  locator: Entire maintained YAML, all fields, graph edges and discussions
+  accessed_at: '2026-10-21T08:46:04Z'
+  support: context_only
+  summary: Complete target read; historical curation notes and native PROPOSED status
+    remain unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/record-review-profile.md
+  locator: Governing review profile, checklist, evidence skill and schema captured
+    by native inspect
+  accessed_at: '2026-10-21T08:46:04Z'
+  support: context_only
+  summary: Assess exact component/structure identity and evidential scope; optional
+    inventories, images or protein examples are not automatic requirements.
+- evidence_id: overlap-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097592,GO:0097593,GO:0097597
+  locator: Complete three native results including definition, status, exact synonym
+    scopes and parent children relations.
+  accessed_at: '2026-10-21T08:41:38.206113Z'
+  support: supports
+  summary: Active GO:0097592 exactly defines self-overlap of two portions of the same
+    disc array. GO:0097593 defines that array; GO:0097597 explicitly lists GO:0097592
+    as a part_of child.
+  snapshot_sha256: 5103d81aee3c4339be7027c6d49f0e6502c2c72db386fa0dbca067fd258a3b25
+- evidence_id: overlap-agent-tax-5741
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5741
+  locator: 'Complete native taxon5741 result: scientificName, otherNames, rank and
+    lineage; original receipt reused unchanged.'
+  accessed_at: '2026-10-21T08:25:56.730800Z'
+  support: supports
+  summary: Native species5741 is currently Giardia duodenalis, with Giardia intestinalis
+    and Giardia lamblia explicitly included as synonyms. Species nomenclature is consistent
+    with the target; experimental strain/stage are supplied by primary Methods.
+  snapshot_sha256: 1dcdc380972a71a0a24c80755d8bbacdcb0b6d9988bb5fb1e05ba43f50580dd3
+- evidence_id: overlap-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1371/journal.pone.0043783%22
+  locator: Exact DOI/title/authors/year/PMID/PMC identity in native metadata.
+  accessed_at: '2026-10-21T08:25:57.030288Z'
+  support: supports
+  summary: Exact cited DOI resolves to Schwartz, Heumann, Dawson and Hoenger2012,
+    PMID22984443/PMC3439489.
+  snapshot_sha256: e57aa4be2b4da0e8c2fd4082e5f08d1cd50239a932a5c403924d3a2618bac654
+- evidence_id: overlap-agent-schwartz2012-jats
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3439489/fullTextXML
+  locator: 'Principal locators s2a and Figure1F caption, s3a partial-overlap reconstruction,
+    s2e averaging selection/exclusion and Methods s5a–s5f; Native JATS PMC3439489:
+    Introduction and Results s2a–s2h, Discussion s3a–s3e, Conclusions s4 and Methods
+    s5a–s5f read across the unchanged batch12/13 snapshot; principal locators specified
+    in summary. Claim-bearing captions/Table1 read; no figure pixels, videos or raw
+    tomography reanalysis.'
+  accessed_at: '2026-10-21T08:27:02.838620Z'
+  support: supports
+  summary: Primary whole-cell and plastic-section reconstructions identify the overlap
+    region and show microribbons extending into it, with an anterior axoneme passing
+    through. The high-resolution grand-average calculation explicitly excluded overlap-zone
+    segments and cannot serve as an overlap-specific molecular map.
+  snapshot_sha256: df4cb13cb3b12c8be3df05f99f8b97cc44951dd61a2c00a168ed8e9aedb6f9d8
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:41:16Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml'
+  snapshot_sha256: dc20b0fa2882d160f6df88e9230d822b119bc9314e7ffcb2bd8159fea83d8cc0
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml
+    --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/ventral_disc_overlap_zone-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:41:22Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml\
+    \ --out /private/tmp/cellstructure-batch13-20261021-vud60b4w/ventral_disc_overlap_zone-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch13-20261021-vud60b4w/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch13-20261021-vud60b4w/ventral_disc_overlap_zone-strict.tsv"
+  snapshot_sha256: c5da73144b432d289454f029ccab3357c15b493baeaa164ad592b9a84dc60455
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/ventral_disc_overlap_zone.yaml; exact collect()
+    scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:46:04Z'
+  support: supports
+  summary: '5 of5 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Spatial overlap region
+  outcome: supported
+  target_ids:
+  - GO:0097592
+  summary: Exact GO identity, definition, broad/related synonyms and OTHER kind denote
+    a named region of the disc where two parts of one array overlap. It is not a separate
+    tubulin polymer, the entire microtubule array or the supernumerary spiral.
+  evidence_ids:
+  - overlap-agent-go
+  - overlap-agent-schwartz2012-jats
+  - record
+- assessment_id: partonomy
+  area: scope
+  topic: Region within the ventral disc
+  outcome: supported
+  target_ids:
+  - GO:0097592
+  summary: Native GO and primary whole-cell/resin tomography support part_of ventral
+    disc. The overlap-zone relationship to the microtubule array is geometric self-overlap
+    rather than is-a equivalence or a second independent array.
+  evidence_ids:
+  - overlap-agent-go
+  - overlap-agent-schwartz2012-jats
+  - record
+- assessment_id: taxon
+  area: scope
+  topic: Species identity and trophozoite example
+  outcome: supported
+  target_ids:
+  - GO:0097592
+  summary: Species5741 aliases match the record and paper. The characterized WBC6
+    trophozoite is the canonical model; COMMON does not supply a prevalence estimate
+    or establish all stages, strains or Giardia species.
+  evidence_ids:
+  - overlap-agent-tax-5741
+  - overlap-agent-schwartz2012-jats
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Two bounded topology edges
+  outcome: supported
+  target_ids:
+  - GO:0097592
+  summary: The marks-self-overlap and is-part-of edges reproduce exact GO topology.
+    FUNCTION/NONMECHANISTIC describes the named region’s structural role and explicitly
+    leaves composition/assembly order unresolved. It does not assert an overlap-mediated
+    contractile, attachment or transport mechanism.
+  evidence_ids:
+  - overlap-agent-go
+  - overlap-agent-schwartz2012-jats
+  - record
+- assessment_id: imaging
+  area: evidence
+  topic: Which preparation supports the overlap claim
+  outcome: supported
+  target_ids:
+  - GO:0097592
+  summary: The cited s2a/s3a whole-cell/plastic-section reconstructions include overlap-zone
+    geometry. The selected extracted-disc grand average excludes this region; its
+    lattice density assignments are not offered as proof of overlap-specific proteins
+    or uniform segment boundaries.
+  evidence_ids:
+  - overlap-agent-schwartz2012-jats
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: No duplicate generic inventory
+  outcome: supported
+  target_ids:
+  - GO:0097592
+  summary: The empty components list is appropriate for a spatial-region record whose
+    generic tubulin composition belongs to the underlying array. The existing graph-scoped
+    TODO asks for exact local boundaries/accessory structures. No observed region-specific
+    molecular inventory in the cited work makes an omitted required component evident.
+  evidence_ids:
+  - overlap-agent-go
+  - overlap-agent-schwartz2012-jats
+  - record
+  - policy
+- assessment_id: provenance
+  area: provenance
+  topic: Citation scope and optional data
+  outcome: supported
+  target_ids:
+  - GO:0097592
+  summary: All asserted GO/taxon/DOI identifiers are supported by native sources.
+    The target retains historical provenance and PROPOSED status. Lack of an asserted
+    physiological function, image or numerical property is not a defect when the evidence
+    establishes bounded topology.
+  evidence_ids:
+  - overlap-agent-go
+  - overlap-agent-tax-5741
+  - overlap-agent-epmc
+  - overlap-agent-schwartz2012-jats
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- Claim-bearing primary sections and main Methods were read from the reused native
+  JATS; figure pixels, videos, raw tomography and all supplementary data were not
+  independently analyzed.
+- The resin reconstruction samples part of the overlap region. The grand average deliberately
+  excludes overlap and extreme-peripheral segments, so it supplies no complete overlap-specific
+  molecular map.
+- Exact segment boundaries, region-specific accessory proteins, assembly order and
+  physiological consequences remain unresolved by the inspected evidence.
+- Species-level occurrence is qualitative for characterized trophozoites, without
+  an all-strain, all-stage or numerical prevalence claim.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- All12 native input hashes verified after focused gates0. Judgment uses target/native
+  authority/primary source and has no neighboring maintained-record dependency.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
