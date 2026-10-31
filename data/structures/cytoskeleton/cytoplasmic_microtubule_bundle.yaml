@@ -23,6 +23,12 @@ curation_history:
   changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag
     mapping(s) on existing protein_examples.'
   llm_assisted: true
+- timestamp: '2026-10-31T01:15:00Z'
+  curator: agy
+  action: CURATED_PROTEIN_EXAMPLES
+  changes: Aligned UniProtKB:P04689 primary gene_symbol to tub1 (retaining synonym
+    atb2 in component gene_symbols and role) (#2475).
+  llm_assisted: true
 parent_structures:
 - GO:0097427
 part_of:
@@ -49,17 +55,18 @@ components:
     notes: Complete native InterPro matches verified on 2026-10-05; integrated type=family
       and scope checked, not inferred from a domain.
   gene_symbols:
+  - tub1
   - atb2
   protein_examples:
   - uniprot_id: UniProtKB:P04689
     protein_label: Tubulin alpha-2 chain
-    gene_symbol: atb2
+    gene_symbol: tub1
     taxon_id: NCBITaxon:284812
     taxon_label: Schizosaccharomyces pombe 972h-
     entry_status: REVIEWED
     retrieved_on: '2026-10-05'
-    role: Reference-sequence exemplar for the species-level experiment; this accession
-      does not assert that the exact reference stock was imaged.
+    role: S. pombe alpha-2 tubulin subunit forming the alpha/beta-tubulin heterodimers
+      of interphase cytoplasmic microtubule bundles (also declared as synonym atb2).
     evidence:
     - reference: DOI:10.1083/jcb.201502025
       notes: 'Figures 1-2: GFP-Atb2 labels the bundle. UniProt names this alpha-2

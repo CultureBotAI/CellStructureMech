@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1008,
- "corpus_updated": "2026-10-30 21:27:56 UTC",
- "corpus_digest": "724eba4d2c4f",
+ "corpus_updated": "2026-10-31 01:15:00 UTC",
+ "corpus_digest": "55a3daa391d6",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -42683,6 +42683,13 @@
      "action": "EDIT",
      "changes": "Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag mapping(s) on existing protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Aligned UniProtKB:P04689 primary gene_symbol to tub1 (retaining synonym atb2 in component gene_symbols and role) (#2475).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -42721,18 +42728,19 @@
       }
      ],
      "gene_symbols": [
+      "tub1",
       "atb2"
      ],
      "protein_examples": [
       {
        "uniprot_id": "UniProtKB:P04689",
        "protein_label": "Tubulin alpha-2 chain",
-       "gene_symbol": "atb2",
+       "gene_symbol": "tub1",
        "taxon_id": "NCBITaxon:284812",
        "taxon_label": "Schizosaccharomyces pombe 972h-",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-05",
-       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "role": "S. pombe alpha-2 tubulin subunit forming the alpha/beta-tubulin heterodimers of interphase cytoplasmic microtubule bundles (also declared as synonym atb2).",
        "evidence": [
         {
          "reference": "DOI:10.1083/jcb.201502025",
@@ -61962,6 +61970,13 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2421: Added S. pombe alpha-1 tubulin gene symbol nda2 to components#alpha_tubulin.gene_symbols to match UniProtKB:P04688 in protein_examples.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_COMPONENTS",
+     "changes": "Added gene_symbols [mto1, mto2] to eMTOC component (GO:0000923) to match reviewed UniProtKB protein_examples O94488 and Q9USP7 (#2475).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -62154,6 +62169,10 @@
        "reference": "DOI:10.3390/cells12060917",
        "notes": "Equatorial Mto1 recruitment precedes PAA formation in live-cell time series."
       }
+     ],
+     "gene_symbols": [
+      "mto1",
+      "mto2"
      ],
      "protein_examples": [
       {
@@ -63435,6 +63454,13 @@
      "curator": "uniprot_genes",
      "action": "SEED_PROTEIN_EXAMPLES",
      "changes": "#183: added 1 protein example(s) by resolving each of the component's declared gene symbols to the single reviewed UniProtKB entry for that symbol in a taxon this record names, deduplicated by accession. Symbols resolving to more than one reviewed entry were skipped rather than chosen between."
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Aligned UniProtKB:P04689 primary gene_symbol to tub1 (retaining synonym atb2 in component gene_symbols and role) (#2475).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -63479,18 +63505,19 @@
       }
      ],
      "gene_symbols": [
+      "tub1",
       "atb2"
      ],
      "protein_examples": [
       {
        "uniprot_id": "UniProtKB:P04689",
        "protein_label": "Tubulin alpha-2 chain",
-       "gene_symbol": "atb2",
+       "gene_symbol": "tub1",
        "taxon_id": "NCBITaxon:284812",
        "taxon_label": "Schizosaccharomyces pombe 972h-",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-05",
-       "role": "Reference-sequence exemplar for the species-level experiment; this accession does not assert that the exact reference stock was imaged.",
+       "role": "S. pombe alpha-2 tubulin subunit incorporated into the hyperstable interphase microtubule bundle of G0 quiescent cells (also declared as synonym atb2).",
        "evidence": [
         {
          "reference": "DOI:10.1083/jcb.201502025",
@@ -73096,6 +73123,7 @@
      "component_role": "CONSTITUENT",
      "grounding": "InterPro:IPR002452",
      "gene_symbols": [
+      "tub1",
       "atb2",
       "TUB1",
       "TUB3"
@@ -73116,12 +73144,12 @@
       {
        "uniprot_id": "UniProtKB:P04689",
        "protein_label": "Tubulin alpha-2 chain",
-       "gene_symbol": "atb2",
+       "gene_symbol": "tub1",
        "taxon_id": "NCBITaxon:284812",
        "taxon_label": "Schizosaccharomyces pombe 972h-",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-08-30",
-       "role": "Reviewed UniProtKB entry for gene atb2 in Schizosaccharomyces pombe 972h-.",
+       "role": "Reviewed UniProtKB entry for gene tub1 (also declared as synonym atb2) in Schizosaccharomyces pombe 972h-.",
        "evidence": [
         {
          "reference": "DOI:10.1083/jcb.201502025",
@@ -73412,6 +73440,13 @@
      "curator": "antigravity",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2431 (finding static-microtubule-bundle-curation-history-graph-id-mismatch): aligned curation_history[1] graph_id to static_microtubule_bundle_organization.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_PROTEIN_EXAMPLES",
+     "changes": "Aligned UniProtKB:P04689 primary gene_symbol to tub1 (retaining synonym atb2 in component gene_symbols and role) (#2475).",
      "llm_assisted": true
     }
    ]
@@ -117355,6 +117390,13 @@
      "action": "ADDRESS_REVIEW",
      "changes": "Addressed review issues #540 and #541 by connecting the autophagosome membrane to the top-level graph organelle node and by recasting the macroautophagy edge as a functional support edge.",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_FUNCTIONS",
+     "changes": "Added explicit GO grounding GO:0016236 (macroautophagy) to functions[0] (#2476).",
+     "llm_assisted": true
     }
    ],
    "has_part": [
@@ -117415,6 +117457,7 @@
     {
      "function_id": "macroautophagy",
      "label": "macroautophagy",
+     "grounding": "GO:0016236",
      "description": "Autophagosomes engulf cytoplasmic material in a double-membrane vesicle and deliver that cargo to a lytic vacuole for degradation.",
      "evidence": [
       {
@@ -199323,6 +199366,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_TAXON_SCOPE",
+     "changes": "Aligned NCBITaxon:284812 strain label to 'Schizosaccharomyces pombe 972h-' on Cdc45 protein UniProtKB:O74113 protein example and canonical_examples[0] (#2475).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -199405,10 +199455,10 @@
        "protein_label": "Cell division control protein 45 homolog",
        "gene_symbol": "sna41",
        "taxon_id": "NCBITaxon:284812",
-       "taxon_label": "Schizosaccharomyces pombe",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative reviewed UniProtKB entry for gene CDC45, which UniProt lists under the primary name sna41, in Schizosaccharomyces pombe. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative reviewed UniProtKB entry for gene CDC45, which UniProt lists under the primary name sna41, in Schizosaccharomyces pombe 972h-. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
        "evidence": [
         {
          "reference": "PMID:9619628",
@@ -199431,7 +199481,7 @@
    "canonical_examples": [
     {
      "taxon_id": "NCBITaxon:284812",
-     "taxon_label": "Schizosaccharomyces pombe",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
      "note": "Reference fission-yeast system in which Akman and MacNeill visualised GINS-MCM interactions in living cells from native chromosomal loci.",
      "reference": "PMID:19228417"
     }
@@ -267368,10 +267418,10 @@
        "protein_label": "Cell division control protein 45 homolog",
        "gene_symbol": "sna41",
        "taxon_id": "NCBITaxon:284812",
-       "taxon_label": "Schizosaccharomyces pombe",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative reviewed UniProtKB entry for gene CDC45, which UniProt lists under the primary name sna41, in Schizosaccharomyces pombe. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative reviewed UniProtKB entry for gene CDC45, which UniProt lists under the primary name sna41, in Schizosaccharomyces pombe 972h-. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
        "evidence": [
         {
          "reference": "PMID:9619628",
@@ -267466,7 +267516,7 @@
    "canonical_examples": [
     {
      "taxon_id": "NCBITaxon:284812",
-     "taxon_label": "Schizosaccharomyces pombe",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
      "note": "Reference fission-yeast system in which Akman and MacNeill visualised GINS-MCM interactions in living cells from native chromosomal loci.",
      "reference": "PMID:19228417"
     }
@@ -267709,6 +267759,13 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of nuclear replisome (GO:0043601) in category OTHER with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_TAXON_SCOPE",
+     "changes": "Aligned NCBITaxon:284812 strain label to 'Schizosaccharomyces pombe 972h-' on Cdc45 protein UniProtKB:O74113 protein example and canonical_examples[0] (#2475).",
      "llm_assisted": true
     }
    ]
@@ -271017,7 +271074,7 @@
       {
        "node_id": "dna_replication_origin_binding",
        "label": "DNA replication origin binding",
-       "node_type": "BIOLOGICAL_PROCESS",
+       "node_type": "MOLECULAR_FUNCTION",
        "grounding": "GO:0003688",
        "description": "The origin recognition complex recognizes DNA replication origins in an ATP-dependent manner."
       }
@@ -271128,6 +271185,13 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of origin recognition complex (GO:0000808) in category OTHER with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_CAUSAL_GRAPHS",
+     "changes": "Aligned causal node dna_replication_origin_binding (GO:0003688) node_type to MOLECULAR_FUNCTION to match the Gene Ontology molecular_function namespace (#2476).",
      "llm_assisted": true
     }
    ]
@@ -276187,7 +276251,7 @@
      "protein_examples": [
       {
        "uniprot_id": "UniProtKB:P0AEF0",
-       "protein_label": "DNA replication protein DnaC",
+       "protein_label": "Replicative helicase loader DnaC",
        "gene_symbol": "dnaC",
        "taxon_id": "NCBITaxon:83333",
        "taxon_label": "Escherichia coli K-12",
@@ -276283,6 +276347,14 @@
     {
      "reference": "PMID:21856207",
      "notes": "Kaguni JM 2011, 'Replication initiation at the Escherichia coli chromosomal origin.', Curr Opin Chem Biol."
+    },
+    {
+     "reference": "GO:0032993",
+     "notes": "Gene Ontology classification of the primosome complex (GO:1990077) as a subtype of DNA-protein complex (GO:0032993) via is_a hierarchy."
+    },
+    {
+     "reference": "GO:0030894",
+     "notes": "Gene Ontology parthood relationship placing the primosome complex (GO:1990077) as part_of the replisome (GO:0030894)."
     }
    ],
    "causal_graphs": [
@@ -276445,6 +276517,13 @@
      "curator": "antigravity",
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2430 (finding primosome-complex-pmid-citation-and-graph-id): corrected bibliographic notes for PMID:8663105 (Ng & Marians 1996, J Biol Chem) and PMID:21856207 (Kaguni 2011, Curr Opin Chem Biol) and aligned curation_history[1] graph_id to primosome_primer_synthesis.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_COMPONENTS",
+     "changes": "Aligned UniProtKB:P0AEF0 protein_label to current RecName 'Replicative helicase loader DnaC' and added top-level GO evidence for parent_structures GO:0032993 and part_of GO:0030894 (#2476).",
      "llm_assisted": true
     }
    ]
@@ -283444,10 +283523,10 @@
        "protein_label": "Cell division control protein 45 homolog",
        "gene_symbol": "sna41",
        "taxon_id": "NCBITaxon:284812",
-       "taxon_label": "Schizosaccharomyces pombe",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
        "entry_status": "REVIEWED",
        "retrieved_on": "2026-10-17",
-       "role": "Representative reviewed UniProtKB entry for gene CDC45, which UniProt lists under the primary name sna41, in Schizosaccharomyces pombe. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
+       "role": "Representative reviewed UniProtKB entry for gene CDC45, which UniProt lists under the primary name sna41, in Schizosaccharomyces pombe 972h-. Identifier for the component's declared gene symbol; it is not itself evidence that the protein is part of this structure.",
        "evidence": [
         {
          "reference": "PMID:9619628",
@@ -283556,7 +283635,7 @@
    "canonical_examples": [
     {
      "taxon_id": "NCBITaxon:284812",
-     "taxon_label": "Schizosaccharomyces pombe",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
      "note": "Reference fission-yeast system in which Akman and MacNeill visualised GINS-MCM interactions in living cells from native chromosomal loci.",
      "reference": "PMID:19228417"
     }
@@ -283784,6 +283863,13 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of replisome (GO:0030894) in category OTHER with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T01:15:00Z",
+     "curator": "agy",
+     "action": "CURATED_TAXON_SCOPE",
+     "changes": "Aligned NCBITaxon:284812 strain label to 'Schizosaccharomyces pombe 972h-' on Cdc45 protein UniProtKB:O74113 protein example and canonical_examples[0] (#2475).",
      "llm_assisted": true
     }
    ],

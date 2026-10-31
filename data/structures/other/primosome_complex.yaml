@@ -101,7 +101,7 @@ components:
       helicase ring onto single-stranded DNA during primosome assembly.
   protein_examples:
   - uniprot_id: UniProtKB:P0AEF0
-    protein_label: DNA replication protein DnaC
+    protein_label: Replicative helicase loader DnaC
     gene_symbol: dnaC
     taxon_id: NCBITaxon:83333
     taxon_label: Escherichia coli K-12
@@ -172,6 +172,12 @@ evidence:
 - reference: PMID:21856207
   notes: Kaguni JM 2011, 'Replication initiation at the Escherichia coli chromosomal
     origin.', Curr Opin Chem Biol.
+- reference: GO:0032993
+  notes: Gene Ontology classification of the primosome complex (GO:1990077) as a subtype
+    of DNA-protein complex (GO:0032993) via is_a hierarchy.
+- reference: GO:0030894
+  notes: Gene Ontology parthood relationship placing the primosome complex (GO:1990077)
+    as part_of the replisome (GO:0030894).
 causal_graphs:
 - graph_id: primosome_primer_synthesis
   title: DnaB helicase and DnaG primase on template DNA mediate bacterial primer synthesis
@@ -293,4 +299,11 @@ curation_history:
     corrected bibliographic notes for PMID:8663105 (Ng & Marians 1996, J Biol Chem)
     and PMID:21856207 (Kaguni 2011, Curr Opin Chem Biol) and aligned curation_history[1]
     graph_id to primosome_primer_synthesis.'
+  llm_assisted: true
+- timestamp: '2026-10-31T01:15:00Z'
+  curator: agy
+  action: CURATED_COMPONENTS
+  changes: Aligned UniProtKB:P0AEF0 protein_label to current RecName 'Replicative
+    helicase loader DnaC' and added top-level GO evidence for parent_structures GO:0032993
+    and part_of GO:0030894 (#2476).
   llm_assisted: true

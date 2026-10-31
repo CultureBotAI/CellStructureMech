@@ -38,6 +38,12 @@ curation_history:
   changes: 'Addressed #2421: Added S. pombe alpha-1 tubulin gene symbol nda2 to components#alpha_tubulin.gene_symbols
     to match UniProtKB:P04688 in protein_examples.'
   llm_assisted: true
+- timestamp: '2026-10-31T01:15:00Z'
+  curator: agy
+  action: CURATED_COMPONENTS
+  changes: Added gene_symbols [mto1, mto2] to eMTOC component (GO:0000923) to match
+    reviewed UniProtKB protein_examples O94488 and Q9USP7 (#2475).
+  llm_assisted: true
 parent_structures:
 - GO:0110165
 part_of:
@@ -193,6 +199,9 @@ components:
       spindle-pole targeting.
   - reference: DOI:10.3390/cells12060917
     notes: Equatorial Mto1 recruitment precedes PAA formation in live-cell time series.
+  gene_symbols:
+  - mto1
+  - mto2
   protein_examples:
   - uniprot_id: UniProtKB:O94488
     protein_label: Gamma tubulin complex adapter mto1

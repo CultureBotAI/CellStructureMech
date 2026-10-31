@@ -32,6 +32,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-31T01:15:00Z'
+  curator: agy
+  action: CURATED_TAXON_SCOPE
+  changes: Aligned NCBITaxon:284812 strain label to 'Schizosaccharomyces pombe 972h-'
+    on Cdc45 protein UniProtKB:O74113 protein example and canonical_examples[0] (#2475).
+  llm_assisted: true
 synonyms:
 - synonym_text: unwindosome
   synonym_type: EXACT_SYNONYM
@@ -92,13 +98,13 @@ components:
     protein_label: Cell division control protein 45 homolog
     gene_symbol: sna41
     taxon_id: NCBITaxon:284812
-    taxon_label: Schizosaccharomyces pombe
+    taxon_label: Schizosaccharomyces pombe 972h-
     entry_status: REVIEWED
     retrieved_on: '2026-10-17'
     role: Representative reviewed UniProtKB entry for gene CDC45, which UniProt lists
-      under the primary name sna41, in Schizosaccharomyces pombe. Identifier for the
-      component's declared gene symbol; it is not itself evidence that the protein
-      is part of this structure.
+      under the primary name sna41, in Schizosaccharomyces pombe 972h-. Identifier
+      for the component's declared gene symbol; it is not itself evidence that the
+      protein is part of this structure.
     evidence:
     - reference: PMID:9619628
       notes: Miyake S et al. 1998, ‘Identification of sna41 gene, which is the suppressor
@@ -114,7 +120,7 @@ taxonomic_distribution:
   reference: PMID:19228417
 canonical_examples:
 - taxon_id: NCBITaxon:284812
-  taxon_label: Schizosaccharomyces pombe
+  taxon_label: Schizosaccharomyces pombe 972h-
   note: Reference fission-yeast system in which Akman and MacNeill visualised GINS-MCM
     interactions in living cells from native chromosomal loci.
   reference: PMID:19228417

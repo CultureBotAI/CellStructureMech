@@ -29,6 +29,7 @@ components:
   component_role: CONSTITUENT
   grounding: InterPro:IPR002452
   gene_symbols:
+  - tub1
   - atb2
   - TUB1
   - TUB3
@@ -45,12 +46,13 @@ components:
   protein_examples:
   - uniprot_id: UniProtKB:P04689
     protein_label: Tubulin alpha-2 chain
-    gene_symbol: atb2
+    gene_symbol: tub1
     taxon_id: NCBITaxon:284812
     taxon_label: Schizosaccharomyces pombe 972h-
     entry_status: REVIEWED
     retrieved_on: '2026-08-30'
-    role: Reviewed UniProtKB entry for gene atb2 in Schizosaccharomyces pombe 972h-.
+    role: Reviewed UniProtKB entry for gene tub1 (also declared as synonym atb2) in
+      Schizosaccharomyces pombe 972h-.
     evidence:
     - reference: DOI:10.1083/jcb.201502025
       notes: Laporte D et al. 2015 characterized Atb2-containing quiescent microtubule
@@ -273,4 +275,10 @@ curation_history:
   action: ADDRESS_SAVED_REVIEW
   changes: 'Addressed #2431 (finding static-microtubule-bundle-curation-history-graph-id-mismatch):
     aligned curation_history[1] graph_id to static_microtubule_bundle_organization.'
+  llm_assisted: true
+- timestamp: '2026-10-31T01:15:00Z'
+  curator: agy
+  action: CURATED_PROTEIN_EXAMPLES
+  changes: Aligned UniProtKB:P04689 primary gene_symbol to tub1 (retaining synonym
+    atb2 in component gene_symbols and role) (#2475).
   llm_assisted: true

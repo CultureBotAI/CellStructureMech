@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/autophagosome.yaml
+  slug: autophagosome
+session:
+  id: 2026-10-31T011500Z-agy-44182e
+  timestamp: '2026-10-31T01:15:00Z'
+  actors:
+  - type: ai_agent
+    name: agy
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2476
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - functions
+  summary: Add GO:0016236 grounding to macroautophagy function on autophagosome
+  details: 'Added grounding: GO:0016236 (macroautophagy) to functions[0] (macroautophagy)
+    on data/structures/membrane_organelle/autophagosome.yaml so the function entry matches
+    its GO:0016236 evidence item and causal_graphs[0].nodes[3].'
