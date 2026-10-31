@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/microcompartment/carboxysome.yaml
+  slug: carboxysome
+session:
+  id: 2026-10-31T093454Z-claude-code-7820c6
+  timestamp: '2026-10-31T09:34:54Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected mcdb to shell in carboxysome_assembly and aligned rubisco node_type to
+    STRUCTURE.
+  details: 'Added a sourced ''binds'' edge from mcdb to shell in carboxysome_assembly (PMID:30520729,
+    PMID:34406783) connecting McdAB positioning to the assembled shell, and updated rubisco
+    node_type to STRUCTURE across both causal graphs to match its PROTEIN_COMPLEX component_ref
+    (fixes #2483).'

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/secretion_system/type_vi_protein_secretion_system_complex.yaml
+  slug: type_vi_protein_secretion_system_complex
+session:
+  id: 2026-10-31T090232Z-claude-code-ccf0e8
+  timestamp: '2026-10-31T09:02:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected membrane, baseplate, tube, sheath, and spike subassemblies to the t6ss
+    structure node in contractile_tube_injection.
+  details: Added sourced 'contributes to' edges from membrane, baseplate, tube, sheath, and
+    spike to t6ss (DOI:10.1128/microbiolspec.PSIB-0031-2019, GO:0033104) so the contractile
+    assembly-and-firing mechanics connect directly to the T6SS complex and secretion function.

@@ -645,7 +645,7 @@ causal_graphs:
     grounding: CHEBI:16526
   - node_id: rubisco
     label: RuBisCO
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: rubisco
   - node_id: fixation
     label: carbon fixation
@@ -713,7 +713,7 @@ causal_graphs:
     component_ref: scaffold
   - node_id: rubisco
     label: RuBisCO
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     component_ref: rubisco
   - node_id: procarboxysome
     label: pre-carboxysome cargo condensate
@@ -833,6 +833,19 @@ causal_graphs:
     - reference: PMID:30520729
       notes: UniProt cites this paper (Q8GJM6) for McdA and McdB together mediating
         carboxysome spacing.
+  - subject: mcdb
+    predicate: binds
+    object: shell
+    description: The partner protein McdB associates with the outer surface of assembled
+      carboxysome shells to couple carboxysomes to the nucleoid-bound McdA ATPase
+      gradient.
+    evidence:
+    - reference: PMID:30520729
+      notes: MacCready et al. 2018 demonstrated that McdB localizes to carboxysome
+        shells and interacts with McdA to distribute carboxysomes along the nucleoid.
+    - reference: PMID:34406783
+      notes: Hakim et al. 2021 dissected how McdB-bound carboxysome shells interact
+        with the McdA ATPase to drive carboxysome positioning along the nucleoid.
 mapping_status: PROPOSED
 curation_history:
 - timestamp: '2026-08-29T00:00:00Z'
@@ -977,6 +990,12 @@ curation_history:
   changes: 'Removed component_ref: bmc_h from composite STRUCTURE node shell in carboxysome_co2_concentrating
     since the icosahedral shell is built from both bmc_h hexamers and bmc_p pentamers
     (#2463).'
+  llm_assisted: true
+- timestamp: '2026-10-31T09:34:54Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected mcdb to shell in carboxysome_assembly and aligned rubisco node_type
+    to STRUCTURE.
   llm_assisted: true
 xrefs:
 - uniprot.location:SL-0034

@@ -46,6 +46,12 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-31T09:02:31Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected fungal_type_vacuole_membrane and fungal_type_vacuole_lumen to
+    fungal_type_vacuole.
+  llm_assisted: true
 parent_structures:
 - GO:0005773
 has_part:
@@ -260,6 +266,24 @@ causal_graphs:
     - reference: GO:0000324
       notes: GO:0000324 describes the fungal vacuole as the primary compartment for
         degradation.
+  - subject: fungal_type_vacuole_membrane
+    predicate: is part of
+    object: fungal_type_vacuole
+    description: The fungal-type vacuole membrane is a direct anatomical part of the
+      fungal-type vacuole.
+    evidence:
+    - reference: GO:0000329
+      notes: GO:0000329 places the fungal-type vacuole membrane as a direct part of
+        the fungal-type vacuole (GO:0000324).
+  - subject: fungal_type_vacuole_lumen
+    predicate: is part of
+    object: fungal_type_vacuole
+    description: The fungal-type vacuole lumen is a direct anatomical part of the
+      fungal-type vacuole.
+    evidence:
+    - reference: GO:0000328
+      notes: GO:0000328 places the fungal-type vacuole lumen as a direct part of the
+        fungal-type vacuole (GO:0000324).
 discussions:
 - discussion_id: ground_fungal_vacuole_machinery
   prompt: Resolve exact source-neutral identifiers for fungal vacuole V-ATPase, transporter,

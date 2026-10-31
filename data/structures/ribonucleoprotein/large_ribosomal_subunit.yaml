@@ -35,6 +35,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-31T09:02:31Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added rrna_5s and lsu_protein_cohort causal graph nodes with component_ref
+    and connected them to large_ribosomal_subunit.
+  llm_assisted: true
 synonyms:
 - synonym_text: ribosomal large subunit
   synonym_type: EXACT_SYNONYM
@@ -241,6 +247,19 @@ causal_graphs:
     label: major large-subunit rRNA
     node_type: RNA
     component_ref: major_lsu_rrna
+  - node_id: rrna_5s
+    label: 5S rRNA
+    node_type: RNA
+    grounding: SO:0000652
+    component_ref: rrna_5s
+    description: Conserved ~120-nucleotide ribosomal RNA forming the central protuberance
+      of the large ribosomal subunit.
+  - node_id: lsu_protein_cohort
+    label: large subunit ribosomal proteins (uL/bL/eL cohort)
+    node_type: GENE_OR_PROTEIN
+    component_ref: lsu_protein_cohort
+    description: Universal and domain-specific ribosomal proteins that pack over the
+      large-subunit rRNA surface and extend unstructured tails into the rRNA core.
   edges:
   - subject: major_lsu_rrna
     predicate: forms peptidyl transferase center of
@@ -250,6 +269,31 @@ causal_graphs:
     - reference: DOI:10.1126/science.289.5481.920
       notes: Nissen et al. 2000 localized all 50S peptidyl-transferase-center contacts
         to 23S rRNA.
+  - subject: rrna_5s
+    predicate: contributes to
+    object: large_ribosomal_subunit
+    description: The 5S rRNA assembles with ribosomal proteins uL5 and uL18 to form
+      the central protuberance of the large ribosomal subunit.
+    evidence:
+    - reference: DOI:10.1126/science.289.5481.905
+      notes: Ban et al. 2000 resolved the atomic structure of the 50S large ribosomal
+        subunit including the 23S rRNA, 5S rRNA, and ribosomal protein cohort.
+    - reference: DOI:10.1128/MMBR.00013-07
+      notes: Kaczanowska and Rydén-Aulin 2007 reviewed the assembly and structural
+        organization of 5S rRNA and large-subunit ribosomal proteins in the 50S subunit.
+  - subject: lsu_protein_cohort
+    predicate: contributes to
+    object: large_ribosomal_subunit
+    description: Large-subunit ribosomal proteins pack across the solvent-exposed
+      surface of the 23S/28S and 5S rRNAs and stabilize the folded ribonucleoprotein
+      subunit.
+    evidence:
+    - reference: DOI:10.1126/science.289.5481.905
+      notes: Ban et al. 2000 resolved the atomic structure of the 50S large ribosomal
+        subunit including the 23S rRNA, 5S rRNA, and ribosomal protein cohort.
+    - reference: DOI:10.1128/MMBR.00013-07
+      notes: Kaczanowska and Rydén-Aulin 2007 reviewed the assembly and structural
+        organization of 5S rRNA and large-subunit ribosomal proteins in the 50S subunit.
 discussions:
 - discussion_id: split_large_subunit_components
   prompt: Split exact large-subunit rRNA and protein families across bacterial, archaeal,

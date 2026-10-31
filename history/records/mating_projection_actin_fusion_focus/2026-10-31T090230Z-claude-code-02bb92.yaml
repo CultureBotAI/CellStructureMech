@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/mating_projection_actin_fusion_focus.yaml
+  slug: mating_projection_actin_fusion_focus
+session:
+  id: 2026-10-31T090230Z-claude-code-02bb92
+  timestamp: '2026-10-31T09:02:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected actin_fusion_focus to type_v_myosins and cell_wall_hydrolases to cell_wall_dissolution
+    in fus1_actin_focus_wall_dissolution.
+  details: Added sourced edges linking actin_fusion_focus to type_v_myosins and cell_wall_hydrolases
+    to cell_wall_dissolution (DOI:10.1083/jcb.201411124) so myosin-driven hydrolase delivery
+    integrates into the cell-wall dissolution pathway.
