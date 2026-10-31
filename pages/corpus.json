@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
  "record_count": 1015,
- "corpus_updated": "2026-10-31 10:59:40 UTC",
- "corpus_digest": "c67d6814f042",
+ "corpus_updated": "2026-10-31 15:02:59 UTC",
+ "corpus_digest": "4d46a3a5ca0b",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -19852,6 +19852,13 @@
      "action": "EDIT",
      "changes": "added 8 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ADDED_HAS_PART_LINK",
+     "changes": "Added reciprocal has_part link to cellstructuremech:stalk_crossband (#2490).",
+     "llm_assisted": true
     }
    ],
    "synonyms": [
@@ -19877,7 +19884,8 @@
    "has_part": [
     "GO:0005886",
     "GO:0009274",
-    "GO:0009279"
+    "GO:0009279",
+    "cellstructuremech:stalk_crossband"
    ],
    "components": [
     {
@@ -33459,6 +33467,13 @@
      "action": "ADDRESS_SAVED_REVIEW",
      "changes": "Addressed #2430 (finding cytoskeleton-cartwheel-discussions-unlinked-pmid): aligned discussions#newer_trichonympha_source prose citation with structured discussions[3].evidence (DOI:10.1073/pnas.2612170123).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ADDED_HAS_PART_LINKS",
+     "changes": "Added reciprocal has_part links to basal_body_cartwheel_inner_density, basal_body_d2_rod, and basal_body_filamentous_cartwheel_inner_density (#2490).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -33759,6 +33774,11 @@
      "retrieved_on": "2026-10-04",
      "notes": "Figure 1 from article version PMC7667884.1; exact licence version read from JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator because PMC has no taxon field. Curator explicitly accepted the multi-panel figure. Original image visually inspected without modification. The JATS caption contains inconsistent panel lettering; the curated caption follows the graphic labels. Symmetrized panels are processed views, not raw observations."
     }
+   ],
+   "has_part": [
+    "cellstructuremech:basal_body_cartwheel_inner_density",
+    "cellstructuremech:basal_body_d2_rod",
+    "cellstructuremech:basal_body_filamentous_cartwheel_inner_density"
    ]
   },
   {
@@ -50804,6 +50824,13 @@
      "action": "EDIT",
      "changes": "Cycle 3 Stage 3 protein_examples curation: added 2 declared gene_symbol(s); added 2 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ADDED_HAS_PART_LINK",
+     "changes": "Added reciprocal has_part link to cellstructuremech:cytostomal_cord (#2490).",
+     "llm_assisted": true
     }
    ],
    "parent_structures": [
@@ -51145,6 +51172,9 @@
      "retrieved_on": "2026-10-03",
      "notes": "Fig. 2. from article version PMC5483020.1; exact licence version read from JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator because PMC has no taxon field. Curator explicitly accepted the multi-panel figure."
     }
+   ],
+   "has_part": [
+    "cellstructuremech:cytostomal_cord"
    ]
   },
   {
@@ -81309,7 +81339,7 @@
    "label": "Sid2-Mob1 complex",
    "structure_category": "DIVISION_MACHINERY",
    "structure_kind": "MULTIPROTEIN_COMPLEX",
-   "definition": "A conserved fungal NDR-family protein kinase complex localized to the spindle pole body and medial cell division site, composed of the catalytic serine/threonine protein kinase Sid2 (fission yeast) or Dbf2/Dbf20 (budding yeast) bound to its regulatory activator subunit Mob1; acts as the terminal effector kinase complex of the septation initiation network (SIN) and mitotic exit network (MEN) to trigger mitotic exit, Cdc14 release, and cytokinetic septum assembly.",
+   "definition": "A protein complex that contains a protein kinase (Sid2 in S. pombe) and its regulatory subunit (Mob1). The Sid2p-Mob1p kinase complex is a component of the septation initiation network in fission yeast (called the mitotic exit network in S. cerevisiae) and is required for cytokinesis. The analogous complex in S. cerevisiae is called Dbf2p-Mob1p complex.",
    "definition_source": "GO:0034973",
    "mapping_status": "PROPOSED",
    "synonyms": [
@@ -81593,6 +81623,16 @@
     {
      "reference": "DOI:10.7554/elife.63645",
      "notes": "DOI for PMID:33481703."
+    },
+    {
+     "reference": "PMID:29813053",
+     "snippet": "To ensure asymmetric SIN signaling, the terminal SIN kinase Sid2, complexed with its regulatory subunit Mob1, associates via its N-terminus with the SIN scaffold Cdc11 at the SPB.",
+     "notes": "Supports N-terminal association of the Sid2-Mob1 complex with the SIN scaffold Cdc11 at the spindle pole body."
+    },
+    {
+     "reference": "PMID:35011608",
+     "snippet": "Only in anaphase B, when CDK activity drops, does the terminal kinase of the SIN pathway, Sid2-Mob1, translocate from the SPB to the division site to trigger cytokinesis.",
+     "notes": "Supports anaphase B translocation of the Sid2-Mob1 complex from the spindle pole body to the division site."
     }
    ],
    "causal_graphs": [
@@ -81727,6 +81767,13 @@
      "curator": "antigravity",
      "action": "CURATE_PROTEIN_EXAMPLES",
      "changes": "Added reviewed UniProtKB:P32328 (DBF20) in Saccharomyces cerevisiae S288C to sid2_dbf2_kinase_subunit so all three declared gene symbols (sid2, DBF2, DBF20) are covered.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ALIGNED_GO_DEFINITION_AND_EVIDENCE",
+     "changes": "Aligned definition to official GO:0034973 text and added PMID:29813053 and PMID:35011608 to top-level evidence (#2489).",
      "llm_assisted": true
     }
    ]
@@ -92924,7 +92971,7 @@
    "label": "potassium ion-transporting ATPase complex",
    "structure_category": "ENERGY_COMPLEX",
    "structure_kind": "MULTIPROTEIN_COMPLEX",
-   "definition": "A heterotetrameric P-type ATPase complex (KdpFABC) in the prokaryotic plasma membrane that couples ATP hydrolysis in the KdpB P-type ATPase subunit to high-affinity potassium ion import through the channel-like KdpA selectivity filter and inter-subunit intramembrane tunnel, stabilized by KdpC and KdpF.",
+   "definition": "Protein complex that carries out the reaction: ATP + H2O + K+(out) = ADP + phosphate + K+(in). It is a high affinity potassium uptake system. The E. coli complex consists of 4 proteins: KdpA is the potassium ion translocase, KdpB is the ATPase, and KdpC and KdpF seem to be involved in assembly and stabilization of the complex.",
    "definition_source": "GO:0031004",
    "mapping_status": "PROPOSED",
    "synonyms": [
@@ -93220,6 +93267,11 @@
     {
      "reference": "DOI:10.1073/pnas.2105195118",
      "notes": "DOI for PMID:34272288."
+    },
+    {
+     "reference": "PMID:41384914",
+     "snippet": "KdpFABC is an ATP-dependent membrane complex that enables prokaryotes to maintain potassium homeostasis under potassium-limited conditions.",
+     "notes": "Establishes the physiological role of KdpFABC in prokaryotic potassium homeostasis under potassium-limited conditions."
     }
    ],
    "causal_graphs": [
@@ -93365,6 +93417,13 @@
      "curator": "antigravity",
      "action": "CREATED_RECORD",
      "changes": "Added potassium ion-transporting ATPase complex (GO:0031004) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ALIGNED_GO_DEFINITION_AND_EVIDENCE",
+     "changes": "Aligned definition to official GO:0031004 text and added PMID:41384914 to top-level evidence (#2489).",
      "llm_assisted": true
     }
    ]
@@ -171700,6 +171759,13 @@
      "action": "EDIT",
      "changes": "added 1 verified UniProtKB protein_example(s).",
      "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "GROUNDED_COMPONENT_AND_ADDED_HAS_PART",
+     "changes": "Grounded reservosome_membrane component to GO:0106126 and added has_part links to GO:0106124, GO:0106125, and GO:0106126 (#2490).",
+     "llm_assisted": true
     }
    ],
    "components": [
@@ -171713,8 +171779,13 @@
       {
        "reference": "DOI:10.1017/S0031182004005797",
        "notes": "Figueiredo et al. 2004 described reservosomes as large membrane-bound organelles in T. cruzi epimastigotes."
+      },
+      {
+       "reference": "GO:0106126",
+       "notes": "GO cellular-component term for the reservosome membrane."
       }
-     ]
+     ],
+     "grounding": "GO:0106126"
     },
     {
      "component_id": "endocytosed_cargo",
@@ -171825,6 +171896,10 @@
     {
      "reference": "DOI:10.1002/pmic.200800730",
      "notes": "Sant'Anna et al. 2009, Subcellular proteomics of Trypanosoma cruzi reservosomes, Proteomics."
+    },
+    {
+     "reference": "GO:0106126",
+     "notes": "GO cellular-component term for the reservosome membrane (part_of reservosome)."
     }
    ],
    "causal_graphs": [
@@ -171937,6 +172012,11 @@
    ],
    "parent_structures": [
     "GO:0043231"
+   ],
+   "has_part": [
+    "GO:0106124",
+    "GO:0106125",
+    "GO:0106126"
    ]
   },
   {
@@ -172458,7 +172538,7 @@
    "label": "reservosome membrane",
    "structure_category": "MEMBRANE_ORGANELLE",
    "structure_kind": "MEMBRANE",
-   "definition": "The lipid bilayer surrounding a reservosome. The limiting lipid bilayer membrane surrounding the reservosome in Trypanosoma cruzi epimastigotes. It is enriched in ergosterol, P-type H+-ATPases, ABC transporters, and membrane-tethered Rab11 GTPases that mediate endocytic vesicle fusion, luminal acidification, and regulated lipid and protein mobilization during metacyclogenesis.",
+   "definition": "The lipid bilayer surrounding a reservosome.",
    "definition_source": "GO:0106126",
    "mapping_status": "PROPOSED",
    "parent_structures": [
@@ -172472,7 +172552,7 @@
      "taxon_id": "NCBITaxon:5693",
      "taxon_label": "Trypanosoma cruzi",
      "presence": "VARIABLE",
-     "note": "Reservosome lumens occur in reservosomes of T. cruzi epimastigotes and are absent from amastigote and trypomastigote life-cycle forms that lack reservosomes.",
+     "note": "Reservosome membranes bound the reservosomes of T. cruzi epimastigotes and are absent from amastigote and trypomastigote life-cycle forms that lack reservosomes.",
      "reference": "DOI:10.1017/S0031182004005797"
     }
    ],
@@ -172527,8 +172607,8 @@
      "graph_id": "reservosome_membrane_mechanism",
      "title": "Reservosome membrane assembly and functional mechanism",
      "description": "Directed causal graph linking constituent components and compartmental context of reservosome membrane (GO:0106126) to its biological functions.",
-     "graph_kind": "ASSEMBLY",
-     "scope_status": "MECHANISTIC",
+     "graph_kind": "FUNCTION",
+     "scope_status": "NONMECHANISTIC",
      "nodes": [
       {
        "node_id": "reservosome_membrane",
@@ -172558,7 +172638,8 @@
         }
        ]
       }
-     ]
+     ],
+     "scope_notes": "Two-node structural parthood edge linking the reservosome membrane to the reservosome organelle; specific membrane-trafficking and fusion steps remain to be expanded."
     }
    ],
    "curation_history": [
@@ -172567,6 +172648,13 @@
      "curator": "claude-opus-4-7",
      "action": "CREATED",
      "changes": "Initial curation of reservosome membrane (GO:0106126) in category MEMBRANE_ORGANELLE with verified GO hierarchy, compartmental context, causal mechanism graph, and literature evidence.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ALIGNED_GO_DEFINITION_AND_GRAPH_METADATA",
+     "changes": "Aligned definition to official GO:0106126 text, added life-stage note for presence: VARIABLE on NCBITaxon:5693, and downgraded 2-node parthood causal graph to FUNCTION/NONMECHANISTIC (#2490).",
      "llm_assisted": true
     }
    ]
@@ -189534,7 +189622,7 @@
    "label": "Atg12-Atg5-Atg16 complex",
    "structure_category": "OTHER",
    "structure_kind": "MULTIPROTEIN_COMPLEX",
-   "definition": "A heterohexameric ubiquitin-like E3 ligase complex localized to the phagophore assembly site (pre-autophagosomal structure, PAS) in yeast and other eukaryotes, formed by two copies of the covalent Atg12-Atg5 conjugate bound to a homodimer of coiled-coil Atg16; stimulates Atg3-mediated conjugation of Atg8 to phosphatidylethanolamine (PE) and scaffolds membrane shaping during autophagosome biogenesis.",
+   "definition": "A protein complex required for the expansion of the autophagosomal membrane. In budding yeast, this complex consists of Atg12p, Atg5p and Atg16p.",
    "definition_source": "GO:0034274",
    "mapping_status": "PROPOSED",
    "parent_structures": [
@@ -189783,6 +189871,11 @@
     {
      "reference": "DOI:10.1038/s41594-025-01678-3",
      "notes": "DOI for PMID:40957983."
+    },
+    {
+     "reference": "PMID:41457424",
+     "snippet": "During autophagy, the Atg12-Atg5-Atg16 complex functions as an E3-like enzyme that promotes Atg8 lipidation on the phagophore membrane.",
+     "notes": "Demonstrates E3-like Atg8 lipidation activity of the yeast Atg12-Atg5-Atg16 complex on the phagophore membrane."
     }
    ],
    "causal_graphs": [
@@ -189937,6 +190030,13 @@
      "curator": "antigravity",
      "action": "CURATE_PROTEIN_EXAMPLES",
      "changes": "Recorded declared APG12, APG5, and APG16 synonym mappings on the reviewed Saccharomyces cerevisiae S288C UniProtKB protein_examples (P38316, Q12380, Q03818).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ALIGNED_GO_DEFINITION_AND_EVIDENCE",
+     "changes": "Aligned definition to official GO:0034274 text and added PMID:41457424 to top-level evidence (#2489).",
      "llm_assisted": true
     }
    ]
@@ -201749,7 +201849,7 @@
    "label": "cobalamin transport complex",
    "structure_category": "OTHER",
    "structure_kind": "MULTIPROTEIN_COMPLEX",
-   "definition": "A type II ATP-binding cassette (ABC) importer complex (BtuCD-F) in the bacterial inner membrane and periplasm, composed of the periplasmic cobalamin-binding protein BtuF, homodimeric transmembrane permease subunits BtuC2, and homodimeric ATP-binding cassette subunits BtuD2, which mediates ATP-driven import of vitamin B12 (cobalamin) and cobinamide into the cytoplasm.",
+   "definition": "Protein complex facilitating ATP-dependent cobalamin (vitamin B12) transport through inner cell membrane (periplasm to cytoplasm) in Gram-negative bacteria. In E. coli the system is composed of a periplasmic cobalamin-binding protein (BtuF), an integral membrane homodimer, BtuC, and a cytoplasmic ATP-binding homodimer BtuD.",
    "definition_source": "GO:1990191",
    "mapping_status": "PROPOSED",
    "synonyms": [
@@ -202018,6 +202118,16 @@
     {
      "reference": "DOI:10.1038/srep41575",
      "notes": "DOI for PMID:28128319."
+    },
+    {
+     "reference": "PMID:27457716",
+     "snippet": "The Escherichia coli vitamin B12 ABC transporter BtuCD-F imports cobalamin across the inner membrane into the cytoplasm.",
+     "notes": "Supports inner-membrane cobalamin import by the E. coli BtuCD-F ABC transporter complex."
+    },
+    {
+     "reference": "PMID:29084999",
+     "snippet": "ATP binding and hydrolysis by the BtuD dimer drive conformational transitions in the BtuC transmembrane subunits that translocate vitamin B12 into the cytoplasm.",
+     "notes": "Establishes ATP-driven conformational coupling between BtuD and BtuC during cobalamin translocation."
     }
    ],
    "causal_graphs": [
@@ -202172,6 +202282,13 @@
      "curator": "antigravity",
      "action": "CURATE_PROTEIN_EXAMPLES",
      "changes": "Recorded declared yadT synonym mapping on the reviewed Escherichia coli K-12 BtuF UniProtKB protein_example (P37028).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ALIGNED_GO_DEFINITION_AND_EVIDENCE",
+     "changes": "Aligned definition to official GO:1990191 text and added PMID:27457716 and PMID:29084999 to top-level evidence (#2489).",
      "llm_assisted": true
     }
    ]
@@ -223155,7 +223272,7 @@
    "label": "EKC/KEOPS complex",
    "structure_category": "OTHER",
    "structure_kind": "MULTIPROTEIN_COMPLEX",
-   "definition": "A multiprotein complex conserved across Archaea and Eukarya (composed of Kae1, Bud32, Cgi121, Pcc1, and in fungi/metazoa Gon7) that catalyzes the biosynthesis of the essential N(6)-L-threonylcarbamoyladenine (t6A) modification at position 37 of ANN-decoding tRNAs and supports telomere maintenance and transcription.",
+   "definition": "A protein complex involved in t6A tRNA modification. For example, in Saccharomyces cerevisiae the complex contains Bud32p, Kae1p, Gon7p, Cgi121p, and Pcc1p.",
    "definition_source": "GO:0000408",
    "mapping_status": "PROPOSED",
    "synonyms": [
@@ -223700,6 +223817,13 @@
      "curator": "antigravity",
      "action": "CURATE_PROTEIN_EXAMPLES",
      "changes": "Recorded declared PCC2 synonym mapping on the reviewed Saccharomyces cerevisiae S288C Gon7 UniProtKB protein_example (P46984).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ALIGNED_GO_DEFINITION",
+     "changes": "Aligned definition to official GO:0000408 text (#2489).",
      "llm_assisted": true
     }
    ]
@@ -240307,7 +240431,7 @@
    "label": "HslUV protease complex",
    "structure_category": "OTHER",
    "structure_kind": "MULTIPROTEIN_COMPLEX",
-   "definition": "An ATP-dependent protease complex present in many Bacteria and Eukarya, composed of stacking HslU (ClpY) hexameric AAA+ ATPase rings and HslV (ClpQ) dodecameric peptidase double rings; recognizes, unfolds, and translocates protein substrates such as the cell division inhibitor SulA into the HslV proteolytic chamber.",
+   "definition": "A protein complex that possesses ATP-dependent protease activity; consists of an ATPase large subunit with homology to other ClpX family ATPases and a peptidase small subunit related to the proteasomal beta-subunits of eukaryotes. In the E. coli complex, a double ring-shaped homohexamer of HslV is capped on each side by a ring-shaped HslU homohexamer.",
    "definition_source": "GO:0009376",
    "mapping_status": "PROPOSED",
    "synonyms": [
@@ -240623,6 +240747,13 @@
      "curator": "antigravity",
      "action": "CURATE_PROTEIN_EXAMPLES",
      "changes": "Recorded declared clpY and clpQ synonym mappings on the reviewed Escherichia coli K-12 HslU and HslV UniProtKB protein_examples (P0A6H5, P0A7B8).",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ALIGNED_GO_DEFINITION",
+     "changes": "Aligned definition to official GO:0009376 text (#2489).",
      "llm_assisted": true
     }
    ]
@@ -247679,7 +247810,7 @@
    "label": "maltose transport complex",
    "structure_category": "OTHER",
    "structure_kind": "MULTIPROTEIN_COMPLEX",
-   "definition": "A pentameric ATP-binding cassette (ABC) importer complex (MalEFGK2) in the bacterial inner membrane and periplasm, composed of the periplasmic maltose/maltodextrin-binding protein MalE, heterodimeric transmembrane permease subunits MalF and MalG, and homodimeric ATP-binding cassette subunits MalK2.",
+   "definition": "Protein complex facilitating ATP-dependent maltose transport through inner cell membrane (periplasm to cytoplasm) in Gram-negative bacteria. In E. coli the system is composed of a periplasmic maltose-binding protein (MBP), two integral membrane proteins, MalF and MalG, and two copies of the cytoplasmic ATP-binding cassette MalK.",
    "definition_source": "GO:1990060",
    "mapping_status": "PROPOSED",
    "synonyms": [
@@ -248133,6 +248264,13 @@
      "curator": "antigravity",
      "action": "CREATED_RECORD",
      "changes": "Added maltose transport complex (GO:1990060) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    },
+    {
+     "timestamp": "2026-10-31T15:02:59Z",
+     "curator": "antigravity",
+     "action": "ALIGNED_GO_DEFINITION",
+     "changes": "Aligned definition to official GO:1990060 text (#2489).",
      "llm_assisted": true
     }
    ]

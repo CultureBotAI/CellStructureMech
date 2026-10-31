@@ -2,11 +2,8 @@ identifier: GO:0034274
 label: Atg12-Atg5-Atg16 complex
 structure_category: OTHER
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: A heterohexameric ubiquitin-like E3 ligase complex localized to the phagophore
-  assembly site (pre-autophagosomal structure, PAS) in yeast and other eukaryotes,
-  formed by two copies of the covalent Atg12-Atg5 conjugate bound to a homodimer of
-  coiled-coil Atg16; stimulates Atg3-mediated conjugation of Atg8 to phosphatidylethanolamine
-  (PE) and scaffolds membrane shaping during autophagosome biogenesis.
+definition: A protein complex required for the expansion of the autophagosomal membrane.
+  In budding yeast, this complex consists of Atg12p, Atg5p and Atg16p.
 definition_source: GO:0034274
 mapping_status: PROPOSED
 parent_structures:
@@ -203,6 +200,11 @@ evidence:
     droplets.
 - reference: DOI:10.1038/s41594-025-01678-3
   notes: DOI for PMID:40957983.
+- reference: PMID:41457424
+  snippet: During autophagy, the Atg12-Atg5-Atg16 complex functions as an E3-like
+    enzyme that promotes Atg8 lipidation on the phagophore membrane.
+  notes: Demonstrates E3-like Atg8 lipidation activity of the yeast Atg12-Atg5-Atg16
+    complex on the phagophore membrane.
 causal_graphs:
 - graph_id: atg12_atg5_atg16_atg8_lipidation
   title: Atg12-Atg5-Atg16 E3 Ligase Assembly and Atg8 Lipidation at the PAS
@@ -324,4 +326,10 @@ curation_history:
   action: CURATE_PROTEIN_EXAMPLES
   changes: Recorded declared APG12, APG5, and APG16 synonym mappings on the reviewed
     Saccharomyces cerevisiae S288C UniProtKB protein_examples (P38316, Q12380, Q03818).
+  llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ALIGNED_GO_DEFINITION_AND_EVIDENCE
+  changes: Aligned definition to official GO:0034274 text and added PMID:41457424
+    to top-level evidence (#2489).
   llm_assisted: true

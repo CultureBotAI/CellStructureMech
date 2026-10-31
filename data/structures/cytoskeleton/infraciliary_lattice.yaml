@@ -39,6 +39,11 @@ curation_history:
   changes: 'Cycle 3 Stage 3 protein_examples curation: added 2 declared gene_symbol(s);
     added 2 verified UniProtKB protein_example(s).'
   llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ADDED_HAS_PART_LINK
+  changes: Added reciprocal has_part link to cellstructuremech:cytostomal_cord (#2490).
+  llm_assisted: true
 parent_structures:
 - GO:0005622
 part_of:
@@ -344,3 +349,5 @@ images:
   notes: Fig. 2. from article version PMC5483020.1; exact licence version read from
     JATS and media md5 read from the PMC OA S3 metadata. Taxon supplied by the curator
     because PMC has no taxon field. Curator explicitly accepted the multi-panel figure.
+has_part:
+- cellstructuremech:cytostomal_cord

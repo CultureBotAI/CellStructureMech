@@ -46,6 +46,11 @@ curation_history:
   action: EDIT
   changes: added 8 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ADDED_HAS_PART_LINK
+  changes: Added reciprocal has_part link to cellstructuremech:stalk_crossband (#2490).
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial stalk
   synonym_type: RELATED_SYNONYM
@@ -62,6 +67,7 @@ has_part:
 - GO:0005886
 - GO:0009274
 - GO:0009279
+- cellstructuremech:stalk_crossband
 components:
 - component_id: stalk_peptidoglycan
   label: stalk peptidoglycan

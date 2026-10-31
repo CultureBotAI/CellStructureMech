@@ -2,10 +2,11 @@ identifier: GO:1990060
 label: maltose transport complex
 structure_category: OTHER
 structure_kind: MULTIPROTEIN_COMPLEX
-definition: A pentameric ATP-binding cassette (ABC) importer complex (MalEFGK2) in
-  the bacterial inner membrane and periplasm, composed of the periplasmic maltose/maltodextrin-binding
-  protein MalE, heterodimeric transmembrane permease subunits MalF and MalG, and homodimeric
-  ATP-binding cassette subunits MalK2.
+definition: Protein complex facilitating ATP-dependent maltose transport through inner
+  cell membrane (periplasm to cytoplasm) in Gram-negative bacteria. In E. coli the
+  system is composed of a periplasmic maltose-binding protein (MBP), two integral
+  membrane proteins, MalF and MalG, and two copies of the cytoplasmic ATP-binding
+  cassette MalK.
 definition_source: GO:1990060
 mapping_status: PROPOSED
 synonyms:
@@ -355,4 +356,9 @@ curation_history:
   changes: Added maltose transport complex (GO:1990060) with InterPro-grounded components,
     reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
     snippets, and a mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-10-31T15:02:59Z'
+  curator: antigravity
+  action: ALIGNED_GO_DEFINITION
+  changes: Aligned definition to official GO:1990060 text (#2489).
   llm_assisted: true
