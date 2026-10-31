@@ -5740,6 +5740,16 @@
   "synonyms": "AMT1 complex"
  },
  {
+  "identifier": "GO:0031250",
+  "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/anaerobic_ribonucleoside_triphosphate_reductase_complex.html",
+  "definition": "An enzyme complex composed of 4 subunits, 2 copies of the large protein (nrdD in E. coli) and 2 copies of the small protein (nrdG in E. coli). It catalyzes the generation of 2'deoxyribonucleotides under anaerobic growth conditions. The larger subunit is the catalytic unit that is activated by the smaller iron-binding subunit.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0030121",
   "label": "AP-1 adaptor complex",
   "category": "OTHER",
@@ -7090,6 +7100,16 @@
   "synonyms": "Caulobacter holdfast holdfast adhesin"
  },
  {
+  "identifier": "GO:0009379",
+  "label": "Holliday junction helicase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/holliday_junction_helicase_complex.html",
+  "definition": "A DNA helicase complex found at Holliday junctions where the helicase activity is involved in the migration of the junction branch point. The best-characterized example is the E. coli RuvAB complex, in which a hexamer of RuvB subunits possesses helicase activity that is modulated by association with RuvA.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0030897",
   "label": "HOPS complex",
   "category": "OTHER",
@@ -7158,6 +7178,16 @@
   "page": "structures/other/ino80_complex.html",
   "definition": "A multisubunit protein complex that contains the Ino80p ATPase; exhibits chromatin remodeling activity.",
   "synonyms": "INO80 chromatin remodeling complex INO80-C Ino80.com"
+ },
+ {
+  "identifier": "GO:1990330",
+  "label": "IscS-IscU complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/iscs_iscu_complex.html",
+  "definition": "A heterotetrameric protein complex involved in the sulfur transfer during iron-sulfur cluster assembly and in the modification of tRNA wobble positions. In E. coli it consists of a central IscS dimer with the IscU protomers attached to one of the IscS units each via a disulfide (-SSH) group.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0016587",
@@ -7508,6 +7538,16 @@
   "page": "structures/other/mode_complex.html",
   "definition": "A dimeric protein complex containing two ModE subunits. Binds directly to DNA to regulate transcription, and is involved in (positively and negatively) regulating various aspects of molybdenum metabolism.",
   "synonyms": "ModE dimer"
+ },
+ {
+  "identifier": "GO:1990140",
+  "label": "molybdopterin synthase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/molybdopterin_synthase_complex.html",
+  "definition": "A heterotetrameric protein complex that catalyses sulfur transfer from the sulfur carrier subunit of molybdopterin synthase to precursor Z to synthesize molybdopterin as part of molybdopterin cofactor (Moco) biosynthesis. In E. coli the subunits are MoaE and MoaD; in human, MOCS2B and MOCS2A. Moco biosynthesis and its constituent molecules are evolutionarily conserved.",
+  "synonyms": "MPT synthase complex molybdopterin converting factor complex molybdopterin cofactor (Moco) biosynthesis sulfurtransferase complex"
  },
  {
   "identifier": "GO:0035658",
@@ -8070,6 +8110,16 @@
   "synonyms": "pre-RC pre-replication complex"
  },
  {
+  "identifier": "GO:0016272",
+  "label": "prefoldin complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/prefoldin_complex.html",
+  "definition": "A multisubunit chaperone that is capable of delivering unfolded proteins to cytosolic chaperonin, which it acts as a cofactor for. In humans, the complex is a heterohexamer of two PFD-alpha and four PFD-beta type subunits. In Saccharomyces cerevisiae, it also acts in the nucleus to regulate the rate of elongation by RNA polymerase II via a direct effect on histone dynamics.",
+  "synonyms": "GIM complex"
+ },
+ {
   "identifier": "GO:1990077",
   "label": "primosome complex",
   "category": "OTHER",
@@ -8530,6 +8580,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0009337",
+  "label": "sulfite reductase complex (NADPH)",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/sulfite_reductase_complex_nadph.html",
+  "definition": "A multisubunit iron flavoprotein, which in yeast is composed of 2 alpha and 2 beta subunits. Catalyzes the reduction of sulfite to sulfide.",
+  "synonyms": "sulphite reductase complex (NADPH)"
+ },
+ {
   "identifier": "GO:0032798",
   "label": "Swi5-Sfr1 complex",
   "category": "OTHER",
@@ -8778,6 +8838,16 @@
   "page": "structures/other/tusk_complex.html",
   "definition": "A protein complex containing Usp7, the divergent Skp1-like protein SkpZ, and Tpr86, experimentally characterized in Trypanosoma brucei. It is distinct from cullin ubiquitin-ligase complexes and is implicated in coordinated regulation of surface-protein abundance.",
   "synonyms": "TUSK TUS complex TUS deubiquitinase complex"
+ },
+ {
+  "identifier": "GO:0031372",
+  "label": "UBC13-MMS2 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ubc13_mms2_complex.html",
+  "definition": "A heterodimeric ubiquitin conjugating enzyme complex that catalyzes assembly of K63-linked polyubiquitin chains. In Saccharomyces cerevisiae, the complex comprises Ubc13p and Mms2p; in human it comprises UBE2N and UBE2V1/UBE2V2; and in plants UBC35/UBC36 and UEV1A/UEV1B/UEV1C/UEV1D-4.",
+  "synonyms": "BEN-UEV1A complex UBE2N/UBE2NL complex UBE2V1/UBE2V2 complex Uev1A-ben complex ubc-13-uev-1 complex"
  },
  {
   "identifier": "GO:0043541",

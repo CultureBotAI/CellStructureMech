@@ -1,0 +1,299 @@
+identifier: GO:0031372
+label: UBC13-MMS2 complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterodimeric ubiquitin conjugating enzyme complex that catalyzes assembly
+  of K63-linked polyubiquitin chains. In Saccharomyces cerevisiae, the complex comprises
+  Ubc13p and Mms2p; in human it comprises UBE2N and UBE2V1/UBE2V2; and in plants UBC35/UBC36
+  and UEV1A/UEV1B/UEV1C/UEV1D-4.
+definition_source: GO:0031372
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: BEN-UEV1A complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031372
+- synonym_text: UBE2N/UBE2NL complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031372
+- synonym_text: UBE2V1/UBE2V2 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031372
+- synonym_text: Uev1A-ben complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031372
+- synonym_text: ubc-13-uev-1 complex
+  synonym_type: NARROW_SYNONYM
+  source: GO:0031372
+parent_structures:
+- GO:0031371
+part_of:
+- GO:0005737
+xrefs:
+- ComplexPortal:CPX-2541
+components:
+- component_id: ubc13_e2_catalytic_subunit
+  label: Ubiquitin-conjugating enzyme E2 13
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000608
+  gene_symbols:
+  - UBC13
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Catalytic E2 ubiquitin-conjugating subunit (Ubc13p) that forms a thioester
+    intermediate with donor ubiquitin at its active-site cysteine and catalyzes isopeptide
+    bond formation onto Lys63 of acceptor ubiquitin.
+  protein_examples:
+  - uniprot_id: UniProtKB:P52490
+    protein_label: Ubiquitin-conjugating enzyme E2 13
+    gene_symbol: UBC13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Saccharomyces cerevisiae S288C catalytic E2 subunit Ubc13p.
+    evidence:
+    - reference: UniProtKB:P52490
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Ubc13p.
+    - reference: PMID:10089880
+      snippet: We show that Mms2p forms a specific heteromeric complex with the UBC13-encoded
+        E2 and is required for the Ubc13p-dependent assembly of polyubiquitin chains
+        linked through lysine 63.
+      notes: Demonstrates Ubc13p-Mms2p heterodimer formation and K63-linked chain
+        assembly.
+  evidence:
+  - reference: GO:0031372
+    notes: GO:0031372 defines Ubc13p as the catalytic E2 subunit of the yeast UBC13-MMS2
+      complex.
+  - reference: InterPro:IPR000608
+    notes: InterPro domain entry for ubiquitin-conjugating enzyme E2.
+  - reference: PMID:10089880
+    snippet: We show that Mms2p forms a specific heteromeric complex with the UBC13-encoded
+      E2 and is required for the Ubc13p-dependent assembly of polyubiquitin chains
+      linked through lysine 63.
+    notes: Confirms Ubc13p as the catalytic E2 partner of Mms2p.
+- component_id: mms2_uev_regulatory_subunit
+  label: Ubiquitin-conjugating enzyme variant MMS2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR016135
+  gene_symbols:
+  - MMS2
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Noncatalytic ubiquitin-conjugating enzyme variant (UEV) subunit (Mms2p) that
+    lacks an active-site cysteine and binds acceptor ubiquitin to orient its Lys63
+    residue toward the Ubc13p catalytic center.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53152
+    protein_label: Ubiquitin-conjugating enzyme variant MMS2
+    gene_symbol: MMS2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Saccharomyces cerevisiae S288C noncatalytic UEV subunit Mms2p.
+    evidence:
+    - reference: UniProtKB:P53152
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Mms2p.
+    - reference: PMID:10089880
+      snippet: Ubiquitin-conjugating enzyme variant (UEV) proteins resemble ubiquitin-conjugating
+        enzymes (E2s) but lack the defining E2 active-site residue. The MMS2-encoded
+        UEV protein has been genetically implicated in error-free postreplicative
+        DNA repair in Saccharomyces cerevisiae.
+      notes: Identifies Mms2p as the noncanonical UEV subunit required for error-free
+        postreplicative DNA repair.
+  evidence:
+  - reference: GO:0031372
+    notes: GO:0031372 defines Mms2p as the UEV subunit of the yeast UBC13-MMS2 complex.
+  - reference: InterPro:IPR016135
+    notes: InterPro superfamily entry for ubiquitin-conjugating enzyme/RWD-like proteins.
+  - reference: PMID:10089880
+    snippet: These findings support a model in which an Mms2p/Ubc13p complex assembles
+      novel polyubiquitin chains for signaling in DNA repair, and they suggest that
+      UEV proteins may act to increase diversity and selectivity in ubiquitin conjugation.
+    notes: Establishes the selectivity-conferring role of Mms2p in the Mms2p/Ubc13p
+      heterodimer.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: Conserved across budding and pathogenic yeasts (including S. cerevisiae and
+    Candida albicans) as the K63-specific E2-UEV heterodimer.
+  reference: PMID:34995738
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding yeast strain in which the heterodimeric Ubc13p-Mms2p complex
+    and its role in K63-linked polyubiquitination during error-free postreplication
+    DNA repair and membrane sorting were discovered.
+  reference: PMID:10089880
+functions:
+- function_id: ubiquitin_conjugating_enzyme_activity
+  label: ubiquitin conjugating enzyme activity
+  grounding: GO:0061631
+  description: Functions as a heterodimeric E2 ubiquitin-conjugating enzyme that cooperates
+    with RING-type E3 ubiquitin ligases such as Rad5 and Pib1.
+  evidence:
+  - reference: GO:0061631
+    notes: GO molecular-function term for ubiquitin conjugating enzyme activity.
+  - reference: PMID:32265276
+    snippet: The heterodimeric ubiquitin-conjugating enzyme (E2), Ubc13-Mms2, catalyses
+      K63-specific polyubiquitylation in genome maintenance and inflammatory signalling.
+    notes: Confirms the heterodimeric E2 ubiquitin-conjugating activity of Ubc13-Mms2.
+- function_id: protein_k63_linked_ubiquitination
+  label: protein K63-linked ubiquitination
+  grounding: GO:0070534
+  description: Specifically catalyzes synthesis of lysine-63-linked polyubiquitin
+    chains on target substrates such as PCNA and endosomal membrane proteins.
+  evidence:
+  - reference: GO:0070534
+    notes: GO biological-process term for protein K63-linked ubiquitination.
+  - reference: PMID:10089880
+    snippet: We show that Mms2p forms a specific heteromeric complex with the UBC13-encoded
+      E2 and is required for the Ubc13p-dependent assembly of polyubiquitin chains
+      linked through lysine 63.
+    notes: Demonstrates K63-linked polyubiquitin chain assembly by Ubc13p-Mms2p.
+- function_id: error_free_postreplication_dna_repair
+  label: error-free postreplication DNA repair
+  grounding: GO:0042275
+  description: Mediates K63-linked polyubiquitination of PCNA to promote error-free
+    postreplicative DNA damage tolerance.
+  evidence:
+  - reference: GO:0042275
+    notes: GO biological-process term for error-free postreplication DNA repair.
+  - reference: PMID:34995738
+    snippet: In the budding yeast Saccharomyces cerevisiae, K63-linked polyubiquitination
+      of proliferating cell nuclear antigen (PCNA) is mediated by a Ubc13-Mms2 heterodimer,
+      leading to error-free DDT.
+    notes: Establishes Ubc13-Mms2-mediated K63-polyubiquitination of PCNA in error-free
+      DNA damage tolerance.
+evidence:
+- reference: GO:0031372
+  notes: GO cellular-component term for the UBC13-MMS2 complex.
+- reference: ComplexPortal:CPX-2541
+  notes: Complex Portal entry for the Saccharomyces cerevisiae S288C Ubc13-Mms2 ubiquitin-conjugating
+    enzyme complex.
+- reference: PMID:10089880
+  snippet: We show that Mms2p forms a specific heteromeric complex with the UBC13-encoded
+    E2 and is required for the Ubc13p-dependent assembly of polyubiquitin chains linked
+    through lysine 63.
+  notes: Discovery of the S. cerevisiae Mms2p-Ubc13p heterodimer and its K63-linked
+    polyubiquitination activity.
+- reference: DOI:10.1016/s0092-8674(00)80575-9
+  notes: DOI for PMID:10089880.
+- reference: PMID:32265276
+  snippet: The heterodimeric ubiquitin-conjugating enzyme (E2), Ubc13-Mms2, catalyses
+    K63-specific polyubiquitylation in genome maintenance and inflammatory signalling.
+  notes: Demonstrates Ubc13-Mms2 cooperation with RING E3 ligases in budding yeast.
+- reference: DOI:10.1242/jcs.244566
+  notes: DOI for PMID:32265276.
+- reference: PMID:34995738
+  snippet: In the budding yeast Saccharomyces cerevisiae, K63-linked polyubiquitination
+    of proliferating cell nuclear antigen (PCNA) is mediated by a Ubc13-Mms2 heterodimer,
+    leading to error-free DDT.
+  notes: Confirms conservation of Ubc13-Mms2 function in fungal error-free DNA damage
+    tolerance.
+- reference: DOI:10.1016/j.gene.2021.146163
+  notes: DOI for PMID:34995738.
+causal_graphs:
+- graph_id: ubc13_mms2_k63_ubiquitination_dna_repair
+  title: Ubc13-Mms2 Heterodimer Assembly and K63-Linked Polyubiquitination in DNA
+    Repair
+  description: The noncatalytic UEV protein Mms2p forms a specific heterodimer with
+    the catalytic E2 enzyme Ubc13p to constitute the UBC13-MMS2 complex, which executes
+    ubiquitin-conjugating activity to assemble K63-linked polyubiquitin chains for
+    error-free postreplication DNA repair.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mms2_uev_regulatory_subunit
+    label: Ubiquitin-conjugating enzyme variant MMS2
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR016135
+    component_ref: mms2_uev_regulatory_subunit
+  - node_id: ubc13_e2_catalytic_subunit
+    label: Ubiquitin-conjugating enzyme E2 13
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000608
+    component_ref: ubc13_e2_catalytic_subunit
+  - node_id: ubc13_mms2_complex
+    label: UBC13-MMS2 complex
+    node_type: STRUCTURE
+    grounding: GO:0031372
+  - node_id: ubiquitin_conjugating_enzyme_activity
+    label: ubiquitin conjugating enzyme activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0061631
+  - node_id: protein_k63_linked_ubiquitination
+    label: protein K63-linked ubiquitination
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0070534
+  - node_id: error_free_postreplication_dna_repair
+    label: error-free postreplication DNA repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042275
+  edges:
+  - subject: mms2_uev_regulatory_subunit
+    predicate: forms specific heteromeric complex with
+    object: ubc13_e2_catalytic_subunit
+    description: The noncatalytic UEV subunit Mms2p binds the catalytic E2 subunit
+      Ubc13p to confer Lys63 linkage selectivity.
+    evidence:
+    - reference: PMID:10089880
+      snippet: We show that Mms2p forms a specific heteromeric complex with the UBC13-encoded
+        E2 and is required for the Ubc13p-dependent assembly of polyubiquitin chains
+        linked through lysine 63.
+      notes: Demonstrates specific heterodimerization of Mms2p with Ubc13p.
+  - subject: ubc13_e2_catalytic_subunit
+    predicate: co-assembles with Mms2p into
+    object: ubc13_mms2_complex
+    description: Ubc13p and Mms2p assemble into the functional heterodimeric UBC13-MMS2
+      complex.
+    evidence:
+    - reference: PMID:10089880
+      snippet: These findings support a model in which an Mms2p/Ubc13p complex assembles
+        novel polyubiquitin chains for signaling in DNA repair, and they suggest that
+        UEV proteins may act to increase diversity and selectivity in ubiquitin conjugation.
+      notes: Supports assembly of the Mms2p/Ubc13p heterodimer.
+  - subject: ubc13_mms2_complex
+    predicate: executes
+    object: ubiquitin_conjugating_enzyme_activity
+    description: The heterodimeric UBC13-MMS2 complex functions as a K63-selective
+      E2 ubiquitin-conjugating enzyme.
+    evidence:
+    - reference: PMID:32265276
+      snippet: The heterodimeric ubiquitin-conjugating enzyme (E2), Ubc13-Mms2, catalyses
+        K63-specific polyubiquitylation in genome maintenance and inflammatory signalling.
+      notes: Establishes the E2 catalytic activity of the Ubc13-Mms2 complex.
+  - subject: ubiquitin_conjugating_enzyme_activity
+    predicate: catalyzes
+    object: protein_k63_linked_ubiquitination
+    description: Ubc13-Mms2 E2 activity catalyzes the assembly of Lys63-linked polyubiquitin
+      chains on target proteins.
+    evidence:
+    - reference: PMID:10089880
+      snippet: We show that Mms2p forms a specific heteromeric complex with the UBC13-encoded
+        E2 and is required for the Ubc13p-dependent assembly of polyubiquitin chains
+        linked through lysine 63.
+      notes: Links Ubc13p-Mms2p E2 activity to K63-linked polyubiquitin chain assembly.
+  - subject: protein_k63_linked_ubiquitination
+    predicate: signals PCNA modification for
+    object: error_free_postreplication_dna_repair
+    description: K63-linked polyubiquitination of PCNA by Ubc13-Mms2 promotes error-free
+      postreplicative DNA repair.
+    evidence:
+    - reference: PMID:34995738
+      snippet: In the budding yeast Saccharomyces cerevisiae, K63-linked polyubiquitination
+        of proliferating cell nuclear antigen (PCNA) is mediated by a Ubc13-Mms2 heterodimer,
+        leading to error-free DDT.
+      notes: Links Ubc13-Mms2-mediated K63 polyubiquitination of PCNA to error-free
+        postreplicative repair.
+curation_history:
+- timestamp: '2026-10-31T22:28:50Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added UBC13-MMS2 complex (GO:0031372) with InterPro-grounded components,
+    reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
+    snippets, and a mechanistic causal graph.
+  llm_assisted: true

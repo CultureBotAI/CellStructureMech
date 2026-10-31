@@ -1,0 +1,241 @@
+identifier: GO:0009379
+label: Holliday junction helicase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A DNA helicase complex found at Holliday junctions where the helicase
+  activity is involved in the migration of the junction branch point. The best-characterized
+  example is the E. coli RuvAB complex, in which a hexamer of RuvB subunits possesses
+  helicase activity that is modulated by association with RuvA.
+definition_source: GO:0009379
+mapping_status: PROPOSED
+parent_structures:
+- GO:0033202
+part_of:
+- GO:0005737
+xrefs:
+- ComplexPortal:CPX-5124
+components:
+- component_id: ruva_junction_recognition_subunit
+  label: Holliday junction branch migration complex subunit RuvA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000085
+  gene_symbols:
+  - ruvA
+  stoichiometry: 4 or 8
+  essentiality: ESSENTIAL
+  role: Fourfold-symmetric Holliday junction recognition subunit that binds the four-way
+    DNA crossover in a square-planar configuration and recruits RuvB hexamers.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A809
+    protein_label: Holliday junction branch migration complex subunit RuvA
+    gene_symbol: ruvA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Escherichia coli K-12 Holliday junction recognition subunit RuvA.
+    evidence:
+    - reference: UniProtKB:P0A809
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 RuvA.
+    - reference: PMID:8832889
+      snippet: Four monomers of RuvA are related by fourfold symmetry in a manner
+        reminiscent of a four-petaled flower.
+      notes: Establishes the tetrameric fourfold-symmetric structure of E. coli RuvA.
+  evidence:
+  - reference: GO:0009379
+    notes: GO:0009379 defines RuvA as the Holliday junction-binding subunit that modulates
+      RuvB.
+  - reference: InterPro:IPR000085
+    notes: InterPro family entry for Holliday junction DNA helicase RuvA.
+  - reference: PMID:8832889
+    snippet: The Escherichia coli DNA binding protein RuvA acts in concert with the
+      helicase RuvB to drive branch migration of Holliday intermediates during recombination
+      and DNA repair.
+    notes: Demonstrates RuvA cooperation with RuvB in Holliday junction branch migration.
+- component_id: ruvb_hexameric_motor_subunit
+  label: Holliday junction branch migration complex subunit RuvB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR004605
+  gene_symbols:
+  - ruvB
+  stoichiometry: '12'
+  essentiality: ESSENTIAL
+  role: AAA+ ATPase motor subunit that forms two hexameric rings flanking the RuvA-bound
+    Holliday junction to drive ATP-dependent DNA rotation and branch migration.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A812
+    protein_label: Holliday junction branch migration complex subunit RuvB
+    gene_symbol: ruvB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Escherichia coli K-12 AAA+ ATPase motor subunit RuvB.
+    evidence:
+    - reference: UniProtKB:P0A812
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 RuvB.
+    - reference: PMID:26658024
+      snippet: The Escherichia coli RuvB hexameric ring motor proteins, together with
+        RuvAs, promote branch migration of Holliday junction DNA.
+      notes: Confirms RuvB hexameric ring motor function in the E. coli RuvAB complex.
+  evidence:
+  - reference: GO:0009379
+    notes: GO:0009379 defines the RuvB hexamer as the helicase subunit of the complex.
+  - reference: InterPro:IPR004605
+    notes: InterPro family entry for Holliday junction DNA helicase RuvB.
+  - reference: PMID:26658024
+    snippet: These results suggest that not only ATP binding to RuvB but also ATP
+      hydrolysis by RuvB facilitates a stable RuvA–RuvB–Holliday junction DNA complex
+      formation.
+    notes: Demonstrates ATP binding and hydrolysis by RuvB in assembling the RuvAB-Holliday
+      junction complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Widespread across bacteria as the conserved RuvAB Holliday junction branch
+    migration machinery.
+  reference: PMID:8832889
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial strain in which the tripartite RuvAB-Holliday junction
+    complex and its ATP-driven branch migration mechanism were determined.
+  reference: PMID:8832889
+functions:
+- function_id: four_way_junction_helicase_activity
+  label: four-way junction helicase activity
+  grounding: GO:0009378
+  description: Couples RuvB ATP hydrolysis to helical DNA rotation and strand separation
+    across the RuvA central pin, driving branch migration of four-way Holliday junctions.
+  evidence:
+  - reference: GO:0009378
+    notes: GO molecular-function term for four-way junction helicase activity.
+  - reference: PMID:8832889
+    snippet: The Escherichia coli DNA binding protein RuvA acts in concert with the
+      helicase RuvB to drive branch migration of Holliday intermediates during recombination
+      and DNA repair.
+    notes: Establishes the four-way junction helicase / branch migration activity
+      of RuvAB.
+- function_id: dna_recombination
+  label: DNA recombination
+  grounding: GO:0006310
+  description: Catalyzes branch migration of Holliday junction intermediates during
+    homologous recombination and recombinational DNA repair.
+  evidence:
+  - reference: GO:0006310
+    notes: GO biological-process term for DNA recombination.
+  - reference: PMID:26658024
+    snippet: The Escherichia coli RuvB hexameric ring motor proteins, together with
+      RuvAs, promote branch migration of Holliday junction DNA.
+    notes: Supports RuvAB-mediated branch migration of Holliday junction DNA during
+      recombination.
+evidence:
+- reference: GO:0009379
+  notes: GO cellular-component term for the Holliday junction helicase complex.
+- reference: ComplexPortal:CPX-5124
+  notes: Complex Portal entry for the Escherichia coli K-12 RuvAB Holliday junction
+    branch migration complex.
+- reference: PMID:8832889
+  snippet: The Escherichia coli DNA binding protein RuvA acts in concert with the
+    helicase RuvB to drive branch migration of Holliday intermediates during recombination
+    and DNA repair.
+  notes: Crystal structure of RuvA and structural model of the RuvAB-Holliday junction
+    complex.
+- reference: DOI:10.1126/science.274.5286.415
+  notes: DOI for PMID:8832889.
+- reference: PMID:26658024
+  snippet: These results suggest that not only ATP binding to RuvB but also ATP hydrolysis
+    by RuvB facilitates a stable RuvA–RuvB–Holliday junction DNA complex formation.
+  notes: Single-molecule analysis of ATP-dependent RuvA-RuvB-Holliday junction complex
+    assembly.
+- reference: DOI:10.1038/srep18177
+  notes: DOI for PMID:26658024.
+causal_graphs:
+- graph_id: ruvab_holliday_junction_branch_migration
+  title: RuvAB Assembly and ATP-Driven Holliday Junction Branch Migration
+  description: RuvA tetramers recognize the four-way Holliday junction and recruit
+    ATP-bound RuvB hexameric motor rings to form the Holliday junction helicase complex,
+    driving branch migration during homologous DNA recombination.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ruva_junction_recognition_subunit
+    label: Holliday junction branch migration complex subunit RuvA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000085
+    component_ref: ruva_junction_recognition_subunit
+  - node_id: ruvb_hexameric_motor_subunit
+    label: Holliday junction branch migration complex subunit RuvB
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR004605
+    component_ref: ruvb_hexameric_motor_subunit
+  - node_id: holliday_junction_helicase_complex
+    label: Holliday junction helicase complex
+    node_type: STRUCTURE
+    grounding: GO:0009379
+  - node_id: four_way_junction_helicase_activity
+    label: four-way junction helicase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0009378
+  - node_id: dna_recombination
+    label: DNA recombination
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006310
+  edges:
+  - subject: ruva_junction_recognition_subunit
+    predicate: recruits ATP-activated hexamers of
+    object: ruvb_hexameric_motor_subunit
+    description: Holliday junction-bound RuvA tetramers recruit RuvB hexameric motor
+      rings in a manner stabilized by RuvB ATP binding and hydrolysis.
+    evidence:
+    - reference: PMID:26658024
+      snippet: These results suggest that not only ATP binding to RuvB but also ATP
+        hydrolysis by RuvB facilitates a stable RuvA–RuvB–Holliday junction DNA complex
+        formation.
+      notes: Demonstrates ATP-facilitated recruitment of RuvB to the RuvA-Holliday
+        junction complex.
+  - subject: ruvb_hexameric_motor_subunit
+    predicate: assembles with RuvA into
+    object: holliday_junction_helicase_complex
+    description: RuvB hexameric rings and RuvA tetramers form the tripartite RuvAB
+      Holliday junction helicase complex on four-way DNA junctions.
+    evidence:
+    - reference: PMID:26658024
+      snippet: The Escherichia coli RuvB hexameric ring motor proteins, together with
+        RuvAs, promote branch migration of Holliday junction DNA.
+      notes: Supports cooperative assembly of RuvB hexamers and RuvA into the functional
+        complex.
+  - subject: holliday_junction_helicase_complex
+    predicate: executes
+    object: four_way_junction_helicase_activity
+    description: The assembled RuvAB complex couples ATP hydrolysis to strand separation
+      and branch point migration across the Holliday junction.
+    evidence:
+    - reference: PMID:8832889
+      snippet: The four DNA duplex arms of a Holliday junction can be modeled in a
+        square planar configuration and docked into grooves on the concave surface
+        of the protein around a central pin that may facilitate strand separation
+        during the migration reaction.
+      notes: Describes the structural mechanism of four-way junction strand separation.
+  - subject: four_way_junction_helicase_activity
+    predicate: drives branch migration during
+    object: dna_recombination
+    description: Four-way junction helicase activity drives branch migration of Holliday
+      intermediates during homologous recombination and DNA repair.
+    evidence:
+    - reference: PMID:8832889
+      snippet: The Escherichia coli DNA binding protein RuvA acts in concert with
+        the helicase RuvB to drive branch migration of Holliday intermediates during
+        recombination and DNA repair.
+      notes: Links RuvAB branch migration activity to DNA recombination.
+curation_history:
+- timestamp: '2026-10-31T22:10:24Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added Holliday junction helicase complex (GO:0009379) with InterPro-grounded
+    components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim
+    literature snippets, and a mechanistic causal graph.
+  llm_assisted: true

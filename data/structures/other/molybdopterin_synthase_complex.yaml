@@ -1,0 +1,264 @@
+identifier: GO:1990140
+label: molybdopterin synthase complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotetrameric protein complex that catalyses sulfur transfer from
+  the sulfur carrier subunit of molybdopterin synthase to precursor Z to synthesize
+  molybdopterin as part of molybdopterin cofactor (Moco) biosynthesis. In E. coli
+  the subunits are MoaE and MoaD; in human, MOCS2B and MOCS2A. Moco biosynthesis and
+  its constituent molecules are evolutionarily conserved.
+definition_source: GO:1990140
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: MPT synthase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990140
+- synonym_text: molybdopterin converting factor complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:1990140
+- synonym_text: molybdopterin cofactor (Moco) biosynthesis sulfurtransferase complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:1990140
+parent_structures:
+- GO:1990228
+part_of:
+- GO:0005737
+xrefs:
+- ComplexPortal:CPX-1970
+components:
+- component_id: moad_sulfur_carrier_subunit
+  label: Molybdopterin synthase sulfur carrier subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR044672
+  gene_symbols:
+  - moaD
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: Small ubiquitin-fold sulfur carrier subunit containing a conserved C-terminal
+    Gly-Gly motif that carries a thiocarboxylate group into the MoaE active site to
+    donate dithiolene sulfur atoms to precursor Z.
+  protein_examples:
+  - uniprot_id: UniProtKB:P30748
+    protein_label: Molybdopterin synthase sulfur carrier subunit
+    gene_symbol: moaD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Escherichia coli K-12 sulfur carrier subunit MoaD.
+    evidence:
+    - reference: UniProtKB:P30748
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 MoaD.
+    - reference: PMID:17223713
+      snippet: In Escherichia coli, the MoaD protein plays a central role in the conversion
+        of precursor Z to molybdopterin (MPT) during molybdenum cofactor biosynthesis.
+        MoaD has a fold similar to that of ubiquitin and contains a highly conserved
+        C-terminal Gly-Gly motif, which in its active form contains a transferrable
+        sulfur in the form of a thiocarboxylate group.
+      notes: Establishes the structure and thiocarboxylate sulfur-carrier role of
+        E. coli MoaD.
+  evidence:
+  - reference: GO:1990140
+    notes: GO:1990140 defines MoaD as the sulfur carrier subunit of molybdopterin
+      synthase.
+  - reference: InterPro:IPR044672
+    notes: InterPro family entry for molybdopterin synthase sulfur carrier subunit
+      MoaD.
+  - reference: PMID:18092812
+    snippet: Previous studies have determined that the conversion of the sulfur- and
+      metal-free precursor Z to MPT by MPT synthase involves the transfer of sulfur
+      atoms from a C-terminal MoaD thiocarboxylate to the C-1' and C-2' positions
+      of precursor Z.
+    notes: Demonstrates C-terminal MoaD thiocarboxylate sulfur transfer to precursor
+      Z.
+- component_id: moae_catalytic_subunit
+  label: Molybdopterin synthase catalytic subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR003448
+  gene_symbols:
+  - moaE
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: Large catalytic subunit that forms the central homodimer, binds precursor
+    Z at its dimer interface, and docks two MoaD subunits at opposite ends to catalyze
+    dithiolene ring formation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P30749
+    protein_label: Molybdopterin synthase catalytic subunit
+    gene_symbol: moaE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Escherichia coli K-12 catalytic subunit MoaE.
+    evidence:
+    - reference: UniProtKB:P30749
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 MoaE.
+    - reference: PMID:18092812
+      snippet: The second step is catalyzed by the heterotetrameric MPT synthase protein
+        consisting of two large (MoaE) and two small (MoaD) subunits with the MoaD
+        subunits located at opposite ends of a central MoaE dimer.
+      notes: Establishes the central MoaE dimer architecture of the MPT synthase heterotetramer.
+  evidence:
+  - reference: GO:1990140
+    notes: GO:1990140 defines MoaE as the catalytic subunit of molybdopterin synthase.
+  - reference: InterPro:IPR003448
+    notes: InterPro family entry for MoaE-like catalytic domain.
+  - reference: PMID:18092812
+    snippet: In the complex, precursor Z is bound by strictly conserved residues in
+      a pocket at the MoaE dimer interface in close proximity of the C-terminal glycine
+      of MoaD.
+    notes: Demonstrates precursor Z binding at the MoaE dimer interface.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Conserved across bacteria synthesizing molybdenum and tungsten cofactors.
+  reference: PMID:18092812
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial strain in which the heterotetrameric MoaD2-MoaE2 molybdopterin
+    synthase complex and its C-terminal Gly-Gly thiocarboxylate sulfur-transfer cycle
+    were characterized.
+  reference: PMID:17223713
+functions:
+- function_id: molybdopterin_synthase_activity
+  label: molybdopterin synthase activity
+  grounding: GO:0030366
+  description: Catalyzes the sequential transfer of two sulfur atoms from thiocarboxylated
+    MoaD subunits to the C-2' and C-1' positions of cyclic pyranopterin monophosphate
+    (precursor Z) to form molybdopterin.
+  evidence:
+  - reference: GO:0030366
+    notes: GO molecular-function term for molybdopterin synthase activity.
+  - reference: PMID:18092812
+    snippet: Previous studies have determined that the conversion of the sulfur- and
+      metal-free precursor Z to MPT by MPT synthase involves the transfer of sulfur
+      atoms from a C-terminal MoaD thiocarboxylate to the C-1' and C-2' positions
+      of precursor Z.
+    notes: Establishes the sulfur-transfer reaction catalyzed by molybdopterin synthase.
+- function_id: mo_molybdopterin_cofactor_biosynthetic_process
+  label: Mo-molybdopterin cofactor biosynthetic process
+  grounding: GO:0006777
+  description: Synthesizes the dithiolene-bearing pyranopterin (molybdopterin) scaffold
+    required for molybdenum coordination during Moco biosynthesis.
+  evidence:
+  - reference: GO:0006777
+    notes: GO biological-process term for Mo-molybdopterin cofactor biosynthetic process.
+  - reference: PMID:17223713
+    snippet: In Escherichia coli, the MoaD protein plays a central role in the conversion
+      of precursor Z to molybdopterin (MPT) during molybdenum cofactor biosynthesis.
+    notes: Demonstrates the role of MPT synthase in molybdenum cofactor biosynthesis.
+evidence:
+- reference: GO:1990140
+  notes: GO cellular-component term for the molybdopterin synthase complex.
+- reference: ComplexPortal:CPX-1970
+  notes: Complex Portal entry for the Escherichia coli K-12 MoaD2-MoaE2 molybdopterin
+    synthase complex.
+- reference: PMID:18092812
+  snippet: The second step is catalyzed by the heterotetrameric MPT synthase protein
+    consisting of two large (MoaE) and two small (MoaD) subunits with the MoaD subunits
+    located at opposite ends of a central MoaE dimer.
+  notes: Structural and mechanistic characterization of heterotetrameric MPT synthase
+    bound to precursor Z.
+- reference: DOI:10.1021/bi701734g
+  notes: DOI for PMID:18092812.
+- reference: PMID:17223713
+  snippet: During MPT biosynthesis, MoaD cycles between two different heterotetrameric
+    complexes, one with MoaE to form MPT synthase and the other with MoeB, a protein
+    similar to E1 in the ubiquitin pathway, to regenerate its transferrable sulfur.
+  notes: Characterizes E. coli MoaD-MoaE complex formation and C-terminal Gly-Gly
+    sulfur transfer.
+- reference: DOI:10.1021/bi062011w
+  notes: DOI for PMID:17223713.
+causal_graphs:
+- graph_id: molybdopterin_synthase_sulfur_transfer
+  title: MoaD-MoaE MPT Synthase Assembly and Precursor Z Dithiolene Synthesis
+  description: Thiocarboxylated MoaD subunits dock at opposite ends of a central MoaE
+    homodimer to form the heterotetrameric molybdopterin synthase complex, transferring
+    sulfur atoms into precursor Z at the MoaE dimer interface during Mo-molybdopterin
+    cofactor biosynthesis.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: moad_sulfur_carrier_subunit
+    label: Molybdopterin synthase sulfur carrier subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR044672
+    component_ref: moad_sulfur_carrier_subunit
+  - node_id: moae_catalytic_subunit
+    label: Molybdopterin synthase catalytic subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003448
+    component_ref: moae_catalytic_subunit
+  - node_id: molybdopterin_synthase_complex
+    label: molybdopterin synthase complex
+    node_type: STRUCTURE
+    grounding: GO:1990140
+  - node_id: molybdopterin_synthase_activity
+    label: molybdopterin synthase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0030366
+  - node_id: mo_molybdopterin_cofactor_biosynthetic_process
+    label: Mo-molybdopterin cofactor biosynthetic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006777
+  edges:
+  - subject: moad_sulfur_carrier_subunit
+    predicate: docks at opposite ends of central dimer of
+    object: moae_catalytic_subunit
+    description: Two small MoaD sulfur-carrier subunits bind at opposite ends of the
+      central MoaE catalytic dimer, positioning the MoaD C-terminal Gly-Gly thiocarboxylate
+      near the MoaE substrate pocket.
+    evidence:
+    - reference: PMID:18092812
+      snippet: The second step is catalyzed by the heterotetrameric MPT synthase protein
+        consisting of two large (MoaE) and two small (MoaD) subunits with the MoaD
+        subunits located at opposite ends of a central MoaE dimer.
+      notes: Demonstrates docking of two MoaD subunits at opposite ends of the MoaE
+        dimer.
+  - subject: moae_catalytic_subunit
+    predicate: assembles with MoaD into
+    object: molybdopterin_synthase_complex
+    description: The central MoaE dimer and two flanking MoaD subunits form the heterotetrameric
+      molybdopterin synthase complex.
+    evidence:
+    - reference: PMID:17223713
+      snippet: During MPT biosynthesis, MoaD cycles between two different heterotetrameric
+        complexes, one with MoaE to form MPT synthase and the other with MoeB, a protein
+        similar to E1 in the ubiquitin pathway, to regenerate its transferrable sulfur.
+      notes: Supports heterotetrameric MoaD-MoaE complex formation.
+  - subject: molybdopterin_synthase_complex
+    predicate: catalyzes
+    object: molybdopterin_synthase_activity
+    description: The assembled MoaD2-MoaE2 complex transfers sulfur atoms from the
+      MoaD C-terminal thiocarboxylate to the C-2' and C-1' positions of precursor
+      Z.
+    evidence:
+    - reference: PMID:18092812
+      snippet: Previous studies have determined that the conversion of the sulfur-
+        and metal-free precursor Z to MPT by MPT synthase involves the transfer of
+        sulfur atoms from a C-terminal MoaD thiocarboxylate to the C-1' and C-2' positions
+        of precursor Z.
+      notes: Establishes sulfur transfer from MoaD to precursor Z by MPT synthase.
+  - subject: molybdopterin_synthase_activity
+    predicate: drives
+    object: mo_molybdopterin_cofactor_biosynthetic_process
+    description: Conversion of precursor Z to molybdopterin completes the second step
+      of Mo-molybdopterin cofactor biosynthesis.
+    evidence:
+    - reference: PMID:17223713
+      snippet: In Escherichia coli, the MoaD protein plays a central role in the conversion
+        of precursor Z to molybdopterin (MPT) during molybdenum cofactor biosynthesis.
+      notes: Links molybdopterin synthase catalysis to molybdenum cofactor biosynthesis.
+curation_history:
+- timestamp: '2026-10-31T22:28:50Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added molybdopterin synthase complex (GO:1990140) with InterPro-grounded
+    components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim
+    literature snippets, and a mechanistic causal graph.
+  llm_assisted: true

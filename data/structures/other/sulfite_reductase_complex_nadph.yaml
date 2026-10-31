@@ -1,0 +1,299 @@
+identifier: GO:0009337
+label: sulfite reductase complex (NADPH)
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit iron flavoprotein, which in yeast is composed of 2 alpha
+  and 2 beta subunits. Catalyzes the reduction of sulfite to sulfide.
+definition_source: GO:0009337
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: sulphite reductase complex (NADPH)
+  synonym_type: EXACT_SYNONYM
+  source: GO:0009337
+parent_structures:
+- GO:1902494
+- GO:0140535
+part_of:
+- GO:0005737
+xrefs:
+- ComplexPortal:CPX-5629
+- ComplexPortal:CPX-3163
+components:
+- component_id: cysj_flavoprotein_alpha_subunit
+  label: Sulfite reductase [NADPH] flavoprotein alpha-component
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR003097
+  gene_symbols:
+  - cysJ
+  - MET10
+  stoichiometry: 8 (E. coli) or 2 (S. cerevisiae)
+  essentiality: ESSENTIAL
+  role: FAD- and FMN-binding flavoprotein alpha subunit (SiRFP) that accepts electrons
+    from NADPH and transfers them to the hemoprotein beta subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38038
+    protein_label: Sulfite reductase [NADPH] flavoprotein alpha-component
+    gene_symbol: cysJ
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Escherichia coli K-12 flavoprotein alpha subunit (CysJ / SiRFP).
+    evidence:
+    - reference: UniProtKB:P38038
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 CysJ.
+    - reference: PMID:26088143
+      snippet: Assimilatory NADPH-sulfite reductase (SiR) from Escherichia coli is
+        a structurally complex oxidoreductase that catalyzes the six-electron reduction
+        of sulfite to sulfide.
+      notes: Confirms SiRFP (CysJ) as the flavin-binding alpha subunit of E. coli
+        SiR.
+  - uniprot_id: UniProtKB:P39692
+    protein_label: Sulfite reductase [NADPH] flavoprotein component
+    gene_symbol: MET10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Saccharomyces cerevisiae S288C flavoprotein alpha subunit (Met10p).
+    evidence:
+    - reference: UniProtKB:P39692
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Met10p.
+    - reference: PMID:1479340
+      snippet: Phenotypic studies and enzyme determinations showed that the products
+        of at least five genes are needed for the synthesis of an enzymically active
+        sulphite reductase. These genes are MET1, MET5, MET8, MET10 and MET20.
+      notes: Establishes MET10 as an essential structural gene for active yeast sulfite
+        reductase.
+  evidence:
+  - reference: GO:0009337
+    notes: GO:0009337 defines the flavoprotein alpha subunit of the sulfite reductase
+      complex (NADPH).
+  - reference: InterPro:IPR003097
+    notes: InterPro family entry for sulfite reductase [NADPH] flavoprotein alpha-component.
+  - reference: PMID:26088143
+    snippet: Assimilatory NADPH-sulfite reductase (SiR) from Escherichia coli is a
+      structurally complex oxidoreductase that catalyzes the six-electron reduction
+      of sulfite to sulfide.
+    notes: Demonstrates assembly of the flavoprotein alpha subunit (SiRFP) with SiRHP.
+- component_id: cysi_hemoprotein_beta_subunit
+  label: Sulfite reductase [NADPH] hemoprotein beta-component
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR006067
+  gene_symbols:
+  - cysI
+  - MET5
+  stoichiometry: 4 (E. coli) or 2 (S. cerevisiae)
+  essentiality: ESSENTIAL
+  role: Siroheme- and [4Fe-4S]-binding hemoprotein beta subunit (SiRHP) that oligomerizes
+    via its N-terminal domain and catalyzes the six-electron reduction of sulfite
+    to sulfide.
+  protein_examples:
+  - uniprot_id: UniProtKB:P17846
+    protein_label: Sulfite reductase [NADPH] hemoprotein beta-component
+    gene_symbol: cysI
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Escherichia coli K-12 hemoprotein beta subunit (CysI / SiRHP).
+    evidence:
+    - reference: UniProtKB:P17846
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 CysI.
+    - reference: PMID:26088143
+      snippet: The iron-rich cofactors in SiRHP are unique because they are a covalent
+        arrangement of a Fe4S4 cluster attached through a cysteine ligand to an iron-containing
+        porphyrinoid called siroheme.
+      notes: Confirms SiRHP (CysI) as the iron-containing hemoprotein beta subunit.
+  - uniprot_id: UniProtKB:P47169
+    protein_label: Sulfite reductase [NADPH] subunit beta
+    gene_symbol: MET5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Saccharomyces cerevisiae S288C sulfite reductase beta subunit (Met5p
+      / Ecm17p).
+    evidence:
+    - reference: UniProtKB:P47169
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Met5p.
+    - reference: PMID:1479340
+      snippet: Phenotypic studies and enzyme determinations showed that the products
+        of at least five genes are needed for the synthesis of an enzymically active
+        sulphite reductase. These genes are MET1, MET5, MET8, MET10 and MET20.
+      notes: Establishes MET5 as required for active yeast sulfite reductase.
+  evidence:
+  - reference: GO:0009337
+    notes: GO:0009337 defines the beta subunit of the sulfite reductase complex (NADPH).
+  - reference: InterPro:IPR006067
+    notes: InterPro domain entry for nitrite/sulfite reductase ferredoxin-like half-domain.
+  - reference: PMID:26088143
+    snippet: The iron-rich cofactors in SiRHP are unique because they are a covalent
+      arrangement of a Fe4S4 cluster attached through a cysteine ligand to an iron-containing
+      porphyrinoid called siroheme.
+    notes: Describes the coupled [4Fe-4S]-siroheme cofactor center in the SiRHP beta
+      subunit.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Conserved assimilatory alpha8-beta4 NADPH-sulfite reductase holoenzyme in
+    enteric and other bacteria.
+  reference: PMID:26088143
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: Conserved alpha2-beta2 heterotetrameric NADPH-sulfite reductase complex in
+    yeasts and fungi.
+  reference: PMID:1479340
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial strain for the 800 kDa alpha8-beta4 CysJ8-CysI4 assimilatory
+    NADPH-sulfite reductase holoenzyme.
+  reference: PMID:26088143
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding yeast strain for the alpha2-beta2 Met10p2-Met5p2 NADPH-sulfite
+    reductase complex.
+  reference: PMID:1479340
+functions:
+- function_id: sulfite_reductase_nadph_activity
+  label: sulfite reductase (NADPH) activity
+  grounding: GO:0004783
+  description: Catalyzes the six-electron reduction of sulfite to hydrogen sulfide
+    using NADPH via FAD, FMN, [4Fe-4S], and siroheme cofactors.
+  evidence:
+  - reference: GO:0004783
+    notes: GO molecular-function term for sulfite reductase (NADPH) activity.
+  - reference: PMID:26088143
+    snippet: Assimilatory NADPH-sulfite reductase (SiR) from Escherichia coli is a
+      structurally complex oxidoreductase that catalyzes the six-electron reduction
+      of sulfite to sulfide.
+    notes: Establishes the six-electron NADPH-dependent sulfite reductase activity.
+- function_id: sulfate_assimilation
+  label: sulfate assimilation
+  grounding: GO:0000103
+  description: Reduces inorganic sulfite derived from sulfate or thiosulfate into
+    sulfide for incorporation into cysteine, homocysteine, and methionine.
+  evidence:
+  - reference: GO:0000103
+    notes: GO biological-process term for sulfate assimilation.
+  - reference: PMID:1479340
+    snippet: The assimilation of sulphate in Saccharomyces cerevisiae, comprising
+      the reduction of sulphate to sulphide and the incorporation of the sulphur atom
+      into a four-carbon chain, requires the integrity of 13 different genes.
+    notes: Demonstrates the role of sulfite reductase in the sulfate assimilation
+      pathway.
+evidence:
+- reference: GO:0009337
+  notes: GO cellular-component term for sulfite reductase complex (NADPH).
+- reference: ComplexPortal:CPX-5629
+  notes: Complex Portal entry for the Escherichia coli K-12 CysJ8-CysI4 sulfite reductase
+    complex.
+- reference: ComplexPortal:CPX-3163
+  notes: Complex Portal entry for the Saccharomyces cerevisiae S288C Met10p2-Met5p2
+    sulfite reductase complex.
+- reference: PMID:26088143
+  snippet: Assimilatory NADPH-sulfite reductase (SiR) from Escherichia coli is a structurally
+    complex oxidoreductase that catalyzes the six-electron reduction of sulfite to
+    sulfide.
+  notes: Characterizes subunit assembly and cofactor requirements of E. coli NADPH-sulfite
+    reductase.
+- reference: DOI:10.1074/jbc.m115.662379
+  notes: DOI for PMID:26088143.
+- reference: PMID:1479340
+  snippet: Phenotypic studies and enzyme determinations showed that the products of
+    at least five genes are needed for the synthesis of an enzymically active sulphite
+    reductase. These genes are MET1, MET5, MET8, MET10 and MET20.
+  notes: Genetic and biochemical characterization of Saccharomyces cerevisiae sulfite
+    reductase.
+- reference: DOI:10.1099/00221287-138-10-2021
+  notes: DOI for PMID:1479340.
+causal_graphs:
+- graph_id: sulfite_reductase_assembly_and_catalysis
+  title: NADPH-Sulfite Reductase Assembly and Six-Electron Sulfite Reduction
+  description: Flavin-binding alpha subunits (CysJ/Met10) and siroheme-[4Fe-4S] hemoprotein
+    beta subunits (CysI/Met5) assemble via the SiRHP N-terminal domain and SiRFP NADPH-binding
+    domain to catalyze six-electron sulfite reduction during sulfate assimilation.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cysj_flavoprotein_alpha_subunit
+    label: Sulfite reductase [NADPH] flavoprotein alpha-component
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003097
+    component_ref: cysj_flavoprotein_alpha_subunit
+  - node_id: cysi_hemoprotein_beta_subunit
+    label: Sulfite reductase [NADPH] hemoprotein beta-component
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR006067
+    component_ref: cysi_hemoprotein_beta_subunit
+  - node_id: sulfite_reductase_complex_nadph
+    label: sulfite reductase complex (NADPH)
+    node_type: STRUCTURE
+    grounding: GO:0009337
+  - node_id: sulfite_reductase_nadph_activity
+    label: sulfite reductase (NADPH) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004783
+  - node_id: sulfate_assimilation
+    label: sulfate assimilation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000103
+  edges:
+  - subject: cysi_hemoprotein_beta_subunit
+    predicate: binds via N-terminal oligomerization domain to
+    object: cysj_flavoprotein_alpha_subunit
+    description: The N-terminal domain of the hemoprotein beta subunit (SiRHP) interacts
+      with the NADPH-binding domain of the flavoprotein alpha subunit (SiRFP).
+    evidence:
+    - reference: PMID:26088143
+      snippet: The iron-rich cofactors in SiRHP are unique because they are a covalent
+        arrangement of a Fe4S4 cluster attached through a cysteine ligand to an iron-containing
+        porphyrinoid called siroheme.
+      notes: Demonstrates the inter-subunit assembly interface between SiRHP and SiRFP.
+  - subject: cysj_flavoprotein_alpha_subunit
+    predicate: co-assembles with beta subunit into
+    object: sulfite_reductase_complex_nadph
+    description: Flavin-binding alpha subunits and siroheme-[4Fe-4S] beta subunits
+      assemble into the active NADPH-sulfite reductase holoenzyme.
+    evidence:
+    - reference: PMID:26088143
+      snippet: Assimilatory NADPH-sulfite reductase (SiR) from Escherichia coli is
+        a structurally complex oxidoreductase that catalyzes the six-electron reduction
+        of sulfite to sulfide.
+      notes: Supports assembly of alpha and beta subunits into the holoenzyme.
+  - subject: sulfite_reductase_complex_nadph
+    predicate: catalyzes
+    object: sulfite_reductase_nadph_activity
+    description: The assembled NADPH-sulfite reductase holoenzyme transfers six electrons
+      from NADPH to reduce sulfite to sulfide.
+    evidence:
+    - reference: PMID:26088143
+      snippet: Assimilatory NADPH-sulfite reductase (SiR) from Escherichia coli is
+        a structurally complex oxidoreductase that catalyzes the six-electron reduction
+        of sulfite to sulfide.
+      notes: Establishes holoenzyme catalysis of six-electron sulfite reduction.
+  - subject: sulfite_reductase_nadph_activity
+    predicate: drives
+    object: sulfate_assimilation
+    description: Reduction of sulfite to sulfide provides reduced sulfur for incorporation
+      into sulfur-containing amino acids during sulfate assimilation.
+    evidence:
+    - reference: PMID:1479340
+      snippet: Thiosulphate is cleaved into sulphite and sulphide prior to utilization
+        by the sulphate assimilation pathway, as the metabolism of one sulphur atom
+        from thiosulphate requires the presence of an active sulphite reductase.
+      notes: Links active sulfite reductase catalysis to the sulfate assimilation
+        pathway.
+curation_history:
+- timestamp: '2026-10-31T22:10:23Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added sulfite reductase complex (NADPH) (GO:0009337) with InterPro-grounded
+    components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim
+    literature snippets, and a mechanistic causal graph.
+  llm_assisted: true

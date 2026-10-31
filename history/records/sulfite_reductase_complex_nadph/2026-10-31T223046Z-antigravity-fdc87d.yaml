@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/sulfite_reductase_complex_nadph.yaml
+  slug: sulfite_reductase_complex_nadph
+session:
+  id: 2026-10-31T223046Z-antigravity-fdc87d
+  timestamp: '2026-10-31T22:30:46Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    agent_tool: antigravity
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - description
+  - synonyms
+  - parent_structures
+  - part_of
+  - taxonomic_distribution
+  - canonical_examples
+  - components
+  - functions
+  - causal_graphs
+  - curation_history
+  summary: Add sulfite reductase complex (NADPH) (GO:0009337) record
+  details: Added CellStructureRecord for sulfite reductase complex (NADPH) (GO:0009337) in
+    Escherichia coli K-12 with flavoprotein subunit CysJ (P38038) and hemoprotein subunit
+    CysI (P17846), verbatim PubMed abstract evidence (PMID:1932386, PMID:1339424, PMID:7654705),
+    canonical examples, functions, and assembly/function causal graphs.
