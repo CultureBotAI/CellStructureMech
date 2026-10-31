@@ -1,0 +1,936 @@
+# Germ tube definition, septin grounding and graph review
+
+- Review: 20261021T094732Z-germ-tube-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T09:07:10Z
+- Finished UTC: 2026-10-21T09:47:32Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact germ-tube identity and septin localization are supported. Three minor findings address definition location/source scope and unjustified generic septin-family withholding.
+
+## Scope And Provenance
+
+Full exact record and inspected repository rubric; source-native ontology/taxon/protein identities and all claim-bearing citation scopes, with readable primary results distinguished from review summaries and access-limited sources.
+
+Selection: Exact target 3 in the frozen batch15 path selection on expanded-main revision 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; no old-base resolver result is reused.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0032179 | data/structures/appendage/germ_tube.yaml | maintained | germ tube |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0032179 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0032179 | Focused validator passed. |
+| Native verify | passed | True | GO:0032179 | Read-only native diagnostic passed; it does not establish biological membership or mechanism. |
+| Native causal-graphs | passed | True | GO:0032179 | Read-only native diagnostic passed; it does not establish biological membership or mechanism. |
+| Claim-level scientific review | passed | True | GO:0032179 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Target resolver slice with native transport-failure cross-checks | passed | True | GO:0032179 | 6 of 6 exact target identifiers returned OK. No target residuals. The shared command exit zero is not interpreted as successful network resolution for transport failures. |
+| Full corpus QC | passed | True | GO:0032179 | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0032179 | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0032179 | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0032179 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0032179 | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Generic germ-tube structure
+
+identity: supported. Targets: GO:0032179.
+
+The GO identity and APPENDAGE kind remain correct. Candida germ-tube use is supported in the review and primary study even though GO wording starts from spores; no false species-taxonomy mismatch is inferred. The added three-species causal narrative is not provided by the GO-only definition_source.
+
+### Basal band versus apical cap
+
+provenance: concern. Targets: GO:0032179.
+
+The phrase basal septin collar/cap merges two experimentally and ontologically distinct locations. The appended unqualified dependence on Cdc42, Spitzenkörper/polarisome delivery and this septin structure is not supported by the attached GO definition. Scope and source attribution require correction, without declaring all polarity biology false.
+
+### Generic septin family
+
+grounding: concern. Targets: GO:0032179.
+
+The represented component is septin proteins, not an entire septin-plus-associated-protein complex. Exact generic IPR016491 can ground that class; demanding a complete germ-tube cap cohort before assigning any family confuses family identity with complex composition.
+
+### Septin localization and essentiality
+
+evidence: supported. Targets: GO:0032179.
+
+The component role at the leading edge and cap/ring membership have support. Assembly necessity of the generic class is not directly established by the GO cap definition or review localization evidence. cdc10/cdc11 mutant hyphae retain other septins and therefore do not prove the entire septin class dispensable. No automatic essentiality contradiction is filed.
+
+### Assembly necessity of the generic septin class
+
+evidence: unknown. Targets: GO:0032179.
+
+The current ESSENTIAL annotation concerns assembly necessity, which is not established by septin localization or by a definition of a septin-containing cap. The inspected cdc10/cdc11 deletions retain other septins and are not complete class ablation. Thus neither essentiality nor dispensability of the generic class for germ-tube assembly is independently established here; supported membership remains separate.
+
+### Parthood does not describe assembly
+
+graph: concern. Targets: GO:0032179.
+
+All three graph edges are is part of. They provide membership context for septins/cap/ring but no assembly step, regulator, timing transition or causal path. ASSEMBLY/MECHANISTIC is therefore unsupported by the actual representation.
+
+### Generic class and optional instances
+
+completeness: supported. Targets: GO:0032179.
+
+No species-specific gene list, protein accession or taxon distribution is asserted. Native graph diagnostics report one generic NO_GENE_SYMBOLS component; protein guidance permits generic protein classes without invented gene symbols. Missing optional examples/functions/images are not findings.
+
+### Review versus primary scope
+
+evidence: supported. Targets: GO:0032179.
+
+Douglas remains secondary review evidence. Warenda is a scoped supplemental primary cross-check, not substituted for every fungal species named in the definition. No expression-module/iModulon inference or proof from source metadata is used.
+
+## Findings
+
+### F1: The graph shows parthood rather than an assembly mechanism
+
+minor / open / confirmed; issue key: germ-tube-static-assembly-graph.
+
+The ASSEMBLY/MECHANISTIC graph contains exactly three is-part-of edges and no assembly event or causal intermediate. The cited GO definitions and Douglas review support membership/localization, but membership alone does not establish how the germ tube forms.
+
+### F2: Separate the apical cap from the basal band and source added claims
+
+minor / open / confirmed; issue key: germ-tube-definition-cap-location-source.
+
+The definition appends a basal septin collar/cap and a broad mechanistic dependence while definition_source remains GO0032179. Native GO and the cited review locate the cap at the leading edge; the basal band is a distinct localization. Retain the exact definition or attach properly scoped literature support to added polarity/vesicle/septin claims. This does not establish that Cdc42 or vesicle traffic has no germ-tube role.
+
+### F3: Ground the generic septin class independently of cap composition
+
+minor / open / confirmed; issue key: germ-tube-generic-septin-family-gap.
+
+The label-only rationale withholds a family CURIE until a complete germ-tube cap cohort is resolved, although the component label and role denote generic septin GTPases. Native InterPro IPR016491 exactly represents that protein family. Family grounding does not require claiming a complete cap membership list or a species-specific stoichiometry.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Recast the existing graph as NONMECHANISTIC structural context, remove it, or replace it with an organism- and condition-bounded assembly mechanism supported by primary experiments.
+
+- Do not equate is-part-of with required-for-assembly.
+- Each mechanistic edge must identify a source-supported action and direction.
+- After separately authorized curation, use the guarded writer and native history/status rules; run focused schema/strict, identifier and evidence checks.
+
+### A2
+
+Correct the spatial distinction between apical cap, diffuse basal band and internal septation ring; remove or source the additional causal clauses with their organism and experimental context.
+
+- Check every retained added clause against the actual cited passage rather than a title.
+- Do not infer absence of the entire septin class from single-member deletion phenotypes.
+- After separately authorized curation, use the guarded writer and native history/status rules; run focused schema/strict, identifier and evidence checks.
+
+### A3
+
+Use exact generic septin family grounding for the existing protein class and preserve any unresolved cap composition or organism-specific membership as a separate limitation.
+
+- Verify IPR016491 remains a family named Septin.
+- Do not substitute a single septin paralog or a domain for the generic protein-family class.
+- After separately authorized curation, use the guarded writer and native history/status rules; run focused schema/strict, identifier and evidence checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/germ_tube.yaml; Entire maintained YAML, all components/examples/evidence, definition, hierarchy, functions, every graph node/edge, and creation history. | context_only | The complete exact target was read after native inspect. No neighboring maintained record is relied on; external GO authority supplies graph identities. The target remains PROPOSED and contains no image, measured property, dataset or verbatim quotation assertion. |
+| rubric | docs/CURATION.md; Evidence placement; component essentiality; source.inputs also freezes the full review checklist and protein/graph guidance. | context_only | Evidence is claim-specific and retains taxon, preparation and source tier. Essentiality concerns assembly necessity; canonical presence or catalytic activity does not independently prove it. Optional empty fields and generic protein classes do not automatically require findings. |
+| graph-contract | src/cellstructuremech/schema/cellstructuremech.yaml; CellStructureRecord.causal_graphs; GraphKindEnum.ASSEMBLY/FUNCTION; CausalGraphScopeEnum; curate-causal-graphs/SKILL.md. | context_only | The graph should explain how the structure is built or does its job. Static parthood or whole-structure function summaries alone do not explain a causal mechanism, even when schema-valid. |
+| germ-tube-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032159,GO:0032171,GO:0032172,GO:0032179,GO:0110165; All five result definitions/synonyms/children and exact relation values. | supports | Active GO0032179 defines a slender outgrowth from most germinating spores. GO0032171 defines a faint septin cap at the leading edge, whereas GO0032172 defines a tight septin ring at a future septum within the tube. The parent/scope and septin-cap parent identity match. Native GO does not supply the appended Cdc42/Spitzenkörper causal narrative. |
+| germ-tube-agent-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128/EC.4.9.1503-1512.2005%22&amp;format=json&amp;resultType=core&amp;pageSize=100; resultList.result DOI/PMID/title/author/pubTypeList. | context_only | DOI10.1128/EC.4.9.1503-1512.2005 identifies Douglas et al., PMID16151244, explicitly a review. |
+| germ-tube-agent-douglas-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC1214204/; Introduction; Septins in C. albicans, three numbered localization patterns and mutant paragraph; Septins in A. nidulans germination/septation context. | supports | The review separately describes a cytokinetic septin ring inside the germ tube, a diffuse basal band at the mother-cell junction, and a faint cap at the leading edge. Candida serum-induced hyphae differ from pseudohyphae; septin regulation and functions vary across fungi. It reports curved but persisting hyphae in cdc10/cdc11 mutants, not complete septin loss. |
+| germ-tube-agent-warenda2002 | https://pmc.ncbi.nlm.nih.gov/articles/PMC117938/?pdf=render; Results Distinct Septin Localization; Septin Mutants Show Altered Germ Tube and Hyphal Growth Patterns; Fig2/7/8 captions; Discussion. Original batch10 receipt preserved. | supports | Primary C. albicans CDC10-GFP localization distinguishes budding/pseudohyphal neck rings from emerging germ-tube patterns. Under20% BCS at37C, cdc10Δ/cdc11Δ cells still form germ tubes/hyphae with altered curvature/site selection; remaining septins assemble rings. This supports localization/morphogenesis distinctions but does not test deletion of the entire generic septin class. |
+| germ-tube-agent-family | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016491/; metadata.accession/type/name/description/member_databases/hierarchy. Original native receipt preserved. | supports | IPR016491 is the active family Septin, explicitly representing various septin proteins, including fungal GTPases and Cdc3/10/11/12/Shs1 examples. This is an exact generic protein-family match for the component class; it does not identify a complete species-specific cap complex or its stoichiometry. |
+| schema-result | just validate data/structures/appendage/germ_tube.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/appendage/germ_tube.yaml |
+| strict-result | just validate-strict data/structures/appendage/germ_tube.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/germ_tube-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/appendage/germ_tube.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/germ_tube-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch15-20261021-ohdkgt21/germ_tube-strict.tsv |
+| verify-result | /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/appendage/germ_tube.yaml --verify; Read-only native target diagnostic log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| causal-graphs-result | /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/appendage/germ_tube.yaml --causal-graphs; Read-only native target diagnostic log | supports | data/structures/appendage/germ_tube.yaml  (GO:0032179)<br>  germ_tube_mechanism	septin_proteins	NO_GENE_SYMBOLS	-&gt;septin_proteins (PROTEIN: septin proteins)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| target-curies-result | just check-curies-strict; data/structures/appendage/germ_tube.yaml; exact native collect() target slice of original fresh-base TSV | supports | 6 of 6 exact target identifiers returned OK. No target residuals. The shared command exit zero is not interpreted as successful network resolution for transport failures. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Douglas2005 is a review and Warenda2002 supplies Candida-specific primary context. Neither is a direct three-species test of every added Cdc42/Spitzenkörper/polarisome clause.
+- Generic septin-class assembly essentiality remains unresolved at the inspected evidence level. Surviving cdc10/cdc11 mutant hyphae are not complete septin ablation, and viability is not the same endpoint as structural assembly.
+- Prior raw/meta are copied unchanged with original timestamps; no conclusions from earlier reviews are imported as proof. Zhang2010 is retained as an unused lead and is not cited as inspected evidence in this draft.
+- The exact target resolver slice is derived from the completed fresh-base run. Any PMID transport failures were checked against the separately cited native literature metadata; these identity checks do not establish full-body scientific support.
+- No raw microscopy pixels, original movies, supplementary datasets or unpublished data were independently reanalyzed. Figure captions and relevant body/methods prose were read at the listed locators. The target has no image asset or quantitative measurement assertion.
+- All 14 frozen repository inputs retain their inspected hashes. No neighboring local structure record, expression-module source or iModulonDB claim is used; no optional-empty finding is made.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Unsaveable clean exceptions are not manufactured; each listed finding is supported independently of validator results. Root alone owns finalization, save and shared index updates.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T094732Z-germ-tube-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Germ tube definition, septin grounding and graph review
+started_at: '2026-10-21T09:07:10Z'
+finished_at: '2026-10-21T09:47:32Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Exact germ-tube identity and septin localization are supported. Three minor
+  findings address definition location/source scope and unjustified generic septin-family
+  withholding.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/germ_tube.yaml
+    sha256: b238d9290ea6c71027cd0c398db6954baa769ad167812dd404a3c9fae4c0c058
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0032179
+  path: data/structures/appendage/germ_tube.yaml
+  label: germ tube
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/germ_tube.yaml
+    role: maintained scientific record
+scope:
+  description: Full exact record and inspected repository rubric; source-native ontology/taxon/protein
+    identities and all claim-bearing citation scopes, with readable primary results
+    distinguished from review summaries and access-limited sources.
+  selection: Exact target 3 in the frozen batch15 path selection on expanded-main
+    revision 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; no old-base resolver result
+    is reused.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0032179
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  command: just validate data/structures/appendage/germ_tube.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  command: just validate-strict data/structures/appendage/germ_tube.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/germ_tube-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  command: /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/appendage/germ_tube.yaml --verify
+  exit_code: 0
+  summary: Read-only native diagnostic passed; it does not establish biological membership
+    or mechanism.
+  evidence_ids:
+  - verify-result
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  command: /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/appendage/germ_tube.yaml --causal-graphs
+  exit_code: 0
+  summary: Read-only native diagnostic passed; it does not establish biological membership
+    or mechanism.
+  evidence_ids:
+  - causal-graphs-result
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - rubric
+  - graph-contract
+  - germ-tube-agent-go
+  - germ-tube-agent-epmc
+  - germ-tube-agent-douglas-pmc
+  - germ-tube-agent-warenda2002
+  - germ-tube-agent-family
+- check_id: target-curies
+  name: Target resolver slice with native transport-failure cross-checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  summary: 6 of 6 exact target identifiers returned OK. No target residuals. The shared
+    command exit zero is not interpreted as successful network resolution for transport
+    failures.
+  evidence_ids:
+  - target-curies-result
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0032179
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/germ_tube.yaml
+  locator: Entire maintained YAML, all components/examples/evidence, definition, hierarchy,
+    functions, every graph node/edge, and creation history.
+  accessed_at: '2026-10-21T09:23:25Z'
+  support: context_only
+  summary: The complete exact target was read after native inspect. No neighboring
+    maintained record is relied on; external GO authority supplies graph identities.
+    The target remains PROPOSED and contains no image, measured property, dataset
+    or verbatim quotation assertion.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Evidence placement; component essentiality; source.inputs also freezes
+    the full review checklist and protein/graph guidance.
+  accessed_at: '2026-10-21T09:23:25Z'
+  support: context_only
+  summary: Evidence is claim-specific and retains taxon, preparation and source tier.
+    Essentiality concerns assembly necessity; canonical presence or catalytic activity
+    does not independently prove it. Optional empty fields and generic protein classes
+    do not automatically require findings.
+- evidence_id: graph-contract
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: CellStructureRecord.causal_graphs; GraphKindEnum.ASSEMBLY/FUNCTION; CausalGraphScopeEnum;
+    curate-causal-graphs/SKILL.md.
+  accessed_at: '2026-10-21T09:23:25Z'
+  support: context_only
+  summary: The graph should explain how the structure is built or does its job. Static
+    parthood or whole-structure function summaries alone do not explain a causal mechanism,
+    even when schema-valid.
+- evidence_id: germ-tube-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0032159,GO:0032171,GO:0032172,GO:0032179,GO:0110165
+  locator: All five result definitions/synonyms/children and exact relation values.
+  accessed_at: '2026-10-21T09:08:34.949384Z'
+  support: supports
+  summary: Active GO0032179 defines a slender outgrowth from most germinating spores.
+    GO0032171 defines a faint septin cap at the leading edge, whereas GO0032172 defines
+    a tight septin ring at a future septum within the tube. The parent/scope and septin-cap
+    parent identity match. Native GO does not supply the appended Cdc42/Spitzenkörper
+    causal narrative.
+  snapshot_sha256: 3a8a62b46c3347b6fe19861d5cf540a1e2a0e723936134b8c9e9dbe7671a8436
+- evidence_id: germ-tube-agent-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128/EC.4.9.1503-1512.2005%22&format=json&resultType=core&pageSize=100
+  locator: resultList.result DOI/PMID/title/author/pubTypeList.
+  accessed_at: '2026-10-21T09:08:35.342081Z'
+  support: context_only
+  summary: DOI10.1128/EC.4.9.1503-1512.2005 identifies Douglas et al., PMID16151244,
+    explicitly a review.
+  snapshot_sha256: 02f39a00b6db0ee9c3ddb52ca98b46686e31dcddb394b4268236b9b6c1b556ac
+- evidence_id: germ-tube-agent-douglas-pmc
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1214204/
+  locator: Introduction; Septins in C. albicans, three numbered localization patterns
+    and mutant paragraph; Septins in A. nidulans germination/septation context.
+  accessed_at: '2026-10-21T07:11:03.050463Z'
+  support: supports
+  summary: The review separately describes a cytokinetic septin ring inside the germ
+    tube, a diffuse basal band at the mother-cell junction, and a faint cap at the
+    leading edge. Candida serum-induced hyphae differ from pseudohyphae; septin regulation
+    and functions vary across fungi. It reports curved but persisting hyphae in cdc10/cdc11
+    mutants, not complete septin loss.
+  snapshot_sha256: 31a2dd0109697492854f84701ef3f1d1be31f62312b613ab8432223332b69dd3
+- evidence_id: germ-tube-agent-warenda2002
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC117938/?pdf=render
+  locator: Results Distinct Septin Localization; Septin Mutants Show Altered Germ
+    Tube and Hyphal Growth Patterns; Fig2/7/8 captions; Discussion. Original batch10
+    receipt preserved.
+  accessed_at: '2026-10-21T07:55:41.272909Z'
+  support: supports
+  summary: Primary C. albicans CDC10-GFP localization distinguishes budding/pseudohyphal
+    neck rings from emerging germ-tube patterns. Under20% BCS at37C, cdc10Δ/cdc11Δ
+    cells still form germ tubes/hyphae with altered curvature/site selection; remaining
+    septins assemble rings. This supports localization/morphogenesis distinctions
+    but does not test deletion of the entire generic septin class.
+  snapshot_sha256: 7b0552af320b38fa21e9800ad0e493cf04cb5f02f85d578e45acd0340f634cdb
+- evidence_id: germ-tube-agent-family
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016491/
+  locator: metadata.accession/type/name/description/member_databases/hierarchy. Original
+    native receipt preserved.
+  accessed_at: '2026-10-21T06:58:21.193684Z'
+  support: supports
+  summary: IPR016491 is the active family Septin, explicitly representing various
+    septin proteins, including fungal GTPases and Cdc3/10/11/12/Shs1 examples. This
+    is an exact generic protein-family match for the component class; it does not
+    identify a complete species-specific cap complex or its stoichiometry.
+  snapshot_sha256: 5797c626d192b641ed5b4b2231e729f9f179bfd6bb18f911689fa08253688c4a
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/appendage/germ_tube.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:07:16Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/germ_tube.yaml'
+  snapshot_sha256: 1ab05ae1400e91c959006610734c806067e386e600e93e499c65d2d64614342b
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/appendage/germ_tube.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/germ_tube-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:07:20Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/appendage/germ_tube.yaml\
+    \ --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/germ_tube-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch15-20261021-ohdkgt21/germ_tube-strict.tsv"
+  snapshot_sha256: 2c9c55d104237338358b0d25b333a54db90c86fb343060e795d2f5695c68d04d
+- evidence_id: verify-result
+  kind: validation
+  reference: /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/appendage/germ_tube.yaml --verify
+  locator: Read-only native target diagnostic log
+  accessed_at: '2026-10-21T09:14:40Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: causal-graphs-result
+  kind: validation
+  reference: /private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/appendage/germ_tube.yaml --causal-graphs
+  locator: Read-only native target diagnostic log
+  accessed_at: '2026-10-21T09:14:41Z'
+  support: supports
+  summary: "data/structures/appendage/germ_tube.yaml  (GO:0032179)\n  germ_tube_mechanism\t\
+    septin_proteins\tNO_GENE_SYMBOLS\t->septin_proteins (PROTEIN: septin proteins)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  NO_GENE_SYMBOLS       \
+    \    component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     0  PARTIAL_EXAMPLES          component_ref\
+    \ target holds protein_examples but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: b6822abc52c170ca6071fcc71dc3f3492257d585e43f5b9f69d69f689b54e063
+- evidence_id: target-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/germ_tube.yaml; exact native collect() target
+    slice of original fresh-base TSV
+  accessed_at: '2026-10-21T09:47:06.156511Z'
+  support: supports
+  summary: 6 of 6 exact target identifiers returned OK. No target residuals. The shared
+    command exit zero is not interpreted as successful network resolution for transport
+    failures.
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Generic germ-tube structure
+  outcome: supported
+  target_ids:
+  - GO:0032179
+  summary: The GO identity and APPENDAGE kind remain correct. Candida germ-tube use
+    is supported in the review and primary study even though GO wording starts from
+    spores; no false species-taxonomy mismatch is inferred. The added three-species
+    causal narrative is not provided by the GO-only definition_source.
+  evidence_ids:
+  - germ-tube-agent-go
+  - germ-tube-agent-douglas-pmc
+  - germ-tube-agent-warenda2002
+  - record
+- assessment_id: definition
+  area: provenance
+  topic: Basal band versus apical cap
+  outcome: concern
+  target_ids:
+  - GO:0032179
+  summary: The phrase basal septin collar/cap merges two experimentally and ontologically
+    distinct locations. The appended unqualified dependence on Cdc42, Spitzenkörper/polarisome
+    delivery and this septin structure is not supported by the attached GO definition.
+    Scope and source attribution require correction, without declaring all polarity
+    biology false.
+  evidence_ids:
+  - germ-tube-agent-go
+  - germ-tube-agent-douglas-pmc
+  - germ-tube-agent-warenda2002
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Generic septin family
+  outcome: concern
+  target_ids:
+  - GO:0032179
+  summary: The represented component is septin proteins, not an entire septin-plus-associated-protein
+    complex. Exact generic IPR016491 can ground that class; demanding a complete germ-tube
+    cap cohort before assigning any family confuses family identity with complex composition.
+  evidence_ids:
+  - germ-tube-agent-go
+  - germ-tube-agent-family
+  - record
+- assessment_id: composition
+  area: evidence
+  topic: Septin localization and essentiality
+  outcome: supported
+  target_ids:
+  - GO:0032179
+  summary: The component role at the leading edge and cap/ring membership have support.
+    Assembly necessity of the generic class is not directly established by the GO
+    cap definition or review localization evidence. cdc10/cdc11 mutant hyphae retain
+    other septins and therefore do not prove the entire septin class dispensable.
+    No automatic essentiality contradiction is filed.
+  evidence_ids:
+  - germ-tube-agent-go
+  - germ-tube-agent-douglas-pmc
+  - germ-tube-agent-warenda2002
+- assessment_id: assembly-necessity
+  area: evidence
+  topic: Assembly necessity of the generic septin class
+  outcome: unknown
+  target_ids:
+  - GO:0032179
+  summary: The current ESSENTIAL annotation concerns assembly necessity, which is
+    not established by septin localization or by a definition of a septin-containing
+    cap. The inspected cdc10/cdc11 deletions retain other septins and are not complete
+    class ablation. Thus neither essentiality nor dispensability of the generic class
+    for germ-tube assembly is independently established here; supported membership
+    remains separate.
+  evidence_ids:
+  - germ-tube-agent-go
+  - germ-tube-agent-douglas-pmc
+  - germ-tube-agent-warenda2002
+- assessment_id: graph
+  area: graph
+  topic: Parthood does not describe assembly
+  outcome: concern
+  target_ids:
+  - GO:0032179
+  summary: All three graph edges are is part of. They provide membership context for
+    septins/cap/ring but no assembly step, regulator, timing transition or causal
+    path. ASSEMBLY/MECHANISTIC is therefore unsupported by the actual representation.
+  evidence_ids:
+  - germ-tube-agent-go
+  - germ-tube-agent-douglas-pmc
+  - record
+  - graph-contract
+- assessment_id: examples
+  area: completeness
+  topic: Generic class and optional instances
+  outcome: supported
+  target_ids:
+  - GO:0032179
+  summary: No species-specific gene list, protein accession or taxon distribution
+    is asserted. Native graph diagnostics report one generic NO_GENE_SYMBOLS component;
+    protein guidance permits generic protein classes without invented gene symbols.
+    Missing optional examples/functions/images are not findings.
+  evidence_ids:
+  - germ-tube-agent-family
+  - record
+- assessment_id: tiers
+  area: evidence
+  topic: Review versus primary scope
+  outcome: supported
+  target_ids:
+  - GO:0032179
+  summary: Douglas remains secondary review evidence. Warenda is a scoped supplemental
+    primary cross-check, not substituted for every fungal species named in the definition.
+    No expression-module/iModulon inference or proof from source metadata is used.
+  evidence_ids:
+  - germ-tube-agent-epmc
+  - germ-tube-agent-douglas-pmc
+  - germ-tube-agent-warenda2002
+findings:
+- finding_id: F1
+  issue_key: germ-tube-static-assembly-graph
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The graph shows parthood rather than an assembly mechanism
+  description: The ASSEMBLY/MECHANISTIC graph contains exactly three is-part-of edges
+    and no assembly event or causal intermediate. The cited GO definitions and Douglas
+    review support membership/localization, but membership alone does not establish
+    how the germ tube forms.
+  target_ids:
+  - GO:0032179
+  field_paths:
+  - causal_graphs[graph_id=germ_tube_mechanism].graph_kind
+  - causal_graphs[graph_id=germ_tube_mechanism].scope_status
+  - causal_graphs[graph_id=germ_tube_mechanism].edges
+  evidence_ids:
+  - record
+  - graph-contract
+  - germ-tube-agent-go
+  - germ-tube-agent-douglas-pmc
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/germ_tube.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Identity, Components, Evidence and Causal graph; docs/CURATION.md:Evidence
+  native_severity: minor
+  normalization_reason: The exact structure and most underlying membership/location
+    claims remain supported. The bounded defect is an overbroad scope qualifier or
+    mechanistic representation, rather than a demonstrated false experimental mechanism
+    or wrong identity; calibrated as minor.
+- finding_id: F2
+  issue_key: germ-tube-definition-cap-location-source
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate the apical cap from the basal band and source added claims
+  description: The definition appends a basal septin collar/cap and a broad mechanistic
+    dependence while definition_source remains GO0032179. Native GO and the cited
+    review locate the cap at the leading edge; the basal band is a distinct localization.
+    Retain the exact definition or attach properly scoped literature support to added
+    polarity/vesicle/septin claims. This does not establish that Cdc42 or vesicle
+    traffic has no germ-tube role.
+  target_ids:
+  - GO:0032179
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - germ-tube-agent-go
+  - germ-tube-agent-douglas-pmc
+  - germ-tube-agent-warenda2002
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/germ_tube.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Identity, Components, Evidence and Causal graph; docs/CURATION.md:Evidence
+  native_severity: minor
+  normalization_reason: The record retains its exact biological identity; this bounded
+    wording, grounding or completeness defect does not invalidate the supported core.
+- finding_id: F3
+  issue_key: germ-tube-generic-septin-family-gap
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the generic septin class independently of cap composition
+  description: The label-only rationale withholds a family CURIE until a complete
+    germ-tube cap cohort is resolved, although the component label and role denote
+    generic septin GTPases. Native InterPro IPR016491 exactly represents that protein
+    family. Family grounding does not require claiming a complete cap membership list
+    or a species-specific stoichiometry.
+  target_ids:
+  - GO:0032179
+  field_paths:
+  - components[component_id=septin_proteins].grounding_status
+  - components[component_id=septin_proteins].grounding_notes
+  evidence_ids:
+  - germ-tube-agent-family
+  - germ-tube-agent-go
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/germ_tube.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Identity, Components, Evidence and Causal graph; docs/CURATION.md:Evidence
+  native_severity: minor
+  normalization_reason: The record retains its exact biological identity; this bounded
+    wording, grounding or completeness defect does not invalidate the supported core.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0032179
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/germ_tube.yaml
+    role: maintained scientific record
+  description: Recast the existing graph as NONMECHANISTIC structural context, remove
+    it, or replace it with an organism- and condition-bounded assembly mechanism supported
+    by primary experiments.
+  acceptance_checks:
+  - Do not equate is-part-of with required-for-assembly.
+  - Each mechanistic edge must identify a source-supported action and direction.
+  - After separately authorized curation, use the guarded writer and native history/status
+    rules; run focused schema/strict, identifier and evidence checks.
+  generator: Maintained structure YAML; derived products only after authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0032179
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/germ_tube.yaml
+    role: maintained scientific record
+  description: Correct the spatial distinction between apical cap, diffuse basal band
+    and internal septation ring; remove or source the additional causal clauses with
+    their organism and experimental context.
+  acceptance_checks:
+  - Check every retained added clause against the actual cited passage rather than
+    a title.
+  - Do not infer absence of the entire septin class from single-member deletion phenotypes.
+  - After separately authorized curation, use the guarded writer and native history/status
+    rules; run focused schema/strict, identifier and evidence checks.
+  generator: Maintained structure YAML; derived products only after authorized curation.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0032179
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/germ_tube.yaml
+    role: maintained scientific record
+  description: Use exact generic septin family grounding for the existing protein
+    class and preserve any unresolved cap composition or organism-specific membership
+    as a separate limitation.
+  acceptance_checks:
+  - Verify IPR016491 remains a family named Septin.
+  - Do not substitute a single septin paralog or a domain for the generic protein-family
+    class.
+  - After separately authorized curation, use the guarded writer and native history/status
+    rules; run focused schema/strict, identifier and evidence checks.
+  generator: Maintained structure YAML; derived products only after authorized curation.
+limitations:
+- Douglas2005 is a review and Warenda2002 supplies Candida-specific primary context.
+  Neither is a direct three-species test of every added Cdc42/Spitzenkörper/polarisome
+  clause.
+- Generic septin-class assembly essentiality remains unresolved at the inspected evidence
+  level. Surviving cdc10/cdc11 mutant hyphae are not complete septin ablation, and
+  viability is not the same endpoint as structural assembly.
+- Prior raw/meta are copied unchanged with original timestamps; no conclusions from
+  earlier reviews are imported as proof. Zhang2010 is retained as an unused lead and
+  is not cited as inspected evidence in this draft.
+- The exact target resolver slice is derived from the completed fresh-base run. Any
+  PMID transport failures were checked against the separately cited native literature
+  metadata; these identity checks do not establish full-body scientific support.
+- No raw microscopy pixels, original movies, supplementary datasets or unpublished
+  data were independently reanalyzed. Figure captions and relevant body/methods prose
+  were read at the listed locators. The target has no image asset or quantitative
+  measurement assertion.
+- All 14 frozen repository inputs retain their inspected hashes. No neighboring local
+  structure record, expression-module source or iModulonDB claim is used; no optional-empty
+  finding is made.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Unsaveable clean exceptions are not manufactured; each listed finding is supported
+  independently of validator results. Root alone owns finalization, save and shared
+  index updates.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```
