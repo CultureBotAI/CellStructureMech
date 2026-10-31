@@ -11,6 +11,7 @@ from cellstructuremech.validation.validator import (
     validate_curation_history,
     validate_discussion_issue_links,
     validate_hierarchy_relations,
+    validate_top_level_pmid_parity,
 )
 from cellstructuremech.validation.write_validated import validate_structure
 from scripts.corpus import record_path
@@ -124,6 +125,18 @@ def test_hierarchy_and_component_relations_are_disjoint(records):
         for err in validate_hierarchy_relations(doc):
             bad.append(f"{path.name}:{err}")
     assert not bad, f"hierarchy/parthood/component relation collision: {bad}"
+
+
+def test_top_level_pmid_evidence_parity(records):
+    """When top-level `evidence` cites `PMID:` primary literature references,
+    primary `PMID:` references cited in `components`, `taxonomic_distribution`,
+    `functions`, or `causal_graphs` must also be present in top-level `evidence`
+    or `protein_examples` (#2486)."""
+    bad = []
+    for path, doc in records:
+        for err in validate_top_level_pmid_parity(doc):
+            bad.append(f"{path.name}:{err}")
+    assert not bad, f"top-level PMID evidence parity violations: {bad}"
 
 
 def test_local_ids_are_unique_within_record(records):
