@@ -1,0 +1,1610 @@
+# Ino80 complex scientific review
+
+- Review: 20261022T074202Z-ino80-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:12:54Z
+- Finished UTC: 2026-10-22T07:42:02Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+INO80-C identity,15 named protein classes, actual supplementary inventory and nonmechanistic remodeling summary are supported. One grouped minor resolves five exact Ies-family mappings; source-specific module-loss results remain bounded context.
+
+## Scope And Provenance
+
+Exactly one complete maintained target plus frozen guidance, protein-example skill and, for the hyphal pair, the other frozen region/complex neighbor. Actual source-reading extents appear per evidence row.
+
+Selection: Target 10 of batch57, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0031011 | data/structures/other/ino80_complex.yaml | maintained | Ino80 complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0031011 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0031011 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0031011 | Native focused check passed; biological claims assessed separately. |
+| Native verify | passed | True | GO:0031011 | Native focused check passed; biological claims assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0031011 | No expression-module inference is used. |
+| Claim-level scientific review | passed | True | GO:0031011 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0031011 | 27 of 37 collected target identifiers returned OK. PMID:10787406: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:10952318: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:11604509: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:12887900: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:14562095: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:15525518: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:19355820: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:24034245: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:25964121: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:8573785: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0031011 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0031011 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0031011 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0031011 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0031011 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### INO80-C identity and15 named constituent classes
+
+identity: supported. Targets: GO:0031011.
+
+Exact GO identity/parent and nuclear-chromosome context agree. All15 native reviewed proteins and current exact-gene queries match; actual Supplementary Table2 independently supports their INO80-C membership. The listed15 classes do not assert15 total molecular copies; Rvb multimeric occupancy remains distinct.
+
+### Five exact Ies families versus broader unresolved classes
+
+grounding: concern. Targets: GO:0031011.
+
+Native Ies1/2/4/5/6 full-family metadata and independent UniProt membership resolve five existing label-only deferrals. Shared INO80/SWR1, Rvb1/2, actin/Arp, Sas5/TAF14 and HMGB classes are not forced onto narrower rows. No exhaustive absence claim is made for Ies3.
+
+### Budding-yeast preparations and reference examples
+
+scope: supported. Targets: GO:0031011.
+
+Watanabe yeast TAP purifications and protein classes support the canonical yeast complex; E.coli BL21 is the recombinant histone-expression context, not native INO80 occurrence. COMMON retains majority/losses-exception meaning, supported qualitatively rather than by a measured strain census. S288C protein references are not assumed to identify every experimental culture.
+
+### Nonmechanistic inventory and remodeling function
+
+graph: supported. Targets: GO:0031011.
+
+The graph explicitly summarizes15 distinct members and whole-complex remodeling. Native Shen/Tosi/Jonsson abstracts support the historical biochemical/structural context, while directly read Watanabe provides module comparisons. No missing atomic steps are required for this declared scope.
+
+### Direct module-association results are bounded positive context
+
+completeness: supported. Targets: GO:0031011.
+
+Arp8 deletion loses the Arp8/Arp4/Act1 module; Ies6 deletion loses Arp5 from purified residual INO80-C. These findings identify specific association dependencies, not abolition of every complex. The record already identifies the modules and declares an inventory graph; omission of further contact detail alone does not meet the materiality threshold.
+
+### Whole-complex formation and activity remain distinct
+
+grounding: unknown. Targets: GO:0031011.
+
+The module-loss/remodeling experiments do not establish universal all-or-none formation requirements for every constituent. UNKNOWN is not interpreted as denying these measured submodule dependencies.
+
+### Whole maintained target and declared source coverage
+
+completeness: supported. Targets: GO:0031011.
+
+Every maintained field, evidence note, graph claim and discussion was inspected at the declared source extents. Empty optional slots, acknowledged unknowns and broader-family candidates do not independently create findings.
+
+## Findings
+
+### F1: Ground five exact Ies subunit families
+
+minor / open / confirmed; issue key: ino80-exact-ies-families.
+
+Ies1, Ies2, Ies4, Ies5 and Ies6 remain REVIEWED_LABEL_ONLY because exact families were not curated in this pass. Current native full-family entries and independently verified protein membership resolve those specific classes.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Map Ies1/IPR038014, Ies2/IPR029523, Ies4/IPR062650, Ies5/IPR020366 and Ies6/IPR029525, preserving their correct yeast examples and existing complex/module boundaries.
+
+- Retain broader or unresolved other classes as label-only rather than substituting domains or shared paralog families.
+- Preserve supported source-specific claims and pass applicable native gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/ino80_complex.yaml; Entire maintained record, including all evidence, examples, graphs, history and discussions | context_only | Every maintained field was read. Historical curation statements are not independent biological evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent/ProteinExample, essentiality, PresenceEnum and graph-scope contracts | context_only | Formation necessity differs from activity, viability and observed membership. COMMON means present in most members, with losses the exception; it is not redefined as merely observed occurrence. |
+| curation | docs/CURATION.md; Component grounding, including REVIEWED_LABEL_ONLY at159–160 | context_only | An exact full-family mapping is distinct from a shared domain or broader paralog class; label-only does not mean merely uncurated this pass. |
+| complex57-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000133,GO:0000228,GO:0001411,GO:0004176,GO:0005743,GO:0006338,GO:0030427,GO:0031011,GO:0031521,GO:0031562,GO:0031942,GO:0051286,GO:0097346,GO:0098800; Complete target-relevant definitions/synonyms and typed relationships in the combined response; unrelated entries are not attributed to this target | supports | GO0031011 defines the Ino80-containing chromatin-remodeling complex and its synonyms. GO0097346,0000228 and0006338 identify the INO80-type parent, nuclear chromosome and chromatin-remodeling process. |
+| complex57-agent-go-0031011-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031011/ancestors?relations=is_a; Complete is_a-only ancestor response | supports | The is_a-only ancestor response supports the maintained parent classification. It does not prove parthood, formation requirements or taxonomic prevalence. |
+| complex57-agent-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete ENA taxonomy identity/names/lineage | supports | Taxon4932 is Saccharomyces cerevisiae, rank species; native names and lineage establish this exact organism. |
+| complex57-agent-tax-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete ENA taxonomy identity/names/lineage | supports | Taxon559292 is Saccharomyces cerevisiae S288C, rank strain; native names and lineage establish this exact organism. |
+| complex57-agent-protein-P32617 | https://rest.uniprot.org/uniprotkb/P32617.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P32617, Chromatin-remodeling complex subunit IES6; primary genes IES6, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-IES6 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES6%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: P32617. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-P35189 | https://rest.uniprot.org/uniprotkb/P35189.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P35189, Transcription initiation factor TFIID subunit 14; primary genes TAF14, synonyms ANC1, CST10, SWP29, TAF30, TFG3, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-TAF14 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATAF14%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: P35189. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-P40060 | https://rest.uniprot.org/uniprotkb/P40060.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P40060, Ino eighty subunit 5; primary genes IES5, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-IES5 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: P40060. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-P40154 | https://rest.uniprot.org/uniprotkb/P40154.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P40154, Ino eighty subunit 2; primary genes IES2, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-IES2 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES2%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: P40154. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-P43579 | https://rest.uniprot.org/uniprotkb/P43579.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P43579, Ino eighty subunit 1; primary genes IES1, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-IES1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES1%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: P43579. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-P53115 | https://rest.uniprot.org/uniprotkb/P53115.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P53115, Chromatin-remodeling ATPase INO80; primary genes INO80, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-INO80 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AINO80%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: P53115. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-P53946 | https://rest.uniprot.org/uniprotkb/P53946.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P53946, Actin-related protein 5; primary genes ARP5, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-ARP5 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AARP5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: P53946. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-P60010 | https://rest.uniprot.org/uniprotkb/P60010.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P60010, Actin; primary genes ACT1, synonyms ABY1, END7, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-ACT1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AACT1%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: P60010. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-P80428 | https://rest.uniprot.org/uniprotkb/P80428.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P80428, Actin-related protein 4; primary genes ARP4, synonyms ACT3, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-ARP4 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AARP4%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: P80428. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-Q03435 | https://rest.uniprot.org/uniprotkb/Q03435.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): Q03435, Non-histone protein 10; primary genes NHP10, synonyms HMO2, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-NHP10 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANHP10%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: Q03435. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-Q03940 | https://rest.uniprot.org/uniprotkb/Q03940.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): Q03940, RuvB-like protein 1; primary genes RVB1, synonyms TIH1, TIP49A, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-RVB1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ARVB1%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: Q03940. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-Q08561 | https://rest.uniprot.org/uniprotkb/Q08561.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): Q08561, Ino eighty subunit 4; primary genes IES4, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-IES4 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES4%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: Q08561. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-Q12345 | https://rest.uniprot.org/uniprotkb/Q12345.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): Q12345, Ino eighty subunit 3; primary genes IES3, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-IES3 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES3%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: Q12345. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-Q12386 | https://rest.uniprot.org/uniprotkb/Q12386.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): Q12386, Actin-like protein ARP8; primary genes ARP8, synonyms none, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-ARP8 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AARP8%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: Q12386. All returned identities and gene tokens were inspected. |
+| complex57-agent-protein-Q12464 | https://rest.uniprot.org/uniprotkb/Q12464.json; Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): Q12464, RuvB-like protein 2; primary genes RVB2, synonyms TIH2, TIP49B, taxon559292. Native comments retain their own experimental/inferred evidence qualifiers; the response independently supplies its family cross-references. |
+| complex57-agent-query-RVB2 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ARVB2%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Every returned accession/name/gene/organism identity | supports | Exact reviewed S288C gene query returns 1 entry: Q12464. All returned identities and gene tokens were inspected. |
+| complex57-agent-pmid-10787406 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10787406+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED10787406: The Saccharomyces cerevisiae RuvB-like protein, Tih2p, is required for cell cycle progression and RNA polymerase II-directed transcription. Lim CR, Kimata Y, Ohdate H, Kokubo T, Kikuchi N, Horigome T, Kohno K. (2000), DOI10.1074/jbc.m001031200. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-pmid-10952318 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10952318+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED10952318: A chromatin remodelling complex involved in transcription and DNA processing. Shen X, Mizuguchi G, Hamiche A, Wu C. (2000), DOI10.1038/35020123. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-pmid-11604509 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11604509+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED11604509: A well-connected and conserved nucleoplasmic helicase is required for production of box C/D and H/ACA snoRNAs and localization of snoRNP proteins. King TH, Decatur WA, Bertrand E, Maxwell ES, Fournier MJ. (2001), DOI10.1128/mcb.21.22.7731-7746.2001. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-pmid-12887900 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12887900+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED12887900: Involvement of actin-related proteins in ATP-dependent chromatin remodeling. Shen X, Ranallo R, Choi E, Wu C. (2003), DOI10.1016/s1097-2765(03)00264-8. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-pmid-14562095 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED14562095: Global analysis of protein localization in budding yeast. Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O'Shea EK. (2003), DOI10.1038/nature02026. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-pmid-15525518 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15525518+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED15525518: Rvb1p/Rvb2p recruit Arp5p and assemble a functional Ino80 chromatin remodeling complex. Jónsson ZO, Jha S, Wohlschlegel JA, Dutta A. (2004), DOI10.1016/j.molcel.2004.09.033. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-pmid-19355820 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19355820+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED19355820: The biology of chromatin remodeling complexes. Clapier CR, Cairns BR. (2009), DOI10.1146/annurev.biochem.77.062706.153223. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-doi-10.1016_j.cell.2013.08.016 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2013.08.016%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED24034245: Structure and subunit topology of the INO80 chromatin remodeler and its nucleosome complex. Tosi A, Haas C, Herzog F, Gilmozzi A, Berninghausen O, Ungewickell C, Gerhold CB, Lakomek K, Aebersold R, Beckmann R, Hopfner KP. (2013), DOI10.1016/j.cell.2013.08.016. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-pmid-25964121 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A25964121+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED25964121: Structural analyses of the chromatin remodelling enzymes INO80-C and SWR-C. Watanabe S, Tan D, Lakshminarasimhan M, Washburn MP, Hong EJ, Walz T, Peterson CL. (2015), DOI10.1038/ncomms8108. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-pmid-8573785 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8573785+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity and available abstract | supports | MED8573785: The actin-related protein Act3p of Saccharomyces cerevisiae is located in the nucleus. Weber V, Harata M, Hauser H, Wintersberger U. (1995), DOI10.1091/mbc.6.10.1263. Exact metadata and complete available native abstract read; this does not imply access to its full paper body. |
+| complex57-agent-PMC4431590-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC4431590/; Complete Introduction S1, Results S3–S7, Discussion S8, Methods S10/S17 and all embedded Fig1–8 captions/Table1. Other Methods and figure pixels not claimed. | supports | Watanabe2015 independently purifies INO80-C, distinguishes the Arp8/Arp4/Act1 and Arp5/Ies6 modules and tests their deletion-associated loss while residual complexes remain. Three preparations and quantitative MS distinguish protein classes from copy numbers. The primary main prose accidentally reverses Supplementary Table1/2 references; the separately inspected actual tables identify Table2 as INO80-C. |
+| complex57-agent-watanabe2015-supplement-s3 | https://pmc-oa-opendata.s3.amazonaws.com/PMC4431590.1/NIHMS677628-supplement-1.pdf; Complete Supplementary Tables1 and2, final two PDF pages, extracted table text and captions. Supplementary figures/pixels not inspected. | supports | Actual Supplementary Table2 lists all15 maintained INO80-C protein classes in three TAP-tagged preparations, with per-protein normalized values/lengths/coverage. Table1 instead lists SWR-C. This verifies the maintained Table2 locator despite the reversed main-text cross-reference. |
+| complex57-agent-ipr-IPR038014 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR038014/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | IPR038014 is the full INO80 subunit Ies1 family. |
+| complex57-agent-ipr-IPR029523 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029523/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | IPR029523 is the full INO80 subunit Ies2 family. |
+| complex57-agent-ipr-IPR062650 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR062650/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | IPR062650 is the full INO80 subunit Ies4 family. |
+| complex57-agent-ipr-IPR020366 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020366/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | IPR020366 is the full INO80 subunit Ies5 family. |
+| complex57-agent-ipr-IPR029525 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029525/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | IPR029525 is the full INO80 subunit Ies6 family. |
+| complex57-agent-ipr-IPR050520 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050520/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | INO80/SWR1 family metadata spans two ATPase classes; LLM-unchecked descriptive prose is not biological primary evidence. |
+| complex57-agent-ipr-IPR027238 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027238/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | The RuvB-like1/2 family spans the two retained paralog classes. |
+| complex57-agent-ipr-IPR004000 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004000/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | The actin family covers conventional and actin-related proteins, broader than the individual retained classes. |
+| complex57-agent-ipr-IPR016665 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016665/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | The Sas5/TAF14 family spans distinct protein classes, not an exact TAF14-only mapping. |
+| complex57-agent-ipr-IPR050342 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050342/; Native entry name/type, descriptions/curation flags and signatures; example membership is independently supplied by UniProt | supports | HMGB family metadata is broader than NHP10; LLM-unchecked descriptive prose is not a primary role experiment. |
+| schema-result | just validate data/structures/other/ino80_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/ino80_complex.yaml |
+| strict-result | just validate-strict data/structures/other/ino80_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/ino80_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/ino80_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/ino80_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch57-20261022-84r2nmpm/ino80_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/ino80_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/ino80_complex.yaml  (GO:0031011)<br>  yeast_ino80_chromatin_remodeling	ino80_ino80c_atpase_subunit	COVERED	-&gt;ino80_ino80c_atpase_subunit (UniProtKB:P53115)<br>  yeast_ino80_chromatin_remodeling	rvb1_ino80c_head_subunit	COVERED	-&gt;rvb1_ino80c_head_subunit (UniProtKB:Q03940)<br>  yeast_ino80_chromatin_remodeling	rvb2_ino80c_head_subunit	COVERED	-&gt;rvb2_ino80c_head_subunit (UniProtKB:Q12464)<br>  yeast_ino80_chromatin_remodeling	ies5_ino80c_subunit	COVERED	-&gt;ies5_ino80c_subunit (UniProtKB:P40060)<br>  yeast_ino80_chromatin_remodeling	ies3_ino80c_nhp10_module_subunit	COVERED	-&gt;ies3_ino80c_nhp10_module_subunit (UniProtKB:Q12345)<br>  yeast_ino80_chromatin_remodeling	nhp10_ino80c_nhp10_module_subunit	COVERED	-&gt;nhp10_ino80c_nhp10_module_subunit (UniProtKB:Q03435)<br>  yeast_ino80_chromatin_remodeling	ies6_ino80c_arp5_module_subunit	COVERED	-&gt;ies6_ino80c_arp5_module_subunit (UniProtKB:P32617)<br>  yeast_ino80_chromatin_remodeling	ies1_ino80c_subunit	COVERED	-&gt;ies1_ino80c_subunit (UniProtKB:P43579)<br>  yeast_ino80_chromatin_remodeling	arp8_ino80c_arp8_module_subunit	COVERED	-&gt;arp8_ino80c_arp8_module_subunit (UniProtKB:Q12386)<br>  yeast_ino80_chromatin_remodeling	arp4_ino80c_arp8_module_subunit	COVERED	-&gt;arp4_ino80c_arp8_module_subunit (UniProtKB:P80428)<br>  yeast_ino80_chromatin_remodeling	act1_ino80c_actin_constituent	COVERED	-&gt;act1_ino80c_actin_constituent (UniProtKB:P60010)<br>  yeast_ino80_chromatin_remodeling	taf14_ino80c_subunit	COVERED	-&gt;taf14_ino80c_subunit (UniProtKB:P35189)<br>  yeast_ino80_chromatin_remodeling	ies2_ino80c_neck_subunit	COVERED	-&gt;ies2_ino80c_neck_subunit (UniProtKB:P40154)<br>  yeast_ino80_chromatin_remodeling	ies4_ino80c_subunit	COVERED	-&gt;ies4_ino80c_subunit (UniProtKB:Q08561)<br>  yeast_ino80_chromatin_remodeling	arp5_ino80c_arp5_module_subunit	COVERED	-&gt;arp5_ino80c_arp5_module_subunit (UniProtKB:P53946)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>    15  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>    15  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/ino80_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/ino80_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 27 of 37 collected target identifiers returned OK. PMID:10787406: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:10952318: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:11604509: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:12887900: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:14562095: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:15525518: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:19355820: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:24034245: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:25964121: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read.; PMID:8573785: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver is not treated as identifier invalidity or as proof that its primary body was read. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log hashes verified. No fresh full-site QC is claimed from the sparse B57 checkout.
+- Only the source sections and assets explicitly enumerated in evidence locators were inspected; no unlisted supplements or atomic coordinates were analyzed.
+- Watanabe XML endpoint returned HTTP500; the independently retained legacy HTML was genuine. Its first supplemental PMC route returned200 challenge HTML, while the separately hashed S3 PDF was genuine.
+- Shen2000 publisher returned200 challenge HTML. Shen2003, Jonsson2004 and Tosi2013 DOI routes failed TLS certificate verification; only complete native abstracts, not those bodies, were read. Clapier/Cairns2009 is explicitly secondary-review abstract context.
+- No supplementary structure figures, atomic coordinates or raw MS data were analyzed; actual Supplementary Tables1/2 were read. The primary’s inverted main-text table cross-reference is not propagated into a false record finding.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T074202Z-ino80-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Ino80 complex scientific review
+started_at: '2026-10-22T07:12:54Z'
+finished_at: '2026-10-22T07:42:02Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: INO80-C identity,15 named protein classes, actual supplementary inventory
+  and nonmechanistic remodeling summary are supported. One grouped minor resolves
+  five exact Ies-family mappings; source-specific module-loss results remain bounded
+  context.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/ino80_complex.yaml
+    sha256: 0903c3843e1e1d782fa1437c3ec324bc1c5aae25f19cb4cbe5452a3d36e865c4
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0031011
+  path: data/structures/other/ino80_complex.yaml
+  label: Ino80 complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ino80_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target plus frozen guidance, protein-example
+    skill and, for the hyphal pair, the other frozen region/complex neighbor. Actual
+    source-reading extents appear per evidence row.
+  selection: Target 10 of batch57, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0031011
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  command: just validate data/structures/other/ino80_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  command: just validate-strict data/structures/other/ino80_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/ino80_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  command: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/ino80_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  command: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/ino80_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0031011
+  summary: No expression-module inference is used.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex57-agent-go
+  - complex57-agent-go-0031011-ancestors
+  - complex57-agent-tax-4932
+  - complex57-agent-tax-559292
+  - complex57-agent-protein-P32617
+  - complex57-agent-query-IES6
+  - complex57-agent-protein-P35189
+  - complex57-agent-query-TAF14
+  - complex57-agent-protein-P40060
+  - complex57-agent-query-IES5
+  - complex57-agent-protein-P40154
+  - complex57-agent-query-IES2
+  - complex57-agent-protein-P43579
+  - complex57-agent-query-IES1
+  - complex57-agent-protein-P53115
+  - complex57-agent-query-INO80
+  - complex57-agent-protein-P53946
+  - complex57-agent-query-ARP5
+  - complex57-agent-protein-P60010
+  - complex57-agent-query-ACT1
+  - complex57-agent-protein-P80428
+  - complex57-agent-query-ARP4
+  - complex57-agent-protein-Q03435
+  - complex57-agent-query-NHP10
+  - complex57-agent-protein-Q03940
+  - complex57-agent-query-RVB1
+  - complex57-agent-protein-Q08561
+  - complex57-agent-query-IES4
+  - complex57-agent-protein-Q12345
+  - complex57-agent-query-IES3
+  - complex57-agent-protein-Q12386
+  - complex57-agent-query-ARP8
+  - complex57-agent-protein-Q12464
+  - complex57-agent-query-RVB2
+  - complex57-agent-pmid-10787406
+  - complex57-agent-pmid-10952318
+  - complex57-agent-pmid-11604509
+  - complex57-agent-pmid-12887900
+  - complex57-agent-pmid-14562095
+  - complex57-agent-pmid-15525518
+  - complex57-agent-pmid-19355820
+  - complex57-agent-doi-10.1016_j.cell.2013.08.016
+  - complex57-agent-pmid-25964121
+  - complex57-agent-pmid-8573785
+  - complex57-agent-PMC4431590-legacy
+  - complex57-agent-watanabe2015-supplement-s3
+  - complex57-agent-ipr-IPR038014
+  - complex57-agent-ipr-IPR029523
+  - complex57-agent-ipr-IPR062650
+  - complex57-agent-ipr-IPR020366
+  - complex57-agent-ipr-IPR029525
+  - complex57-agent-ipr-IPR050520
+  - complex57-agent-ipr-IPR027238
+  - complex57-agent-ipr-IPR004000
+  - complex57-agent-ipr-IPR016665
+  - complex57-agent-ipr-IPR050342
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  summary: '27 of 37 collected target identifiers returned OK. PMID:10787406: UNREACHABLE;
+    Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport
+    failure in the corpus resolver is not treated as identifier invalidity or as proof
+    that its primary body was read.; PMID:10952318: UNREACHABLE; Unique native MED
+    identity, exact PMID/title/DOI and bibliography inspected; transport failure in
+    the corpus resolver is not treated as identifier invalidity or as proof that its
+    primary body was read.; PMID:11604509: UNREACHABLE; Unique native MED identity,
+    exact PMID/title/DOI and bibliography inspected; transport failure in the corpus
+    resolver is not treated as identifier invalidity or as proof that its primary
+    body was read.; PMID:12887900: UNREACHABLE; Unique native MED identity, exact
+    PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver
+    is not treated as identifier invalidity or as proof that its primary body was
+    read.; PMID:14562095: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI
+    and bibliography inspected; transport failure in the corpus resolver is not treated
+    as identifier invalidity or as proof that its primary body was read.; PMID:15525518:
+    UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography
+    inspected; transport failure in the corpus resolver is not treated as identifier
+    invalidity or as proof that its primary body was read.; PMID:19355820: UNREACHABLE;
+    Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport
+    failure in the corpus resolver is not treated as identifier invalidity or as proof
+    that its primary body was read.; PMID:24034245: UNREACHABLE; Unique native MED
+    identity, exact PMID/title/DOI and bibliography inspected; transport failure in
+    the corpus resolver is not treated as identifier invalidity or as proof that its
+    primary body was read.; PMID:25964121: UNREACHABLE; Unique native MED identity,
+    exact PMID/title/DOI and bibliography inspected; transport failure in the corpus
+    resolver is not treated as identifier invalidity or as proof that its primary
+    body was read.; PMID:8573785: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI
+    and bibliography inspected; transport failure in the corpus resolver is not treated
+    as identifier invalidity or as proof that its primary body was read. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex57-agent-pmid-10787406
+  - complex57-agent-pmid-10952318
+  - complex57-agent-pmid-11604509
+  - complex57-agent-pmid-12887900
+  - complex57-agent-pmid-14562095
+  - complex57-agent-pmid-15525518
+  - complex57-agent-pmid-19355820
+  - complex57-agent-doi-10.1016_j.cell.2013.08.016
+  - complex57-agent-pmid-25964121
+  - complex57-agent-pmid-8573785
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031011
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch57 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/ino80_complex.yaml
+  locator: Entire maintained record, including all evidence, examples, graphs, history
+    and discussions
+  accessed_at: '2026-10-22T07:29:05Z'
+  support: context_only
+  summary: Every maintained field was read. Historical curation statements are not
+    independent biological evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent/ProteinExample, essentiality, PresenceEnum and graph-scope
+    contracts
+  accessed_at: '2026-10-22T07:29:05Z'
+  support: context_only
+  summary: Formation necessity differs from activity, viability and observed membership.
+    COMMON means present in most members, with losses the exception; it is not redefined
+    as merely observed occurrence.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component grounding, including REVIEWED_LABEL_ONLY at159–160
+  accessed_at: '2026-10-22T07:29:05Z'
+  support: context_only
+  summary: An exact full-family mapping is distinct from a shared domain or broader
+    paralog class; label-only does not mean merely uncurated this pass.
+- evidence_id: complex57-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000133,GO:0000228,GO:0001411,GO:0004176,GO:0005743,GO:0006338,GO:0030427,GO:0031011,GO:0031521,GO:0031562,GO:0031942,GO:0051286,GO:0097346,GO:0098800
+  locator: Complete target-relevant definitions/synonyms and typed relationships in
+    the combined response; unrelated entries are not attributed to this target
+  accessed_at: '2026-10-22T07:19:38.382591Z'
+  support: supports
+  summary: GO0031011 defines the Ino80-containing chromatin-remodeling complex and
+    its synonyms. GO0097346,0000228 and0006338 identify the INO80-type parent, nuclear
+    chromosome and chromatin-remodeling process.
+  snapshot_sha256: 6952f2a5328b5e824e0506235219b200a620006b8f5dc429ebc31e24f9c2639e
+- evidence_id: complex57-agent-go-0031011-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031011/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor response
+  accessed_at: '2026-10-22T07:19:50.443901Z'
+  support: supports
+  summary: The is_a-only ancestor response supports the maintained parent classification.
+    It does not prove parthood, formation requirements or taxonomic prevalence.
+  snapshot_sha256: b58b1405dc99c87a6e14a83a19fe01f279b3d2f4cfc27079eb1da897cd7500e7
+- evidence_id: complex57-agent-tax-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete ENA taxonomy identity/names/lineage
+  accessed_at: '2026-10-22T07:19:44.208873Z'
+  support: supports
+  summary: Taxon4932 is Saccharomyces cerevisiae, rank species; native names and lineage
+    establish this exact organism.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: complex57-agent-tax-559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete ENA taxonomy identity/names/lineage
+  accessed_at: '2026-10-22T07:19:44.803426Z'
+  support: supports
+  summary: Taxon559292 is Saccharomyces cerevisiae S288C, rank strain; native names
+    and lineage establish this exact organism.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: complex57-agent-protein-P32617
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P32617.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:38.386555Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P32617, Chromatin-remodeling complex
+    subunit IES6; primary genes IES6, synonyms none, taxon559292. Native comments
+    retain their own experimental/inferred evidence qualifiers; the response independently
+    supplies its family cross-references.'
+  snapshot_sha256: 0306da0fb2167dbb6762f9a50a2de40e3ad347864992b6255c262b5c3e6a7303
+- evidence_id: complex57-agent-query-IES6
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES6%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:46.022427Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: P32617. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: be371a8ee6aaf54c5b8aa63124fd1c9c2e9126ea38010f84243f9c5027e0ac83
+  search_scope: UniProt gene_exact:IES6, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-P35189
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P35189.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:39.093968Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P35189, Transcription initiation factor
+    TFIID subunit 14; primary genes TAF14, synonyms ANC1, CST10, SWP29, TAF30, TFG3,
+    taxon559292. Native comments retain their own experimental/inferred evidence qualifiers;
+    the response independently supplies its family cross-references.'
+  snapshot_sha256: 0d45bd3db17d72fa09760e05ffdad5bc906237015697a155a6a18c124b201dd6
+- evidence_id: complex57-agent-query-TAF14
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATAF14%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:47.350433Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: P35189. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: f745d1cb34d5e820ca3f8a5dacff6aa7347f97b2cb877177acee3e21d184436b
+  search_scope: UniProt gene_exact:TAF14, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-P40060
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40060.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:39.202039Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P40060, Ino eighty subunit 5; primary
+    genes IES5, synonyms none, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: b46a8e58f6e005e6c31df1c320206dfcd6437f76de3b6a89295fcf5534c83f2d
+- evidence_id: complex57-agent-query-IES5
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:45.306482Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: P40060. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: b2a1931fe4102218838e2479af3ccc3c9e3ed21e4b890ad5e88e93d059503d4e
+  search_scope: UniProt gene_exact:IES5, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-P40154
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40154.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:39.837945Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P40154, Ino eighty subunit 2; primary
+    genes IES2, synonyms none, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: 910aeeada31840023e4b258a230c5eac7909885e6fe095ad0650106790604928
+- evidence_id: complex57-agent-query-IES2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES2%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:47.836132Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: P40154. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: 37d2509986c803299074a49e50976ad8554a26d4cdca090625152a188c6d325e
+  search_scope: UniProt gene_exact:IES2, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-P43579
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P43579.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:39.899873Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P43579, Ino eighty subunit 1; primary
+    genes IES1, synonyms none, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: 3952c1984f975bb6a4071c099fc5284f2287465e0d564a10d48a6f090ac23118
+- evidence_id: complex57-agent-query-IES1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES1%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:46.296162Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: P43579. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: 59b51421e92698c1a27620d2e7aaa9eed1dee13b1c9fac022ad605e996bcffb5
+  search_scope: UniProt gene_exact:IES1, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-P53115
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53115.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:40.131341Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P53115, Chromatin-remodeling ATPase INO80;
+    primary genes INO80, synonyms none, taxon559292. Native comments retain their
+    own experimental/inferred evidence qualifiers; the response independently supplies
+    its family cross-references.'
+  snapshot_sha256: b9dc9eeb0ceb14d664cdc004c6ab5d73d5c9cebd3a5353aac28568e6b6fb59ed
+- evidence_id: complex57-agent-query-INO80
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AINO80%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:44.397323Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: P53115. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: dfab6fcc3656cde7bff6cd000ac804e917e12fc74764bebc269c4ba434d47b29
+  search_scope: UniProt gene_exact:INO80, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-P53946
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53946.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:40.538100Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P53946, Actin-related protein 5; primary
+    genes ARP5, synonyms none, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: c90a8ed90dacea5ce4ead0ea8d99ad81ecc79a6d017aba33a2da99f415d98dec
+- evidence_id: complex57-agent-query-ARP5
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AARP5%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:48.347632Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: P53946. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: 0f63c75513a1c10572751c5e81801aea4dcf8926ae0f05d40ae80d32bac79264
+  search_scope: UniProt gene_exact:ARP5, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-P60010
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P60010.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:40.576423Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P60010, Actin; primary genes ACT1, synonyms
+    ABY1, END7, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: 85ccbfada9f62388f2b4f90b3b15fd6e7c5df202249d114e3f5ed8482a086034
+- evidence_id: complex57-agent-query-ACT1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AACT1%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:47.044921Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: P60010. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: 5f32bb1ef917c3425db2aaa4a4d4f98e2a08794a7994a79de7a51aabe7b8c75c
+  search_scope: UniProt gene_exact:ACT1, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-P80428
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P80428.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:40.955046Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P80428, Actin-related protein 4; primary
+    genes ARP4, synonyms ACT3, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: 4bebfe4b74cce9ed302af0fb7cb01087203cc891ce9e034dace0f5b209b9e1e0
+- evidence_id: complex57-agent-query-ARP4
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AARP4%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:46.942792Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: P80428. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: d2c9d987fa278db85dbf167406d062a9760137dfc8c724cbe48dc7bb07969ec4
+  search_scope: UniProt gene_exact:ARP4, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-Q03435
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q03435.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:41.328538Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q03435, Non-histone protein 10; primary
+    genes NHP10, synonyms HMO2, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: d190afcc8fc585b5f95ab67afd0e74fa4234ed6f60b6d7a8e2115c0dffab42cf
+- evidence_id: complex57-agent-query-NHP10
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANHP10%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:45.610162Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: Q03435. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: 0e405a042c9fc43dcbbf84cca1e867cac0c6f666647346f6b17af10e77b770de
+  search_scope: UniProt gene_exact:NHP10, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-Q03940
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q03940.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:41.396628Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q03940, RuvB-like protein 1; primary
+    genes RVB1, synonyms TIH1, TIP49A, taxon559292. Native comments retain their own
+    experimental/inferred evidence qualifiers; the response independently supplies
+    its family cross-references.'
+  snapshot_sha256: 6ce9d57f84802eaee38756f8f81d75949cd51ac5748b2f2ab3ec1011605bb377
+- evidence_id: complex57-agent-query-RVB1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ARVB1%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:44.632869Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: Q03940. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: 19d983274f1d43c56a52213b12a4847a72bc9eeb895800873ff8efaa77412c0b
+  search_scope: UniProt gene_exact:RVB1, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-Q08561
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q08561.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:41.966580Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q08561, Ino eighty subunit 4; primary
+    genes IES4, synonyms none, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: e6bcc7f67a8687f05d9e3bdaefe2d6a7672ca19a508800ae921b6451a730c668
+- evidence_id: complex57-agent-query-IES4
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES4%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:47.977196Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: Q08561. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: ff983e70eb43afeee1f17db2377f0a29039ffb8fb3777e448e6d91474149c36b
+  search_scope: UniProt gene_exact:IES4, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-Q12345
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q12345.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:42.362995Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q12345, Ino eighty subunit 3; primary
+    genes IES3, synonyms none, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: f185d4a26f81e4be727e10e91b763208ef5762c7599c5a761b3f5cb17c97bebd
+- evidence_id: complex57-agent-query-IES3
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIES3%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:45.586186Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: Q12345. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: 2e6508e593849083e65973f6b0ecfc2778f0b016eee9f30d0a6ade0dd945dbfc
+  search_scope: UniProt gene_exact:IES3, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-Q12386
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q12386.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:42.393710Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q12386, Actin-like protein ARP8; primary
+    genes ARP8, synonyms none, taxon559292. Native comments retain their own experimental/inferred
+    evidence qualifiers; the response independently supplies its family cross-references.'
+  snapshot_sha256: 43efde4f9e7bcf49d031426d4133cc774968545d5c492760303e953450344cea
+- evidence_id: complex57-agent-query-ARP8
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AARP8%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:46.319251Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: Q12386. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: 537762f3265784d48900bc894debafaefdcada8036b1aed372aaacfcc5358abc
+  search_scope: UniProt gene_exact:ARP8, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-protein-Q12464
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q12464.json
+  locator: Accession/status/name/all gene tokens/organism; FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family cross-references
+  accessed_at: '2026-10-22T07:19:42.588197Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q12464, RuvB-like protein 2; primary
+    genes RVB2, synonyms TIH2, TIP49B, taxon559292. Native comments retain their own
+    experimental/inferred evidence qualifiers; the response independently supplies
+    its family cross-references.'
+  snapshot_sha256: b8c85170bb959c90c301628c98841fdcf738dba14d8c5ca841b8ecfa7e2adad2
+- evidence_id: complex57-agent-query-RVB2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ARVB2%29+AND+%28taxonomy_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Every returned accession/name/gene/organism identity
+  accessed_at: '2026-10-22T07:20:44.663757Z'
+  support: supports
+  summary: 'Exact reviewed S288C gene query returns 1 entry: Q12464. All returned
+    identities and gene tokens were inspected.'
+  snapshot_sha256: cfa1a99d691fa90e857f06d9773f252b82563cba006643483f4b3690220999dd
+  search_scope: UniProt gene_exact:RVB2, taxonomy_id:559292, reviewed:true; all returned
+    identities inspected.
+- evidence_id: complex57-agent-pmid-10787406
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10787406+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:44.816180Z'
+  support: supports
+  summary: 'MED10787406: The Saccharomyces cerevisiae RuvB-like protein, Tih2p, is
+    required for cell cycle progression and RNA polymerase II-directed transcription.
+    Lim CR, Kimata Y, Ohdate H, Kokubo T, Kikuchi N, Horigome T, Kohno K. (2000),
+    DOI10.1074/jbc.m001031200. Exact metadata and complete available native abstract
+    read; this does not imply access to its full paper body.'
+  snapshot_sha256: 97272b497d284c98a17f03f3e408f12f761b5d0e9747edc4d9913d033f3c438c
+- evidence_id: complex57-agent-pmid-10952318
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10952318+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:45.391470Z'
+  support: supports
+  summary: 'MED10952318: A chromatin remodelling complex involved in transcription
+    and DNA processing. Shen X, Mizuguchi G, Hamiche A, Wu C. (2000), DOI10.1038/35020123.
+    Exact metadata and complete available native abstract read; this does not imply
+    access to its full paper body.'
+  snapshot_sha256: 9444002837d548b3dfc9b3543e2aab9dd62bd95e07fae85dbf5d79ed18251dcc
+- evidence_id: complex57-agent-pmid-11604509
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11604509+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:45.427327Z'
+  support: supports
+  summary: 'MED11604509: A well-connected and conserved nucleoplasmic helicase is
+    required for production of box C/D and H/ACA snoRNAs and localization of snoRNP
+    proteins. King TH, Decatur WA, Bertrand E, Maxwell ES, Fournier MJ. (2001), DOI10.1128/mcb.21.22.7731-7746.2001.
+    Exact metadata and complete available native abstract read; this does not imply
+    access to its full paper body.'
+  snapshot_sha256: 4f3ddc166a68fb1377bb79f1da58816f75018cf712ca5fd944e4554645ff1c2a
+- evidence_id: complex57-agent-pmid-12887900
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12887900+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:45.429339Z'
+  support: supports
+  summary: 'MED12887900: Involvement of actin-related proteins in ATP-dependent chromatin
+    remodeling. Shen X, Ranallo R, Choi E, Wu C. (2003), DOI10.1016/s1097-2765(03)00264-8.
+    Exact metadata and complete available native abstract read; this does not imply
+    access to its full paper body.'
+  snapshot_sha256: 1edb3072783754478703352eb38fc795453eff2afca32454a60047296b0e1d96
+- evidence_id: complex57-agent-pmid-14562095
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14562095+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:46.018668Z'
+  support: supports
+  summary: 'MED14562095: Global analysis of protein localization in budding yeast.
+    Huh WK, Falvo JV, Gerke LC, Carroll AS, Howson RW, Weissman JS, O''Shea EK. (2003),
+    DOI10.1038/nature02026. Exact metadata and complete available native abstract
+    read; this does not imply access to its full paper body.'
+  snapshot_sha256: 571f7249c52d66a3b53ae05fa04cfe3012ab729c63308d338c745e9f3c1daa72
+- evidence_id: complex57-agent-pmid-15525518
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15525518+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:46.047300Z'
+  support: supports
+  summary: 'MED15525518: Rvb1p/Rvb2p recruit Arp5p and assemble a functional Ino80
+    chromatin remodeling complex. Jónsson ZO, Jha S, Wohlschlegel JA, Dutta A. (2004),
+    DOI10.1016/j.molcel.2004.09.033. Exact metadata and complete available native
+    abstract read; this does not imply access to its full paper body.'
+  snapshot_sha256: 713056b73124ebcd600e17bbf5b00facef0f80dd320d7b554b05f3fc54818d0b
+- evidence_id: complex57-agent-pmid-19355820
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19355820+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:46.634908Z'
+  support: supports
+  summary: 'MED19355820: The biology of chromatin remodeling complexes. Clapier CR,
+    Cairns BR. (2009), DOI10.1146/annurev.biochem.77.062706.153223. Exact metadata
+    and complete available native abstract read; this does not imply access to its
+    full paper body.'
+  snapshot_sha256: d563a8efa654b78457d5f8e8c6f7cedfb79b1e5295e86b5eb9236a7a3d5496bc
+- evidence_id: complex57-agent-doi-10.1016_j.cell.2013.08.016
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2013.08.016%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:47.851160Z'
+  support: supports
+  summary: 'MED24034245: Structure and subunit topology of the INO80 chromatin remodeler
+    and its nucleosome complex. Tosi A, Haas C, Herzog F, Gilmozzi A, Berninghausen
+    O, Ungewickell C, Gerhold CB, Lakomek K, Aebersold R, Beckmann R, Hopfner KP.
+    (2013), DOI10.1016/j.cell.2013.08.016. Exact metadata and complete available native
+    abstract read; this does not imply access to its full paper body.'
+  snapshot_sha256: 8d465a8f8ff21093ed33c2b050524a169247df1765ab1e30c9c1899b0bc90c92
+- evidence_id: complex57-agent-pmid-25964121
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A25964121+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:47.229070Z'
+  support: supports
+  summary: 'MED25964121: Structural analyses of the chromatin remodelling enzymes
+    INO80-C and SWR-C. Watanabe S, Tan D, Lakshminarasimhan M, Washburn MP, Hong EJ,
+    Walz T, Peterson CL. (2015), DOI10.1038/ncomms8108. Exact metadata and complete
+    available native abstract read; this does not imply access to its full paper body.'
+  snapshot_sha256: 4380f7e9b19d13e9a205cb421db38bde3a5935931f8876671d25a448e87b61cb
+- evidence_id: complex57-agent-pmid-8573785
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8573785+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity and available abstract
+  accessed_at: '2026-10-22T07:19:47.319102Z'
+  support: supports
+  summary: 'MED8573785: The actin-related protein Act3p of Saccharomyces cerevisiae
+    is located in the nucleus. Weber V, Harata M, Hauser H, Wintersberger U. (1995),
+    DOI10.1091/mbc.6.10.1263. Exact metadata and complete available native abstract
+    read; this does not imply access to its full paper body.'
+  snapshot_sha256: 53654bd6a62589f5e0de34f4a08f8ae03b4f3dcb95900bb5c2d3acda945f9b97
+- evidence_id: complex57-agent-PMC4431590-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4431590/
+  locator: Complete Introduction S1, Results S3–S7, Discussion S8, Methods S10/S17
+    and all embedded Fig1–8 captions/Table1. Other Methods and figure pixels not claimed.
+  accessed_at: '2026-10-22T07:20:39.688801Z'
+  support: supports
+  summary: Watanabe2015 independently purifies INO80-C, distinguishes the Arp8/Arp4/Act1
+    and Arp5/Ies6 modules and tests their deletion-associated loss while residual
+    complexes remain. Three preparations and quantitative MS distinguish protein classes
+    from copy numbers. The primary main prose accidentally reverses Supplementary
+    Table1/2 references; the separately inspected actual tables identify Table2 as
+    INO80-C.
+  snapshot_sha256: 01573596d6eb017ccd05790b9397ee84cdfda56a55d5b23d042a4f3fdfe26ff7
+- evidence_id: complex57-agent-watanabe2015-supplement-s3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC4431590.1/NIHMS677628-supplement-1.pdf
+  locator: Complete Supplementary Tables1 and2, final two PDF pages, extracted table
+    text and captions. Supplementary figures/pixels not inspected.
+  accessed_at: '2026-10-22T07:21:59.847041Z'
+  support: supports
+  summary: Actual Supplementary Table2 lists all15 maintained INO80-C protein classes
+    in three TAP-tagged preparations, with per-protein normalized values/lengths/coverage.
+    Table1 instead lists SWR-C. This verifies the maintained Table2 locator despite
+    the reversed main-text cross-reference.
+  snapshot_sha256: e2617d57e5578b4cb1d9c3b3a4b75e2ff5ffba9a73bdfa90fe1b0da7426b127b
+- evidence_id: complex57-agent-ipr-IPR038014
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR038014/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:41.883190Z'
+  support: supports
+  summary: IPR038014 is the full INO80 subunit Ies1 family.
+  snapshot_sha256: 411cab4340cf3f52db50591caf31e013c5ca43c990c9c5cdd6b1b1a1f10c1b67
+- evidence_id: complex57-agent-ipr-IPR029523
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029523/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:41.069671Z'
+  support: supports
+  summary: IPR029523 is the full INO80 subunit Ies2 family.
+  snapshot_sha256: 0c23206dd564ba1b40ed445882d0fd2a7eb8e1baa4c25aa887f40d87de613928
+- evidence_id: complex57-agent-ipr-IPR062650
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR062650/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:41.640876Z'
+  support: supports
+  summary: IPR062650 is the full INO80 subunit Ies4 family.
+  snapshot_sha256: 8bbb43f4200ee8ace175f0aaf9674470d749ef84d48d7934603a1a2f87aad507
+- evidence_id: complex57-agent-ipr-IPR020366
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020366/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:41.662863Z'
+  support: supports
+  summary: IPR020366 is the full INO80 subunit Ies5 family.
+  snapshot_sha256: 6d7a29f25d365a7c074ec341d6c2dac875dfb6891af00585963a9f397cf0e39f
+- evidence_id: complex57-agent-ipr-IPR029525
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029525/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:41.300198Z'
+  support: supports
+  summary: IPR029525 is the full INO80 subunit Ies6 family.
+  snapshot_sha256: 55f39022487454ed9f07df394057eac2c8ec18ff3a89765b7f32a3633611dd5d
+- evidence_id: complex57-agent-ipr-IPR050520
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050520/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:42.696081Z'
+  support: supports
+  summary: INO80/SWR1 family metadata spans two ATPase classes; LLM-unchecked descriptive
+    prose is not biological primary evidence.
+  snapshot_sha256: 9d6834b933901b2a309b3f7ac4d9fef9d43a937289b8a503a1c62f07dd145c25
+- evidence_id: complex57-agent-ipr-IPR027238
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027238/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:42.867451Z'
+  support: supports
+  summary: The RuvB-like1/2 family spans the two retained paralog classes.
+  snapshot_sha256: 08a048c568949fbb29f30855b9421944a74e5d6f06de1dc6ffbeea6dd11ce7e2
+- evidence_id: complex57-agent-ipr-IPR004000
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004000/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:42.251468Z'
+  support: supports
+  summary: The actin family covers conventional and actin-related proteins, broader
+    than the individual retained classes.
+  snapshot_sha256: 353427570f0d1c3842a14f7737374f68e9dd70a98b09cf9fc2a8e8c86062edca
+- evidence_id: complex57-agent-ipr-IPR016665
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR016665/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:42.232294Z'
+  support: supports
+  summary: The Sas5/TAF14 family spans distinct protein classes, not an exact TAF14-only
+    mapping.
+  snapshot_sha256: ca6de0795e5014bc6d92ea86f320ac302e4f829fd285239c863862f2d2d365d5
+- evidence_id: complex57-agent-ipr-IPR050342
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050342/
+  locator: Native entry name/type, descriptions/curation flags and signatures; example
+    membership is independently supplied by UniProt
+  accessed_at: '2026-10-22T07:20:43.293462Z'
+  support: supports
+  summary: HMGB family metadata is broader than NHP10; LLM-unchecked descriptive prose
+    is not a primary role experiment.
+  snapshot_sha256: b1f3db4bfdcbc2e07497675d9db436601cc9bc73b9f86085eb8285826b0ccbea
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/ino80_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:12:55Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/ino80_complex.yaml'
+  snapshot_sha256: 38745b8d9b11786708fa8ee5a32d59c35881d108bb572ccd80f719c9189da146
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/ino80_complex.yaml --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/ino80_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:12:56Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/ino80_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch57-20261022-84r2nmpm/ino80_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch57-20261022-84r2nmpm/ino80_complex-strict.tsv"
+  snapshot_sha256: dbd53d6d54d8f0bf173a3a79ae73bf726985632f4563272adab2d31a7bc9351e
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/ino80_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T07:20:02.249168Z'
+  support: supports
+  summary: "data/structures/other/ino80_complex.yaml  (GO:0031011)\n  yeast_ino80_chromatin_remodeling\t\
+    ino80_ino80c_atpase_subunit\tCOVERED\t->ino80_ino80c_atpase_subunit (UniProtKB:P53115)\n\
+    \  yeast_ino80_chromatin_remodeling\trvb1_ino80c_head_subunit\tCOVERED\t->rvb1_ino80c_head_subunit\
+    \ (UniProtKB:Q03940)\n  yeast_ino80_chromatin_remodeling\trvb2_ino80c_head_subunit\t\
+    COVERED\t->rvb2_ino80c_head_subunit (UniProtKB:Q12464)\n  yeast_ino80_chromatin_remodeling\t\
+    ies5_ino80c_subunit\tCOVERED\t->ies5_ino80c_subunit (UniProtKB:P40060)\n  yeast_ino80_chromatin_remodeling\t\
+    ies3_ino80c_nhp10_module_subunit\tCOVERED\t->ies3_ino80c_nhp10_module_subunit\
+    \ (UniProtKB:Q12345)\n  yeast_ino80_chromatin_remodeling\tnhp10_ino80c_nhp10_module_subunit\t\
+    COVERED\t->nhp10_ino80c_nhp10_module_subunit (UniProtKB:Q03435)\n  yeast_ino80_chromatin_remodeling\t\
+    ies6_ino80c_arp5_module_subunit\tCOVERED\t->ies6_ino80c_arp5_module_subunit (UniProtKB:P32617)\n\
+    \  yeast_ino80_chromatin_remodeling\ties1_ino80c_subunit\tCOVERED\t->ies1_ino80c_subunit\
+    \ (UniProtKB:P43579)\n  yeast_ino80_chromatin_remodeling\tarp8_ino80c_arp8_module_subunit\t\
+    COVERED\t->arp8_ino80c_arp8_module_subunit (UniProtKB:Q12386)\n  yeast_ino80_chromatin_remodeling\t\
+    arp4_ino80c_arp8_module_subunit\tCOVERED\t->arp4_ino80c_arp8_module_subunit (UniProtKB:P80428)\n\
+    \  yeast_ino80_chromatin_remodeling\tact1_ino80c_actin_constituent\tCOVERED\t\
+    ->act1_ino80c_actin_constituent (UniProtKB:P60010)\n  yeast_ino80_chromatin_remodeling\t\
+    taf14_ino80c_subunit\tCOVERED\t->taf14_ino80c_subunit (UniProtKB:P35189)\n  yeast_ino80_chromatin_remodeling\t\
+    ies2_ino80c_neck_subunit\tCOVERED\t->ies2_ino80c_neck_subunit (UniProtKB:P40154)\n\
+    \  yeast_ino80_chromatin_remodeling\ties4_ino80c_subunit\tCOVERED\t->ies4_ino80c_subunit\
+    \ (UniProtKB:Q08561)\n  yeast_ino80_chromatin_remodeling\tarp5_ino80c_arp5_module_subunit\t\
+    COVERED\t->arp5_ino80c_arp5_module_subunit (UniProtKB:P53946)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n    15  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n    15  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: aa96cf2f4b6921e477f5ffa6700a09bdedf93e8d1eaf4c39893c3fd5d6242a70
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch57-20261022-84r2nmpm/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/ino80_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T07:20:03.813040Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/ino80_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '27 of 37 collected target identifiers returned OK. PMID:10787406: UNREACHABLE;
+    Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport
+    failure in the corpus resolver is not treated as identifier invalidity or as proof
+    that its primary body was read.; PMID:10952318: UNREACHABLE; Unique native MED
+    identity, exact PMID/title/DOI and bibliography inspected; transport failure in
+    the corpus resolver is not treated as identifier invalidity or as proof that its
+    primary body was read.; PMID:11604509: UNREACHABLE; Unique native MED identity,
+    exact PMID/title/DOI and bibliography inspected; transport failure in the corpus
+    resolver is not treated as identifier invalidity or as proof that its primary
+    body was read.; PMID:12887900: UNREACHABLE; Unique native MED identity, exact
+    PMID/title/DOI and bibliography inspected; transport failure in the corpus resolver
+    is not treated as identifier invalidity or as proof that its primary body was
+    read.; PMID:14562095: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI
+    and bibliography inspected; transport failure in the corpus resolver is not treated
+    as identifier invalidity or as proof that its primary body was read.; PMID:15525518:
+    UNREACHABLE; Unique native MED identity, exact PMID/title/DOI and bibliography
+    inspected; transport failure in the corpus resolver is not treated as identifier
+    invalidity or as proof that its primary body was read.; PMID:19355820: UNREACHABLE;
+    Unique native MED identity, exact PMID/title/DOI and bibliography inspected; transport
+    failure in the corpus resolver is not treated as identifier invalidity or as proof
+    that its primary body was read.; PMID:24034245: UNREACHABLE; Unique native MED
+    identity, exact PMID/title/DOI and bibliography inspected; transport failure in
+    the corpus resolver is not treated as identifier invalidity or as proof that its
+    primary body was read.; PMID:25964121: UNREACHABLE; Unique native MED identity,
+    exact PMID/title/DOI and bibliography inspected; transport failure in the corpus
+    resolver is not treated as identifier invalidity or as proof that its primary
+    body was read.; PMID:8573785: UNREACHABLE; Unique native MED identity, exact PMID/title/DOI
+    and bibliography inspected; transport failure in the corpus resolver is not treated
+    as identifier invalidity or as proof that its primary body was read. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: INO80-C identity and15 named constituent classes
+  outcome: supported
+  target_ids:
+  - GO:0031011
+  summary: Exact GO identity/parent and nuclear-chromosome context agree. All15 native
+    reviewed proteins and current exact-gene queries match; actual Supplementary Table2
+    independently supports their INO80-C membership. The listed15 classes do not assert15
+    total molecular copies; Rvb multimeric occupancy remains distinct.
+  evidence_ids:
+  - record
+  - complex57-agent-go
+  - complex57-agent-go-0031011-ancestors
+  - complex57-agent-PMC4431590-legacy
+  - complex57-agent-watanabe2015-supplement-s3
+  - complex57-agent-protein-P32617
+  - complex57-agent-protein-P35189
+  - complex57-agent-protein-P40060
+  - complex57-agent-protein-P40154
+  - complex57-agent-protein-P43579
+  - complex57-agent-protein-P53115
+  - complex57-agent-protein-P53946
+  - complex57-agent-protein-P60010
+  - complex57-agent-protein-P80428
+  - complex57-agent-protein-Q03435
+  - complex57-agent-protein-Q03940
+  - complex57-agent-protein-Q08561
+  - complex57-agent-protein-Q12345
+  - complex57-agent-protein-Q12386
+  - complex57-agent-protein-Q12464
+  - complex57-agent-query-IES6
+  - complex57-agent-query-TAF14
+  - complex57-agent-query-IES5
+  - complex57-agent-query-IES2
+  - complex57-agent-query-IES1
+  - complex57-agent-query-INO80
+  - complex57-agent-query-ARP5
+  - complex57-agent-query-ACT1
+  - complex57-agent-query-ARP4
+  - complex57-agent-query-NHP10
+  - complex57-agent-query-RVB1
+  - complex57-agent-query-IES4
+  - complex57-agent-query-IES3
+  - complex57-agent-query-ARP8
+  - complex57-agent-query-RVB2
+- assessment_id: grounding
+  area: grounding
+  topic: Five exact Ies families versus broader unresolved classes
+  outcome: concern
+  target_ids:
+  - GO:0031011
+  summary: Native Ies1/2/4/5/6 full-family metadata and independent UniProt membership
+    resolve five existing label-only deferrals. Shared INO80/SWR1, Rvb1/2, actin/Arp,
+    Sas5/TAF14 and HMGB classes are not forced onto narrower rows. No exhaustive absence
+    claim is made for Ies3.
+  evidence_ids:
+  - record
+  - curation
+  - complex57-agent-ipr-IPR038014
+  - complex57-agent-ipr-IPR029523
+  - complex57-agent-ipr-IPR062650
+  - complex57-agent-ipr-IPR020366
+  - complex57-agent-ipr-IPR029525
+  - complex57-agent-ipr-IPR050520
+  - complex57-agent-ipr-IPR027238
+  - complex57-agent-ipr-IPR004000
+  - complex57-agent-ipr-IPR016665
+  - complex57-agent-ipr-IPR050342
+  - complex57-agent-protein-P32617
+  - complex57-agent-protein-P35189
+  - complex57-agent-protein-P40060
+  - complex57-agent-protein-P40154
+  - complex57-agent-protein-P43579
+  - complex57-agent-protein-P53115
+  - complex57-agent-protein-P53946
+  - complex57-agent-protein-P60010
+  - complex57-agent-protein-P80428
+  - complex57-agent-protein-Q03435
+  - complex57-agent-protein-Q03940
+  - complex57-agent-protein-Q08561
+  - complex57-agent-protein-Q12345
+  - complex57-agent-protein-Q12386
+  - complex57-agent-protein-Q12464
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast preparations and reference examples
+  outcome: supported
+  target_ids:
+  - GO:0031011
+  summary: Watanabe yeast TAP purifications and protein classes support the canonical
+    yeast complex; E.coli BL21 is the recombinant histone-expression context, not
+    native INO80 occurrence. COMMON retains majority/losses-exception meaning, supported
+    qualitatively rather than by a measured strain census. S288C protein references
+    are not assumed to identify every experimental culture.
+  evidence_ids:
+  - record
+  - schema
+  - complex57-agent-PMC4431590-legacy
+  - complex57-agent-watanabe2015-supplement-s3
+  - complex57-agent-tax-4932
+  - complex57-agent-tax-559292
+- assessment_id: graph
+  area: graph
+  topic: Nonmechanistic inventory and remodeling function
+  outcome: supported
+  target_ids:
+  - GO:0031011
+  summary: The graph explicitly summarizes15 distinct members and whole-complex remodeling.
+    Native Shen/Tosi/Jonsson abstracts support the historical biochemical/structural
+    context, while directly read Watanabe provides module comparisons. No missing
+    atomic steps are required for this declared scope.
+  evidence_ids:
+  - record
+  - complex57-agent-go
+  - complex57-agent-PMC4431590-legacy
+  - complex57-agent-watanabe2015-supplement-s3
+  - complex57-agent-pmid-10787406
+  - complex57-agent-pmid-10952318
+  - complex57-agent-pmid-11604509
+  - complex57-agent-pmid-12887900
+  - complex57-agent-pmid-14562095
+  - complex57-agent-pmid-15525518
+  - complex57-agent-pmid-19355820
+  - complex57-agent-doi-10.1016_j.cell.2013.08.016
+  - complex57-agent-pmid-25964121
+  - complex57-agent-pmid-8573785
+- assessment_id: formation-tested
+  area: completeness
+  topic: Direct module-association results are bounded positive context
+  outcome: supported
+  target_ids:
+  - GO:0031011
+  summary: Arp8 deletion loses the Arp8/Arp4/Act1 module; Ies6 deletion loses Arp5
+    from purified residual INO80-C. These findings identify specific association dependencies,
+    not abolition of every complex. The record already identifies the modules and
+    declares an inventory graph; omission of further contact detail alone does not
+    meet the materiality threshold.
+  evidence_ids:
+  - record
+  - schema
+  - complex57-agent-PMC4431590-legacy
+- assessment_id: formation-unknown
+  area: grounding
+  topic: Whole-complex formation and activity remain distinct
+  outcome: unknown
+  target_ids:
+  - GO:0031011
+  summary: The module-loss/remodeling experiments do not establish universal all-or-none
+    formation requirements for every constituent. UNKNOWN is not interpreted as denying
+    these measured submodule dependencies.
+  evidence_ids:
+  - record
+  - schema
+  - complex57-agent-PMC4431590-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and declared source coverage
+  outcome: supported
+  target_ids:
+  - GO:0031011
+  summary: Every maintained field, evidence note, graph claim and discussion was inspected
+    at the declared source extents. Empty optional slots, acknowledged unknowns and
+    broader-family candidates do not independently create findings.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex57-agent-go
+findings:
+- finding_id: F1
+  issue_key: ino80-exact-ies-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground five exact Ies subunit families
+  description: Ies1, Ies2, Ies4, Ies5 and Ies6 remain REVIEWED_LABEL_ONLY because
+    exact families were not curated in this pass. Current native full-family entries
+    and independently verified protein membership resolve those specific classes.
+  target_ids:
+  - GO:0031011
+  field_paths:
+  - components#ies1_ino80c_subunit.grounding_status
+  - components#ies2_ino80c_subunit.grounding_status
+  - components#ies4_ino80c_subunit.grounding_status
+  - components#ies5_ino80c_subunit.grounding_status
+  - components#ies6_ino80c_arp5_module_subunit.grounding_status
+  - discussions
+  evidence_ids:
+  - record
+  - curation
+  - complex57-agent-ipr-IPR038014
+  - complex57-agent-ipr-IPR029523
+  - complex57-agent-ipr-IPR062650
+  - complex57-agent-ipr-IPR020366
+  - complex57-agent-ipr-IPR029525
+  - complex57-agent-protein-P32617
+  - complex57-agent-protein-P35189
+  - complex57-agent-protein-P40060
+  - complex57-agent-protein-P40154
+  - complex57-agent-protein-P43579
+  - complex57-agent-protein-P53115
+  - complex57-agent-protein-P53946
+  - complex57-agent-protein-P60010
+  - complex57-agent-protein-P80428
+  - complex57-agent-protein-Q03435
+  - complex57-agent-protein-Q03940
+  - complex57-agent-protein-Q08561
+  - complex57-agent-protein-Q12345
+  - complex57-agent-protein-Q12386
+  - complex57-agent-protein-Q12464
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ino80_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-backed identity, grounding and claim scope
+  native_severity: minor
+  normalization_reason: A bounded correction preserves the supported structure identity
+    and source-specific biology.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0031011
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/ino80_complex.yaml
+    role: maintained scientific record
+  description: Map Ies1/IPR038014, Ies2/IPR029523, Ies4/IPR062650, Ies5/IPR020366
+    and Ies6/IPR029525, preserving their correct yeast examples and existing complex/module
+    boundaries.
+  acceptance_checks:
+  - Retain broader or unresolved other classes as label-only rather than substituting
+    domains or shared paralog families.
+  - Preserve supported source-specific claims and pass applicable native gates.
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified. No fresh full-site QC is claimed from the sparse B57 checkout.
+- Only the source sections and assets explicitly enumerated in evidence locators were
+  inspected; no unlisted supplements or atomic coordinates were analyzed.
+- Watanabe XML endpoint returned HTTP500; the independently retained legacy HTML was
+  genuine. Its first supplemental PMC route returned200 challenge HTML, while the
+  separately hashed S3 PDF was genuine.
+- Shen2000 publisher returned200 challenge HTML. Shen2003, Jonsson2004 and Tosi2013
+  DOI routes failed TLS certificate verification; only complete native abstracts,
+  not those bodies, were read. Clapier/Cairns2009 is explicitly secondary-review abstract
+  context.
+- No supplementary structure figures, atomic coordinates or raw MS data were analyzed;
+  actual Supplementary Tables1/2 were read. The primary’s inverted main-text table
+  cross-reference is not propagated into a false record finding.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
