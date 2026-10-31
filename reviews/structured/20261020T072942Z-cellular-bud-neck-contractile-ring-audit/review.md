@@ -1,0 +1,757 @@
+# Cellular bud-neck contractile-ring identity and constituent review
+
+- Review: 20261020T072942Z-cellular-bud-neck-contractile-ring-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-20T07:25:24Z
+- Finished UTC: 2026-10-20T07:29:42Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact ring identity, actin/Myo1 constituents and reference examples, budding-yeast scope and three nonmechanistic topology edges are supported. No concrete curation defect was found.
+
+## Scope And Provenance
+
+Entire maintained record; native ontology, taxonomy and sequence entries, primary Bi1998 localization/contraction results and relevant Versele/Thorner2005 context.
+
+Selection: Second remaining unreviewed path of batch5, in repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0000142 | data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml | maintained | cellular bud neck contractile ring |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0000142 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0000142 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0000142 | 9 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | GO:0000142 | No matched microbial expression dataset or expression-derived mechanism is asserted; primary localization and native sequence/ontology evidence establish the reviewed claims. |
+| Claim-level scientific review | passed | True | GO:0000142 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0000142 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0000142 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0000142 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0000142 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0000142 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Exact bud-neck actomyosin ring
+
+identity: supported. Targets: GO:0000142.
+
+The definition and synonym match native GO. The localized structure is distinct from the broader mitotic ring and adjacent septin assemblies.
+
+### Is-a and containing bud neck
+
+grounding: supported. Targets: GO:0000142.
+
+Parent and parthood match native relations; the bud-neck region is not treated as a subtype.
+
+### Actin and Myo1 membership
+
+evidence: supported. Targets: GO:0000142.
+
+Primary imaging supports both constituents. The label describes the filamentous actin state, while the example identifies its ACT1 protein; the myosin example is explicitly typeII.
+
+### Verified reference sequences
+
+provenance: supported. Targets: GO:0000142.
+
+Both accession/name/gene/status pairs match native entries and S288C is a child of the named species. The record explicitly separates identifier mapping from structural membership evidence.
+
+### Unresolved localized class mappings
+
+grounding: supported. Targets: GO:0000142.
+
+Inspected accession-linked annotations are broader families, sites or domains and do not supply an exact localized cohort identity. The open TODO does not claim an exhaustive absence of possible mappings.
+
+### Cell-cycle-specific budding yeast example
+
+scope: supported. Targets: GO:0000142.
+
+Species-level ordinary occurrence is supported; the late actomyosin ring is not asserted to persist throughout the cell cycle. The record does not equate the early Myo1 ring with an already complete actomyosin ring.
+
+### Cytokinetic involvement without universal necessity
+
+evidence: supported. Targets: GO:0000142.
+
+The function matches the study and GO’s preparation-for-cytokinesis scope. Alternate division without a contractile ring does not contradict the modest involvement statement or UNKNOWN essentiality.
+
+### Three topology relationships
+
+graph: supported. Targets: GO:0000142.
+
+Actin membership, Myo1 membership and bud-neck parthood are source-supported. NONMECHANISTIC avoids inferring assembly order or motor-force requirements.
+
+### Explicit boundary follow-up
+
+completeness: supported. Targets: GO:0000142.
+
+The discussion correctly keeps additional cytokinetic factors pending constituent-versus-associated-machinery review. The cited septin review supplies relevant context rather than a complete actomyosin proteome.
+
+### Proposed localized record
+
+completeness: supported. Targets: GO:0000142.
+
+PROPOSED and open exact-family/accessory questions are appropriate. No concrete maintained-record defect was found.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ring-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000142,GO:0110085,GO:0005935,GO:0000144,GO:0032174; Five native GO definitions, synonyms and child relations | supports | GO0000142 is active, with the exact neck ring synonym and definition. GO0110085 lists it as an is_a child and GO0005935 lists it as part_of. The septin ring/collar terms denote distinct structures. |
+| ring-paper | https://pmc-oa-opendata.s3.amazonaws.com/PMC2149343.1/PMC2149343.1.xml; Actin/Myo1 ring Results, coincidence Results and contractile-ring/sequential-assembly/alternative-cytokinesis Discussion | supports | Bi1998 directly localizes actin and Myo1 to the neck ring and follows contraction. Actin and myosin assemble at different times; cytokinesis can occur without the ring under studied conditions. The record does not claim universal essentiality or a specific motor-force mechanism. |
+| ring-epmc | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1083/jcb.142.5.1301%20OR%20DOI:10.1016/j.tcb.2005.06.007&amp;format=json&amp;resultType=core; Exact bibliographic metadata | supports | Both DOIs match Bi1998 and Versele/Thorner2005, with PMID9732290/PMC2149343 and PMID16009555/PMC1761124. |
+| ring-proteins | https://rest.uniprot.org/uniprotkb/search?query=(gene_exact:ACT1%20OR%20gene_exact:MYO1)%20AND%20organism_id:559292%20AND%20reviewed:true&amp;format=json; Complete two-result native query, names, genes, organisms and status | supports | The reviewed exact-gene query returns P60010 ACT1 Actin and P08964 MYO1 Myosin-1, with TypeII myosin as an alternative name. Both entries identify S288C559292; these reference sequences do not independently prove localization. |
+| ring-taxon | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=4932,559292; Both taxonomy records and parent relation | supports | Native taxonomy identifies4932 as Saccharomyces cerevisiae species and559292 as its S288C strain. |
+| ring-IPR004000 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004000; Native type/name and scope description | supports | The inspected actin family includes divergent actin-related proteins; remaining annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3 domain. These do not establish an exact localized filament cohort or Myo1-only family. |
+| ring-IPR020902 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020902; Native type/name and scope description | supports | The inspected actin family includes divergent actin-related proteins; remaining annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3 domain. These do not establish an exact localized filament cohort or Myo1-only family. |
+| ring-IPR004001 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004001; Native type/name and scope description | supports | The inspected actin family includes divergent actin-related proteins; remaining annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3 domain. These do not establish an exact localized filament cohort or Myo1-only family. |
+| ring-IPR043129 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR043129; Native type/name and scope description | supports | The inspected actin family includes divergent actin-related proteins; remaining annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3 domain. These do not establish an exact localized filament cohort or Myo1-only family. |
+| ring-IPR004009 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004009; Native type/name and scope description | supports | The inspected actin family includes divergent actin-related proteins; remaining annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3 domain. These do not establish an exact localized filament cohort or Myo1-only family. |
+| septin-review | https://pmc.ncbi.nlm.nih.gov/articles/PMC1761124/; Public browser full-text inspection: Septin functions, Figure3 caption and anillin/Iqg1 discussion | context_only | The2005 review distinguishes septin collar/split rings from the contractile apparatus and discusses recruitment of other bud-neck factors. It supports the boundary and accessory-review discussion, not blanket actomyosin membership. Public browser text was readable despite failed archive/XML/PDF attempts; no raw full-text snapshot hash is asserted. |
+| record | data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml; Entire maintained target, two components/examples and three graph edges | context_only | The record uses a nonmechanistic topology graph and leaves exact family/accessory boundaries open. It does not assert assembly timing, fixed stoichiometry or universal necessity. |
+| identity-search | data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml; Exact identifier search across data/structures including hidden and ignored files | context_only | Only the target declares GO0000142. |
+| schema-result | just validate data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml --out /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_contractile_ring-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml --out /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_contractile_ring-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch5-20261020-aEelh1/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_contractile_ring-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml; exact collect() scope | supports | 9 of9 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The record is not a complete accessory-protein census and exact localized family boundaries remain open.
+- COMMON denotes ordinary cell-cycle occurrence, not a prevalence estimate or continuous occupancy.
+- Reference-strain sequences are identifiers rather than independent localization experiments.
+- Broad family-search results were not used to claim exhaustive absence of an exact mapping.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Only the review bundle is saved. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261020T072942Z-cellular-bud-neck-contractile-ring-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cellular bud-neck contractile-ring identity and constituent review
+started_at: '2026-10-20T07:25:24Z'
+finished_at: '2026-10-20T07:29:42Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact ring identity, actin/Myo1 constituents and reference examples, budding-yeast
+  scope and three nonmechanistic topology edges are supported. No concrete curation
+  defect was found.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+    sha256: 98f13751880cb87993310078d3409a400df4ccbaad0f9499f9b76a2be4538280
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000142
+  path: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+  label: cellular bud neck contractile ring
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+    role: maintained scientific record
+scope:
+  description: Entire maintained record; native ontology, taxonomy and sequence entries,
+    primary Bi1998 localization/contraction results and relevant Versele/Thorner2005
+    context.
+  selection: Second remaining unreviewed path of batch5, in repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000142
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000142
+  command: just validate data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000142
+  command: just validate-strict data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+    --out /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_contractile_ring-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000142
+  summary: 9 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0000142
+  summary: No matched microbial expression dataset or expression-derived mechanism
+    is asserted; primary localization and native sequence/ontology evidence establish
+    the reviewed claims.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000142
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - ring-go
+  - ring-paper
+  - ring-epmc
+  - ring-proteins
+  - ring-taxon
+  - ring-IPR004000
+  - ring-IPR020902
+  - ring-IPR004001
+  - ring-IPR043129
+  - ring-IPR004009
+  - septin-review
+  - record
+  - identity-search
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000142
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000142
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000142
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000142
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000142
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: ring-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000142,GO:0110085,GO:0005935,GO:0000144,GO:0032174
+  locator: Five native GO definitions, synonyms and child relations
+  accessed_at: '2026-10-20T07:26:49.613570Z'
+  support: supports
+  summary: GO0000142 is active, with the exact neck ring synonym and definition. GO0110085
+    lists it as an is_a child and GO0005935 lists it as part_of. The septin ring/collar
+    terms denote distinct structures.
+  snapshot_sha256: b1e68696c8de822bd099580bf8a93d7ff74892679dcc58ffc7ffcd219d3f6a45
+- evidence_id: ring-paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2149343.1/PMC2149343.1.xml
+  locator: Actin/Myo1 ring Results, coincidence Results and contractile-ring/sequential-assembly/alternative-cytokinesis
+    Discussion
+  accessed_at: '2026-10-20T07:27:22.709239Z'
+  support: supports
+  summary: Bi1998 directly localizes actin and Myo1 to the neck ring and follows contraction.
+    Actin and myosin assemble at different times; cytokinesis can occur without the
+    ring under studied conditions. The record does not claim universal essentiality
+    or a specific motor-force mechanism.
+  snapshot_sha256: a4c232ad97f81fb8c71968e042b68b1ff0e416fbe1ef465d6be24a21d84036ba
+- evidence_id: ring-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1083/jcb.142.5.1301%20OR%20DOI:10.1016/j.tcb.2005.06.007&format=json&resultType=core
+  locator: Exact bibliographic metadata
+  accessed_at: '2026-10-20T07:26:50.023381Z'
+  support: supports
+  summary: Both DOIs match Bi1998 and Versele/Thorner2005, with PMID9732290/PMC2149343
+    and PMID16009555/PMC1761124.
+  snapshot_sha256: 78db39dfff750c8d36756aa2dcc451281e660158b44f3a92188e4019f92a41be
+- evidence_id: ring-proteins
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=(gene_exact:ACT1%20OR%20gene_exact:MYO1)%20AND%20organism_id:559292%20AND%20reviewed:true&format=json
+  locator: Complete two-result native query, names, genes, organisms and status
+  accessed_at: '2026-10-20T07:26:50.568177Z'
+  support: supports
+  summary: The reviewed exact-gene query returns P60010 ACT1 Actin and P08964 MYO1
+    Myosin-1, with TypeII myosin as an alternative name. Both entries identify S288C559292;
+    these reference sequences do not independently prove localization.
+  snapshot_sha256: f20559c2076242f7d8ec984395f7e708d517163c2a674e44ab4d252920c2c265
+- evidence_id: ring-taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=4932,559292
+  locator: Both taxonomy records and parent relation
+  accessed_at: '2026-10-20T07:26:49.146723Z'
+  support: supports
+  summary: Native taxonomy identifies4932 as Saccharomyces cerevisiae species and559292
+    as its S288C strain.
+  snapshot_sha256: a0110fd4b27dc6aa4f9c3ae5db622f12e6d58f6309580788781290225ca768bb
+- evidence_id: ring-IPR004000
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004000
+  locator: Native type/name and scope description
+  accessed_at: '2026-10-20T07:27:22.511467Z'
+  support: supports
+  summary: The inspected actin family includes divergent actin-related proteins; remaining
+    annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3
+    domain. These do not establish an exact localized filament cohort or Myo1-only
+    family.
+  snapshot_sha256: 353427570f0d1c3842a14f7737374f68e9dd70a98b09cf9fc2a8e8c86062edca
+- evidence_id: ring-IPR020902
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020902
+  locator: Native type/name and scope description
+  accessed_at: '2026-10-20T07:27:23.811336Z'
+  support: supports
+  summary: The inspected actin family includes divergent actin-related proteins; remaining
+    annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3
+    domain. These do not establish an exact localized filament cohort or Myo1-only
+    family.
+  snapshot_sha256: f3a085f881ed28257b0990510ee1c679a1cf4a7dbc2d3eae72f6311df7d7e45b
+- evidence_id: ring-IPR004001
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004001
+  locator: Native type/name and scope description
+  accessed_at: '2026-10-20T07:27:21.795375Z'
+  support: supports
+  summary: The inspected actin family includes divergent actin-related proteins; remaining
+    annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3
+    domain. These do not establish an exact localized filament cohort or Myo1-only
+    family.
+  snapshot_sha256: 0fac8eafa2188793ba987caf676e00b60a3a4079781b8b1eb474d4b72054b745
+- evidence_id: ring-IPR043129
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR043129
+  locator: Native type/name and scope description
+  accessed_at: '2026-10-20T07:27:22.765452Z'
+  support: supports
+  summary: The inspected actin family includes divergent actin-related proteins; remaining
+    annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3
+    domain. These do not establish an exact localized filament cohort or Myo1-only
+    family.
+  snapshot_sha256: 6a55e5fdeb8f8afcbdc15f21ea0d61d2d557b6d318489f65130a111ddb04db19
+- evidence_id: ring-IPR004009
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004009
+  locator: Native type/name and scope description
+  accessed_at: '2026-10-20T07:27:23.305460Z'
+  support: supports
+  summary: The inspected actin family includes divergent actin-related proteins; remaining
+    annotations are conserved sites, a broad ATPase domain superfamily or myosin SH3
+    domain. These do not establish an exact localized filament cohort or Myo1-only
+    family.
+  snapshot_sha256: 2a4c5a9b064d9ddfb02fffd3ac159ef8cb09a44837596eabd2f43cc970b69a05
+- evidence_id: septin-review
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1761124/
+  locator: 'Public browser full-text inspection: Septin functions, Figure3 caption
+    and anillin/Iqg1 discussion'
+  accessed_at: '2026-10-20T07:29:42Z'
+  support: context_only
+  summary: The2005 review distinguishes septin collar/split rings from the contractile
+    apparatus and discusses recruitment of other bud-neck factors. It supports the
+    boundary and accessory-review discussion, not blanket actomyosin membership. Public
+    browser text was readable despite failed archive/XML/PDF attempts; no raw full-text
+    snapshot hash is asserted.
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+  locator: Entire maintained target, two components/examples and three graph edges
+  accessed_at: '2026-10-20T07:29:42Z'
+  support: context_only
+  summary: The record uses a nonmechanistic topology graph and leaves exact family/accessory
+    boundaries open. It does not assert assembly timing, fixed stoichiometry or universal
+    necessity.
+- evidence_id: identity-search
+  kind: record_content
+  reference: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+  locator: Exact identifier search across data/structures including hidden and ignored
+    files
+  accessed_at: '2026-10-20T07:29:42Z'
+  support: context_only
+  summary: Only the target declares GO0000142.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:25:25Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml'
+  snapshot_sha256: b2919f4c482abeb92dd6f5edcdf5d1fe953a19b852f35a3086cffec94b99e270
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml
+    --out /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_contractile_ring-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:25:26Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml\
+    \ --out /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_contractile_ring-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch5-20261020-aEelh1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch5-20261020-aEelh1/cellular_bud_neck_contractile_ring-strict.tsv"
+  snapshot_sha256: 586f8bd768a3cbbf1131010114470dc6f9deb609b463e32fee890afedc8b6e65
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/cellular_bud_neck_contractile_ring.yaml; exact
+    collect() scope
+  accessed_at: '2026-10-20T07:29:42Z'
+  support: supports
+  summary: '9 of9 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact bud-neck actomyosin ring
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: The definition and synonym match native GO. The localized structure is
+    distinct from the broader mitotic ring and adjacent septin assemblies.
+  evidence_ids:
+  - ring-go
+  - ring-paper
+  - septin-review
+  - record
+- assessment_id: hierarchy
+  area: grounding
+  topic: Is-a and containing bud neck
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: Parent and parthood match native relations; the bud-neck region is not
+    treated as a subtype.
+  evidence_ids:
+  - ring-go
+  - record
+- assessment_id: components
+  area: evidence
+  topic: Actin and Myo1 membership
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: Primary imaging supports both constituents. The label describes the filamentous
+    actin state, while the example identifies its ACT1 protein; the myosin example
+    is explicitly typeII.
+  evidence_ids:
+  - ring-paper
+  - ring-proteins
+  - ring-go
+  - record
+- assessment_id: examples
+  area: provenance
+  topic: Verified reference sequences
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: Both accession/name/gene/status pairs match native entries and S288C is
+    a child of the named species. The record explicitly separates identifier mapping
+    from structural membership evidence.
+  evidence_ids:
+  - ring-proteins
+  - ring-taxon
+  - ring-paper
+  - record
+- assessment_id: families
+  area: grounding
+  topic: Unresolved localized class mappings
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: Inspected accession-linked annotations are broader families, sites or domains
+    and do not supply an exact localized cohort identity. The open TODO does not claim
+    an exhaustive absence of possible mappings.
+  evidence_ids:
+  - ring-IPR004000
+  - ring-IPR020902
+  - ring-IPR004001
+  - ring-IPR043129
+  - ring-IPR004009
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Cell-cycle-specific budding yeast example
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: Species-level ordinary occurrence is supported; the late actomyosin ring
+    is not asserted to persist throughout the cell cycle. The record does not equate
+    the early Myo1 ring with an already complete actomyosin ring.
+  evidence_ids:
+  - ring-paper
+  - ring-taxon
+  - ring-go
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Cytokinetic involvement without universal necessity
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: The function matches the study and GO’s preparation-for-cytokinesis scope.
+    Alternate division without a contractile ring does not contradict the modest involvement
+    statement or UNKNOWN essentiality.
+  evidence_ids:
+  - ring-paper
+  - ring-go
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Three topology relationships
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: Actin membership, Myo1 membership and bud-neck parthood are source-supported.
+    NONMECHANISTIC avoids inferring assembly order or motor-force requirements.
+  evidence_ids:
+  - ring-paper
+  - ring-go
+  - record
+- assessment_id: accessories
+  area: completeness
+  topic: Explicit boundary follow-up
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: The discussion correctly keeps additional cytokinetic factors pending constituent-versus-associated-machinery
+    review. The cited septin review supplies relevant context rather than a complete
+    actomyosin proteome.
+  evidence_ids:
+  - septin-review
+  - ring-paper
+  - record
+- assessment_id: status
+  area: completeness
+  topic: Proposed localized record
+  outcome: supported
+  target_ids:
+  - GO:0000142
+  summary: PROPOSED and open exact-family/accessory questions are appropriate. No
+    concrete maintained-record defect was found.
+  evidence_ids:
+  - ring-paper
+  - ring-proteins
+  - ring-go
+  - record
+findings: []
+actions: []
+limitations:
+- The record is not a complete accessory-protein census and exact localized family
+  boundaries remain open.
+- COMMON denotes ordinary cell-cycle occurrence, not a prevalence estimate or continuous
+  occupancy.
+- Reference-strain sequences are identifiers rather than independent localization
+  experiments.
+- Broad family-search results were not used to claim exhaustive absence of an exact
+  mapping.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
+```
