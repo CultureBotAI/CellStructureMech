@@ -21,10 +21,10 @@ artifacts:
   sha256: 6488cd995783868486f9ecb3b85ec0bc6523daf30dbc72cd30fbbe69dcbac3e4
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_findings.md
-  sha256: 39a26815d11e8e5dce376062366d23cac0f702fe8b38341d38732ae4c5ca860e
+  sha256: 540fcf501efa9940e7240ecb36c319df2b108f1d1bcae987e3f7c4dca2fc8974
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/validation.md
-  sha256: 97427591a66e599a91dc6270d0e01eb3b29cc238aa39aa67900ff0cd9ec3a49e
+  sha256: ddc3f934f836644939f9913cf5da6e7d404ca32dbe769456c0b41eb0a6430e60
   kind: validation
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/coverage_inventory.json
   sha256: b8353df66defdde2c43d46fac9bf8f9437ddf6415d96dd9dd614a6b90e28f0a6
@@ -32,14 +32,14 @@ artifacts:
 findings:
 - finding_id: post-anaphase-microtubule-array-emtoc-missing-gene-symbols
   status: open
-  summary: 'post_anaphase_microtubule_array.yaml (GO:1990295) components[2] (emtoc, equatorial microtubule
+  summary: 'post_anaphase_microtubule_array.yaml (GO:1990295) components[3] (emtoc, equatorial microtubule
     organizing center, GO:0000923) omits gene_symbols: [mto1, mto2] while carrying reviewed protein_examples
     for UniProtKB:O94488 (mto1) and UniProtKB:Q9USP7 (mto2) in NCBITaxon:284812 whose role strings claim
     declared gene symbols (native review: 20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols
     F1, severity major).'
 - finding_id: origin-recognition-complex-node-type-molecular-function
   status: open
-  summary: 'origin_recognition_complex.yaml (GO:0000808) causal_graphs[0].nodes[6] (dna_replication_origin_binding,
+  summary: 'origin_recognition_complex.yaml (GO:0000808) causal_graphs[0].nodes[8] (dna_replication_origin_binding,
     GO:0003688) sets node_type: BIOLOGICAL_PROCESS instead of MOLECULAR_FUNCTION (native review: 20261030T222002Z-origin-recognition-complex-node-type-molecular-function
     F1, severity major).'
 - finding_id: cytoskeleton-spombe-p04689-primary-gene-symbol-tub1

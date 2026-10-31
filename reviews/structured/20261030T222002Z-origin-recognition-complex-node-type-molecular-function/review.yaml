@@ -21,13 +21,12 @@ native_verdict: NEEDS_CURATION
 scientific_review: true
 summary: 'Single-record audit of origin_recognition_complex.yaml (GO:0000808, origin
   recognition complex). Subunit composition (Orc1-Orc6 in S. cerevisiae S288C), GO
-  hierarchy (parent_structures: GO:0140513 nuclear protein-containing complex; part_of:
-  GO:0005656 nuclear pre-replicative complex), and function annotations are accurate.
-  However, in causal_graphs[0] (origin_recognition_complex_mechanism), nodes[6] (node_id:
-  dna_replication_origin_binding, label: DNA replication origin binding, grounding:
-  GO:0003688) is typed node_type: BIOLOGICAL_PROCESS, whereas GO:0003688 is a Gene
-  Ontology molecular_function term (as explicitly noted on functions[1] and record
-  evidence[2]).'
+  hierarchy (parent_structures: GO:0032991 protein-containing complex; part_of: GO:0005694
+  chromosome), and function annotations are accurate. However, in causal_graphs[0]
+  (origin_recognition_complex_mechanism), nodes[8] (node_id: dna_replication_origin_binding,
+  label: DNA replication origin binding, grounding: GO:0003688) is typed node_type:
+  BIOLOGICAL_PROCESS, whereas GO:0003688 is a Gene Ontology molecular_function term
+  (as explicitly noted on functions[0].evidence[0] and record evidence[3]).'
 source:
   git_revision: a94f6deb809dd50c8344fb03284de9801c0aa298
   state: git_commit
@@ -132,25 +131,31 @@ evidence:
 - evidence_id: ev_orc_causal_node_type
   kind: record_content
   reference: data/structures/other/origin_recognition_complex.yaml
-  locator: functions[1] (lines 247-259) and causal_graphs[0].nodes[6] (lines 345-350)
+  locator: functions[0] (lines 250-261), evidence[3] (lines 272-273), and causal_graphs[0].nodes[8]
+    (lines 345-350)
   accessed_at: '2026-10-30T22:17:00Z'
   support: supports
-  summary: 'functions[1] explicitly states GO:0003688 is the molecular_function term
-    for DNA replication origin binding, whereas causal_graphs[0].nodes[6] sets node_type:
-    BIOLOGICAL_PROCESS on GO:0003688.'
-  quote: "  - reference: GO:0003688\n    supports: SUPPORT\n    evidence_source: OTHER\n\
-    \    explanation: GO:0003688 is the molecular_function term for DNA replication\
-    \ origin\n      binding.\n...\n  - node_id: dna_replication_origin_binding\n \
-    \   label: DNA replication origin binding\n    node_type: BIOLOGICAL_PROCESS\n\
-    \    grounding: GO:0003688"
+  summary: 'functions[0].evidence[0] and record evidence[3] explicitly state GO:0003688
+    is the Gene Ontology molecular-function term for DNA replication origin binding,
+    whereas causal_graphs[0].nodes[8] sets node_type: BIOLOGICAL_PROCESS on GO:0003688.'
+  quote: "- function_id: dna_replication_origin_binding\n  label: DNA replication\
+    \ origin binding\n  grounding: GO:0003688\n  description: The origin recognition\
+    \ complex recognizes DNA replication origins in\n    an ATP-dependent manner.\n\
+    \  evidence:\n  - reference: GO:0003688\n    notes: GO:0003688 is the Gene Ontology\
+    \ molecular-function term for DNA replication\n      origin binding.\n...\n  -\
+    \ node_id: dna_replication_origin_binding\n    label: DNA replication origin binding\n\
+    \    node_type: BIOLOGICAL_PROCESS\n    grounding: GO:0003688\n    description:\
+    \ The origin recognition complex recognizes DNA replication origins\n      in\
+    \ an ATP-dependent manner."
   snapshot_sha256: 32edb24d8b6f6a1b1528149347c7d933ff4478c2bdf992535fe93a8ba6829f3c
 assessments:
 - assessment_id: assess_orc_identity_and_components
   area: identity
   topic: GO identity, hierarchy, and hexameric Orc1-Orc6 subunit composition in origin_recognition_complex.yaml
   outcome: supported
-  summary: GO:0000808, its hierarchy under GO:0140513 and parthood in GO:0005656,
-    and all six reviewed S. cerevisiae S288C Orc1-Orc6 subunit groundings are verified.
+  summary: GO:0000808, its hierarchy under GO:0032991 (protein-containing complex)
+    and parthood in GO:0005694 (chromosome), and all six reviewed S. cerevisiae S288C
+    Orc1-Orc6 subunit groundings are verified.
   target_ids:
   - GO:0000808
   evidence_ids:
@@ -159,9 +164,9 @@ assessments:
 - assessment_id: assess_orc_causal_node_type
   area: representation
   topic: CausalNodeTypeEnum value for GO:0003688 (DNA replication origin binding)
-    in causal_graphs[0].nodes[6]
+    in causal_graphs[0].nodes[8]
   outcome: concern
-  summary: causal_graphs[0].nodes[6] (dna_replication_origin_binding, GO:0003688)
+  summary: causal_graphs[0].nodes[8] (dna_replication_origin_binding, GO:0003688)
     is typed BIOLOGICAL_PROCESS instead of MOLECULAR_FUNCTION.
   target_ids:
   - GO:0000808
@@ -174,20 +179,20 @@ findings:
   severity: major
   status: open
   certainty: confirmed
-  title: origin_recognition_complex.yaml causal_graphs[0].nodes[6] types molecular_function
+  title: origin_recognition_complex.yaml causal_graphs[0].nodes[8] types molecular_function
     term GO:0003688 as BIOLOGICAL_PROCESS
   description: 'In data/structures/other/origin_recognition_complex.yaml (GO:0000808,
-    lines 345-350), causal_graphs[0] (origin_recognition_complex_mechanism) nodes[6]
+    lines 345-350), causal_graphs[0] (origin_recognition_complex_mechanism) nodes[8]
     (node_id: dna_replication_origin_binding, label: ''DNA replication origin binding'',
     grounding: GO:0003688) sets node_type: BIOLOGICAL_PROCESS. However, GO:0003688
-    is a Gene Ontology molecular_function term, as the record itself notes in functions[1].evidence[0]
-    (line 257: ''GO:0003688 is the molecular_function term for DNA replication origin
-    binding'') and evidence[2] (line 273). It should be typed node_type: MOLECULAR_FUNCTION
-    (tracked for validator enforcement in cellstructuremech-infra-0008).'
+    is a Gene Ontology molecular_function term, as the record itself notes in functions[0].evidence[0]
+    (lines 256-258: ''GO:0003688 is the Gene Ontology molecular-function term for
+    DNA replication origin binding.'') and evidence[3] (lines 272-273). It should
+    be typed node_type: MOLECULAR_FUNCTION (tracked for validator enforcement in cellstructuremech-infra-0008).'
   target_ids:
   - GO:0000808
   field_paths:
-  - causal_graphs[0].nodes[6].node_type
+  - causal_graphs[0].nodes[8].node_type
   evidence_ids:
   - ev_orc_causal_node_type
   rule_id: docs/SCHEMA.md:CausalNodeTypeEnum.MOLECULAR_FUNCTION
@@ -202,7 +207,7 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: Change causal_graphs[0].nodes[6].node_type from BIOLOGICAL_PROCESS
+  description: Change causal_graphs[0].nodes[8].node_type from BIOLOGICAL_PROCESS
     to MOLECULAR_FUNCTION in data/structures/other/origin_recognition_complex.yaml
     with a curation event and history entry.
   finding_ids:

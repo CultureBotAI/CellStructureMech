@@ -11,7 +11,7 @@
 
 ## Summary
 
-Single-record audit of post_anaphase_microtubule_array.yaml (GO:1990295, post-anaphase microtubule array). Structure identity, GO hierarchy (parent_structures: GO:0032156 cytoplasmic microtubule array), fission yeast canonical example (NCBITaxon:284812), and causal graph are well-supported. However, components[2] (component_id: emtoc, label: equatorial microtubule organizing center, grounding: GO:0000923) lists two reviewed protein_examples (UniProtKB:O94488 with gene_symbol: mto1 and UniProtKB:Q9USP7 with gene_symbol: mto2) whose role strings explicitly state 'Identifier for the component's declared gene symbol', yet components[2] omits gene_symbols: [mto1, mto2] completely.
+Single-record audit of post_anaphase_microtubule_array.yaml (GO:1990295, post-anaphase microtubule array). Structure identity, GO hierarchy (parent_structures: GO:0110165 cellular anatomical entity; part_of: GO:0015630 microtubule cytoskeleton; has_part: GO:0000923 equatorial microtubule organizing center), fission yeast canonical example (NCBITaxon:4896), and causal graphs are well-supported. However, components[3] (component_id: emtoc, label: equatorial microtubule organizing center, grounding: GO:0000923) lists two reviewed protein_examples (UniProtKB:O94488 with gene_symbol: mto1 and UniProtKB:Q9USP7 with gene_symbol: mto2 in NCBITaxon:284812) whose role strings explicitly state 'Identifier for the component's declared gene symbol', yet components[3] omits gene_symbols: [mto1, mto2] completely.
 
 ## Scope And Provenance
 
@@ -39,27 +39,27 @@ Working-tree hashes do not imply those bytes were committed.
 
 identity: supported. Targets: GO:1990295.
 
-GO:1990295 accurately identifies the fission yeast post-anaphase microtubule array as a subtype of cytoplasmic microtubule array (GO:0032156).
+GO:1990295 accurately identifies the fission yeast post-anaphase microtubule array with parent_structures GO:0110165 (cellular anatomical entity), part_of GO:0015630 (microtubule cytoskeleton), and has_part GO:0000923 (equatorial microtubule organizing center).
 
-### Missing gene_symbols list on components[2] (emtoc) despite declared protein_examples for mto1 and mto2
+### Missing gene_symbols list on components[3] (emtoc) despite declared protein_examples for mto1 and mto2
 
 representation: concern. Targets: GO:1990295.
 
-components[2] (emtoc) omits gene_symbols: [mto1, mto2] even though its two protein_examples (UniProtKB:O94488 mto1 and UniProtKB:Q9USP7 mto2) state 'Identifier for the component's declared gene symbol' in role.
+components[3] (emtoc) omits gene_symbols: [mto1, mto2] even though its two protein_examples (UniProtKB:O94488 mto1 and UniProtKB:Q9USP7 mto2) state 'Identifier for the component's declared gene symbol' in role.
 
 ## Findings
 
-### F1: post_anaphase_microtubule_array.yaml components[2] (emtoc) omits gene_symbols: [mto1, mto2] while protein_examples claim declared gene symbols
+### F1: post_anaphase_microtubule_array.yaml components[3] (emtoc) omits gene_symbols: [mto1, mto2] while protein_examples claim declared gene symbols
 
 major / open / confirmed; issue key: post-anaphase-microtubule-array-emtoc-missing-gene-symbols.
 
-In data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml (GO:1990295, lines 98-137), components[2] (component_id: emtoc, label: 'equatorial microtubule organizing center', grounding: GO:0000923) carries two reviewed protein_examples (UniProtKB:O94488 with gene_symbol: mto1 and UniProtKB:Q9USP7 with gene_symbol: mto2 in NCBITaxon:284812) whose role strings state 'Identifier for the component's declared gene symbol', yet components[2] omits gene_symbols: [mto1, mto2] completely. This escaped validate_component_protein_examples because validator.py lines 223-224 skip components with an empty gene_symbols list (tracked in cellstructuremech-infra-0008).
+In data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml (GO:1990295, lines 179-251), components[3] (component_id: emtoc, label: 'equatorial microtubule organizing center', grounding: GO:0000923) carries two reviewed protein_examples (UniProtKB:O94488 with gene_symbol: mto1 and UniProtKB:Q9USP7 with gene_symbol: mto2 in NCBITaxon:284812) whose role strings state 'Identifier for the component's declared gene symbol', yet components[3] omits gene_symbols: [mto1, mto2] completely. This escaped validate_component_protein_examples because validator.py lines 223-224 skip components with an empty gene_symbols list (tracked in cellstructuremech-infra-0008).
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Add gene_symbols: [mto1, mto2] to components[2] (emtoc) in data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml with a curation event and history entry.
+Add gene_symbols: [mto1, mto2] to components[3] (emtoc) in data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml with a curation event and history entry.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -73,7 +73,7 @@ Add gene_symbols: [mto1, mto2] to components[2] (emtoc) in data/structures/cytos
 | --- | --- | --- | --- |
 | ev_strict_pama | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,008 records. |
 | ev_history_pama | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,140 history records. |
-| ev_pama_emtoc_component | data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml; components[2] (lines 98-137) | supports | components[2] (emtoc) omits gene_symbols while declaring protein_examples for mto1 (UniProtKB:O94488) and mto2 (UniProtKB:Q9USP7) with role 'Identifier for the component's declared gene symbol'. |
+| ev_pama_emtoc_component | data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml; components[3] (lines 179-251) | supports | components[3] (emtoc) omits gene_symbols while declaring protein_examples for mto1 (UniProtKB:O94488) and mto2 (UniProtKB:Q9USP7) with role 'Identifier for the component's declared gene symbol'. |
 
 ## Limits And Additional Notes
 
@@ -107,13 +107,14 @@ native_verdict: NEEDS_CURATION
 scientific_review: true
 summary: 'Single-record audit of post_anaphase_microtubule_array.yaml (GO:1990295,
   post-anaphase microtubule array). Structure identity, GO hierarchy (parent_structures:
-  GO:0032156 cytoplasmic microtubule array), fission yeast canonical example (NCBITaxon:284812),
-  and causal graph are well-supported. However, components[2] (component_id: emtoc,
-  label: equatorial microtubule organizing center, grounding: GO:0000923) lists two
-  reviewed protein_examples (UniProtKB:O94488 with gene_symbol: mto1 and UniProtKB:Q9USP7
-  with gene_symbol: mto2) whose role strings explicitly state ''Identifier for the
-  component''s declared gene symbol'', yet components[2] omits gene_symbols: [mto1,
-  mto2] completely.'
+  GO:0110165 cellular anatomical entity; part_of: GO:0015630 microtubule cytoskeleton;
+  has_part: GO:0000923 equatorial microtubule organizing center), fission yeast canonical
+  example (NCBITaxon:4896), and causal graphs are well-supported. However, components[3]
+  (component_id: emtoc, label: equatorial microtubule organizing center, grounding:
+  GO:0000923) lists two reviewed protein_examples (UniProtKB:O94488 with gene_symbol:
+  mto1 and UniProtKB:Q9USP7 with gene_symbol: mto2 in NCBITaxon:284812) whose role
+  strings explicitly state ''Identifier for the component''s declared gene symbol'',
+  yet components[3] omits gene_symbols: [mto1, mto2] completely.'
 source:
   git_revision: a94f6deb809dd50c8344fb03284de9801c0aa298
   state: git_commit
@@ -218,23 +219,29 @@ evidence:
 - evidence_id: ev_pama_emtoc_component
   kind: record_content
   reference: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
-  locator: components[2] (lines 98-137)
+  locator: components[3] (lines 179-251)
   accessed_at: '2026-10-30T22:16:00Z'
   support: supports
-  summary: components[2] (emtoc) omits gene_symbols while declaring protein_examples
+  summary: components[3] (emtoc) omits gene_symbols while declaring protein_examples
     for mto1 (UniProtKB:O94488) and mto2 (UniProtKB:Q9USP7) with role 'Identifier
     for the component's declared gene symbol'.
   quote: "- component_id: emtoc\n  label: equatorial microtubule organizing center\n\
-    \  component_type: OTHER\n  component_role: REGULATOR\n  grounding: GO:0000923\n\
-    \  required_for_assembly: true\n  notes: Mto1-Mto2-gamma-tubulin ring complex\
-    \ nucleator localized at the cytokinetic\n    ring that nucleates the post-anaphase\
-    \ microtubule array.\n  evidence:\n  - reference: GO:1990295\n    supports: SUPPORT\n\
-    \    evidence_source: OTHER\n    explanation: GO:1990295 defines the post-anaphase\
-    \ microtubule array as nucleated\n      from the equatorial microtubule organizing\
-    \ center (eMTOC).\n  protein_examples:\n  - uniprot_id: UniProtKB:O94488\n   \
-    \ protein_label: Microtubule organizer mto1\n    gene_symbol: mto1\n    taxon_id:\
-    \ NCBITaxon:284812\n    taxon_label: Schizosaccharomyces pombe 972h-\n    entry_status:\
-    \ REVIEWED\n    role: Identifier for the component's declared gene symbol"
+    \  component_type: PROTEIN_COMPLEX\n  component_role: CONSTITUENT\n  grounding:\
+    \ GO:0000923\n  essentiality: UNKNOWN\n  role: Equatorial nucleating subassembly\
+    \ included within the whole-array boundary;\n    its finer composition is curated\
+    \ in the separate center record.\n  evidence:\n  - reference: GO:1990295\n   \
+    \ notes: The native GO class has-part GO:0000923; the relation is not inverted\
+    \ into\n      universal eMTOC part-of PAA.\n  - reference: DOI:10.1016/j.cub.2010.10.006\n\
+    \    notes: Equator-selective Mto1 targeting defects prevent PAA nucleation while\
+    \ preserving\n      spindle-pole targeting.\n  - reference: DOI:10.3390/cells12060917\n\
+    \    notes: Equatorial Mto1 recruitment precedes PAA formation in live-cell time\
+    \ series.\n  protein_examples:\n  - uniprot_id: UniProtKB:O94488\n    protein_label:\
+    \ Gamma tubulin complex adapter mto1\n    gene_symbol: mto1\n    taxon_id: NCBITaxon:284812\n\
+    \    taxon_label: Schizosaccharomyces pombe 972h-\n    entry_status: REVIEWED\n\
+    \    retrieved_on: '2026-10-17'\n    role: Representative reviewed UniProtKB entry\
+    \ for gene mto1 in Schizosaccharomyces\n      pombe 972h-. Identifier for the\
+    \ component's declared gene symbol; it is not\n      itself evidence that the\
+    \ protein is part of this structure."
   snapshot_sha256: ac97344d35ac58bc4d21294879b0fc23684fca5f7da6956a4b075108a326a225
 assessments:
 - assessment_id: assess_pama_identity_and_hierarchy
@@ -243,7 +250,9 @@ assessments:
     array (GO:1990295)
   outcome: supported
   summary: GO:1990295 accurately identifies the fission yeast post-anaphase microtubule
-    array as a subtype of cytoplasmic microtubule array (GO:0032156).
+    array with parent_structures GO:0110165 (cellular anatomical entity), part_of
+    GO:0015630 (microtubule cytoskeleton), and has_part GO:0000923 (equatorial microtubule
+    organizing center).
   target_ids:
   - GO:1990295
   evidence_ids:
@@ -251,10 +260,10 @@ assessments:
   - ev_history_pama
 - assessment_id: assess_pama_emtoc_gene_symbols
   area: representation
-  topic: Missing gene_symbols list on components[2] (emtoc) despite declared protein_examples
+  topic: Missing gene_symbols list on components[3] (emtoc) despite declared protein_examples
     for mto1 and mto2
   outcome: concern
-  summary: 'components[2] (emtoc) omits gene_symbols: [mto1, mto2] even though its
+  summary: 'components[3] (emtoc) omits gene_symbols: [mto1, mto2] even though its
     two protein_examples (UniProtKB:O94488 mto1 and UniProtKB:Q9USP7 mto2) state ''Identifier
     for the component''s declared gene symbol'' in role.'
   target_ids:
@@ -268,20 +277,20 @@ findings:
   severity: major
   status: open
   certainty: confirmed
-  title: 'post_anaphase_microtubule_array.yaml components[2] (emtoc) omits gene_symbols:
+  title: 'post_anaphase_microtubule_array.yaml components[3] (emtoc) omits gene_symbols:
     [mto1, mto2] while protein_examples claim declared gene symbols'
   description: 'In data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
-    (GO:1990295, lines 98-137), components[2] (component_id: emtoc, label: ''equatorial
+    (GO:1990295, lines 179-251), components[3] (component_id: emtoc, label: ''equatorial
     microtubule organizing center'', grounding: GO:0000923) carries two reviewed protein_examples
     (UniProtKB:O94488 with gene_symbol: mto1 and UniProtKB:Q9USP7 with gene_symbol:
     mto2 in NCBITaxon:284812) whose role strings state ''Identifier for the component''s
-    declared gene symbol'', yet components[2] omits gene_symbols: [mto1, mto2] completely.
+    declared gene symbol'', yet components[3] omits gene_symbols: [mto1, mto2] completely.
     This escaped validate_component_protein_examples because validator.py lines 223-224
     skip components with an empty gene_symbols list (tracked in cellstructuremech-infra-0008).'
   target_ids:
   - GO:1990295
   field_paths:
-  - components[2].gene_symbols
+  - components[3].gene_symbols
   evidence_ids:
   - ev_pama_emtoc_component
   rule_id: docs/SCHEMA.md:StructuralComponent.gene_symbols
@@ -296,7 +305,7 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Add gene_symbols: [mto1, mto2] to components[2] (emtoc) in data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  description: 'Add gene_symbols: [mto1, mto2] to components[3] (emtoc) in data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
     with a curation event and history entry.'
   finding_ids:
   - F1
