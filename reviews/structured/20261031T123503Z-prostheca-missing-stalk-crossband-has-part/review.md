@@ -11,7 +11,7 @@
 
 ## Summary
 
-Single-record audit of prostheca.yaml (cellstructuremech:prostheca). Identity, parent_structures (GO:0042995 cell projection), components (StpABCD crossband complex, PBP2/RodA, BacA), and causal graph (prostheca_extension_and_compartmentalization) are well-curated. However, prostheca.yaml omits has_part: [cellstructuremech:stalk_crossband] even though sibling record data/structures/appendage/stalk_crossband.yaml (cellstructuremech:stalk_crossband) declares part_of: [cellstructuremech:prostheca] and prostheca.yaml already models stp_crossbands in components[0] and causal_graphs[0].nodes[2].
+Single-record audit of prostheca.yaml (cellstructuremech:prostheca). Identity, parent_structures (GO:0042995 cell projection), components (stalk_peptidoglycan, stalk_envelope_lipids), and causal graph (caulobacter_stalk_wall_synthesis_extension) are well-curated. However, prostheca.yaml lists has_part: [GO:0005886, GO:0009274, GO:0009279] and omits cellstructuremech:stalk_crossband even though sibling record data/structures/appendage/stalk_crossband.yaml (cellstructuremech:stalk_crossband) declares part_of: [cellstructuremech:prostheca] and prostheca.yaml already models stp_crossbands in causal_graphs[0].nodes[5].
 
 ## Scope And Provenance
 
@@ -39,27 +39,27 @@ Working-tree hashes do not imply those bytes were committed.
 
 identity: supported. Targets: cellstructuremech:prostheca.
 
-cellstructuremech:prostheca is properly minted with parent_structures GO:0042995 (cell projection) and part_of GO:0071944 (cell periphery).
+cellstructuremech:prostheca is properly minted with parent_structures GO:0042995 (cell projection) and envelope layer substructures in has_part.
 
 ### Reciprocal has_part linkage to curated substructure cellstructuremech:stalk_crossband
 
 consistency: concern. Targets: cellstructuremech:prostheca.
 
-prostheca.yaml omits has_part: [cellstructuremech:stalk_crossband] despite stalk_crossband.yaml declaring part_of: [cellstructuremech:prostheca].
+prostheca.yaml lists has_part: [GO:0005886, GO:0009274, GO:0009279] and omits cellstructuremech:stalk_crossband despite stalk_crossband.yaml declaring part_of: [cellstructuremech:prostheca].
 
 ## Findings
 
-### F1: prostheca.yaml omits has_part: [cellstructuremech:stalk_crossband]
+### F1: prostheca.yaml omits cellstructuremech:stalk_crossband from has_part
 
 minor / open / confirmed; issue key: prostheca-missing-stalk-crossband-has-part.
 
-In data/structures/appendage/prostheca.yaml (cellstructuremech:prostheca, lines 16-19), has_part is omitted even though sibling record data/structures/appendage/stalk_crossband.yaml (cellstructuremech:stalk_crossband) declares part_of: [cellstructuremech:prostheca] and prostheca.yaml already models StpABCD crossband disks in components[0] (stp_crossband_complex) and causal_graphs[0].nodes[2] (stp_crossbands, grounded to cellstructuremech:stalk_crossband).
+In data/structures/appendage/prostheca.yaml (cellstructuremech:prostheca, lines 61-64), has_part lists [GO:0005886, GO:0009274, GO:0009279] and omits cellstructuremech:stalk_crossband even though sibling record data/structures/appendage/stalk_crossband.yaml (cellstructuremech:stalk_crossband) declares part_of: [cellstructuremech:prostheca] and prostheca.yaml already models StpABCD stalk crossbands in causal_graphs[0].nodes[5] (stp_crossbands, lines 211-218).
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Add has_part: [cellstructuremech:stalk_crossband] to data/structures/appendage/prostheca.yaml with a curation event and history entry.
+Append cellstructuremech:stalk_crossband to has_part in data/structures/appendage/prostheca.yaml with a curation event and history entry.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -73,7 +73,7 @@ Add has_part: [cellstructuremech:stalk_crossband] to data/structures/appendage/p
 | --- | --- | --- | --- |
 | ev_strict_prostheca | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,015 records. |
 | ev_history_prostheca | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,192 history records. |
-| ev_prostheca_hierarchy_and_crossband | data/structures/appendage/prostheca.yaml; parent_structures, part_of, components[0] (lines 16-67) | supports | prostheca.yaml declares parent_structures: [GO:0042995] and part_of: [GO:0071944] and curates stp_crossbands in components[0], but omits has_part: [cellstructuremech:stalk_crossband]. |
+| ev_prostheca_hierarchy_and_crossband | data/structures/appendage/prostheca.yaml; parent_structures, has_part, causal_graphs[0].nodes[5] (lines 59-64, 211-218) | supports | prostheca.yaml declares parent_structures: [GO:0042995] and has_part: [GO:0005886, GO:0009274, GO:0009279] and models stp_crossbands in causal_graphs[0].nodes[5], but omits cellstructuremech:stalk_crossband from has_part. |
 
 ## Limits And Additional Notes
 
@@ -106,12 +106,13 @@ verdict: needs_curation
 native_verdict: NEEDS_CURATION
 scientific_review: true
 summary: 'Single-record audit of prostheca.yaml (cellstructuremech:prostheca). Identity,
-  parent_structures (GO:0042995 cell projection), components (StpABCD crossband complex,
-  PBP2/RodA, BacA), and causal graph (prostheca_extension_and_compartmentalization)
-  are well-curated. However, prostheca.yaml omits has_part: [cellstructuremech:stalk_crossband]
-  even though sibling record data/structures/appendage/stalk_crossband.yaml (cellstructuremech:stalk_crossband)
+  parent_structures (GO:0042995 cell projection), components (stalk_peptidoglycan,
+  stalk_envelope_lipids), and causal graph (caulobacter_stalk_wall_synthesis_extension)
+  are well-curated. However, prostheca.yaml lists has_part: [GO:0005886, GO:0009274,
+  GO:0009279] and omits cellstructuremech:stalk_crossband even though sibling record
+  data/structures/appendage/stalk_crossband.yaml (cellstructuremech:stalk_crossband)
   declares part_of: [cellstructuremech:prostheca] and prostheca.yaml already models
-  stp_crossbands in components[0] and causal_graphs[0].nodes[2].'
+  stp_crossbands in causal_graphs[0].nodes[5].'
 source:
   git_revision: 9634411be0aeec8d8f4b9cb9158e3165db87c150
   state: git_commit
@@ -213,15 +214,23 @@ evidence:
 - evidence_id: ev_prostheca_hierarchy_and_crossband
   kind: record_content
   reference: data/structures/appendage/prostheca.yaml
-  locator: parent_structures, part_of, components[0] (lines 16-67)
+  locator: parent_structures, has_part, causal_graphs[0].nodes[5] (lines 59-64, 211-218)
   accessed_at: '2026-10-31T12:31:00Z'
   support: supports
-  summary: 'prostheca.yaml declares parent_structures: [GO:0042995] and part_of: [GO:0071944]
-    and curates stp_crossbands in components[0], but omits has_part: [cellstructuremech:stalk_crossband].'
-  quote: "parent_structures:\n- GO:0042995\npart_of:\n- GO:0071944\nevidence:\n- reference:\
-    \ PMID:20436456\n  snippet: Prosthecae are extensions of the cell envelope, containing\
-    \ thin cylindrical\n    segments of cytoplasm surrounded by inner membrane, peptidoglycan\
-    \ cell wall, and\n    outer membrane."
+  summary: 'prostheca.yaml declares parent_structures: [GO:0042995] and has_part:
+    [GO:0005886, GO:0009274, GO:0009279] and models stp_crossbands in causal_graphs[0].nodes[5],
+    but omits cellstructuremech:stalk_crossband from has_part.'
+  quote: 'parent_structures:
+
+    - GO:0042995
+
+    has_part:
+
+    - GO:0005886
+
+    - GO:0009274
+
+    - GO:0009279'
   snapshot_sha256: 5095221d67c8c2ea04cbd1d5f8cbff38a8b97f792852868a19e4628559c065a3
 assessments:
 - assessment_id: assess_prostheca_identity
@@ -229,7 +238,7 @@ assessments:
   topic: Minted identity cellstructuremech:prostheca and parent_structures GO:0042995
   outcome: supported
   summary: cellstructuremech:prostheca is properly minted with parent_structures GO:0042995
-    (cell projection) and part_of GO:0071944 (cell periphery).
+    (cell projection) and envelope layer substructures in has_part.
   target_ids:
   - cellstructuremech:prostheca
   evidence_ids:
@@ -239,8 +248,9 @@ assessments:
   area: consistency
   topic: Reciprocal has_part linkage to curated substructure cellstructuremech:stalk_crossband
   outcome: concern
-  summary: 'prostheca.yaml omits has_part: [cellstructuremech:stalk_crossband] despite
-    stalk_crossband.yaml declaring part_of: [cellstructuremech:prostheca].'
+  summary: 'prostheca.yaml lists has_part: [GO:0005886, GO:0009274, GO:0009279] and
+    omits cellstructuremech:stalk_crossband despite stalk_crossband.yaml declaring
+    part_of: [cellstructuremech:prostheca].'
   target_ids:
   - cellstructuremech:prostheca
   evidence_ids:
@@ -252,12 +262,12 @@ findings:
   severity: minor
   status: open
   certainty: confirmed
-  title: 'prostheca.yaml omits has_part: [cellstructuremech:stalk_crossband]'
+  title: prostheca.yaml omits cellstructuremech:stalk_crossband from has_part
   description: 'In data/structures/appendage/prostheca.yaml (cellstructuremech:prostheca,
-    lines 16-19), has_part is omitted even though sibling record data/structures/appendage/stalk_crossband.yaml
-    (cellstructuremech:stalk_crossband) declares part_of: [cellstructuremech:prostheca]
-    and prostheca.yaml already models StpABCD crossband disks in components[0] (stp_crossband_complex)
-    and causal_graphs[0].nodes[2] (stp_crossbands, grounded to cellstructuremech:stalk_crossband).'
+    lines 61-64), has_part lists [GO:0005886, GO:0009274, GO:0009279] and omits cellstructuremech:stalk_crossband
+    even though sibling record data/structures/appendage/stalk_crossband.yaml (cellstructuremech:stalk_crossband)
+    declares part_of: [cellstructuremech:prostheca] and prostheca.yaml already models
+    StpABCD stalk crossbands in causal_graphs[0].nodes[5] (stp_crossbands, lines 211-218).'
   target_ids:
   - cellstructuremech:prostheca
   field_paths:
@@ -276,8 +286,8 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Add has_part: [cellstructuremech:stalk_crossband] to data/structures/appendage/prostheca.yaml
-    with a curation event and history entry.'
+  description: Append cellstructuremech:stalk_crossband to has_part in data/structures/appendage/prostheca.yaml
+    with a curation event and history entry.
   finding_ids:
   - F1
   target_ids:

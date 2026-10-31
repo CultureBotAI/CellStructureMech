@@ -11,7 +11,7 @@
 
 ## Summary
 
-Single-record audit of potassium_ion_transporting_atpase_complex.yaml (GO:0031004, potassium ion-transporting ATPase complex). Subunit composition (KdpF, KdpA, KdpB, KdpC with E. coli K-12 UniProtKB entries P36937, P03959, P03960, P03961) and causal graph are well-supported. Two minor curation issues were identified: (1) definition is a custom structural sentence while definition_source is set to GO:0031004 instead of quoting the official GO:0031004 definition verbatim; and (2) top-level evidence omits PMID:41384914, which is cited in taxonomic_distribution[0], functions[0], and causal_graphs[0].edges[1].
+Single-record audit of potassium_ion_transporting_atpase_complex.yaml (GO:0031004, potassium ion-transporting ATPase complex). Subunit composition (KdpF, KdpA, KdpB, KdpC with E. coli K-12 UniProtKB entries P36937, P03959, P03960, P03961) and causal graph are well-supported. Two minor curation issues were identified: (1) definition is a custom structural sentence while definition_source is set to GO:0031004 instead of quoting the official GO:0031004 definition verbatim; and (2) top-level evidence omits PMID:41384914, which is cited in taxonomic_distribution[0].reference, functions[1].evidence[1].reference, and causal_graphs[0].edges[5].evidence[0].reference.
 
 ## Scope And Provenance
 
@@ -53,13 +53,13 @@ definition uses custom prose while setting definition_source: GO:0031004, and to
 
 minor / open / confirmed; issue key: potassium-atpase-complex-definition-source-attribution.
 
-In data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml (GO:0031004, lines 7-12), definition is a custom structural sentence while definition_source is set to GO:0031004. The official GO:0031004 definition via OAK is: 'Protein complex that carries out the reaction: ATP + H2O + K+(out) = ADP + phosphate + K+(in). It is a high affinity potassium uptake system. The E. coli complex consists of 4 proteins: KdpA is the potassium ion translocase, KdpB is the ATPase, and KdpC and KdpF seem to be involved in assembly and stabilization of the complex.'
+In data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml (GO:0031004, lines 5-9), definition is a custom structural sentence while definition_source is set to GO:0031004. The official GO:0031004 definition via OAK is: 'Protein complex that carries out the reaction: ATP + H2O + K+(out) = ADP + phosphate + K+(in). It is a high affinity potassium uptake system. The E. coli complex consists of 4 proteins: KdpA is the potassium ion translocase, KdpB is the ATPase, and KdpC and KdpF seem to be involved in assembly and stabilization of the complex.'
 
 ### F2: potassium_ion_transporting_atpase_complex.yaml omits sub-section-cited PMID:41384914 from top-level evidence
 
 minor / open / confirmed; issue key: potassium-atpase-complex-missing-top-level-pmid-evidence.
 
-In data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml (GO:0031004), taxonomic_distribution[0], functions[1] (potassium_ion_transport), and causal_graphs[0].edges[4] cite PMID:41384914, but top-level evidence (lines 212-231) lists only GO:0031004, ComplexPortal:CPX-3564, PMID:41259220, and PMID:34272288 without including PMID:41384914.
+In data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml (GO:0031004), taxonomic_distribution[0].reference, functions[1].evidence[1].reference (potassium_ion_transport), and causal_graphs[0].edges[5].evidence[0].reference cite PMID:41384914, but top-level evidence (lines 212-231) lists only GO:0031004, ComplexPortal:CPX-3564, PMID:41259220, and PMID:34272288 without including PMID:41384914.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -79,7 +79,7 @@ Set definition in data/structures/energy_complex/potassium_ion_transporting_atpa
 | --- | --- | --- | --- |
 | ev_strict_kdp | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,015 records. |
 | ev_history_kdp | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,192 history records. |
-| ev_kdp_definition_and_evidence | data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml; definition, definition_source, taxonomic_distribution[0], functions[1], evidence (lines 5-9, 152-177, 199-231) | supports | potassium_ion_transporting_atpase_complex.yaml sets definition_source: GO:0031004 on a custom structural sentence and cites PMID:41384914 in taxonomic_distribution[0], functions[1], and causal_graphs[0].edges[4] while omitting PMID:41384914 from top-level evidence. |
+| ev_kdp_definition_and_evidence | data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml; definition, definition_source, taxonomic_distribution[0].reference, functions[1].evidence[1].reference, evidence, causal_graphs[0].edges[5].evidence[0].reference (lines 5-9, 177, 207, 212-231, 336) | supports | potassium_ion_transporting_atpase_complex.yaml sets definition_source: GO:0031004 on a custom structural sentence and cites PMID:41384914 in taxonomic_distribution[0].reference, functions[1].evidence[1].reference, and causal_graphs[0].edges[5].evidence[0].reference while omitting PMID:41384914 from top-level evidence. |
 
 ## Limits And Additional Notes
 
@@ -117,8 +117,8 @@ summary: 'Single-record audit of potassium_ion_transporting_atpase_complex.yaml 
   graph are well-supported. Two minor curation issues were identified: (1) definition
   is a custom structural sentence while definition_source is set to GO:0031004 instead
   of quoting the official GO:0031004 definition verbatim; and (2) top-level evidence
-  omits PMID:41384914, which is cited in taxonomic_distribution[0], functions[0],
-  and causal_graphs[0].edges[1].'
+  omits PMID:41384914, which is cited in taxonomic_distribution[0].reference, functions[1].evidence[1].reference,
+  and causal_graphs[0].edges[5].evidence[0].reference.'
 source:
   git_revision: 9634411be0aeec8d8f4b9cb9158e3165db87c150
   state: git_commit
@@ -223,14 +223,15 @@ evidence:
 - evidence_id: ev_kdp_definition_and_evidence
   kind: record_content
   reference: data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml
-  locator: definition, definition_source, taxonomic_distribution[0], functions[1],
-    evidence (lines 5-9, 152-177, 199-231)
+  locator: definition, definition_source, taxonomic_distribution[0].reference, functions[1].evidence[1].reference,
+    evidence, causal_graphs[0].edges[5].evidence[0].reference (lines 5-9, 177, 207,
+    212-231, 336)
   accessed_at: '2026-10-31T12:31:00Z'
   support: supports
   summary: 'potassium_ion_transporting_atpase_complex.yaml sets definition_source:
-    GO:0031004 on a custom structural sentence and cites PMID:41384914 in taxonomic_distribution[0],
-    functions[1], and causal_graphs[0].edges[4] while omitting PMID:41384914 from
-    top-level evidence.'
+    GO:0031004 on a custom structural sentence and cites PMID:41384914 in taxonomic_distribution[0].reference,
+    functions[1].evidence[1].reference, and causal_graphs[0].edges[5].evidence[0].reference
+    while omitting PMID:41384914 from top-level evidence.'
   quote: "definition: A heterotetrameric P-type ATPase complex (KdpFABC) in the prokaryotic\n\
     \  plasma membrane that couples ATP hydrolysis in the KdpB P-type ATPase subunit\
     \ to\n  high-affinity potassium ion import through the channel-like KdpA selectivity\
@@ -270,7 +271,7 @@ findings:
   title: 'potassium_ion_transporting_atpase_complex.yaml attributes a custom definition
     to definition_source: GO:0031004'
   description: 'In data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml
-    (GO:0031004, lines 7-12), definition is a custom structural sentence while definition_source
+    (GO:0031004, lines 5-9), definition is a custom structural sentence while definition_source
     is set to GO:0031004. The official GO:0031004 definition via OAK is: ''Protein
     complex that carries out the reaction: ATP + H2O + K+(out) = ADP + phosphate +
     K+(in). It is a high affinity potassium uptake system. The E. coli complex consists
@@ -302,10 +303,10 @@ findings:
   title: potassium_ion_transporting_atpase_complex.yaml omits sub-section-cited PMID:41384914
     from top-level evidence
   description: In data/structures/energy_complex/potassium_ion_transporting_atpase_complex.yaml
-    (GO:0031004), taxonomic_distribution[0], functions[1] (potassium_ion_transport),
-    and causal_graphs[0].edges[4] cite PMID:41384914, but top-level evidence (lines
-    212-231) lists only GO:0031004, ComplexPortal:CPX-3564, PMID:41259220, and PMID:34272288
-    without including PMID:41384914.
+    (GO:0031004), taxonomic_distribution[0].reference, functions[1].evidence[1].reference
+    (potassium_ion_transport), and causal_graphs[0].edges[5].evidence[0].reference
+    cite PMID:41384914, but top-level evidence (lines 212-231) lists only GO:0031004,
+    ComplexPortal:CPX-3564, PMID:41259220, and PMID:34272288 without including PMID:41384914.
   target_ids:
   - GO:0031004
   field_paths:

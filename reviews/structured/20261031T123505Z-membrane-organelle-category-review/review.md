@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-cohort audit of all 226 MEMBRANE_ORGANELLE records in data/structures/membrane_organelle/. Cycle 5 Stage 5 remediation on autophagosome.yaml (functions[0] grounding GO:0016236) and Cycle 6 Stage 3 UniProtKB enrichment across 9 membrane_organelle records were verified clean. Two major curation findings were identified in the Trypanosoma cruzi reservosome cohort: (1) reservosome.yaml (cellstructuremech:reservosome) omits has_part: [GO:0106124, GO:0106125, GO:0106126] for its three curated subcompartments (reservosome lumen, reservosome matrix, reservosome membrane, all of which declare part_of: [cellstructuremech:reservosome]) and leaves components[0] (reservosome_membrane) as grounding_status: REVIEWED_LABEL_ONLY instead of grounding: GO:0106126; and (2) reservosome_membrane.yaml (GO:0106126) appends two unsourced prose sentences to the official GO:0106126 definition ('The lipid bilayer surrounding a reservosome.') while setting definition_source: GO:0106126, carries a copy-pasted taxonomic_distribution[0].note describing 'Reservosome lumens...' instead of reservosome membranes, and marks its 2-node 1-edge structural parthood graph as graph_kind: ASSEMBLY / scope_status: MECHANISTIC instead of FUNCTION / NONMECHANISTIC.
+Full-cohort audit of all 226 MEMBRANE_ORGANELLE records in data/structures/membrane_organelle/. Cycle 5 Stage 5 remediation on autophagosome.yaml (functions[0] grounding GO:0016236) and Cycle 6 Stage 3 UniProtKB enrichment across 9 membrane_organelle records were verified clean. Two major curation findings were identified in the Trypanosoma cruzi reservosome cohort: (1) reservosome.yaml (cellstructuremech:reservosome) omits has_part: [GO:0106124, GO:0106125, GO:0106126] for its three curated subcompartments (reservosome lumen, reservosome matrix, reservosome membrane, all of which declare part_of: [cellstructuremech:reservosome]) and leaves components[0] (reservosome_membrane) ungrounded instead of grounding: GO:0106126; and (2) reservosome_membrane.yaml (GO:0106126) appends two elaborated prose sentences to the official GO:0106126 definition ('The lipid bilayer surrounding a reservosome.') while setting definition_source: GO:0106126, carries a copy-pasted taxonomic_distribution[0].note describing 'Reservosome lumens...' instead of reservosome membranes, and marks its 2-node 1-edge structural parthood graph as graph_kind: ASSEMBLY / scope_status: MECHANISTIC instead of FUNCTION / NONMECHANISTIC.
 
 ## Scope And Provenance
 
@@ -278,26 +278,26 @@ reservosome.yaml omits has_part for GO:0106124/GO:0106125/GO:0106126 and leaves 
 
 major / open / confirmed; issue key: reservosome-missing-subcompartment-has-part-and-membrane-grounding.
 
-In data/structures/membrane_organelle/reservosome.yaml (cellstructuremech:reservosome), has_part is omitted even though all three curated reservosome subcompartments in the same category — reservosome_lumen.yaml (GO:0106124), reservosome_matrix.yaml (GO:0106125), and reservosome_membrane.yaml (GO:0106126) — declare part_of: [cellstructuremech:reservosome]. In addition, reservosome.yaml components[0] (component_id: reservosome_membrane, label: 'reservosome membrane') sets grounding_status: REVIEWED_LABEL_ONLY instead of grounding: GO:0106126 (and causal_graphs[0].nodes[0] reservosome_membrane also omits grounding: GO:0106126).
+In data/structures/membrane_organelle/reservosome.yaml (cellstructuremech:reservosome), has_part is omitted even though all three curated reservosome subcompartments in the same category — reservosome_lumen.yaml (GO:0106124), reservosome_matrix.yaml (GO:0106125), and reservosome_membrane.yaml (GO:0106126) — declare part_of: [cellstructuremech:reservosome]. In addition, reservosome.yaml components[0] (component_id: reservosome_membrane, label: 'reservosome membrane', lines 49-59) omits grounding: GO:0106126.
 
-### F2: reservosome_membrane.yaml (GO:0106126) appends unsourced prose to official GO definition, has copy-pasted lumen note, and overstates parthood graph as MECHANISTIC ASSEMBLY
+### F2: reservosome_membrane.yaml (GO:0106126) appends elaborated prose to official GO definition, has copy-pasted lumen note, and overstates parthood graph as MECHANISTIC ASSEMBLY
 
 major / open / confirmed; issue key: reservosome-membrane-definition-note-and-graph-scope.
 
-In data/structures/membrane_organelle/reservosome_membrane.yaml (GO:0106126): (1) definition appends two sentences ('In Trypanosoma cruzi epimastigotes, this limiting membrane has a high protein-to-lipid ratio...') to the official GO:0106126 definition ('The lipid bilayer surrounding a reservosome.') while setting definition_source: GO:0106126 and citing no literature reference for those claims; (2) taxonomic_distribution[0].note (lines 52-55) is copy-pasted from reservosome_lumen.yaml ('Reservosome lumens are characteristic of Trypanosoma cruzi epimastigote forms...'); and (3) causal_graphs[0] (reservosome_membrane_mechanism, lines 74-90) is a 2-node, 1-edge structural parthood graph (reservosome_membrane -&gt; part_of -&gt; reservosome) marked as graph_kind: ASSEMBLY and scope_status: MECHANISTIC instead of graph_kind: FUNCTION and scope_status: NONMECHANISTIC (with scope_note) like sibling records reservosome_lumen.yaml and reservosome_matrix.yaml.
+In data/structures/membrane_organelle/reservosome_membrane.yaml (GO:0106126): (1) definition (lines 5-10) appends two elaborated sentences ('The limiting lipid bilayer membrane surrounding the reservosome in Trypanosoma cruzi epimastigotes. It is enriched in ergosterol, P-type H+-ATPases, ABC transporters, and membrane-tethered Rab11 GTPases that mediate endocytic vesicle fusion, luminal acidification, and regulated lipid and protein mobilization during metacyclogenesis.') to the official GO:0106126 definition ('The lipid bilayer surrounding a reservosome.') while setting definition_source: GO:0106126; (2) taxonomic_distribution[0].note (lines 17-22) is copy-pasted from reservosome_lumen.yaml ('Reservosome lumens occur in reservosomes of T. cruzi epimastigotes and are absent from amastigote and trypomastigote life-cycle forms that lack reservosomes.'); and (3) causal_graphs[0] (reservosome_membrane_mechanism, lines 55-83) is a 2-node, 1-edge structural parthood graph (reservosome_membrane -&gt; is part of -&gt; reservosome) marked as graph_kind: ASSEMBLY and scope_status: MECHANISTIC instead of graph_kind: FUNCTION and scope_status: NONMECHANISTIC (with scope_notes) like sibling records reservosome_lumen.yaml and reservosome_matrix.yaml.
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-In data/structures/membrane_organelle/reservosome.yaml, add has_part: [GO:0106124, GO:0106125, GO:0106126] and ground components[0] and causal_graphs[0].nodes[0] (reservosome_membrane) to GO:0106126.
+In data/structures/membrane_organelle/reservosome.yaml, add has_part: [GO:0106124, GO:0106125, GO:0106126] and ground components[0] (reservosome_membrane) to GO:0106126.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
 
 ### A2
 
-In data/structures/membrane_organelle/reservosome_membrane.yaml, set definition to the exact official GO:0106126 definition ('The lipid bilayer surrounding a reservosome.'), fix taxonomic_distribution[0].note to describe the reservosome membrane, and set causal_graphs[0] to graph_kind: FUNCTION and scope_status: NONMECHANISTIC with a scope_note.
+In data/structures/membrane_organelle/reservosome_membrane.yaml, set definition to the exact official GO:0106126 definition ('The lipid bilayer surrounding a reservosome.'), fix taxonomic_distribution[0].note to describe the reservosome membrane, and set causal_graphs[0] to graph_kind: FUNCTION and scope_status: NONMECHANISTIC with scope_notes.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -312,8 +312,8 @@ In data/structures/membrane_organelle/reservosome_membrane.yaml, set definition 
 | --- | --- | --- | --- |
 | ev_strict_membrane_organelle | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,015 records. |
 | ev_history_membrane_organelle | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,192 history records. |
-| ev_reservosome_record | data/structures/membrane_organelle/reservosome.yaml; parent_structures, part_of, components[0] (lines 18-56) | supports | reservosome.yaml omits has_part for GO:0106124, GO:0106125, and GO:0106126 and leaves components[0] (reservosome_membrane) as grounding_status: REVIEWED_LABEL_ONLY. |
-| ev_reservosome_membrane_record | data/structures/membrane_organelle/reservosome_membrane.yaml; definition, definition_source, taxonomic_distribution[0].note, causal_graphs[0] (lines 4-10, 48-90) | supports | reservosome_membrane.yaml appends two unsourced sentences to the official GO:0106126 definition while setting definition_source: GO:0106126, has a copy-pasted 'Reservosome lumens...' note in taxonomic_distribution[0], and marks its 2-node 1-edge structural parthood graph as ASSEMBLY / MECHANISTIC. |
+| ev_reservosome_record | data/structures/membrane_organelle/reservosome.yaml; components[0], parent_structures (lines 49-59, 230-231) | supports | reservosome.yaml omits has_part for GO:0106124, GO:0106125, and GO:0106126 and leaves components[0] (reservosome_membrane) ungrounded instead of grounding: GO:0106126. |
+| ev_reservosome_membrane_record | data/structures/membrane_organelle/reservosome_membrane.yaml; definition, definition_source, taxonomic_distribution[0], causal_graphs[0] (lines 5-10, 16-22, 55-83) | supports | reservosome_membrane.yaml appends two elaborated sentences to the official GO:0106126 definition while setting definition_source: GO:0106126, has a copy-pasted 'Reservosome lumens...' note in taxonomic_distribution[0].note, and marks its 2-node 1-edge structural parthood graph as ASSEMBLY / MECHANISTIC. |
 
 ## Limits And Additional Notes
 
@@ -351,14 +351,13 @@ summary: 'Full-cohort audit of all 226 MEMBRANE_ORGANELLE records in data/struct
   reservosome cohort: (1) reservosome.yaml (cellstructuremech:reservosome) omits has_part:
   [GO:0106124, GO:0106125, GO:0106126] for its three curated subcompartments (reservosome
   lumen, reservosome matrix, reservosome membrane, all of which declare part_of: [cellstructuremech:reservosome])
-  and leaves components[0] (reservosome_membrane) as grounding_status: REVIEWED_LABEL_ONLY
-  instead of grounding: GO:0106126; and (2) reservosome_membrane.yaml (GO:0106126)
-  appends two unsourced prose sentences to the official GO:0106126 definition (''The
-  lipid bilayer surrounding a reservosome.'') while setting definition_source: GO:0106126,
-  carries a copy-pasted taxonomic_distribution[0].note describing ''Reservosome lumens...''
-  instead of reservosome membranes, and marks its 2-node 1-edge structural parthood
-  graph as graph_kind: ASSEMBLY / scope_status: MECHANISTIC instead of FUNCTION /
-  NONMECHANISTIC.'
+  and leaves components[0] (reservosome_membrane) ungrounded instead of grounding:
+  GO:0106126; and (2) reservosome_membrane.yaml (GO:0106126) appends two elaborated
+  prose sentences to the official GO:0106126 definition (''The lipid bilayer surrounding
+  a reservosome.'') while setting definition_source: GO:0106126, carries a copy-pasted
+  taxonomic_distribution[0].note describing ''Reservosome lumens...'' instead of reservosome
+  membranes, and marks its 2-node 1-edge structural parthood graph as graph_kind:
+  ASSEMBLY / scope_status: MECHANISTIC instead of FUNCTION / NONMECHANISTIC.'
 source:
   git_revision: 9634411be0aeec8d8f4b9cb9158e3165db87c150
   state: git_commit
@@ -4737,33 +4736,36 @@ evidence:
 - evidence_id: ev_reservosome_record
   kind: record_content
   reference: data/structures/membrane_organelle/reservosome.yaml
-  locator: parent_structures, part_of, components[0] (lines 18-56)
+  locator: components[0], parent_structures (lines 49-59, 230-231)
   accessed_at: '2026-10-31T12:32:30Z'
   support: supports
   summary: 'reservosome.yaml omits has_part for GO:0106124, GO:0106125, and GO:0106126
-    and leaves components[0] (reservosome_membrane) as grounding_status: REVIEWED_LABEL_ONLY.'
+    and leaves components[0] (reservosome_membrane) ungrounded instead of grounding:
+    GO:0106126.'
   quote: "components:\n- component_id: reservosome_membrane\n  label: reservosome\
-    \ membrane\n  component_type: MEMBRANE\n  component_role: ENVELOPE\n  grounding_status:\
-    \ REVIEWED_LABEL_ONLY\n  essentiality: ESSENTIAL"
+    \ membrane\n  component_type: LIPID\n  component_role: CONSTITUENT\n  role: Membrane\
+    \ boundary of the posterior acidic compartment that separates reservosome\n  \
+    \  contents from the T. cruzi cytosol.\n  evidence:\n  - reference: DOI:10.1017/S0031182004005797\n\
+    \    notes: Figueiredo et al. 2004 described reservosomes as large membrane-bound\
+    \ organelles\n      in T. cruzi epimastigotes."
   snapshot_sha256: 0e733e8adbe97aaadfaaa43aafd271069aaa3fb14cad36f8c3281b31852e7aeb
 - evidence_id: ev_reservosome_membrane_record
   kind: record_content
   reference: data/structures/membrane_organelle/reservosome_membrane.yaml
-  locator: definition, definition_source, taxonomic_distribution[0].note, causal_graphs[0]
-    (lines 4-10, 48-90)
+  locator: definition, definition_source, taxonomic_distribution[0], causal_graphs[0]
+    (lines 5-10, 16-22, 55-83)
   accessed_at: '2026-10-31T12:32:30Z'
   support: supports
-  summary: 'reservosome_membrane.yaml appends two unsourced sentences to the official
+  summary: 'reservosome_membrane.yaml appends two elaborated sentences to the official
     GO:0106126 definition while setting definition_source: GO:0106126, has a copy-pasted
-    ''Reservosome lumens...'' note in taxonomic_distribution[0], and marks its 2-node
-    1-edge structural parthood graph as ASSEMBLY / MECHANISTIC.'
-  quote: "definition: The lipid bilayer surrounding a reservosome. In Trypanosoma\
-    \ cruzi epimastigotes,\n  this limiting membrane has a high protein-to-lipid ratio,\
-    \ contains P-type H+-ATPase\n  and rab11 GTPase, and forms planar membrane domains\
-    \ and internal vesicular invaginations.\ndefinition_source: GO:0106126\n...\n\
-    taxonomic_distribution:\n- taxon_id: NCBITaxon:5693\n  taxon_label: Trypanosoma\
-    \ cruzi\n  distribution_status: PRESENT\n  note: Reservosome lumens are characteristic\
-    \ of Trypanosoma cruzi epimastigote forms"
+    ''Reservosome lumens...'' note in taxonomic_distribution[0].note, and marks its
+    2-node 1-edge structural parthood graph as ASSEMBLY / MECHANISTIC.'
+  quote: "definition: The lipid bilayer surrounding a reservosome. The limiting lipid\
+    \ bilayer\n  membrane surrounding the reservosome in Trypanosoma cruzi epimastigotes.\
+    \ It is enriched\n  in ergosterol, P-type H+-ATPases, ABC transporters, and membrane-tethered\
+    \ Rab11\n  GTPases that mediate endocytic vesicle fusion, luminal acidification,\
+    \ and regulated\n  lipid and protein mobilization during metacyclogenesis.\ndefinition_source:\
+    \ GO:0106126"
   snapshot_sha256: 73604615ebff7b587a19bac850af2728c5ff9cee59e065977e9498f59092a831
 assessments:
 - assessment_id: assess_membrane_organelle_cohort_boundaries
@@ -5031,16 +5033,12 @@ findings:
     in the same category — reservosome_lumen.yaml (GO:0106124), reservosome_matrix.yaml
     (GO:0106125), and reservosome_membrane.yaml (GO:0106126) — declare part_of: [cellstructuremech:reservosome].
     In addition, reservosome.yaml components[0] (component_id: reservosome_membrane,
-    label: ''reservosome membrane'') sets grounding_status: REVIEWED_LABEL_ONLY instead
-    of grounding: GO:0106126 (and causal_graphs[0].nodes[0] reservosome_membrane also
-    omits grounding: GO:0106126).'
+    label: ''reservosome membrane'', lines 49-59) omits grounding: GO:0106126.'
   target_ids:
   - cellstructuremech:reservosome
   field_paths:
   - has_part
   - components[0].grounding
-  - components[0].grounding_status
-  - causal_graphs[0].nodes[0].grounding
   evidence_ids:
   - ev_reservosome_record
   rule_id: docs/SCHEMA.md:CellStructureRecord.has_part
@@ -5059,21 +5057,24 @@ findings:
   severity: major
   status: open
   certainty: confirmed
-  title: reservosome_membrane.yaml (GO:0106126) appends unsourced prose to official
+  title: reservosome_membrane.yaml (GO:0106126) appends elaborated prose to official
     GO definition, has copy-pasted lumen note, and overstates parthood graph as MECHANISTIC
     ASSEMBLY
   description: 'In data/structures/membrane_organelle/reservosome_membrane.yaml (GO:0106126):
-    (1) definition appends two sentences (''In Trypanosoma cruzi epimastigotes, this
-    limiting membrane has a high protein-to-lipid ratio...'') to the official GO:0106126
-    definition (''The lipid bilayer surrounding a reservosome.'') while setting definition_source:
-    GO:0106126 and citing no literature reference for those claims; (2) taxonomic_distribution[0].note
-    (lines 52-55) is copy-pasted from reservosome_lumen.yaml (''Reservosome lumens
-    are characteristic of Trypanosoma cruzi epimastigote forms...''); and (3) causal_graphs[0]
-    (reservosome_membrane_mechanism, lines 74-90) is a 2-node, 1-edge structural parthood
-    graph (reservosome_membrane -> part_of -> reservosome) marked as graph_kind: ASSEMBLY
-    and scope_status: MECHANISTIC instead of graph_kind: FUNCTION and scope_status:
-    NONMECHANISTIC (with scope_note) like sibling records reservosome_lumen.yaml and
-    reservosome_matrix.yaml.'
+    (1) definition (lines 5-10) appends two elaborated sentences (''The limiting lipid
+    bilayer membrane surrounding the reservosome in Trypanosoma cruzi epimastigotes.
+    It is enriched in ergosterol, P-type H+-ATPases, ABC transporters, and membrane-tethered
+    Rab11 GTPases that mediate endocytic vesicle fusion, luminal acidification, and
+    regulated lipid and protein mobilization during metacyclogenesis.'') to the official
+    GO:0106126 definition (''The lipid bilayer surrounding a reservosome.'') while
+    setting definition_source: GO:0106126; (2) taxonomic_distribution[0].note (lines
+    17-22) is copy-pasted from reservosome_lumen.yaml (''Reservosome lumens occur
+    in reservosomes of T. cruzi epimastigotes and are absent from amastigote and trypomastigote
+    life-cycle forms that lack reservosomes.''); and (3) causal_graphs[0] (reservosome_membrane_mechanism,
+    lines 55-83) is a 2-node, 1-edge structural parthood graph (reservosome_membrane
+    -> is part of -> reservosome) marked as graph_kind: ASSEMBLY and scope_status:
+    MECHANISTIC instead of graph_kind: FUNCTION and scope_status: NONMECHANISTIC (with
+    scope_notes) like sibling records reservosome_lumen.yaml and reservosome_matrix.yaml.'
   target_ids:
   - GO:0106126
   field_paths:
@@ -5082,7 +5083,7 @@ findings:
   - taxonomic_distribution[0].note
   - causal_graphs[0].graph_kind
   - causal_graphs[0].scope_status
-  - causal_graphs[0].scope_note
+  - causal_graphs[0].scope_notes
   evidence_ids:
   - ev_reservosome_membrane_record
   rule_id: docs/SCHEMA.md:CausalGraph.scope_status
@@ -5098,8 +5099,8 @@ findings:
 actions:
 - action_id: A1
   description: 'In data/structures/membrane_organelle/reservosome.yaml, add has_part:
-    [GO:0106124, GO:0106125, GO:0106126] and ground components[0] and causal_graphs[0].nodes[0]
-    (reservosome_membrane) to GO:0106126.'
+    [GO:0106124, GO:0106125, GO:0106126] and ground components[0] (reservosome_membrane)
+    to GO:0106126.'
   finding_ids:
   - F1
   target_ids:
@@ -5116,7 +5117,7 @@ actions:
     definition to the exact official GO:0106126 definition (''The lipid bilayer surrounding
     a reservosome.''), fix taxonomic_distribution[0].note to describe the reservosome
     membrane, and set causal_graphs[0] to graph_kind: FUNCTION and scope_status: NONMECHANISTIC
-    with a scope_note.'
+    with scope_notes.'
   finding_ids:
   - F2
   target_ids:

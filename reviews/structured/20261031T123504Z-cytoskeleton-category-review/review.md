@@ -231,7 +231,7 @@ basal_body_cartwheel.yaml and infraciliary_lattice.yaml omit has_part for four c
 
 minor / open / confirmed; issue key: cytoskeleton-non-reciprocal-substructure-has-part.
 
-In data/structures/cytoskeleton/basal_body_cartwheel.yaml (cellstructuremech:basal_body_cartwheel), has_part is omitted even though three curated substructures in the same category — basal_body_cartwheel_inner_density.yaml (cellstructuremech:basal_body_cartwheel_inner_density), basal_body_d2_rod.yaml (cellstructuremech:basal_body_d2_rod), and basal_body_filamentous_cartwheel_inner_density.yaml (cellstructuremech:basal_body_filamentous_cartwheel_inner_density) — all declare part_of: [cellstructuremech:basal_body_cartwheel] (and basal_body_cartwheel.yaml already models cartwheel_inner_density in components[1] and causal_graphs[0]). Similarly, in data/structures/cytoskeleton/infraciliary_lattice.yaml (cellstructuremech:infraciliary_lattice), has_part is omitted even though cytostomal_cord.yaml (cellstructuremech:cytostomal_cord) declares part_of: [cellstructuremech:infraciliary_lattice].
+In data/structures/cytoskeleton/basal_body_cartwheel.yaml (cellstructuremech:basal_body_cartwheel), has_part is omitted even though three curated substructures in the same category — basal_body_cartwheel_inner_density.yaml (cellstructuremech:basal_body_cartwheel_inner_density), basal_body_d2_rod.yaml (cellstructuremech:basal_body_d2_rod), and basal_body_filamentous_cartwheel_inner_density.yaml (cellstructuremech:basal_body_filamentous_cartwheel_inner_density) — all declare part_of: [cellstructuremech:basal_body_cartwheel]. Similarly, in data/structures/cytoskeleton/infraciliary_lattice.yaml (cellstructuremech:infraciliary_lattice), has_part is omitted even though cytostomal_cord.yaml (cellstructuremech:cytostomal_cord) declares part_of: [cellstructuremech:infraciliary_lattice].
 
 ## Recommended Actions And Acceptance Checks
 
@@ -252,7 +252,7 @@ Add has_part: [cellstructuremech:basal_body_cartwheel_inner_density, cellstructu
 | --- | --- | --- | --- |
 | ev_strict_cytoskeleton | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,015 records. |
 | ev_history_cytoskeleton | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,192 history records. |
-| ev_cyto_cartwheel_and_icl_parthood | data/structures/cytoskeleton/basal_body_cartwheel.yaml; basal_body_cartwheel.yaml lines 15-21 and infraciliary_lattice.yaml lines 19-24 | supports | basal_body_cartwheel.yaml and infraciliary_lattice.yaml omit has_part for their local child substructures in data/structures/cytoskeleton/. |
+| ev_cyto_cartwheel_and_icl_parthood | data/structures/cytoskeleton/basal_body_cartwheel.yaml; basal_body_cartwheel.yaml lines 32-36 and infraciliary_lattice.yaml lines 42-45 | supports | basal_body_cartwheel.yaml and infraciliary_lattice.yaml omit has_part for their local child substructures in data/structures/cytoskeleton/. |
 
 ## Limits And Additional Notes
 
@@ -3778,21 +3778,21 @@ evidence:
 - evidence_id: ev_cyto_cartwheel_and_icl_parthood
   kind: record_content
   reference: data/structures/cytoskeleton/basal_body_cartwheel.yaml
-  locator: basal_body_cartwheel.yaml lines 15-21 and infraciliary_lattice.yaml lines
-    19-24
+  locator: basal_body_cartwheel.yaml lines 32-36 and infraciliary_lattice.yaml lines
+    42-45
   accessed_at: '2026-10-31T12:32:00Z'
   support: supports
   summary: basal_body_cartwheel.yaml and infraciliary_lattice.yaml omit has_part for
     their local child substructures in data/structures/cytoskeleton/.
   quote: 'parent_structures:
 
-    - GO:0110165
+    - GO:0032991
 
     part_of:
 
     - GO:0036064
 
-    - GO:0120269'
+    - GO:0120280'
   snapshot_sha256: bdd863ed130a8a2b226fe920cc7f6c6327a2cc1ea90602bf051d952f27e56e17
 assessments:
 - assessment_id: assess_cytoskeleton_cohort_boundaries
@@ -4010,11 +4010,9 @@ findings:
     — basal_body_cartwheel_inner_density.yaml (cellstructuremech:basal_body_cartwheel_inner_density),
     basal_body_d2_rod.yaml (cellstructuremech:basal_body_d2_rod), and basal_body_filamentous_cartwheel_inner_density.yaml
     (cellstructuremech:basal_body_filamentous_cartwheel_inner_density) — all declare
-    part_of: [cellstructuremech:basal_body_cartwheel] (and basal_body_cartwheel.yaml
-    already models cartwheel_inner_density in components[1] and causal_graphs[0]).
-    Similarly, in data/structures/cytoskeleton/infraciliary_lattice.yaml (cellstructuremech:infraciliary_lattice),
-    has_part is omitted even though cytostomal_cord.yaml (cellstructuremech:cytostomal_cord)
-    declares part_of: [cellstructuremech:infraciliary_lattice].'
+    part_of: [cellstructuremech:basal_body_cartwheel]. Similarly, in data/structures/cytoskeleton/infraciliary_lattice.yaml
+    (cellstructuremech:infraciliary_lattice), has_part is omitted even though cytostomal_cord.yaml
+    (cellstructuremech:cytostomal_cord) declares part_of: [cellstructuremech:infraciliary_lattice].'
   target_ids:
   - cellstructuremech:basal_body_cartwheel
   - cellstructuremech:infraciliary_lattice

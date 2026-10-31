@@ -377,7 +377,7 @@ Across all five newly added Cycle 6 Stage 1 records in data/structures/other/ â€
 
 minor / open / confirmed; issue key: other-cycle6-stage1-missing-top-level-pmid-evidence.
 
-In data/structures/other/atg12_atg5_atg16_complex.yaml (GO:0034274), PMID:41457424 is cited across components[0], components[2], taxonomic_distribution[0], functions[0], and causal_graphs[0].edges[1..2], but top-level evidence (lines 185-205) lists only GO:0034274, ComplexPortal:CPX-1849, PMID:38057553, and PMID:40957983 without including PMID:41457424. In data/structures/other/cobalamin_transport_complex.yaml (GO:1990191), PMID:27457716 (taxonomic_distribution[0]) and PMID:29084999 (causal_graphs[0].edges[1]) are cited in sub-sections while top-level evidence (lines 195-213) lists only GO:1990191, ComplexPortal:CPX-2105, PMID:11790740, and PMID:28128319.
+In data/structures/other/atg12_atg5_atg16_complex.yaml (GO:0034274), PMID:41457424 is cited across components[0], components[2], taxonomic_distribution[0], functions[0], and causal_graphs[0].edges[0..1], but top-level evidence (lines 185-205) lists only GO:0034274, ComplexPortal:CPX-1849, PMID:38057553, and PMID:40957983 without including PMID:41457424. In data/structures/other/cobalamin_transport_complex.yaml (GO:1990191), PMID:27457716 (taxonomic_distribution[0]) and PMID:29084999 (causal_graphs[0].edges[1]) are cited in sub-sections while top-level evidence (lines 195-213) lists only GO:1990191, ComplexPortal:CPX-2105, PMID:11790740, and PMID:28128319.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -7011,7 +7011,7 @@ findings:
     PMIDs from top-level evidence
   description: In data/structures/other/atg12_atg5_atg16_complex.yaml (GO:0034274),
     PMID:41457424 is cited across components[0], components[2], taxonomic_distribution[0],
-    functions[0], and causal_graphs[0].edges[1..2], but top-level evidence (lines
+    functions[0], and causal_graphs[0].edges[0..1], but top-level evidence (lines
     185-205) lists only GO:0034274, ComplexPortal:CPX-1849, PMID:38057553, and PMID:40957983
     without including PMID:41457424. In data/structures/other/cobalamin_transport_complex.yaml
     (GO:1990191), PMID:27457716 (taxonomic_distribution[0]) and PMID:29084999 (causal_graphs[0].edges[1])

@@ -22,12 +22,13 @@ scientific_review: true
 summary: 'Single-record audit of sid2_mob1_complex.yaml (GO:0034973, Sid2-Mob1 complex).
   GO cellular_component identity, hierarchy (parent_structures: GO:0032991 protein-containing
   complex; part_of: GO:0005816 spindle pole body), S. pombe and S. cerevisiae canonical
-  examples, and reviewed UniProtKB protein_examples (O14047 sid2, O74558 mob1, P22204
+  examples, and reviewed UniProtKB protein_examples (Q09898 sid2, O94360 mob1, P22204
   DBF2, P32328 DBF20, P40484 MOB1) are well-grounded. Two minor curation issues were
   identified: (1) definition is a custom elaborated prose sentence while definition_source
   is set to GO:0034973 instead of quoting the official GO:0034973 definition verbatim
   and placing the elaboration in description; and (2) top-level evidence (lines 210-230)
-  omits PMID:29813053 (cited on components[0]) and PMID:35011608 (cited on components[1]).'
+  omits PMID:29813053 (cited on components[0].evidence[2]) and PMID:35011608 (cited
+  on components[1].protein_examples[1].evidence[1]).'
 source:
   git_revision: 9634411be0aeec8d8f4b9cb9158e3165db87c150
   state: git_commit
@@ -130,13 +131,14 @@ evidence:
 - evidence_id: ev_sid2_definition_and_evidence
   kind: record_content
   reference: data/structures/division_machinery/sid2_mob1_complex.yaml
-  locator: definition, definition_source, evidence, components[0..1].evidence (lines
-    5-11, 86-152, 210-230)
+  locator: definition, definition_source, components[0].evidence[2], components[1].protein_examples[1].evidence[1],
+    evidence (lines 5-11, 86-152, 210-230)
   accessed_at: '2026-10-31T12:31:00Z'
   support: supports
   summary: 'sid2_mob1_complex.yaml sets definition_source: GO:0034973 on a custom
-    elaborated definition and cites PMID:29813053 and PMID:35011608 in components[0..1]
-    while omitting both PMIDs from top-level evidence.'
+    elaborated definition and cites PMID:29813053 in components[0].evidence[2] and
+    PMID:35011608 in components[1].protein_examples[1].evidence[1] while omitting
+    both PMIDs from top-level evidence.'
   quote: "definition: A conserved fungal NDR-family protein kinase complex localized\
     \ to the\n  spindle pole body and medial cell division site, composed of the catalytic\
     \ serine/threonine\n  protein kinase Sid2 (fission yeast) or Dbf2/Dbf20 (budding\
@@ -215,10 +217,10 @@ findings:
   title: sid2_mob1_complex.yaml omits component-cited PMID:29813053 and PMID:35011608
     from top-level evidence
   description: In data/structures/division_machinery/sid2_mob1_complex.yaml (GO:0034973),
-    components[0] (sid2_dbf2_kinase_subunit) cites PMID:29813053 and components[1]
-    (mob1_activator_subunit) cites PMID:35011608, but top-level evidence (lines 210-230)
-    lists only GO:0034973, ComplexPortal:CPX-26510, ComplexPortal:CPX-1683, PMID:40385371,
-    and PMID:33481703 without including PMID:29813053 or PMID:35011608.
+    components[0].evidence[2] (sid2_dbf2_kinase_subunit) cites PMID:29813053 and components[1].protein_examples[1].evidence[1]
+    (mob1_activator_subunit, UniProtKB:P40484) cites PMID:35011608, but top-level
+    evidence (lines 210-230) lists only GO:0034973, ComplexPortal:CPX-26510, ComplexPortal:CPX-1683,
+    PMID:40385371, and PMID:33481703 without including PMID:29813053 or PMID:35011608.
   target_ids:
   - GO:0034973
   field_paths:
