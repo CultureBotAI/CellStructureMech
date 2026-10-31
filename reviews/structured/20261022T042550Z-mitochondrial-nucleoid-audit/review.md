@@ -1,0 +1,876 @@
+# Mitochondrial nucleoid scientific review
+
+- Review: 20261022T042550Z-mitochondrial-nucleoid-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T03:58:39Z
+- Finished UTC: 2026-10-22T04:25:50Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+No concrete defect found in the exact organellar identity, source-supported material/example scope or NONMECHANISTIC graph. Retain the stated source-access, family-grounding and experimental-formation limits.
+
+## Scope And Provenance
+
+Exactly one full maintained mitochondrial nucleoid record and its frozen guidance/schema; the four-record nucleoid boundary set (target plus three neighbors); source-specific native identities, all maintained claim/evidence placements, and explicitly bounded literature sections. No image pixels or uninspected supplements are claimed.
+
+Selection: Batch43 exact path-ordered target4; initial native inspection/schema/strict passed at the unchanged f97b base before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0042645 | data/structures/nucleoid/mitochondrial_nucleoid.yaml | maintained | mitochondrial nucleoid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0042645 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0042645 | Focused validator passed. |
+| Native verify | passed | True | GO:0042645 | Read-only check passed; diagnostic coverage is assessed separately. |
+| Native causal-graphs | passed | True | GO:0042645 | Read-only check passed; diagnostic coverage is assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0042645 | No computational expression-module assertion is made; experimental gene interventions do not require expression-module evidence. |
+| Claim-level scientific review | passed | True | GO:0042645 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0042645 | 10 of 10 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0042645 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0042645 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0042645 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0042645 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0042645 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact mitochondrial nucleoid identity and matrix parthood
+
+identity: supported. Targets: GO:0042645.
+
+Native GO and SL support the precise definition, generic nucleoid parent, matrix parthood and both maintained exact synonyms. The generic neighbor’s bacterial definition does not invalidate this correctly identified organellar child.
+
+### Species experiment and verified reference-strain example
+
+scope: supported. Targets: GO:0042645.
+
+S. cerevisiae is directly supported by the primary studies. Q02486/ABF2 and its S288C taxon/status are correct; the study-specific MCC109/BY4741 conditions are not relabeled as S288C. COMMON retains the schema meaning of presence in most members with losses as the exception, supported here as a qualitative synthesis without a measured strain-prevalence census. The role’s reference-strain entry is an identity anchor rather than a claim that every cited assay used that strain.
+
+### DNA and Abf2-represented HMG cohort
+
+grounding: supported. Targets: GO:0042645.
+
+Both constituent classes are source-supported. The protein family TODO is not resolved merely by IPR009071, a domain, or the broad IPR051965 family. No complete mitochondrial nucleoid proteome or exact organellar DNA sequence-feature mapping is required for this bounded inventory.
+
+### Three bounded NONMECHANISTIC packaging and stability edges
+
+graph: supported. Targets: GO:0042645.
+
+The binding edge is supported by the original in organello ChIP-chip, and the passive packaging edge fits the native identity and review abstract. The stability edge accurately refers to repetitive mtDNA changes in Sia2009 and does not assert an effect on all mutation classes. The graph is explicitly yeast-scoped and avoids a detailed assembly mechanism.
+
+### UNKNOWN component essentiality retained
+
+evidence: unknown. Targets: GO:0042645.
+
+The record does not assert formation necessity for either mtDNA material or the HMG cohort. Abf2 deletion phenotypes are condition-dependent, and retained mtDNA under respiratory selection prevents converting those phenotypes into an unconditional nucleoid-formation requirement.
+
+### Full target and exact bounded source scopes
+
+provenance: supported. Targets: GO:0042645.
+
+All maintained target fields were read with the four-record nucleoid boundary set (target plus three neighbors), native identities and the exact source sections declared in evidence. Optional inventories and unresolved experimental formation requirements are not converted into findings. No scientific edits, promotion, save or publication occurred.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/nucleoid/mitochondrial_nucleoid.yaml; Entire maintained target, including all evidence, components, taxonomy, examples, functions, graph, discussions and history | context_only | Complete target read; historical curation prose is not independent scientific evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Structure identity, is-a/parthood, component molecular material, essentiality, protein examples and graph contracts | context_only | Constituent identity, individual formation necessity, exact family identity and experimental membership are distinct claims. |
+| neighbor-chloroplast_nucleoid | data/structures/nucleoid/chloroplast_nucleoid.yaml; Entire frozen neighboring nucleoid record | context_only | Read for the generic/organellar boundary and maintained identifier usage, not as independent literature evidence. |
+| neighbor-nucleoid | data/structures/nucleoid/nucleoid.yaml; Entire frozen neighboring nucleoid record | context_only | Read for the generic/organellar boundary and maintained identifier usage, not as independent literature evidence. |
+| neighbor-plastid_nucleoid | data/structures/nucleoid/plastid_nucleoid.yaml; Entire frozen neighboring nucleoid record | context_only | Read for the generic/organellar boundary and maintained identifier usage, not as independent literature evidence. |
+| nucleoid-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009295,GO:0042644,GO:0042645,GO:0042646,GO:0009570,GO:0009532,GO:0005759,GO:0051276; Complete eight-term native names, definitions, active states and typed child relations | supports | GO0009295 denotes a nucleic-acid region in a virus, bacterial cell, mitochondrion or chloroplast. GO0042644/0042645/0042646 exactly identify the three organellar nucleoid classes. The returned stroma/matrix terms show their corresponding nucleoid part_of children; GO0051276 is chromosome organization. Each exact term was read; no omitted edge is treated as biological disproof. |
+| nucleoid-agent-go-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042644,GO:0042645,GO:0042646/ancestors?relations=is_a; Complete is_a-only ancestor arrays for GO0042644, GO0042645 and GO0042646 | supports | The is_a-only response places chloroplast nucleoid under plastid nucleoid and places both plastid and mitochondrial nucleoids under generic nucleoid. The direct typed child relations are independently visible in the term response. This request does not establish parthood. |
+| nucleoid-agent-SL-0269 | https://rest.uniprot.org/locations/SL-0269.json; Complete native name/definition/synonyms/GO and part-of hierarchy | supports | SL0269 identifies Mitochondrion nucleoid, maps GO0042645, supplies mitochondrial nucleoid and mitochromosome synonyms and places the location under mitochondrial matrix SL0170/GO0005759. |
+| nucleoid-agent-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete native taxId/scientificName/rank/lineage and names | supports | ENA 4932 identifies Saccharomyces cerevisiae, rank species. This verifies this named taxon only; it does not measure prevalence or identify a different experimental strain. |
+| nucleoid-agent-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete native taxId/scientificName/rank/lineage and names | supports | ENA 559292 identifies Saccharomyces cerevisiae S288C, rank strain. This verifies this named taxon only; it does not measure prevalence or identify a different experimental strain. |
+| nucleoid-agent-kucej2008-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1242/jcs.028605%22; Unique native Europe PMC MED identity, DOI/PMID/PMC where present, authors, year and complete abstract | supports | Kucej M, Kucejova B, Subramanian R, Chen XJ and Butow RA2008, DOI10.1242/jcs.028605/PMC5728373. The complete abstract reports in organello ChIP-chip, genome-wide Abf2 association and metabolic remodeling. |
+| nucleoid-agent-kucej2007-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1016/j.tcb.2007.08.007%22; Unique native Europe PMC MED identity, DOI/PMID/PMC where present, authors, year and complete abstract | supports | Kucej M and Butow RA2007, DOI10.1016/j.tcb.2007.08.007, PMID17981466, is a review. The complete abstract describes mitochondrial DNA-protein particles, species-specific protein combinations and HMG packaging proteins. No full review body is claimed. |
+| nucleoid-agent-sia2009-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1534/genetics.108.095786%22; Unique native Europe PMC MED identity, DOI/PMID/PMC where present, authors, year and complete abstract | supports | Sia RA, Carrol S, Kalifa L, Hochmuth C and Sia EA2009, DOI10.1534/genetics.108.095786/PMC2621183. The abstract distinguishes increased frameshifts/direct-repeat deletions from no point-mutation-rate effect. |
+| nucleoid-agent-kucej2008-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC5728373/; Genuine full PMC body: complete Introduction S1, all Results S3–S6, Discussion S7 and Methods S9–S13; Figures1–6 captions read. Supplementary tables/data and image pixels not inspected. | supports | The primary ChIP-chip Results show Abf2 association across most mtDNA with GC-rich preference; formaldehyde treatment is in isolated mitochondria, and the array covers about70% of an intronless genome. Nuclease accessibility and Abf2:DNA ratio differ between glucose and glycerol conditions; recruitment of Hsp60/Ilv5 is condition-dependent. The Discussion distinguishes measured remodeling from hypotheses about its functional significance. Methods identify MCC109, BY4741 and other assay-specific strains, not an experiment performed universally in S288C. |
+| nucleoid-agent-sia2009-pmc | https://pmc.ncbi.nlm.nih.gov/articles/PMC2621183/; Genuine full PMC primary main body after abstract through final conclusion, Table1 including assay footnote and Figure1–2 captions; no figure pixels or unlinked supplementary strain details read. | supports | The complete short primary body shows increased mitochondrial microsatellite instability and direct-repeat deletion following ABF2 deletion, with no increased point-mutation rate. Respiratory selection can retain mtDNA in abf2 deletion strains, whereas fermentable conditions favor loss. Table1 and reporter/culture procedures delimit the result; this is genome-stability evidence, not proof that every mitochondrial nucleoid universally requires Abf2 to form. |
+| nucleoid-agent-protein-Q02486 | https://rest.uniprot.org/uniprotkb/Q02486.json; Exact accession/status/name/genes/taxon and subcellular-location comments; native family crossrefs inspected separately | supports | Q02486 is reviewed ARS-binding factor2, mitochondrial, primary gene ABF2 with HIM1/YMR072W/YM9916.11 tokens, organism559292. It verifies the reference-strain example identity; the current location comments alone do not cite the Kucej/Sia nucleoid experiments. |
+| nucleoid-agent-gene-ABF2 | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=500&amp;query=%28gene_exact%3AABF2%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29; Complete current UniProt JSON result array and returned entry genes; query conditions in exact source URL | context_only | The exact reviewed ABF2 query at taxon559292 returns one entry Q02486 with matching primary ABF2 gene. This is the current bounded query, not reconstruction of the historical retrieval. |
+| nucleoid-agent-family-IPR009071 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009071/; Native type/name, complete description and integrated signatures | supports | IPR009071 is a High mobility group box domain, present in diverse nuclear and other proteins as well as Abf2. It is not an exact localized mitochondrial HMG-box protein family. |
+| nucleoid-agent-family-IPR051965 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR051965/; Native type/name/description, LLM flags and Q02486 cross-reference context | context_only | IPR051965 is a broad family linked by Q02486, named Chromatin Regulation and Neuronal Gene Expression; its description is marked unchecked LLM-generated and spans diverse chromatin/neuronal functions. That mapping does not establish exact equivalence to the mitochondrial nucleoid HMG-box cohort. |
+| schema-result | just validate data/structures/nucleoid/mitochondrial_nucleoid.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/nucleoid/mitochondrial_nucleoid.yaml |
+| strict-result | just validate-strict data/structures/nucleoid/mitochondrial_nucleoid.yaml --out /private/tmp/cellstructure-batch43-20261022-u_vlughs/mitochondrial_nucleoid-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/nucleoid/mitochondrial_nucleoid.yaml --out /private/tmp/cellstructure-batch43-20261022-u_vlughs/mitochondrial_nucleoid-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch43-20261022-u_vlughs/mitochondrial_nucleoid-strict.tsv |
+| mitochondrial-nucleoid-verify | /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/nucleoid/mitochondrial_nucleoid.yaml; Complete native read-only log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| mitochondrial-nucleoid-causal-graphs | /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/nucleoid/mitochondrial_nucleoid.yaml; Complete native read-only log | supports | data/structures/nucleoid/mitochondrial_nucleoid.yaml  (GO:0042645)<br>  abf2_mitochondrial_nucleoid_packaging	mitochondrial_hmg_box_proteins	COVERED	-&gt;mitochondrial_hmg_box_proteins (UniProtKB:Q02486)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/nucleoid/mitochondrial_nucleoid.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 10 of 10 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Kucej2008 full scientific main text and Methods plus captions were read; no supplementary datasets, image pixels or new ChIP-chip reanalysis. The paper uses in organello crosslinking of isolated mitochondria and a partially sampled intronless genome; its own in vivo wording is not upgraded into intact-live-cell ChIP.
+- Sia2009 full short scientific body/Table1/captions was read. Repeat stability, point mutations, respiratory selection and fermentable growth are distinct outcomes. Detailed supplementary strain ancestry was not independently reconstructed.
+- Kucej/Butow2007 was read at complete native abstract scope only; the DOI route retained a TLS certificate verification failure. No full review body is asserted.
+- The native protein example verifies S288C identity, not the experimental strain of each primary assay. IPR009071 is a domain and IPR051965 is a broader family with an unchecked LLM description; neither closes the exact localized-family TODO.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User all-record goal authorizes this one-record bundle even when no defect is found. Parent owns integration of the five completed same-base batch26 global gates and later finalization.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T042550Z-mitochondrial-nucleoid-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mitochondrial nucleoid scientific review
+started_at: '2026-10-22T03:58:39Z'
+finished_at: '2026-10-22T04:25:50Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No concrete defect found in the exact organellar identity, source-supported
+  material/example scope or NONMECHANISTIC graph. Retain the stated source-access,
+  family-grounding and experimental-formation limits.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/nucleoid/chloroplast_nucleoid.yaml
+    sha256: ce04fc40cbf0fc1be723607cbbd2095ca56b7fabc1530a94c14bf6d2f675fa25
+    role: context
+  - path: data/structures/nucleoid/mitochondrial_nucleoid.yaml
+    sha256: c5528f88f4b4d2e0a93245d0abd172ae0b12cc2fd06d9009df8d9c1b802d557d
+    role: target
+  - path: data/structures/nucleoid/nucleoid.yaml
+    sha256: e9524aec530d0a42437605be025e4da7f940b4203085f3622efae68ea2819e08
+    role: context
+  - path: data/structures/nucleoid/plastid_nucleoid.yaml
+    sha256: 08f0a8e488283887c528c2c2e4fe98e6094c34062da928ad0bf47484c0521842
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0042645
+  path: data/structures/nucleoid/mitochondrial_nucleoid.yaml
+  label: mitochondrial nucleoid
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/nucleoid/mitochondrial_nucleoid.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one full maintained mitochondrial nucleoid record and its frozen
+    guidance/schema; the four-record nucleoid boundary set (target plus three neighbors);
+    source-specific native identities, all maintained claim/evidence placements, and
+    explicitly bounded literature sections. No image pixels or uninspected supplements
+    are claimed.
+  selection: Batch43 exact path-ordered target4; initial native inspection/schema/strict
+    passed at the unchanged f97b base before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0042645
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  command: just validate data/structures/nucleoid/mitochondrial_nucleoid.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  command: just validate-strict data/structures/nucleoid/mitochondrial_nucleoid.yaml
+    --out /private/tmp/cellstructure-batch43-20261022-u_vlughs/mitochondrial_nucleoid-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  command: /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/nucleoid/mitochondrial_nucleoid.yaml
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - mitochondrial-nucleoid-verify
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  command: /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/nucleoid/mitochondrial_nucleoid.yaml
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - mitochondrial-nucleoid-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0042645
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - neighbor-chloroplast_nucleoid
+  - neighbor-nucleoid
+  - neighbor-plastid_nucleoid
+  - nucleoid-agent-go
+  - nucleoid-agent-go-ancestors
+  - nucleoid-agent-SL-0269
+  - nucleoid-agent-tax4932
+  - nucleoid-agent-tax559292
+  - nucleoid-agent-kucej2008-meta
+  - nucleoid-agent-kucej2007-meta
+  - nucleoid-agent-sia2009-meta
+  - nucleoid-agent-kucej2008-pmc
+  - nucleoid-agent-sia2009-pmc
+  - nucleoid-agent-protein-Q02486
+  - nucleoid-agent-gene-ABF2
+  - nucleoid-agent-family-IPR009071
+  - nucleoid-agent-family-IPR051965
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  summary: 10 of 10 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042645
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch43 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/nucleoid/mitochondrial_nucleoid.yaml
+  locator: Entire maintained target, including all evidence, components, taxonomy,
+    examples, functions, graph, discussions and history
+  accessed_at: '2026-10-22T04:08:00Z'
+  support: context_only
+  summary: Complete target read; historical curation prose is not independent scientific
+    evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Structure identity, is-a/parthood, component molecular material, essentiality,
+    protein examples and graph contracts
+  accessed_at: '2026-10-22T04:08:00Z'
+  support: context_only
+  summary: Constituent identity, individual formation necessity, exact family identity
+    and experimental membership are distinct claims.
+- evidence_id: neighbor-chloroplast_nucleoid
+  kind: record_content
+  reference: data/structures/nucleoid/chloroplast_nucleoid.yaml
+  locator: Entire frozen neighboring nucleoid record
+  accessed_at: '2026-10-22T04:08:00Z'
+  support: context_only
+  summary: Read for the generic/organellar boundary and maintained identifier usage,
+    not as independent literature evidence.
+- evidence_id: neighbor-nucleoid
+  kind: record_content
+  reference: data/structures/nucleoid/nucleoid.yaml
+  locator: Entire frozen neighboring nucleoid record
+  accessed_at: '2026-10-22T04:08:00Z'
+  support: context_only
+  summary: Read for the generic/organellar boundary and maintained identifier usage,
+    not as independent literature evidence.
+- evidence_id: neighbor-plastid_nucleoid
+  kind: record_content
+  reference: data/structures/nucleoid/plastid_nucleoid.yaml
+  locator: Entire frozen neighboring nucleoid record
+  accessed_at: '2026-10-22T04:08:00Z'
+  support: context_only
+  summary: Read for the generic/organellar boundary and maintained identifier usage,
+    not as independent literature evidence.
+- evidence_id: nucleoid-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009295,GO:0042644,GO:0042645,GO:0042646,GO:0009570,GO:0009532,GO:0005759,GO:0051276
+  locator: Complete eight-term native names, definitions, active states and typed
+    child relations
+  accessed_at: '2026-10-22T04:01:32.865895Z'
+  support: supports
+  summary: GO0009295 denotes a nucleic-acid region in a virus, bacterial cell, mitochondrion
+    or chloroplast. GO0042644/0042645/0042646 exactly identify the three organellar
+    nucleoid classes. The returned stroma/matrix terms show their corresponding nucleoid
+    part_of children; GO0051276 is chromosome organization. Each exact term was read;
+    no omitted edge is treated as biological disproof.
+  snapshot_sha256: 157b49ca60fedbfa204de107ed8accec843e846c341d6803ca0c7b3b2b8b2b14
+- evidence_id: nucleoid-agent-go-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042644,GO:0042645,GO:0042646/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor arrays for GO0042644, GO0042645 and GO0042646
+  accessed_at: '2026-10-22T04:01:32.866260Z'
+  support: supports
+  summary: The is_a-only response places chloroplast nucleoid under plastid nucleoid
+    and places both plastid and mitochondrial nucleoids under generic nucleoid. The
+    direct typed child relations are independently visible in the term response. This
+    request does not establish parthood.
+  snapshot_sha256: ca89714e653442f4f3d54532fb4a24f02f4bb7443db4be2ec7d2462c9b738df3
+- evidence_id: nucleoid-agent-SL-0269
+  kind: authority
+  reference: https://rest.uniprot.org/locations/SL-0269.json
+  locator: Complete native name/definition/synonyms/GO and part-of hierarchy
+  accessed_at: '2026-10-22T04:01:32.866491Z'
+  support: supports
+  summary: SL0269 identifies Mitochondrion nucleoid, maps GO0042645, supplies mitochondrial
+    nucleoid and mitochromosome synonyms and places the location under mitochondrial
+    matrix SL0170/GO0005759.
+  snapshot_sha256: a8d00d2f20b2ea058e41b4768154df594b1902d742af3a2a6834dad64a5c2c98
+- evidence_id: nucleoid-agent-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxId/scientificName/rank/lineage and names
+  accessed_at: '2026-10-22T04:01:33.597281Z'
+  support: supports
+  summary: ENA 4932 identifies Saccharomyces cerevisiae, rank species. This verifies
+    this named taxon only; it does not measure prevalence or identify a different
+    experimental strain.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: nucleoid-agent-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxId/scientificName/rank/lineage and names
+  accessed_at: '2026-10-22T04:01:33.599370Z'
+  support: supports
+  summary: ENA 559292 identifies Saccharomyces cerevisiae S288C, rank strain. This
+    verifies this named taxon only; it does not measure prevalence or identify a different
+    experimental strain.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: nucleoid-agent-kucej2008-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1242/jcs.028605%22
+  locator: Unique native Europe PMC MED identity, DOI/PMID/PMC where present, authors,
+    year and complete abstract
+  accessed_at: '2026-10-22T04:01:37.482269Z'
+  support: supports
+  summary: Kucej M, Kucejova B, Subramanian R, Chen XJ and Butow RA2008, DOI10.1242/jcs.028605/PMC5728373.
+    The complete abstract reports in organello ChIP-chip, genome-wide Abf2 association
+    and metabolic remodeling.
+  snapshot_sha256: d6e0d0a2780e28db35efba7851bb964fda5aeec733496546b8414240b93f3458
+- evidence_id: nucleoid-agent-kucej2007-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1016/j.tcb.2007.08.007%22
+  locator: Unique native Europe PMC MED identity, DOI/PMID/PMC where present, authors,
+    year and complete abstract
+  accessed_at: '2026-10-22T04:01:37.899161Z'
+  support: supports
+  summary: Kucej M and Butow RA2007, DOI10.1016/j.tcb.2007.08.007, PMID17981466, is
+    a review. The complete abstract describes mitochondrial DNA-protein particles,
+    species-specific protein combinations and HMG packaging proteins. No full review
+    body is claimed.
+  snapshot_sha256: f31b78d6ce533f5d4a731651cc5e2b79738b66c7c1fd5601a540bda58bda7fd6
+- evidence_id: nucleoid-agent-sia2009-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1534/genetics.108.095786%22
+  locator: Unique native Europe PMC MED identity, DOI/PMID/PMC where present, authors,
+    year and complete abstract
+  accessed_at: '2026-10-22T04:01:38.102397Z'
+  support: supports
+  summary: Sia RA, Carrol S, Kalifa L, Hochmuth C and Sia EA2009, DOI10.1534/genetics.108.095786/PMC2621183.
+    The abstract distinguishes increased frameshifts/direct-repeat deletions from
+    no point-mutation-rate effect.
+  snapshot_sha256: 77dd88f29e0162f08438f22700aa560466bba1bec786927050797114a1ff9684
+- evidence_id: nucleoid-agent-kucej2008-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5728373/
+  locator: 'Genuine full PMC body: complete Introduction S1, all Results S3–S6, Discussion
+    S7 and Methods S9–S13; Figures1–6 captions read. Supplementary tables/data and
+    image pixels not inspected.'
+  accessed_at: '2026-10-22T04:02:19.858521Z'
+  support: supports
+  summary: The primary ChIP-chip Results show Abf2 association across most mtDNA with
+    GC-rich preference; formaldehyde treatment is in isolated mitochondria, and the
+    array covers about70% of an intronless genome. Nuclease accessibility and Abf2:DNA
+    ratio differ between glucose and glycerol conditions; recruitment of Hsp60/Ilv5
+    is condition-dependent. The Discussion distinguishes measured remodeling from
+    hypotheses about its functional significance. Methods identify MCC109, BY4741
+    and other assay-specific strains, not an experiment performed universally in S288C.
+  snapshot_sha256: 0ecd512940bf2d084fec067cc1a8e78f413335bbd4d1f80374d98098a1dac854
+- evidence_id: nucleoid-agent-sia2009-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2621183/
+  locator: Genuine full PMC primary main body after abstract through final conclusion,
+    Table1 including assay footnote and Figure1–2 captions; no figure pixels or unlinked
+    supplementary strain details read.
+  accessed_at: '2026-10-22T04:02:19.858762Z'
+  support: supports
+  summary: The complete short primary body shows increased mitochondrial microsatellite
+    instability and direct-repeat deletion following ABF2 deletion, with no increased
+    point-mutation rate. Respiratory selection can retain mtDNA in abf2 deletion strains,
+    whereas fermentable conditions favor loss. Table1 and reporter/culture procedures
+    delimit the result; this is genome-stability evidence, not proof that every mitochondrial
+    nucleoid universally requires Abf2 to form.
+  snapshot_sha256: 8378a9dfbaa64686604b934139651ee6c8c010cdc4a48787dc969e1a5f288b11
+- evidence_id: nucleoid-agent-protein-Q02486
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q02486.json
+  locator: Exact accession/status/name/genes/taxon and subcellular-location comments;
+    native family crossrefs inspected separately
+  accessed_at: '2026-10-22T04:01:34.195349Z'
+  support: supports
+  summary: Q02486 is reviewed ARS-binding factor2, mitochondrial, primary gene ABF2
+    with HIM1/YMR072W/YM9916.11 tokens, organism559292. It verifies the reference-strain
+    example identity; the current location comments alone do not cite the Kucej/Sia
+    nucleoid experiments.
+  snapshot_sha256: 598307b8c9dbce8b7e341554122e14bcd4b360a371e82452ba9379a2d8a8df32
+- evidence_id: nucleoid-agent-gene-ABF2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AABF2%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete current UniProt JSON result array and returned entry genes; query
+    conditions in exact source URL
+  accessed_at: '2026-10-22T04:01:35.637718Z'
+  support: context_only
+  summary: The exact reviewed ABF2 query at taxon559292 returns one entry Q02486 with
+    matching primary ABF2 gene. This is the current bounded query, not reconstruction
+    of the historical retrieval.
+  snapshot_sha256: 2f1a4b7da1f69f1aa503aab21b8943f00b277576ba864fdae142ec1699d7402b
+  search_scope: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AABF2%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29
+- evidence_id: nucleoid-agent-family-IPR009071
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR009071/
+  locator: Native type/name, complete description and integrated signatures
+  accessed_at: '2026-10-22T04:02:39.220315Z'
+  support: supports
+  summary: IPR009071 is a High mobility group box domain, present in diverse nuclear
+    and other proteins as well as Abf2. It is not an exact localized mitochondrial
+    HMG-box protein family.
+  snapshot_sha256: 624ec9d277aca01da75e1ab484d4c58cac553a9e08e3f045a2297c3554e16eaa
+- evidence_id: nucleoid-agent-family-IPR051965
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR051965/
+  locator: Native type/name/description, LLM flags and Q02486 cross-reference context
+  accessed_at: '2026-10-22T04:02:39.576214Z'
+  support: context_only
+  summary: IPR051965 is a broad family linked by Q02486, named Chromatin Regulation
+    and Neuronal Gene Expression; its description is marked unchecked LLM-generated
+    and spans diverse chromatin/neuronal functions. That mapping does not establish
+    exact equivalence to the mitochondrial nucleoid HMG-box cohort.
+  snapshot_sha256: e382a831709c9be2575382b010ab2aa7e3bf6c1764a7b0953adb68c04f01d119
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/nucleoid/mitochondrial_nucleoid.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:58:40Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/nucleoid/mitochondrial_nucleoid.yaml'
+  snapshot_sha256: ba6677264f3fce4dbd186a4fb00a9102d65372ffa1c3d1c6ef5104de25df490d
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/nucleoid/mitochondrial_nucleoid.yaml
+    --out /private/tmp/cellstructure-batch43-20261022-u_vlughs/mitochondrial_nucleoid-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T03:58:41Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/nucleoid/mitochondrial_nucleoid.yaml\
+    \ --out /private/tmp/cellstructure-batch43-20261022-u_vlughs/mitochondrial_nucleoid-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch43-20261022-u_vlughs/mitochondrial_nucleoid-strict.tsv"
+  snapshot_sha256: 3c390ccb6432d48ecfc41968f1e917ddb348f1eea1f39d3aee1de4592ec48e54
+- evidence_id: mitochondrial-nucleoid-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/nucleoid/mitochondrial_nucleoid.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T04:01:52.497201Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: mitochondrial-nucleoid-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch43-20261022-u_vlughs/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/nucleoid/mitochondrial_nucleoid.yaml
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T04:01:53.008633Z'
+  support: supports
+  summary: "data/structures/nucleoid/mitochondrial_nucleoid.yaml  (GO:0042645)\n \
+    \ abf2_mitochondrial_nucleoid_packaging\tmitochondrial_hmg_box_proteins\tCOVERED\t\
+    ->mitochondrial_hmg_box_proteins (UniProtKB:Q02486)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     1  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     1  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: f99e2411914f5015315ed9c67ad81727e914466b91175451cb0ca9ca924f37f8
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/nucleoid/mitochondrial_nucleoid.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 10 of 10 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact mitochondrial nucleoid identity and matrix parthood
+  outcome: supported
+  target_ids:
+  - GO:0042645
+  summary: Native GO and SL support the precise definition, generic nucleoid parent,
+    matrix parthood and both maintained exact synonyms. The generic neighbor’s bacterial
+    definition does not invalidate this correctly identified organellar child.
+  evidence_ids:
+  - record
+  - nucleoid-agent-go
+  - nucleoid-agent-go-ancestors
+  - nucleoid-agent-SL-0269
+- assessment_id: taxonomy-protein
+  area: scope
+  topic: Species experiment and verified reference-strain example
+  outcome: supported
+  target_ids:
+  - GO:0042645
+  summary: S. cerevisiae is directly supported by the primary studies. Q02486/ABF2
+    and its S288C taxon/status are correct; the study-specific MCC109/BY4741 conditions
+    are not relabeled as S288C. COMMON retains the schema meaning of presence in most
+    members with losses as the exception, supported here as a qualitative synthesis
+    without a measured strain-prevalence census. The role’s reference-strain entry
+    is an identity anchor rather than a claim that every cited assay used that strain.
+  evidence_ids:
+  - record
+  - nucleoid-agent-tax4932
+  - nucleoid-agent-tax559292
+  - nucleoid-agent-protein-Q02486
+  - nucleoid-agent-gene-ABF2
+  - nucleoid-agent-kucej2008-pmc
+  - nucleoid-agent-sia2009-pmc
+- assessment_id: components
+  area: grounding
+  topic: DNA and Abf2-represented HMG cohort
+  outcome: supported
+  target_ids:
+  - GO:0042645
+  summary: Both constituent classes are source-supported. The protein family TODO
+    is not resolved merely by IPR009071, a domain, or the broad IPR051965 family.
+    No complete mitochondrial nucleoid proteome or exact organellar DNA sequence-feature
+    mapping is required for this bounded inventory.
+  evidence_ids:
+  - record
+  - nucleoid-agent-kucej2008-pmc
+  - nucleoid-agent-sia2009-pmc
+  - nucleoid-agent-kucej2007-meta
+  - nucleoid-agent-protein-Q02486
+  - nucleoid-agent-family-IPR009071
+  - nucleoid-agent-family-IPR051965
+- assessment_id: function-graph
+  area: graph
+  topic: Three bounded NONMECHANISTIC packaging and stability edges
+  outcome: supported
+  target_ids:
+  - GO:0042645
+  summary: The binding edge is supported by the original in organello ChIP-chip, and
+    the passive packaging edge fits the native identity and review abstract. The stability
+    edge accurately refers to repetitive mtDNA changes in Sia2009 and does not assert
+    an effect on all mutation classes. The graph is explicitly yeast-scoped and avoids
+    a detailed assembly mechanism.
+  evidence_ids:
+  - record
+  - nucleoid-agent-go
+  - nucleoid-agent-kucej2007-meta
+  - nucleoid-agent-kucej2008-pmc
+  - nucleoid-agent-sia2009-pmc
+- assessment_id: formation
+  area: evidence
+  topic: UNKNOWN component essentiality retained
+  outcome: unknown
+  target_ids:
+  - GO:0042645
+  summary: The record does not assert formation necessity for either mtDNA material
+    or the HMG cohort. Abf2 deletion phenotypes are condition-dependent, and retained
+    mtDNA under respiratory selection prevents converting those phenotypes into an
+    unconditional nucleoid-formation requirement.
+  evidence_ids:
+  - record
+  - schema
+  - nucleoid-agent-kucej2008-pmc
+  - nucleoid-agent-sia2009-pmc
+- assessment_id: coverage
+  area: provenance
+  topic: Full target and exact bounded source scopes
+  outcome: supported
+  target_ids:
+  - GO:0042645
+  summary: All maintained target fields were read with the four-record nucleoid boundary
+    set (target plus three neighbors), native identities and the exact source sections
+    declared in evidence. Optional inventories and unresolved experimental formation
+    requirements are not converted into findings. No scientific edits, promotion,
+    save or publication occurred.
+  evidence_ids:
+  - record
+  - schema
+  - nucleoid-agent-go
+  - nucleoid-agent-go-ancestors
+findings: []
+actions: []
+limitations:
+- Kucej2008 full scientific main text and Methods plus captions were read; no supplementary
+  datasets, image pixels or new ChIP-chip reanalysis. The paper uses in organello
+  crosslinking of isolated mitochondria and a partially sampled intronless genome;
+  its own in vivo wording is not upgraded into intact-live-cell ChIP.
+- Sia2009 full short scientific body/Table1/captions was read. Repeat stability, point
+  mutations, respiratory selection and fermentable growth are distinct outcomes. Detailed
+  supplementary strain ancestry was not independently reconstructed.
+- Kucej/Butow2007 was read at complete native abstract scope only; the DOI route retained
+  a TLS certificate verification failure. No full review body is asserted.
+- The native protein example verifies S288C identity, not the experimental strain
+  of each primary assay. IPR009071 is a domain and IPR051965 is a broader family with
+  an unchecked LLM description; neither closes the exact localized-family TODO.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User all-record goal authorizes this one-record bundle even when no defect is found.
+  Parent owns integration of the five completed same-base batch26 global gates and
+  later finalization.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
