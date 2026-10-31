@@ -7706,6 +7706,11 @@
           "cosine_similarity": 0.73235856
         },
         {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.73136113
+        },
+        {
           "identifier": "GO:0044674",
           "label": "methyl coenzyme M reductase complex",
           "cosine_similarity": 0.73080816
@@ -7719,11 +7724,6 @@
           "identifier": "GO:0045271",
           "label": "respiratory chain complex I",
           "cosine_similarity": 0.72242073
-        },
-        {
-          "identifier": "GO:0045283",
-          "label": "fumarate reductase complex",
-          "cosine_similarity": 0.71694239
         }
       ]
     },
@@ -7969,9 +7969,9 @@
           "cosine_similarity": 0.65842586
         },
         {
-          "identifier": "GO:0160292",
-          "label": "sodium-translocating NADH:quinone reductase complex",
-          "cosine_similarity": 0.64687576
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.64799055
         }
       ]
     },
@@ -8682,9 +8682,9 @@
           "cosine_similarity": 0.77700758
         },
         {
-          "identifier": "GO:0033178",
-          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
-          "cosine_similarity": 0.73413763
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.74074121
         }
       ]
     },
@@ -10119,6 +10119,11 @@
       "label": "sulfur globule",
       "neighbors": [
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.65574019
+        },
+        {
           "identifier": "cellstructuremech:glycogen_granule",
           "label": "glycogen granule",
           "cosine_similarity": 0.63481886
@@ -10129,19 +10134,14 @@
           "cosine_similarity": 0.62953638
         },
         {
+          "identifier": "GO:1990330",
+          "label": "IscS-IscU complex",
+          "cosine_similarity": 0.61118542
+        },
+        {
           "identifier": "GO:0031411",
           "label": "gas vesicle",
           "cosine_similarity": 0.60706138
-        },
-        {
-          "identifier": "GO:0033172",
-          "label": "gas vesicle shell",
-          "cosine_similarity": 0.60525579
-        },
-        {
-          "identifier": "GO:0031469",
-          "label": "bacterial microcompartment",
-          "cosine_similarity": 0.60424991
         }
       ]
     },
@@ -10460,6 +10460,11 @@
       "label": "Asi complex",
       "neighbors": [
         {
+          "identifier": "GO:0031372",
+          "label": "UBC13-MMS2 complex",
+          "cosine_similarity": 0.77511157
+        },
+        {
           "identifier": "GO:1990862",
           "label": "nuclear membrane complex Bqt3-Bqt4",
           "cosine_similarity": 0.7550933
@@ -10478,11 +10483,6 @@
           "identifier": "GO:0072546",
           "label": "EMC complex",
           "cosine_similarity": 0.73868805
-        },
-        {
-          "identifier": "GO:0031205",
-          "label": "endoplasmic reticulum Sec complex",
-          "cosine_similarity": 0.73707454
         }
       ]
     },
@@ -17734,9 +17734,9 @@
           "cosine_similarity": 0.7191081
         },
         {
-          "identifier": "GO:0031026",
-          "label": "glutamate synthase complex",
-          "cosine_similarity": 0.71316558
+          "identifier": "GO:1990330",
+          "label": "IscS-IscU complex",
+          "cosine_similarity": 0.71368936
         }
       ]
     },
@@ -17799,6 +17799,37 @@
           "identifier": "GO:0140275",
           "label": "MIB complex",
           "cosine_similarity": 0.69303797
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031250",
+      "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009326",
+          "label": "formate dehydrogenase complex",
+          "cosine_similarity": 0.762854
+        },
+        {
+          "identifier": "GO:0048492",
+          "label": "ribulose bisphosphate carboxylase complex",
+          "cosine_similarity": 0.75956901
+        },
+        {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.74096958
+        },
+        {
+          "identifier": "GO:0009325",
+          "label": "nitrate reductase complex",
+          "cosine_similarity": 0.74059952
+        },
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.73773391
         }
       ]
     },
@@ -18566,14 +18597,14 @@
           "cosine_similarity": 0.79778395
         },
         {
+          "identifier": "GO:0016272",
+          "label": "prefoldin complex",
+          "cosine_similarity": 0.793868
+        },
+        {
           "identifier": "cellstructuremech:hsp78_chaperone_complex",
           "label": "Hsp78 chaperone complex",
           "cosine_similarity": 0.78229281
-        },
-        {
-          "identifier": "GO:0005832",
-          "label": "chaperonin-containing T-complex",
-          "cosine_similarity": 0.77859632
         }
       ]
     },
@@ -18581,6 +18612,11 @@
       "identifier": "GO:0005832",
       "label": "chaperonin-containing T-complex",
       "neighbors": [
+        {
+          "identifier": "GO:0016272",
+          "label": "prefoldin complex",
+          "cosine_similarity": 0.78684755
+        },
         {
           "identifier": "GO:0016465",
           "label": "chaperonin ATPase complex",
@@ -18600,11 +18636,6 @@
           "identifier": "GO:0070985",
           "label": "transcription factor TFIIK complex",
           "cosine_similarity": 0.69328158
-        },
-        {
-          "identifier": "GO:0000817",
-          "label": "COMA complex",
-          "cosine_similarity": 0.69277957
         }
       ]
     },
@@ -19305,6 +19336,11 @@
           "cosine_similarity": 0.72008828
         },
         {
+          "identifier": "GO:0031372",
+          "label": "UBC13-MMS2 complex",
+          "cosine_similarity": 0.71978
+        },
+        {
           "identifier": "GO:0031431",
           "label": "Dbf4-dependent protein kinase complex",
           "cosine_similarity": 0.7138622
@@ -19313,11 +19349,6 @@
           "identifier": "GO:0031518",
           "label": "CBF3 complex",
           "cosine_similarity": 0.71077854
-        },
-        {
-          "identifier": "GO:1990334",
-          "label": "SIN/MEN two-component GAP complex",
-          "cosine_similarity": 0.71061893
         }
       ]
     },
@@ -21279,6 +21310,11 @@
       "label": "exodeoxyribonuclease V complex",
       "neighbors": [
         {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.716498
+        },
+        {
           "identifier": "GO:1903095",
           "label": "ribonuclease III complex",
           "cosine_similarity": 0.68501582
@@ -21297,11 +21333,6 @@
           "identifier": "GO:0032299",
           "label": "ribonuclease H2 complex",
           "cosine_similarity": 0.67570642
-        },
-        {
-          "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
-          "label": "formate dehydrogenase N complex",
-          "cosine_similarity": 0.66586592
         }
       ]
     },
@@ -21382,19 +21413,19 @@
           "cosine_similarity": 0.77510908
         },
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.76651182
+        },
+        {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.73773391
+        },
+        {
           "identifier": "GO:0009390",
           "label": "dimethyl sulfoxide reductase complex",
           "cosine_similarity": 0.73065503
-        },
-        {
-          "identifier": "GO:0045271",
-          "label": "respiratory chain complex I",
-          "cosine_similarity": 0.7206893
-        },
-        {
-          "identifier": "GO:0045283",
-          "label": "fumarate reductase complex",
-          "cosine_similarity": 0.71891396
         }
       ]
     },
@@ -21661,19 +21692,19 @@
           "cosine_similarity": 0.77788041
         },
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.75026825
+        },
+        {
           "identifier": "GO:0009325",
           "label": "nitrate reductase complex",
           "cosine_similarity": 0.73311516
         },
         {
-          "identifier": "GO:1990200",
-          "label": "SsuD-SsuE complex",
-          "cosine_similarity": 0.72468585
-        },
-        {
-          "identifier": "GO:0022624",
-          "label": "proteasome accessory complex",
-          "cosine_similarity": 0.71886094
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.72620553
         }
       ]
     },
@@ -21692,6 +21723,11 @@
           "cosine_similarity": 0.72923634
         },
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.72713149
+        },
+        {
           "identifier": "GO:0160292",
           "label": "sodium-translocating NADH:quinone reductase complex",
           "cosine_similarity": 0.71081652
@@ -21700,11 +21736,6 @@
           "identifier": "GO:1990202",
           "label": "FMN reductase complex",
           "cosine_similarity": 0.68907581
-        },
-        {
-          "identifier": "GO:0030700",
-          "label": "glycine reductase complex",
-          "cosine_similarity": 0.67308803
         }
       ]
     },
@@ -21754,6 +21785,11 @@
           "cosine_similarity": 0.69356343
         },
         {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.680073
+        },
+        {
           "identifier": "GO:0009342",
           "label": "glutamate synthase complex (NADPH)",
           "cosine_similarity": 0.67308803
@@ -21762,11 +21798,6 @@
           "identifier": "GO:0045283",
           "label": "fumarate reductase complex",
           "cosine_similarity": 0.6603281
-        },
-        {
-          "identifier": "GO:0160292",
-          "label": "sodium-translocating NADH:quinone reductase complex",
-          "cosine_similarity": 0.65305936
         }
       ]
     },
@@ -21811,6 +21842,11 @@
           "cosine_similarity": 0.88119393
         },
         {
+          "identifier": "GO:0016272",
+          "label": "prefoldin complex",
+          "cosine_similarity": 0.76635419
+        },
+        {
           "identifier": "GO:0005832",
           "label": "chaperonin-containing T-complex",
           "cosine_similarity": 0.74236187
@@ -21824,11 +21860,6 @@
           "identifier": "GO:0009376",
           "label": "HslUV protease complex",
           "cosine_similarity": 0.72127242
-        },
-        {
-          "identifier": "GO:0033178",
-          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
-          "cosine_similarity": 0.70501986
         }
       ]
     },
@@ -21988,6 +22019,37 @@
       ]
     },
     {
+      "identifier": "GO:0009379",
+      "label": "Holliday junction helicase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:1990161",
+          "label": "DnaB helicase complex",
+          "cosine_similarity": 0.78664303
+        },
+        {
+          "identifier": "GO:1990100",
+          "label": "DnaB-DnaC complex",
+          "cosine_similarity": 0.75651627
+        },
+        {
+          "identifier": "GO:0030894",
+          "label": "replisome",
+          "cosine_similarity": 0.7542509
+        },
+        {
+          "identifier": "GO:1990082",
+          "label": "DnaA-L2 complex",
+          "cosine_similarity": 0.72917298
+        },
+        {
+          "identifier": "GO:1990077",
+          "label": "primosome complex",
+          "cosine_similarity": 0.72757474
+        }
+      ]
+    },
+    {
       "identifier": "GO:0030897",
       "label": "HOPS complex",
       "neighbors": [
@@ -22074,9 +22136,9 @@
           "cosine_similarity": 0.75831094
         },
         {
-          "identifier": "GO:0031942",
-          "label": "i-AAA complex",
-          "cosine_similarity": 0.7466793
+          "identifier": "GO:0016272",
+          "label": "prefoldin complex",
+          "cosine_similarity": 0.75023679
         }
       ]
     },
@@ -22201,6 +22263,37 @@
           "identifier": "GO:0034457",
           "label": "Mpp10 complex",
           "cosine_similarity": 0.71642108
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990330",
+      "label": "IscS-IscU complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.74257007
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.71368936
+        },
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.69737164
+        },
+        {
+          "identifier": "GO:0031026",
+          "label": "glutamate synthase complex",
+          "cosine_similarity": 0.67930305
+        },
+        {
+          "identifier": "GO:0033178",
+          "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+          "cosine_similarity": 0.66964306
         }
       ]
     },
@@ -23286,6 +23379,37 @@
           "identifier": "GO:1990334",
           "label": "SIN/MEN two-component GAP complex",
           "cosine_similarity": 0.63678063
+        }
+      ]
+    },
+    {
+      "identifier": "GO:1990140",
+      "label": "molybdopterin synthase complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016612",
+          "label": "molybdenum-iron nitrogenase complex",
+          "cosine_similarity": 0.72064125
+        },
+        {
+          "identifier": "GO:0031026",
+          "label": "glutamate synthase complex",
+          "cosine_similarity": 0.67428508
+        },
+        {
+          "identifier": "GO:1990201",
+          "label": "alkanesulfonate monooxygenase complex",
+          "cosine_similarity": 0.67250921
+        },
+        {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.6667051
+        },
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.65567178
         }
       ]
     },
@@ -25026,6 +25150,37 @@
       ]
     },
     {
+      "identifier": "GO:0016272",
+      "label": "prefoldin complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0016465",
+          "label": "chaperonin ATPase complex",
+          "cosine_similarity": 0.793868
+        },
+        {
+          "identifier": "GO:0005832",
+          "label": "chaperonin-containing T-complex",
+          "cosine_similarity": 0.78684755
+        },
+        {
+          "identifier": "GO:0005885",
+          "label": "Arp2/3 protein complex",
+          "cosine_similarity": 0.78430618
+        },
+        {
+          "identifier": "GO:0008275",
+          "label": "gamma-tubulin small complex",
+          "cosine_similarity": 0.78370931
+        },
+        {
+          "identifier": "GO:0000930",
+          "label": "gamma-tubulin complex",
+          "cosine_similarity": 0.78190578
+        }
+      ]
+    },
+    {
       "identifier": "GO:1990077",
       "label": "primosome complex",
       "neighbors": [
@@ -25748,6 +25903,11 @@
           "cosine_similarity": 0.76131375
         },
         {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.75956901
+        },
+        {
           "identifier": "GO:0009512",
           "label": "cytochrome b6f complex",
           "cosine_similarity": 0.73090805
@@ -25761,11 +25921,6 @@
           "identifier": "GO:0022624",
           "label": "proteasome accessory complex",
           "cosine_similarity": 0.70899892
-        },
-        {
-          "identifier": "GO:1990732",
-          "label": "pyrenoid",
-          "cosine_similarity": 0.70667148
         }
       ]
     },
@@ -26373,6 +26528,11 @@
           "cosine_similarity": 0.77510908
         },
         {
+          "identifier": "GO:0009337",
+          "label": "sulfite reductase complex (NADPH)",
+          "cosine_similarity": 0.7553853
+        },
+        {
           "identifier": "GO:0009326",
           "label": "formate dehydrogenase complex",
           "cosine_similarity": 0.72890412
@@ -26381,11 +26541,6 @@
           "identifier": "GO:0031026",
           "label": "glutamate synthase complex",
           "cosine_similarity": 0.72468585
-        },
-        {
-          "identifier": "GO:0045273",
-          "label": "respiratory chain complex II (succinate dehydrogenase)",
-          "cosine_similarity": 0.70697699
         }
       ]
     },
@@ -26448,6 +26603,37 @@
           "identifier": "cellstructuremech:crl4wdr1_ubiquitin_ligase_complex",
           "label": "CRL4WDR1 ubiquitin ligase complex",
           "cosine_similarity": 0.65093493
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0009337",
+      "label": "sulfite reductase complex (NADPH)",
+      "neighbors": [
+        {
+          "identifier": "GO:1990202",
+          "label": "FMN reductase complex",
+          "cosine_similarity": 0.76651182
+        },
+        {
+          "identifier": "GO:1990200",
+          "label": "SsuD-SsuE complex",
+          "cosine_similarity": 0.7553853
+        },
+        {
+          "identifier": "GO:0031026",
+          "label": "glutamate synthase complex",
+          "cosine_similarity": 0.75026825
+        },
+        {
+          "identifier": "GO:1990330",
+          "label": "IscS-IscU complex",
+          "cosine_similarity": 0.74257007
+        },
+        {
+          "identifier": "GO:0031250",
+          "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+          "cosine_similarity": 0.74096958
         }
       ]
     },
@@ -27223,6 +27409,37 @@
           "identifier": "GO:0000439",
           "label": "transcription factor TFIIH core complex",
           "cosine_similarity": 0.70439637
+        }
+      ]
+    },
+    {
+      "identifier": "GO:0031372",
+      "label": "UBC13-MMS2 complex",
+      "neighbors": [
+        {
+          "identifier": "GO:0097658",
+          "label": "Asi complex",
+          "cosine_similarity": 0.77511157
+        },
+        {
+          "identifier": "GO:0008540",
+          "label": "proteasome regulatory particle, base subcomplex",
+          "cosine_similarity": 0.76632163
+        },
+        {
+          "identifier": "GO:0005838",
+          "label": "proteasome regulatory particle",
+          "cosine_similarity": 0.74700961
+        },
+        {
+          "identifier": "GO:0033565",
+          "label": "ESCRT-0 complex",
+          "cosine_similarity": 0.74237786
+        },
+        {
+          "identifier": "GO:0008541",
+          "label": "proteasome regulatory particle, lid subcomplex",
+          "cosine_similarity": 0.73561371
         }
       ]
     },
