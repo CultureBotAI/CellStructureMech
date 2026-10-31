@@ -1,0 +1,961 @@
+# Scientific review of organellar chromatophore
+
+- Review: 20261022T025111Z-organellar-chromatophore-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T02:36:43Z
+- Finished UTC: 2026-10-22T02:51:11Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Organellar chromatophore identity, topology, photosynthesis and protein import are supported. One major finding separates three whole-membrane identities from LIPID components; one minor finding corrects the thylakoid complex source attribution.
+
+## Scope And Provenance
+
+Entire single maintained target at frozen f97b1abe; exact source identities, taxonomy, component/formation distinctions, function, evidence placement, completeness and all asserted graph/image fields.
+
+Selection: Batch35 fixed strict path-order selection, position 10; one maintained record only. Initial focused inspect/schema/strict all passed before review.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0070111 | data/structures/membrane_organelle/organellar_chromatophore.yaml | maintained | organellar chromatophore |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0070111 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0070111 | Focused validator passed. |
+| Native focused graph protein-reference check | passed | True | GO:0070111 | Native check passed; all graph edges independently read. |
+| Individual protein verification applicability | not_applicable | False | GO:0070111 | No structured individual protein example, gene-symbol field or UniProt protein accession is asserted. Named source proteins are checked against the actual primary passage; optional instance enrichment is not required. |
+| Expression-module applicability | not_applicable | False | GO:0070111 | No expression-module/regulon claim or covered strain transcriptomic inference is made. |
+| Claim-level scientific review | passed | True | GO:0070111 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0070111 | 15 of 15 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0070111 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0070111 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0070111 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0070111 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0070111 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact organelle and topology
+
+identity: supported. Targets: GO:0070111.
+
+GO and SL identify the Paulinella organellar chromatophore, not a generic bacterial chromatophore. Plastid parentage has explicit SL isA support, distinct from GO part relations. Six has_part terms name exact envelope/intermembrane/thylakoid compartments; missing direct GO isA in this response is not treated as a biological contradiction.
+
+### Paulinella species and studied strain
+
+scope: supported. Targets: GO:0070111.
+
+Species identity is exact. The primary study demonstrates the organelle and import in CCAC0185; secondary synthesis characterizes the photosynthetic species while distinguishing heterotrophic relatives. COMMON is qualitative, without extending to every Paulinella lineage or a population census.
+
+### Three membrane rows are not molecular lipid identities
+
+grounding: concern. Targets: GO:0070111.
+
+The first three components label and ground whole anatomical membranes while typing them LIPID. Their graph component_ref joins propagate that molecular/structural mismatch. Correct whole-part topology and membrane location do not make GO cellular-component identities into chemical lipid identities.
+
+### Residual peptidoglycan wall and unresolved molecular detail
+
+grounding: unknown. Targets: GO:0070111.
+
+SL directly supports the wall location. The reviewed-label-only component denotes the retained wall/layer as a structure, not a chemically resolved polymer species, and the record leaves its formation necessity UNKNOWN. Generic peptidoglycan chemistry alone is not used here to silently replace this specific whole-wall identity. Exact polymer composition, import machinery and membrane molecular requirements remain unresolved.
+
+### Photosynthesis and protein import
+
+evidence: supported. Targets: GO:0070111.
+
+Photosynthetic function has exact native authority support; direct 2012 localization/purification/translation experiments support host protein import and PSI association. The 2017 complete abstract supports broader proteomics-based import. The record does not assert a solved import machinery or convert all predicted cargo into experimentally localized constituents.
+
+### Light-complex source placement
+
+evidence: concern. Targets: GO:0070111.
+
+Light-reaction complexes in thylakoids are supported by the 2012 experiments, but the target explicitly attributes this mechanistic content to GO0070118, whose definition only identifies the bilayer compartment. The biology is supported; the specific source note overstates the ontology entry.
+
+### Five descriptive edges with bounded joins
+
+graph: supported. Targets: GO:0070111.
+
+The five NONMECHANISTIC edges describe envelope boundaries, residual wall location, photosynthesis and protein import. Those biological relations are supported. The membrane component_ref joins need the molecular-type correction, and the thylakoid light-complex edge needs the correct primary citation. No other graph mechanism is inferred.
+
+### Full target and open composition questions
+
+completeness: supported. Targets: GO:0070111.
+
+All target fields, history, discussions and five graph edges were read. No individual protein accession, numerical physical property or maintained image is asserted. Unknown molecular requirements and open import machinery are not optional-inventory findings; historical first-record wording is not a current ontology absence claim.
+
+## Findings
+
+### F1: Separate whole membrane parts from molecular lipid components
+
+major / open / confirmed; issue key: organellar-chromatophore-membrane-lipid-grounding.
+
+Components0–2 are typed LIPID but their labels and GO0070114/13/18 groundings identify entire anatomical membranes. These identities are valid structural parts, not lipid entities. The corresponding structural graph nodes also carry component_ref links to those misclassified molecular rows.
+
+### F2: Attach the light-reaction complex claim to its primary evidence
+
+minor / open / confirmed; issue key: organellar-chromatophore-thylakoid-go-source-overstatement.
+
+The component and graph source notes say GO0070118 defines an internal photosynthetic membrane system carrying light-reaction complexes. Its actual definition only identifies the thylakoid lipid-bilayer membrane. The inspected Nowack2012 Results directly support thylakoid-associated PSI proteins and provide the appropriate experimental source.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Preserve supported membrane parts/topology. Represent whole structural constituents with an appropriate structural type if retained, or model supported lipid materials separately with exact chemical grounding or justified reviewed-label-only status; align graph component_ref joins to that distinction.
+
+- Verify each LIPID row denotes a molecular lipid/material identity rather than a GO membrane location.
+- Run focused schema, strict and graph checks after separately authorized curation.
+
+### A2
+
+Restrict the GO note to the compartment definition and attach the relevant primary localization/PSI evidence to the light-complex statement.
+
+- Re-read GO0070118 definition and Nowack2012 Results sec2–4.
+- Ensure the updated evidence note states only what its cited source establishes.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/organellar_chromatophore.yaml; Entire maintained target, including all history, graph nodes/edges, evidence notes and discussions | context_only | All target bytes read; no maintained scientific content changed. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent and grounding; ComponentTypeEnum; EssentialityEnum and PresenceEnum | context_only | OTHER is expressly allowed without a chemical description. LIPID groundings concern a molecular lipid identity; a whole anatomical membrane is a distinct entity. Essentiality means whether the structure forms without the constituent, not cell survival or catalytic function. |
+| chromatophore-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070111,GO:0009536,GO:0070113,GO:0070114,GO:0070115,GO:0070116,GO:0070117,GO:0070118,GO:0015979; Complete QuickGO results GO0070111/0009536/0070113/0070114/0070115/0070116/0070117/0070118/0015979: definitions, names, obsolete flags and typed children | supports | All nine active terms match the organellar chromatophore, its listed parts, plastid and photosynthesis. GO0070113/14/18 denote whole anatomical bilayer membranes; GO0070118 definition does not assert light-reaction complexes. Native is_a parentage to plastid is not invented from these returned children. |
+| chromatophore-agent-SL0351 | https://rest.uniprot.org/locations/SL-0351.json; Complete JSON definition, geneOntologies and nested isA; no protein-count inventory inference | supports | SL0351 explicitly identifies the Paulinella photosynthetic organelle, maps to GO0070111, isA plastid/GO0009536, and describes two surrounding membranes, residual peptidoglycan between them, thylakoids and photosynthesis/CO2 fixation. |
+| chromatophore-agent-tax39717 | https://rest.uniprot.org/taxonomy/39717.json; Complete taxonId, scientificName, active, rank and lineage | supports | Active species taxon39717 is Paulinella chromatophora under Cercozoa/Rhizaria, matching the target. |
+| chromatophore-agent-nowack2014-crossref | https://api.crossref.org/works/10.5586/asbp.2014.049; message.DOI/title/author/published/link | context_only | Crossref verifies DOI10.5586/asbp.2014.049, Eva C.M.Nowack, the 2014 title and publisher PDF locator. This is bibliographic evidence only; full review body not available from the retained native routes. |
+| chromatophore-agent-nowack2012-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1073/pnas.1118800109; Unique native result identity and complete abstractText | supports | Exact DOI, PMID22371600, title and author/year match the cited article. Complete abstract read; body scope is separately recorded. |
+| chromatophore-agent-singer2017-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.cub.2017.08.010; Unique native result identity and complete abstractText | supports | Exact DOI, PMID28889978, title and author/year match the cited article. Complete primary abstract supports proteomics-based import and distinguishes experimentally detected proteins from predictions and a putative targeting signal. |
+| chromatophore-agent-gabr2020-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1111/jpy.13003; Unique native result identity and complete abstractText | supports | Exact DOI, PMID32289879, title and author/year match the cited article. Complete abstract read; body scope is separately recorded. |
+| chromatophore-agent-nowack2012-pmc | https://pmc.ncbi.nlm.nih.gov/articles/3325729/; Results sec2–5 including Fig1–4 captions; Discussion sec7 and sec9; complete Materials and Methods sec14–19; no figure pixels, raw data or supplementary experiments inspected | supports | In P.chromatophora CCAC0185, immunogold EM localizes PsaE to thylakoids; PSI purification identifies PsaE/PsaK subunits; radiolabeling with translation inhibitors supports cytoplasmic synthesis and import. Golgi routing remains a proposed pathway, not a resolved translocon mechanism. |
+| chromatophore-agent-gabr2020-pmc | https://pmc.ncbi.nlm.nih.gov/articles/7734844/; S2 The Paulinella model, S4 Host-chromatophore metabolic integration, S5 Chromatophore protein import; figure captions only | supports | The secondary review describes P.chromatophora as a photosynthetic species with chromatophores, distinguishes heterotrophic relatives, summarizes host-organelle metabolic integration and protein import. This supports biological context without being relabeled a primary experiment. |
+| access-nowack2014-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.5586/asbp.2014.049; Retained original HTTP response 200, 188 bytes | context_only | EuropePMC DOI search returned200 with zero results; Crossref verifies identity instead. |
+| access-nowack2014-publisher | https://doi.org/10.5586/asbp.2014.049; Retained original HTTP response 500, 0 bytes | context_only | Publisher DOI route returned500 with an empty body; not read as source text. |
+| access-nowack2014-pdf | https://www.marinebiology.pt/beu/files/monograph/Nowack2014.pdf; Retained original HTTP response 401, 543 bytes | context_only | Public mirror returned401, not a readable PDF; no authentication or paid access attempted. |
+| access-singer2017-publisher | https://doi.org/10.1016/j.cub.2017.08.010; Retained original HTTP response 200, 3042 bytes | context_only | HTTP200 response is a 3042-byte LinkingHub redirect/locator page, not the primary body. Only the exact complete native abstract supports Singer-specific claims. |
+| access-nowack2012-publisher | https://doi.org/10.1073/pnas.1118800109; Retained original HTTP response 403, 5548 bytes | context_only | Publisher returned403; separate genuine PMC body was directly read. |
+| access-gabr2020-publisher | https://doi.org/10.1111/jpy.13003; Retained original HTTP response 403, 5572 bytes | context_only | Publisher returned403; separate genuine PMC author-manuscript review was read at the stated sections. |
+| schema-result | just validate data/structures/membrane_organelle/organellar_chromatophore.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/organellar_chromatophore.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/organellar_chromatophore.yaml --out /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/organellar_chromatophore-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/organellar_chromatophore.yaml --out /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/organellar_chromatophore-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch35-20261022-5cl5i1x7/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/organellar_chromatophore-strict.tsv |
+| focused-causal | /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/organellar_chromatophore.yaml; /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/chromatophore-agent/organellar_chromatophore-causal.log | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/organellar_chromatophore.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 15 of 15 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Nowack2014 identity was verified through Crossref, but its full body remained inaccessible from retained native routes. Singer2017 was read through its complete native abstract only; HTTP200 LinkingHub markup was not treated as full text.
+- Nowack2012 primary body and Gabr2020 secondary review were read at the explicit sections only. No figure-pixel or supplementary-data inspection, raw proteomics reanalysis, quantitative taxon prevalence or exact molecular formation test was performed.
+- All four components retain UNKNOWN formation necessity. The residual peptidoglycan-wall row describes a whole retained layer; its exact chemical/structural grounding is unresolved and generic polymer chemistry is not silently substituted.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T025111Z-organellar-chromatophore-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Scientific review of organellar chromatophore
+started_at: '2026-10-22T02:36:43Z'
+finished_at: '2026-10-22T02:51:11Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Organellar chromatophore identity, topology, photosynthesis and protein import
+  are supported. One major finding separates three whole-membrane identities from
+  LIPID components; one minor finding corrects the thylakoid complex source attribution.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+    sha256: 6e9805392c72104f5f1d6e9ee70767c49f480b22130da0e6f293bcf8f6a1bec0
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0070111
+  path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+  label: organellar chromatophore
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single maintained target at frozen f97b1abe; exact source identities,
+    taxonomy, component/formation distinctions, function, evidence placement, completeness
+    and all asserted graph/image fields.
+  selection: Batch35 fixed strict path-order selection, position 10; one maintained
+    record only. Initial focused inspect/schema/strict all passed before review.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0070111
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  command: just validate data/structures/membrane_organelle/organellar_chromatophore.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  command: just validate-strict data/structures/membrane_organelle/organellar_chromatophore.yaml
+    --out /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/organellar_chromatophore-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: focused-causal
+  name: Native focused graph protein-reference check
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  command: /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/organellar_chromatophore.yaml
+  exit_code: 0
+  summary: Native check passed; all graph edges independently read.
+  evidence_ids:
+  - focused-causal
+- check_id: protein-verification
+  name: Individual protein verification applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0070111
+  summary: No structured individual protein example, gene-symbol field or UniProt
+    protein accession is asserted. Named source proteins are checked against the actual
+    primary passage; optional instance enrichment is not required.
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0070111
+  summary: No expression-module/regulon claim or covered strain transcriptomic inference
+    is made.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - chromatophore-agent-go
+  - chromatophore-agent-SL0351
+  - chromatophore-agent-tax39717
+  - chromatophore-agent-nowack2014-crossref
+  - chromatophore-agent-nowack2012-meta
+  - chromatophore-agent-singer2017-meta
+  - chromatophore-agent-gabr2020-meta
+  - chromatophore-agent-nowack2012-pmc
+  - chromatophore-agent-gabr2020-pmc
+  - access-nowack2014-meta
+  - access-nowack2014-publisher
+  - access-nowack2014-pdf
+  - access-singer2017-publisher
+  - access-nowack2012-publisher
+  - access-gabr2020-publisher
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  summary: 15 of 15 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch35 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch35 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch35 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch35 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070111
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch35 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/organellar_chromatophore.yaml
+  locator: Entire maintained target, including all history, graph nodes/edges, evidence
+    notes and discussions
+  accessed_at: '2026-10-22T02:45:24Z'
+  support: context_only
+  summary: All target bytes read; no maintained scientific content changed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent and grounding; ComponentTypeEnum; EssentialityEnum
+    and PresenceEnum
+  accessed_at: '2026-10-22T02:45:24Z'
+  support: context_only
+  summary: OTHER is expressly allowed without a chemical description. LIPID groundings
+    concern a molecular lipid identity; a whole anatomical membrane is a distinct
+    entity. Essentiality means whether the structure forms without the constituent,
+    not cell survival or catalytic function.
+- evidence_id: chromatophore-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070111,GO:0009536,GO:0070113,GO:0070114,GO:0070115,GO:0070116,GO:0070117,GO:0070118,GO:0015979
+  locator: 'Complete QuickGO results GO0070111/0009536/0070113/0070114/0070115/0070116/0070117/0070118/0015979:
+    definitions, names, obsolete flags and typed children'
+  accessed_at: '2026-10-22T02:37:49.551329Z'
+  support: supports
+  summary: All nine active terms match the organellar chromatophore, its listed parts,
+    plastid and photosynthesis. GO0070113/14/18 denote whole anatomical bilayer membranes;
+    GO0070118 definition does not assert light-reaction complexes. Native is_a parentage
+    to plastid is not invented from these returned children.
+  snapshot_sha256: dac8ac12ecd88e9d30f88e230f8781998550a27a0de060a88ca461def93f0d3c
+- evidence_id: chromatophore-agent-SL0351
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0351.json
+  locator: Complete JSON definition, geneOntologies and nested isA; no protein-count
+    inventory inference
+  accessed_at: '2026-10-22T02:37:50.466589Z'
+  support: supports
+  summary: SL0351 explicitly identifies the Paulinella photosynthetic organelle, maps
+    to GO0070111, isA plastid/GO0009536, and describes two surrounding membranes,
+    residual peptidoglycan between them, thylakoids and photosynthesis/CO2 fixation.
+  snapshot_sha256: 8a511ebab3aeb225c94971707064b4de8201b1bc8f6672c0e32f550ee72ae5c2
+- evidence_id: chromatophore-agent-tax39717
+  kind: database
+  reference: https://rest.uniprot.org/taxonomy/39717.json
+  locator: Complete taxonId, scientificName, active, rank and lineage
+  accessed_at: '2026-10-22T02:37:50.326165Z'
+  support: supports
+  summary: Active species taxon39717 is Paulinella chromatophora under Cercozoa/Rhizaria,
+    matching the target.
+  snapshot_sha256: f3534e3c32299238a36f87d7ba474db869e62a1636bb45879426bb0f4081f420
+- evidence_id: chromatophore-agent-nowack2014-crossref
+  kind: database
+  reference: https://api.crossref.org/works/10.5586/asbp.2014.049
+  locator: message.DOI/title/author/published/link
+  accessed_at: '2026-10-22T02:41:59.235726Z'
+  support: context_only
+  summary: Crossref verifies DOI10.5586/asbp.2014.049, Eva C.M.Nowack, the 2014 title
+    and publisher PDF locator. This is bibliographic evidence only; full review body
+    not available from the retained native routes.
+  snapshot_sha256: 7a5635c186a67f8d0f6b1eebbe0d69651d31f4f794592f79583b8106e2e2e16d
+- evidence_id: chromatophore-agent-nowack2012-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.1118800109
+  locator: Unique native result identity and complete abstractText
+  accessed_at: '2026-10-22T02:37:48.587487Z'
+  support: supports
+  summary: Exact DOI, PMID22371600, title and author/year match the cited article.
+    Complete abstract read; body scope is separately recorded.
+  snapshot_sha256: 8f62b9fd80b8ca0fc14ec7ba0953bc2fb5becd33876f6d27bd7f6cd5198d364b
+- evidence_id: chromatophore-agent-singer2017-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.cub.2017.08.010
+  locator: Unique native result identity and complete abstractText
+  accessed_at: '2026-10-22T02:37:48.774155Z'
+  support: supports
+  summary: Exact DOI, PMID28889978, title and author/year match the cited article.
+    Complete primary abstract supports proteomics-based import and distinguishes experimentally
+    detected proteins from predictions and a putative targeting signal.
+  snapshot_sha256: 4c59444b18671b877b17fdb67796085fdd5fdfcfaf877ae232daa48a30ef938f
+- evidence_id: chromatophore-agent-gabr2020-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1111/jpy.13003
+  locator: Unique native result identity and complete abstractText
+  accessed_at: '2026-10-22T02:37:49.243652Z'
+  support: supports
+  summary: Exact DOI, PMID32289879, title and author/year match the cited article.
+    Complete abstract read; body scope is separately recorded.
+  snapshot_sha256: 92316c5a8ceb42a149eed745d90d18ef7138e9981df6099868707d5706f534b4
+- evidence_id: chromatophore-agent-nowack2012-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/3325729/
+  locator: Results sec2–5 including Fig1–4 captions; Discussion sec7 and sec9; complete
+    Materials and Methods sec14–19; no figure pixels, raw data or supplementary experiments
+    inspected
+  accessed_at: '2026-10-22T02:39:41.676639Z'
+  support: supports
+  summary: In P.chromatophora CCAC0185, immunogold EM localizes PsaE to thylakoids;
+    PSI purification identifies PsaE/PsaK subunits; radiolabeling with translation
+    inhibitors supports cytoplasmic synthesis and import. Golgi routing remains a
+    proposed pathway, not a resolved translocon mechanism.
+  snapshot_sha256: df4b05048ab13ce50055bc6357bdc95ef2a5195af3269700d7b791f514864c94
+- evidence_id: chromatophore-agent-gabr2020-pmc
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/7734844/
+  locator: S2 The Paulinella model, S4 Host-chromatophore metabolic integration, S5
+    Chromatophore protein import; figure captions only
+  accessed_at: '2026-10-22T02:39:41.678213Z'
+  support: supports
+  summary: The secondary review describes P.chromatophora as a photosynthetic species
+    with chromatophores, distinguishes heterotrophic relatives, summarizes host-organelle
+    metabolic integration and protein import. This supports biological context without
+    being relabeled a primary experiment.
+  snapshot_sha256: 4cb5e9956e00937ea3f62ff80af921075a27b1cd6951c7d460b530c200993396
+- evidence_id: access-nowack2014-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.5586/asbp.2014.049
+  locator: Retained original HTTP response 200, 188 bytes
+  accessed_at: '2026-10-22T02:37:47.420290Z'
+  support: context_only
+  summary: EuropePMC DOI search returned200 with zero results; Crossref verifies identity
+    instead.
+  snapshot_sha256: 3d8e57bc0c7858cde65301b2d69c8058af583ad5415dd729b3329ecac72770f8
+- evidence_id: access-nowack2014-publisher
+  kind: authority
+  reference: https://doi.org/10.5586/asbp.2014.049
+  locator: Retained original HTTP response 500, 0 bytes
+  accessed_at: '2026-10-22T02:37:48.028256Z'
+  support: context_only
+  summary: Publisher DOI route returned500 with an empty body; not read as source
+    text.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: access-nowack2014-pdf
+  kind: authority
+  reference: https://www.marinebiology.pt/beu/files/monograph/Nowack2014.pdf
+  locator: Retained original HTTP response 401, 543 bytes
+  accessed_at: '2026-10-22T02:39:41.678147Z'
+  support: context_only
+  summary: Public mirror returned401, not a readable PDF; no authentication or paid
+    access attempted.
+  snapshot_sha256: 30fe9c4a1ab18b051b0fa152bfca786e5101d182c14d3ffed4969738d9ec60ca
+- evidence_id: access-singer2017-publisher
+  kind: authority
+  reference: https://doi.org/10.1016/j.cub.2017.08.010
+  locator: Retained original HTTP response 200, 3042 bytes
+  accessed_at: '2026-10-22T02:37:48.830162Z'
+  support: context_only
+  summary: HTTP200 response is a 3042-byte LinkingHub redirect/locator page, not the
+    primary body. Only the exact complete native abstract supports Singer-specific
+    claims.
+  snapshot_sha256: d43df592c45f47a74308b05e2ec33deabdae155489e5a4a26504c34877d12dc6
+- evidence_id: access-nowack2012-publisher
+  kind: authority
+  reference: https://doi.org/10.1073/pnas.1118800109
+  locator: Retained original HTTP response 403, 5548 bytes
+  accessed_at: '2026-10-22T02:37:48.678223Z'
+  support: context_only
+  summary: Publisher returned403; separate genuine PMC body was directly read.
+  snapshot_sha256: 4856565450dcc7039dd65ab760fd79b3259c37e7ae1693d1d58879b70e4a72ae
+- evidence_id: access-gabr2020-publisher
+  kind: authority
+  reference: https://doi.org/10.1111/jpy.13003
+  locator: Retained original HTTP response 403, 5572 bytes
+  accessed_at: '2026-10-22T02:37:49.382093Z'
+  support: context_only
+  summary: Publisher returned403; separate genuine PMC author-manuscript review was
+    read at the stated sections.
+  snapshot_sha256: 1959e52c3c5c67558831e3083f5db741043cd87567daf49621503d200558216d
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/organellar_chromatophore.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:36:44Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/organellar_chromatophore.yaml'
+  snapshot_sha256: 0876c594b72999301ad9a710c04bfa68152e494eea756ba44764c429825a7c51
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/organellar_chromatophore.yaml
+    --out /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/organellar_chromatophore-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:36:47Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/organellar_chromatophore.yaml\
+    \ --out /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/organellar_chromatophore-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch35-20261022-5cl5i1x7/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/organellar_chromatophore-strict.tsv"
+  snapshot_sha256: 9f9be129a001dfe662d2fc3a6b40fad2f7afe2a1e644f366e44a0705a28bb817
+- evidence_id: focused-causal
+  kind: validation
+  reference: /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/membrane_organelle/organellar_chromatophore.yaml
+  locator: /private/tmp/cellstructure-batch35-20261022-5cl5i1x7/chromatophore-agent/organellar_chromatophore-causal.log
+  accessed_at: '2026-10-22T02:42:27.971731Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/organellar_chromatophore.yaml; native
+    collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 15 of 15 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact organelle and topology
+  outcome: supported
+  target_ids:
+  - GO:0070111
+  summary: GO and SL identify the Paulinella organellar chromatophore, not a generic
+    bacterial chromatophore. Plastid parentage has explicit SL isA support, distinct
+    from GO part relations. Six has_part terms name exact envelope/intermembrane/thylakoid
+    compartments; missing direct GO isA in this response is not treated as a biological
+    contradiction.
+  evidence_ids:
+  - chromatophore-agent-go
+  - chromatophore-agent-SL0351
+  - chromatophore-agent-gabr2020-pmc
+- assessment_id: scope
+  area: scope
+  topic: Paulinella species and studied strain
+  outcome: supported
+  target_ids:
+  - GO:0070111
+  summary: Species identity is exact. The primary study demonstrates the organelle
+    and import in CCAC0185; secondary synthesis characterizes the photosynthetic species
+    while distinguishing heterotrophic relatives. COMMON is qualitative, without extending
+    to every Paulinella lineage or a population census.
+  evidence_ids:
+  - chromatophore-agent-tax39717
+  - chromatophore-agent-nowack2012-pmc
+  - chromatophore-agent-gabr2020-pmc
+- assessment_id: materials
+  area: grounding
+  topic: Three membrane rows are not molecular lipid identities
+  outcome: concern
+  target_ids:
+  - GO:0070111
+  summary: The first three components label and ground whole anatomical membranes
+    while typing them LIPID. Their graph component_ref joins propagate that molecular/structural
+    mismatch. Correct whole-part topology and membrane location do not make GO cellular-component
+    identities into chemical lipid identities.
+  evidence_ids:
+  - chromatophore-agent-go
+  - chromatophore-agent-SL0351
+  - record
+  - schema
+- assessment_id: wall
+  area: grounding
+  topic: Residual peptidoglycan wall and unresolved molecular detail
+  outcome: unknown
+  target_ids:
+  - GO:0070111
+  summary: SL directly supports the wall location. The reviewed-label-only component
+    denotes the retained wall/layer as a structure, not a chemically resolved polymer
+    species, and the record leaves its formation necessity UNKNOWN. Generic peptidoglycan
+    chemistry alone is not used here to silently replace this specific whole-wall
+    identity. Exact polymer composition, import machinery and membrane molecular requirements
+    remain unresolved.
+  evidence_ids:
+  - chromatophore-agent-SL0351
+  - chromatophore-agent-gabr2020-pmc
+  - record
+  - schema
+- assessment_id: function
+  area: evidence
+  topic: Photosynthesis and protein import
+  outcome: supported
+  target_ids:
+  - GO:0070111
+  summary: Photosynthetic function has exact native authority support; direct 2012
+    localization/purification/translation experiments support host protein import
+    and PSI association. The 2017 complete abstract supports broader proteomics-based
+    import. The record does not assert a solved import machinery or convert all predicted
+    cargo into experimentally localized constituents.
+  evidence_ids:
+  - chromatophore-agent-go
+  - chromatophore-agent-SL0351
+  - chromatophore-agent-nowack2012-pmc
+  - chromatophore-agent-singer2017-meta
+  - chromatophore-agent-gabr2020-pmc
+- assessment_id: attribution
+  area: evidence
+  topic: Light-complex source placement
+  outcome: concern
+  target_ids:
+  - GO:0070111
+  summary: Light-reaction complexes in thylakoids are supported by the 2012 experiments,
+    but the target explicitly attributes this mechanistic content to GO0070118, whose
+    definition only identifies the bilayer compartment. The biology is supported;
+    the specific source note overstates the ontology entry.
+  evidence_ids:
+  - chromatophore-agent-go
+  - chromatophore-agent-nowack2012-pmc
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Five descriptive edges with bounded joins
+  outcome: supported
+  target_ids:
+  - GO:0070111
+  summary: The five NONMECHANISTIC edges describe envelope boundaries, residual wall
+    location, photosynthesis and protein import. Those biological relations are supported.
+    The membrane component_ref joins need the molecular-type correction, and the thylakoid
+    light-complex edge needs the correct primary citation. No other graph mechanism
+    is inferred.
+  evidence_ids:
+  - chromatophore-agent-go
+  - chromatophore-agent-SL0351
+  - chromatophore-agent-nowack2012-pmc
+  - record
+- assessment_id: coverage
+  area: completeness
+  topic: Full target and open composition questions
+  outcome: supported
+  target_ids:
+  - GO:0070111
+  summary: All target fields, history, discussions and five graph edges were read.
+    No individual protein accession, numerical physical property or maintained image
+    is asserted. Unknown molecular requirements and open import machinery are not
+    optional-inventory findings; historical first-record wording is not a current
+    ontology absence claim.
+  evidence_ids:
+  - record
+  - schema
+  - chromatophore-agent-go
+  - chromatophore-agent-SL0351
+findings:
+- finding_id: F1
+  issue_key: organellar-chromatophore-membrane-lipid-grounding
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate whole membrane parts from molecular lipid components
+  description: Components0–2 are typed LIPID but their labels and GO0070114/13/18
+    groundings identify entire anatomical membranes. These identities are valid structural
+    parts, not lipid entities. The corresponding structural graph nodes also carry
+    component_ref links to those misclassified molecular rows.
+  target_ids:
+  - GO:0070111
+  field_paths:
+  - components[0].component_type
+  - components[0].grounding
+  - components[1].component_type
+  - components[1].grounding
+  - components[2].component_type
+  - components[2].grounding
+  - causal_graphs[0].nodes[1].component_ref
+  - causal_graphs[0].nodes[2].component_ref
+  - causal_graphs[0].nodes[4].component_ref
+  evidence_ids:
+  - chromatophore-agent-go
+  - chromatophore-agent-SL0351
+  - schema
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:component grounding; StructuralComponent
+  native_severity: major
+  normalization_reason: Major wrong molecular grounding/type across three components,
+    propagated through graph joins; correct anatomical parthood is preserved and not
+    rejected.
+- finding_id: F2
+  issue_key: organellar-chromatophore-thylakoid-go-source-overstatement
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Attach the light-reaction complex claim to its primary evidence
+  description: The component and graph source notes say GO0070118 defines an internal
+    photosynthetic membrane system carrying light-reaction complexes. Its actual definition
+    only identifies the thylakoid lipid-bilayer membrane. The inspected Nowack2012
+    Results directly support thylakoid-associated PSI proteins and provide the appropriate
+    experimental source.
+  target_ids:
+  - GO:0070111
+  field_paths:
+  - components[2].evidence[0].notes
+  - causal_graphs[0].edges[3].evidence[0].notes
+  evidence_ids:
+  - chromatophore-agent-go
+  - chromatophore-agent-nowack2012-pmc
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:narrowest source claim
+  native_severity: minor
+  normalization_reason: Minor source-attribution overstatement because the biological
+    assertion itself is supported by an already-cited primary study; no false photosynthesis
+    mechanism is alleged.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0070111
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+    role: maintained scientific record
+  description: Preserve supported membrane parts/topology. Represent whole structural
+    constituents with an appropriate structural type if retained, or model supported
+    lipid materials separately with exact chemical grounding or justified reviewed-label-only
+    status; align graph component_ref joins to that distinction.
+  acceptance_checks:
+  - Verify each LIPID row denotes a molecular lipid/material identity rather than
+    a GO membrane location.
+  - Run focused schema, strict and graph checks after separately authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0070111
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/organellar_chromatophore.yaml
+    role: maintained scientific record
+  description: Restrict the GO note to the compartment definition and attach the relevant
+    primary localization/PSI evidence to the light-complex statement.
+  acceptance_checks:
+  - Re-read GO0070118 definition and Nowack2012 Results sec2–4.
+  - Ensure the updated evidence note states only what its cited source establishes.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Nowack2014 identity was verified through Crossref, but its full body remained inaccessible
+  from retained native routes. Singer2017 was read through its complete native abstract
+  only; HTTP200 LinkingHub markup was not treated as full text.
+- Nowack2012 primary body and Gabr2020 secondary review were read at the explicit
+  sections only. No figure-pixel or supplementary-data inspection, raw proteomics
+  reanalysis, quantitative taxon prevalence or exact molecular formation test was
+  performed.
+- All four components retain UNKNOWN formation necessity. The residual peptidoglycan-wall
+  row describes a whole retained layer; its exact chemical/structural grounding is
+  unresolved and generic polymer chemistry is not silently substituted.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
