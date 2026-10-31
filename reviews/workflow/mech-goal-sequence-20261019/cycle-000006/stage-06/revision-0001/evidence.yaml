@@ -1,0 +1,45 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 6
+stage: 6
+revision: 1
+outcome: completed
+summary: 'Froze INFRA_TASKS.md at 2026-10-31T16:42:06Z (sha256 eff06ec8760db8b15ca0b7bd2f3afd18e1d35b3d0870f464c05b492c8ce1cc0a),
+  mapped the bounded Cycle 6 infrastructure task (cellstructuremech-infra-0009) to
+  real GitHub issue #2486, implemented top-level PMID evidence parity and 2-node
+  parthood-only STRUCTURE CausalGraph scope_status checks in
+  src/cellstructuremech/validation/validator.py in commit 3b2cb9853a5517ce9975cc0e445e5fb4af0b5a41,
+  updated INFRA_TASKS.md and reviews/workflow/latest.yaml, and passed all 10 quality
+  gates in scripts/run_qc.py (1,082 passed tests, 2,204 history records validated,
+  1,015 structure records validated with 0 errors and 0 deferred tasks).'
+source_revision: 3b2cb9853a5517ce9975cc0e445e5fb4af0b5a41
+scope_frozen_at: '2026-10-31T16:42:06Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/infra_snapshot.md
+  sha256: eff06ec8760db8b15ca0b7bd2f3afd18e1d35b3d0870f464c05b492c8ce1cc0a
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/implementation_plan.md
+  sha256: e23cd7f950b7631bb0e0b35b51a830b1f993fb05bbcbacf65f3bdb90b38d84e4
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/validation.md
+  sha256: e9104c81c49dc74aaae96ce61c31025ca643b5ac1cc893d27a2dca89226f35f2
+  kind: validation
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: cellstructuremech-infra-0009
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2486
+  status: resolved
+  summary: Extend src/cellstructuremech/validation/validator.py to check top-level
+    PMID evidence parity and 2-node part_of-only CausalGraph scope_status
+  disposition: 'Added validate_top_level_pmid_parity() and extended validate_causal_graphs()
+    in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics,
+    write_validated_structure, and scripts/validate_strict.py); verified 0 errors
+    across all 1,015 structure records and added unit and corpus-integrity tests in
+    tests/test_validator.py and tests/test_corpus_integrity.py (commit 3b2cb9853a5517ce9975cc0e445e5fb4af0b5a41).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/validation.md
