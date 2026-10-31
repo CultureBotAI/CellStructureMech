@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-cohort audit of all 226 MEMBRANE_ORGANELLE records in data/structures/membrane_organelle/, including the two records added in Cycle 5 Stage 1 (mon1_ccz1_complex.yaml GO:0034753 and udp_n_acetylglucosamine_transferase_complex.yaml GO:0017176) and the eight membrane_organelle records enriched with causal graphs in Cycle 5 Stage 2. Lump/split boundaries across ER, Golgi, vacuolar/endosomal, peroxisomal, mitochondrial, and autophagic compartments and complexes are clean, and all Cycle 4 findings (eisosome_membrane_domain.yaml and garp_tethering_complex.yaml) were verified resolved. One minor completeness gap was identified in autophagosome.yaml (GO:0005776), where functions[0] (function_id: macroautophagy, label: macroautophagy) omits grounding: GO:0016236 even though its own evidence[0] cites GO:0016236 and causal_graphs[0].nodes[6] (macroautophagy) carries grounding: GO:0016236.
+Full-cohort audit of all 226 MEMBRANE_ORGANELLE records in data/structures/membrane_organelle/, including the two records added in Cycle 5 Stage 1 (mon1_ccz1_complex.yaml GO:0034753 and udp_n_acetylglucosamine_transferase_complex.yaml GO:0017176) and the eight membrane_organelle records enriched with causal graphs in Cycle 5 Stage 2. Lump/split boundaries across ER, Golgi, vacuolar/endosomal, peroxisomal, mitochondrial, and autophagic compartments and complexes are clean, and all Cycle 4 findings (eisosome_membrane_domain.yaml and garp_tethering_complex.yaml) were verified resolved. One minor completeness gap was identified in autophagosome.yaml (GO:0005776), where functions[0] (function_id: macroautophagy, label: macroautophagy) omits grounding: GO:0016236 even though its own evidence[0] cites GO:0016236 and causal_graphs[0].nodes[3] (macroautophagy) carries grounding: GO:0016236.
 
 ## Scope And Provenance
 
@@ -278,7 +278,7 @@ functions[0] (macroautophagy) in autophagosome.yaml omits grounding: GO:0016236 
 
 minor / open / confirmed; issue key: autophagosome-macroautophagy-function-missing-go-grounding.
 
-In data/structures/membrane_organelle/autophagosome.yaml (GO:0005776, lines 71-81), functions[0] (function_id: macroautophagy, label: macroautophagy) omits grounding: GO:0016236 even though functions[0].evidence[0] cites reference: GO:0016236 ('GO:0016236 defines macroautophagy as the autophagic process that proceeds via autophagosome formation') and causal_graphs[0].nodes[6] (node_id: macroautophagy, label: macroautophagy, line 143) already carries grounding: GO:0016236 (tracked for validator enforcement in cellstructuremech-infra-0008).
+In data/structures/membrane_organelle/autophagosome.yaml (GO:0005776, lines 71-81), functions[0] (function_id: macroautophagy, label: macroautophagy) omits grounding: GO:0016236 even though functions[0].evidence[0] cites reference: GO:0016236 ('GO:0016236 defines macroautophagy as the autophagic process that proceeds via autophagosome formation') and causal_graphs[0].nodes[3] (node_id: macroautophagy, label: macroautophagy, line 143) already carries grounding: GO:0016236 (tracked for validator enforcement in cellstructuremech-infra-0008).
 
 ## Recommended Actions And Acceptance Checks
 
@@ -299,7 +299,7 @@ Add grounding: GO:0016236 to functions[0] (macroautophagy) in data/structures/me
 | --- | --- | --- | --- |
 | ev_strict_membrane_organelle | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,008 records including all 226 membrane_organelle records. |
 | ev_history_membrane_organelle | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,140 history records covering membrane_organelle. |
-| ev_autophagosome_macroautophagy_grounding | data/structures/membrane_organelle/autophagosome.yaml; functions[0] (lines 71-81) and causal_graphs[0].nodes[6] (lines 140-143) | supports | autophagosome.yaml functions[0] (macroautophagy) omits grounding: GO:0016236 while citing GO:0016236 in functions[0].evidence[0] and grounding causal_graphs[0].nodes[6] (macroautophagy) to GO:0016236. |
+| ev_autophagosome_macroautophagy_grounding | data/structures/membrane_organelle/autophagosome.yaml; functions[0] (lines 71-81) and causal_graphs[0].nodes[3] (lines 140-143) | supports | autophagosome.yaml functions[0] (macroautophagy) omits grounding: GO:0016236 while citing GO:0016236 in functions[0].evidence[0] and grounding causal_graphs[0].nodes[3] (macroautophagy) to GO:0016236. |
 
 ## Limits And Additional Notes
 
@@ -339,7 +339,7 @@ summary: 'Full-cohort audit of all 226 MEMBRANE_ORGANELLE records in data/struct
   and garp_tethering_complex.yaml) were verified resolved. One minor completeness
   gap was identified in autophagosome.yaml (GO:0005776), where functions[0] (function_id:
   macroautophagy, label: macroautophagy) omits grounding: GO:0016236 even though its
-  own evidence[0] cites GO:0016236 and causal_graphs[0].nodes[6] (macroautophagy)
+  own evidence[0] cites GO:0016236 and causal_graphs[0].nodes[3] (macroautophagy)
   carries grounding: GO:0016236.'
 source:
   git_revision: a94f6deb809dd50c8344fb03284de9801c0aa298
@@ -4720,11 +4720,11 @@ evidence:
 - evidence_id: ev_autophagosome_macroautophagy_grounding
   kind: record_content
   reference: data/structures/membrane_organelle/autophagosome.yaml
-  locator: functions[0] (lines 71-81) and causal_graphs[0].nodes[6] (lines 140-143)
+  locator: functions[0] (lines 71-81) and causal_graphs[0].nodes[3] (lines 140-143)
   accessed_at: '2026-10-30T22:18:45Z'
   support: supports
   summary: 'autophagosome.yaml functions[0] (macroautophagy) omits grounding: GO:0016236
-    while citing GO:0016236 in functions[0].evidence[0] and grounding causal_graphs[0].nodes[6]
+    while citing GO:0016236 in functions[0].evidence[0] and grounding causal_graphs[0].nodes[3]
     (macroautophagy) to GO:0016236.'
   quote: "functions:\n- function_id: macroautophagy\n  label: macroautophagy\n  role:\
     \ Sequester cytoplasmic cargo in a double-membrane vesicle and deliver it to\n\
@@ -4996,7 +4996,7 @@ findings:
     lines 71-81), functions[0] (function_id: macroautophagy, label: macroautophagy)
     omits grounding: GO:0016236 even though functions[0].evidence[0] cites reference:
     GO:0016236 (''GO:0016236 defines macroautophagy as the autophagic process that
-    proceeds via autophagosome formation'') and causal_graphs[0].nodes[6] (node_id:
+    proceeds via autophagosome formation'') and causal_graphs[0].nodes[3] (node_id:
     macroautophagy, label: macroautophagy, line 143) already carries grounding: GO:0016236
     (tracked for validator enforcement in cellstructuremech-infra-0008).'
   target_ids:

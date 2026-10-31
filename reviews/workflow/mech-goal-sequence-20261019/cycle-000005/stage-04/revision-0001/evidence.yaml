@@ -21,7 +21,7 @@ artifacts:
   sha256: 6488cd995783868486f9ecb3b85ec0bc6523daf30dbc72cd30fbbe69dcbac3e4
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_findings.md
-  sha256: 02307599f311b7ecea647d7029f4873ec7bfd2a05c4ee24be150428d6632bd32
+  sha256: 39a26815d11e8e5dce376062366d23cac0f702fe8b38341d38732ae4c5ca860e
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/validation.md
   sha256: 97427591a66e599a91dc6270d0e01eb3b29cc238aa39aa67900ff0cd9ec3a49e
@@ -46,12 +46,12 @@ findings:
   status: open
   summary: 'cytoplasmic_microtubule_bundle.yaml (GO:1905720), quiescent_cell_microtubule_bundle.yaml (cellstructuremech:quiescent_cell_microtubule_bundle),
     and static_microtubule_bundle.yaml (GO:0099070) use synonym gene_symbol: atb2 instead of UniProtKB
-    primary gene symbol tub1 on UniProtKB:P04689 (native review: 20261030T222003Z-cytoskeleton-category-review
+    primary gene symbol tub1 on components[0].protein_examples[0] (UniProtKB:P04689) (native review: 20261030T222003Z-cytoskeleton-category-review
     F1, severity minor).'
 - finding_id: autophagosome-macroautophagy-function-missing-go-grounding
   status: open
   summary: 'autophagosome.yaml (GO:0005776) functions[0] (macroautophagy) omits grounding: GO:0016236
-    while functions[0].evidence[0] cites GO:0016236 and causal_graphs[0].nodes[6] is grounded to GO:0016236
+    while functions[0].evidence[0] cites GO:0016236 and causal_graphs[0].nodes[3] is grounded to GO:0016236
     (native review: 20261030T222004Z-membrane-organelle-category-review F1, severity minor).'
 - finding_id: primosome-complex-dnac-protein-label-and-hierarchy-evidence
   status: open
@@ -64,7 +64,7 @@ findings:
   status: open
   summary: 'cmg_complex.yaml (GO:0071162), nuclear_replisome.yaml (GO:0043601), and replisome.yaml (GO:0030894)
     use species-level label ''Schizosaccharomyces pombe'' on strain taxon NCBITaxon:284812 instead of
-    ''Schizosaccharomyces pombe 972h-'' on components[0].protein_examples[0] (UniProtKB:O74113) and canonical_examples[0]
+    ''Schizosaccharomyces pombe 972h-'' on components[2].protein_examples[0] (UniProtKB:O74113) and canonical_examples[0]
     (native review: 20261030T222005Z-other-category-review F2, severity minor).'
 groups: []
 carry_forward_ids:

@@ -11,7 +11,7 @@
 
 ## Summary
 
-Full-cohort audit of all 179 CYTOSKELETON records in data/structures/cytoskeleton/. Lump/split boundaries across bacterial cytomotive filaments, fungal septin/microtubule arrays, and protist cortical/axonemal arrays are clean, and the Cycle 4 finding on eisosome_filament.yaml was verified resolved. One cross-record consistency issue was identified across three S. pombe microtubule bundle records (cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml, static_microtubule_bundle.yaml), where alpha_tubulin protein_examples[1] (UniProtKB:P04689) uses synonym gene_symbol: atb2 instead of UniProtKB's primary gene symbol tub1 used across the five other S. pombe microtubule records in the same category. (A separate single-record review 20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols covers the missing gene_symbols list on post_anaphase_microtubule_array.yaml#emtoc.)
+Full-cohort audit of all 179 CYTOSKELETON records in data/structures/cytoskeleton/. Lump/split boundaries across bacterial cytomotive filaments, fungal septin/microtubule arrays, and protist cortical/axonemal arrays are clean, and the Cycle 4 finding on eisosome_filament.yaml was verified resolved. One cross-record consistency issue was identified across three S. pombe microtubule bundle records (cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml, static_microtubule_bundle.yaml), where alpha_tubulin protein_examples[0] (UniProtKB:P04689) uses synonym gene_symbol: atb2 instead of UniProtKB's primary gene symbol tub1 used across the five other S. pombe microtubule records in the same category. (A separate single-record review 20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols covers the missing gene_symbols list on post_anaphase_microtubule_array.yaml#emtoc.)
 
 ## Scope And Provenance
 
@@ -231,13 +231,13 @@ Three S. pombe microtubule bundle records record synonym atb2 instead of UniProt
 
 minor / open / confirmed; issue key: cytoskeleton-spombe-p04689-primary-gene-symbol-tub1.
 
-In cytoplasmic_microtubule_bundle.yaml (GO:1905720), quiescent_cell_microtubule_bundle.yaml (cellstructuremech:quiescent_cell_microtubule_bundle), and static_microtubule_bundle.yaml (GO:0099070), components[0] (alpha_tubulin) lists gene_symbols: [nda2, atb2] and its protein_examples[1] entry for UniProtKB:P04689 (Tubulin alpha-2 chain, NCBITaxon:284812) records gene_symbol: atb2. In UniProtKB, P04689's primary gene symbol is tub1 (with atb2 as a synonym), and all five other S. pombe microtubule records in data/structures/cytoskeleton/ (aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml, horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml) include tub1 in components[0].gene_symbols, set gene_symbol: tub1 on UniProtKB:P04689, and disclose '(also declared as synonym atb2)' in role.
+In cytoplasmic_microtubule_bundle.yaml (GO:1905720, components[0].gene_symbols: [atb2]), quiescent_cell_microtubule_bundle.yaml (cellstructuremech:quiescent_cell_microtubule_bundle, components[0].gene_symbols: [atb2]), and static_microtubule_bundle.yaml (GO:0099070, components[0].gene_symbols: [atb2, TUB1, TUB3]), components[0].protein_examples[0] for UniProtKB:P04689 (Tubulin alpha-2 chain, NCBITaxon:284812) records gene_symbol: atb2. In UniProtKB, P04689's primary gene symbol is tub1 (with atb2 as a synonym), and all five other S. pombe microtubule records in data/structures/cytoskeleton/ (aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml, horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml) include tub1 in components[0].gene_symbols, set gene_symbol: tub1 on UniProtKB:P04689, and disclose '(also declared as synonym atb2)' in role.
 
 ## Recommended Actions And Acceptance Checks
 
 ### A1
 
-Update components[0] (alpha_tubulin) in cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml so gene_symbols is [nda2, tub1, atb2] and protein_examples[1] (UniProtKB:P04689) uses primary gene_symbol: tub1 with role disclosing synonym atb2.
+Update components[0] (alpha_tubulin) in cytoplasmic_microtubule_bundle.yaml (gene_symbols: [tub1, atb2]), quiescent_cell_microtubule_bundle.yaml (gene_symbols: [tub1, atb2]), and static_microtubule_bundle.yaml (gene_symbols: [tub1, atb2, TUB1, TUB3]) so components[0].protein_examples[0] (UniProtKB:P04689) uses primary gene_symbol: tub1 with role disclosing synonym atb2.
 
 - .venv/bin/python scripts/validate_strict.py --out /tmp/instance_validation_failures.tsv
 - .venv/bin/python scripts/validate_history.py
@@ -252,7 +252,7 @@ Update components[0] (alpha_tubulin) in cytoplasmic_microtubule_bundle.yaml, qui
 | --- | --- | --- | --- |
 | ev_strict_cytoskeleton | scripts/validate_strict.py; strict_all receipt | supports | validate_strict.py exited 0 across all 1,008 records including all 179 cytoskeleton records. |
 | ev_history_cytoskeleton | scripts/validate_history.py; history_all receipt | supports | validate_history.py exited 0 across all 2,140 history records covering cytoskeleton. |
-| ev_cyto_spombe_p04689_atb2 | data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml; components[0] (lines 48-77) vs aster.yaml components[0] | supports | cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml list gene_symbols: [nda2, atb2] and gene_symbol: atb2 for UniProtKB:P04689, whereas aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml, horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml use UniProtKB primary gene symbol tub1. |
+| ev_cyto_spombe_p04689_atb2 | data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml; components[0] (lines 38-72) vs aster.yaml components[0] | supports | cytoplasmic_microtubule_bundle.yaml (gene_symbols: [atb2]), quiescent_cell_microtubule_bundle.yaml (gene_symbols: [atb2]), and static_microtubule_bundle.yaml (gene_symbols: [atb2, TUB1, TUB3]) record synonym gene_symbol: atb2 on components[0].protein_examples[0] (UniProtKB:P04689), whereas aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml, horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml use UniProtKB primary gene symbol tub1. |
 
 ## Limits And Additional Notes
 
@@ -289,7 +289,7 @@ summary: 'Full-cohort audit of all 179 CYTOSKELETON records in data/structures/c
   on eisosome_filament.yaml was verified resolved. One cross-record consistency issue
   was identified across three S. pombe microtubule bundle records (cytoplasmic_microtubule_bundle.yaml,
   quiescent_cell_microtubule_bundle.yaml, static_microtubule_bundle.yaml), where alpha_tubulin
-  protein_examples[1] (UniProtKB:P04689) uses synonym gene_symbol: atb2 instead of
+  protein_examples[0] (UniProtKB:P04689) uses synonym gene_symbol: atb2 instead of
   UniProtKB''s primary gene symbol tub1 used across the five other S. pombe microtubule
   records in the same category. (A separate single-record review 20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols
   covers the missing gene_symbols list on post_anaphase_microtubule_array.yaml#emtoc.)'
@@ -3779,20 +3779,20 @@ evidence:
 - evidence_id: ev_cyto_spombe_p04689_atb2
   kind: record_content
   reference: data/structures/cytoskeleton/cytoplasmic_microtubule_bundle.yaml
-  locator: components[0] (lines 48-77) vs aster.yaml components[0]
+  locator: components[0] (lines 38-72) vs aster.yaml components[0]
   accessed_at: '2026-10-30T22:18:30Z'
   support: supports
-  summary: 'cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml,
-    and static_microtubule_bundle.yaml list gene_symbols: [nda2, atb2] and gene_symbol:
-    atb2 for UniProtKB:P04689, whereas aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml,
+  summary: 'cytoplasmic_microtubule_bundle.yaml (gene_symbols: [atb2]), quiescent_cell_microtubule_bundle.yaml
+    (gene_symbols: [atb2]), and static_microtubule_bundle.yaml (gene_symbols: [atb2,
+    TUB1, TUB3]) record synonym gene_symbol: atb2 on components[0].protein_examples[0]
+    (UniProtKB:P04689), whereas aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml,
     horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml
     use UniProtKB primary gene symbol tub1.'
-  quote: "- component_id: alpha_tubulin\n  label: alpha-tubulin\n  component_type:\
-    \ PROTEIN\n  component_role: STRUCTURAL_CORE\n  grounding: InterPro:IPR002453\n\
-    \  gene_symbols:\n  - nda2\n  - atb2\n...\n  - uniprot_id: UniProtKB:P04689\n\
-    \    protein_label: Tubulin alpha-2 chain\n    gene_symbol: atb2\n    taxon_id:\
-    \ NCBITaxon:284812\n    taxon_label: Schizosaccharomyces pombe 972h-\n    entry_status:\
-    \ REVIEWED\n    role: Identifier for the component's declared gene symbol"
+  quote: "- component_id: alpha_tubulin\n  label: Alpha tubulin\n  component_type:\
+    \ PROTEIN\n  component_role: CONSTITUENT\n...\n  gene_symbols:\n  - atb2\n  protein_examples:\n\
+    \  - uniprot_id: UniProtKB:P04689\n    protein_label: Tubulin alpha-2 chain\n\
+    \    gene_symbol: atb2\n    taxon_id: NCBITaxon:284812\n    taxon_label: Schizosaccharomyces\
+    \ pombe 972h-\n    entry_status: REVIEWED"
   snapshot_sha256: 4f42862d1735d7b07301c9c183f9ace1e024061c363ab4a5197c150328565db2
 assessments:
 - assessment_id: assess_cytoskeleton_cohort
@@ -4006,12 +4006,13 @@ findings:
   certainty: confirmed
   title: Three S. pombe microtubule bundle records use synonym gene_symbol atb2 instead
     of primary UniProtKB symbol tub1 on UniProtKB:P04689
-  description: 'In cytoplasmic_microtubule_bundle.yaml (GO:1905720), quiescent_cell_microtubule_bundle.yaml
-    (cellstructuremech:quiescent_cell_microtubule_bundle), and static_microtubule_bundle.yaml
-    (GO:0099070), components[0] (alpha_tubulin) lists gene_symbols: [nda2, atb2] and
-    its protein_examples[1] entry for UniProtKB:P04689 (Tubulin alpha-2 chain, NCBITaxon:284812)
-    records gene_symbol: atb2. In UniProtKB, P04689''s primary gene symbol is tub1
-    (with atb2 as a synonym), and all five other S. pombe microtubule records in data/structures/cytoskeleton/
+  description: 'In cytoplasmic_microtubule_bundle.yaml (GO:1905720, components[0].gene_symbols:
+    [atb2]), quiescent_cell_microtubule_bundle.yaml (cellstructuremech:quiescent_cell_microtubule_bundle,
+    components[0].gene_symbols: [atb2]), and static_microtubule_bundle.yaml (GO:0099070,
+    components[0].gene_symbols: [atb2, TUB1, TUB3]), components[0].protein_examples[0]
+    for UniProtKB:P04689 (Tubulin alpha-2 chain, NCBITaxon:284812) records gene_symbol:
+    atb2. In UniProtKB, P04689''s primary gene symbol is tub1 (with atb2 as a synonym),
+    and all five other S. pombe microtubule records in data/structures/cytoskeleton/
     (aster.yaml, astral_microtubule.yaml, cortical_microtubule_cytoskeleton.yaml,
     horsetail_astral_microtubule_array.yaml, and post_anaphase_microtubule_array.yaml)
     include tub1 in components[0].gene_symbols, set gene_symbol: tub1 on UniProtKB:P04689,
@@ -4022,8 +4023,8 @@ findings:
   - GO:0099070
   field_paths:
   - components[0].gene_symbols
-  - components[0].protein_examples[1].gene_symbol
-  - components[0].protein_examples[1].role
+  - components[0].protein_examples[0].gene_symbol
+  - components[0].protein_examples[0].role
   evidence_ids:
   - ev_cyto_spombe_p04689_atb2
   rule_id: .claude/skills/uniprot-protein-examples/SKILL.md:primary-gene-symbol
@@ -4044,10 +4045,11 @@ findings:
   - stage4-record-review
 actions:
 - action_id: A1
-  description: 'Update components[0] (alpha_tubulin) in cytoplasmic_microtubule_bundle.yaml,
-    quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml so
-    gene_symbols is [nda2, tub1, atb2] and protein_examples[1] (UniProtKB:P04689)
-    uses primary gene_symbol: tub1 with role disclosing synonym atb2.'
+  description: 'Update components[0] (alpha_tubulin) in cytoplasmic_microtubule_bundle.yaml
+    (gene_symbols: [tub1, atb2]), quiescent_cell_microtubule_bundle.yaml (gene_symbols:
+    [tub1, atb2]), and static_microtubule_bundle.yaml (gene_symbols: [tub1, atb2,
+    TUB1, TUB3]) so components[0].protein_examples[0] (UniProtKB:P04689) uses primary
+    gene_symbol: tub1 with role disclosing synonym atb2.'
   finding_ids:
   - F1
   target_ids:

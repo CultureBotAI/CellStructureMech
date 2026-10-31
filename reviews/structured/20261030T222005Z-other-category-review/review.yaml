@@ -6087,8 +6087,8 @@ evidence:
 - evidence_id: ev_primosome_dnac_and_hierarchy
   kind: record_content
   reference: data/structures/other/primosome_complex.yaml
-  locator: parent_structures/part_of (lines 36-39), components[2].protein_examples[0]
-    (lines 103-110), and evidence (lines 195-210)
+  locator: parent_structures/part_of (lines 16-19), components[2].protein_examples[0]
+    (lines 103-110), and evidence (lines 163-174)
   accessed_at: '2026-10-30T22:19:15Z'
   support: supports
   summary: primosome_complex.yaml uses outdated protein_label 'DNA replication protein
@@ -6103,8 +6103,8 @@ evidence:
 - evidence_id: ev_other_replisome_ncbitaxon_284812_label
   kind: record_content
   reference: data/structures/other/cmg_complex.yaml
-  locator: components[0].protein_examples[0] (lines 48-55) and canonical_examples[0]
-    (lines 201-205)
+  locator: components[2].protein_examples[0] (lines 91-107) and canonical_examples[0]
+    (lines 116-120)
   accessed_at: '2026-10-30T22:19:20Z'
   support: supports
   summary: 'cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml pair taxon_id:
@@ -6508,7 +6508,7 @@ findings:
   title: cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml use species
     label 'Schizosaccharomyces pombe' for strain NCBITaxon:284812
   description: 'Across data/structures/other/cmg_complex.yaml (GO:0071162), data/structures/other/nuclear_replisome.yaml
-    (GO:0043601), and data/structures/other/replisome.yaml (GO:0030894), components[0]
+    (GO:0043601), and data/structures/other/replisome.yaml (GO:0030894), components[2]
     (cdc45_protein) protein_examples[0] (UniProtKB:O74113, taxon_id: NCBITaxon:284812)
     and canonical_examples[0] (taxon_id: NCBITaxon:284812) set taxon_label: ''Schizosaccharomyces
     pombe'' (the species label for NCBITaxon:4896) instead of the canonical NCBI Taxonomy
@@ -6519,7 +6519,7 @@ findings:
   - GO:0043601
   - GO:0030894
   field_paths:
-  - components[0].protein_examples[0].taxon_label
+  - components[2].protein_examples[0].taxon_label
   - canonical_examples[0].taxon_label
   evidence_ids:
   - ev_other_replisome_ncbitaxon_284812_label
@@ -6558,7 +6558,7 @@ actions:
   - .venv/bin/python scripts/validate_history.py
 - action_id: A2
   description: Update taxon_label for NCBITaxon:284812 from 'Schizosaccharomyces pombe'
-    to 'Schizosaccharomyces pombe 972h-' in components[0].protein_examples[0] and
+    to 'Schizosaccharomyces pombe 972h-' in components[2].protein_examples[0] and
     canonical_examples[0] across cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml.
   finding_ids:
   - F2
