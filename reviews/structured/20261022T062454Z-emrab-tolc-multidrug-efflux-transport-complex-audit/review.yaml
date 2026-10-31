@@ -1,0 +1,961 @@
+schema_version: 1.0.0
+review_id: 20261022T062454Z-emrab-tolc-multidrug-efflux-transport-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Emrab tolc multidrug efflux transport complex scientific review
+started_at: '2026-10-22T06:03:55Z'
+finished_at: '2026-10-22T06:24:54Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The CPX-defined K12 pump, curator-qualified6:1:3 composition and coarse export
+  function are supported. One minor resolves exact EmrA/EmrB family identity; engineered
+  structure and unresolved individual formation requirements remain explicit.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    sha256: 3f2fc12842c13b847a6c930d89242a164a83e37cfc8840f59fa90fe2c71f0d2c
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  path: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+  label: EmrAB-TolC multidrug efflux transport complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target and frozen guidance; source-specific
+    actual read scopes enumerated per evidence locator. No maintained neighboring
+    record supplied scientific evidence.
+  selection: Target 9 of batch53, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  command: just validate data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  command: just validate-strict data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/emrab_tolc_multidrug_efflux_transport_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  command: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological validity is separately assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  command: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; biological validity is separately assessed.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  summary: No expression-module inference is required for these identity/assembly/transport
+    claims.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex53-agent-go
+  - complex53-agent-tax83333
+  - complex53-agent-protein-P27303
+  - complex53-agent-gene-emrA-83333
+  - complex53-agent-protein-P0AEJ0
+  - complex53-agent-gene-emrB-83333
+  - complex53-agent-protein-P02930
+  - complex53-agent-gene-tolC-83333
+  - complex53-agent-pmid-12482849
+  - complex53-agent-pmid-33065135
+  - complex53-agent-pmid-41839863
+  - complex53-agent-doi-j_bbamem_2020_183488
+  - complex53-agent-doi-s41467-026-70500-5
+  - complex53-agent-doi-jbc_M209457200
+  - complex53-agent-complex-CPX-4268
+  - complex53-agent-eco0005547
+  - complex53-agent-pdb-8ZAL-entry
+  - complex53-agent-pdb-8ZAL-assembly
+  - complex53-agent-pdb-8ZAL-entity1
+  - complex53-agent-pdb-8ZAL-entity2
+  - complex53-agent-pdb-8ZAL-entity3
+  - complex53-agent-zhong2026-legacy
+  - complex53-agent-ncbifam-NF011715
+  - complex53-agent-ncbifam-NF000391
+  - complex53-agent-ipr-IPR004638
+  - complex53-agent-ipr-IPR058622
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  summary: '13 of 19 collected target identifiers returned OK. ECO:0005547: SKIPPED;
+    Exact active ECO0005547 native identifier, label and complete definition independently
+    read: manual assertion by biological-system reconstruction from background knowledge.
+    This evidence type does not itself provide physical interaction evidence; no ECO
+    adapter exists in the bulk gate.; PDB:8ZAL: SKIPPED; Exact RCSB entry identifier,
+    structure title and primary citation DOI/PMID independently read. Deposition-specific
+    composition, ligands and structural interpretation retain the separately reviewed
+    evidence scopes; the paper title does not substitute for entry identity. No PDB
+    resolver adapter exists in the bulk gate.; PMID:12482849: UNREACHABLE; Exact native
+    EuropePMC MED identifier/title/DOI independently read following the bulk eutils414
+    transport failure. Resolution is identifier identity only; separate primary-body/abstract
+    evidence limits remain in force.; PMID:33065135: UNREACHABLE; Exact native EuropePMC
+    MED identifier/title/DOI independently read following the bulk eutils414 transport
+    failure. Resolution is identifier identity only; separate primary-body/abstract
+    evidence limits remain in force.; PMID:41839863: UNREACHABLE; Exact native EuropePMC
+    MED identifier/title/DOI independently read following the bulk eutils414 transport
+    failure. Resolution is identifier identity only; separate primary-body/abstract
+    evidence limits remain in force.; cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex:
+    SKIPPED; Repository-minted identifier independently checked in the complete ignored-inclusive
+    978-record YAML universe; exactly one record declares this identifier, at the
+    reviewed target path. This is local identity verification, not external ontology
+    resolution. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex53-agent-eco0005547
+  - complex53-agent-pdb-8ZAL-entry
+  - complex53-agent-pmid-12482849
+  - complex53-agent-pmid-33065135
+  - complex53-agent-pmid-41839863
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Entire maintained target, all components/examples/evidence/graph/discussions/history
+  accessed_at: '2026-10-22T06:14:56Z'
+  support: context_only
+  summary: The complete target was read. Historical curation claims are not independent
+    scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ProteinExample, essentiality, taxonomic presence and
+    graph scope
+  accessed_at: '2026-10-22T06:14:56Z'
+  support: context_only
+  summary: Formation necessity differs from activity and membership. COMMON means
+    present in most members, losses the exception; VARIABLE does not assert universality.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact component grounding, label-only contract159–160 and formation semantics
+  accessed_at: '2026-10-22T06:14:56Z'
+  support: context_only
+  summary: REVIEWED_LABEL_ONLY means no exact class term exists after review. A known
+    protein constituent can be represented with a label while exact family mapping
+    remains unresolved.
+- evidence_id: complex53-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0002097,GO:0005784,GO:0005789,GO:0033588,GO:0042910,GO:0045048,GO:0072546,GO:0098796,GO:0140330,GO:0140535,GO:1902494,GO:1902495,GO:1990207,GO:1990281
+  locator: Complete target-relevant active definitions, synonym types and typed child
+    links within combined response; other terms are not attributed to this target
+  accessed_at: '2026-10-22T06:04:56.005634Z'
+  support: supports
+  summary: GO1990281 defines an efflux pump complex; GO0042910 and GO0140330 define
+    xenobiotic transmembrane transport and export across the outer membrane. These
+    terms classify the CPX-defined pump without supplying its exact stoichiometry.
+  snapshot_sha256: ff946a7735c549a3a05a73c3dfaaaa7d501546c65d21a07ca7e5e8474cb827b2
+- evidence_id: complex53-agent-tax83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T06:04:56.745015Z'
+  support: supports
+  summary: 'ENA 83333: Escherichia coli K-12, rank strain; names and lineage support
+    this exact taxon identity.'
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: complex53-agent-protein-P27303
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P27303.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:56.870919Z'
+  support: supports
+  summary: Reviewed P27303 identifies Multidrug export protein EmrA in taxon83333;
+    gene emrA is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: d7638d10e5bd07cc5b1c923730bb205e1ee6647425b833cc7dd3c0392995e329
+- evidence_id: complex53-agent-gene-emrA-83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AemrA%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:04:59.914159Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: P27303.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: 53daa4a1a9e4fe8791823830645ae0c25651dceb217d4e76af0336c1042fe83e
+  search_scope: UniProt gene_exact:emrA, organism_id:83333, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-protein-P0AEJ0
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0AEJ0.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:56.816480Z'
+  support: supports
+  summary: Reviewed P0AEJ0 identifies Multidrug export protein EmrB in taxon83333;
+    gene emrB is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: 28e94d51d54ca95bd1deded6498d7456ec9b3b550970d1bb376b28cd1d0c5284
+- evidence_id: complex53-agent-gene-emrB-83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AemrB%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:04:59.990190Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: P0AEJ0.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: 53c835b77fdb599222e36e600094db1b6e028876b16cd1baabb6dc8c9edd192e
+  search_scope: UniProt gene_exact:emrB, organism_id:83333, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-protein-P02930
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P02930.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:56.768447Z'
+  support: supports
+  summary: Reviewed P02930 identifies Outer membrane protein TolC in taxon83333; gene
+    tolC is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: cef14f6af1999fe0b5218d959cca8788ec00afc1b145201ba48344a4b15bbb04
+- evidence_id: complex53-agent-gene-tolC-83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AtolC%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:05:00.727069Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: P02930.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: 3e284eede466d8aa6d6eac091b434ce033083e18848c220476a3bdb06463365a
+  search_scope: UniProt gene_exact:tolC, organism_id:83333, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-pmid-12482849
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12482849+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:01.637967Z'
+  support: supports
+  summary: 'MED12482849: Identification of oligomerization and drug-binding domains
+    of the membrane fusion protein EmrA. Authors Borges-Walmsley MI, Beauchamp J,
+    Kelly SM, Jumel K, Candlish D, Harding SE, Price NC, Walmsley AR.; year2003, DOI10.1074/jbc.m209457200.
+    Complete abstract read; metadata is not full-body evidence.'
+  snapshot_sha256: a1371a1e352145cb70838ea905392c5169553c2cc4d1ace978eb9cfc69311fc3
+- evidence_id: complex53-agent-pmid-33065135
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A33065135+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:02.465105Z'
+  support: supports
+  summary: 'MED33065135: Structural characterization of the EmrAB-TolC efflux complex
+    from E. coli. Authors Yousefian N, Ornik-Cha A, Poussard S, Decossas M, Berbon
+    M, Daury L, Taveau JC, Dupuy JW, Đorđević-Marquardt S, Lambert O, Pos KM.; year2021,
+    DOI10.1016/j.bbamem.2020.183488. Complete abstract read; metadata is not full-body
+    evidence.'
+  snapshot_sha256: 6fb578646a5c5345644bb9956adb1c2e93d3f0d637609f5939070b4177f107d4
+- evidence_id: complex53-agent-pmid-41839863
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41839863+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:02.542050Z'
+  support: supports
+  summary: 'MED41839863: A model for drug transport across two membranes of Gram-negative
+    bacteria by an MFS tripartite assembly. Authors Zhong Z, Maimaiti T, Jackson ML,
+    Dong R, Gao X, Ouyang Q, Wang W, Guo J, Li S, Shang W, Liu H, Jiang H, Zhang S,
+    Zachariae U, Luisi BF, Chao Y, Du D.; year2026, DOI10.1038/s41467-026-70500-5.
+    Complete abstract read; metadata is not full-body evidence.'
+  snapshot_sha256: 66653ceea0ad750ae4dab39cd88d6754703897a10332ad59c0d71c05fb82ecee
+- evidence_id: complex53-agent-doi-j_bbamem_2020_183488
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bbamem.2020.183488%22&format=json&resultType=core
+  locator: Exact DOI/title/authors/PMID/year and complete native abstract
+  accessed_at: '2026-10-22T06:05:02.646164Z'
+  support: supports
+  summary: 'Native DOI/MED identity: Structural characterization of the EmrAB-TolC
+    efflux complex from E. coli. Authors Yousefian N, Ornik-Cha A, Poussard S, Decossas
+    M, Berbon M, Daury L, Taveau JC, Dupuy JW, Đorđević-Marquardt S, Lambert O, Pos
+    KM.; year2021, PMID33065135. Complete abstract inspected; independently recovered
+    primary bodies are separate evidence rows.'
+  snapshot_sha256: 56b7a41369ce9213e9793712dd12e44ab9498ad44037f6638d7db876292c234d
+- evidence_id: complex53-agent-doi-s41467-026-70500-5
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-026-70500-5%22&format=json&resultType=core
+  locator: Exact DOI/title/authors/PMID/year and complete native abstract
+  accessed_at: '2026-10-22T06:05:02.864530Z'
+  support: supports
+  summary: 'Native DOI/MED identity: A model for drug transport across two membranes
+    of Gram-negative bacteria by an MFS tripartite assembly. Authors Zhong Z, Maimaiti
+    T, Jackson ML, Dong R, Gao X, Ouyang Q, Wang W, Guo J, Li S, Shang W, Liu H, Jiang
+    H, Zhang S, Zachariae U, Luisi BF, Chao Y, Du D.; year2026, PMID41839863. Complete
+    abstract inspected; independently recovered primary bodies are separate evidence
+    rows.'
+  snapshot_sha256: 5762605cfbdf5b175eeed72414052ed4fb6781ce65ba5ce59379710060229fd8
+- evidence_id: complex53-agent-doi-jbc_M209457200
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.M209457200%22&format=json&resultType=core
+  locator: Exact DOI/title/authors/PMID/year and complete native abstract
+  accessed_at: '2026-10-22T06:05:03.529742Z'
+  support: supports
+  summary: 'Native DOI/MED identity: Identification of oligomerization and drug-binding
+    domains of the membrane fusion protein EmrA. Authors Borges-Walmsley MI, Beauchamp
+    J, Kelly SM, Jumel K, Candlish D, Harding SE, Price NC, Walmsley AR.; year2003,
+    PMID12482849. Complete abstract inspected; independently recovered primary bodies
+    are separate evidence rows.'
+  snapshot_sha256: 52e3370bde21e92fdc677ae874021c380d98e8a45ed31b1f29c6ce382383f2b4
+- evidence_id: complex53-agent-complex-CPX-4268
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-4268
+  locator: Exact accession/species/name, complete participants/counts and assembly/evidenceType/functions/properties;
+    feature annotations not used as atomic binding evidence
+  accessed_at: '2026-10-22T06:05:04.786714Z'
+  support: supports
+  summary: CPX4268 is the E.coliK12 EmrAB-TolC system. Explicit participants are P27303×6,P0AEJ0×1,P02930×3,
+    heterodecamer, ECO0005547 inferred by curator. The systematicName string is less
+    complete than the explicit participant counts; properties call EmrA hexamer probable.
+    Functional summary concerns hydrophobic xenobiotic export.
+  snapshot_sha256: 4dd8d1075159c44c779141de7e6ffb8cf4824ef3830e3704223626dbfecadab6
+- evidence_id: complex53-agent-eco0005547
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/eco/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FECO_0005547
+  locator: Exact active identifier/label/definition and ontology metadata
+  accessed_at: '2026-10-22T06:11:38.617052Z'
+  support: supports
+  summary: ECO0005547 is biological-system reconstruction based on background scientific
+    knowledge used in manual assertion, matching the CPX inferred-by-curator evidence
+    type.
+  snapshot_sha256: 5e079c708429feead41b2264cd1bf4f73131b706add51786aeaa9ad1f0de949b
+- evidence_id: complex53-agent-pdb-8ZAL-entry
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/8ZAL
+  locator: Entry title, experimental method, primary citation, accession and entity
+    counts
+  accessed_at: '2026-10-22T06:05:05.304212Z'
+  support: supports
+  summary: 8ZAL is the EmrAB-TolC pump-EA electron-microscopy model, with primary
+    citation Zhong2026 matching PMID41839863/DOI10.1038/s41467-026-70500-5.
+  snapshot_sha256: ed624267153d201ad3c5d23ac9d33b577f429f011f6858bc83ca940cd75948aa
+- evidence_id: complex53-agent-pdb-8ZAL-assembly
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/8ZAL/1
+  locator: Assembly1 oligomeric details and chain generation
+  accessed_at: '2026-10-22T06:05:05.341150Z'
+  support: supports
+  summary: Assembly1 is an author/software-defined heterodecamer with six EmrA, three
+    TolC and one EmrB chains. This deposition count is not a direct transport-function
+    assay.
+  snapshot_sha256: 0ef4b90f32f9f356a7192a19657db57ea195454471080e849d5b9fd9b3ef4515
+- evidence_id: complex53-agent-pdb-8ZAL-entity1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/8ZAL/1
+  locator: Entity source/sequence/chains, mutation and SIFTS reference-coverage metadata;
+    no coordinates
+  accessed_at: '2026-10-22T06:05:05.369758Z'
+  support: supports
+  summary: Entity1 maps to P27303/EmrA, sourceK12 taxonomy83333; chains and sequence
+    coverage were checked. The deposited engineered construct is distinguished from
+    its reference sequence.
+  snapshot_sha256: c765d233963548acd217c564c6c61703b28d1609b0120e2690f87366b27f151f
+- evidence_id: complex53-agent-pdb-8ZAL-entity2
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/8ZAL/2
+  locator: Entity source/sequence/chains, mutation and SIFTS reference-coverage metadata;
+    no coordinates
+  accessed_at: '2026-10-22T06:05:53.486047Z'
+  support: supports
+  summary: Entity2 maps to P02930/TolC, sourceK12 taxonomy83333; chains and sequence
+    coverage were checked. The native entity reports TolC V169L; it is not an unmodified
+    wild-type protein sample.
+  snapshot_sha256: 972853bb403a14c3b01d3d813fad976ffeec9850289bc8c046dd065105016ca8
+- evidence_id: complex53-agent-pdb-8ZAL-entity3
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/8ZAL/3
+  locator: Entity source/sequence/chains, mutation and SIFTS reference-coverage metadata;
+    no coordinates
+  accessed_at: '2026-10-22T06:05:53.533278Z'
+  support: supports
+  summary: Entity3 maps to P0AEJ0/EmrB, sourceK12 taxonomy83333; chains and sequence
+    coverage were checked. The deposited engineered construct is distinguished from
+    its reference sequence.
+  snapshot_sha256: 6374acc517a0f9eda5707a406e851f76c7675d41b2bbf2a3efdeef6b3360a827
+- evidence_id: complex53-agent-zhong2026-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13139468/
+  locator: Results Sec3/4/5/6/8/11, Discussion Sec12 including Fig1/2/3/5 and embedded
+    supplementary-caption text; Methods Sec14/15/16/17. Other Results, simulation
+    Methods, supplements and pixels not independently analyzed.
+  accessed_at: '2026-10-22T06:05:51.139660Z'
+  support: supports
+  summary: Zhong2026 resolves a3:6:1 pump and measures resistance/antiport in engineered
+    expression systems. Pump-FA retains resistance, while more stable pump-EA is inactive
+    despite similar assembly; EmrB-EmrA fusion, BRIL/ALFA and modified EmrA are explicit.
+    K12MG1655 supplies cloned genes, C43(DE3)deltaacrAB is the assay/expression host.
+    Mutant resistance loss and proposed transport transitions are distinguished from
+    direct assembly-removal tests.
+  snapshot_sha256: ec51e012bb13366d9b46f7e42f9012320ccb1fc2028f14fd13f96717bf0d7138
+- evidence_id: complex53-agent-ncbifam-NF011715
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF011715/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:09:23.889875Z'
+  support: supports
+  summary: NF011715 is a family named multidrug efflux MFS transporter periplasmic
+    adaptor subunit EmrA; no descriptive functional prose is present. It supplies
+    exact family identity, with separate protein membership evidence.
+  snapshot_sha256: 769e1484b7cb220f4f9d8ced45408d463a0256d540b04783f8691e1f0d969114
+- evidence_id: complex53-agent-ncbifam-NF000391
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF000391/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:09:23.889321Z'
+  support: supports
+  summary: NF000391 is a family named multidrug efflux MFS transporter permease subunit
+    EmrB; its native literature and type identify the exact named protein family,
+    independently of its membership in this pump.
+  snapshot_sha256: cafbbbd9187ec1b56c7ca1190c035777ea704caa2bbcf460e1bbbaf5b11adf78
+- evidence_id: complex53-agent-ipr-IPR004638
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004638/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:04.587920Z'
+  support: supports
+  summary: IPR004638 is Drug resistance transporter EmrB-like, the broader DHA2 transporter
+    family; its description also includes FarB,TcmA,RibZ. It is not an exact identity
+    for EmrB alone.
+  snapshot_sha256: 633ee99cb1562d934fe7f86ce75875bc69f1394a42250bdf6a58ce6a0fc00caf
+- evidence_id: complex53-agent-ipr-IPR058622
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058622/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:04.707093Z'
+  support: supports
+  summary: IPR058622 is the full outer-membrane-channel TolC family, with exact NF007002
+    signature. This supports the maintained TolC grounding; membership is independently
+    evidenced by P02930.
+  snapshot_sha256: d3c58cbb9737d5f395f703b634f84df048f355555af2b817f321a5e474b8e310
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:03:58Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml'
+  snapshot_sha256: 6af17933a4f92169783c83d30d5d64276e7c76df33c6b38d86b11ddd82b7e1c5
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/emrab_tolc_multidrug_efflux_transport_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:03:59Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/emrab_tolc_multidrug_efflux_transport_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch53-20261022-kx679dvh/emrab_tolc_multidrug_efflux_transport_complex-strict.tsv"
+  snapshot_sha256: ae52e6fc08f29a96fcd9748301b18b4e7f2d5da35d419cd93a88f8a893bdf546
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T06:10:35.556012Z'
+  support: supports
+  summary: "data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml\
+    \  (cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex)\n  emrab_tolc_xenobiotic_efflux\t\
+    emra\tCOVERED\t->emra_membrane_fusion_protein (UniProtKB:P27303)\n  emrab_tolc_xenobiotic_efflux\t\
+    emrb\tCOVERED\t->emrb_inner_membrane_transporter (UniProtKB:P0AEJ0)\n  emrab_tolc_xenobiotic_efflux\t\
+    tolc\tCOVERED\t->tolc_outer_membrane_channel (UniProtKB:P02930)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     3  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     3  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 470e07d0a056cc012469c5825c184baff91f5d1a6fc33adc4c368013cc58f268
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T06:10:36.648857Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '13 of 19 collected target identifiers returned OK. ECO:0005547: SKIPPED;
+    Exact active ECO0005547 native identifier, label and complete definition independently
+    read: manual assertion by biological-system reconstruction from background knowledge.
+    This evidence type does not itself provide physical interaction evidence; no ECO
+    adapter exists in the bulk gate.; PDB:8ZAL: SKIPPED; Exact RCSB entry identifier,
+    structure title and primary citation DOI/PMID independently read. Deposition-specific
+    composition, ligands and structural interpretation retain the separately reviewed
+    evidence scopes; the paper title does not substitute for entry identity. No PDB
+    resolver adapter exists in the bulk gate.; PMID:12482849: UNREACHABLE; Exact native
+    EuropePMC MED identifier/title/DOI independently read following the bulk eutils414
+    transport failure. Resolution is identifier identity only; separate primary-body/abstract
+    evidence limits remain in force.; PMID:33065135: UNREACHABLE; Exact native EuropePMC
+    MED identifier/title/DOI independently read following the bulk eutils414 transport
+    failure. Resolution is identifier identity only; separate primary-body/abstract
+    evidence limits remain in force.; PMID:41839863: UNREACHABLE; Exact native EuropePMC
+    MED identifier/title/DOI independently read following the bulk eutils414 transport
+    failure. Resolution is identifier identity only; separate primary-body/abstract
+    evidence limits remain in force.; cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex:
+    SKIPPED; Repository-minted identifier independently checked in the complete ignored-inclusive
+    978-record YAML universe; exactly one record declares this identifier, at the
+    reviewed target path. This is local identity verification, not external ontology
+    resolution. Native source checks are separately scoped; skipped or unreachable
+    identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Minted pump identity and imported composition
+  outcome: supported
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  summary: The maintained identifier occurs exactly once as an identifier among ignored-inclusive
+    data/structures YAML records. CPX4268 defines the intended K12 three-protein system;
+    its explicit heterodecamer import matches6:1:3 and preserves curator-inference
+    provenance. Native GO classifies the pump without replacing the source-defined
+    identity.
+  evidence_ids:
+  - record
+  - complex53-agent-go
+  - complex53-agent-complex-CPX-4268
+  - complex53-agent-eco0005547
+  - complex53-agent-pdb-8ZAL-entry
+  - complex53-agent-pdb-8ZAL-assembly
+  - complex53-agent-pdb-8ZAL-entity1
+  - complex53-agent-pdb-8ZAL-entity2
+  - complex53-agent-pdb-8ZAL-entity3
+- assessment_id: grounding
+  area: grounding
+  topic: Exact EmrA/EmrB class mapping and correct TolC
+  outcome: concern
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  summary: Correct K12 accessions, exact gene-query identities and molecular roles
+    are retained. EmrA can use NF011715, while broad DHA2/EmrB-like IPR004638 should
+    be distinguished from exact EmrB NF000391. TolC IPR058622 remains valid.
+  evidence_ids:
+  - record
+  - curation
+  - complex53-agent-ncbifam-NF011715
+  - complex53-agent-ncbifam-NF000391
+  - complex53-agent-ipr-IPR004638
+  - complex53-agent-ipr-IPR058622
+  - complex53-agent-protein-P27303
+  - complex53-agent-protein-P0AEJ0
+  - complex53-agent-protein-P02930
+  - complex53-agent-gene-emrA-83333
+  - complex53-agent-gene-emrB-83333
+  - complex53-agent-gene-tolC-83333
+- assessment_id: scope
+  area: scope
+  topic: Reference K12 versus engineered structural sample
+  outcome: supported
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  summary: The canonical CPX K12 example and its curator-qualified stoichiometry are
+    accurate. The target calls8ZAL the pump-EA model and uses it for modeled chain
+    counts, not proof of wild-type activity. The primary demonstrates functional and
+    inactive engineered preparations; sourceMG1655, referenceK12 and expressionC43
+    are distinct.
+  evidence_ids:
+  - record
+  - complex53-agent-complex-CPX-4268
+  - complex53-agent-pdb-8ZAL-entry
+  - complex53-agent-pdb-8ZAL-assembly
+  - complex53-agent-zhong2026-legacy
+  - complex53-agent-tax83333
+  - complex53-agent-pdb-8ZAL-entity1
+  - complex53-agent-pdb-8ZAL-entity2
+  - complex53-agent-pdb-8ZAL-entity3
+- assessment_id: graph
+  area: graph
+  topic: Coarse coupled-conduit output
+  outcome: supported
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  summary: The NONMECHANISTIC graph states coupled EmrB/EmrA/TolC and xenobiotic export.
+    CPX and Yousefian complete abstract support that coarse linkage; Zhong supplies
+    higher-resolution support without importing its proposed protonation/alternating-access
+    cycle into the maintained graph.
+  evidence_ids:
+  - record
+  - complex53-agent-go
+  - complex53-agent-complex-CPX-4268
+  - complex53-agent-zhong2026-legacy
+  - complex53-agent-pmid-33065135
+  - complex53-agent-protein-P27303
+  - complex53-agent-protein-P0AEJ0
+  - complex53-agent-protein-P02930
+- assessment_id: formation
+  area: grounding
+  topic: Individual formation necessity is not established by activity loss
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  summary: The ESSENTIAL fields concern structure formation. Native composition and
+    engineered assembled structures establish membership; source resistance and vesicle-antiport
+    loss after omissions do not by themselves establish whether remaining proteins
+    fail to associate. This review does not certify a direct formation requirement
+    for each of the three proteins from those functional assays.
+  evidence_ids:
+  - record
+  - schema
+  - complex53-agent-complex-CPX-4268
+  - complex53-agent-zhong2026-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Full maintained record and scoped unresolved claims
+  outcome: supported
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  summary: All maintained fields, evidence notes, discussions and graph claims were
+    checked at the stated source extents. Unresolved assembly, taxonomic prevalence
+    and preparation details remain explicit rather than being inferred from identifiers
+    or validation success.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex53-agent-go
+findings:
+- finding_id: F1
+  issue_key: emrab-exact-component-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Use exact EmrA and EmrB family identities
+  description: EmrA remains label-only although NF011715 names the exact adaptor family;
+    EmrB is grounded to broader DHA2/EmrB-like IPR004638 while NF000391 resolves exact
+    EmrB. Separate UniProt xrefs corroborate each protein-family join.
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  field_paths:
+  - components#emra_membrane_fusion_protein.grounding_status
+  - components#emrb_inner_membrane_transporter.grounding
+  - causal_graphs#emrab_tolc_xenobiotic_efflux.nodes#emrb.grounding
+  - discussions#emrab_tolc_component_family_grounding
+  evidence_ids:
+  - record
+  - curation
+  - complex53-agent-ncbifam-NF011715
+  - complex53-agent-ncbifam-NF000391
+  - complex53-agent-ipr-IPR004638
+  - complex53-agent-protein-P27303
+  - complex53-agent-protein-P0AEJ0
+  - complex53-agent-protein-P02930
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-specific biological scope and exact component grounding
+  native_severity: minor
+  normalization_reason: The complex identity and correctly identified proteins remain
+    intact; this is a bounded actionable grounding, inventory or condition-specific
+    annotation correction.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:emrab_tolc_multidrug_efflux_transport_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emrab_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+  description: Ground EmrA to verified NF011715 and use exact EmrB NF000391 consistently
+    in component and graph; align current TODO/notes and retain exact TolC, protein
+    examples and source composition.
+  acceptance_checks:
+  - Do not treat a shared hairpin/beta-barrel domain as EmrA identity.
+  - Keep broader DHA2 membership only as contextual classification.
+  - Preserve correct identities and supported biology; pass applicable native validation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, supplemental datasets or atomic coordinates were reanalyzed. Embedded
+  caption text is distinguished from independently inspected images and supplements.
+- Yousefian2021 and Borges-Walmsley2003 were read at complete native abstract scope
+  only; retained DOI routes failed TLS certificate verification. No full-body absence
+  is claimed.
+- 8ZAL pump-EA is an engineered inactive structural construct; count correspondence
+  supports architecture, not activity of that preparation. CPX remains an explicitly
+  curator-inferred composition layer.
+- The legacy EmrA oligomer annotations and CPX systematicName are not substituted
+  for the explicitly sourced whole-pump6:1:3 assembly.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
