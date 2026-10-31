@@ -1,0 +1,1079 @@
+schema_version: 1.0.0
+review_id: 20261022T065211Z-gamma-dna-polymerase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of gamma dna polymerase complex
+started_at: '2026-10-22T06:28:13Z'
+finished_at: '2026-10-22T06:52:11Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'One minor: an exact catalytic POLG family is available. The accessory class
+  remains appropriately unresolved after bounded candidate checks; mammalian composition/function
+  and protein identities are supported with historical stoichiometry and prevalence
+  limits explicit.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    sha256: 7347f769b0c99e3c591c0d717c36b3fe849329f234e87d95c14ad77d9e3739ff
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0005760
+  path: data/structures/other/gamma_dna_polymerase_complex.yaml
+  label: gamma DNA polymerase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target plus frozen governing/schema/protein/graph
+    guidance. Native identifiers and independently read primary/abstract evidence
+    are separated. No neighboring maintained record is an unstated premise.
+  selection: Batch55 strict ordered selection, index 6; exactly one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0005760
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: just validate data/structures/other/gamma_dna_polymerase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: just validate-strict data/structures/other/gamma_dna_polymerase_complex.yaml
+    --out /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/gamma_dna_polymerase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/gamma_dna_polymerase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; scientific scope independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/gamma_dna_polymerase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; scientific scope independently assessed.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-pmid-10608893
+  - micro55-pmid-11172710
+  - micro55-pmid-10827171
+  - micro55-pmid-18063578
+  - micro55-pmid-12045093
+  - micro55-lim1999-browser
+  - micro55-lim1999-browser2
+  - micro55-protein-P54098
+  - micro55-gene-POLG
+  - micro55-protein-Q9UHN1
+  - micro55-gene-POLG2
+  - micro55-ipr-IPR002297
+  - micro55-ipr-IPR027031
+  - micro55-ipr-IPR042064
+  - micro55-ipr-IPR027030
+  - micro55-panther-PTHR10745-SF8
+  - micro55-lim1999
+  - micro55-carrodeguas2001
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  summary: '9 of 14 collected target identifiers returned OK. PMID:10608893: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:10827171: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:11172710: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:12045093: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:18063578: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro55-pmid-10608893
+  - micro55-pmid-10827171
+  - micro55-pmid-11172710
+  - micro55-pmid-12045093
+  - micro55-pmid-18063578
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0005760
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch55 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/gamma_dna_polymerase_complex.yaml
+  locator: Complete current YAML, including all citations, component/example fields,
+    graph edges, discussions and history
+  accessed_at: '2026-10-22T06:45:35Z'
+  support: context_only
+  summary: The entire target was read. No neighboring maintained record is an unstated
+    premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Source-neutral class grounding and label-only review contract
+  accessed_at: '2026-10-22T06:45:35Z'
+  support: context_only
+  summary: Verified exact families may resolve explicit current grounding tasks; a
+    protein example is not a family identity. Physical complex formation differs from
+    catalytic activity, viability and localization.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum and PresenceEnum
+  accessed_at: '2026-10-22T06:45:35Z'
+  support: context_only
+  summary: UNKNOWN does not assert formation necessity. COMMON means present in most
+    taxon members, with exceptional losses; a model-organism experiment or only_in_taxon
+    constraint is not a prevalence census.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Graph scope, actor identity and source-specific edge support
+  accessed_at: '2026-10-22T06:45:35Z'
+  support: context_only
+  summary: Descriptive membership/function graphs may remain NONMECHANISTIC. A coarse
+    physical assembly and catalytic reaction can be mechanistic without specifying
+    every intermediate.
+- evidence_id: micro55-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035101,GO:0008023,GO:0034728,GO:0006354,GO:1990202,GO:1990204,GO:0052873,GO:0005760,GO:0042575,GO:0098798,GO:0005759,GO:0006264
+  locator: Exact target/parent/matrix/function entries with full definitions and relevant
+    typed children.
+  accessed_at: '2026-10-22T06:35:36.591500Z'
+  support: supports
+  summary: GO0005760 identifies gamma DNA polymerase with large catalytic and small
+    accessory subunit classes. GO0042575 and GO0098798 are its DNA-polymerase/mitochondrial-complex
+    parents; GO0005759 lists it as part_of matrix, and GO0006264 is mitochondrial
+    DNA replication. The definition names classes rather than specifying one accessory
+    copy.
+  snapshot_sha256: 4afb3b0b05daaeda1d6ce52f48b9cae548f1c81ce9b5c4b1e12c97a343bb1f7d
+- evidence_id: micro55-GO0005760-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005760/ancestors?relations=is_a
+  locator: Complete relations=is_a ancestors array.
+  accessed_at: '2026-10-22T06:35:42.052127Z'
+  support: supports
+  summary: The is_a-only array confirms DNA-polymerase and mitochondrial protein-containing-complex
+    ancestry. Matrix location is independently checked in the typed child relation,
+    not inferred from this array.
+  snapshot_sha256: f26246702a8ee2658dcc963a86fd552f34f9a46ba14ce3f3425e3e5610498434
+- evidence_id: micro55-polg-constraints
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005760/constraints
+  locator: Only the complete taxonConstraints array is used; unrelated blacklist entries
+    are not a prevalence dataset.
+  accessed_at: '2026-10-22T06:35:42.425643Z'
+  support: supports
+  summary: The exact taxonConstraints array contains an only_in_taxon Eukaryota restriction
+    for GO0005760. This restricts admissible taxa; it does not assert presence in
+    most eukaryotes.
+  snapshot_sha256: 92e891aa7f5e3b444a1c2436b4fb8593522e2b15db03ca19c8f9ec8e160d67d5
+- evidence_id: micro55-tax2759
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759
+  locator: Native taxId, scientificName, rank and lineage fields.
+  accessed_at: '2026-10-22T06:35:41.293018Z'
+  support: supports
+  summary: ENA taxId2759 is Eukaryota, currently rank domain.
+  snapshot_sha256: 47d02c524bbdc511eb1fc377bdedc484b5cb6d3504611b0cbc6c280a65f140b4
+- evidence_id: micro55-tax9606
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/9606
+  locator: Native taxId, scientificName, rank and lineage fields.
+  accessed_at: '2026-10-22T06:35:41.200496Z'
+  support: supports
+  summary: ENA taxId9606 is Homo sapiens, species, matching both maintained examples.
+  snapshot_sha256: ae6861231eabbe5c76a3e6240a9109a3163b77f2061b644c22bbdd1b01b15840
+- evidence_id: micro55-pmid-10608893
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10608893+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED entry, exact title/authors/year/DOI/PMID and complete abstractText.
+    No unlisted main-body or individual figure inference.
+  accessed_at: '2026-10-22T06:35:37.383897Z'
+  support: supports
+  summary: 'PMID10608893: The mitochondrial p55 accessory subunit of human DNA polymerase
+    gamma enhances DNA binding, promotes processive DNA synthesis, and confers N-ethylmaleimide
+    resistance. Lim SE, Longley MJ, Copeland WC. (1999), DOI10.1074/jbc.274.53.38197.
+    Exact identity and complete native abstract were read; source-specific body scope
+    is separately declared.'
+  snapshot_sha256: abe2e3a96a0651eef59ba8dad99f8d5a238fdee37801a964792fb6cd3aec0cf8
+- evidence_id: micro55-pmid-11172710
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11172710+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED entry, exact title/authors/year/DOI/PMID and complete abstractText.
+    No unlisted main-body or individual figure inference.
+  accessed_at: '2026-10-22T06:35:37.397222Z'
+  support: supports
+  summary: 'PMID11172710: Crystal structure and deletion analysis show that the accessory
+    subunit of mammalian DNA polymerase gamma, Pol gamma B, functions as a homodimer.
+    Carrodeguas JA, Theis K, Bogenhagen DF, Kisker C. (2001), DOI10.1016/s1097-2765(01)00153-8.
+    Exact identity and complete native abstract were read; source-specific body scope
+    is separately declared.'
+  snapshot_sha256: d4e9fe1af722113a8ad89ea583208c1da0e78e97566dab002c472105c7e1e9e4
+- evidence_id: micro55-pmid-10827171
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10827171+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED entry, exact title/authors/year/DOI/PMID and complete abstractText.
+    No unlisted main-body or individual figure inference.
+  accessed_at: '2026-10-22T06:35:37.937087Z'
+  support: supports
+  summary: 'PMID10827171: In vivo functional analysis of the human mitochondrial DNA
+    polymerase POLG expressed in cultured human cells. Spelbrink JN, Toivonen JM,
+    Hakkaart GA, Kurkela JM, Cooper HM, Lehtinen SK, Lecrenier N, Back JW, Speijer
+    D, Foury F, Jacobs HT. (2000), DOI10.1074/jbc.m000559200. Exact identity and complete
+    native abstract were read; source-specific body scope is separately declared.'
+  snapshot_sha256: 60edd4c79fe6432c2c1292e1ac99341b7b0173191bbd0b84fdfc5e994f11bfc0
+- evidence_id: micro55-pmid-18063578
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18063578+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED entry, exact title/authors/year/DOI/PMID and complete abstractText.
+    No unlisted main-body or individual figure inference.
+  accessed_at: '2026-10-22T06:35:37.941008Z'
+  support: supports
+  summary: 'PMID18063578: The layered structure of human mitochondrial DNA nucleoids.
+    Bogenhagen DF, Rousseau D, Burke S. (2008), DOI10.1074/jbc.m708444200. Exact identity
+    and complete native abstract were read; source-specific body scope is separately
+    declared.'
+  snapshot_sha256: 230d4df534f4f33a362f6fed25fe586123773ee7e6b94e8dcc8187048e47cb25
+- evidence_id: micro55-pmid-12045093
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12045093+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED entry, exact title/authors/year/DOI/PMID and complete abstractText.
+    No unlisted main-body or individual figure inference.
+  accessed_at: '2026-10-22T06:35:37.993333Z'
+  support: supports
+  summary: 'PMID12045093: Eukaryotic DNA polymerases. Hubscher U, Maga G, Spadari
+    S. (2002), DOI10.1146/annurev.biochem.71.090501.150041. Exact identity and complete
+    native abstract were read; source-specific body scope is separately declared.'
+  snapshot_sha256: c8323092bbcd6fb08a9bb11eba95d2fd7cf999905745729aa3e5809ac706f480
+- evidence_id: micro55-lim1999-browser
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/51355128_The_Mitochondrial_p55_Accessory_Subunit_of_Human_DNA_Polymerase_Enhances_DNA_Binding_Promotes_Processive_DNA_Synthesis_and_Confers_N-Ethylmaleimide_Resistance
+  locator: 'Exact combined browser output, status:null: ResearchGate primary block
+    at printed p38197 and initial Experimental Procedures, including expression/purification
+    and enzyme assay kinetics. Other blocks in the same artifact are failed publisher-route
+    diagnostics, not positive paper bodies.'
+  accessed_at: '2026-10-22T06:38:09.257141Z'
+  support: supports
+  summary: The retained primary paper describes human p55 cloning, tagged recombinant
+    proteins and reconstitution with catalytic p140. It provides direct biochemical
+    support for the two subunit classes. Native publisher access failed separately;
+    the browser representation is genuine primary text.
+  snapshot_sha256: 1ca56562ade8c63ece06d4d43fc8aaa04b6da446a8f4114c8b2596d4bf0b5843
+- evidence_id: micro55-lim1999-browser2
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/51355128_The_Mitochondrial_p55_Accessory_Subunit_of_Human_DNA_Polymerase_Enhances_DNA_Binding_Promotes_Processive_DNA_Synthesis_and_Confers_N-Ethylmaleimide_Resistance
+  locator: 'Browser-extracted primary blocks: printed pp38198-38199 purification/cloning/reconstitution
+    and DNA-cellulose results; p38203 Discussion, preceding NEM result/TableI and
+    Fig7 caption. Exact captured blocks only; unretained intervening Results, remaining
+    Methods, pixels and supplements were not read.'
+  accessed_at: '2026-10-22T06:38:09.335343Z'
+  support: supports
+  summary: Lim Results and Discussion support stable human p140/p55 association, increased
+    DNA affinity and processivity. The paper historically interprets a190kDa1:1 heterodimer;
+    that interpretation is kept distinct from the later mammalian accessory-homodimer
+    paper and current native heterotrimer annotations. The target already models one
+    accessory class without asserting one copy.
+  snapshot_sha256: 3bfaffa629cd28ee7666950793ad36663195c8917fbcc4fd8edc95934c67268c
+- evidence_id: micro55-protein-P54098
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P54098.json
+  locator: Native entryType, primaryAccession, recommendedName, organism/taxonId,
+    genes, complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION blocks and relevant family
+    cross-references. Unlisted annotation citations are not independently certified
+    as papers.
+  accessed_at: '2026-10-22T06:35:38.606559Z'
+  support: supports
+  summary: Reviewed human P54098 is POLG, catalytic gamma-1. Native SUBUNIT says one
+    catalytic subunit plus a POLG2 homodimer; FUNCTION gives polymerase/exonuclease
+    roles. PMID10827171/18063578 carry ECO0000269 for mitochondrial location, matching
+    the maintained annotation provenance. IPR002297 is a native family cross-reference.
+  snapshot_sha256: 99ed2ecd2ed5e2d995927222c6e764468579569bb1d2ee1833ce2069f184eb97
+- evidence_id: micro55-gene-POLG
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOLG%29+AND+%28organism_id%3A9606%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; exact gene_exact, organism_id and reviewed:true
+    query retained in URL. This is accession uniqueness, not evidence of complex membership.
+  accessed_at: '2026-10-22T06:35:39.825743Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, P54098, matching the maintained
+    example and its stated organism.
+  snapshot_sha256: b36d0206bed6f6f509ce0ac5b566bca54c51b4b4bb2057de08514d0f033c0cc7
+- evidence_id: micro55-protein-Q9UHN1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9UHN1.json
+  locator: Native entryType, primaryAccession, recommendedName, organism/taxonId,
+    genes, complete FUNCTION/SUBUNIT/SUBCELLULAR LOCATION blocks and relevant family
+    cross-references. Unlisted annotation citations are not independently certified
+    as papers.
+  accessed_at: '2026-10-22T06:35:38.863072Z'
+  support: supports
+  summary: Reviewed human Q9UHN1 is POLG2, accessory gamma-2. FUNCTION supports processivity
+    and DNA-template interaction; SUBUNIT gives the heterotrimer. Its location is
+    inferred with ECO0000250 via P54098, not an independent experiment; the maintained
+    example only asserts accession identity.
+  snapshot_sha256: 3535a8ff9e5ab5cbacc0f6b2474786418cc92436f11d0fa230bb2df50d1cc828
+- evidence_id: micro55-gene-POLG2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3APOLG2%29+AND+%28organism_id%3A9606%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete results identity set; exact gene_exact, organism_id and reviewed:true
+    query retained in URL. This is accession uniqueness, not evidence of complex membership.
+  accessed_at: '2026-10-22T06:35:40.283113Z'
+  support: supports
+  summary: The exact reviewed gene query returns one entry, Q9UHN1, matching the maintained
+    example and its stated organism.
+  snapshot_sha256: 01a7f1163df0bbf9f2fa4b76a400315655059aaa23e9ae4db24b34aea1f446d8
+- evidence_id: micro55-ipr-IPR002297
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002297/
+  locator: Complete native accession/name/type/description/signatures; family identity
+    is used, not the erroneous incidental directional prose.
+  accessed_at: '2026-10-22T06:36:56.974542Z'
+  support: supports
+  summary: IPR002297 is the mitochondrial DNA polymerase family A (Pol gamma) whole-protein
+    family, supported by PTHR10267, PIRSF000797 and PRINTS PR00867 signatures. This
+    identifies the catalytic class. Incidental description text about extension at
+    a5-prime end is not adopted as polymerase mechanism.
+  snapshot_sha256: 2007363cd3c16e8ea0644ed58c7b9b7a9eaffb7e7f1e90b15d85d34b36482d45
+- evidence_id: micro55-ipr-IPR027031
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027031/
+  locator: Complete native identity/type/description/signatures.
+  accessed_at: '2026-10-22T06:36:57.575642Z'
+  support: context_only
+  summary: IPR027031 combines glycine-tRNA synthetase with mitochondrial polymerase
+    gamma-2, so it is broader than the named accessory class.
+  snapshot_sha256: 197cc482994edbe0d958f35820c291bd183ad0c5e05669eb7cca7a9a9d30f515
+- evidence_id: micro55-ipr-IPR042064
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR042064/
+  locator: Complete native domain identity/type/description.
+  accessed_at: '2026-10-22T06:36:58.162647Z'
+  support: context_only
+  summary: IPR042064 is a POLG2 C-terminal domain, not a whole-protein accessory family.
+  snapshot_sha256: 81ddfde7308450719c6931303f3f38a2de37f03756aadeb3728e1300a5bf21e2
+- evidence_id: micro55-ipr-IPR027030
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027030/
+  locator: 'Complete410 response: accession, source_database, type, name, deletion_date
+    and history.'
+  accessed_at: '2026-10-22T06:41:53.762873Z'
+  support: context_only
+  summary: The exact POLG2-looking accession returns HTTP410 deletion metadata, dated2022-11-25.
+    Its historical name and signatures do not make it an active exact replacement.
+  snapshot_sha256: 55b5c9ff347bb7abd2326fffcf527557c8ba5879ff997615029917e27d99eed1
+- evidence_id: micro55-panther-PTHR10745-SF8
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR10745:SF8/
+  locator: Original204 receipt and empty raw SHA; no positive body.
+  accessed_at: '2026-10-22T06:41:54.419094Z'
+  support: context_only
+  summary: The candidate PANTHER subfamily endpoint returned HTTP204 with zero response
+    bytes. No current exact family identity or membership is inferred from this empty
+    response.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: micro55-lim1999
+  kind: authority
+  reference: https://doi.org/10.1074/jbc.274.53.38197
+  locator: Exact original request and retained TLS diagnostic.
+  accessed_at: '2026-10-22T06:36:59.941413Z'
+  support: context_only
+  summary: Lim1999 native DOI request failed TLS certificate verification (status0).
+    The raw error is not an article body. Lim browser text and the Carrodeguas complete
+    native abstract are separately scoped.
+  snapshot_sha256: a8014ecefc9b9c4cc3987abe484f64b8ee37dd3e6bc0182a0f12915e702dedb3
+- evidence_id: micro55-carrodeguas2001
+  kind: authority
+  reference: https://doi.org/10.1016/S1097-2765(01)00153-8
+  locator: Exact original request and retained TLS diagnostic.
+  accessed_at: '2026-10-22T06:37:00.192333Z'
+  support: context_only
+  summary: Carrodeguas2001 native DOI request failed TLS certificate verification
+    (status0). The raw error is not an article body. Lim browser text and the Carrodeguas
+    complete native abstract are separately scoped.
+  snapshot_sha256: a8014ecefc9b9c4cc3987abe484f64b8ee37dd3e6bc0182a0f12915e702dedb3
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/gamma_dna_polymerase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:28:15Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/gamma_dna_polymerase_complex.yaml'
+  snapshot_sha256: d815f1eaa0e25465056d124e59530de4bb71d0f3dce6a94e0a6391ac655d7bb2
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/gamma_dna_polymerase_complex.yaml
+    --out /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/gamma_dna_polymerase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:28:16Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/gamma_dna_polymerase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/gamma_dna_polymerase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/gamma_dna_polymerase_complex-strict.tsv"
+  snapshot_sha256: 7e770ba945a059770e0799730dac390f184fe01ecd4553ac1987ec6c1743cd10
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/gamma_dna_polymerase_complex.yaml
+    --causal-graphs
+  locator: Complete focused native read-only report
+  accessed_at: '2026-10-22T06:41:51.864201Z'
+  support: supports
+  summary: "data/structures/other/gamma_dna_polymerase_complex.yaml  (GO:0005760)\n\
+    \  pol_gamma_supports_mtdna_replication\tpol_gamma_catalytic_subunit\tCOVERED\t\
+    ->pol_gamma_catalytic_subunit (UniProtKB:P54098)\n  pol_gamma_supports_mtdna_replication\t\
+    pol_gamma_accessory_subunit\tCOVERED\t->pol_gamma_accessory_subunit (UniProtKB:Q9UHN1)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     2  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     2\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 0314a6b14e8b8067e2bba90a07d49cf0bec7624457ae2ea726e5edbc6cf48157
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch55-20261022-hwfmcxvp/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/gamma_dna_polymerase_complex.yaml
+    --verify
+  locator: Complete focused native read-only report
+  accessed_at: '2026-10-22T06:41:53.299144Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/gamma_dna_polymerase_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '9 of 14 collected target identifiers returned OK. PMID:10608893: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:10827171: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:11172710: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:12045093: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force.; PMID:18063578: UNREACHABLE;
+    Exact native EuropePMC MED identifier/title/DOI independently read following the
+    bulk eutils414 transport failure. Resolution is identifier identity only; separate
+    primary-body/abstract evidence limits remain in force. Native source checks are
+    separately scoped; skipped or unreachable identifiers are not silently counted
+    as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact mitochondrial polymerase identity and class-level composition
+  outcome: supported
+  target_ids:
+  - GO:0005760
+  summary: Native GO confirms both parents, matrix relation and broad replication/repair
+    definition. The large/small language refers to classes, while the resolved accessory-homodimer
+    discussion correctly avoids duplicate component rows.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-pmid-10608893
+  - micro55-pmid-11172710
+  - micro55-pmid-10827171
+  - micro55-pmid-18063578
+  - micro55-pmid-12045093
+  - micro55-protein-P54098
+  - micro55-gene-POLG
+  - micro55-protein-Q9UHN1
+  - micro55-gene-POLG2
+- assessment_id: composition
+  area: grounding
+  topic: Supported two classes with one exact family gap
+  outcome: concern
+  target_ids:
+  - GO:0005760
+  summary: Lim reconstitution, the complete Carrodeguas abstract and native SUBUNIT
+    comments support catalytic plus accessory classes. IPR002297 is an exact catalytic
+    family. The accessory mixed family, isolated domain, deleted exact entry and empty
+    subfamily endpoint are insufficient current replacements.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-lim1999-browser
+  - micro55-lim1999-browser2
+  - micro55-ipr-IPR002297
+  - micro55-ipr-IPR027031
+  - micro55-ipr-IPR042064
+  - micro55-ipr-IPR027030
+  - micro55-panther-PTHR10745-SF8
+  - micro55-protein-P54098
+  - micro55-gene-POLG
+  - micro55-protein-Q9UHN1
+  - micro55-gene-POLG2
+  - micro55-pmid-10608893
+  - micro55-pmid-11172710
+  - micro55-pmid-10827171
+  - micro55-pmid-18063578
+  - micro55-pmid-12045093
+- assessment_id: function
+  area: evidence
+  topic: Polymerase activity and accessory processivity
+  outcome: supported
+  target_ids:
+  - GO:0005760
+  summary: The retained Lim primary passages support reconstitution, DNA binding and
+    processivity; native annotations corroborate catalytic polymerase/exonuclease
+    roles. Mitochondrial replication is a supported coarse function, without claiming
+    that the reconstitution itself measured complete in-vivo genome replication or
+    every repair pathway.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-lim1999-browser
+  - micro55-lim1999-browser2
+  - micro55-protein-P54098
+  - micro55-gene-POLG
+  - micro55-protein-Q9UHN1
+  - micro55-gene-POLG2
+  - micro55-pmid-10608893
+  - micro55-pmid-11172710
+  - micro55-pmid-10827171
+  - micro55-pmid-18063578
+  - micro55-pmid-12045093
+- assessment_id: examples
+  area: grounding
+  topic: Verified human protein identities and annotation tiers
+  outcome: supported
+  target_ids:
+  - GO:0005760
+  summary: Both gene queries return one reviewed human entry. The maintained POLG
+    location citations match native experimental annotations. POLG2 example evidence
+    is correctly identity-only; its inferred native location is not promoted to experimental
+    evidence.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-protein-P54098
+  - micro55-gene-POLG
+  - micro55-protein-Q9UHN1
+  - micro55-gene-POLG2
+  - micro55-pmid-10608893
+  - micro55-pmid-11172710
+  - micro55-pmid-10827171
+  - micro55-pmid-18063578
+  - micro55-pmid-12045093
+- assessment_id: scope
+  area: scope
+  topic: Eukaryotic ontology restriction and mammalian example
+  outcome: supported
+  target_ids:
+  - GO:0005760
+  summary: The native only_in_taxon restriction and human/mouse literature support
+    the stated model boundary. COMMON retains majority-occurrence meaning with exceptional
+    losses, but these sources do not measure prevalence across Eukaryota. The mammalian
+    accessory homodimer is not exported to every eukaryote as a fixed universal stoichiometry.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-lim1999-browser
+  - micro55-lim1999-browser2
+  - micro55-pmid-10608893
+  - micro55-pmid-11172710
+  - micro55-pmid-10827171
+  - micro55-pmid-18063578
+  - micro55-pmid-12045093
+- assessment_id: prevalence
+  area: scope
+  topic: Quantitative COMMON support remains unresolved
+  outcome: unknown
+  target_ids:
+  - GO:0005760
+  summary: Only_in_taxon establishes exclusion outside Eukaryota, not occurrence in
+    most members. A quantitative lineage-wide prevalence estimate is unavailable from
+    the inspected sources; the review does not silently equate the two statements.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+- assessment_id: graph
+  area: graph
+  topic: Three descriptive membership/function edges
+  outcome: supported
+  target_ids:
+  - GO:0005760
+  summary: The two component-class edges and mitochondrial-replication output match
+    the actors and sources. NONMECHANISTIC appropriately omits DNA binding, proofreading,
+    accessory dimerization and repair-pathway details. The source disagreement about
+    historical copy number is not reproduced as a graph claim.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-lim1999-browser
+  - micro55-lim1999-browser2
+  - micro55-pmid-10608893
+  - micro55-pmid-11172710
+  - micro55-pmid-10827171
+  - micro55-pmid-18063578
+  - micro55-pmid-12045093
+- assessment_id: formation
+  area: evidence
+  topic: Existing UNKNOWN formation labels remain appropriate
+  outcome: unknown
+  target_ids:
+  - GO:0005760
+  summary: Reconstitution establishes association under tested conditions, and accessory-dimer
+    perturbation affects processivity; neither is generalized into universal whole-class
+    physical formation necessity. Activity, stable complex formation and subunit copy
+    number remain separate questions.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-lim1999-browser
+  - micro55-lim1999-browser2
+  - micro55-pmid-10608893
+  - micro55-pmid-11172710
+  - micro55-pmid-10827171
+  - micro55-pmid-18063578
+  - micro55-pmid-12045093
+- assessment_id: coverage
+  area: completeness
+  topic: Whole target reviewed with explicit evidence limits
+  outcome: supported
+  target_ids:
+  - GO:0005760
+  summary: All scientific fields, citations, discussions, graph edges and history
+    were reviewed. Findings address exact actionable current tasks, not optional empty
+    slots or historical wording made false merely by later source availability. Unmeasured
+    formation and broader prevalence remain explicit uncertainties.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-lim1999-browser
+  - micro55-lim1999-browser2
+  - micro55-ipr-IPR002297
+  - micro55-ipr-IPR027031
+  - micro55-ipr-IPR042064
+  - micro55-ipr-IPR027030
+  - micro55-panther-PTHR10745-SF8
+  - micro55-protein-P54098
+  - micro55-gene-POLG
+  - micro55-protein-Q9UHN1
+  - micro55-gene-POLG2
+  - micro55-pmid-10608893
+  - micro55-pmid-11172710
+  - micro55-pmid-10827171
+  - micro55-pmid-18063578
+  - micro55-pmid-12045093
+findings:
+- finding_id: F1
+  issue_key: pol-gamma-catalytic-exact-family-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the verified catalytic polymerase-gamma family
+  description: The existing POLG class is REVIEWED_LABEL_ONLY with an open exact-family
+    task. Native IPR002297 identifies mitochondrial DNA polymerase family A and P54098
+    corroborates membership. The accessory alternatives checked here are broader,
+    domain-only, deleted or empty and are deliberately excluded.
+  target_ids:
+  - GO:0005760
+  field_paths:
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro55-go
+  - micro55-GO0005760-ancestors
+  - micro55-polg-constraints
+  - micro55-tax2759
+  - micro55-tax9606
+  - micro55-protein-P54098
+  - micro55-gene-POLG
+  - micro55-protein-Q9UHN1
+  - micro55-gene-POLG2
+  - micro55-ipr-IPR002297
+  - micro55-ipr-IPR027031
+  - micro55-ipr-IPR042064
+  - micro55-ipr-IPR027030
+  - micro55-panther-PTHR10745-SF8
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component-class grounding under the explicit current task
+  native_severity: minor
+  normalization_reason: This is one bounded actionable class-grounding gap. The catalytic/accessory
+    identities, human examples and resolved accessory-copy-number boundary remain
+    supported; the review does not force an unverified accessory family.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0005760
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/gamma_dna_polymerase_complex.yaml
+    role: maintained scientific record
+  description: Add InterPro:IPR002297 to the existing catalytic class with exact family
+    evidence and update that portion of the grounding task. Retain the accessory class
+    as reviewed label-only until a current exact family is independently verified.
+    Do not copy the family entry incidental erroneous5-prime extension prose.
+  acceptance_checks:
+  - Each adopted identifier denotes the exact whole-protein class rather than a species
+    example, shared domain or broader mixed family.
+  - Preserve supported component labels, protein examples and UNKNOWN formation necessity.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+limitations:
+- Lim1999 is read only at the exact retained browser primary passages. Carrodeguas2001,
+  Spelbrink2000, Bogenhagen2008 and Hubscher2002 are complete native abstract only;
+  Hubscher is secondary. No figures, supplements or unread full bodies are certified.
+- Lim historical1:1 interpretation is preserved as source history, separately from
+  later accessory-homodimer evidence/current human heterotrimer annotations. The maintained
+  record intentionally models two molecular classes rather than universal copy counts.
+- 'No active exact POLG2 family was established from the bounded candidates: IPR027031
+  is mixed, IPR042064 a domain, IPR027030 deleted410 and the PANTHER candidate204
+  empty. This does not prove absence across every database.'
+- The eukaryotic taxon restriction is not a prevalence census, and catalytic/processivity
+  effects are not universal formation-necessity evidence.
+- Original source bytes, URLs, UTC timestamps and SHA256 receipts are retained. Browser-derived
+  URL-specific blocks retain their original combined representation and do not assert
+  native HTTP200.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user requests a review for every unreviewed record, including qualified clean
+  records.
+- Native ontology, taxonomic and protein/family databases directly address these claims;
+  no expression-module membership is treated as proof of physical complex membership.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
