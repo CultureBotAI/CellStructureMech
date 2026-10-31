@@ -1,0 +1,807 @@
+# Mitochondrial prohibitin complex scientific review
+
+- Review: 20261022T084811Z-mitochondrial-prohibitin-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T08:17:35Z
+- Finished UTC: 2026-10-22T08:48:11Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Prohibitin identity, PHB1/PHB2 building-block evidence, membrane topology and broad biogenesis graph are supported. Family resolution and optional inventory expansion remain appropriately bounded; no actionable defect was established.
+
+## Scope And Provenance
+
+Exactly one complete maintained target, frozen guidance/protein-example skill and, for Lon, its exact stored figure. Actual source-reading extents and original receipts are declared per evidence row.
+
+Selection: Target 10 of batch60, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0035632 | data/structures/other/mitochondrial_prohibitin_complex.yaml | maintained | mitochondrial prohibitin complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0035632 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0035632 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0035632 | Native focused check passed; scientific claims assessed separately. |
+| Native verify | passed | True | GO:0035632 | Native focused check passed; scientific claims assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0035632 | No expression-module inference is used to establish this structure. |
+| Claim-level scientific review | passed | True | GO:0035632 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0035632 | 7 of 7 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0035632 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0035632 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0035632 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0035632 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0035632 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### PHB1/PHB2 assembly and membrane topology
+
+identity: supported. Targets: GO:0035632.
+
+Exact GO identity/synonym, inner-membrane-protein-complex parent and membrane parthood agree with primary crosslinking and review synthesis. The canonical yeast chemical-crosslink/MS example is accurately bounded and does not assert a fixed oligomer count.
+
+### Qualified broad biogenesis support
+
+graph: supported. Targets: GO:0035632.
+
+The function and NONMECHANISTIC graph use the broad mitochondrion-organization/biogenesis context supported by GO and the review. They do not assert a universal stimulatory mechanism, precise catalytic role or every proposed non-mitochondrial prohibitin function.
+
+### Established proteins and unresolved exact paralog-family classes
+
+completeness: supported. Targets: GO:0035632.
+
+PHB1/P40961 and PHB2/P50085 are native reviewed S288C identities and known yeast subunits. IPR000163 spans both rather than separately defining each paralog. Optional rows may be represented later with appropriate family scope or justified label-only status; pending exact verification is not an assertion that no terms exist and is not a standalone defect.
+
+### Yeast example versus reference proteome
+
+scope: supported. Targets: GO:0035632.
+
+W303-1A experimental preparations are not substituted by S288C reference entries. COMMON keeps the schema majority/losses-exception meaning, supported by qualitative conserved-yeast synthesis rather than an independently measured strain-prevalence census.
+
+### No universal individual formation assertion
+
+grounding: unknown. Targets: GO:0035632.
+
+The current record does not assign individual component essentiality. Source-specific association/perturbation observations and positive constitutive identity are not automatically generalized to universal formation necessity.
+
+### Whole maintained target and exact current source scope
+
+completeness: supported. Targets: GO:0035632.
+
+All maintained fields and current scientific assertions were compared with their nearest inspected sources. Historical read claims, optional enrichment and acknowledged unknowns alone do not create findings.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/mitochondrial_prohibitin_complex.yaml; Entire maintained record, including all evidence, graph edges, discussions, examples, datasets, images and history | context_only | Every maintained field was read. Historical source-inspection claims are not automatically adopted as current review evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component, ProteinExample, EssentialityEnum, PresenceEnum and graph contracts | context_only | Membership and enzymatic activity differ from formation necessity. COMMON means most members with losses the exception; VARIABLE denotes lineage/strain patchiness, not cell state. |
+| curation | docs/CURATION.md; Exact grounding, label-only classes and native validation contracts | context_only | Exact whole-protein families differ from domains or broader classes. Optional inventories and acknowledged unknowns do not alone establish defects. |
+| complex60-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0004176,GO:0005741,GO:0005742,GO:0005743,GO:0005759,GO:0007005,GO:0030150,GO:0035632,GO:0098799,GO:0098800,GO:1905368; Complete target-relevant native definitions, synonyms and typed relationships; unrelated combined entries excluded | supports | GO0035632 defines repeating PHB1/PHB2 heterodimers and inner-membrane location. GO0098800 lists this complex as an is_a child; GO0007005 includes mitochondrial biogenesis as an exact synonym. |
+| complex60-agent-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete exact ENA taxonomy response | supports | Native taxon4932 is Saccharomyces cerevisiae, rank species. Its own names and lineage were read. |
+| complex60-agent-gene-PHB1 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APHB1+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=500; Complete query result identity set and indicated returned-entry comments | supports | The exact reviewed S288C query returns P40961; all returned identities and gene tokens were inspected. Returned full-entry FUNCTION/SUBUNIT/LOCATION and InterPro references were also read. |
+| complex60-agent-gene-PHB2 | https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APHB2+AND+organism_id%3A559292+AND+reviewed%3Atrue&amp;format=json&amp;size=500; Complete query result identity set and indicated returned-entry comments | supports | The exact reviewed S288C query returns P50085; all returned identities and gene tokens were inspected. Returned full-entry FUNCTION/SUBUNIT/LOCATION and InterPro references were also read. |
+| complex60-agent-doi-10.1110_ps.0212602 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1110%2Fps.0212602%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native bibliographic identity and available abstract | supports | Exact native identity: A structure for the yeast prohibitin complex: Structure prediction and evidence from chemical crosslinking and mass spectrometry. Back JW, Sanz MA, De Jong L, De Koning LJ, Nijtmans LG, De Koster CG, Grivell LA, Van Der Spek H, Muijsers AO. (2002), PMID12237468. Complete available abstract read. |
+| complex60-agent-doi-10.18632_aging.100246 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.18632%2Faging.100246%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native bibliographic identity and available abstract | supports | Exact native identity: Opposing function of mitochondrial prohibitin in aging. Artal-Sanz M, Tavernarakis N. (2010), PMID21164222. Complete available abstract read. |
+| complex60-agent-go-0035632-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035632/ancestors?relations=is_a; Complete is_a-only native ancestor response | supports | The exact is_a-only ancestor closure includes the asserted mitochondrial membrane-protein-complex parent. It does not independently establish experimental mechanism or prevalence. |
+| complex60-agent-back2002-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC2373692/; All Results sec1–4 including Table1/Fig1–5 captions, Discussion sec5/Fig6 caption and Methods sec6–14. No figure pixels, supplements or cited primary bodies read. | supports | Back2002 crosslinking/MS supports PHB1/PHB2 heterodimeric building blocks and an assembled yeast prohibitin supercomplex. The preparations use W303-1A deletion strains expressing plasmid-borne proteins; modeled architecture is distinct from an atomic structure or universally fixed copy count. |
+| complex60-agent-artal2010-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3034168/fullTextXML; Entire Introduction s1 including s1_1–s1_5; conclusions and referenced primary bodies not read | supports | Artal-Sanz/Tavernarakis2010 reviews inner-membrane PHB1/PHB2 assemblies, proposed functions and context-dependent mitochondrial biogenesis/aging effects. Opposing physiological outcomes do not establish a single universal directional mechanism. |
+| complex60-agent-ipr-IPR000163 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR000163/; Complete family metadata, descriptions, signatures and quality flags | supports | Native family identity: IPR000163, Prohibitin, type family. Its complete description, signatures and quality flags were inspected; any protein membership is supported separately by the protein response. |
+| access-back2002-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2373692/fullTextXML; Exact retained transport response; no biological body inferred | context_only | The EuropePMC XML route returned HTTP500; a genuine legacy primary body was separately recovered and read. |
+| access-panther-PTHR23222-SF0 | https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR23222:SF0/; Exact retained transport response; no biological body inferred | context_only | The queried PHB1-associated PANTHER subfamily endpoint returned HTTP204 empty; no exact family absence is inferred. |
+| access-panther-PTHR23222-SF1 | https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR23222:SF1/; Exact retained transport response; no biological body inferred | context_only | The queried PHB2-associated PANTHER subfamily endpoint returned HTTP204 empty; no exact family absence is inferred. |
+| schema-result | just validate data/structures/other/mitochondrial_prohibitin_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/mitochondrial_prohibitin_complex.yaml |
+| strict-result | just validate-strict data/structures/other/mitochondrial_prohibitin_complex.yaml --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_prohibitin_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/mitochondrial_prohibitin_complex.yaml --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_prohibitin_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_prohibitin_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_prohibitin_complex.yaml --causal-graphs; Complete native focused report | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_prohibitin_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/mitochondrial_prohibitin_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 7 of 7 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only explicitly declared source sections and assets were inspected. No raw experimental data or atomic coordinates were reanalysed.
+- No Back2002 figure pixels or cited older primary experiments were independently read. The2010 review supplies broad context; it does not settle exact biochemical mechanism or population-frequency estimates.
+- Shared prohibitin-family identity does not resolve separate PHB1/PHB2 family classes. HTTP204 candidate queries do not prove term absence; the optional inventory remains an acknowledged follow-up.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes both qualified clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T084811Z-mitochondrial-prohibitin-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mitochondrial prohibitin complex scientific review
+started_at: '2026-10-22T08:17:35Z'
+finished_at: '2026-10-22T08:48:11Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Prohibitin identity, PHB1/PHB2 building-block evidence, membrane topology
+  and broad biogenesis graph are supported. Family resolution and optional inventory
+  expansion remain appropriately bounded; no actionable defect was established.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/mitochondrial_prohibitin_complex.yaml
+    sha256: a2a0c89fc814c0dba32ef8a1b90246ced003e274382c67d78794cbd86e9b7453
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0035632
+  path: data/structures/other/mitochondrial_prohibitin_complex.yaml
+  label: mitochondrial prohibitin complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mitochondrial_prohibitin_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target, frozen guidance/protein-example
+    skill and, for Lon, its exact stored figure. Actual source-reading extents and
+    original receipts are declared per evidence row.
+  selection: Target 10 of batch60, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0035632
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  command: just validate data/structures/other/mitochondrial_prohibitin_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  command: just validate-strict data/structures/other/mitochondrial_prohibitin_complex.yaml
+    --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_prohibitin_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_prohibitin_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_prohibitin_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; scientific claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0035632
+  summary: No expression-module inference is used to establish this structure.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex60-agent-go
+  - complex60-agent-tax-4932
+  - complex60-agent-gene-PHB1
+  - complex60-agent-gene-PHB2
+  - complex60-agent-doi-10.1110_ps.0212602
+  - complex60-agent-doi-10.18632_aging.100246
+  - complex60-agent-go-0035632-ancestors
+  - complex60-agent-back2002-legacy
+  - complex60-agent-artal2010-xml
+  - complex60-agent-ipr-IPR000163
+  - access-back2002-xml
+  - access-panther-PTHR23222-SF0
+  - access-panther-PTHR23222-SF1
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  summary: 7 of 7 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0035632
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/mitochondrial_prohibitin_complex.yaml
+  locator: Entire maintained record, including all evidence, graph edges, discussions,
+    examples, datasets, images and history
+  accessed_at: '2026-10-22T08:37:20Z'
+  support: context_only
+  summary: Every maintained field was read. Historical source-inspection claims are
+    not automatically adopted as current review evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component, ProteinExample, EssentialityEnum, PresenceEnum and graph contracts
+  accessed_at: '2026-10-22T08:37:20Z'
+  support: context_only
+  summary: Membership and enzymatic activity differ from formation necessity. COMMON
+    means most members with losses the exception; VARIABLE denotes lineage/strain
+    patchiness, not cell state.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact grounding, label-only classes and native validation contracts
+  accessed_at: '2026-10-22T08:37:20Z'
+  support: context_only
+  summary: Exact whole-protein families differ from domains or broader classes. Optional
+    inventories and acknowledged unknowns do not alone establish defects.
+- evidence_id: complex60-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0004176,GO:0005741,GO:0005742,GO:0005743,GO:0005759,GO:0007005,GO:0030150,GO:0035632,GO:0098799,GO:0098800,GO:1905368
+  locator: Complete target-relevant native definitions, synonyms and typed relationships;
+    unrelated combined entries excluded
+  accessed_at: '2026-10-22T08:24:00.662524Z'
+  support: supports
+  summary: GO0035632 defines repeating PHB1/PHB2 heterodimers and inner-membrane location.
+    GO0098800 lists this complex as an is_a child; GO0007005 includes mitochondrial
+    biogenesis as an exact synonym.
+  snapshot_sha256: e6a248305bc7752e1bb81d50f22d98da6c5bdd61dadb96af270f922128b26fb7
+- evidence_id: complex60-agent-tax-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete exact ENA taxonomy response
+  accessed_at: '2026-10-22T08:24:03.593628Z'
+  support: supports
+  summary: Native taxon4932 is Saccharomyces cerevisiae, rank species. Its own names
+    and lineage were read.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: complex60-agent-gene-PHB1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APHB1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete query result identity set and indicated returned-entry comments
+  accessed_at: '2026-10-22T08:24:10.447854Z'
+  support: supports
+  summary: The exact reviewed S288C query returns P40961; all returned identities
+    and gene tokens were inspected. Returned full-entry FUNCTION/SUBUNIT/LOCATION
+    and InterPro references were also read.
+  snapshot_sha256: 673277f52941216ddca0e5bef133e5ba919049a98532053bae628562d9f92576
+  search_scope: Exact retained request https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APHB1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500;
+    all returned results inspected.
+- evidence_id: complex60-agent-gene-PHB2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APHB2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500
+  locator: Complete query result identity set and indicated returned-entry comments
+  accessed_at: '2026-10-22T08:24:11.020813Z'
+  support: supports
+  summary: The exact reviewed S288C query returns P50085; all returned identities
+    and gene tokens were inspected. Returned full-entry FUNCTION/SUBUNIT/LOCATION
+    and InterPro references were also read.
+  snapshot_sha256: 7ff7d570cf878ecfc9d309850cee1757582357cb9c36f2f507e3320178df5731
+  search_scope: Exact retained request https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APHB2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500;
+    all returned results inspected.
+- evidence_id: complex60-agent-doi-10.1110_ps.0212602
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1110%2Fps.0212602%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native bibliographic identity and available abstract
+  accessed_at: '2026-10-22T08:24:07.299493Z'
+  support: supports
+  summary: 'Exact native identity: A structure for the yeast prohibitin complex: Structure
+    prediction and evidence from chemical crosslinking and mass spectrometry. Back
+    JW, Sanz MA, De Jong L, De Koning LJ, Nijtmans LG, De Koster CG, Grivell LA, Van
+    Der Spek H, Muijsers AO. (2002), PMID12237468. Complete available abstract read.'
+  snapshot_sha256: 8a6abeaf5f26e23dbf1c21da419f0514c7e8828feea4fe64b660a9c2889f910c
+- evidence_id: complex60-agent-doi-10.18632_aging.100246
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.18632%2Faging.100246%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native bibliographic identity and available abstract
+  accessed_at: '2026-10-22T08:24:07.730261Z'
+  support: supports
+  summary: 'Exact native identity: Opposing function of mitochondrial prohibitin in
+    aging. Artal-Sanz M, Tavernarakis N. (2010), PMID21164222. Complete available
+    abstract read.'
+  snapshot_sha256: bdd9c9d479c326c8fd7731443bf295f5799985e9266a095ab7a294fafe7e4fe1
+- evidence_id: complex60-agent-go-0035632-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0035632/ancestors?relations=is_a
+  locator: Complete is_a-only native ancestor response
+  accessed_at: '2026-10-22T08:24:07.940165Z'
+  support: supports
+  summary: The exact is_a-only ancestor closure includes the asserted mitochondrial
+    membrane-protein-complex parent. It does not independently establish experimental
+    mechanism or prevalence.
+  snapshot_sha256: 8fd5b89811be37fa5e75ef2799299a6775422a592ea6ec34dafef8f90a8a6fa7
+- evidence_id: complex60-agent-back2002-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2373692/
+  locator: All Results sec1–4 including Table1/Fig1–5 captions, Discussion sec5/Fig6
+    caption and Methods sec6–14. No figure pixels, supplements or cited primary bodies
+    read.
+  accessed_at: '2026-10-22T08:26:10.316156Z'
+  support: supports
+  summary: Back2002 crosslinking/MS supports PHB1/PHB2 heterodimeric building blocks
+    and an assembled yeast prohibitin supercomplex. The preparations use W303-1A deletion
+    strains expressing plasmid-borne proteins; modeled architecture is distinct from
+    an atomic structure or universally fixed copy count.
+  snapshot_sha256: bba9a4101e561cfc2985cbc6c45534bb3c0d61b67e3b3cab3c6bb2fe522eabb9
+- evidence_id: complex60-agent-artal2010-xml
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3034168/fullTextXML
+  locator: Entire Introduction s1 including s1_1–s1_5; conclusions and referenced
+    primary bodies not read
+  accessed_at: '2026-10-22T08:25:10.618123Z'
+  support: supports
+  summary: Artal-Sanz/Tavernarakis2010 reviews inner-membrane PHB1/PHB2 assemblies,
+    proposed functions and context-dependent mitochondrial biogenesis/aging effects.
+    Opposing physiological outcomes do not establish a single universal directional
+    mechanism.
+  snapshot_sha256: fe8827eb4bd34216ac5d4287299ca4551ce16330e201c170ef21a3ee9784a49e
+- evidence_id: complex60-agent-ipr-IPR000163
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR000163/
+  locator: Complete family metadata, descriptions, signatures and quality flags
+  accessed_at: '2026-10-22T08:25:14.309268Z'
+  support: supports
+  summary: 'Native family identity: IPR000163, Prohibitin, type family. Its complete
+    description, signatures and quality flags were inspected; any protein membership
+    is supported separately by the protein response.'
+  snapshot_sha256: a5538e91cc0c6dad68aa5d385c9f165506535acddba9e5dc8623f7bbd764256a
+- evidence_id: access-back2002-xml
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2373692/fullTextXML
+  locator: Exact retained transport response; no biological body inferred
+  accessed_at: '2026-10-22T08:25:10.617921Z'
+  support: context_only
+  summary: The EuropePMC XML route returned HTTP500; a genuine legacy primary body
+    was separately recovered and read.
+  snapshot_sha256: 38bd36cd9a0273e79824059ec1ab246424895390a92ddd3c312b9dbf85c19750
+- evidence_id: access-panther-PTHR23222-SF0
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR23222:SF0/
+  locator: Exact retained transport response; no biological body inferred
+  accessed_at: '2026-10-22T08:25:14.912775Z'
+  support: context_only
+  summary: The queried PHB1-associated PANTHER subfamily endpoint returned HTTP204
+    empty; no exact family absence is inferred.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: access-panther-PTHR23222-SF1
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/panther/PTHR23222:SF1/
+  locator: Exact retained transport response; no biological body inferred
+  accessed_at: '2026-10-22T08:25:15.138050Z'
+  support: context_only
+  summary: The queried PHB2-associated PANTHER subfamily endpoint returned HTTP204
+    empty; no exact family absence is inferred.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/mitochondrial_prohibitin_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:36Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/mitochondrial_prohibitin_complex.yaml'
+  snapshot_sha256: e4432dcbd4bab25ee002fc1c194f812e46554c6e401017a8c3ae2a33f3c01f75
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/mitochondrial_prohibitin_complex.yaml
+    --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_prohibitin_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:37Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/mitochondrial_prohibitin_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_prohibitin_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_prohibitin_complex-strict.tsv"
+  snapshot_sha256: 9a07b0ebe5d725d8170ff3a8ab7b4721d2ccbca8db775ba94593fde85c1722c2
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_prohibitin_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:25:14.974959Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_prohibitin_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:25:15.396502Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/mitochondrial_prohibitin_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 7 of 7 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: PHB1/PHB2 assembly and membrane topology
+  outcome: supported
+  target_ids:
+  - GO:0035632
+  summary: Exact GO identity/synonym, inner-membrane-protein-complex parent and membrane
+    parthood agree with primary crosslinking and review synthesis. The canonical yeast
+    chemical-crosslink/MS example is accurately bounded and does not assert a fixed
+    oligomer count.
+  evidence_ids:
+  - record
+  - complex60-agent-go
+  - complex60-agent-go-0035632-ancestors
+  - complex60-agent-back2002-legacy
+  - complex60-agent-artal2010-xml
+  - complex60-agent-tax-4932
+- assessment_id: function
+  area: graph
+  topic: Qualified broad biogenesis support
+  outcome: supported
+  target_ids:
+  - GO:0035632
+  summary: The function and NONMECHANISTIC graph use the broad mitochondrion-organization/biogenesis
+    context supported by GO and the review. They do not assert a universal stimulatory
+    mechanism, precise catalytic role or every proposed non-mitochondrial prohibitin
+    function.
+  evidence_ids:
+  - record
+  - complex60-agent-go
+  - complex60-agent-back2002-legacy
+  - complex60-agent-artal2010-xml
+- assessment_id: inventory
+  area: completeness
+  topic: Established proteins and unresolved exact paralog-family classes
+  outcome: supported
+  target_ids:
+  - GO:0035632
+  summary: PHB1/P40961 and PHB2/P50085 are native reviewed S288C identities and known
+    yeast subunits. IPR000163 spans both rather than separately defining each paralog.
+    Optional rows may be represented later with appropriate family scope or justified
+    label-only status; pending exact verification is not an assertion that no terms
+    exist and is not a standalone defect.
+  evidence_ids:
+  - record
+  - curation
+  - complex60-agent-back2002-legacy
+  - complex60-agent-artal2010-xml
+  - complex60-agent-gene-PHB1
+  - complex60-agent-gene-PHB2
+  - complex60-agent-ipr-IPR000163
+- assessment_id: scope
+  area: scope
+  topic: Yeast example versus reference proteome
+  outcome: supported
+  target_ids:
+  - GO:0035632
+  summary: W303-1A experimental preparations are not substituted by S288C reference
+    entries. COMMON keeps the schema majority/losses-exception meaning, supported
+    by qualitative conserved-yeast synthesis rather than an independently measured
+    strain-prevalence census.
+  evidence_ids:
+  - record
+  - schema
+  - complex60-agent-back2002-legacy
+  - complex60-agent-artal2010-xml
+  - complex60-agent-tax-4932
+  - complex60-agent-gene-PHB1
+  - complex60-agent-gene-PHB2
+- assessment_id: formation
+  area: grounding
+  topic: No universal individual formation assertion
+  outcome: unknown
+  target_ids:
+  - GO:0035632
+  summary: The current record does not assign individual component essentiality. Source-specific
+    association/perturbation observations and positive constitutive identity are not
+    automatically generalized to universal formation necessity.
+  evidence_ids:
+  - record
+  - schema
+  - complex60-agent-back2002-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and exact current source scope
+  outcome: supported
+  target_ids:
+  - GO:0035632
+  summary: All maintained fields and current scientific assertions were compared with
+    their nearest inspected sources. Historical read claims, optional enrichment and
+    acknowledged unknowns alone do not create findings.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex60-agent-go
+findings: []
+actions: []
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only explicitly declared source sections and assets were inspected. No raw experimental
+  data or atomic coordinates were reanalysed.
+- No Back2002 figure pixels or cited older primary experiments were independently
+  read. The2010 review supplies broad context; it does not settle exact biochemical
+  mechanism or population-frequency estimates.
+- Shared prohibitin-family identity does not resolve separate PHB1/PHB2 family classes.
+  HTTP204 candidate queries do not prove term absence; the optional inventory remains
+  an acknowledged follow-up.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both qualified clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```

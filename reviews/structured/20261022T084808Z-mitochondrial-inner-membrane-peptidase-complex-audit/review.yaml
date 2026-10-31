@@ -1,0 +1,695 @@
+schema_version: 1.0.0
+review_id: 20261022T084808Z-mitochondrial-inner-membrane-peptidase-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of mitochondrial inner membrane peptidase complex
+started_at: '2026-10-22T08:17:27Z'
+finished_at: '2026-10-22T08:48:08Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'Qualified pass: IMP identity, hierarchy, yeast context and coarse processing
+  graph are supported at the declared authority/abstract tiers. The acknowledged optional
+  subunit inventory and unresolved formation details do not by themselves constitute
+  findings.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    sha256: 8eb6f174c969fc2aef5a84a2a473fe42a66158531ae26422ccfd8ae3407227e0
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0042720
+  path: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+  label: mitochondrial inner membrane peptidase complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire maintained target and 14 frozen input files. No
+    neighboring maintained record is an unstated premise. Source tiers and actual
+    read extents are declared per evidence row.
+  selection: Batch60 strict ordered selection index 6; exactly one maintained target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0042720
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  command: just validate data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  command: just validate-strict data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_inner_membrane_peptidase_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused check passed; scientific claims assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  command: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Focused check passed; scientific claims assessed independently.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro60-doi-10.1007_s004380051192
+  - micro60-doi-10.1016_s0167-4889-02-00265-3
+  - micro60-tax4932
+  - micro60-go
+  - micro60-GO0042720-ancestors
+  - micro60-gene-IMP1
+  - micro60-gene-IMP2
+  - micro60-gene-SOM1
+  - micro60-jan2000-publisher
+  - micro60-jan2000-pdf
+  - micro60-gakh2002-publisher
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042720
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch60 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+  locator: Entire maintained YAML, including all scientific fields, examples, graphs,
+    discussions, images and history
+  accessed_at: '2026-10-22T08:35:41Z'
+  support: context_only
+  summary: All target bytes were read. No neighboring maintained record is an unstated
+    scientific premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component-class grounding and reviewed-label-only contract
+  accessed_at: '2026-10-22T08:35:41Z'
+  support: context_only
+  summary: Species accessions establish examples, not automatic class groundings.
+    Unknowns and empty optional slots alone are not defects.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: EssentialityEnum, PresenceEnum and graph actor semantics
+  accessed_at: '2026-10-22T08:35:41Z'
+  support: context_only
+  summary: Formation necessity differs from functional activity, viability and localization.
+    COMMON means present in most members with exceptional losses, not merely known
+    occurrence.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Source scope, actor identity and mechanism versus descriptive relationships
+  accessed_at: '2026-10-22T08:35:41Z'
+  support: context_only
+  summary: Assay, species and epistemic boundaries apply to each graph claim; coarse
+    supported mechanisms need not invent unresolved intermediates.
+- evidence_id: micro60-doi-10.1007_s004380051192
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1007%2Fs004380051192%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:24:39.751090Z'
+  support: supports
+  summary: 'PMID10821182: Som1, a third component of the yeast mitochondrial inner
+    membrane peptidase complex that contains Imp1 and Imp2. Jan PS, Esser K, Pratje
+    E, Michaelis G. (2000), DOI10.1007/s004380051192. Complete native abstract read;
+    no main-body access is implied by this metadata row.'
+  snapshot_sha256: 3feefea54a000dc24d8e8453be36e79d69d33edab4156aa61f4cc2e6183c7b2c
+- evidence_id: micro60-doi-10.1016_s0167-4889-02-00265-3
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0167-4889%2802%2900265-3%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Unique MED identity and complete abstractText.
+  accessed_at: '2026-10-22T08:24:40.357545Z'
+  support: supports
+  summary: 'PMID12191769: Mitochondrial processing peptidases. Gakh O, Cavadini P,
+    Isaya G. (2002), DOI10.1016/s0167-4889(02)00265-3. Complete native abstract read;
+    no main-body access is implied by this metadata row.'
+  snapshot_sha256: 38b1896cc727575a0aa9f7b9c819c50f23387b33aa7dfad8ca36636b11a858ea
+- evidence_id: micro60-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Exact taxId, scientificName, rank, lineage and relevant synonyms.
+  accessed_at: '2026-10-22T07:38:47.039448Z'
+  support: supports
+  summary: ENA taxId4932 identifies Saccharomyces cerevisiae, rank species. Experimental
+    cultures are distinguished from reference sequence strains.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: micro60-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000444,GO:0000776,GO:0000940,GO:0001401,GO:0005741,GO:0005742,GO:0005743,GO:0034982,GO:0042720,GO:0098799,GO:0098800,GO:0140595,GO:1905370,GO:7770059
+  locator: 'Only these five native entries: complete identity, definition, synonyms
+    and relevant typed links.'
+  accessed_at: '2026-10-22T08:24:38.435749Z'
+  support: supports
+  summary: GO0042720 exactly defines IMP as an inner-membrane protease complex processing
+    nuclear- and mitochondrially encoded substrates targeted to the intermembrane
+    space. GO0098800/1905370 are its two named parents; GO0005743 denotes its membrane
+    and GO0034982 its broader processing role. Synonym qualifiers agree.
+  snapshot_sha256: eaf537ed0db7d257ec37c171677875dcad35ade113b761962915842d91552658
+- evidence_id: micro60-GO0042720-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0042720/ancestors?relations=is_a
+  locator: Complete exact requested-term ancestor array.
+  accessed_at: '2026-10-22T08:24:38.436318Z'
+  support: supports
+  summary: The exact is_a-only response supports inner mitochondrial membrane protein
+    complex and serine-type endopeptidase-complex hierarchy. Substrate targeting to
+    the intermembrane space is not a claim that the enzyme complex floats in that
+    lumen.
+  snapshot_sha256: 2f96839cbac62bc254b38cefa4078fcacbd04d580bd0f3da8eb3a3ce2f03d6c5
+- evidence_id: micro60-gene-IMP1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIMP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set; selected exact primary-gene entry FUNCTION,
+    SUBUNIT and SUBCELLULAR LOCATION comments. Original query URL retained. Unlisted
+    cited papers not read.
+  accessed_at: '2026-10-22T08:25:57.285422Z'
+  support: supports
+  summary: The reviewed organism559292 result set contains the correctly named IMP1
+    entry P28627; its FUNCTION/SUBUNIT/LOCATION comments support IMP context. IMP1
+    and IMP2 queries also return alias collisions and therefore do not establish single-hit
+    uniqueness; SOM1 returns one entry. This is optional enrichment, not a new maintained
+    example.
+  snapshot_sha256: eb8776a6ca29892f1d40459303af75189b37449083a10e26a7de78c3eccb9365
+- evidence_id: micro60-gene-IMP2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIMP2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set; selected exact primary-gene entry FUNCTION,
+    SUBUNIT and SUBCELLULAR LOCATION comments. Original query URL retained. Unlisted
+    cited papers not read.
+  accessed_at: '2026-10-22T08:25:58.127391Z'
+  support: supports
+  summary: The reviewed organism559292 result set contains the correctly named IMP2
+    entry P46972; its FUNCTION/SUBUNIT/LOCATION comments support IMP context. IMP1
+    and IMP2 queries also return alias collisions and therefore do not establish single-hit
+    uniqueness; SOM1 returns one entry. This is optional enrichment, not a new maintained
+    example.
+  snapshot_sha256: 6db981e54cebb319d72e92a5fbc29e231a12c5ae3547973373142b539c772ca2
+- evidence_id: micro60-gene-SOM1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASOM1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete result identity set; selected exact primary-gene entry FUNCTION,
+    SUBUNIT and SUBCELLULAR LOCATION comments. Original query URL retained. Unlisted
+    cited papers not read.
+  accessed_at: '2026-10-22T08:25:58.303983Z'
+  support: supports
+  summary: The reviewed organism559292 result set contains the correctly named SOM1
+    entry Q05676; its FUNCTION/SUBUNIT/LOCATION comments support IMP context. IMP1
+    and IMP2 queries also return alias collisions and therefore do not establish single-hit
+    uniqueness; SOM1 returns one entry. This is optional enrichment, not a new maintained
+    example.
+  snapshot_sha256: 12743d8afb7c0c01ddc848797e1e0cf09fd405a9bd98ec68157a255782f0c304
+- evidence_id: micro60-jan2000-publisher
+  kind: authority
+  reference: https://link.springer.com/article/10.1007/s004380051192
+  locator: Actual response content/transport and 3038-byte challenge payload.
+  accessed_at: '2026-10-22T08:25:56.360392Z'
+  support: context_only
+  summary: The retained HTTP200 response is a short client challenge, not the cited
+    primary article body. Scientific support is limited to the independently retained
+    complete MED abstract.
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+- evidence_id: micro60-jan2000-pdf
+  kind: authority
+  reference: https://link.springer.com/content/pdf/10.1007/s004380051192.pdf
+  locator: Actual response content/transport and 3038-byte challenge payload.
+  accessed_at: '2026-10-22T08:25:56.360438Z'
+  support: context_only
+  summary: The retained HTTP200 response is a short client challenge, not the cited
+    primary article body. Scientific support is limited to the independently retained
+    complete MED abstract.
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+- evidence_id: micro60-gakh2002-publisher
+  kind: authority
+  reference: https://doi.org/10.1016/s0167-4889(02)00265-3
+  locator: Actual returned JSON type and metadata; no publisher full-text claim.
+  accessed_at: '2026-10-22T08:25:56.563037Z'
+  support: context_only
+  summary: The DOI route returned Crossref JSON bibliographic metadata, not the review
+    body. The secondary review is assessed only at complete native abstract tier.
+  snapshot_sha256: 20301c7adc991c604e018876c17995b38e10e7756d92ab5ee352fd0def5dd392
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:28Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml'
+  snapshot_sha256: 57bd1aeabc0ac81faad2339901736ac52080504c20d899fd55ae6c5c5e380b2d
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_inner_membrane_peptidase_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T08:17:29Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_inner_membrane_peptidase_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch60-20261022-hg31t4fv/mitochondrial_inner_membrane_peptidase_complex-strict.tsv"
+  snapshot_sha256: 920afbd0651c0e6b9074000efc2b34612b010f08f70751cb33f4badd37e0d38f
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    --causal-graphs
+  locator: Complete focused read-only native log
+  accessed_at: '2026-10-22T08:25:28.406980Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch60-20261022-hg31t4fv/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml
+    --verify
+  locator: Complete focused read-only native log
+  accessed_at: '2026-10-22T08:25:28.788094Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/mitochondrial_inner_membrane_peptidase_complex.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 8 of 8 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact inner-membrane protease class
+  outcome: supported
+  target_ids:
+  - GO:0042720
+  summary: GO identity, synonym scopes, two parent classes and inner-membrane parthood
+    agree with the target. The definition correctly includes both nuclear- and mitochondrially
+    encoded substrates; the previously removed after-import restriction is not reintroduced.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro60-go
+  - micro60-GO0042720-ancestors
+  - micro60-doi-10.1007_s004380051192
+  - micro60-doi-10.1016_s0167-4889-02-00265-3
+- assessment_id: composition
+  area: completeness
+  topic: Known named subunits are optional future enrichment
+  outcome: supported
+  target_ids:
+  - GO:0042720
+  summary: Jan2000 abstract identifies Imp1/Imp2 catalytic subunits, Som1 interaction
+    and a proposed third-component interpretation; native selected protein entries
+    support that inventory. The current scaffold explicitly acknowledges the open
+    family task and does not claim no identifiers exist. Empty optional components
+    alone do not establish a defect; label-only species-scoped rows would be a useful
+    future enrichment.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro60-doi-10.1007_s004380051192
+  - micro60-doi-10.1016_s0167-4889-02-00265-3
+  - micro60-gene-IMP1
+  - micro60-gene-IMP2
+  - micro60-gene-SOM1
+- assessment_id: formation
+  area: evidence
+  topic: No formation-necessity assertion to correct
+  outcome: unknown
+  target_ids:
+  - GO:0042720
+  summary: The target has no component essentiality claims. Jan abstract reports asymmetric
+    protein-stability/interaction observations, not an exhaustive universal physical-formation
+    test. Neither functional processing nor gene requirement is converted into a new
+    ESSENTIAL label.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro60-doi-10.1007_s004380051192
+  - micro60-doi-10.1016_s0167-4889-02-00265-3
+  - micro60-gene-IMP1
+  - micro60-gene-IMP2
+  - micro60-gene-SOM1
+- assessment_id: graph
+  area: graph
+  topic: Appropriately descriptive processing graph
+  outcome: supported
+  target_ids:
+  - GO:0042720
+  summary: Two NONMECHANISTIC edges capture membrane topology and selected-substrate
+    processing. They do not assert an atomistic cleavage route, post-import-only restriction
+    or every-substrate dependence. Gakh2002 is accurately described as a review rather
+    than a new primary experiment.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro60-go
+  - micro60-GO0042720-ancestors
+  - micro60-doi-10.1007_s004380051192
+  - micro60-doi-10.1016_s0167-4889-02-00265-3
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast scope and qualified prevalence
+  outcome: supported
+  target_ids:
+  - GO:0042720
+  summary: The species identity is correct. COMMON means most members with exceptional
+    losses; Jan and native annotations provide qualitative yeast-system evidence,
+    not a strain census. Exact experimental strain/construct detail is not invented
+    from abstract-only access; S288C queries are optional reference identities.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro60-tax4932
+  - micro60-doi-10.1007_s004380051192
+  - micro60-doi-10.1016_s0167-4889-02-00265-3
+  - micro60-gene-IMP1
+  - micro60-gene-IMP2
+  - micro60-gene-SOM1
+- assessment_id: coverage
+  area: completeness
+  topic: Entire record assessed without manufacturing optional defects
+  outcome: supported
+  target_ids:
+  - GO:0042720
+  summary: All target scientific fields, source notes, current discussions, graph
+    claims, examples and history were read. Optional missing detail and historical
+    access/search limitations are distinguished from actionable present-field defects;
+    no maintained scientific content was changed.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro60-go
+  - micro60-GO0042720-ancestors
+  - micro60-doi-10.1007_s004380051192
+  - micro60-doi-10.1016_s0167-4889-02-00265-3
+  - micro60-tax4932
+  - micro60-gene-IMP1
+  - micro60-gene-IMP2
+  - micro60-gene-SOM1
+  - micro60-jan2000-publisher
+  - micro60-jan2000-pdf
+  - micro60-gakh2002-publisher
+findings: []
+actions: []
+limitations:
+- Jan2000 was read at complete native MED abstract tier only; retained publisher/PDF
+  routes returned client challenges. Gakh2002 was read at complete native abstract
+  tier as a secondary review; DOI-returned Crossref metadata is not its body. No primary
+  figure, supplement, detailed strain/construct or assay methods are certified.
+- Optional Imp1/Imp2/Som1 enrichment is supported qualitatively, with Jan wording
+  proposing Som1 as a third component. Exact taxon-neutral whole-class family mappings
+  and universal formation necessity were not established. Native IMP1/IMP2 queries
+  contain alias collisions, so no single-hit uniqueness is asserted.
+- COMMON retains majority occurrence with exceptional losses; the cited model-system
+  studies are not an exhaustive prevalence survey.
+- Reused source bytes retain original URL, UTC and SHA256. HTTP status alone is not
+  treated as evidence of article-body readability.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requests a review for every unreviewed record, including qualified
+  clean cases.
+- Initial inspections and failed access/check attempts are preserved; no scientific
+  record or historical review is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
