@@ -1,4 +1,5 @@
-"""Unit tests for semantic record validation in validator.py (#2408, #2410, #2417, #2428, #2457, #2472)."""
+"""Unit tests for semantic record validation in validator.py
+(#2408, #2410, #2417, #2428, #2457, #2472, #2486)."""
 
 from __future__ import annotations
 
@@ -11,6 +12,7 @@ from cellstructuremech.validation.validator import (
     validate_discussion_issue_links,
     validate_hierarchy_relations,
     validate_record_semantics,
+    validate_top_level_pmid_parity,
 )
 from cellstructuremech.validation.write_validated import (
     ValidationFailedError,
@@ -774,6 +776,159 @@ def test_function_and_causal_node_go_grounding_and_aspect_consistency():
     }
     assert validate_causal_graphs(fixed_doc) == []
     assert validate_structure(fixed_doc) == []
+
+
+def test_top_level_pmid_evidence_parity_is_enforced():
+    bad_doc = {
+        **BASE_RECORD,
+        "evidence": [
+            {
+                "reference": "GO:0005840",
+                "notes": "GO term definition.",
+            },
+            {
+                "reference": "PMID:10985327",
+                "notes": "Primary study.",
+            },
+        ],
+        "components": [
+            {
+                "component_id": "sid2",
+                "label": "Sid2 kinase",
+                "component_type": "PROTEIN",
+                "component_role": "CONSTITUENT",
+                "gene_symbols": ["sid2"],
+                "evidence": [
+                    {"reference": "PMID:11069087", "notes": "Mob1-Sid2 complex assembly."}
+                ],
+            }
+        ],
+        "taxonomic_distribution": [
+            {
+                "taxon_id": "NCBITaxon:4896",
+                "taxon_label": "Schizosaccharomyces pombe",
+                "presence": "COMMON",
+                "reference": "PMID:11069087",
+                "note": "Demonstrated in fission yeast.",
+            }
+        ],
+        "functions": [
+            {
+                "function_id": "sin_signaling",
+                "label": "septation initiation signaling",
+                "description": "Triggers medial ring constriction.",
+                "evidence": [
+                    {"reference": "PMID:11069087", "notes": "Required for cytokinesis."}
+                ],
+            }
+        ],
+        "causal_graphs": [
+            {
+                "graph_id": "sid2_mob1_assembly",
+                "graph_kind": "ASSEMBLY",
+                "scope_status": "MECHANISTIC",
+                "nodes": [
+                    {
+                        "node_id": "sid2",
+                        "label": "Sid2 kinase",
+                        "node_type": "GENE_OR_PROTEIN",
+                        "component_ref": "sid2",
+                    },
+                    {"node_id": "complex", "label": "Sid2-Mob1 complex", "node_type": "STRUCTURE"},
+                ],
+                "edges": [
+                    {
+                        "subject": "sid2",
+                        "predicate": "assembles into",
+                        "object": "complex",
+                        "description": "Sid2 kinase associates with Mob1 to form the active complex.",
+                        "evidence": [
+                            {"reference": "PMID:11069087", "notes": "Co-immunoprecipitation."}
+                        ],
+                    }
+                ],
+            }
+        ],
+    }
+    errors = validate_top_level_pmid_parity(bad_doc)
+    assert len(errors) == 4
+    assert any("components#sid2: cites 'PMID:11069087'" in e for e in errors)
+    assert any("taxonomic_distribution#NCBITaxon:4896: cites 'PMID:11069087'" in e for e in errors)
+    assert any("functions#sin_signaling: cites 'PMID:11069087'" in e for e in errors)
+    assert any("causal_graphs#sid2_mob1_assembly.edges[0]: cites 'PMID:11069087'" in e for e in errors)
+    assert validate_structure(bad_doc)
+
+    fixed_doc = {
+        **bad_doc,
+        "evidence": [
+            *bad_doc["evidence"],
+            {
+                "reference": "PMID:11069087",
+                "notes": "Mob1-Sid2 complex assembly and cytokinesis requirement.",
+            },
+        ],
+    }
+    assert validate_top_level_pmid_parity(fixed_doc) == []
+    assert validate_structure(fixed_doc) == []
+
+
+def test_two_node_parthood_only_structure_causal_graph_marked_mechanistic_is_flagged():
+    bad_doc = {
+        **BASE_RECORD,
+        "structure_category": "MEMBRANE_ORGANELLE",
+        "structure_kind": "MEMBRANE",
+        "causal_graphs": [
+            {
+                "graph_id": "reservosome_membrane_parthood",
+                "graph_kind": "ASSEMBLY",
+                "scope_status": "MECHANISTIC",
+                "nodes": [
+                    {
+                        "node_id": "reservosome_membrane",
+                        "label": "reservosome membrane",
+                        "node_type": "STRUCTURE",
+                        "grounding": "GO:0106126",
+                    },
+                    {
+                        "node_id": "reservosome",
+                        "label": "reservosome",
+                        "node_type": "STRUCTURE",
+                        "grounding": "GO:0033011",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "reservosome_membrane",
+                        "predicate": "is part of",
+                        "object": "reservosome",
+                        "description": "The reservosome membrane bounds the reservosome.",
+                        "evidence": [{"reference": "GO:0106126", "notes": "GO parthood."}],
+                    }
+                ],
+            }
+        ],
+    }
+    errors = validate_causal_graphs(bad_doc)
+    assert len(errors) == 1
+    assert (
+        "reservosome_membrane_parthood: 2-node 1-edge STRUCTURE graph with parthood-only "
+        "predicate 'is part of' has scope_status 'MECHANISTIC' (expected 'NONMECHANISTIC' or 'INCOMPLETE')"
+        in errors[0]
+    )
+    assert validate_structure(bad_doc)
+
+    fixed_doc = {
+        **bad_doc,
+        "causal_graphs": [
+            {
+                **bad_doc["causal_graphs"][0],
+                "scope_status": "NONMECHANISTIC",
+            }
+        ],
+    }
+    assert validate_causal_graphs(fixed_doc) == []
+    assert validate_structure(fixed_doc) == []
+
 
 
 

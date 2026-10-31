@@ -1,4 +1,5 @@
-"""Semantic validation checks for CellStructureRecord documents (#2408, #2410, #2417, #2428, #2457, #2472).
+"""Semantic validation checks for CellStructureRecord documents
+(#2408, #2410, #2417, #2428, #2457, #2472, #2486).
 
 Complements closed-schema LinkML validation (``write_validated.py``) with
 cross-field and graph-completeness invariants that JSON Schema alone cannot
@@ -16,6 +17,9 @@ express:
 - Every declared ``CausalNode`` participates in at least one incident
   ``CausalEdge`` (no isolated nodes).
 - Every ``CausalEdge`` carries a non-blank ``description``.
+- No 2-node, 1-edge ``STRUCTURE`` ``CausalGraph`` (on a non-``SUBCELLULAR_REGION``
+  record) whose sole edge predicate is parthood-only (``"is part of"``,
+  ``"part_of"``, ``"BFO:0000050"``) carries ``scope_status: MECHANISTIC``.
 - No ``CausalNode`` with ``node_type == 'GENE_OR_PROTEIN'`` carries a ``GO:``
   or ``cellstructuremech:`` structure/complex ``grounding`` or references a
   ``PROTEIN_COMPLEX`` component grounded to ``GO:`` or ``cellstructuremech:``
@@ -28,6 +32,10 @@ express:
   non-empty parent ``components[].gene_symbols`` list or explicitly disclosed
   as an organism-specific synonym/locus tag in ``protein_examples[].role``
   (including components whose ``gene_symbols`` list is empty).
+- When top-level ``evidence`` cites ``PMID:`` primary literature references,
+  primary ``PMID:`` citations in ``components``, ``taxonomic_distribution``,
+  ``functions``, and ``causal_graphs`` are also present in top-level ``evidence``
+  (or component ``protein_examples``).
 - Every ``curation_history`` entry with ``action == 'CURATED_CAUSAL_GRAPH'``
   that names a target causal-graph slug resolves to a declared
   ``causal_graphs[].graph_id`` on the record.
@@ -60,6 +68,7 @@ _SYNONYM_ROLE_RE = re.compile(
 _ALSO_SYNONYM_RE = re.compile(r"\(also declared as (?:synonym|locus tag)[s]? ([^)]+)\)")
 _MF_ASPECT_TOKENS = ("molecular-function", "molecular_function", "molecular function")
 _BP_ASPECT_TOKENS = ("biological-process", "biological_process", "biological process")
+_PARTHOOD_PREDICATES = {"is part of", "part_of", "BFO:0000050"}
 
 
 def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
@@ -87,6 +96,21 @@ def validate_causal_graphs(doc: dict[str, Any]) -> list[str]:
         nodes = [n for n in (graph.get("nodes") or []) if isinstance(n, dict)]
         edges = [e for e in (graph.get("edges") or []) if isinstance(e, dict)]
         node_ids = {n.get("node_id") for n in nodes if n.get("node_id")}
+
+        if (
+            graph.get("scope_status") == "MECHANISTIC"
+            and doc.get("structure_kind") != "SUBCELLULAR_REGION"
+            and len(nodes) == 2
+            and len(edges) == 1
+            and all(n.get("node_type") == "STRUCTURE" for n in nodes)
+        ):
+            sole_pred = str(edges[0].get("predicate") or "").strip()
+            if sole_pred in _PARTHOOD_PREDICATES:
+                errors.append(
+                    f"{gid}: 2-node 1-edge STRUCTURE graph with parthood-only predicate "
+                    f"{sole_pred!r} has scope_status 'MECHANISTIC' "
+                    f"(expected 'NONMECHANISTIC' or 'INCOMPLETE')"
+                )
 
         incident: set[str] = set()
         edge_go_ev_notes: dict[str, list[str]] = {}
@@ -456,6 +480,94 @@ def validate_curation_history(doc: dict[str, Any]) -> list[str]:
     return errors
 
 
+def validate_top_level_pmid_parity(doc: dict[str, Any]) -> list[str]:
+    """Return error strings when top-level ``evidence`` cites ``PMID:`` entries
+    while omitting primary ``PMID:`` references cited in ``components``,
+    ``taxonomic_distribution``, ``functions``, or ``causal_graphs``."""
+    errors: list[str] = []
+    top_refs = [
+        str(ev.get("reference") or "").strip()
+        for ev in (doc.get("evidence") or [])
+        if isinstance(ev, dict) and str(ev.get("reference") or "").strip()
+    ]
+    top_pmids = {r for r in top_refs if r.startswith("PMID:")}
+    top_dois = {r for r in top_refs if r.startswith("DOI:")}
+    if (
+        not top_pmids
+        or len(top_dois) > len(top_pmids)
+        or any(r.startswith("CHEBI:") for r in top_refs)
+    ):
+        return errors
+
+    pe_pmids: set[str] = set()
+    for comp in doc.get("components") or []:
+        if not isinstance(comp, dict):
+            continue
+        for pe in comp.get("protein_examples") or []:
+            if not isinstance(pe, dict):
+                continue
+            for ev in pe.get("evidence") or []:
+                if isinstance(ev, dict):
+                    ref = str(ev.get("reference") or "").strip()
+                    if ref.startswith("PMID:"):
+                        pe_pmids.add(ref)
+    covered_pmids = top_pmids | pe_pmids
+
+    def _check_ev_list(ev_list: Any, path_label: str) -> None:
+        items = [e for e in (ev_list or []) if isinstance(e, dict)]
+        list_pmids = {
+            str(e.get("reference") or "").strip()
+            for e in items
+            if str(e.get("reference") or "").strip().startswith("PMID:")
+        }
+        has_covered_sibling = bool(list_pmids & covered_pmids)
+        for ev in items:
+            ref = str(ev.get("reference") or "").strip()
+            if not ref.startswith("PMID:") or ref in covered_pmids:
+                continue
+            notes = str(ev.get("notes") or "")
+            if has_covered_sibling and "DOI:10." in notes:
+                continue
+            errors.append(
+                f"{path_label}: cites {ref!r} not present in top-level evidence "
+                f"({sorted(top_pmids)!r})"
+            )
+
+    for comp in doc.get("components") or []:
+        if not isinstance(comp, dict):
+            continue
+        cid = comp.get("component_id") or "<component>"
+        _check_ev_list(comp.get("evidence"), f"components#{cid}")
+
+    for idx, td in enumerate(doc.get("taxonomic_distribution") or []):
+        if not isinstance(td, dict):
+            continue
+        ref = str(td.get("reference") or "").strip()
+        if ref.startswith("PMID:") and ref not in covered_pmids:
+            tid = td.get("taxon_id") or f"[{idx}]"
+            errors.append(
+                f"taxonomic_distribution#{tid}: cites {ref!r} not present in "
+                f"top-level evidence ({sorted(top_pmids)!r})"
+            )
+
+    for fn in doc.get("functions") or []:
+        if not isinstance(fn, dict):
+            continue
+        fid = fn.get("function_id") or "<function>"
+        _check_ev_list(fn.get("evidence"), f"functions#{fid}")
+
+    for graph in doc.get("causal_graphs") or []:
+        if not isinstance(graph, dict):
+            continue
+        gid = graph.get("graph_id") or "<graph>"
+        for eidx, edge in enumerate(graph.get("edges") or []):
+            if not isinstance(edge, dict):
+                continue
+            _check_ev_list(edge.get("evidence"), f"causal_graphs#{gid}.edges[{eidx}]")
+
+    return errors
+
+
 def validate_record_semantics(
     doc: dict[str, Any],
     *,
@@ -466,6 +578,7 @@ def validate_record_semantics(
         *validate_hierarchy_relations(doc),
         *validate_causal_graphs(doc),
         *validate_component_protein_examples(doc),
+        *validate_top_level_pmid_parity(doc),
         *validate_curation_history(doc),
         *validate_discussion_issue_links(doc, github_repo=github_repo),
     ]
