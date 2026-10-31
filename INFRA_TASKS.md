@@ -71,8 +71,9 @@ tasks:
     disposition: Added validate_hierarchy_relations() and extended validate_causal_graphs() in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics, write_validated_structure, and scripts/validate_strict.py); verified 0 errors across all 1,001 structure records and added unit and corpus-integrity tests in tests/test_validator.py and tests/test_corpus_integrity.py.
   - task_id: cellstructuremech-infra-0008
     summary: Extend src/cellstructuremech/validation/validator.py to check empty-gene_symbols component protein_examples and function/CausalNode GO aspect and grounding consistency
-    status: open
+    status: resolved
     issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2472
+    disposition: Extended validate_component_protein_examples() and validate_causal_graphs() in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics, write_validated_structure, and scripts/validate_strict.py); verified 0 errors across all 1,008 structure records and added unit and corpus-integrity tests in tests/test_validator.py and tests/test_corpus_integrity.py.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -166,12 +167,14 @@ tasks:
 
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 5, Stage 4 (`record_review`)
 - **Issue**: https://github.com/CultureBotAI/CellStructureMech/issues/2472
-- **Status**: `open`
+- **Status**: `resolved` (Cycle 5, Stage 6)
 - **Priority**: P2
 - **Dependencies**: None
 - **Observation**: During the Cycle 5 Stage 4 whole-corpus audit of all 1,008 records: (1) `src/cellstructuremech/validation/validator.py` (`validate_component_protein_examples`, lines 223–224) skips any component whose `gene_symbols` list is empty (`if not gs: continue`), allowing `data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml` (`GO:1990295`) `components[2]` (`emtoc`, `GO:0000923`) to declare two reviewed `protein_examples` (`UniProtKB:O94488` `mto1` and `UniProtKB:Q9USP7` `mto2`) whose `role` strings claim `"Identifier for the component's declared gene symbol"` while omitting `gene_symbols: [mto1, mto2]` on `components[2]`; (2) `validator.py` (`validate_causal_graphs`) does not check whether a `CausalNode` grounded to a `GO:` term sets `node_type: BIOLOGICAL_PROCESS` when a matching `functions[]` entry on the same record explicitly documents that `GO:` term as a `molecular_function` (affecting `data/structures/other/origin_recognition_complex.yaml` `causal_graphs[0].nodes[6]` `dna_replication_origin_binding`, `GO:0003688`); and (3) `validator.py` does not check whether a `functions[]` entry omits `grounding` when a `CausalNode` with the identical `node_id`/`label` on the same record carries a `GO:` `grounding` (affecting `data/structures/membrane_organelle/autophagosome.yaml` `functions[0]` `macroautophagy`, `GO:0016236`).
 - **Desired outcome**: Extend `src/cellstructuremech/validation/validator.py` (`validate_component_protein_examples` and `validate_causal_graphs`) to flag components that omit `gene_symbols` while declaring `protein_examples[].gene_symbol` (without explicit synonym/locus disclosure in `role`), `CausalNode` items whose `node_type` contradicts the GO aspect documented on the matching `functions[]` entry, and `functions[]` items that omit `grounding` when a matching `CausalNode` on the same record carries a `GO:` `grounding`.
-- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `reviews/structured/20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols/review.yaml`, `reviews/structured/20261030T222002Z-origin-recognition-complex-node-type-molecular-function/review.yaml`, `reviews/structured/20261030T222004Z-membrane-organelle-category-review/review.yaml`
+- **Resolution**: Extended `validate_component_protein_examples()` and `validate_causal_graphs()` in `src/cellstructuremech/validation/validator.py` (wired into `validate_record_semantics()`, `write_validated_structure()`, and `scripts/validate_strict.py`), verified 0 errors across all 1,008 corpus records, and added unit and corpus-integrity tests in `tests/test_validator.py` and `tests/test_corpus_integrity.py`.
+- **Evidence paths**: `src/cellstructuremech/validation/validator.py`, `tests/test_validator.py`, `tests/test_corpus_integrity.py`, `reviews/structured/20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols/review.yaml`, `reviews/structured/20261030T222002Z-origin-recognition-complex-node-type-molecular-function/review.yaml`, `reviews/structured/20261030T222004Z-membrane-organelle-category-review/review.yaml`
+
 
 
 

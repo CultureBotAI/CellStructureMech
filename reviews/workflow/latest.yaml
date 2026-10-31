@@ -1,11 +1,11 @@
 latest_verified_stage:
   run_id: mech-goal-sequence-20261019
   cycle_index: 5
-  stage_order: 4
-  stage_id: review_sampled_records
+  stage_order: 5
+  stage_id: resolve_review_findings
   revision: 1
-  evidence_path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml
-  evidence_sha256: 008cce72cea1a120bfef359392a32f3930ae39fa3af2b47ef9f79bda7608df12
-  git_revision: a94f6deb809dd50c8344fb03284de9801c0aa298
-  verified_at: '2026-10-31T01:02:13.719002+00:00'
+  evidence_path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/evidence.yaml
+  evidence_sha256: 4e7ffd3acfd2ac6af3a267d9b08461c792a034d26f4b43c5ff9b67978b7f5f7b
+  git_revision: ecd788f5a2090d23dddea6a1c8757ed55f7ddf68
+  verified_at: '2026-10-31T02:45:16.856265+00:00'
   status: verified

@@ -1,4 +1,4 @@
-"""Unit tests for semantic record validation in validator.py (#2408, #2410, #2417, #2428, #2457)."""
+"""Unit tests for semantic record validation in validator.py (#2408, #2410, #2417, #2428, #2457, #2472)."""
 
 from __future__ import annotations
 
@@ -609,6 +609,172 @@ def test_causal_node_component_ref_grounding_and_type_consistency():
     }
     assert validate_causal_graphs(fixed_doc) == []
     assert validate_structure(fixed_doc) == []
+
+
+def test_component_with_empty_gene_symbols_and_protein_example_is_flagged():
+    bad_doc = {
+        **BASE_RECORD,
+        "components": [
+            {
+                "component_id": "emtoc",
+                "label": "equatorial microtubule organizing center",
+                "component_type": "PROTEIN_COMPLEX",
+                "component_role": "CONSTITUENT",
+                "grounding": "GO:0000923",
+                "evidence": [{"reference": "PMID:12345678", "notes": "Component evidence."}],
+                "protein_examples": [
+                    {
+                        "uniprot_id": "UniProtKB:O94488",
+                        "protein_label": "Gamma tubulin complex adapter mto1",
+                        "gene_symbol": "mto1",
+                        "taxon_id": "NCBITaxon:284812",
+                        "taxon_label": "Schizosaccharomyces pombe 972h-",
+                        "entry_status": "REVIEWED",
+                        "retrieved_on": "2026-10-17",
+                        "role": (
+                            "Representative reviewed UniProtKB entry for gene mto1 in "
+                            "Schizosaccharomyces pombe 972h-. Identifier for the component's "
+                            "declared gene symbol."
+                        ),
+                        "evidence": [
+                            {
+                                "reference": "PMID:15004232",
+                                "notes": "Experimental localization.",
+                            }
+                        ],
+                    }
+                ],
+            }
+        ],
+    }
+    errors = validate_component_protein_examples(bad_doc)
+    assert len(errors) == 1
+    assert "declares gene_symbol 'mto1' on a component with empty gene_symbols" in errors[0]
+    assert validate_structure(bad_doc)
+
+    fixed_doc = {
+        **BASE_RECORD,
+        "components": [
+            {
+                **bad_doc["components"][0],
+                "gene_symbols": ["mto1"],
+            }
+        ],
+    }
+    assert validate_component_protein_examples(fixed_doc) == []
+    assert validate_structure(fixed_doc) == []
+
+
+def test_function_and_causal_node_go_grounding_and_aspect_consistency():
+    bad_doc = {
+        **BASE_RECORD,
+        "functions": [
+            {
+                "function_id": "dna_replication_origin_binding",
+                "label": "DNA replication origin binding",
+                "grounding": "GO:0003688",
+                "description": "Recognizes DNA replication origins in an ATP-dependent manner.",
+                "evidence": [
+                    {
+                        "reference": "GO:0003688",
+                        "notes": (
+                            "GO:0003688 is the Gene Ontology molecular-function term for "
+                            "DNA replication origin binding."
+                        ),
+                    }
+                ],
+            },
+            {
+                "function_id": "macroautophagy",
+                "label": "macroautophagy",
+                "description": "Delivers cytoplasmic cargo to the lytic vacuole.",
+                "evidence": [
+                    {
+                        "reference": "GO:0016236",
+                        "notes": "GO:0016236 defines macroautophagy.",
+                    }
+                ],
+            },
+        ],
+        "causal_graphs": [
+            {
+                "graph_id": "func_graph",
+                "graph_kind": "FUNCTION",
+                "scope_status": "MECHANISTIC",
+                "nodes": [
+                    {"node_id": "complex", "label": "complex", "node_type": "STRUCTURE"},
+                    {
+                        "node_id": "dna_replication_origin_binding",
+                        "label": "DNA replication origin binding",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0003688",
+                    },
+                    {
+                        "node_id": "macroautophagy",
+                        "label": "macroautophagy",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0016236",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "complex",
+                        "predicate": "mediates",
+                        "object": "dna_replication_origin_binding",
+                        "description": "The complex mediates DNA replication origin binding.",
+                        "evidence": [{"reference": "GO:0003688", "notes": "MF term."}],
+                    },
+                    {
+                        "subject": "complex",
+                        "predicate": "supports",
+                        "object": "macroautophagy",
+                        "description": "The complex supports macroautophagy.",
+                        "evidence": [{"reference": "GO:0016236", "notes": "BP term."}],
+                    },
+                ],
+            }
+        ],
+    }
+    errors = validate_causal_graphs(bad_doc)
+    assert len(errors) == 2
+    assert any(
+        "has node_type 'BIOLOGICAL_PROCESS' contradicting molecular_function aspect on "
+        "functions#dna_replication_origin_binding" in e
+        for e in errors
+    )
+    assert any(
+        "functions#macroautophagy: omits grounding 'GO:0016236' present on matching "
+        "CausalNode 'macroautophagy'" in e
+        for e in errors
+    )
+    assert validate_structure(bad_doc)
+
+    fixed_doc = {
+        **bad_doc,
+        "functions": [
+            bad_doc["functions"][0],
+            {
+                **bad_doc["functions"][1],
+                "grounding": "GO:0016236",
+            },
+        ],
+        "causal_graphs": [
+            {
+                **bad_doc["causal_graphs"][0],
+                "nodes": [
+                    bad_doc["causal_graphs"][0]["nodes"][0],
+                    {
+                        **bad_doc["causal_graphs"][0]["nodes"][1],
+                        "node_type": "MOLECULAR_FUNCTION",
+                    },
+                    bad_doc["causal_graphs"][0]["nodes"][2],
+                ],
+            }
+        ],
+    }
+    assert validate_causal_graphs(fixed_doc) == []
+    assert validate_structure(fixed_doc) == []
+
 
 
 

@@ -72,8 +72,9 @@ def test_graph_node_component_refs_resolve(records):
 
 
 def test_causal_graphs_have_no_isolated_nodes_or_undescribed_edges(records):
-    """Every CausalNode participates in at least one directed edge and every
-    CausalEdge carries a non-empty mechanistic description (#2408)."""
+    """Every CausalNode participates in at least one directed edge, every
+    CausalEdge carries a non-empty mechanistic description, and CausalNode
+    grounding/aspect agrees with referenced components and functions (#2408, #2472)."""
     bad = []
     for path, doc in records:
         for err in validate_causal_graphs(doc):
@@ -95,7 +96,7 @@ def test_discussions_referencing_issues_carry_structured_issue_links(records):
 def test_component_protein_examples_match_declared_gene_symbols(records):
     """Every `components[].protein_examples[].gene_symbol` must appear in its
     parent component's non-empty `gene_symbols` list or be disclosed as a
-    synonym/locus tag in `protein_examples[].role` (#2417)."""
+    synonym/locus tag in `protein_examples[].role` (#2417, #2472)."""
     bad = []
     for path, doc in records:
         for err in validate_component_protein_examples(doc):
