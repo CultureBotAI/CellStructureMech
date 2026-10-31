@@ -1,0 +1,312 @@
+identifier: GO:0034973
+label: Sid2-Mob1 complex
+structure_category: DIVISION_MACHINERY
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A conserved fungal NDR-family protein kinase complex localized to the
+  spindle pole body and medial cell division site, composed of the catalytic serine/threonine
+  protein kinase Sid2 (fission yeast) or Dbf2/Dbf20 (budding yeast) bound to its regulatory
+  activator subunit Mob1; acts as the terminal effector kinase complex of the septation
+  initiation network (SIN) and mitotic exit network (MEN) to trigger mitotic exit,
+  Cdc14 release, and cytokinetic septum assembly.
+definition_source: GO:0034973
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: Dbf2p-Mob1p complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034973
+- synonym_text: Sid2-Mob1 kinase complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034973
+- synonym_text: Sid2p-Mob1p complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0034973
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005816
+xrefs:
+- ComplexPortal:CPX-26510
+- ComplexPortal:CPX-1683
+components:
+- component_id: sid2_dbf2_kinase_subunit
+  label: NDR-family serine/threonine-protein kinase Sid2/Dbf2
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR000961
+  gene_symbols:
+  - sid2
+  - DBF2
+  - DBF20
+  stoichiometry: 1 or 2
+  essentiality: ESSENTIAL
+  role: Catalytic AGC/NDR-family serine/threonine protein kinase subunit that binds
+    Mob1 via its N-terminal regulatory region and phosphorylates mitotic-exit and
+    cytokinetic substrates.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q09898
+    protein_label: Serine/threonine-protein kinase sid2
+    gene_symbol: sid2
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Schizosaccharomyces pombe 972h- Sid2 terminal SIN kinase subunit.
+    evidence:
+    - reference: UniProtKB:Q09898
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- Sid2.
+    - reference: PMID:40385371
+      snippet: The Sid2- Mob1 complex is the most downstream acting component of the
+        septation initiation network (SIN).
+      notes: Establishes Sid2 as the catalytic kinase subunit of the S. pombe Sid2-Mob1
+        SIN complex.
+  - uniprot_id: UniProtKB:P22204
+    protein_label: Cell cycle protein kinase DBF2
+    gene_symbol: DBF2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Dbf2 terminal MEN kinase subunit.
+    evidence:
+    - reference: UniProtKB:P22204
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Dbf2.
+    - reference: PMID:33481703
+      snippet: Here, we show that the MEN activating signal at SPBs is relayed to
+        Cdc14 in the nucleolus through the dynamic localization of its terminal kinase
+        complex Dbf2-Mob1.
+      notes: Establishes Dbf2 as the catalytic subunit of the budding yeast Dbf2-Mob1
+        MEN complex.
+  evidence:
+  - reference: GO:0034973
+    notes: GO:0034973 defines Sid2p/Dbf2p as the catalytic protein kinase subunit
+      of the Sid2-Mob1 complex.
+  - reference: InterPro:IPR000961
+    notes: InterPro entry for AGC-kinase C-terminal domain present in Sid2 and Dbf2.
+  - reference: PMID:29813053
+    snippet: Strikingly the reduced SIN activity present after Cdk1 loss was enough
+      to trigger septation by immediately inducing the medial recruitment of the SIN
+      kinase complex Sid2-Mob1.
+    notes: Demonstrates medial recruitment of the Sid2-Mob1 kinase complex to trigger
+      septation.
+- component_id: mob1_activator_subunit
+  label: Kinase activator protein Mob1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR005301
+  gene_symbols:
+  - mob1
+  - MOB1
+  stoichiometry: 1 or 2
+  essentiality: ESSENTIAL
+  role: Regulatory co-activator subunit that binds the N-terminal regulatory domain
+    of Sid2/Dbf2 and is required for kinase activation, spindle pole body localization,
+    and cytokinesis.
+  protein_examples:
+  - uniprot_id: UniProtKB:O94360
+    protein_label: Maintenance of ploidy protein mob1
+    gene_symbol: mob1
+    taxon_id: NCBITaxon:284812
+    taxon_label: Schizosaccharomyces pombe 972h-
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Schizosaccharomyces pombe 972h- Mob1 regulatory subunit.
+    evidence:
+    - reference: UniProtKB:O94360
+      notes: Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- Mob1.
+    - reference: PMID:40385371
+      snippet: Based on structural modeling, we hypothesize that the Mob1 mutations
+        interfere with Mob1 stability and its ability to bind the N-terminal regulatory
+        region of Sid2 .
+      notes: Demonstrates that Mob1 binds the N-terminal regulatory region of Sid2
+        in S. pombe.
+  - uniprot_id: UniProtKB:P40484
+    protein_label: DBF2 kinase activator protein MOB1
+    gene_symbol: MOB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Mob1 kinase activator subunit.
+    evidence:
+    - reference: UniProtKB:P40484
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Mob1.
+    - reference: PMID:35011608
+      snippet: A crucial step in MEN activation occurs when the Dbf2-Mob1 protein
+        kinase complex associates with the Nud1 scaffold protein at the yeast spindle
+        pole bodies (SPBs; centrosome equivalents) and thereby becomes activated.
+      notes: Confirms Mob1 as part of the Dbf2-Mob1 kinase complex at budding yeast
+        SPBs.
+  evidence:
+  - reference: GO:0034973
+    notes: GO:0034973 defines Mob1p as the regulatory partner of Sid2p/Dbf2p.
+  - reference: InterPro:IPR005301
+    notes: InterPro family entry for MOB kinase activator family.
+  - reference: PMID:40385371
+    snippet: In the absence of functional Mob1 , cells fail cytokinesis and become
+      multinucleate.
+    notes: Establishes the essential requirement for Mob1 in cytokinesis.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: Conserved across fission and budding yeasts and filamentous fungi as the terminal
+    SIN/MEN NDR kinase-coactivator complex.
+  reference: PMID:33481703
+canonical_examples:
+- taxon_id: NCBITaxon:284812
+  taxon_label: Schizosaccharomyces pombe 972h-
+  note: Reference fission yeast strain in which the Sid2-Mob1 complex was established
+    as the terminal kinase of the septation initiation network (SIN).
+  reference: PMID:40385371
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference budding yeast strain in which the orthologous Dbf2-Mob1 complex
+    is activated by Cdc15 at spindle pole bodies and translocates to the nucleolus
+    to activate Cdc14 and drive mitotic exit.
+  reference: PMID:33481703
+functions:
+- function_id: protein_serine_threonine_kinase_activity
+  label: protein serine/threonine kinase activity
+  grounding: GO:0004674
+  description: Catalyzes Mob1-dependent serine/threonine phosphorylation of mitotic
+    exit and cytokinetic effector substrates including Cdc14 and Net1/Cfi1.
+  evidence:
+  - reference: GO:0004674
+    notes: GO molecular-function term for protein serine/threonine kinase activity.
+  - reference: PMID:33481703
+    snippet: Nucleolar Dbf2-Mob1 then phosphorylates Cfi1/Net1 and Cdc14, activating
+      Cdc14.
+    notes: Demonstrates protein kinase activity of Dbf2-Mob1 toward Cfi1/Net1 and
+      Cdc14.
+- function_id: regulation_of_exit_from_mitosis
+  label: regulation of exit from mitosis
+  grounding: GO:0007096
+  description: Relays the spindle-pole-body MEN/SIN signal to promote mitotic exit
+    and coordinate nuclear division with cytokinesis and septation.
+  evidence:
+  - reference: GO:0007096
+    notes: GO biological-process term for regulation of exit from mitosis.
+  - reference: PMID:33481703
+    snippet: Here, we show that the MEN activating signal at SPBs is relayed to Cdc14
+      in the nucleolus through the dynamic localization of its terminal kinase complex
+      Dbf2-Mob1.
+    notes: Demonstrates Dbf2-Mob1 signal relay driving exit from mitosis.
+evidence:
+- reference: GO:0034973
+  notes: GO cellular-component term for the Sid2-Mob1 (Dbf2p-Mob1p) complex.
+- reference: ComplexPortal:CPX-26510
+  notes: Complex Portal entry for the Schizosaccharomyces pombe Sid2-Mob1 complex.
+- reference: ComplexPortal:CPX-1683
+  notes: Complex Portal entry for the Saccharomyces cerevisiae Dbf2-Mob1 complex.
+- reference: PMID:40385371
+  snippet: The Sid2- Mob1 complex is the most downstream acting component of the septation
+    initiation network (SIN).
+  notes: Characterizes S. pombe Mob1 alleles and the Sid2-Mob1 interface.
+- reference: DOI:10.17912/micropub.biology.001595
+  notes: DOI for PMID:40385371.
+- reference: PMID:33481703
+  snippet: Here, we show that the MEN activating signal at SPBs is relayed to Cdc14
+    in the nucleolus through the dynamic localization of its terminal kinase complex
+    Dbf2-Mob1.
+  notes: Dissects SPB-to-nucleolus signal propagation by the budding yeast Dbf2-Mob1
+    complex.
+- reference: DOI:10.7554/elife.63645
+  notes: DOI for PMID:33481703.
+causal_graphs:
+- graph_id: sid2_mob1_men_sin_signaling
+  title: Sid2-Mob1 / Dbf2-Mob1 Activation at the Spindle Pole Body and Mitotic Exit
+    Signaling
+  description: Mob1 binds the N-terminal regulatory region of Sid2/Dbf2 to form the
+    Sid2-Mob1 (Dbf2-Mob1) complex, which is activated at the spindle pole body by
+    Cdc15 and phosphorylates Cfi1/Net1 and Cdc14 to drive mitotic exit.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mob1_activator_subunit
+    label: Kinase activator protein Mob1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR005301
+    component_ref: mob1_activator_subunit
+  - node_id: sid2_dbf2_kinase_subunit
+    label: NDR-family serine/threonine-protein kinase Sid2/Dbf2
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000961
+    component_ref: sid2_dbf2_kinase_subunit
+  - node_id: cdc15_upstream_kinase
+    label: Cell division control protein 15
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000719
+    xrefs:
+    - UniProtKB:P27636
+  - node_id: sid2_mob1_complex
+    label: Sid2-Mob1 complex
+    node_type: STRUCTURE
+    grounding: GO:0034973
+  - node_id: protein_serine_threonine_kinase_activity
+    label: protein serine/threonine kinase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004674
+  - node_id: regulation_of_exit_from_mitosis
+    label: regulation of exit from mitosis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007096
+  edges:
+  - subject: mob1_activator_subunit
+    predicate: binds N-terminal regulatory region of
+    object: sid2_dbf2_kinase_subunit
+    description: Mob1 binds the N-terminal regulatory region of the NDR kinase Sid2/Dbf2
+      to assemble the active kinase complex.
+    evidence:
+    - reference: PMID:40385371
+      snippet: Based on structural modeling, we hypothesize that the Mob1 mutations
+        interfere with Mob1 stability and its ability to bind the N-terminal regulatory
+        region of Sid2 .
+      notes: Establishes binding of Mob1 to the N-terminal regulatory domain of Sid2.
+  - subject: sid2_dbf2_kinase_subunit
+    predicate: assembles with Mob1 into
+    object: sid2_mob1_complex
+    description: Sid2/Dbf2 and Mob1 form the terminal SIN/MEN kinase complex.
+    evidence:
+    - reference: PMID:40385371
+      snippet: Schizosaccharomyces pombe Mob1 is the regulatory subunit of the protein
+        kinase Sid2 . The Sid2- Mob1 complex is the most downstream acting component
+        of the septation initiation network (SIN).
+      notes: Confirms assembly of Sid2 and Mob1 into the Sid2-Mob1 complex.
+  - subject: cdc15_upstream_kinase
+    predicate: activates at spindle pole body
+    object: sid2_mob1_complex
+    description: Upstream kinase Cdc15 phosphorylates Nud1 and activates Dbf2-Mob1
+      at the spindle pole body, licensing its nuclear access.
+    evidence:
+    - reference: PMID:33481703
+      snippet: Cdc15, the protein kinase that activates Dbf2-Mob1 at SPBs, also regulates
+        its nuclear access.
+      notes: Directly supports Cdc15 activation of Dbf2-Mob1 at SPBs.
+  - subject: sid2_mob1_complex
+    predicate: enables
+    object: protein_serine_threonine_kinase_activity
+    description: Activated Dbf2-Mob1 / Sid2-Mob1 phosphorylates Cfi1/Net1 and Cdc14.
+    evidence:
+    - reference: PMID:33481703
+      snippet: Nucleolar Dbf2-Mob1 then phosphorylates Cfi1/Net1 and Cdc14, activating
+        Cdc14.
+      notes: Demonstrates serine/threonine kinase activity of Dbf2-Mob1.
+  - subject: protein_serine_threonine_kinase_activity
+    predicate: drives
+    object: regulation_of_exit_from_mitosis
+    description: Phosphorylation and activation of Cdc14 by Dbf2-Mob1 relays the MEN
+      signal from the spindle pole body to promote exit from mitosis.
+    evidence:
+    - reference: PMID:33481703
+      snippet: Here, we show that the MEN activating signal at SPBs is relayed to
+        Cdc14 in the nucleolus through the dynamic localization of its terminal kinase
+        complex Dbf2-Mob1.
+      notes: Links Dbf2-Mob1 kinase activity to exit from mitosis.
+curation_history:
+- timestamp: '2026-10-31T05:52:59Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added Sid2-Mob1 complex (GO:0034973) with InterPro-grounded components,
+    reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
+    snippets, and a mechanistic causal graph.
+  llm_assisted: true

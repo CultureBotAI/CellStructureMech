@@ -1,0 +1,404 @@
+identifier: GO:0000408
+label: EKC/KEOPS complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multiprotein complex conserved across Archaea and Eukarya (composed
+  of Kae1, Bud32, Cgi121, Pcc1, and in fungi/metazoa Gon7) that catalyzes the biosynthesis
+  of the essential N(6)-L-threonylcarbamoyladenine (t6A) modification at position
+  37 of ANN-decoding tRNAs and supports telomere maintenance and transcription.
+definition_source: GO:0000408
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: KEOPS/EKC complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000408
+- synonym_text: endopeptidase-like kinase chromatin-associated protein complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000408
+- synonym_text: kinase, putative endopeptidase and other proteins of small size protein
+    complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0000408
+parent_structures:
+- GO:1990234
+part_of:
+- GO:0005737
+xrefs:
+- ComplexPortal:CPX-995
+components:
+- component_id: kae1_catalytic_subunit
+  label: tRNA N6-adenosine threonylcarbamoyltransferase Kae1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR017861
+  gene_symbols:
+  - KAE1
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Catalytic metalloprotein subunit that transfers the threonylcarbamoyl moiety
+    from threonylcarbamoyl-AMP onto adenosine-37 of ANN-decoding tRNAs.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36132
+    protein_label: tRNA N6-adenosine threonylcarbamoyltransferase
+    gene_symbol: KAE1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Kae1 catalytic t6A transferase subunit.
+    evidence:
+    - reference: UniProtKB:P36132
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Kae1.
+    - reference: PMID:39639027
+      snippet: Kae1 catalyzes the modification of tRNA, but the specific contributions
+        of Bud32 and the other subunits are less clear.
+      notes: Establishes Kae1 as the catalytic tRNA-modifying subunit of KEOPS.
+  evidence:
+  - reference: GO:0000408
+    notes: GO:0000408 defines Kae1p as a core subunit of the yeast EKC/KEOPS complex.
+  - reference: InterPro:IPR017861
+    notes: InterPro family entry for Kae1/TsaD tRNA N6-adenosine threonylcarbamoyltransferase.
+  - reference: PMID:39639027
+    snippet: KEOPS consists of Cgi121, Kae1, Pcc1, Gon7 and the atypical kinase/ATPase
+      Bud32.
+    notes: Confirms five-subunit composition of fungal/eukaryotic KEOPS.
+- component_id: bud32_atpase_kinase_subunit
+  label: EKC/KEOPS complex subunit Bud32
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR022495
+  gene_symbols:
+  - BUD32
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Atypical protein kinase/ATPase subunit that directly contacts tRNA and couples
+    ATP hydrolysis to Kae1 catalytic t6A activity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P53323
+    protein_label: EKC/KEOPS complex subunit BUD32
+    gene_symbol: BUD32
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Bud32 atypical kinase/ATPase subunit.
+    evidence:
+    - reference: UniProtKB:P53323
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Bud32.
+    - reference: PMID:39639027
+      snippet: We also uncover contact surfaces within the KEOPS-tRNA holo-enzyme
+        substrate complex that are required for Bud32 ATPase regulation and t6A modification
+        activity.
+      notes: Demonstrates Bud32 ATPase regulation of KEOPS t6A modification activity.
+  evidence:
+  - reference: GO:0000408
+    notes: GO:0000408 defines Bud32p as a core subunit of the EKC/KEOPS complex.
+  - reference: InterPro:IPR022495
+    notes: InterPro family entry for Serine/threonine-protein kinase Bud32/PRPK.
+  - reference: PMID:38477398
+    snippet: BUD32 participates in direct binding of tRNA to KEOPS and modulates the
+      t6A-catalytic activity of KEOPS via its C-terminal tail and ATP to ADP hydrolysis.
+    notes: Demonstrates Bud32 tRNA binding and ATP-hydrolysis-mediated activation
+      of Kae1.
+- component_id: pcc1_dimerization_subunit
+  label: EKC/KEOPS complex subunit Pcc1
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR015419
+  gene_symbols:
+  - PCC1
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Structural dimerization and tRNA anticodon-stabilizing subunit that binds
+    Kae1 and Gon7.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q3E833
+    protein_label: EKC/KEOPS complex subunit PCC1
+    gene_symbol: PCC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Pcc1 subunit.
+    evidence:
+    - reference: UniProtKB:Q3E833
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Pcc1.
+    - reference: PMID:39639027
+      snippet: KEOPS consists of Cgi121, Kae1, Pcc1, Gon7 and the atypical kinase/ATPase
+        Bud32.
+      notes: Confirms Pcc1 as an integral subunit of KEOPS.
+  evidence:
+  - reference: GO:0000408
+    notes: GO:0000408 defines Pcc1p as a core subunit of the EKC/KEOPS complex.
+  - reference: InterPro:IPR015419
+    notes: InterPro family entry for EKC/KEOPS complex subunit Pcc1.
+  - reference: PMID:38477398
+    snippet: PCC1 dimerization leads to a KEOPS dimer that is needed for an active
+      t6A-catalytic KEOPS-tRNA assembly.
+    notes: Establishes Pcc1-mediated KEOPS assembly.
+- component_id: cgi121_trna_recruitment_subunit
+  label: EKC/KEOPS complex subunit Cgi121
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR013926
+  gene_symbols:
+  - CGI121
+  stoichiometry: '1'
+  essentiality: CONDITIONAL
+  role: Allosteric regulator and tRNA 3'-CCA-binding subunit that docks onto Bud32
+    to recruit tRNA and potentiate t6A synthesis.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q03705
+    protein_label: EKC/KEOPS complex subunit CGI121
+    gene_symbol: CGI121
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Cgi121 subunit.
+    evidence:
+    - reference: UniProtKB:Q03705
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Cgi121.
+    - reference: PMID:38477398
+      snippet: CGI121 promotes the binding of tRNA to KEOPS and potentiates the t6A-catalytic
+        activity of KEOPS.
+      notes: Demonstrates Cgi121 promotion of tRNA binding and t6A catalysis.
+  evidence:
+  - reference: GO:0000408
+    notes: GO:0000408 defines Cgi121p as a subunit of the EKC/KEOPS complex.
+  - reference: InterPro:IPR013926
+    notes: InterPro family entry for EKC/KEOPS complex subunit Cgi121/TPRKB.
+  - reference: PMID:38477398
+    snippet: CGI121 promotes the binding of tRNA to KEOPS and potentiates the t6A-catalytic
+      activity of KEOPS.
+    notes: Supports Cgi121 role in tRNA recruitment.
+- component_id: gon7_stabilizing_subunit
+  label: EKC/KEOPS complex subunit Gon7
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR014849
+  gene_symbols:
+  - GON7
+  - PCC2
+  stoichiometry: '1'
+  essentiality: CONDITIONAL
+  role: Intrinsically disordered fungal/eukaryotic fifth subunit that binds Pcc1 and
+    stabilizes the monomeric pentameric EKC/KEOPS architecture.
+  protein_examples:
+  - uniprot_id: UniProtKB:P46984
+    protein_label: EKC/KEOPS complex subunit GON7
+    gene_symbol: GON7
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Saccharomyces cerevisiae S288C Gon7 subunit.
+    evidence:
+    - reference: UniProtKB:P46984
+      notes: Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Gon7.
+    - reference: PMID:38477398
+      snippet: In archaea and eukaryotes, the evolutionarily conserved KEOPS is composed
+        of four core subunits-Kae1, Bud32, Cgi121 and Pcc1, and a fifth Gon7/Pcc2
+        that is found in fungi and metazoa.
+      notes: Establishes Gon7/Pcc2 as the fifth subunit in fungi.
+  evidence:
+  - reference: GO:0000408
+    notes: GO:0000408 defines Gon7p as the fifth yeast EKC/KEOPS subunit.
+  - reference: InterPro:IPR014849
+    notes: InterPro family entry for EKC/KEOPS complex Gon7 subunit.
+  - reference: PMID:38477398
+    snippet: In archaea and eukaryotes, the evolutionarily conserved KEOPS is composed
+      of four core subunits-Kae1, Bud32, Cgi121 and Pcc1, and a fifth Gon7/Pcc2 that
+      is found in fungi and metazoa.
+    notes: Confirms Gon7/Pcc2 membership in the fungal KEOPS complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2157
+  taxon_label: Archaea
+  presence: UNIVERSAL
+  note: Present across Archaea as the four-subunit core KEOPS complex (Kae1-Bud32-Pcc1-Cgi121).
+  reference: PMID:38477398
+- taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  presence: COMMON
+  note: Present in yeasts and filamentous fungi as the pentameric Gon7-Pcc1-Kae1-Bud32-Cgi121
+    complex.
+  reference: PMID:38477398
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Reference eukaryotic microbe in which the pentameric EKC/KEOPS complex (Gon7-Pcc1-Kae1-Bud32-Cgi121)
+    and its tRNA t6A synthase function were discovered and structurally dissected.
+  reference: PMID:39639027
+functions:
+- function_id: trna_t6a_synthase_activity
+  label: tRNA N(6)-L-threonylcarbamoyladenine synthase activity
+  grounding: GO:0061711
+  description: Catalyzes the transfer of the threonylcarbamoyl group onto N6 of adenosine-37
+    in ANN-decoding tRNAs.
+  evidence:
+  - reference: GO:0061711
+    notes: GO molecular-function term for tRNA N(6)-L-threonylcarbamoyladenine synthase
+      activity.
+  - reference: PMID:39639027
+    snippet: The enzyme complex KEOPS (Kinase, Endopeptidase and Other Proteins of
+      Small size) installs the universally conserved and essential N6-threonylcarbamoyl
+      adenosine modification (t6A) on ANN-decoding tRNAs in eukaryotes and in archaea.
+    notes: Establishes tRNA N6-threonylcarbamoyladenosine synthase activity of KEOPS.
+- function_id: trna_t6a_modification
+  label: tRNA threonylcarbamoyladenosine modification
+  grounding: GO:0002949
+  description: Installs the essential t6A modification at position 37 of ANN-decoding
+    tRNAs to maintain reading-frame fidelity and cellular fitness.
+  evidence:
+  - reference: GO:0002949
+    notes: GO biological-process term for tRNA threonylcarbamoyladenosine modification.
+  - reference: PMID:38477398
+    snippet: KEOPS cooperates with Sua5/YRDC to catalyze the biosynthesis of tRNA
+      N6-threonylcarbamoyladenosine (t6A), an essential modification needed for fitness
+      of cellular organisms.
+    notes: Demonstrates the role of KEOPS in tRNA t6A biosynthesis.
+evidence:
+- reference: GO:0000408
+  notes: GO cellular-component term for the EKC/KEOPS complex.
+- reference: ComplexPortal:CPX-995
+  notes: Complex Portal entry for the Saccharomyces cerevisiae EKC/KEOPS complex.
+- reference: PMID:39639027
+  snippet: KEOPS consists of Cgi121, Kae1, Pcc1, Gon7 and the atypical kinase/ATPase
+    Bud32.
+  notes: Cryo-EM structures and functional dissection of the KEOPS-tRNA complex.
+- reference: DOI:10.1038/s41467-024-54787-w
+  notes: DOI for PMID:39639027.
+- reference: PMID:38477398
+  snippet: In archaea and eukaryotes, the evolutionarily conserved KEOPS is composed
+    of four core subunits-Kae1, Bud32, Cgi121 and Pcc1, and a fifth Gon7/Pcc2 that
+    is found in fungi and metazoa.
+  notes: Biochemical and structural characterization of KEOPS subunit roles.
+- reference: DOI:10.1093/nar/gkae179
+  notes: DOI for PMID:38477398.
+causal_graphs:
+- graph_id: ekc_keops_trna_t6a_biosynthesis
+  title: EKC/KEOPS Subunit Cooperation in tRNA t6A Modification
+  description: Cgi121, Bud32, Pcc1, and Gon7 coordinate tRNA binding and ATPase regulation
+    to position tRNA A37 in the Kae1 catalytic site for t6A synthesis.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cgi121_trna_recruitment_subunit
+    label: EKC/KEOPS complex subunit Cgi121
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR013926
+    component_ref: cgi121_trna_recruitment_subunit
+  - node_id: bud32_atpase_kinase_subunit
+    label: EKC/KEOPS complex subunit Bud32
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR022495
+    component_ref: bud32_atpase_kinase_subunit
+  - node_id: pcc1_dimerization_subunit
+    label: EKC/KEOPS complex subunit Pcc1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR015419
+    component_ref: pcc1_dimerization_subunit
+  - node_id: gon7_stabilizing_subunit
+    label: EKC/KEOPS complex subunit Gon7
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR014849
+    component_ref: gon7_stabilizing_subunit
+  - node_id: kae1_catalytic_subunit
+    label: tRNA N6-adenosine threonylcarbamoyltransferase Kae1
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR017861
+    component_ref: kae1_catalytic_subunit
+  - node_id: ekc_keops_complex
+    label: EKC/KEOPS complex
+    node_type: STRUCTURE
+    grounding: GO:0000408
+  - node_id: trna_t6a_synthase_activity
+    label: tRNA N(6)-L-threonylcarbamoyladenine synthase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0061711
+  - node_id: trna_t6a_modification
+    label: tRNA threonylcarbamoyladenosine modification
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0002949
+  edges:
+  - subject: cgi121_trna_recruitment_subunit
+    predicate: cooperates in tRNA binding with
+    object: bud32_atpase_kinase_subunit
+    description: Cgi121 binds Bud32 and the tRNA 3' CCA end to promote substrate recruitment
+      to KEOPS.
+    evidence:
+    - reference: PMID:38477398
+      snippet: CGI121 promotes the binding of tRNA to KEOPS and potentiates the t6A-catalytic
+        activity of KEOPS.
+      notes: Supports Cgi121 promotion of tRNA binding.
+  - subject: bud32_atpase_kinase_subunit
+    predicate: allosterically activates
+    object: kae1_catalytic_subunit
+    description: Bud32 contacts the tRNA substrate and couples ATP-to-ADP hydrolysis
+      via its C-terminal tail to activate t6A catalysis by Kae1.
+    evidence:
+    - reference: PMID:38477398
+      snippet: BUD32 participates in direct binding of tRNA to KEOPS and modulates
+        the t6A-catalytic activity of KEOPS via its C-terminal tail and ATP to ADP
+        hydrolysis.
+      notes: Establishes Bud32 ATP-hydrolysis-mediated regulation of Kae1 activity.
+  - subject: gon7_stabilizing_subunit
+    predicate: binds and stabilizes
+    object: pcc1_dimerization_subunit
+    description: Gon7 associates with Pcc1 in fungal KEOPS to form the pentameric
+      Gon7-Pcc1-Kae1-Bud32-Cgi121 architecture.
+    evidence:
+    - reference: PMID:38477398
+      snippet: In archaea and eukaryotes, the evolutionarily conserved KEOPS is composed
+        of four core subunits-Kae1, Bud32, Cgi121 and Pcc1, and a fifth Gon7/Pcc2
+        that is found in fungi and metazoa.
+      notes: Supports Gon7 association with the core KEOPS complex.
+  - subject: pcc1_dimerization_subunit
+    predicate: scaffolds tRNA-binding assembly with
+    object: kae1_catalytic_subunit
+    description: Pcc1 binds Kae1 and stabilizes the tRNA anticodon loop in the active
+      KEOPS assembly.
+    evidence:
+    - reference: PMID:39639027
+      snippet: KEOPS consists of Cgi121, Kae1, Pcc1, Gon7 and the atypical kinase/ATPase
+        Bud32.
+      notes: Confirms Pcc1-Kae1 structural organization in KEOPS.
+  - subject: kae1_catalytic_subunit
+    predicate: constitutes catalytic core of
+    object: ekc_keops_complex
+    description: Kae1 provides the active site of the assembled EKC/KEOPS complex.
+    evidence:
+    - reference: PMID:39639027
+      snippet: Kae1 catalyzes the modification of tRNA, but the specific contributions
+        of Bud32 and the other subunits are less clear.
+      notes: Establishes Kae1 as the catalytic subunit of KEOPS.
+  - subject: ekc_keops_complex
+    predicate: enables
+    object: trna_t6a_synthase_activity
+    description: The assembled EKC/KEOPS holoenzyme catalyzes tRNA N(6)-L-threonylcarbamoyladenine
+      synthase activity.
+    evidence:
+    - reference: PMID:39639027
+      snippet: The enzyme complex KEOPS (Kinase, Endopeptidase and Other Proteins
+        of Small size) installs the universally conserved and essential N6-threonylcarbamoyl
+        adenosine modification (t6A) on ANN-decoding tRNAs in eukaryotes and in archaea.
+      notes: Directly links KEOPS to tRNA t6A synthase activity.
+  - subject: trna_t6a_synthase_activity
+    predicate: drives
+    object: trna_t6a_modification
+    description: tRNA t6A synthase activity modifies adenosine-37 of ANN-decoding
+      tRNAs.
+    evidence:
+    - reference: PMID:38477398
+      snippet: KEOPS cooperates with Sua5/YRDC to catalyze the biosynthesis of tRNA
+        N6-threonylcarbamoyladenosine (t6A), an essential modification needed for
+        fitness of cellular organisms.
+      notes: Links catalytic t6A synthase activity to cellular tRNA t6A modification.
+curation_history:
+- timestamp: '2026-10-31T05:52:59Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added EKC/KEOPS complex (GO:0000408) with InterPro-grounded components,
+    reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
+    snippets, and a mechanistic causal graph.
+  llm_assisted: true

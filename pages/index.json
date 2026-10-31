@@ -2410,6 +2410,16 @@
   "synonyms": "FtsB-FtsL-FtsQ complex"
  },
  {
+  "identifier": "GO:0034973",
+  "label": "Sid2-Mob1 complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/sid2_mob1_complex.html",
+  "definition": "A conserved fungal NDR-family protein kinase complex localized to the spindle pole body and medial cell division site, composed of the catalytic serine/threonine protein kinase Sid2 (fission yeast) or Dbf2/Dbf20 (budding yeast) bound to its regulatory activator subunit Mob1; acts as the terminal effector kinase complex of the septation initiation network (SIN) and mitotic exit network (MEN) to trigger mitotic exit, Cdc14 release, and cytokinetic septum assembly.",
+  "synonyms": "Dbf2p-Mob1p complex Sid2-Mob1 kinase complex Sid2p-Mob1p complex"
+ },
+ {
   "identifier": "GO:1990490",
   "label": "archaeal proton-transporting A-type ATPase complex",
   "category": "ENERGY_COMPLEX",
@@ -2678,6 +2688,16 @@
   "page": "structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.html",
   "definition": "A photosystem II protein complex located in the plasma membrane-derived bacterial thylakoid that contains a P680 reaction center and catalyzes the water-oxidizing, plastoquinone-reducing step of oxygenic photosynthesis.",
   "synonyms": "cyanobacterial PSII"
+ },
+ {
+  "identifier": "GO:0031004",
+  "label": "potassium ion-transporting ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/potassium_ion_transporting_atpase_complex.html",
+  "definition": "A heterotetrameric P-type ATPase complex (KdpFABC) in the prokaryotic plasma membrane that couples ATP hydrolysis in the KdpB P-type ATPase subunit to high-affinity potassium ion import through the channel-like KdpA selectivity filter and inter-subunit intramembrane tunnel, stabilized by KdpC and KdpF.",
+  "synonyms": "Kdp system complex"
  },
  {
   "identifier": "GO:0045259",
@@ -5790,6 +5810,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0034274",
+  "label": "Atg12-Atg5-Atg16 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/atg12_atg5_atg16_complex.html",
+  "definition": "A heterohexameric ubiquitin-like E3 ligase complex localized to the phagophore assembly site (pre-autophagosomal structure, PAS) in yeast and other eukaryotes, formed by two copies of the covalent Atg12-Atg5 conjugate bound to a homodimer of coiled-coil Atg16; stimulates Atg3-mediated conjugation of Atg8 to phosphatidylethanolamine (PE) and scaffolds membrane shaping during autophagosome biogenesis.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0097691",
   "label": "bacterial extracellular vesicle",
   "category": "OTHER",
@@ -6098,6 +6128,16 @@
   "page": "structures/other/cmg_complex.html",
   "definition": "A protein complex that contains the GINS complex, Cdc45p, and the heterohexameric MCM complex, and that is involved in unwinding DNA during replication.",
   "synonyms": "unwindosome"
+ },
+ {
+  "identifier": "GO:1990191",
+  "label": "cobalamin transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/cobalamin_transport_complex.html",
+  "definition": "A type II ATP-binding cassette (ABC) importer complex (BtuCD-F) in the bacterial inner membrane and periplasm, composed of the periplasmic cobalamin-binding protein BtuF, homodimeric transmembrane permease subunits BtuC2, and homodimeric ATP-binding cassette subunits BtuD2, which mediates ATP-driven import of vitamin B12 (cobalamin) and cobinamide into the cytoplasm.",
+  "synonyms": "BtuCDF complex cobalamin-transporting BtuCDF complex vitamin B12 transport complex vitamin B12-transporting BtuCDF complex"
  },
  {
   "identifier": "GO:0017119",
@@ -6650,6 +6690,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0000408",
+  "label": "EKC/KEOPS complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ekc_keops_complex.html",
+  "definition": "A multiprotein complex conserved across Archaea and Eukarya (composed of Kae1, Bud32, Cgi121, Pcc1, and in fungi/metazoa Gon7) that catalyzes the biosynthesis of the essential N(6)-L-threonylcarbamoyladenine (t6A) modification at position 37 of ANN-decoding tRNAs and supports telomere maintenance and transcription.",
+  "synonyms": "KEOPS/EKC complex endopeptidase-like kinase chromatin-associated protein complex kinase, putative endopeptidase and other proteins of small size protein complex"
+ },
+ {
   "identifier": "GO:0031391",
   "label": "Elg1 RFC-like complex",
   "category": "OTHER",
@@ -7050,6 +7100,16 @@
   "synonyms": "homotypic fusion and vacuole protein sorting complex"
  },
  {
+  "identifier": "GO:0009376",
+  "label": "HslUV protease complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/hsluv_protease_complex.html",
+  "definition": "An ATP-dependent protease complex present in many Bacteria and Eukarya, composed of stacking HslU (ClpY) hexameric AAA+ ATPase rings and HslV (ClpQ) dodecameric peptidase double rings; recognizes, unfolds, and translocates protein substrates such as the cell division inhibitor SulA into the HslV proteolytic chamber.",
+  "synonyms": "ClpYQ protease complex"
+ },
+ {
   "identifier": "cellstructuremech:hsp78_chaperone_complex",
   "label": "Hsp78 chaperone complex",
   "category": "OTHER",
@@ -7198,6 +7258,16 @@
   "page": "structures/other/macab_tolc_complex.html",
   "definition": "The MacAB-TolC complex is a macrolide transporter complex found in E.coli and related gram-negative bacteria. Its transport activity is specific to macrolide compounds containing 14- and 15-membered lactones. It consists of the dimeric inner membrane ATPase MacB, the hexameric, periplasmic membrane fusion protein MacA and the trimeric outer membrane factor TolC.",
   "synonyms": "macrolide transporter MacAB-TolC complex"
+ },
+ {
+  "identifier": "GO:1990060",
+  "label": "maltose transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/maltose_transport_complex.html",
+  "definition": "A pentameric ATP-binding cassette (ABC) importer complex (MalEFGK2) in the bacterial inner membrane and periplasm, composed of the periplasmic maltose/maltodextrin-binding protein MalE, heterodimeric transmembrane permease subunits MalF and MalG, and homodimeric ATP-binding cassette subunits MalK2.",
+  "synonyms": "maltose ABC transporter complex maltose ATP-binding cassette transporter complex"
  },
  {
   "identifier": "GO:0043332",

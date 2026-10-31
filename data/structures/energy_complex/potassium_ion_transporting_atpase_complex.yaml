@@ -1,0 +1,347 @@
+identifier: GO:0031004
+label: potassium ion-transporting ATPase complex
+structure_category: ENERGY_COMPLEX
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotetrameric P-type ATPase complex (KdpFABC) in the prokaryotic
+  plasma membrane that couples ATP hydrolysis in the KdpB P-type ATPase subunit to
+  high-affinity potassium ion import through the channel-like KdpA selectivity filter
+  and inter-subunit intramembrane tunnel, stabilized by KdpC and KdpF.
+definition_source: GO:0031004
+mapping_status: PROPOSED
+synonyms:
+- synonym_text: Kdp system complex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0031004
+parent_structures:
+- GO:0090533
+part_of:
+- GO:0005886
+xrefs:
+- ComplexPortal:CPX-3564
+components:
+- component_id: kdpa_potassium_channel_subunit
+  label: Potassium-transporting ATPase potassium-binding subunit KdpA
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR004623
+  gene_symbols:
+  - kdpA
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Channel-like transmembrane subunit with a selectivity filter that binds periplasmic
+    potassium ions and feeds them into the inter-subunit tunnel.
+  protein_examples:
+  - uniprot_id: UniProtKB:P03959
+    protein_label: Potassium-transporting ATPase potassium-binding subunit
+    gene_symbol: kdpA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 KdpA potassium-binding subunit.
+    evidence:
+    - reference: UniProtKB:P03959
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 KdpA.
+    - reference: PMID:41259220
+      snippet: The subunit KdpA belongs to the superfamily of K+ transporters and
+        adopts pseudo fourfold symmetry with a membrane-embedded selectivity filter
+        as seen in K+ channels.
+      notes: Establishes KdpA as the selectivity-filter potassium-binding subunit
+        in E. coli.
+  evidence:
+  - reference: GO:0031004
+    notes: GO:0031004 defines the potassium ion-transporting ATPase (Kdp) complex.
+  - reference: InterPro:IPR004623
+    notes: InterPro family entry for KdpA potassium-transporting ATPase A chain.
+  - reference: PMID:34272288
+    snippet: The complex comprises a channel-like subunit (KdpA) from the superfamily
+      of K+ transporters and a pump-like subunit (KdpB) from the superfamily of P-type
+      ATPases.
+    notes: Confirms KdpA as the channel-like subunit of KdpFABC.
+- component_id: kdpb_atpase_subunit
+  label: Potassium-transporting ATPase ATP-binding subunit KdpB
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR008250
+  gene_symbols:
+  - kdpB
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Catalytic P-type ATPase subunit that undergoes E1/E2 aspartyl-phosphate conformational
+    cycling to pump potassium ions into the cytoplasm.
+  protein_examples:
+  - uniprot_id: UniProtKB:P03960
+    protein_label: Potassium-transporting ATPase ATP-binding subunit
+    gene_symbol: kdpB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 KdpB P-type ATPase catalytic subunit.
+    evidence:
+    - reference: UniProtKB:P03960
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 KdpB.
+    - reference: PMID:41259220
+      snippet: KdpB belongs to the superfamily of P-type ATPases with a conserved
+        binding site for ions within the membrane domain and three cytoplasmic domains
+        that orchestrate ATP hydrolysis via an aspartyl phosphate intermediate.
+      notes: Establishes KdpB as the catalytic P-type ATPase subunit in E. coli.
+  evidence:
+  - reference: GO:0031004
+    notes: GO:0031004 defines the potassium ion-transporting ATPase complex.
+  - reference: InterPro:IPR008250
+    notes: InterPro entry for P-type ATPase A domain present in KdpB.
+  - reference: PMID:34272288
+    snippet: Our structures suggest a mechanism where ATP hydrolysis is coupled to
+      K+ transfer between alternative sites in KdpB, ultimately reaching a low-affinity
+      site where a water-filled pathway allows release of K+ to the cytoplasm.
+    notes: Demonstrates KdpB-mediated ATP hydrolysis and cytoplasmic potassium release.
+- component_id: kdpc_regulatory_subunit
+  label: Potassium-transporting ATPase KdpC subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR003820
+  gene_symbols:
+  - kdpC
+  stoichiometry: '1'
+  essentiality: ESSENTIAL
+  role: Single-pass transmembrane auxiliary subunit with a periplasmic domain that
+    stabilizes KdpA and facilitates complex assembly and activity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P03961
+    protein_label: Potassium-transporting ATPase KdpC subunit
+    gene_symbol: kdpC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 KdpC subunit.
+    evidence:
+    - reference: UniProtKB:P03961
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 KdpC.
+    - reference: PMID:34272288
+      snippet: We find that KdpB undergoes conformational changes consistent with
+        other representatives from the P-type superfamily, whereas KdpA, KdpC, and
+        KdpF remain static.
+      notes: Confirms KdpC as a static structural constituent of the KdpFABC complex.
+  evidence:
+  - reference: InterPro:IPR003820
+    notes: InterPro family entry for KdpC potassium-transporting ATPase C chain.
+  - reference: PMID:34272288
+    snippet: We find that KdpB undergoes conformational changes consistent with other
+      representatives from the P-type superfamily, whereas KdpA, KdpC, and KdpF remain
+      static.
+    notes: Verifies KdpC within the cryo-EM structure of KdpFABC.
+- component_id: kdpf_stabilizing_subunit
+  label: Potassium-transporting ATPase KdpF subunit
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011726
+  gene_symbols:
+  - kdpF
+  stoichiometry: '1'
+  essentiality: CONDITIONAL
+  role: Hydrophobic single-helix transmembrane peptide that stabilizes the KdpFABC
+    heterotetramer in the lipid bilayer.
+  protein_examples:
+  - uniprot_id: UniProtKB:P36937
+    protein_label: Potassium-transporting ATPase KdpF subunit
+    gene_symbol: kdpF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-30'
+    role: Reviewed Escherichia coli K-12 KdpF stabilizing transmembrane peptide.
+    evidence:
+    - reference: UniProtKB:P36937
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 KdpF.
+    - reference: PMID:34272288
+      snippet: We find that KdpB undergoes conformational changes consistent with
+        other representatives from the P-type superfamily, whereas KdpA, KdpC, and
+        KdpF remain static.
+      notes: Confirms KdpF as the fourth transmembrane subunit of KdpFABC.
+  evidence:
+  - reference: InterPro:IPR011726
+    notes: InterPro family entry for KdpF subunit.
+  - reference: PMID:34272288
+    snippet: We find that KdpB undergoes conformational changes consistent with other
+      representatives from the P-type superfamily, whereas KdpA, KdpC, and KdpF remain
+      static.
+    notes: Verifies KdpF as an integral component of the KdpFABC complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Widespread across bacteria and select archaea for high-affinity K+ scavenging
+    under osmotic or potassium-limiting stress.
+  reference: PMID:41384914
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Archetypal bacterial strain in which high-resolution cryo-EM turnover intermediates
+    and the KdpA-KdpB intramembrane conduction tunnel of KdpFABC were determined.
+  reference: PMID:41259220
+functions:
+- function_id: p_type_potassium_transporter_activity
+  label: P-type potassium transmembrane transporter activity
+  grounding: GO:0008556
+  description: Catalyzes ATP-driven active uptake of potassium ions across the prokaryotic
+    plasma membrane via an aspartyl-phosphate intermediate.
+  evidence:
+  - reference: GO:0008556
+    notes: GO molecular-function term for P-type potassium transmembrane transporter
+      activity.
+  - reference: PMID:41259220
+    snippet: Under osmotic stress, bacteria express a heterotetrameric protein complex,
+      KdpFABC, which functions as an ATP-dependent K+ pump to maintain intracellular
+      potassium levels.
+    notes: Demonstrates ATP-dependent potassium pump activity of KdpFABC.
+- function_id: potassium_ion_transport
+  label: potassium ion transport
+  grounding: GO:0006813
+  description: Maintains intracellular potassium homeostasis and turgor under potassium-depleted
+    or osmotic-stress conditions.
+  evidence:
+  - reference: GO:0006813
+    notes: GO biological-process term for potassium ion transport.
+  - reference: PMID:41384914
+    snippet: KdpFABC is an ATP-dependent membrane complex that enables prokaryotes
+      to maintain potassium homeostasis under potassium-limited conditions.
+    notes: Establishes the physiological role of KdpFABC in potassium ion transport
+      and homeostasis.
+evidence:
+- reference: GO:0031004
+  notes: GO cellular-component term for potassium ion-transporting ATPase complex.
+- reference: ComplexPortal:CPX-3564
+  notes: Complex Portal entry for the Escherichia coli K-12 KdpFABC potassium-transporting
+    ATPase complex.
+- reference: PMID:41259220
+  snippet: Under osmotic stress, bacteria express a heterotetrameric protein complex,
+    KdpFABC, which functions as an ATP-dependent K+ pump to maintain intracellular
+    potassium levels.
+  notes: 2.1 A cryo-EM structure of E. coli KdpFABC under turnover conditions.
+- reference: DOI:10.7554/elife.107397
+  notes: DOI for PMID:41259220.
+- reference: PMID:34272288
+  snippet: KdpFABC is an oligomeric K+ transport complex in prokaryotes that maintains
+    ionic homeostasis under stress conditions.
+  notes: Cryo-EM structural characterization of four reaction-cycle intermediates
+    of KdpFABC.
+- reference: DOI:10.1073/pnas.2105195118
+  notes: DOI for PMID:34272288.
+causal_graphs:
+- graph_id: kdpfabc_potassium_pumping
+  title: KdpFABC Inter-Subunit Tunnel Conduction and ATP-Driven Potassium Import
+  description: KdpA captures periplasmic potassium ions via its selectivity filter
+    and delivers them through an intramembrane tunnel to KdpB, which couples ATP hydrolysis
+    to cytoplasmic K+ release while stabilized by KdpC and KdpF.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: kdpa_potassium_channel_subunit
+    label: Potassium-transporting ATPase potassium-binding subunit KdpA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR004623
+    component_ref: kdpa_potassium_channel_subunit
+  - node_id: kdpb_atpase_subunit
+    label: Potassium-transporting ATPase ATP-binding subunit KdpB
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR008250
+    component_ref: kdpb_atpase_subunit
+  - node_id: kdpc_regulatory_subunit
+    label: Potassium-transporting ATPase KdpC subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003820
+    component_ref: kdpc_regulatory_subunit
+  - node_id: kdpf_stabilizing_subunit
+    label: Potassium-transporting ATPase KdpF subunit
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR011726
+    component_ref: kdpf_stabilizing_subunit
+  - node_id: potassium_atpase_complex
+    label: potassium ion-transporting ATPase complex
+    node_type: STRUCTURE
+    grounding: GO:0031004
+  - node_id: p_type_potassium_transporter_activity
+    label: P-type potassium transmembrane transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008556
+  - node_id: potassium_ion_transport
+    label: potassium ion transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006813
+  edges:
+  - subject: kdpa_potassium_channel_subunit
+    predicate: channels potassium ions through intramembrane tunnel to
+    object: kdpb_atpase_subunit
+    description: KdpA binds periplasmic K+ at its selectivity filter and conducts
+      it through an intramembrane tunnel into the canonical binding site of KdpB.
+    evidence:
+    - reference: PMID:34272288
+      snippet: This pathway runs through an intramembrane tunnel in KdpA and delivers
+        ions to sites in the membrane domain of KdpB.
+      notes: Establishes K+ conduction from KdpA through the intramembrane tunnel
+        to KdpB.
+  - subject: kdpc_regulatory_subunit
+    predicate: co-assembles with KdpA and KdpB into
+    object: potassium_atpase_complex
+    description: KdpC forms part of the static structural scaffold of the heterotetrameric
+      KdpFABC complex.
+    evidence:
+    - reference: PMID:34272288
+      snippet: We find that KdpB undergoes conformational changes consistent with
+        other representatives from the P-type superfamily, whereas KdpA, KdpC, and
+        KdpF remain static.
+      notes: Supports KdpC structural role in the KdpFABC complex.
+  - subject: kdpf_stabilizing_subunit
+    predicate: stabilizes
+    object: potassium_atpase_complex
+    description: KdpF remains static at the transmembrane interface to stabilize the
+      KdpFABC heterotetramer.
+    evidence:
+    - reference: PMID:34272288
+      snippet: We find that KdpB undergoes conformational changes consistent with
+        other representatives from the P-type superfamily, whereas KdpA, KdpC, and
+        KdpF remain static.
+      notes: Supports KdpF structural stabilization in KdpFABC.
+  - subject: kdpb_atpase_subunit
+    predicate: couples ATP hydrolysis in
+    object: potassium_atpase_complex
+    description: KdpB undergoes P-type ATPase E1/E2 conformational transitions within
+      KdpFABC to drive potassium translocation.
+    evidence:
+    - reference: PMID:34272288
+      snippet: Our structures suggest a mechanism where ATP hydrolysis is coupled
+        to K+ transfer between alternative sites in KdpB, ultimately reaching a low-affinity
+        site where a water-filled pathway allows release of K+ to the cytoplasm.
+      notes: Shows KdpB coupling of ATP hydrolysis to K+ transfer and cytoplasmic
+        release.
+  - subject: potassium_atpase_complex
+    predicate: enables
+    object: p_type_potassium_transporter_activity
+    description: The assembled KdpFABC complex functions as an ATP-driven P-type potassium
+      transmembrane pump.
+    evidence:
+    - reference: PMID:41259220
+      snippet: Under osmotic stress, bacteria express a heterotetrameric protein complex,
+        KdpFABC, which functions as an ATP-dependent K+ pump to maintain intracellular
+        potassium levels.
+      notes: Supports P-type ATP-dependent potassium pump activity of KdpFABC.
+  - subject: p_type_potassium_transporter_activity
+    predicate: drives
+    object: potassium_ion_transport
+    description: P-type potassium pump activity imports K+ against a steep electrochemical
+      gradient to maintain cellular potassium homeostasis.
+    evidence:
+    - reference: PMID:41384914
+      snippet: KdpFABC is an ATP-dependent membrane complex that enables prokaryotes
+        to maintain potassium homeostasis under potassium-limited conditions.
+      notes: Links KdpFABC transporter activity to prokaryotic potassium homeostasis.
+curation_history:
+- timestamp: '2026-10-31T05:52:59Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added potassium ion-transporting ATPase complex (GO:0031004) with InterPro-grounded
+    components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim
+    literature snippets, and a mechanistic causal graph.
+  llm_assisted: true

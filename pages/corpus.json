@@ -1,8 +1,8 @@
 {
  "corpus": "CellStructureMech",
- "record_count": 1008,
- "corpus_updated": "2026-10-31 01:15:00 UTC",
- "corpus_digest": "55a3daa391d6",
+ "record_count": 1015,
+ "corpus_updated": "2026-10-31 05:52:59 UTC",
+ "corpus_digest": "58cc9a9c0211",
  "schema": "https://github.com/CultureBotAI/CellStructureMech/blob/main/src/cellstructuremech/schema/cellstructuremech.yaml",
  "records": [
   {
@@ -80973,6 +80973,410 @@
    ]
   },
   {
+   "identifier": "GO:0034973",
+   "label": "Sid2-Mob1 complex",
+   "structure_category": "DIVISION_MACHINERY",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A conserved fungal NDR-family protein kinase complex localized to the spindle pole body and medial cell division site, composed of the catalytic serine/threonine protein kinase Sid2 (fission yeast) or Dbf2/Dbf20 (budding yeast) bound to its regulatory activator subunit Mob1; acts as the terminal effector kinase complex of the septation initiation network (SIN) and mitotic exit network (MEN) to trigger mitotic exit, Cdc14 release, and cytokinetic septum assembly.",
+   "definition_source": "GO:0034973",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "Dbf2p-Mob1p complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0034973"
+    },
+    {
+     "synonym_text": "Sid2-Mob1 kinase complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0034973"
+    },
+    {
+     "synonym_text": "Sid2p-Mob1p complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0034973"
+    }
+   ],
+   "parent_structures": [
+    "GO:0032991"
+   ],
+   "part_of": [
+    "GO:0005816"
+   ],
+   "xrefs": [
+    "ComplexPortal:CPX-26510",
+    "ComplexPortal:CPX-1683"
+   ],
+   "components": [
+    {
+     "component_id": "sid2_dbf2_kinase_subunit",
+     "label": "NDR-family serine/threonine-protein kinase Sid2/Dbf2",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR000961",
+     "gene_symbols": [
+      "sid2",
+      "DBF2",
+      "DBF20"
+     ],
+     "stoichiometry": "1 or 2",
+     "essentiality": "ESSENTIAL",
+     "role": "Catalytic AGC/NDR-family serine/threonine protein kinase subunit that binds Mob1 via its N-terminal regulatory region and phosphorylates mitotic-exit and cytokinetic substrates.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q09898",
+       "protein_label": "Serine/threonine-protein kinase sid2",
+       "gene_symbol": "sid2",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Schizosaccharomyces pombe 972h- Sid2 terminal SIN kinase subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q09898",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- Sid2."
+        },
+        {
+         "reference": "PMID:40385371",
+         "snippet": "The Sid2- Mob1 complex is the most downstream acting component of the septation initiation network (SIN).",
+         "notes": "Establishes Sid2 as the catalytic kinase subunit of the S. pombe Sid2-Mob1 SIN complex."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P22204",
+       "protein_label": "Cell cycle protein kinase DBF2",
+       "gene_symbol": "DBF2",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Dbf2 terminal MEN kinase subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P22204",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Dbf2."
+        },
+        {
+         "reference": "PMID:33481703",
+         "snippet": "Here, we show that the MEN activating signal at SPBs is relayed to Cdc14 in the nucleolus through the dynamic localization of its terminal kinase complex Dbf2-Mob1.",
+         "notes": "Establishes Dbf2 as the catalytic subunit of the budding yeast Dbf2-Mob1 MEN complex."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0034973",
+       "notes": "GO:0034973 defines Sid2p/Dbf2p as the catalytic protein kinase subunit of the Sid2-Mob1 complex."
+      },
+      {
+       "reference": "InterPro:IPR000961",
+       "notes": "InterPro entry for AGC-kinase C-terminal domain present in Sid2 and Dbf2."
+      },
+      {
+       "reference": "PMID:29813053",
+       "snippet": "Strikingly the reduced SIN activity present after Cdk1 loss was enough to trigger septation by immediately inducing the medial recruitment of the SIN kinase complex Sid2-Mob1.",
+       "notes": "Demonstrates medial recruitment of the Sid2-Mob1 kinase complex to trigger septation."
+      }
+     ]
+    },
+    {
+     "component_id": "mob1_activator_subunit",
+     "label": "Kinase activator protein Mob1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR005301",
+     "gene_symbols": [
+      "mob1",
+      "MOB1"
+     ],
+     "stoichiometry": "1 or 2",
+     "essentiality": "ESSENTIAL",
+     "role": "Regulatory co-activator subunit that binds the N-terminal regulatory domain of Sid2/Dbf2 and is required for kinase activation, spindle pole body localization, and cytokinesis.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:O94360",
+       "protein_label": "Maintenance of ploidy protein mob1",
+       "gene_symbol": "mob1",
+       "taxon_id": "NCBITaxon:284812",
+       "taxon_label": "Schizosaccharomyces pombe 972h-",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Schizosaccharomyces pombe 972h- Mob1 regulatory subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:O94360",
+         "notes": "Reviewed Swiss-Prot entry for Schizosaccharomyces pombe 972h- Mob1."
+        },
+        {
+         "reference": "PMID:40385371",
+         "snippet": "Based on structural modeling, we hypothesize that the Mob1 mutations interfere with Mob1 stability and its ability to bind the N-terminal regulatory region of Sid2 .",
+         "notes": "Demonstrates that Mob1 binds the N-terminal regulatory region of Sid2 in S. pombe."
+        }
+       ]
+      },
+      {
+       "uniprot_id": "UniProtKB:P40484",
+       "protein_label": "DBF2 kinase activator protein MOB1",
+       "gene_symbol": "MOB1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Mob1 kinase activator subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P40484",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Mob1."
+        },
+        {
+         "reference": "PMID:35011608",
+         "snippet": "A crucial step in MEN activation occurs when the Dbf2-Mob1 protein kinase complex associates with the Nud1 scaffold protein at the yeast spindle pole bodies (SPBs; centrosome equivalents) and thereby becomes activated.",
+         "notes": "Confirms Mob1 as part of the Dbf2-Mob1 kinase complex at budding yeast SPBs."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0034973",
+       "notes": "GO:0034973 defines Mob1p as the regulatory partner of Sid2p/Dbf2p."
+      },
+      {
+       "reference": "InterPro:IPR005301",
+       "notes": "InterPro family entry for MOB kinase activator family."
+      },
+      {
+       "reference": "PMID:40385371",
+       "snippet": "In the absence of functional Mob1 , cells fail cytokinesis and become multinucleate.",
+       "notes": "Establishes the essential requirement for Mob1 in cytokinesis."
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4751",
+     "taxon_label": "Fungi",
+     "presence": "COMMON",
+     "note": "Conserved across fission and budding yeasts and filamentous fungi as the terminal SIN/MEN NDR kinase-coactivator complex.",
+     "reference": "PMID:33481703"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:284812",
+     "taxon_label": "Schizosaccharomyces pombe 972h-",
+     "note": "Reference fission yeast strain in which the Sid2-Mob1 complex was established as the terminal kinase of the septation initiation network (SIN).",
+     "reference": "PMID:40385371"
+    },
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Reference budding yeast strain in which the orthologous Dbf2-Mob1 complex is activated by Cdc15 at spindle pole bodies and translocates to the nucleolus to activate Cdc14 and drive mitotic exit.",
+     "reference": "PMID:33481703"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "protein_serine_threonine_kinase_activity",
+     "label": "protein serine/threonine kinase activity",
+     "grounding": "GO:0004674",
+     "description": "Catalyzes Mob1-dependent serine/threonine phosphorylation of mitotic exit and cytokinetic effector substrates including Cdc14 and Net1/Cfi1.",
+     "evidence": [
+      {
+       "reference": "GO:0004674",
+       "notes": "GO molecular-function term for protein serine/threonine kinase activity."
+      },
+      {
+       "reference": "PMID:33481703",
+       "snippet": "Nucleolar Dbf2-Mob1 then phosphorylates Cfi1/Net1 and Cdc14, activating Cdc14.",
+       "notes": "Demonstrates protein kinase activity of Dbf2-Mob1 toward Cfi1/Net1 and Cdc14."
+      }
+     ]
+    },
+    {
+     "function_id": "regulation_of_exit_from_mitosis",
+     "label": "regulation of exit from mitosis",
+     "grounding": "GO:0007096",
+     "description": "Relays the spindle-pole-body MEN/SIN signal to promote mitotic exit and coordinate nuclear division with cytokinesis and septation.",
+     "evidence": [
+      {
+       "reference": "GO:0007096",
+       "notes": "GO biological-process term for regulation of exit from mitosis."
+      },
+      {
+       "reference": "PMID:33481703",
+       "snippet": "Here, we show that the MEN activating signal at SPBs is relayed to Cdc14 in the nucleolus through the dynamic localization of its terminal kinase complex Dbf2-Mob1.",
+       "notes": "Demonstrates Dbf2-Mob1 signal relay driving exit from mitosis."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0034973",
+     "notes": "GO cellular-component term for the Sid2-Mob1 (Dbf2p-Mob1p) complex."
+    },
+    {
+     "reference": "ComplexPortal:CPX-26510",
+     "notes": "Complex Portal entry for the Schizosaccharomyces pombe Sid2-Mob1 complex."
+    },
+    {
+     "reference": "ComplexPortal:CPX-1683",
+     "notes": "Complex Portal entry for the Saccharomyces cerevisiae Dbf2-Mob1 complex."
+    },
+    {
+     "reference": "PMID:40385371",
+     "snippet": "The Sid2- Mob1 complex is the most downstream acting component of the septation initiation network (SIN).",
+     "notes": "Characterizes S. pombe Mob1 alleles and the Sid2-Mob1 interface."
+    },
+    {
+     "reference": "DOI:10.17912/micropub.biology.001595",
+     "notes": "DOI for PMID:40385371."
+    },
+    {
+     "reference": "PMID:33481703",
+     "snippet": "Here, we show that the MEN activating signal at SPBs is relayed to Cdc14 in the nucleolus through the dynamic localization of its terminal kinase complex Dbf2-Mob1.",
+     "notes": "Dissects SPB-to-nucleolus signal propagation by the budding yeast Dbf2-Mob1 complex."
+    },
+    {
+     "reference": "DOI:10.7554/elife.63645",
+     "notes": "DOI for PMID:33481703."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "sid2_mob1_men_sin_signaling",
+     "title": "Sid2-Mob1 / Dbf2-Mob1 Activation at the Spindle Pole Body and Mitotic Exit Signaling",
+     "description": "Mob1 binds the N-terminal regulatory region of Sid2/Dbf2 to form the Sid2-Mob1 (Dbf2-Mob1) complex, which is activated at the spindle pole body by Cdc15 and phosphorylates Cfi1/Net1 and Cdc14 to drive mitotic exit.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "mob1_activator_subunit",
+       "label": "Kinase activator protein Mob1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR005301",
+       "component_ref": "mob1_activator_subunit"
+      },
+      {
+       "node_id": "sid2_dbf2_kinase_subunit",
+       "label": "NDR-family serine/threonine-protein kinase Sid2/Dbf2",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR000961",
+       "component_ref": "sid2_dbf2_kinase_subunit"
+      },
+      {
+       "node_id": "cdc15_upstream_kinase",
+       "label": "Cell division control protein 15",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR000719",
+       "xrefs": [
+        "UniProtKB:P27636"
+       ]
+      },
+      {
+       "node_id": "sid2_mob1_complex",
+       "label": "Sid2-Mob1 complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0034973"
+      },
+      {
+       "node_id": "protein_serine_threonine_kinase_activity",
+       "label": "protein serine/threonine kinase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0004674"
+      },
+      {
+       "node_id": "regulation_of_exit_from_mitosis",
+       "label": "regulation of exit from mitosis",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0007096"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "mob1_activator_subunit",
+       "predicate": "binds N-terminal regulatory region of",
+       "object": "sid2_dbf2_kinase_subunit",
+       "description": "Mob1 binds the N-terminal regulatory region of the NDR kinase Sid2/Dbf2 to assemble the active kinase complex.",
+       "evidence": [
+        {
+         "reference": "PMID:40385371",
+         "snippet": "Based on structural modeling, we hypothesize that the Mob1 mutations interfere with Mob1 stability and its ability to bind the N-terminal regulatory region of Sid2 .",
+         "notes": "Establishes binding of Mob1 to the N-terminal regulatory domain of Sid2."
+        }
+       ]
+      },
+      {
+       "subject": "sid2_dbf2_kinase_subunit",
+       "predicate": "assembles with Mob1 into",
+       "object": "sid2_mob1_complex",
+       "description": "Sid2/Dbf2 and Mob1 form the terminal SIN/MEN kinase complex.",
+       "evidence": [
+        {
+         "reference": "PMID:40385371",
+         "snippet": "Schizosaccharomyces pombe Mob1 is the regulatory subunit of the protein kinase Sid2 . The Sid2- Mob1 complex is the most downstream acting component of the septation initiation network (SIN).",
+         "notes": "Confirms assembly of Sid2 and Mob1 into the Sid2-Mob1 complex."
+        }
+       ]
+      },
+      {
+       "subject": "cdc15_upstream_kinase",
+       "predicate": "activates at spindle pole body",
+       "object": "sid2_mob1_complex",
+       "description": "Upstream kinase Cdc15 phosphorylates Nud1 and activates Dbf2-Mob1 at the spindle pole body, licensing its nuclear access.",
+       "evidence": [
+        {
+         "reference": "PMID:33481703",
+         "snippet": "Cdc15, the protein kinase that activates Dbf2-Mob1 at SPBs, also regulates its nuclear access.",
+         "notes": "Directly supports Cdc15 activation of Dbf2-Mob1 at SPBs."
+        }
+       ]
+      },
+      {
+       "subject": "sid2_mob1_complex",
+       "predicate": "enables",
+       "object": "protein_serine_threonine_kinase_activity",
+       "description": "Activated Dbf2-Mob1 / Sid2-Mob1 phosphorylates Cfi1/Net1 and Cdc14.",
+       "evidence": [
+        {
+         "reference": "PMID:33481703",
+         "snippet": "Nucleolar Dbf2-Mob1 then phosphorylates Cfi1/Net1 and Cdc14, activating Cdc14.",
+         "notes": "Demonstrates serine/threonine kinase activity of Dbf2-Mob1."
+        }
+       ]
+      },
+      {
+       "subject": "protein_serine_threonine_kinase_activity",
+       "predicate": "drives",
+       "object": "regulation_of_exit_from_mitosis",
+       "description": "Phosphorylation and activation of Cdc14 by Dbf2-Mob1 relays the MEN signal from the spindle pole body to promote exit from mitosis.",
+       "evidence": [
+        {
+         "reference": "PMID:33481703",
+         "snippet": "Here, we show that the MEN activating signal at SPBs is relayed to Cdc14 in the nucleolus through the dynamic localization of its terminal kinase complex Dbf2-Mob1.",
+         "notes": "Links Dbf2-Mob1 kinase activity to exit from mitosis."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-31T05:52:59Z",
+     "curator": "antigravity",
+     "action": "CREATED_RECORD",
+     "changes": "Added Sid2-Mob1 complex (GO:0034973) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "GO:1990490",
    "label": "archaeal proton-transporting A-type ATPase complex",
    "structure_category": "ENERGY_COMPLEX",
@@ -92150,6 +92554,456 @@
      ],
      "posed_by": "codex",
      "posed_date": "2026-09-13"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:0031004",
+   "label": "potassium ion-transporting ATPase complex",
+   "structure_category": "ENERGY_COMPLEX",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A heterotetrameric P-type ATPase complex (KdpFABC) in the prokaryotic plasma membrane that couples ATP hydrolysis in the KdpB P-type ATPase subunit to high-affinity potassium ion import through the channel-like KdpA selectivity filter and inter-subunit intramembrane tunnel, stabilized by KdpC and KdpF.",
+   "definition_source": "GO:0031004",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "Kdp system complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0031004"
+    }
+   ],
+   "parent_structures": [
+    "GO:0090533"
+   ],
+   "part_of": [
+    "GO:0005886"
+   ],
+   "xrefs": [
+    "ComplexPortal:CPX-3564"
+   ],
+   "components": [
+    {
+     "component_id": "kdpa_potassium_channel_subunit",
+     "label": "Potassium-transporting ATPase potassium-binding subunit KdpA",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR004623",
+     "gene_symbols": [
+      "kdpA"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Channel-like transmembrane subunit with a selectivity filter that binds periplasmic potassium ions and feeds them into the inter-subunit tunnel.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P03959",
+       "protein_label": "Potassium-transporting ATPase potassium-binding subunit",
+       "gene_symbol": "kdpA",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 KdpA potassium-binding subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P03959",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 KdpA."
+        },
+        {
+         "reference": "PMID:41259220",
+         "snippet": "The subunit KdpA belongs to the superfamily of K+ transporters and adopts pseudo fourfold symmetry with a membrane-embedded selectivity filter as seen in K+ channels.",
+         "notes": "Establishes KdpA as the selectivity-filter potassium-binding subunit in E. coli."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0031004",
+       "notes": "GO:0031004 defines the potassium ion-transporting ATPase (Kdp) complex."
+      },
+      {
+       "reference": "InterPro:IPR004623",
+       "notes": "InterPro family entry for KdpA potassium-transporting ATPase A chain."
+      },
+      {
+       "reference": "PMID:34272288",
+       "snippet": "The complex comprises a channel-like subunit (KdpA) from the superfamily of K+ transporters and a pump-like subunit (KdpB) from the superfamily of P-type ATPases.",
+       "notes": "Confirms KdpA as the channel-like subunit of KdpFABC."
+      }
+     ]
+    },
+    {
+     "component_id": "kdpb_atpase_subunit",
+     "label": "Potassium-transporting ATPase ATP-binding subunit KdpB",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR008250",
+     "gene_symbols": [
+      "kdpB"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Catalytic P-type ATPase subunit that undergoes E1/E2 aspartyl-phosphate conformational cycling to pump potassium ions into the cytoplasm.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P03960",
+       "protein_label": "Potassium-transporting ATPase ATP-binding subunit",
+       "gene_symbol": "kdpB",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 KdpB P-type ATPase catalytic subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P03960",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 KdpB."
+        },
+        {
+         "reference": "PMID:41259220",
+         "snippet": "KdpB belongs to the superfamily of P-type ATPases with a conserved binding site for ions within the membrane domain and three cytoplasmic domains that orchestrate ATP hydrolysis via an aspartyl phosphate intermediate.",
+         "notes": "Establishes KdpB as the catalytic P-type ATPase subunit in E. coli."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0031004",
+       "notes": "GO:0031004 defines the potassium ion-transporting ATPase complex."
+      },
+      {
+       "reference": "InterPro:IPR008250",
+       "notes": "InterPro entry for P-type ATPase A domain present in KdpB."
+      },
+      {
+       "reference": "PMID:34272288",
+       "snippet": "Our structures suggest a mechanism where ATP hydrolysis is coupled to K+ transfer between alternative sites in KdpB, ultimately reaching a low-affinity site where a water-filled pathway allows release of K+ to the cytoplasm.",
+       "notes": "Demonstrates KdpB-mediated ATP hydrolysis and cytoplasmic potassium release."
+      }
+     ]
+    },
+    {
+     "component_id": "kdpc_regulatory_subunit",
+     "label": "Potassium-transporting ATPase KdpC subunit",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR003820",
+     "gene_symbols": [
+      "kdpC"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Single-pass transmembrane auxiliary subunit with a periplasmic domain that stabilizes KdpA and facilitates complex assembly and activity.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P03961",
+       "protein_label": "Potassium-transporting ATPase KdpC subunit",
+       "gene_symbol": "kdpC",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 KdpC subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P03961",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 KdpC."
+        },
+        {
+         "reference": "PMID:34272288",
+         "snippet": "We find that KdpB undergoes conformational changes consistent with other representatives from the P-type superfamily, whereas KdpA, KdpC, and KdpF remain static.",
+         "notes": "Confirms KdpC as a static structural constituent of the KdpFABC complex."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "InterPro:IPR003820",
+       "notes": "InterPro family entry for KdpC potassium-transporting ATPase C chain."
+      },
+      {
+       "reference": "PMID:34272288",
+       "snippet": "We find that KdpB undergoes conformational changes consistent with other representatives from the P-type superfamily, whereas KdpA, KdpC, and KdpF remain static.",
+       "notes": "Verifies KdpC within the cryo-EM structure of KdpFABC."
+      }
+     ]
+    },
+    {
+     "component_id": "kdpf_stabilizing_subunit",
+     "label": "Potassium-transporting ATPase KdpF subunit",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR011726",
+     "gene_symbols": [
+      "kdpF"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "CONDITIONAL",
+     "role": "Hydrophobic single-helix transmembrane peptide that stabilizes the KdpFABC heterotetramer in the lipid bilayer.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P36937",
+       "protein_label": "Potassium-transporting ATPase KdpF subunit",
+       "gene_symbol": "kdpF",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 KdpF stabilizing transmembrane peptide.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P36937",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 KdpF."
+        },
+        {
+         "reference": "PMID:34272288",
+         "snippet": "We find that KdpB undergoes conformational changes consistent with other representatives from the P-type superfamily, whereas KdpA, KdpC, and KdpF remain static.",
+         "notes": "Confirms KdpF as the fourth transmembrane subunit of KdpFABC."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "InterPro:IPR011726",
+       "notes": "InterPro family entry for KdpF subunit."
+      },
+      {
+       "reference": "PMID:34272288",
+       "snippet": "We find that KdpB undergoes conformational changes consistent with other representatives from the P-type superfamily, whereas KdpA, KdpC, and KdpF remain static.",
+       "notes": "Verifies KdpF as an integral component of the KdpFABC complex."
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2",
+     "taxon_label": "Bacteria",
+     "presence": "COMMON",
+     "note": "Widespread across bacteria and select archaea for high-affinity K+ scavenging under osmotic or potassium-limiting stress.",
+     "reference": "PMID:41384914"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Archetypal bacterial strain in which high-resolution cryo-EM turnover intermediates and the KdpA-KdpB intramembrane conduction tunnel of KdpFABC were determined.",
+     "reference": "PMID:41259220"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "p_type_potassium_transporter_activity",
+     "label": "P-type potassium transmembrane transporter activity",
+     "grounding": "GO:0008556",
+     "description": "Catalyzes ATP-driven active uptake of potassium ions across the prokaryotic plasma membrane via an aspartyl-phosphate intermediate.",
+     "evidence": [
+      {
+       "reference": "GO:0008556",
+       "notes": "GO molecular-function term for P-type potassium transmembrane transporter activity."
+      },
+      {
+       "reference": "PMID:41259220",
+       "snippet": "Under osmotic stress, bacteria express a heterotetrameric protein complex, KdpFABC, which functions as an ATP-dependent K+ pump to maintain intracellular potassium levels.",
+       "notes": "Demonstrates ATP-dependent potassium pump activity of KdpFABC."
+      }
+     ]
+    },
+    {
+     "function_id": "potassium_ion_transport",
+     "label": "potassium ion transport",
+     "grounding": "GO:0006813",
+     "description": "Maintains intracellular potassium homeostasis and turgor under potassium-depleted or osmotic-stress conditions.",
+     "evidence": [
+      {
+       "reference": "GO:0006813",
+       "notes": "GO biological-process term for potassium ion transport."
+      },
+      {
+       "reference": "PMID:41384914",
+       "snippet": "KdpFABC is an ATP-dependent membrane complex that enables prokaryotes to maintain potassium homeostasis under potassium-limited conditions.",
+       "notes": "Establishes the physiological role of KdpFABC in potassium ion transport and homeostasis."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0031004",
+     "notes": "GO cellular-component term for potassium ion-transporting ATPase complex."
+    },
+    {
+     "reference": "ComplexPortal:CPX-3564",
+     "notes": "Complex Portal entry for the Escherichia coli K-12 KdpFABC potassium-transporting ATPase complex."
+    },
+    {
+     "reference": "PMID:41259220",
+     "snippet": "Under osmotic stress, bacteria express a heterotetrameric protein complex, KdpFABC, which functions as an ATP-dependent K+ pump to maintain intracellular potassium levels.",
+     "notes": "2.1 A cryo-EM structure of E. coli KdpFABC under turnover conditions."
+    },
+    {
+     "reference": "DOI:10.7554/elife.107397",
+     "notes": "DOI for PMID:41259220."
+    },
+    {
+     "reference": "PMID:34272288",
+     "snippet": "KdpFABC is an oligomeric K+ transport complex in prokaryotes that maintains ionic homeostasis under stress conditions.",
+     "notes": "Cryo-EM structural characterization of four reaction-cycle intermediates of KdpFABC."
+    },
+    {
+     "reference": "DOI:10.1073/pnas.2105195118",
+     "notes": "DOI for PMID:34272288."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "kdpfabc_potassium_pumping",
+     "title": "KdpFABC Inter-Subunit Tunnel Conduction and ATP-Driven Potassium Import",
+     "description": "KdpA captures periplasmic potassium ions via its selectivity filter and delivers them through an intramembrane tunnel to KdpB, which couples ATP hydrolysis to cytoplasmic K+ release while stabilized by KdpC and KdpF.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "kdpa_potassium_channel_subunit",
+       "label": "Potassium-transporting ATPase potassium-binding subunit KdpA",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR004623",
+       "component_ref": "kdpa_potassium_channel_subunit"
+      },
+      {
+       "node_id": "kdpb_atpase_subunit",
+       "label": "Potassium-transporting ATPase ATP-binding subunit KdpB",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR008250",
+       "component_ref": "kdpb_atpase_subunit"
+      },
+      {
+       "node_id": "kdpc_regulatory_subunit",
+       "label": "Potassium-transporting ATPase KdpC subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR003820",
+       "component_ref": "kdpc_regulatory_subunit"
+      },
+      {
+       "node_id": "kdpf_stabilizing_subunit",
+       "label": "Potassium-transporting ATPase KdpF subunit",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR011726",
+       "component_ref": "kdpf_stabilizing_subunit"
+      },
+      {
+       "node_id": "potassium_atpase_complex",
+       "label": "potassium ion-transporting ATPase complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0031004"
+      },
+      {
+       "node_id": "p_type_potassium_transporter_activity",
+       "label": "P-type potassium transmembrane transporter activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0008556"
+      },
+      {
+       "node_id": "potassium_ion_transport",
+       "label": "potassium ion transport",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0006813"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "kdpa_potassium_channel_subunit",
+       "predicate": "channels potassium ions through intramembrane tunnel to",
+       "object": "kdpb_atpase_subunit",
+       "description": "KdpA binds periplasmic K+ at its selectivity filter and conducts it through an intramembrane tunnel into the canonical binding site of KdpB.",
+       "evidence": [
+        {
+         "reference": "PMID:34272288",
+         "snippet": "This pathway runs through an intramembrane tunnel in KdpA and delivers ions to sites in the membrane domain of KdpB.",
+         "notes": "Establishes K+ conduction from KdpA through the intramembrane tunnel to KdpB."
+        }
+       ]
+      },
+      {
+       "subject": "kdpc_regulatory_subunit",
+       "predicate": "co-assembles with KdpA and KdpB into",
+       "object": "potassium_atpase_complex",
+       "description": "KdpC forms part of the static structural scaffold of the heterotetrameric KdpFABC complex.",
+       "evidence": [
+        {
+         "reference": "PMID:34272288",
+         "snippet": "We find that KdpB undergoes conformational changes consistent with other representatives from the P-type superfamily, whereas KdpA, KdpC, and KdpF remain static.",
+         "notes": "Supports KdpC structural role in the KdpFABC complex."
+        }
+       ]
+      },
+      {
+       "subject": "kdpf_stabilizing_subunit",
+       "predicate": "stabilizes",
+       "object": "potassium_atpase_complex",
+       "description": "KdpF remains static at the transmembrane interface to stabilize the KdpFABC heterotetramer.",
+       "evidence": [
+        {
+         "reference": "PMID:34272288",
+         "snippet": "We find that KdpB undergoes conformational changes consistent with other representatives from the P-type superfamily, whereas KdpA, KdpC, and KdpF remain static.",
+         "notes": "Supports KdpF structural stabilization in KdpFABC."
+        }
+       ]
+      },
+      {
+       "subject": "kdpb_atpase_subunit",
+       "predicate": "couples ATP hydrolysis in",
+       "object": "potassium_atpase_complex",
+       "description": "KdpB undergoes P-type ATPase E1/E2 conformational transitions within KdpFABC to drive potassium translocation.",
+       "evidence": [
+        {
+         "reference": "PMID:34272288",
+         "snippet": "Our structures suggest a mechanism where ATP hydrolysis is coupled to K+ transfer between alternative sites in KdpB, ultimately reaching a low-affinity site where a water-filled pathway allows release of K+ to the cytoplasm.",
+         "notes": "Shows KdpB coupling of ATP hydrolysis to K+ transfer and cytoplasmic release."
+        }
+       ]
+      },
+      {
+       "subject": "potassium_atpase_complex",
+       "predicate": "enables",
+       "object": "p_type_potassium_transporter_activity",
+       "description": "The assembled KdpFABC complex functions as an ATP-driven P-type potassium transmembrane pump.",
+       "evidence": [
+        {
+         "reference": "PMID:41259220",
+         "snippet": "Under osmotic stress, bacteria express a heterotetrameric protein complex, KdpFABC, which functions as an ATP-dependent K+ pump to maintain intracellular potassium levels.",
+         "notes": "Supports P-type ATP-dependent potassium pump activity of KdpFABC."
+        }
+       ]
+      },
+      {
+       "subject": "p_type_potassium_transporter_activity",
+       "predicate": "drives",
+       "object": "potassium_ion_transport",
+       "description": "P-type potassium pump activity imports K+ against a steep electrochemical gradient to maintain cellular potassium homeostasis.",
+       "evidence": [
+        {
+         "reference": "PMID:41384914",
+         "snippet": "KdpFABC is an ATP-dependent membrane complex that enables prokaryotes to maintain potassium homeostasis under potassium-limited conditions.",
+         "notes": "Links KdpFABC transporter activity to prokaryotic potassium homeostasis."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-31T05:52:59Z",
+     "curator": "antigravity",
+     "action": "CREATED_RECORD",
+     "changes": "Added potassium ion-transporting ATPase complex (GO:0031004) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
@@ -187887,6 +188741,411 @@
    ]
   },
   {
+   "identifier": "GO:0034274",
+   "label": "Atg12-Atg5-Atg16 complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A heterohexameric ubiquitin-like E3 ligase complex localized to the phagophore assembly site (pre-autophagosomal structure, PAS) in yeast and other eukaryotes, formed by two copies of the covalent Atg12-Atg5 conjugate bound to a homodimer of coiled-coil Atg16; stimulates Atg3-mediated conjugation of Atg8 to phosphatidylethanolamine (PE) and scaffolds membrane shaping during autophagosome biogenesis.",
+   "definition_source": "GO:0034274",
+   "mapping_status": "PROPOSED",
+   "parent_structures": [
+    "GO:1990234"
+   ],
+   "part_of": [
+    "GO:0000407"
+   ],
+   "xrefs": [
+    "ComplexPortal:CPX-1849"
+   ],
+   "components": [
+    {
+     "component_id": "atg12_ubiquitin_like_modifier",
+     "label": "Ubiquitin-like protein Atg12",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR007242",
+     "gene_symbols": [
+      "ATG12",
+      "APG12"
+     ],
+     "stoichiometry": "2",
+     "essentiality": "ESSENTIAL",
+     "role": "Ubiquitin-like modifier protein covalently conjugated via its C-terminal glycine to an internal lysine of Atg5; mediates PAS recruitment via Atg17 interaction and activates the E2 enzyme Atg3.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P38316",
+       "protein_label": "Ubiquitin-like protein ATG12",
+       "gene_symbol": "ATG12",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Atg12 ubiquitin-like subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P38316",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Atg12."
+        },
+        {
+         "reference": "PMID:40957983",
+         "snippet": "The Atg12-Atg5-Atg16 E3 ligase complex for Atg8 lipidation is the most efficiently condensed in the droplets through specific Atg12-Atg17 interaction, which is also important for the PAS targeting of the E3 complex in vivo.",
+         "notes": "Establishes Atg12 role in PAS droplet recruitment and E3 ligase function in S. cerevisiae."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0034274",
+       "notes": "GO:0034274 defines Atg12 as a core constituent of the Atg12-Atg5-Atg16 complex."
+      },
+      {
+       "reference": "InterPro:IPR007242",
+       "notes": "InterPro family entry for autophagy-related protein 12 (Atg12)."
+      },
+      {
+       "reference": "PMID:41457424",
+       "snippet": "In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16 complex that functions as an E3-like enzyme to promote Atg8 conjugation with phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.",
+       "notes": "Confirms covalent Atg12-Atg5 conjugation in the Atg12-Atg5-Atg16 E3 complex."
+      }
+     ]
+    },
+    {
+     "component_id": "atg5_conjugate_subunit",
+     "label": "Autophagy protein Atg5",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR007239",
+     "gene_symbols": [
+      "ATG5",
+      "APG5"
+     ],
+     "stoichiometry": "2",
+     "essentiality": "ESSENTIAL",
+     "role": "Core E3-like scaffold subunit that accepts covalent Atg12 conjugation, binds the N-terminal domain of Atg16, and associates with phagophore membranes during Atg8 lipidation.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q12380",
+       "protein_label": "Autophagy protein 5",
+       "gene_symbol": "ATG5",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Atg5 subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q12380",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Atg5."
+        },
+        {
+         "reference": "PMID:38057553",
+         "snippet": "Atg8, a ubiquitin-like protein, is conjugated with phosphatidylethanolamine (PE) via Atg7 (E1), Atg3 (E2) and Atg12-Atg5-Atg16 (E3) enzymatic cascade and mediates autophagy.",
+         "notes": "Confirms Atg5 as part of the yeast Atg12-Atg5-Atg16 E3 complex."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0034274",
+       "notes": "GO:0034274 defines Atg5 as a core constituent of the Atg12-Atg5-Atg16 complex."
+      },
+      {
+       "reference": "InterPro:IPR007239",
+       "notes": "InterPro family entry for autophagy protein Atg5."
+      },
+      {
+       "reference": "PMID:38057553",
+       "snippet": "Atg8, a ubiquitin-like protein, is conjugated with phosphatidylethanolamine (PE) via Atg7 (E1), Atg3 (E2) and Atg12-Atg5-Atg16 (E3) enzymatic cascade and mediates autophagy.",
+       "notes": "Demonstrates Atg5 participation in the E3 ligase complex."
+      }
+     ]
+    },
+    {
+     "component_id": "atg16_coiled_coil_dimer_subunit",
+     "label": "Autophagy protein Atg16",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR013923",
+     "gene_symbols": [
+      "ATG16",
+      "APG16"
+     ],
+     "stoichiometry": "2",
+     "essentiality": "ESSENTIAL",
+     "role": "Coiled-coil homodimerization subunit that cross-links two Atg12-Atg5 conjugates into a 2:2:2 hexameric complex and promotes membrane binding and scaffolding.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q03818",
+       "protein_label": "Autophagy protein 16",
+       "gene_symbol": "ATG16",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Atg16 coiled-coil dimerization subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q03818",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Atg16."
+        },
+        {
+         "reference": "PMID:38057553",
+         "snippet": "Here we show that Saccharomyces cerevisiae Atg8-PE and E1-E2-E3 enzymes together construct a stable, mobile membrane scaffold.",
+         "notes": "Demonstrates S. cerevisiae Atg12-Atg5-Atg16 (E3) role in membrane scaffolding."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0034274",
+       "notes": "GO:0034274 defines Atg16 as the dimerizing subunit of the Atg12-Atg5-Atg16 complex."
+      },
+      {
+       "reference": "InterPro:IPR013923",
+       "notes": "InterPro entry for autophagy protein 16 (Atg16)."
+      },
+      {
+       "reference": "PMID:41457424",
+       "snippet": "In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16 complex that functions as an E3-like enzyme to promote Atg8 conjugation with phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.",
+       "notes": "Confirms Atg16 as an integral component of the E3-like ligase complex."
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:4751",
+     "taxon_label": "Fungi",
+     "presence": "COMMON",
+     "note": "Conserved across yeasts and filamentous fungi as the phagophore E3-like Atg8-PE conjugation complex.",
+     "reference": "PMID:41457424"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Reference budding yeast strain in which the heterohexameric Atg12-Atg5-Atg16 complex, its PAS recruitment via Atg17, and its Atg8-PE E3 ligase and membrane-shaping activities were established.",
+     "reference": "PMID:38057553"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "atg8_family_ligase_activity",
+     "label": "Atg8-family ligase activity",
+     "grounding": "GO:0019776",
+     "description": "Acts as a ubiquitin-like E3 enzyme that stimulates transfer of Atg8 from the E2 enzyme Atg3 onto the amino group of phosphatidylethanolamine (PE).",
+     "evidence": [
+      {
+       "reference": "GO:0019776",
+       "notes": "GO molecular-function term for Atg8-family ligase activity."
+      },
+      {
+       "reference": "PMID:41457424",
+       "snippet": "In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16 complex that functions as an E3-like enzyme to promote Atg8 conjugation with phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.",
+       "notes": "Establishes the E3-like Atg8-PE ligase activity of the Atg12-Atg5-Atg16 complex."
+      }
+     ]
+    },
+    {
+     "function_id": "autophagosome_assembly",
+     "label": "autophagosome assembly",
+     "grounding": "GO:0000045",
+     "description": "Drives phagophore membrane expansion, vesicle condensation at the PAS, and isolation-membrane shaping during autophagosome biogenesis.",
+     "evidence": [
+      {
+       "reference": "GO:0000045",
+       "notes": "GO biological-process term for autophagosome assembly."
+      },
+      {
+       "reference": "PMID:38057553",
+       "snippet": "These data suggest that all six Atg proteins in the Atg8 conjugation machinery control membrane shaping during autophagosome formation.",
+       "notes": "Demonstrates the role of Atg12-Atg5-Atg16 in membrane shaping during autophagosome assembly."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0034274",
+     "notes": "GO cellular-component term for the Atg12-Atg5-Atg16 complex."
+    },
+    {
+     "reference": "ComplexPortal:CPX-1849",
+     "notes": "Complex Portal entry for the Saccharomyces cerevisiae S288C Atg12-Atg5-Atg16 complex."
+    },
+    {
+     "reference": "PMID:38057553",
+     "snippet": "Atg8, a ubiquitin-like protein, is conjugated with phosphatidylethanolamine (PE) via Atg7 (E1), Atg3 (E2) and Atg12-Atg5-Atg16 (E3) enzymatic cascade and mediates autophagy.",
+     "notes": "Shows enzymatic and membrane-scaffolding functions of S. cerevisiae Atg12-Atg5-Atg16."
+    },
+    {
+     "reference": "DOI:10.1038/s41594-023-01132-2",
+     "notes": "DOI for PMID:38057553."
+    },
+    {
+     "reference": "PMID:40957983",
+     "snippet": "The Atg12-Atg5-Atg16 E3 ligase complex for Atg8 lipidation is the most efficiently condensed in the droplets through specific Atg12-Atg17 interaction, which is also important for the PAS targeting of the E3 complex in vivo.",
+     "notes": "Demonstrates condensation of the Atg12-Atg5-Atg16 E3 complex into early PAS droplets."
+    },
+    {
+     "reference": "DOI:10.1038/s41594-025-01678-3",
+     "notes": "DOI for PMID:40957983."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "atg12_atg5_atg16_atg8_lipidation",
+     "title": "Atg12-Atg5-Atg16 E3 Ligase Assembly and Atg8 Lipidation at the PAS",
+     "description": "Covalent Atg12-Atg5 conjugates dimerize with coiled-coil Atg16 to form the Atg12-Atg5-Atg16 E3 complex at the PAS, stimulating Atg3-mediated Atg8 lipidation to drive autophagosome assembly.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "atg12_ubiquitin_like_modifier",
+       "label": "Ubiquitin-like protein Atg12",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR007242",
+       "component_ref": "atg12_ubiquitin_like_modifier"
+      },
+      {
+       "node_id": "atg5_conjugate_subunit",
+       "label": "Autophagy protein Atg5",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR007239",
+       "component_ref": "atg5_conjugate_subunit"
+      },
+      {
+       "node_id": "atg16_coiled_coil_dimer_subunit",
+       "label": "Autophagy protein Atg16",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR013923",
+       "component_ref": "atg16_coiled_coil_dimer_subunit"
+      },
+      {
+       "node_id": "atg12_atg5_atg16_complex",
+       "label": "Atg12-Atg5-Atg16 complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0034274"
+      },
+      {
+       "node_id": "atg3_e2_enzyme",
+       "label": "Autophagy-related protein 3",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR006599",
+       "xrefs": [
+        "UniProtKB:P40344"
+       ]
+      },
+      {
+       "node_id": "atg8_family_ligase_activity",
+       "label": "Atg8-family ligase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0019776"
+      },
+      {
+       "node_id": "autophagosome_assembly",
+       "label": "autophagosome assembly",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0000045"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "atg12_ubiquitin_like_modifier",
+       "predicate": "covalently conjugates to",
+       "object": "atg5_conjugate_subunit",
+       "description": "Atg12 covalently binds Atg5 via an isopeptide bond to form the Atg12-Atg5 conjugate.",
+       "evidence": [
+        {
+         "reference": "PMID:41457424",
+         "snippet": "In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16 complex that functions as an E3-like enzyme to promote Atg8 conjugation with phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.",
+         "notes": "Directly supports covalent conjugation of Atg12 to Atg5."
+        }
+       ]
+      },
+      {
+       "subject": "atg5_conjugate_subunit",
+       "predicate": "assembles with Atg16 into",
+       "object": "atg12_atg5_atg16_complex",
+       "description": "The Atg12-Atg5 conjugate associates with Atg16 to form the Atg12-Atg5-Atg16 E3 ligase complex.",
+       "evidence": [
+        {
+         "reference": "PMID:41457424",
+         "snippet": "In most species, Atg12 covalently binds Atg5, forming the Atg12-Atg5-Atg16 complex that functions as an E3-like enzyme to promote Atg8 conjugation with phosphatidylethanolamine (PE), a step essential for autophagosomal maturation.",
+         "notes": "Supports assembly of Atg12-Atg5 with Atg16."
+        }
+       ]
+      },
+      {
+       "subject": "atg16_coiled_coil_dimer_subunit",
+       "predicate": "scaffolds hexameric assembly of",
+       "object": "atg12_atg5_atg16_complex",
+       "description": "Coiled-coil Atg16 dimerizes to cross-link two Atg12-Atg5 conjugates into the functional Atg12-Atg5-Atg16 complex.",
+       "evidence": [
+        {
+         "reference": "PMID:38057553",
+         "snippet": "Here we show that Saccharomyces cerevisiae Atg8-PE and E1-E2-E3 enzymes together construct a stable, mobile membrane scaffold.",
+         "notes": "Supports the scaffolding role of the yeast Atg12-Atg5-Atg16 E3 complex."
+        }
+       ]
+      },
+      {
+       "subject": "atg12_atg5_atg16_complex",
+       "predicate": "forms multivalent E2-E3 catalytic web with",
+       "object": "atg3_e2_enzyme",
+       "description": "The Atg12-Atg5-Atg16 E3 complex interacts with the E2 conjugating enzyme Atg3 to stimulate Atg8 transfer onto phosphatidylethanolamine.",
+       "evidence": [
+        {
+         "reference": "PMID:38057553",
+         "snippet": "Nuclear magnetic resonance analyses revealed that Atg8, E1, E2 and E3 together form an interaction web through multivalent weak interactions, where the intrinsically disordered regions in Atg3 play a central role.",
+         "notes": "Demonstrates interaction between Atg12-Atg5-Atg16 (E3) and Atg3 (E2)."
+        }
+       ]
+      },
+      {
+       "subject": "atg3_e2_enzyme",
+       "predicate": "cooperates with E3 complex to execute",
+       "object": "atg8_family_ligase_activity",
+       "description": "Atg3 activated by the Atg12-Atg5-Atg16 E3 complex transfers Atg8 onto phosphatidylethanolamine.",
+       "evidence": [
+        {
+         "reference": "PMID:38057553",
+         "snippet": "Atg8, a ubiquitin-like protein, is conjugated with phosphatidylethanolamine (PE) via Atg7 (E1), Atg3 (E2) and Atg12-Atg5-Atg16 (E3) enzymatic cascade and mediates autophagy.",
+         "notes": "Establishes cooperative E2-E3 Atg8-PE conjugation."
+        }
+       ]
+      },
+      {
+       "subject": "atg8_family_ligase_activity",
+       "predicate": "drives",
+       "object": "autophagosome_assembly",
+       "description": "Atg8-PE lipidation and E1-E2-E3 scaffolding drive vesicle condensation and isolation-membrane shaping during autophagosome assembly.",
+       "evidence": [
+        {
+         "reference": "PMID:40957983",
+         "snippet": "In vitro reconstitution demonstrates that E3-enriched early PAS droplets promote Atg8 lipidation and that Atg8 coating of the vesicle membrane is both necessary and sufficient for their condensation into the droplets.",
+         "notes": "Links E3-promoted Atg8 lipidation to autophagosome assembly."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-31T05:52:59Z",
+     "curator": "antigravity",
+     "action": "CREATED_RECORD",
+     "changes": "Added Atg12-Atg5-Atg16 complex (GO:0034274) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "GO:0097691",
    "label": "bacterial extracellular vesicle",
    "structure_category": "OTHER",
@@ -199686,6 +200945,431 @@
      "posed_by": "codex",
      "posed_date": "2026-09-27",
      "resolved_date": "2026-09-27"
+    }
+   ]
+  },
+  {
+   "identifier": "GO:1990191",
+   "label": "cobalamin transport complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A type II ATP-binding cassette (ABC) importer complex (BtuCD-F) in the bacterial inner membrane and periplasm, composed of the periplasmic cobalamin-binding protein BtuF, homodimeric transmembrane permease subunits BtuC2, and homodimeric ATP-binding cassette subunits BtuD2, which mediates ATP-driven import of vitamin B12 (cobalamin) and cobinamide into the cytoplasm.",
+   "definition_source": "GO:1990191",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "BtuCDF complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1990191"
+    },
+    {
+     "synonym_text": "cobalamin-transporting BtuCDF complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1990191"
+    },
+    {
+     "synonym_text": "vitamin B12 transport complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1990191"
+    },
+    {
+     "synonym_text": "vitamin B12-transporting BtuCDF complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1990191"
+    }
+   ],
+   "parent_structures": [
+    "GO:0043190"
+   ],
+   "part_of": [
+    "GO:0005886"
+   ],
+   "xrefs": [
+    "ComplexPortal:CPX-2105"
+   ],
+   "components": [
+    {
+     "component_id": "btuf_periplasmic_binding_protein",
+     "label": "Vitamin B12-binding protein BtuF",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR002491",
+     "gene_symbols": [
+      "btuF",
+      "yadT"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Periplasmic substrate-binding protein that binds cyanocobalamin and cobinamide with high affinity (~15 nM) and docks onto the BtuC2 periplasmic face to deliver substrate.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P37028",
+       "protein_label": "Vitamin B12-binding protein",
+       "gene_symbol": "btuF",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 BtuF periplasmic vitamin B12-binding protein.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P37028",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 BtuF."
+        },
+        {
+         "reference": "PMID:11790740",
+         "snippet": "CN-Cbl-binding assays using radiolabeled substrate or isothermal titration calorimetry showed that purified BtuF binds CN-Cbl with a binding constant of around 15 nM.",
+         "notes": "Identifies and characterizes E. coli BtuF as the periplasmic cobalamin-binding protein."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:1990191",
+       "notes": "GO:1990191 defines BtuF as the periplasmic substrate-binding subunit of the cobalamin transport complex."
+      },
+      {
+       "reference": "InterPro:IPR002491",
+       "notes": "InterPro entry for periplasmic binding protein domain in BtuF."
+      },
+      {
+       "reference": "PMID:28128319",
+       "snippet": "We synthesized radiolabeled cyano-cobinamide and demonstrated BtuCD-catalyzed in vitro transport, which was ATP- and BtuF-dependent.",
+       "notes": "Demonstrates essential requirement for BtuF in BtuCD-catalyzed transport."
+      }
+     ]
+    },
+    {
+     "component_id": "btuc_permease_subunit",
+     "label": "Vitamin B12 import system permease protein BtuC",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR023691",
+     "gene_symbols": [
+      "btuC"
+     ],
+     "stoichiometry": "2",
+     "essentiality": "ESSENTIAL",
+     "role": "Homodimeric transmembrane permease subunit (2 x 10 transmembrane helices) forming the inner-membrane translocation channel for cobalamin.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P06609",
+       "protein_label": "Vitamin B12 import system permease protein BtuC",
+       "gene_symbol": "btuC",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 BtuC transmembrane permease subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P06609",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 BtuC."
+        },
+        {
+         "reference": "PMID:11790740",
+         "snippet": "Transport across the cytoplasmic membrane (CM) requires the BtuC and BtuD proteins, which are most related in sequence to the transmembrane and ATP-binding cassette proteins of periplasmic permeases for iron-siderophore transport.",
+         "notes": "Establishes BtuC as the cytoplasmic-membrane permease component in E. coli."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:1990191",
+       "notes": "GO:1990191 defines two BtuC subunits as the transmembrane permease core of BtuCDF."
+      },
+      {
+       "reference": "InterPro:IPR023691",
+       "notes": "InterPro entry for vitamin B12 import system permease protein BtuC."
+      },
+      {
+       "reference": "PMID:11790740",
+       "snippet": "Hence, null mutations in btuC and btuD were constructed and revealed that the btuC mutant had a strong impairment similar to that of the btuF mutant, whereas the btuD defect was less pronounced.",
+       "notes": "Genetic confirmation of btuC requirement for cytoplasmic membrane cobalamin transport."
+      }
+     ]
+    },
+    {
+     "component_id": "btud_atp_binding_subunit",
+     "label": "Vitamin B12 import ATP-binding protein BtuD",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR023693",
+     "gene_symbols": [
+      "btuD"
+     ],
+     "stoichiometry": "2",
+     "essentiality": "ESSENTIAL",
+     "role": "Homodimeric nucleotide-binding cassette subunit that binds and hydrolyzes ATP to power cobalamin translocation through BtuC2.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P06611",
+       "protein_label": "Vitamin B12 import ATP-binding protein BtuD",
+       "gene_symbol": "btuD",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 BtuD ATP-binding subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P06611",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 BtuD."
+        },
+        {
+         "reference": "PMID:11790740",
+         "snippet": "Transport across the cytoplasmic membrane (CM) requires the BtuC and BtuD proteins, which are most related in sequence to the transmembrane and ATP-binding cassette proteins of periplasmic permeases for iron-siderophore transport.",
+         "notes": "Establishes BtuD as the ATP-binding cassette subunit of the cobalamin permease."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:1990191",
+       "notes": "GO:1990191 defines two BtuD subunits as the ATP-binding cassette component of BtuCDF."
+      },
+      {
+       "reference": "InterPro:IPR023693",
+       "notes": "InterPro entry for vitamin B12 import ATP-binding protein BtuD."
+      },
+      {
+       "reference": "PMID:28128319",
+       "snippet": "We synthesized radiolabeled cyano-cobinamide and demonstrated BtuCD-catalyzed in vitro transport, which was ATP- and BtuF-dependent.",
+       "notes": "Confirms ATP-dependent transport catalyzed by BtuCD."
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2",
+     "taxon_label": "Bacteria",
+     "presence": "COMMON",
+     "note": "Widespread across Gram-negative and Gram-positive bacteria that import exogenous cobalamin or cobinamide.",
+     "reference": "PMID:27457716"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Archetypal type II ABC importer (BtuCD-F) in which periplasmic BtuF recognition and ATP-driven cobalamin/cobinamide translocation were established.",
+     "reference": "PMID:11790740"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "abc_vitamin_b12_transporter_activity",
+     "label": "ABC-type vitamin B12 transporter activity",
+     "grounding": "GO:0015420",
+     "description": "Catalyzes ATP-dependent active transmembrane transport of vitamin B12 (cobalamin) and cobinamide across the inner membrane.",
+     "evidence": [
+      {
+       "reference": "GO:0015420",
+       "notes": "GO molecular-function term for ABC-type vitamin B12 transporter activity."
+      },
+      {
+       "reference": "PMID:28128319",
+       "snippet": "BtuCD-F is an ABC transporter that mediates cobalamin uptake into Escherichia coli.",
+       "notes": "Demonstrates ABC-type vitamin B12 and cobinamide transporter activity of BtuCD-F."
+      }
+     ]
+    },
+    {
+     "function_id": "cobalamin_transport",
+     "label": "cobalamin transport",
+     "grounding": "GO:0015889",
+     "description": "Transports periplasmic cobalamin (delivered via outer-membrane BtuB) across the cytoplasmic membrane into the bacterial cytosol.",
+     "evidence": [
+      {
+       "reference": "GO:0015889",
+       "notes": "GO biological-process term for cobalamin transport."
+      },
+      {
+       "reference": "PMID:11790740",
+       "snippet": "A null mutation in btuF, but not in the flanking genes pfs and yadS, strongly decreased CN-Cbl utilization and transport into the cytoplasm.",
+       "notes": "Demonstrates cytoplasmic cobalamin transport mediated by the BtuCDF system."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:1990191",
+     "notes": "GO cellular-component term for the cobalamin transport complex (BtuCDF)."
+    },
+    {
+     "reference": "ComplexPortal:CPX-2105",
+     "notes": "Complex Portal entry for the Escherichia coli K-12 BtuCDF vitamin B12 transport complex."
+    },
+    {
+     "reference": "PMID:11790740",
+     "snippet": "Cells of Escherichia coli take up vitamin B(12) (cyano-cobalamin [CN-Cbl]) and iron chelates by use of sequential active transport processes.",
+     "notes": "Identifies BtuF and establishes its collaboration with BtuC and BtuD in E. coli cobalamin uptake."
+    },
+    {
+     "reference": "DOI:10.1128/jb.184.3.706-717.2002",
+     "notes": "DOI for PMID:11790740."
+    },
+    {
+     "reference": "PMID:28128319",
+     "snippet": "BtuCD-F is an ABC transporter that mediates cobalamin uptake into Escherichia coli.",
+     "notes": "Crystal structure and in vitro transport analysis of E. coli BtuCD-F."
+    },
+    {
+     "reference": "DOI:10.1038/srep41575",
+     "notes": "DOI for PMID:28128319."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "btucdf_cobalamin_import_mechanism",
+     "title": "BtuCD-F Periplasmic Capture and ATP-Driven Cobalamin Import",
+     "description": "Following TonB-dependent outer-membrane passage via BtuB, periplasmic BtuF captures cyanocobalamin and docks onto the BtuC2-BtuD2 inner-membrane ABC complex to drive ATP-dependent cytoplasmic import.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "btub_outer_membrane_transporter",
+       "label": "Vitamin B12 transporter BtuB",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR010101",
+       "xrefs": [
+        "UniProtKB:P06129"
+       ]
+      },
+      {
+       "node_id": "btuf_periplasmic_binding_protein",
+       "label": "Vitamin B12-binding protein BtuF",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR002491",
+       "component_ref": "btuf_periplasmic_binding_protein"
+      },
+      {
+       "node_id": "btuc_permease_subunit",
+       "label": "Vitamin B12 import system permease protein BtuC",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR023691",
+       "component_ref": "btuc_permease_subunit"
+      },
+      {
+       "node_id": "btud_atp_binding_subunit",
+       "label": "Vitamin B12 import ATP-binding protein BtuD",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR023693",
+       "component_ref": "btud_atp_binding_subunit"
+      },
+      {
+       "node_id": "cobalamin_transport_complex",
+       "label": "cobalamin transport complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990191"
+      },
+      {
+       "node_id": "abc_vitamin_b12_transporter_activity",
+       "label": "ABC-type vitamin B12 transporter activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0015420"
+      },
+      {
+       "node_id": "cobalamin_transport",
+       "label": "cobalamin transport",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0015889"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "btub_outer_membrane_transporter",
+       "predicate": "delivers periplasmic cyanocobalamin to",
+       "object": "btuf_periplasmic_binding_protein",
+       "description": "TonB-dependent outer-membrane transporter BtuB translocates cyanocobalamin into the periplasm, where it is captured by BtuF.",
+       "evidence": [
+        {
+         "reference": "PMID:11790740",
+         "snippet": "Transport of CN-Cbl across the outer membrane and its accumulation in the periplasm is mediated by the TonB-dependent transporter BtuB.",
+         "notes": "Establishes sequential delivery from outer-membrane BtuB to periplasmic BtuF."
+        }
+       ]
+      },
+      {
+       "subject": "btuf_periplasmic_binding_protein",
+       "predicate": "docks with substrate onto",
+       "object": "btuc_permease_subunit",
+       "description": "Cobalamin-bound BtuF docks with the periplasmic face of the BtuC transmembrane permease to form the productive BtuCD-F complex.",
+       "evidence": [
+        {
+         "reference": "PMID:29084999",
+         "snippet": "The CDR3 loop of Nb9 reached into the substrate-binding pocket of BtuF, preventing both B12 binding and BtuCD-F complex formation.",
+         "notes": "Demonstrates substrate-coupled docking of BtuF onto BtuCD."
+        }
+       ]
+      },
+      {
+       "subject": "btuc_permease_subunit",
+       "predicate": "assembles with BtuD and BtuF into",
+       "object": "cobalamin_transport_complex",
+       "description": "BtuC transmembrane dimers and BtuD ATPase dimers combine with BtuF to form the functional BtuCD-F complex.",
+       "evidence": [
+        {
+         "reference": "PMID:11790740",
+         "snippet": "Transport across the cytoplasmic membrane (CM) requires the BtuC and BtuD proteins, which are most related in sequence to the transmembrane and ATP-binding cassette proteins of periplasmic permeases for iron-siderophore transport.",
+         "notes": "Supports assembly of BtuC, BtuD, and BtuF as the inner-membrane permease complex."
+        }
+       ]
+      },
+      {
+       "subject": "btud_atp_binding_subunit",
+       "predicate": "powers ATP hydrolysis in",
+       "object": "cobalamin_transport_complex",
+       "description": "BtuD ATP binding and hydrolysis energize substrate translocation through the BtuCD-F complex.",
+       "evidence": [
+        {
+         "reference": "PMID:28128319",
+         "snippet": "We synthesized radiolabeled cyano-cobinamide and demonstrated BtuCD-catalyzed in vitro transport, which was ATP- and BtuF-dependent.",
+         "notes": "Confirms ATP dependence of BtuCD-F transport."
+        }
+       ]
+      },
+      {
+       "subject": "cobalamin_transport_complex",
+       "predicate": "enables",
+       "object": "abc_vitamin_b12_transporter_activity",
+       "description": "The assembled BtuCD-F complex catalyzes ATP-dependent vitamin B12 transmembrane transport.",
+       "evidence": [
+        {
+         "reference": "PMID:28128319",
+         "snippet": "BtuCD-F is an ABC transporter that mediates cobalamin uptake into Escherichia coli.",
+         "notes": "Directly supports ABC vitamin B12 transporter activity of BtuCD-F."
+        }
+       ]
+      },
+      {
+       "subject": "abc_vitamin_b12_transporter_activity",
+       "predicate": "drives",
+       "object": "cobalamin_transport",
+       "description": "ABC-type vitamin B12 transporter activity imports cobalamin across the cytoplasmic membrane into the cytoplasm.",
+       "evidence": [
+        {
+         "reference": "PMID:11790740",
+         "snippet": "A null mutation in btuF, but not in the flanking genes pfs and yadS, strongly decreased CN-Cbl utilization and transport into the cytoplasm.",
+         "notes": "Links BtuCDF activity to cytoplasmic cobalamin transport."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-31T05:52:59Z",
+     "curator": "antigravity",
+     "action": "CREATED_RECORD",
+     "changes": "Added cobalamin transport complex (GO:1990191) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
@@ -220664,6 +222348,553 @@
    ]
   },
   {
+   "identifier": "GO:0000408",
+   "label": "EKC/KEOPS complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A multiprotein complex conserved across Archaea and Eukarya (composed of Kae1, Bud32, Cgi121, Pcc1, and in fungi/metazoa Gon7) that catalyzes the biosynthesis of the essential N(6)-L-threonylcarbamoyladenine (t6A) modification at position 37 of ANN-decoding tRNAs and supports telomere maintenance and transcription.",
+   "definition_source": "GO:0000408",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "KEOPS/EKC complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0000408"
+    },
+    {
+     "synonym_text": "endopeptidase-like kinase chromatin-associated protein complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0000408"
+    },
+    {
+     "synonym_text": "kinase, putative endopeptidase and other proteins of small size protein complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0000408"
+    }
+   ],
+   "parent_structures": [
+    "GO:1990234"
+   ],
+   "part_of": [
+    "GO:0005737"
+   ],
+   "xrefs": [
+    "ComplexPortal:CPX-995"
+   ],
+   "components": [
+    {
+     "component_id": "kae1_catalytic_subunit",
+     "label": "tRNA N6-adenosine threonylcarbamoyltransferase Kae1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR017861",
+     "gene_symbols": [
+      "KAE1"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Catalytic metalloprotein subunit that transfers the threonylcarbamoyl moiety from threonylcarbamoyl-AMP onto adenosine-37 of ANN-decoding tRNAs.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P36132",
+       "protein_label": "tRNA N6-adenosine threonylcarbamoyltransferase",
+       "gene_symbol": "KAE1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Kae1 catalytic t6A transferase subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P36132",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Kae1."
+        },
+        {
+         "reference": "PMID:39639027",
+         "snippet": "Kae1 catalyzes the modification of tRNA, but the specific contributions of Bud32 and the other subunits are less clear.",
+         "notes": "Establishes Kae1 as the catalytic tRNA-modifying subunit of KEOPS."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0000408",
+       "notes": "GO:0000408 defines Kae1p as a core subunit of the yeast EKC/KEOPS complex."
+      },
+      {
+       "reference": "InterPro:IPR017861",
+       "notes": "InterPro family entry for Kae1/TsaD tRNA N6-adenosine threonylcarbamoyltransferase."
+      },
+      {
+       "reference": "PMID:39639027",
+       "snippet": "KEOPS consists of Cgi121, Kae1, Pcc1, Gon7 and the atypical kinase/ATPase Bud32.",
+       "notes": "Confirms five-subunit composition of fungal/eukaryotic KEOPS."
+      }
+     ]
+    },
+    {
+     "component_id": "bud32_atpase_kinase_subunit",
+     "label": "EKC/KEOPS complex subunit Bud32",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR022495",
+     "gene_symbols": [
+      "BUD32"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Atypical protein kinase/ATPase subunit that directly contacts tRNA and couples ATP hydrolysis to Kae1 catalytic t6A activity.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P53323",
+       "protein_label": "EKC/KEOPS complex subunit BUD32",
+       "gene_symbol": "BUD32",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Bud32 atypical kinase/ATPase subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P53323",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Bud32."
+        },
+        {
+         "reference": "PMID:39639027",
+         "snippet": "We also uncover contact surfaces within the KEOPS-tRNA holo-enzyme substrate complex that are required for Bud32 ATPase regulation and t6A modification activity.",
+         "notes": "Demonstrates Bud32 ATPase regulation of KEOPS t6A modification activity."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0000408",
+       "notes": "GO:0000408 defines Bud32p as a core subunit of the EKC/KEOPS complex."
+      },
+      {
+       "reference": "InterPro:IPR022495",
+       "notes": "InterPro family entry for Serine/threonine-protein kinase Bud32/PRPK."
+      },
+      {
+       "reference": "PMID:38477398",
+       "snippet": "BUD32 participates in direct binding of tRNA to KEOPS and modulates the t6A-catalytic activity of KEOPS via its C-terminal tail and ATP to ADP hydrolysis.",
+       "notes": "Demonstrates Bud32 tRNA binding and ATP-hydrolysis-mediated activation of Kae1."
+      }
+     ]
+    },
+    {
+     "component_id": "pcc1_dimerization_subunit",
+     "label": "EKC/KEOPS complex subunit Pcc1",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR015419",
+     "gene_symbols": [
+      "PCC1"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Structural dimerization and tRNA anticodon-stabilizing subunit that binds Kae1 and Gon7.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q3E833",
+       "protein_label": "EKC/KEOPS complex subunit PCC1",
+       "gene_symbol": "PCC1",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Pcc1 subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q3E833",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Pcc1."
+        },
+        {
+         "reference": "PMID:39639027",
+         "snippet": "KEOPS consists of Cgi121, Kae1, Pcc1, Gon7 and the atypical kinase/ATPase Bud32.",
+         "notes": "Confirms Pcc1 as an integral subunit of KEOPS."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0000408",
+       "notes": "GO:0000408 defines Pcc1p as a core subunit of the EKC/KEOPS complex."
+      },
+      {
+       "reference": "InterPro:IPR015419",
+       "notes": "InterPro family entry for EKC/KEOPS complex subunit Pcc1."
+      },
+      {
+       "reference": "PMID:38477398",
+       "snippet": "PCC1 dimerization leads to a KEOPS dimer that is needed for an active t6A-catalytic KEOPS-tRNA assembly.",
+       "notes": "Establishes Pcc1-mediated KEOPS assembly."
+      }
+     ]
+    },
+    {
+     "component_id": "cgi121_trna_recruitment_subunit",
+     "label": "EKC/KEOPS complex subunit Cgi121",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR013926",
+     "gene_symbols": [
+      "CGI121"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "CONDITIONAL",
+     "role": "Allosteric regulator and tRNA 3'-CCA-binding subunit that docks onto Bud32 to recruit tRNA and potentiate t6A synthesis.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:Q03705",
+       "protein_label": "EKC/KEOPS complex subunit CGI121",
+       "gene_symbol": "CGI121",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Cgi121 subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:Q03705",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Cgi121."
+        },
+        {
+         "reference": "PMID:38477398",
+         "snippet": "CGI121 promotes the binding of tRNA to KEOPS and potentiates the t6A-catalytic activity of KEOPS.",
+         "notes": "Demonstrates Cgi121 promotion of tRNA binding and t6A catalysis."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0000408",
+       "notes": "GO:0000408 defines Cgi121p as a subunit of the EKC/KEOPS complex."
+      },
+      {
+       "reference": "InterPro:IPR013926",
+       "notes": "InterPro family entry for EKC/KEOPS complex subunit Cgi121/TPRKB."
+      },
+      {
+       "reference": "PMID:38477398",
+       "snippet": "CGI121 promotes the binding of tRNA to KEOPS and potentiates the t6A-catalytic activity of KEOPS.",
+       "notes": "Supports Cgi121 role in tRNA recruitment."
+      }
+     ]
+    },
+    {
+     "component_id": "gon7_stabilizing_subunit",
+     "label": "EKC/KEOPS complex subunit Gon7",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR014849",
+     "gene_symbols": [
+      "GON7",
+      "PCC2"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "CONDITIONAL",
+     "role": "Intrinsically disordered fungal/eukaryotic fifth subunit that binds Pcc1 and stabilizes the monomeric pentameric EKC/KEOPS architecture.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P46984",
+       "protein_label": "EKC/KEOPS complex subunit GON7",
+       "gene_symbol": "GON7",
+       "taxon_id": "NCBITaxon:559292",
+       "taxon_label": "Saccharomyces cerevisiae S288C",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Saccharomyces cerevisiae S288C Gon7 subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P46984",
+         "notes": "Reviewed Swiss-Prot entry for Saccharomyces cerevisiae S288C Gon7."
+        },
+        {
+         "reference": "PMID:38477398",
+         "snippet": "In archaea and eukaryotes, the evolutionarily conserved KEOPS is composed of four core subunits-Kae1, Bud32, Cgi121 and Pcc1, and a fifth Gon7/Pcc2 that is found in fungi and metazoa.",
+         "notes": "Establishes Gon7/Pcc2 as the fifth subunit in fungi."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0000408",
+       "notes": "GO:0000408 defines Gon7p as the fifth yeast EKC/KEOPS subunit."
+      },
+      {
+       "reference": "InterPro:IPR014849",
+       "notes": "InterPro family entry for EKC/KEOPS complex Gon7 subunit."
+      },
+      {
+       "reference": "PMID:38477398",
+       "snippet": "In archaea and eukaryotes, the evolutionarily conserved KEOPS is composed of four core subunits-Kae1, Bud32, Cgi121 and Pcc1, and a fifth Gon7/Pcc2 that is found in fungi and metazoa.",
+       "notes": "Confirms Gon7/Pcc2 membership in the fungal KEOPS complex."
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2157",
+     "taxon_label": "Archaea",
+     "presence": "UNIVERSAL",
+     "note": "Present across Archaea as the four-subunit core KEOPS complex (Kae1-Bud32-Pcc1-Cgi121).",
+     "reference": "PMID:38477398"
+    },
+    {
+     "taxon_id": "NCBITaxon:4751",
+     "taxon_label": "Fungi",
+     "presence": "COMMON",
+     "note": "Present in yeasts and filamentous fungi as the pentameric Gon7-Pcc1-Kae1-Bud32-Cgi121 complex.",
+     "reference": "PMID:38477398"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:559292",
+     "taxon_label": "Saccharomyces cerevisiae S288C",
+     "note": "Reference eukaryotic microbe in which the pentameric EKC/KEOPS complex (Gon7-Pcc1-Kae1-Bud32-Cgi121) and its tRNA t6A synthase function were discovered and structurally dissected.",
+     "reference": "PMID:39639027"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "trna_t6a_synthase_activity",
+     "label": "tRNA N(6)-L-threonylcarbamoyladenine synthase activity",
+     "grounding": "GO:0061711",
+     "description": "Catalyzes the transfer of the threonylcarbamoyl group onto N6 of adenosine-37 in ANN-decoding tRNAs.",
+     "evidence": [
+      {
+       "reference": "GO:0061711",
+       "notes": "GO molecular-function term for tRNA N(6)-L-threonylcarbamoyladenine synthase activity."
+      },
+      {
+       "reference": "PMID:39639027",
+       "snippet": "The enzyme complex KEOPS (Kinase, Endopeptidase and Other Proteins of Small size) installs the universally conserved and essential N6-threonylcarbamoyl adenosine modification (t6A) on ANN-decoding tRNAs in eukaryotes and in archaea.",
+       "notes": "Establishes tRNA N6-threonylcarbamoyladenosine synthase activity of KEOPS."
+      }
+     ]
+    },
+    {
+     "function_id": "trna_t6a_modification",
+     "label": "tRNA threonylcarbamoyladenosine modification",
+     "grounding": "GO:0002949",
+     "description": "Installs the essential t6A modification at position 37 of ANN-decoding tRNAs to maintain reading-frame fidelity and cellular fitness.",
+     "evidence": [
+      {
+       "reference": "GO:0002949",
+       "notes": "GO biological-process term for tRNA threonylcarbamoyladenosine modification."
+      },
+      {
+       "reference": "PMID:38477398",
+       "snippet": "KEOPS cooperates with Sua5/YRDC to catalyze the biosynthesis of tRNA N6-threonylcarbamoyladenosine (t6A), an essential modification needed for fitness of cellular organisms.",
+       "notes": "Demonstrates the role of KEOPS in tRNA t6A biosynthesis."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0000408",
+     "notes": "GO cellular-component term for the EKC/KEOPS complex."
+    },
+    {
+     "reference": "ComplexPortal:CPX-995",
+     "notes": "Complex Portal entry for the Saccharomyces cerevisiae EKC/KEOPS complex."
+    },
+    {
+     "reference": "PMID:39639027",
+     "snippet": "KEOPS consists of Cgi121, Kae1, Pcc1, Gon7 and the atypical kinase/ATPase Bud32.",
+     "notes": "Cryo-EM structures and functional dissection of the KEOPS-tRNA complex."
+    },
+    {
+     "reference": "DOI:10.1038/s41467-024-54787-w",
+     "notes": "DOI for PMID:39639027."
+    },
+    {
+     "reference": "PMID:38477398",
+     "snippet": "In archaea and eukaryotes, the evolutionarily conserved KEOPS is composed of four core subunits-Kae1, Bud32, Cgi121 and Pcc1, and a fifth Gon7/Pcc2 that is found in fungi and metazoa.",
+     "notes": "Biochemical and structural characterization of KEOPS subunit roles."
+    },
+    {
+     "reference": "DOI:10.1093/nar/gkae179",
+     "notes": "DOI for PMID:38477398."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "ekc_keops_trna_t6a_biosynthesis",
+     "title": "EKC/KEOPS Subunit Cooperation in tRNA t6A Modification",
+     "description": "Cgi121, Bud32, Pcc1, and Gon7 coordinate tRNA binding and ATPase regulation to position tRNA A37 in the Kae1 catalytic site for t6A synthesis.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "cgi121_trna_recruitment_subunit",
+       "label": "EKC/KEOPS complex subunit Cgi121",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR013926",
+       "component_ref": "cgi121_trna_recruitment_subunit"
+      },
+      {
+       "node_id": "bud32_atpase_kinase_subunit",
+       "label": "EKC/KEOPS complex subunit Bud32",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR022495",
+       "component_ref": "bud32_atpase_kinase_subunit"
+      },
+      {
+       "node_id": "pcc1_dimerization_subunit",
+       "label": "EKC/KEOPS complex subunit Pcc1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR015419",
+       "component_ref": "pcc1_dimerization_subunit"
+      },
+      {
+       "node_id": "gon7_stabilizing_subunit",
+       "label": "EKC/KEOPS complex subunit Gon7",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR014849",
+       "component_ref": "gon7_stabilizing_subunit"
+      },
+      {
+       "node_id": "kae1_catalytic_subunit",
+       "label": "tRNA N6-adenosine threonylcarbamoyltransferase Kae1",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR017861",
+       "component_ref": "kae1_catalytic_subunit"
+      },
+      {
+       "node_id": "ekc_keops_complex",
+       "label": "EKC/KEOPS complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0000408"
+      },
+      {
+       "node_id": "trna_t6a_synthase_activity",
+       "label": "tRNA N(6)-L-threonylcarbamoyladenine synthase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0061711"
+      },
+      {
+       "node_id": "trna_t6a_modification",
+       "label": "tRNA threonylcarbamoyladenosine modification",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0002949"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "cgi121_trna_recruitment_subunit",
+       "predicate": "cooperates in tRNA binding with",
+       "object": "bud32_atpase_kinase_subunit",
+       "description": "Cgi121 binds Bud32 and the tRNA 3' CCA end to promote substrate recruitment to KEOPS.",
+       "evidence": [
+        {
+         "reference": "PMID:38477398",
+         "snippet": "CGI121 promotes the binding of tRNA to KEOPS and potentiates the t6A-catalytic activity of KEOPS.",
+         "notes": "Supports Cgi121 promotion of tRNA binding."
+        }
+       ]
+      },
+      {
+       "subject": "bud32_atpase_kinase_subunit",
+       "predicate": "allosterically activates",
+       "object": "kae1_catalytic_subunit",
+       "description": "Bud32 contacts the tRNA substrate and couples ATP-to-ADP hydrolysis via its C-terminal tail to activate t6A catalysis by Kae1.",
+       "evidence": [
+        {
+         "reference": "PMID:38477398",
+         "snippet": "BUD32 participates in direct binding of tRNA to KEOPS and modulates the t6A-catalytic activity of KEOPS via its C-terminal tail and ATP to ADP hydrolysis.",
+         "notes": "Establishes Bud32 ATP-hydrolysis-mediated regulation of Kae1 activity."
+        }
+       ]
+      },
+      {
+       "subject": "gon7_stabilizing_subunit",
+       "predicate": "binds and stabilizes",
+       "object": "pcc1_dimerization_subunit",
+       "description": "Gon7 associates with Pcc1 in fungal KEOPS to form the pentameric Gon7-Pcc1-Kae1-Bud32-Cgi121 architecture.",
+       "evidence": [
+        {
+         "reference": "PMID:38477398",
+         "snippet": "In archaea and eukaryotes, the evolutionarily conserved KEOPS is composed of four core subunits-Kae1, Bud32, Cgi121 and Pcc1, and a fifth Gon7/Pcc2 that is found in fungi and metazoa.",
+         "notes": "Supports Gon7 association with the core KEOPS complex."
+        }
+       ]
+      },
+      {
+       "subject": "pcc1_dimerization_subunit",
+       "predicate": "scaffolds tRNA-binding assembly with",
+       "object": "kae1_catalytic_subunit",
+       "description": "Pcc1 binds Kae1 and stabilizes the tRNA anticodon loop in the active KEOPS assembly.",
+       "evidence": [
+        {
+         "reference": "PMID:39639027",
+         "snippet": "KEOPS consists of Cgi121, Kae1, Pcc1, Gon7 and the atypical kinase/ATPase Bud32.",
+         "notes": "Confirms Pcc1-Kae1 structural organization in KEOPS."
+        }
+       ]
+      },
+      {
+       "subject": "kae1_catalytic_subunit",
+       "predicate": "constitutes catalytic core of",
+       "object": "ekc_keops_complex",
+       "description": "Kae1 provides the active site of the assembled EKC/KEOPS complex.",
+       "evidence": [
+        {
+         "reference": "PMID:39639027",
+         "snippet": "Kae1 catalyzes the modification of tRNA, but the specific contributions of Bud32 and the other subunits are less clear.",
+         "notes": "Establishes Kae1 as the catalytic subunit of KEOPS."
+        }
+       ]
+      },
+      {
+       "subject": "ekc_keops_complex",
+       "predicate": "enables",
+       "object": "trna_t6a_synthase_activity",
+       "description": "The assembled EKC/KEOPS holoenzyme catalyzes tRNA N(6)-L-threonylcarbamoyladenine synthase activity.",
+       "evidence": [
+        {
+         "reference": "PMID:39639027",
+         "snippet": "The enzyme complex KEOPS (Kinase, Endopeptidase and Other Proteins of Small size) installs the universally conserved and essential N6-threonylcarbamoyl adenosine modification (t6A) on ANN-decoding tRNAs in eukaryotes and in archaea.",
+         "notes": "Directly links KEOPS to tRNA t6A synthase activity."
+        }
+       ]
+      },
+      {
+       "subject": "trna_t6a_synthase_activity",
+       "predicate": "drives",
+       "object": "trna_t6a_modification",
+       "description": "tRNA t6A synthase activity modifies adenosine-37 of ANN-decoding tRNAs.",
+       "evidence": [
+        {
+         "reference": "PMID:38477398",
+         "snippet": "KEOPS cooperates with Sua5/YRDC to catalyze the biosynthesis of tRNA N6-threonylcarbamoyladenosine (t6A), an essential modification needed for fitness of cellular organisms.",
+         "notes": "Links catalytic t6A synthase activity to cellular tRNA t6A modification."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-31T05:52:59Z",
+     "curator": "antigravity",
+     "action": "CREATED_RECORD",
+     "changes": "Added EKC/KEOPS complex (GO:0000408) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "GO:0031391",
    "label": "Elg1 RFC-like complex",
    "structure_category": "OTHER",
@@ -237262,6 +239493,324 @@
    ]
   },
   {
+   "identifier": "GO:0009376",
+   "label": "HslUV protease complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "An ATP-dependent protease complex present in many Bacteria and Eukarya, composed of stacking HslU (ClpY) hexameric AAA+ ATPase rings and HslV (ClpQ) dodecameric peptidase double rings; recognizes, unfolds, and translocates protein substrates such as the cell division inhibitor SulA into the HslV proteolytic chamber.",
+   "definition_source": "GO:0009376",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "ClpYQ protease complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:0009376"
+    }
+   ],
+   "parent_structures": [
+    "GO:0031597"
+   ],
+   "part_of": [
+    "GO:0005737"
+   ],
+   "xrefs": [
+    "ComplexPortal:CPX-2104"
+   ],
+   "components": [
+    {
+     "component_id": "hslu_atpase_subunit",
+     "label": "ATP-dependent protease ATPase subunit HslU",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR050052",
+     "gene_symbols": [
+      "hslU",
+      "clpY"
+     ],
+     "stoichiometry": "6 or 12",
+     "essentiality": "ESSENTIAL",
+     "role": "Hexameric AAA+ ATPase chaperone ring that recognizes, unfolds, and translocates polypeptide substrates through its central pore into HslV.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0A6H5",
+       "protein_label": "ATP-dependent protease ATPase subunit HslU",
+       "gene_symbol": "hslU",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 HslU (ClpY) AAA+ unfoldase subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P0A6H5",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 HslU."
+        },
+        {
+         "reference": "PMID:21803990",
+         "snippet": "In Escherichia coli, ClpYQ (HslUV) is a two-component ATP-dependent protease composed of ClpY (HslU), an ATPase with unfolding activity, and ClpQ (HslV), a peptidase.",
+         "notes": "Establishes ClpY (HslU) as the ATPase unfoldase subunit in E. coli."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0009376",
+       "notes": "GO:0009376 defines the HslUV protease complex composed of HslU and HslV."
+      },
+      {
+       "reference": "InterPro:IPR050052",
+       "notes": "InterPro family entry for ATP-dependent protease ATPase subunit HslU."
+      },
+      {
+       "reference": "PMID:20837023",
+       "snippet": "HslU hexamers recognize and unfold native protein substrates and then translocate the polypeptide into the degradation chamber of the HslV peptidase.",
+       "notes": "Demonstrates HslU hexamer substrate recognition, unfolding, and translocation."
+      }
+     ]
+    },
+    {
+     "component_id": "hslv_peptidase_subunit",
+     "label": "ATP-dependent protease subunit HslV",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR022281",
+     "gene_symbols": [
+      "hslV",
+      "clpQ"
+     ],
+     "stoichiometry": "12",
+     "essentiality": "ESSENTIAL",
+     "role": "Dodecameric N-terminal threonine peptidase double ring forming the central proteolytic chamber of the HslUV complex.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0A7B8",
+       "protein_label": "ATP-dependent protease subunit HslV",
+       "gene_symbol": "hslV",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 HslV (ClpQ) peptidase subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P0A7B8",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 HslV."
+        },
+        {
+         "reference": "PMID:21803990",
+         "snippet": "In the ClpYQ proteolytic complex, the hexameric rings of ClpY (HslU) are responsible for protein recognition, unfolding, and translocation into the proteolytic inner chamber of the dodecameric ClpQ (HslV).",
+         "notes": "Establishes dodecameric ClpQ (HslV) as the proteolytic inner chamber."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:0009376",
+       "notes": "GO:0009376 defines the HslUV protease complex."
+      },
+      {
+       "reference": "InterPro:IPR022281",
+       "notes": "InterPro entry for ATP-dependent protease subunit HslV."
+      },
+      {
+       "reference": "PMID:21803990",
+       "snippet": "In Escherichia coli, ClpYQ (HslUV) is a two-component ATP-dependent protease composed of ClpY (HslU), an ATPase with unfolding activity, and ClpQ (HslV), a peptidase.",
+       "notes": "Confirms HslV as the peptidase component of the E. coli HslUV complex."
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2",
+     "taxon_label": "Bacteria",
+     "presence": "COMMON",
+     "note": "Widespread across bacterial lineages as a two-component AAA+ protease complex.",
+     "reference": "PMID:20837023"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Reference bacterial strain in which HslUV (ClpYQ) hexamer-dodecamer architecture and processive degradation of SulA were characterized.",
+     "reference": "PMID:21803990"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "atp_dependent_peptidase_activity",
+     "label": "ATP-dependent peptidase activity",
+     "grounding": "GO:0004176",
+     "description": "Catalyzes ATP-dependent unfolding and peptide bond hydrolysis of intracellular protein substrates inside the HslV chamber.",
+     "evidence": [
+      {
+       "reference": "GO:0004176",
+       "notes": "GO molecular-function term for ATP-dependent peptidase activity."
+      },
+      {
+       "reference": "PMID:21803990",
+       "snippet": "These two central loops of ClpY are in the center of its hexameric ring in which the energy of ATP hydrolysis allows substrate translocation and then degradation by ClpQ.",
+       "notes": "Shows coupling of HslU ATP hydrolysis to polypeptide translocation and HslV proteolysis."
+      }
+     ]
+    },
+    {
+     "function_id": "proteolysis",
+     "label": "proteolysis",
+     "grounding": "GO:0006508",
+     "description": "Mediates intracellular protein quality control and turnover of regulatory substrates such as the cell division inhibitor SulA.",
+     "evidence": [
+      {
+       "reference": "GO:0006508",
+       "notes": "GO biological-process term for proteolysis."
+      },
+      {
+       "reference": "PMID:20837023",
+       "snippet": "Proteolysis is important for protein quality control and for the proper regulation of many intracellular processes in prokaryotes and eukaryotes.",
+       "notes": "Establishes the biological role of HslUV in bacterial proteolysis."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:0009376",
+     "notes": "GO cellular-component term for the HslUV protease complex."
+    },
+    {
+     "reference": "ComplexPortal:CPX-2104",
+     "notes": "Complex Portal entry for the Escherichia coli K-12 HslUV protease complex."
+    },
+    {
+     "reference": "PMID:21803990",
+     "snippet": "In Escherichia coli, ClpYQ (HslUV) is a two-component ATP-dependent protease composed of ClpY (HslU), an ATPase with unfolding activity, and ClpQ (HslV), a peptidase.",
+     "notes": "Characterizes subunit roles and stepwise translocation in E. coli ClpYQ (HslUV)."
+    },
+    {
+     "reference": "DOI:10.1128/jb.05128-11",
+     "notes": "DOI for PMID:21803990."
+    },
+    {
+     "reference": "PMID:20837023",
+     "snippet": "The Escherichia coli HslUV protease is a member of a major family of ATP-dependent AAA+ degradation machines.",
+     "notes": "Demonstrates terminal signal recognition and degradation by E. coli HslUV."
+    },
+    {
+     "reference": "DOI:10.1016/j.jmb.2010.09.008",
+     "notes": "DOI for PMID:20837023."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "hsluv_atp_dependent_proteolysis",
+     "title": "HslUV ATP-Dependent Substrate Unfolding and Proteolysis",
+     "description": "HslU hexamers recognize and unfold protein substrates using ATP hydrolysis and translocate them into the HslV dodecameric chamber for proteolysis.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "hslu_atpase_subunit",
+       "label": "ATP-dependent protease ATPase subunit HslU",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR050052",
+       "component_ref": "hslu_atpase_subunit"
+      },
+      {
+       "node_id": "hslv_peptidase_subunit",
+       "label": "ATP-dependent protease subunit HslV",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR022281",
+       "component_ref": "hslv_peptidase_subunit"
+      },
+      {
+       "node_id": "hsluv_protease_complex",
+       "label": "HslUV protease complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:0009376"
+      },
+      {
+       "node_id": "atp_dependent_peptidase_activity",
+       "label": "ATP-dependent peptidase activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0004176"
+      },
+      {
+       "node_id": "proteolysis",
+       "label": "proteolysis",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0006508"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "hslu_atpase_subunit",
+       "predicate": "translocates unfolded polypeptide substrates to",
+       "object": "hslv_peptidase_subunit",
+       "description": "HslU hexameric rings unfold native protein substrates and translocate them through the central pore into the HslV peptidase chamber.",
+       "evidence": [
+        {
+         "reference": "PMID:20837023",
+         "snippet": "HslU hexamers recognize and unfold native protein substrates and then translocate the polypeptide into the degradation chamber of the HslV peptidase.",
+         "notes": "Directly supports substrate unfolding and translocation from HslU to HslV."
+        }
+       ]
+      },
+      {
+       "subject": "hslv_peptidase_subunit",
+       "predicate": "assembles with HslU into",
+       "object": "hsluv_protease_complex",
+       "description": "Dodecameric HslV peptidase rings dock with ATP-bound HslU hexamers to form the active HslUV protease complex.",
+       "evidence": [
+        {
+         "reference": "PMID:21803990",
+         "snippet": "Our in vivo study of the ClpY mutants also revealed that an ATP-binding site in domain N, separate from its role in polypeptide (ClpY) oligomerization, is required for complex formation with ClpQ.",
+         "notes": "Supports ATP-dependent assembly of HslU (ClpY) and HslV (ClpQ) into HslUV."
+        }
+       ]
+      },
+      {
+       "subject": "hsluv_protease_complex",
+       "predicate": "enables",
+       "object": "atp_dependent_peptidase_activity",
+       "description": "The assembled HslUV complex couples ATP hydrolysis to processive peptidase cleavage of translocated polypeptides.",
+       "evidence": [
+        {
+         "reference": "PMID:21803990",
+         "snippet": "These two central loops of ClpY are in the center of its hexameric ring in which the energy of ATP hydrolysis allows substrate translocation and then degradation by ClpQ.",
+         "notes": "Supports ATP-dependent peptidase catalysis by the ClpYQ (HslUV) complex."
+        }
+       ]
+      },
+      {
+       "subject": "atp_dependent_peptidase_activity",
+       "predicate": "drives",
+       "object": "proteolysis",
+       "description": "ATP-dependent peptidase activity of HslUV mediates intracellular proteolysis and regulatory protein turnover.",
+       "evidence": [
+        {
+         "reference": "PMID:20837023",
+         "snippet": "Proteolysis is important for protein quality control and for the proper regulation of many intracellular processes in prokaryotes and eukaryotes.",
+         "notes": "Links HslUV ATP-dependent peptidase activity to cellular proteolysis."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-31T05:52:58Z",
+     "curator": "antigravity",
+     "action": "CREATED_RECORD",
+     "changes": "Added HslUV protease complex (GO:0009376) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
+    }
+   ]
+  },
+  {
    "identifier": "cellstructuremech:hsp78_chaperone_complex",
    "label": "Hsp78 chaperone complex",
    "structure_category": "OTHER",
@@ -244305,6 +246854,469 @@
        ]
       }
      ]
+    }
+   ]
+  },
+  {
+   "identifier": "GO:1990060",
+   "label": "maltose transport complex",
+   "structure_category": "OTHER",
+   "structure_kind": "MULTIPROTEIN_COMPLEX",
+   "definition": "A pentameric ATP-binding cassette (ABC) importer complex (MalEFGK2) in the bacterial inner membrane and periplasm, composed of the periplasmic maltose/maltodextrin-binding protein MalE, heterodimeric transmembrane permease subunits MalF and MalG, and homodimeric ATP-binding cassette subunits MalK2.",
+   "definition_source": "GO:1990060",
+   "mapping_status": "PROPOSED",
+   "synonyms": [
+    {
+     "synonym_text": "maltose ABC transporter complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1990060"
+    },
+    {
+     "synonym_text": "maltose ATP-binding cassette transporter complex",
+     "synonym_type": "EXACT_SYNONYM",
+     "source": "GO:1990060"
+    }
+   ],
+   "parent_structures": [
+    "GO:0043190"
+   ],
+   "part_of": [
+    "GO:0005886"
+   ],
+   "xrefs": [
+    "ComplexPortal:CPX-1932"
+   ],
+   "components": [
+    {
+     "component_id": "male_periplasmic_binding_protein",
+     "label": "Maltose/maltodextrin-binding periplasmic protein MalE",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR006059",
+     "gene_symbols": [
+      "malE"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Periplasmic substrate-binding protein that captures maltose and maltodextrins and docks onto the MalFG periplasmic loops to stimulate MalK2 ATPase activity and substrate translocation.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P0AEX9",
+       "protein_label": "Maltose/maltodextrin-binding periplasmic protein",
+       "gene_symbol": "malE",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 MalE periplasmic maltose-binding protein.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P0AEX9",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 MalE."
+        },
+        {
+         "reference": "PMID:29194754",
+         "snippet": "In addition to the TMDs and NBDs, the periplasmic maltose binding protein MalE captures maltose and shuttle it to the transporter.",
+         "notes": "Establishes MalE as the periplasmic maltose-capturing subunit in E. coli."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:1990060",
+       "notes": "GO:1990060 defines the pentameric maltose transport complex containing MalE."
+      },
+      {
+       "reference": "InterPro:IPR006059",
+       "notes": "InterPro entry for periplasmic maltose-binding protein MalE."
+      },
+      {
+       "reference": "PMID:26338707",
+       "snippet": "We conclude that open-state MalE stabilizes MalFGK2 in the outward-facing conformation until maltose triggers return to the inward-facing state for substrate and Pi release.",
+       "notes": "Demonstrates the mechanistic requirement for MalE in the MalFGK2 cycle."
+      }
+     ]
+    },
+    {
+     "component_id": "malf_permease_subunit",
+     "label": "Maltose/maltodextrin transport system permease protein MalF",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR035277",
+     "gene_symbols": [
+      "malF"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Integral inner-membrane transmembrane permease subunit that pairs with MalG to form the maltose translocation pathway and contacts MalE via its large periplasmic P2 domain.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P02916",
+       "protein_label": "Maltose/maltodextrin transport system permease protein MalF",
+       "gene_symbol": "malF",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 MalF transmembrane permease subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P02916",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 MalF."
+        },
+        {
+         "reference": "PMID:29194754",
+         "snippet": "This protein is composed of heterodimeric transmembrane domains (TMDs) MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2 .",
+         "notes": "Establishes MalF as one of the heterodimeric transmembrane domains."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:1990060",
+       "notes": "GO:1990060 defines MalF as a transmembrane permease subunit of the maltose transport complex."
+      },
+      {
+       "reference": "InterPro:IPR035277",
+       "notes": "InterPro entry for MalF permease subunit."
+      },
+      {
+       "reference": "PMID:29194754",
+       "snippet": "MalE binding suppressed the fluctuation of the TMDs and MalF periplasmic region (MalF-P2), and thus prevented the incorrect arrangement of the MalF C-terminal (TM8) helix.",
+       "notes": "Characterizes the MalF-P2 periplasmic domain and TM8 helix in MalFGK2-E."
+      }
+     ]
+    },
+    {
+     "component_id": "malg_permease_subunit",
+     "label": "Maltose/maltodextrin transport system permease protein MalG",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR050901",
+     "gene_symbols": [
+      "malG"
+     ],
+     "stoichiometry": "1",
+     "essentiality": "ESSENTIAL",
+     "role": "Integral inner-membrane transmembrane permease subunit that forms the heterodimeric transmembrane channel with MalF.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P68183",
+       "protein_label": "Maltose/maltodextrin transport system permease protein MalG",
+       "gene_symbol": "malG",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 MalG transmembrane permease subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P68183",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 MalG."
+        },
+        {
+         "reference": "PMID:29194754",
+         "snippet": "This protein is composed of heterodimeric transmembrane domains (TMDs) MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2 .",
+         "notes": "Establishes MalG as the partner transmembrane permease subunit in E. coli."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:1990060",
+       "notes": "GO:1990060 defines MalG as a transmembrane permease subunit of the maltose transport complex."
+      },
+      {
+       "reference": "InterPro:IPR050901",
+       "notes": "InterPro entry for MalG permease subunit."
+      },
+      {
+       "reference": "PMID:29194754",
+       "snippet": "This protein is composed of heterodimeric transmembrane domains (TMDs) MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2 .",
+       "notes": "Confirms MalG as part of the heterodimeric transmembrane pore."
+      }
+     ]
+    },
+    {
+     "component_id": "malk_atp_binding_subunit",
+     "label": "Maltose/maltodextrin import ATP-binding protein MalK",
+     "component_type": "PROTEIN",
+     "component_role": "CONSTITUENT",
+     "grounding": "InterPro:IPR015855",
+     "gene_symbols": [
+      "malK"
+     ],
+     "stoichiometry": "2",
+     "essentiality": "ESSENTIAL",
+     "role": "Homodimeric nucleotide-binding domain (NBD) subunit that binds and hydrolyzes ATP to power alternating-access conformational transitions of the MalFG transmembrane core.",
+     "protein_examples": [
+      {
+       "uniprot_id": "UniProtKB:P68187",
+       "protein_label": "Maltose/maltodextrin import ATP-binding protein MalK",
+       "gene_symbol": "malK",
+       "taxon_id": "NCBITaxon:83333",
+       "taxon_label": "Escherichia coli K-12",
+       "entry_status": "REVIEWED",
+       "retrieved_on": "2026-10-30",
+       "role": "Reviewed Escherichia coli K-12 MalK ATP-binding subunit.",
+       "evidence": [
+        {
+         "reference": "UniProtKB:P68187",
+         "notes": "Reviewed Swiss-Prot entry for Escherichia coli K-12 MalK."
+        },
+        {
+         "reference": "PMID:29194754",
+         "snippet": "In this study, we performed all-atom molecular dynamics (MD) simulations on the maltose transporter and found that both the binding of MalE to the periplasmic side of the TMDs and binding of ATP to the MalK2 are necessary to facilitate the conformational change from the inward-facing state to the occluded state, in which MalK2 is completely dimerized.",
+         "notes": "Shows ATP-dependent MalK2 dimerization driving conformational transitions."
+        }
+       ]
+      }
+     ],
+     "evidence": [
+      {
+       "reference": "GO:1990060",
+       "notes": "GO:1990060 defines the MalK homodimer as the ATP-binding cassette component."
+      },
+      {
+       "reference": "InterPro:IPR015855",
+       "notes": "InterPro entry for MalK OB-fold C-terminal regulatory domain."
+      },
+      {
+       "reference": "PMID:29194754",
+       "snippet": "This protein is composed of heterodimeric transmembrane domains (TMDs) MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2 .",
+       "notes": "Confirms homodimeric MalK2 nucleotide-binding domains."
+      }
+     ]
+    }
+   ],
+   "taxonomic_distribution": [
+    {
+     "taxon_id": "NCBITaxon:2",
+     "taxon_label": "Bacteria",
+     "presence": "COMMON",
+     "note": "Conserved across Enterobacterales and diverse Gram-negative and Gram-positive bacteria for maltose and maltodextrin uptake.",
+     "reference": "PMID:29194754"
+    }
+   ],
+   "canonical_examples": [
+    {
+     "taxon_id": "NCBITaxon:83333",
+     "taxon_label": "Escherichia coli K-12",
+     "note": "Model type I ABC importer (MalEFGK2) in which alternating-access crystallographic states and pre-steady-state ATPase coupling were defined.",
+     "reference": "PMID:26338707"
+    }
+   ],
+   "functions": [
+    {
+     "function_id": "abc_maltose_transporter_activity",
+     "label": "ABC-type maltose transporter activity",
+     "grounding": "GO:0015423",
+     "description": "Couples ATP binding and hydrolysis by MalK2 to active translocation of maltose and maltodextrins across the inner membrane.",
+     "evidence": [
+      {
+       "reference": "GO:0015423",
+       "notes": "GO molecular-function term for ABC-type maltose transporter activity."
+      },
+      {
+       "reference": "PMID:26338707",
+       "snippet": "We conclude that open-state MalE stabilizes MalFGK2 in the outward-facing conformation until maltose triggers return to the inward-facing state for substrate and Pi release.",
+       "notes": "Demonstrates the alternating-access ABC maltose transport cycle."
+      }
+     ]
+    },
+    {
+     "function_id": "maltose_transport",
+     "label": "maltose transport",
+     "grounding": "GO:0015768",
+     "description": "Imports periplasmic maltose and maltodextrins into the bacterial cytoplasm for catabolism.",
+     "evidence": [
+      {
+       "reference": "GO:0015768",
+       "notes": "GO biological-process term for maltose transport."
+      },
+      {
+       "reference": "PMID:29194754",
+       "snippet": "In addition to the TMDs and NBDs, the periplasmic maltose binding protein MalE captures maltose and shuttle it to the transporter.",
+       "notes": "Establishes maltose uptake mediated by MalEFGK2."
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "reference": "GO:1990060",
+     "notes": "GO cellular-component term for the maltose transport complex."
+    },
+    {
+     "reference": "ComplexPortal:CPX-1932",
+     "notes": "Complex Portal entry for the Escherichia coli K-12 MalEFGK2 maltose transport complex."
+    },
+    {
+     "reference": "PMID:26338707",
+     "snippet": "We conclude that open-state MalE stabilizes MalFGK2 in the outward-facing conformation until maltose triggers return to the inward-facing state for substrate and Pi release.",
+     "notes": "Dissects pre-steady-state coupling of MalE and maltose to MalFGK2 ATP hydrolysis."
+    },
+    {
+     "reference": "DOI:10.1074/jbc.m115.671826",
+     "notes": "DOI for PMID:26338707."
+    },
+    {
+     "reference": "PMID:29194754",
+     "snippet": "The Escherichia coli maltose transporter MalFGK2 -E belongs to the protein superfamily of ATP-binding cassette (ABC) transporters.",
+     "notes": "Characterizes MalE docking and ATP-induced MalK2 dimerization in MalEFGK2."
+    },
+    {
+     "reference": "DOI:10.1002/prot.25433",
+     "notes": "DOI for PMID:29194754."
+    }
+   ],
+   "causal_graphs": [
+    {
+     "graph_id": "malefgk2_alternating_access_transport",
+     "title": "MalEFGK2 Alternating-Access Maltose Import Cycle",
+     "description": "MalE captures periplasmic maltose and docks with the MalF-MalG transmembrane heterodimer, cooperating with MalK2 dimerization and ATP hydrolysis to drive maltose import.",
+     "graph_kind": "FUNCTION",
+     "scope_status": "MECHANISTIC",
+     "nodes": [
+      {
+       "node_id": "male_periplasmic_binding_protein",
+       "label": "Maltose/maltodextrin-binding periplasmic protein MalE",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR006059",
+       "component_ref": "male_periplasmic_binding_protein"
+      },
+      {
+       "node_id": "malf_permease_subunit",
+       "label": "Maltose/maltodextrin transport system permease protein MalF",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR035277",
+       "component_ref": "malf_permease_subunit"
+      },
+      {
+       "node_id": "malg_permease_subunit",
+       "label": "Maltose/maltodextrin transport system permease protein MalG",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR050901",
+       "component_ref": "malg_permease_subunit"
+      },
+      {
+       "node_id": "malk_atp_binding_subunit",
+       "label": "Maltose/maltodextrin import ATP-binding protein MalK",
+       "node_type": "GENE_OR_PROTEIN",
+       "grounding": "InterPro:IPR015855",
+       "component_ref": "malk_atp_binding_subunit"
+      },
+      {
+       "node_id": "maltose_transport_complex",
+       "label": "maltose transport complex",
+       "node_type": "STRUCTURE",
+       "grounding": "GO:1990060"
+      },
+      {
+       "node_id": "abc_maltose_transporter_activity",
+       "label": "ABC-type maltose transporter activity",
+       "node_type": "MOLECULAR_FUNCTION",
+       "grounding": "GO:0015423"
+      },
+      {
+       "node_id": "maltose_transport",
+       "label": "maltose transport",
+       "node_type": "BIOLOGICAL_PROCESS",
+       "grounding": "GO:0015768"
+      }
+     ],
+     "edges": [
+      {
+       "subject": "male_periplasmic_binding_protein",
+       "predicate": "binds periplasmic region of",
+       "object": "malf_permease_subunit",
+       "description": "Periplasmic MalE docks onto the MalF-P2 region and transmembrane domains, preventing MalF TM8 helix intrusion into the translocation pathway.",
+       "evidence": [
+        {
+         "reference": "PMID:29194754",
+         "snippet": "MalE binding suppressed the fluctuation of the TMDs and MalF periplasmic region (MalF-P2), and thus prevented the incorrect arrangement of the MalF C-terminal (TM8) helix.",
+         "notes": "Demonstrates MalE interaction with MalF-P2 and stabilization of TM8."
+        }
+       ]
+      },
+      {
+       "subject": "malf_permease_subunit",
+       "predicate": "forms heterodimeric transmembrane pore with",
+       "object": "malg_permease_subunit",
+       "description": "MalF and MalG assemble as heterodimeric transmembrane domains forming the substrate translocation pathway.",
+       "evidence": [
+        {
+         "reference": "PMID:29194754",
+         "snippet": "This protein is composed of heterodimeric transmembrane domains (TMDs) MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2 .",
+         "notes": "Supports heterodimeric assembly of MalF and MalG."
+        }
+       ]
+      },
+      {
+       "subject": "malk_atp_binding_subunit",
+       "predicate": "couples ATP dimerization with MalFG in",
+       "object": "maltose_transport_complex",
+       "description": "ATP binding to homodimeric MalK2 together with MalE docking drives closure of MalK2 and transition of MalEFGK2 to the occluded/outward-facing state.",
+       "evidence": [
+        {
+         "reference": "PMID:29194754",
+         "snippet": "In this study, we performed all-atom molecular dynamics (MD) simulations on the maltose transporter and found that both the binding of MalE to the periplasmic side of the TMDs and binding of ATP to the MalK2 are necessary to facilitate the conformational change from the inward-facing state to the occluded state, in which MalK2 is completely dimerized.",
+         "notes": "Supports cooperative action of MalK2 ATP binding and MalE docking in MalEFGK2."
+        }
+       ]
+      },
+      {
+       "subject": "malg_permease_subunit",
+       "predicate": "constitutes transmembrane core of",
+       "object": "maltose_transport_complex",
+       "description": "MalG together with MalF forms the inner-membrane translocation channel of the maltose transport complex.",
+       "evidence": [
+        {
+         "reference": "PMID:29194754",
+         "snippet": "This protein is composed of heterodimeric transmembrane domains (TMDs) MalF and MalG, and the homodimeric nucleotide-binding domains (NBDs) MalK2 .",
+         "notes": "Confirms MalG as an essential transmembrane domain of the complex."
+        }
+       ]
+      },
+      {
+       "subject": "maltose_transport_complex",
+       "predicate": "enables",
+       "object": "abc_maltose_transporter_activity",
+       "description": "The assembled MalEFGK2 complex catalyzes maltose-stimulated ATP cleavage and alternating-access substrate translocation.",
+       "evidence": [
+        {
+         "reference": "PMID:26338707",
+         "snippet": "We conclude that open-state MalE stabilizes MalFGK2 in the outward-facing conformation until maltose triggers return to the inward-facing state for substrate and Pi release.",
+         "notes": "Establishes the catalytic mechanism of ABC-type maltose transporter activity."
+        }
+       ]
+      },
+      {
+       "subject": "abc_maltose_transporter_activity",
+       "predicate": "drives",
+       "object": "maltose_transport",
+       "description": "ABC-type maltose transporter activity imports maltose across the inner membrane into the bacterial cytoplasm.",
+       "evidence": [
+        {
+         "reference": "PMID:26338707",
+         "snippet": "This concerted action explains why ATPase activity of MalFGK2 depends on maltose, and why MalE is essential for transport.",
+         "notes": "Links MalEFGK2 ATPase cycle directly to maltose transport."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "curation_history": [
+    {
+     "timestamp": "2026-10-31T05:52:59Z",
+     "curator": "antigravity",
+     "action": "CREATED_RECORD",
+     "changes": "Added maltose transport complex (GO:1990060) with InterPro-grounded components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature snippets, and a mechanistic causal graph.",
+     "llm_assisted": true
     }
    ]
   },
