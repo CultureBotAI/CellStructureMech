@@ -1,0 +1,896 @@
+schema_version: 1.0.0
+review_id: 20261022T014654Z-fungal-type-vacuole-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Fungal type vacuole identity, compartment and source review
+started_at: '2026-10-22T01:27:38Z'
+finished_at: '2026-10-22T01:46:54Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: No concrete curation defect observed in the fungal type vacuole record within
+  the explicitly bounded source scope.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    sha256: d447fe7bc41bcf0749629f12affde731c10286f9efbb170efbf81bc27b975016
+    role: target
+  - path: data/structures/membrane_organelle/fungal_type_vacuole_lumen.yaml
+    sha256: ef0fef76aaa4813b13015b2fc8b1029f479aa1b997e96a1d7d13950e355eb3aa
+    role: context
+  - path: data/structures/membrane_organelle/fungal_type_vacuole_membrane.yaml
+    sha256: 2436643a28b07f28373a3c9d61360377b61b5e8803b0b6bef5b44ec32f1bfc51
+    role: context
+  - path: data/structures/membrane_organelle/vacuole.yaml
+    sha256: 7db6bf4c90e74fed8acf83d164143fe3ef294c46012b631a01c1d241f05f370d
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0000324
+  path: data/structures/membrane_organelle/fungal_type_vacuole.yaml
+  label: fungal-type vacuole
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire single target: exact structure identity, hierarchy, material/protein
+    examples, organisms, source claims and all graph edges.'
+  selection: Target 3 of batch twenty-nine, strict uncovered path order from fresh
+    origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0000324
+checks:
+- check_id: native-verify
+  name: Native protein verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  command: /private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    --verify
+  exit_code: 0
+  summary: Native check passed; claim-level membership assessed independently.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  command: /private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native check passed; claim-level membership assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  command: just validate data/structures/membrane_organelle/fungal_type_vacuole.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  command: just validate-strict data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/fungal_type_vacuole-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0000324
+  summary: No expression-module dataset or inference is used. Physical compartment,
+    protein-identity and source-localization evidence are the applicable sources.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - protein-contract
+  - root29-sources-go
+  - root29-sources-tax4932
+  - root29-sources-li2009-meta
+  - root29-sources-huh2003-meta
+  - root29-sources-matsumoto2013-meta
+  - root29-sources-parzych2018-meta
+  - root29-sources-GO0000324-ancestors
+  - root29-sources-li2009-numeric
+  - root29-sources-tax559292
+  - root29-sources-protein-P07267
+  - root29-sources-protein-P09232
+  - root29-sources-protein-P00729
+  - root29-sources-query-PEP4-true
+  - root29-sources-query-PEP4-false
+  - root29-sources-query-PRB1-true
+  - root29-sources-query-PRB1-false
+  - root29-sources-query-PRC1-true
+  - root29-sources-query-PRC1-false
+  - root29-sources-parzych2018-numeric
+  - root29-sources-parzych2018-fig1
+  - neighbor-vacuole
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  summary: '10 of 13 collected target identifiers returned OK. PMID:14562095: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID14562095, DOI10.1038/nature02026 and Global analysis of protein localization
+    in budding yeast. Bibliographic identity is resolved; scientific scope remains
+    restricted to the separately documented abstract/body inspections.; PMID:23708375:
+    UNREACHABLE; The bulk PMID transport returned414; the independently retrieved
+    exact MED record verifies PMID23708375, DOI10.1007/s00709-013-0510-2 and Organelle
+    acidification is important for localisation of vacuolar proteins in Saccharomyces
+    cerevisiae. Bibliographic identity is resolved; scientific scope remains restricted
+    to the separately documented abstract/body inspections.; PMID:29514932: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID29514932, DOI10.1091/mbc.e17-08-0516 and A newly characterized vacuolar
+    serine carboxypeptidase, Atg42/Ybr139w, is required for normal vacuole function
+    and the terminal steps of autophagy in the yeast Saccharomyces cerevisiae. Bibliographic
+    identity is resolved; scientific scope remains restricted to the separately documented
+    abstract/body inspections. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root29-sources-huh2003-meta
+  - root29-sources-matsumoto2013-meta
+  - root29-sources-parzych2018-meta
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0000324
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/fungal_type_vacuole.yaml
+  locator: Entire target, including history, components, sources, taxonomic examples,
+    functions, all graph edges and discussions
+  accessed_at: '2026-10-22T01:35:05Z'
+  support: context_only
+  summary: Maintained record was fully read. No scientific record, status, history
+    or generated page is edited.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Structure identity, is-a/parthood, component membership and narrow evidence
+    rules
+  accessed_at: '2026-10-22T01:35:05Z'
+  support: context_only
+  summary: Whole organelle, bounding bilayer and internal volume are distinct. Molecular
+    identity and experimental membership are separate assertions.
+- evidence_id: protein-contract
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component essentiality, protein_examples and ProteinExample fields
+  accessed_at: '2026-10-22T01:35:05Z'
+  support: context_only
+  summary: A protein example is a taxon-paired instance whose structure role needs
+    source support. Collective boundary necessity is not a knockout claim for each
+    lipid.
+- evidence_id: root29-sources-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020020,GO:0000324,GO:0005773,GO:0000329,GO:0000328,GO:0005775,GO:0005774,GO:0007035,GO:0016471
+  locator: Complete nine-term native JSON, active flags, definitions, names, synonyms
+    and child relations
+  accessed_at: '2026-10-22T01:31:20.164017Z'
+  support: supports
+  summary: All nine returned active terms were read. GO0020020 denotes the parasite
+    food vacuole with digestive vacuole as exact synonym. GO0000324 defines the fungal
+    vacuole and its storage/degradative functions, lists the membrane and lumen as
+    parts, and has the recorded exact synonym. GO0000328 is an explicit child of vacuolar
+    lumen. GO0000329/0005774 define enclosing bilayers. GO0016471 is the vacuolar
+    V-type ATPase and GO0007035 the acidification process.
+  snapshot_sha256: 75c75e7439d99f4454531b07a1ea3feed59890a6d8820542801a054d23e7d639
+- evidence_id: root29-sources-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: taxId, scientificName, rank, lineage
+  accessed_at: '2026-10-22T01:10:58.502766Z'
+  support: supports
+  summary: Exact native ENA species identity agrees with Saccharomyces cerevisiae4932.
+    The lookup does not measure population prevalence or establish an experimental
+    strain.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root29-sources-li2009-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1016/j.bbamcr.2008.08.003%22
+  locator: Complete selected MED bibliography and abstract; CTX duplicate excluded
+    where present
+  accessed_at: '2026-10-22T01:31:22.508649Z'
+  support: supports
+  summary: 'Exact native MED bibliography: PMID18786576, DOI10.1016/j.bbamcr.2008.08.003,
+    The yeast lysosome-like vacuole: endpoint and crossroads., Li SC, Kane PM.. Explicit
+    review article. Complete abstract describes the Saccharomyces vacuole as an acidic
+    degradative/storage organelle; source sections separately support molecular and
+    functional claims.'
+  snapshot_sha256: a80dfab6ca988c4f031b90afb9ca5816e91805513281ba402d81aad11ac0142e
+- evidence_id: root29-sources-huh2003-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A14562095%20AND%20SRC%3AMED
+  locator: Complete selected MED bibliography and abstract; CTX duplicate excluded
+    where present
+  accessed_at: '2026-10-22T01:31:22.594934Z'
+  support: supports
+  summary: 'Exact native MED bibliography: PMID14562095, DOI10.1038/nature02026, Global
+    analysis of protein localization in budding yeast., Huh WK, Falvo JV, Gerke LC,
+    Carroll AS, Howson RW, Weissman JS, O''Shea EK.. Complete primary abstract describes
+    GFP-tagged yeast localization profiling. This abstract does not independently
+    expose the individual PRC1 microscopy observation; the target specifically attributes
+    the localization citation to UniProt.'
+  snapshot_sha256: 571f7249c52d66a3b53ae05fa04cfe3012ab729c63308d338c745e9f3c1daa72
+- evidence_id: root29-sources-matsumoto2013-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A23708375%20AND%20SRC%3AMED
+  locator: Complete selected MED bibliography and abstract; CTX duplicate excluded
+    where present
+  accessed_at: '2026-10-22T01:31:22.744261Z'
+  support: supports
+  summary: 'Exact native MED bibliography: PMID23708375, DOI10.1007/s00709-013-0510-2,
+    Organelle acidification is important for localisation of vacuolar proteins in
+    Saccharomyces cerevisiae., Matsumoto R, Suzuki K, Ohya Y.. Complete primary abstract
+    describes concanamycin-A inhibition and GFP localization of73 proteins,19 of which
+    relocalized. It does not name PRC1 in the abstract; the exact target note is independently
+    verified as UniProt source attribution.'
+  snapshot_sha256: 8362e9891ffc9c12bf42de09e8eaf9cf04a987bb3d6b8975b50d7cc1e12ad91b
+- evidence_id: root29-sources-parzych2018-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A29514932%20AND%20SRC%3AMED
+  locator: Complete selected MED bibliography and abstract; CTX duplicate excluded
+    where present
+  accessed_at: '2026-10-22T01:31:22.886462Z'
+  support: supports
+  summary: 'Exact native MED bibliography: PMID29514932, DOI10.1091/mbc.e17-08-0516,
+    A newly characterized vacuolar serine carboxypeptidase, Atg42/Ybr139w, is required
+    for normal vacuole function and the terminal steps of autophagy in the yeast Saccharomyces
+    cerevisiae., Parzych KR, Ariosa A, Mari M, Klionsky DJ.. Complete primary abstract
+    identifies Prc1 and Ybr139w functional overlap in vacuolar zymogen processing
+    and terminal autophagy. Original localization Results and Methods were read separately;
+    this is not proof that either protein alone is essential for organelle formation.'
+  snapshot_sha256: 8abdcce31120976262b433845768a2403a000cd0620f57c478e78afa65dbd205
+- evidence_id: root29-sources-GO0000324-ancestors
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000324/ancestors?relations=is_a
+  locator: Complete native ancestors response, query relations=is_a
+  accessed_at: '2026-10-22T01:31:56.628946Z'
+  support: supports
+  summary: Exact is_a ancestor response independently includes GO0005773 vacuole for
+    GO0000324. This verifies the broader parent transitively without inventing a direct
+    ontology edge.
+  snapshot_sha256: 5bdf4d077666402b9a0811de3f14c3c6e1d3003e6a3846faeab7fd4234881232
+- evidence_id: root29-sources-li2009-numeric
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/2906225/
+  locator: Genuine PMC2906225 review body S3/S13/S16/S20/S21; included Fig2/3 captions
+    read, no figure pixels or underlying primary dataset reanalysis
+  accessed_at: '2026-10-22T01:32:07.202194Z'
+  support: supports
+  summary: Read complete sections2.1,4.2,5.1,6.1,6.2. The review explicitly identifies
+    soluble Pep4/CPY/Prb1 proteases, distinguishes membrane proteins and transient
+    degradative cargo, explains endocytic/biosynthetic/autophagic routes, and documents
+    storage of amino acids/ions/polyphosphate. It separates vacuolar Vph1-containing
+    pumps from predominantly Golgi/endosomal Stv1 complexes. Low pH optimizes processing
+    but is not absolutely essential for every hydrolase reaction.
+  snapshot_sha256: 949eb84ba53fa6400a1c205d2459f909e323b5f8eeb58e3672234730830c256b
+- evidence_id: root29-sources-tax559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T01:10:58.507227Z'
+  support: supports
+  summary: Native ENA taxon559292 is Saccharomyces cerevisiae S288C, distinct from
+    species4932. Experimental SEY6210 derivatives in the primary paper are not renamed
+    S288C.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root29-sources-protein-P07267
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P07267.json
+  locator: Primary accession, entryType, names, genes, organism, complete FUNCTION
+    and SUBCELLULAR LOCATION comments
+  accessed_at: '2026-10-22T01:31:20.164757Z'
+  support: supports
+  summary: Exact reviewed P07267 is Saccharopepsin, primary gene PEP4, taxon559292.
+    Native function and vacuolar location agree with the enzyme identity. The existing
+    Li/Kane review independently supports the named soluble lumenal protease, so membership
+    does not rest only on accession seeding.
+  snapshot_sha256: 6ab8cf887f3658175bd074f93fc54b08d297cb408834631f9d245d7ef10664a2
+- evidence_id: root29-sources-protein-P09232
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P09232.json
+  locator: Primary accession, entryType, names, genes, organism, complete FUNCTION
+    and SUBCELLULAR LOCATION comments
+  accessed_at: '2026-10-22T01:31:20.164879Z'
+  support: supports
+  summary: Exact reviewed P09232 is Cerevisin, primary gene PRB1, taxon559292. Native
+    function and vacuolar location agree with the enzyme identity. The existing Li/Kane
+    review independently supports the named soluble lumenal protease, so membership
+    does not rest only on accession seeding.
+  snapshot_sha256: 80f4737105eec9422743d80e1a80067478635f6d161007290de739d40875dc0b
+- evidence_id: root29-sources-protein-P00729
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P00729.json
+  locator: Primary accession, entryType, names, genes, organism, complete FUNCTION
+    and SUBCELLULAR LOCATION comments
+  accessed_at: '2026-10-22T01:31:20.165005Z'
+  support: supports
+  summary: Exact reviewed P00729 is Carboxypeptidase Y, primary gene PRC1, taxon559292.
+    Native Vacuole lumen SL0270 location explicitly cites ECO0000269 PMID14562095/23708375/29514932,
+    exactly matching the three target notes. The separate ATG42/VPS10 note on this
+    entry concerns another named protein and is not transferred to PRC1.
+  snapshot_sha256: 454c42a3ff6f676dd8419bd405ed7e6a2fcb7fa1f7be3afdda99f73a28fd7941
+- evidence_id: root29-sources-query-PEP4-true
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3APEP4%20AND%20taxonomy_id%3A559292%20AND%20reviewed%3Atrue
+  locator: Complete returned result list at size500 and primary/synonym gene tokens
+  accessed_at: '2026-10-22T01:31:20.911568Z'
+  support: supports
+  summary: Bounded gene_exact:PEP4, taxonomy_id:559292, reviewed:true query returned
+    ['P07267']. PEP4 and PRB1 each have one reviewed match; empty unreviewed queries
+    do not establish gene absence.
+  snapshot_sha256: c60151d7a91a385357f76bd63f62f5719500d420b37d8beabe4a5afa5d87e6c6
+- evidence_id: root29-sources-query-PEP4-false
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3APEP4%20AND%20taxonomy_id%3A559292%20AND%20reviewed%3Afalse
+  locator: Complete returned result list at size500 and primary/synonym gene tokens
+  accessed_at: '2026-10-22T01:31:21.000165Z'
+  support: supports
+  summary: Bounded gene_exact:PEP4, taxonomy_id:559292, reviewed:false query returned
+    []. PEP4 and PRB1 each have one reviewed match; empty unreviewed queries do not
+    establish gene absence.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root29-sources-query-PRB1-true
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3APRB1%20AND%20taxonomy_id%3A559292%20AND%20reviewed%3Atrue
+  locator: Complete returned result list at size500 and primary/synonym gene tokens
+  accessed_at: '2026-10-22T01:31:21.141165Z'
+  support: supports
+  summary: Bounded gene_exact:PRB1, taxonomy_id:559292, reviewed:true query returned
+    ['P09232']. PEP4 and PRB1 each have one reviewed match; empty unreviewed queries
+    do not establish gene absence.
+  snapshot_sha256: bee520e9e96c59f6e027078818963d74c583e93a54601826b6180ff486e80298
+- evidence_id: root29-sources-query-PRB1-false
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3APRB1%20AND%20taxonomy_id%3A559292%20AND%20reviewed%3Afalse
+  locator: Complete returned result list at size500 and primary/synonym gene tokens
+  accessed_at: '2026-10-22T01:31:21.727449Z'
+  support: supports
+  summary: Bounded gene_exact:PRB1, taxonomy_id:559292, reviewed:false query returned
+    []. PEP4 and PRB1 each have one reviewed match; empty unreviewed queries do not
+    establish gene absence.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root29-sources-query-PRC1-true
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3APRC1%20AND%20taxonomy_id%3A559292%20AND%20reviewed%3Atrue
+  locator: Complete returned result list at size500 and primary/synonym gene tokens
+  accessed_at: '2026-10-22T01:31:21.045308Z'
+  support: supports
+  summary: Bounded gene_exact:PRC1, taxonomy_id:559292, reviewed:true query returned
+    ['P00729', 'P21242']. PRC1 reviewed query matches primary PRC1/P00729 and PRE10/P21242
+    via PRC1 synonym. The target says representative for P00729, not unique reviewed
+    result; exact primary-gene/protein identity resolves the ambiguity.
+  snapshot_sha256: 892d31f34b90ad6aae32bc6ab1289a4dbdf8248d7a514f3a2e8696c3d41b22d1
+- evidence_id: root29-sources-query-PRC1-false
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=gene_exact%3APRC1%20AND%20taxonomy_id%3A559292%20AND%20reviewed%3Afalse
+  locator: Complete returned result list at size500 and primary/synonym gene tokens
+  accessed_at: '2026-10-22T01:31:21.128316Z'
+  support: supports
+  summary: Bounded gene_exact:PRC1, taxonomy_id:559292, reviewed:false query returned
+    []. PEP4 and PRB1 each have one reviewed match; empty unreviewed queries do not
+    establish gene absence.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+- evidence_id: root29-sources-parzych2018-numeric
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/5921575/
+  locator: Original primary PMC5921575 body sec3/4/7/9/11 and included Fig1–3 captions/Tables1/2;
+    other Results, supplemental images and raw data not fully audited
+  accessed_at: '2026-10-22T01:32:07.202394Z'
+  support: supports
+  summary: Read complete Results sec3/4, Discussion sec7, Strains/media sec9 includingTables1/2,
+    and microscopy sec11. Direct Prc1-GFP comparisons support soluble lumenal localization
+    in growth/starvation; Fig1 separates luminal GFP from FM4-64 boundary dye. Methods
+    name SEY6210 and derivatives including KPY384/385, not an exact S288C experimental
+    strain. Double-mutant defects and compensation do not prove each hydrolase necessary
+    for vacuole formation.
+  snapshot_sha256: 4885ce27b8773ccd6bd3e558ba555c260e3cf4fccc53fcf5d24517efeaa9b87a
+- evidence_id: root29-sources-parzych2018-fig1
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/505f/5921575/161d795749a8/mbc-29-1089-g001.jpg
+  locator: Complete original Fig1 pixels, interpreted with its caption and study Methods
+  accessed_at: '2026-10-22T01:32:41.035892Z'
+  support: supports
+  summary: Original Fig1A–E pixels viewed. Prc1-GFP and Ybr139w-GFP signals occupy
+    lumenal regions under growing/starvation conditions, distinct from FM4-64 limiting
+    membrane, with line profiles; Ybr139w GFP-cleavage blot is not misassigned to
+    Prc1. No image-derived quantitation is asserted.
+  snapshot_sha256: 2be558fd6289a355e2ab6943bda45b203ec739e0a22b8aaeb4058be27d9ded00
+- evidence_id: neighbor-vacuole
+  kind: record_content
+  reference: data/structures/membrane_organelle/vacuole.yaml
+  locator: Lines1–70 identity, hierarchy and initial source context
+  accessed_at: '2026-10-22T01:35:05Z'
+  support: context_only
+  summary: Named broader compartment resolves to the intended maintained record; this
+    bounded neighbor inspection is not a full review of that separate record.
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    --verify
+  locator: Entire captured native focused output
+  accessed_at: '2026-10-22T01:31:24.612848Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    --causal-graphs
+  locator: Entire captured native focused output
+  accessed_at: '2026-10-22T01:31:25.180204Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/fungal_type_vacuole.yaml  (GO:0000324)\n\
+    \  yeast_fungal_vacuole_storage_and_degradation\tacid_hydrolases\tCOVERED\t->acid_hydrolases\
+    \ (UniProtKB:P07267, UniProtKB:P09232, UniProtKB:P00729)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     1  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     1  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: e7efbc62941a2ec7ab1762a1b02eecc60e7822f33d2a0374f1e9f672d833eba7
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/fungal_type_vacuole.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:27:39Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/fungal_type_vacuole.yaml'
+  snapshot_sha256: bf242549f49ffcd47977f0c1a4725b4d76f3b518b43f5b0faae9cb04e83a4258
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/fungal_type_vacuole.yaml
+    --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/fungal_type_vacuole-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:27:41Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/fungal_type_vacuole.yaml\
+    \ --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/fungal_type_vacuole-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch29-20261022-_v0k34u7/fungal_type_vacuole-strict.tsv"
+  snapshot_sha256: 389025443a09df84c5af0c692fc2c8d396a6777148a8b45ae92eb929ecc30b3f
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/fungal_type_vacuole.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '10 of 13 collected target identifiers returned OK. PMID:14562095: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID14562095, DOI10.1038/nature02026 and Global analysis of protein localization
+    in budding yeast. Bibliographic identity is resolved; scientific scope remains
+    restricted to the separately documented abstract/body inspections.; PMID:23708375:
+    UNREACHABLE; The bulk PMID transport returned414; the independently retrieved
+    exact MED record verifies PMID23708375, DOI10.1007/s00709-013-0510-2 and Organelle
+    acidification is important for localisation of vacuolar proteins in Saccharomyces
+    cerevisiae. Bibliographic identity is resolved; scientific scope remains restricted
+    to the separately documented abstract/body inspections.; PMID:29514932: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID29514932, DOI10.1091/mbc.e17-08-0516 and A newly characterized vacuolar
+    serine carboxypeptidase, Atg42/Ybr139w, is required for normal vacuole function
+    and the terminal steps of autophagy in the yeast Saccharomyces cerevisiae. Bibliographic
+    identity is resolved; scientific scope remains restricted to the separately documented
+    abstract/body inspections. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Whole, internal volume and boundary identities
+  outcome: supported
+  target_ids:
+  - GO:0000324
+  summary: Exact GO identity denotes the whole fungal vacuole. Vacuole parentage is
+    confirmed transitively; membrane/lumen parts and exact morphology synonym agree.
+    Maintained neighbors retain these distinctions.
+  evidence_ids:
+  - record
+  - root29-sources-go
+  - policy
+  - root29-sources-GO0000324-ancestors
+  - root29-sources-li2009-numeric
+  - root29-sources-parzych2018-numeric
+  - root29-sources-parzych2018-fig1
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast scope and source contexts
+  outcome: supported
+  target_ids:
+  - GO:0000324
+  summary: Species4932 is exact and Li/Kane supports the Saccharomyces example and
+    qualitative occurrence. Three taxon559292 accessions are correct reference-strain
+    instances, while Parzych experiments explicitly use SEY6210 derivatives. UniProt
+    citation-attribution notes do not claim the source imaged exact S288C.
+  evidence_ids:
+  - record
+  - root29-sources-tax4932
+  - root29-sources-li2009-meta
+  - root29-sources-huh2003-meta
+  - root29-sources-matsumoto2013-meta
+  - root29-sources-parzych2018-meta
+  - root29-sources-tax559292
+  - root29-sources-protein-P07267
+  - root29-sources-protein-P09232
+  - root29-sources-protein-P00729
+  - root29-sources-query-PEP4-true
+  - root29-sources-query-PEP4-false
+  - root29-sources-query-PRB1-true
+  - root29-sources-query-PRB1-false
+  - root29-sources-query-PRC1-true
+  - root29-sources-query-PRC1-false
+  - root29-sources-GO0000324-ancestors
+  - root29-sources-li2009-numeric
+  - root29-sources-parzych2018-numeric
+  - root29-sources-parzych2018-fig1
+- assessment_id: composition
+  area: grounding
+  topic: Appropriately bounded constituent representation
+  outcome: supported
+  target_ids:
+  - GO:0000324
+  summary: The acid-hydrolase cohort spans unrelated enzyme families and is correctly
+    label-only with UNKNOWN essentiality. Pep4, Prb1 and CPY identities and their
+    soluble vacuolar roles are supported by native proteins and Li/Kane6.1; the PRC1
+    alias collision does not invalidate exact P00729. Its three PMID notes accurately
+    describe UniProt ECO attribution.
+  evidence_ids:
+  - record
+  - root29-sources-go
+  - protein-contract
+  - root29-sources-tax559292
+  - root29-sources-protein-P07267
+  - root29-sources-protein-P09232
+  - root29-sources-protein-P00729
+  - root29-sources-query-PEP4-true
+  - root29-sources-query-PEP4-false
+  - root29-sources-query-PRB1-true
+  - root29-sources-query-PRB1-false
+  - root29-sources-query-PRC1-true
+  - root29-sources-query-PRC1-false
+  - root29-sources-GO0000324-ancestors
+  - root29-sources-li2009-numeric
+  - root29-sources-parzych2018-numeric
+  - root29-sources-parzych2018-fig1
+- assessment_id: function
+  area: evidence
+  topic: Storage, degradation and acidification
+  outcome: supported
+  target_ids:
+  - GO:0000324
+  summary: The stored amino acids/ions/polyphosphate and lumenal hydrolysis are directly
+    supported by GO and Li/Kane6.1/6.2. Biosynthetic, endocytic and autophagic routes
+    are supported by4.2 without asserting all delivered cargo is a resident constituent.
+  evidence_ids:
+  - record
+  - root29-sources-go
+  - root29-sources-GO0000324-ancestors
+  - root29-sources-li2009-numeric
+  - root29-sources-parzych2018-numeric
+  - root29-sources-parzych2018-fig1
+- assessment_id: graph
+  area: graph
+  topic: Every target graph edge
+  outcome: supported
+  target_ids:
+  - GO:0000324
+  summary: 'All five NONMECHANISTIC edges are supported: bilayer bounds lumen; fungal
+    vacuole is a vacuole; lumen stores small molecules; hydrolases act there; lumen
+    compartmentalizes degradation. The hydrolase component_ref resolves.'
+  evidence_ids:
+  - record
+  - root29-sources-go
+  - root29-sources-tax559292
+  - root29-sources-protein-P07267
+  - root29-sources-protein-P09232
+  - root29-sources-protein-P00729
+  - root29-sources-query-PEP4-true
+  - root29-sources-query-PEP4-false
+  - root29-sources-query-PRB1-true
+  - root29-sources-query-PRB1-false
+  - root29-sources-query-PRC1-true
+  - root29-sources-query-PRC1-false
+  - root29-sources-GO0000324-ancestors
+  - root29-sources-li2009-numeric
+  - root29-sources-parzych2018-numeric
+  - root29-sources-parzych2018-fig1
+- assessment_id: limits
+  area: evidence
+  topic: Molecular necessity and complete inventories
+  outcome: unknown
+  target_ids:
+  - GO:0000324
+  summary: Neither defining topology nor hydrolysis establishes individual molecular
+    requirements for organelle formation. Li/Kane explicitly cautions that GFP/proteomic
+    localization can include transient degradative cargo. Prc1 and Ybr139w compensation
+    further prevents inferring individual essentiality from double-mutant phenotypes.
+  evidence_ids:
+  - record
+  - root29-sources-go
+  - protein-contract
+  - root29-sources-GO0000324-ancestors
+  - root29-sources-li2009-numeric
+  - root29-sources-parzych2018-numeric
+  - root29-sources-parzych2018-fig1
+- assessment_id: coverage
+  area: completeness
+  topic: Full target, history and optional fields
+  outcome: supported
+  target_ids:
+  - GO:0000324
+  summary: Every maintained target field and graph edge was read. No image asset,
+    numeric physical measurement, trait link or verbatim evidence snippet is asserted
+    in this target. Optional groundings and machinery inventories are not converted
+    into findings. PROPOSED status, existing discussions and historical curation are
+    retained.
+  evidence_ids:
+  - record
+  - policy
+  - root29-sources-go
+  - root29-sources-li2009-meta
+  - root29-sources-huh2003-meta
+  - root29-sources-matsumoto2013-meta
+  - root29-sources-parzych2018-meta
+findings: []
+actions: []
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- COMMON is qualitative occurrence, not a prevalence estimate. Database identity and
+  reference strain are distinct from experimental strain. Historical authorship, earlier
+  reviews and closed issue dispositions are not independently recertified.
+- Original PMC-prefixed URL attempts returned browser challenges despite HTTP200;
+  only genuine numeric article responses are used for body evidence.
+- Li/Kane2009 is a review, with body scope limited to2.1/4.2/5.1/6.1/6.2 and included
+  captions. It supports bounded synthesis; underlying primary datasets and an exhaustive
+  vacuolar proteome are not independently reanalyzed.
+- Huh2003 and Matsumoto2013 were read as complete abstracts only for this target,
+  with exact PRC1 ECO citation attribution verified in native UniProt. Individual
+  Huh images and Matsumoto73-protein dataset were not inspected. Parzych original
+  body scope is sec3/4/7/9/11 and Tables1/2; Fig1 pixels viewed, other figures read
+  through included captions. No complete supplementary audit or S288C-specific replication
+  is claimed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user explicitly authorizes review bundles for every uncovered record, including
+  honest no-finding reviews. Scientific records are unchanged.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
