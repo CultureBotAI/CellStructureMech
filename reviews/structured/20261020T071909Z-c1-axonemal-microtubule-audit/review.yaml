@@ -1,0 +1,487 @@
+schema_version: 1.0.0
+review_id: 20261020T071909Z-c1-axonemal-microtubule-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: C1 axonemal microtubule identity and projection-scaffold review
+started_at: '2026-10-20T07:17:27Z'
+finished_at: '2026-10-20T07:19:09Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact C1 identity, hierarchy, Chlamydomonas scope, six projection attachments
+  and four nonmechanistic graph edges are supported. No concrete curation defect was
+  found.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+    sha256: 2f4f420d4958d3133a60a7b072e517361d7c2c4908acb4e307bd2033095f18f4
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990719
+  path: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+  label: C1 axonemal microtubule
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+    role: maintained scientific record
+scope:
+  description: Entire maintained record; native GO/taxon records and the2013 primary
+    reconstruction’s Results, relevant Discussion and sample/processing Methods.
+  selection: Tenth unreviewed path of batch4.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990719
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990719
+  command: just validate data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990719
+  command: just validate-strict data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+    --out /private/tmp/cellstructure-batch4-20261019-QtBQNE/c1_axonemal_microtubule-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990719
+  summary: 7 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990719
+  summary: No matched microbial expression dataset or expression-derived mechanistic
+    assignment is asserted. Primary morphology and native ontology establish the reviewed
+    relationships.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990719
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - c1-go
+  - bridge-paper
+  - bridge-epmc
+  - sheath-taxon
+  - record
+  - identity-search
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990719
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990719
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990719
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990719
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990719
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: c1-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990719,GO:1990720,GO:1990717,GO:0005879,GO:0097540
+  locator: All five native term definitions, synonyms, aspects and child relations
+  accessed_at: '2026-10-20T07:17:58.776411Z'
+  support: supports
+  summary: GO1990719 is active and names the exact C1 microtubule, with broad synonym
+    C1 tubule. The axonemal-microtubule parent lists C1 as is_a, and central pair
+    lists it as part_of. C2 and bridge terms match graph identities; bridge definition
+    explicitly connects the single microtubules.
+  snapshot_sha256: 0a3db616cf68ce6e2ac31888f639cbb1212fc889dbe354aa07916503058c3869
+- evidence_id: bridge-paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3914236.1/PMC3914236.1.xml
+  locator: Results overview, C1 projection Results, C1/C2 contact Results, bridge
+    Discussion and sample/image-processing Methods
+  accessed_at: '2026-10-20T03:42:14.888078Z'
+  support: supports
+  summary: The2013 study resolves C1 projections1a through1f and a bridge network
+    connecting C1/C2. Methods describe twelve Chlamydomonas axonemes from five strains
+    with wild-type central-pair complexes and eight sea-urchin flagella. Projection
+    architecture is compared without implying identical molecular composition.
+  snapshot_sha256: 8ea6c2f20d7cecc7a071669f91afd2d6b2d2aa8681eefb5b001ef22c6b82a7d0
+- evidence_id: bridge-epmc
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1002/cm.21094&format=json&resultType=core
+  locator: Exact publication metadata
+  accessed_at: '2026-10-20T03:41:58.165073Z'
+  support: supports
+  summary: The DOI resolves to Carbajal-Gonzalez etal2013, Conserved structural motifs
+    in the central pair complex of eukaryotic flagella.
+  snapshot_sha256: 99899baa950adcfa150e85483fd760d4addfbe5ff43e56e0aa5eb30f428dafd1
+- evidence_id: sheath-taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3055
+  locator: Native species identity
+  accessed_at: '2026-10-20T03:38:20.199537Z'
+  support: supports
+  summary: NCBITaxon3055 identifies Chlamydomonas reinhardtii.
+  snapshot_sha256: a17bc1c97fea9112288574ef15727ed7e37c42787a430ef074ae5fc654547e6b
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+  locator: Entire target, one function, five graph nodes/four edges and open boundary
+    discussion
+  accessed_at: '2026-10-20T07:19:09Z'
+  support: context_only
+  summary: The record describes the broad C1 singlet scaffold, with a nonmechanistic
+    spatial graph. Exact wall constituents, projection subcomplexes and copy numbers
+    are explicitly deferred; no sequence-resolved molecular assignment is asserted.
+- evidence_id: identity-search
+  kind: record_content
+  reference: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+  locator: Exact GO1990719 declaration search across data/structures including hidden
+    and ignored files
+  accessed_at: '2026-10-20T07:19:09Z'
+  support: context_only
+  summary: The exact identity is declared only by this target.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:17:28Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/c1_axonemal_microtubule.yaml'
+  snapshot_sha256: 14c0744132e5ab4dd6865e519dd19ff347be068cc42e64dea108d1bd04dc4715
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/c1_axonemal_microtubule.yaml
+    --out /private/tmp/cellstructure-batch4-20261019-QtBQNE/c1_axonemal_microtubule-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T07:17:30Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/c1_axonemal_microtubule.yaml\
+    \ --out /private/tmp/cellstructure-batch4-20261019-QtBQNE/c1_axonemal_microtubule-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch4-20261019-QtBQNE/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch4-20261019-QtBQNE/c1_axonemal_microtubule-strict.tsv"
+  snapshot_sha256: 1f0732bb89417ae386d9439196d91cecbfc97b8a5ee98617aa9f7a44e83a6e1c
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/c1_axonemal_microtubule.yaml; exact collect()
+    scope
+  accessed_at: '2026-10-20T07:19:09Z'
+  support: supports
+  summary: '7 of7 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact C1 singlet identity
+  outcome: supported
+  target_ids:
+  - GO:1990719
+  summary: Name, definition, filament kind and broad synonym match GO and the primary
+    structural source. The record distinguishes C1 from C2 and the entire central
+    pair.
+  evidence_ids:
+  - c1-go
+  - bridge-paper
+  - record
+- assessment_id: hierarchy
+  area: grounding
+  topic: Is-a and parthood
+  outcome: supported
+  target_ids:
+  - GO:1990719
+  summary: The parent is an axonemal microtubule class and the central pair is a part_of
+    target, exactly matching native relations. No neighboring protein or projection
+    is forced into identity.
+  evidence_ids:
+  - c1-go
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Wild-type central-pair context
+  outcome: supported
+  target_ids:
+  - GO:1990719
+  summary: Chlamydomonas is directly observed in multiple strains with wild-type CPC.
+    COMMON is interpreted as ordinary flagellar architecture in the named model, not
+    a measured population frequency or universal state across mutants/life stages.
+  evidence_ids:
+  - bridge-paper
+  - sheath-taxon
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Six projection attachments
+  outcome: supported
+  target_ids:
+  - GO:1990719
+  summary: The C1a-f list and the newly distinguished1e/1f densities are explicit
+    in the cited study. The scaffold role is a supported structural statement, without
+    mechanistic specificity.
+  evidence_ids:
+  - bridge-paper
+  - c1-go
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Four spatial relationships
+  outcome: supported
+  target_ids:
+  - GO:1990719
+  summary: C1 parthood, C1 projection attachment and bridge contacts to C1/C2 are
+    supported by ontology relations and the primary network reconstruction. NONMECHANISTIC
+    correctly describes these edges.
+  evidence_ids:
+  - c1-go
+  - bridge-paper
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: Declared broad curation scope
+  outcome: supported
+  target_ids:
+  - GO:1990719
+  summary: The record does not claim an exhaustive proteome or exact projection boundaries.
+    Its open discussion names the missing wall constituents and subcomplex grounding;
+    optional slots are not filled with unsupported assignments.
+  evidence_ids:
+  - bridge-paper
+  - record
+- assessment_id: source-boundaries
+  area: provenance
+  topic: Ontology and microscopy detail
+  outcome: supported
+  target_ids:
+  - GO:1990719
+  summary: The graph’s two-bridges note accurately attributes GO wording. The paper
+    describes a more complex network; the graph makes only the shared claim of connection.
+    The central-pair parent definition currently says doublets, but this record correctly
+    calls C1 a singlet and uses the valid part_of relation.
+  evidence_ids:
+  - c1-go
+  - bridge-paper
+  - record
+- assessment_id: status
+  area: completeness
+  topic: Proposed scaffold record
+  outcome: supported
+  target_ids:
+  - GO:1990719
+  summary: PROPOSED status and the actionable boundary discussion agree with the limited
+    molecular coverage. No concrete contradiction in the maintained record was found.
+  evidence_ids:
+  - c1-go
+  - bridge-paper
+  - record
+findings: []
+actions: []
+limitations:
+- Exact C1 wall composition, projection subcomplex boundaries and copy numbers remain
+  explicitly uncurated.
+- COMMON is not a prevalence estimate; source samples were selected for preserved
+  central-pair architecture.
+- The GO parent’s current doublet wording is not adopted as morphology; the primary
+  source supports singlet C1/C2.
+- No reconstruction volumes were reprocessed and no newer molecular census was substituted
+  for the record’s stated scope.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- Only the review bundle is saved. Maintained scientific content, native status, history
+  and generated pages remain unchanged.
