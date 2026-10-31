@@ -1,7 +1,7 @@
 # Cycle 5 Stage 5 — Validation Summary
 
 - **Remediation Commit:** `c4a8f347c314b5601cad86c334497d5aca756640`
-- **Post-Remediation Structured Review Bundle:** `reviews/structured/20261031T012000Z-c5-stage5-remediation-verification/review.yaml` (`sha256: 7058ca363b7d34269f3bd0993273db04445ed3369109a6cbe1d312d90dc04de9`)
+- **Post-Remediation Structured Review Bundle:** `reviews/structured/20261031T012000Z-c5-stage5-remediation-verification/review.yaml` (`sha256: efa019c67d498b88f74cd562b2e4a940166c9f49dec9116c2ba5bd99f6e05ead`)
 
 ## Validation Gates Executed
 
@@ -20,4 +20,4 @@
 
 ## Immutability Verification of Stage 4 Review Artifacts
 
-All 5 Stage 4 structured review bundles (`20261031T003001Z-post-anaphase-microtubule-array-emtoc-gene-symbols` through `20261031T003005Z-other-category-review`) and `reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml` (`sha256: 008cce72cea1a120bfef359392a32f3930ae39fa3af2b47ef9f79bda7608df12`) remain byte-identical.
+All 5 Stage 4 structured review bundles (`20261030T222001Z-post-anaphase-microtubule-array-emtoc-missing-gene-symbols` through `20261030T222005Z-other-category-review`) and `reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml` (`sha256: 008cce72cea1a120bfef359392a32f3930ae39fa3af2b47ef9f79bda7608df12`) remain byte-identical.

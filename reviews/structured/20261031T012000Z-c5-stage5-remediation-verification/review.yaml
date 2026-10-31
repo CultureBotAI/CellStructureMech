@@ -22,16 +22,21 @@ native_verdict: PASS
 scientific_review: true
 summary: 'Fresh post-remediation review of all 10 CellStructureRecord YAML files modified
   in Cycle 5 Stage 5 (commit c4a8f347c314b5601cad86c334497d5aca756640) resolving all
-  6 open findings carried forward from Cycle 5 Stage 4 across issues #2475 (missing
-  gene_symbol values on components[1].protein_examples[0..1] and causal_graphs[0].elements[0]
-  in post_anaphase_microtubule_array.yaml; UniProtKB:P04689 primary gene_symbol tub1
-  alignment in cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml,
-  and static_microtubule_bundle.yaml; and strain-specific NCBITaxon:284812 label
-  ''Schizosaccharomyces pombe 972h-'' across protein_examples in cmg_complex.yaml,
-  nuclear_replisome.yaml, and replisome.yaml) and #2476 (MOLECULAR_FUNCTION node_type
-  for GO:0003688 origin_dna_binding in origin_recognition_complex.yaml; GO:0016236
-  grounding on macroautophagy function in autophagosome.yaml; and ''DnaC protein''
-  label plus PMID:29024950 hierarchy evidence note for GO:0032991 in primosome_complex.yaml).
+  6 open findings carried forward from Cycle 5 Stage 4 across issues #2475 (adding
+  gene_symbols: [mto1, mto2] on components[3] emtoc GO:0000923 to match existing reviewed
+  protein_examples UniProtKB:O94488 and UniProtKB:Q9USP7 in post_anaphase_microtubule_array.yaml;
+  adding tub1 to components[0].gene_symbols and updating components[0].protein_examples[0].gene_symbol
+  for UniProtKB:P04689 from synonym atb2 to primary symbol tub1 in cytoplasmic_microtubule_bundle.yaml,
+  quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml; and
+  standardizing taxon_label on NCBITaxon:284812 to ''Schizosaccharomyces pombe 972h-''
+  on components[2] cdc45_protein protein_examples[0] UniProtKB:O74113 and canonical_examples[0]
+  in cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml) and #2476 (updating
+  causal_graphs[0].nodes[8] dna_replication_origin_binding GO:0003688 from node_type:
+  BIOLOGICAL_PROCESS to MOLECULAR_FUNCTION in origin_recognition_complex.yaml; adding
+  grounding: GO:0016236 on functions[0] macroautophagy in autophagosome.yaml; and
+  updating components[2].protein_examples[0].protein_label for UniProtKB:P0AEF0 dnaC
+  to ''Replicative helicase loader DnaC'' plus adding top-level evidence entries for
+  GO:0032993 parent_structures and GO:0030894 part_of in primosome_complex.yaml).
   All 10 records pass strict validation, ID-label correspondence, UniProt verification,
   offline CURIE cache check, history ledger validation, and page regeneration checks
   with zero open findings.'
@@ -402,19 +407,21 @@ evidence:
 assessments:
 - assessment_id: assess_group1_spombe_gene_symbols_and_taxon_labels
   area: grounding
-  topic: S. pombe 972h- UniProtKB gene_symbol population, primary gene symbol alignment,
+  topic: S. pombe 972h- UniProtKB gene_symbols population, primary gene symbol alignment,
     and strain taxon label consistency (#2475)
   outcome: supported
   summary: 'All 7 S. pombe 972h- (NCBITaxon:284812) records in Group 1 (#2475) resolve
     their UniProtKB and taxon label findings: post_anaphase_microtubule_array.yaml
-    adds gene_symbol: mto1 on components[1].protein_examples[0] (UniProtKB:Q9P7F4)
-    and causal_graphs[0].elements[0] (mto1_mto2) and gene_symbol: mto2 on components[1].protein_examples[1]
-    (UniProtKB:O94709); cytoplasmic_microtubule_bundle.yaml, quiescent_cell_microtubule_bundle.yaml,
-    and static_microtubule_bundle.yaml update gene_symbol from nda2 to UniProt primary
-    gene name tub1 on all UniProtKB:P04689 protein_examples and causal_graphs elements;
-    and cmg_complex.yaml, nuclear_replisome.yaml, and replisome.yaml standardize
-    organism.label on all NCBITaxon:284812 protein_examples to ''Schizosaccharomyces
-    pombe 972h-'' matching canonical_examples.'
+    adds gene_symbols: [mto1, mto2] on components[3] (component_id: emtoc, GO:0000923,
+    equatorial microtubule organizing center) to match its existing reviewed protein_examples
+    UniProtKB:O94488 (mto1) and UniProtKB:Q9USP7 (mto2); cytoplasmic_microtubule_bundle.yaml,
+    quiescent_cell_microtubule_bundle.yaml, and static_microtubule_bundle.yaml add
+    tub1 to components[0].gene_symbols, update components[0].protein_examples[0].gene_symbol
+    (UniProtKB:P04689) from synonym atb2 to primary symbol tub1, and note ''(also
+    declared as synonym atb2)'' in components[0].protein_examples[0].role; and cmg_complex.yaml,
+    nuclear_replisome.yaml, and replisome.yaml standardize taxon_label on NCBITaxon:284812
+    from ''Schizosaccharomyces pombe'' to ''Schizosaccharomyces pombe 972h-'' on components[2]
+    (cdc45_protein) protein_examples[0] (UniProtKB:O74113) and on canonical_examples[0].'
   target_ids:
   - GO:1905720
   - GO:1990295
@@ -434,13 +441,13 @@ assessments:
   outcome: supported
   summary: 'All 3 records in Group 2 (#2476) resolve their GO grounding, causal node
     typing, and protein/evidence curation findings: origin_recognition_complex.yaml
-    updates causal_graphs[0].elements[1] (origin_dna_binding, GO:0003688 DNA replication
-    origin binding) from node_type: BIOLOGICAL_PROCESS to node_type: MOLECULAR_FUNCTION;
-    autophagosome.yaml adds grounding: {id: GO:0016236, label: macroautophagy} to
-    functions[0] (macroautophagy); and primosome_complex.yaml updates components[2].protein_examples[0].protein.label
-    (UniProtKB:P0AEF0, dnaC) to ''DnaC protein'' and expands the top-level PMID:29024950
-    evidence note to explicitly cite GO:0032991 (protein-containing complex) alongside
-    GO:1990077.'
+    updates causal_graphs[0].nodes[8] (node_id: dna_replication_origin_binding, GO:0003688
+    DNA replication origin binding) from node_type: BIOLOGICAL_PROCESS to node_type:
+    MOLECULAR_FUNCTION; autophagosome.yaml adds scalar grounding: GO:0016236 to functions[0]
+    (macroautophagy); and primosome_complex.yaml updates components[2].protein_examples[0].protein_label
+    (UniProtKB:P0AEF0, dnaC) from ''DNA replication protein DnaC'' to ''Replicative
+    helicase loader DnaC'' (matching causal_graphs[0].nodes[1]) and adds top-level
+    evidence entries for GO:0032993 (parent_structures) and GO:0030894 (part_of).'
   target_ids:
   - GO:0005776
   - GO:0000808
