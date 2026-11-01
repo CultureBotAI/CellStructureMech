@@ -1,0 +1,976 @@
+# Cvt complex scientific review
+
+- Review: 20261022T052917Z-cvt-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T05:15:37Z
+- Finished UTC: 2026-10-22T05:29:17Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Ape1 identity and selective vesicle-delivery topology are supported, but one major finding corrects the explicit exclusion of Atg19 from the source-defined Cvt cargo-receptor complex.
+
+## Scope And Provenance
+
+Exactly one entire target reviewed for identity, source support, composition, scope, graph and completeness.
+
+Selection: Target 2 of batch49 in strict uncovered path order at fresh origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0034270 | data/structures/other/cvt_complex.yaml | maintained | Cvt complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0034270 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0034270 | Focused validator passed. |
+| Focused native causal-graphs | passed | True | GO:0034270 | Focused native check passed; identity and biological support assessed independently. |
+| Focused native verify | passed | True | GO:0034270 | Focused native check passed; identity and biological support assessed independently. |
+| Expression-module applicability | not_applicable | False | GO:0034270 | No maintained expression-module assertion requires this resource. |
+| Claim-level scientific review | passed | True | GO:0034270 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0034270 | 10 of 13 collected target identifiers returned OK. PMID:24493041: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:363165: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:8601598: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0034270 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0034270 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0034270 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0034270 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0034270 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Ape1 cargo core versus receptor-containing Cvt complex
+
+identity: concern. Targets: GO:0034270.
+
+GO identity, complex parent and cytoplasm parthood resolve, but the short GO component definition is incomplete relative to the cited primary definition and GO pathway text. The record explicitly excludes Atg19 together with Atg11, obscuring their different physical roles.
+
+### Correct Ape1 reference and broad family boundary
+
+grounding: supported. Targets: GO:0034270.
+
+P14904 is the reviewed S288C APE1 protein. Native annotations retain precursor versus mature stages and correct vacuolar localization citations. M18 is a broad family and its domain2 superfamily does not exactly denote this precursor cargo class; no forced exact grounding follows.
+
+### Atg19 belongs to the cited cargo-receptor complex
+
+grounding: concern. Targets: GO:0034270.
+
+Shintani explicitly calls the Atg19-Ape1 association the Cvt complex and includes Ams1 cargo. Scott shows the receptor accompanies cargo. Atg11 trafficking machinery should remain separately distinguished. This is a structural boundary contradiction, not a demand to enumerate every pathway protein.
+
+### Constitutive Ape1 cargo core
+
+grounding: supported. Targets: GO:0034270.
+
+Ape1 is the defining cargo core in both the short GO component definition and the cited primary account. This supports its constitutive membership; the universal physical assembly-necessity question is assessed separately.
+
+### Experimental formation necessity remains unresolved
+
+grounding: unknown. Targets: GO:0034270.
+
+The inspected PAS-localization and delivery defects do not alone establish universal physical assembly necessity or justify extending an ESSENTIAL designation to every receptor/scaffold. Ape1-defining core identity and nutrient-rich pathway requirements are distinct from starvation-autophagy requirements. This uncertainty does not create an additional finding beyond the confirmed structural boundary defect.
+
+### Species mechanism and reference accession
+
+scope: supported. Targets: GO:0034270.
+
+The primary budding-yeast studies support species-level canonical scope and ordinary nutrient-rich Cvt machinery. S288C is the example accession strain rather than a claim about all SEY6210-derived experiments.
+
+### Cargo packaging and organization are distinguishable
+
+evidence: supported. Targets: GO:0034270.
+
+The absence of a standalone passive-cargo function is not itself an error. Shintani provides a bounded role for the cargo-receptor complex in PAS organization under growing conditions; any future functional enrichment must retain those conditions and avoid reintroducing a generic participates-in statement.
+
+### Coarse delivery topology with a boundary correction
+
+graph: concern. Targets: GO:0034270.
+
+Ape1 membership, membrane enclosure and vesicle delivery are supported. The graph description should distinguish formation of the Ape1 cargo core from formation of the Atg19-containing Cvt complex; NONMECHANISTIC scope does not cure a constituent exclusion.
+
+### Reconcile the resolved receptor/scaffold exclusion
+
+completeness: concern. Targets: GO:0034270.
+
+The explicit exclusion discussion conflicts with its own sources. A single grouped correction can reconcile definition, components, graph description and discussion while distinguishing receptor, additional cargo and trafficking machinery.
+
+## Findings
+
+### F1: Distinguish the Ape1 cargo core from the Atg19-containing Cvt complex
+
+major / open / confirmed; issue key: cvt-cargo-receptor-boundary.
+
+The resolved discussion declines both Atg19 and Atg11 as nonconstituents. Shintani2004 explicitly defines Atg19 binding to the Ape1 assembly as formation of the Cvt complex and describes Ape1, Ams1 and Atg19 in that complex. Scott2001 supports Cvt19/Atg19 association and cotransport. GO:0032258 likewise includes Atg19 in forming the Cvt complex, before Atg11-mediated delivery. The record currently equates the Ape1-only core with the receptor-containing entity.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile the Cvt boundary with the cited primary definition: distinguish preApe1 core assembly from the Atg19-containing complex, curate supported receptor and Ams1 cargo roles with appropriate scope, and keep Atg11/pathway machinery separate. Update the resolved exclusion and graph wording without claiming invariant stoichiometry or making all Atg proteins constituents.
+
+- Check exact source identifiers and reconcile the named current fields and associated TODO.
+- Preserve supported biology, taxon scope, assay limits and distinctions between identity and membership.
+- Use guarded curation and pass applicable schema, strict, protein and graph validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/cvt_complex.yaml; Entire maintained record including history, components, evidence, graph and discussions | context_only | All maintained fields were read. Historical curation notes document earlier decisions rather than independently proving current assertions. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component grounding, formation essentiality, taxonomic presence and graph scope | context_only | Whole-protein families differ from domains and individual examples. Assembly necessity differs from viability or function. COMMON means present in most members, with losses the exception; a qualitative ordinary-machinery assertion need not imply a numerical census. |
+| curation | docs/CURATION.md; Exact identities and claim-specific evidence | context_only | A verified component identity and its membership in a complex require distinct support. Reviewed label-only status is reserved for the absence of an exact term; historical deferred searches can be revisited without alleging historical fabrication. |
+| root49-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005737,GO:0005886,GO:0031461,GO:0031910,GO:0032258,GO:0032991,GO:0033107,GO:0034270; Complete maintained-term identity and definition fields and relevant typed links; not every descendant | supports | All eight requested native GO identities, active status, definitions, synonyms, comments and relevant typed links inspected. The cytostome is explicitly a part_of child of plasma membrane, while the Cvt pathway definition includes Atg19 in formation of the Cvt complex. |
+| root49-sources-doi-2 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs1097-2765%2801%2900263-5%22&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED11430817: Cvt19 is a receptor for the cytoplasm-to-vacuole targeting pathway. DOI 10.1016/s1097-2765(01)00263-5. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root49-sources-doi-4 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.M404399200%22&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED15138258: Cargo proteins facilitate the formation of transport vesicles in the cytoplasm to vacuole targeting pathway. DOI 10.1074/jbc.m404399200. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root49-sources-pmid-24493041 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24493041+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED24493041: A lysosomal aminopeptidase isozyme in differentiating yeast cells and protoplasts. DOI 10.1007/bf00397903. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root49-sources-pmid-363165 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A363165+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED363165: Subcellular localization and levels of aminopeptidases and dipeptidase in Saccharomyces cerevisiae. DOI 10.1016/0005-2744(78)90253-x. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root49-sources-pmid-8601598 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8601598+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native MED identity, authors/year/title/DOI and abstract | supports | MED8601598: Identification of a cytoplasm to vacuole targeting determinant in aminopeptidase I. DOI 10.1083/jcb.132.6.999. Complete bibliographic identity and abstract inspected; full-body access is certified only in separate evidence rows. |
+| root49-sources-protein-P14904 | https://rest.uniprot.org/uniprotkb/P14904.json; Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references, sequence length and generated-name provenance | supports | Native P14904 identity, entry status, names, genes/ORFs and taxon inspected, with available function, association and location annotations. Any mismatch is assessed explicitly; accession resolution alone does not establish membership. |
+| root49-sources-gene-APE1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAPE1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query URL and every result accession/status/name/gene/taxon | supports | Exact reviewed gene query returns one matching yeast accession. Complete returned identity fields agree with the maintained example. |
+| root49-sources-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete native taxonomy response | supports | Native taxon 4932 name, rank, lineage and synonym data inspected. Reference strains are distinguished from experimental strains. |
+| root49-sources-tax559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete native taxonomy response | supports | Native taxon 559292 name, rank, lineage and synonym data inspected. Reference strains are distinguished from experimental strains. |
+| root49-sources-ipr-IPR001948 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001948/; Complete accession/name/type/description, hierarchy and curation flags | supports | IPR001948 is classified as family and named Peptidase M18. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root49-sources-ipr-IPR023358 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR023358/; Complete accession/name/type/description, hierarchy and curation flags | supports | IPR023358 is classified as homologous_superfamily and named Peptidase M18, domain 2. Native metadata, full description and curation flags inspected. This row supports identity scope, not an independent primary biological experiment. |
+| root49-sources-scott2001-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC2767243/?report=xml; Complete Results S6/S8 including Fig4/6 captions, Discussion S12/S14, Methods S18 with Table1 and S24/S25; no figure pixels | supports | Cvt19 binds the precursor propeptide and accompanies cargo into the vacuole rather than acting as a classical recycling receptor. Native co-immunoprecipitation and heterologous binding support association. The latter uses E.coli lysate and rabbit reticulocyte translation, not a purified two-protein reconstitution. Experimental strains include SEY6210 derivatives. |
+| root49-sources-shintani2004-legacy | https://pmc.ncbi.nlm.nih.gov/articles/PMC1712665/?report=xml; Complete Introduction S1, Methods S3 with Table1, Results S8/S9 with embedded Fig1-3 captions and Discussion S10; no figure pixels | supports | The paper explicitly distinguishes the precursor Ape1 assembly from the Cvt complex formed on association with Atg19. Discussion describes Ape1, Ams1 and Atg19 in the Cvt complex; Atg11 connects it to the PAS machinery. Nutrient-rich cargo/receptor deletions impair PAS organization, while starvation changes this dependency. These experiments do not make every Atg protein a constituent. |
+| schema-result | just validate data/structures/other/cvt_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/cvt_complex.yaml |
+| strict-result | just validate-strict data/structures/other/cvt_complex.yaml --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cvt_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/cvt_complex.yaml --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cvt_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cvt_complex-strict.tsv |
+| native-cvt_complex-causal-graphs | /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cvt_complex.yaml; Complete focused native report | supports | data/structures/other/cvt_complex.yaml  (GO:0034270)<br>  cvt_complex_vacuolar_delivery	precursor_aminopeptidase_i	COVERED	-&gt;precursor_aminopeptidase_i (UniProtKB:P14904)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| native-cvt_complex-verify | /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/other/cvt_complex.yaml; Complete focused native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/cvt_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 10 of 13 collected target identifiers returned OK. PMID:24493041: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:363165: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:8601598: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Primary reading is limited to the explicitly recorded sections, captions and datasets; no raw spectra or sequence alignments were reanalyzed.
+- Matile1971, Frey1978 and Oda1996 were read at complete native metadata/abstract tier only; the retained Oda HTML is a bibliographic/abstract page linking scanned text, and its full article body was not recovered or read. No figure pixels, supplemental assays or sequence alignments were inspected.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorizes all uncovered reviews, including honest zero-finding bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Independent peer refinement before finalization: scope each figure summary to its own source, preserve actual article accessibility and distinguish unresolved formation necessity. Scientific findings unchanged; prior draft and validation receipts retained.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T052917Z-cvt-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Cvt complex scientific review
+started_at: '2026-10-22T05:15:37Z'
+finished_at: '2026-10-22T05:29:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Ape1 identity and selective vesicle-delivery topology are supported, but
+  one major finding corrects the explicit exclusion of Atg19 from the source-defined
+  Cvt cargo-receptor complex.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/cvt_complex.yaml
+    sha256: 29ffd90803735e2db2a3869531eae7e439bac79b868049f6d7766c6c9a694902
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0034270
+  path: data/structures/other/cvt_complex.yaml
+  label: Cvt complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cvt_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one entire target reviewed for identity, source support, composition,
+    scope, graph and completeness.
+  selection: Target 2 of batch49 in strict uncovered path order at fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0034270
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  command: just validate data/structures/other/cvt_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  command: just validate-strict data/structures/other/cvt_complex.yaml --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cvt_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-cvt_complex-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  command: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cvt_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; identity and biological support assessed independently.
+  evidence_ids:
+  - native-cvt_complex-causal-graphs
+- check_id: native-cvt_complex-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  command: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cvt_complex.yaml
+  exit_code: 0
+  summary: Focused native check passed; identity and biological support assessed independently.
+  evidence_ids:
+  - native-cvt_complex-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0034270
+  summary: No maintained expression-module assertion requires this resource.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - root49-sources-go
+  - root49-sources-doi-2
+  - root49-sources-doi-4
+  - root49-sources-pmid-24493041
+  - root49-sources-pmid-363165
+  - root49-sources-pmid-8601598
+  - root49-sources-protein-P14904
+  - root49-sources-gene-APE1
+  - root49-sources-tax4932
+  - root49-sources-tax559292
+  - root49-sources-ipr-IPR001948
+  - root49-sources-ipr-IPR023358
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  summary: '10 of 13 collected target identifiers returned OK. PMID:24493041: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:363165:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:8601598: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - root49-sources-pmid-24493041
+  - root49-sources-pmid-363165
+  - root49-sources-pmid-8601598
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0034270
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch49 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/cvt_complex.yaml
+  locator: Entire maintained record including history, components, evidence, graph
+    and discussions
+  accessed_at: '2026-10-22T05:26:43Z'
+  support: context_only
+  summary: All maintained fields were read. Historical curation notes document earlier
+    decisions rather than independently proving current assertions.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component grounding, formation essentiality, taxonomic presence and graph
+    scope
+  accessed_at: '2026-10-22T05:26:43Z'
+  support: context_only
+  summary: Whole-protein families differ from domains and individual examples. Assembly
+    necessity differs from viability or function. COMMON means present in most members,
+    with losses the exception; a qualitative ordinary-machinery assertion need not
+    imply a numerical census.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact identities and claim-specific evidence
+  accessed_at: '2026-10-22T05:26:43Z'
+  support: context_only
+  summary: A verified component identity and its membership in a complex require distinct
+    support. Reviewed label-only status is reserved for the absence of an exact term;
+    historical deferred searches can be revisited without alleging historical fabrication.
+- evidence_id: root49-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0005737,GO:0005886,GO:0031461,GO:0031910,GO:0032258,GO:0032991,GO:0033107,GO:0034270
+  locator: Complete maintained-term identity and definition fields and relevant typed
+    links; not every descendant
+  accessed_at: '2026-10-22T05:16:37.461732Z'
+  support: supports
+  summary: All eight requested native GO identities, active status, definitions, synonyms,
+    comments and relevant typed links inspected. The cytostome is explicitly a part_of
+    child of plasma membrane, while the Cvt pathway definition includes Atg19 in formation
+    of the Cvt complex.
+  snapshot_sha256: d24e5122fae367cf9a2d8fb7c6570ebcb8f08890d0147e4ae81b987297a086a9
+- evidence_id: root49-sources-doi-2
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs1097-2765%2801%2900263-5%22&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:16:40.174236Z'
+  support: supports
+  summary: 'MED11430817: Cvt19 is a receptor for the cytoplasm-to-vacuole targeting
+    pathway. DOI 10.1016/s1097-2765(01)00263-5. Complete bibliographic identity and
+    abstract inspected; full-body access is certified only in separate evidence rows.'
+  snapshot_sha256: e1bbc482d413fa8b51239c90122bb4778ccf71c035296659149f96d8efff066b
+- evidence_id: root49-sources-doi-4
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.M404399200%22&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:16:40.609594Z'
+  support: supports
+  summary: 'MED15138258: Cargo proteins facilitate the formation of transport vesicles
+    in the cytoplasm to vacuole targeting pathway. DOI 10.1074/jbc.m404399200. Complete
+    bibliographic identity and abstract inspected; full-body access is certified only
+    in separate evidence rows.'
+  snapshot_sha256: fbc05dc89f225f950dac489399bbe912f39a887ef75945b4215b568f3746b5e1
+- evidence_id: root49-sources-pmid-24493041
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24493041+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:16:41.920132Z'
+  support: supports
+  summary: 'MED24493041: A lysosomal aminopeptidase isozyme in differentiating yeast
+    cells and protoplasts. DOI 10.1007/bf00397903. Complete bibliographic identity
+    and abstract inspected; full-body access is certified only in separate evidence
+    rows.'
+  snapshot_sha256: 942d6ad2c9549b7a2bb6b1ffe8706ea8d7c1d142f19b0685d74af5997cef45ac
+- evidence_id: root49-sources-pmid-363165
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A363165+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:16:42.050598Z'
+  support: supports
+  summary: 'MED363165: Subcellular localization and levels of aminopeptidases and
+    dipeptidase in Saccharomyces cerevisiae. DOI 10.1016/0005-2744(78)90253-x. Complete
+    bibliographic identity and abstract inspected; full-body access is certified only
+    in separate evidence rows.'
+  snapshot_sha256: 9f0f92a35e2f92534786dba927e3f9a6776f40335a057189ae5ea3f58c41ec60
+- evidence_id: root49-sources-pmid-8601598
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8601598+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native MED identity, authors/year/title/DOI and abstract
+  accessed_at: '2026-10-22T05:16:42.438333Z'
+  support: supports
+  summary: 'MED8601598: Identification of a cytoplasm to vacuole targeting determinant
+    in aminopeptidase I. DOI 10.1083/jcb.132.6.999. Complete bibliographic identity
+    and abstract inspected; full-body access is certified only in separate evidence
+    rows.'
+  snapshot_sha256: 510959b5120c9c4d6e0053c2409ff5dfeeef8ab6c194413eb95673cca5b3293b
+- evidence_id: root49-sources-protein-P14904
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P14904.json
+  locator: Complete accession/status/name/genes/taxon and FUNCTION, SUBUNIT, SUBCELLULAR
+    LOCATION, SIMILARITY comments; InterPro, VEuPathDB and GeneID cross-references,
+    sequence length and generated-name provenance
+  accessed_at: '2026-10-22T05:16:38.531897Z'
+  support: supports
+  summary: Native P14904 identity, entry status, names, genes/ORFs and taxon inspected,
+    with available function, association and location annotations. Any mismatch is
+    assessed explicitly; accession resolution alone does not establish membership.
+  snapshot_sha256: 101800e42ac6ed3ee037cd16805c1cfa9d77c5a48d953dee6ee62bd4b47df10e
+- evidence_id: root49-sources-gene-APE1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAPE1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query URL and every result accession/status/name/gene/taxon
+  accessed_at: '2026-10-22T05:18:33.341575Z'
+  support: supports
+  summary: Exact reviewed gene query returns one matching yeast accession. Complete
+    returned identity fields agree with the maintained example.
+  snapshot_sha256: 9b1594b5e048a7edb46f843511071f749498af749ea42a1a972c16aa12787720
+- evidence_id: root49-sources-tax4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T05:16:37.461814Z'
+  support: supports
+  summary: Native taxon 4932 name, rank, lineage and synonym data inspected. Reference
+    strains are distinguished from experimental strains.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: root49-sources-tax559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete native taxonomy response
+  accessed_at: '2026-10-22T05:16:37.461889Z'
+  support: supports
+  summary: Native taxon 559292 name, rank, lineage and synonym data inspected. Reference
+    strains are distinguished from experimental strains.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: root49-sources-ipr-IPR001948
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001948/
+  locator: Complete accession/name/type/description, hierarchy and curation flags
+  accessed_at: '2026-10-22T05:18:33.470749Z'
+  support: supports
+  summary: IPR001948 is classified as family and named Peptidase M18. Native metadata,
+    full description and curation flags inspected. This row supports identity scope,
+    not an independent primary biological experiment.
+  snapshot_sha256: 37c628cee1eaedb989894d8b4f1a708c4a5d59cd626c2a7c0d2b456d1bdee3e8
+- evidence_id: root49-sources-ipr-IPR023358
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR023358/
+  locator: Complete accession/name/type/description, hierarchy and curation flags
+  accessed_at: '2026-10-22T05:18:33.488229Z'
+  support: supports
+  summary: IPR023358 is classified as homologous_superfamily and named Peptidase M18,
+    domain 2. Native metadata, full description and curation flags inspected. This
+    row supports identity scope, not an independent primary biological experiment.
+  snapshot_sha256: 495ead89923cda97bb3458f3f175f7f5c1343394ca5b70b3e1854f88b9a6d8cb
+- evidence_id: root49-sources-scott2001-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2767243/?report=xml
+  locator: Complete Results S6/S8 including Fig4/6 captions, Discussion S12/S14, Methods
+    S18 with Table1 and S24/S25; no figure pixels
+  accessed_at: '2026-10-22T05:18:32.167879Z'
+  support: supports
+  summary: Cvt19 binds the precursor propeptide and accompanies cargo into the vacuole
+    rather than acting as a classical recycling receptor. Native co-immunoprecipitation
+    and heterologous binding support association. The latter uses E.coli lysate and
+    rabbit reticulocyte translation, not a purified two-protein reconstitution. Experimental
+    strains include SEY6210 derivatives.
+  snapshot_sha256: ef1e1ce7f438673ad5358466d567e7e857576e7efc0046d52b5f7287d9a94e9d
+- evidence_id: root49-sources-shintani2004-legacy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1712665/?report=xml
+  locator: Complete Introduction S1, Methods S3 with Table1, Results S8/S9 with embedded
+    Fig1-3 captions and Discussion S10; no figure pixels
+  accessed_at: '2026-10-22T05:18:32.168315Z'
+  support: supports
+  summary: The paper explicitly distinguishes the precursor Ape1 assembly from the
+    Cvt complex formed on association with Atg19. Discussion describes Ape1, Ams1
+    and Atg19 in the Cvt complex; Atg11 connects it to the PAS machinery. Nutrient-rich
+    cargo/receptor deletions impair PAS organization, while starvation changes this
+    dependency. These experiments do not make every Atg protein a constituent.
+  snapshot_sha256: a90aa66750d07ca437228e474a87c256f1f75365fed67eb8a4e51cb4e5745f77
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/cvt_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:15:38Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/cvt_complex.yaml'
+  snapshot_sha256: 19920753ebdccdb90b0983c364c23dd63f95cc1b78d94b67fabd66361b563f17
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/cvt_complex.yaml --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cvt_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T05:15:39Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/cvt_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cvt_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch49-20261022-3rpodnkz/cvt_complex-strict.tsv"
+  snapshot_sha256: 827bdec8dad443da460e8afd35e909653e1e14139e52e8cfe1fce4434c66bd18
+- evidence_id: native-cvt_complex-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/cvt_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T05:20:52.766812Z'
+  support: supports
+  summary: "data/structures/other/cvt_complex.yaml  (GO:0034270)\n  cvt_complex_vacuolar_delivery\t\
+    precursor_aminopeptidase_i\tCOVERED\t->precursor_aminopeptidase_i (UniProtKB:P14904)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: eb5b3bedce12a4c7f1373712d261d4b8605539a9f12256f743631fbe68f75567
+- evidence_id: native-cvt_complex-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch49-20261022-3rpodnkz/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/cvt_complex.yaml
+  locator: Complete focused native report
+  accessed_at: '2026-10-22T05:20:54.201205Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/cvt_complex.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '10 of 13 collected target identifiers returned OK. PMID:24493041: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:363165:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; PMID:8601598: UNREACHABLE; Exact native Europe PMC MED identifier,
+    title and DOI were inspected after the bulk eutils414 transport failure. Identity
+    resolution does not certify every attached biological claim; declared abstract/body
+    reading scope remains in force. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Ape1 cargo core versus receptor-containing Cvt complex
+  outcome: concern
+  target_ids:
+  - GO:0034270
+  summary: GO identity, complex parent and cytoplasm parthood resolve, but the short
+    GO component definition is incomplete relative to the cited primary definition
+    and GO pathway text. The record explicitly excludes Atg19 together with Atg11,
+    obscuring their different physical roles.
+  evidence_ids:
+  - record
+  - root49-sources-go
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+- assessment_id: examples
+  area: grounding
+  topic: Correct Ape1 reference and broad family boundary
+  outcome: supported
+  target_ids:
+  - GO:0034270
+  summary: P14904 is the reviewed S288C APE1 protein. Native annotations retain precursor
+    versus mature stages and correct vacuolar localization citations. M18 is a broad
+    family and its domain2 superfamily does not exactly denote this precursor cargo
+    class; no forced exact grounding follows.
+  evidence_ids:
+  - record
+  - curation
+  - root49-sources-protein-P14904
+  - root49-sources-gene-APE1
+  - root49-sources-ipr-IPR001948
+  - root49-sources-ipr-IPR023358
+  - root49-sources-doi-2
+  - root49-sources-doi-4
+  - root49-sources-pmid-24493041
+  - root49-sources-pmid-363165
+  - root49-sources-pmid-8601598
+- assessment_id: composition
+  area: grounding
+  topic: Atg19 belongs to the cited cargo-receptor complex
+  outcome: concern
+  target_ids:
+  - GO:0034270
+  summary: Shintani explicitly calls the Atg19-Ape1 association the Cvt complex and
+    includes Ams1 cargo. Scott shows the receptor accompanies cargo. Atg11 trafficking
+    machinery should remain separately distinguished. This is a structural boundary
+    contradiction, not a demand to enumerate every pathway protein.
+  evidence_ids:
+  - record
+  - root49-sources-go
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+- assessment_id: defining-core
+  area: grounding
+  topic: Constitutive Ape1 cargo core
+  outcome: supported
+  target_ids:
+  - GO:0034270
+  summary: Ape1 is the defining cargo core in both the short GO component definition
+    and the cited primary account. This supports its constitutive membership; the
+    universal physical assembly-necessity question is assessed separately.
+  evidence_ids:
+  - record
+  - schema
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+- assessment_id: necessity
+  area: grounding
+  topic: Experimental formation necessity remains unresolved
+  outcome: unknown
+  target_ids:
+  - GO:0034270
+  summary: The inspected PAS-localization and delivery defects do not alone establish
+    universal physical assembly necessity or justify extending an ESSENTIAL designation
+    to every receptor/scaffold. Ape1-defining core identity and nutrient-rich pathway
+    requirements are distinct from starvation-autophagy requirements. This uncertainty
+    does not create an additional finding beyond the confirmed structural boundary
+    defect.
+  evidence_ids:
+  - record
+  - schema
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+- assessment_id: scope
+  area: scope
+  topic: Species mechanism and reference accession
+  outcome: supported
+  target_ids:
+  - GO:0034270
+  summary: The primary budding-yeast studies support species-level canonical scope
+    and ordinary nutrient-rich Cvt machinery. S288C is the example accession strain
+    rather than a claim about all SEY6210-derived experiments.
+  evidence_ids:
+  - record
+  - schema
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+  - root49-sources-tax4932
+  - root49-sources-tax559292
+- assessment_id: function
+  area: evidence
+  topic: Cargo packaging and organization are distinguishable
+  outcome: supported
+  target_ids:
+  - GO:0034270
+  summary: The absence of a standalone passive-cargo function is not itself an error.
+    Shintani provides a bounded role for the cargo-receptor complex in PAS organization
+    under growing conditions; any future functional enrichment must retain those conditions
+    and avoid reintroducing a generic participates-in statement.
+  evidence_ids:
+  - record
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+- assessment_id: graph
+  area: graph
+  topic: Coarse delivery topology with a boundary correction
+  outcome: concern
+  target_ids:
+  - GO:0034270
+  summary: Ape1 membership, membrane enclosure and vesicle delivery are supported.
+    The graph description should distinguish formation of the Ape1 cargo core from
+    formation of the Atg19-containing Cvt complex; NONMECHANISTIC scope does not cure
+    a constituent exclusion.
+  evidence_ids:
+  - record
+  - root49-sources-go
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Reconcile the resolved receptor/scaffold exclusion
+  outcome: concern
+  target_ids:
+  - GO:0034270
+  summary: The explicit exclusion discussion conflicts with its own sources. A single
+    grouped correction can reconcile definition, components, graph description and
+    discussion while distinguishing receptor, additional cargo and trafficking machinery.
+  evidence_ids:
+  - record
+  - root49-sources-go
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+findings:
+- finding_id: F1
+  issue_key: cvt-cargo-receptor-boundary
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Distinguish the Ape1 cargo core from the Atg19-containing Cvt complex
+  description: The resolved discussion declines both Atg19 and Atg11 as nonconstituents.
+    Shintani2004 explicitly defines Atg19 binding to the Ape1 assembly as formation
+    of the Cvt complex and describes Ape1, Ams1 and Atg19 in that complex. Scott2001
+    supports Cvt19/Atg19 association and cotransport. GO:0032258 likewise includes
+    Atg19 in forming the Cvt complex, before Atg11-mediated delivery. The record currently
+    equates the Ape1-only core with the receptor-containing entity.
+  target_ids:
+  - GO:0034270
+  field_paths:
+  - definition
+  - components
+  - causal_graphs#cvt_complex_vacuolar_delivery
+  - discussions#atg_receptor_scaffold_boundary
+  evidence_ids:
+  - record
+  - root49-sources-go
+  - root49-sources-scott2001-legacy
+  - root49-sources-shintani2004-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cvt_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact component identity and source-specific biological support
+  native_severity: major
+  normalization_reason: The asserted molecular identity, structural boundary or typed
+    hierarchy is materially incorrect, rather than an optional enrichment.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0034270
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/cvt_complex.yaml
+    role: maintained scientific record
+  description: 'Reconcile the Cvt boundary with the cited primary definition: distinguish
+    preApe1 core assembly from the Atg19-containing complex, curate supported receptor
+    and Ams1 cargo roles with appropriate scope, and keep Atg11/pathway machinery
+    separate. Update the resolved exclusion and graph wording without claiming invariant
+    stoichiometry or making all Atg proteins constituents.'
+  acceptance_checks:
+  - Check exact source identifiers and reconcile the named current fields and associated
+    TODO.
+  - Preserve supported biology, taxon scope, assay limits and distinctions between
+    identity and membership.
+  - Use guarded curation and pass applicable schema, strict, protein and graph validation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Primary reading is limited to the explicitly recorded sections, captions and datasets;
+  no raw spectra or sequence alignments were reanalyzed.
+- Matile1971, Frey1978 and Oda1996 were read at complete native metadata/abstract
+  tier only; the retained Oda HTML is a bibliographic/abstract page linking scanned
+  text, and its full article body was not recovered or read. No figure pixels, supplemental
+  assays or sequence alignments were inspected.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorizes all uncovered reviews, including honest zero-finding bundles.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- 'Independent peer refinement before finalization: scope each figure summary to its
+  own source, preserve actual article accessibility and distinguish unresolved formation
+  necessity. Scientific findings unchanged; prior draft and validation receipts retained.'
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
