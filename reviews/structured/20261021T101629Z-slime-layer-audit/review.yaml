@@ -1,0 +1,561 @@
+schema_version: 1.0.0
+review_id: 20261021T101629Z-slime-layer-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Slime layer material, capsule boundary and source review
+started_at: '2026-10-21T09:59:58Z'
+finished_at: '2026-10-21T10:16:29Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The diffuse-layer identity, glycocalyx/capsule boundary, mixed material,
+  bounded biochemical example and descriptive graph are supported. No corrective issue
+  was observed.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/envelope/slime_layer.yaml
+    sha256: e55c4f3f80f506328a9d24bc10e7280e85f50f7af5f432f9a4749fcbe7542a34
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0030114
+  path: data/structures/envelope/slime_layer.yaml
+  label: slime layer
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/envelope/slime_layer.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single record; native GO/location/taxon identities, exact Brown
+    citation and complete five-page primary scans.
+  selection: Tenth selected target in batch eighteen, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030114
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: just validate data/structures/envelope/slime_layer.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: just validate-strict data/structures/envelope/slime_layer.yaml --out /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/slime_layer-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  summary: 6 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - slime-layer-agent-go
+  - slime-layer-agent-SL-0247
+  - slime-layer-agent-tax-287
+  - slime-layer-agent-doi-10.1042_bj1120521
+  - slime-layer-agent-brown1969-page1
+  - slime-layer-agent-brown1969-page2
+  - slime-layer-agent-brown1969-page3
+  - slime-layer-agent-brown1969-page4
+  - slime-layer-agent-brown1969-page5
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030114
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/envelope/slime_layer.yaml
+  locator: Entire maintained YAML including definition, components, functions, hierarchy,
+    examples, graph edges, discussions, image metadata and history
+  accessed_at: '2026-10-21T10:11:28Z'
+  support: context_only
+  summary: All fields were read after fresh native inspection; the maintained target
+    and PROPOSED state are unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, CausalNode and source-specific ComplexComposition
+    contracts; essentiality definition; docs/CURATION.md assembly-versus-function
+    guidance and review checklist
+  accessed_at: '2026-10-21T10:11:28Z'
+  support: context_only
+  summary: Component family identity, concrete protein identity and source-specific
+    assembly membership are separate. Essentiality asks whether the structure forms
+    without the component; membership and activity do not establish it. Optional fields
+    are not mandatory. CausalNode permits protein complexes; its xrefs contract does
+    not inherit the top-level record equivalence restriction.
+- evidence_id: slime-layer-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0030114,GO%3A0030112,GO%3A0042603
+  locator: All three complete native definitions, comments and relevant child relationships
+  accessed_at: '2026-10-21T10:00:25.866786Z'
+  support: supports
+  summary: GO0030114 defines easily removed diffuse extracellular material and is
+    a glycocalyx subclass under GO0030112. GO0042603 separately denotes the organized
+    capsule, supporting the maintained sibling boundary. The generic definition lists
+    usual material classes without specifying one invariant polymer.
+  snapshot_sha256: 701f86d2d19f9cffc561369be54d51e544b556dc74533396e111bd5ab7257266
+- evidence_id: slime-layer-agent-SL-0247
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0247.json
+  locator: Complete native location entry definition and GO mapping
+  accessed_at: '2026-10-21T10:00:25.950484Z'
+  support: supports
+  summary: UniProt location SL0247 maps Slime layer to GO0030114 and describes usually
+    polysaccharide-rich bacterial extracellular material, more diffuse than capsule.
+    Its wording is kept distinct from the GO composition statement.
+  snapshot_sha256: 2102944a375f44e5e8f458b467f355388592faf0d85e485ac2849e6d921f12c0
+- evidence_id: slime-layer-agent-tax-287
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/287
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:00:25.923849Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Pseudomonas aeruginosa, species. This receipt
+    attests that identity and rank only, not occurrence or the experimental strain.
+  snapshot_sha256: b1f1bf425b7d767c2098f79a74642175d13b877f972557cf935c80ffa5e5b2cd
+- evidence_id: slime-layer-agent-doi-10.1042_bj1120521
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1042/bj1120521&format=json&resultType=core
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:00:27.363575Z'
+  support: supports
+  summary: 'Native metadata identifies Composition of Pseudomonas aeruginosa slime.
+    Authors: Brown MR, Foster JH, Clamp JR.; PMID 4240755; DOI 10.1042/bj1120521.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: 502f6f80bc5c1c54dfa8aad1e16211bfacdee37c19ccfd7bb7794a172e085759
+- evidence_id: slime-layer-agent-brown1969-page1
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/0eb45745023b/biochemj00703-0128.png
+  locator: 'Native PMC1187742 PNG scan. Printed p521: title/authors, complete five-part
+    abstract, Introduction, Materials and methods opening (materials and organisms).
+    Entire scan visually read.'
+  accessed_at: '2026-10-21T10:06:32.342178Z'
+  support: supports
+  summary: The abstract reports eight-strain slime chemical analysis and a predominantly
+    polysaccharide preparation with nucleic acids and minor protein. The Methods opening
+    names the eight strains and culture-media types. This page supports the bounded
+    historical example, not a universal glycocalyx recipe.
+  snapshot_sha256: 50f562ca73cc787982faef026ecc61f6bfbab1290ce168c5e50833cfb9f598a2
+- evidence_id: slime-layer-agent-brown1969-page2
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/7c5292cc3631/biochemj00703-0129.png
+  locator: 'Native PMC1187742 PNG scan. Printed p522: Materials and methods continuation
+    (culture, extraction, chemical identification and assays); Results Yield and Composition
+    opening. Entire scan visually read.'
+  accessed_at: '2026-10-21T10:06:32.342594Z'
+  support: supports
+  summary: Methods describe five-day static37C culture, homogenization or ethylene-glycol
+    extraction, ethanol precipitation and chemical assays. Early Results compare yields
+    and report qualitative similarity across the eight strains and tested media.
+  snapshot_sha256: 41ece3885374b6f0fa57af4aec821c75099140dff2138d627d9326bf87959e60
+- evidence_id: slime-layer-agent-brown1969-page3
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/eef42817ec9e/biochemj00703-0130.png
+  locator: 'Native PMC1187742 PNG scan. Printed p523: Results Composition continuation,
+    Table1 sugar identities, precipitate examination, Quantitative analysis and complete
+    Table2. Entire scan visually read.'
+  accessed_at: '2026-10-21T10:06:32.342769Z'
+  support: supports
+  summary: This page identifies sugars in hydrolysates and presents Table2 bulk chemical
+    measurements across media and extraction procedures. It supports mixed polysaccharide,
+    nucleic-acid and protein content while preserving the experimental preparation
+    and assay scope.
+  snapshot_sha256: b8ea09a9d8713a0cc136728a061bd8c1f822063baa25e313c3cb24863433adb2
+- evidence_id: slime-layer-agent-brown1969-page4
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/c7e5013f9446/biochemj00703-0131.png
+  locator: 'Native PMC1187742 PNG scan. Printed p524: quantitative Results continuation
+    and Discussion opening through the possible cell-wall/lysis contribution. Entire
+    scan visually read.'
+  accessed_at: '2026-10-21T10:06:32.342955Z'
+  support: supports
+  summary: The authors discuss extraction-dependent differences and predominantly
+    polysaccharide slime with smaller nucleic-acid/protein fractions. They cannot
+    distinguish a glucose/mannose copolymer from a glucan/mannan mixture and consider
+    possible cell-wall or lysis contributions to some measured sugars.
+  snapshot_sha256: dc4d865f3e08e42db8604cbe16ecbd7d45860ff984918d70339dd00aafea0540
+- evidence_id: slime-layer-agent-brown1969-page5
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ddc/1187742/4fa9e12051bb/biochemj00703-0132.png
+  locator: 'Native PMC1187742 PNG scan. Printed p525: final Discussion paragraph,
+    acknowledgments and References. Entire scan visually read.'
+  accessed_at: '2026-10-21T10:06:32.343197Z'
+  support: supports
+  summary: The final Discussion attributes ribose/deoxyribose plausibly to nucleic
+    acid but also considers GDP-derived biosynthetic intermediates. The remainder
+    contains acknowledgments and the reference list; this page does not itself report
+    the extraction protocol or Table2.
+  snapshot_sha256: 15d776120aeca92a97a387790947353e1fb7deec037086540e68dc3427616d03
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/envelope/slime_layer.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:00:00Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/envelope/slime_layer.yaml'
+  snapshot_sha256: f8d116e9edaff0ba0774a3a1761bf43062226df1e6a4f97db2c84f76b33962e5
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/envelope/slime_layer.yaml --out
+    /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/slime_layer-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:00:02Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/envelope/slime_layer.yaml\
+    \ --out /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/slime_layer-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch18-20261021-5wxxz5kh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch18-20261021-5wxxz5kh/slime_layer-strict.tsv"
+  snapshot_sha256: 19dd45aceb32841e3f0316a1e88428ab06f0d7cd078845ba62198f47c640d2ce
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/envelope/slime_layer.yaml; exact collect() scope; hash
+    identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T10:11:28Z'
+  support: supports
+  summary: '6 of6 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Diffuse layer versus organized capsule
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: GO identity, ENVELOPE_LAYER kind, glycocalyx parent and UniProt location
+    xref agree. The capsule distinction is explicit and authority-backed, rather than
+    merging loosely attached matrix with an organized capsule.
+  evidence_ids:
+  - slime-layer-agent-go
+  - slime-layer-agent-SL-0247
+  - record
+- assessment_id: material
+  area: grounding
+  topic: Mixed extracellular material and necessity
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: The component is the collective material constituting the layer. GO, UniProt
+    and Brown composition claims are attributed separately. The measured mixture and
+    unresolved polymer architecture do not justify grounding the complete matrix to
+    one glycan or protein family; material identity remains supported independently
+    of individual formation requirements.
+  evidence_ids:
+  - slime-layer-agent-go
+  - slime-layer-agent-SL-0247
+  - slime-layer-agent-brown1969-page1
+  - slime-layer-agent-brown1969-page2
+  - slime-layer-agent-brown1969-page3
+  - slime-layer-agent-brown1969-page4
+  - slime-layer-agent-brown1969-page5
+  - record
+  - policy
+- assessment_id: formation-necessity
+  area: evidence
+  topic: Whole-material constitution versus individual requirements
+  outcome: unknown
+  target_ids:
+  - GO:0030114
+  summary: The record applies ESSENTIAL to the complete material constituting the
+    slime layer, not separately to each named chemical class. Brown chemical extraction
+    does not establish whether the layer forms without any particular polysaccharide,
+    protein or nucleic-acid component. Logical constitution is retained; experimental
+    formation necessity for those individual classes remains unknown, without a new
+    corrective finding.
+  evidence_ids:
+  - record
+  - policy
+  - slime-layer-agent-go
+  - slime-layer-agent-brown1969-page1
+  - slime-layer-agent-brown1969-page2
+  - slime-layer-agent-brown1969-page3
+  - slime-layer-agent-brown1969-page4
+  - slime-layer-agent-brown1969-page5
+- assessment_id: example
+  area: scope
+  topic: Historical multi-strain biochemical example
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: Native taxon identity matches P.aeruginosa. Brown studied eight strains
+    after five-day static culture at37C, using different media and two extraction
+    procedures. The maintained example claims only chemical characterization of multiple
+    strains; it does not promote uniform composition, fixed proportions or all modern
+    biofilm matrices.
+  evidence_ids:
+  - slime-layer-agent-tax-287
+  - slime-layer-agent-doi-10.1042_bj1120521
+  - slime-layer-agent-brown1969-page1
+  - slime-layer-agent-brown1969-page2
+  - slime-layer-agent-brown1969-page3
+  - slime-layer-agent-brown1969-page4
+  - slime-layer-agent-brown1969-page5
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Descriptive matrix organization
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: 'NONMECHANISTIC and its scope note accurately describe the two edges: material
+    forms a layer and the layer surrounds the cell surface. No species-neutral export
+    system, adhesion mechanism, biosynthetic route or individual-component necessity
+    is asserted.'
+  evidence_ids:
+  - slime-layer-agent-go
+  - slime-layer-agent-SL-0247
+  - slime-layer-agent-brown1969-page1
+  - slime-layer-agent-brown1969-page2
+  - slime-layer-agent-brown1969-page3
+  - slime-layer-agent-brown1969-page4
+  - slime-layer-agent-brown1969-page5
+  - record
+  - policy
+- assessment_id: coverage
+  area: completeness
+  topic: Open chemistry question is appropriate
+  outcome: supported
+  target_ids:
+  - GO:0030114
+  summary: The broad mixed-material TODO remains justified. Optional protein inventory,
+    strain list, quantitative table, image, traits and mechanistic function rows are
+    not mandatory. No existing quotation or reused image occurs. No corrective issue
+    was found within this bounded record review; PROPOSED status and history are preserved.
+  evidence_ids:
+  - slime-layer-agent-go
+  - slime-layer-agent-SL-0247
+  - slime-layer-agent-brown1969-page1
+  - slime-layer-agent-brown1969-page2
+  - slime-layer-agent-brown1969-page3
+  - slime-layer-agent-brown1969-page4
+  - slime-layer-agent-brown1969-page5
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- The Brown PDF download routes failed or returned challenge HTML, but all five genuine
+  native PMC scan pages521-525 were recovered and visually read; the body is not abstract-only.
+- Brown is a historical bulk extraction study with medium/extraction effects and unresolved
+  polymer architecture. It does not establish the complete matrix of every P.aeruginosa
+  strain or every organism with a slime layer.
+- No exhaustive modern polymer-family or biosynthesis survey was performed. The collective
+  matrix identity does not establish formation necessity for any individual polysaccharide,
+  protein or nucleic-acid component.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- The user-authorized coverage task includes clean records.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
