@@ -1,0 +1,1765 @@
+# Source-backed review of lipopolysaccharide transport system
+
+- Review: 20261022T080130Z-lipopolysaccharide-transport-system-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:34:49Z
+- Finished UTC: 2026-10-22T08:01:30Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Two minors: seven exact Lpt family mappings remain unresolved in the record, and one graph note attributes later plug-and-barrel demonstration to the2010 proposal. Seven-member identity, E.coli examples and coarse ATP-driven transport are supported with assay and formation limits.
+
+## Scope And Provenance
+
+Exactly one complete target and thirteen frozen target/guidance/schema inputs. Primary bodies, native identities and stated access scopes were independently read; no neighboring record is an unstated premise.
+
+Selection: Batch58 strict ordered selection index 6; exactly one maintained record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0062051 | data/structures/other/lipopolysaccharide_transport_system.yaml | maintained | lipopolysaccharide transport system |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0062051 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0062051 | Focused validator passed. |
+| Focused native causal-graphs | passed | True | GO:0062051 | Native check passed; scientific support independently assessed. |
+| Focused native verify | passed | True | GO:0062051 | Native check passed; scientific support independently assessed. |
+| Claim-level scientific review | passed | True | GO:0062051 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0062051 | 22 of 32 collected target identifiers returned OK. PMID:12207697: UNREACHABLE; Native Europe PMC uniquely identifies MED12207697: Imp/OstA is required for cell envelope biogenesis in Escherichia coli. (2002); DOI 10.1046/j.1365-2958.2002.03091.x. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:12724388: UNREACHABLE; Native Europe PMC uniquely identifies MED12724388: n-Hexane sensitivity of Escherichia coli due to low expression of imp/ostA encoding an 87 kDa minor protein associated with the outer membrane. (2003); DOI 10.1099/mic.0.25927-0. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:16079137: UNREACHABLE; Native Europe PMC uniquely identifies MED16079137: Protein complexes of the Escherichia coli cell envelope. (2005); DOI 10.1074/jbc.m506479200. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:17056748: UNREACHABLE; Native Europe PMC uniquely identifies MED17056748: Characterization of lptA and lptB, two essential genes implicated in lipopolysaccharide transport to the outer membrane of Escherichia coli. (2007); DOI 10.1128/jb.01126-06. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:18424520: UNREACHABLE; Native Europe PMC uniquely identifies MED18424520: Functional analysis of the protein machinery required for transport of lipopolysaccharide to the outer membrane of Escherichia coli. (2008); DOI 10.1128/jb.00270-08. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:18480051: UNREACHABLE; Native Europe PMC uniquely identifies MED18480051: The LptA protein of Escherichia coli is a periplasmic lipid A-binding protein involved in the lipopolysaccharide export pathway. (2008); DOI 10.1074/jbc.m802503200. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:20446753: UNREACHABLE; Native Europe PMC uniquely identifies MED20446753: Proteins required for lipopolysaccharide assembly in Escherichia coli form a transenvelope complex. (2010); DOI 10.1021/bi100493e. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:20720015: UNREACHABLE; Native Europe PMC uniquely identifies MED20720015: Structure and functional analysis of LptC, a conserved membrane protein involved in the lipopolysaccharide export pathway in Escherichia coli. (2010); DOI 10.1074/jbc.m110.144709. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:21257904: UNREACHABLE; Native Europe PMC uniquely identifies MED21257904: The complex that inserts lipopolysaccharide into the bacterial outer membrane forms a two-protein plug-and-barrel. (2011); DOI 10.1073/pnas.1015617108. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:3316191: UNREACHABLE; Native Europe PMC uniquely identifies MED3316191: Genes encoding two lipoproteins in the leuS-dacA region of the Escherichia coli chromosome. (1987); DOI 10.1128/jb.169.12.5692-5699.1987. This resolves the identifier transport residual only; primary-source reading remains separately scoped. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0062051 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0062051 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0062051 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0062051 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0062051 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Correct Lpt boundary and transporter parent
+
+identity: supported. Targets: GO:0062051.
+
+The exact GO term and seven named E.coli protein classes fit the membrane-to-membrane LPS transporter. MsbA flipping is upstream context, not an eighth constitutive Lpt component. LptD/E and the inner extractor remain distinct subassemblies.
+
+### Seven exact family mappings are available
+
+grounding: concern. Targets: GO:0062051.
+
+All seven reviewed K-12 examples and exact gene queries agree. Exact LptA/B/C/D/E/F/G families match the named whole subunit classes; broad ABC, OstA-like, shared LptF/G and LptC-related groupings are not substituted.
+
+### Transport requirement is not universal assembly necessity
+
+evidence: unknown. Targets: GO:0062051.
+
+The record does not assert ESSENTIAL formation labels for the seven proteins. Depletion, viability and ATP-dependent transport results do not automatically prove failure of physical complex formation. Specific LptD/E maturation and bridge-association dependencies are supported context, not a forced omitted universal pathway.
+
+### Diderm/LPS context and reference strain are preserved
+
+scope: supported. Targets: GO:0062051.
+
+VARIABLE retains a nonuniform distribution claim rather than merely unknown prevalence. The record explicitly restricts the pathway to LPS-bearing Gram-negative/diderm contexts, while the review describes exceptions. K-12 reference sequences, MC4100/BW25113-derived experiments, recombinant purification and proteoliposomes are not conflated.
+
+### Coarse transport mechanism is supported with one source-attribution correction
+
+graph: concern. Targets: GO:0062051.
+
+ATP-dependent extraction, LptC-to-LptA transfer, transenvelope association and delivery to LptD are supported by complementary primary assays. The graph need not assert an atomic trajectory or fixed LptA count. One edge attributes demonstration of the plug-and-barrel architecture to the2010 proposal rather than the later structural-contact study.
+
+### Entire target with bounded positive evidence
+
+completeness: supported. Targets: GO:0062051.
+
+All scientific fields, examples, citations, graphs, discussions and history were read. Existing protein examples were checked directly; no empty optional slot alone is treated as an error. Source tiers and actual reading extents are explicit.
+
+## Findings
+
+### F1: Ground the seven named Lpt protein classes
+
+minor / open / confirmed; issue key: lpt-seven-exact-subunit-families.
+
+All seven named subunits remain REVIEWED_LABEL_ONLY despite exact current families: LptA IPR014340, LptB IPR030921, LptC IPR026265, LptD IPR020889, LptE IPR007485, LptF IPR030922 and LptG IPR030923. Family types/signatures and separate native protein cross-references support these class mappings.
+
+### F2: Separate the 2010 plug model from later demonstration
+
+minor / open / confirmed; issue key: lpt-chng2010-plug-barrel-attribution.
+
+The evidence note on the LptE-to-LptD edge says Chng2010 DOI10.1073/pnas.0912872107 demonstrated the plug-and-barrel architecture. That paper characterizes LptD/E and explicitly discusses alternative arrangements conditionally. Freinkman2011 PMID21257904 supplies the later contact-mapping support.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground the seven named subunit classes to the exact verified families, retaining role evidence and species exceptions. Keep LptF and LptG distinct.
+
+- Each family matches the named whole protein class and its reviewed example.
+- No broad ABC, shared LptF/G or isolated domain is substituted; historical search claims remain historical.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+
+### A2
+
+Change the2010 note to its demonstrated biochemical characterization/proposed arrangement, and cite the later directly relevant2011 study for the architecture claim.
+
+- Each citation is attached to the claim and epistemic stage actually supported.
+- The valid LptD/E insertion relationship is retained without claiming the2010 paper solved the later architecture.
+- Native schema, strict and CURIE checks pass after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/lipopolysaccharide_transport_system.yaml; Entire current YAML, including every scientific field, graph, discussion and history entry | context_only | All target bytes were read. No neighboring maintained record is an unstated premise. |
+| curation | docs/CURATION.md; Component-class grounding and reviewed-label-only contract | context_only | A verified species protein example does not replace exact source-neutral class grounding; protein families need not be exclusive to one complex. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, EssentialityEnum, PresenceEnum and graph fields | context_only | Assembly necessity is distinct from catalytic activity, viability and localization. COMMON means present in most members with exceptional losses; VARIABLE does not merely mean unmeasured prevalence. |
+| graphs | .claude/skills/curate-causal-graphs/SKILL.md; Actor identity and edge-level evidence | context_only | A coarse supported physical mechanism can be represented without inventing every intermediate; a source-specific demonstration claim must match the actual experiment. |
+| micro58-pmid-12207697 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12207697+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID12207697: Imp/OstA is required for cell envelope biogenesis in Escherichia coli. Braun M, Silhavy TJ. (2002), DOI10.1046/j.1365-2958.2002.03091.x. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-12724388 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12724388+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID12724388: n-Hexane sensitivity of Escherichia coli due to low expression of imp/ostA encoding an 87 kDa minor protein associated with the outer membrane. Abe S, Okutsu T, Nakajima H, Kakuda N, Ohtsu I, Aono R. (2003), DOI10.1099/mic.0.25927-0. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-16079137 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16079137+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID16079137: Protein complexes of the Escherichia coli cell envelope. Stenberg F, Chovanec P, Maslen SL, Robinson CV, Ilag LL, von Heijne G, Daley DO. (2005), DOI10.1074/jbc.m506479200. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-17056748 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17056748+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID17056748: Characterization of lptA and lptB, two essential genes implicated in lipopolysaccharide transport to the outer membrane of Escherichia coli. Sperandeo P, Cescutti R, Villa R, Di Benedetto C, Candia D, Dehò G, Polissi A. (2007), DOI10.1128/jb.01126-06. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-18424520 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18424520+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID18424520: Functional analysis of the protein machinery required for transport of lipopolysaccharide to the outer membrane of Escherichia coli. Sperandeo P, Lau FK, Carpentieri A, De Castro C, Molinaro A, Dehò G, Silhavy TJ, Polissi A. (2008), DOI10.1128/jb.00270-08. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-18480051 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18480051+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID18480051: The LptA protein of Escherichia coli is a periplasmic lipid A-binding protein involved in the lipopolysaccharide export pathway. Tran AX, Trent MS, Whitfield C. (2008), DOI10.1074/jbc.m802503200. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-20446753 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20446753+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID20446753: Proteins required for lipopolysaccharide assembly in Escherichia coli form a transenvelope complex. Chng SS, Gronenberg LS, Kahne D. (2010), DOI10.1021/bi100493e. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-20720015 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20720015+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID20720015: Structure and functional analysis of LptC, a conserved membrane protein involved in the lipopolysaccharide export pathway in Escherichia coli. Tran AX, Dong C, Whitfield C. (2010), DOI10.1074/jbc.m110.144709. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-21257904 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21257904+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID21257904: The complex that inserts lipopolysaccharide into the bacterial outer membrane forms a two-protein plug-and-barrel. Freinkman E, Chng SS, Kahne D. (2011), DOI10.1073/pnas.1015617108. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-pmid-3316191 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A3316191+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID3316191: Genes encoding two lipoproteins in the leuS-dacA region of the Escherichia coli chromosome. Takase I, Ishino F, Wachi M, Kamata H, Doi M, Asoh S, Matsuzawa H, Ohta T, Matsuhashi M. (1987), DOI10.1128/jb.169.12.5692-5699.1987. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1016_j.febslet.2009.05.051 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.febslet.2009.05.051%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID19500581: Biochemical characterization of an ABC transporter LptBFGC complex required for the outer membrane sorting of lipopolysaccharides. Narita S, Tokuda H. (2009), DOI10.1016/j.febslet.2009.05.051. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1021_bi300592c | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1021%2Fbi300592c%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID22668317: Regulated assembly of the transenvelope protein complex required for lipopolysaccharide export. Freinkman E, Okuda S, Ruiz N, Kahne D. (2012), DOI10.1021/bi300592c. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1073_pnas.0604744103 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0604744103%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID16861298: Identification of a protein complex that assembles lipopolysaccharide in the outer membrane of Escherichia coli. Wu T, McCandlish AC, Gronenberg LS, Chng SS, Silhavy TJ, Kahne D. (2006), DOI10.1073/pnas.0604744103. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1073_pnas.0801196105 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0801196105%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID18375759: Identification of two inner-membrane proteins required for the transport of lipopolysaccharide to the outer membrane of Escherichia coli. Ruiz N, Gronenberg LS, Kahne D, Silhavy TJ. (2008), DOI10.1073/pnas.0801196105. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1073_pnas.0912872107 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0912872107%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID20203010: Characterization of the two-protein complex in Escherichia coli responsible for lipopolysaccharide assembly at the outer membrane. Chng SS, Ruiz N, Chimalakonda G, Silhavy TJ, Kahne D. (2010), DOI10.1073/pnas.0912872107. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1074_jbc.R117.802512 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.R117.802512%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID28878019: The lipopolysaccharide transport (Lpt) machinery: A nonconventional transporter for lipopolysaccharide assembly at the outer membrane of Gram-negative bacteria. Sperandeo P, Martorana AM, Polissi A. (2017), DOI10.1074/jbc.r117.802512. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1126_science.1228984 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1228984%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID23138981: Cytoplasmic ATP hydrolysis powers transport of lipopolysaccharide across the periplasm in E. coli. Okuda S, Freinkman E, Kahne D. (2012), DOI10.1126/science.1228984. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-doi-10.1126_science.aar1886 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.aar1886%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Unique MED result: exact PMID, title, authors, year, DOI and complete abstractText when present. | supports | PMID29449493: Lipopolysaccharide is transported to the cell surface by a membrane-to-membrane protein bridge. Sherman DJ, Xie R, Taylor RJ, George AH, Okuda S, Foster PJ, Needleman DJ, Kahne D. (2018), DOI10.1126/science.aar1886. The complete native abstract was read; no unlisted body scope is implied. |
+| micro58-protein-P0ADV1 | https://rest.uniprot.org/uniprotkb/P0ADV1.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P0ADV1 identifies lptA in taxon83333; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-lptA | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptA%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed lptA query returns one entry, P0ADV1, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P0A9V1 | https://rest.uniprot.org/uniprotkb/P0A9V1.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P0A9V1 identifies lptB in taxon83333; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-lptB | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptB%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed lptB query returns one entry, P0A9V1, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P0ADV9 | https://rest.uniprot.org/uniprotkb/P0ADV9.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P0ADV9 identifies lptC in taxon83333; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-lptC | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptC%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed lptC query returns one entry, P0ADV9, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P31554 | https://rest.uniprot.org/uniprotkb/P31554.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P31554 identifies lptD in taxon83333; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-lptD | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptD%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed lptD query returns one entry, P31554, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P0ADC1 | https://rest.uniprot.org/uniprotkb/P0ADC1.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P0ADC1 identifies lptE in taxon83333; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-lptE | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptE%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed lptE query returns one entry, P0ADC1, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P0AF98 | https://rest.uniprot.org/uniprotkb/P0AF98.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P0AF98 identifies lptF in taxon83333; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-lptF | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptF%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed lptF query returns one entry, P0AF98, with matching primary gene or declared synonym and exact organism. |
+| micro58-protein-P0ADC6 | https://rest.uniprot.org/uniprotkb/P0ADC6.json; Native identity/status/names, genes, organism/taxonId; complete FUNCTION, SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references. | supports | Reviewed P0ADC6 identifies lptG in taxon83333; native names, gene aliases, organism, location and subunit comments match this maintained example. Native family cross-references provide separate corroboration of candidate class mappings. Unlisted annotation papers are not claimed as independently read. |
+| micro58-gene-lptG | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptG%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned identity set; actual gene_exact, organism_id and reviewed:true query preserved in original URL. | supports | The exact reviewed lptG query returns one entry, P0ADC6, with matching primary gene or declared synonym and exact organism. |
+| micro58-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000444,GO:0000776,GO:0000817,GO:0006303,GO:0007059,GO:0031262,GO:0043564,GO:0045027,GO:0062051,GO:0140513,GO:1990351; Only those two exact entries, definitions/synonyms and relevant typed links in the combined response. | supports | GO0062051 is the ATP-dependent transenvelope lipopolysaccharide transport system; GO1990351 is its transporter-complex parent. These identify the Lpt system rather than upstream MsbA flipping or the whole bacterial envelope. |
+| micro58-GO0062051-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0062051/ancestors?relations=is_a; Complete exact-target relations=is_a ancestor array. | supports | The is_a-only ancestor array includes transporter complex GO1990351 and protein-containing complex GO0032991. |
+| micro58-tax2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA2 identifies Bacteria, domain. |
+| micro58-tax562 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA562 identifies Escherichia coli, species. |
+| micro58-tax83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; Native taxId, scientificName, rank, lineage and relevant equivalent names. | supports | ENA83333 identifies Escherichia coli K-12, the native reviewed-protein strain. |
+| micro58-IPR014340 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014340/; Complete native family type/name/descriptions/member signatures. Matching accession membership is evidenced separately by UniProt. | supports | IPR014340 is the named LptA whole-protein family with exact MF_01914/TIGR03002 signatures. Old generic background listing only five Lpt proteins is not adopted as current complex composition; taxon-specific biological exceptions remain distinct from protein-class identity. |
+| micro58-IPR030921 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030921/; Complete native family type/name/descriptions/member signatures. Matching accession membership is evidenced separately by UniProt. | supports | IPR030921 is the named LptB whole-protein family with exact TIGR04406/cd03218 signatures. Old generic background listing only five Lpt proteins is not adopted as current complex composition; taxon-specific biological exceptions remain distinct from protein-class identity. |
+| micro58-IPR026265 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR026265/; Complete native family type/name/descriptions/member signatures. Matching accession membership is evidenced separately by UniProt. | supports | IPR026265 is the named LptC whole-protein family with exact MF_01915/TIGR04409/PIRSF028513 signatures. Old generic background listing only five Lpt proteins is not adopted as current complex composition; taxon-specific biological exceptions remain distinct from protein-class identity. |
+| micro58-IPR020889 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020889/; Complete native family type/name/descriptions/member signatures. Matching accession membership is evidenced separately by UniProt. | supports | IPR020889 is the named LptD whole-protein family with exact MF_01411 signatures. Old generic background listing only five Lpt proteins is not adopted as current complex composition; taxon-specific biological exceptions remain distinct from protein-class identity. |
+| micro58-IPR007485 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007485/; Complete native family type/name/descriptions/member signatures. Matching accession membership is evidenced separately by UniProt. | supports | IPR007485 is the named LptE whole-protein family with exact MF_01186/PF04390/PTHR38098 signatures. Old generic background listing only five Lpt proteins is not adopted as current complex composition; taxon-specific biological exceptions remain distinct from protein-class identity. |
+| micro58-IPR030922 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030922/; Complete native family type/name/descriptions/member signatures. Matching accession membership is evidenced separately by UniProt. | supports | IPR030922 is the named LptF whole-protein family with exact TIGR04407 signatures. Old generic background listing only five Lpt proteins is not adopted as current complex composition; taxon-specific biological exceptions remain distinct from protein-class identity. |
+| micro58-IPR030923 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030923/; Complete native family type/name/descriptions/member signatures. Matching accession membership is evidenced separately by UniProt. | supports | IPR030923 is the named LptG whole-protein family with exact TIGR04408 signatures. Old generic background listing only five Lpt proteins is not adopted as current complex composition; taxon-specific biological exceptions remain distinct from protein-class identity. |
+| micro58-IPR005495 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005495/; Complete native type/name/description and signatures. | context_only | IPR005495 covers the broader related LptF/LptG permease group; the separately checked narrower families distinguish the two named paralogs. |
+| micro58-IPR010664 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR010664/; Complete native type/name/description and signatures. | context_only | IPR010664 is a broader LptC-related family; it is not preferred over the separately verified exact LptC family. |
+| micro58-PMC5858563-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5858563/; Genuine primary HTML: complete main P2–P15 including abstract, all Fig1–4 captions. Supplementary Methods/files and image pixels were not read. | supports | Reconstitution with separate inner/outer membrane proteoliposomes supports ATP-dependent movement of LPS to LptD and LptA-dependent stable association of the two membrane populations. The PEZ-like transport interpretation is a model, not an atomic trajectory, and physiological LptA stoichiometry remains unresolved. |
+| micro58-PMC3552488-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3552488/; Genuine primary HTML: complete main P1–P9 and all Fig1–4 captions. Supplementary Methods/files and pixels not read. | supports | In vivo photocrosslinking and right-side-out membrane vesicles distinguish ATP-dependent extraction to LptC and additional ATP-dependent transfer to LptA. LptA–LptC physical association itself is ATP-independent in the stated assay. |
+| micro58-PMC2880507-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2880507/; Genuine primary HTML: complete main P2–P12 and all Fig1–3 captions. Supplementary methods/files and pixels not read. | supports | Membrane fractionation and affinity purification support physical transenvelope association of the seven Lpt components. The original report proposes a transport bridge; functional transport is tested separately in later work. |
+| micro58-PMC2851745-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851745/; Genuine primary HTML: Results sec2–4 with Fig2–4 captions; Discussion sec7; Methods sec9–10. Results sec5–6, other Methods, supplements and pixels not read. | supports | The 2010 study purifies a stable LptD/E1:1 complex and studies its domains/stability. Discussion sec7 explicitly considers alternative LptE arrangements and proposes a plug model conditionally; it does not demonstrate the later plug-and-barrel architecture. |
+| micro58-PMC3038725-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3038725/; Genuine primary HTML: complete Results sec2–6 and Discussion SEC2; Methods sec9–10; Fig1–5 captions. Other Methods, supplements and pixels not read. | supports | The later2011 study maps extensive LptD/E contacts by in vivo/in vitro crosslinking and mass spectrometry, supporting LptE within the barrel. The529–538 deletion impairs complex assembly while an isolated mature complex can remain stable; this is a specific mutant context, not universal necessity for every Lpt protein. |
+| micro58-PMC3426634-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3426634/; Genuine primary HTML: complete Results S6–S7, Discussion S8 and Methods S2–S3, embedded Fig2–4 captions. Introduction, supplemental files and pixels not read. | supports | In vivo photocrosslinking defines LptC–LptA–LptD edge interactions and condition-specific dependence of bridge association on native LptD disulfides. LptA copy number remains unresolved; correct OM translocon formation can precede bridge formation. |
+| micro58-PMC1544242-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1544242/; Genuine primary HTML: Results sec2/3/6/8, Discussion sec9, Methods sec11/14/15, embedded Fig1/2/6 captions. Other sections and pixels not read. | supports | MC4100-derived Imp/RlpB experiments support physical LptD/E association and defective arrival of newly synthesized LPS at the cell surface upon depletion. Cell viability, transport and physical complex formation are distinct; the early study did not resolve the whole pathway or exact stoichiometry. |
+| micro58-PMC2291135-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2291135/; Genuine primary HTML: Results sec3–5 and sec9, Discussion sec10, Methods sec12–13, Fig4 caption. Other sections, supplements and pixels not read. | supports | Bioinformatic candidate selection followed by E.coli depletion assays identifies LptF and LptG as distinct required transport proteins. Their ABC-extractor mechanism was proposed in2008; later reconstitution supplies stronger mechanistic support. |
+| micro58-PMC1797204-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1797204/; Genuine primary HTML: Results sec14/16/17, Discussion sec18, Methods sec2 including Tables1/2 and sec8, Fig3/5–7 captions. Other sections and pixels not read. | supports | BW25113-derived depletion and fractionation studies support LptA periplasmic localization and involvement of LptA/B in LPS delivery. Tagged overexpression and inability to distinguish detailed topology of accumulated LPS are explicit limitations. |
+| micro58-PMC5672026-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5672026/; Secondary review: complete sec1; direct introductory paragraphs of sec3; complete sec4–9 including embedded Fig1–3 captions. Other sections and pixels not read. | supports | The secondary review synthesizes LptB2FGC extraction, LptA bridge and LptDE insertion, separates MsbA from Lpt, and preserves species-specific exceptions and an LptC-bypass mutant context. It is not an independent primary transport experiment. |
+| schema-result | just validate data/structures/other/lipopolysaccharide_transport_system.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/lipopolysaccharide_transport_system.yaml |
+| strict-result | just validate-strict data/structures/other/lipopolysaccharide_transport_system.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lipopolysaccharide_transport_system-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/lipopolysaccharide_transport_system.yaml --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lipopolysaccharide_transport_system-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lipopolysaccharide_transport_system-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/lipopolysaccharide_transport_system.yaml --causal-graphs; Complete focused read-only native report | supports | data/structures/other/lipopolysaccharide_transport_system.yaml  (GO:0062051)<br>  lpt_transenvelope_lps_transport	lptb_cytoplasmic_atpase	COVERED	-&gt;lptb_cytoplasmic_atpase (UniProtKB:P0A9V1)<br>  lpt_transenvelope_lps_transport	lptf_inner_membrane_permease	COVERED	-&gt;lptf_inner_membrane_permease (UniProtKB:P0AF98)<br>  lpt_transenvelope_lps_transport	lptg_inner_membrane_permease	COVERED	-&gt;lptg_inner_membrane_permease (UniProtKB:P0ADC6)<br>  lpt_transenvelope_lps_transport	lptc_inner_membrane_adapter	COVERED	-&gt;lptc_inner_membrane_adapter (UniProtKB:P0ADV9)<br>  lpt_transenvelope_lps_transport	lpta_periplasmic_bridge_protein	COVERED	-&gt;lpta_periplasmic_bridge_protein (UniProtKB:P0ADV1)<br>  lpt_transenvelope_lps_transport	lpte_outer_membrane_lipoprotein	COVERED	-&gt;lpte_outer_membrane_lipoprotein (UniProtKB:P0ADC1)<br>  lpt_transenvelope_lps_transport	lptd_outer_membrane_beta_barrel	COVERED	-&gt;lptd_outer_membrane_beta_barrel (UniProtKB:P31554)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     7  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     7  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/lipopolysaccharide_transport_system.yaml --verify; Complete focused read-only native report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/lipopolysaccharide_transport_system.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 22 of 32 collected target identifiers returned OK. PMID:12207697: UNREACHABLE; Native Europe PMC uniquely identifies MED12207697: Imp/OstA is required for cell envelope biogenesis in Escherichia coli. (2002); DOI 10.1046/j.1365-2958.2002.03091.x. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:12724388: UNREACHABLE; Native Europe PMC uniquely identifies MED12724388: n-Hexane sensitivity of Escherichia coli due to low expression of imp/ostA encoding an 87 kDa minor protein associated with the outer membrane. (2003); DOI 10.1099/mic.0.25927-0. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:16079137: UNREACHABLE; Native Europe PMC uniquely identifies MED16079137: Protein complexes of the Escherichia coli cell envelope. (2005); DOI 10.1074/jbc.m506479200. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:17056748: UNREACHABLE; Native Europe PMC uniquely identifies MED17056748: Characterization of lptA and lptB, two essential genes implicated in lipopolysaccharide transport to the outer membrane of Escherichia coli. (2007); DOI 10.1128/jb.01126-06. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:18424520: UNREACHABLE; Native Europe PMC uniquely identifies MED18424520: Functional analysis of the protein machinery required for transport of lipopolysaccharide to the outer membrane of Escherichia coli. (2008); DOI 10.1128/jb.00270-08. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:18480051: UNREACHABLE; Native Europe PMC uniquely identifies MED18480051: The LptA protein of Escherichia coli is a periplasmic lipid A-binding protein involved in the lipopolysaccharide export pathway. (2008); DOI 10.1074/jbc.m802503200. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:20446753: UNREACHABLE; Native Europe PMC uniquely identifies MED20446753: Proteins required for lipopolysaccharide assembly in Escherichia coli form a transenvelope complex. (2010); DOI 10.1021/bi100493e. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:20720015: UNREACHABLE; Native Europe PMC uniquely identifies MED20720015: Structure and functional analysis of LptC, a conserved membrane protein involved in the lipopolysaccharide export pathway in Escherichia coli. (2010); DOI 10.1074/jbc.m110.144709. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:21257904: UNREACHABLE; Native Europe PMC uniquely identifies MED21257904: The complex that inserts lipopolysaccharide into the bacterial outer membrane forms a two-protein plug-and-barrel. (2011); DOI 10.1073/pnas.1015617108. This resolves the identifier transport residual only; primary-source reading remains separately scoped.; PMID:3316191: UNREACHABLE; Native Europe PMC uniquely identifies MED3316191: Genes encoding two lipoproteins in the leuS-dacA region of the Escherichia coli chromosome. (1987); DOI 10.1128/jb.169.12.5692-5699.1987. This resolves the identifier transport residual only; primary-source reading remains separately scoped. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- Primary sources were read only in the exact main-text/Methods/caption extents stated per evidence row. No actual figure pixels, supplemental files or raw experimental datasets were inspected. Narita2009 and unlisted annotation papers remain complete native abstract tier.
+- Co-purification, membrane fractionation, functional transport, viability and physical formation are distinct. Mutant-specific LptD/E and bridge dependencies are not universal subunit-essentiality claims. Physiological LptA copy number remains unresolved.
+- Older family background describes an incomplete five-protein system; that prose is not adopted as current composition. Exact family identities/signatures and separate protein membership establish the proposed mappings.
+- Species-specific Lpt exceptions remain explicit; VARIABLE is not redefined as mere uncertainty. Native reviewed K-12 references are distinct from actual assay strains and proteoliposomes.
+- All reused source bytes preserve their original URL, UTC and SHA256. Readability is established from content rather than HTTP200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorization requests one review for every unreviewed record, including qualified clean cases.
+- No maintained scientific record, historical review or initial native inspection snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T080130Z-lipopolysaccharide-transport-system-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of lipopolysaccharide transport system
+started_at: '2026-10-22T07:34:49Z'
+finished_at: '2026-10-22T08:01:30Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Two minors: seven exact Lpt family mappings remain unresolved in the record,
+  and one graph note attributes later plug-and-barrel demonstration to the2010 proposal.
+  Seven-member identity, E.coli examples and coarse ATP-driven transport are supported
+  with assay and formation limits.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/lipopolysaccharide_transport_system.yaml
+    sha256: 7ce50d437cce77aa049b4340bd3c95899875c156a208e23cb92b38fd4ba0e32e
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0062051
+  path: data/structures/other/lipopolysaccharide_transport_system.yaml
+  label: lipopolysaccharide transport system
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lipopolysaccharide_transport_system.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target and thirteen frozen target/guidance/schema
+    inputs. Primary bodies, native identities and stated access scopes were independently
+    read; no neighboring record is an unstated premise.
+  selection: Batch58 strict ordered selection index 6; exactly one maintained record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0062051
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  command: just validate data/structures/other/lipopolysaccharide_transport_system.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  command: just validate-strict data/structures/other/lipopolysaccharide_transport_system.yaml
+    --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lipopolysaccharide_transport_system-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  command: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/lipopolysaccharide_transport_system.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  command: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/lipopolysaccharide_transport_system.yaml
+    --verify
+  exit_code: 0
+  summary: Native check passed; scientific support independently assessed.
+  evidence_ids:
+  - native-verify
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-pmid-12207697
+  - micro58-pmid-12724388
+  - micro58-pmid-16079137
+  - micro58-pmid-17056748
+  - micro58-pmid-18424520
+  - micro58-pmid-18480051
+  - micro58-pmid-20446753
+  - micro58-pmid-20720015
+  - micro58-pmid-21257904
+  - micro58-pmid-3316191
+  - micro58-doi-10.1016_j.febslet.2009.05.051
+  - micro58-doi-10.1021_bi300592c
+  - micro58-doi-10.1073_pnas.0604744103
+  - micro58-doi-10.1073_pnas.0801196105
+  - micro58-doi-10.1073_pnas.0912872107
+  - micro58-doi-10.1074_jbc.R117.802512
+  - micro58-doi-10.1126_science.1228984
+  - micro58-doi-10.1126_science.aar1886
+  - micro58-protein-P0ADV1
+  - micro58-gene-lptA
+  - micro58-protein-P0A9V1
+  - micro58-gene-lptB
+  - micro58-protein-P0ADV9
+  - micro58-gene-lptC
+  - micro58-protein-P31554
+  - micro58-gene-lptD
+  - micro58-protein-P0ADC1
+  - micro58-gene-lptE
+  - micro58-protein-P0AF98
+  - micro58-gene-lptF
+  - micro58-protein-P0ADC6
+  - micro58-gene-lptG
+  - micro58-go
+  - micro58-GO0062051-ancestors
+  - micro58-tax2
+  - micro58-tax562
+  - micro58-tax83333
+  - micro58-IPR014340
+  - micro58-IPR030921
+  - micro58-IPR026265
+  - micro58-IPR020889
+  - micro58-IPR007485
+  - micro58-IPR030922
+  - micro58-IPR030923
+  - micro58-IPR005495
+  - micro58-IPR010664
+  - micro58-PMC5858563-legacy
+  - micro58-PMC3552488-legacy
+  - micro58-PMC2880507-legacy
+  - micro58-PMC2851745-legacy
+  - micro58-PMC3038725-legacy
+  - micro58-PMC3426634-legacy
+  - micro58-PMC1544242-legacy
+  - micro58-PMC2291135-legacy
+  - micro58-PMC1797204-legacy
+  - micro58-PMC5672026-legacy
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  summary: '22 of 32 collected target identifiers returned OK. PMID:12207697: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED12207697: Imp/OstA is required for cell
+    envelope biogenesis in Escherichia coli. (2002); DOI 10.1046/j.1365-2958.2002.03091.x.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:12724388: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED12724388: n-Hexane sensitivity of Escherichia coli due to low expression of
+    imp/ostA encoding an 87 kDa minor protein associated with the outer membrane.
+    (2003); DOI 10.1099/mic.0.25927-0. This resolves the identifier transport residual
+    only; primary-source reading remains separately scoped.; PMID:16079137: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED16079137: Protein complexes of the Escherichia
+    coli cell envelope. (2005); DOI 10.1074/jbc.m506479200. This resolves the identifier
+    transport residual only; primary-source reading remains separately scoped.; PMID:17056748:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED17056748: Characterization
+    of lptA and lptB, two essential genes implicated in lipopolysaccharide transport
+    to the outer membrane of Escherichia coli. (2007); DOI 10.1128/jb.01126-06. This
+    resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:18424520: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED18424520: Functional analysis of the protein machinery required for transport
+    of lipopolysaccharide to the outer membrane of Escherichia coli. (2008); DOI 10.1128/jb.00270-08.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:18480051: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED18480051: The LptA protein of Escherichia coli is a periplasmic lipid A-binding
+    protein involved in the lipopolysaccharide export pathway. (2008); DOI 10.1074/jbc.m802503200.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:20446753: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED20446753: Proteins required for lipopolysaccharide assembly in Escherichia
+    coli form a transenvelope complex. (2010); DOI 10.1021/bi100493e. This resolves
+    the identifier transport residual only; primary-source reading remains separately
+    scoped.; PMID:20720015: UNREACHABLE; Native Europe PMC uniquely identifies MED20720015:
+    Structure and functional analysis of LptC, a conserved membrane protein involved
+    in the lipopolysaccharide export pathway in Escherichia coli. (2010); DOI 10.1074/jbc.m110.144709.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:21257904: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED21257904: The complex that inserts lipopolysaccharide into the bacterial outer
+    membrane forms a two-protein plug-and-barrel. (2011); DOI 10.1073/pnas.1015617108.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:3316191: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED3316191: Genes encoding two lipoproteins in the leuS-dacA region of the Escherichia
+    coli chromosome. (1987); DOI 10.1128/jb.169.12.5692-5699.1987. This resolves the
+    identifier transport residual only; primary-source reading remains separately
+    scoped. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro58-pmid-12207697
+  - micro58-pmid-12724388
+  - micro58-pmid-16079137
+  - micro58-pmid-17056748
+  - micro58-pmid-18424520
+  - micro58-pmid-18480051
+  - micro58-pmid-20446753
+  - micro58-pmid-20720015
+  - micro58-pmid-21257904
+  - micro58-pmid-3316191
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0062051
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch58 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/lipopolysaccharide_transport_system.yaml
+  locator: Entire current YAML, including every scientific field, graph, discussion
+    and history entry
+  accessed_at: '2026-10-22T07:51:12Z'
+  support: context_only
+  summary: All target bytes were read. No neighboring maintained record is an unstated
+    premise.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component-class grounding and reviewed-label-only contract
+  accessed_at: '2026-10-22T07:51:12Z'
+  support: context_only
+  summary: A verified species protein example does not replace exact source-neutral
+    class grounding; protein families need not be exclusive to one complex.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, EssentialityEnum, PresenceEnum and graph fields
+  accessed_at: '2026-10-22T07:51:12Z'
+  support: context_only
+  summary: Assembly necessity is distinct from catalytic activity, viability and localization.
+    COMMON means present in most members with exceptional losses; VARIABLE does not
+    merely mean unmeasured prevalence.
+- evidence_id: graphs
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Actor identity and edge-level evidence
+  accessed_at: '2026-10-22T07:51:12Z'
+  support: context_only
+  summary: A coarse supported physical mechanism can be represented without inventing
+    every intermediate; a source-specific demonstration claim must match the actual
+    experiment.
+- evidence_id: micro58-pmid-12207697
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12207697+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:53.009479Z'
+  support: supports
+  summary: 'PMID12207697: Imp/OstA is required for cell envelope biogenesis in Escherichia
+    coli. Braun M, Silhavy TJ. (2002), DOI10.1046/j.1365-2958.2002.03091.x. The complete
+    native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 98c0315b8f62ee166acb6ddfb1eb0e15f1aae2758052f8076f78f46a6e5dba48
+- evidence_id: micro58-pmid-12724388
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12724388+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:53.596292Z'
+  support: supports
+  summary: 'PMID12724388: n-Hexane sensitivity of Escherichia coli due to low expression
+    of imp/ostA encoding an 87 kDa minor protein associated with the outer membrane.
+    Abe S, Okutsu T, Nakajima H, Kakuda N, Ohtsu I, Aono R. (2003), DOI10.1099/mic.0.25927-0.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 1444054210472d29a77d4360c1e8ac0d03ae2fa0a62b44d309cbdaffbedb8868
+- evidence_id: micro58-pmid-16079137
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16079137+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:54.225257Z'
+  support: supports
+  summary: 'PMID16079137: Protein complexes of the Escherichia coli cell envelope.
+    Stenberg F, Chovanec P, Maslen SL, Robinson CV, Ilag LL, von Heijne G, Daley DO.
+    (2005), DOI10.1074/jbc.m506479200. The complete native abstract was read; no unlisted
+    body scope is implied.'
+  snapshot_sha256: cf1c57d1a5343edc60d65a0b5d128f9d7b78f0006ac9526b7a31be6d9945918a
+- evidence_id: micro58-pmid-17056748
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17056748+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:54.251708Z'
+  support: supports
+  summary: 'PMID17056748: Characterization of lptA and lptB, two essential genes implicated
+    in lipopolysaccharide transport to the outer membrane of Escherichia coli. Sperandeo
+    P, Cescutti R, Villa R, Di Benedetto C, Candia D, Dehò G, Polissi A. (2007), DOI10.1128/jb.01126-06.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 2aa26af523397e4aafae5a06e3c2c11ad61618750d3b962c5ce302d48c18b085
+- evidence_id: micro58-pmid-18424520
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18424520+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:54.560119Z'
+  support: supports
+  summary: 'PMID18424520: Functional analysis of the protein machinery required for
+    transport of lipopolysaccharide to the outer membrane of Escherichia coli. Sperandeo
+    P, Lau FK, Carpentieri A, De Castro C, Molinaro A, Dehò G, Silhavy TJ, Polissi
+    A. (2008), DOI10.1128/jb.00270-08. The complete native abstract was read; no unlisted
+    body scope is implied.'
+  snapshot_sha256: fe1ce7f67cbe41ac90fd668ec4978306c265832c382f72a4eaa1b145b84deafb
+- evidence_id: micro58-pmid-18480051
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18480051+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:54.825384Z'
+  support: supports
+  summary: 'PMID18480051: The LptA protein of Escherichia coli is a periplasmic lipid
+    A-binding protein involved in the lipopolysaccharide export pathway. Tran AX,
+    Trent MS, Whitfield C. (2008), DOI10.1074/jbc.m802503200. The complete native
+    abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: ec7daa495e2b734eba7ae503b0710081c5204031ef4605383006284a917212db
+- evidence_id: micro58-pmid-20446753
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20446753+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:54.845057Z'
+  support: supports
+  summary: 'PMID20446753: Proteins required for lipopolysaccharide assembly in Escherichia
+    coli form a transenvelope complex. Chng SS, Gronenberg LS, Kahne D. (2010), DOI10.1021/bi100493e.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: d6c312191193caac489761c8022eadbb72933505b258aa5adec4165e2e49e350
+- evidence_id: micro58-pmid-20720015
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20720015+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:54.869668Z'
+  support: supports
+  summary: 'PMID20720015: Structure and functional analysis of LptC, a conserved membrane
+    protein involved in the lipopolysaccharide export pathway in Escherichia coli.
+    Tran AX, Dong C, Whitfield C. (2010), DOI10.1074/jbc.m110.144709. The complete
+    native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 938627a07e7e4afdc25dcb893f422c357fef32dc871c3aecd13e57ce35741af0
+- evidence_id: micro58-pmid-21257904
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21257904+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:55.171255Z'
+  support: supports
+  summary: 'PMID21257904: The complex that inserts lipopolysaccharide into the bacterial
+    outer membrane forms a two-protein plug-and-barrel. Freinkman E, Chng SS, Kahne
+    D. (2011), DOI10.1073/pnas.1015617108. The complete native abstract was read;
+    no unlisted body scope is implied.'
+  snapshot_sha256: 249e4dcc7f4845e1a09d633257229245ac0b048bae0be1d2adfa3b85e3f702d2
+- evidence_id: micro58-pmid-3316191
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A3316191+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:55.457555Z'
+  support: supports
+  summary: 'PMID3316191: Genes encoding two lipoproteins in the leuS-dacA region of
+    the Escherichia coli chromosome. Takase I, Ishino F, Wachi M, Kamata H, Doi M,
+    Asoh S, Matsuzawa H, Ohta T, Matsuhashi M. (1987), DOI10.1128/jb.169.12.5692-5699.1987.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: c7fb35497917f098f4fd624fdff29fdc63d2e594e8eb2c65848c559034e938ae
+- evidence_id: micro58-doi-10.1016_j.febslet.2009.05.051
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.febslet.2009.05.051%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:56.104967Z'
+  support: supports
+  summary: 'PMID19500581: Biochemical characterization of an ABC transporter LptBFGC
+    complex required for the outer membrane sorting of lipopolysaccharides. Narita
+    S, Tokuda H. (2009), DOI10.1016/j.febslet.2009.05.051. The complete native abstract
+    was read; no unlisted body scope is implied.'
+  snapshot_sha256: a3e1c28a1c4d52338afe1a0a981b7f6498689f35ec55340e76112be8830d39fa
+- evidence_id: micro58-doi-10.1021_bi300592c
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1021%2Fbi300592c%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:56.684835Z'
+  support: supports
+  summary: 'PMID22668317: Regulated assembly of the transenvelope protein complex
+    required for lipopolysaccharide export. Freinkman E, Okuda S, Ruiz N, Kahne D.
+    (2012), DOI10.1021/bi300592c. The complete native abstract was read; no unlisted
+    body scope is implied.'
+  snapshot_sha256: 273b6ed18c7c7413947ae956188f5607501290ab4b273c04cf304490b4b8aa0a
+- evidence_id: micro58-doi-10.1073_pnas.0604744103
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0604744103%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:56.733693Z'
+  support: supports
+  summary: 'PMID16861298: Identification of a protein complex that assembles lipopolysaccharide
+    in the outer membrane of Escherichia coli. Wu T, McCandlish AC, Gronenberg LS,
+    Chng SS, Silhavy TJ, Kahne D. (2006), DOI10.1073/pnas.0604744103. The complete
+    native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 93a0fbd97045fae847ed7c1ab3b7a5e31e39dd90896a87803c6a2a418c0d42eb
+- evidence_id: micro58-doi-10.1073_pnas.0801196105
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0801196105%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:57.014830Z'
+  support: supports
+  summary: 'PMID18375759: Identification of two inner-membrane proteins required for
+    the transport of lipopolysaccharide to the outer membrane of Escherichia coli.
+    Ruiz N, Gronenberg LS, Kahne D, Silhavy TJ. (2008), DOI10.1073/pnas.0801196105.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 38d71df0b082e22c237f251de69d2348011a43e393918ea42a53dac10dc631a6
+- evidence_id: micro58-doi-10.1073_pnas.0912872107
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0912872107%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:57.294231Z'
+  support: supports
+  summary: 'PMID20203010: Characterization of the two-protein complex in Escherichia
+    coli responsible for lipopolysaccharide assembly at the outer membrane. Chng SS,
+    Ruiz N, Chimalakonda G, Silhavy TJ, Kahne D. (2010), DOI10.1073/pnas.0912872107.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 145b11655c8d97994e49412df5952031832c1c5449d514d7c27d4c6fc3a5c50f
+- evidence_id: micro58-doi-10.1074_jbc.R117.802512
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.R117.802512%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:57.388337Z'
+  support: supports
+  summary: 'PMID28878019: The lipopolysaccharide transport (Lpt) machinery: A nonconventional
+    transporter for lipopolysaccharide assembly at the outer membrane of Gram-negative
+    bacteria. Sperandeo P, Martorana AM, Polissi A. (2017), DOI10.1074/jbc.r117.802512.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: c65602750adb8422a0b6d630b4bf65bf9295d9d48cec5ccdf0609a9f7caa4039
+- evidence_id: micro58-doi-10.1126_science.1228984
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1228984%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:58.064022Z'
+  support: supports
+  summary: 'PMID23138981: Cytoplasmic ATP hydrolysis powers transport of lipopolysaccharide
+    across the periplasm in E. coli. Okuda S, Freinkman E, Kahne D. (2012), DOI10.1126/science.1228984.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: fb73eb400ccbf7f59a0b649cb988ef5457b2c90600c628527cdd3552caaf6ba0
+- evidence_id: micro58-doi-10.1126_science.aar1886
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.aar1886%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: 'Unique MED result: exact PMID, title, authors, year, DOI and complete
+    abstractText when present.'
+  accessed_at: '2026-10-22T07:38:58.294486Z'
+  support: supports
+  summary: 'PMID29449493: Lipopolysaccharide is transported to the cell surface by
+    a membrane-to-membrane protein bridge. Sherman DJ, Xie R, Taylor RJ, George AH,
+    Okuda S, Foster PJ, Needleman DJ, Kahne D. (2018), DOI10.1126/science.aar1886.
+    The complete native abstract was read; no unlisted body scope is implied.'
+  snapshot_sha256: 582f62252185e84f00d96e415dea03aa99b055dbbbe36804813883a806756271
+- evidence_id: micro58-protein-P0ADV1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0ADV1.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:48.218686Z'
+  support: supports
+  summary: Reviewed P0ADV1 identifies lptA in taxon83333; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: a49f57f247687a374446fcfe0d6b33e53ea8060af935201b1d8e588c245901e7
+- evidence_id: micro58-gene-lptA
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptA%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:01.827008Z'
+  support: supports
+  summary: The exact reviewed lptA query returns one entry, P0ADV1, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: e97a531c6792ce399e4ff13718c26ef6b8492357f54d130230c72afcb8fb0b19
+- evidence_id: micro58-protein-P0A9V1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0A9V1.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:47.638413Z'
+  support: supports
+  summary: Reviewed P0A9V1 identifies lptB in taxon83333; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: a539dccc2f9371777cda184328fdbdf0ea913901bb0a4f8be9973ccb28e38a07
+- evidence_id: micro58-gene-lptB
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptB%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:01.875290Z'
+  support: supports
+  summary: The exact reviewed lptB query returns one entry, P0A9V1, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: 50c80c40179588c0cbda5e9914674e3561dd3f52fd1de12dec341b827da48bcc
+- evidence_id: micro58-protein-P0ADV9
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0ADV9.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:48.321025Z'
+  support: supports
+  summary: Reviewed P0ADV9 identifies lptC in taxon83333; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 53d4861aae4b0c63f0442dabafde093c6df6d2ed831df1b48bff73b6717d2e4f
+- evidence_id: micro58-gene-lptC
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptC%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:02.653929Z'
+  support: supports
+  summary: The exact reviewed lptC query returns one entry, P0ADV9, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: 9275ea8f055bff383cda815a15b30587451b4228aa8a12dcbb6441316600d41c
+- evidence_id: micro58-protein-P31554
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P31554.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:48.406076Z'
+  support: supports
+  summary: Reviewed P31554 identifies lptD in taxon83333; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: dbab992a253dc68cd2b7543da5236b46111557f1f37b9fdd619b4b81794bf178
+- evidence_id: micro58-gene-lptD
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptD%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:02.663102Z'
+  support: supports
+  summary: The exact reviewed lptD query returns one entry, P31554, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: 1cefffb7d372496094e05d2fcba958a834d1b35316006f0c3e13d60d143c15e5
+- evidence_id: micro58-protein-P0ADC1
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0ADC1.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:47.662447Z'
+  support: supports
+  summary: Reviewed P0ADC1 identifies lptE in taxon83333; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 70872174ddd7695d30b349af2863fe0f5d9c5f83f387200cbf6f8da40d459a90
+- evidence_id: micro58-gene-lptE
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptE%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:02.767570Z'
+  support: supports
+  summary: The exact reviewed lptE query returns one entry, P0ADC1, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: c335b8cad051a875c24d87fa500eab861f2656e511ac7164d0a6664830daeef4
+- evidence_id: micro58-protein-P0AF98
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0AF98.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:48.389386Z'
+  support: supports
+  summary: Reviewed P0AF98 identifies lptF in taxon83333; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: a4fd62e77373d82751c493c32e954a4a935cecb2c8d43d2a357743077dd5c3c4
+- evidence_id: micro58-gene-lptF
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptF%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:02.774396Z'
+  support: supports
+  summary: The exact reviewed lptF query returns one entry, P0AF98, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: d5933058a3cccc7ee4679d7043e63990578d827ba058fe21f9f8d01b3de57f23
+- evidence_id: micro58-protein-P0ADC6
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0ADC6.json
+  locator: Native identity/status/names, genes, organism/taxonId; complete FUNCTION,
+    SUBUNIT, SUBCELLULAR LOCATION and SIMILARITY comments and relevant InterPro cross-references.
+  accessed_at: '2026-10-22T07:38:47.670030Z'
+  support: supports
+  summary: Reviewed P0ADC6 identifies lptG in taxon83333; native names, gene aliases,
+    organism, location and subunit comments match this maintained example. Native
+    family cross-references provide separate corroboration of candidate class mappings.
+    Unlisted annotation papers are not claimed as independently read.
+  snapshot_sha256: 20aa3222eec43cbb1782775b815c3b69549e897e0cfcc81d7556732e6cb2f5bc
+- evidence_id: micro58-gene-lptG
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AlptG%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned identity set; actual gene_exact, organism_id and reviewed:true
+    query preserved in original URL.
+  accessed_at: '2026-10-22T07:39:03.464124Z'
+  support: supports
+  summary: The exact reviewed lptG query returns one entry, P0ADC6, with matching
+    primary gene or declared synonym and exact organism.
+  snapshot_sha256: 664f7d12805970dcb311daba5feb97624ef8d394464edc55edfc90b0f4f6f177
+- evidence_id: micro58-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000444,GO:0000776,GO:0000817,GO:0006303,GO:0007059,GO:0031262,GO:0043564,GO:0045027,GO:0062051,GO:0140513,GO:1990351
+  locator: Only those two exact entries, definitions/synonyms and relevant typed links
+    in the combined response.
+  accessed_at: '2026-10-22T07:38:46.369929Z'
+  support: supports
+  summary: GO0062051 is the ATP-dependent transenvelope lipopolysaccharide transport
+    system; GO1990351 is its transporter-complex parent. These identify the Lpt system
+    rather than upstream MsbA flipping or the whole bacterial envelope.
+  snapshot_sha256: 250f8bb7ef6c3e14e15534276b68530200b6490913906399353bb07481b31f71
+- evidence_id: micro58-GO0062051-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0062051/ancestors?relations=is_a
+  locator: Complete exact-target relations=is_a ancestor array.
+  accessed_at: '2026-10-22T07:38:46.370445Z'
+  support: supports
+  summary: The is_a-only ancestor array includes transporter complex GO1990351 and
+    protein-containing complex GO0032991.
+  snapshot_sha256: d1a97376dc80e450241fd90f2c148c4b6f9ba36e4fce3d1b452dd9cae3d92e52
+- evidence_id: micro58-tax2
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:38:47.039523Z'
+  support: supports
+  summary: ENA2 identifies Bacteria, domain.
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: micro58-tax562
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:38:47.081563Z'
+  support: supports
+  summary: ENA562 identifies Escherichia coli, species.
+  snapshot_sha256: ea038c30da3aab3426b7df16ce7a137cf2985e73d6ad8281971b9c390a74d2a8
+- evidence_id: micro58-tax83333
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Native taxId, scientificName, rank, lineage and relevant equivalent names.
+  accessed_at: '2026-10-22T07:38:47.636125Z'
+  support: supports
+  summary: ENA83333 identifies Escherichia coli K-12, the native reviewed-protein
+    strain.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: micro58-IPR014340
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014340/
+  locator: Complete native family type/name/descriptions/member signatures. Matching
+    accession membership is evidenced separately by UniProt.
+  accessed_at: '2026-10-22T07:39:41.335097Z'
+  support: supports
+  summary: IPR014340 is the named LptA whole-protein family with exact MF_01914/TIGR03002
+    signatures. Old generic background listing only five Lpt proteins is not adopted
+    as current complex composition; taxon-specific biological exceptions remain distinct
+    from protein-class identity.
+  snapshot_sha256: 0771d28efa0d43eb3d035c9a2bfe493df3bb92162384988fe8dc6eb3cab22526
+- evidence_id: micro58-IPR030921
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030921/
+  locator: Complete native family type/name/descriptions/member signatures. Matching
+    accession membership is evidenced separately by UniProt.
+  accessed_at: '2026-10-22T07:39:42.039095Z'
+  support: supports
+  summary: IPR030921 is the named LptB whole-protein family with exact TIGR04406/cd03218
+    signatures. Old generic background listing only five Lpt proteins is not adopted
+    as current complex composition; taxon-specific biological exceptions remain distinct
+    from protein-class identity.
+  snapshot_sha256: 3c2d08b1686549651ee7093273649dded7908b349a60b40e45567fdf432e2924
+- evidence_id: micro58-IPR026265
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR026265/
+  locator: Complete native family type/name/descriptions/member signatures. Matching
+    accession membership is evidenced separately by UniProt.
+  accessed_at: '2026-10-22T07:39:42.085553Z'
+  support: supports
+  summary: IPR026265 is the named LptC whole-protein family with exact MF_01915/TIGR04409/PIRSF028513
+    signatures. Old generic background listing only five Lpt proteins is not adopted
+    as current complex composition; taxon-specific biological exceptions remain distinct
+    from protein-class identity.
+  snapshot_sha256: e13a5fb3ce284814ce35a6385238428b8b3a64eefe2b790a2550f446dff31c41
+- evidence_id: micro58-IPR020889
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR020889/
+  locator: Complete native family type/name/descriptions/member signatures. Matching
+    accession membership is evidenced separately by UniProt.
+  accessed_at: '2026-10-22T07:39:42.620920Z'
+  support: supports
+  summary: IPR020889 is the named LptD whole-protein family with exact MF_01411 signatures.
+    Old generic background listing only five Lpt proteins is not adopted as current
+    complex composition; taxon-specific biological exceptions remain distinct from
+    protein-class identity.
+  snapshot_sha256: 012318b2911e0a9d11b42b5289e9b0051b4a9cfd6c59fc6c2a091b35642a2bf5
+- evidence_id: micro58-IPR007485
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007485/
+  locator: Complete native family type/name/descriptions/member signatures. Matching
+    accession membership is evidenced separately by UniProt.
+  accessed_at: '2026-10-22T07:39:42.703514Z'
+  support: supports
+  summary: IPR007485 is the named LptE whole-protein family with exact MF_01186/PF04390/PTHR38098
+    signatures. Old generic background listing only five Lpt proteins is not adopted
+    as current complex composition; taxon-specific biological exceptions remain distinct
+    from protein-class identity.
+  snapshot_sha256: 6ae7a373d99ee781c3000e39974e66fd76e6a9c81d478e98c9bd4cb08d3d0669
+- evidence_id: micro58-IPR030922
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030922/
+  locator: Complete native family type/name/descriptions/member signatures. Matching
+    accession membership is evidenced separately by UniProt.
+  accessed_at: '2026-10-22T07:39:43.238990Z'
+  support: supports
+  summary: IPR030922 is the named LptF whole-protein family with exact TIGR04407 signatures.
+    Old generic background listing only five Lpt proteins is not adopted as current
+    complex composition; taxon-specific biological exceptions remain distinct from
+    protein-class identity.
+  snapshot_sha256: 64c715c496a528e693830567cc118b2b2fad20562374f2e3cb033d21a8d37863
+- evidence_id: micro58-IPR030923
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR030923/
+  locator: Complete native family type/name/descriptions/member signatures. Matching
+    accession membership is evidenced separately by UniProt.
+  accessed_at: '2026-10-22T07:39:43.273713Z'
+  support: supports
+  summary: IPR030923 is the named LptG whole-protein family with exact TIGR04408 signatures.
+    Old generic background listing only five Lpt proteins is not adopted as current
+    complex composition; taxon-specific biological exceptions remain distinct from
+    protein-class identity.
+  snapshot_sha256: 3a6f425a6e6e4697c474a88abab19320ffe52dafbfdfcbb3d2b6d9402693f8e8
+- evidence_id: micro58-IPR005495
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005495/
+  locator: Complete native type/name/description and signatures.
+  accessed_at: '2026-10-22T07:39:43.310398Z'
+  support: context_only
+  summary: IPR005495 covers the broader related LptF/LptG permease group; the separately
+    checked narrower families distinguish the two named paralogs.
+  snapshot_sha256: 18caf5bee3071bcdf80a398fa408ee0d58ca5527ad45ec7700dda19db58a5dbc
+- evidence_id: micro58-IPR010664
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR010664/
+  locator: Complete native type/name/description and signatures.
+  accessed_at: '2026-10-22T07:39:43.762705Z'
+  support: context_only
+  summary: IPR010664 is a broader LptC-related family; it is not preferred over the
+    separately verified exact LptC family.
+  snapshot_sha256: 96b00c1ce0c98d278b435b180bcd489c71541e11044b917bb6f2d14bceaad2b5
+- evidence_id: micro58-PMC5858563-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5858563/
+  locator: 'Genuine primary HTML: complete main P2–P15 including abstract, all Fig1–4
+    captions. Supplementary Methods/files and image pixels were not read.'
+  accessed_at: '2026-10-22T07:40:39.678645Z'
+  support: supports
+  summary: Reconstitution with separate inner/outer membrane proteoliposomes supports
+    ATP-dependent movement of LPS to LptD and LptA-dependent stable association of
+    the two membrane populations. The PEZ-like transport interpretation is a model,
+    not an atomic trajectory, and physiological LptA stoichiometry remains unresolved.
+  snapshot_sha256: 03e8381fbb3a1fbcc5f45efd908f0a5bdd1c829f170c23c0540377b8c37c4552
+- evidence_id: micro58-PMC3552488-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3552488/
+  locator: 'Genuine primary HTML: complete main P1–P9 and all Fig1–4 captions. Supplementary
+    Methods/files and pixels not read.'
+  accessed_at: '2026-10-22T07:40:39.646976Z'
+  support: supports
+  summary: In vivo photocrosslinking and right-side-out membrane vesicles distinguish
+    ATP-dependent extraction to LptC and additional ATP-dependent transfer to LptA.
+    LptA–LptC physical association itself is ATP-independent in the stated assay.
+  snapshot_sha256: 2d371ad04121ea12b0348c47242bd33ff2cef5c6e23241d5f1cd0ab657fe92f7
+- evidence_id: micro58-PMC2880507-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2880507/
+  locator: 'Genuine primary HTML: complete main P2–P12 and all Fig1–3 captions. Supplementary
+    methods/files and pixels not read.'
+  accessed_at: '2026-10-22T07:40:39.112945Z'
+  support: supports
+  summary: Membrane fractionation and affinity purification support physical transenvelope
+    association of the seven Lpt components. The original report proposes a transport
+    bridge; functional transport is tested separately in later work.
+  snapshot_sha256: 8cc69b1a518f9b60ad759bbc88d3201156701e835eec9b286f2dd7940768240d
+- evidence_id: micro58-PMC2851745-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851745/
+  locator: 'Genuine primary HTML: Results sec2–4 with Fig2–4 captions; Discussion
+    sec7; Methods sec9–10. Results sec5–6, other Methods, supplements and pixels not
+    read.'
+  accessed_at: '2026-10-22T07:41:28.056889Z'
+  support: supports
+  summary: The 2010 study purifies a stable LptD/E1:1 complex and studies its domains/stability.
+    Discussion sec7 explicitly considers alternative LptE arrangements and proposes
+    a plug model conditionally; it does not demonstrate the later plug-and-barrel
+    architecture.
+  snapshot_sha256: 3b4822118e23c8484f8c6935b96e8bec2d01bec9ca80aa2e056b2540de540744
+- evidence_id: micro58-PMC3038725-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3038725/
+  locator: 'Genuine primary HTML: complete Results sec2–6 and Discussion SEC2; Methods
+    sec9–10; Fig1–5 captions. Other Methods, supplements and pixels not read.'
+  accessed_at: '2026-10-22T07:41:28.057220Z'
+  support: supports
+  summary: The later2011 study maps extensive LptD/E contacts by in vivo/in vitro
+    crosslinking and mass spectrometry, supporting LptE within the barrel. The529–538
+    deletion impairs complex assembly while an isolated mature complex can remain
+    stable; this is a specific mutant context, not universal necessity for every Lpt
+    protein.
+  snapshot_sha256: af83c27ca27fb9d63c1e8f17c981ec495fb9b48be5647d036a03dcfe11b5865f
+- evidence_id: micro58-PMC3426634-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3426634/
+  locator: 'Genuine primary HTML: complete Results S6–S7, Discussion S8 and Methods
+    S2–S3, embedded Fig2–4 captions. Introduction, supplemental files and pixels not
+    read.'
+  accessed_at: '2026-10-22T07:40:39.113294Z'
+  support: supports
+  summary: In vivo photocrosslinking defines LptC–LptA–LptD edge interactions and
+    condition-specific dependence of bridge association on native LptD disulfides.
+    LptA copy number remains unresolved; correct OM translocon formation can precede
+    bridge formation.
+  snapshot_sha256: b549244cc3789e889e34902ce16362ffe711c5b34b330f8bd64a092881f4f5af
+- evidence_id: micro58-PMC1544242-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1544242/
+  locator: 'Genuine primary HTML: Results sec2/3/6/8, Discussion sec9, Methods sec11/14/15,
+    embedded Fig1/2/6 captions. Other sections and pixels not read.'
+  accessed_at: '2026-10-22T07:40:39.113365Z'
+  support: supports
+  summary: MC4100-derived Imp/RlpB experiments support physical LptD/E association
+    and defective arrival of newly synthesized LPS at the cell surface upon depletion.
+    Cell viability, transport and physical complex formation are distinct; the early
+    study did not resolve the whole pathway or exact stoichiometry.
+  snapshot_sha256: 9a31193ab3cae6647d0a23076c201da4fe1de4ef95be40a86f5935d2cdf9313a
+- evidence_id: micro58-PMC2291135-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2291135/
+  locator: 'Genuine primary HTML: Results sec3–5 and sec9, Discussion sec10, Methods
+    sec12–13, Fig4 caption. Other sections, supplements and pixels not read.'
+  accessed_at: '2026-10-22T07:40:39.113406Z'
+  support: supports
+  summary: Bioinformatic candidate selection followed by E.coli depletion assays identifies
+    LptF and LptG as distinct required transport proteins. Their ABC-extractor mechanism
+    was proposed in2008; later reconstitution supplies stronger mechanistic support.
+  snapshot_sha256: 70e78be2f038c6ce8f21b728471c3025df0f0fd9f6eeb5160c02390b5d56d38b
+- evidence_id: micro58-PMC1797204-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1797204/
+  locator: 'Genuine primary HTML: Results sec14/16/17, Discussion sec18, Methods sec2
+    including Tables1/2 and sec8, Fig3/5–7 captions. Other sections and pixels not
+    read.'
+  accessed_at: '2026-10-22T07:40:39.710080Z'
+  support: supports
+  summary: BW25113-derived depletion and fractionation studies support LptA periplasmic
+    localization and involvement of LptA/B in LPS delivery. Tagged overexpression
+    and inability to distinguish detailed topology of accumulated LPS are explicit
+    limitations.
+  snapshot_sha256: 6eb39d107b63555407d0a7d7461caee36b0aa12e852f6e189df69591d57411f3
+- evidence_id: micro58-PMC5672026-legacy
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5672026/
+  locator: 'Secondary review: complete sec1; direct introductory paragraphs of sec3;
+    complete sec4–9 including embedded Fig1–3 captions. Other sections and pixels
+    not read.'
+  accessed_at: '2026-10-22T07:40:39.642413Z'
+  support: supports
+  summary: The secondary review synthesizes LptB2FGC extraction, LptA bridge and LptDE
+    insertion, separates MsbA from Lpt, and preserves species-specific exceptions
+    and an LptC-bypass mutant context. It is not an independent primary transport
+    experiment.
+  snapshot_sha256: 1f31cd4983e985e22b244531560f51df6cd74653457d23696566fadf2e648c36
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/lipopolysaccharide_transport_system.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:34:51Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/lipopolysaccharide_transport_system.yaml'
+  snapshot_sha256: 812cac7ded1ed7bb550a6f1013bc57acf907054034ff8bf26e31977dbab33d00
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/lipopolysaccharide_transport_system.yaml
+    --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lipopolysaccharide_transport_system-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:34:51Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/lipopolysaccharide_transport_system.yaml\
+    \ --out /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lipopolysaccharide_transport_system-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/lipopolysaccharide_transport_system-strict.tsv"
+  snapshot_sha256: 9594140caf1f85eea3d6d6f91af7171d4d4e56d5de09fd6e47cf92d07f05b26b
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/lipopolysaccharide_transport_system.yaml
+    --causal-graphs
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:39:24.689219Z'
+  support: supports
+  summary: "data/structures/other/lipopolysaccharide_transport_system.yaml  (GO:0062051)\n\
+    \  lpt_transenvelope_lps_transport\tlptb_cytoplasmic_atpase\tCOVERED\t->lptb_cytoplasmic_atpase\
+    \ (UniProtKB:P0A9V1)\n  lpt_transenvelope_lps_transport\tlptf_inner_membrane_permease\t\
+    COVERED\t->lptf_inner_membrane_permease (UniProtKB:P0AF98)\n  lpt_transenvelope_lps_transport\t\
+    lptg_inner_membrane_permease\tCOVERED\t->lptg_inner_membrane_permease (UniProtKB:P0ADC6)\n\
+    \  lpt_transenvelope_lps_transport\tlptc_inner_membrane_adapter\tCOVERED\t->lptc_inner_membrane_adapter\
+    \ (UniProtKB:P0ADV9)\n  lpt_transenvelope_lps_transport\tlpta_periplasmic_bridge_protein\t\
+    COVERED\t->lpta_periplasmic_bridge_protein (UniProtKB:P0ADV1)\n  lpt_transenvelope_lps_transport\t\
+    lpte_outer_membrane_lipoprotein\tCOVERED\t->lpte_outer_membrane_lipoprotein (UniProtKB:P0ADC1)\n\
+    \  lpt_transenvelope_lps_transport\tlptd_outer_membrane_beta_barrel\tCOVERED\t\
+    ->lptd_outer_membrane_beta_barrel (UniProtKB:P31554)\n\ncausal_graphs GENE_OR_PROTEIN\
+    \ node summary:\n     7  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     7  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 22dc6e5a43f3ee651b4ba14ac6c41138867d16abc99858e2a217188e2a4a2c83
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch58-20261022-e3d8mlk1/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/lipopolysaccharide_transport_system.yaml
+    --verify
+  locator: Complete focused read-only native report
+  accessed_at: '2026-10-22T07:39:25.793579Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/lipopolysaccharide_transport_system.yaml; native
+    collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '22 of 32 collected target identifiers returned OK. PMID:12207697: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED12207697: Imp/OstA is required for cell
+    envelope biogenesis in Escherichia coli. (2002); DOI 10.1046/j.1365-2958.2002.03091.x.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:12724388: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED12724388: n-Hexane sensitivity of Escherichia coli due to low expression of
+    imp/ostA encoding an 87 kDa minor protein associated with the outer membrane.
+    (2003); DOI 10.1099/mic.0.25927-0. This resolves the identifier transport residual
+    only; primary-source reading remains separately scoped.; PMID:16079137: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED16079137: Protein complexes of the Escherichia
+    coli cell envelope. (2005); DOI 10.1074/jbc.m506479200. This resolves the identifier
+    transport residual only; primary-source reading remains separately scoped.; PMID:17056748:
+    UNREACHABLE; Native Europe PMC uniquely identifies MED17056748: Characterization
+    of lptA and lptB, two essential genes implicated in lipopolysaccharide transport
+    to the outer membrane of Escherichia coli. (2007); DOI 10.1128/jb.01126-06. This
+    resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:18424520: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED18424520: Functional analysis of the protein machinery required for transport
+    of lipopolysaccharide to the outer membrane of Escherichia coli. (2008); DOI 10.1128/jb.00270-08.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:18480051: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED18480051: The LptA protein of Escherichia coli is a periplasmic lipid A-binding
+    protein involved in the lipopolysaccharide export pathway. (2008); DOI 10.1074/jbc.m802503200.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:20446753: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED20446753: Proteins required for lipopolysaccharide assembly in Escherichia
+    coli form a transenvelope complex. (2010); DOI 10.1021/bi100493e. This resolves
+    the identifier transport residual only; primary-source reading remains separately
+    scoped.; PMID:20720015: UNREACHABLE; Native Europe PMC uniquely identifies MED20720015:
+    Structure and functional analysis of LptC, a conserved membrane protein involved
+    in the lipopolysaccharide export pathway in Escherichia coli. (2010); DOI 10.1074/jbc.m110.144709.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:21257904: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED21257904: The complex that inserts lipopolysaccharide into the bacterial outer
+    membrane forms a two-protein plug-and-barrel. (2011); DOI 10.1073/pnas.1015617108.
+    This resolves the identifier transport residual only; primary-source reading remains
+    separately scoped.; PMID:3316191: UNREACHABLE; Native Europe PMC uniquely identifies
+    MED3316191: Genes encoding two lipoproteins in the leuS-dacA region of the Escherichia
+    coli chromosome. (1987); DOI 10.1128/jb.169.12.5692-5699.1987. This resolves the
+    identifier transport residual only; primary-source reading remains separately
+    scoped. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Correct Lpt boundary and transporter parent
+  outcome: supported
+  target_ids:
+  - GO:0062051
+  summary: The exact GO term and seven named E.coli protein classes fit the membrane-to-membrane
+    LPS transporter. MsbA flipping is upstream context, not an eighth constitutive
+    Lpt component. LptD/E and the inner extractor remain distinct subassemblies.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-go
+  - micro58-GO0062051-ancestors
+  - micro58-PMC5858563-legacy
+  - micro58-PMC5672026-legacy
+- assessment_id: grounding
+  area: grounding
+  topic: Seven exact family mappings are available
+  outcome: concern
+  target_ids:
+  - GO:0062051
+  summary: All seven reviewed K-12 examples and exact gene queries agree. Exact LptA/B/C/D/E/F/G
+    families match the named whole subunit classes; broad ABC, OstA-like, shared LptF/G
+    and LptC-related groupings are not substituted.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-IPR014340
+  - micro58-IPR030921
+  - micro58-IPR026265
+  - micro58-IPR020889
+  - micro58-IPR007485
+  - micro58-IPR030922
+  - micro58-IPR030923
+  - micro58-IPR005495
+  - micro58-IPR010664
+  - micro58-protein-P0ADV1
+  - micro58-protein-P0A9V1
+  - micro58-protein-P0ADV9
+  - micro58-protein-P31554
+  - micro58-protein-P0ADC1
+  - micro58-protein-P0AF98
+  - micro58-protein-P0ADC6
+  - micro58-gene-lptA
+  - micro58-gene-lptB
+  - micro58-gene-lptC
+  - micro58-gene-lptD
+  - micro58-gene-lptE
+  - micro58-gene-lptF
+  - micro58-gene-lptG
+- assessment_id: formation
+  area: evidence
+  topic: Transport requirement is not universal assembly necessity
+  outcome: unknown
+  target_ids:
+  - GO:0062051
+  summary: The record does not assert ESSENTIAL formation labels for the seven proteins.
+    Depletion, viability and ATP-dependent transport results do not automatically
+    prove failure of physical complex formation. Specific LptD/E maturation and bridge-association
+    dependencies are supported context, not a forced omitted universal pathway.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-PMC5858563-legacy
+  - micro58-PMC3552488-legacy
+  - micro58-PMC1544242-legacy
+  - micro58-PMC2291135-legacy
+  - micro58-PMC1797204-legacy
+  - micro58-PMC3038725-legacy
+  - micro58-PMC3426634-legacy
+- assessment_id: scope
+  area: scope
+  topic: Diderm/LPS context and reference strain are preserved
+  outcome: supported
+  target_ids:
+  - GO:0062051
+  summary: VARIABLE retains a nonuniform distribution claim rather than merely unknown
+    prevalence. The record explicitly restricts the pathway to LPS-bearing Gram-negative/diderm
+    contexts, while the review describes exceptions. K-12 reference sequences, MC4100/BW25113-derived
+    experiments, recombinant purification and proteoliposomes are not conflated.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-tax2
+  - micro58-tax562
+  - micro58-tax83333
+  - micro58-PMC5672026-legacy
+  - micro58-PMC1544242-legacy
+  - micro58-PMC2291135-legacy
+  - micro58-PMC1797204-legacy
+  - micro58-PMC5858563-legacy
+  - micro58-protein-P0ADV1
+  - micro58-protein-P0A9V1
+  - micro58-protein-P0ADV9
+  - micro58-protein-P31554
+  - micro58-protein-P0ADC1
+  - micro58-protein-P0AF98
+  - micro58-protein-P0ADC6
+- assessment_id: graph
+  area: graph
+  topic: Coarse transport mechanism is supported with one source-attribution correction
+  outcome: concern
+  target_ids:
+  - GO:0062051
+  summary: ATP-dependent extraction, LptC-to-LptA transfer, transenvelope association
+    and delivery to LptD are supported by complementary primary assays. The graph
+    need not assert an atomic trajectory or fixed LptA count. One edge attributes
+    demonstration of the plug-and-barrel architecture to the2010 proposal rather than
+    the later structural-contact study.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-PMC5858563-legacy
+  - micro58-PMC3552488-legacy
+  - micro58-PMC2880507-legacy
+  - micro58-PMC2851745-legacy
+  - micro58-PMC3038725-legacy
+  - micro58-PMC3426634-legacy
+  - micro58-PMC1544242-legacy
+  - micro58-PMC2291135-legacy
+  - micro58-PMC5672026-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Entire target with bounded positive evidence
+  outcome: supported
+  target_ids:
+  - GO:0062051
+  summary: All scientific fields, examples, citations, graphs, discussions and history
+    were read. Existing protein examples were checked directly; no empty optional
+    slot alone is treated as an error. Source tiers and actual reading extents are
+    explicit.
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-go
+  - micro58-GO0062051-ancestors
+  - micro58-PMC5858563-legacy
+  - micro58-PMC3552488-legacy
+  - micro58-PMC2880507-legacy
+  - micro58-PMC2851745-legacy
+  - micro58-PMC3038725-legacy
+  - micro58-PMC3426634-legacy
+  - micro58-PMC1544242-legacy
+  - micro58-PMC2291135-legacy
+  - micro58-PMC1797204-legacy
+  - micro58-PMC5672026-legacy
+  - micro58-tax2
+  - micro58-tax562
+  - micro58-tax83333
+  - micro58-pmid-12207697
+  - micro58-pmid-12724388
+  - micro58-pmid-16079137
+  - micro58-pmid-17056748
+  - micro58-pmid-18424520
+  - micro58-pmid-18480051
+  - micro58-pmid-20446753
+  - micro58-pmid-20720015
+  - micro58-pmid-21257904
+  - micro58-pmid-3316191
+  - micro58-doi-10.1016_j.febslet.2009.05.051
+  - micro58-doi-10.1021_bi300592c
+  - micro58-doi-10.1073_pnas.0604744103
+  - micro58-doi-10.1073_pnas.0801196105
+  - micro58-doi-10.1073_pnas.0912872107
+  - micro58-doi-10.1074_jbc.R117.802512
+  - micro58-doi-10.1126_science.1228984
+  - micro58-doi-10.1126_science.aar1886
+  - micro58-protein-P0ADV1
+  - micro58-protein-P0A9V1
+  - micro58-protein-P0ADV9
+  - micro58-protein-P31554
+  - micro58-protein-P0ADC1
+  - micro58-protein-P0AF98
+  - micro58-protein-P0ADC6
+  - micro58-gene-lptA
+  - micro58-gene-lptB
+  - micro58-gene-lptC
+  - micro58-gene-lptD
+  - micro58-gene-lptE
+  - micro58-gene-lptF
+  - micro58-gene-lptG
+  - micro58-IPR014340
+  - micro58-IPR030921
+  - micro58-IPR026265
+  - micro58-IPR020889
+  - micro58-IPR007485
+  - micro58-IPR030922
+  - micro58-IPR030923
+  - micro58-IPR005495
+  - micro58-IPR010664
+findings:
+- finding_id: F1
+  issue_key: lpt-seven-exact-subunit-families
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the seven named Lpt protein classes
+  description: 'All seven named subunits remain REVIEWED_LABEL_ONLY despite exact
+    current families: LptA IPR014340, LptB IPR030921, LptC IPR026265, LptD IPR020889,
+    LptE IPR007485, LptF IPR030922 and LptG IPR030923. Family types/signatures and
+    separate native protein cross-references support these class mappings.'
+  target_ids:
+  - GO:0062051
+  field_paths:
+  - components[0].grounding_status
+  - components[1].grounding_status
+  - components[2].grounding_status
+  - components[3].grounding_status
+  - components[4].grounding_status
+  - components[5].grounding_status
+  - components[6].grounding_status
+  - components[0].grounding_notes
+  - components[1].grounding_notes
+  - components[2].grounding_notes
+  - components[3].grounding_notes
+  - components[4].grounding_notes
+  - components[5].grounding_notes
+  - components[6].grounding_notes
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-IPR014340
+  - micro58-IPR030921
+  - micro58-IPR026265
+  - micro58-IPR020889
+  - micro58-IPR007485
+  - micro58-IPR030922
+  - micro58-IPR030923
+  - micro58-IPR005495
+  - micro58-IPR010664
+  - micro58-protein-P0ADV1
+  - micro58-protein-P0A9V1
+  - micro58-protein-P0ADV9
+  - micro58-protein-P31554
+  - micro58-protein-P0ADC1
+  - micro58-protein-P0AF98
+  - micro58-protein-P0ADC6
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lipopolysaccharide_transport_system.yaml
+    role: maintained scientific record
+  rule_id: Exact source support and current component-class grounding
+  native_severity: minor
+  normalization_reason: Grouped minor class-grounding gap; the correct seven-member
+    inventory and reference accessions already exist. Older background prose or generated
+    alternative entries are not used to infer current mechanism.
+- finding_id: F2
+  issue_key: lpt-chng2010-plug-barrel-attribution
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate the 2010 plug model from later demonstration
+  description: The evidence note on the LptE-to-LptD edge says Chng2010 DOI10.1073/pnas.0912872107
+    demonstrated the plug-and-barrel architecture. That paper characterizes LptD/E
+    and explicitly discusses alternative arrangements conditionally. Freinkman2011
+    PMID21257904 supplies the later contact-mapping support.
+  target_ids:
+  - GO:0062051
+  field_paths:
+  - causal_graphs[0].edges[6].evidence[1].notes
+  evidence_ids:
+  - record
+  - curation
+  - schema
+  - graphs
+  - micro58-PMC2851745-legacy
+  - micro58-PMC3038725-legacy
+  - micro58-pmid-21257904
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lipopolysaccharide_transport_system.yaml
+    role: maintained scientific record
+  rule_id: Exact source support and current component-class grounding
+  native_severity: minor
+  normalization_reason: Localized source-stage overstatement; the LptD/E partnership
+    and plug-and-barrel biology are independently supported, so the mechanism itself
+    is not rejected.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0062051
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lipopolysaccharide_transport_system.yaml
+    role: maintained scientific record
+  description: Ground the seven named subunit classes to the exact verified families,
+    retaining role evidence and species exceptions. Keep LptF and LptG distinct.
+  acceptance_checks:
+  - Each family matches the named whole protein class and its reviewed example.
+  - No broad ABC, shared LptF/G or isolated domain is substituted; historical search
+    claims remain historical.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0062051
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/lipopolysaccharide_transport_system.yaml
+    role: maintained scientific record
+  description: Change the2010 note to its demonstrated biochemical characterization/proposed
+    arrangement, and cite the later directly relevant2011 study for the architecture
+    claim.
+  acceptance_checks:
+  - Each citation is attached to the claim and epistemic stage actually supported.
+  - The valid LptD/E insertion relationship is retained without claiming the2010 paper
+    solved the later architecture.
+  - Native schema, strict and CURIE checks pass after separately authorized curation.
+limitations:
+- Primary sources were read only in the exact main-text/Methods/caption extents stated
+  per evidence row. No actual figure pixels, supplemental files or raw experimental
+  datasets were inspected. Narita2009 and unlisted annotation papers remain complete
+  native abstract tier.
+- Co-purification, membrane fractionation, functional transport, viability and physical
+  formation are distinct. Mutant-specific LptD/E and bridge dependencies are not universal
+  subunit-essentiality claims. Physiological LptA copy number remains unresolved.
+- Older family background describes an incomplete five-protein system; that prose
+  is not adopted as current composition. Exact family identities/signatures and separate
+  protein membership establish the proposed mappings.
+- Species-specific Lpt exceptions remain explicit; VARIABLE is not redefined as mere
+  uncertainty. Native reviewed K-12 references are distinct from actual assay strains
+  and proteoliposomes.
+- All reused source bytes preserve their original URL, UTC and SHA256. Readability
+  is established from content rather than HTTP200 alone.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requests one review for every unreviewed record, including qualified
+  clean cases.
+- No maintained scientific record, historical review or initial native inspection
+  snapshot is edited.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
