@@ -1,0 +1,1253 @@
+# Membrane coat scientific review
+
+- Review: 20261022T082336Z-membrane-coat-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T07:58:01Z
+- Finished UTC: 2026-10-22T08:23:36Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The generic coat class, heterogeneous constituents and coarse graph are supported. One minor corrects current RET1 single-entry wording while retaining the correct COP1 protein.
+
+## Scope And Provenance
+
+Exactly one complete maintained target plus frozen guidance and protein-example skill. Actual source-reading extents appear per evidence row; no unlisted primary experiments or assets are certified.
+
+Selection: Target 7 of batch59, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0030117 | data/structures/other/membrane_coat.yaml | maintained | membrane coat |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0030117 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0030117 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:0030117 | Native focused check passed; biological claims assessed separately. |
+| Native verify | passed | True | GO:0030117 | Native focused check passed; biological claims assessed separately. |
+| Expression-module applicability | not_applicable | False | GO:0030117 | No expression-module inference is used. |
+| Claim-level scientific review | passed | True | GO:0030117 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0030117 | 18 of 26 collected target identifiers returned OK. PMID:10684247: UNREACHABLE; Native Europe PMC uniquely identifies MED10684247: The yeast nuclear pore complex: composition, architecture, and transport mechanism. (2000); DOI10.1083/jcb.148.4.635. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:10720463: UNREACHABLE; Native Europe PMC uniquely identifies MED10720463: The use of liposomes to study COPII- and COPI-coated vesicle formation and membrane protein sorting. (2000); DOI10.1006/meth.2000.0955. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:10753972: UNREACHABLE; Native Europe PMC uniquely identifies MED10753972: Evidence for overlapping and distinct functions in protein transport of coat protein Sec24p family members. (2000); DOI10.1074/jbc.275.15.11521. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:11086000: UNREACHABLE; Native Europe PMC uniquely identifies MED11086000: Lst1p and Sec24p cooperate in sorting of the plasma membrane ATPase into COPII vesicles in Saccharomyces cerevisiae. (2000); DOI10.1083/jcb.151.5.973. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:12235121: UNREACHABLE; Native Europe PMC uniquely identifies MED12235121: Sec16p potentiates the action of COPII proteins to bud transport vesicles. (2002); DOI10.1083/jcb.200207053. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:15504911: UNREACHABLE; Native Europe PMC uniquely identifies MED15504911: The GTPase Arf1p and the ER to Golgi cargo receptor Erv14p cooperate to recruit the golgin Rud3p to the cis-Golgi. (2004); DOI10.1083/jcb.200407088. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:8004676: UNREACHABLE; Native Europe PMC uniquely identifies MED8004676: COPII: a membrane coat formed by Sec proteins that drive vesicle budding from the endoplasmic reticulum. (1994); DOI10.1016/0092-8674(94)90138-4. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:8548805: UNREACHABLE; Native Europe PMC uniquely identifies MED8548805: COPI- and COPII-coated vesicles bud directly from the endoplasmic reticulum in yeast. (1995); DOI10.1016/0092-8674(95)90144-2. Identifier transport verification is distinct from separately scoped primary-source reading. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0030117 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0030117 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0030117 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0030117 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0030117 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Broad coat class and correct example identities
+
+identity: supported. Targets: GO:0030117.
+
+GO identity and hierarchy, two heterogeneous protein cohorts, exact gene/alias identities and coarse NONMECHANISTIC coat-assembly graph agree. Broad cohorts intentionally span unrelated coat systems and should not be forced into single protein families.
+
+### RET1 alias ambiguity
+
+evidence: concern. Targets: GO:0030117.
+
+The current exact reviewed S288C RET1 query returns both P53622 COP1 and P22276 RNA polymerase RET1. P53622 remains the correct coatomer example, but its current evidence note describes the query as single-entry.
+
+### Yeast occurrence and experiment-specific coat evidence
+
+scope: supported. Targets: GO:0030117.
+
+COMMON retains most-members/losses-exception meaning, supported qualitatively by the conserved yeast coat systems rather than a prevalence census. The COPII canonical example is consistent with the1994/1995 native abstracts; the NPC-only SEC13 reference is correctly delimited and not promoted to coat evidence. Yu2012 cross-species recombinant assays and Payne1988 abstract observations are distinct from a universal coat assembly mechanism.
+
+### No universal individual assembly requirement
+
+grounding: unknown. Targets: GO:0030117.
+
+Inventory, recruitment, endocytosis phenotypes and clathrin-deficient viability do not establish universal formation necessity for every member of these broad cohorts. No categorical individual necessity is inferred.
+
+### Whole maintained target and declared source coverage
+
+completeness: supported. Targets: GO:0030117.
+
+Every maintained field, source note, graph and discussion was inspected at the declared extents. Optional inventory/contact enrichment and acknowledged unknowns alone do not create findings.
+
+## Findings
+
+### F1: Correct the single-entry RET1 assertion
+
+minor / open / confirmed; issue key: membrane-coat-ret1-query.
+
+The current COP1/P53622 protein example is correct, but its evidence note calls RET1 a single reviewed S288C entry. The exact native query returns two distinct reviewed proteins. This does not invalidate COP1 membership.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Retain P53622/COP1 and its verified RET1 alias; replace the current single-entry assertion with the actual disambiguated identity or use the exact COP1 query. Preserve historical seeding history as historical.
+
+- Verify both RET1 hits and the single COP1 hit; do not substitute RNA polymerase P22276.
+- Preserve supported source-specific claims and pass applicable native gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/membrane_coat.yaml; Entire maintained record, all examples, evidence, graphs, properties, images, history and discussions | context_only | Every maintained field was read. Historical curation statements are context, not independent biological evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; Component/ProteinExample, EssentialityEnum, PresenceEnum and graph-scope contracts | context_only | Formation necessity differs from function, viability and membership. COMMON means most members with losses the exception; VARIABLE means lineage- or strain-level patchiness, not cell-type-specific visibility. |
+| curation | docs/CURATION.md; Component grounding and REVIEWED_LABEL_ONLY at159–160 | context_only | Exact full-family mappings differ from shared domains or broader paralog classes. Label-only is not merely uncurated in this pass. |
+| complex59-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0001401,GO:0005743,GO:0006935,GO:0015191,GO:0030117,GO:0030118,GO:0030119,GO:0030120,GO:0033232,GO:0061617,GO:0098561,GO:0098796,GO:0098800,GO:0140275,GO:1902495,GO:1990197; Complete target-relevant native definitions/synonyms and typed relationships; unrelated combined entries not attributed to this target | supports | GO0030117 defines a generic membrane-associated proteinaceous coat class including clathrin/adaptors, COPI and COPII. Typed relationships and referenced transport/membrane terms were inspected. |
+| complex59-agent-go-0030117-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030117/ancestors?relations=is_a; Complete is_a-only ancestor response | supports | The is_a-only closure supplies classification ancestry for this exact target. It does not establish parthood, experimental assembly necessity or prevalence. |
+| complex59-agent-tax-4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Complete ENA identity/names/lineage | supports | Taxon4932: Saccharomyces cerevisiae, rank species; exact native names and lineage inspected. |
+| complex59-agent-tax-559292 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292; Complete ENA identity/names/lineage | supports | Taxon559292: Saccharomyces cerevisiae S288C, rank strain; exact native names and lineage inspected. |
+| complex59-agent-protein-P11076 | https://rest.uniprot.org/uniprotkb/P11076.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P11076, ADP-ribosylation factor 1; primary genes ARF1, synonyms none, taxon559292. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex59-agent-protein-P15303 | https://rest.uniprot.org/uniprotkb/P15303.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P15303, Protein transport protein SEC23; primary genes SEC23, synonyms none, taxon559292. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex59-agent-protein-P20606 | https://rest.uniprot.org/uniprotkb/P20606.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P20606, Small COPII coat GTPase SAR1; primary genes SAR1, synonyms none, taxon559292. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex59-agent-protein-P22137 | https://rest.uniprot.org/uniprotkb/P22137.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P22137, Clathrin heavy chain; primary genes CHC1, synonyms none, taxon559292. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex59-agent-protein-P36000 | https://rest.uniprot.org/uniprotkb/P36000.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P36000, AP-1 complex subunit beta-1; primary genes APL2, synonyms none, taxon559292. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex59-agent-protein-P38968 | https://rest.uniprot.org/uniprotkb/P38968.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P38968, Protein transport protein SEC31; primary genes SEC31, synonyms WEB1, taxon559292. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex59-agent-protein-P40482 | https://rest.uniprot.org/uniprotkb/P40482.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P40482, Protein transport protein SEC24; primary genes SEC24, synonyms ANU1, taxon559292. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex59-agent-protein-P53622 | https://rest.uniprot.org/uniprotkb/P53622.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): P53622, Coatomer subunit alpha; primary genes COP1, synonyms RET1, SEC33, SOO1, taxon559292. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex59-agent-protein-Q04491 | https://rest.uniprot.org/uniprotkb/Q04491.json; Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity comments and family cross-references | supports | UniProtKB reviewed (Swiss-Prot): Q04491, Protein transport protein SEC13; primary genes SEC13, synonyms ANU3, taxon559292. Its own native comments and family cross-references were inspected with their original evidence qualifiers. |
+| complex59-agent-query-APL2 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAPL2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 1 entry: P36000. Every returned identity/gene/organism was read. |
+| complex59-agent-query-ARF1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AARF1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 1 entry: P11076. Every returned identity/gene/organism was read. |
+| complex59-agent-query-CHC1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACHC1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 1 entry: P22137. Every returned identity/gene/organism was read. |
+| complex59-agent-query-COP1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACOP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 1 entry: P53622. Every returned identity/gene/organism was read. |
+| complex59-agent-query-RET1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ARET1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 2 entry: P22276, P53622. Every returned identity/gene/organism was read. |
+| complex59-agent-query-SAR1 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASAR1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 1 entry: P20606. Every returned identity/gene/organism was read. |
+| complex59-agent-query-SEC13 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC13%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 1 entry: Q04491. Every returned identity/gene/organism was read. |
+| complex59-agent-query-SEC23 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC23%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 1 entry: P15303. Every returned identity/gene/organism was read. |
+| complex59-agent-query-SEC24 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC24%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 1 entry: P40482. Every returned identity/gene/organism was read. |
+| complex59-agent-query-SEC31 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC31%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=100; Complete query results | supports | Exact native query returns 1 entry: P38968. Every returned identity/gene/organism was read. |
+| complex59-agent-pmid-10684247 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10684247+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED10684247: The yeast nuclear pore complex: composition, architecture, and transport mechanism. Rout MP, Aitchison JD, Suprapto A, Hjertaas K, Zhao Y, Chait BT. (2000), DOI10.1083/jcb.148.4.635. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex59-agent-pmid-10720463 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10720463+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED10720463: The use of liposomes to study COPII- and COPI-coated vesicle formation and membrane protein sorting. Matsuoka K, Schekman R. (2000), DOI10.1006/meth.2000.0955. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex59-agent-pmid-10753972 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10753972+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED10753972: Evidence for overlapping and distinct functions in protein transport of coat protein Sec24p family members. Peng R, De Antoni A, Gallwitz D. (2000), DOI10.1074/jbc.275.15.11521. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex59-agent-pmid-11086000 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11086000+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED11086000: Lst1p and Sec24p cooperate in sorting of the plasma membrane ATPase into COPII vesicles in Saccharomyces cerevisiae. Shimoni Y, Kurihara T, Ravazzola M, Amherdt M, Orci L, Schekman R. (2000), DOI10.1083/jcb.151.5.973. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex59-agent-pmid-12235121 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12235121+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED12235121: Sec16p potentiates the action of COPII proteins to bud transport vesicles. Supek F, Madden DT, Hamamoto S, Orci L, Schekman R. (2002), DOI10.1083/jcb.200207053. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex59-agent-pmid-15504911 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15504911+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED15504911: The GTPase Arf1p and the ER to Golgi cargo receptor Erv14p cooperate to recruit the golgin Rud3p to the cis-Golgi. Gillingham AK, Tong AH, Boone C, Munro S. (2004), DOI10.1083/jcb.200407088. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex59-agent-pmid-8004676 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8004676+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED8004676: COPII: a membrane coat formed by Sec proteins that drive vesicle budding from the endoplasmic reticulum. Barlowe C, Orci L, Yeung T, Hosobuchi M, Hamamoto S, Salama N, Rexach MF, Ravazzola M, Amherdt M, Schekman R. (1994), DOI10.1016/0092-8674(94)90138-4. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex59-agent-pmid-8548805 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8548805+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and available abstract | supports | MED8548805: COPI- and COPII-coated vesicles bud directly from the endoplasmic reticulum in yeast. Bednarek SY, Ravazzola M, Hosobuchi M, Amherdt M, Perrelet A, Schekman R, Orci L. (1995), DOI10.1016/0092-8674(95)90144-2. Exact metadata and complete available abstract read; this does not claim body access.  |
+| complex59-agent-doi-10.1016_j.cell.2012.01.015 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2012.01.015%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and abstract | supports | Exact native DOI/MED identity: A structure-based mechanism for Arf1-dependent recruitment of coatomer to membranes. Yu X, Breitman M, Goldberg J. (2012), PMID22304919. Complete available abstract read. |
+| complex59-agent-doi-10.1083_jcb.106.5.1453 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.106.5.1453%22+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Complete native identity and abstract | supports | Exact native DOI/MED identity: Protein transport to the vacuole and receptor-mediated endocytosis by clathrin heavy chain-deficient yeast. Payne GS, Baker D, van Tuinen E, Schekman R. (1988), PMID2836429. Complete available abstract read. |
+| complex59-agent-yu2012-s3 | https://pmc-oa-opendata.s3.amazonaws.com/PMC3285272.1/PMC3285272.1.xml; Complete Introduction S1, Results/Discussion S3–S10, Methods S12–S15 and Fig1–6 captions; no Table1, pixels or supplements. Original imported receipt retained. | supports | Yu2012 combines cross-species Arf1/coatomer binding assays and a2.9-Angstrom bovine gamma/zeta-COP–yeastArf1 structure. Two Arf1 sites and recruitment-related conformational models support coarse coat assembly; this is not a complete native yeast vesicle-budding reconstruction. |
+| complex59-agent-payne1988-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2115047/; Exact native article identity and complete abstract only; scanned body not read | supports | The complete primary abstract reports viable clathrin-deficient yeast, retained secretory transport, differential sorting and reduced alpha-factor internalization. The retained page is a scanned-article landing page, not an inspected full body. |
+| schema-result | just validate data/structures/other/membrane_coat.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/membrane_coat.yaml |
+| strict-result | just validate-strict data/structures/other/membrane_coat.yaml --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/membrane_coat-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/membrane_coat.yaml --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/membrane_coat-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch59-20261022-t3ere5ku/membrane_coat-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/membrane_coat.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/membrane_coat.yaml  (GO:0030117)<br>  membrane_coat_scaffold_assembly	membrane_coat_scaffold_proteins	COVERED	-&gt;membrane_coat_scaffold_proteins (UniProtKB:P22137, UniProtKB:Q04491, UniProtKB:P38968, UniProtKB:P53622)<br>  membrane_coat_scaffold_assembly	membrane_coat_recruitment_modules	COVERED	-&gt;membrane_coat_recruitment_modules (UniProtKB:P11076, UniProtKB:P20606, UniProtKB:P15303, UniProtKB:P40482, UniProtKB:P36000)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     2  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     2  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/membrane_coat.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/membrane_coat.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 18 of 26 collected target identifiers returned OK. PMID:10684247: UNREACHABLE; Native Europe PMC uniquely identifies MED10684247: The yeast nuclear pore complex: composition, architecture, and transport mechanism. (2000); DOI10.1083/jcb.148.4.635. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:10720463: UNREACHABLE; Native Europe PMC uniquely identifies MED10720463: The use of liposomes to study COPII- and COPI-coated vesicle formation and membrane protein sorting. (2000); DOI10.1006/meth.2000.0955. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:10753972: UNREACHABLE; Native Europe PMC uniquely identifies MED10753972: Evidence for overlapping and distinct functions in protein transport of coat protein Sec24p family members. (2000); DOI10.1074/jbc.275.15.11521. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:11086000: UNREACHABLE; Native Europe PMC uniquely identifies MED11086000: Lst1p and Sec24p cooperate in sorting of the plasma membrane ATPase into COPII vesicles in Saccharomyces cerevisiae. (2000); DOI10.1083/jcb.151.5.973. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:12235121: UNREACHABLE; Native Europe PMC uniquely identifies MED12235121: Sec16p potentiates the action of COPII proteins to bud transport vesicles. (2002); DOI10.1083/jcb.200207053. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:15504911: UNREACHABLE; Native Europe PMC uniquely identifies MED15504911: The GTPase Arf1p and the ER to Golgi cargo receptor Erv14p cooperate to recruit the golgin Rud3p to the cis-Golgi. (2004); DOI10.1083/jcb.200407088. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:8004676: UNREACHABLE; Native Europe PMC uniquely identifies MED8004676: COPII: a membrane coat formed by Sec proteins that drive vesicle budding from the endoplasmic reticulum. (1994); DOI10.1016/0092-8674(94)90138-4. Identifier transport verification is distinct from separately scoped primary-source reading.; PMID:8548805: UNREACHABLE; Native Europe PMC uniquely identifies MED8548805: COPI- and COPII-coated vesicles bud directly from the endoplasmic reticulum in yeast. (1995); DOI10.1016/0092-8674(95)90144-2. Identifier transport verification is distinct from separately scoped primary-source reading. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicitly listed source sections/assets were inspected. No unlisted supplements, atomic coordinates or raw experimental data were analyzed.
+- Payne1988 and the eight supporting PMID references were inspected at complete native abstract/identity scope only. The retained Payne page does not provide a read full body. Yu2012 is the only directly read full primary body used here.
+- No complete coat inventory, every species occurrence, kinetic assembly sequence or individual formation requirement was inferred from this broad class.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T082336Z-membrane-coat-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Membrane coat scientific review
+started_at: '2026-10-22T07:58:01Z'
+finished_at: '2026-10-22T08:23:36Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The generic coat class, heterogeneous constituents and coarse graph are supported.
+  One minor corrects current RET1 single-entry wording while retaining the correct
+  COP1 protein.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/membrane_coat.yaml
+    sha256: 9073c1cdc0933d5d06be86c723bdc6ca142420034739d82499bcbd38e3b8968c
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0030117
+  path: data/structures/other/membrane_coat.yaml
+  label: membrane coat
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/membrane_coat.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target plus frozen guidance and protein-example
+    skill. Actual source-reading extents appear per evidence row; no unlisted primary
+    experiments or assets are certified.
+  selection: Target 7 of batch59, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030117
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  command: just validate data/structures/other/membrane_coat.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  command: just validate-strict data/structures/other/membrane_coat.yaml --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/membrane_coat-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  command: /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/membrane_coat.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  command: /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/membrane_coat.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; biological claims assessed separately.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0030117
+  summary: No expression-module inference is used.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex59-agent-go
+  - complex59-agent-go-0030117-ancestors
+  - complex59-agent-tax-4932
+  - complex59-agent-tax-559292
+  - complex59-agent-protein-P11076
+  - complex59-agent-protein-P15303
+  - complex59-agent-protein-P20606
+  - complex59-agent-protein-P22137
+  - complex59-agent-protein-P36000
+  - complex59-agent-protein-P38968
+  - complex59-agent-protein-P40482
+  - complex59-agent-protein-P53622
+  - complex59-agent-protein-Q04491
+  - complex59-agent-query-APL2
+  - complex59-agent-query-ARF1
+  - complex59-agent-query-CHC1
+  - complex59-agent-query-COP1
+  - complex59-agent-query-RET1
+  - complex59-agent-query-SAR1
+  - complex59-agent-query-SEC13
+  - complex59-agent-query-SEC23
+  - complex59-agent-query-SEC24
+  - complex59-agent-query-SEC31
+  - complex59-agent-pmid-10684247
+  - complex59-agent-pmid-10720463
+  - complex59-agent-pmid-10753972
+  - complex59-agent-pmid-11086000
+  - complex59-agent-pmid-12235121
+  - complex59-agent-pmid-15504911
+  - complex59-agent-pmid-8004676
+  - complex59-agent-pmid-8548805
+  - complex59-agent-doi-10.1016_j.cell.2012.01.015
+  - complex59-agent-doi-10.1083_jcb.106.5.1453
+  - complex59-agent-yu2012-s3
+  - complex59-agent-payne1988-legacy
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  summary: '18 of 26 collected target identifiers returned OK. PMID:10684247: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED10684247: The yeast nuclear pore complex:
+    composition, architecture, and transport mechanism. (2000); DOI10.1083/jcb.148.4.635.
+    Identifier transport verification is distinct from separately scoped primary-source
+    reading.; PMID:10720463: UNREACHABLE; Native Europe PMC uniquely identifies MED10720463:
+    The use of liposomes to study COPII- and COPI-coated vesicle formation and membrane
+    protein sorting. (2000); DOI10.1006/meth.2000.0955. Identifier transport verification
+    is distinct from separately scoped primary-source reading.; PMID:10753972: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED10753972: Evidence for overlapping and
+    distinct functions in protein transport of coat protein Sec24p family members.
+    (2000); DOI10.1074/jbc.275.15.11521. Identifier transport verification is distinct
+    from separately scoped primary-source reading.; PMID:11086000: UNREACHABLE; Native
+    Europe PMC uniquely identifies MED11086000: Lst1p and Sec24p cooperate in sorting
+    of the plasma membrane ATPase into COPII vesicles in Saccharomyces cerevisiae.
+    (2000); DOI10.1083/jcb.151.5.973. Identifier transport verification is distinct
+    from separately scoped primary-source reading.; PMID:12235121: UNREACHABLE; Native
+    Europe PMC uniquely identifies MED12235121: Sec16p potentiates the action of COPII
+    proteins to bud transport vesicles. (2002); DOI10.1083/jcb.200207053. Identifier
+    transport verification is distinct from separately scoped primary-source reading.;
+    PMID:15504911: UNREACHABLE; Native Europe PMC uniquely identifies MED15504911:
+    The GTPase Arf1p and the ER to Golgi cargo receptor Erv14p cooperate to recruit
+    the golgin Rud3p to the cis-Golgi. (2004); DOI10.1083/jcb.200407088. Identifier
+    transport verification is distinct from separately scoped primary-source reading.;
+    PMID:8004676: UNREACHABLE; Native Europe PMC uniquely identifies MED8004676: COPII:
+    a membrane coat formed by Sec proteins that drive vesicle budding from the endoplasmic
+    reticulum. (1994); DOI10.1016/0092-8674(94)90138-4. Identifier transport verification
+    is distinct from separately scoped primary-source reading.; PMID:8548805: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED8548805: COPI- and COPII-coated vesicles
+    bud directly from the endoplasmic reticulum in yeast. (1995); DOI10.1016/0092-8674(95)90144-2.
+    Identifier transport verification is distinct from separately scoped primary-source
+    reading. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex59-agent-pmid-10684247
+  - complex59-agent-pmid-10720463
+  - complex59-agent-pmid-10753972
+  - complex59-agent-pmid-11086000
+  - complex59-agent-pmid-12235121
+  - complex59-agent-pmid-15504911
+  - complex59-agent-pmid-8004676
+  - complex59-agent-pmid-8548805
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030117
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch59 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/membrane_coat.yaml
+  locator: Entire maintained record, all examples, evidence, graphs, properties, images,
+    history and discussions
+  accessed_at: '2026-10-22T08:10:06Z'
+  support: context_only
+  summary: Every maintained field was read. Historical curation statements are context,
+    not independent biological evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component/ProteinExample, EssentialityEnum, PresenceEnum and graph-scope
+    contracts
+  accessed_at: '2026-10-22T08:10:06Z'
+  support: context_only
+  summary: Formation necessity differs from function, viability and membership. COMMON
+    means most members with losses the exception; VARIABLE means lineage- or strain-level
+    patchiness, not cell-type-specific visibility.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Component grounding and REVIEWED_LABEL_ONLY at159–160
+  accessed_at: '2026-10-22T08:10:06Z'
+  support: context_only
+  summary: Exact full-family mappings differ from shared domains or broader paralog
+    classes. Label-only is not merely uncurated in this pass.
+- evidence_id: complex59-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0001401,GO:0005743,GO:0006935,GO:0015191,GO:0030117,GO:0030118,GO:0030119,GO:0030120,GO:0033232,GO:0061617,GO:0098561,GO:0098796,GO:0098800,GO:0140275,GO:1902495,GO:1990197
+  locator: Complete target-relevant native definitions/synonyms and typed relationships;
+    unrelated combined entries not attributed to this target
+  accessed_at: '2026-10-22T07:52:24.329077Z'
+  support: supports
+  summary: GO0030117 defines a generic membrane-associated proteinaceous coat class
+    including clathrin/adaptors, COPI and COPII. Typed relationships and referenced
+    transport/membrane terms were inspected.
+  snapshot_sha256: dbd460ba253a79f76308983bfbf11d984337e32c973e044f3f1b30f1394901af
+- evidence_id: complex59-agent-go-0030117-ancestors
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030117/ancestors?relations=is_a
+  locator: Complete is_a-only ancestor response
+  accessed_at: '2026-10-22T07:52:40.045060Z'
+  support: supports
+  summary: The is_a-only closure supplies classification ancestry for this exact target.
+    It does not establish parthood, experimental assembly necessity or prevalence.
+  snapshot_sha256: 44321a999c00782b700cf5f60bdfcc3b90ed9f78aa32837e424e7ee244cf4e05
+- evidence_id: complex59-agent-tax-4932
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Complete ENA identity/names/lineage
+  accessed_at: '2026-10-22T07:52:31.073203Z'
+  support: supports
+  summary: 'Taxon4932: Saccharomyces cerevisiae, rank species; exact native names
+    and lineage inspected.'
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: complex59-agent-tax-559292
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Complete ENA identity/names/lineage
+  accessed_at: '2026-10-22T07:52:31.652748Z'
+  support: supports
+  summary: 'Taxon559292: Saccharomyces cerevisiae S288C, rank strain; exact native
+    names and lineage inspected.'
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: complex59-agent-protein-P11076
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P11076.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:52:25.920620Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P11076, ADP-ribosylation factor 1; primary
+    genes ARF1, synonyms none, taxon559292. Its own native comments and family cross-references
+    were inspected with their original evidence qualifiers.'
+  snapshot_sha256: fb2ce21f92da7c817647884a2805ab45d84f49b279093b1a68cd4908bbbfb7b4
+- evidence_id: complex59-agent-protein-P15303
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P15303.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:52:26.434001Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P15303, Protein transport protein SEC23;
+    primary genes SEC23, synonyms none, taxon559292. Its own native comments and family
+    cross-references were inspected with their original evidence qualifiers.'
+  snapshot_sha256: 13181465e32452a91853f6b16daf92a2d67f378a9dabcb9d19e84585bc1168cf
+- evidence_id: complex59-agent-protein-P20606
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P20606.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:52:26.648095Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P20606, Small COPII coat GTPase SAR1;
+    primary genes SAR1, synonyms none, taxon559292. Its own native comments and family
+    cross-references were inspected with their original evidence qualifiers.'
+  snapshot_sha256: b357bd5a974f24c0409bf017765b03d59132ea51bcd07912699b22356faee9cc
+- evidence_id: complex59-agent-protein-P22137
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P22137.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:52:26.702606Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P22137, Clathrin heavy chain; primary
+    genes CHC1, synonyms none, taxon559292. Its own native comments and family cross-references
+    were inspected with their original evidence qualifiers.'
+  snapshot_sha256: 09d51b91c677526fa74c1513304fdd8c51215ce5c9511a6654355fbd16c61648
+- evidence_id: complex59-agent-protein-P36000
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P36000.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:52:28.047232Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P36000, AP-1 complex subunit beta-1;
+    primary genes APL2, synonyms none, taxon559292. Its own native comments and family
+    cross-references were inspected with their original evidence qualifiers.'
+  snapshot_sha256: 526b13f0578f674f0da6edd6f5d896d27525277aaa24102a9f138d00afb7c2f0
+- evidence_id: complex59-agent-protein-P38968
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38968.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:52:28.259885Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P38968, Protein transport protein SEC31;
+    primary genes SEC31, synonyms WEB1, taxon559292. Its own native comments and family
+    cross-references were inspected with their original evidence qualifiers.'
+  snapshot_sha256: 3cd679eb515caf22dceb7f5a2b97bb726ea5a88379f3117f90f10ab06364d1fc
+- evidence_id: complex59-agent-protein-P40482
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40482.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:52:28.404070Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P40482, Protein transport protein SEC24;
+    primary genes SEC24, synonyms ANU1, taxon559292. Its own native comments and family
+    cross-references were inspected with their original evidence qualifiers.'
+  snapshot_sha256: 364fe7b7178611824e4035d3300302e3e97e8e5a87934557bbf966f0507e4817
+- evidence_id: complex59-agent-protein-P53622
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53622.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:52:28.681631Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): P53622, Coatomer subunit alpha; primary
+    genes COP1, synonyms RET1, SEC33, SOO1, taxon559292. Its own native comments and
+    family cross-references were inspected with their original evidence qualifiers.'
+  snapshot_sha256: 3fa8e6ac02935b57b3588e23901528210478283bbb5311fd3d3118999af5ced3
+- evidence_id: complex59-agent-protein-Q04491
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q04491.json
+  locator: Accession/status/name/all gene tokens/organism, relevant function/subunit/localization/similarity
+    comments and family cross-references
+  accessed_at: '2026-10-22T07:52:29.108688Z'
+  support: supports
+  summary: 'UniProtKB reviewed (Swiss-Prot): Q04491, Protein transport protein SEC13;
+    primary genes SEC13, synonyms ANU3, taxon559292. Its own native comments and family
+    cross-references were inspected with their original evidence qualifiers.'
+  snapshot_sha256: 5ea1f9385e1989653cc9b1251babdb2a1e325e72d3b3617590028f3fca38207c
+- evidence_id: complex59-agent-query-APL2
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAPL2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:24.475857Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P36000. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 43e854e42512755d38608a38375b2f320cf989cd66644bf4dbeec296798c6006
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAPL2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-query-ARF1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AARF1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:23.445143Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P11076. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 554d864c11d13c2eab3f7b69ffa33fea857144e092250db66629ff6b7ea2ddb0
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AARF1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-query-CHC1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACHC1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:21.600908Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P22137. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 2a920614f72637e8dca08d8a782c81c920e1e8a01fd1b0b958f6d70602c68b89
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACHC1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-query-COP1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACOP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:22.771759Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P53622. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 7ae16d897c8db90416843060a4f2e9120b0e3613f4106d9634bcf9dc662bbe3a
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACOP1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-query-RET1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ARET1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:22.555175Z'
+  support: supports
+  summary: 'Exact native query returns 2 entry: P22276, P53622. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: e08053c7530d77cd89e56c7471167d1ff5c188e01f31390c1a89d329b7b1fe7a
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ARET1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-query-SAR1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASAR1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:23.589571Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P20606. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 4fde95272e65ad8006acb9e1adb75c26a8ed2b97b8cd24d6c47082800a39caab
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASAR1%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-query-SEC13
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC13%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:21.748295Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: Q04491. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 8967ba9e2ec39d6cb3ef7e6da9e8cd5ceb82f150094d58f932574e30155b6cba
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC13%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-query-SEC23
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC23%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:23.746227Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P15303. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 48d1d820864e58d7b8ec091b4e2c252d5c32aa77f0c4757a2921094deb3d4329
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC23%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-query-SEC24
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC24%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:24.343000Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P40482. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 3c767a3b3ae12aeb87128c4be82c30332fb471e6fcb0d6788bc9157d6ef0c2c8
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC24%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-query-SEC31
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC31%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete query results
+  accessed_at: '2026-10-22T07:57:22.515074Z'
+  support: supports
+  summary: 'Exact native query returns 1 entry: P38968. Every returned identity/gene/organism
+    was read.'
+  snapshot_sha256: 9860d546b4ea67784200cb6bee02e10605b6e5674b9827ce546fa20eecfaf685
+  search_scope: Exact retained UniProt request https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ASEC31%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    all returned identities inspected.
+- evidence_id: complex59-agent-pmid-10684247
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10684247+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:52:32.347965Z'
+  support: supports
+  summary: 'MED10684247: The yeast nuclear pore complex: composition, architecture,
+    and transport mechanism. Rout MP, Aitchison JD, Suprapto A, Hjertaas K, Zhao Y,
+    Chait BT. (2000), DOI10.1083/jcb.148.4.635. Exact metadata and complete available
+    abstract read; this does not claim body access. '
+  snapshot_sha256: a7793d918549c733dfc82d665450d3381170a18b8dbbfd4915a74bac8386e742
+- evidence_id: complex59-agent-pmid-10720463
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10720463+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:52:32.458007Z'
+  support: supports
+  summary: 'MED10720463: The use of liposomes to study COPII- and COPI-coated vesicle
+    formation and membrane protein sorting. Matsuoka K, Schekman R. (2000), DOI10.1006/meth.2000.0955.
+    Exact metadata and complete available abstract read; this does not claim body
+    access. '
+  snapshot_sha256: ea93542c4436b14ec308c90c326e050c43999c2948dbe23b04354e197344bc13
+- evidence_id: complex59-agent-pmid-10753972
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10753972+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:52:32.947809Z'
+  support: supports
+  summary: 'MED10753972: Evidence for overlapping and distinct functions in protein
+    transport of coat protein Sec24p family members. Peng R, De Antoni A, Gallwitz
+    D. (2000), DOI10.1074/jbc.275.15.11521. Exact metadata and complete available
+    abstract read; this does not claim body access. '
+  snapshot_sha256: 3a7f86f300d3bb8671c17faa4aca4bef0b3c1db5512f8e3461c8aede0abc0e1f
+- evidence_id: complex59-agent-pmid-11086000
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11086000+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:52:33.063743Z'
+  support: supports
+  summary: 'MED11086000: Lst1p and Sec24p cooperate in sorting of the plasma membrane
+    ATPase into COPII vesicles in Saccharomyces cerevisiae. Shimoni Y, Kurihara T,
+    Ravazzola M, Amherdt M, Orci L, Schekman R. (2000), DOI10.1083/jcb.151.5.973.
+    Exact metadata and complete available abstract read; this does not claim body
+    access. '
+  snapshot_sha256: 2297f85c77fff981fd5683190302514a8e02d288ed519de6b79eba3a0bb45758
+- evidence_id: complex59-agent-pmid-12235121
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12235121+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:52:33.566236Z'
+  support: supports
+  summary: 'MED12235121: Sec16p potentiates the action of COPII proteins to bud transport
+    vesicles. Supek F, Madden DT, Hamamoto S, Orci L, Schekman R. (2002), DOI10.1083/jcb.200207053.
+    Exact metadata and complete available abstract read; this does not claim body
+    access. '
+  snapshot_sha256: acf82dd7657ed8bb493ed0aceb699b0d9d446ac9e9ff01640290b22b37992648
+- evidence_id: complex59-agent-pmid-15504911
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15504911+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:52:33.678653Z'
+  support: supports
+  summary: 'MED15504911: The GTPase Arf1p and the ER to Golgi cargo receptor Erv14p
+    cooperate to recruit the golgin Rud3p to the cis-Golgi. Gillingham AK, Tong AH,
+    Boone C, Munro S. (2004), DOI10.1083/jcb.200407088. Exact metadata and complete
+    available abstract read; this does not claim body access. '
+  snapshot_sha256: be219fcd874aa21bd72e253d1eaf87aceaaaa4fc148d339740542c9dec1dcecd
+- evidence_id: complex59-agent-pmid-8004676
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8004676+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:52:35.381930Z'
+  support: supports
+  summary: 'MED8004676: COPII: a membrane coat formed by Sec proteins that drive vesicle
+    budding from the endoplasmic reticulum. Barlowe C, Orci L, Yeung T, Hosobuchi
+    M, Hamamoto S, Salama N, Rexach MF, Ravazzola M, Amherdt M, Schekman R. (1994),
+    DOI10.1016/0092-8674(94)90138-4. Exact metadata and complete available abstract
+    read; this does not claim body access. '
+  snapshot_sha256: 5cb877da5722be8060792d7c7e1c653fd91cb3c6e9338675e8e92762a7e2ec3e
+- evidence_id: complex59-agent-pmid-8548805
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8548805+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and available abstract
+  accessed_at: '2026-10-22T07:52:35.528161Z'
+  support: supports
+  summary: 'MED8548805: COPI- and COPII-coated vesicles bud directly from the endoplasmic
+    reticulum in yeast. Bednarek SY, Ravazzola M, Hosobuchi M, Amherdt M, Perrelet
+    A, Schekman R, Orci L. (1995), DOI10.1016/0092-8674(95)90144-2. Exact metadata
+    and complete available abstract read; this does not claim body access. '
+  snapshot_sha256: 571bfae6970e90a8c874c9d9baf0d38c70514bd9e9ee39feced9f988753b4ce3
+- evidence_id: complex59-agent-doi-10.1016_j.cell.2012.01.015
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2012.01.015%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and abstract
+  accessed_at: '2026-10-22T07:52:36.121977Z'
+  support: supports
+  summary: 'Exact native DOI/MED identity: A structure-based mechanism for Arf1-dependent
+    recruitment of coatomer to membranes. Yu X, Breitman M, Goldberg J. (2012), PMID22304919.
+    Complete available abstract read.'
+  snapshot_sha256: 3c9b2cfbab05170f98caa56720bbde3c3b5d29c21db6c7a323faffa3cd6c72d7
+- evidence_id: complex59-agent-doi-10.1083_jcb.106.5.1453
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1083%2Fjcb.106.5.1453%22+AND+SRC%3AMED&format=json&resultType=core
+  locator: Complete native identity and abstract
+  accessed_at: '2026-10-22T07:52:39.360226Z'
+  support: supports
+  summary: 'Exact native DOI/MED identity: Protein transport to the vacuole and receptor-mediated
+    endocytosis by clathrin heavy chain-deficient yeast. Payne GS, Baker D, van Tuinen
+    E, Schekman R. (1988), PMID2836429. Complete available abstract read.'
+  snapshot_sha256: afd40f9ba5e5d336c2ffcf4d88591a1d4798423350bf1d520ef3d96f1b2f6d00
+- evidence_id: complex59-agent-yu2012-s3
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3285272.1/PMC3285272.1.xml
+  locator: Complete Introduction S1, Results/Discussion S3–S10, Methods S12–S15 and
+    Fig1–6 captions; no Table1, pixels or supplements. Original imported receipt retained.
+  accessed_at: '2026-10-21T11:00:51.605958Z'
+  support: supports
+  summary: Yu2012 combines cross-species Arf1/coatomer binding assays and a2.9-Angstrom
+    bovine gamma/zeta-COP–yeastArf1 structure. Two Arf1 sites and recruitment-related
+    conformational models support coarse coat assembly; this is not a complete native
+    yeast vesicle-budding reconstruction.
+  snapshot_sha256: a7adecb3e84137dcc05565185633b97cd4c07fc8e2556c98e9922152c7d34ea6
+- evidence_id: complex59-agent-payne1988-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2115047/
+  locator: Exact native article identity and complete abstract only; scanned body
+    not read
+  accessed_at: '2026-10-22T04:52:19.992384Z'
+  support: supports
+  summary: The complete primary abstract reports viable clathrin-deficient yeast,
+    retained secretory transport, differential sorting and reduced alpha-factor internalization.
+    The retained page is a scanned-article landing page, not an inspected full body.
+  snapshot_sha256: ac9d8d98d54ce1937a739f4ce2e6e70c4d84cc4433430eec35f3aaaf9441d664
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/membrane_coat.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:58:02Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/membrane_coat.yaml'
+  snapshot_sha256: 8f67424cb370a2f7896d45a3e56c593846def643f726af24b6380957e4e90b58
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/membrane_coat.yaml --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/membrane_coat-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T07:58:03Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/membrane_coat.yaml\
+    \ --out /private/tmp/cellstructure-batch59-20261022-t3ere5ku/membrane_coat-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch59-20261022-t3ere5ku/membrane_coat-strict.tsv"
+  snapshot_sha256: 7ab055ee848a45201819b409389b3b8222093383da5570946715a0e1d1f3bb6a
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/membrane_coat.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:00:11.340662Z'
+  support: supports
+  summary: "data/structures/other/membrane_coat.yaml  (GO:0030117)\n  membrane_coat_scaffold_assembly\t\
+    membrane_coat_scaffold_proteins\tCOVERED\t->membrane_coat_scaffold_proteins (UniProtKB:P22137,\
+    \ UniProtKB:Q04491, UniProtKB:P38968, UniProtKB:P53622)\n  membrane_coat_scaffold_assembly\t\
+    membrane_coat_recruitment_modules\tCOVERED\t->membrane_coat_recruitment_modules\
+    \ (UniProtKB:P11076, UniProtKB:P20606, UniProtKB:P15303, UniProtKB:P40482, UniProtKB:P36000)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     2  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     2\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 8eff4643992216c4a2f34aab8d22d6e0df7a4bf8de5ba0f0e676783d77953327
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch59-20261022-t3ere5ku/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/membrane_coat.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T08:00:12.520163Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/membrane_coat.yaml; native collect() exact identifier
+    slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '18 of 26 collected target identifiers returned OK. PMID:10684247: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED10684247: The yeast nuclear pore complex:
+    composition, architecture, and transport mechanism. (2000); DOI10.1083/jcb.148.4.635.
+    Identifier transport verification is distinct from separately scoped primary-source
+    reading.; PMID:10720463: UNREACHABLE; Native Europe PMC uniquely identifies MED10720463:
+    The use of liposomes to study COPII- and COPI-coated vesicle formation and membrane
+    protein sorting. (2000); DOI10.1006/meth.2000.0955. Identifier transport verification
+    is distinct from separately scoped primary-source reading.; PMID:10753972: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED10753972: Evidence for overlapping and
+    distinct functions in protein transport of coat protein Sec24p family members.
+    (2000); DOI10.1074/jbc.275.15.11521. Identifier transport verification is distinct
+    from separately scoped primary-source reading.; PMID:11086000: UNREACHABLE; Native
+    Europe PMC uniquely identifies MED11086000: Lst1p and Sec24p cooperate in sorting
+    of the plasma membrane ATPase into COPII vesicles in Saccharomyces cerevisiae.
+    (2000); DOI10.1083/jcb.151.5.973. Identifier transport verification is distinct
+    from separately scoped primary-source reading.; PMID:12235121: UNREACHABLE; Native
+    Europe PMC uniquely identifies MED12235121: Sec16p potentiates the action of COPII
+    proteins to bud transport vesicles. (2002); DOI10.1083/jcb.200207053. Identifier
+    transport verification is distinct from separately scoped primary-source reading.;
+    PMID:15504911: UNREACHABLE; Native Europe PMC uniquely identifies MED15504911:
+    The GTPase Arf1p and the ER to Golgi cargo receptor Erv14p cooperate to recruit
+    the golgin Rud3p to the cis-Golgi. (2004); DOI10.1083/jcb.200407088. Identifier
+    transport verification is distinct from separately scoped primary-source reading.;
+    PMID:8004676: UNREACHABLE; Native Europe PMC uniquely identifies MED8004676: COPII:
+    a membrane coat formed by Sec proteins that drive vesicle budding from the endoplasmic
+    reticulum. (1994); DOI10.1016/0092-8674(94)90138-4. Identifier transport verification
+    is distinct from separately scoped primary-source reading.; PMID:8548805: UNREACHABLE;
+    Native Europe PMC uniquely identifies MED8548805: COPI- and COPII-coated vesicles
+    bud directly from the endoplasmic reticulum in yeast. (1995); DOI10.1016/0092-8674(95)90144-2.
+    Identifier transport verification is distinct from separately scoped primary-source
+    reading. Native source checks are separately scoped; skipped or unreachable identifiers
+    are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Broad coat class and correct example identities
+  outcome: supported
+  target_ids:
+  - GO:0030117
+  summary: GO identity and hierarchy, two heterogeneous protein cohorts, exact gene/alias
+    identities and coarse NONMECHANISTIC coat-assembly graph agree. Broad cohorts
+    intentionally span unrelated coat systems and should not be forced into single
+    protein families.
+  evidence_ids:
+  - record
+  - complex59-agent-go
+  - complex59-agent-go-0030117-ancestors
+  - complex59-agent-yu2012-s3
+  - complex59-agent-payne1988-legacy
+  - complex59-agent-protein-P11076
+  - complex59-agent-protein-P15303
+  - complex59-agent-protein-P20606
+  - complex59-agent-protein-P22137
+  - complex59-agent-protein-P36000
+  - complex59-agent-protein-P38968
+  - complex59-agent-protein-P40482
+  - complex59-agent-protein-P53622
+  - complex59-agent-protein-Q04491
+  - complex59-agent-tax-4932
+  - complex59-agent-tax-559292
+- assessment_id: query
+  area: evidence
+  topic: RET1 alias ambiguity
+  outcome: concern
+  target_ids:
+  - GO:0030117
+  summary: The current exact reviewed S288C RET1 query returns both P53622 COP1 and
+    P22276 RNA polymerase RET1. P53622 remains the correct coatomer example, but its
+    current evidence note describes the query as single-entry.
+  evidence_ids:
+  - record
+  - complex59-agent-query-APL2
+  - complex59-agent-query-ARF1
+  - complex59-agent-query-CHC1
+  - complex59-agent-query-COP1
+  - complex59-agent-query-RET1
+  - complex59-agent-query-SAR1
+  - complex59-agent-query-SEC13
+  - complex59-agent-query-SEC23
+  - complex59-agent-query-SEC24
+  - complex59-agent-query-SEC31
+  - complex59-agent-protein-P11076
+  - complex59-agent-protein-P15303
+  - complex59-agent-protein-P20606
+  - complex59-agent-protein-P22137
+  - complex59-agent-protein-P36000
+  - complex59-agent-protein-P38968
+  - complex59-agent-protein-P40482
+  - complex59-agent-protein-P53622
+  - complex59-agent-protein-Q04491
+- assessment_id: scope
+  area: scope
+  topic: Yeast occurrence and experiment-specific coat evidence
+  outcome: supported
+  target_ids:
+  - GO:0030117
+  summary: COMMON retains most-members/losses-exception meaning, supported qualitatively
+    by the conserved yeast coat systems rather than a prevalence census. The COPII
+    canonical example is consistent with the1994/1995 native abstracts; the NPC-only
+    SEC13 reference is correctly delimited and not promoted to coat evidence. Yu2012
+    cross-species recombinant assays and Payne1988 abstract observations are distinct
+    from a universal coat assembly mechanism.
+  evidence_ids:
+  - record
+  - schema
+  - complex59-agent-yu2012-s3
+  - complex59-agent-payne1988-legacy
+  - complex59-agent-protein-P11076
+  - complex59-agent-protein-P15303
+  - complex59-agent-protein-P20606
+  - complex59-agent-protein-P22137
+  - complex59-agent-protein-P36000
+  - complex59-agent-protein-P38968
+  - complex59-agent-protein-P40482
+  - complex59-agent-protein-P53622
+  - complex59-agent-protein-Q04491
+  - complex59-agent-pmid-10684247
+  - complex59-agent-pmid-10720463
+  - complex59-agent-pmid-10753972
+  - complex59-agent-pmid-11086000
+  - complex59-agent-pmid-12235121
+  - complex59-agent-pmid-15504911
+  - complex59-agent-pmid-8004676
+  - complex59-agent-pmid-8548805
+  - complex59-agent-tax-4932
+  - complex59-agent-tax-559292
+- assessment_id: formation
+  area: grounding
+  topic: No universal individual assembly requirement
+  outcome: unknown
+  target_ids:
+  - GO:0030117
+  summary: Inventory, recruitment, endocytosis phenotypes and clathrin-deficient viability
+    do not establish universal formation necessity for every member of these broad
+    cohorts. No categorical individual necessity is inferred.
+  evidence_ids:
+  - record
+  - schema
+  - complex59-agent-yu2012-s3
+  - complex59-agent-payne1988-legacy
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and declared source coverage
+  outcome: supported
+  target_ids:
+  - GO:0030117
+  summary: Every maintained field, source note, graph and discussion was inspected
+    at the declared extents. Optional inventory/contact enrichment and acknowledged
+    unknowns alone do not create findings.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex59-agent-go
+findings:
+- finding_id: F1
+  issue_key: membrane-coat-ret1-query
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the single-entry RET1 assertion
+  description: The current COP1/P53622 protein example is correct, but its evidence
+    note calls RET1 a single reviewed S288C entry. The exact native query returns
+    two distinct reviewed proteins. This does not invalidate COP1 membership.
+  target_ids:
+  - GO:0030117
+  field_paths:
+  - components
+  - components.protein_examples.evidence
+  evidence_ids:
+  - record
+  - complex59-agent-query-APL2
+  - complex59-agent-query-ARF1
+  - complex59-agent-query-CHC1
+  - complex59-agent-query-COP1
+  - complex59-agent-query-RET1
+  - complex59-agent-query-SAR1
+  - complex59-agent-query-SEC13
+  - complex59-agent-query-SEC23
+  - complex59-agent-query-SEC24
+  - complex59-agent-query-SEC31
+  - complex59-agent-protein-P11076
+  - complex59-agent-protein-P15303
+  - complex59-agent-protein-P20606
+  - complex59-agent-protein-P22137
+  - complex59-agent-protein-P36000
+  - complex59-agent-protein-P38968
+  - complex59-agent-protein-P40482
+  - complex59-agent-protein-P53622
+  - complex59-agent-protein-Q04491
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/membrane_coat.yaml
+    role: maintained scientific record
+  rule_id: Source-backed identity, grounding and claim scope
+  native_severity: minor
+  normalization_reason: A bounded correction preserves the supported complex identity
+    and principal biological function.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030117
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/membrane_coat.yaml
+    role: maintained scientific record
+  description: Retain P53622/COP1 and its verified RET1 alias; replace the current
+    single-entry assertion with the actual disambiguated identity or use the exact
+    COP1 query. Preserve historical seeding history as historical.
+  acceptance_checks:
+  - Verify both RET1 hits and the single COP1 hit; do not substitute RNA polymerase
+    P22276.
+  - Preserve supported source-specific claims and pass applicable native gates.
+limitations:
+- All five completed same-base batch26 global gates are integrated with exact manifest/input/log
+  hashes verified; no fresh full-site QC is claimed from this sparse checkout.
+- Only the explicitly listed source sections/assets were inspected. No unlisted supplements,
+  atomic coordinates or raw experimental data were analyzed.
+- Payne1988 and the eight supporting PMID references were inspected at complete native
+  abstract/identity scope only. The retained Payne page does not provide a read full
+  body. Yu2012 is the only directly read full primary body used here.
+- No complete coat inventory, every species occurrence, kinetic assembly sequence
+  or individual formation requirement was inferred from this broad class.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
