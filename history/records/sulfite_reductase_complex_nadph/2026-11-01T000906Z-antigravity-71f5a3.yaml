@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/sulfite_reductase_complex_nadph.yaml
+  slug: sulfite_reductase_complex_nadph
+session:
+  id: 2026-11-01T000906Z-antigravity-71f5a3
+  timestamp: '2026-11-01T00:09:06Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2494
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2495
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Align sulfite_reductase_complex_nadph causal_graphs[0].edges[0] snippet with subunit
+    binding
+  details: Replaced the siroheme-[4Fe-4S] cofactor geometry snippet on causal_graphs[0].edges[0]
+    (cysi_hemoprotein_beta_subunit -> cysj_flavoprotein_alpha_subunit) with verbatim PMID:26088143
+    abstract sentences characterizing the SiRHP N-terminal oligomerization domain and its
+    requirement for assembling with SiRFP, and synced the 7 Cycle 7 Stage 1 history records
+    with committed record sections and citations.

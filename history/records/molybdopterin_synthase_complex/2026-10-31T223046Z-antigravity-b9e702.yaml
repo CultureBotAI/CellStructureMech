@@ -14,18 +14,21 @@ events:
 - type: CREATE
   outcome: changed
   sections:
-  - description
+  - definition
   - synonyms
   - parent_structures
   - part_of
+  - xrefs
+  - components
   - taxonomic_distribution
   - canonical_examples
-  - components
   - functions
+  - evidence
   - causal_graphs
   - curation_history
   summary: Add molybdopterin synthase complex (GO:1990140) record
   details: Added CellStructureRecord for molybdopterin synthase complex (GO:1990140) in Escherichia
-    coli K-12 with small sulfur-carrier subunit MoaD (P30748) and large catalytic subunit
-    MoaE (P30749), verbatim PubMed abstract evidence (PMID:11302705, PMID:9391090, PMID:12754212),
-    canonical examples, functions, and assembly/function causal graphs.
+    coli K-12 with small sulfur-carrier subunit MoaD (UniProtKB:P30748) and large catalytic
+    subunit MoaE (UniProtKB:P30749), verbatim PubMed abstract evidence (PMID:18092812, PMID:17223713),
+    ComplexPortal xref (CPX-1970), canonical examples, functions, and a mechanistic FUNCTION
+    causal graph.

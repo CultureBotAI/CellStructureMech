@@ -14,18 +14,20 @@ events:
 - type: CREATE
   outcome: changed
   sections:
-  - description
-  - synonyms
+  - definition
   - parent_structures
   - part_of
+  - xrefs
+  - components
   - taxonomic_distribution
   - canonical_examples
-  - components
   - functions
+  - evidence
   - causal_graphs
   - curation_history
   summary: Add IscS-IscU complex (GO:1990330) record
   details: Added CellStructureRecord for IscS-IscU complex (GO:1990330) in Escherichia coli
-    K-12 with cysteine desulfurase IscS (P0A6B7) and iron-sulfur cluster assembly scaffold
-    IscU (P0ACD4), verbatim PubMed abstract evidence (PMID:10829015, PMID:11741955, PMID:20427296),
-    canonical examples, functions, and assembly/function causal graphs.
+    K-12 with cysteine desulfurase IscS (UniProtKB:P0A6B7) and iron-sulfur cluster assembly
+    scaffold IscU (UniProtKB:P0ACD4), verbatim PubMed abstract evidence (PMID:20404999, PMID:22203963),
+    ComplexPortal xref (CPX-2141), canonical examples, functions, and a mechanistic FUNCTION
+    causal graph.
