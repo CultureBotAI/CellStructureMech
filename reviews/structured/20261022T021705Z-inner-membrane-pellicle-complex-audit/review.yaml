@@ -1,0 +1,736 @@
+schema_version: 1.0.0
+review_id: 20261022T021705Z-inner-membrane-pellicle-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Apicomplexan inner membrane pellicle complex source and boundary review
+started_at: '2026-10-22T01:50:38Z'
+finished_at: '2026-10-22T02:17:05Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The apicomplexan IMC identity, developmental context, component classes,
+  functions and descriptive graph are supported within the inspected source scopes.
+  No concrete curation finding was established.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    sha256: 8090ece98a38a0ca4a5d6644b36bbb0a40b8225c439956d1010443ab0b6e24f9
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0070258
+  path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  label: inner membrane pellicle complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Full single maintained target; exact GO/taxon/protein identities, four
+    citation abstracts, full Ferreira review main text and specified Kono primary
+    body sections.
+  selection: Batch31 target2 in strict path order; initial native inspect/schema/strict
+    passed before assessment at immutable f97b1abe.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0070258
+checks:
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - imc-agent-verify
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - imc-agent-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: just validate data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: just validate-strict data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    --out /private/tmp/cellstructure-batch31-20261022-ag46a4d4/inner_membrane_pellicle_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0070258
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - imc-agent-go
+  - imc-agent-go-isa-only
+  - imc-agent-tax5794
+  - imc-agent-tax5833
+  - imc-agent-ferreira2021-meta
+  - imc-agent-kono2013-meta
+  - imc-agent-kono2012-meta
+  - imc-agent-dearnley2012-meta
+  - imc-agent-ferreira2021-jats
+  - imc-agent-kono2012-minimal
+  - imc-agent-O00934
+  - imc-agent-Q7Z289
+  - imc-agent-A0A125YT84
+  - imc-agent-ipr-alveolin-search
+  - imc-agent-alveolin-proteins
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  summary: 11 of 11 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0070258
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch31 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  locator: Entire maintained target, every claim, component, graph edge and discussion
+  accessed_at: '2026-10-22T02:03:48Z'
+  support: context_only
+  summary: The complete record was read; scientific content and status remain unchanged.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, protein examples, graph xrefs and essentiality
+  accessed_at: '2026-10-22T02:03:48Z'
+  support: context_only
+  summary: Collective constituent material, representative cohort references and experimentally
+    established formation necessity are distinct.
+- evidence_id: imc-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070258,GO:0043231
+  locator: Both complete labels/definitions/active flags, synonyms and returned child
+    relations
+  accessed_at: '2026-10-22T01:51:14.472712Z'
+  support: supports
+  summary: Active GO0070258 defines two closely aligned bilayers beneath an apicomplexan
+    plasma membrane and part of its pellicle. GO0043231 defines intracellular single-
+    or double-bilayer-bounded organelles. The generic inner membrane complex synonym
+    is broad in GO.
+  snapshot_sha256: 49ccc67e96f2cea35c0b579eca533c04637e53f615b71efb0818419c73583594
+- evidence_id: imc-agent-go-isa-only
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070258/ancestors?relations=is_a
+  locator: Exact is_a-only request and complete returned ancestor IDs
+  accessed_at: '2026-10-22T01:57:15.450412Z'
+  support: supports
+  summary: The exact is_a-only response does not contain GO0043231. The maintained
+    broader parent is evaluated by its definition and the source organelle description,
+    not claimed as a native GO ancestry edge.
+  snapshot_sha256: 01446efb43b26f2cb4a6be42d48f68dd0f6f90d00781809220bd5173b9ddb677
+- evidence_id: imc-agent-tax5794
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5794
+  locator: Exact taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T01:51:14.472936Z'
+  support: supports
+  summary: ENA confirms Apicomplexa for taxon5794. Rank/lineage identity is separate
+    from occurrence or strain.
+  snapshot_sha256: 71f50f7adf0b7ad8670573c6c6ac0e6df37a9cf467fdec2ab20d612db477bc53
+- evidence_id: imc-agent-tax5833
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833
+  locator: Exact taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T01:51:14.473024Z'
+  support: supports
+  summary: ENA confirms Plasmodium falciparum for taxon5833. Rank/lineage identity
+    is separate from occurrence or strain.
+  snapshot_sha256: 47c9da135299ea0515b9cbddde80166e0e7256bcf1daac4cdf87f8ae3e0ecd11
+- evidence_id: imc-agent-ferreira2021-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.3389%2Ffcimb.2020.611801
+  locator: Exact MED DOI/title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T01:51:13.036971Z'
+  support: supports
+  summary: Exact native bibliographic identity and complete abstract were read for
+    ferreira2021. The first two sources are reviews; the latter two are primary studies.
+  snapshot_sha256: 95580c88246137872888b2b6aef492eb6adcd0fbd7afbaad5b503648514d2696
+- evidence_id: imc-agent-kono2013-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.2741%2F4157
+  locator: Exact MED DOI/title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T01:51:13.036890Z'
+  support: supports
+  summary: Exact native bibliographic identity and complete abstract were read for
+    kono2013. The first two sources are reviews; the latter two are primary studies.
+  snapshot_sha256: 163d8f0c1be3541001074f867cb3c6d8567c4bf22748c96e16130fd211c24b7d
+- evidence_id: imc-agent-kono2012-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1093%2Fmolbev%2Fmss081
+  locator: Exact MED DOI/title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T01:51:13.037330Z'
+  support: supports
+  summary: Exact native bibliographic identity and complete abstract were read for
+    kono2012. The first two sources are reviews; the latter two are primary studies.
+  snapshot_sha256: 7ad4323f6e5769c8f2fc69523fea19c48c16a6ed85e010c7a0c616c604b8ca7b
+- evidence_id: imc-agent-dearnley2012-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1242%2Fjcs.099002
+  locator: Exact MED DOI/title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T01:51:14.472517Z'
+  support: supports
+  summary: Exact native bibliographic identity and complete abstract were read for
+    dearnley2012. The first two sources are reviews; the latter two are primary studies.
+  snapshot_sha256: 89e968ce17edbf2bb581468579a712002db4bf0c883aa422c84745b245abd331
+- evidence_id: imc-agent-ferreira2021-jats
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC7820811.1/PMC7820811.1.xml
+  locator: Entire scientific main text S1–S5, including S4.1–S4.5, complete Table1
+    and embedded Figure1 caption; no figure pixels or underlying primary data reanalysis
+  accessed_at: '2026-10-22T01:51:50.209749Z'
+  support: supports
+  summary: This review supports stage-dependent Plasmodium IMC architecture, daughter-cell
+    scaffolding, morphology and glideosome anchoring. It distinguishes Toxoplasma
+    and Plasmodium and motile versus nonmotile stages. Table1 identifies IMC1a, IMC1c
+    and IMC1g as alveolins and describes GAP50 with a phosphatase domain.
+  snapshot_sha256: 5d77075b815fea8187aacdc79c357525eeb6a0aa21419cc08d9f9d74da3674e9
+- evidence_id: imc-agent-kono2012-minimal
+  kind: primary_source
+  reference: https://oup.silverchair-cdn.com/article-minimal/1075017
+  locator: Complete Abstract/Introduction and Methods; Results from Differential Spatial
+    Distribution through end, including Figures3–8 captions; entire Discussion. Earlier
+    phylogenetic Results/Figures1–2, pixels and supplements not comprehensively inspected.
+  accessed_at: '2026-10-22T01:54:25.311398Z'
+  support: supports
+  summary: Primary Plasmodium microscopy supports distinct IMC protein distributions
+    and assembly through asexual and sexual development. P. falciparum 3D7 experiments
+    and P. berghei ANKA ookinete/sporozoite comparisons are kept separate. Reporter
+    promoter limitations and endogenous controls are described.
+  snapshot_sha256: 5f27432e6f2781d60f45d48489dcc3323ef1b6b75fcc67441f832ab81c0ba5b6
+- evidence_id: imc-agent-O00934
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O00934.json
+  locator: Complete accession, entry status, protein/gene names, organism and available
+    annotation comments
+  accessed_at: '2026-10-22T01:51:14.473239Z'
+  support: supports
+  summary: Reviewed Toxoplasma gondii myosin A; native membrane/function annotation
+    and cited context support a representative motor identity.
+  snapshot_sha256: 95b32ca195be7bfcead066fae9485017d12f952c0b02c1416d61c510622d80a5
+- evidence_id: imc-agent-Q7Z289
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q7Z289.json
+  locator: Complete accession, entry status, protein/gene names, organism and available
+    annotation comments
+  accessed_at: '2026-10-22T01:51:16.042564Z'
+  support: supports
+  summary: Unreviewed Toxoplasma gondii GAP45 entry, identified by its exact gene
+    and protein name; no native functional comments are present.
+  snapshot_sha256: 4ecc18c62e24146999ce3544759e6cdd12481856d6149d395c4ce5b88565e1b8
+- evidence_id: imc-agent-A0A125YT84
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/A0A125YT84.json
+  locator: Complete accession, entry status, protein/gene names, organism and available
+    annotation comments
+  accessed_at: '2026-10-22T01:51:16.042940Z'
+  support: supports
+  summary: Unreviewed T. gondii ME49 entry has automatic acid-phosphatase protein
+    naming and GAP50/TGME49_219320 gene identity. The phosphatase name does not contradict
+    the GAP50 identity or reviewed family-domain context.
+  snapshot_sha256: 1b57bc2121175bdd8b3eeed2d5b4f9f9fd37c775d7a33155cfbc5a80cc71678a
+- evidence_id: imc-agent-ipr-alveolin-search
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=alveolin&page_size=200
+  locator: Complete exact native query response
+  accessed_at: '2026-10-22T01:51:16.043076Z'
+  support: context_only
+  summary: Exact InterPro alveolin-name query returned HTTP204 with an empty body;
+    this bounded name search does not establish that every possible family mapping
+    is absent.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  search_scope: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=alveolin&page_size=200;
+    only this exact live native query, not an exhaustive absence claim
+- evidence_id: imc-agent-alveolin-proteins
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=protein_name%3Aalveolin%20AND%20taxonomy_id%3A5833&format=json&size=100
+  locator: Complete exact native query response
+  accessed_at: '2026-10-22T01:57:15.450861Z'
+  support: context_only
+  summary: Exact UniProt protein_name alveolin and Plasmodium falciparum query returned
+    an empty result list; broader synonyms and unannotated family members are outside
+    this search.
+  snapshot_sha256: 5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84
+  search_scope: https://rest.uniprot.org/uniprotkb/search?query=protein_name%3Aalveolin%20AND%20taxonomy_id%3A5833&format=json&size=100;
+    only this exact live native query, not an exhaustive absence claim
+- evidence_id: imc-agent-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    --verify
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T01:55:20.352341Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: imc-agent-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    --causal-graphs
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T01:55:20.897656Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml\
+    \  (GO:0070258)\n  imc_pellicle_shape_scaffold\talveolin_subpellicular_network\t\
+    HAS_SYMBOLS_NO_EXAMPLES\t->alveolin_subpellicular_network (PROTEIN: IMC1a, IMC1c,\
+    \ IMC1g)\n  imc_pellicle_shape_scaffold\tglideosome\tUNANCHORED_WITH_UNIPROT\t\
+    actin-myosin glideosome (UniProtKB:O00934, UniProtKB:Q7Z289, UniProtKB:A0A125YT84)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     1  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  COVERED                   component_ref target holds\
+    \ protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES   \
+    \       component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols\
+    \ and holds no protein_examples\n     0  DANGLING_COMPONENT_REF    component_ref\
+    \ names a component_id that does not exist on the record\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     2\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: deefc6cc982d1b5edefab52598c9a2a58ce375d67b625c79e8273386ead36e53
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:50:39Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml'
+  snapshot_sha256: 5f6a05d5482d640f0bad862dd67733b321a663fc2085296b0a4ed6802b04c0a4
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml
+    --out /private/tmp/cellstructure-batch31-20261022-ag46a4d4/inner_membrane_pellicle_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:50:40Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch31-20261022-ag46a4d4/inner_membrane_pellicle_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch31-20261022-ag46a4d4/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch31-20261022-ag46a4d4/inner_membrane_pellicle_complex-strict.tsv"
+  snapshot_sha256: da78368177a77063b6bd7b80480a0087539488a9873a47f04a73aff66de64a15
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/inner_membrane_pellicle_complex.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 11 of 11 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact apicomplexan membrane identity and contextual synonym
+  outcome: supported
+  target_ids:
+  - GO:0070258
+  summary: The double-bilayer pellicle identity is supported. Inner membrane complex
+    is exact within the explicitly apicomplexan source context; its broader use in
+    other contexts explains the GO broad synonym. GO0043231 parentage is a biological
+    inference from source and parent definitions, not a falsely claimed native ontology
+    edge.
+  evidence_ids:
+  - record
+  - imc-agent-go
+  - imc-agent-go-isa-only
+  - imc-agent-ferreira2021-jats
+  - imc-agent-kono2012-minimal
+- assessment_id: materials
+  area: grounding
+  topic: Membrane material and alveolin cohort
+  outcome: supported
+  target_ids:
+  - GO:0070258
+  summary: The label-only bilayer row denotes the collective lipid material of flattened
+    cisternae and has no erroneous whole-membrane GO molecular grounding. Alveolin
+    membership and the three named Plasmodium symbols are supported by review Table1
+    and primary architecture studies. No exact family or complete subunit census is
+    invented.
+  evidence_ids:
+  - record
+  - schema
+  - imc-agent-ferreira2021-jats
+  - imc-agent-kono2012-minimal
+  - imc-agent-ipr-alveolin-search
+  - imc-agent-alveolin-proteins
+- assessment_id: necessity
+  area: evidence
+  topic: Formation necessity is not composition
+  outcome: unknown
+  target_ids:
+  - GO:0070258
+  summary: The bilayer is constitutive of this membrane-bounded identity. Its ESSENTIAL
+    collective-material interpretation does not demonstrate formation necessity of
+    each lipid species; the inspected studies do not establish such chemical removal
+    tests. Alveolin essentiality remains UNKNOWN and no universal protein requirement
+    follows from localization.
+  evidence_ids:
+  - record
+  - schema
+  - imc-agent-ferreira2021-jats
+  - imc-agent-kono2012-minimal
+- assessment_id: scope
+  area: scope
+  topic: Taxonomic and developmental scope
+  outcome: supported
+  target_ids:
+  - GO:0070258
+  summary: Review-level Apicomplexa COMMON is qualitative and explicitly stage/lineage
+    qualified. The canonical P. falciparum asexual/sexual context is directly supported.
+    Neither a single IMC architecture nor gliding activity in every developmental
+    stage is inferred.
+  evidence_ids:
+  - record
+  - imc-agent-ferreira2021-jats
+  - imc-agent-kono2012-minimal
+  - imc-agent-tax5794
+  - imc-agent-tax5833
+  - imc-agent-ferreira2021-meta
+  - imc-agent-kono2013-meta
+  - imc-agent-kono2012-meta
+  - imc-agent-dearnley2012-meta
+- assessment_id: functions
+  area: evidence
+  topic: Shape, daughter-cell scaffold and motility anchoring
+  outcome: supported
+  target_ids:
+  - GO:0070258
+  summary: All three functions are supported at the stated broad context, primarily
+    by the cited review and corroborating architecture study. Stage-specific shapes,
+    recycling and glideosome contexts remain distinct; review synthesis is not relabeled
+    as a new causal experiment.
+  evidence_ids:
+  - record
+  - imc-agent-ferreira2021-jats
+  - imc-agent-kono2012-minimal
+  - imc-agent-ferreira2021-meta
+  - imc-agent-kono2013-meta
+  - imc-agent-kono2012-meta
+  - imc-agent-dearnley2012-meta
+- assessment_id: protein-links
+  area: grounding
+  topic: Representative glideosome xrefs
+  outcome: supported
+  target_ids:
+  - GO:0070258
+  summary: The three native entries identify Toxoplasma motor/anchoring proteins.
+    They are representative links within an aggregate protein-cohort node, not an
+    assertion that each accession equals the entire glideosome or that these exact
+    Toxoplasma accessions were measured in the P. falciparum canonical experiment.
+    Unreviewed annotations provide limited independent functional evidence.
+  evidence_ids:
+  - record
+  - schema
+  - imc-agent-ferreira2021-jats
+  - imc-agent-O00934
+  - imc-agent-Q7Z289
+  - imc-agent-A0A125YT84
+- assessment_id: graph
+  area: graph
+  topic: Six descriptive support and topology edges
+  outcome: supported
+  target_ids:
+  - GO:0070258
+  summary: All six edges are consistent with the inspected review at the declared
+    NONMECHANISTIC level. Component links resolve and the stable-morphology endpoint
+    is a state. No molecular stoichiometry, complete motor inventory or resolved anchoring
+    chemistry is asserted.
+  evidence_ids:
+  - record
+  - imc-agent-go
+  - imc-agent-ferreira2021-jats
+  - imc-agent-kono2012-minimal
+  - imc-agent-O00934
+  - imc-agent-Q7Z289
+  - imc-agent-A0A125YT84
+- assessment_id: completeness
+  area: completeness
+  topic: Open family and optional protein inventory
+  outcome: supported
+  target_ids:
+  - GO:0070258
+  summary: The existing discussion correctly leaves narrower cohorts unresolved. The
+    bounded native searches provide no verified exact alveolin family candidate; optional
+    protein examples and a fuller glideosome component census are not mandatory findings
+    by themselves.
+  evidence_ids:
+  - record
+  - imc-agent-ferreira2021-jats
+  - imc-agent-kono2012-minimal
+  - imc-agent-ipr-alveolin-search
+  - imc-agent-alveolin-proteins
+findings: []
+actions: []
+limitations:
+- Ferreira2021 and Kono2013 are review-tier sources. Kono2013 was checked at complete
+  native abstract level, not full body.
+- Dearnley2012 complete native abstract was inspected; native publisher/PDF routes
+  returned403 and a CDN minimal route404. Browser-displayed early PDF text was not
+  frozen as a body receipt and is not used to certify the entire paper.
+- Kono2012 primary body was inspected only in the enumerated sections. No figure pixels,
+  supplementary datasets or quantitative phenotype reanalysis were performed.
+- The broader parent follows biological definitions, not a native is_a edge in the
+  captured ancestor response. Exact synonymy is restricted to the apicomplexan source
+  context.
+- The family searches are bounded exact-name queries. Empty results are not an exhaustive
+  assertion of missing ontology/family representation.
+- Membership and collective constitutive material do not establish individual molecular
+  formation necessity. Representative Toxoplasma protein links are not P. falciparum
+  accession-specific experimental evidence.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- Original source URL, UTC access and SHA256 are preserved. Parent owns finalization.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
