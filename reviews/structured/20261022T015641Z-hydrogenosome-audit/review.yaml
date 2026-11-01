@@ -1,0 +1,930 @@
+schema_version: 1.0.0
+review_id: 20261022T015641Z-hydrogenosome-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Hydrogenosome identity, source scope and molecular-boundary review
+started_at: '2026-10-22T01:39:36Z'
+finished_at: '2026-10-22T01:56:41Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The organelle, energy/ISC functions and grouped machinery are supported within
+  the read primary scopes. One major finding corrects whole-membrane molecular grounding;
+  two minor findings correct a review title and qualify presequence-only import wording.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/hydrogenosomal_membrane.yaml
+    sha256: 7e389b3e00ef30e931b8415dcc2daf38b5022ba6849696387af283a6f9f7ab56
+    role: context
+  - path: data/structures/membrane_organelle/hydrogenosome.yaml
+    sha256: cbe6ff879b7bc2477e475394c4361107d4d033bfeba79e4a85c03787b27b8b70
+    role: target
+  - path: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+    sha256: 30c5139da8ac02b5d677b314f371d09b1a64fa10a6bb45352d3b8b76c298fd40
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0042566
+  path: data/structures/membrane_organelle/hydrogenosome.yaml
+  label: hydrogenosome
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome.yaml
+    role: maintained scientific record
+scope:
+  description: Full single maintained target and frozen boundary neighbors; exact
+    native identifiers, bibliography and claim-bearing primary/review scopes; no maintained
+    record edits.
+  selection: Target 10 of batch thirty in strict uncovered path order; fresh native
+    inspect/schema/strict all passed at unchanged base f97b1abe before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0042566
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042566
+  command: just validate data/structures/membrane_organelle/hydrogenosome.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042566
+  command: just validate-strict data/structures/membrane_organelle/hydrogenosome.yaml
+    --out /private/tmp/cellstructure-batch30-20261022-frro2xh0/hydrogenosome-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0042566
+  summary: No expression-module membership, regulator or transcriptomic association
+    is used in this organelle review.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042566
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - boundary-neighbor
+  - paired-neighbor
+  - hydrogenosome-agent-go
+  - hydrogenosome-agent-SL-0144
+  - hydrogenosome-agent-SL-0335
+  - hydrogenosome-agent-tax2759
+  - hydrogenosome-agent-tax5722
+  - hydrogenosome-agent-tachezy2022-meta
+  - hydrogenosome-agent-schneider2011-meta
+  - hydrogenosome-agent-schneider2011-pmc
+  - hydrogenosome-agent-lindmark1973-meta
+  - hydrogenosome-agent-bui1996-meta
+  - hydrogenosome-agent-dolezal2005-meta
+  - hydrogenosome-agent-sutak2004-meta
+  - hydrogenosome-agent-dolezal2005-pmc
+  - hydrogenosome-agent-sutak2004-pmc
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042566
+  summary: '12 of 13 collected target identifiers returned OK. PMID:4750424: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID4750424, DOI10.1016/s0021-9258(19)43249-3 and Hydrogenosome, a cytoplasmic
+    organelle of the anaerobic flagellate Tritrichomonas foetus, and its role in pyruvate
+    metabolism. Bibliographic identity is resolved; scientific scope remains restricted
+    to the separately documented source inspections. The Lindmark1973 source is bibliographic
+    metadata only; no abstract or body was provided. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - hydrogenosome-agent-lindmark1973-meta
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042566
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch30 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042566
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch30 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042566
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch30 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042566
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch30 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0042566
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch30 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/hydrogenosome.yaml
+  locator: Entire maintained YAML, including all components, taxonomy, examples, functions,
+    graphs, evidence, discussions and history
+  accessed_at: '2026-10-22T01:47:31Z'
+  support: context_only
+  summary: The exact single target was fully read without maintained scientific edits
+    or status promotion.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent lines391–446, molecular-grounding contract and essentiality;
+    graph component_ref contract
+  accessed_at: '2026-10-22T01:47:31Z'
+  support: context_only
+  summary: A component is a molecular building block. The grounding contract distinguishes
+    chemical lipid identity from GO sub-complex identity. Essentiality concerns formation
+    without a component, not catalytic activity or inclusion in an intact inventory.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Graph source scope, component correspondence and causal versus descriptive
+    representation
+  accessed_at: '2026-10-22T01:47:31Z'
+  support: context_only
+  summary: A correct descriptive topology does not establish molecular equivalence
+    between the complete boundary and an asserted chemical constituent.
+- evidence_id: boundary-neighbor
+  kind: record_content
+  reference: data/structures/membrane_organelle/hydrogenosome_lumen.yaml
+  locator: Entire frozen neighboring record, boundary context only
+  accessed_at: '2026-10-22T01:47:31Z'
+  support: context_only
+  summary: Whole hydrogenosome, enclosing membrane and enclosed lumen remain distinct;
+    this neighbor is not a second review target.
+- evidence_id: paired-neighbor
+  kind: record_content
+  reference: data/structures/membrane_organelle/hydrogenosomal_membrane.yaml
+  locator: Entire frozen neighboring record, boundary context only
+  accessed_at: '2026-10-22T01:47:31Z'
+  support: context_only
+  summary: Whole hydrogenosome, enclosing membrane and enclosed lumen remain distinct;
+    this neighbor is not a second review target.
+- evidence_id: hydrogenosome-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0046859,GO:0042566,GO:0034492,GO:0016020,GO:0043231,GO:0005737
+  locator: All six returned exact IDs, labels, definitions, synonyms and relevant
+    child relations
+  accessed_at: '2026-10-22T01:40:30.242260Z'
+  support: supports
+  summary: 'All six terms are active: hydrogenosome0042566, its membrane0046859 and
+    lumen0034492, membrane0016020, intracellular membrane-bounded organelle0043231
+    and cytoplasm0005737. Explicit children establish hydrogenosome is_a0043231, part_of
+    cytoplasm, and membrane/lumen parts. The membrane synonym is exact.'
+  snapshot_sha256: ba6172c903b6b820bc4dff5fb8cc9b28cf7dab7eab4ced81ad86446f84ec4ddb
+- evidence_id: hydrogenosome-agent-SL-0144
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0144.json
+  locator: Complete name, synonym, exact GO mapping, isA and partOf structures including
+    embedded Hydrogenosome definition
+  accessed_at: '2026-10-22T01:40:30.275157Z'
+  support: supports
+  summary: Hydrogenosome membrane SL0144 maps to GO0046859, is_a Membrane and part_of
+    Hydrogenosome SL0145. The embedded whole-organelle entry describes unrelated anaerobic
+    flagellate, fungal and ciliate lineages, with genome retention in some ciliates.
+  snapshot_sha256: fccca371507283bd774e05a93feda2a3bc58eee39bb06c0b458c57786a80456a
+- evidence_id: hydrogenosome-agent-SL-0335
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0335.json
+  locator: Complete name, synonym, exact mapping and partOf
+  accessed_at: '2026-10-22T01:40:30.855391Z'
+  support: supports
+  summary: Hydrogenosome lumen maps to GO0034492 and is part of Hydrogenosome SL0145.
+    Its compartment definition supports boundary identity, not a protein or lipid
+    constituent.
+  snapshot_sha256: 96793a2ae46ab05de07492a336d115179a5cf644697d96c5e5d3c4f4daf25c7d
+- evidence_id: hydrogenosome-agent-tax2759
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759
+  locator: Exact taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T01:40:30.254730Z'
+  support: supports
+  summary: ENA2759 identifies Eukaryota at domain rank. Taxonomy alone does not establish
+    prevalence, strain or experimental function.
+  snapshot_sha256: 47d02c524bbdc511eb1fc377bdedc484b5cb6d3504611b0cbc6c280a65f140b4
+- evidence_id: hydrogenosome-agent-tax5722
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5722
+  locator: Exact taxId, scientificName, rank and lineage
+  accessed_at: '2026-10-22T01:40:30.265215Z'
+  support: supports
+  summary: ENA5722 identifies Trichomonas vaginalis at species rank. Taxonomy alone
+    does not establish prevalence, strain or experimental function.
+  snapshot_sha256: 187c33fcc8a5be0659d37aa99eb3c11f74b2e42cab385cd8ff38b2ba0175e47f
+- evidence_id: hydrogenosome-agent-tachezy2022-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1111/jeu.12922
+  locator: Exact native bibliographic fields and complete abstract
+  accessed_at: '2026-10-22T01:40:29.609875Z'
+  support: supports
+  summary: Native MED identifies The hydrogenosome of Trichomonas vaginalis. by Tachezy
+    J, Makki A, Hrdý I. (2022), DOI 10.1111/jeu.12922, PMID 35567536. The complete
+    returned abstract was read. This is review-tier context, not a new primary experiment.
+  snapshot_sha256: d04be05b15294eca215c38660eed08c45e0a78d2486043a183144b4682706944
+- evidence_id: hydrogenosome-agent-schneider2011-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.ijpara.2011.10.001
+  locator: Exact native bibliographic fields and complete abstract
+  accessed_at: '2026-10-22T01:40:29.610134Z'
+  support: supports
+  summary: Native MED identifies The Trichomonas vaginalis hydrogenosome proteome
+    is highly reduced relative to mitochondria, yet complex compared with mitosomes.
+    by Schneider RE, Brown MT, Shiflett AM, Dyall SD, Hayes RD, Xie Y, Loo JA, Johnson
+    PJ. (2011), DOI 10.1016/j.ijpara.2011.10.001, PMID 22079833. The complete returned
+    abstract was read. Detailed experimental claims use the separately inspected body
+    where available.
+  snapshot_sha256: 8afe4787ba5f9cad8c1bc499491004290d1306b02a0114eafc7082afddcdc57a
+- evidence_id: hydrogenosome-agent-schneider2011-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/4437511/
+  locator: Complete Introduction S1; Methods2.1–2.6 S3–S8 and2.7 S10, with only the
+    opening of2.6.1 S9 inspected; Results3.1 S12 including Table1/Fig1–2 captions,
+    complete3.5 S16 including3.5.1/3.5.2 andFig4–5 captions, complete3.7 S20 including3.7.1/3.7.2
+    andTable2, complete3.8 S23,3.9 S24 and concluding S25. Other Results, remaining2.6.1,
+    image pixels and supplements not independently analyzed.
+  accessed_at: '2026-10-22T01:40:30.865625Z'
+  support: supports
+  summary: T. vaginalis T1 hydrogenosome proteomics supports double membranes, pyruvate/ATP/hydrogen
+    metabolism, ISC proteins and putative translocases. The569 identified proteins
+    include external-surface proteins and possible contaminants; presence in a fraction
+    is not proof every protein resides in matrix. Section3.8 explicitly recognizes
+    targeting without an N-terminal presequence and incomplete motif predictions.
+    The Introduction supports patchy fungal/ciliate/parabasalid occurrence; these
+    are reviewed background statements within a primary proteomic study.
+  snapshot_sha256: 71f42aec9b7990c668899689fea0c650181de68fa7ed8c2e0c5a953a4aaf5ea9
+- evidence_id: hydrogenosome-agent-lindmark1973-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A4750424%20AND%20SRC%3AMED
+  locator: Exact native bibliographic fields; no abstract or primary body in this
+    response
+  accessed_at: '2026-10-22T01:40:30.235608Z'
+  support: context_only
+  summary: Native MED identifies Hydrogenosome, a cytoplasmic organelle of the anaerobic
+    flagellate Tritrichomonas foetus, and its role in pyruvate metabolism. by Lindmark
+    DG, Müller M. (1973), DOI 10.1016/s0021-9258(19)43249-3, PMID 4750424. No abstract
+    is present; this supports identity only.
+  snapshot_sha256: 54299eb5e6aac224dab7a77f15f64ebd0993ca373a700d8070620e5b493b4227
+- evidence_id: hydrogenosome-agent-bui1996-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.93.18.9651
+  locator: Exact native bibliographic fields and complete abstract
+  accessed_at: '2026-10-22T01:40:29.610484Z'
+  support: supports
+  summary: Native MED identifies A common evolutionary origin for mitochondria and
+    hydrogenosomes. by Bui ET, Bradley PJ, Johnson PJ. (1996), DOI 10.1073/pnas.93.18.9651,
+    PMID 8790385. The complete returned abstract was read. Detailed experimental claims
+    use the separately inspected body where available.
+  snapshot_sha256: 3c939677d54b4e0067afd94956f4928c78bb566ad42dd64daf1f08442699bf24
+- evidence_id: hydrogenosome-agent-dolezal2005-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.0500349102
+  locator: Exact native bibliographic fields and complete abstract
+  accessed_at: '2026-10-22T01:40:29.610245Z'
+  support: supports
+  summary: Native MED identifies Giardia mitosomes and trichomonad hydrogenosomes
+    share a common mode of protein targeting. by Dolezal P, Smíd O, Rada P, Zubácová
+    Z, Bursać D, Suták R, Nebesárová J, Lithgow T, Tachezy J. (2005), DOI 10.1073/pnas.0500349102,
+    PMID 16040811. The complete returned abstract was read. Detailed experimental
+    claims use the separately inspected body where available.
+  snapshot_sha256: ebc78023358ad6d9ca35e7b34606dfe84cb1cac48319f509490547d40b38fdb8
+- evidence_id: hydrogenosome-agent-sutak2004-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.0401319101
+  locator: Exact native bibliographic fields and complete abstract
+  accessed_at: '2026-10-22T01:40:29.610328Z'
+  support: supports
+  summary: Native MED identifies Mitochondrial-type assembly of FeS centers in the
+    hydrogenosomes of the amitochondriate eukaryote Trichomonas vaginalis. by Sutak
+    R, Dolezal P, Fiumera HL, Hrdy I, Dancis A, Delgadillo-Correa M, Johnson PJ, Müller
+    M, Tachezy J. (2004), DOI 10.1073/pnas.0401319101, PMID 15226492. The complete
+    returned abstract was read. Detailed experimental claims use the separately inspected
+    body where available.
+  snapshot_sha256: 084690cec8acd56239378a6ba2e8ebb31ff08a03d8c00ef5f70d52d1040a874d
+- evidence_id: hydrogenosome-agent-dolezal2005-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/1182405/
+  locator: Complete abstract and unsectioned Introduction; complete main Methods sec1,
+    Results sec2 and Discussion sec3, including Fig1–5 captions. Supplementary methods/data,
+    figure pixels and raw data not independently inspected.
+  accessed_at: '2026-10-22T01:41:03.724804Z'
+  support: supports
+  summary: 'The primary targeting assays demonstrate N-terminal signals on GiIscU/Gifdx
+    and internal signals in GiIscS: both N- and C-terminal GiIscS fragments enter
+    T. vaginalis hydrogenosomes. Experiments compare Giardia WB, T. vaginalis T1 and
+    yeast and include heterologous reporters. Pam18 homolog localization supports
+    related machinery but its detailed translocation function was not dissected experimentally.'
+  snapshot_sha256: c00dba08f0c96be17027452ba9880e94defbfe0d16acc77aab2892c54c3cbf97
+- evidence_id: hydrogenosome-agent-sutak2004-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/478578/
+  locator: Complete abstract, unsectioned Introduction, main Materials and Methods
+    sec1, Results sec2 and Discussion sec3, including Fig1–7 captions. Separate supporting
+    Methods, figure pixels and raw data not independently inspected.
+  accessed_at: '2026-10-22T01:41:03.725381Z'
+  support: supports
+  summary: In T. vaginalis C-1:NIH, expressed TvIscS-2 localizes to hydrogenosomes
+    and organelle lysates catalyze cysteine-dependent FeS incorporation into apoferredoxin.
+    The assays establish functional assembly activity, with chelator and protein controls,
+    not organelle formation necessity of every ISC factor. Non-detection of IscS-1
+    expression is condition-limited.
+  snapshot_sha256: 2bb1200077f7bbd4f1eaeb570d5d9185e25759cd582d1fb7f91b86299a15fd1e
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/hydrogenosome.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:39:38Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/hydrogenosome.yaml'
+  snapshot_sha256: 0c5c3264e277cbd94fe16ffe188d223344a5b48544cdba5563fb0bdbc20abd6d
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/hydrogenosome.yaml
+    --out /private/tmp/cellstructure-batch30-20261022-frro2xh0/hydrogenosome-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:39:39Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/hydrogenosome.yaml\
+    \ --out /private/tmp/cellstructure-batch30-20261022-frro2xh0/hydrogenosome-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch30-20261022-frro2xh0/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch30-20261022-frro2xh0/hydrogenosome-strict.tsv"
+  snapshot_sha256: 0c334d9282564fceebfc1a585aa6f525ff92267348e15313cd708da721d2c848
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/hydrogenosome.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '12 of 13 collected target identifiers returned OK. PMID:4750424: UNREACHABLE;
+    The bulk PMID transport returned414; the independently retrieved exact MED record
+    verifies PMID4750424, DOI10.1016/s0021-9258(19)43249-3 and Hydrogenosome, a cytoplasmic
+    organelle of the anaerobic flagellate Tritrichomonas foetus, and its role in pyruvate
+    metabolism. Bibliographic identity is resolved; scientific scope remains restricted
+    to the separately documented source inspections. The Lindmark1973 source is bibliographic
+    metadata only; no abstract or body was provided. Native source checks are separately
+    scoped; skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact organelle and boundary hierarchy
+  outcome: supported
+  target_ids:
+  - GO:0042566
+  summary: Native GO and UniProt location identities match the target, synonym where
+    present, and parent/parthood relations. The membrane, internal volume and whole
+    organelle are kept distinct. Double-membrane context in T. vaginalis is directly
+    supported by the primary source; a whole-membrane term is not thereby chemical
+    lipid identity.
+  evidence_ids:
+  - record
+  - boundary-neighbor
+  - paired-neighbor
+  - hydrogenosome-agent-go
+  - hydrogenosome-agent-SL-0144
+  - hydrogenosome-agent-SL-0335
+  - hydrogenosome-agent-schneider2011-pmc
+- assessment_id: scope
+  area: scope
+  topic: Patchy eukaryotic occurrence and T. vaginalis model
+  outcome: supported
+  target_ids:
+  - GO:0042566
+  summary: Taxonomic IDs and the species model agree. Native authority and Schneider
+    Introduction support patchy occurrence across anaerobic microbial eukaryotes;
+    RARE is qualitative, not a measured frequency. Schneider Methods specifies T1
+    and separates fraction-associated proteins from validated localizations. Its proteome
+    is not a universal complete matrix inventory across every hydrogenosome-bearing
+    lineage.
+  evidence_ids:
+  - record
+  - hydrogenosome-agent-go
+  - hydrogenosome-agent-SL-0144
+  - hydrogenosome-agent-tachezy2022-meta
+  - hydrogenosome-agent-schneider2011-meta
+  - hydrogenosome-agent-schneider2011-pmc
+  - hydrogenosome-agent-tax2759
+  - hydrogenosome-agent-tax5722
+- assessment_id: citation
+  area: evidence
+  topic: Incorrect title attached to the correct review DOI
+  outcome: concern
+  target_ids:
+  - GO:0042566
+  summary: 'The exact DOI resolves to Tachezy, Makki and Hrdý2022, The hydrogenosome
+    of Trichomonas vaginalis. The record instead gives Hydrogenosomes and mitosomes:
+    Mitochondria of anaerobic eukaryotes. This is a bibliographic provenance error;
+    the DOI is correct and the actual review remains relevant.'
+  evidence_ids:
+  - record
+  - hydrogenosome-agent-tachezy2022-meta
+- assessment_id: membrane-component
+  area: grounding
+  topic: Whole membrane incorrectly used as molecular lipid identity
+  outcome: concern
+  target_ids:
+  - GO:0042566
+  summary: GO0046859 is the complete hydrogenosomal membrane; assigning it as a LIPID
+    molecular grounding and binding the structural node to that row violates the schema
+    distinction. Double boundary morphology and organelle parthood remain supported.
+  evidence_ids:
+  - record
+  - policy
+  - hydrogenosome-agent-go
+  - hydrogenosome-agent-SL-0144
+  - hydrogenosome-agent-schneider2011-pmc
+- assessment_id: protein-cohorts
+  area: grounding
+  topic: Multifamily energy, ISC and import components
+  outcome: supported
+  target_ids:
+  - GO:0042566
+  summary: The cited primary studies support the three explicitly grouped functional
+    cohorts. No single exact protein-family term denotes the entire ATP/hydrogen enzyme
+    set, ISC module or divergent import machinery, so reviewed label-only grouping
+    is defensible. Family or domain labels for individual members would not by themselves
+    identify a whole localized cohort. No accession or gene-symbol identity claim
+    is present.
+  evidence_ids:
+  - record
+  - policy
+  - hydrogenosome-agent-schneider2011-pmc
+  - hydrogenosome-agent-dolezal2005-pmc
+  - hydrogenosome-agent-sutak2004-pmc
+- assessment_id: necessity
+  area: grounding
+  topic: Membership and activity do not establish organelle formation requirements
+  outcome: unknown
+  target_ids:
+  - GO:0042566
+  summary: UNKNOWN for the three protein cohorts is appropriate. Import, ATP production
+    and FeS assembly assays do not demonstrate that removal of every grouped factor
+    prevents organelle assembly. The membrane is a defining boundary, but individual
+    lipid-class formation necessity and exact chemistry remain untested separately
+    from the F1 identity mismatch.
+  evidence_ids:
+  - record
+  - policy
+  - hydrogenosome-agent-schneider2011-pmc
+  - hydrogenosome-agent-dolezal2005-pmc
+  - hydrogenosome-agent-sutak2004-pmc
+- assessment_id: metabolism
+  area: evidence
+  topic: ATP/hydrogen production and ISC activity
+  outcome: supported
+  target_ids:
+  - GO:0042566
+  summary: Schneider3.5 describes the native energy pathway and identifies its proteins;
+    Sutak directly demonstrates organelle FeS assembly. The historical Lindmark PMID
+    is verified bibliographically only; no original abstract/body was recovered, so
+    its detailed1973 observations are not independently certified here. The general
+    energy and ISC functions have independently inspected later support.
+  evidence_ids:
+  - record
+  - hydrogenosome-agent-lindmark1973-meta
+  - hydrogenosome-agent-schneider2011-meta
+  - hydrogenosome-agent-schneider2011-pmc
+  - hydrogenosome-agent-sutak2004-meta
+  - hydrogenosome-agent-sutak2004-pmc
+- assessment_id: import
+  area: evidence
+  topic: Presequence targeting is one route rather than a universal matrix import
+    rule
+  outcome: concern
+  target_ids:
+  - GO:0042566
+  summary: The stated N-terminal route exists and Bui abstract supports Hsp60 processing.
+    However, the unqualified function description implies a uniform targeting route,
+    whereas its cited Dolezal study explicitly demonstrates internal signals and Schneider3.8
+    cautions against universal presequence inference. This requires qualification
+    without denying import or the validated N-terminal route.
+  evidence_ids:
+  - record
+  - hydrogenosome-agent-bui1996-meta
+  - hydrogenosome-agent-dolezal2005-meta
+  - hydrogenosome-agent-dolezal2005-pmc
+  - hydrogenosome-agent-schneider2011-pmc
+- assessment_id: graph
+  area: graph
+  topic: Seven causal or boundary edges with cohort-level inference
+  outcome: concern
+  target_ids:
+  - GO:0042566
+  summary: The energy conversion/ATP/hydrogen and ISC steps are causal processes,
+    supporting MECHANISTIC scope for the pathway graph. Matrix localization and double
+    boundary are supported. Generic import of the energy cohort is a synthesis of
+    nuclear encoding/proteome and targeting experiments; Dolezal directly assays heterologous
+    ISC reporters rather than every native pyruvate enzyme, so no direct cargo-by-cargo
+    validation or universal presequence is inferred. The membrane component_ref separately
+    propagates F1.
+  evidence_ids:
+  - record
+  - graph-policy
+  - hydrogenosome-agent-schneider2011-pmc
+  - hydrogenosome-agent-dolezal2005-pmc
+  - hydrogenosome-agent-sutak2004-pmc
+  - hydrogenosome-agent-lindmark1973-meta
+- assessment_id: coverage
+  area: completeness
+  topic: Full target, evidence placement and bounded review
+  outcome: supported
+  target_ids:
+  - GO:0042566
+  summary: Every maintained claim, evidence item, graph edge and discussion was inspected.
+    Findings are limited to demonstrated identity/provenance/scope issues; optional
+    inventory and inaccessible original bodies alone are not findings. No quantitative
+    measurement field, maintained figure/licence asset or verbatim evidence snippet
+    requires a separate check. Scientific status and history remain unchanged.
+  evidence_ids:
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: hydrogenosome-lipid-whole-membrane-grounding
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate the complete membrane identity from its molecular lipid constituent
+  description: The hydrogenosomal_membrane component is typed LIPID but grounded to
+    GO:0046859, which identifies the complete organelle membrane. The schema requires
+    a molecular building block and chemical grounding for a lipid, while GO can identify
+    a sub-complex. Correct membrane parthood and bilayer topology do not make the
+    entire membrane term an exact lipid molecular identity. The graph component_ref
+    propagates this mismatch.
+  target_ids:
+  - GO:0042566
+  field_paths:
+  - components#hydrogenosomal_membrane.component_type
+  - components#hydrogenosomal_membrane.grounding
+  - causal_graphs#hydrogenosomal_pyruvate_to_atp_and_hydrogen.nodes#hydrogenosomal_membrane.component_ref
+  evidence_ids:
+  - record
+  - policy
+  - hydrogenosome-agent-go
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:exact identity, scoped evidence
+    and severity rubric
+  native_severity: major
+  normalization_reason: Major because a molecular component is assigned a distinct
+    complete-structure identity and the mismatch propagates into its graph correspondence.
+    This does not make the accepted whole-organelle identity or membrane topology
+    wrong.
+- finding_id: F2
+  issue_key: hydrogenosome-tachezy-title
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the title of the cited Tachezy2022 review
+  description: 'DOI:10.1111/jeu.12922 resolves to The hydrogenosome of Trichomonas
+    vaginalis by Tachezy, Makki and Hrdý, not the title Hydrogenosomes and mitosomes:
+    Mitochondria of anaerobic eukaryotes recorded in evidence.notes. The DOI and broad
+    scientific relevance remain correct.'
+  target_ids:
+  - GO:0042566
+  field_paths:
+  - evidence[reference=DOI:10.1111/jeu.12922].notes
+  evidence_ids:
+  - record
+  - hydrogenosome-agent-tachezy2022-meta
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:exact identity, scoped evidence
+    and severity rubric
+  native_severity: minor
+  normalization_reason: 'Minor bibliographic provenance error: the resolvable source
+    identifier and relevant organelle topic are correct; no wrong organelle identity
+    follows from the title correction.'
+- finding_id: F3
+  issue_key: hydrogenosome-import-route-qualification
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify N-terminal presequence targeting as one demonstrated import route
+  description: The matrix-import function says nuclear-encoded matrix proteins are
+    targeted through N-terminal presequences without qualification. Its cited Dolezal2005
+    paper demonstrates internal targeting signals in GiIscS expressed in T. vaginalis
+    as well as N-terminal targeting; Schneider2011 §3.8 also states that targeting
+    without an N-terminal presequence has been demonstrated. The evidence supports
+    the route but not an unqualified common requirement.
+  target_ids:
+  - GO:0042566
+  field_paths:
+  - functions#hydrogenosomal_protein_import.description
+  evidence_ids:
+  - record
+  - hydrogenosome-agent-dolezal2005-pmc
+  - hydrogenosome-agent-schneider2011-pmc
+  - hydrogenosome-agent-bui1996-meta
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:exact identity, scoped evidence
+    and severity rubric
+  native_severity: minor
+  normalization_reason: 'Minor scope/wording overgeneralization within an otherwise
+    supported import function: the named route is experimentally real and the record
+    does not explicitly deny alternatives, but the unqualified formulation omits alternatives
+    demonstrated by its own source.'
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0042566
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome.yaml
+    role: maintained scientific record
+  description: In a separately authorized curation change, preserve the complete membrane
+    in structural parthood/topology and represent only source-supported lipid material
+    in the component row, with exact chemical grounding if justified or an explicitly
+    reviewed label-only material; correct the graph component_ref correspondence.
+  acceptance_checks:
+  - Do not use the complete membrane GO term as chemical lipid identity or invent
+    an exact lipid mixture.
+  - Preserve correct organelle identity, has_part, membrane STRUCTURE node and supported
+    topology; any component_ref must denote the actual molecular component.
+  - Run focused schema, grounding/product and graph checks after separately authorized
+    curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0042566
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome.yaml
+    role: maintained scientific record
+  description: In a separately authorized curation change, replace the incorrect citation
+    title and author attribution with the exact native bibliographic identity while
+    retaining the correct DOI and review evidence tier.
+  acceptance_checks:
+  - Verify DOI, exact title, three authors, year2022 and Journal of Eukaryotic Microbiology
+    against the native metadata.
+  - Do not replace the correct DOI, claim that this review is a primary experiment,
+    or generalize its T. vaginalis focus solely from the incorrect broad title.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0042566
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/hydrogenosome.yaml
+    role: maintained scientific record
+  description: In a separately authorized curation change, qualify the function to
+    state that some matrix proteins use N-terminal presequences and that internal/presequence-independent
+    targeting also occurs; retain the supported import machinery and generic import
+    pathway.
+  acceptance_checks:
+  - Bind the qualification to the actual Dolezal Results and retain the heterologous-reporter
+    context.
+  - Do not infer that all proteins lacking a predicted motif lack a targeting signal;
+    Schneider explicitly gives stringent prediction as an alternative.
+  - Do not remove the validated N-terminal route or convert import activity into organelle-assembly
+    necessity.
+limitations:
+- 'Lindmark1973 is verified as exact native bibliography only: the native response
+  has no abstract, publisher PDF and legacy routes returned403, and one Elsevier route429
+  was not retried. Its detailed original experimental implementation remains unverified;
+  later primary bodies independently support the maintained general functions.'
+- Bui1996 was read as the complete native primary abstract and legacy abstract page.
+  The listed PDF route returned HTTP200 HTML download interstitial, not an inspected
+  PDF. Its Hsp60 processing claim is abstract-supported; historical early-branching
+  phylogenetic language is not adopted as a current conclusion.
+- Dolezal2005 and Sutak2004 complete main scientific text and captions were read.
+  Heterologous Giardia reporters in T. vaginalis, native T1 proteomics and C-1:NIH
+  ISC biochemistry remain separate experimental contexts. Pam18 localization is not
+  a fully dissected translocase mechanism.
+- Tachezy2022 is used as review-tier complete native abstract and exact bibliographic
+  identity. Publisher HTML/PDF and author PDF requests returned403. An author manuscript
+  was visible through the browser for its introductory historical pages, but no full-review-body
+  scientific assessment or preserved body receipt is claimed here.
+- Schneider2011 reading is limited to the explicitly enumerated Introduction, Methods
+  and Results sections, Tables1–2 and specified captions. No figure pixels, supplementary
+  tables, raw spectra or exhaustive proteome membership were independently analyzed.
+- Qualitative RARE/COMMON scope is not a counted prevalence claim. The isolated hydrogenosome
+  fraction contains surface-associated and possible contaminating proteins, and protein-family
+  prediction is not equivalent to validated matrix localization.
+- Exact membrane lipid chemistry, individual molecular formation requirements and
+  complete localized cohort inventories remain unresolved; optional completeness is
+  not a required missing field.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requires a validated review for every uncovered target; no finding
+  is invented to satisfy the local issue-only output rule.
+- Remote snapshots retain original URL, UTC access and raw SHA256. Reused de Zoysa
+  and native sources retain their original batch29 receipts. Parent owns finalization
+  and the five full-corpus gate integrations.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
