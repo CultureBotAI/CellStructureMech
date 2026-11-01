@@ -1,0 +1,1018 @@
+schema_version: 1.0.0
+review_id: 20261021T094807Z-endocytic-patch-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Endocytic patch identity, source scope and graph review
+started_at: '2026-10-21T09:23:59Z'
+finished_at: '2026-10-21T09:48:07Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The broad endocytic-patch identity, yeast actin/Arp2/3 composition and eight
+  exact examples are supported. Two minor findings concern expanded-definition attribution/scope
+  and stage-specific causal graph representation.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/endocytic_patch.yaml
+    sha256: 1712d71180fdc41b66ee9e20b120788b2db93b91e2f6638930ff08b2310c12bd
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0061645
+  path: data/structures/cytoskeleton/endocytic_patch.yaml
+  label: endocytic patch
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/endocytic_patch.yaml
+    role: maintained scientific record
+scope:
+  description: Whole single target, all eight native GO terms and protein examples,
+    all graph nodes/edges; exact literature passages and explicit unread-body boundaries.
+  selection: Target 1 in batch sixteen, selected in strict sorted path order from
+    uncovered records at the fresh captured main revision.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0061645
+checks:
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  command: /private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/endocytic_patch.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; annotation coverage is not independent experimental
+    membership evidence.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  command: /private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/endocytic_patch.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; annotation coverage is not independent experimental
+    membership evidence.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0061645
+  summary: No expression-module or transcriptomic dataset inference is needed for
+    these structural claims.
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  command: just validate data/structures/cytoskeleton/endocytic_patch.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  command: just validate-strict data/structures/cytoskeleton/endocytic_patch.yaml
+    --out /private/tmp/cellstructure-batch16-20261021-fjx428vi/endocytic_patch-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - endocytic-prep-go
+  - endocytic-prep-tax-4932
+  - endocytic-prep-tax-559292
+  - endocytic-prep-jats-jcb.200404159
+  - endocytic-prep-galletta2008-plos
+  - endocytic-prep-aghamohammadzadeh2009-jats
+  - endocytic-prep-kaksonen2003-meta
+  - endocytic-prep-doi-jcb.200404159-meta
+  - endocytic-prep-doi-journal.pbio.0060001-meta
+  - endocytic-prep-pmid-11248049-meta
+  - endocytic-prep-pmid-9210376-meta
+  - endocytic-prep-P60010
+  - endocytic-prep-P32381
+  - endocytic-prep-P47117
+  - endocytic-prep-P38328
+  - endocytic-prep-P53731
+  - endocytic-prep-P33204
+  - endocytic-prep-Q05933
+  - endocytic-prep-P40518
+  - endocytic-prep-ACT1-query
+  - endocytic-prep-query-ARP2
+  - endocytic-prep-query-ARP3
+  - endocytic-prep-query-ARC40
+  - endocytic-prep-query-ARC35
+  - endocytic-prep-query-ARC19
+  - endocytic-prep-query-ARC18
+  - endocytic-prep-query-ARC15
+  - endocytic-prep-IPR004000
+- check_id: target-curies
+  name: Target resolver slice with native transport-failure cross-checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  summary: '21 of 23 exact target identifiers returned OK. Residuals: PMID:11248049
+    returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently
+    verified by endocytic-prep-pmid-11248049-meta; PMID:9210376 returned UNREACHABLE
+    (eutils HTTP414); exact native PMID metadata independently verified by endocytic-prep-pmid-9210376-meta
+    The shared command exit zero is not interpreted as successful network resolution
+    for transport failures.'
+  evidence_ids:
+  - target-curies-result
+  - endocytic-prep-pmid-11248049-meta
+  - endocytic-prep-pmid-9210376-meta
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0061645
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/endocytic_patch.yaml
+  locator: Entire maintained YAML, every evidence and graph field
+  accessed_at: '2026-10-21T09:36:31Z'
+  support: context_only
+  summary: The entire resolved target was read; maintained scientific inputs remain
+    unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Identity, exact grounding, evidence and component rules, with frozen schema
+  accessed_at: '2026-10-21T09:36:31Z'
+  support: context_only
+  summary: Membership, assembly necessity, function and taxonomic scope are assessed
+    separately.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Source-supported directed paths and graph scope
+  accessed_at: '2026-10-21T09:36:31Z'
+  support: context_only
+  summary: Parthood and whole-structure function summaries do not alone explain a
+    causal transition.
+- evidence_id: endocytic-prep-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0000147,GO:0005885,GO:0005938,GO:0015629,GO:0030479,GO:0030864,GO:0061645,GO:0110165
+  locator: All eight exact term definitions/synonyms and relevant hierarchy relations;
+    unrelated broad-parent children are not a separate biological survey
+  accessed_at: '2026-10-21T09:25:46.120433Z'
+  support: supports
+  summary: The native broad endocytic patch has an actin-cortical-patch subtype, belongs
+    to cell cortex and has cellular-anatomical-structure parentage. Component and
+    process terms match their intended identities.
+  snapshot_sha256: a239831b9f269db06defa117b5777b310315e86211abb27839644fe0493ca412
+- evidence_id: endocytic-prep-tax-4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Returned exact identity, rank and aliases
+  accessed_at: '2026-10-21T09:25:45.976787Z'
+  support: supports
+  summary: Native taxon4932 verifies its own S.cerevisiae species or S288C strain
+    identity.
+  snapshot_sha256: a9a5b093cf2c8ca6b29636297d91762ea2a8b790cf3979b09c50344bbaf6656e
+- evidence_id: endocytic-prep-tax-559292
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/559292
+  locator: Returned exact identity, rank and aliases
+  accessed_at: '2026-10-21T09:25:45.977185Z'
+  support: supports
+  summary: Native taxon559292 verifies its own S.cerevisiae species or S288C strain
+    identity.
+  snapshot_sha256: 940c60b7db761a4fda63338d466eed265e65607af672578413061e3c258095bb
+- evidence_id: endocytic-prep-jats-jcb.200404159
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2172413.1/PMC2172413.1.xml
+  locator: Entire scientific main body, Methods, all five main captions and TableI;
+    no raw-image or supplemental-data reanalysis
+  accessed_at: '2026-10-21T09:15:57.521096Z'
+  support: supports
+  summary: Young2004 directly identifies short branched actin networks in partially
+    purified yeast cortical patches. Extraction, stabilization, negative staining
+    and mutant preparations are distinguished from intact live endocytic sites; branch
+    morphology is consistent with Arp2/3, not an atomistic subunit mechanism.
+  snapshot_sha256: 7f6584b83df46499ba5c7e041436bf04a67115725fd90c8470d8c5982e073bf4
+- evidence_id: endocytic-prep-galletta2008-plos
+  kind: primary_source
+  reference: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0060001
+  locator: Abstract and Introduction; Las17 Results opening; full type-I-myosin and
+    Pan1 Results sections/captions; entire Discussion and main Methods; no supplemental
+    strain-table audit
+  accessed_at: '2026-10-21T09:16:18.290045Z'
+  support: supports
+  summary: Arp2/3 regulators have distinct and overlapping roles in patch assembly
+    and movement. Early adaptors, later actin assembly and inward motion are temporally
+    distinct; mutant behavior does not establish a fixed simultaneous membership inventory
+    or a universal fungal mechanism.
+  snapshot_sha256: 2e22ffa309390850ae8694fe35e7c0d3ea83861b18d63757e536009267f1de24
+- evidence_id: endocytic-prep-aghamohammadzadeh2009-jats
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2875176.1/PMC2875176.1.xml
+  locator: Entire scientific main body P4–P13 and both main captions; detailed supplemental
+    Methods and original movies not read
+  accessed_at: '2026-10-21T09:27:43.629575Z'
+  support: supports
+  summary: Aghamohammadazadeh/Ayscough2009 directly tests osmotic support and yeast
+    actin-bundling mutants. Sorbitol can rescue invagination while post-scission transport
+    still requires actin organization. Strain/background and stage distinctions constrain
+    the added turgor explanation.
+  snapshot_sha256: 386ffb5b2dc79c1e2958156b358387900e88310090681f7a5fad902c89cc275c
+- evidence_id: endocytic-prep-kaksonen2003-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID:14622601%20AND%20SRC:MED
+  locator: Bibliographic identity and full returned primary abstract
+  accessed_at: '2026-10-21T09:25:50.518701Z'
+  support: supports
+  summary: Exact PMID14622601/DOI identifies the cited receptor/adaptor/actin pathway
+    study; its abstract supports sequential recruitment and internalization. No full
+    experimental body was recovered in this scope.
+  snapshot_sha256: 5806df4303a480a2563d1bf05d6a2b056e4795a8372efac10c77dcd351587a79
+- evidence_id: endocytic-prep-doi-jcb.200404159-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1083/jcb.200404159
+  locator: Native citation identity, abstract and access flags
+  accessed_at: '2026-10-21T09:25:46.719909Z'
+  support: supports
+  summary: The exact cited title, authors, DOI/PMID and returned abstract were inspected;
+    this is bibliographic/abstract evidence, not a full experimental-body audit.
+  snapshot_sha256: e9459bf7a252db9f77ac4990dc14fd4892fab1fca60c05702a6b63681c6d7cfa
+- evidence_id: endocytic-prep-doi-journal.pbio.0060001-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1371/journal.pbio.0060001
+  locator: Native citation identity, abstract and access flags
+  accessed_at: '2026-10-21T09:25:46.765669Z'
+  support: supports
+  summary: The exact cited title, authors, DOI/PMID and returned abstract were inspected;
+    this is bibliographic/abstract evidence, not a full experimental-body audit.
+  snapshot_sha256: e2527a46cc8527983a0ddb126ee7b8cc5bccc1bef5f13d7c2605960c45da431c
+- evidence_id: endocytic-prep-pmid-11248049-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A11248049%20AND%20SRC%3AMED
+  locator: Native citation identity, abstract and access flags
+  accessed_at: '2026-10-21T09:25:46.712500Z'
+  support: supports
+  summary: The exact cited title, authors, DOI/PMID and returned abstract were inspected;
+    this is bibliographic/abstract evidence, not a full experimental-body audit.
+  snapshot_sha256: fe047d85d1c3b0f5f6b0ef27fe7687ff5c4b38a69c446d65ec8b40d0417396e6
+- evidence_id: endocytic-prep-pmid-9210376-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A9210376%20AND%20SRC%3AMED
+  locator: Native citation identity, abstract and access flags
+  accessed_at: '2026-10-21T09:25:46.738550Z'
+  support: supports
+  summary: The exact cited title, authors, DOI/PMID and returned abstract were inspected;
+    this is bibliographic/abstract evidence, not a full experimental-body audit.
+  snapshot_sha256: 151d04ea747d831de23b637c42a74aea902ce84dab5f5c62c58a0b542506e9bc
+- evidence_id: endocytic-prep-P60010
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P60010.json
+  locator: Identity, gene tokens, organism, status and LOCATION citation IDs; identity
+    alone is not proof of experimental membership; InterPro cross-references
+  accessed_at: '2026-10-21T09:25:46.172180Z'
+  support: supports
+  summary: Native P60010 verifies its exact declared gene, recommended protein name,
+    reviewed status and S288C taxon. Maintained LOCATION evidence notes were matched
+    to the entry where present. This entry independently carries the IPR004000 cross-reference.
+  snapshot_sha256: 85ccbfada9f62388f2b4f90b3b15fd6e7c5df202249d114e3f5ed8482a086034
+- evidence_id: endocytic-prep-P32381
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P32381.json
+  locator: Identity, gene tokens, organism, status and LOCATION citation IDs; identity
+    alone is not proof of experimental membership; InterPro cross-references
+  accessed_at: '2026-10-21T09:14:54.498516Z'
+  support: supports
+  summary: Native P32381 verifies its exact declared gene, recommended protein name,
+    reviewed status and S288C taxon. Maintained LOCATION evidence notes were matched
+    to the entry where present. This entry independently carries the IPR004000 cross-reference.
+  snapshot_sha256: 2b378f480e51da72d42b3b9dce10343e882ecd765163079ebba5dee3a2597bf9
+- evidence_id: endocytic-prep-P47117
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P47117.json
+  locator: Identity, gene tokens, organism, status and LOCATION citation IDs; identity
+    alone is not proof of experimental membership; InterPro cross-references
+  accessed_at: '2026-10-21T09:14:55.226518Z'
+  support: supports
+  summary: Native P47117 verifies its exact declared gene, recommended protein name,
+    reviewed status and S288C taxon. Maintained LOCATION evidence notes were matched
+    to the entry where present. This entry independently carries the IPR004000 cross-reference.
+  snapshot_sha256: c1fb00ae697516d543e044536958483b7e17ee1660700e869689adb336de7b71
+- evidence_id: endocytic-prep-P38328
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38328.json
+  locator: Identity, gene tokens, organism, status and LOCATION citation IDs; identity
+    alone is not proof of experimental membership
+  accessed_at: '2026-10-21T09:14:55.170129Z'
+  support: supports
+  summary: Native P38328 verifies its exact declared gene, recommended protein name,
+    reviewed status and S288C taxon. Maintained LOCATION evidence notes were matched
+    to the entry where present.
+  snapshot_sha256: cb2cf7eba6e89e1c6e9a26a6cab12515382eff955ca37f302d7762c99853a6eb
+- evidence_id: endocytic-prep-P53731
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P53731.json
+  locator: Identity, gene tokens, organism, status and LOCATION citation IDs; identity
+    alone is not proof of experimental membership
+  accessed_at: '2026-10-21T09:14:55.232103Z'
+  support: supports
+  summary: Native P53731 verifies its exact declared gene, recommended protein name,
+    reviewed status and S288C taxon. Maintained LOCATION evidence notes were matched
+    to the entry where present.
+  snapshot_sha256: 7c903010adc7254a171b89a0cf935052237882f9599de322c36116a29640f2ad
+- evidence_id: endocytic-prep-P33204
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P33204.json
+  locator: Identity, gene tokens, organism, status and LOCATION citation IDs; identity
+    alone is not proof of experimental membership
+  accessed_at: '2026-10-21T09:14:54.498681Z'
+  support: supports
+  summary: Native P33204 verifies its exact declared gene, recommended protein name,
+    reviewed status and S288C taxon. Maintained LOCATION evidence notes were matched
+    to the entry where present.
+  snapshot_sha256: 6a510fff14b0f9054f847c6ad26e13dfc29e391b6c173a27dc6410b509bf7000
+- evidence_id: endocytic-prep-Q05933
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q05933.json
+  locator: Identity, gene tokens, organism, status and LOCATION citation IDs; identity
+    alone is not proof of experimental membership
+  accessed_at: '2026-10-21T09:14:55.279122Z'
+  support: supports
+  summary: Native Q05933 verifies its exact declared gene, recommended protein name,
+    reviewed status and S288C taxon. Maintained LOCATION evidence notes were matched
+    to the entry where present.
+  snapshot_sha256: a0f9700443c987dd59d04c81980287273147117d9c570aa6e3cafdb62636eb51
+- evidence_id: endocytic-prep-P40518
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P40518.json
+  locator: Identity, gene tokens, organism, status and LOCATION citation IDs; identity
+    alone is not proof of experimental membership
+  accessed_at: '2026-10-21T09:14:55.215087Z'
+  support: supports
+  summary: Native P40518 verifies its exact declared gene, recommended protein name,
+    reviewed status and S288C taxon. Maintained LOCATION evidence notes were matched
+    to the entry where present.
+  snapshot_sha256: f6a13b306d4e1740fa932240cf28d5ab9ef710a923167a97c1442d240b3014f2
+- evidence_id: endocytic-prep-ACT1-query
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28reviewed%3Atrue%29%20AND%20%28organism_id%3A559292%29%20AND%20%28gene_exact%3AACT1%29&format=json&size=500
+  locator: Complete returned query set and own-entry exact gene token
+  accessed_at: '2026-10-21T09:25:50.430976Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query confirms a single matching ACT1 entry
+    for strain559292.
+  snapshot_sha256: 5f32bb1ef917c3425db2aaa4a4d4f98e2a08794a7994a79de7a51aabe7b8c75c
+- evidence_id: endocytic-prep-query-ARP2
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AARP2%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete returned query set and own-entry exact gene token
+  accessed_at: '2026-10-21T09:14:55.791342Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query confirms a single matching ARP2 entry
+    for strain559292.
+  snapshot_sha256: dfebbdfdb0fb815de18cf04958a76825298435a28c2b14fb2f4d644fbf8cba8a
+- evidence_id: endocytic-prep-query-ARP3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AARP3%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete returned query set and own-entry exact gene token
+  accessed_at: '2026-10-21T09:14:55.886342Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query confirms a single matching ARP3 entry
+    for strain559292.
+  snapshot_sha256: 2fd3bf9551a26771c0fa16bbc3e318de130696bc94b2f4760fc8e138bf421e61
+- evidence_id: endocytic-prep-query-ARC40
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AARC40%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete returned query set and own-entry exact gene token
+  accessed_at: '2026-10-21T09:14:56.234557Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query confirms a single matching ARC40
+    entry for strain559292.
+  snapshot_sha256: 42f2915f586bbecd94d03031300dd449208983f62bc6db4d9af39e1d3c977873
+- evidence_id: endocytic-prep-query-ARC35
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AARC35%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete returned query set and own-entry exact gene token
+  accessed_at: '2026-10-21T09:14:56.178940Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query confirms a single matching ARC35
+    entry for strain559292.
+  snapshot_sha256: 6cfa62fe3454446fd9c97d4e8ab4b2b8a26222347f367e0f602cf9257c9cb995
+- evidence_id: endocytic-prep-query-ARC19
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AARC19%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete returned query set and own-entry exact gene token
+  accessed_at: '2026-10-21T09:14:56.218133Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query confirms a single matching ARC19
+    entry for strain559292.
+  snapshot_sha256: 1a847c87c46f70cfa1ce9a557d5e37332a3594ef1168d73e6de42081e4fe8c66
+- evidence_id: endocytic-prep-query-ARC18
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AARC18%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete returned query set and own-entry exact gene token
+  accessed_at: '2026-10-21T09:14:56.547687Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query confirms a single matching ARC18
+    entry for strain559292.
+  snapshot_sha256: f8ea6b20283807a786443913a74fe80a7023003e5e2608a2c103baa8f7fc535a
+- evidence_id: endocytic-prep-query-ARC15
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&query=%28gene_exact%3AARC15%29%20AND%20%28organism_id%3A559292%29%20AND%20%28reviewed%3Atrue%29
+  locator: Complete returned query set and own-entry exact gene token
+  accessed_at: '2026-10-21T09:14:57.274304Z'
+  support: supports
+  summary: The bounded reviewed exact-gene query confirms a single matching ARC15
+    entry for strain559292.
+  snapshot_sha256: 75eaaf64f0a1c5a0496ac86ba4e1965a492f606002cc2481475fc5b829c66aa4
+- evidence_id: endocytic-prep-IPR004000
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004000/
+  locator: Whole family description, type and member databases
+  accessed_at: '2026-10-21T09:25:49.887429Z'
+  support: supports
+  summary: IPR004000 includes conventional actin and divergent actin-related subfamilies,
+    so its description does not denote only the conventional filament-forming actin
+    component.
+  snapshot_sha256: 353427570f0d1c3842a14f7737374f68e9dd70a98b09cf9fc2a8e8c86062edca
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/endocytic_patch.yaml
+    --verify
+  locator: Focused native command log and timestamped receipt
+  accessed_at: '2026-10-21T09:29:52.623142Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/cytoskeleton/endocytic_patch.yaml
+    --causal-graphs
+  locator: Focused native command log and timestamped receipt
+  accessed_at: '2026-10-21T09:29:53.248795Z'
+  support: supports
+  summary: "data/structures/cytoskeleton/endocytic_patch.yaml  (GO:0061645)\n  endocytic_patch_mechanism\t\
+    actin\tCOVERED\t->actin (UniProtKB:P60010)\n\ncausal_graphs GENE_OR_PROTEIN node\
+    \ summary:\n     1  COVERED                   component_ref target holds protein_examples\
+    \ covering all declared symbols\n     0  PARTIAL_EXAMPLES          component_ref\
+    \ target holds protein_examples but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES\
+    \   component_ref target declares gene_symbols but holds no protein_examples\n\
+    \     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols\
+    \ and holds no protein_examples\n     0  DANGLING_COMPONENT_REF    component_ref\
+    \ names a component_id that does not exist on the record\n     0  UNANCHORED_WITH_UNIPROT\
+    \   no component_ref, but node carries a UniProtKB grounding or xref\n     0 \
+    \ UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref\
+    \ on the node\n     1  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 5133cc11efe9a1d82763f342d094e8782b68b0251358b40294d9d88ca0a6fd26
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/endocytic_patch.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:24:02Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/endocytic_patch.yaml'
+  snapshot_sha256: 68e50bea603a3ec36f29dee049a5ded9b8c69c5f167805b1070f1b62778b43df
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/endocytic_patch.yaml
+    --out /private/tmp/cellstructure-batch16-20261021-fjx428vi/endocytic_patch-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:24:03Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/endocytic_patch.yaml\
+    \ --out /private/tmp/cellstructure-batch16-20261021-fjx428vi/endocytic_patch-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch16-20261021-fjx428vi/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch16-20261021-fjx428vi/endocytic_patch-strict.tsv"
+  snapshot_sha256: e436fcfdea5f64106969030fc8af616f853113fc122fa32baa227b6d3839f21f
+- evidence_id: target-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/endocytic_patch.yaml; exact native collect()
+    target slice of original fresh-base TSV
+  accessed_at: '2026-10-21T09:47:59.782036Z'
+  support: supports
+  summary: '21 of 23 exact target identifiers returned OK. Residuals: PMID:11248049
+    returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently
+    verified by endocytic-prep-pmid-11248049-meta; PMID:9210376 returned UNREACHABLE
+    (eutils HTTP414); exact native PMID metadata independently verified by endocytic-prep-pmid-9210376-meta
+    The shared command exit zero is not interpreted as successful network resolution
+    for transport failures.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Endocytic site versus its actin-rich subtype
+  outcome: supported
+  target_ids:
+  - GO:0061645
+  summary: The exact broad identity and native hierarchy are sound. The actin cortical
+    patch is a subtype, and the maintained examples describe that yeast realization;
+    this should not become an obligatory definition of every broad endocytic patch.
+  evidence_ids:
+  - endocytic-prep-go
+  - endocytic-prep-jats-jcb.200404159
+  - endocytic-prep-galletta2008-plos
+  - record
+- assessment_id: definition
+  area: provenance
+  topic: Source and stage bounds of the appended description
+  outcome: concern
+  target_ids:
+  - GO:0061645
+  summary: The added coat/adaptor/NPF/scission and turgor narrative exceeds the GO-only
+    definition_source. Readable yeast studies support parts of the explanation with
+    temporal and experimental qualifiers; no inspected source establishes every named
+    protein in every fungal endocytic patch.
+  evidence_ids:
+  - endocytic-prep-go
+  - endocytic-prep-jats-jcb.200404159
+  - endocytic-prep-galletta2008-plos
+  - endocytic-prep-aghamohammadzadeh2009-jats
+  - endocytic-prep-kaksonen2003-meta
+  - record
+- assessment_id: components
+  area: evidence
+  topic: Actin and Arp2/3 membership
+  outcome: supported
+  target_ids:
+  - GO:0061645
+  summary: The two represented components and all seven Arp2/3 members are supported
+    at the stated yeast level. UNKNOWN essentiality does not infer formation necessity
+    from activity. The deliberate whole-complex protein cohort is legitimate, and
+    additional adaptor/coat inventories are optional.
+  evidence_ids:
+  - endocytic-prep-go
+  - endocytic-prep-jats-jcb.200404159
+  - endocytic-prep-galletta2008-plos
+  - endocytic-prep-P60010
+  - endocytic-prep-P32381
+  - endocytic-prep-P47117
+  - endocytic-prep-P38328
+  - endocytic-prep-P53731
+  - endocytic-prep-P33204
+  - endocytic-prep-Q05933
+  - endocytic-prep-P40518
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Exact complex term and bounded actin family deferral
+  outcome: supported
+  target_ids:
+  - GO:0061645
+  summary: GO0005885 exactly denotes the whole Arp2/3 complex. The checked IPR004000
+    candidate is broader than conventional actin; absence of a more exact mapping
+    is not asserted exhaustively. Its existence does not by itself invalidate the
+    label-only component.
+  evidence_ids:
+  - endocytic-prep-go
+  - endocytic-prep-IPR004000
+  - endocytic-prep-P60010
+  - endocytic-prep-P32381
+  - endocytic-prep-P47117
+  - endocytic-prep-P38328
+  - endocytic-prep-P53731
+  - endocytic-prep-P33204
+  - endocytic-prep-Q05933
+  - endocytic-prep-P40518
+  - record
+- assessment_id: protein-examples
+  area: grounding
+  topic: Eight concrete examples and source attributions
+  outcome: supported
+  target_ids:
+  - GO:0061645
+  summary: All accession/gene/name/status/taxon pairs and eight bounded uniqueness
+    queries pass. The native Arp2/Arp3/Arc15 LOCATION notes attribute PMID11248049/9210376
+    exactly. Those primary abstracts and database annotations are not claimed as full-body
+    localization assays.
+  evidence_ids:
+  - endocytic-prep-P60010
+  - endocytic-prep-P32381
+  - endocytic-prep-P47117
+  - endocytic-prep-P38328
+  - endocytic-prep-P53731
+  - endocytic-prep-P33204
+  - endocytic-prep-Q05933
+  - endocytic-prep-P40518
+  - endocytic-prep-ACT1-query
+  - endocytic-prep-query-ARP2
+  - endocytic-prep-query-ARP3
+  - endocytic-prep-query-ARC40
+  - endocytic-prep-query-ARC35
+  - endocytic-prep-query-ARC19
+  - endocytic-prep-query-ARC18
+  - endocytic-prep-query-ARC15
+  - endocytic-prep-tax-4932
+  - endocytic-prep-tax-559292
+  - endocytic-prep-doi-jcb.200404159-meta
+  - endocytic-prep-doi-journal.pbio.0060001-meta
+  - endocytic-prep-pmid-11248049-meta
+  - endocytic-prep-pmid-9210376-meta
+  - record
+- assessment_id: preparation
+  area: scope
+  topic: Species and experimental strains
+  outcome: supported
+  target_ids:
+  - GO:0061645
+  summary: The S.cerevisiae model and branched-network example are supported. Young
+    uses S288C-derived laboratory strains and stabilized, partly purified material;
+    turgor experiments distinguish BY4741/W303 backgrounds. Reference sequences do
+    not identify every exact experimental stock.
+  evidence_ids:
+  - endocytic-prep-tax-4932
+  - endocytic-prep-tax-559292
+  - endocytic-prep-jats-jcb.200404159
+  - endocytic-prep-aghamohammadzadeh2009-jats
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Assembly and endocytic internalization
+  outcome: supported
+  target_ids:
+  - GO:0061645
+  summary: The primary studies support machinery-dependent actin assembly and inward
+    motion at yeast endocytic sites. Early patches recruit regulators before the actin
+    network assembles; Kaksonen2003 abstract also identifies endocytic complexes as
+    actin-nucleation sites in the sla2 mutant context. An early patch can therefore
+    organize later actin assembly, but a GO process definition alone does not specify
+    that stage-dependent mechanism.
+  evidence_ids:
+  - endocytic-prep-go
+  - endocytic-prep-galletta2008-plos
+  - endocytic-prep-kaksonen2003-meta
+  - endocytic-prep-aghamohammadzadeh2009-jats
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Composition/output summary and causal direction
+  outcome: concern
+  target_ids:
+  - GO:0061645
+  summary: All six nodes and five edges were inspected. Three part-of edges and two
+    whole-structure outputs provide a membership/function summary without resolving
+    the temporal recruitment and activation steps. The GO-only patch-to-actin-patch-assembly
+    edge leaves the relevant stage and recruited machinery unspecified. This is an
+    explanatory-scope defect, not evidence that an early endocytic patch cannot organize
+    later actin assembly.
+  evidence_ids:
+  - endocytic-prep-go
+  - endocytic-prep-galletta2008-plos
+  - endocytic-prep-kaksonen2003-meta
+  - record
+  - graph-policy
+- assessment_id: completeness
+  area: completeness
+  topic: No optional-empty finding
+  outcome: supported
+  target_ids:
+  - GO:0061645
+  summary: No image, measurement, exact stoichiometry or complete coat inventory is
+    required by this review. The substantive follow-up concerns existing source scope
+    and causal representation, with unknown composition across other taxa explicit.
+  evidence_ids:
+  - endocytic-prep-jats-jcb.200404159
+  - endocytic-prep-galletta2008-plos
+  - endocytic-prep-go
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: endocytic-patch-expanded-definition-source-scope
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Source and qualify the added yeast mechanism separately from the GO definition
+  description: The definition extends the broad GO text with a detailed fungal coat/adaptor/NPF/scission
+    sequence and turgor mechanism while retaining only GO0061645 as its source. The
+    inspected yeast papers support scoped examples and distinguish early coats, actin
+    recruitment and later movement. Attach the appropriate sources and stage/taxon
+    qualifiers, or retain the exact broad definition with the detailed material in
+    supported example notes.
+  target_ids:
+  - GO:0061645
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - endocytic-prep-go
+  - endocytic-prep-jats-jcb.200404159
+  - endocytic-prep-galletta2008-plos
+  - endocytic-prep-aghamohammadzadeh2009-jats
+  - endocytic-prep-kaksonen2003-meta
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/endocytic_patch.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Evidence and claim scope; review-checklist
+  native_severity: minor
+  normalization_reason: The supported identity and basic biology remain intact; this
+    is a bounded source-attribution or graph-representation defect.
+- finding_id: F2
+  issue_key: endocytic-patch-self-assembly-graph-scope
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Specify assembly stages and recruited machinery or narrow graph scope
+  description: 'The FUNCTION/MECHANISTIC graph is a membership/function summary, and
+    the patch-to-actin-cortical-patch-assembly edge cites only a GO process definition.
+    The broad endocytic patch can precede its actin-rich stage: the inspected studies
+    describe early regulator recruitment followed by network assembly. The present
+    graph does not specify those stages or the recruited causal machinery. Preserve
+    valid membership/output context as NONMECHANISTIC or add a source-supported, stage-specific
+    causal transition; do not treat this as proof that an early endocytic patch cannot
+    organize later actin assembly.'
+  target_ids:
+  - GO:0061645
+  field_paths:
+  - causal_graphs[graph_id=endocytic_patch_mechanism].scope_status
+  - causal_graphs[graph_id=endocytic_patch_mechanism].edges[subject=endocytic_patch,object=actin_cortical_patch_assembly]
+  evidence_ids:
+  - endocytic-prep-go
+  - endocytic-prep-galletta2008-plos
+  - endocytic-prep-kaksonen2003-meta
+  - record
+  - graph-policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/endocytic_patch.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Evidence and claim scope; review-checklist
+  native_severity: minor
+  normalization_reason: The supported identity and basic biology remain intact; this
+    is a bounded source-attribution or graph-representation defect.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0061645
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/endocytic_patch.yaml
+    role: maintained scientific record
+  description: Preserve the generic endocytic-patch identity while attributing the
+    added molecular and pressure-dependent details to the experiments that support
+    them.
+  acceptance_checks:
+  - Do not collapse the broad endocytic site and its actin-rich subtype or all temporal
+    phases.
+  - Keep turgor-dependent invagination separate from post-scission transport and retain
+    the studied yeast scope.
+  - Apply only through separately authorized scientific curation, guarded writing,
+    append-only history, rendering and native validation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0061645
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/endocytic_patch.yaml
+    role: maintained scientific record
+  description: Specify the stage and recruited machinery supporting the assembly edge,
+    or represent the graph at its supported nonmechanistic level.
+  acceptance_checks:
+  - Distinguish the early endocytic site from its later actin-rich stage; support
+    the causal transition with experimental evidence rather than the assembly-process
+    definition alone.
+  - Retain supported actin/Arp2/3 membership and yeast internalization evidence.
+  - Apply only through separately authorized scientific curation, guarded writing,
+    append-only history, rendering and native validation.
+limitations:
+- Kaksonen2003, Boldogh2001 and Winter1997 are metadata/abstract or native annotation
+  evidence only. The failed Boldogh S3 route is retained, not represented as an accessible
+  body.
+- Young2004 was read completely at the scientific main-text/Methods/caption/TableI
+  level; no figure-pixel or supplementary-data reanalysis was performed. Galletta
+  was read only at the recorded sections; its supplemental strain table and movies
+  were not read.
+- Aghamohammadazadeh2009 main body and captions were read; detailed supplemental Methods
+  were not recovered. Osmotic support and strain effects are preserved.
+- Only the specified conventional-actin family candidate was evaluated; no exhaustive
+  claim that an exact family cannot exist is made. No universal fungal component inventory
+  or fixed membership at every endocytic stage was established.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Only the requested review is proposed for saving. The shared fresh-base resolver
+  must be completed and its exact target slice verified before finalization.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
