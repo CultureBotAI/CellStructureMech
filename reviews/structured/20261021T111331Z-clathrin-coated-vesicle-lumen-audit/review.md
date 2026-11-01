@@ -1,0 +1,784 @@
+# Clathrin vesicle identity and evidence review
+
+- Review: 20261021T111331Z-clathrin-coated-vesicle-lumen-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T10:57:22Z
+- Finished UTC: 2026-10-21T11:13:31Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact structural identity, yeast recruitment context, spatial parthood and the descriptive graph are supported within the declared source limits. No concrete curation issue was established.
+
+## Scope And Provenance
+
+Entire single maintained record; exact native identities, primary-source scope and membrane/coat/lumen distinctions.
+
+Selection: Target 6 in batch23, exact sorted uncovered maintained path at frozen revision9c0446.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:clathrin_coated_vesicle_lumen | data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml | maintained | clathrin-coated vesicle lumen |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native verify | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | Native command passed; target has no explicit protein examples or GENE_OR_PROTEIN graph nodes. |
+| Focused native causal-graphs | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | Native command passed; target has no explicit protein examples or GENE_OR_PROTEIN graph nodes. |
+| Focused native schema | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | Focused validator passed. |
+| Target resolver slice | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | 6 identifiers OK; 1 transport/skipped residuals independently resolved. |
+| Expression-module applicability | not_applicable | False | cellstructuremech:clathrin_coated_vesicle_lumen | No expression-module, transcriptomic or regulatory inference is made by these spatial/vesicle claims. |
+| Claim-level scientific review | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | cellstructuremech:clathrin_coated_vesicle_lumen | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Exact whole-vesicle, lumen or membrane identity
+
+identity: supported. Targets: cellstructuremech:clathrin_coated_vesicle_lumen.
+
+The target is the named physical structure, distinct from the clathrin lattice and from a budding pit. The generic whole class includes endocytic and intracellular traffic; neither the definition nor its maintained identity is restricted to plasma-membrane origin. GO/UniProt exact definitions and synonyms support the target and its is_a/part_of boundaries. The lumen local identifier is paired with exact SL0319; a broader cytoplasmic-vesicle-lumen term is appropriately retained as parent.
+
+### Budding-yeast example and recruitment context
+
+scope: supported. Targets: cellstructuremech:clathrin_coated_vesicle_lumen.
+
+The species identity is exact and Newpher directly studies Saccharomyces cerevisiae. The maintained notes describe clathrin/adaptor recruitment at cortical endocytic sites, not a strain-independent molecular stoichiometry or a direct assay of luminal contents. COMMON is a qualitative occurrence label for this established yeast compartment class; no population survey or invariant presence in each cell state is certified. Methods and mutant perturbations are not silently converted to wild-type prevalence measurements.
+
+### Spatial interior without an invariant cargo inventory
+
+graph: supported. Targets: cellstructuremech:clathrin_coated_vesicle_lumen.
+
+SL0319 explicitly identifies the lumen as bounded by the clathrin-coated-vesicle membrane and part of the whole vesicle. The two NONMECHANISTIC edges faithfully represent those relationships. The recruitment paper supplies yeast biological context; it is not used as direct resolved-lumen imaging. No invariant cargo inventory or intrinsic molecular function of this spatial volume is required.
+
+### Individual molecular formation requirements remain unresolved
+
+evidence: unknown. Targets: cellstructuremech:clathrin_coated_vesicle_lumen.
+
+No individual protein/adaptor or lipid-species assembly-necessity assertion is present in these target fields. The membrane target alone labels its defining collective bilayer ESSENTIAL. Localization, reporter dynamics, uptake function and viability are not substitutes for an experiment demonstrating necessity for formation of the entire target.
+
+### Exact citation identities with primary-source limits
+
+provenance: supported. Targets: cellstructuremech:clathrin_coated_vesicle_lumen.
+
+All target native identities and DOI citations were checked. Newpher is a genuine primary PDF with declared body coverage and original access receipt. Kaksonen, where cited, is used only at its complete-abstract tier; failed routes and the metadata-only API response are not counted as full text. No snippet, image, numerical physical-property or dataset claim is present. Historical curation searches and attribution were read but not independently recertified.
+
+### Bounded full-target assessment
+
+completeness: supported. Targets: cellstructuremech:clathrin_coated_vesicle_lumen.
+
+The entire single target and its claim-bearing sources were assessed. Additional component inventories, cargos, numerical properties, images or mechanisms are optional at these whole-vesicle and spatial-part scopes. No concrete curation issue was established within the documented evidence limits; no automatic finding is assigned for unavailable full text or optional empty fields.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml; Entire maintained YAML including all history, evidence notes, discussions, functions and graph edges | context_only | All maintained target fields were read. No scientific record, mapping status or curator history is changed. |
+| policy | docs/CURATION.md; Identity, constituent grounding, claim-level evidence and formation-essentiality contract | context_only | Spatial identity, material identity, localization, activity and necessity for assembly are distinct. Optional inventories do not automatically create curation findings. |
+| neighbor-clathrin_coated_vesicle | data/structures/membrane_organelle/clathrin_coated_vesicle.yaml; Entire local record including components and boundary discussions | context_only | Frozen local identity/context only. The coat record models heavy/light chains and explicitly leaves adaptor-module boundaries open; no independent correctness claim is imported from its protein accessions or other literature. |
+| neighbor-clathrin_coated_vesicle_membrane | data/structures/membrane_organelle/clathrin_coated_vesicle_membrane.yaml; Entire local record including components and boundary discussions | context_only | Frozen local identity/context only. The coat record models heavy/light chains and explicitly leaves adaptor-module boundaries open; no independent correctness claim is imported from its protein accessions or other literature. |
+| neighbor-clathrin_vesicle_coat | data/structures/other/clathrin_vesicle_coat.yaml; Entire local record including components and boundary discussions | context_only | Frozen local identity/context only. The coat record models heavy/light chains and explicitly leaves adaptor-module boundaries open; no independent correctness claim is imported from its protein accessions or other literature. |
+| clathrin-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030136,GO:0030135,GO:0030125,GO:0030665,GO:0072583,GO:0060205,GO:0030659,GO:0030662; All8 returned identifiers, active status, names, aspects and definitions; exact relevant children relation objects. No unreturned direct relation is inferred as an explicit field. | supports | Eight active GO terms distinguish the coated-vesicle parent, clathrin-coated vesicle, clathrin coat, vesicle membrane and lumen parent, and clathrin-dependent endocytosis. GO0030135 lists GO0030136 is_a; GO0030136 lists GO0030665 part_of. The membrane is_a chain is GO0030659 to GO0030662 to GO0030665. GO0030665 lists GO0030125 part_of, supporting coat parthood through the membrane to the vesicle. GO0072583 is a biological process involving the endocytic subset, not the identity of the entire generic class. |
+| clathrin-agent-tax4932 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932; Exact taxId, scientificName, rank, names and lineage | supports | NCBITaxon4932 identifies Saccharomyces cerevisiae at species rank, with the returned synonyms and fungal lineage. This establishes taxon identity, not a population prevalence or the genotype of any experimental strain. |
+| clathrin-agent-SL-0319 | https://rest.uniprot.org/locations/SL-0319.json; Exact id, name, definition, synonym and returned geneOntologies/isA/partOf objects, distinguishing top-level from nested fields | supports | The native location defines the bounded clathrin-coated vesicle lumen and its exact vesicular-lumen synonym. It has isA cytoplasmic-vesicle lumen SL0325 (whose GO cross-reference is GO0060205) and direct partOf clathrin-coated vesicle SL0070. This entry has no direct GO cross-reference; no exhaustive ontology-absence claim follows. |
+| clathrin-agent-doi-10.1016_j.devcel.2005.04.014 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1016/j.devcel.2005.04.014; Exact title, authors, publication year, PMID/DOI and complete abstract | supports | Native MED identifies Newpher, Smith, Lemmon and Lemmon2005, PMID15992543, DOI10.1016/j.devcel.2005.04.014, In vivo dynamics of clathrin and its adaptor-dependent recruitment to the actin-based endocytic machinery in yeast. The complete abstract distinguishes cortical recruitment from internal trans-Golgi/endosomal structures. |
+| clathrin-agent-newpher2005-duke | https://dukespace.lib.duke.edu/server/api/core/bitstreams/e3c70c30-e4a1-4ba0-8ea6-c50af4ba491e/content; Published pp87–96: Summary; entire Introduction, Results and Discussion; Experimental Procedures including Table1 and Fig1–6 captions. Especially pp91–93 transient association/adaptor recruitment and pp95–96 Dynamics of Cortical Clathrin Patches. Figure pixels, supplements, movies and raw quantitative data not reanalysed. | supports | The primary yeast study directly images fluorescent heavy/light-chain reporters at internal and cortical sites, documents adaptor-dependent cortical recruitment, and measures clathrin arrival before Abp1 accumulation. Table1 and Methods identify the strains, reporter construction, culture and LAT-A conditions. The Discussion explicitly cannot determine whether clathrin disassembles before budding or a coated vesicle/bud leaves the TIRF field; this is not direct imaging of a sealed lumen or a universal scission mechanism. |
+| clathrin-agent-newpher2005-publisher | https://doi.org/10.1016/j.devcel.2005.04.014; Actual retained access response, not a paper body | context_only | The publisher route returned HTTP200 with a 3055-byte LinkingHub redirect/locator response, not an article body. The separately retained Duke PDF provides the genuine primary body read for this review. |
+| native-verify | /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml --verify; Complete focused native command output | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml --causal-graphs; Complete focused native command output | supports | causal_graphs GENE_OR_PROTEIN node summary:<br>     0  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     0  total GENE_OR_PROTEIN causal nodes |
+| schema-result | just validate data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml --out /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/clathrin_coated_vesicle_lumen-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml --out /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/clathrin_coated_vesicle_lumen-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch23-20261021-fk4xe2ee/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/clathrin_coated_vesicle_lumen-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 6 of7 collected target identifiers returned OK in this fresh base resolver run. Residuals: cellstructuremech:clathrin_coated_vesicle_lumen: SKIPPED; resolved by evidence record. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- Newpher2005 was read through the stated primary-paper body and methods. No figure pixels, supplementary movies or raw data were analysed; its own coat-loss-versus-budding uncertainty is preserved.
+- The yeast lumen/bilayer existence follows from exact compartment definitions in the established vesicle context; the recruitment study is not a direct sealed-lumen imaging experiment.
+- Species-wide COMMON occurrence is qualitative context, not a census or a claim about all genotypes and cell states.
+- Local neighboring records are frozen identity/context inputs, not independent proof of their constituent accession mappings. No exhaustive absence claim or optional-inventory requirement is made.
+- Historical searches, curator independence and historical issue dispositions are not recertified. Fresh-base completed global15 gates are attached by root only at finalization.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The user explicitly authorized one review for each previously uncovered record, including clean reviews. No persistence, index update or scientific mutation is performed here.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T111331Z-clathrin-coated-vesicle-lumen-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Clathrin vesicle identity and evidence review
+started_at: '2026-10-21T10:57:22Z'
+finished_at: '2026-10-21T11:13:31Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact structural identity, yeast recruitment context, spatial parthood and
+  the descriptive graph are supported within the declared source limits. No concrete
+  curation issue was established.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/clathrin_coated_vesicle.yaml
+    sha256: cee241afc73475bcdec9d8c3c4c57bdf9c4cb2f726e4a78615dfb393613be9ad
+    role: context
+  - path: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    sha256: 2137a192f721232651c140497813cea3f15a73a67e910194d59fadc7837308f9
+    role: target
+  - path: data/structures/membrane_organelle/clathrin_coated_vesicle_membrane.yaml
+    sha256: 963e3cbe094c98b1279923d8f4ecc6a27343f82aa7240dece427fa09882c25f1
+    role: context
+  - path: data/structures/other/clathrin_vesicle_coat.yaml
+    sha256: cef674eb9fc2b08323c1780daa340012db00fd43e3f89c7de880ac972594e17d
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:clathrin_coated_vesicle_lumen
+  path: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+  label: clathrin-coated vesicle lumen
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single maintained record; exact native identities, primary-source
+    scope and membrane/coat/lumen distinctions.
+  selection: Target 6 in batch23, exact sorted uncovered maintained path at frozen
+    revision9c0446.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+checks:
+- check_id: native-verify
+  name: Focused native verify
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  command: /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    --verify
+  exit_code: 0
+  summary: Native command passed; target has no explicit protein examples or GENE_OR_PROTEIN
+    graph nodes.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Focused native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  command: /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native command passed; target has no explicit protein examples or GENE_OR_PROTEIN
+    graph nodes.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  command: just validate data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  command: just validate-strict data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    --out /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/clathrin_coated_vesicle_lumen-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  summary: 6 identifiers OK; 1 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  summary: No expression-module, transcriptomic or regulatory inference is made by
+    these spatial/vesicle claims.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - neighbor-clathrin_coated_vesicle
+  - neighbor-clathrin_coated_vesicle_membrane
+  - neighbor-clathrin_vesicle_coat
+  - clathrin-agent-go
+  - clathrin-agent-tax4932
+  - clathrin-agent-SL-0319
+  - clathrin-agent-doi-10.1016_j.devcel.2005.04.014
+  - clathrin-agent-newpher2005-duke
+  - clathrin-agent-newpher2005-publisher
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+  locator: Entire maintained YAML including all history, evidence notes, discussions,
+    functions and graph edges
+  accessed_at: '2026-10-21T11:07:31Z'
+  support: context_only
+  summary: All maintained target fields were read. No scientific record, mapping status
+    or curator history is changed.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Identity, constituent grounding, claim-level evidence and formation-essentiality
+    contract
+  accessed_at: '2026-10-21T11:07:31Z'
+  support: context_only
+  summary: Spatial identity, material identity, localization, activity and necessity
+    for assembly are distinct. Optional inventories do not automatically create curation
+    findings.
+- evidence_id: neighbor-clathrin_coated_vesicle
+  kind: record_content
+  reference: data/structures/membrane_organelle/clathrin_coated_vesicle.yaml
+  locator: Entire local record including components and boundary discussions
+  accessed_at: '2026-10-21T11:07:31Z'
+  support: context_only
+  summary: Frozen local identity/context only. The coat record models heavy/light
+    chains and explicitly leaves adaptor-module boundaries open; no independent correctness
+    claim is imported from its protein accessions or other literature.
+- evidence_id: neighbor-clathrin_coated_vesicle_membrane
+  kind: record_content
+  reference: data/structures/membrane_organelle/clathrin_coated_vesicle_membrane.yaml
+  locator: Entire local record including components and boundary discussions
+  accessed_at: '2026-10-21T11:07:31Z'
+  support: context_only
+  summary: Frozen local identity/context only. The coat record models heavy/light
+    chains and explicitly leaves adaptor-module boundaries open; no independent correctness
+    claim is imported from its protein accessions or other literature.
+- evidence_id: neighbor-clathrin_vesicle_coat
+  kind: record_content
+  reference: data/structures/other/clathrin_vesicle_coat.yaml
+  locator: Entire local record including components and boundary discussions
+  accessed_at: '2026-10-21T11:07:31Z'
+  support: context_only
+  summary: Frozen local identity/context only. The coat record models heavy/light
+    chains and explicitly leaves adaptor-module boundaries open; no independent correctness
+    claim is imported from its protein accessions or other literature.
+- evidence_id: clathrin-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0030136,GO:0030135,GO:0030125,GO:0030665,GO:0072583,GO:0060205,GO:0030659,GO:0030662
+  locator: All8 returned identifiers, active status, names, aspects and definitions;
+    exact relevant children relation objects. No unreturned direct relation is inferred
+    as an explicit field.
+  accessed_at: '2026-10-21T11:04:40.022677Z'
+  support: supports
+  summary: Eight active GO terms distinguish the coated-vesicle parent, clathrin-coated
+    vesicle, clathrin coat, vesicle membrane and lumen parent, and clathrin-dependent
+    endocytosis. GO0030135 lists GO0030136 is_a; GO0030136 lists GO0030665 part_of.
+    The membrane is_a chain is GO0030659 to GO0030662 to GO0030665. GO0030665 lists
+    GO0030125 part_of, supporting coat parthood through the membrane to the vesicle.
+    GO0072583 is a biological process involving the endocytic subset, not the identity
+    of the entire generic class.
+  snapshot_sha256: 99bb7c9eae759e77dbeb8efc316337e5593f176de6a769197070419135166ed5
+- evidence_id: clathrin-agent-tax4932
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/4932
+  locator: Exact taxId, scientificName, rank, names and lineage
+  accessed_at: '2026-10-21T11:04:40.023078Z'
+  support: supports
+  summary: NCBITaxon4932 identifies Saccharomyces cerevisiae at species rank, with
+    the returned synonyms and fungal lineage. This establishes taxon identity, not
+    a population prevalence or the genotype of any experimental strain.
+  snapshot_sha256: be57b95543b586448f6bd2889db42e91038e90ae2d12e8f654050c92af5b9087
+- evidence_id: clathrin-agent-SL-0319
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0319.json
+  locator: Exact id, name, definition, synonym and returned geneOntologies/isA/partOf
+    objects, distinguishing top-level from nested fields
+  accessed_at: '2026-10-21T11:04:40.023475Z'
+  support: supports
+  summary: The native location defines the bounded clathrin-coated vesicle lumen and
+    its exact vesicular-lumen synonym. It has isA cytoplasmic-vesicle lumen SL0325
+    (whose GO cross-reference is GO0060205) and direct partOf clathrin-coated vesicle
+    SL0070. This entry has no direct GO cross-reference; no exhaustive ontology-absence
+    claim follows.
+  snapshot_sha256: 60adcc470cf8170aeb6ca0842437084ca80cb1a3e5fbd7c87e7a4b3a735d0e4e
+- evidence_id: clathrin-agent-doi-10.1016_j.devcel.2005.04.014
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.devcel.2005.04.014
+  locator: Exact title, authors, publication year, PMID/DOI and complete abstract
+  accessed_at: '2026-10-21T10:57:50.523144Z'
+  support: supports
+  summary: Native MED identifies Newpher, Smith, Lemmon and Lemmon2005, PMID15992543,
+    DOI10.1016/j.devcel.2005.04.014, In vivo dynamics of clathrin and its adaptor-dependent
+    recruitment to the actin-based endocytic machinery in yeast. The complete abstract
+    distinguishes cortical recruitment from internal trans-Golgi/endosomal structures.
+  snapshot_sha256: c99ec084fa3f65e3b5107699c30f42b09489dbc49d6be518d71ff9352d5a199c
+- evidence_id: clathrin-agent-newpher2005-duke
+  kind: primary_source
+  reference: https://dukespace.lib.duke.edu/server/api/core/bitstreams/e3c70c30-e4a1-4ba0-8ea6-c50af4ba491e/content
+  locator: 'Published pp87–96: Summary; entire Introduction, Results and Discussion;
+    Experimental Procedures including Table1 and Fig1–6 captions. Especially pp91–93
+    transient association/adaptor recruitment and pp95–96 Dynamics of Cortical Clathrin
+    Patches. Figure pixels, supplements, movies and raw quantitative data not reanalysed.'
+  accessed_at: '2026-10-21T11:00:52.091438Z'
+  support: supports
+  summary: The primary yeast study directly images fluorescent heavy/light-chain reporters
+    at internal and cortical sites, documents adaptor-dependent cortical recruitment,
+    and measures clathrin arrival before Abp1 accumulation. Table1 and Methods identify
+    the strains, reporter construction, culture and LAT-A conditions. The Discussion
+    explicitly cannot determine whether clathrin disassembles before budding or a
+    coated vesicle/bud leaves the TIRF field; this is not direct imaging of a sealed
+    lumen or a universal scission mechanism.
+  snapshot_sha256: c848e911372b9afb9902e4a74e3cb3dd66ef90eb5e102024cc95fff648bb6c21
+- evidence_id: clathrin-agent-newpher2005-publisher
+  kind: authority
+  reference: https://doi.org/10.1016/j.devcel.2005.04.014
+  locator: Actual retained access response, not a paper body
+  accessed_at: '2026-10-21T10:58:29.695830Z'
+  support: context_only
+  summary: The publisher route returned HTTP200 with a 3055-byte LinkingHub redirect/locator
+    response, not an article body. The separately retained Duke PDF provides the genuine
+    primary body read for this review.
+  snapshot_sha256: 5df941bcc76d6caccdb7f7d86b8fd5365874521f4d3dc8eafc0e5e62b77b6f04
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    --verify
+  locator: Complete focused native command output
+  accessed_at: '2026-10-21T11:06:01.616122Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    --causal-graphs
+  locator: Complete focused native command output
+  accessed_at: '2026-10-21T11:06:02.621678Z'
+  support: supports
+  summary: "causal_graphs GENE_OR_PROTEIN node summary:\n     0  COVERED         \
+    \          component_ref target holds protein_examples covering all declared symbols\n\
+    \     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     0\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 76713306e77e0692d57177510568a0e633849a0a594c55b30edcd9a5e375e6a5
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:57:23Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml'
+  snapshot_sha256: 64e4b918219f02947a56ea27208fd5a2e939955baa3bdef5f7d2858e2a8c45a8
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml
+    --out /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/clathrin_coated_vesicle_lumen-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:57:25Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml\
+    \ --out /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/clathrin_coated_vesicle_lumen-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch23-20261021-fk4xe2ee/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch23-20261021-fk4xe2ee/clathrin_coated_vesicle_lumen-strict.tsv"
+  snapshot_sha256: 39fb4d0b4490831d5a83634834347a0682715ebe2651df646de3c45a18a65e0d
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/clathrin_coated_vesicle_lumen.yaml;
+    exact collect() scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T11:07:31Z'
+  support: supports
+  summary: '6 of7 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: cellstructuremech:clathrin_coated_vesicle_lumen: SKIPPED; resolved
+    by evidence record. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact whole-vesicle, lumen or membrane identity
+  outcome: supported
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  summary: The target is the named physical structure, distinct from the clathrin
+    lattice and from a budding pit. The generic whole class includes endocytic and
+    intracellular traffic; neither the definition nor its maintained identity is restricted
+    to plasma-membrane origin. GO/UniProt exact definitions and synonyms support the
+    target and its is_a/part_of boundaries. The lumen local identifier is paired with
+    exact SL0319; a broader cytoplasmic-vesicle-lumen term is appropriately retained
+    as parent.
+  evidence_ids:
+  - record
+  - policy
+  - clathrin-agent-go
+  - clathrin-agent-tax4932
+  - clathrin-agent-SL-0319
+  - clathrin-agent-doi-10.1016_j.devcel.2005.04.014
+  - clathrin-agent-newpher2005-duke
+- assessment_id: scope
+  area: scope
+  topic: Budding-yeast example and recruitment context
+  outcome: supported
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  summary: The species identity is exact and Newpher directly studies Saccharomyces
+    cerevisiae. The maintained notes describe clathrin/adaptor recruitment at cortical
+    endocytic sites, not a strain-independent molecular stoichiometry or a direct
+    assay of luminal contents. COMMON is a qualitative occurrence label for this established
+    yeast compartment class; no population survey or invariant presence in each cell
+    state is certified. Methods and mutant perturbations are not silently converted
+    to wild-type prevalence measurements.
+  evidence_ids:
+  - record
+  - policy
+  - clathrin-agent-go
+  - clathrin-agent-tax4932
+  - clathrin-agent-SL-0319
+  - clathrin-agent-doi-10.1016_j.devcel.2005.04.014
+  - clathrin-agent-newpher2005-duke
+- assessment_id: composition-graph
+  area: graph
+  topic: Spatial interior without an invariant cargo inventory
+  outcome: supported
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  summary: SL0319 explicitly identifies the lumen as bounded by the clathrin-coated-vesicle
+    membrane and part of the whole vesicle. The two NONMECHANISTIC edges faithfully
+    represent those relationships. The recruitment paper supplies yeast biological
+    context; it is not used as direct resolved-lumen imaging. No invariant cargo inventory
+    or intrinsic molecular function of this spatial volume is required.
+  evidence_ids:
+  - record
+  - policy
+  - clathrin-agent-go
+  - clathrin-agent-tax4932
+  - clathrin-agent-SL-0319
+  - clathrin-agent-doi-10.1016_j.devcel.2005.04.014
+  - clathrin-agent-newpher2005-duke
+- assessment_id: assembly-necessity
+  area: evidence
+  topic: Individual molecular formation requirements remain unresolved
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  summary: No individual protein/adaptor or lipid-species assembly-necessity assertion
+    is present in these target fields. The membrane target alone labels its defining
+    collective bilayer ESSENTIAL. Localization, reporter dynamics, uptake function
+    and viability are not substitutes for an experiment demonstrating necessity for
+    formation of the entire target.
+  evidence_ids:
+  - record
+  - policy
+  - clathrin-agent-go
+  - clathrin-agent-tax4932
+  - clathrin-agent-SL-0319
+  - clathrin-agent-doi-10.1016_j.devcel.2005.04.014
+  - clathrin-agent-newpher2005-duke
+- assessment_id: provenance
+  area: provenance
+  topic: Exact citation identities with primary-source limits
+  outcome: supported
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  summary: All target native identities and DOI citations were checked. Newpher is
+    a genuine primary PDF with declared body coverage and original access receipt.
+    Kaksonen, where cited, is used only at its complete-abstract tier; failed routes
+    and the metadata-only API response are not counted as full text. No snippet, image,
+    numerical physical-property or dataset claim is present. Historical curation searches
+    and attribution were read but not independently recertified.
+  evidence_ids:
+  - record
+  - policy
+  - clathrin-agent-go
+  - clathrin-agent-tax4932
+  - clathrin-agent-SL-0319
+  - clathrin-agent-doi-10.1016_j.devcel.2005.04.014
+  - clathrin-agent-newpher2005-duke
+- assessment_id: coverage
+  area: completeness
+  topic: Bounded full-target assessment
+  outcome: supported
+  target_ids:
+  - cellstructuremech:clathrin_coated_vesicle_lumen
+  summary: The entire single target and its claim-bearing sources were assessed. Additional
+    component inventories, cargos, numerical properties, images or mechanisms are
+    optional at these whole-vesicle and spatial-part scopes. No concrete curation
+    issue was established within the documented evidence limits; no automatic finding
+    is assigned for unavailable full text or optional empty fields.
+  evidence_ids:
+  - record
+  - policy
+  - clathrin-agent-go
+  - clathrin-agent-tax4932
+  - clathrin-agent-SL-0319
+  - clathrin-agent-doi-10.1016_j.devcel.2005.04.014
+  - clathrin-agent-newpher2005-duke
+findings: []
+actions: []
+limitations:
+- Newpher2005 was read through the stated primary-paper body and methods. No figure
+  pixels, supplementary movies or raw data were analysed; its own coat-loss-versus-budding
+  uncertainty is preserved.
+- The yeast lumen/bilayer existence follows from exact compartment definitions in
+  the established vesicle context; the recruitment study is not a direct sealed-lumen
+  imaging experiment.
+- Species-wide COMMON occurrence is qualitative context, not a census or a claim about
+  all genotypes and cell states.
+- Local neighboring records are frozen identity/context inputs, not independent proof
+  of their constituent accession mappings. No exhaustive absence claim or optional-inventory
+  requirement is made.
+- Historical searches, curator independence and historical issue dispositions are
+  not recertified. Fresh-base completed global15 gates are attached by root only at
+  finalization.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- The user explicitly authorized one review for each previously uncovered record,
+  including clean reviews. No persistence, index update or scientific mutation is
+  performed here.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```
