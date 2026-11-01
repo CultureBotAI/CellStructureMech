@@ -1,0 +1,1115 @@
+# Source-backed review of acrad tolc multidrug efflux transport complex
+
+- Review: 20261022T043537Z-acrad-tolc-multidrug-efflux-transport-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T04:14:59Z
+- Finished UTC: 2026-10-22T04:35:37Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Two minor corrections: exact AcrA family grounding and citation author names. Pump identity, source composition and bounded export graph are supported; formation necessity remains unresolved.
+
+## Scope And Provenance
+
+Exactly one complete target; no neighboring scientific-record verdict is imported. Exact authority, all current component/function/graph/source placements, taxonomic scope, formation semantics, history and discussions were reviewed.
+
+Selection: Batch44 fixed strict path order, index 1; exactly one maintained target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml | maintained | AcrAD-TolC multidrug efflux transport complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | Focused validator passed. |
+| Focused native strict | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | Focused validator passed. |
+| Focused native proteins | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | Read-only native check passed; claim-level protein/edge support evaluated separately. |
+| Focused native graphs | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | Read-only native check passed; claim-level protein/edge support evaluated separately. |
+| Claim-level scientific review | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | 11 of 15 collected target identifiers returned OK. ECO:0005547: SKIPPED; Native ECO authority verifies exact identifier and inferred-by-curator meaning; Complex Portal explicitly attaches this inference tier to the complexes. It is not treated as direct physical-interaction evidence.; PMID:15743938: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:26113845: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex: SKIPPED; Exact frozen target identity has exactly one maintained-record match in the ignored-inclusive local search. This verifies the repository-minted identity without asserting exhaustive external ontology absence. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Specific pump identity and parent
+
+identity: supported. Targets: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex.
+
+The local identifier and definition preserve the specific Complex Portal pump under the broader GO efflux-pump parent. The evidence-code and source participant identifiers match the native entry.
+
+### Source composition and family resolution
+
+grounding: concern. Targets: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex.
+
+AcrA/AcrD/TolC roles and 6:3:3 counts match CPX-4264. An exact AcrA family is now available; the inspected AcrD candidates remain broader. Source inference is not direct structural measurement.
+
+### Formation necessity remains unresolved
+
+grounding: unknown. Targets: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex.
+
+The three proteins are constituents of the defined tripartite pump, but the cited functional evidence and curator-inferred composition do not independently establish the three ESSENTIAL structure-formation claims. Transport loss is not redefined as assembly failure. No contradiction is inferred solely from the lack of a depletion-based formation assay.
+
+### Exact accessions, aliases and compartments
+
+grounding: supported. Targets: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex.
+
+All three reviewed K-12 accessions, current symbols, protein labels and Complex Portal cross-references match. Inner-membrane transporter, periplasmic adaptor and outer-membrane TolC roles are supported; direct versus probable annotation codes remain distinguished. The combined exact-symbol query contains an AcrB historical acrE alias and does not displace P24180 as the intended AcrE.
+
+### Transport support and experimental scope
+
+evidence: concern. Targets: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex.
+
+The primary AcrD study supports aminoglycoside capture and proton-coupled activity through reconstituted AcrA/AcrD assays plus intact-cell susceptibility. Its system has no TolC outer-membrane barrier; the whole tripartite conduit is supported separately by curator synthesis. The biological interpretation is retained while incorrect author names are corrected.
+
+### Explicit nonmechanistic transport diagram
+
+graph: supported. Targets: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex.
+
+The five directed edges are expressly scoped NONMECHANISTIC and describe coupling, function and export destination. They do not claim resolved binding sites, gating kinetics or assembly order. GO function/process nodes and the local whole-pump node have appropriate roles.
+
+### Reference strain versus experimental context
+
+scope: supported. Targets: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex.
+
+CPX and proteins refer to K-12. The primary purification uses KAM3, a K-12-derived acrB deletion strain, engineered tagged AcrD and lipid-deficient AcrA; Table1 susceptibility strains have further mutations. No COMMON prevalence enum occurs in this target.
+
+### Full record and bounded unresolved tasks
+
+completeness: supported. Targets: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex.
+
+All source-composition fields, component notes, functions, graph, discussion and history were inspected. No images or verbatim excerpts occur. Historical retrieval notes are not judged false merely because newer authority records exist; only the current exact-family task is evaluated.
+
+## Findings
+
+### F1: Resolve the available exact AcrA family
+
+minor / open / confirmed; issue key: acrad-acra-family-grounding.
+
+The current reviewed-label-only AcrA row and open family task can be resolved with IPR058628, an exact named AcrA family. The verified protein identity remains correct; broader AcrD candidates remain unresolved.
+
+### F2: Correct the cited author attributions
+
+minor / open / confirmed; issue key: acrad-citation-authors.
+
+PMID15743938/DOI10.1128/JB.187.6.1923-1929.2005 is Aires and Nikaido2005, not Murakami et al. PMID26113845/DOI10.3389/fmicb.2015.00587 is Anes et al.2015, not Zwama and Pos. Exact titles and identifiers otherwise match.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Ground AcrA to IPR058628 with native evidence and narrow the open task to AcrD. Preserve protein examples and source composition.
+
+- Preserve exact supported identity, experimental organism and native versus recombinant context.
+- Attach source-specific evidence to each changed claim and retain historical provenance.
+- Native schema, strict, CURIE, protein and graph checks pass as applicable.
+
+### A2
+
+Correct the author names in every affected evidence placement while retaining the verified titles, identifiers, study tier and strain/assay limits.
+
+- Preserve exact supported identity, experimental organism and native versus recombinant context.
+- Attach source-specific evidence to each changed claim and retain historical provenance.
+- Native schema, strict, CURIE, protein and graph checks pass as applicable.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml; Complete maintained YAML; all components, source notes, graphs, discussions and historical entries | context_only | The entire maintained target was read; no scientific record was changed. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes | context_only | Protein-family identity is distinct from an assembled complex. ESSENTIAL concerns failure of structure formation, not merely loss of catalytic or transport function. |
+| curation | docs/CURATION.md; Components; groundings; associated machinery and chaperone boundaries | context_only | Components are taxon-agnostic molecular families/classes; exact family grounding is preferred when verified. Mature constituents and assembled-structure maintenance machinery differ from transient preassembly chaperones. |
+| micro44-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990281,GO:0042910,GO:0140330,GO:0110067,GO:1902495,GO:0008519,GO:0072488; Complete exact GO1990281/0042910/0140330 entries: names, definitions, synonyms, active status and typed children. | supports | GO1990281 denotes the generic efflux-pump complex; GO0042910 and GO0140330 denote xenobiotic transport and outer-membrane export. These do not replace the exact locally named pump identity. |
+| micro44-cpx-4264 | https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-4264; complexAc/name/systematicName/species/functions/properties/complexAssemblies/evidenceType; all participant identifiers/names/stochiometry/interactorAC; complete cross-reference identity list. | supports | CPX-4264 identifies E. coli K-12 AcrAD-TolC as 6 AcrA:3 AcrD:3 TolC, a heterododecamer. All three interactor IDs and counts match the imported source composition. The native evidenceType is ECO0005547 inferred by curator; source properties are not recast as direct whole-complex structural observations. |
+| micro44-eco0005547 | https://www.ebi.ac.uk/ols4/api/ontologies/eco/terms?obo_id=ECO:0005547; Exact OLS term obo_id/label/complete description. | supports | ECO0005547 is manual biological-system reconstruction from background scientific knowledge. Its native description explicitly distinguishes functional/ligand-binding proxies from direct physical-interaction evidence. |
+| micro44-tax83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; Complete taxId/scientificName/rank/lineage/otherNames. | supports | ENA taxId 83333 identifies Escherichia coli K-12 at rank strain; aliases and lineage match the record. Identity alone is not prevalence or experimental-condition evidence. |
+| micro44-up-P0AE06 | https://rest.uniprot.org/uniprotkb/P0AE06.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR LOCATION comments and their evidence joins; InterPro/Pfam cross-references. Full FUNCTION/SUBUNIT comments and ComplexPortal cross-references also read. | supports | P0AE06 is UniProtKB reviewed (Swiss-Prot), taxon 83333, genes ['acrA']. Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. FUNCTION/SUBUNIT qualifiers and exact ComplexPortal cross-references were checked; probable/inferred assertions remain distinguished. |
+| micro44-up-P24177 | https://rest.uniprot.org/uniprotkb/P24177.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR LOCATION comments and their evidence joins; InterPro/Pfam cross-references. Full FUNCTION/SUBUNIT comments and ComplexPortal cross-references also read. | supports | P24177 is UniProtKB reviewed (Swiss-Prot), taxon 83333, genes ['acrD']. Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. FUNCTION/SUBUNIT qualifiers and exact ComplexPortal cross-references were checked; probable/inferred assertions remain distinguished. |
+| micro44-up-P02930 | https://rest.uniprot.org/uniprotkb/P02930.json; primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR LOCATION comments and their evidence joins; InterPro/Pfam cross-references. Full FUNCTION/SUBUNIT comments and ComplexPortal cross-references also read. | supports | P02930 is UniProtKB reviewed (Swiss-Prot), taxon 83333, genes ['tolC']. Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity localization and recombinant-study contexts remain distinguished; a native accession is not itself proof of each mechanistic edge. FUNCTION/SUBUNIT qualifiers and exact ComplexPortal cross-references were checked; probable/inferred assertions remain distinguished. |
+| micro44-ipr-IPR058622 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058622/; Complete metadata identity/type/name/description/member databases/hierarchy. | supports | The TolC family grounding is exact and already present. TolC participation in multiple efflux systems does not invalidate its source-neutral family identity. |
+| micro44-ipr-IPR001036 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001036/; Complete metadata identity/type/description/member databases and hierarchy. | supports | This broad acriflavin-resistance family integrates the AcrB/AcrD/AcrF family and includes several RND branches. It does not identify the narrower named AcrD or AcrF constituent alone. |
+| micro44-ipr-IPR004764 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004764/; Complete metadata identity/type/description and hierarchy. | supports | The MdtF-like family covers bacterial RND proteins beyond the named AcrD/AcrF boundary; no exact narrow mapping is inferred from accession membership alone. |
+| micro44-reviewed-unique | https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue%20AND%20organism_id%3A83333%20AND%20%28gene_exact%3AacrA%20OR%20gene_exact%3AacrD%20OR%20gene_exact%3AacrE%20OR%20gene_exact%3AacrF%20OR%20gene_exact%3AtolC%20OR%20gene_exact%3AamtB%29&amp;format=json&amp;size=100&amp;fields=accession,id,gene_names,organism_id,protein_name; Complete native response with exact query preserved in reference; HTTP204 is an empty response, not an uninspected result page. | supports | The combined reviewed K-12 query returns the six intended accessions plus P31224/AcrB because acrE is also its historical alias. The exact current gene and protein identities distinguish P24180/AcrE; no false claim of seven distinct current queried genes is made. |
+| micro44-anes2015-numeric | https://pmc.ncbi.nlm.nih.gov/articles/4462101/; Genuine full review HTML; complete sec3/4/5/8, including Table1 and Fig1–2 captions. AcrD/AcrEF paragraphs near end sec5 read in full. No figure pixels; the cited original experiments are not certified as independently read. | supports | This is Anes et al. 2015, a secondary review. It supports the tripartite RND boundary and distinguishes AcrAD and AcrEF from the better characterized AcrAB system. Its AcrEF assembly comparison is explicitly predicted by homology, and expression/deletion phenotypes are context dependent. |
+| micro44-pmid26113845 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A26113845+AND+SRC%3AMED; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED26113845: The ins and outs of RND efflux pumps in Escherichia coli. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro44-ipr-IPR058628 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058628/; Complete metadata identity/type/name/description/member databases/hierarchy. | supports | IPR058628 is the exact named AcrA adaptor family, matching the P0AE06 protein identity and resolving the current reviewed-label-only AcrA task. It is not a whole-pump identifier. |
+| micro44-family-search-acrd | https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=AcrD&amp;page_size=100; Complete native response with exact query preserved in reference; HTTP204 is an empty response, not an uninspected result page. | supports | The bounded exact-string AcrD InterPro entry search returned HTTP204 with zero bytes. Together with directly inspected broader current protein cross-references, it does not furnish an exact AcrD family; no global family absence is asserted. |
+| micro44-pmid15743938 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A15743938+AND+SRC%3AMED; Exact native result id/title/authorString/pubYear/doi and complete abstractText. | supports | Unique MED15743938: Aminoglycosides are captured from both periplasm and cytoplasm by the AcrD multidrug efflux transporter of Escherichia coli. Authors/year/DOI and the complete native abstract were inspected. This row establishes bibliographic identity and abstract-level content only; detailed experiments require separately specified body evidence. |
+| micro44-aires2005-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1064028/; Genuine primary HTML; Introduction; complete Methods sec2/3/6/7/8/9; complete Results sec11–15 including Table1 and Fig1–5 captions; entire Discussion sec16. Antiserum-production/protein-assay subsections sec4/5 and raw figure pixels not independently read. | supports | Aires and Nikaido reconstituted His-tagged AcrD with lipid-deficient AcrA in proteoliposomes and measured proton flux and radiolabeled gentamicin uptake. Intravesicular versus external conditions model periplasm versus cytoplasm; the study does not reconstitute the TolC outer-membrane barrier. AcrA dependence and substrate capture support the bounded pump function, with streptomycin and intact-cell interpretation qualifications retained. |
+| micro44-aires2005-numeric | https://pmc.ncbi.nlm.nih.gov/articles/1064028/; Complete retained response/access diagnostic; no scientific main-body content inferred. | context_only | Recorded status 200: HTTP200 challenge page, not the article body; separate legacy response supplies the read primary body. |
+| schema-result | just validate data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml |
+| strict-result | just validate-strict data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml --out /private/tmp/cellstructure-batch44-20261022-b975f18l/acrad_tolc_multidrug_efflux_transport_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml --out /private/tmp/cellstructure-batch44-20261022-b975f18l/acrad_tolc_multidrug_efflux_transport_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch44-20261022-b975f18l/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch44-20261022-b975f18l/acrad_tolc_multidrug_efflux_transport_complex-strict.tsv |
+| native-proteins | /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python -B scripts/uniprot_genes.py --verify --record data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml; Complete read-only focused native proteins log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-graphs | /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml; Complete read-only focused native graphs log | supports | data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml  (cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex)<br>  acrad_tolc_xenobiotic_efflux	acra	COVERED	-&gt;acra_periplasmic_adaptor (UniProtKB:P0AE06)<br>  acrad_tolc_xenobiotic_efflux	acrd	COVERED	-&gt;acrd_inner_membrane_transporter (UniProtKB:P24177)<br>  acrad_tolc_xenobiotic_efflux	tolc	COVERED	-&gt;tolc_outer_membrane_channel (UniProtKB:P02930)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     3  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     3  total GENE_OR_PROTEIN causal nodes |
+| target-curies | just check-curies-strict; data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 11 of 15 collected target identifiers returned OK. ECO:0005547: SKIPPED; Native ECO authority verifies exact identifier and inferred-by-curator meaning; Complex Portal explicitly attaches this inference tier to the complexes. It is not treated as direct physical-interaction evidence.; PMID:15743938: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; PMID:26113845: UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected after the bulk eutils414 transport failure. Identity resolution does not certify every attached biological claim; declared abstract/body reading scope remains in force.; cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex: SKIPPED; Exact frozen target identity has exactly one maintained-record match in the ignored-inclusive local search. This verifies the repository-minted identity without asserting exhaustive external ontology absence. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- The source composition is explicitly curator-inferred ECO0005547, not independently observed full-complex structure. Membership and loss of activity do not establish formation necessity.
+- No figure pixels, atomic models or supplements were inspected. Actual paper reading is restricted to the source-specific listed sections.
+- Aires2005 reconstitution lacks the TolC outer-membrane barrier and uses engineered proteins; the whole-pump context derives from separate native authority and secondary synthesis.
+- Bounded native family and gene queries are not exhaustive absence claims; AcrE alias collision with AcrB is resolved by exact current accession identity.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User expressly requests one review for every unreviewed record, including scientifically clean records.
+- iModulonDB is not applicable to these complex identity, protein family, assembly and enzyme or transport claims.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T043537Z-acrad-tolc-multidrug-efflux-transport-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Source-backed review of acrad tolc multidrug efflux transport complex
+started_at: '2026-10-22T04:14:59Z'
+finished_at: '2026-10-22T04:35:37Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Two minor corrections: exact AcrA family grounding and citation author names.
+  Pump identity, source composition and bounded export graph are supported; formation
+  necessity remains unresolved.'
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    sha256: cd8c86f064ff23e279eeb075edcdeab1a1786141aa66cac03ab019c44cfcdd47
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  label: AcrAD-TolC multidrug efflux transport complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete target; no neighboring scientific-record verdict
+    is imported. Exact authority, all current component/function/graph/source placements,
+    taxonomic scope, formation semantics, history and discussions were reviewed.
+  selection: Batch44 fixed strict path order, index 1; exactly one maintained target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  command: just validate data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  command: just validate-strict data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    --out /private/tmp/cellstructure-batch44-20261022-b975f18l/acrad_tolc_multidrug_efflux_transport_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-proteins
+  name: Focused native proteins
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  command: /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-proteins
+- check_id: native-graphs
+  name: Focused native graphs
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  command: /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  exit_code: 0
+  summary: Read-only native check passed; claim-level protein/edge support evaluated
+    separately.
+  evidence_ids:
+  - native-graphs
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - micro44-go
+  - micro44-cpx-4264
+  - micro44-eco0005547
+  - micro44-tax83333
+  - micro44-up-P0AE06
+  - micro44-up-P24177
+  - micro44-up-P02930
+  - micro44-ipr-IPR058622
+  - micro44-ipr-IPR001036
+  - micro44-ipr-IPR004764
+  - micro44-reviewed-unique
+  - micro44-anes2015-numeric
+  - micro44-pmid26113845
+  - micro44-ipr-IPR058628
+  - micro44-family-search-acrd
+  - micro44-pmid15743938
+  - micro44-aires2005-legacy
+  - micro44-aires2005-numeric
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: '11 of 15 collected target identifiers returned OK. ECO:0005547: SKIPPED;
+    Native ECO authority verifies exact identifier and inferred-by-curator meaning;
+    Complex Portal explicitly attaches this inference tier to the complexes. It is
+    not treated as direct physical-interaction evidence.; PMID:15743938: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:26113845:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex: SKIPPED;
+    Exact frozen target identity has exactly one maintained-record match in the ignored-inclusive
+    local search. This verifies the repository-minted identity without asserting exhaustive
+    external ontology absence. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - micro44-eco0005547
+  - micro44-pmid15743938
+  - micro44-pmid26113845
+  - record
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch44 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Complete maintained YAML; all components, source notes, graphs, discussions
+    and historical entries
+  accessed_at: '2026-10-22T04:27:19Z'
+  support: context_only
+  summary: The entire maintained target was read; no scientific record was changed.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent; ComponentTypeEnum; EssentialityEnum; graph scopes
+  accessed_at: '2026-10-22T04:27:19Z'
+  support: context_only
+  summary: Protein-family identity is distinct from an assembled complex. ESSENTIAL
+    concerns failure of structure formation, not merely loss of catalytic or transport
+    function.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components; groundings; associated machinery and chaperone boundaries
+  accessed_at: '2026-10-22T04:27:19Z'
+  support: context_only
+  summary: Components are taxon-agnostic molecular families/classes; exact family
+    grounding is preferred when verified. Mature constituents and assembled-structure
+    maintenance machinery differ from transient preassembly chaperones.
+- evidence_id: micro44-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:1990281,GO:0042910,GO:0140330,GO:0110067,GO:1902495,GO:0008519,GO:0072488
+  locator: 'Complete exact GO1990281/0042910/0140330 entries: names, definitions,
+    synonyms, active status and typed children.'
+  accessed_at: '2026-10-22T04:22:33.314420Z'
+  support: supports
+  summary: GO1990281 denotes the generic efflux-pump complex; GO0042910 and GO0140330
+    denote xenobiotic transport and outer-membrane export. These do not replace the
+    exact locally named pump identity.
+  snapshot_sha256: 84212830407680914329f5be4038a3c5dd3494912885c4100404cd02f3c97d7b
+- evidence_id: micro44-cpx-4264
+  kind: database
+  reference: https://www.ebi.ac.uk/intact/complex-ws/complex/CPX-4264
+  locator: complexAc/name/systematicName/species/functions/properties/complexAssemblies/evidenceType;
+    all participant identifiers/names/stochiometry/interactorAC; complete cross-reference
+    identity list.
+  accessed_at: '2026-10-22T04:22:33.315005Z'
+  support: supports
+  summary: CPX-4264 identifies E. coli K-12 AcrAD-TolC as 6 AcrA:3 AcrD:3 TolC, a
+    heterododecamer. All three interactor IDs and counts match the imported source
+    composition. The native evidenceType is ECO0005547 inferred by curator; source
+    properties are not recast as direct whole-complex structural observations.
+  snapshot_sha256: 27de9e9e5a745f76d32f3c05e7000bab001e38d836005fda9024e75b623c1e6f
+- evidence_id: micro44-eco0005547
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/eco/terms?obo_id=ECO:0005547
+  locator: Exact OLS term obo_id/label/complete description.
+  accessed_at: '2026-10-22T04:24:12.118606Z'
+  support: supports
+  summary: ECO0005547 is manual biological-system reconstruction from background scientific
+    knowledge. Its native description explicitly distinguishes functional/ligand-binding
+    proxies from direct physical-interaction evidence.
+  snapshot_sha256: a6ea6ff7334e1e7cd3fee1ef14c09bc40944adcbf6571775cf5f2ef49352bb8a
+- evidence_id: micro44-tax83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete taxId/scientificName/rank/lineage/otherNames.
+  accessed_at: '2026-10-22T04:09:06.395271Z'
+  support: supports
+  summary: ENA taxId 83333 identifies Escherichia coli K-12 at rank strain; aliases
+    and lineage match the record. Identity alone is not prevalence or experimental-condition
+    evidence.
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: micro44-up-P0AE06
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0AE06.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references. Full
+    FUNCTION/SUBUNIT comments and ComplexPortal cross-references also read.
+  accessed_at: '2026-10-22T04:09:09.006215Z'
+  support: supports
+  summary: P0AE06 is UniProtKB reviewed (Swiss-Prot), taxon 83333, genes ['acrA'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge. FUNCTION/SUBUNIT qualifiers and
+    exact ComplexPortal cross-references were checked; probable/inferred assertions
+    remain distinguished.
+  snapshot_sha256: 3353ebe0339b2686335d36fa720ceee4c8808ae38f2a2c975d3ef3cdba6cdb9d
+- evidence_id: micro44-up-P24177
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P24177.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references. Full
+    FUNCTION/SUBUNIT comments and ComplexPortal cross-references also read.
+  accessed_at: '2026-10-22T04:22:34.060254Z'
+  support: supports
+  summary: P24177 is UniProtKB reviewed (Swiss-Prot), taxon 83333, genes ['acrD'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge. FUNCTION/SUBUNIT qualifiers and
+    exact ComplexPortal cross-references were checked; probable/inferred assertions
+    remain distinguished.
+  snapshot_sha256: 636bbed797ba8588d55bc652f75ed140bc9938df11368424afecbcfb0eea723f
+- evidence_id: micro44-up-P02930
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P02930.json
+  locator: primaryAccession/entryType; organism; proteinDescription; genes; full SUBCELLULAR
+    LOCATION comments and their evidence joins; InterPro/Pfam cross-references. Full
+    FUNCTION/SUBUNIT comments and ComplexPortal cross-references also read.
+  accessed_at: '2026-10-22T04:09:08.342290Z'
+  support: supports
+  summary: P02930 is UniProtKB reviewed (Swiss-Prot), taxon 83333, genes ['tolC'].
+    Recommended identity, gene aliases, full SUBCELLULAR LOCATION comments, evidence
+    codes/PMIDs and InterPro/Pfam cross-references were inspected. Direct, inferred/by-similarity
+    localization and recombinant-study contexts remain distinguished; a native accession
+    is not itself proof of each mechanistic edge. FUNCTION/SUBUNIT qualifiers and
+    exact ComplexPortal cross-references were checked; probable/inferred assertions
+    remain distinguished.
+  snapshot_sha256: cef14f6af1999fe0b5218d959cca8788ec00afc1b145201ba48344a4b15bbb04
+- evidence_id: micro44-ipr-IPR058622
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058622/
+  locator: Complete metadata identity/type/name/description/member databases/hierarchy.
+  accessed_at: '2026-10-22T04:09:05.823477Z'
+  support: supports
+  summary: The TolC family grounding is exact and already present. TolC participation
+    in multiple efflux systems does not invalidate its source-neutral family identity.
+  snapshot_sha256: d3c58cbb9737d5f395f703b634f84df048f355555af2b817f321a5e474b8e310
+- evidence_id: micro44-ipr-IPR001036
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR001036/
+  locator: Complete metadata identity/type/description/member databases and hierarchy.
+  accessed_at: '2026-10-22T04:24:11.126717Z'
+  support: supports
+  summary: This broad acriflavin-resistance family integrates the AcrB/AcrD/AcrF family
+    and includes several RND branches. It does not identify the narrower named AcrD
+    or AcrF constituent alone.
+  snapshot_sha256: 008625fa530ed076943ad70b287d824327c5aa73e66ec612bcdc2644d8bf06ec
+- evidence_id: micro44-ipr-IPR004764
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR004764/
+  locator: Complete metadata identity/type/description and hierarchy.
+  accessed_at: '2026-10-22T04:24:11.877660Z'
+  support: supports
+  summary: The MdtF-like family covers bacterial RND proteins beyond the named AcrD/AcrF
+    boundary; no exact narrow mapping is inferred from accession membership alone.
+  snapshot_sha256: 4c678f9531dce3a032e17ba34b6f2578dee02575c7431a9bfb9bd2df4e9a5aeb
+- evidence_id: micro44-reviewed-unique
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue%20AND%20organism_id%3A83333%20AND%20%28gene_exact%3AacrA%20OR%20gene_exact%3AacrD%20OR%20gene_exact%3AacrE%20OR%20gene_exact%3AacrF%20OR%20gene_exact%3AtolC%20OR%20gene_exact%3AamtB%29&format=json&size=100&fields=accession,id,gene_names,organism_id,protein_name
+  locator: Complete native response with exact query preserved in reference; HTTP204
+    is an empty response, not an uninspected result page.
+  accessed_at: '2026-10-22T04:23:29.458941Z'
+  support: supports
+  summary: The combined reviewed K-12 query returns the six intended accessions plus
+    P31224/AcrB because acrE is also its historical alias. The exact current gene
+    and protein identities distinguish P24180/AcrE; no false claim of seven distinct
+    current queried genes is made.
+  snapshot_sha256: 39a84fc6a0fa9664b771e53f37cfc555908c5cb2eaf94dc9ed06f1ed404afad5
+  search_scope: reviewed:true AND organism_id:83333 AND gene_exact acrA/acrD/acrE/acrF/tolC/amtB;
+    all seven returned entries inspected, below page size100. Remote authority query
+    only; ignored-file inclusion is not applicable and no local absence claim is made.
+- evidence_id: micro44-anes2015-numeric
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/4462101/
+  locator: Genuine full review HTML; complete sec3/4/5/8, including Table1 and Fig1–2
+    captions. AcrD/AcrEF paragraphs near end sec5 read in full. No figure pixels;
+    the cited original experiments are not certified as independently read.
+  accessed_at: '2026-10-22T04:23:28.684685Z'
+  support: supports
+  summary: This is Anes et al. 2015, a secondary review. It supports the tripartite
+    RND boundary and distinguishes AcrAD and AcrEF from the better characterized AcrAB
+    system. Its AcrEF assembly comparison is explicitly predicted by homology, and
+    expression/deletion phenotypes are context dependent.
+  snapshot_sha256: f3de337eac24e04a75268bfe64674aa246c6a575bafff92cfad5aea68158070d
+- evidence_id: micro44-pmid26113845
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A26113845+AND+SRC%3AMED
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:22:34.747067Z'
+  support: supports
+  summary: 'Unique MED26113845: The ins and outs of RND efflux pumps in Escherichia
+    coli. Authors/year/DOI and the complete native abstract were inspected. This row
+    establishes bibliographic identity and abstract-level content only; detailed experiments
+    require separately specified body evidence.'
+  snapshot_sha256: 099d7abb69cc4dc0bf44e2b186820f11f7c1cb62884b140f3eb6e4cc137f28af
+- evidence_id: micro44-ipr-IPR058628
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR058628/
+  locator: Complete metadata identity/type/name/description/member databases/hierarchy.
+  accessed_at: '2026-10-22T04:09:49.522195Z'
+  support: supports
+  summary: IPR058628 is the exact named AcrA adaptor family, matching the P0AE06 protein
+    identity and resolving the current reviewed-label-only AcrA task. It is not a
+    whole-pump identifier.
+  snapshot_sha256: 122db3dd9fef2511493cb2808549931269cfb075d3fdb63230bf5d05f01c1b9b
+- evidence_id: micro44-family-search-acrd
+  kind: search
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/?search=AcrD&page_size=100
+  locator: Complete native response with exact query preserved in reference; HTTP204
+    is an empty response, not an uninspected result page.
+  accessed_at: '2026-10-22T04:23:28.887739Z'
+  support: supports
+  summary: The bounded exact-string AcrD InterPro entry search returned HTTP204 with
+    zero bytes. Together with directly inspected broader current protein cross-references,
+    it does not furnish an exact AcrD family; no global family absence is asserted.
+  snapshot_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  search_scope: InterPro /entry/interpro/?search=AcrD&page_size=100; single native
+    response inspected. Remote authority query only; ignored-file inclusion is not
+    applicable and no local absence claim is made.
+- evidence_id: micro44-pmid15743938
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A15743938+AND+SRC%3AMED
+  locator: Exact native result id/title/authorString/pubYear/doi and complete abstractText.
+  accessed_at: '2026-10-22T04:22:34.472856Z'
+  support: supports
+  summary: 'Unique MED15743938: Aminoglycosides are captured from both periplasm and
+    cytoplasm by the AcrD multidrug efflux transporter of Escherichia coli. Authors/year/DOI
+    and the complete native abstract were inspected. This row establishes bibliographic
+    identity and abstract-level content only; detailed experiments require separately
+    specified body evidence.'
+  snapshot_sha256: 0bad625c4e1a7e067b212b4eafc8f2060dbf13c883d3decc544e650ceae9264d
+- evidence_id: micro44-aires2005-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1064028/
+  locator: Genuine primary HTML; Introduction; complete Methods sec2/3/6/7/8/9; complete
+    Results sec11–15 including Table1 and Fig1–5 captions; entire Discussion sec16.
+    Antiserum-production/protein-assay subsections sec4/5 and raw figure pixels not
+    independently read.
+  accessed_at: '2026-10-22T04:24:11.125976Z'
+  support: supports
+  summary: Aires and Nikaido reconstituted His-tagged AcrD with lipid-deficient AcrA
+    in proteoliposomes and measured proton flux and radiolabeled gentamicin uptake.
+    Intravesicular versus external conditions model periplasm versus cytoplasm; the
+    study does not reconstitute the TolC outer-membrane barrier. AcrA dependence and
+    substrate capture support the bounded pump function, with streptomycin and intact-cell
+    interpretation qualifications retained.
+  snapshot_sha256: 91c37374a7ce1a24869686719ea16fc97d7f24675dc51a89c02e6722d4ba3d00
+- evidence_id: micro44-aires2005-numeric
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/1064028/
+  locator: Complete retained response/access diagnostic; no scientific main-body content
+    inferred.
+  accessed_at: '2026-10-22T04:23:28.684313Z'
+  support: context_only
+  summary: 'Recorded status 200: HTTP200 challenge page, not the article body; separate
+    legacy response supplies the read primary body.'
+  snapshot_sha256: c7e1444d1ac3bc989f39e354831345fafc921ce8f994bad2e78d84fa71a2c930
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:15:00Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml'
+  snapshot_sha256: 144762b54db930f35d3ca93c7d2a9d380f0b4a77f6de9253af20e7f802ec4e88
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    --out /private/tmp/cellstructure-batch44-20261022-b975f18l/acrad_tolc_multidrug_efflux_transport_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T04:15:01Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch44-20261022-b975f18l/acrad_tolc_multidrug_efflux_transport_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch44-20261022-b975f18l/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch44-20261022-b975f18l/acrad_tolc_multidrug_efflux_transport_complex-strict.tsv"
+  snapshot_sha256: f50723da30aac721ee45526ffb2a50ffd51bd955d113c311a55047851adfa5af
+- evidence_id: native-proteins
+  kind: validation
+  reference: /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --verify --record data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Complete read-only focused native proteins log
+  accessed_at: '2026-10-22T04:23:12.902549Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch44-20261022-b975f18l/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --causal-graphs --record data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+  locator: Complete read-only focused native graphs log
+  accessed_at: '2026-10-22T04:23:13.643945Z'
+  support: supports
+  summary: "data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml\
+    \  (cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex)\n  acrad_tolc_xenobiotic_efflux\t\
+    acra\tCOVERED\t->acra_periplasmic_adaptor (UniProtKB:P0AE06)\n  acrad_tolc_xenobiotic_efflux\t\
+    acrd\tCOVERED\t->acrd_inner_membrane_transporter (UniProtKB:P24177)\n  acrad_tolc_xenobiotic_efflux\t\
+    tolc\tCOVERED\t->tolc_outer_membrane_channel (UniProtKB:P02930)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     3  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     0  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     3  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 95d861b3b81fe081a2d9fd2266ee9618bab5cc55342ac07719312a47706f7cda
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml;
+    native collect() exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '11 of 15 collected target identifiers returned OK. ECO:0005547: SKIPPED;
+    Native ECO authority verifies exact identifier and inferred-by-curator meaning;
+    Complex Portal explicitly attaches this inference tier to the complexes. It is
+    not treated as direct physical-interaction evidence.; PMID:15743938: UNREACHABLE;
+    Exact native Europe PMC MED identifier, title and DOI were inspected after the
+    bulk eutils414 transport failure. Identity resolution does not certify every attached
+    biological claim; declared abstract/body reading scope remains in force.; PMID:26113845:
+    UNREACHABLE; Exact native Europe PMC MED identifier, title and DOI were inspected
+    after the bulk eutils414 transport failure. Identity resolution does not certify
+    every attached biological claim; declared abstract/body reading scope remains
+    in force.; cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex: SKIPPED;
+    Exact frozen target identity has exactly one maintained-record match in the ignored-inclusive
+    local search. This verifies the repository-minted identity without asserting exhaustive
+    external ontology absence. Native source checks are separately scoped; skipped
+    or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Specific pump identity and parent
+  outcome: supported
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: The local identifier and definition preserve the specific Complex Portal
+    pump under the broader GO efflux-pump parent. The evidence-code and source participant
+    identifiers match the native entry.
+  evidence_ids:
+  - record
+  - micro44-go
+  - micro44-cpx-4264
+  - micro44-eco0005547
+- assessment_id: composition
+  area: grounding
+  topic: Source composition and family resolution
+  outcome: concern
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: AcrA/AcrD/TolC roles and 6:3:3 counts match CPX-4264. An exact AcrA family
+    is now available; the inspected AcrD candidates remain broader. Source inference
+    is not direct structural measurement.
+  evidence_ids:
+  - record
+  - curation
+  - micro44-cpx-4264
+  - micro44-eco0005547
+  - micro44-ipr-IPR058622
+  - micro44-ipr-IPR001036
+  - micro44-ipr-IPR004764
+  - micro44-ipr-IPR058628
+  - micro44-family-search-acrd
+- assessment_id: necessity
+  area: grounding
+  topic: Formation necessity remains unresolved
+  outcome: unknown
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: The three proteins are constituents of the defined tripartite pump, but
+    the cited functional evidence and curator-inferred composition do not independently
+    establish the three ESSENTIAL structure-formation claims. Transport loss is not
+    redefined as assembly failure. No contradiction is inferred solely from the lack
+    of a depletion-based formation assay.
+  evidence_ids:
+  - record
+  - schema
+  - micro44-cpx-4264
+  - micro44-eco0005547
+  - micro44-aires2005-legacy
+  - micro44-anes2015-numeric
+- assessment_id: proteins
+  area: grounding
+  topic: Exact accessions, aliases and compartments
+  outcome: supported
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: All three reviewed K-12 accessions, current symbols, protein labels and
+    Complex Portal cross-references match. Inner-membrane transporter, periplasmic
+    adaptor and outer-membrane TolC roles are supported; direct versus probable annotation
+    codes remain distinguished. The combined exact-symbol query contains an AcrB historical
+    acrE alias and does not displace P24180 as the intended AcrE.
+  evidence_ids:
+  - record
+  - micro44-tax83333
+  - micro44-reviewed-unique
+  - micro44-cpx-4264
+  - micro44-up-P0AE06
+  - micro44-up-P24177
+  - micro44-up-P02930
+- assessment_id: function
+  area: evidence
+  topic: Transport support and experimental scope
+  outcome: concern
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: The primary AcrD study supports aminoglycoside capture and proton-coupled
+    activity through reconstituted AcrA/AcrD assays plus intact-cell susceptibility.
+    Its system has no TolC outer-membrane barrier; the whole tripartite conduit is
+    supported separately by curator synthesis. The biological interpretation is retained
+    while incorrect author names are corrected.
+  evidence_ids:
+  - record
+  - micro44-go
+  - micro44-cpx-4264
+  - micro44-aires2005-legacy
+  - micro44-anes2015-numeric
+  - micro44-pmid15743938
+  - micro44-pmid26113845
+  - micro44-up-P0AE06
+  - micro44-up-P24177
+  - micro44-up-P02930
+- assessment_id: graph
+  area: graph
+  topic: Explicit nonmechanistic transport diagram
+  outcome: supported
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: The five directed edges are expressly scoped NONMECHANISTIC and describe
+    coupling, function and export destination. They do not claim resolved binding
+    sites, gating kinetics or assembly order. GO function/process nodes and the local
+    whole-pump node have appropriate roles.
+  evidence_ids:
+  - record
+  - micro44-go
+  - micro44-cpx-4264
+  - micro44-aires2005-legacy
+  - micro44-anes2015-numeric
+- assessment_id: scope
+  area: scope
+  topic: Reference strain versus experimental context
+  outcome: supported
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: CPX and proteins refer to K-12. The primary purification uses KAM3, a K-12-derived
+    acrB deletion strain, engineered tagged AcrD and lipid-deficient AcrA; Table1
+    susceptibility strains have further mutations. No COMMON prevalence enum occurs
+    in this target.
+  evidence_ids:
+  - record
+  - micro44-tax83333
+  - micro44-cpx-4264
+  - micro44-aires2005-legacy
+  - micro44-anes2015-numeric
+- assessment_id: coverage
+  area: completeness
+  topic: Full record and bounded unresolved tasks
+  outcome: supported
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  summary: All source-composition fields, component notes, functions, graph, discussion
+    and history were inspected. No images or verbatim excerpts occur. Historical retrieval
+    notes are not judged false merely because newer authority records exist; only
+    the current exact-family task is evaluated.
+  evidence_ids:
+  - record
+  - micro44-cpx-4264
+  - micro44-ipr-IPR058622
+  - micro44-ipr-IPR001036
+  - micro44-ipr-IPR004764
+  - micro44-ipr-IPR058628
+  - micro44-family-search-acrd
+findings:
+- finding_id: F1
+  issue_key: acrad-acra-family-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the available exact AcrA family
+  description: The current reviewed-label-only AcrA row and open family task can be
+    resolved with IPR058628, an exact named AcrA family. The verified protein identity
+    remains correct; broader AcrD candidates remain unresolved.
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  field_paths:
+  - components[0].grounding
+  - components[0].grounding_status
+  - components[0].grounding_notes
+  - discussions[0]
+  evidence_ids:
+  - record
+  - curation
+  - micro44-ipr-IPR058628
+  - micro44-up-P0AE06
+  - micro44-cpx-4264
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: minor
+  normalization_reason: A bounded current grounding omission; no false component identity
+    or historical verification claim is inferred.
+- finding_id: F2
+  issue_key: acrad-citation-authors
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the cited author attributions
+  description: PMID15743938/DOI10.1128/JB.187.6.1923-1929.2005 is Aires and Nikaido2005,
+    not Murakami et al. PMID26113845/DOI10.3389/fmicb.2015.00587 is Anes et al.2015,
+    not Zwama and Pos. Exact titles and identifiers otherwise match.
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  field_paths:
+  - components[1].evidence[2].notes
+  - evidence[8].notes
+  - evidence[9].notes
+  - evidence[10].notes
+  - evidence[11].notes
+  - causal_graphs[0].edges[3].evidence[0].notes
+  evidence_ids:
+  - record
+  - micro44-pmid15743938
+  - micro44-pmid26113845
+  - micro44-anes2015-numeric
+  - micro44-aires2005-legacy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+  rule_id: Exact source scope, protein grounding and formation-specific essentiality
+  native_severity: minor
+  normalization_reason: The source identities and bounded biological conclusions remain
+    recoverable; the error is precise bibliographic attribution across the listed
+    placements.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+  description: Ground AcrA to IPR058628 with native evidence and narrow the open task
+    to AcrD. Preserve protein examples and source composition.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - cellstructuremech:acrad_tolc_multidrug_efflux_transport_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/acrad_tolc_multidrug_efflux_transport_complex.yaml
+    role: maintained scientific record
+  description: Correct the author names in every affected evidence placement while
+    retaining the verified titles, identifiers, study tier and strain/assay limits.
+  acceptance_checks:
+  - Preserve exact supported identity, experimental organism and native versus recombinant
+    context.
+  - Attach source-specific evidence to each changed claim and retain historical provenance.
+  - Native schema, strict, CURIE, protein and graph checks pass as applicable.
+limitations:
+- The source composition is explicitly curator-inferred ECO0005547, not independently
+  observed full-complex structure. Membership and loss of activity do not establish
+  formation necessity.
+- No figure pixels, atomic models or supplements were inspected. Actual paper reading
+  is restricted to the source-specific listed sections.
+- Aires2005 reconstitution lacks the TolC outer-membrane barrier and uses engineered
+  proteins; the whole-pump context derives from separate native authority and secondary
+  synthesis.
+- Bounded native family and gene queries are not exhaustive absence claims; AcrE alias
+  collision with AcrB is resolved by exact current accession identity.
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User expressly requests one review for every unreviewed record, including scientifically
+  clean records.
+- iModulonDB is not applicable to these complex identity, protein family, assembly
+  and enzyme or transport claims.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
