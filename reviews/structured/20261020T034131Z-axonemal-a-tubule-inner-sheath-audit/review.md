@@ -1,0 +1,609 @@
+# Axonemal A tubule inner sheath identity and source scope
+
+- Review: 20261020T034131Z-axonemal-a-tubule-inner-sheath-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-20T03:37:58Z
+- Finished UTC: 2026-10-20T03:41:31Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Exact identity, both part-of relations, normal Chlamydomonas context and the three descriptive graph edges are supported. The explicitly deferred MIP inventory remains an enrichment opportunity; no observed defect.
+
+## Scope And Provenance
+
+Entire record, nearest cited authorities and primary source; all three graph edges assessed.
+
+Selection: First path of batch3 after excluding validated prior coverage and the twenty completed session targets.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0160111 | data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml | maintained | axonemal A tubule inner sheath |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0160111 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0160111 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0160111 | All5 target identifiers OK; current authorities independently inspected. |
+| Claim-level scientific review | passed | True | GO:0160111 | Complete target and nearest sources inspected. Primary XML initially failed and PMC HTML returned a challenge; official archive manuscript recovered and read successfully. |
+| Expression-module applicability | not_applicable | False | GO:0160111 | No gene, locus, expression module or transcriptomic dataset is asserted by this target; structural GO and microscopy evidence are the relevant sources. |
+| Full corpus QC | passed | True | GO:0160111 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0160111 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0160111 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0160111 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0160111 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Luminal network versus A tubule
+
+identity: supported. Targets: GO:0160111.
+
+Exact GO identity denotes the MIP network, distinct from the tubulin wall and the encompassing doublet sheath. MULTIPROTEIN_COMPLEX is appropriate.
+
+### Both parthood relations
+
+representation: supported. Targets: GO:0160111.
+
+Both listed relations are explicitly part_of in current GO. The record does not substitute parthood for is-a. The existing parent record points to this child.
+
+### Species-level normal anatomy
+
+scope: supported. Targets: GO:0160111.
+
+The cited structural study and its framing support this as normal Chlamydomonas axonemal anatomy, including a wild-type example. COMMON is read qualitatively as normal anatomy; this is not a measured population-prevalence estimate or a statement about every life stage.
+
+### Luminal stabilization
+
+evidence: supported. Targets: GO:0160111.
+
+The nearest GO definition explicitly states A-tubule stabilization; structural interconnections and comparative evidence in the primary paper support the broad function. No particular molecular perturbation is claimed.
+
+### All three nonmechanistic edges
+
+graph: supported. Targets: GO:0160111.
+
+The two spatial edges and broad stabilizing relation mirror GO and the descriptive scope. FUNCTION with NONMECHANISTIC scope avoids presenting a detailed causal mechanism.
+
+### Explicitly deferred MIP inventory
+
+completeness: supported. Targets: GO:0160111.
+
+The record promises a coarse structural identity and records a concrete family/position/copy-number TODO. Optional composition is not silently represented as complete. A later source-backed enrichment could use the primary model; no arbitrary requirement to populate every optional slot is applied.
+
+### History and optional surfaces
+
+provenance: supported. Targets: GO:0160111.
+
+Creation history agrees with the current coarse scope; scientific status remains PROPOSED. No unsupported image, property, trait, dataset, protein accession or stoichiometry is asserted.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0160111,GO:0160110,GO:0097649; Exact term IDs, definitions and children relationships | supports | All three GO terms are active. The exact A-tubule inner-sheath definition includes luminal MIPs and stabilization. Both containing terms explicitly list the A-tubule sheath as a part_of child. |
+| taxon | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=3055; Top-level TaxId and ScientificName | supports | Taxon3055 resolves to Chlamydomonas reinhardtii. |
+| doi | https://api.crossref.org/works/10.1016/j.cell.2019.09.030; Crossref message DOI/title/author/journal | supports | The exact DOI, title and authors correspond to Ma et al.2019 in Cell. |
+| native-meta | https://pmc-oa-opendata.s3.amazonaws.com/PMC6936269.1/PMC6936269.1.json; Identifiers, version and licence | supports | Official article metadata joins DOI10.1016/j.cell.2019.09.030, PMID31668805 and PMC6936269.1. This is the author manuscript with TDM licence; no article or figures are copied into the repository. |
+| native-paper | https://pmc-oa-opendata.s3.amazonaws.com/PMC6936269.1/PMC6936269.1.xml; Introduction; MIP-network and luminal-coverage Results; diverse-function Discussion; experimental-model Methods | supports | The primary manuscript supports a native Chlamydomonas luminal MIP network, heterogeneous coverage and stabilization. The model includes wild-type CC-125 and separately examined mutants. Individual families, positions and periodicities are available, but the target explicitly defers that finer composition. |
+| record | data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml; Entire target; parent inner-sheath record; creation history | context_only | Read the complete target, all three graph edges, its open composition discussion and creation history. The parent links this separately identified child. PROPOSED status is retained. |
+| schema-result | just validate data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml |
+| strict-result | just validate-strict data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_a_tubule_inner_sheath-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_a_tubule_inner_sheath-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_a_tubule_inner_sheath-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml; exact native collect() slice | supports | All5 collected target identifiers returned OK in the unchanged-base corpus report. Current source receipts separately establish identity. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The record intentionally lacks a curated component inventory, family groundings and copy numbers; its open TODO makes this scope explicit.
+- COMMON describes normal species anatomy, not a direct survey of population prevalence or constitutive occurrence in all life stages.
+- Structural stabilization is broad; no detailed molecular causal mechanism or universal taxonomic composition is established.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- The initial inspection preceded assessment. Additional parent/history context was captured separately without changing target bytes.
+- The user explicitly requests a saved bundle for every uncovered target, including clean reviews. No maintained scientific content was changed.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261020T034131Z-axonemal-a-tubule-inner-sheath-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Axonemal A tubule inner sheath identity and source scope
+started_at: '2026-10-20T03:37:58Z'
+finished_at: '2026-10-20T03:41:31Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independence from historical
+    agent authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Exact identity, both part-of relations, normal Chlamydomonas context and
+  the three descriptive graph edges are supported. The explicitly deferred MIP inventory
+  remains an enrichment opportunity; no observed defect.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+    sha256: 23bcdab335f1f6b6f39da802471c2336ab47ed2083b4986133b9558f42d4f7c0
+    role: target
+  - path: data/structures/cytoskeleton/axonemal_microtubule_doublet_inner_sheath.yaml
+    sha256: 9e9be5e7f27009254e123e548fe1c5bbfd4bbacb87f856eec8f868fb605c0f9e
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/axonemal_a_tubule_inner_sheath/2026-09-23T180248Z-claude-code-a0814f.yaml
+    sha256: 76fb8acdc549c4e08aa00ca7c45cd72ec9aa2e1f3f84e755aeaae53746f4caa9
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0160111
+  path: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+  label: axonemal A tubule inner sheath
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+    role: maintained scientific record
+scope:
+  description: Entire record, nearest cited authorities and primary source; all three
+    graph edges assessed.
+  selection: First path of batch3 after excluding validated prior coverage and the
+    twenty completed session targets.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0160111
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160111
+  command: just validate data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160111
+  command: just validate-strict data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_a_tubule_inner_sheath-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160111
+  summary: All5 target identifiers OK; current authorities independently inspected.
+  evidence_ids:
+  - target-curies
+  - go
+  - taxon
+  - doi
+- check_id: source-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160111
+  summary: Complete target and nearest sources inspected. Primary XML initially failed
+    and PMC HTML returned a challenge; official archive manuscript recovered and read
+    successfully.
+  evidence_ids:
+  - go
+  - native-paper
+  - native-meta
+  - record
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0160111
+  summary: No gene, locus, expression module or transcriptomic dataset is asserted
+    by this target; structural GO and microscopy evidence are the relevant sources.
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160111
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160111
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160111
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160111
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0160111
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch3 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0160111,GO:0160110,GO:0097649
+  locator: Exact term IDs, definitions and children relationships
+  accessed_at: '2026-10-20T03:38:20.442356Z'
+  support: supports
+  summary: All three GO terms are active. The exact A-tubule inner-sheath definition
+    includes luminal MIPs and stabilization. Both containing terms explicitly list
+    the A-tubule sheath as a part_of child.
+  snapshot_sha256: f9555ed7337bceb69f393ddc1cf7823bcb3aa71ffb73b119e3f6890a1b58cc66
+- evidence_id: taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3055
+  locator: Top-level TaxId and ScientificName
+  accessed_at: '2026-10-20T03:38:20.199537Z'
+  support: supports
+  summary: Taxon3055 resolves to Chlamydomonas reinhardtii.
+  snapshot_sha256: a17bc1c97fea9112288574ef15727ed7e37c42787a430ef074ae5fc654547e6b
+- evidence_id: doi
+  kind: database
+  reference: https://api.crossref.org/works/10.1016/j.cell.2019.09.030
+  locator: Crossref message DOI/title/author/journal
+  accessed_at: '2026-10-20T03:38:20.146648Z'
+  support: supports
+  summary: The exact DOI, title and authors correspond to Ma et al.2019 in Cell.
+  snapshot_sha256: a3e49957a48d0ff0d685a5bc8982695c74b53673cbe9d10fbc706024ab787e50
+- evidence_id: native-meta
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC6936269.1/PMC6936269.1.json
+  locator: Identifiers, version and licence
+  accessed_at: '2026-10-20T03:39:02.669848Z'
+  support: supports
+  summary: Official article metadata joins DOI10.1016/j.cell.2019.09.030, PMID31668805
+    and PMC6936269.1. This is the author manuscript with TDM licence; no article or
+    figures are copied into the repository.
+  snapshot_sha256: 3c4ec5e8504f645ea0d0a4d43925a26045c4b84322cff24f4c6119e55c151723
+- evidence_id: native-paper
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC6936269.1/PMC6936269.1.xml
+  locator: Introduction; MIP-network and luminal-coverage Results; diverse-function
+    Discussion; experimental-model Methods
+  accessed_at: '2026-10-20T03:39:02.896527Z'
+  support: supports
+  summary: The primary manuscript supports a native Chlamydomonas luminal MIP network,
+    heterogeneous coverage and stabilization. The model includes wild-type CC-125
+    and separately examined mutants. Individual families, positions and periodicities
+    are available, but the target explicitly defers that finer composition.
+  snapshot_sha256: 0876ca7aaca5f9242bcead773c38bd14befec9d32ada12bb647428f60f79594e
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+  locator: Entire target; parent inner-sheath record; creation history
+  accessed_at: '2026-10-20T03:41:25Z'
+  support: context_only
+  summary: Read the complete target, all three graph edges, its open composition discussion
+    and creation history. The parent links this separately identified child. PROPOSED
+    status is retained.
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:37:59Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml'
+  snapshot_sha256: d1507957b2a82cb4c5e7c6fe51674cbd437e8d2e31d278ac1cc7cb206173c1c8
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml
+    --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_a_tubule_inner_sheath-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-20T03:38:00Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml\
+    \ --out /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_a_tubule_inner_sheath-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch3-20261019-YKo4JU/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch3-20261019-YKo4JU/axonemal_a_tubule_inner_sheath-strict.tsv"
+  snapshot_sha256: d8d407967dc499902bc80590fea198083350bf1243c01420890cef8e815ba03e
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/cytoskeleton/axonemal_a_tubule_inner_sheath.yaml; exact
+    native collect() slice
+  accessed_at: '2026-10-20T03:41:25Z'
+  support: supports
+  summary: All5 collected target identifiers returned OK in the unchanged-base corpus
+    report. Current source receipts separately establish identity.
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Luminal network versus A tubule
+  outcome: supported
+  target_ids:
+  - GO:0160111
+  summary: Exact GO identity denotes the MIP network, distinct from the tubulin wall
+    and the encompassing doublet sheath. MULTIPROTEIN_COMPLEX is appropriate.
+  evidence_ids:
+  - go
+  - native-paper
+  - record
+- assessment_id: relations
+  area: representation
+  topic: Both parthood relations
+  outcome: supported
+  target_ids:
+  - GO:0160111
+  summary: Both listed relations are explicitly part_of in current GO. The record
+    does not substitute parthood for is-a. The existing parent record points to this
+    child.
+  evidence_ids:
+  - go
+  - record
+- assessment_id: scope
+  area: scope
+  topic: Species-level normal anatomy
+  outcome: supported
+  target_ids:
+  - GO:0160111
+  summary: The cited structural study and its framing support this as normal Chlamydomonas
+    axonemal anatomy, including a wild-type example. COMMON is read qualitatively
+    as normal anatomy; this is not a measured population-prevalence estimate or a
+    statement about every life stage.
+  evidence_ids:
+  - native-paper
+  - taxon
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Luminal stabilization
+  outcome: supported
+  target_ids:
+  - GO:0160111
+  summary: The nearest GO definition explicitly states A-tubule stabilization; structural
+    interconnections and comparative evidence in the primary paper support the broad
+    function. No particular molecular perturbation is claimed.
+  evidence_ids:
+  - go
+  - native-paper
+  - record
+- assessment_id: graph
+  area: graph
+  topic: All three nonmechanistic edges
+  outcome: supported
+  target_ids:
+  - GO:0160111
+  summary: The two spatial edges and broad stabilizing relation mirror GO and the
+    descriptive scope. FUNCTION with NONMECHANISTIC scope avoids presenting a detailed
+    causal mechanism.
+  evidence_ids:
+  - go
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: Explicitly deferred MIP inventory
+  outcome: supported
+  target_ids:
+  - GO:0160111
+  summary: The record promises a coarse structural identity and records a concrete
+    family/position/copy-number TODO. Optional composition is not silently represented
+    as complete. A later source-backed enrichment could use the primary model; no
+    arbitrary requirement to populate every optional slot is applied.
+  evidence_ids:
+  - native-paper
+  - record
+- assessment_id: status
+  area: provenance
+  topic: History and optional surfaces
+  outcome: supported
+  target_ids:
+  - GO:0160111
+  summary: Creation history agrees with the current coarse scope; scientific status
+    remains PROPOSED. No unsupported image, property, trait, dataset, protein accession
+    or stoichiometry is asserted.
+  evidence_ids:
+  - record
+findings: []
+actions: []
+limitations:
+- The record intentionally lacks a curated component inventory, family groundings
+  and copy numbers; its open TODO makes this scope explicit.
+- COMMON describes normal species anatomy, not a direct survey of population prevalence
+  or constitutive occurrence in all life stages.
+- Structural stabilization is broad; no detailed molecular causal mechanism or universal
+  taxonomic composition is established.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- The initial inspection preceded assessment. Additional parent/history context was
+  captured separately without changing target bytes.
+- The user explicitly requests a saved bundle for every uncovered target, including
+  clean reviews. No maintained scientific content was changed.
+```
