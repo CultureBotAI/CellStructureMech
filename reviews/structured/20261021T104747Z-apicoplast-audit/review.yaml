@@ -1,0 +1,1495 @@
+schema_version: 1.0.0
+review_id: 20261021T104747Z-apicoplast-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Apicoplast identity, import-component paralogs and mechanism review
+started_at: '2026-10-21T10:27:20Z'
+finished_at: '2026-10-21T10:47:47Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One major correction is needed because the Toxoplasma Der1 example is the
+  ER paralog. Three minor corrections resolve Tic20 family grounding and over-specific
+  claims about direct Tic20 translocation and endogenous ubiquitin. Organelle identity,
+  four-membrane context and stage-scoped functions remain supported.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/apicoplast.yaml
+    sha256: 92a545baa209311fdb4b224a2253a543c1a67c87b35b8004334c9bebf02f5186
+    role: target
+  - path: data/structures/membrane_organelle/apicoplast_membrane.yaml
+    sha256: fb3e343e0ed2a8711dff2305abea2166c589cb0a7b169d291c67fed81990ca58
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0020011
+  path: data/structures/membrane_organelle/apicoplast.yaml
+  label: apicoplast
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained scientific record
+scope:
+  description: Entire apicoplast target and membrane neighbor; native identities and
+    original sequence bridges; explicitly scoped primary and review bodies, with separate
+    assembly-necessity limits.
+  selection: Tenth selected target in batch twenty, fixed maintained-path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0020011
+checks:
+- check_id: native-verify
+  name: Native UniProt verify
+  status: passed
+  required: false
+  target_ids:
+  - GO:0020011
+  command: /private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/apicoplast.yaml
+    --verify
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native UniProt causal-graphs
+  status: passed
+  required: false
+  target_ids:
+  - GO:0020011
+  command: /private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/apicoplast.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native command passed; scientific membership and graph scope assessed independently.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020011
+  command: just validate data/structures/membrane_organelle/apicoplast.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020011
+  command: just validate-strict data/structures/membrane_organelle/apicoplast.yaml
+    --out /private/tmp/cellstructure-batch20-20261021-guyhe4k8/apicoplast-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020011
+  summary: 22 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020011
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - apicoplast-agent-go
+  - apicoplast-agent-tax-5794
+  - apicoplast-agent-tax-5811
+  - apicoplast-agent-tax-5833
+  - apicoplast-agent-tax-508771
+  - apicoplast-agent-tax-36329
+  - apicoplast-agent-S8GBF3
+  - apicoplast-agent-O97275
+  - apicoplast-agent-B9PY98
+  - apicoplast-agent-Q8I295
+  - apicoplast-agent-Q965D5
+  - apicoplast-agent-Q965D7
+  - apicoplast-agent-C9WWW6
+  - apicoplast-agent-query-TIC20-508771
+  - apicoplast-agent-query-ispH-36329
+  - apicoplast-agent-query-fabI
+  - apicoplast-agent-query-fabZ
+  - apicoplast-agent-matches-S8GBF3
+  - apicoplast-agent-matches-O97275
+  - apicoplast-agent-matches-B9PY98
+  - apicoplast-agent-matches-Q8I295
+  - apicoplast-agent-matches-Q965D5
+  - apicoplast-agent-matches-Q965D7
+  - apicoplast-agent-IPR005691
+  - apicoplast-agent-IPR007599
+  - apicoplast-agent-IPR035952
+  - apicoplast-agent-IPR003451
+  - apicoplast-agent-IPR002347
+  - apicoplast-agent-IPR014358
+  - apicoplast-agent-IPR036291
+  - apicoplast-agent-IPR010084
+  - apicoplast-agent-IPR013114
+  - apicoplast-agent-IPR029069
+  - apicoplast-agent-doi-10.1073_pnas.95.21.12352
+  - apicoplast-agent-doi-10.1098_rstb.2009.0273
+  - apicoplast-agent-doi-10.1073_pnas.0803862105
+  - apicoplast-agent-doi-10.1371_journal.ppat.1003426
+  - apicoplast-agent-doi-10.1186_1475-2875-12-25
+  - apicoplast-agent-doi-10.1146_annurev-micro-092412-155741
+  - apicoplast-agent-doi-10.1371_journal.pbio.1001138
+  - apicoplast-agent-doi-10.1016_j.ijpara.2016.08.005
+  - apicoplast-agent-doi-10.1074_jbc.M109.044024
+  - apicoplast-agent-doi-10.1128_EC.00061-09
+  - apicoplast-agent-pmc-html-PMC22835
+  - apicoplast-agent-pmc-html-PMC2533231
+  - apicoplast-agent-jats-PMC3681736
+  - apicoplast-agent-jats-PMC3662607
+  - apicoplast-agent-jats-PMC3166167
+  - apicoplast-agent-jats-PMC2817234
+  - apicoplast-agent-jats-PMC5406208
+  - apicoplast-agent-ena-FJ976521
+  - apicoplast-agent-ena-FJ976520
+  - apicoplast-agent-der1-primary-browser
+  - apicoplast-agent-ena-CAB38986
+  - apicoplast-agent-gene-814456
+  - apicoplast-agent-kalanon2009-pdf
+  - boundary-0
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020011
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020011
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020011
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020011
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020011
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/apicoplast.yaml
+  locator: Entire maintained YAML including definition, components, functions, hierarchy,
+    examples, graph edges, discussions, image metadata and history
+  accessed_at: '2026-10-21T10:46:23Z'
+  support: context_only
+  summary: All fields were read after fresh native inspection; the maintained target
+    and PROPOSED state are unchanged.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, CausalNode and source-specific ComplexComposition
+    contracts; essentiality definition; docs/CURATION.md assembly-versus-function
+    guidance and review checklist
+  accessed_at: '2026-10-21T10:46:23Z'
+  support: context_only
+  summary: Component family identity, concrete protein identity and source-specific
+    assembly membership are separate. Essentiality asks whether the structure forms
+    without the component; membership and activity do not establish it. Optional fields
+    are not mandatory. CausalNode permits protein complexes; its xrefs contract does
+    not inherit the top-level record equivalence restriction.
+- evidence_id: apicoplast-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009536,GO:0020011,GO:0160211
+  locator: Complete definitions, synonyms and relevant relations for all three terms
+  accessed_at: '2026-10-21T10:32:33.628314Z'
+  support: supports
+  summary: Native GO0020011 identifies the apicomplexan plastid, GO0009536 its plastid
+    parent, and GO0160211 any surrounding lipid bilayer forming its envelope. The
+    whole organelle and its membrane remain distinct.
+  snapshot_sha256: b69177f751226895a3c7fd524367d90cd42d221c35107cbbbb4594cc53be6bca
+- evidence_id: apicoplast-agent-tax-5794
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5794
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:32:34.254920Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Apicomplexa, phylum. This receipt attests
+    that identity and rank only, not occurrence or the experimental strain.
+  snapshot_sha256: 71f50f7adf0b7ad8670573c6c6ac0e6df37a9cf467fdec2ab20d612db477bc53
+- evidence_id: apicoplast-agent-tax-5811
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5811
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:32:34.266107Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Toxoplasma gondii, species. This receipt
+    attests that identity and rank only, not occurrence or the experimental strain.
+  snapshot_sha256: 11679825fa4d00b18d5848862450ab6b3770aaa47ad6676d1196d9df61124b16
+- evidence_id: apicoplast-agent-tax-5833
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5833
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:32:34.279997Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Plasmodium falciparum, species. This receipt
+    attests that identity and rank only, not occurrence or the experimental strain.
+  snapshot_sha256: 2df2a0981f04c32092ca60753a3398e45ed0d84ac8c090ca31e269edd7fffd25
+- evidence_id: apicoplast-agent-tax-508771
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/508771
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:32:34.031940Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Toxoplasma gondii ME49, strain. This receipt
+    attests that identity and rank only, not occurrence or the experimental strain.
+  snapshot_sha256: d1622dee69e1fe2abfea4351893585852f4200cfff6eac3b42e5a014283cd0b0
+- evidence_id: apicoplast-agent-tax-36329
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/36329
+  locator: Complete taxId, scientificName, rank, lineage and relevant synonyms
+  accessed_at: '2026-10-21T10:32:33.855582Z'
+  support: supports
+  summary: Native ENA taxonomy identifies Plasmodium falciparum3D7, isolate. This
+    receipt attests that identity and rank only, not occurrence or the experimental
+    strain.
+  snapshot_sha256: 6d1389e6a3af3a09ef4bf23157b95ec8d94dac9b395b8f8ccf0d1952beddc306
+- evidence_id: apicoplast-agent-S8GBF3
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/S8GBF3.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; relevant
+    location/function comments, sequence references and cross-references
+  accessed_at: '2026-10-21T10:32:36.759035Z'
+  support: supports
+  summary: 'Native UniProtKB unreviewed (TrEMBL) S8GBF3: TIC20; taxon 508771; gene
+    fields [{"geneName": {"evidences": [{"evidenceCode": "ECO:0000313", "source":
+    "EMBL", "id": "EPT29150.1"}], "value": "TIC20"}, "orfNames": [{"evidences": [{"evidenceCode":
+    "ECO:0000313", "source": "EMBL", "id": "EPT29150.1"}], "value": "TGME49_255370"}]}].
+    Accession identity and predicted location annotations do not by themselves prove
+    membership in the maintained structure.'
+  snapshot_sha256: 6f8ee8170f0800a4b6cc9e8c5cea4930f69f83c3d0d4392d8cfc6c3eee95ebd4
+- evidence_id: apicoplast-agent-O97275
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O97275.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; relevant
+    location/function comments, sequence references and cross-references
+  accessed_at: '2026-10-21T10:32:34.869990Z'
+  support: supports
+  summary: 'Native UniProtKB unreviewed (TrEMBL) O97275: Derlin; taxon 36329; gene
+    fields [{"orfNames": [{"evidences": [{"evidenceCode": "ECO:0000313", "source":
+    "EMBL", "id": "CAB38986.4"}], "value": "PF3D7_0314300"}]}]. Accession identity
+    and predicted location annotations do not by themselves prove membership in the
+    maintained structure.'
+  snapshot_sha256: aa2a0c336bb23dcf2519f28ca86594f604bde1109843da9c2009d44459e0d241
+- evidence_id: apicoplast-agent-B9PY98
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/B9PY98.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; relevant
+    location/function comments, sequence references and cross-references
+  accessed_at: '2026-10-21T10:32:34.491211Z'
+  support: supports
+  summary: 'Native UniProtKB unreviewed (TrEMBL) B9PY98: Derlin; taxon 5811; gene
+    fields []. Accession identity and predicted location annotations do not by themselves
+    prove membership in the maintained structure.'
+  snapshot_sha256: 5e769e2158976bdd00e8f8faedecee43ff930efff08515488ea2e999900edb70
+- evidence_id: apicoplast-agent-Q8I295
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q8I295.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; relevant
+    location/function comments, sequence references and cross-references
+  accessed_at: '2026-10-21T10:32:34.889170Z'
+  support: supports
+  summary: 'Native UniProtKB reviewed (Swiss-Prot) Q8I295: 4-hydroxy-3-methylbut-2-enyl
+    diphosphate reductase, apicoplast; taxon 36329; gene fields [{"geneName": {"evidences":
+    [{"evidenceCode": "ECO:0000303", "source": "PubMed", "id": "16289098"}], "value":
+    "LytB"}, "synonyms": [{"evidences": [{"evidenceCode": "ECO:0000303", "source":
+    "PubMed", "id": "16289098"}], "value": "IspH"}], "orfNames": [{"evidences": [{"evidenceCode":
+    "ECO:0000312", "source": "EMBL", "id": "CAD49005.1"}], "value": "PF3D7_0104400"}]}].
+    Accession identity and predicted location annotations do not by themselves prove
+    membership in the maintained structure.'
+  snapshot_sha256: fbf23236890cbb286f7187b2d6cf9ee3c0e99a51755db5d1e71b9ecbf63994e3
+- evidence_id: apicoplast-agent-Q965D5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q965D5.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; relevant
+    location/function comments, sequence references and cross-references
+  accessed_at: '2026-10-21T10:32:35.553162Z'
+  support: supports
+  summary: 'Native UniProtKB unreviewed (TrEMBL) Q965D5: Enoyl-acyl-carrier protein
+    reductase; taxon 5833; gene fields [{"geneName": {"evidences": [{"evidenceCode":
+    "ECO:0000313", "source": "EMBL", "id": "AAK83687.1"}], "value": "fabI"}}]. Accession
+    identity and predicted location annotations do not by themselves prove membership
+    in the maintained structure.'
+  snapshot_sha256: 494803a71b64af3106da8cfaff33db472624f0f0dbc957523701ab202acb0dbb
+- evidence_id: apicoplast-agent-Q965D7
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q965D7.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; relevant
+    location/function comments, sequence references and cross-references
+  accessed_at: '2026-10-21T10:32:36.125151Z'
+  support: supports
+  summary: 'Native UniProtKB unreviewed (TrEMBL) Q965D7: 3-hydroxyacyl-[acyl-carrier-protein]
+    dehydratase; taxon 5833; gene fields [{"geneName": {"evidences": [{"evidenceCode":
+    "ECO:0000313", "source": "EMBL", "id": "AAK83685.1"}], "value": "fabZ"}}]. Accession
+    identity and predicted location annotations do not by themselves prove membership
+    in the maintained structure.'
+  snapshot_sha256: 91433d2a32ddbebd30a84cf2180205a68ab753b6968930a88c17bb7fae59b969
+- evidence_id: apicoplast-agent-C9WWW6
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/C9WWW6.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism; relevant
+    location/function comments, sequence references and cross-references
+  accessed_at: '2026-10-21T10:37:34.992439Z'
+  support: supports
+  summary: 'Native UniProtKB unreviewed (TrEMBL) C9WWW6: Apicoplast Der1; taxon 5811;
+    gene fields []. Accession identity and predicted location annotations do not by
+    themselves prove membership in the maintained structure.'
+  snapshot_sha256: 322c5fb4f1e71820ed84f3e03f57edeb35c06f1e671641702a129d00c727cf0e
+- evidence_id: apicoplast-agent-query-TIC20-508771
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3ATIC20%29%20AND%20%28organism_id%3A508771%29
+  locator: Complete returned results for the exact query URL
+  accessed_at: '2026-10-21T10:34:52.305111Z'
+  support: context_only
+  summary: The exact ME49 TIC20 query returns S8GBF3.
+  snapshot_sha256: 35a6c87eab0bae30ee1cc55f0bc32fbc90a9b21c7f07584dd76db1af04e4dcd7
+  search_scope: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3ATIC20%29%20AND%20%28organism_id%3A508771%29;
+    only this exact gene/taxon/filter scope, not exhaustive synonym or family absence.
+- evidence_id: apicoplast-agent-query-ispH-36329
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AispH%29%20AND%20%28organism_id%3A36329%29
+  locator: Complete returned results for the exact query URL
+  accessed_at: '2026-10-21T10:34:52.376617Z'
+  support: context_only
+  summary: The exact ispH/3D7 query returns the reviewed LytB/IspH example Q8I295.
+  snapshot_sha256: 3d9c15d68cca856c85c28a84a06123eb3e972e24f1acafc2c30cd5f9415b7c87
+  search_scope: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AispH%29%20AND%20%28organism_id%3A36329%29;
+    only this exact gene/taxon/filter scope, not exhaustive synonym or family absence.
+- evidence_id: apicoplast-agent-query-fabI
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AfabI%29%20AND%20%28organism_id%3A5833%29
+  locator: Complete returned results for the exact query URL
+  accessed_at: '2026-10-21T10:33:14.853566Z'
+  support: context_only
+  summary: The exact species fabI query returns multiple unreviewed entries; Q965D5
+    is a representative rather than a unique species-wide accession.
+  snapshot_sha256: 353a3cba86413102955d8e53c0ed065f063ea0517140a7dbac46e55dbff8385c
+  search_scope: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AfabI%29%20AND%20%28organism_id%3A5833%29;
+    only this exact gene/taxon/filter scope, not exhaustive synonym or family absence.
+- evidence_id: apicoplast-agent-query-fabZ
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AfabZ%29%20AND%20%28organism_id%3A5833%29
+  locator: Complete returned results for the exact query URL
+  accessed_at: '2026-10-21T10:33:14.994217Z'
+  support: context_only
+  summary: The exact species fabZ query returns Q965D7.
+  snapshot_sha256: d7e80ecb29e8e76aacf335f89608fa51328daf2e700f214f1f7bfbb653b67e6f
+  search_scope: https://rest.uniprot.org/uniprotkb/search?format=json&size=500&query=%28gene_exact%3AfabZ%29%20AND%20%28organism_id%3A5833%29;
+    only this exact gene/taxon/filter scope, not exhaustive synonym or family absence.
+- evidence_id: apicoplast-agent-matches-S8GBF3
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/S8GBF3/?page_size=200
+  locator: All returned results; next is null
+  accessed_at: '2026-10-21T10:32:37.165967Z'
+  support: context_only
+  summary: The full integrated InterPro match set was inspected for this exact example.
+    A matching constituent family is not an exact grounding for the heterogeneous
+    SELMA or metabolic-enzyme cohort.
+  snapshot_sha256: 43cd8b9d7fde94abf9038d7fc9785aae46b79d52245b9672587e64cac9020ceb
+- evidence_id: apicoplast-agent-matches-O97275
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O97275/?page_size=200
+  locator: All returned results; next is null
+  accessed_at: '2026-10-21T10:32:34.870507Z'
+  support: context_only
+  summary: The full integrated InterPro match set was inspected for this exact example.
+    A matching constituent family is not an exact grounding for the heterogeneous
+    SELMA or metabolic-enzyme cohort.
+  snapshot_sha256: 751500a2527a56fd64a534a58d8cb850d8fbe6010609087cf75b459243cc1eaa
+- evidence_id: apicoplast-agent-matches-B9PY98
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/B9PY98/?page_size=200
+  locator: All returned results; next is null
+  accessed_at: '2026-10-21T10:32:34.677093Z'
+  support: context_only
+  summary: The full integrated InterPro match set was inspected for this exact example.
+    A matching constituent family is not an exact grounding for the heterogeneous
+    SELMA or metabolic-enzyme cohort.
+  snapshot_sha256: e3f9e802aee474bbb0bddc4c7e9fb7007c014b7ee37fe22382c8deca667ae831
+- evidence_id: apicoplast-agent-matches-Q8I295
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q8I295/?page_size=200
+  locator: All returned results; next is null
+  accessed_at: '2026-10-21T10:32:35.183770Z'
+  support: context_only
+  summary: The full integrated InterPro match set was inspected for this exact example.
+    A matching constituent family is not an exact grounding for the heterogeneous
+    SELMA or metabolic-enzyme cohort.
+  snapshot_sha256: e291cd13102c9c8a6efe74340b5a5a4ff6d88038a2a13042cf605d24c3f6229a
+- evidence_id: apicoplast-agent-matches-Q965D5
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q965D5/?page_size=200
+  locator: All returned results; next is null
+  accessed_at: '2026-10-21T10:32:35.604106Z'
+  support: context_only
+  summary: The full integrated InterPro match set was inspected for this exact example.
+    A matching constituent family is not an exact grounding for the heterogeneous
+    SELMA or metabolic-enzyme cohort.
+  snapshot_sha256: 61a6fba1a7467efad5724c0ebde15af47f57f8ac012280633fa81081a993e1b2
+- evidence_id: apicoplast-agent-matches-Q965D7
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q965D7/?page_size=200
+  locator: All returned results; next is null
+  accessed_at: '2026-10-21T10:32:36.303813Z'
+  support: context_only
+  summary: The full integrated InterPro match set was inspected for this exact example.
+    A matching constituent family is not an exact grounding for the heterogeneous
+    SELMA or metabolic-enzyme cohort.
+  snapshot_sha256: 590519ba218ef2dbedff31268934487d95ed336e4305b1a3dfdf3e893f4f2fbf
+- evidence_id: apicoplast-agent-IPR005691
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR005691/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:11.972655Z'
+  support: supports
+  summary: IPR005691 is the Tic20 family, not merely a transmembrane domain or an
+    apicoplast-localization cohort. It matches the maintained S8GBF3 example and can
+    ground the Tic20 protein class while the record retains organism, localization
+    and functional evidence separately.
+  snapshot_sha256: e7db56a3422efafa4695821230f0f6ac9caf851f4d67509c0528c119c5a67070
+- evidence_id: apicoplast-agent-IPR007599
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR007599/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:09.985721Z'
+  support: supports
+  summary: Derlin is an individual family spanning distinct ER and plastid paralogs;
+    it is not the heterogeneous SELMA system.
+  snapshot_sha256: e82a628179ff9cf75d826bc42804aec4fee648285a5951e3028dcf560819a944
+- evidence_id: apicoplast-agent-IPR035952
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR035952/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:10.068774Z'
+  support: supports
+  summary: Rhomboid-like homologous superfamily is broader than Derlin and cannot
+    distinguish the ER/apicoplast paralogs.
+  snapshot_sha256: 54c39c940a1c98977176381073ed83761db133518e80cf6c935b4c1f8741f1b3
+- evidence_id: apicoplast-agent-IPR003451
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003451/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:09.984956Z'
+  support: supports
+  summary: IspH/LytB is one metabolic-enzyme family and cannot ground the heterogeneous
+    imported-enzyme cohort.
+  snapshot_sha256: ff811b6765a6b19264d8001bb52b9c1c5c6d6ab2ab089796485b46017b565e19
+- evidence_id: apicoplast-agent-IPR002347
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002347/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:10.293981Z'
+  support: supports
+  summary: Short-chain dehydrogenase/reductase is broad relative to the FabI example
+    and unrelated to the whole enzyme cohort.
+  snapshot_sha256: 8719e4dee0cd1302acc88e65a346a6fff37771f9670d32165f613d46124ca595
+- evidence_id: apicoplast-agent-IPR014358
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR014358/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:10.804357Z'
+  support: supports
+  summary: Enoyl-ACP reductase NADH family bounds the FabI example, not every imported
+    metabolic enzyme.
+  snapshot_sha256: fc8b4e91f6ed775c3f9d3e41b58ebd66fa58a65388ce3718dc4753c5b1ac4650
+- evidence_id: apicoplast-agent-IPR036291
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR036291/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:11.199366Z'
+  support: supports
+  summary: Rossmann-like NAD(P)-binding homologous superfamily is not a whole-cohort
+    family.
+  snapshot_sha256: 76bffc1e5b5163e613a57a0d1473fa8ead89a3661421e3ec7a400d3bed30cad2
+- evidence_id: apicoplast-agent-IPR010084
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR010084/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:11.200750Z'
+  support: supports
+  summary: FabZ is an individual family, not the entire imported metabolic enzyme
+    group.
+  snapshot_sha256: b8649388fa37837bbe6468463e77b168774ba96bca5ef43a087a0cacb99ceb45
+- evidence_id: apicoplast-agent-IPR013114
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR013114/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:11.216457Z'
+  support: supports
+  summary: FabA/FabZ grouping is broader than FabZ alone and does not identify the
+    heterogeneous apicoplast cohort.
+  snapshot_sha256: 48a25564fa21cc57aef1101d929162fca24f24ad89caaa17ba3caf0c7010fc9b
+- evidence_id: apicoplast-agent-IPR029069
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR029069/
+  locator: Native InterPro metadata name/type, description and membership scope; predictive
+    description provenance retained where marked
+  accessed_at: '2026-10-21T10:33:11.519827Z'
+  support: supports
+  summary: HotDog homologous superfamily is structural-domain ancestry, not an exact
+    enzyme-cohort identity.
+  snapshot_sha256: 2da134cfd5468fda3c7b149611bbc2fee9b8a62a0bd6a20098b5188971a5c79b
+- evidence_id: apicoplast-agent-doi-10.1073_pnas.95.21.12352
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.95.21.12352
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:32:37.508995Z'
+  support: supports
+  summary: 'Native metadata identifies Nuclear-encoded proteins target to the plastid
+    in Toxoplasma gondii and Plasmodium falciparum. Authors: Waller RF, Keeling PJ,
+    Donald RG, Striepen B, Handman E, Lang-Unnasch N, Cowman AF, Besra GS, Roos DS,
+    McFadden GI.; PMID 9770490; DOI 10.1073/pnas.95.21.12352. Bibliographic identity
+    and available abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: 2efbaff681709b6af798bf03b78a1904fa08b154006d30f968a37014582037cc
+- evidence_id: apicoplast-agent-doi-10.1098_rstb.2009.0273
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1098/rstb.2009.0273
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:32:37.988692Z'
+  support: supports
+  summary: 'Native metadata identifies The evolution, metabolism and functions of
+    the apicoplast. Authors: Lim L, McFadden GI.; PMID 20124342; DOI 10.1098/rstb.2009.0273.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: 991b7c396b7075762d8d54bca1983efdaa0231339bc942f69de4e6b984fcd715
+- evidence_id: apicoplast-agent-doi-10.1073_pnas.0803862105
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1073/pnas.0803862105
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:32:37.471759Z'
+  support: supports
+  summary: 'Native metadata identifies Toxoplasma gondii Tic20 is essential for apicoplast
+    protein import. Authors: van Dooren GG, Tomova C, Agrawal S, Humbel BM, Striepen
+    B.; PMID 18757752; DOI 10.1073/pnas.0803862105. Bibliographic identity and available
+    abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: 73796de2a5b5c1e415e9121ea437fcc1eb547f7aeab1c48a824ab3a730969217
+- evidence_id: apicoplast-agent-doi-10.1371_journal.ppat.1003426
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1371/journal.ppat.1003426
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:32:38.684138Z'
+  support: supports
+  summary: 'Native metadata identifies An apicoplast localized ubiquitylation system
+    is required for the import of nuclear-encoded plastid proteins. Authors: Agrawal
+    S, Chung DW, Ponts N, van Dooren GG, Prudhomme J, Brooks CF, Rodrigues EM, Tan
+    JC, Ferdig MT, Striepen B, Le Roch KG.; PMID 23785288; DOI 10.1371/journal.ppat.1003426.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: df58652c813eac97ab9c4684a66e6b0b65f01defcc6219778b7e3f8372ae4ec3
+- evidence_id: apicoplast-agent-doi-10.1186_1475-2875-12-25
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1186/1475-2875-12-25
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:32:38.109607Z'
+  support: supports
+  summary: 'Native metadata identifies Cryo-electron tomography reveals four-membrane
+    architecture of the Plasmodium apicoplast. Authors: Lemgruber L, Kudryashev M,
+    Dekiwadia C, Riglar DT, Baum J, Stahlberg H, Ralph SA, Frischknecht F.; PMID 23331966;
+    DOI 10.1186/1475-2875-12-25. Bibliographic identity and available abstract only;
+    not a substitute for inspected article body.'
+  snapshot_sha256: d52a8201ddfa74c2eb86cb4d75449d14d05af21d4a291d8525eef5158b3b3497
+- evidence_id: apicoplast-agent-doi-10.1146_annurev-micro-092412-155741
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1146/annurev-micro-092412-155741
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:32:38.078245Z'
+  support: supports
+  summary: 'Native metadata identifies The algal past and parasite present of the
+    apicoplast. Authors: van Dooren GG, Striepen B.; PMID 23808340; DOI 10.1146/annurev-micro-092412-155741.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: f51e74215bd68a149825c99cec576f0dbdc6bccb1fb5a07314e3f28a804d816a
+- evidence_id: apicoplast-agent-doi-10.1371_journal.pbio.1001138
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1371/journal.pbio.1001138
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:32:38.184092Z'
+  support: supports
+  summary: 'Native metadata identifies Chemical rescue of malaria parasites lacking
+    an apicoplast defines organelle function in blood-stage Plasmodium falciparum.
+    Authors: Yeh E, DeRisi JL.; PMID 21912516; DOI 10.1371/journal.pbio.1001138. Bibliographic
+    identity and available abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: e3aa250872a7ea1b3bad026415735c45f886e76b79c7b0648b5e3f03ffe259a3
+- evidence_id: apicoplast-agent-doi-10.1016_j.ijpara.2016.08.005
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1016/j.ijpara.2016.08.005
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:32:37.324545Z'
+  support: supports
+  summary: 'Native metadata identifies The apicoplast: now you see it, now you don''t.
+    Authors: McFadden GI, Yeh E.; PMID 27773518; DOI 10.1016/j.ijpara.2016.08.005.
+    Bibliographic identity and available abstract only; not a substitute for inspected
+    article body.'
+  snapshot_sha256: 37821f58ccd1e4ae6687378fd007c61cd391f95cb39c674a3790b501af3cff1b
+- evidence_id: apicoplast-agent-doi-10.1074_jbc.M109.044024
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1074/jbc.M109.044024
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:34:51.425908Z'
+  support: supports
+  summary: 'Native metadata identifies Genetic evidence that an endosymbiont-derived
+    endoplasmic reticulum-associated protein degradation (ERAD) system functions in
+    import of apicoplast proteins. Authors: Agrawal S, van Dooren GG, Beatty WL, Striepen
+    B.; PMID 19808683; DOI 10.1074/jbc.m109.044024. Bibliographic identity and available
+    abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: 181614af6aa84d2a283db06a13dd4bd9ebc0394c31c03c920de6961c012c5bdd
+- evidence_id: apicoplast-agent-doi-10.1128_EC.00061-09
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI:10.1128/EC.00061-09
+  locator: Exact bibliographic fields, article type and available abstract
+  accessed_at: '2026-10-21T10:42:30.022603Z'
+  support: supports
+  summary: 'Native metadata identifies Characterization of two putative protein translocation
+    components in the apicoplast of Plasmodium falciparum. Authors: Kalanon M, Tonkin
+    CJ, McFadden GI.; PMID 19502580; DOI 10.1128/ec.00061-09. Bibliographic identity
+    and available abstract only; not a substitute for inspected article body.'
+  snapshot_sha256: 78f37f0a66a2ea2d6d8d11926080f05f8769bf75d92e33899f2a30710e5d9e7e
+- evidence_id: apicoplast-agent-pmc-html-PMC22835
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC22835/
+  locator: Complete Abstract, Introduction, Materials and Methods, Results and Discussion;
+    Figures1-6 captions. No independent figure-pixel or raw-data reanalysis.
+  accessed_at: '2026-10-21T10:34:51.424566Z'
+  support: supports
+  summary: Waller1998 directly localizes S9/ACP and an ACP-leader GFP reporter in
+    Toxoplasma; it identifies nuclear-encoded Plasmodium candidates and targeting
+    sequences. The paper supports nuclear encoding and plastid targeting without making
+    every listed Plasmodium candidate an independently imaged protein. Early universal
+    pathway-essentiality suggestions are not transferred into the record.
+  snapshot_sha256: de65f2d3d2788b83befe8939c6782cdfc719f5cd0deaf05b0d7a7da2ebc0fe54
+- evidence_id: apicoplast-agent-pmc-html-PMC2533231
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2533231/
+  locator: Complete Abstract, Introduction, Results/Discussion sec1-sec6, Methods
+    sec8-sec10 and Figures1-5 captions; especially sec5 final paragraph. Detailed
+    supplementary methods and image pixels were not independently audited.
+  accessed_at: '2026-10-21T10:34:51.425360Z'
+  support: supports
+  summary: vanDooren2008 localizes TgTic20 to the innermost membrane and shows import
+    impairment preceding organelle loss and growth arrest. Results/Discussion sec5
+    explicitly considers an accessory/regulatory role and argues against direct channel
+    activity from the persistence of substantial import when TgTic20 is below detection.
+    This establishes import requirement, not a resolved Tic20 pore mechanism.
+  snapshot_sha256: 4b9cf5a603022753c4e5c55ef113777c6283bb4062a6e4aeedc3b5a8898de2c0
+- evidence_id: apicoplast-agent-jats-PMC3681736
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3681736.1/PMC3681736.1.xml
+  locator: Complete Introduction, Results s2a-s2d, Discussion s3 and main Methods
+    s4; Figures1-5 captions. Supplement TextS1 and raw assays were not independently
+    audited.
+  accessed_at: '2026-10-21T10:33:24.006080Z'
+  support: supports
+  summary: Agrawal2013 localizes apicoplast ubiquitylation machinery and demonstrates
+    enzyme activities and an E2-dependent import phenotype. Discussion explicitly
+    leaves the endogenous ubiquitin versus ubiquitin-like modifier unresolved; activity
+    with recombinant human ubiquitin is not proof of endogenous ubiquitin use.
+  snapshot_sha256: 8e546449838569e9d2d6a7d89bffc348f344d421df0c04c833ca170916a26897
+- evidence_id: apicoplast-agent-jats-PMC3662607
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3662607.1/PMC3662607.1.xml
+  locator: Complete Background, Methods, Results, Discussion and Conclusion; Figures1-5
+    captions. Figure pixels, tomographic volumes and movies were not independently
+    reanalysed.
+  accessed_at: '2026-10-21T10:33:24.592019Z'
+  support: supports
+  summary: Lemgruber2013 cryo-electron tomography resolves four Plasmodium apicoplast
+    membranes; close apposition explains why single sections can appear to show fewer.
+    Unidentified envelope densities are not assigned to particular translocons by
+    this study.
+  snapshot_sha256: 6a8d19405baff6d46f39c9c039da72718883c8b15c1850da7249c229af07f642
+- evidence_id: apicoplast-agent-jats-PMC3166167
+  kind: primary_source
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC3166167.1/PMC3166167.1.xml
+  locator: All Results s2a-s2e and Discussion s3 including figure captions; Methods
+    s4a cultures and s4b drug assays. Introduction, remaining Methods and raw supplements
+    not comprehensively audited.
+  accessed_at: '2026-10-21T10:33:24.395517Z'
+  support: supports
+  summary: Yeh/DeRisi2011 tests cultured blood-stage Plasmodium and rescues loss of
+    apicoplast function with IPP. The inference is explicitly blood-stage; it does
+    not establish the same dispensability or metabolic requirements across parasite
+    life stages or Toxoplasma.
+  snapshot_sha256: a501217e5e07c4792e454d88376994aac9edf25247c7c5f38c06086bcb618886
+- evidence_id: apicoplast-agent-jats-PMC2817234
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC2817234.1/PMC2817234.1.xml
+  locator: Section s2c and s3/s3a-s3d, corresponding preserved paragraphs14-35; other
+    sections not comprehensively audited.
+  accessed_at: '2026-10-21T10:33:24.579097Z'
+  support: supports
+  summary: Lim/McFadden2010 is review-tier synthesis supporting the four-membrane
+    envelope, bipartite targeting and multiple imported metabolic pathways. It retains
+    life-cycle differences and the distribution of heme-pathway reactions across compartments;
+    no universal blood-stage FASII requirement is inferred.
+  snapshot_sha256: 600962f47c1fa8ce333826e38b6df45e8fd8e4c252cabbb68c723d849fbe0352
+- evidence_id: apicoplast-agent-jats-PMC5406208
+  kind: authority
+  reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC5406208.1/PMC5406208.1.xml
+  locator: S4-S6 and S8-S9, preserved paragraphs8-17 and24-31; other sections not
+    comprehensively audited.
+  accessed_at: '2026-10-21T10:33:24.005951Z'
+  support: supports
+  summary: McFadden/Yeh2017 is review-tier synthesis supporting variable apicoplast
+    retention, including loss in Cryptosporidium, four membranes, protein import and
+    stage-specific metabolic dependencies. Noncanonical targeting exceptions do not
+    invalidate the record’s mostly bipartite targeting statement.
+  snapshot_sha256: 7046ea308097ea6a445617026580730ee21555abfc70da5e9c3df7adbc6653b2
+- evidence_id: apicoplast-agent-ena-FJ976521
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/browser/api/embl/FJ976521?download=false
+  locator: DE product, source taxon5811, CDS product/protein_id/db_xref, original
+    publication reference
+  accessed_at: '2026-10-21T10:35:29.083140Z'
+  support: supports
+  summary: The native deposited mRNA explicitly identifies Der1ER1, protein ACU32856.1,
+    and cross-references UniProtKB B9PY98, with the original Agrawal2009 DOI/PMID.
+    This is the ER paralog, not the separately deposited apicoplast Der1.
+  snapshot_sha256: c828fa0bcfedada7e3f1681cf850c2171324afdb4832e582f84733fd96c20831
+- evidence_id: apicoplast-agent-ena-FJ976520
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/browser/api/embl/FJ976520?download=false
+  locator: DE nuclear gene for apicoplast product; CDS product/note/protein_id/db_xref;
+    original publication reference
+  accessed_at: '2026-10-21T10:36:54.435963Z'
+  support: supports
+  summary: The independent native mRNA identifies apicoplast Der1, note Der1Ap, protein
+    ACU32855.1 and UniProtKB C9WWW6, taxon5811. This is the candidate replacement
+    accession; no absent native gene-name field is invented.
+  snapshot_sha256: 47671e2466a074e673610363f3c8e7d8429c5063b2dbba1cf947b0212e32bfd2
+- evidence_id: apicoplast-agent-der1-primary-browser
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2785210/
+  locator: Agrawal2009 Methods accession paragraph under Cloning and expression; the
+    captured multi-result artifact also contains other primary excerpts, which are
+    not used for this identity claim.
+  accessed_at: '2026-10-21T10:36:18.094Z'
+  support: supports
+  summary: The indexed Agrawal2009 Methods excerpt explicitly distinguishes FJ976521
+    Der1-1ER from FJ976520 Der1Ap. It corroborates the native sequence bridge; the
+    captured primary Results/Discussion excerpts are discontinuous and are not represented
+    as a complete body read.
+  snapshot_sha256: c364174d7acae3366419a6640e3105b232f1da71707efe7978cc4bc7ff01b5b4
+- evidence_id: apicoplast-agent-ena-CAB38986
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/browser/api/embl/CAB38986.4?download=false
+  locator: DE, source/CDS, protein_id, locus_tag, cross-references and translation
+  accessed_at: '2026-10-21T10:41:03.660474Z'
+  support: supports
+  summary: Native ENA CAB38986.4 links the Plasmodium DER1-like sequence to PF3D7_0314300
+    and O97275, taxon36329. The sequence contains the antigenic peptide used for PfsDer1-2
+    in Kalanon2009; old model names are not silently declared identical identifiers.
+  snapshot_sha256: a30a4b80383caa9e201851e7e8e9ed3edc23a763419f786e1df7926037f532ef
+- evidence_id: apicoplast-agent-gene-814456
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=gene&id=814456&retmode=json
+  locator: Complete native gene name, otheraliases and organism fields
+  accessed_at: '2026-10-21T10:36:54.436100Z'
+  support: supports
+  summary: Native NCBI Gene814456 gives DER1-2 and PF3D7_0314300 in Plasmodium falciparum3D7.
+    It supports the gene alias independently of generic automated ER location annotations.
+  snapshot_sha256: 95978f67da120777d7cd6b2f19bab33265c5ed897b6a435c3981275833603ed7
+- evidence_id: apicoplast-agent-kalanon2009-pdf
+  kind: primary_source
+  reference: https://fad.webmate.me/McFadden_Lab/Mcfadden_Papers/2009/Kalanon_Euk_Cell_2009.pdf
+  locator: 'Printed pp1150-1152: Results P.falciparum contains two apicoplast Der1
+    homologues; full-length PfsDer1-1 localization opening; Figures3-4 captions. Only
+    these body/caption scopes and bibliographic identity were read, not the complete
+    article or supplementary sequence alignment.'
+  accessed_at: '2026-10-21T10:41:47.885936Z'
+  support: supports
+  summary: Kalanon2009 distinguishes predicted ER and apicoplast Der1 paralogs, describes
+    the manually shortened PfsDer1-2 model and its antigenic-peptide experiment, and
+    experimentally localizes full-length PfsDer1-1. The latter direct localization
+    is not transferred to a different paralog. The source context supports retaining
+    the independently resolved O97275 example while keeping submembrane placement
+    inferential.
+  snapshot_sha256: b38fbf7d4b2afc6cc5b36f4797f94c46a25f859d093d64b031f656485bc12add
+- evidence_id: boundary-0
+  kind: record_content
+  reference: data/structures/membrane_organelle/apicoplast_membrane.yaml
+  locator: Identifier, label, definition/source, synonyms, hierarchy/parthood and
+    all discussions; frozen additional inspection input
+  accessed_at: '2026-10-21T10:46:23Z'
+  support: context_only
+  summary: These maintained fields were read to verify the stated identity boundary.
+    This is contextual corpus evidence, not an independent full scientific review
+    of the neighboring record.
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/apicoplast.yaml
+    --verify
+  locator: Captured focused native verify log
+  accessed_at: '2026-10-21T10:32:37.440606Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/apicoplast.yaml
+    --causal-graphs
+  locator: Captured focused native causal-graphs log
+  accessed_at: '2026-10-21T10:32:37.958458Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/apicoplast.yaml  (GO:0020011)\n  bipartite_leader_apicoplast_import\t\
+    precursor_proteins\tPARTIAL_EXAMPLES\t->nuclear_encoded_metabolic_enzymes (have:\
+    \ UniProtKB:Q8I295, UniProtKB:Q965D5, UniProtKB:Q965D7; missing: ispG)\n  bipartite_leader_apicoplast_import\t\
+    selma_import_system\tCOVERED\t->selma_erad_import_machinery (UniProtKB:O97275,\
+    \ UniProtKB:B9PY98)\n  bipartite_leader_apicoplast_import\ttic20_translocon\t\
+    COVERED\t->tic20_inner_membrane_translocon (UniProtKB:S8GBF3)\n\ncausal_graphs\
+    \ GENE_OR_PROTEIN node summary:\n     2  COVERED                   component_ref\
+    \ target holds protein_examples covering all declared symbols\n     1  PARTIAL_EXAMPLES\
+    \          component_ref target holds protein_examples but has unrepresented symbols\n\
+    \     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols\
+    \ but holds no protein_examples\n     0  NO_GENE_SYMBOLS           component_ref\
+    \ target declares no gene_symbols and holds no protein_examples\n     0  DANGLING_COMPONENT_REF\
+    \    component_ref names a component_id that does not exist on the record\n  \
+    \   0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB\
+    \ grounding or xref\n     0  UNANCHORED_NO_UNIPROT     no component_ref and no\
+    \ UniProtKB grounding or xref on the node\n     3  total GENE_OR_PROTEIN causal\
+    \ nodes"
+  snapshot_sha256: 34267ce13c79ba29408d6972e53e651c732062f7226d0de0993d499fdf00e7ad
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/apicoplast.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:27:21Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/apicoplast.yaml'
+  snapshot_sha256: 77e8adc695b56c9d630d996940ccfb697d813c57507259c5dc1a6bcd9731f9af
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/apicoplast.yaml
+    --out /private/tmp/cellstructure-batch20-20261021-guyhe4k8/apicoplast-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T10:27:23Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/apicoplast.yaml\
+    \ --out /private/tmp/cellstructure-batch20-20261021-guyhe4k8/apicoplast-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch20-20261021-guyhe4k8/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch20-20261021-guyhe4k8/apicoplast-strict.tsv"
+  snapshot_sha256: 99d1aee2d8f75f068766fc53ecc4e26f23ff711457a157c3e19406845345fca8
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/apicoplast.yaml; exact collect() scope;
+    hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T10:46:23Z'
+  support: supports
+  summary: '22 of22 collected target identifiers returned OK in this fresh base resolver
+    run. Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Plastid identity, envelope and retention
+  outcome: supported
+  target_ids:
+  - GO:0020011
+  summary: GO identity and plastid hierarchy are supported. Four membranes are directly
+    resolved in the cited Plasmodium study, and variable retention/loss is supported
+    at review tier. The explicit membrane neighbor remains a part of the organelle
+    rather than an equivalent whole structure.
+  evidence_ids:
+  - apicoplast-agent-go
+  - apicoplast-agent-jats-PMC3662607
+  - apicoplast-agent-jats-PMC5406208
+  - boundary-0
+  - apicoplast-agent-tax-5794
+  - apicoplast-agent-tax-5811
+  - apicoplast-agent-tax-5833
+  - apicoplast-agent-tax-508771
+  - apicoplast-agent-tax-36329
+  - record
+- assessment_id: composition
+  area: grounding
+  topic: Heterogeneous cohorts and available Tic20 family
+  outcome: concern
+  target_ids:
+  - GO:0020011
+  summary: 'SELMA and imported metabolic enzymes span unrelated proteins and remain
+    appropriately label-only; narrower Derlin, IspH, FabI and FabZ entries cannot
+    ground those entire cohorts. Tic20 is different: an exact class-level Tic20 family
+    is available and matches the maintained example, so lack of a reviewed species
+    accession is not a reason to withhold its family grounding.'
+  evidence_ids:
+  - apicoplast-agent-IPR005691
+  - apicoplast-agent-matches-S8GBF3
+  - apicoplast-agent-matches-O97275
+  - apicoplast-agent-matches-B9PY98
+  - apicoplast-agent-matches-Q8I295
+  - apicoplast-agent-matches-Q965D5
+  - apicoplast-agent-matches-Q965D7
+  - apicoplast-agent-IPR007599
+  - apicoplast-agent-IPR035952
+  - apicoplast-agent-IPR003451
+  - apicoplast-agent-IPR002347
+  - apicoplast-agent-IPR014358
+  - apicoplast-agent-IPR036291
+  - apicoplast-agent-IPR010084
+  - apicoplast-agent-IPR013114
+  - apicoplast-agent-IPR029069
+  - apicoplast-agent-pmc-html-PMC2533231
+  - apicoplast-agent-jats-PMC3681736
+  - apicoplast-agent-jats-PMC2817234
+  - apicoplast-agent-S8GBF3
+  - apicoplast-agent-O97275
+  - apicoplast-agent-B9PY98
+  - apicoplast-agent-Q8I295
+  - apicoplast-agent-Q965D5
+  - apicoplast-agent-Q965D7
+  - apicoplast-agent-C9WWW6
+  - record
+  - policy
+- assessment_id: protein-identity
+  area: identity
+  topic: ER paralog substituted for an apicoplast import example
+  outcome: concern
+  target_ids:
+  - GO:0020011
+  summary: The native B9PY98-to-FJ976521 bridge proves that the Toxoplasma example
+    is Der1ER1. The separately deposited apicoplast Der1 is FJ976520/C9WWW6. This
+    is a concrete constituent-identity error despite the record correctly saying that
+    UniProt identity alone is not localization evidence. Other examples retain their
+    independently verified native identity; generic automated location annotations
+    are not treated as experimental counterevidence.
+  evidence_ids:
+  - apicoplast-agent-S8GBF3
+  - apicoplast-agent-O97275
+  - apicoplast-agent-B9PY98
+  - apicoplast-agent-Q8I295
+  - apicoplast-agent-Q965D5
+  - apicoplast-agent-Q965D7
+  - apicoplast-agent-C9WWW6
+  - apicoplast-agent-ena-FJ976521
+  - apicoplast-agent-ena-FJ976520
+  - apicoplast-agent-der1-primary-browser
+  - apicoplast-agent-ena-CAB38986
+  - apicoplast-agent-gene-814456
+  - apicoplast-agent-kalanon2009-pdf
+  - apicoplast-agent-query-TIC20-508771
+  - apicoplast-agent-query-ispH-36329
+  - apicoplast-agent-query-fabI
+  - apicoplast-agent-query-fabZ
+  - record
+- assessment_id: necessity
+  area: evidence
+  topic: Assembly necessity distinct from import and parasite fitness
+  outcome: unknown
+  target_ids:
+  - GO:0020011
+  summary: The membrane row denotes the collective lipid envelope. Import defects,
+    organelle-maintenance phenotypes and parasite growth requirements do not identify
+    every necessary component for initial organelle formation. The protein-cohort
+    UNKNOWN values preserve that unresolved assembly question; no individual lipid-species
+    requirement is inferred.
+  evidence_ids:
+  - apicoplast-agent-jats-PMC3662607
+  - apicoplast-agent-pmc-html-PMC2533231
+  - apicoplast-agent-jats-PMC3681736
+  - apicoplast-agent-jats-PMC3166167
+  - record
+  - policy
+- assessment_id: scope
+  area: scope
+  topic: Species, strains and stage-specific functions
+  outcome: supported
+  target_ids:
+  - GO:0020011
+  summary: Each native taxonomy row attests its own species/strain/isolate identity.
+    The Plasmodium IPP function is explicitly blood-stage, the Tic20 experiment is
+    Toxoplasma, and ME49/3D7 accessions are reference identities rather than an assertion
+    that every cited experiment used those backgrounds. Review-tier variable occurrence
+    does not assert presence in every apicomplexan.
+  evidence_ids:
+  - apicoplast-agent-tax-5794
+  - apicoplast-agent-tax-5811
+  - apicoplast-agent-tax-5833
+  - apicoplast-agent-tax-508771
+  - apicoplast-agent-tax-36329
+  - apicoplast-agent-doi-10.1073_pnas.95.21.12352
+  - apicoplast-agent-doi-10.1098_rstb.2009.0273
+  - apicoplast-agent-doi-10.1073_pnas.0803862105
+  - apicoplast-agent-doi-10.1371_journal.ppat.1003426
+  - apicoplast-agent-doi-10.1186_1475-2875-12-25
+  - apicoplast-agent-doi-10.1146_annurev-micro-092412-155741
+  - apicoplast-agent-doi-10.1371_journal.pbio.1001138
+  - apicoplast-agent-doi-10.1016_j.ijpara.2016.08.005
+  - apicoplast-agent-doi-10.1074_jbc.M109.044024
+  - apicoplast-agent-doi-10.1128_EC.00061-09
+  - apicoplast-agent-jats-PMC3166167
+  - apicoplast-agent-pmc-html-PMC2533231
+  - apicoplast-agent-jats-PMC5406208
+  - record
+- assessment_id: functions
+  area: evidence
+  topic: Supported import and blood-stage IPP production
+  outcome: supported
+  target_ids:
+  - GO:0020011
+  summary: Nuclear-encoded protein targeting, import dependence and blood-stage IPP
+    synthesis are supported. The Waller experiments distinguish direct Toxoplasma
+    imaging from Plasmodium sequence candidates; later reviewed context supports the
+    broader import narrative. No universal pathway necessity is inferred from the
+    enzyme inventory.
+  evidence_ids:
+  - apicoplast-agent-pmc-html-PMC22835
+  - apicoplast-agent-pmc-html-PMC2533231
+  - apicoplast-agent-jats-PMC3166167
+  - apicoplast-agent-jats-PMC2817234
+  - apicoplast-agent-jats-PMC5406208
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Mechanistic graph with two over-specific claims
+  outcome: concern
+  target_ids:
+  - GO:0020011
+  summary: Targeting and import-perturbation steps justify a mechanistic function
+    graph, but the direct Tic20 translocates predicate and translocon wording need
+    qualification to import component/required for import. The SELMA component also
+    identifies the endogenous modifier as ubiquitin although its cited paper explicitly
+    leaves that identity unresolved. Supported machinery involvement is retained.
+  evidence_ids:
+  - apicoplast-agent-pmc-html-PMC22835
+  - apicoplast-agent-pmc-html-PMC2533231
+  - apicoplast-agent-jats-PMC3681736
+  - apicoplast-agent-jats-PMC2817234
+  - apicoplast-agent-jats-PMC3662607
+  - record
+- assessment_id: coverage
+  area: completeness
+  topic: Resolved issues and bounded remaining inventory
+  outcome: supported
+  target_ids:
+  - GO:0020011
+  summary: The review identifies one wrong concrete paralog and three narrow grounding/claim-scope
+    corrections. No complete universal import or enzyme inventory is required. Optional
+    ispG examples, lack of all membrane lipid species and unresolved import-complex
+    architecture remain limitations rather than invented missing-field defects.
+  evidence_ids:
+  - apicoplast-agent-IPR005691
+  - apicoplast-agent-ena-FJ976521
+  - apicoplast-agent-ena-FJ976520
+  - apicoplast-agent-pmc-html-PMC2533231
+  - apicoplast-agent-jats-PMC3681736
+  - apicoplast-agent-IPR007599
+  - apicoplast-agent-IPR035952
+  - apicoplast-agent-IPR003451
+  - apicoplast-agent-IPR002347
+  - apicoplast-agent-IPR014358
+  - apicoplast-agent-IPR036291
+  - apicoplast-agent-IPR010084
+  - apicoplast-agent-IPR013114
+  - apicoplast-agent-IPR029069
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: apicoplast-der1-er-paralog-example
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The Toxoplasma Der1 example is the ER paralog
+  description: B9PY98 cross-references FJ976521/ACU32856.1, explicitly deposited as
+    Der1ER1. The original study distinguishes that sequence from apicoplast Der1Ap
+    FJ976520/ACU32855.1, now C9WWW6. Consequently the concrete Toxoplasma example
+    under apicoplast SELMA identifies a different cellular paralog; calling it an
+    identity-only example does not make that substitution correct.
+  target_ids:
+  - GO:0020011
+  field_paths:
+  - components#selma_erad_import_machinery.protein_examples
+  evidence_ids:
+  - apicoplast-agent-B9PY98
+  - apicoplast-agent-ena-FJ976521
+  - apicoplast-agent-ena-FJ976520
+  - apicoplast-agent-der1-primary-browser
+  - apicoplast-agent-C9WWW6
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Evidence
+    and claim scope
+  native_severity: major
+  normalization_reason: Major because an explicit protein example resolves to the
+    wrong cellular paralog of the maintained component.
+- finding_id: F2
+  issue_key: apicoplast-tic20-family-grounding
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The Tic20 protein class has an available family grounding
+  description: IPR005691 is a family entry for Tic20 and is matched by the maintained
+    S8GBF3 example. The present label-only rationale combines lack of an exact family
+    with absence of a reviewed species accession. Family-class grounding does not
+    require a Swiss-Prot entry or a localization-specific family.
+  target_ids:
+  - GO:0020011
+  field_paths:
+  - components#tic20_inner_membrane_translocon.grounding_status
+  - components#tic20_inner_membrane_translocon.grounding_notes
+  - discussions#protein_import_grounding
+  evidence_ids:
+  - apicoplast-agent-IPR005691
+  - apicoplast-agent-matches-S8GBF3
+  - apicoplast-agent-S8GBF3
+  - apicoplast-agent-pmc-html-PMC2533231
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Evidence
+    and claim scope
+  native_severity: minor
+  normalization_reason: Minor because the biological class is correct but a verified
+    class-level grounding is omitted for an inapplicable reason.
+- finding_id: F3
+  issue_key: apicoplast-tic20-direct-channel-overclaim
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Direct Tic20 translocation exceeds the cited experiment
+  description: The label/role and graph treat Tic20 as the translocon that translocates
+    cargo. The cited2008 paper establishes inner-membrane localization and import
+    requirement, but its sec5 explicitly argues against direct channel activity and
+    considers accessory or regulatory roles. The known import dependency should be
+    retained without resolving the channel mechanism by wording.
+  target_ids:
+  - GO:0020011
+  field_paths:
+  - components#tic20_inner_membrane_translocon.label
+  - components#tic20_inner_membrane_translocon.role
+  - causal_graphs#bipartite_leader_apicoplast_import.description
+  - causal_graphs#bipartite_leader_apicoplast_import.nodes#tic20_translocon
+  - causal_graphs#bipartite_leader_apicoplast_import.edges
+  evidence_ids:
+  - apicoplast-agent-pmc-html-PMC2533231
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Evidence
+    and claim scope
+  native_severity: minor
+  normalization_reason: Minor because the supported import function remains correct;
+    the direct physical mechanism is overstated.
+- finding_id: F4
+  issue_key: apicoplast-endogenous-ubiquitin-unresolved
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The cited study does not identify the endogenous modifier as ubiquitin
+  description: The SELMA role definitively says the machinery uses ubiquitin. Agrawal2013
+    demonstrates an apicoplast ubiquitylation system and enzyme activity with recombinant
+    ubiquitin, but Discussion explicitly leaves endogenous ubiquitin versus a ubiquitin-like
+    modifier unresolved.
+  target_ids:
+  - GO:0020011
+  field_paths:
+  - components#selma_erad_import_machinery.role
+  evidence_ids:
+  - apicoplast-agent-jats-PMC3681736
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/curate-yaml-record/references/review-checklist.md:Evidence
+    and claim scope
+  native_severity: minor
+  normalization_reason: Minor because machinery involvement is supported but the exact
+    endogenous modifier is not established.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0020011
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained scientific record
+  description: Remove B9PY98 from this apicoplast component or replace it with the
+    independently verified C9WWW6/Der1Ap example and source bridge. Preserve its unreviewed
+    status, correct taxon and the absence of a native gene-name field; retain other
+    examples on their own evidence.
+  acceptance_checks:
+  - Native sequence cross-references distinguish ER and apicoplast paralogs.
+  - Replacement example has exact taxon/status and source-supported alias, without
+    inventing a UniProt primary gene symbol.
+  - Run focused schema, strict CURIE and UniProt checks.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0020011
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained scientific record
+  description: Ground the Tic20 protein class to InterPro:IPR005691 and update its
+    note/TODO without extending that identifier to the whole import complex or heterogeneous
+    SELMA system.
+  acceptance_checks:
+  - Native entry is Family and the example matches it.
+  - Organism-specific localization and import evidence remain separate.
+  - Focused validators pass.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0020011
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained scientific record
+  description: Use Tic20 inner-membrane import component and an import-dependency
+    predicate/description, or cite direct evidence for the stronger channel claim.
+    Preserve the paper’s accessory/regulatory uncertainty.
+  acceptance_checks:
+  - Graph wording distinguishes import requirement from demonstrated pore/translocation
+    activity.
+  - Supported inner-membrane localization and import phenotype remain.
+  - Focused validators pass.
+- action_id: A4
+  finding_ids:
+  - F4
+  target_ids:
+  - GO:0020011
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/apicoplast.yaml
+    role: maintained scientific record
+  description: Describe the demonstrated ubiquitylation/ubiquitin-like machinery while
+    retaining the unresolved endogenous modifier, or provide direct evidence for ubiquitin
+    use in vivo.
+  acceptance_checks:
+  - Component wording distinguishes the tested in-vitro substrate from the endogenous
+    modifier.
+  - Import-perturbation and enzyme-activity evidence remain accurately scoped.
+  - Focused validators pass.
+limitations:
+- The cited2013 Annual Review was available as native bibliographic metadata and abstract
+  only; the publisher returned403. Other review sources were read only at the explicitly
+  named sections.
+- Agrawal2009 identity evidence uses native sequence deposits plus indexed primary
+  Methods text; attempted direct PMC routes returned challenge HTML. No full2009 body
+  read is claimed. Kalanon2009 was read only at the stated Der1 Results/caption scope.
+- O97275 is independently linked to PF3D7_0314300/DER1-2; its native ENA sequence
+  contains the published Der1-2 antigenic peptide. The older PFC0590c model and current
+  locus identifier are not treated as identical strings, and localization data for
+  PfsDer1-1 are not transferred wholesale to Der1-2.
+- No figure pixels, raw tomograms, supplementary sequence alignments or quantitative
+  assays were independently reanalysed. The sources establish import/maintenance and
+  stage-specific metabolic requirements, not a universal organelle-assembly requirement
+  for every listed protein or lipid species.
+- The family candidates were examined through complete example-specific native matches
+  and named native entries. This is not an exhaustive absence search for every possible
+  import-machine ontology representation.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
