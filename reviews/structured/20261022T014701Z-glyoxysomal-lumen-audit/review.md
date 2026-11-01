@@ -1,0 +1,749 @@
+# Glyoxysomal lumen identity, source scope and boundary review
+
+- Review: 20261022T014701Z-glyoxysomal-lumen-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T01:27:54Z
+- Finished UTC: 2026-10-22T01:47:01Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The exact identity, scoped occurrence, constituent or compartment boundaries and nonmechanistic graph are supported; no concrete issue was established within the explicitly read source scopes.
+
+## Scope And Provenance
+
+Whole single target and frozen boundary neighbors; exact native IDs, source identities and claim-bearing primary/review passages audited with per-source reading limits.
+
+Selection: Target 9 of batch twenty-nine in strict uncovered path order; initial native inspect/schema/strict passed on fresh base f97b1abe before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0031908 | data/structures/membrane_organelle/glyoxysomal_lumen.yaml | maintained | glyoxysomal lumen |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0031908 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0031908 | Focused validator passed. |
+| Expression-module applicability | not_applicable | False | GO:0031908 | No expression-module membership, regulatory network or transcriptomic claim is used. |
+| Claim-level scientific review | passed | True | GO:0031908 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0031908 | 9 of 9 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0031908 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0031908 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0031908 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0031908 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0031908 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact compartment identity, synonyms and hierarchy
+
+identity: supported. Targets: GO:0031908.
+
+The record identity and synonyms exactly match native GO and UniProt location authorities. The broader parent is correctly is-a and the glyoxysome relation is parthood. The whole organelle, enclosing membrane and enclosed matrix are not conflated; the frozen neighbor records preserve these distinctions.
+
+### Acetate-induced Neurospora experimental context
+
+scope: supported. Targets: GO:0031908.
+
+The species ID and canonical fungal model are correct. The primary full paper directly supports induced glyoxysomes and matrix targeting in N. crassa, with nutritional state and reporter assay limits. COMMON is qualitative occurrence under the stated acetate-induced context, not constitutive prevalence in every growth condition. Native plant-focused authority prose is not the sole evidence for fungal occurrence.
+
+### Matrix enzyme localization versus universal import route
+
+evidence: supported. Targets: GO:0031908.
+
+GO and primary fractionation support the matrix as a compartment containing glyoxylate-cycle enzymes. The C-terminal-targeting note is supported for the experimentally demonstrated route, but does not establish that all endogenous matrix enzymes require it: the source explicitly distinguishes ICL and incomplete/dual enzyme localization. The graph description is an enzyme-localization statement, not an assertion that every cycle reaction is exclusively luminal.
+
+### Enclosed volume has no asserted membrane constituent
+
+grounding: supported. Targets: GO:0031908.
+
+Leaving the lumen without constituent components is consistent with its definition as an enclosed volume. The boundary membrane is represented as a separate graph node and is not falsely inserted as luminal material. No specific enzyme instance or assembly necessity is asserted.
+
+### Three descriptive topology and localization edges
+
+graph: supported. Targets: GO:0031908.
+
+The parthood and enclosure edges match the exact authorities. The glyoxylate-cycle edge is qualified by its description as matrix enzyme localization and primary fractionation, without encoding a complete exclusive enzymatic pathway or import mechanism. NONMECHANISTIC and the resolved boundary discussion accurately state this scope.
+
+### Whole maintained target and bounded review outcome
+
+completeness: supported. Targets: GO:0031908.
+
+Every maintained claim, evidence item, graph edge and discussion was inspected. No physical measurements, maintained image asset or verbatim evidence snippets require separate numerical/licence/quotation verification here. PROPOSED status and history remain untouched; no finding is invented from optional unknown inventory or inaccessible review bodies.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/glyoxysomal_lumen.yaml; Entire maintained YAML, including all components, taxonomy, canonical examples, functions, graph edges, discussions and history | context_only | The whole exact target was inspected without scientific edits or native status promotion. |
+| policy | src/cellstructuremech/schema/cellstructuremech.yaml; Component grounding, component_ref, essentiality, structure-kind and graph contracts | context_only | Assembly necessity differs from catalytic activity, membership and collective material identity. A membrane boundary, the enclosed volume and the whole organelle are distinct. |
+| graph-policy | .claude/skills/curate-causal-graphs/SKILL.md; Source scope and mechanistic-versus-descriptive graph guidance | context_only | Descriptive topology and localization can be represented honestly as NONMECHANISTIC without inventing a molecular mechanism. |
+| whole-neighbor | data/structures/membrane_organelle/glyoxysome.yaml; Entire frozen neighboring record, boundary context only | context_only | Whole glyoxysome, membrane and enclosed matrix remain distinct; neighbors are inputs rather than additional assessed targets. |
+| boundary-neighbor | data/structures/membrane_organelle/glyoxysomal_membrane.yaml; Entire frozen neighboring record, boundary context only | context_only | Whole glyoxysome, membrane and enclosed matrix remain distinct; neighbors are inputs rather than additional assessed targets. |
+| glyoxysomal-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031908,GO:0043233,GO:0009514,GO:0046861,GO:0006097,GO:0005778; All six exact IDs, names, active flags, definitions, synonyms and relevant child relations | supports | The six active terms exactly distinguish glyoxysomal lumen0031908, glyoxysomal membrane0046861, glyoxysome0009514, organelle lumen0043233, peroxisomal membrane0005778 and glyoxylate cycle0006097. The membrane is explicitly a peroxisomal-membrane child and glyoxysome part. The plant examples in the generic glyoxysome definition do not negate independently observed fungal organelles. |
+| glyoxysomal-agent-go-lumen-ancestors | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031908/ancestors?relations=is_a,part_of; GO0031908 exact identity and complete ancestor list; request explicitly includes relations=is_a,part_of | supports | The returned ancestor list uses combined is_a and part_of traversal and therefore establishes broad ancestry only. It is not by itself proof of an is-a-only path; the separate native is-a-only response supplies that check. |
+| glyoxysomal-agent-SL-0130 | https://rest.uniprot.org/locations/SL-0130.json; Complete native name, ID, synonym, GO mapping, isA and partOf structures | supports | Native Glyoxysome membrane SL0130 maps to GO0046861, has the maintained synonym, is_a peroxisome membrane and part_of glyoxysome. The entry defines the membrane domain, not a unique lipid molecular species. |
+| glyoxysomal-agent-SL-0333 | https://rest.uniprot.org/locations/SL-0333.json; Complete native name, synonyms, exact GO mapping, isA and partOf structures | supports | Native Glyoxysome matrix SL0333 maps to GO0031908, supplies all maintained matrix/lumen names and places the matrix within glyoxysome. The record primary name also supports glyoxysome matrix synonymy. |
+| glyoxysomal-agent-SL-0131 | https://rest.uniprot.org/locations/SL-0131.json; Whole entry, especially GO mapping and isA; organism-context limitation retained | context_only | Native whole-glyoxysome entry provides peroxisome hierarchy and GO0009514 mapping. Its plant/catalase narrative is authority context only; it is not used as direct evidence for Neurospora catalase distribution. |
+| glyoxysomal-agent-tax5141 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5141; Exact taxId, scientificName, rank, lineage and alternate names | supports | ENA identifies5141 as Neurospora crassa, species rank and fungal lineage. Experimental strain and nutritional induction come from the primary Methods. |
+| glyoxysomal-agent-dezoysa1994-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1007/BF00309930; Exact bibliographic identity and complete abstract; detailed primary claims use the separately inspected body | supports | Native MED identifies The function and specificity of the C-terminal tripeptide glyoxysomal targeting signal in Neurospora crassa. by de Zoysa PA, Connerton IF. (1994), DOI 10.1007/bf00309930, PMID 7874736.  |
+| glyoxysomal-agent-dezoysa1994-pdf | https://link.springer.com/content/pdf/10.1007/BF00309930.pdf; Printed pp430–436: entire scientific Abstract, Introduction, Materials and Methods, Results and Discussion; Table1 and Fig1–5 captions. Page437 references, figure pixels and raw data are not an independent scientific analysis. Genuine publisher PDF verified by signature; derivative text used for reading. | supports | The primary study demonstrates acetate-induced targeting of C-terminally modified CAT reporters into glyoxysome-enriched fractions, with native malate synthase/isocitrate lyase markers. Methods use am132 transformants shifted from sucrose to40mM acetate for8–9h at30C. Targeting varies with the tripeptide and nutritional state; native Neurospora ICL lacks the terminal signal, so not every matrix enzyme uses that route. The study distinguishes glyoxysomes from catalase-containing peroxisome-like microbodies and does not establish exact membrane lipid chemistry. |
+| schema-result | just validate data/structures/membrane_organelle/glyoxysomal_lumen.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/glyoxysomal_lumen.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/glyoxysomal_lumen.yaml --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glyoxysomal_lumen-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/glyoxysomal_lumen.yaml --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glyoxysomal_lumen-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glyoxysomal_lumen-strict.tsv |
+| glyoxysomal-agent-go-lumen-isa-only | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031908/ancestors?relations=is_a; GO0031908 complete ancestor list with request relations=is_a only | supports | GO0043233 organelle lumen is returned on the is-a-only ancestor path of glyoxysomal lumen. This confirms the broad class relationship without asserting a direct immediate edge. |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/glyoxysomal_lumen.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 9 of 9 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- The full primary scientific text pp430–436, Table1 and Fig1–5 captions were read from the genuine publisher PDF; figure pixels and raw measurements were not independently analyzed. Native metadata alone was not used to certify the detailed targeting claims.
+- The targeting evidence uses reporter activity, biochemical fractionation and marker immunodetection under acetate induction. It is not a direct movie of membrane translocation or a complete inventory of import machinery. Native ICL lacks the canonical C-terminal signal; the review does not generalize that route to every glyoxysomal enzyme or make all glyoxylate-cycle reactions exclusively luminal.
+- Native GO/UniProt plant examples and catalase narrative are not directly transferred to the fungal model. The primary paper distinguishes glyoxysomes from catalase-containing microbodies and supplies the actual N. crassa occurrence evidence.
+- Exact membrane lipid mixture, individual molecular assembly necessities and a complete enzyme inventory remain unresolved. These limits do not imply an optional census is a required missing field.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- User authorization requires a validated review for each uncovered target, including an honest clean review; no issue is invented to satisfy the local issue-only output rule.
+- Remote evidence preserves original request URL, actual UTC access timestamp and raw SHA256; reused batch22 sources retain their original receipts. Fresh target resolver results use the completed same-base batch26 native report; broader finalization is reserved to the parent.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T014701Z-glyoxysomal-lumen-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Glyoxysomal lumen identity, source scope and boundary review
+started_at: '2026-10-22T01:27:54Z'
+finished_at: '2026-10-22T01:47:01Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The exact identity, scoped occurrence, constituent or compartment boundaries
+  and nonmechanistic graph are supported; no concrete issue was established within
+  the explicitly read source scopes.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+    sha256: 57bdc53bba889fb38dd511718cec3c0cab5013fa2029d21636f27da4ca97801b
+    role: target
+  - path: data/structures/membrane_organelle/glyoxysomal_membrane.yaml
+    sha256: acf5b4c65edac5fd14c1a33ffa545fc5f7715162e84fdb59535e6a39d48be48c
+    role: context
+  - path: data/structures/membrane_organelle/glyoxysome.yaml
+    sha256: 4f1e29ea41f06149b1f638a6b94949e9f6c7246bfb5ed9b954eb5ded839858a4
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0031908
+  path: data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+  label: glyoxysomal lumen
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+    role: maintained scientific record
+scope:
+  description: Whole single target and frozen boundary neighbors; exact native IDs,
+    source identities and claim-bearing primary/review passages audited with per-source
+    reading limits.
+  selection: Target 9 of batch twenty-nine in strict uncovered path order; initial
+    native inspect/schema/strict passed on fresh base f97b1abe before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0031908
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031908
+  command: just validate data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031908
+  command: just validate-strict data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+    --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glyoxysomal_lumen-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0031908
+  summary: No expression-module membership, regulatory network or transcriptomic claim
+    is used.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031908
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-policy
+  - whole-neighbor
+  - boundary-neighbor
+  - glyoxysomal-agent-go
+  - glyoxysomal-agent-go-lumen-ancestors
+  - glyoxysomal-agent-SL-0130
+  - glyoxysomal-agent-SL-0333
+  - glyoxysomal-agent-SL-0131
+  - glyoxysomal-agent-tax5141
+  - glyoxysomal-agent-dezoysa1994-meta
+  - glyoxysomal-agent-dezoysa1994-pdf
+  - glyoxysomal-agent-go-lumen-isa-only
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031908
+  summary: 9 of 9 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031908
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031908
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031908
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031908
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0031908
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch29 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+  locator: Entire maintained YAML, including all components, taxonomy, canonical examples,
+    functions, graph edges, discussions and history
+  accessed_at: '2026-10-22T01:38:04Z'
+  support: context_only
+  summary: The whole exact target was inspected without scientific edits or native
+    status promotion.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: Component grounding, component_ref, essentiality, structure-kind and graph
+    contracts
+  accessed_at: '2026-10-22T01:38:04Z'
+  support: context_only
+  summary: Assembly necessity differs from catalytic activity, membership and collective
+    material identity. A membrane boundary, the enclosed volume and the whole organelle
+    are distinct.
+- evidence_id: graph-policy
+  kind: record_content
+  reference: .claude/skills/curate-causal-graphs/SKILL.md
+  locator: Source scope and mechanistic-versus-descriptive graph guidance
+  accessed_at: '2026-10-22T01:38:04Z'
+  support: context_only
+  summary: Descriptive topology and localization can be represented honestly as NONMECHANISTIC
+    without inventing a molecular mechanism.
+- evidence_id: whole-neighbor
+  kind: record_content
+  reference: data/structures/membrane_organelle/glyoxysome.yaml
+  locator: Entire frozen neighboring record, boundary context only
+  accessed_at: '2026-10-22T01:38:04Z'
+  support: context_only
+  summary: Whole glyoxysome, membrane and enclosed matrix remain distinct; neighbors
+    are inputs rather than additional assessed targets.
+- evidence_id: boundary-neighbor
+  kind: record_content
+  reference: data/structures/membrane_organelle/glyoxysomal_membrane.yaml
+  locator: Entire frozen neighboring record, boundary context only
+  accessed_at: '2026-10-22T01:38:04Z'
+  support: context_only
+  summary: Whole glyoxysome, membrane and enclosed matrix remain distinct; neighbors
+    are inputs rather than additional assessed targets.
+- evidence_id: glyoxysomal-agent-go
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031908,GO:0043233,GO:0009514,GO:0046861,GO:0006097,GO:0005778
+  locator: All six exact IDs, names, active flags, definitions, synonyms and relevant
+    child relations
+  accessed_at: '2026-10-22T01:33:08.652120Z'
+  support: supports
+  summary: The six active terms exactly distinguish glyoxysomal lumen0031908, glyoxysomal
+    membrane0046861, glyoxysome0009514, organelle lumen0043233, peroxisomal membrane0005778
+    and glyoxylate cycle0006097. The membrane is explicitly a peroxisomal-membrane
+    child and glyoxysome part. The plant examples in the generic glyoxysome definition
+    do not negate independently observed fungal organelles.
+  snapshot_sha256: e57c2868e00f1dff4e4e37d990a56aac06ebfa605fe4abcc8903dd5a2697a294
+- evidence_id: glyoxysomal-agent-go-lumen-ancestors
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031908/ancestors?relations=is_a,part_of
+  locator: GO0031908 exact identity and complete ancestor list; request explicitly
+    includes relations=is_a,part_of
+  accessed_at: '2026-10-22T01:33:42.976941Z'
+  support: supports
+  summary: The returned ancestor list uses combined is_a and part_of traversal and
+    therefore establishes broad ancestry only. It is not by itself proof of an is-a-only
+    path; the separate native is-a-only response supplies that check.
+  snapshot_sha256: f249051753180f8582525d4cb19e416f1bffd494945815369d65f6f771c3d38d
+- evidence_id: glyoxysomal-agent-SL-0130
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0130.json
+  locator: Complete native name, ID, synonym, GO mapping, isA and partOf structures
+  accessed_at: '2026-10-22T01:33:08.653068Z'
+  support: supports
+  summary: Native Glyoxysome membrane SL0130 maps to GO0046861, has the maintained
+    synonym, is_a peroxisome membrane and part_of glyoxysome. The entry defines the
+    membrane domain, not a unique lipid molecular species.
+  snapshot_sha256: 0bcde00617f838f8f0289d03c8684bef62b2d5b471ee28148b796b7294176e3e
+- evidence_id: glyoxysomal-agent-SL-0333
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0333.json
+  locator: Complete native name, synonyms, exact GO mapping, isA and partOf structures
+  accessed_at: '2026-10-22T01:33:08.653130Z'
+  support: supports
+  summary: Native Glyoxysome matrix SL0333 maps to GO0031908, supplies all maintained
+    matrix/lumen names and places the matrix within glyoxysome. The record primary
+    name also supports glyoxysome matrix synonymy.
+  snapshot_sha256: f72cb3a1f7b5389a3224af2407dc7e4c8f90f7fe7afd53280565f7a62c8b97b5
+- evidence_id: glyoxysomal-agent-SL-0131
+  kind: database
+  reference: https://rest.uniprot.org/locations/SL-0131.json
+  locator: Whole entry, especially GO mapping and isA; organism-context limitation
+    retained
+  accessed_at: '2026-10-22T01:33:08.845122Z'
+  support: context_only
+  summary: Native whole-glyoxysome entry provides peroxisome hierarchy and GO0009514
+    mapping. Its plant/catalase narrative is authority context only; it is not used
+    as direct evidence for Neurospora catalase distribution.
+  snapshot_sha256: cf99e708d621df3115ac0a2989d8db95df1e7c7fa23f4f9d6c83d60b64952e64
+- evidence_id: glyoxysomal-agent-tax5141
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5141
+  locator: Exact taxId, scientificName, rank, lineage and alternate names
+  accessed_at: '2026-10-22T01:33:08.845750Z'
+  support: supports
+  summary: ENA identifies5141 as Neurospora crassa, species rank and fungal lineage.
+    Experimental strain and nutritional induction come from the primary Methods.
+  snapshot_sha256: 574584705a280fad9f1e98d4f83398508b511c50023ca90be837a4a72c20911c
+- evidence_id: glyoxysomal-agent-dezoysa1994-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1007/BF00309930
+  locator: Exact bibliographic identity and complete abstract; detailed primary claims
+    use the separately inspected body
+  accessed_at: '2026-10-22T01:33:09.447879Z'
+  support: supports
+  summary: 'Native MED identifies The function and specificity of the C-terminal tripeptide
+    glyoxysomal targeting signal in Neurospora crassa. by de Zoysa PA, Connerton IF.
+    (1994), DOI 10.1007/bf00309930, PMID 7874736. '
+  snapshot_sha256: 16f3d02690a2657bf3505be6ce85db62c37ba31c5b6aa9d6e38d38535d0a65ac
+- evidence_id: glyoxysomal-agent-dezoysa1994-pdf
+  kind: primary_source
+  reference: https://link.springer.com/content/pdf/10.1007/BF00309930.pdf
+  locator: 'Printed pp430–436: entire scientific Abstract, Introduction, Materials
+    and Methods, Results and Discussion; Table1 and Fig1–5 captions. Page437 references,
+    figure pixels and raw data are not an independent scientific analysis. Genuine
+    publisher PDF verified by signature; derivative text used for reading.'
+  accessed_at: '2026-10-22T01:33:42.975970Z'
+  support: supports
+  summary: The primary study demonstrates acetate-induced targeting of C-terminally
+    modified CAT reporters into glyoxysome-enriched fractions, with native malate
+    synthase/isocitrate lyase markers. Methods use am132 transformants shifted from
+    sucrose to40mM acetate for8–9h at30C. Targeting varies with the tripeptide and
+    nutritional state; native Neurospora ICL lacks the terminal signal, so not every
+    matrix enzyme uses that route. The study distinguishes glyoxysomes from catalase-containing
+    peroxisome-like microbodies and does not establish exact membrane lipid chemistry.
+  snapshot_sha256: aa7d55a368c2325fa452c6396c7fc974106444119a7165ec05ff2aa7ac12ee0d
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:27:55Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/glyoxysomal_lumen.yaml'
+  snapshot_sha256: efd9261cd8dcec3bed7e92a87ef9d1a62097843512ba4a33be00e8cf6342edf7
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/glyoxysomal_lumen.yaml
+    --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glyoxysomal_lumen-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T01:27:57Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/glyoxysomal_lumen.yaml\
+    \ --out /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glyoxysomal_lumen-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch29-20261022-_v0k34u7/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch29-20261022-_v0k34u7/glyoxysomal_lumen-strict.tsv"
+  snapshot_sha256: bda6616431452775cc55195f55566d8b17251b4e1b92599eb98797db8ac79486
+- evidence_id: glyoxysomal-agent-go-lumen-isa-only
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0031908/ancestors?relations=is_a
+  locator: GO0031908 complete ancestor list with request relations=is_a only
+  accessed_at: '2026-10-22T01:44:20.503601Z'
+  support: supports
+  summary: GO0043233 organelle lumen is returned on the is-a-only ancestor path of
+    glyoxysomal lumen. This confirms the broad class relationship without asserting
+    a direct immediate edge.
+  snapshot_sha256: 1004692222af5610c3419213cb31e2349892caca8f989095e880318be142d9a9
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/glyoxysomal_lumen.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 9 of 9 collected target identifiers returned OK. No residuals. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact compartment identity, synonyms and hierarchy
+  outcome: supported
+  target_ids:
+  - GO:0031908
+  summary: The record identity and synonyms exactly match native GO and UniProt location
+    authorities. The broader parent is correctly is-a and the glyoxysome relation
+    is parthood. The whole organelle, enclosing membrane and enclosed matrix are not
+    conflated; the frozen neighbor records preserve these distinctions.
+  evidence_ids:
+  - record
+  - whole-neighbor
+  - boundary-neighbor
+  - glyoxysomal-agent-go
+  - glyoxysomal-agent-go-lumen-ancestors
+  - glyoxysomal-agent-SL-0130
+  - glyoxysomal-agent-SL-0333
+  - glyoxysomal-agent-SL-0131
+  - glyoxysomal-agent-go-lumen-isa-only
+- assessment_id: scope
+  area: scope
+  topic: Acetate-induced Neurospora experimental context
+  outcome: supported
+  target_ids:
+  - GO:0031908
+  summary: The species ID and canonical fungal model are correct. The primary full
+    paper directly supports induced glyoxysomes and matrix targeting in N. crassa,
+    with nutritional state and reporter assay limits. COMMON is qualitative occurrence
+    under the stated acetate-induced context, not constitutive prevalence in every
+    growth condition. Native plant-focused authority prose is not the sole evidence
+    for fungal occurrence.
+  evidence_ids:
+  - record
+  - glyoxysomal-agent-tax5141
+  - glyoxysomal-agent-dezoysa1994-meta
+  - glyoxysomal-agent-dezoysa1994-pdf
+- assessment_id: function
+  area: evidence
+  topic: Matrix enzyme localization versus universal import route
+  outcome: supported
+  target_ids:
+  - GO:0031908
+  summary: 'GO and primary fractionation support the matrix as a compartment containing
+    glyoxylate-cycle enzymes. The C-terminal-targeting note is supported for the experimentally
+    demonstrated route, but does not establish that all endogenous matrix enzymes
+    require it: the source explicitly distinguishes ICL and incomplete/dual enzyme
+    localization. The graph description is an enzyme-localization statement, not an
+    assertion that every cycle reaction is exclusively luminal.'
+  evidence_ids:
+  - record
+  - glyoxysomal-agent-go
+  - glyoxysomal-agent-dezoysa1994-pdf
+- assessment_id: composition
+  area: grounding
+  topic: Enclosed volume has no asserted membrane constituent
+  outcome: supported
+  target_ids:
+  - GO:0031908
+  summary: Leaving the lumen without constituent components is consistent with its
+    definition as an enclosed volume. The boundary membrane is represented as a separate
+    graph node and is not falsely inserted as luminal material. No specific enzyme
+    instance or assembly necessity is asserted.
+  evidence_ids:
+  - record
+  - policy
+  - glyoxysomal-agent-go
+  - glyoxysomal-agent-SL-0333
+  - glyoxysomal-agent-SL-0130
+- assessment_id: graph
+  area: graph
+  topic: Three descriptive topology and localization edges
+  outcome: supported
+  target_ids:
+  - GO:0031908
+  summary: The parthood and enclosure edges match the exact authorities. The glyoxylate-cycle
+    edge is qualified by its description as matrix enzyme localization and primary
+    fractionation, without encoding a complete exclusive enzymatic pathway or import
+    mechanism. NONMECHANISTIC and the resolved boundary discussion accurately state
+    this scope.
+  evidence_ids:
+  - record
+  - graph-policy
+  - glyoxysomal-agent-go
+  - glyoxysomal-agent-SL-0333
+  - glyoxysomal-agent-SL-0130
+  - glyoxysomal-agent-dezoysa1994-pdf
+- assessment_id: coverage
+  area: completeness
+  topic: Whole maintained target and bounded review outcome
+  outcome: supported
+  target_ids:
+  - GO:0031908
+  summary: Every maintained claim, evidence item, graph edge and discussion was inspected.
+    No physical measurements, maintained image asset or verbatim evidence snippets
+    require separate numerical/licence/quotation verification here. PROPOSED status
+    and history remain untouched; no finding is invented from optional unknown inventory
+    or inaccessible review bodies.
+  evidence_ids:
+  - record
+  - policy
+findings: []
+actions: []
+limitations:
+- The full primary scientific text pp430–436, Table1 and Fig1–5 captions were read
+  from the genuine publisher PDF; figure pixels and raw measurements were not independently
+  analyzed. Native metadata alone was not used to certify the detailed targeting claims.
+- The targeting evidence uses reporter activity, biochemical fractionation and marker
+  immunodetection under acetate induction. It is not a direct movie of membrane translocation
+  or a complete inventory of import machinery. Native ICL lacks the canonical C-terminal
+  signal; the review does not generalize that route to every glyoxysomal enzyme or
+  make all glyoxylate-cycle reactions exclusively luminal.
+- Native GO/UniProt plant examples and catalase narrative are not directly transferred
+  to the fungal model. The primary paper distinguishes glyoxysomes from catalase-containing
+  microbodies and supplies the actual N. crassa occurrence evidence.
+- Exact membrane lipid mixture, individual molecular assembly necessities and a complete
+  enzyme inventory remain unresolved. These limits do not imply an optional census
+  is a required missing field.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- User authorization requires a validated review for each uncovered target, including
+  an honest clean review; no issue is invented to satisfy the local issue-only output
+  rule.
+- Remote evidence preserves original request URL, actual UTC access timestamp and
+  raw SHA256; reused batch22 sources retain their original receipts. Fresh target
+  resolver results use the completed same-base batch26 native report; broader finalization
+  is reserved to the parent.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
