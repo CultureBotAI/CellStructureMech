@@ -1,0 +1,909 @@
+# Emre multidrug transporter complex scientific review
+
+- Review: 20261022T062455Z-emre-multidrug-transporter-complex-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T06:03:59Z
+- Finished UTC: 2026-10-22T06:24:55Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+EmrE homodimer identity, antiparallel assembly, correct K12 protein and bounded efflux function are supported. One minor resolves the exact available EmrE protein family.
+
+## Scope And Provenance
+
+Exactly one complete maintained target and frozen guidance; source-specific actual read scopes enumerated per evidence locator. No maintained neighboring record supplied scientific evidence.
+
+Selection: Target 10 of batch53, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:1990207 | data/structures/other/emre_multidrug_transporter_complex.yaml | maintained | EmrE multidrug transporter complex |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:1990207 | Focused validator passed. |
+| Focused native strict | passed | True | GO:1990207 | Focused validator passed. |
+| Native causal-graphs | passed | True | GO:1990207 | Native focused check passed; biological validity is separately assessed. |
+| Native verify | passed | True | GO:1990207 | Native focused check passed; biological validity is separately assessed. |
+| Expression-module applicability | not_applicable | False | GO:1990207 | No expression-module inference is required for these identity/assembly/transport claims. |
+| Claim-level scientific review | passed | True | GO:1990207 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:1990207 | 8 of 10 collected target identifiers returned OK. PDB:3B5D: SKIPPED; Exact RCSB entry identifier, structure title and primary citation DOI/PMID independently read. Deposition-specific composition, ligands and structural interpretation retain the separately reviewed evidence scopes; the paper title does not substitute for entry identity. No PDB resolver adapter exists in the bulk gate.; PMID:18024586: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:1990207 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:1990207 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:1990207 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:1990207 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:1990207 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### EmrE complex versus protein and broad SMR class
+
+identity: supported. Targets: GO:1990207.
+
+Native GO identity, narrow synonym and transporter-complex parent are correct. Chen and3B5D support an asymmetric antiparallel homodimer; the target distinguishes the named EmrE complex from all SMR proteins.
+
+### Exact EmrE family resolves the label-only row
+
+grounding: concern. Targets: GO:1990207.
+
+P23895 is the correct reviewed K12 protein and sole exact reviewed emrE query result. NF042984 gives the precise full EmrE family; NF007087 and IPR045324 are broader alternatives.
+
+### Variable bacterial distribution and source/host distinction
+
+scope: supported. Targets: GO:1990207.
+
+VARIABLE Bacteria does not assert universal bacterial occurrence. The E.coli canonical example and referenceK12 accession are supported, with BL21(DE3) used for expression and the PDB retaining the source/host distinction.
+
+### Specific assembly orientation followed by transport output
+
+graph: supported. Targets: GO:1990207.
+
+The MECHANISTIC graph contains a specific antiparallel two-protein assembly transition rather than only generic membership. Structure and native annotations support that step and coarse transporter output; the text does not purport to resolve proton-coupling states or a full transport cycle. Chen primary binding data are not relabeled as a new direct transport assay.
+
+### Keep unresolved experimental formation necessity separate
+
+grounding: unknown. Targets: GO:1990207.
+
+The protein is the defining material of the homodimer, and structural contacts suggest obligate association. This review does not convert that identity inference or transport-topology requirements into a directly measured individual formation-necessity experiment. UNKNOWN is retained.
+
+### Full maintained record and scoped unresolved claims
+
+completeness: supported. Targets: GO:1990207.
+
+All maintained fields, evidence notes, discussions and graph claims were checked at the stated source extents. Unresolved assembly, taxonomic prevalence and preparation details remain explicit rather than being inferred from identifiers or validation success.
+
+## Findings
+
+### F1: Ground the EmrE constituent to its exact family
+
+minor / open / confirmed; issue key: emre-exact-protein-family.
+
+The EmrE row remains REVIEWED_LABEL_ONLY because the SMR class is broad, but NF042984 specifically identifies the full EmrE protein family and independent P23895 metadata verifies membership.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Use verified NF042984 for the named EmrE constituent and align current grounding rationale/TODO, while preserving GO1990207 for the assembled complex.
+
+- Do not substitute the broad SMR family or infer every SMR protein is an EmrE homodimer.
+- Preserve correct identities and supported biology; pass applicable native validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/other/emre_multidrug_transporter_complex.yaml; Entire maintained target, all components/examples/evidence/graph/discussions/history | context_only | The complete target was read. Historical curation claims are not independent scientific evidence. |
+| schema | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, ProteinExample, essentiality, taxonomic presence and graph scope | context_only | Formation necessity differs from activity and membership. COMMON means present in most members, losses the exception; VARIABLE does not assert universality. |
+| curation | docs/CURATION.md; Exact component grounding, label-only contract159–160 and formation semantics | context_only | REVIEWED_LABEL_ONLY means no exact class term exists after review. A known protein constituent can be represented with a label while exact family mapping remains unresolved. |
+| complex53-agent-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0002097,GO:0005784,GO:0005789,GO:0033588,GO:0042910,GO:0045048,GO:0072546,GO:0098796,GO:0140330,GO:0140535,GO:1902494,GO:1902495,GO:1990207,GO:1990281; Complete target-relevant active definitions, synonym types and typed child links within combined response; other terms are not attributed to this target | supports | GO1990207 defines the bacterial EmrE drug transporter and E.coli homodimer, with narrow EmrE complex synonym. GO1902495 explicitly lists it as an is_a child; GO0042910 defines the corresponding transporter activity. |
+| complex53-agent-tax2 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2; Complete native taxon response | supports | ENA 2: Bacteria, rank domain; names and lineage support this exact taxon identity. |
+| complex53-agent-tax562 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562; Complete native taxon response | supports | ENA 562: Escherichia coli, rank species; names and lineage support this exact taxon identity. |
+| complex53-agent-tax83333 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333; Complete native taxon response | supports | ENA 83333: Escherichia coli K-12, rank strain; names and lineage support this exact taxon identity. |
+| complex53-agent-protein-P23895 | https://rest.uniprot.org/uniprotkb/P23895.json; Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs | supports | Reviewed P23895 identifies Multidrug transporter EmrE in taxon83333; gene emrE is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership comes from this protein response, independently of family-entry metadata. |
+| complex53-agent-gene-emrE-83333 | https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AemrE%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&amp;format=json&amp;size=500; Complete returned accession/name/gene-alias/organism identities | supports | The complete exact reviewed-organism query returns 1 identity: P23895. The maintained example is correctly disambiguated; aliases were read. |
+| complex53-agent-pmid-18024586 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18024586+AND+SRC%3AMED&amp;format=json&amp;resultType=core; Exact PMID/title/authors/year/DOI and complete native abstract | supports | MED18024586: X-ray structure of EmrE supports dual topology model. Authors Chen YJ, Pornillos O, Lieu S, Ma C, Chen AP, Chang G.; year2007, DOI10.1073/pnas.0709387104. Complete abstract read; metadata is not full-body evidence. |
+| complex53-agent-doi-pnas_0709387104 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0709387104%22&amp;format=json&amp;resultType=core; Exact DOI/title/authors/PMID/year and complete native abstract | supports | Native DOI/MED identity: X-ray structure of EmrE supports dual topology model. Authors Chen YJ, Pornillos O, Lieu S, Ma C, Chen AP, Chang G.; year2007, PMID18024586. Complete abstract inspected; independently recovered primary bodies are separate evidence rows. |
+| complex53-agent-chen2007-legacy | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2141897/; Results sec2/3/4/5/7/8 including Table1 and Fig1–4 caption text embedded therein; Methods sec10 expression/purification. No coordinate/pixel/supplement reanalysis; cited prior transport experiments not independently reread. | supports | Chen2007 reanalyzes and corrects earlier X-ray structures; substrate-bound EmrE is an asymmetric antiparallel homodimer, distinct from the distorted acidic apo crystal. Binding assays use detergent-solubilized protein; prior transport/topology studies are discussed separately. In vivo expression uses BL21(DE3), not a redefinition of the K12 reference protein source. |
+| complex53-agent-pdb-3B5D-entry | https://data.rcsb.org/rest/v1/core/entry/3B5D; Entry title/method/primary citation and entity counts | supports | 3B5D is the C2 substrate-bound EmrE X-ray crystal form associated with Chen2007, DOI10.1073/pnas.0709387104 and PMID18024586. |
+| complex53-agent-pdb-3B5D-assembly | https://data.rcsb.org/rest/v1/core/assembly/3B5D/1; Complete assembly1 identity, chain generator and oligomeric count | supports | Author-defined biological assembly1 is a two-chain homodimer, not the full lattice or a generic SMR family complex. |
+| complex53-agent-pdb-3B5D-entity1 | https://data.rcsb.org/rest/v1/core/polymer_entity/3B5D/1; Complete source/host records, chain identifiers and SIFTS reference mapping/coverage | supports | Entity1 maps fully to P23895 and two chainsA/B, with K12 source83333 and BL21(DE3) expressionhost469008 separately recorded. |
+| complex53-agent-ncbifam-NF042984 | https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF042984/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | NF042984 is a full family specifically named multidrug efflux SMR transporter EmrE, with primary EmrE literature. Its exact protein membership is verified in separate P23895 metadata. |
+| complex53-agent-ncbifam-NF007087 | https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF007087/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | NF007087 is explicitly broader EmrE-family: native prose says it also includes a77%-identical homolog probably needing another name. It is not selected over NF042984. |
+| complex53-agent-ipr-IPR045324 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045324/; Native name/type, complete description where present, member signatures, hierarchy and curation flags; protein membership is separately evidenced | supports | IPR045324 is a broader SMR family including distinct paired MdtI/MdtJ proteins; it is not an exact EmrE class mapping. |
+| schema-result | just validate data/structures/other/emre_multidrug_transporter_complex.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/other/emre_multidrug_transporter_complex.yaml |
+| strict-result | just validate-strict data/structures/other/emre_multidrug_transporter_complex.yaml --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/emre_multidrug_transporter_complex-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/other/emre_multidrug_transporter_complex.yaml --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/emre_multidrug_transporter_complex-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch53-20261022-kx679dvh/emre_multidrug_transporter_complex-strict.tsv |
+| native-causal-graphs | /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/emre_multidrug_transporter_complex.yaml --causal-graphs; Complete native focused report | supports | data/structures/other/emre_multidrug_transporter_complex.yaml  (GO:1990207)<br>  emre_efflux_function	emre_multidrug_transporter	COVERED	-&gt;emre_multidrug_transporter (UniProtKB:P23895)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     1  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     1  total GENE_OR_PROTEIN causal nodes |
+| native-verify | /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python -B scripts/uniprot_genes.py --record data/structures/other/emre_multidrug_transporter_complex.yaml --verify; Complete native focused report | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| target-curies | just check-curies-strict; data/structures/other/emre_multidrug_transporter_complex.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 8 of 10 collected target identifiers returned OK. PDB:3B5D: SKIPPED; Exact RCSB entry identifier, structure title and primary citation DOI/PMID independently read. Deposition-specific composition, ligands and structural interpretation retain the separately reviewed evidence scopes; the paper title does not substitute for entry identity. No PDB resolver adapter exists in the bulk gate.; PMID:18024586: UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read following the bulk eutils414 transport failure. Resolution is identifier identity only; separate primary-body/abstract evidence limits remain in force. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- No figure pixels, supplemental datasets or atomic coordinates were reanalyzed. Embedded caption text is distinguished from independently inspected images and supplements.
+- The primary structure paper discusses historical conflicting topology experiments and corrects earlier X-ray models. This review uses its corrected substrate-bound3B5D model, not the defunct structures or distorted apo form.
+- No broad phylogenetic prevalence census or new primary transport reanalysis was performed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T062455Z-emre-multidrug-transporter-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Emre multidrug transporter complex scientific review
+started_at: '2026-10-22T06:03:59Z'
+finished_at: '2026-10-22T06:24:55Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: EmrE homodimer identity, antiparallel assembly, correct K12 protein and bounded
+  efflux function are supported. One minor resolves the exact available EmrE protein
+  family.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/other/emre_multidrug_transporter_complex.yaml
+    sha256: 7a4055fadb4512ab96308689f737202f1b82dfd99e0fe4046fa82e1e22f6a0e0
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:1990207
+  path: data/structures/other/emre_multidrug_transporter_complex.yaml
+  label: EmrE multidrug transporter complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emre_multidrug_transporter_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Exactly one complete maintained target and frozen guidance; source-specific
+    actual read scopes enumerated per evidence locator. No maintained neighboring
+    record supplied scientific evidence.
+  selection: Target 10 of batch53, strict uncovered path order at unchanged f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:1990207
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  command: just validate data/structures/other/emre_multidrug_transporter_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  command: just validate-strict data/structures/other/emre_multidrug_transporter_complex.yaml
+    --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/emre_multidrug_transporter_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: native-causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  command: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/emre_multidrug_transporter_complex.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Native focused check passed; biological validity is separately assessed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: native-verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  command: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/emre_multidrug_transporter_complex.yaml
+    --verify
+  exit_code: 0
+  summary: Native focused check passed; biological validity is separately assessed.
+  evidence_ids:
+  - native-verify
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:1990207
+  summary: No expression-module inference is required for these identity/assembly/transport
+    claims.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex53-agent-go
+  - complex53-agent-tax2
+  - complex53-agent-tax562
+  - complex53-agent-tax83333
+  - complex53-agent-protein-P23895
+  - complex53-agent-gene-emrE-83333
+  - complex53-agent-pmid-18024586
+  - complex53-agent-doi-pnas_0709387104
+  - complex53-agent-chen2007-legacy
+  - complex53-agent-pdb-3B5D-entry
+  - complex53-agent-pdb-3B5D-assembly
+  - complex53-agent-pdb-3B5D-entity1
+  - complex53-agent-ncbifam-NF042984
+  - complex53-agent-ncbifam-NF007087
+  - complex53-agent-ipr-IPR045324
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  summary: '8 of 10 collected target identifiers returned OK. PDB:3B5D: SKIPPED; Exact
+    RCSB entry identifier, structure title and primary citation DOI/PMID independently
+    read. Deposition-specific composition, ligands and structural interpretation retain
+    the separately reviewed evidence scopes; the paper title does not substitute for
+    entry identity. No PDB resolver adapter exists in the bulk gate.; PMID:18024586:
+    UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read
+    following the bulk eutils414 transport failure. Resolution is identifier identity
+    only; separate primary-body/abstract evidence limits remain in force. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - complex53-agent-pdb-3B5D-entry
+  - complex53-agent-pmid-18024586
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:1990207
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch53 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/other/emre_multidrug_transporter_complex.yaml
+  locator: Entire maintained target, all components/examples/evidence/graph/discussions/history
+  accessed_at: '2026-10-22T06:15:02Z'
+  support: context_only
+  summary: The complete target was read. Historical curation claims are not independent
+    scientific evidence.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, ProteinExample, essentiality, taxonomic presence and
+    graph scope
+  accessed_at: '2026-10-22T06:15:02Z'
+  support: context_only
+  summary: Formation necessity differs from activity and membership. COMMON means
+    present in most members, losses the exception; VARIABLE does not assert universality.
+- evidence_id: curation
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Exact component grounding, label-only contract159–160 and formation semantics
+  accessed_at: '2026-10-22T06:15:02Z'
+  support: context_only
+  summary: REVIEWED_LABEL_ONLY means no exact class term exists after review. A known
+    protein constituent can be represented with a label while exact family mapping
+    remains unresolved.
+- evidence_id: complex53-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0002097,GO:0005784,GO:0005789,GO:0033588,GO:0042910,GO:0045048,GO:0072546,GO:0098796,GO:0140330,GO:0140535,GO:1902494,GO:1902495,GO:1990207,GO:1990281
+  locator: Complete target-relevant active definitions, synonym types and typed child
+    links within combined response; other terms are not attributed to this target
+  accessed_at: '2026-10-22T06:04:56.005634Z'
+  support: supports
+  summary: GO1990207 defines the bacterial EmrE drug transporter and E.coli homodimer,
+    with narrow EmrE complex synonym. GO1902495 explicitly lists it as an is_a child;
+    GO0042910 defines the corresponding transporter activity.
+  snapshot_sha256: ff946a7735c549a3a05a73c3dfaaaa7d501546c65d21a07ca7e5e8474cb827b2
+- evidence_id: complex53-agent-tax2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T06:04:56.005187Z'
+  support: supports
+  summary: 'ENA 2: Bacteria, rank domain; names and lineage support this exact taxon
+    identity.'
+  snapshot_sha256: 314bd7723b8dea04f1840809fb74e06c514664fba9c6a0619e8f12e2a6dceef1
+- evidence_id: complex53-agent-tax562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T06:04:56.006185Z'
+  support: supports
+  summary: 'ENA 562: Escherichia coli, rank species; names and lineage support this
+    exact taxon identity.'
+  snapshot_sha256: 66d5c5c74569e24b72fd7b011961dc221b58d841db7db3023337fb534733e200
+- evidence_id: complex53-agent-tax83333
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/83333
+  locator: Complete native taxon response
+  accessed_at: '2026-10-22T06:04:56.745015Z'
+  support: supports
+  summary: 'ENA 83333: Escherichia coli K-12, rank strain; names and lineage support
+    this exact taxon identity.'
+  snapshot_sha256: f499fde9e4fcea85ff811b58a76a405669d32465a62eaf74240a48331b63d8e6
+- evidence_id: complex53-agent-protein-P23895
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P23895.json
+  locator: Accession/status/name, all gene names/aliases/organism, FUNCTION/SUBUNIT/SUBCELLULAR
+    LOCATION/SIMILARITY comments and family/PDB/ComplexPortal xrefs
+  accessed_at: '2026-10-22T06:04:56.833288Z'
+  support: supports
+  summary: Reviewed P23895 identifies Multidrug transporter EmrE in taxon83333; gene
+    emrE is present as primary name or synonym. Native FUNCTION/SUBUNIT/localization/SIMILARITY
+    annotations were read at their stated evidentiary scope. InterPro/NCBIfam membership
+    comes from this protein response, independently of family-entry metadata.
+  snapshot_sha256: 16b0232f2fa91b8aa82030bd23bc100956391cb5072213492783c1c9de46f3e4
+- evidence_id: complex53-agent-gene-emrE-83333
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AemrE%29+AND+%28organism_id%3A83333%29+AND+%28reviewed%3Atrue%29&format=json&size=500
+  locator: Complete returned accession/name/gene-alias/organism identities
+  accessed_at: '2026-10-22T06:05:00.921437Z'
+  support: supports
+  summary: 'The complete exact reviewed-organism query returns 1 identity: P23895.
+    The maintained example is correctly disambiguated; aliases were read.'
+  snapshot_sha256: bcd9fba167947871800476e31915aedb64508a81733cd6c2253e8472df2268ca
+  search_scope: UniProt gene_exact:emrE, organism_id:83333, reviewed:true, size500;
+    all returned identities inspected.
+- evidence_id: complex53-agent-pmid-18024586
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18024586+AND+SRC%3AMED&format=json&resultType=core
+  locator: Exact PMID/title/authors/year/DOI and complete native abstract
+  accessed_at: '2026-10-22T06:05:02.212308Z'
+  support: supports
+  summary: 'MED18024586: X-ray structure of EmrE supports dual topology model. Authors
+    Chen YJ, Pornillos O, Lieu S, Ma C, Chen AP, Chang G.; year2007, DOI10.1073/pnas.0709387104.
+    Complete abstract read; metadata is not full-body evidence.'
+  snapshot_sha256: cdf0b6a4e684d755b45c64e18fdb06ca540fdae1311534ba4f9be6976c8c8635
+- evidence_id: complex53-agent-doi-pnas_0709387104
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0709387104%22&format=json&resultType=core
+  locator: Exact DOI/title/authors/PMID/year and complete native abstract
+  accessed_at: '2026-10-22T06:05:03.215776Z'
+  support: supports
+  summary: 'Native DOI/MED identity: X-ray structure of EmrE supports dual topology
+    model. Authors Chen YJ, Pornillos O, Lieu S, Ma C, Chen AP, Chang G.; year2007,
+    PMID18024586. Complete abstract inspected; independently recovered primary bodies
+    are separate evidence rows.'
+  snapshot_sha256: 75cb87b295c0a1754b09fb9e8ffa662b40cd11b39b509235dd979b0166c1f388
+- evidence_id: complex53-agent-chen2007-legacy
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2141897/
+  locator: Results sec2/3/4/5/7/8 including Table1 and Fig1–4 caption text embedded
+    therein; Methods sec10 expression/purification. No coordinate/pixel/supplement
+    reanalysis; cited prior transport experiments not independently reread.
+  accessed_at: '2026-10-22T06:05:51.072627Z'
+  support: supports
+  summary: Chen2007 reanalyzes and corrects earlier X-ray structures; substrate-bound
+    EmrE is an asymmetric antiparallel homodimer, distinct from the distorted acidic
+    apo crystal. Binding assays use detergent-solubilized protein; prior transport/topology
+    studies are discussed separately. In vivo expression uses BL21(DE3), not a redefinition
+    of the K12 reference protein source.
+  snapshot_sha256: 5efd915e36eb9894f180fa4d137fdf669b824fa07f873385aeaf30479749c1cc
+- evidence_id: complex53-agent-pdb-3B5D-entry
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/entry/3B5D
+  locator: Entry title/method/primary citation and entity counts
+  accessed_at: '2026-10-22T06:05:05.228286Z'
+  support: supports
+  summary: 3B5D is the C2 substrate-bound EmrE X-ray crystal form associated with
+    Chen2007, DOI10.1073/pnas.0709387104 and PMID18024586.
+  snapshot_sha256: 180a81cf875bddfb701664e093dd237e83d38c8f61b97379d30615a54c9ece97
+- evidence_id: complex53-agent-pdb-3B5D-assembly
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/assembly/3B5D/1
+  locator: Complete assembly1 identity, chain generator and oligomeric count
+  accessed_at: '2026-10-22T06:05:05.235732Z'
+  support: supports
+  summary: Author-defined biological assembly1 is a two-chain homodimer, not the full
+    lattice or a generic SMR family complex.
+  snapshot_sha256: 6299f333ad1fd84e594661efb0f716401c6edd97cb4a316ad14ddec961e701e3
+- evidence_id: complex53-agent-pdb-3B5D-entity1
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/3B5D/1
+  locator: Complete source/host records, chain identifiers and SIFTS reference mapping/coverage
+  accessed_at: '2026-10-22T06:05:05.303174Z'
+  support: supports
+  summary: Entity1 maps fully to P23895 and two chainsA/B, with K12 source83333 and
+    BL21(DE3) expressionhost469008 separately recorded.
+  snapshot_sha256: 0424ee4e12edcbbe35110831397e2e64526c0cd388faba989e2be13d48ab834a
+- evidence_id: complex53-agent-ncbifam-NF042984
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF042984/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:09:23.889901Z'
+  support: supports
+  summary: NF042984 is a full family specifically named multidrug efflux SMR transporter
+    EmrE, with primary EmrE literature. Its exact protein membership is verified in
+    separate P23895 metadata.
+  snapshot_sha256: 6e2c3977a0db9592fa4498e2d34152c7bcc5ab0fe77cb3811f5aee7e52523596
+- evidence_id: complex53-agent-ncbifam-NF007087
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/ncbifam/NF007087/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:09:23.889824Z'
+  support: supports
+  summary: 'NF007087 is explicitly broader EmrE-family: native prose says it also
+    includes a77%-identical homolog probably needing another name. It is not selected
+    over NF042984.'
+  snapshot_sha256: fdd122cc8b2b8af1335c5a8acee768b033e1193c186371e9414cdd450b1809db
+- evidence_id: complex53-agent-ipr-IPR045324
+  kind: authority
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR045324/
+  locator: Native name/type, complete description where present, member signatures,
+    hierarchy and curation flags; protein membership is separately evidenced
+  accessed_at: '2026-10-22T06:05:52.838970Z'
+  support: supports
+  summary: IPR045324 is a broader SMR family including distinct paired MdtI/MdtJ proteins;
+    it is not an exact EmrE class mapping.
+  snapshot_sha256: fc9e8aa77fa57d0e0fac9ab79b8906ffda24817ce0c10036eaa66041ba51a6c4
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/other/emre_multidrug_transporter_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:04:02Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/other/emre_multidrug_transporter_complex.yaml'
+  snapshot_sha256: 060c0a27e70ed8920ad6c9b2634e48298ad9b2c9ca15aa93ae97c6fa1dc08bc2
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/other/emre_multidrug_transporter_complex.yaml
+    --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/emre_multidrug_transporter_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T06:04:04Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/other/emre_multidrug_transporter_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch53-20261022-kx679dvh/emre_multidrug_transporter_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch53-20261022-kx679dvh/emre_multidrug_transporter_complex-strict.tsv"
+  snapshot_sha256: bd4747000f5f534d633b49801813a577f0ca6794ad62f3dc3e73d0c404634063
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/emre_multidrug_transporter_complex.yaml
+    --causal-graphs
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T06:10:37.612377Z'
+  support: supports
+  summary: "data/structures/other/emre_multidrug_transporter_complex.yaml  (GO:1990207)\n\
+    \  emre_efflux_function\temre_multidrug_transporter\tCOVERED\t->emre_multidrug_transporter\
+    \ (UniProtKB:P23895)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     1\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 0ba2585e9162a17ba8731cba84e13eb7e577ea344263773afa6c906b12c8e38c
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch53-20261022-kx679dvh/repo/.venv/bin/python
+    -B scripts/uniprot_genes.py --record data/structures/other/emre_multidrug_transporter_complex.yaml
+    --verify
+  locator: Complete native focused report
+  accessed_at: '2026-10-22T06:10:38.898802Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/other/emre_multidrug_transporter_complex.yaml; native collect()
+    exact identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '8 of 10 collected target identifiers returned OK. PDB:3B5D: SKIPPED; Exact
+    RCSB entry identifier, structure title and primary citation DOI/PMID independently
+    read. Deposition-specific composition, ligands and structural interpretation retain
+    the separately reviewed evidence scopes; the paper title does not substitute for
+    entry identity. No PDB resolver adapter exists in the bulk gate.; PMID:18024586:
+    UNREACHABLE; Exact native EuropePMC MED identifier/title/DOI independently read
+    following the bulk eutils414 transport failure. Resolution is identifier identity
+    only; separate primary-body/abstract evidence limits remain in force. Native source
+    checks are separately scoped; skipped or unreachable identifiers are not silently
+    counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: EmrE complex versus protein and broad SMR class
+  outcome: supported
+  target_ids:
+  - GO:1990207
+  summary: Native GO identity, narrow synonym and transporter-complex parent are correct.
+    Chen and3B5D support an asymmetric antiparallel homodimer; the target distinguishes
+    the named EmrE complex from all SMR proteins.
+  evidence_ids:
+  - record
+  - complex53-agent-go
+  - complex53-agent-chen2007-legacy
+  - complex53-agent-pdb-3B5D-entry
+  - complex53-agent-pdb-3B5D-assembly
+  - complex53-agent-pdb-3B5D-entity1
+- assessment_id: grounding
+  area: grounding
+  topic: Exact EmrE family resolves the label-only row
+  outcome: concern
+  target_ids:
+  - GO:1990207
+  summary: P23895 is the correct reviewed K12 protein and sole exact reviewed emrE
+    query result. NF042984 gives the precise full EmrE family; NF007087 and IPR045324
+    are broader alternatives.
+  evidence_ids:
+  - record
+  - curation
+  - complex53-agent-ncbifam-NF042984
+  - complex53-agent-ncbifam-NF007087
+  - complex53-agent-ipr-IPR045324
+  - complex53-agent-protein-P23895
+  - complex53-agent-gene-emrE-83333
+- assessment_id: scope
+  area: scope
+  topic: Variable bacterial distribution and source/host distinction
+  outcome: supported
+  target_ids:
+  - GO:1990207
+  summary: VARIABLE Bacteria does not assert universal bacterial occurrence. The E.coli
+    canonical example and referenceK12 accession are supported, with BL21(DE3) used
+    for expression and the PDB retaining the source/host distinction.
+  evidence_ids:
+  - record
+  - schema
+  - complex53-agent-go
+  - complex53-agent-chen2007-legacy
+  - complex53-agent-pdb-3B5D-entry
+  - complex53-agent-pdb-3B5D-entity1
+  - complex53-agent-tax2
+  - complex53-agent-tax562
+  - complex53-agent-tax83333
+  - complex53-agent-protein-P23895
+- assessment_id: graph
+  area: graph
+  topic: Specific assembly orientation followed by transport output
+  outcome: supported
+  target_ids:
+  - GO:1990207
+  summary: The MECHANISTIC graph contains a specific antiparallel two-protein assembly
+    transition rather than only generic membership. Structure and native annotations
+    support that step and coarse transporter output; the text does not purport to
+    resolve proton-coupling states or a full transport cycle. Chen primary binding
+    data are not relabeled as a new direct transport assay.
+  evidence_ids:
+  - record
+  - schema
+  - complex53-agent-go
+  - complex53-agent-chen2007-legacy
+  - complex53-agent-pdb-3B5D-entry
+  - complex53-agent-pdb-3B5D-assembly
+  - complex53-agent-protein-P23895
+- assessment_id: formation
+  area: grounding
+  topic: Keep unresolved experimental formation necessity separate
+  outcome: unknown
+  target_ids:
+  - GO:1990207
+  summary: The protein is the defining material of the homodimer, and structural contacts
+    suggest obligate association. This review does not convert that identity inference
+    or transport-topology requirements into a directly measured individual formation-necessity
+    experiment. UNKNOWN is retained.
+  evidence_ids:
+  - record
+  - schema
+  - complex53-agent-chen2007-legacy
+  - complex53-agent-pdb-3B5D-assembly
+- assessment_id: coverage
+  area: completeness
+  topic: Full maintained record and scoped unresolved claims
+  outcome: supported
+  target_ids:
+  - GO:1990207
+  summary: All maintained fields, evidence notes, discussions and graph claims were
+    checked at the stated source extents. Unresolved assembly, taxonomic prevalence
+    and preparation details remain explicit rather than being inferred from identifiers
+    or validation success.
+  evidence_ids:
+  - record
+  - schema
+  - curation
+  - complex53-agent-go
+findings:
+- finding_id: F1
+  issue_key: emre-exact-protein-family
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Ground the EmrE constituent to its exact family
+  description: The EmrE row remains REVIEWED_LABEL_ONLY because the SMR class is broad,
+    but NF042984 specifically identifies the full EmrE protein family and independent
+    P23895 metadata verifies membership.
+  target_ids:
+  - GO:1990207
+  field_paths:
+  - components#emre_multidrug_transporter.grounding_status
+  - discussions
+  evidence_ids:
+  - record
+  - curation
+  - complex53-agent-ncbifam-NF042984
+  - complex53-agent-ncbifam-NF007087
+  - complex53-agent-ipr-IPR045324
+  - complex53-agent-protein-P23895
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emre_multidrug_transporter_complex.yaml
+    role: maintained scientific record
+  rule_id: Source-specific biological scope and exact component grounding
+  native_severity: minor
+  normalization_reason: The complex identity and correctly identified proteins remain
+    intact; this is a bounded actionable grounding, inventory or condition-specific
+    annotation correction.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:1990207
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/emre_multidrug_transporter_complex.yaml
+    role: maintained scientific record
+  description: Use verified NF042984 for the named EmrE constituent and align current
+    grounding rationale/TODO, while preserving GO1990207 for the assembled complex.
+  acceptance_checks:
+  - Do not substitute the broad SMR family or infer every SMR protein is an EmrE homodimer.
+  - Preserve correct identities and supported biology; pass applicable native validation.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- No figure pixels, supplemental datasets or atomic coordinates were reanalyzed. Embedded
+  caption text is distinguished from independently inspected images and supplements.
+- The primary structure paper discusses historical conflicting topology experiments
+  and corrects earlier X-ray models. This review uses its corrected substrate-bound3B5D
+  model, not the defunct structures or distorted apo form.
+- No broad phylogenetic prevalence census or new primary transport reanalysis was
+  performed.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The explicit all-record goal authorizes both clean and issue-bearing reviews.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
