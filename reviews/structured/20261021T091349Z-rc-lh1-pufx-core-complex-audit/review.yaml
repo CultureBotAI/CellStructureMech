@@ -1,0 +1,624 @@
+schema_version: 1.0.0
+review_id: 20261021T091349Z-rc-lh1-pufx-core-complex-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: RC-LH1-PufX core identity, native arrays and photochemical function review
+started_at: '2026-10-21T08:50:27Z'
+finished_at: '2026-10-21T09:13:49Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The RC-LH1-PufX core identity, native-array example and bounded quinone-reduction
+  graph are supported. One minor completeness finding separates known constituents
+  from exact family mapping. Source-specific preparation and connectivity interpretations
+  remain explicit.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+    sha256: 4bb84c48c2bb27f1a8dded06f479771b494070977ef26e0b14f0708bc446a7ce
+    role: context
+  - path: data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+    sha256: 0a3a6fcfe54b7a355fd2903992f521fb2fc293ce984d4ede356dbc8460071824
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: cellstructuremech:rc_lh1_pufx_core_complex
+  path: data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+  label: RC-LH1-PufX core complex
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target and internal LH2-reference boundary; native GO/taxon/bibliography;
+    full Bahatyrova main article/Methods and selected Comayras primary Methods/Results/Discussion
+    excerpts.
+  selection: Fifth target in batch fourteen; strict repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  command: just validate data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  command: just validate-strict data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+    --out /private/tmp/cellstructure-batch14-20261021-g0felisv/rc_lh1_pufx_core_complex-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: 5 identifiers OK; 2 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+  - record
+  - lh2-neighbor
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - lh2-neighbor
+  - rc-prep-go
+  - rc-prep-tax-1063
+  - rc-prep-bahatyrova2004-meta
+  - rc-prep-bahatyrova2004-whiterose-pdf
+  - rc-prep-comayras2005-meta
+  - comayras-body1
+  - comayras-body2
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+  locator: Entire maintained YAML including history, all component/protein/graph/evidence/discussion
+    fields
+  accessed_at: '2026-10-21T08:57:59Z'
+  support: context_only
+  summary: Complete maintained record read; PROPOSED status and historical curation
+    preserved.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components and evidence rules; exact review profile/checklist/schema captured
+    in native inspect
+  accessed_at: '2026-10-21T08:57:59Z'
+  support: context_only
+  summary: Exact identifiers are required when assigned, but label-only constituent
+    rows may retain unresolved family grounding; source-specific preparation and inference
+    must be preserved.
+- evidence_id: lh2-neighbor
+  kind: record_content
+  reference: data/structures/energy_complex/lh2_peripheral_light_harvesting_antenna_complex.yaml
+  locator: Entire neighboring YAML read; only identifier/label and distinct receiver
+    boundary used
+  accessed_at: '2026-10-21T08:57:59Z'
+  support: context_only
+  summary: The graph’s internal LH2 identifier resolves to a distinct peripheral antenna
+    record; this is an input dependency, not a second reviewed target or new coverage
+    credit.
+- evidence_id: rc-prep-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009767,GO:0042717
+  locator: Complete two native GO responses, identity/status/definition/synonyms
+  accessed_at: '2026-10-21T08:52:53.997642Z'
+  support: supports
+  summary: GO0042717 is the active plasma membrane-derived chromatophore membrane
+    class; GO0009767 is the active photosynthetic electron-transport process. Both
+    match the target role and graph endpoints.
+  snapshot_sha256: a9ebf46fb99807cbd088c421c45834e88fc68f21d1abdd1f394e70ef458c0271
+- evidence_id: rc-prep-tax-1063
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1063
+  locator: taxId/scientificName/rank/lineage and complete otherNames
+  accessed_at: '2026-10-21T08:52:54.037926Z'
+  support: supports
+  summary: Native taxon1063 is Cereibacter sphaeroides; Rhodobacter sphaeroides is
+    an explicit synonym. This supports the record’s current name and historical literature
+    label.
+  snapshot_sha256: 8285496c8734b387fd123717f2706cee39315debabb01990f225569e47e4420d
+- evidence_id: rc-prep-bahatyrova2004-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1038/nature02823
+  locator: Exact DOI/title/authors/year/PMID identity fields
+  accessed_at: '2026-10-21T08:52:54.960760Z'
+  support: supports
+  summary: Exact DOI10.1038/nature02823 identifies Bahatyrova et al.2004, The native
+    architecture of a photosynthetic membrane, PMID15329728.
+  snapshot_sha256: cdd0a3a0fab5cf8136a8c5e9e2246441b2cbf420c78c71eaf28cf9620293f722
+- evidence_id: rc-prep-bahatyrova2004-whiterose-pdf
+  kind: primary_source
+  reference: https://eprints.whiterose.ac.uk/id/eprint/102/1/huntercn1.pdf
+  locator: 'Institutional primary PDF: Nature430 pp1058–1062, entire article main
+    text and Methods, Figures1–3 captions. Repository cover and neighboring articles
+    excluded. No figure-pixel or supplemental-image reanalysis.'
+  accessed_at: '2026-10-21T08:53:33.388205Z'
+  support: supports
+  summary: The primary AFM study images RC-LH1-PufX arrays and nearby LH2 in membrane
+    patches from R.sphaeroides NCIB8253. Samples were detergent-fractionated and mica-bound.
+    PufX itself was not resolved within the dimer center. Spatial contacts and prior
+    spectroscopy support a transfer model, while direct rates, protein dynamics and
+    native curvature remain limited.
+  snapshot_sha256: 18b555872af69d3ebed8f51dcfab485e048eaa892d83e9ac71cb998564f3bd25
+- evidence_id: rc-prep-comayras2005-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1074/jbc.M412088200
+  locator: Exact DOI/title/authors/year/PMID fields; PartI distinguished from the
+    accompanying PufX-specific article
+  accessed_at: '2026-10-21T08:52:54.958102Z'
+  support: supports
+  summary: Exact DOI10.1074/jbc.M412088200 identifies Comayras, Jungas and Lavergne2005
+    PartI on quinone domains and excitation transfer, PMID15632164.
+  snapshot_sha256: f0a2f6d4c18cf31ffaaddcebf08e2e79dffad94e116ffecf30b579b254acd745
+- evidence_id: comayras-body1
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/8099149_Functional_consequences_of_the_organization_of_the_photosynthetic_apparatus_in_Rhodobacter_sphaeroides_I_Quinone_domains_and_excitation_transfer_in_chromatophores_and_reaction_centerantenna_complexes
+  locator: 'Coauthor-shared primary JBC article browser text: Methods lines488–796;
+    selected Results lines1099–1246; Figure1 reaction-scheme caption. Captured excerpts
+    only, not complete PDF.'
+  accessed_at: '2026-10-21T08:55:40.204360Z'
+  support: supports
+  summary: Primary methods use Ga-strain cultures, detergent-isolated cores and chromatophores
+    with TMPD donor, inhibitors and uncouplers; optical signals measure photoreduction
+    and excitonic connectivity under those conditions.
+  snapshot_sha256: 41d62a5b4399ea3b11d95703cb686d447ba32e5854f314f3a2a54fc6790b4b2a
+- evidence_id: comayras-body2
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/8099149_Functional_consequences_of_the_organization_of_the_photosynthetic_apparatus_in_Rhodobacter_sphaeroides_I_Quinone_domains_and_excitation_transfer_in_chromatophores_and_reaction_centerantenna_complexes
+  locator: 'Same primary article: Results photoreduction/sharing lines1248–1447; Discussion
+    excitonic-connectivity lines2432–2575 and domain interpretation2626–2862. Discontinuous
+    excerpts; no full supplemental modeling read.'
+  accessed_at: '2026-10-21T08:55:40.241503Z'
+  support: supports
+  summary: The inspected results support quinone photoreduction. Functional domain
+    interpretations favor intradimer connectivity; the hypothesized quinone-rich environment
+    is not established native geometry.
+  snapshot_sha256: 910490f9606f2c3225ec7099bd64c3191e4054ab59da3cf38051850964ea2f33
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:50:31Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml'
+  snapshot_sha256: 9ca16da44bf3d2b18364ddfacd55f454104ed6b9ba4c6dbd5ac68da9631d1df6
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+    --out /private/tmp/cellstructure-batch14-20261021-g0felisv/rc_lh1_pufx_core_complex-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:50:34Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml\
+    \ --out /private/tmp/cellstructure-batch14-20261021-g0felisv/rc_lh1_pufx_core_complex-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch14-20261021-g0felisv/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch14-20261021-g0felisv/rc_lh1_pufx_core_complex-strict.tsv"
+  snapshot_sha256: d890af716d276bec80e837ddc141c5879f226a91e05fe47e63064ede085795b5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml; exact collect()
+    scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:57:59Z'
+  support: supports
+  summary: '5 of7 collected target identifiers returned OK at the unchanged base.
+    Residuals: cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex:
+    SKIPPED; resolved by evidence lh2-neighbor; cellstructuremech:rc_lh1_pufx_core_complex:
+    SKIPPED; resolved by evidence record. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Reaction-center antenna core
+  outcome: supported
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: Local exact identity, exact expanded synonym and multiprotein-complex kind
+    match the cited named RC-LH1-PufX complex. The target is neither the whole chromatophore
+    nor peripheral LH2; the local LH2 node resolves to its own maintained record.
+  evidence_ids:
+  - rc-prep-bahatyrova2004-whiterose-pdf
+  - rc-prep-go
+  - record
+  - lh2-neighbor
+- assessment_id: partonomy
+  area: scope
+  topic: Membrane and organism context
+  outcome: supported
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: The native GO membrane class and primary membrane preparations support
+    chromatophore parthood. Cereibacter/Rhodobacter names agree. NCIB8253 imaging
+    and Ga-strain functional preparations are distinct species examples; no strain-identical
+    experiment is implied.
+  evidence_ids:
+  - rc-prep-go
+  - rc-prep-tax-1063
+  - rc-prep-bahatyrova2004-whiterose-pdf
+  - comayras-body1
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: Named members before exact families
+  outcome: concern
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: The record’s explicit prompt defers all reaction-center L/M/H, LH1 alpha/beta
+    and PufX component rows until family identifiers are resolved. The named core
+    architecture and reaction-center subunits already have source support, even though
+    the2004 AFM did not resolve PufX independently. Record supported constituent identities
+    at appropriate evidence tiers while retaining genuine family/stoichiometry limits.
+  evidence_ids:
+  - rc-prep-bahatyrova2004-whiterose-pdf
+  - comayras-body1
+  - record
+  - policy
+- assessment_id: transfer
+  area: evidence
+  topic: Contact geometry and physiological interpretation
+  outcome: supported
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: The LH2-to-core direction is supported as the paper’s structural/physiological
+    interpretation. Static AFM contact is not a new rate measurement; LH2 presence
+    is contextual and not an essential identity requirement for the core, which also
+    occurs in the source’s LH2-lacking mutant discussion.
+  evidence_ids:
+  - rc-prep-bahatyrova2004-whiterose-pdf
+  - record
+- assessment_id: function
+  area: evidence
+  topic: Quinone reduction and cycle context
+  outcome: supported
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: Primary optical measurements support photochemical electron transfer to
+    quinone under specified assay conditions. The normal cyclic pathway was deliberately
+    interrupted in the assay; the graph places the core in that physiological pathway
+    without asserting a measured intact cycle or proton-pumping stoichiometry.
+  evidence_ids:
+  - comayras-body1
+  - comayras-body2
+  - rc-prep-go
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Four bounded edges
+  outcome: supported
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: Membrane residence and LH2 excitation input follow the native-array study;
+    quinone reduction and contribution to electron transport follow the functional
+    work. NONMECHANISTIC omits cofactor sequence, PufX dimerization and quinone exchange
+    kinetics; no complete assembly or necessity/sufficiency mechanism is asserted.
+  evidence_ids:
+  - rc-prep-bahatyrova2004-whiterose-pdf
+  - comayras-body1
+  - comayras-body2
+  - rc-prep-go
+  - record
+  - lh2-neighbor
+- assessment_id: interpretation
+  area: scope
+  topic: Preserved differences between the two studies
+  outcome: supported
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: Bahatyrova proposes possible excitation migration along core arrays. Comayras
+    favors little significant interdimer transfer under its functional analysis. These
+    source-specific interpretations are retained rather than collapsed into a measured
+    universal network. The existing graph does not assert interdimer connectivity
+    and therefore need not choose between them.
+  evidence_ids:
+  - rc-prep-bahatyrova2004-whiterose-pdf
+  - comayras-body2
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Source and maintained-input ownership
+  outcome: supported
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  summary: Both DOI identities resolve. The institutional PDF is the complete primary
+    article, while Comayras body access is an explicitly incomplete coauthor-shared
+    rendering. Source dates and hashes remain exact; the LH2 neighbor is included
+    in native input hashes. No picture licence, quantitative property or complete
+    optional accessory inventory is claimed.
+  evidence_ids:
+  - rc-prep-bahatyrova2004-meta
+  - rc-prep-comayras2005-meta
+  - rc-prep-bahatyrova2004-whiterose-pdf
+  - comayras-body1
+  - comayras-body2
+  - record
+  - lh2-neighbor
+findings:
+- finding_id: F1
+  issue_key: rc-lh1-pufx-known-core-deferred-for-family-grounding
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate the established core constituents from family-mapping work
+  description: The record has no component rows, and its rc_lh1_pufx_subunit_boundaries
+    prompt makes exact family resolution a prerequisite for representing the named
+    reaction-center/LH1/PufX constituents. The cited native-array paper already supplies
+    the core architecture and reaction-center L/M/H context, while the functional
+    study characterizes isolated RC-LH1 complexes. Supported labels can preserve known
+    membership without guessed family identifiers or unsupported PufX density assignments.
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  field_paths:
+  - components
+  - discussions[discussion_id=rc_lh1_pufx_subunit_boundaries]
+  evidence_ids:
+  - rc-prep-bahatyrova2004-whiterose-pdf
+  - comayras-body1
+  - record
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: Minor consequential known-composition gap; exact core identity
+    and bounded functional graph are supported.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - cellstructuremech:rc_lh1_pufx_core_complex
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/rc_lh1_pufx_core_complex.yaml
+    role: maintained scientific record
+  description: Represent source-supported core constituents with evidence and explicit
+    unresolved groundings where needed. Distinguish directly resolved reaction-center
+    features, established LH1 membership and the paper’s PufX-containing complex interpretation;
+    retain exact family and stoichiometry work in the discussion.
+  acceptance_checks:
+  - Do not claim Bahatyrova2004 directly located the PufX polypeptide; the paper explicitly
+    could not identify it.
+  - Keep external LH2, cytochrome bc1 and mobile quinone pools distinct from constitutive
+    protein members; avoid universal small-subunit stoichiometry.
+  - Use the guarded record writer, append curation/repository history, regenerate
+    pages, and pass native schema/strict/products/history/qc gates in separately authorized
+    curation.
+  generator: Maintained structure YAML; generated pages derive from it.
+limitations:
+- Bahatyrova2004 membrane patches were isolated using sucrose gradients and mild detergent,
+  adsorbed to mica and flattened. Native terminology does not imply an intact-cell
+  dynamic measurement, and PufX itself was not resolved.
+- Comayras2005 primary body access is discontinuous browser rendering of a coauthor-shared
+  paper. Native publisher requests were403 and Elsevier API returned metadata only.
+  Complete supplemental models, full redox-titration Results and remaining body were
+  not read.
+- No figure pixels, AFM raw maps, spectroscopy raw data or supplemental methods were
+  reanalyzed. No new kinetic constant, stoichiometric estimate or universal transfer
+  efficiency is asserted.
+- Source interpretations of potential interdimer transfer differ; the existing graph
+  needs only LH2-to-core input and quinone output. Strains and assay conditions remain
+  distinct.
+- No exact subunit family grounding, phylogenetic prevalence or universal PufX/antenna
+  assembly mechanism is newly established.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- All13 native input hashes verified after expanded inspect; LH2 neighbor is dependency-only
+  with no added target coverage.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
