@@ -14,19 +14,22 @@ events:
 - type: CREATE
   outcome: changed
   sections:
-  - description
+  - definition
   - synonyms
   - parent_structures
   - part_of
+  - xrefs
+  - components
   - taxonomic_distribution
   - canonical_examples
-  - components
   - functions
+  - evidence
   - causal_graphs
   - curation_history
   summary: Add prefoldin complex (GO:0016272) record
-  details: Added CellStructureRecord for prefoldin complex (GO:0016272) across Archaea and
-    Fungi with Methanothermobacter thermautotrophicus GimA/GimB (O27126, O26779) and Saccharomyces
-    cerevisiae Gim1-Gim5/Pfd1 (P48363, P40005, P53900, P52553, Q04493, P46988), verbatim PubMed
-    abstract evidence (PMID:11113124, PMID:9630229, PMID:10523662), canonical examples, functions,
-    and assembly/function causal graphs.
+  details: Added CellStructureRecord for prefoldin complex (GO:0016272) in Saccharomyces cerevisiae
+    S288C with heterohexameric subunits PFD1 (UniProtKB:P46988), GIM4 (UniProtKB:P40005),
+    PAC10 (UniProtKB:P48363), GIM3 (UniProtKB:P53900), GIM5 (UniProtKB:Q04493), and YKE2
+    (UniProtKB:P52553), verbatim PubMed abstract evidence (PMID:9630229, PMID:41754437, PMID:42647631),
+    ComplexPortal xref (CPX-1671), canonical examples, functions, and a mechanistic FUNCTION
+    causal graph.

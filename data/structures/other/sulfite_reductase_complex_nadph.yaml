@@ -247,14 +247,20 @@ causal_graphs:
   - subject: cysi_hemoprotein_beta_subunit
     predicate: binds via N-terminal oligomerization domain to
     object: cysj_flavoprotein_alpha_subunit
-    description: The N-terminal domain of the hemoprotein beta subunit (SiRHP) interacts
-      with the NADPH-binding domain of the flavoprotein alpha subunit (SiRFP).
+    description: The N-terminal oligomerization domain of the cofactor-loaded hemoprotein
+      beta subunit (SiRHP) governs inter-subunit assembly with the flavoprotein alpha
+      subunit (SiRFP).
     evidence:
     - reference: PMID:26088143
-      snippet: The iron-rich cofactors in SiRHP are unique because they are a covalent
-        arrangement of a Fe4S4 cluster attached through a cysteine ligand to an iron-containing
-        porphyrinoid called siroheme.
-      notes: Demonstrates the inter-subunit assembly interface between SiRHP and SiRFP.
+      snippet: By use of small angle x-ray scattering, we explore the structure of
+        the SiRHP N-terminal oligomerization domain.
+      notes: Characterizes the structure of the SiRHP N-terminal oligomerization domain
+        that mediates holoenzyme assembly.
+    - reference: PMID:26088143
+      snippet: Apo-SiRHP forms a homotetramer, also dependent on its N terminus, that
+        is unable to assemble with SiRFP.
+      notes: Demonstrates that N-terminal-dependent oligomerization of holo-SiRHP
+        is required to assemble with SiRFP.
   - subject: cysj_flavoprotein_alpha_subunit
     predicate: co-assembles with beta subunit into
     object: sulfite_reductase_complex_nadph
@@ -296,4 +302,10 @@ curation_history:
   changes: Added sulfite reductase complex (NADPH) (GO:0009337) with InterPro-grounded
     components, reviewed UniProtKB protein examples, GO-grounded functions, verbatim
     literature snippets, and a mechanistic causal graph.
+  llm_assisted: true
+- timestamp: '2026-11-01T00:05:33Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Aligned causal_graphs[0].edges[0] evidence snippets on PMID:26088143 with
+    the SiRHP N-terminal oligomerization domain and assembly with SiRFP (#2495).
   llm_assisted: true

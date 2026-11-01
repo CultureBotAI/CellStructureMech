@@ -14,19 +14,20 @@ events:
 - type: CREATE
   outcome: changed
   sections:
-  - description
-  - synonyms
+  - definition
   - parent_structures
   - part_of
+  - xrefs
+  - components
   - taxonomic_distribution
   - canonical_examples
-  - components
   - functions
+  - evidence
   - causal_graphs
   - curation_history
   summary: Add Holliday junction helicase complex (GO:0009379) record
   details: Added CellStructureRecord for Holliday junction helicase complex (GO:0009379) in
-    Escherichia coli K-12 with DNA-binding subunit RuvA (P0A809), branch-migration motor subunit
-    RuvB (P0A812), and Holliday junction resolvase RuvC (P0A814), verbatim PubMed abstract
-    evidence (PMID:1633791, PMID:9512672, PMID:10490600), canonical examples, functions, and
-    assembly/function causal graphs.
+    Escherichia coli K-12 with Holliday junction recognition subunit RuvA (UniProtKB:P0A809)
+    and ATP-dependent branch-migration motor subunit RuvB (UniProtKB:P0A812), verbatim PubMed
+    abstract evidence (PMID:8832889, PMID:26658024), ComplexPortal xref (CPX-5124), canonical
+    examples, functions, and a mechanistic FUNCTION causal graph.

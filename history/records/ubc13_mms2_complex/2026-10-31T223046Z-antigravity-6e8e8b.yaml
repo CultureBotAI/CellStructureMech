@@ -14,18 +14,21 @@ events:
 - type: CREATE
   outcome: changed
   sections:
-  - description
+  - definition
   - synonyms
   - parent_structures
   - part_of
+  - xrefs
+  - components
   - taxonomic_distribution
   - canonical_examples
-  - components
   - functions
+  - evidence
   - causal_graphs
   - curation_history
   summary: Add UBC13-MMS2 complex (GO:0031372) record
   details: Added CellStructureRecord for UBC13-MMS2 complex (GO:0031372) in Saccharomyces
-    cerevisiae S288C with ubiquitin-conjugating enzyme Ubc13 (P52490) and ubiquitin-conjugating
-    enzyme variant Mms2 (P53152), verbatim PubMed abstract evidence (PMID:10089880, PMID:11498590),
-    canonical examples, functions, and assembly/function causal graphs.
+    cerevisiae S288C with ubiquitin-conjugating enzyme Ubc13 (UniProtKB:P52490) and ubiquitin-conjugating
+    enzyme variant Mms2 (UniProtKB:P53152), verbatim PubMed abstract evidence (PMID:10089880,
+    PMID:32265276, PMID:34995738), ComplexPortal xref (CPX-1137), canonical examples, functions,
+    and a mechanistic FUNCTION causal graph.
