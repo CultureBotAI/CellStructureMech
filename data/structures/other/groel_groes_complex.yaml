@@ -22,6 +22,12 @@ curation_history:
     PDB:1AON canonical example, protein-folding function evidence, PDB-backed stoichiometry,
     and DOI/PMID/PDB evidence.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'groel_groes_folding_cycle' with
+    3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: bacterial chaperonin ATPase complex
   synonym_type: RELATED_SYNONYM
@@ -151,3 +157,55 @@ evidence:
 - reference: PDB:1AON
   notes: RCSB Protein Data Bank entry for the asymmetric Escherichia coli GroEL-GroES-(ADP)7
     crystal structure from Xu, Horwich and Sigler 1997.
+causal_graphs:
+- graph_id: groel_groes_folding_cycle
+  title: GroEL-GroES Chaperonin Cavity Encapsulation and Protein Folding
+  description: GroES co-chaperonin capping of the GroEL heptameric ring and ATP-dependent
+    substrate protein folding inside the cis cavity.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: groes_cochaperonin
+    label: GroES chaperonin
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR020818
+    component_ref: groes_cochaperonin
+  - node_id: groel_chaperonin
+    label: Chaperonin Cpn60/GroEL
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR001844
+    component_ref: groel_chaperonin
+  - node_id: protein_folding
+    label: protein folding
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006457
+  edges:
+  - subject: groes_cochaperonin
+    predicate: caps
+    object: groel_chaperonin
+    description: The heptameric GroES co-chaperonin dome binds an nucleotide-bound
+      GroEL heptameric ring to seal the central cis folding chamber.
+    evidence:
+    - reference: GO:1990220
+      notes: GO:1990220 defines the GroEL-GroES complex as a tetradecameric GroEL
+        double ring capped by a heptameric GroES ring.
+    - reference: DOI:10.1038/41944
+      notes: Xu, Horwich and Sigler 1997 resolved the asymmetric GroEL-GroES-(ADP)7
+        complex structure.
+    - reference: PDB:1AON
+      notes: PDB:1AON captures the seven-subunit GroES ring capping one ring of the
+        14-subunit GroEL cylinder.
+  - subject: groel_chaperonin
+    predicate: promotes
+    object: protein_folding
+    description: Enlargement and hydrophilic remodeling of the GroES-capped GroEL
+      cis cavity promote folding of encapsulated polypeptide substrates.
+    evidence:
+    - reference: GO:1990220
+      notes: GO:1990220 defines the GroEL-GroES holoenzyme by its role in correct
+        protein folding.
+    - reference: GO:0006457
+      notes: GO:0006457 is the biological-process term for protein folding.
+    - reference: DOI:10.1038/41944
+      notes: Xu, Horwich and Sigler 1997 showed how GroES binding doubles the volume
+        of the GroEL cis cavity to assist protein folding.

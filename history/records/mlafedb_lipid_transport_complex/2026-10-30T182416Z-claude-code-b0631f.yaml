@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/mlafedb_lipid_transport_complex.yaml
+  slug: mlafedb_lipid_transport_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-b0631f
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect MlaE, MlaF, and MlaB subunit nodes to mlafedb structure node
+  details: Added contributes to edges from mlae, mlaf, and mlab to mlafedb backed by ComplexPortal:CPX-3464
+    and PDB:7CGE.

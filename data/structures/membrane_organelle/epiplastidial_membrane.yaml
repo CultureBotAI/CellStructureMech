@@ -23,6 +23,12 @@ curation_history:
     a complex-plastid boundary function, GO and DOI evidence, and open lipid-grounding
     and periplastidial-boundary discussions.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'epiplastidial_membrane_boundary'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: cERM
   synonym_type: EXACT_SYNONYM
@@ -133,3 +139,47 @@ discussions:
   - reference: GO:7770041
   posed_by: codex
   posed_date: '2026-10-03'
+causal_graphs:
+- graph_id: epiplastidial_membrane_boundary
+  title: Epiplastidial Membrane Outer Complex-Plastid Boundary
+  description: Host-endomembrane-derived epiplastidial lipid bilayer forming the outermost
+    membrane boundary of secondary complex plastids.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: epiplastidial_lipid_bilayer
+    label: epiplastidial lipid bilayer
+    node_type: STRUCTURE
+    component_ref: epiplastidial_lipid_bilayer
+  - node_id: epiplastidial_membrane
+    label: epiplastidial membrane
+    node_type: STRUCTURE
+  - node_id: complex_plastid_outer_boundary
+    label: complex-plastid outer boundary
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - subject: epiplastidial_lipid_bilayer
+    predicate: forms
+    object: epiplastidial_membrane
+    description: The host-endomembrane-derived lipid bilayer forms the outermost epiplastidial
+      membrane surrounding secondary complex plastids.
+    evidence:
+    - reference: GO:7770040
+      notes: GO:7770040 defines the epiplastidial membrane as the outermost lipid
+        bilayer surrounding complex plastids.
+    - reference: DOI:10.1016/j.protis.2016.04.001
+      notes: Flori et al. 2016 characterized the membrane architecture bounding the
+        diatom periplastidial compartment.
+  - subject: epiplastidial_membrane
+    predicate: maintains
+    object: complex_plastid_outer_boundary
+    description: The epiplastidial membrane separates the periplastidial compartment
+      from the host cytosol while maintaining continuity with the rough ER and outer
+      nuclear envelope.
+    evidence:
+    - reference: GO:7770040
+      notes: GO:7770040 describes the epiplastidial membrane as the outermost complex-plastid
+        boundary continuous with the host ER and outer nuclear membrane.
+    - reference: DOI:10.1007/s10265-005-0214-6
+      notes: Hashimoto 2005 reviewed the four-membrane organization and outer ER-continuous
+        membrane of secondary plastids.

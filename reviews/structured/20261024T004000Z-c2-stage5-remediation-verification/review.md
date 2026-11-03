@@ -1,0 +1,754 @@
+# Post-remediation verification review of all 19 CellStructureRecord files remediated in Cycle 2 Stage 5 (#2419, #2420, #2421)
+
+- Review: 20261024T004000Z-c2-stage5-remediation-verification
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-24T00:35:00Z
+- Finished UTC: 2026-10-24T00:40:00Z
+- Reviewer: antigravity-c2-stage5-remediation-review (self_review)
+- Completion: completed
+- Verdict: pass
+- Scientific review: true
+
+## Summary
+
+Fresh post-remediation review of all 19 CellStructureRecord YAML files modified in Cycle 2 Stage 5 (commit 99e590eb7afb0e8251f6e81183e59ca1119987b9) resolving all 7 open findings carried forward from Cycle 2 Stage 4 across issues #2419 (causal-graph STRUCTURE typing for 5 subcomplex nodes), #2420 (component_type: PROTEIN_COMPLEX for 10 heterodimeric/multiprotein subcomplex components across 8 records), and #2421 (synchronization of component gene_symbols with verified protein_examples across 6 records). All 19 records pass strict validation, ID-label correspondence, UniProt verification, history ledger validation, and page regeneration checks with zero open findings.
+
+## Scope And Provenance
+
+Complete cohort of all 19 CellStructureRecord YAML files remediated in Cycle 2 Stage 5 to resolve the 7 carried-forward Stage 4 findings.
+
+Selection: All 19 records modified in commit 99e590eb7afb0e8251f6e81183e59ca1119987b9 for issues #2419, #2420, and #2421.
+Coverage: full; 19 reviewed / 19 in the declared population.
+Source: git_commit at Git base 99e590eb7afb0e8251f6e81183e59ca1119987b9.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0030128 | data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml | maintained | clathrin coat of endocytic vesicle |
+| GO:0046858 | data/structures/membrane_organelle/chlorosome.yaml | maintained | chlorosome |
+| GO:0033105 | data/structures/membrane_organelle/chlorosome_envelope.yaml | maintained | chlorosome envelope |
+| GO:0044284 | data/structures/membrane_organelle/mitochondrial_crista_junction.yaml | maintained | mitochondrial crista junction |
+| GO:0005741 | data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml | maintained | mitochondrial outer membrane |
+| GO:0005885 | data/structures/cytoskeleton/arp2_3_protein_complex.yaml | maintained | Arp2/3 protein complex |
+| GO:0000930 | data/structures/cytoskeleton/gamma_tubulin_complex.yaml | maintained | gamma-tubulin complex |
+| GO:0000931 | data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml | maintained | gamma-tubulin ring complex |
+| GO:0008275 | data/structures/cytoskeleton/gamma_tubulin_small_complex.yaml | maintained | gamma-tubulin small complex |
+| GO:0034993 | data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml | maintained | meiotic nuclear membrane microtubule tethering complex |
+| GO:0106094 | data/structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.yaml | maintained | nuclear membrane microtubule tethering complex |
+| GO:1990612 | data/structures/cytoskeleton/sad1_kms1_linc_complex.yaml | maintained | Sad1-Kms1 LINC complex |
+| GO:0009521 | data/structures/energy_complex/photosystem.yaml | maintained | photosystem |
+| GO:0009288 | data/structures/appendage/bacterial_type_flagellum.yaml | maintained | bacterial-type flagellum |
+| GO:0005818 | data/structures/cytoskeleton/aster.yaml | maintained | aster |
+| GO:0000235 | data/structures/cytoskeleton/astral_microtubule.yaml | maintained | astral microtubule |
+| GO:0032117 | data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml | maintained | horsetail astral microtubule array |
+| GO:1990295 | data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml | maintained | post-anaphase microtubule array |
+| GO:0031470 | data/structures/microcompartment/carboxysome.yaml | maintained | carboxysome |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Strict corpus validation covering all 19 remediated records | passed | True | GO:0030128, GO:0046858, GO:0033105, GO:0044284, GO:0005741, GO:0005885, GO:0000930, GO:0000931, GO:0008275, GO:0034993, GO:0106094, GO:1990612, GO:0009521, GO:0009288, GO:0005818, GO:0000235, GO:0032117, GO:1990295, GO:0031470 | All 985 corpus records including the 19 remediated records pass strict LinkML and semantic validation with 0 errors. |
+| ID-label correspondence across corpus and generated products | passed | True | GO:0030128, GO:0046858, GO:0033105, GO:0044284, GO:0005741, GO:0005885, GO:0000930, GO:0000931, GO:0008275, GO:0034993, GO:0106094, GO:1990612, GO:0009521, GO:0009288, GO:0005818, GO:0000235, GO:0032117, GO:1990295, GO:0031470 | All ontology ID-label pairs across the corpus (4023 canonical, 50 synonym, 6 exception) correspond to authoritative ontology labels. |
+| UniProtKB protein_examples and causal_graphs xref verification | passed | True | GO:0030128, GO:0046858, GO:0033105, GO:0044284, GO:0005741, GO:0005885, GO:0000930, GO:0000931, GO:0008275, GO:0034993, GO:0106094, GO:1990612, GO:0009521, GO:0009288, GO:0005818, GO:0000235, GO:0032117, GO:1990295, GO:0031470 | All UniProtKB protein_examples and causal_graphs xrefs across the corpus pass offline verification. |
+| Repository history link and LinkML HistoryRecord validation | passed | True | GO:0030128, GO:0046858, GO:0033105, GO:0044284, GO:0005741, GO:0005885, GO:0000930, GO:0000931, GO:0008275, GO:0034993, GO:0106094, GO:1990612, GO:0009521, GO:0009288, GO:0005818, GO:0000235, GO:0032117, GO:1990295, GO:0031470 | All 1991 repository history files (including the 19 newly added Cycle 2 Stage 5 history ledger records) pass link and LinkML HistoryRecord schema validation. |
+
+## Scientific And Domain Assessments
+
+### Causal-graph STRUCTURE typing and grounding for subcomplex nodes (#2419)
+
+graph: supported. Targets: GO:0030128, GO:0046858, GO:0033105, GO:0044284, GO:0005741.
+
+All 5 subcomplex causal-graph nodes across clathrin_coat_of_endocytic_vesicle.yaml (ap2_adaptor_complex GO:0030122), chlorosome.yaml (csma_baseplate cellstructuremech:chlorosome_baseplate_antenna_complex), chlorosome_envelope.yaml (csma_baseplate cellstructuremech:chlorosome_baseplate_antenna_complex), mitochondrial_crista_junction.yaml (micos_complex GO:0061617), and mitochondrial_outer_membrane.yaml (tom_complex GO:0005742) now use node_type: STRUCTURE with canonical GO or CSM grounding.
+
+### PROTEIN_COMPLEX component typing for heterodimeric and multiprotein subcomplexes (#2420)
+
+representation: supported. Targets: GO:0005885, GO:0000930, GO:0000931, GO:0008275, GO:0034993, GO:0106094, GO:1990612, GO:0009521.
+
+All 10 heterodimeric or multiprotein subcomplex components across arp2_3_protein_complex.yaml, gamma_tubulin_complex.yaml, gamma_tubulin_ring_complex.yaml, gamma_tubulin_small_complex.yaml, meiotic_nuclear_membrane_microtubule_tethering_complex.yaml, nuclear_membrane_microtubule_tethering_complex.yaml, sad1_kms1_linc_complex.yaml, and photosystem.yaml now use component_type: PROTEIN_COMPLEX.
+
+### Synchronization of component gene_symbols with verified protein_examples (#2421)
+
+consistency: supported. Targets: GO:0009288, GO:0005818, GO:0000235, GO:0032117, GO:1990295, GO:0031470.
+
+All 6 records (bacterial_type_flagellum.yaml, aster.yaml, astral_microtubule.yaml, horsetail_astral_microtubule_array.yaml, post_anaphase_microtubule_array.yaml, and carboxysome.yaml) now include every verified protein_examples gene_symbol (hag, fliY, nda2, ccmK3, ccmK4) in their parent component gene_symbols lists.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+- retain: GO:0030128, GO:0046858, GO:0033105, GO:0044284, GO:0005741, GO:0005885, GO:0000930, GO:0000931, GO:0008275, GO:0034993, GO:0106094, GO:1990612, GO:0009521, GO:0009288, GO:0005818, GO:0000235, GO:0032117, GO:1990295, GO:0031470. All 19 remediated records preserve their existing structure boundaries and canonical GO identifiers while resolving all 7 Cycle 2 Stage 4 review findings.
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev_strict_c2_stage5 | scripts/validate_strict.py; strict validation summary | supports | validate_strict.py scanned 985 files with 0 ERROR rows. |
+| ev_labels_c2_stage5 | scripts/validate_id_label_correspondence.py; id-label correspondence summary | supports | validate_id_label_correspondence.py verified 4023 canonical, 50 synonym, and 6 exception pairs with 0 mismatches. |
+| ev_uniprot_c2_stage5 | scripts/uniprot_genes.py; uniprot_genes --verify summary | supports | uniprot_genes.py --verify confirmed all UniProtKB protein_examples and causal_graphs xrefs verified ok. |
+| ev_history_c2_stage5 | scripts/validate_history.py; history link and schema validation | supports | 1991 history records validated with 0 invalid links and 0 HistoryRecord schema errors. |
+
+## Limits And Additional Notes
+
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261024T004000Z-c2-stage5-remediation-verification
+kind: category
+repository: CultureBotAI/CellStructureMech
+title: 'Post-remediation verification review of all 19 CellStructureRecord files remediated
+  in Cycle 2 Stage 5 (#2419, #2420, #2421)'
+started_at: '2026-10-24T00:35:00Z'
+finished_at: '2026-10-24T00:40:00Z'
+reviewer:
+  identity: antigravity-c2-stage5-remediation-review
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: 'Post-remediation verification review against committed git
+    revision 99e590eb7afb0e8251f6e81183e59ca1119987b9 covering all 19 records modified
+    to resolve the 7 Cycle 2 Stage 4 review findings across GitHub issues #2419, #2420,
+    and #2421.'
+skill: .claude/skills/review-yaml-category/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: true
+summary: 'Fresh post-remediation review of all 19 CellStructureRecord YAML files modified
+  in Cycle 2 Stage 5 (commit 99e590eb7afb0e8251f6e81183e59ca1119987b9) resolving all
+  7 open findings carried forward from Cycle 2 Stage 4 across issues #2419 (causal-graph
+  STRUCTURE typing for 5 subcomplex nodes), #2420 (component_type: PROTEIN_COMPLEX
+  for 10 heterodimeric/multiprotein subcomplex components across 8 records), and #2421
+  (synchronization of component gene_symbols with verified protein_examples across
+  6 records). All 19 records pass strict validation, ID-label correspondence, UniProt
+  verification, history ledger validation, and page regeneration checks with zero
+  open findings.'
+source:
+  git_revision: 99e590eb7afb0e8251f6e81183e59ca1119987b9
+  state: git_commit
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 7a7ae411cf451ee7e634dfc65b6a466e5c52206e5d9111f090d3704832ddceae
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: conf/record_review.yaml
+    sha256: d3334a12b8a616a7638f1195748085d2b543fba7df67ad4ff8fcc0ac18f2d3ee
+    role: context
+  - path: data/structures/appendage/bacterial_type_flagellum.yaml
+    sha256: 95ba125172ad6d65d33e178c0ebb32e3ee547828d509819263848b4789252b3c
+    role: target
+  - path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+    sha256: cbdf1988c3ba5d6d509ce20ffa8fefa763f7273e9120ed2231eca3d33d424d80
+    role: target
+  - path: data/structures/cytoskeleton/aster.yaml
+    sha256: ead65813443a3277dee3611ec40e32b7bc4c3882d8c31508eb352f6fffdfd6df
+    role: target
+  - path: data/structures/cytoskeleton/astral_microtubule.yaml
+    sha256: 45c1ec56a960d58bde433d88317824b726ff48473bc9b0b1d4429c6e2f57041d
+    role: target
+  - path: data/structures/cytoskeleton/gamma_tubulin_complex.yaml
+    sha256: 32184c59b76eafdef971451be3b00f1bc2c3f04ac49348c1a3a8c67ba740f700
+    role: target
+  - path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    sha256: 1c9501c5c43f775b44d7f455eecce522c0acf308308b7cb05ff180327545a6b3
+    role: target
+  - path: data/structures/cytoskeleton/gamma_tubulin_small_complex.yaml
+    sha256: 22ddf61af1db19b692c4c2bc4b77fa938e148ac1cc6b98916714205abb7f80bd
+    role: target
+  - path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+    sha256: 567b5def97463ac69a319318e8de9b0d02cbbb670f78212dbe1aa4dcdc4c204d
+    role: target
+  - path: data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml
+    sha256: b88b24ae10c1c8ceb36cb1489992fabe20600bff7e85e71a9fd3048d02e15b00
+    role: target
+  - path: data/structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.yaml
+    sha256: a4458d3e0be617506557e7896258e186266872195a65d308b65390609fd539a7
+    role: target
+  - path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    sha256: ac97344d35ac58bc4d21294879b0fc23684fca5f7da6956a4b075108a326a225
+    role: target
+  - path: data/structures/cytoskeleton/sad1_kms1_linc_complex.yaml
+    sha256: 4bf976f7c39fe18c961e155a1e4304153986b271209d2d35aa520a8406c03c65
+    role: target
+  - path: data/structures/energy_complex/photosystem.yaml
+    sha256: c2bcf25948fb2eac1930736513012c4c177df4e0138ef971209ffed798ef3da8
+    role: target
+  - path: data/structures/membrane_organelle/chlorosome.yaml
+    sha256: eacca36a012da67cb45237059e21f59f42619b8c93a0fd06b37a1d8fcbe4afb4
+    role: target
+  - path: data/structures/membrane_organelle/chlorosome_envelope.yaml
+    sha256: d39583d641a4c6070008f52e29246d1659bf86b1158799b1c30caf2e272ef903
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_crista_junction.yaml
+    sha256: b994a1d51d584f4614c50fb97db455db7a6cf72b2f886da419fcbf3b77ba3adb
+    role: target
+  - path: data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml
+    sha256: 136ac3a72a4a1f8475301e2328ebc27c3799397823e0b5804124480ff728800f
+    role: target
+  - path: data/structures/microcompartment/carboxysome.yaml
+    sha256: 2d532dcd3f7267b41e377c7a595a93507b3aa7c139c57da0c6c58d6d36cae58a
+    role: target
+  - path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    sha256: 04cd29ffe90456d0dc2acbe6dbba20bd061587015653a0bea6d7259c1c7f6220
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+  - path: src/cellstructuremech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+scope:
+  description: Complete cohort of all 19 CellStructureRecord YAML files remediated
+    in Cycle 2 Stage 5 to resolve the 7 carried-forward Stage 4 findings.
+  selection: 'All 19 records modified in commit 99e590eb7afb0e8251f6e81183e59ca1119987b9
+    for issues #2419, #2420, and #2421.'
+  coverage: full
+  population_size: 19
+  reviewed_target_ids:
+  - GO:0030128
+  - GO:0046858
+  - GO:0033105
+  - GO:0044284
+  - GO:0005741
+  - GO:0005885
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0034993
+  - GO:0106094
+  - GO:1990612
+  - GO:0009521
+  - GO:0009288
+  - GO:0005818
+  - GO:0000235
+  - GO:0032117
+  - GO:1990295
+  - GO:0031470
+targets:
+- target_id: GO:0030128
+  path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+  label: clathrin coat of endocytic vesicle
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 04cd29ffe90456d0dc2acbe6dbba20bd061587015653a0bea6d7259c1c7f6220
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/other/clathrin_coat_of_endocytic_vesicle.yaml
+    role: maintained_record
+- target_id: GO:0046858
+  path: data/structures/membrane_organelle/chlorosome.yaml
+  label: chlorosome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: eacca36a012da67cb45237059e21f59f42619b8c93a0fd06b37a1d8fcbe4afb4
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chlorosome.yaml
+    role: maintained_record
+- target_id: GO:0033105
+  path: data/structures/membrane_organelle/chlorosome_envelope.yaml
+  label: chlorosome envelope
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: d39583d641a4c6070008f52e29246d1659bf86b1158799b1c30caf2e272ef903
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/chlorosome_envelope.yaml
+    role: maintained_record
+- target_id: GO:0044284
+  path: data/structures/membrane_organelle/mitochondrial_crista_junction.yaml
+  label: mitochondrial crista junction
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b994a1d51d584f4614c50fb97db455db7a6cf72b2f886da419fcbf3b77ba3adb
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_crista_junction.yaml
+    role: maintained_record
+- target_id: GO:0005741
+  path: data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml
+  label: mitochondrial outer membrane
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 136ac3a72a4a1f8475301e2328ebc27c3799397823e0b5804124480ff728800f
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mitochondrial_outer_membrane.yaml
+    role: maintained_record
+- target_id: GO:0005885
+  path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+  label: Arp2/3 protein complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: cbdf1988c3ba5d6d509ce20ffa8fefa763f7273e9120ed2231eca3d33d424d80
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/arp2_3_protein_complex.yaml
+    role: maintained_record
+- target_id: GO:0000930
+  path: data/structures/cytoskeleton/gamma_tubulin_complex.yaml
+  label: gamma-tubulin complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 32184c59b76eafdef971451be3b00f1bc2c3f04ac49348c1a3a8c67ba740f700
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_complex.yaml
+    role: maintained_record
+- target_id: GO:0000931
+  path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+  label: gamma-tubulin ring complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 1c9501c5c43f775b44d7f455eecce522c0acf308308b7cb05ff180327545a6b3
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_ring_complex.yaml
+    role: maintained_record
+- target_id: GO:0008275
+  path: data/structures/cytoskeleton/gamma_tubulin_small_complex.yaml
+  label: gamma-tubulin small complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 22ddf61af1db19b692c4c2bc4b77fa938e148ac1cc6b98916714205abb7f80bd
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/gamma_tubulin_small_complex.yaml
+    role: maintained_record
+- target_id: GO:0034993
+  path: data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml
+  label: meiotic nuclear membrane microtubule tethering complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: b88b24ae10c1c8ceb36cb1489992fabe20600bff7e85e71a9fd3048d02e15b00
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.yaml
+    role: maintained_record
+- target_id: GO:0106094
+  path: data/structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.yaml
+  label: nuclear membrane microtubule tethering complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: a4458d3e0be617506557e7896258e186266872195a65d308b65390609fd539a7
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.yaml
+    role: maintained_record
+- target_id: GO:1990612
+  path: data/structures/cytoskeleton/sad1_kms1_linc_complex.yaml
+  label: Sad1-Kms1 LINC complex
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 4bf976f7c39fe18c961e155a1e4304153986b271209d2d35aa520a8406c03c65
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/sad1_kms1_linc_complex.yaml
+    role: maintained_record
+- target_id: GO:0009521
+  path: data/structures/energy_complex/photosystem.yaml
+  label: photosystem
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: c2bcf25948fb2eac1930736513012c4c177df4e0138ef971209ffed798ef3da8
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/photosystem.yaml
+    role: maintained_record
+- target_id: GO:0009288
+  path: data/structures/appendage/bacterial_type_flagellum.yaml
+  label: bacterial-type flagellum
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 95ba125172ad6d65d33e178c0ebb32e3ee547828d509819263848b4789252b3c
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/bacterial_type_flagellum.yaml
+    role: maintained_record
+- target_id: GO:0005818
+  path: data/structures/cytoskeleton/aster.yaml
+  label: aster
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ead65813443a3277dee3611ec40e32b7bc4c3882d8c31508eb352f6fffdfd6df
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/aster.yaml
+    role: maintained_record
+- target_id: GO:0000235
+  path: data/structures/cytoskeleton/astral_microtubule.yaml
+  label: astral microtubule
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 45c1ec56a960d58bde433d88317824b726ff48473bc9b0b1d4429c6e2f57041d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/astral_microtubule.yaml
+    role: maintained_record
+- target_id: GO:0032117
+  path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+  label: horsetail astral microtubule array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 567b5def97463ac69a319318e8de9b0d02cbbb670f78212dbe1aa4dcdc4c204d
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+    role: maintained_record
+- target_id: GO:1990295
+  path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+  label: post-anaphase microtubule array
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: ac97344d35ac58bc4d21294879b0fc23684fca5f7da6956a4b075108a326a225
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/cytoskeleton/post_anaphase_microtubule_array.yaml
+    role: maintained_record
+- target_id: GO:0031470
+  path: data/structures/microcompartment/carboxysome.yaml
+  label: carboxysome
+  record_class: CellStructureRecord
+  kind: maintained
+  semantic_digest:
+    algorithm: file_sha256_v1
+    sha256: 2d532dcd3f7267b41e377c7a595a93507b3aa7c139c57da0c6c58d6d36cae58a
+    description: Exact UTF-8 YAML bytes of the maintained CellStructureRecord.
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/microcompartment/carboxysome.yaml
+    role: maintained_record
+checks:
+- check_id: strict_remediated_cohort
+  name: Strict corpus validation covering all 19 remediated records
+  status: passed
+  required: true
+  summary: All 985 corpus records including the 19 remediated records pass strict
+    LinkML and semantic validation with 0 errors.
+  target_ids:
+  - GO:0030128
+  - GO:0046858
+  - GO:0033105
+  - GO:0044284
+  - GO:0005741
+  - GO:0005885
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0034993
+  - GO:0106094
+  - GO:1990612
+  - GO:0009521
+  - GO:0009288
+  - GO:0005818
+  - GO:0000235
+  - GO:0032117
+  - GO:1990295
+  - GO:0031470
+  command: .venv/bin/python scripts/validate_strict.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_strict_c2_stage5
+- check_id: labels_remediated_cohort
+  name: ID-label correspondence across corpus and generated products
+  status: passed
+  required: true
+  summary: All ontology ID-label pairs across the corpus (4023 canonical, 50 synonym,
+    6 exception) correspond to authoritative ontology labels.
+  target_ids:
+  - GO:0030128
+  - GO:0046858
+  - GO:0033105
+  - GO:0044284
+  - GO:0005741
+  - GO:0005885
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0034993
+  - GO:0106094
+  - GO:1990612
+  - GO:0009521
+  - GO:0009288
+  - GO:0005818
+  - GO:0000235
+  - GO:0032117
+  - GO:1990295
+  - GO:0031470
+  command: .venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_labels_c2_stage5
+- check_id: uniprot_remediated_cohort
+  name: UniProtKB protein_examples and causal_graphs xref verification
+  status: passed
+  required: true
+  summary: All UniProtKB protein_examples and causal_graphs xrefs across the corpus
+    pass offline verification.
+  target_ids:
+  - GO:0030128
+  - GO:0046858
+  - GO:0033105
+  - GO:0044284
+  - GO:0005741
+  - GO:0005885
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0034993
+  - GO:0106094
+  - GO:1990612
+  - GO:0009521
+  - GO:0009288
+  - GO:0005818
+  - GO:0000235
+  - GO:0032117
+  - GO:1990295
+  - GO:0031470
+  command: .venv/bin/python scripts/uniprot_genes.py --verify
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_uniprot_c2_stage5
+- check_id: history_remediated_cohort
+  name: Repository history link and LinkML HistoryRecord validation
+  status: passed
+  required: true
+  summary: All 1991 repository history files (including the 19 newly added Cycle 2
+    Stage 5 history ledger records) pass link and LinkML HistoryRecord schema validation.
+  target_ids:
+  - GO:0030128
+  - GO:0046858
+  - GO:0033105
+  - GO:0044284
+  - GO:0005741
+  - GO:0005885
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0034993
+  - GO:0106094
+  - GO:1990612
+  - GO:0009521
+  - GO:0009288
+  - GO:0005818
+  - GO:0000235
+  - GO:0032117
+  - GO:1990295
+  - GO:0031470
+  command: .venv/bin/python scripts/validate_history.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ev_history_c2_stage5
+evidence:
+- evidence_id: ev_strict_c2_stage5
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: strict validation summary
+  accessed_at: '2026-10-24T00:35:00Z'
+  support: supports
+  summary: validate_strict.py scanned 985 files with 0 ERROR rows.
+  snapshot_sha256: a67c4e39ffcc914af5dbab9d95f83a56d9c22a9b463448dbf75f361ad590ff8a
+- evidence_id: ev_labels_c2_stage5
+  kind: validation
+  reference: scripts/validate_id_label_correspondence.py
+  locator: id-label correspondence summary
+  accessed_at: '2026-10-24T00:35:30Z'
+  support: supports
+  summary: validate_id_label_correspondence.py verified 4023 canonical, 50 synonym,
+    and 6 exception pairs with 0 mismatches.
+  snapshot_sha256: bed64b0ebbdfb58f5150bb8aa699fa4288ec3c10211b96690ca8161bc70acc5b
+- evidence_id: ev_uniprot_c2_stage5
+  kind: validation
+  reference: scripts/uniprot_genes.py
+  locator: uniprot_genes --verify summary
+  accessed_at: '2026-10-24T00:36:00Z'
+  support: supports
+  summary: uniprot_genes.py --verify confirmed all UniProtKB protein_examples and
+    causal_graphs xrefs verified ok.
+  snapshot_sha256: 11c1829ca43b20fec8a5204306b01af82dace97ed7a58c0a507b82b66a4d1012
+- evidence_id: ev_history_c2_stage5
+  kind: validation
+  reference: scripts/validate_history.py
+  locator: history link and schema validation
+  accessed_at: '2026-10-24T00:36:30Z'
+  support: supports
+  summary: 1991 history records validated with 0 invalid links and 0 HistoryRecord
+    schema errors.
+  snapshot_sha256: d28dc7ae3666b4169ae5160b439497faa7bc4772a44cdbc0113698b33ae4ca80
+assessments:
+- assessment_id: assess_group1_causal_subcomplex_nodes
+  area: graph
+  topic: Causal-graph STRUCTURE typing and grounding for subcomplex nodes (#2419)
+  outcome: supported
+  summary: 'All 5 subcomplex causal-graph nodes across clathrin_coat_of_endocytic_vesicle.yaml
+    (ap2_adaptor_complex GO:0030122), chlorosome.yaml (csma_baseplate cellstructuremech:chlorosome_baseplate_antenna_complex),
+    chlorosome_envelope.yaml (csma_baseplate cellstructuremech:chlorosome_baseplate_antenna_complex),
+    mitochondrial_crista_junction.yaml (micos_complex GO:0061617), and mitochondrial_outer_membrane.yaml
+    (tom_complex GO:0005742) now use node_type: STRUCTURE with canonical GO or CSM
+    grounding.'
+  target_ids:
+  - GO:0030128
+  - GO:0046858
+  - GO:0033105
+  - GO:0044284
+  - GO:0005741
+  evidence_ids:
+  - ev_strict_c2_stage5
+  - ev_labels_c2_stage5
+- assessment_id: assess_group2_subcomplex_component_types
+  area: representation
+  topic: PROTEIN_COMPLEX component typing for heterodimeric and multiprotein subcomplexes
+    (#2420)
+  outcome: supported
+  summary: 'All 10 heterodimeric or multiprotein subcomplex components across arp2_3_protein_complex.yaml,
+    gamma_tubulin_complex.yaml, gamma_tubulin_ring_complex.yaml, gamma_tubulin_small_complex.yaml,
+    meiotic_nuclear_membrane_microtubule_tethering_complex.yaml, nuclear_membrane_microtubule_tethering_complex.yaml,
+    sad1_kms1_linc_complex.yaml, and photosystem.yaml now use component_type: PROTEIN_COMPLEX.'
+  target_ids:
+  - GO:0005885
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0034993
+  - GO:0106094
+  - GO:1990612
+  - GO:0009521
+  evidence_ids:
+  - ev_strict_c2_stage5
+- assessment_id: assess_group3_component_gene_symbols
+  area: consistency
+  topic: Synchronization of component gene_symbols with verified protein_examples
+    (#2421)
+  outcome: supported
+  summary: All 6 records (bacterial_type_flagellum.yaml, aster.yaml, astral_microtubule.yaml,
+    horsetail_astral_microtubule_array.yaml, post_anaphase_microtubule_array.yaml,
+    and carboxysome.yaml) now include every verified protein_examples gene_symbol
+    (hag, fliY, nda2, ccmK3, ccmK4) in their parent component gene_symbols lists.
+  target_ids:
+  - GO:0009288
+  - GO:0005818
+  - GO:0000235
+  - GO:0032117
+  - GO:1990295
+  - GO:0031470
+  evidence_ids:
+  - ev_strict_c2_stage5
+  - ev_uniprot_c2_stage5
+findings: []
+actions: []
+boundary_decisions:
+- action: retain
+  target_ids:
+  - GO:0030128
+  - GO:0046858
+  - GO:0033105
+  - GO:0044284
+  - GO:0005741
+  - GO:0005885
+  - GO:0000930
+  - GO:0000931
+  - GO:0008275
+  - GO:0034993
+  - GO:0106094
+  - GO:1990612
+  - GO:0009521
+  - GO:0009288
+  - GO:0005818
+  - GO:0000235
+  - GO:0032117
+  - GO:1990295
+  - GO:0031470
+  rationale: All 19 remediated records preserve their existing structure boundaries
+    and canonical GO identifiers while resolving all 7 Cycle 2 Stage 4 review findings.
+  evidence_ids:
+  - ev_strict_c2_stage5
+  - ev_labels_c2_stage5
+  - ev_uniprot_c2_stage5
+  - ev_history_c2_stage5
+limitations: []
+tags:
+- stage5
+- cycle2
+- post-remediation
+- verification-review
+```

@@ -28,6 +28,19 @@ curation_history:
     as well as the biological-process node; #1484: removed the broad Bacteria COMMON
     taxonomic-distribution row until a source directly supports that clade-level frequency.'
   llm_assisted: true
+- timestamp: '2026-10-30T18:22:38Z'
+  curator: claude-opus-4-6
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Connected rnase_p_rna and rnpa_protein to dimeric_rnase_p and linked dimeric_rnase_p
+    to ribonuclease_p_activity.
+  llm_assisted: true
+- timestamp: '2026-10-30T19:09:23Z'
+  curator: claude-opus-4-6
+  action: REVIEW_FIX
+  changes: 'Resolved PR #2467 review issue #2468 by correcting GO:0030680 and Kazantsev
+    and Pace 2006 stoichiometry notes on the rnase_p_rna and rnpa_protein subunit-to-complex
+    edges.'
+  llm_assisted: true
 synonyms:
 - synonym_text: dimeric RNase P complex
   synonym_type: EXACT_SYNONYM
@@ -228,6 +241,44 @@ causal_graphs:
         particle that catalyzes tRNA 5-prime maturation.
     - reference: GO:0001682
       notes: GO:0001682 is the biological-process term for tRNA 5'-leader removal.
+  - subject: rnase_p_rna
+    predicate: contributes to
+    object: dimeric_rnase_p
+    description: The catalytic RNase P RNA ribozyme subunit is a required constituent
+      of the bacterial dimeric ribonuclease P ribonucleoprotein complex.
+    evidence:
+    - reference: GO:0030680
+      notes: GO:0030680 defines the dimeric ribonuclease P complex by one RNA molecule
+        and one protein molecule.
+    - reference: DOI:10.1038/nrmicro1491
+      notes: Kazantsev and Pace 2006 reviewed the two-component bacterial RNase P
+        ribonucleoprotein holoenzyme composed of one RNase P RNA and one RnpA protein.
+  - subject: rnpa_protein
+    predicate: contributes to
+    object: dimeric_rnase_p
+    description: The RnpA protein cofactor subunit is a required constituent of the
+      bacterial dimeric ribonuclease P ribonucleoprotein complex.
+    evidence:
+    - reference: GO:0030680
+      notes: GO:0030680 defines the dimeric ribonuclease P complex by one RNA molecule
+        and one protein molecule.
+    - reference: DOI:10.1038/nrmicro1491
+      notes: Kazantsev and Pace 2006 reviewed the two-component bacterial RNase P
+        ribonucleoprotein holoenzyme composed of one RNase P RNA and one RnpA protein.
+  - subject: dimeric_rnase_p
+    predicate: enables
+    object: ribonuclease_p_activity
+    description: The assembled dimeric ribonuclease P ribonucleoprotein complex enables
+      endonucleolytic 5'-leader cleavage of precursor tRNAs.
+    evidence:
+    - reference: GO:0030680
+      notes: GO:0030680 defines the dimeric ribonuclease P complex that catalyzes
+        precursor-tRNA 5'-end maturation.
+    - reference: GO:0004526
+      notes: GO:0004526 defines ribonuclease P endoribonuclease activity.
+    - reference: DOI:10.1038/nrmicro1491
+      notes: Kazantsev and Pace 2006 reviewed bacterial RNase P holoenzyme catalysis
+        of pre-tRNA 5'-leader cleavage.
 discussions:
 - discussion_id: rnase_p_scope_limited_to_bacterial_dimeric_complex
   prompt: Keep this record scoped to the bacterial dimeric RNase P complex and curate
