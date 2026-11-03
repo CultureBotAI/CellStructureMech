@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/spitzenkorper.yaml
+  slug: spitzenkorper
+session:
+  id: 2026-11-03T055100Z-antigravity-cceed6
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked spitzenkorper_actin_filaments component into spitzenkorper_vesicle_supply
+    causal graph with source-backed actin-scaffold organization edge.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''spitzenkorper_vesicle_supply''
+    in data/structures/other/spitzenkorper.yaml. Added node(s) [spitzenkorper_actin_filaments]
+    and source-backed edge(s) [spitzenkorper_actin_filaments organizes spitzenkorper]. Validated
+    with write_validated_structure.'

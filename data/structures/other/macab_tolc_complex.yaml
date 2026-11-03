@@ -22,6 +22,12 @@ curation_history:
     with exact InterPro groundings and reviewed E. coli K-12 UniProt examples, the
     PDB:5NIK hetero-11-mer, function, taxonomy, and authority evidence.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'macab_tolc_efflux_function'
+    with 4 nodes and 3 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: macrolide transporter MacAB-TolC complex
   synonym_type: EXACT_SYNONYM
@@ -197,3 +203,76 @@ evidence:
 - reference: PMID:18955484
   notes: PubMed identifier for the 2009 Journal of Biological Chemistry paper showing
     that MacA regulates MacB ATPase activity and macrolide binding.
+causal_graphs:
+- graph_id: macab_tolc_efflux_function
+  title: MacAB-TolC Tripartite Efflux Pump Coupling and Export
+  description: Mechanochemical coupling of the inner-membrane MacB ABC ATPase through
+    the periplasmic MacA hexamer to the outer-membrane TolC channel.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: macb_atp_binding_permease
+    label: Macrolide Exporter MacB
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR050250
+    component_ref: macb_atp_binding_permease
+  - node_id: maca_membrane_fusion_protein
+    label: Macrolide export protein MacA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR058623
+    component_ref: maca_membrane_fusion_protein
+  - node_id: tolc_outer_membrane_channel
+    label: Outer membrane channel protein TolC
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR058622
+    component_ref: tolc_outer_membrane_channel
+  - node_id: atp_dependent_xenobiotic_export
+    label: ABC-type xenobiotic transporter activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008559
+  edges:
+  - subject: macb_atp_binding_permease
+    predicate: couples to
+    object: maca_membrane_fusion_protein
+    description: The dimeric inner-membrane ABC transporter MacB docks with the hexameric
+      periplasmic membrane-fusion protein MacA, which stimulates MacB ATPase activity.
+    evidence:
+    - reference: GO:1990196
+      notes: GO:1990196 defines MacAB-TolC as consisting of dimeric MacB, hexameric
+        MacA, and trimeric TolC.
+    - reference: PMID:18955484
+      notes: Tikhonova et al. 2009 showed that MacA regulates MacB ATPase activity
+        and macrolide binding.
+    - reference: PDB:5NIK
+      notes: PDB:5NIK resolves the MacB dimer docked to the MacA hexamer.
+  - subject: maca_membrane_fusion_protein
+    predicate: bridges to
+    object: tolc_outer_membrane_channel
+    description: The periplasmic MacA hexameric funnel engages the periplasmic tip
+      of the trimeric TolC outer-membrane channel to form a continuous trans-envelope
+      conduit.
+    evidence:
+    - reference: GO:1990196
+      notes: GO:1990196 defines MacA as linking inner-membrane MacB to outer-membrane
+        TolC.
+    - reference: PMID:28504659
+      notes: Fitzpatrick et al. 2017 resolved the cryo-EM structure of the complete
+        MacAB-TolC tripartite assembly.
+    - reference: PDB:5NIK
+      notes: PDB:5NIK captures the tip-to-tip interaction between the MacA hexamer
+        and TolC trimer.
+  - subject: tolc_outer_membrane_channel
+    predicate: mediates
+    object: atp_dependent_xenobiotic_export
+    description: The assembled MacAB-TolC channel exports macrolide antibiotics and
+      polypeptide substrates across the outer membrane.
+    evidence:
+    - reference: GO:1990196
+      notes: GO:1990196 defines the complex by export of 14- and 15-membered macrolide
+        antibiotics.
+    - reference: GO:0008559
+      notes: GO:0008559 is the molecular-function term for ABC-type xenobiotic transporter
+        activity.
+    - reference: PMID:28504659
+      notes: Fitzpatrick et al. 2017 described the tripartite efflux conduit formed
+        by MacAB-TolC.

@@ -20,6 +20,11 @@ curation_history:
     precursor recruitment and recovery graphs, dataset-conflict provenance, and an
     inspected CC BY 4.0 primary figure.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Grounded self-referential causal node 'mitostore' to cellstructuremech:mitostore.
+  llm_assisted: true
 synonyms:
 - synonym_text: MitoStores
   synonym_type: EXACT_SYNONYM
@@ -199,6 +204,7 @@ causal_graphs:
   - node_id: mitostore
     label: MitoStore
     node_type: STRUCTURE
+    grounding: cellstructuremech:mitostore
   - node_id: hsp42_loss
     label: HSP42 deletion
     node_type: EXPERIMENTAL_FACTOR
@@ -279,6 +285,7 @@ causal_graphs:
   - node_id: mitostore
     label: MitoStore
     node_type: STRUCTURE
+    grounding: cellstructuremech:mitostore
   - node_id: cargo
     label: Stored precursor cargo represented by Aim17
     node_type: GENE_OR_PROTEIN

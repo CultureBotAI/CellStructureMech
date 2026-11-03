@@ -32,6 +32,11 @@ curation_history:
   changes: 'Replaced unreadable Jackson et al. 2015 Glaucophyta evidence with reachable
     cyanelle evidence for #1231.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0009579
 part_of:
@@ -158,6 +163,15 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-120823-022747
       notes: Perez-Boerema et al. 2024 review the plastid thylakoid membrane as the
         site of oxygenic photosynthesis.
+  - subject: plastid_thylakoid_membrane
+    predicate: is part of
+    object: plastid_thylakoid
+    description: The plastid thylakoid membrane forms the lipid bilayer of the plastid
+      thylakoid.
+    evidence:
+    - reference: GO:0031976
+      notes: GO:0031976 and GO:0055035 link the plastid thylakoid membrane to the
+        plastid thylakoid.
 discussions:
 - discussion_id: whole_plastid_thylakoid_not_membrane_or_lumen
   prompt: Keep the whole plastid thylakoid distinct from its membrane and lumen children.

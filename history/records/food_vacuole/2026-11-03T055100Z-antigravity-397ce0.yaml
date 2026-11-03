@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/food_vacuole.yaml
+  slug: food_vacuole
+session:
+  id: 2026-11-03T055100Z-antigravity-397ce0
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked food_vacuole_membrane component into hemoglobin_digestion_and_hemozoin_formation
+    causal graph.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''hemoglobin_digestion_and_hemozoin_formation''
+    in data/structures/membrane_organelle/food_vacuole.yaml. Added node(s) [food_vacuole_membrane]
+    and source-backed edge(s) [food_vacuole_membrane bounds food_vacuole]. Validated with
+    write_validated_structure.'
