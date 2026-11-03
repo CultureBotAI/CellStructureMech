@@ -35,6 +35,8 @@ from linkml.validator import Validator
 from linkml.validator.plugins import JsonschemaValidationPlugin
 from linkml.validator.report import Severity, ValidationResult
 
+from cellstructuremech.validation.validator import validate_record_semantics
+
 DEFAULT_SCHEMA_PATH = Path(__file__).resolve().parents[1] / "schema" / "cellstructuremech.yaml"
 DEFAULT_TARGET_CLASS = "CellStructureRecord"
 
@@ -82,7 +84,19 @@ def validate_structure(
     """Return the list of ERROR-severity validation results (empty when clean)."""
     validator = _get_validator(schema_path)
     report = validator.validate(doc, target_class=target_class)
-    return [r for r in report.results if r.severity == Severity.ERROR]
+    results = [r for r in report.results if r.severity == Severity.ERROR]
+    if target_class == DEFAULT_TARGET_CLASS and isinstance(doc, dict):
+        for msg in validate_record_semantics(doc):
+            results.append(
+                ValidationResult(
+                    type="semantic validation",
+                    severity=Severity.ERROR,
+                    instance=doc,
+                    instantiates=target_class,
+                    message=msg,
+                )
+            )
+    return results
 
 
 # Emission options at module scope so a test can import THESE rather than

@@ -34,6 +34,13 @@ curation_history:
   changes: '#2304: Correct PCC 6803 source attribution and qualify core-dependent
     architecture with the coreless antenna exception.'
   llm_assisted: true
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_COMPONENTS_AND_PARTHOOD
+  changes: Updated allophycocyanin_core component_type from PROTEIN to PROTEIN_COMPLEX
+    and added has_part links to cellstructuremech:phycobilisome_core and cellstructuremech:phycobilisome_rod
+    (#2462).
+  llm_assisted: true
 synonyms:
 - synonym_text: PBS
   synonym_type: RELATED_SYNONYM
@@ -42,6 +49,9 @@ parent_structures:
 - GO:0030076
 part_of:
 - GO:0042651
+has_part:
+- cellstructuremech:phycobilisome_core
+- cellstructuremech:phycobilisome_rod
 components:
 - component_id: rod_phycobiliproteins
   label: rod phycobiliproteins
@@ -103,7 +113,7 @@ components:
         rests on the record's own sources.
 - component_id: allophycocyanin_core
   label: allophycocyanin core cylinders
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: CONSTITUENT
   gene_symbols:
   - apcA

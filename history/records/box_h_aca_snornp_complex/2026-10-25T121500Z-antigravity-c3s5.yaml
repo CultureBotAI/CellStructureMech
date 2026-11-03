@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/box_h_aca_snornp_complex.yaml
+  slug: box_h_aca_snornp_complex
+session:
+  id: 2026-10-25T121500Z-antigravity-c3s5
+  timestamp: '2026-10-25T12:15:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2430
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2431
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - evidence
+  - curation_history
+  summary: 'Addressed #2430 and #2431 (findings ribonucleoprotein-box-rnp-reference-misattribution,
+    ribonucleoprotein-subcomplex-types-and-history-graph-ids): updated components#cbf5_gar1_nhp2_nop10_core
+    from PROTEIN to PROTEIN_COMPLEX and added explicit PMID:9843512 (Henras et al.
+    1998, EMBO J) box H/ACA snoRNP core evidence alongside verified PMID:14562095
+    (Huh et al. 2003, Nature) nucleolar localization evidence.'
+  details: 'Original findings F1 (ribonucleoprotein-box-rnp-reference-misattribution)
+    and F2 (ribonucleoprotein-subcomplex-types-and-history-graph-ids) saved before
+    mutation in reviews/structured/20261025T071011Z-ribonucleoprotein-category-review/review.yaml.
+    Addresses #2430 and #2431.'

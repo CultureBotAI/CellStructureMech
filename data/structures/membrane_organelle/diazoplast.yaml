@@ -31,6 +31,13 @@ curation_history:
   changes: Added source-backed mechanistic descriptions to 7 causal edge(s); Grounded
     self-referential causal node 'diazoplast' to cellstructuremech:diazoplast.
   llm_assisted: true
+- timestamp: '2026-10-23T11:08:00Z'
+  curator: claude-code
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2404 (Stage 4 finding membrane-organelle-go-subcomplex-causal-node-types):
+    retyped GO-grounded PROTEIN_COMPLEX causal-graph node nitrogenase (GO:0016610)
+    from GENE_OR_PROTEIN to STRUCTURE.'
+  llm_assisted: true
 synonyms:
 - synonym_text: spheroid body
   synonym_type: RELATED_SYNONYM
@@ -181,7 +188,7 @@ causal_graphs:
     grounding: cellstructuremech:diazoplast
   - node_id: nitrogenase
     label: nitrogenase complex
-    node_type: GENE_OR_PROTEIN
+    node_type: STRUCTURE
     grounding: GO:0016610
     component_ref: nitrogenase
   - node_id: fixation
