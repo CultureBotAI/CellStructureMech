@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/chaperonin_atpase_complex.yaml
+  slug: chaperonin_atpase_complex
+session:
+  id: 2026-10-24T031500Z-claude-opus-4-6-c3s101
+  timestamp: '2026-10-24T03:15:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for chaperonin ATPase complex (GO:0016465) in
+    other.
+  details: Authored data/structures/other/chaperonin_atpase_complex.yaml for chaperonin
+    ATPase complex (GO:0016465) with verified GO hierarchy, taxonomic distribution,
+    UniProtKB protein examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

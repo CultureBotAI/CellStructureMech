@@ -1,0 +1,47 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 3
+stage: 6
+revision: 1
+outcome: completed
+summary: 'Froze INFRA_TASKS.md at 2026-10-25T13:48:26Z (sha256 d9f903712f75f1a27d026d55a6216ad1bcaaef01560d26b1b2a843f2c44638e2),
+  mapped the bounded Cycle 3 infrastructure task (cellstructuremech-infra-0006) to
+  real GitHub issue #2428, implemented causal_graphs component_ref grounding propagation,
+  CURATED_CAUSAL_GRAPH graph_id target validation, and discussions prose DOI/PMID
+  citation evidence checks in src/cellstructuremech/validation/validator.py in commit
+  f95d8017373ebb70d23ed6a8b231046a63ec009e, updated INFRA_TASKS.md and reviews/workflow/latest.yaml,
+  and passed all 10 quality gates in scripts/run_qc.py (1,074 passed tests, 2,057
+  history records validated, 993 structure records validated with 0 errors and 0 deferred
+  tasks).'
+source_revision: f95d8017373ebb70d23ed6a8b231046a63ec009e
+scope_frozen_at: '2026-10-25T13:48:26Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/infra_snapshot.md
+  sha256: d9f903712f75f1a27d026d55a6216ad1bcaaef01560d26b1b2a843f2c44638e2
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/implementation_plan.md
+  sha256: db6295fc197be89a64a4ff642daacc0d0efd3f8d85f91d3c869af1584021ba92
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/validation.md
+  sha256: fd0c568f21a8cc0d7d3cc7543a564b17522c3c5b3befb1cdec6db74e07d3b559
+  kind: validation
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: cellstructuremech-infra-0006
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2428
+  status: resolved
+  summary: Extend src/cellstructuremech/validation/validator.py to check causal_graphs
+    component_ref grounding propagation, CURATED_CAUSAL_GRAPH id targets, and discussions
+    prose citation evidence
+  disposition: 'Extended validate_causal_graphs() and validate_discussion_issue_links()
+    and added validate_curation_history() in src/cellstructuremech/validation/validator.py
+    (wired into validate_record_semantics, write_validated_structure, and scripts/validate_strict.py);
+    verified 0 errors across all 993 structure records and added unit and corpus-integrity
+    tests in tests/test_validator.py and tests/test_corpus_integrity.py (commit f95d8017373ebb70d23ed6a8b231046a63ec009e).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/validation.md

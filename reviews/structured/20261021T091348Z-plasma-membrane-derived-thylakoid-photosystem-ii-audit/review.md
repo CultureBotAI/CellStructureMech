@@ -1,0 +1,748 @@
+# Bacterial-thylakoid PSII identity, phycobilisome association and core-composition review
+
+- Review: 20261021T091348Z-plasma-membrane-derived-thylakoid-photosystem-ii-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T08:50:20Z
+- Finished UTC: 2026-10-21T09:13:48Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The bacterial-thylakoid PSII identity, Nostoc association example and bounded function graph are supported. One minor completeness finding separates directly identified reaction-center constituents from unresolved family grounding.
+
+## Scope And Provenance
+
+Entire single target, all hierarchy/taxon/function/graph/discussion claims; native GO/taxa and exact bibliography, primary association/preparation/docking evidence and cited-review physiological context.
+
+Selection: Fourth target in batch fourteen; strict repository path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 99692a3d5f16a7dcd6db7e3811344c299a977b81.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0030096 | data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml | maintained | plasma membrane-derived thylakoid photosystem II |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0030096 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0030096 | Focused validator passed. |
+| Target resolver slice | passed | True | GO:0030096 | 10 identifiers OK; 0 transport/skipped residuals independently resolved. |
+| Claim-level scientific review | passed | True | GO:0030096 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Full corpus QC | passed | True | GO:0030096 | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0030096 | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0030096 | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0030096 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0030096 | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Scoped PSII structure
+
+identity: supported. Targets: GO:0030096.
+
+The exact GO term denotes the bacterial membrane-derived thylakoid PSII subtype, with P680 water-plastoquinone oxidoreductase activity. The related cyanobacterial PSII synonym is scoped and does not recreate the historical overbroad bare-PSII synonym. Category/kind distinguish the whole complex from a phycobilisome or protein.
+
+### Is-a versus membrane parthood
+
+scope: supported. Targets: GO:0030096.
+
+Generic PSII parentage is explicit in native GO. The bacterial-thylakoid term and primary source support membrane residence. The ontology label is retained without inventing a direct contemporary membrane-biogenesis experiment from this structural paper.
+
+### Canonical association experiment
+
+evidence: supported. Targets: GO:0030096.
+
+The canonical note and some-phycobilisomes graph edge accurately describe the selected associated particles. Orthogonal D1/D2 and immunogold evidence strengthens the low-resolution density assignment. It does not show that every PBS has PSII attached or establish an atomically resolved interface.
+
+### Known core versus family TODO
+
+completeness: concern. Targets: GO:0030096.
+
+The target explicitly postpones all subunit rows until source-neutral families are resolved. D1 and D2 are directly identified as reaction-center subunits in the cited primary preparation. Their established membership can be recorded with unresolved family grounding; the omitted core inventory is a bounded, non-blocking gap. Antenna/core distinctions and uncertain accessory composition remain separate.
+
+### Physiology versus prepared-particle activity
+
+evidence: supported. Targets: GO:0030096.
+
+Water oxidation and quinone reduction are supported by the exact GO definition and inspected review. The Chang sample is used for association evidence; its missing PsbO signal does not prove absence from native PSII generally, nor does the review infer a functional oxygen-evolving preparation.
+
+### Model strain and qualitative occurrence
+
+scope: supported. Targets: GO:0030096.
+
+Native names agree with the paper’s Anabaena/Nostoc7120 equivalence. COMMON is qualitative for cyanobacteria with internal thylakoids, not prevalence data or a universal architecture claim for all cyanobacteria, stages or culture conditions.
+
+### Four bounded functional edges
+
+graph: supported. Targets: GO:0030096.
+
+Membrane partonomy, limited physical association, quinone reduction and initiation of electron transport are source-supported at their stated tiers. FUNCTION/NONMECHANISTIC omits core chemistry, repair/assembly order and a measured energy-transfer efficiency. The PBS docking/nearest-pigment model is not treated as a necessity or sufficiency experiment.
+
+### Source placement and optional slots
+
+provenance: supported. Targets: GO:0030096.
+
+Citation identities and local graph references are sound; no verbatim snippet, image-reuse or numerical-property claim is asserted. The component finding targets a blanket grounding prerequisite for known members, not a demand for a complete optional proteome, every cofactor or a new protein accession.
+
+## Findings
+
+### F1: Separate known reaction-center membership from family-grounding uncertainty
+
+minor / open / confirmed; issue key: bacterial-psii-known-core-deferred-for-family-grounding.
+
+The psii_subunit_boundaries prompt defers adding all subunit-level components until exact family groundings are resolved. Yet the cited Chang2015 Results and Figure1G identify D1 and D2 as reaction-center subunits in the associated PBS preparation. These known core constituents can be represented with source-backed labels and unresolved groundings. The consequential gap is the blanket deferral of established membership, not the lack of every optional PSII detail.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Add source-backed D1/D2 core constituent rows without guessed identifiers, and distinguish exact family resolution from known membership in discussion progress. Keep PBS proteins, transient assembly/repair factors and accessory-subunit variation separate.
+
+- Use the cited Results/immunoblot evidence for D1/D2 membership; do not assert that all photosystem subunits were detected in this preparation.
+- Do not interpret missing PsbO detection as native universal absence or claim a measured oxygen-evolution rate.
+- Use the guarded record writer, append curation/repository history, regenerate pages, and pass native schema/strict/products/history/qc gates in separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml; Entire maintained YAML including history, all component/protein/graph/evidence/discussion fields | context_only | Complete maintained record read; PROPOSED status and historical curation preserved. |
+| policy | docs/CURATION.md; Components and evidence rules; exact review profile/checklist/schema captured in native inspect | context_only | Exact identifiers are required when assigned, but label-only constituent rows may retain unresolved family grounding; source-specific preparation and inference must be preserved. |
+| psii-prep-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009523,GO:0009767,GO:0030075,GO:0030089,GO:0030096,GO:0031676; Complete GO0030096/0009523/0031676/0030075/0009767/0030089 results, definitions, synonyms, status and children | supports | The six active terms give exact bacterial-thylakoid PSII identity, generic PSII is-a parent, bacterial thylakoid/membrane context, phycobilisome and electron-transport process. Generic GO0009523 explicitly lists GO0030096 as an is_a child; GO0030075 lists it as part_of. |
+| psii-prep-tax-1117 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1117; Complete native identity/rank/lineage/otherNames | supports | Native taxId/name/rank/lineage agree with Cyanobacteriota and Nostoc sp.PCC7120=FACHB-418; Anabaena PCC7120 is an explicit equivalent name. |
+| psii-prep-tax-103690 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/103690; Complete native identity/rank/lineage/otherNames | supports | Native taxId/name/rank/lineage agree with Cyanobacteriota and Nostoc sp.PCC7120=FACHB-418; Anabaena PCC7120 is an explicit equivalent name. |
+| psii-prep-chang2015-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1038/cr.2015.59; Exact DOI/title/authors/year/PMID/PMC native bibliographic fields | supports | Exact DOI10.1038/cr.2015.59 identifies Chang et al.2015, Structural organization of an intact phycobilisome and its association with photosystem II, PMID25998682/PMC4456626. |
+| psii-prep-chang2015-pmc-html | https://pmc.ncbi.nlm.nih.gov/articles/PMC4456626/; PMC4456626 native HTML: Introduction; Results/Overall structures of PBS and PBS-PSII complexes; Pigment arrangement and energy transfer; complete Discussion and Materials and Methods, including preparation, negative-stain EM, classification/docking, immunoblot and immunogold; Figures1/5 captions. No figure pixels or all supplements. | supports | Anabaena7120 PBS preparations contain a subpopulation with PSII-sized attached density. D1/D2 immunoblot, anti-D1 immunogold and structural docking support PSII association. PBS-only reconstruction is21A; the selected2363-particle PBS-PSII class is approximately34A negative-stain EM. No PsbO or PsaA was detected in this preparation, and no complete oxygen-evolution assay is reported here. |
+| psii-prep-perez2024-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A10.1146/annurev-cellbio-120823-022747; Exact DOI/title/authors/year/PMID and abstract only; reused original receipt | supports | The exact DOI identifies Perez-Boerema, Engel and Wietrzynski2024, PMID38950450. The source is a structural-diversity review. |
+| perez-body | https://doi.org/10.1146%2Fannurev-cellbio-120823-022747; Publisher-indexed Introduction and Electron Transport Chain Complexes body excerpts; original batch13 response/capture receipt copied byte-identically, not a new full-paper read or native HTTP200. | supports | The inspected review describes PSII-driven water oxidation and plastoquinone-mediated electron flow. Its Introduction preserves the thylakoid-lacking Gloeobacter exception. |
+| schema-result | just validate data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml |
+| strict-result | just validate-strict data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml --out /private/tmp/cellstructure-batch14-20261021-g0felisv/plasma_membrane_derived_thylakoid_photosystem_ii-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml --out /private/tmp/cellstructure-batch14-20261021-g0felisv/plasma_membrane_derived_thylakoid_photosystem_ii-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch14-20261021-g0felisv/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch14-20261021-g0felisv/plasma_membrane_derived_thylakoid_photosystem_ii-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml; exact collect() scope; hash identifies the entire original resolver TSV | supports | 10 of10 collected target identifiers returned OK at the unchanged base. Residuals: none. Source-native identity checked separately. |
+| global-qc-result | just qc; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec | supports | Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1759 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad | supports | Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256 below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4 | supports | Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The Chang preparation used French-pressure disruption,2%TritonX100 and sucrose gradients, followed by negative staining. It is not live-cell imaging or a high-resolution PSII catalytic structure.
+- Only the specified primary sections and Figures1/5 captions were inspected; remaining rod-assembly Results, figure pixels, raw reconstructions and all supplementary materials were not reanalyzed.
+- The source’s PBS-only21A and PBS-PSII34A reconstructions are distinct. Missing PsbO/PsaA signals are specific to that preparation; assembly integrity and oxygen evolution were not independently established.
+- The Perez2024 body excerpt is browser-indexed publisher text reused with original capture provenance, not a new full-paper/native-HTTP download.
+- No exact protein-family CURIE, strain-specific accession inventory or obligatory direct membrane-biogenesis pathway is newly assigned.
+- Shared corpus gates have bounded coverage: 600 label checks had no adapter; the identifier command reported 819 transport-unreachable and 252 skipped identifiers. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- All12 native input hashes verified after native inspect/schema/strict0. No neighboring maintained-record dependency.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T091348Z-plasma-membrane-derived-thylakoid-photosystem-ii-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Bacterial-thylakoid PSII identity, phycobilisome association and core-composition
+  review
+started_at: '2026-10-21T08:50:20Z'
+finished_at: '2026-10-21T09:13:48Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The bacterial-thylakoid PSII identity, Nostoc association example and bounded
+  function graph are supported. One minor completeness finding separates directly
+  identified reaction-center constituents from unresolved family grounding.
+source:
+  git_revision: 99692a3d5f16a7dcd6db7e3811344c299a977b81
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+    sha256: 7629a2480ce3d823e87431d0c26be93c45101095021fd60087301f5f1d9a58ef
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0030096
+  path: data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+  label: plasma membrane-derived thylakoid photosystem II
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+    role: maintained scientific record
+scope:
+  description: Entire single target, all hierarchy/taxon/function/graph/discussion
+    claims; native GO/taxa and exact bibliography, primary association/preparation/docking
+    evidence and cited-review physiological context.
+  selection: Fourth target in batch fourteen; strict repository path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0030096
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030096
+  command: just validate data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030096
+  command: just validate-strict data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+    --out /private/tmp/cellstructure-batch14-20261021-g0felisv/plasma_membrane_derived_thylakoid_photosystem_ii-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: target-curies
+  name: Target resolver slice
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030096
+  summary: 10 identifiers OK; 0 transport/skipped residuals independently resolved.
+  evidence_ids:
+  - target-curies
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030096
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - psii-prep-go
+  - psii-prep-tax-1117
+  - psii-prep-tax-103690
+  - psii-prep-chang2015-meta
+  - psii-prep-chang2015-pmc-html
+  - psii-prep-perez2024-meta
+  - perez-body
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030096
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:38:12Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030096
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:15Z to
+    2026-10-19T07:29:37Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030096
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T07:32:39Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030096
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:17Z to
+    2026-10-19T07:29:45Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0030096
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-19T07:29:18Z to
+    2026-10-19T08:04:01Z at 99692a3d5f16a7dcd6db7e3811344c299a977b81. Reused from
+    batch1 isolated checkout because this fresh batch14 clone has the same base commit
+    and unchanged maintained scientific inputs. This does not scientifically review
+    non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+  locator: Entire maintained YAML including history, all component/protein/graph/evidence/discussion
+    fields
+  accessed_at: '2026-10-21T08:57:59Z'
+  support: context_only
+  summary: Complete maintained record read; PROPOSED status and historical curation
+    preserved.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Components and evidence rules; exact review profile/checklist/schema captured
+    in native inspect
+  accessed_at: '2026-10-21T08:57:59Z'
+  support: context_only
+  summary: Exact identifiers are required when assigned, but label-only constituent
+    rows may retain unresolved family grounding; source-specific preparation and inference
+    must be preserved.
+- evidence_id: psii-prep-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0009523,GO:0009767,GO:0030075,GO:0030089,GO:0030096,GO:0031676
+  locator: Complete GO0030096/0009523/0031676/0030075/0009767/0030089 results, definitions,
+    synonyms, status and children
+  accessed_at: '2026-10-21T08:52:53.997367Z'
+  support: supports
+  summary: The six active terms give exact bacterial-thylakoid PSII identity, generic
+    PSII is-a parent, bacterial thylakoid/membrane context, phycobilisome and electron-transport
+    process. Generic GO0009523 explicitly lists GO0030096 as an is_a child; GO0030075
+    lists it as part_of.
+  snapshot_sha256: 854d31e60c2a54924a10a2bfa72e30e53acea3047b1d7e6614c8fe63b6ba20ad
+- evidence_id: psii-prep-tax-1117
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/1117
+  locator: Complete native identity/rank/lineage/otherNames
+  accessed_at: '2026-10-21T08:52:54.000110Z'
+  support: supports
+  summary: Native taxId/name/rank/lineage agree with Cyanobacteriota and Nostoc sp.PCC7120=FACHB-418;
+    Anabaena PCC7120 is an explicit equivalent name.
+  snapshot_sha256: 0462d61ee879faf0de43deb3472da6e0fe29fdf63cc068591b0ca652eb921c4d
+- evidence_id: psii-prep-tax-103690
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/103690
+  locator: Complete native identity/rank/lineage/otherNames
+  accessed_at: '2026-10-21T08:52:53.866159Z'
+  support: supports
+  summary: Native taxId/name/rank/lineage agree with Cyanobacteriota and Nostoc sp.PCC7120=FACHB-418;
+    Anabaena PCC7120 is an explicit equivalent name.
+  snapshot_sha256: 807abd1968631ec3ee802bf72e180cfd5d7c74a5ae13cd97b8741b57e7342185
+- evidence_id: psii-prep-chang2015-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1038/cr.2015.59
+  locator: Exact DOI/title/authors/year/PMID/PMC native bibliographic fields
+  accessed_at: '2026-10-21T08:52:54.958213Z'
+  support: supports
+  summary: Exact DOI10.1038/cr.2015.59 identifies Chang et al.2015, Structural organization
+    of an intact phycobilisome and its association with photosystem II, PMID25998682/PMC4456626.
+  snapshot_sha256: 529cc77b3b228da781814b110110b11848c2fcab43cbc7907306c4b96584e0f5
+- evidence_id: psii-prep-chang2015-pmc-html
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4456626/
+  locator: 'PMC4456626 native HTML: Introduction; Results/Overall structures of PBS
+    and PBS-PSII complexes; Pigment arrangement and energy transfer; complete Discussion
+    and Materials and Methods, including preparation, negative-stain EM, classification/docking,
+    immunoblot and immunogold; Figures1/5 captions. No figure pixels or all supplements.'
+  accessed_at: '2026-10-21T08:54:04.224869Z'
+  support: supports
+  summary: Anabaena7120 PBS preparations contain a subpopulation with PSII-sized attached
+    density. D1/D2 immunoblot, anti-D1 immunogold and structural docking support PSII
+    association. PBS-only reconstruction is21A; the selected2363-particle PBS-PSII
+    class is approximately34A negative-stain EM. No PsbO or PsaA was detected in this
+    preparation, and no complete oxygen-evolution assay is reported here.
+  snapshot_sha256: 64c1f378baea104c28c098708903fa3df67c7d64343d9283454a53b6ed63ed6b
+- evidence_id: psii-prep-perez2024-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1146/annurev-cellbio-120823-022747
+  locator: Exact DOI/title/authors/year/PMID and abstract only; reused original receipt
+  accessed_at: '2026-10-21T08:39:18.846261Z'
+  support: supports
+  summary: The exact DOI identifies Perez-Boerema, Engel and Wietrzynski2024, PMID38950450.
+    The source is a structural-diversity review.
+  snapshot_sha256: f9df3427bb3b35764922628c9e89cc9378fa7875a4a103bde71a75b130d54926
+- evidence_id: perez-body
+  kind: authority
+  reference: https://doi.org/10.1146%2Fannurev-cellbio-120823-022747
+  locator: Publisher-indexed Introduction and Electron Transport Chain Complexes body
+    excerpts; original batch13 response/capture receipt copied byte-identically, not
+    a new full-paper read or native HTTP200.
+  accessed_at: '2026-10-21T08:46:38.912004Z'
+  support: supports
+  summary: The inspected review describes PSII-driven water oxidation and plastoquinone-mediated
+    electron flow. Its Introduction preserves the thylakoid-lacking Gloeobacter exception.
+  snapshot_sha256: 1e2a20aee1043d6a8c9b511e909b825174d51fe9374f438c494e924d20992a0e
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:50:24Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml'
+  snapshot_sha256: 666a4e7f6869982d8324c3ad8f5130674e58b0137bbf8e8ae181fdc606e566e7
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+    --out /private/tmp/cellstructure-batch14-20261021-g0felisv/plasma_membrane_derived_thylakoid_photosystem_ii-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T08:50:27Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml\
+    \ --out /private/tmp/cellstructure-batch14-20261021-g0felisv/plasma_membrane_derived_thylakoid_photosystem_ii-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch14-20261021-g0felisv/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch14-20261021-g0felisv/plasma_membrane_derived_thylakoid_photosystem_ii-strict.tsv"
+  snapshot_sha256: 338a1917b6fa8acc108524e9fb411faccb7dc063816d4e61a6544b377779d1f6
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml;
+    exact collect() scope; hash identifies the entire original resolver TSV
+  accessed_at: '2026-10-21T08:57:59Z'
+  support: supports
+  summary: '10 of10 collected target identifiers returned OK at the unchanged base.
+    Residuals: none. Source-native identity checked separately.'
+  snapshot_sha256: 68d64e4e86437df228658f43be4d47b41054fe882fedf357e660293691a0a061
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 6c8c7d7abaf6a0a21b9e0eb879d48c56c28ac4e6078a53b7026927980af7bdec
+  accessed_at: '2026-10-19T07:38:12Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1017 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 7b6165ba8532d080a336f7a5a4c29b456fdf7182dd596410b700dfe60af61a06
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-19T07:29:37Z'
+  support: supports
+  summary: Exit 0. All 1759 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: b98e3eecd58a81fa46033e6baca6977811a439f119b943fd5d9931964adb2680
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 a790911c34f0fcbf67057d508b1992332228d191b143cbc6ce4455c5424e36ad
+  accessed_at: '2026-10-19T07:32:39Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3543 canonical, 50 synonym, 6 exception and 600
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: 2a1330c26aac5bd248a2fd3a3a7b9c882d2b3bb202365c555e5d6415d1c2203d
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-19T07:29:45Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 99692a3d5f16a7dcd6db7e3811344c299a977b81; stdout SHA-256
+    below, stderr SHA-256 64567a41acb57e09a332d91b914e0f757dff330c0e69e5fec5e0fe9f6034e3d4
+  accessed_at: '2026-10-19T08:04:01Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4806 identifiers OK, 819 UNREACHABLE
+    and 252 SKIPPED. Transport failures (including PMID batch HTTP 414) and skipped
+    prefixes are not evidence of resolution. Exact target identifiers are assessed
+    separately in this review.
+  snapshot_sha256: 7cb413edccc92ee6ce79a32cd2b96a59bc4da37f2cb7b326eaca51a64f723cfb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Scoped PSII structure
+  outcome: supported
+  target_ids:
+  - GO:0030096
+  summary: The exact GO term denotes the bacterial membrane-derived thylakoid PSII
+    subtype, with P680 water-plastoquinone oxidoreductase activity. The related cyanobacterial
+    PSII synonym is scoped and does not recreate the historical overbroad bare-PSII
+    synonym. Category/kind distinguish the whole complex from a phycobilisome or protein.
+  evidence_ids:
+  - psii-prep-go
+  - psii-prep-chang2015-pmc-html
+  - record
+- assessment_id: relations
+  area: scope
+  topic: Is-a versus membrane parthood
+  outcome: supported
+  target_ids:
+  - GO:0030096
+  summary: Generic PSII parentage is explicit in native GO. The bacterial-thylakoid
+    term and primary source support membrane residence. The ontology label is retained
+    without inventing a direct contemporary membrane-biogenesis experiment from this
+    structural paper.
+  evidence_ids:
+  - psii-prep-go
+  - psii-prep-chang2015-pmc-html
+  - record
+- assessment_id: association
+  area: evidence
+  topic: Canonical association experiment
+  outcome: supported
+  target_ids:
+  - GO:0030096
+  summary: The canonical note and some-phycobilisomes graph edge accurately describe
+    the selected associated particles. Orthogonal D1/D2 and immunogold evidence strengthens
+    the low-resolution density assignment. It does not show that every PBS has PSII
+    attached or establish an atomically resolved interface.
+  evidence_ids:
+  - psii-prep-chang2015-pmc-html
+  - psii-prep-tax-103690
+  - record
+- assessment_id: composition
+  area: completeness
+  topic: Known core versus family TODO
+  outcome: concern
+  target_ids:
+  - GO:0030096
+  summary: The target explicitly postpones all subunit rows until source-neutral families
+    are resolved. D1 and D2 are directly identified as reaction-center subunits in
+    the cited primary preparation. Their established membership can be recorded with
+    unresolved family grounding; the omitted core inventory is a bounded, non-blocking
+    gap. Antenna/core distinctions and uncertain accessory composition remain separate.
+  evidence_ids:
+  - psii-prep-chang2015-pmc-html
+  - psii-prep-go
+  - record
+  - policy
+- assessment_id: function
+  area: evidence
+  topic: Physiology versus prepared-particle activity
+  outcome: supported
+  target_ids:
+  - GO:0030096
+  summary: Water oxidation and quinone reduction are supported by the exact GO definition
+    and inspected review. The Chang sample is used for association evidence; its missing
+    PsbO signal does not prove absence from native PSII generally, nor does the review
+    infer a functional oxygen-evolving preparation.
+  evidence_ids:
+  - psii-prep-go
+  - perez-body
+  - psii-prep-chang2015-pmc-html
+  - record
+- assessment_id: taxonomy
+  area: scope
+  topic: Model strain and qualitative occurrence
+  outcome: supported
+  target_ids:
+  - GO:0030096
+  summary: Native names agree with the paper’s Anabaena/Nostoc7120 equivalence. COMMON
+    is qualitative for cyanobacteria with internal thylakoids, not prevalence data
+    or a universal architecture claim for all cyanobacteria, stages or culture conditions.
+  evidence_ids:
+  - psii-prep-tax-1117
+  - psii-prep-tax-103690
+  - psii-prep-chang2015-pmc-html
+  - perez-body
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Four bounded functional edges
+  outcome: supported
+  target_ids:
+  - GO:0030096
+  summary: Membrane partonomy, limited physical association, quinone reduction and
+    initiation of electron transport are source-supported at their stated tiers. FUNCTION/NONMECHANISTIC
+    omits core chemistry, repair/assembly order and a measured energy-transfer efficiency.
+    The PBS docking/nearest-pigment model is not treated as a necessity or sufficiency
+    experiment.
+  evidence_ids:
+  - psii-prep-go
+  - psii-prep-chang2015-pmc-html
+  - perez-body
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Source placement and optional slots
+  outcome: supported
+  target_ids:
+  - GO:0030096
+  summary: Citation identities and local graph references are sound; no verbatim snippet,
+    image-reuse or numerical-property claim is asserted. The component finding targets
+    a blanket grounding prerequisite for known members, not a demand for a complete
+    optional proteome, every cofactor or a new protein accession.
+  evidence_ids:
+  - psii-prep-chang2015-meta
+  - psii-prep-perez2024-meta
+  - psii-prep-chang2015-pmc-html
+  - psii-prep-go
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: bacterial-psii-known-core-deferred-for-family-grounding
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate known reaction-center membership from family-grounding uncertainty
+  description: The psii_subunit_boundaries prompt defers adding all subunit-level
+    components until exact family groundings are resolved. Yet the cited Chang2015
+    Results and Figure1G identify D1 and D2 as reaction-center subunits in the associated
+    PBS preparation. These known core constituents can be represented with source-backed
+    labels and unresolved groundings. The consequential gap is the blanket deferral
+    of established membership, not the lack of every optional PSII detail.
+  target_ids:
+  - GO:0030096
+  field_paths:
+  - components
+  - discussions[discussion_id=psii_subunit_boundaries]
+  evidence_ids:
+  - psii-prep-chang2015-pmc-html
+  - record
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+    role: maintained scientific record
+  rule_id: docs/CURATION.md:Components
+  native_severity: minor
+  normalization_reason: Minor actionable core-composition gap; the exact structure,
+    association and physiological role remain supported.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0030096
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/energy_complex/plasma_membrane_derived_thylakoid_photosystem_ii.yaml
+    role: maintained scientific record
+  description: Add source-backed D1/D2 core constituent rows without guessed identifiers,
+    and distinguish exact family resolution from known membership in discussion progress.
+    Keep PBS proteins, transient assembly/repair factors and accessory-subunit variation
+    separate.
+  acceptance_checks:
+  - Use the cited Results/immunoblot evidence for D1/D2 membership; do not assert
+    that all photosystem subunits were detected in this preparation.
+  - Do not interpret missing PsbO detection as native universal absence or claim a
+    measured oxygen-evolution rate.
+  - Use the guarded record writer, append curation/repository history, regenerate
+    pages, and pass native schema/strict/products/history/qc gates in separately authorized
+    curation.
+  generator: Maintained structure YAML; generated pages derive from it.
+limitations:
+- The Chang preparation used French-pressure disruption,2%TritonX100 and sucrose gradients,
+  followed by negative staining. It is not live-cell imaging or a high-resolution
+  PSII catalytic structure.
+- Only the specified primary sections and Figures1/5 captions were inspected; remaining
+  rod-assembly Results, figure pixels, raw reconstructions and all supplementary materials
+  were not reanalyzed.
+- The source’s PBS-only21A and PBS-PSII34A reconstructions are distinct. Missing PsbO/PsaA
+  signals are specific to that preparation; assembly integrity and oxygen evolution
+  were not independently established.
+- The Perez2024 body excerpt is browser-indexed publisher text reused with original
+  capture provenance, not a new full-paper/native-HTTP download.
+- No exact protein-family CURIE, strain-specific accession inventory or obligatory
+  direct membrane-biogenesis pathway is newly assigned.
+- 'Shared corpus gates have bounded coverage: 600 label checks had no adapter; the
+  identifier command reported 819 transport-unreachable and 252 skipped identifiers.
+  These totals are not target-specific biological findings or proof that all corpus
+  identifiers resolve.'
+notes:
+- All12 native input hashes verified after native inspect/schema/strict0. No neighboring
+  maintained-record dependency.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

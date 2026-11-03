@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/hsluv_protease_complex.yaml
+  slug: hsluv_protease_complex
+session:
+  id: 2026-10-31T055259Z-antigravity-69a2c2
+  timestamp: '2026-10-31T05:52:59Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - components
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  summary: Create HslUV protease complex (GO:0009376) structure record
+  details: Added new microbial cell structure record `data/structures/other/hsluv_protease_complex.yaml`
+    for HslUV protease complex (`GO:0009376`, `OTHER`, `MULTIPROTEIN_COMPLEX`) during Cycle
+    6 Stage 1 (`add_records`). Grounded constituent subunits to InterPro families with reviewed
+    Swiss-Prot UniProtKB protein examples, linked ComplexPortal cross-references, curated
+    GO molecular-function and biological-process annotations with verbatim PubMed abstract
+    snippets and DOIs, and added a mechanistic FUNCTION causal graph. Validated with `write_validated_structure`,
+    `validate_strict.py`, `validate_history.py`, and `validate_id_label_correspondence.py`.

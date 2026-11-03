@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/horsetail_astral_microtubule_array.yaml
+  slug: horsetail_astral_microtubule_array
+session:
+  id: 2026-10-24T002000Z-claude-code-63b928
+  timestamp: '2026-10-24T00:20:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2421
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - components
+  - curation_history
+  summary: 'Addressed #2421: Added S. pombe alpha-1 tubulin gene symbol nda2 to components#alpha_tubulin.gene_symbols
+    to match UniProtKB:P04688 in protein_examples.'
+  details: 'Original finding F2 (cytoskeleton-fission-yeast-nda2-gene-symbol-omission)
+    saved before mutation in reviews/structured/20261023T230503Z-cytoskeleton-category-review/review.yaml.
+    Addresses #2421.'

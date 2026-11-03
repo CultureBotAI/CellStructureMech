@@ -1,0 +1,82 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 6
+revision: 1
+outcome: completed
+summary: 'Froze INFRA_TASKS.md at 2026-10-23T12:41:41Z (sha256 d8ee261ed2d5eac92afc87e14ee9f8abdf042930f749afa72c5ecc97fd763f02),
+  mapped all 4 bounded Cycle 1 infrastructure tasks (cellstructuremech-infra-0001
+  through cellstructuremech-infra-0004) to real GitHub issues (#2407, #2408, #2409,
+  #2410), implemented all 4 tasks in commit febaa87536ef821bbca4d821335608e5b7c40074,
+  updated INFRA_TASKS.md and reviews/workflow/latest.yaml, and passed all 10 quality
+  gates in scripts/run_qc.py (1,065 passed tests, 1,921 history records validated,
+  978 structure records validated with 0 errors and 0 deferred tasks).'
+source_revision: febaa87536ef821bbca4d821335608e5b7c40074
+scope_frozen_at: '2026-10-23T12:41:41Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/infra_snapshot.md
+  sha256: d8ee261ed2d5eac92afc87e14ee9f8abdf042930f749afa72c5ecc97fd763f02
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  sha256: a3a4c5ec3ba30148c1ee059a369e817cdae094508cac1278f677d027653754fa
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  sha256: 813eb05aae87c91ab88727ad6845eeb0b14418faab57ef0adc8b70bcaadb5572
+  kind: validation
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: cellstructuremech-infra-0001
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2407
+  status: resolved
+  summary: Resolve linkml-validate relative to sys.executable in scripts/validate_history.py
+    so scripts/run_qc.py succeeds under direct .venv/bin/python invocation
+  disposition: 'Implemented resolve_linkml_validate() in scripts/validate_history.py
+    (preferring Path(sys.executable).with_name("linkml-validate") before shutil.which("linkml-validate"))
+    and covered with unit tests in tests/test_new_history_record.py (commit febaa87536ef821bbca4d821335608e5b7c40074).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+- task_id: cellstructuremech-infra-0002
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2408
+  status: resolved
+  summary: Add causal-graph completeness checks in src/cellstructuremech/validation/validator.py
+    for isolated CausalNode entries with zero incident edges and CausalEdge items lacking
+    description
+  disposition: 'Created src/cellstructuremech/validation/validator.py (validate_causal_graphs)
+    and wired validate_record_semantics into write_validated_structure and scripts/validate_strict.py;
+    verified 0 isolated nodes and 0 description-less edges across all 978 records
+    and added unit tests in tests/test_validator.py and tests/test_corpus_integrity.py
+    (commit febaa87536ef821bbca4d821335608e5b7c40074).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+- task_id: cellstructuremech-infra-0003
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2409
+  status: resolved
+  summary: Allow scripts/uniprot_genes.py seeding mode to inspect components of any
+    component_type that declare gene_symbols when --include-complexes is passed
+  disposition: 'Added _component_in_scope(), --include-non-protein, and seed_records()
+    in scripts/uniprot_genes.py so --include-complexes inspects composite protein-bearing
+    components (e.g. OTHER) declaring gene_symbols while preserving component_type;
+    covered in tests/test_uniprot_genes.py (commit febaa87536ef821bbca4d821335608e5b7c40074).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+- task_id: cellstructuremech-infra-0004
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2410
+  status: resolved
+  summary: Extend scripts/validate_history.py to enforce 1:1 record-to-history coverage
+    and extend src/cellstructuremech/validation/validator.py to enforce structured
+    issue links on discussions prose mentions
+  disposition: 'Added check_structure_history_coverage() in scripts/validate_history.py
+    (enforcing 1:1 coverage across all 978 structure records and history/records/<slug>/)
+    and validate_discussion_issue_links() in src/cellstructuremech/validation/validator.py;
+    covered in tests/test_new_history_record.py, tests/test_validator.py, and tests/test_corpus_integrity.py
+    (commit febaa87536ef821bbca4d821335608e5b7c40074).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/magnetosome.yaml
+  slug: magnetosome
+session:
+  id: 2026-10-31T090231Z-claude-code-5eb95b
+  timestamp: '2026-10-31T09:02:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected mamj and crystal to the magnetosome membrane node in magnetosome_chain_alignment.
+  details: Added sourced edges linking mamj to membrane (DOI:10.1038/nrmicro.2016.99, DOI:10.1002/pro.2827)
+    and crystal to membrane (DOI:10.1038/nrmicro.2016.99) so biomineralization and MamJ-MamK
+    chain alignment form a single connected graph.
