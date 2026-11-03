@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/prefoldin_complex.yaml
+  slug: prefoldin_complex
+session:
+  id: 2026-10-31T223046Z-antigravity-0465e9
+  timestamp: '2026-10-31T22:30:46Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    agent_tool: antigravity
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - definition
+  - synonyms
+  - parent_structures
+  - part_of
+  - xrefs
+  - components
+  - taxonomic_distribution
+  - canonical_examples
+  - functions
+  - evidence
+  - causal_graphs
+  - curation_history
+  summary: Add prefoldin complex (GO:0016272) record
+  details: Added CellStructureRecord for prefoldin complex (GO:0016272) in Saccharomyces cerevisiae
+    S288C with heterohexameric subunits PFD1 (UniProtKB:P46988), GIM4 (UniProtKB:P40005),
+    PAC10 (UniProtKB:P48363), GIM3 (UniProtKB:P53900), GIM5 (UniProtKB:Q04493), and YKE2
+    (UniProtKB:P52553), verbatim PubMed abstract evidence (PMID:9630229, PMID:41754437, PMID:42647631),
+    ComplexPortal xref (CPX-1671), canonical examples, functions, and a mechanistic FUNCTION
+    causal graph.

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/static_microtubule_bundle.yaml
+  slug: static_microtubule_bundle
+session:
+  id: 2026-10-25T121500Z-antigravity-c3s5
+  timestamp: '2026-10-25T12:15:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/CellStructureMech/issues/2431
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: 'Addressed #2431 (finding static-microtubule-bundle-curation-history-graph-id-mismatch):
+    aligned curation_history[1] graph_id to static_microtubule_bundle_organization.'
+  details: 'Original finding F1 (static-microtubule-bundle-curation-history-graph-id-mismatch)
+    saved before mutation in reviews/structured/20261025T071001Z-static-microtubule-bundle-reference-attribution/review.yaml.
+    Addresses #2431.'
