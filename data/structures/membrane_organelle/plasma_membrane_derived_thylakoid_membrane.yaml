@@ -33,6 +33,12 @@ curation_history:
   changes: Retyped the PSII, cytochrome b6f, and PSI graph nodes from GENE_OR_PROTEIN
     to STRUCTURE.
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked atp_synthase component into plasma_membrane_derived_thylakoid_membrane_topology
+    causal graph.
+  llm_assisted: true
 synonyms:
 - synonym_text: plasma membrane thylakoid membrane
   synonym_type: EXACT_SYNONYM
@@ -220,6 +226,11 @@ causal_graphs:
     label: photosynthetic electron transport chain
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009767
+  - node_id: atp_synthase
+    label: proton-transporting ATP synthase complex
+    node_type: STRUCTURE
+    grounding: GO:0045259
+    component_ref: atp_synthase
   edges:
   - subject: thylakoid_membrane
     predicate: bounds
@@ -268,6 +279,15 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-120823-022747
       notes: Perez-Boerema et al. 2024 review thylakoid electron transport across
         PSII, cytochrome b6f and PSI.
+  - subject: thylakoid_membrane
+    predicate: houses
+    object: atp_synthase
+    description: The plasma membrane-derived thylakoid membrane houses proton-transporting
+      ATP synthase complexes alongside the photosynthetic electron-transport chain.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-120823-022747
+      notes: Perez-Boerema et al. 2024 include ATP synthase among the thylakoid complexes
+        that convert light energy into ATP and reducing power.
 discussions:
 - discussion_id: ground_bacterial_thylakoid_lipid_matrix
   prompt: Resolve an exact source-neutral grounding for the lipid matrix constituent

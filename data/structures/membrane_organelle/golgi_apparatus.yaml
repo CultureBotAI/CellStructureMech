@@ -36,6 +36,12 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-30T11:55:00Z'
+  curator: claude
+  action: CURATED_COMPONENTS
+  changes: Updated golgi_snare_trafficking_machinery component_type from PROTEIN to
+    PROTEIN_COMPLEX for the Sed5-containing cis-Golgi SNARE complex (#2462).
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 part_of:
@@ -127,7 +133,7 @@ components:
         on the record's own sources.
 - component_id: golgi_snare_trafficking_machinery
   label: Golgi SNARE trafficking machinery
-  component_type: PROTEIN
+  component_type: PROTEIN_COMPLEX
   component_role: ASSOCIATED_MACHINERY
   grounding_status: REVIEWED_LABEL_ONLY
   grounding_notes: SNARE domains and SNARE superfamilies are broader than the Golgi
