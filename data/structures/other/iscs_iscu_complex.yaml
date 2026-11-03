@@ -1,0 +1,281 @@
+identifier: GO:1990330
+label: IscS-IscU complex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A heterotetrameric protein complex involved in the sulfur transfer during
+  iron-sulfur cluster assembly and in the modification of tRNA wobble positions. In
+  E. coli it consists of a central IscS dimer with the IscU protomers attached to
+  one of the IscS units each via a disulfide (-SSH) group.
+definition_source: GO:1990330
+mapping_status: PROPOSED
+parent_structures:
+- GO:1990229
+- GO:1990221
+part_of:
+- GO:0005737
+xrefs:
+- ComplexPortal:CPX-2141
+components:
+- component_id: iscs_cysteine_desulfurase_subunit
+  label: Cysteine desulfurase IscS
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR010240
+  gene_symbols:
+  - iscS
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: PLP-dependent cysteine desulfurase homodimer subunit that abstracts sulfur
+    from L-cysteine onto its active-site Cys328 persulfide loop and transfers it to
+    bound IscU scaffold subunits.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A6B7
+    protein_label: Cysteine desulfurase IscS
+    gene_symbol: iscS
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Escherichia coli K-12 cysteine desulfurase subunit IscS.
+    evidence:
+    - reference: UniProtKB:P0A6B7
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 IscS.
+    - reference: PMID:20404999
+      snippet: The cysteine desulfurase IscS is a highly conserved master enzyme initiating
+        sulfur transfer via persulfide to a range of acceptor proteins involved in
+        Fe-S cluster assembly, tRNA modifications, and sulfur-containing cofactor
+        biosynthesis.
+      notes: Establishes IscS as the master cysteine desulfurase initiating persulfide
+        transfer.
+  evidence:
+  - reference: GO:1990330
+    notes: GO:1990330 defines the central IscS dimer of the IscS-IscU complex.
+  - reference: InterPro:IPR010240
+    notes: InterPro family entry for cysteine desulfurase IscS.
+  - reference: PMID:20404999
+    snippet: We have determined the crystal structures of IscS-IscU and IscS-TusA
+      complexes providing the first insight into their different modes of binding
+      and the mechanism of sulfur transfer.
+    notes: Determines the crystal structure of the E. coli IscS-IscU complex.
+- component_id: iscu_fe_s_scaffold_subunit
+  label: Iron-sulfur cluster assembly scaffold protein IscU
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  grounding: InterPro:IPR011339
+  gene_symbols:
+  - iscU
+  stoichiometry: '2'
+  essentiality: ESSENTIAL
+  role: Conformationally dynamic scaffold subunit that binds IscS in its disordered
+    (D) state to accept persulfide sulfur from IscS Cys328 and converts to a structured
+    (S) state to stabilize assembled Fe-S clusters.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ACD4
+    protein_label: Iron-sulfur cluster assembly scaffold protein IscU
+    gene_symbol: iscU
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli K-12
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reviewed Escherichia coli K-12 Fe-S cluster assembly scaffold subunit IscU.
+    evidence:
+    - reference: UniProtKB:P0ACD4
+      notes: Reviewed Swiss-Prot entry for Escherichia coli K-12 IscU.
+    - reference: PMID:22203963
+      snippet: Cluster assembly takes place in the complex between IscU and the cysteine
+        desulfurase, IscS, and our NMR studies demonstrate that IscS binds preferentially
+        the D form of apo-IscU.
+      notes: Demonstrates preferential binding of apo-IscU to IscS during Fe-S cluster
+        assembly.
+  evidence:
+  - reference: GO:1990330
+    notes: GO:1990330 defines the two IscU protomers attached to the central IscS
+      dimer.
+  - reference: InterPro:IPR011339
+    notes: InterPro family entry for NifU-like N-terminal iron-sulfur scaffold domain
+      (IscU).
+  - reference: PMID:22203963
+    snippet: It appears that IscU has evolved to exist in a disordered conformational
+      state that is the initial substrate for the desulfurase and to convert to a
+      structured state that stabilizes the cluster once it is assembled.
+    notes: Describes the conformational cycle of IscU in the IscS-IscU complex.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  presence: COMMON
+  note: Conserved across bacteria with the housekeeping ISC iron-sulfur cluster assembly
+    system.
+  reference: PMID:20404999
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference bacterial strain in which the heterotetrameric IscS2-IscU2 crystal
+    structure and conformational D-to-S cluster assembly mechanism were determined.
+  reference: PMID:20404999
+functions:
+- function_id: cysteine_desulfurase_activity
+  label: cysteine desulfurase activity
+  grounding: GO:0031071
+  description: Catalyzes PLP-dependent desulfuration of L-cysteine to L-alanine, forming
+    a persulfide intermediate on IscS Cys328 for transfer to acceptor proteins.
+  evidence:
+  - reference: GO:0031071
+    notes: GO molecular-function term for cysteine desulfurase activity.
+  - reference: PMID:20404999
+    snippet: IscS interacts with its partners through an extensive surface area centered
+      on the active site Cys328. The structures indicate that the acceptor proteins
+      approach Cys328 from different directions and suggest that the conformational
+      plasticity of a long loop containing this cysteine is essential for the ability
+      of IscS to transfer sulfur to multiple acceptor proteins.
+    notes: Demonstrates Cys328-mediated persulfide sulfur transfer by IscS.
+- function_id: iron_sulfur_cluster_assembly
+  label: iron-sulfur cluster assembly
+  grounding: GO:0016226
+  description: Transfers sulfur from IscS to the disordered state of IscU and coordinates
+    iron incorporation to assemble [2Fe-2S] and [4Fe-4S] clusters.
+  evidence:
+  - reference: GO:0016226
+    notes: GO biological-process term for iron-sulfur cluster assembly.
+  - reference: PMID:22203963
+    snippet: Cluster assembly takes place in the complex between IscU and the cysteine
+      desulfurase, IscS, and our NMR studies demonstrate that IscS binds preferentially
+      the D form of apo-IscU.
+    notes: Demonstrates Fe-S cluster assembly within the IscS-IscU complex.
+- function_id: trna_wobble_uridine_modification
+  label: tRNA wobble uridine modification
+  grounding: GO:0002098
+  description: Initiates persulfide sulfur relay to tRNA thiolation acceptors (such
+    as TusA and ThiI) for wobble uridine modification.
+  evidence:
+  - reference: GO:0002098
+    notes: GO biological-process term for tRNA wobble uridine modification.
+  - reference: PMID:20404999
+    snippet: Several IscS-interacting partners including IscU, a scaffold for Fe-S
+      cluster assembly; TusA, the first member of a sulfur relay leading to sulfur
+      incorporation into the wobble uridine of several tRNAs; ThiI, involved in tRNA
+      modification and thiamine biosynthesis; and rhodanese RhdA are sulfur acceptors.
+    notes: Links IscS persulfide transfer to tRNA wobble uridine modification.
+evidence:
+- reference: GO:1990330
+  notes: GO cellular-component term for the IscS-IscU complex.
+- reference: ComplexPortal:CPX-2141
+  notes: Complex Portal entry for the Escherichia coli K-12 IscS-IscU cysteine desulfurase-scaffold
+    complex.
+- reference: PMID:20404999
+  snippet: We have determined the crystal structures of IscS-IscU and IscS-TusA complexes
+    providing the first insight into their different modes of binding and the mechanism
+    of sulfur transfer.
+  notes: Crystal structure and mutational analysis of the E. coli IscS-IscU complex.
+- reference: DOI:10.1371/journal.pbio.1000354
+  notes: DOI for PMID:20404999.
+- reference: PMID:22203963
+  snippet: Cluster assembly takes place in the complex between IscU and the cysteine
+    desulfurase, IscS, and our NMR studies demonstrate that IscS binds preferentially
+    the D form of apo-IscU.
+  notes: NMR and kinetic demonstration of IscS-IscU complex formation and Fe-S cluster
+    assembly.
+- reference: DOI:10.1073/pnas.1114372109
+  notes: DOI for PMID:22203963.
+causal_graphs:
+- graph_id: iscs_iscu_sulfur_transfer_and_cluster_assembly
+  title: IscS-IscU Complex Assembly, Persulfide Transfer, and Fe-S Cluster Biogenesis
+  description: The cysteine desulfurase IscS dimer preferentially binds the disordered
+    conformation of apo-IscU to form the IscS-IscU complex, catalyzing Cys328-mediated
+    persulfide sulfur transfer to drive iron-sulfur cluster assembly and tRNA wobble
+    uridine modification.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: iscs_cysteine_desulfurase_subunit
+    label: Cysteine desulfurase IscS
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR010240
+    component_ref: iscs_cysteine_desulfurase_subunit
+  - node_id: iscu_fe_s_scaffold_subunit
+    label: Iron-sulfur cluster assembly scaffold protein IscU
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR011339
+    component_ref: iscu_fe_s_scaffold_subunit
+  - node_id: iscs_iscu_complex
+    label: IscS-IscU complex
+    node_type: STRUCTURE
+    grounding: GO:1990330
+  - node_id: cysteine_desulfurase_activity
+    label: cysteine desulfurase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0031071
+  - node_id: iron_sulfur_cluster_assembly
+    label: iron-sulfur cluster assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0016226
+  - node_id: trna_wobble_uridine_modification
+    label: tRNA wobble uridine modification
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0002098
+  edges:
+  - subject: iscs_cysteine_desulfurase_subunit
+    predicate: preferentially binds disordered apo-form of
+    object: iscu_fe_s_scaffold_subunit
+    description: IscS binds the disordered (D) conformational state of apo-IscU through
+      an extensive surface centered on active-site Cys328.
+    evidence:
+    - reference: PMID:22203963
+      snippet: Cluster assembly takes place in the complex between IscU and the cysteine
+        desulfurase, IscS, and our NMR studies demonstrate that IscS binds preferentially
+        the D form of apo-IscU.
+      notes: Demonstrates selective binding of IscS to disordered apo-IscU.
+  - subject: iscu_fe_s_scaffold_subunit
+    predicate: assembles with IscS dimer into
+    object: iscs_iscu_complex
+    description: Two IscU protomers bind the central IscS homodimer to form the heterotetrameric
+      IscS-IscU complex.
+    evidence:
+    - reference: PMID:20404999
+      snippet: We have determined the crystal structures of IscS-IscU and IscS-TusA
+        complexes providing the first insight into their different modes of binding
+        and the mechanism of sulfur transfer.
+      notes: Establishes the structure of the assembled IscS-IscU complex.
+  - subject: iscs_iscu_complex
+    predicate: executes
+    object: cysteine_desulfurase_activity
+    description: Within the complex, the flexible Cys328 loop of IscS catalyzes persulfide
+      sulfur transfer to bound acceptor proteins.
+    evidence:
+    - reference: PMID:20404999
+      snippet: The cysteine desulfurase IscS is a highly conserved master enzyme initiating
+        sulfur transfer via persulfide to a range of acceptor proteins involved in
+        Fe-S cluster assembly, tRNA modifications, and sulfur-containing cofactor
+        biosynthesis.
+      notes: Supports persulfide-mediated sulfur transfer catalyzed by IscS.
+  - subject: cysteine_desulfurase_activity
+    predicate: transfers sulfur onto IscU to drive
+    object: iron_sulfur_cluster_assembly
+    description: Persulfide transfer from IscS to disordered apo-IscU followed by
+      conversion of IscU to its structured state drives Fe-S cluster assembly.
+    evidence:
+    - reference: PMID:22203963
+      snippet: It appears that IscU has evolved to exist in a disordered conformational
+        state that is the initial substrate for the desulfurase and to convert to
+        a structured state that stabilizes the cluster once it is assembled.
+      notes: Links desulfurase catalysis to Fe-S cluster assembly on IscU.
+  - subject: cysteine_desulfurase_activity
+    predicate: initiates persulfide sulfur relay for
+    object: trna_wobble_uridine_modification
+    description: IscS cysteine desulfurase activity initiates sulfur relay to acceptor
+      proteins for thiolation of tRNA wobble uridines.
+    evidence:
+    - reference: PMID:20404999
+      snippet: Several IscS-interacting partners including IscU, a scaffold for Fe-S
+        cluster assembly; TusA, the first member of a sulfur relay leading to sulfur
+        incorporation into the wobble uridine of several tRNAs; ThiI, involved in
+        tRNA modification and thiamine biosynthesis; and rhodanese RhdA are sulfur
+        acceptors.
+      notes: Links IscS desulfurase activity to tRNA wobble uridine thiolation.
+curation_history:
+- timestamp: '2026-10-31T22:28:50Z'
+  curator: antigravity
+  action: CREATED_RECORD
+  changes: Added IscS-IscU complex (GO:1990330) with InterPro-grounded components,
+    reviewed UniProtKB protein examples, GO-grounded functions, verbatim literature
+    snippets, and a mechanistic causal graph.
+  llm_assisted: true

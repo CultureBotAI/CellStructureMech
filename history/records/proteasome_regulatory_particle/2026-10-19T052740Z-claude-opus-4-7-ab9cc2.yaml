@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/proteasome_regulatory_particle.yaml
+  slug: proteasome_regulatory_particle
+session:
+  id: 2026-10-19T052740Z-claude-opus-4-7-ab9cc2
+  timestamp: '2026-10-19T05:27:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for proteasome regulatory particle (GO:0005838)
+    in other.
+  details: Authored data/structures/other/proteasome_regulatory_particle.yaml for
+    proteasome regulatory particle (GO:0005838) with verified GO hierarchy, taxonomic
+    distribution, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

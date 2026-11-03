@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/ribonucleoprotein/dimeric_ribonuclease_p_complex.yaml
+  slug: dimeric_ribonuclease_p_complex
+session:
+  id: 2026-10-30T182416Z-claude-code-100723
+  timestamp: '2026-10-30T18:24:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect RNase P RNA and RnpA protein subunits to dimeric_rnase_p and activity
+  details: Added contributes to edges from rnase_p_rna and rnpa_protein to dimeric_rnase_p
+    and dimeric_rnase_p enables ribonuclease_p_activity backed by GO:0030680, GO:0004526,
+    and DOI:10.1038/nrmicro1491.

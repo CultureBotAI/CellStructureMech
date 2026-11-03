@@ -26,6 +26,11 @@ curation_history:
     species-level distribution row; resolved #646 by removing the whole-chromatophore
     Singer et al. protein-import DOI from thylakoid record-level evidence.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 parent_structures:
 - GO:0009579
 part_of:
@@ -136,3 +141,12 @@ causal_graphs:
     - reference: GO:0070118
       notes: GO:0070118 defines the membrane as the internal system that houses light-reaction
         complexes.
+  - subject: organellar_chromatophore_thylakoid_membrane
+    predicate: is part of
+    object: organellar_chromatophore_thylakoid
+    description: The organellar chromatophore thylakoid membrane forms the photosynthetic
+      bilayer of the chromatophore thylakoid.
+    evidence:
+    - reference: GO:0070116
+      notes: GO:0070116 and GO:0070118 link the chromatophore thylakoid membrane to
+        the chromatophore thylakoid.

@@ -1,5 +1,15 @@
 [
  {
+  "identifier": "GO:0097729",
+  "label": "9+2 motile cilium",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/9_2_motile_cilium.html",
+  "definition": "A motile cilium where the axoneme has a ring of nine outer microtubule doublets plus two central microtubules (and is therefore called a 9+2 axoneme). A canonical motile cilium (or eukaryotic flagellum) whose axoneme consists of nine peripheral microtubule doublets surrounding a central pair of singlet microtubules (the 9+2 arrangement). Conserved across Chlamydomonas reinhardtii, Tetrahymena thermophila, and Trypanosoma brucei, the 9+2 motile cilium integrates central pair projections, radial spokes, nexin-dynein regulatory complexes, and dynein arms to produce planar or ciliary waveforms.",
+  "synonyms": "motile 9+2 cilium conventional motile cilium sperm flagellum"
+ },
+ {
   "identifier": "cellstructuremech:archaeal_cannula",
   "label": "archaeal cannula",
   "category": "APPENDAGE",
@@ -230,6 +240,16 @@
   "synonyms": "bacterial-type flagellum motor force generator complex bacterial-type flagellum torque generator complex"
  },
  {
+  "identifier": "GO:0097546",
+  "label": "ciliary base",
+  "category": "APPENDAGE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/appendage/ciliary_base.html",
+  "definition": "Area of the cilium (also called flagellum) where the basal body and the axoneme are anchored to the plasma membrane. The ciliary base encompasses the distal part of the basal body, transition fibers and transition zone and is structurally and functionally very distinct from the rest of the cilium. In this area proteins are sorted and filtered before entering the cilium, and many ciliary proteins localize specifically to this area. The specialized proximal region of a eukaryotic cilium or flagellum encompassing the basal body docking site, transition fibers, and ciliary transition zone in ciliated protists and microalgae. The ciliary base acts as a molecular gate and assembly hub where intraflagellar transport (IFT) trains are loaded and membrane diffusion between the plasma membrane and ciliary membrane is regulated.",
+  "synonyms": "cilial base cilium base flagellar base flagellum base"
+ },
+ {
   "identifier": "GO:0060170",
   "label": "ciliary membrane",
   "category": "APPENDAGE",
@@ -300,6 +320,16 @@
   "synonyms": "FC"
  },
  {
+  "identifier": "GO:0032179",
+  "label": "germ tube",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/germ_tube.html",
+  "definition": "The slender tubular outgrowth first produced by most spores in germination. A polarized cylindrical outgrowth emerging from a germinating fungal spore or yeast cell during the transition to filamentous hyphal growth, notably in Candida albicans, Aspergillus fumigatus, and Neurospora crassa. Germ tube emergence and extension depend on Cdc42-mediated polarity establishment, Spitzenkörper/polarisome vesicle delivery, and a basal septin collar/cap.",
+  "synonyms": ""
+ },
+ {
   "identifier": "cellstructuremech:hamus",
   "label": "hamus",
   "category": "APPENDAGE",
@@ -328,6 +358,16 @@
   "page": "structures/appendage/intraciliary_transport_particle.html",
   "definition": "Non-membrane-bounded protein particle complex that carries cargo along axonemal microtubules during intraflagellar transport in eukaryotic cilia and flagella.",
   "synonyms": "intraflagellar transport particle"
+ },
+ {
+  "identifier": "GO:0097609",
+  "label": "longitudinal flagellum",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/longitudinal_flagellum.html",
+  "definition": "A motile cilium found in dinoflagellates. It trails the cell and acts as a steering rudder. It is often partially contained in a furrow called the sulcus, and emerges from a flagellar pore located in the sulcus. The posteriorly directed eukaryotic flagellum of dinoflagellates that emerges from the ventral flagellar pore, lies along the longitudinal sulcus furrow, and trails behind the cell body. Together with the transverse flagellum, the longitudinal flagellum beats with planar waves to provide directional steering and forward propulsion in free-living and symbiotic dinoflagellates.",
+  "synonyms": "longitudinal cilium"
  },
  {
   "identifier": "GO:0097741",
@@ -378,6 +418,16 @@
   "page": "structures/appendage/mating_projection_tip_membrane.html",
   "definition": "The portion of the plasma membrane surrounding the mating projection tip.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0031514",
+  "label": "motile cilium",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/motile_cilium.html",
+  "definition": "A cilium which may have a variable arrangement of axonemal microtubules and also contains molecular motors. It may beat with a whip-like pattern that promotes cell motility or transport of fluids and other cells across a cell surface, such as on epithelial cells that line the lumenal ducts of various tissues; or they may display a distinct twirling motion that directs fluid flow asymmetrically across the cellular surface to affect asymmetric body plan organization. Motile cilia can be found in single as well as multiple copies per cell. A membrane-bounded ciliary projection capable of active whip-like or undulating beating that propels swimming cells or generates fluid flow across microbial cell surfaces. In flagellated green algae (Chlamydomonas reinhardtii), ciliates (Tetrahymena thermophila), and kinetoplastids (Trypanosoma brucei), the motile cilium contains an axoneme powered by outer and inner dynein arms and regulated by radial spokes and intraflagellar transport (IFT) trains.",
+  "synonyms": "motile cilia microtubule-based flagellum motile primary cilia motile primary cilium motile secondary cilium nodal cilium"
  },
  {
   "identifier": "cellstructuremech:omce_cytochrome_nanowire",
@@ -490,6 +540,16 @@
   "synonyms": "tight-adherence pilus type IVc pilus Flp pilus"
  },
  {
+  "identifier": "GO:0097608",
+  "label": "transverse flagellum",
+  "category": "APPENDAGE",
+  "kind": "APPENDAGE",
+  "status": "PROPOSED",
+  "page": "structures/appendage/transverse_flagellum.html",
+  "definition": "A motile cilium found in dinoflagellates. It coils around the cell and provides the forward thrust for motility. It is often contained in a furrow called the cingulum, and emerges from a flagellar pore located in the cingulum. The ribbon-like anterior/equatorial eukaryotic flagellum of dinoflagellates that emerges from the ventral flagellar pore and beats within the horizontal cingulum furrow encircling the cell. It contains a 9+2 axoneme paired with a contractile striated paraflagellar rod (paraxonemal strand) that holds the flagellum in a helical wave, generating both forward thrust and rotational torque during swimming.",
+  "synonyms": "transverse cilium"
+ },
+ {
   "identifier": "GO:0140621",
   "label": "type I pilus",
   "category": "APPENDAGE",
@@ -560,6 +620,16 @@
   "synonyms": "contractile ring cytokinetic actomyosin ring"
  },
  {
+  "identifier": "GO:0110131",
+  "label": "Aim21-Tda2 complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/aim21_tda2_complex.html",
+  "definition": "A complex that localizes to actin cortical patches at sites of endocytosis and negatively regulates barbed end F-actin assembly, resulting in the generation of free actin pools. The Aim21-Tda2 complex is necessary for efficient endocytosis and balancing the distribution of actin between patches and cables.",
+  "synonyms": "Aim21/Tda2 complex"
+ },
+ {
   "identifier": "cellstructuremech:alfa_filament",
   "label": "AlfA filament",
   "category": "CYTOSKELETON",
@@ -568,6 +638,36 @@
   "page": "structures/cytoskeleton/alfa_filament.html",
   "definition": "A plasmid-encoded bacterial actin-like cytoskeletal filament assembled from AlfA ATPases that supports segregation of pLS32-family plasmids in Bacillus subtilis.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0005885",
+  "label": "Arp2/3 protein complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/arp2_3_protein_complex.html",
+  "definition": "A stable protein complex that contains two actin-related proteins, Arp2 and Arp3, and five novel proteins (ARPC1-5), and functions in the nucleation of branched actin filaments. A conserved seven-subunit protein complex (comprising actin-related proteins Arp2 and Arp3 together with Arc40/ARPC1, Arc35/ARPC2, Arc19/ARPC3, Arc18/ARPC4, and Arc15/ARPC5) that binds to the side of a pre-existing mother actin filament and nucleates a daughter filament at a characteristic 70-degree angle. In yeasts, amoebae, and filamentous fungi, the Arp2/3 protein complex generates branched actin networks that drive clathrin-mediated endocytosis, phagocytosis, and pseudopod extension.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0005818",
+  "label": "aster",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/aster.html",
+  "definition": "An array of microtubules emanating from a spindle pole MTOC that do not connect to kinetochores. A radial, star-shaped array of cytoplasmic astral microtubules nucleated from a microtubule organizing center—such as the outer plaque of a yeast spindle pole body or a protist basal body/centrosome—with microtubule plus ends radiating toward the cell cortex. In budding and fission yeasts, filamentous fungi, and protists, the aster interacts with cortical dynein and Kar9/Bim1 capture machinery to position the mitotic spindle and drive nuclear migration.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0000235",
+  "label": "astral microtubule",
+  "category": "CYTOSKELETON",
+  "kind": "FILAMENT",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/astral_microtubule.html",
+  "definition": "Any of the spindle microtubules that radiate in all directions from the spindle poles and are thought to contribute to the forces that separate the poles and position them in relation to the rest of the cell. In yeasts, fungi, and microbial eukaryotes, cytoplasmic astral microtubules nucleated from the outer plaque of the spindle pole body or centrosome probe the cell cortex via plus-end tracking proteins (Kar9, Bim1/EB1, Bik1) and cortical dynein-dynactin to orient the mitotic spindle along the division axis.",
+  "synonyms": "cytoplasmic astral microtubule"
  },
  {
   "identifier": "GO:0160111",
@@ -1030,6 +1130,16 @@
   "synonyms": "cilium pocket collar flagellar pocket collar flagellum pocket collar FPC"
  },
  {
+  "identifier": "GO:0120280",
+  "label": "ciliary pro-basal body",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/ciliary_pro_basal_body.html",
+  "definition": "The cilary pro-basal body is an immature, partially assembled form of a ciliary basal body found next to the basal body of a cilium. Pro-basal bodies are not capable of nucleating a cilium. As the cell progresses through the cell cycle, continuing assembly will convert the pro-basal body into a mature basal body that is capable of nucleating a cilium. An immature precursor of the ciliary basal body assembled orthogonally adjacent to a mother basal body during the cell cycle in flagellated and ciliated microbial eukaryotes such as Chlamydomonas reinhardtii, Trypanosoma brucei, and Tetrahymena thermophila. It comprises a SAS-6/Bld10p cartwheel hub and nascent microtubule blades that elongate and mature into a docking-competent basal body.",
+  "synonyms": "pro-basal body pro-centriole probasal body flagellar pro-basal body flagellar probasal body"
+ },
+ {
   "identifier": "GO:0035253",
   "label": "ciliary rootlet",
   "category": "CYTOSKELETON",
@@ -1058,6 +1168,26 @@
   "page": "structures/cytoskeleton/conoid.html",
   "definition": "A spiral cytoskeletal structure located at the apical end of the apical complex in some apicomplexan parasites. Fibers form a left-handed spiral, and are comprised of tubulin protofilaments organized in a ribbon-like structure that differs from the conventional tubular structure characteristic of microtubules.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0030864",
+  "label": "cortical actin cytoskeleton",
+  "category": "CYTOSKELETON",
+  "kind": "FILAMENT",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/cortical_actin_cytoskeleton.html",
+  "definition": "The part of the actin cytoskeleton that lies just beneath the plasma membrane. In budding yeast (Saccharomyces cerevisiae), fission yeast, and other fungi and protists, the cortical actin cytoskeleton comprises Arp2/3-nucleated branched actin cortical patches and cortical actin filaments that drive endocytic vesicle internalization and cell-cortex remodeling.",
+  "synonyms": "submembranous actin cytoskeleton"
+ },
+ {
+  "identifier": "GO:0030981",
+  "label": "cortical microtubule cytoskeleton",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/cortical_microtubule_cytoskeleton.html",
+  "definition": "The part of the microtubule cytoskeleton that lies just beneath the plasma membrane in the cell cortex. In fission yeast (Schizosaccharomyces pombe), ciliates, apicomplexans, and microalgae, the cortical microtubule cytoskeleton includes astral and cortical microtubule arrays that interact with cortical dynein and plus-end capture factors to drive nuclear movement and maintain cell-cortex polarity.",
+  "synonyms": "cortical microtubule array"
  },
  {
   "identifier": "cellstructuremech:crescentin_filament",
@@ -1100,6 +1230,16 @@
   "synonyms": "non-spindle-associated astral microtubule"
  },
  {
+  "identifier": "GO:1905720",
+  "label": "cytoplasmic microtubule bundle",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/cytoplasmic_microtubule_bundle.html",
+  "definition": "A microtubule bundle located in the cytoplasm. In fission yeast (Schizosaccharomyces pombe) and other microbial eukaryotes, cytoplasmic microtubule bundles consist of parallel or antiparallel alpha/beta-tubulin polymers nucleated by gamma-tubulin adaptor complexes (Mto1-Mto2) and crosslinked by Ase1/MAP65 family proteins and CLASP (Cls1/Peg1) to maintain cytoplasmic organization and cell-tip polarity.",
+  "synonyms": "cytoplasmic MT bundle"
+ },
+ {
   "identifier": "cellstructuremech:cytostomal_cord",
   "label": "cytostomal cord",
   "category": "CYTOSKELETON",
@@ -1137,6 +1277,16 @@
   "status": "PROPOSED",
   "page": "structures/cytoskeleton/eisosome_filament.html",
   "definition": "A filamentous cortical structure formed, in S. pombe, by the eisosome component Pil1.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0061645",
+  "label": "endocytic patch",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/endocytic_patch.html",
+  "definition": "The part of the cell cortex consisting of an aggregation of proteins that will give rise to an endocytic vesicle. A discrete, transient cortical assembly of clathrin coat proteins, endocytic adaptors (Ede1, Sla1, Sla2, Ent1/2), WASP/myosin-I nucleation-promoting factors (Las17, Myo3/5), Arp2/3-nucleated branched actin filaments, and BAR-domain scission proteins (Rvs161–Rvs167) at the plasma membrane of yeasts and filamentous fungi. The endocytic patch couples localized Arp2/3 actin polymerization to membrane invagination against high intracellular turgor pressure.",
   "synonyms": ""
  },
  {
@@ -1178,6 +1328,36 @@
   "page": "structures/cytoskeleton/funis.html",
   "definition": "A Giardia trophozoite cytoskeletal structure composed of short microtubule arrays that emanate from the caudal flagellar axonemes, anchor to dense rods running parallel to the posterior-lateral flagella, and after posterior-lateral flagellar emergence anchor to the epiplasm beneath the contractile tail membrane.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0000930",
+  "label": "gamma-tubulin complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/gamma_tubulin_complex.html",
+  "definition": "A multiprotein complex composed of gamma-tubulin and other non-tubulin proteins. Gamma-tubulin complexes are localized to microtubule organizing centers, and play an important role in the nucleation of microtubules. The number and complexity of non-tubulin proteins associated with these complexes varies between species. A conserved multi-subunit protein complex containing gamma-tubulin (Tub4p in Saccharomyces cerevisiae) and gamma-tubulin complex proteins (GCPs such as Spc97p and Spc98p) that templates and nucleates microtubule polymerization at microtubule organizing centers, including fungal spindle pole bodies and protist basal bodies. By capping the minus end of nascent microtubules, the gamma-tubulin complex sets microtubule polarity and protofilament number.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0000931",
+  "label": "gamma-tubulin ring complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/gamma_tubulin_ring_complex.html",
+  "definition": "A complex of gamma tubulin and associated proteins thought to be formed by multimerization of gamma-tubulin small complexes. An example of this structure is found in Schizosaccharomyces pombe. A large lock-washer-shaped multiprotein complex (gamma-TuRC) assembled from multiple gamma-tubulin small complexes (gamma-TuSCs) together with additional gamma-tubulin ring proteins (GCP4/Gfh1, GCP5/Mod21, GCP6/Alp16) and Mzt1. In fission yeast (Schizosaccharomyces pombe), filamentous fungi, and ciliated protists, gamma-TuRC localizes to spindle pole bodies, interphase and equatorial MTOCs, and basal bodies to nucleate and cap microtubule minus ends.",
+  "synonyms": "gamma-TuRC gamma-tubulin large complex, centrosomal gamma-tubulin large complex, eMTOC gamma-tubulin large complex, equatorial microtubule organizing center gamma-tubulin large complex, equatorial microtubule organizing centre gamma-tubulin large complex, iMTOC gamma-tubulin large complex, interphase microtubule organizing center gamma-tubulin large complex, interphase microtubule organizing centre gamma-tubulin large complex, mitotic spindle pole body gamma-tubulin large complex, spindle pole body gamma-tubulin ring complex, centrosomal gamma-tubulin large complex"
+ },
+ {
+  "identifier": "GO:0008275",
+  "label": "gamma-tubulin small complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/gamma_tubulin_small_complex.html",
+  "definition": "A complex usually comprising two gamma-tubulin molecules and two conserved non-tubulin proteins. Some gamma-tubulin small complexes are thought to be the repeating unit making up the core of the gamma-tubulin ring complex. A heterotetrameric core nucleation subcomplex (gamma-TuSC) composed of two molecules of gamma-tubulin (Tub4p in Saccharomyces cerevisiae) bound to one molecule each of GCP2 (Spc97p) and GCP3 (Spc98p). In budding yeast and other fungi lacking GCP4–6, gamma-TuSC is the fundamental building block that oligomerizes into a 13-protofilament helical ring upon binding Spc110p or Spc72p at the spindle pole body.",
+  "synonyms": "gammaTuSC Tub4 complex gamma-tubulin small complex, centrosomal gamma-tubulin small complex, mitotic spindle pole body gamma-tubulin small complex, spindle pole body"
  },
  {
   "identifier": "GO:0032171",
@@ -1450,6 +1630,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0034993",
+  "label": "meiotic nuclear membrane microtubule tethering complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/meiotic_nuclear_membrane_microtubule_tethering_complex.html",
+  "definition": "A nuclear membrane protein complex which connects the nuclear outer and inner membranes together, and links links the nuclear lumen to cytoplasmic microtubules during meiosis. A specialized nuclear-envelope-spanning multiprotein tethering complex assembled during meiotic prophase in fission yeast (Schizosaccharomyces pombe) and related fungi that links clustered meiotic telomeres (via Bqt1–Bqt2) through the inner nuclear membrane SUN protein Sad1 and outer nuclear membrane KASH protein Kms1 to cytoplasmic dynein (Dhc1) and the hrs1/mcp6-organized horsetail microtubule array.",
+  "synonyms": "LINC complex LInker of Nucleoskeleton and Cytoskeleton complex SUN-KASH complex"
+ },
+ {
   "identifier": "cellstructuremech:meiotic_outer_plaque",
   "label": "meiotic outer plaque",
   "category": "CYTOSKELETON",
@@ -1558,6 +1748,16 @@
   "page": "structures/cytoskeleton/new_spindle_pole_body_sin_signaling_complex.html",
   "definition": "A SIN signaling complex associated with the new mitotic spindle pole body during anaphase and characterized by the presence activated (GTP bound) GTPase (Spg1 in fission yeast) to activate SIN signaling.",
   "synonyms": "new spindle pole body SIN signalling complex"
+ },
+ {
+  "identifier": "GO:0106094",
+  "label": "nuclear membrane microtubule tethering complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/nuclear_membrane_microtubule_tethering_complex.html",
+  "definition": "A nuclear membrane protein complex that connects the nuclear inner and outer membranes and links nuclear structures across the nuclear envelope to cytoplasmic microtubules. In Schizosaccharomyces pombe and other fungi, nuclear membrane microtubule tethering complexes composed of the inner nuclear membrane SUN-domain protein Sad1 and outer nuclear membrane KASH-domain linker Kms1 (bridged during meiosis to telomeres by Bqt1-Bqt2) couple chromosomes and spindle pole body attachment sites across the nuclear envelope to cytoplasmic microtubule motors.",
+  "synonyms": "nuclear envelope microtubule tethering complex"
  },
  {
   "identifier": "GO:0005880",
@@ -1780,6 +1980,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:1990612",
+  "label": "Sad1-Kms1 LINC complex",
+  "category": "CYTOSKELETON",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/sad1_kms1_linc_complex.html",
+  "definition": "A LINC complex implicated in the connection of DNA double strand breaks to the cytoskeleton during DNA double-strand break repair. The canonical fission yeast (Schizosaccharomyces pombe) Linker of Nucleoskeleton and Cytoskeleton (LINC) complex spanning the inner and outer nuclear membranes, composed of the inner nuclear membrane SUN-domain protein Sad1 and the outer nuclear membrane KASH-domain protein Kms1 (and Kms2). During meiotic prophase, the Sad1–Kms1 LINC complex interacts with Bqt1–Bqt2 on the nucleoplasmic side and cytoplasmic dynein motors on the cytoplasmic side to gather telomeres to the spindle pole body and transmit microtubule forces across the nuclear envelope.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0032158",
   "label": "septin band",
   "category": "CYTOSKELETON",
@@ -1817,6 +2027,16 @@
   "status": "PROPOSED",
   "page": "structures/cytoskeleton/septin_complex.html",
   "definition": "A protein complex containing septins. Typically, these complexes contain multiple septins and are oligomeric.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0032156",
+  "label": "septin cytoskeleton",
+  "category": "CYTOSKELETON",
+  "kind": "FILAMENT",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/septin_cytoskeleton.html",
+  "definition": "The part of the cytoskeleton (the internal framework of a cell) composed of septins and associated proteins. Includes septin cytoskeleton-associated complexes. The network of GTP-binding septin hetero-oligomeric rods (Cdc3–Cdc10–Cdc11–Cdc12–Shs1 in Saccharomyces cerevisiae) and higher-order filaments, rings, collars, and gauzes associated with the inner face of the plasma membrane in yeasts, filamentous fungi, and green algae. The septin cytoskeleton acts as a cortical diffusion barrier and spatial scaffold that recruits cytokinetic, cell-wall-synthetic, and morphogenesis checkpoint proteins to the bud neck, hyphal branch sites, and prospore membranes.",
   "synonyms": ""
  },
  {
@@ -1870,6 +2090,16 @@
   "synonyms": "sf-fiber 1sf-fiber 2sf-fiber"
  },
  {
+  "identifier": "GO:0005819",
+  "label": "spindle",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/spindle.html",
+  "definition": "The array of microtubules and associated molecules that forms between opposite poles of a eukaryotic cell during mitosis or meiosis and serves to move the duplicated chromosomes apart. The bipolar array of microtubules, microtubule-associated proteins, and motor proteins (kinesins and dynein) organized between two spindle pole bodies or centrosomal poles that aligns and segregates chromosomes during mitosis or meiosis in yeasts, fungi, microalgae, and protists. The spindle comprises kinetochore microtubules that capture sister chromatids, antiparallel interpolar microtubules crosslinked by Ase1/PRC1 and Cin8/Kip1 motors, and astral microtubules.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0005876",
   "label": "spindle microtubule",
   "category": "CYTOSKELETON",
@@ -1878,6 +2108,26 @@
   "page": "structures/cytoskeleton/spindle_microtubule.html",
   "definition": "Any microtubule that is part of a mitotic or meiotic spindle; anchored at one spindle pole.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0051233",
+  "label": "spindle midzone",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/spindle_midzone.html",
+  "definition": "The area in the center of the spindle where the spindle microtubules from opposite poles overlap. In yeasts, fungi, and microbial eukaryotes, the spindle midzone is organized by antiparallel microtubule crosslinkers (Ase1/PRC1), kinesin-5 motors (Cin8, Kip1), and the chromosomal passenger complex (Ipl1/Aurora B, Sli15/INCENP, Bir1), driving anaphase B spindle elongation and stabilizing the central spindle.",
+  "synonyms": "central spindle overlap zone"
+ },
+ {
+  "identifier": "GO:0000922",
+  "label": "spindle pole",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/spindle_pole.html",
+  "definition": "Either of the ends of a spindle, where spindle microtubules are organized; usually contains a microtubule organizing center and accessory molecules, spindle microtubules and astral microtubules. In yeasts, fungi, microalgae, and protists, the two opposite spindle poles contain the spindle pole body or centrosomal MTOC together with minus-end focusing kinesin-14 motors, NuMA/Pkl1/Mto1 factors, and gamma-tubulin ring complexes that anchor kinetochore, interpolar, and astral microtubule minus ends.",
+  "synonyms": "mitotic spindle pole"
  },
  {
   "identifier": "GO:0005816",
@@ -1938,6 +2188,16 @@
   "page": "structures/cytoskeleton/stalk_spasmoneme.html",
   "definition": "An intracellular contractile fibrillar organelle within the stalk of contractile-stalk peritrich ciliates. A spasmin-rich fibrillar mass is interspersed with membrane-bounded tubules. Shortening deforms the surrounding stalk; the organelle is distinct from the extracellular sheath and from the continuous body myoneme network.",
   "synonyms": "vorticellid spasmoneme stalk myoneme spasmoneme"
+ },
+ {
+  "identifier": "GO:0099070",
+  "label": "static microtubule bundle",
+  "category": "CYTOSKELETON",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/cytoskeleton/static_microtubule_bundle.html",
+  "definition": "A stable bundle of closely packed microtubules formed in quiescent cells, usually associated with the spindle pole body. In yeast cells entering quiescence, it assembles at the transition from proliferation to quiescence and disassembles rapidly upon cell cycle re-entry.",
+  "synonyms": "Q-MT bundle quiescent cell MT bundle quiescent cell microtubule bundle"
  },
  {
   "identifier": "cellstructuremech:stentor_km_fiber",
@@ -2130,6 +2390,46 @@
   "synonyms": "Rod complex RodA-PBP2 complex"
  },
  {
+  "identifier": "GO:1990588",
+  "label": "FtsBL complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/ftsbl_complex.html",
+  "definition": "A protein complex required for prokaryotic cell division (FtsZ-dependent cytokinesis). Part of the divisome. Assembled independently of the other divisome components in the cytoplasm prior to transport to the cell septum. In E. coli consists of FtsB and FtsL.",
+  "synonyms": "FtsB-FtsL complex"
+ },
+ {
+  "identifier": "GO:1990587",
+  "label": "FtsQBL complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/ftsqbl_complex.html",
+  "definition": "A protein complex required for prokaryotic cell division (FtsZ-dependent cytokinesis). Part of the divisome. Assembled independently of the other divisome components in the cytoplasm prior to transport to the cell septum. In E. coli consists of FtsB, FtsL and FtsQ.",
+  "synonyms": "FtsB-FtsL-FtsQ complex"
+ },
+ {
+  "identifier": "GO:0034973",
+  "label": "Sid2-Mob1 complex",
+  "category": "DIVISION_MACHINERY",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/division_machinery/sid2_mob1_complex.html",
+  "definition": "A protein complex that contains a protein kinase (Sid2 in S. pombe) and its regulatory subunit (Mob1). The Sid2p-Mob1p kinase complex is a component of the septation initiation network in fission yeast (called the mitotic exit network in S. cerevisiae) and is required for cytokinesis. The analogous complex in S. cerevisiae is called Dbf2p-Mob1p complex.",
+  "synonyms": "Dbf2p-Mob1p complex Sid2-Mob1 kinase complex Sid2p-Mob1p complex"
+ },
+ {
+  "identifier": "GO:1990490",
+  "label": "archaeal proton-transporting A-type ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/archaeal_proton_transporting_a_type_atpase_complex.html",
+  "definition": "A large proton-transporting two-sector ATPase protein complex that catalyzes the synthesis or hydrolysis of ATP by a rotational mechanism, coupled to the transport of protons across a membrane and is found in Archaea.",
+  "synonyms": "A-type ATPase protein complex archaeal A-type ATPase protein complex"
+ },
+ {
   "identifier": "cellstructuremech:chlorosome_baseplate_antenna_complex",
   "label": "chlorosome baseplate antenna complex",
   "category": "ENERGY_COMPLEX",
@@ -2190,6 +2490,16 @@
   "synonyms": "dimethyl sulphoxide reductase complex DMSO reductase complex"
  },
  {
+  "identifier": "GO:0009326",
+  "label": "formate dehydrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/formate_dehydrogenase_complex.html",
+  "definition": "An enzyme complex that catalyzes the dehydrogenation of formate to produce carbon dioxide (CO2). A multisubunit molybdenum/tungsten-cofactor- and iron-sulfur-cluster-containing oxidoreductase complex in bacteria and archaea (including respiratory membrane-bound Fdh-N/FdnGHI and Fdh-O/FdoGHI in Escherichia coli and cytoplasmic NAD+/F420-linked formate dehydrogenases in methanogens and methylotrophs) that catalyzes the two-electron oxidation of formate (HCOO-) to CO2 and H+. Respiratory formate dehydrogenase complexes couple periplasmic formate oxidation to menaquinone reduction via a redox loop that conserves energy as proton-motive force.",
+  "synonyms": ""
+ },
+ {
   "identifier": "cellstructuremech:formate_dehydrogenase_n_complex",
   "label": "formate dehydrogenase N complex",
   "category": "ENERGY_COMPLEX",
@@ -2218,6 +2528,16 @@
   "page": "structures/energy_complex/fumarate_reductase_complex.html",
   "definition": "A membrane-bound four-subunit respiratory quinol:fumarate reductase complex whose extrinsic catalytic module and membrane-anchor module couple fumarate reduction to quinol oxidation.",
   "synonyms": "quinol-fumarate reductase"
+ },
+ {
+  "identifier": "GO:0016611",
+  "label": "iron-iron nitrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/iron_iron_nitrogenase_complex.html",
+  "definition": "An alternative nitrogenase enzyme complex containing an iron-only active-site cluster (FeFe-cofactor) expressed when both molybdenum and vanadium are depleted in diazotrophs such as Rhodobacter capsulatus and Azotobacter vinelandii. Although the GO:0016611 ontology definition describes an older alpha1-beta2 or alpha2-beta2 dinitrogenase stoichiometry, crystallographic and cryo-EM structures (PDB:8BOQ, PDB:8OIE) demonstrate a heterohexameric alpha2beta2delta2 catalytic component (AnfD2K2G2) partnered with a homodimeric iron-protein nitrogenase reductase (AnfH2).",
+  "synonyms": ""
  },
  {
   "identifier": "cellstructuremech:lh2_peripheral_light_harvesting_antenna_complex",
@@ -2250,6 +2570,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0016612",
+  "label": "molybdenum-iron nitrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/molybdenum_iron_nitrogenase_complex.html",
+  "definition": "An enzyme complex containing a molybdenum-iron cluster found in many diazotrophic species. It is composed of two component proteins, molybdenum-iron dinitrogenase (MoFe protein, an alpha2beta2 heterotetramer NifD2K2 carrying P-clusters and active-site FeMo-cofactors) and nitrogenase reductase (Fe protein, a homodimer NifH2 carrying a subunit-bridging [4Fe-4S] cluster) that transiently dock to couple MgATP hydrolysis to electron transfer and dinitrogen reduction.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0044799",
   "label": "NarGHI complex",
   "category": "ENERGY_COMPLEX",
@@ -2260,6 +2590,16 @@
   "synonyms": "cytoplasmic membrane-bound quinol-nitrate oxidoreductase nitrate reductase A Nitrate reductase A complex"
  },
  {
+  "identifier": "GO:0009325",
+  "label": "nitrate reductase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/nitrate_reductase_complex.html",
+  "definition": "An enzyme complex that catalyzes the formation of nitrate from nitrite with the concomitant reduction of an acceptor. A molybdenum-cofactor- and iron-sulfur-containing multisubunit oxidoreductase complex (exemplified by the respiratory membrane-bound NarGHI complex in Escherichia coli and denitrifying bacteria, periplasmic NapAB, and assimilatory Nas/Nia complexes in bacteria, fungi, and microalgae) that catalyzes the two-electron reduction of nitrate (NO3-) to nitrite (NO2-). In anaerobic respiration, the membrane-bound nitrate reductase complex couples quinol oxidation in the cytoplasmic membrane to proton-motive force generation.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0016610",
   "label": "nitrogenase complex",
   "category": "ENERGY_COMPLEX",
@@ -2268,6 +2608,16 @@
   "page": "structures/energy_complex/nitrogenase_complex.html",
   "definition": "A nitrogenase enzyme assembly comprising a metal-cluster-containing dinitrogenase catalytic component and a homodimeric nitrogenase reductase that together support ATP-dependent dinitrogen reduction. Catalytic-component subunit composition varies among molybdenum, vanadium and iron-only nitrogenases.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0009521",
+  "label": "photosystem",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/photosystem.html",
+  "definition": "A complex located in a photosynthetic membrane that consists of a photoreaction center associated with accessory pigments and electron carriers. Examples of this component are found in Arabidopsis thaliana and in photosynthetic bacterial and archaeal species. A pigment-protein supercomplex embedded in the photosynthetic thylakoid or cytoplasmic membranes of cyanobacteria, phototrophic bacteria, and eukaryotic microalgae that harvests light energy via chlorophyll/bacteriochlorophyll and carotenoid antennas and drives photochemical charge separation across a reaction center. Photosystems (including oxygenic Photosystem I and II and anoxygenic type I/II reaction centers) initiate photosynthetic electron transport coupled to ATP and NAD(P)H synthesis.",
+  "synonyms": "reaction center reaction centre"
  },
  {
   "identifier": "GO:0009522",
@@ -2340,6 +2690,16 @@
   "synonyms": "cyanobacterial PSII"
  },
  {
+  "identifier": "GO:0031004",
+  "label": "potassium ion-transporting ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/potassium_ion_transporting_atpase_complex.html",
+  "definition": "Protein complex that carries out the reaction: ATP + H2O + K+(out) = ADP + phosphate + K+(in). It is a high affinity potassium uptake system. The E. coli complex consists of 4 proteins: KdpA is the potassium ion translocase, KdpB is the ATPase, and KdpC and KdpF seem to be involved in assembly and stabilization of the complex.",
+  "synonyms": "Kdp system complex"
+ },
+ {
   "identifier": "GO:0045259",
   "label": "proton-transporting ATP synthase complex",
   "category": "ENERGY_COMPLEX",
@@ -2348,6 +2708,66 @@
   "page": "structures/energy_complex/proton_transporting_atp_synthase_complex.html",
   "definition": "The rotary motor enzyme that makes ATP from ADP and phosphate using the ion motive force across the membrane. It has two coupled sectors: a membrane-embedded Fo, whose c-ring turns as protons cross it, and a soluble F1 (alpha3beta3gammadeltaepsilon), whose catalytic beta subunits are driven through their conformational cycle by the rotating gamma subunit.",
   "synonyms": "F1Fo ATP synthase"
+ },
+ {
+  "identifier": "GO:0016469",
+  "label": "proton-transporting two-sector ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_two_sector_atpase_complex.html",
+  "definition": "A large protein complex that catalyzes the synthesis or hydrolysis of ATP by a rotational mechanism, coupled to the transport of protons across a membrane. The complex comprises a membrane sector (F0 or V0) that carries out proton transport and a cytoplasmic compartment sector (F1 or V1) that catalyzes ATP synthesis or hydrolysis.",
+  "synonyms": "hydrogen-transporting two-sector ATPase complex vacuolar hydrogen-transporting ATPase"
+ },
+ {
+  "identifier": "GO:0033178",
+  "label": "proton-transporting two-sector ATPase complex, catalytic domain",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_two_sector_atpase_complex_catalytic_domain.html",
+  "definition": "A protein complex that forms part of a proton-transporting two-sector ATPase complex and catalyzes ATP synthesis or hydrolysis. The catalytic sector consists of a hexameric head and a central stalk; substrate binding and rotary motion of the central stalk is coupled to proton transport in the membrane sector.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0033177",
+  "label": "proton-transporting two-sector ATPase complex, proton-transporting domain",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_two_sector_atpase_complex_proton_transporting_domain.html",
+  "definition": "A protein complex that forms part of a proton-transporting two-sector ATPase complex and mediates proton transport across a membrane.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0033176",
+  "label": "proton-transporting V-type ATPase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_v_type_atpase_complex.html",
+  "definition": "A proton-transporting two-sector ATPase complex that couples ATP hydrolysis to the transport of protons across a concentration gradient. The resulting transmembrane electrochemical potential of H+ is used to drive a variety of (i) secondary active transport systems via H+-dependent symporters and antiporters and (ii) channel-mediated transport systems. The complex comprises a membrane sector (V0) that carries out proton transport and a cytoplasmic compartment sector (V1) that catalyzes ATP hydrolysis. V-type ATPases are found in the membranes of organelles such as vacuoles, endosomes, and lysosomes, and in the plasma membrane. A rotary proton-pumping nanomachine composed of a peripheral catalytic V1 domain that hydrolyzes ATP and a membrane-embedded V0 domain that translocates protons across biological membranes. Present across yeasts, filamentous fungi, protists, and certain bacteria (V/A-type ATPases), the proton-transporting V-type ATPase complex acidifies vacuoles, lysosomes, endosomes, Golgi cisternae, and acidocalcisomes to energize secondary active transport and pH-dependent proteolysis.",
+  "synonyms": "hydrogen-translocating V-type ATPase complex"
+ },
+ {
+  "identifier": "GO:0033179",
+  "label": "proton-transporting V-type ATPase, V0 domain",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_v_type_atpase_v0_domain.html",
+  "definition": "A protein complex that forms part of a proton-transporting V-type ATPase and mediates proton transport across a membrane. The V0 complex consists of at least four different subunits (a,c,d and e); six or more c subunits form a proton-binding rotor ring. The integral membrane proton-translocating sector (V0 domain) of the proton-transporting V-type ATPase complex. Assembled in the endoplasmic reticulum of yeasts, fungi, and protists from the a-subunit stator (Vph1p/Stv1p) Containing two hemichannels, a decameric proteolipid c-ring rotor (Vma3p, Vma11p, Vma16p), and coupling subunits d (Vma6p) and e (Vma9p), the V0 domain conducts protons across endomembranes when driven by the V1 rotary motor.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0033180",
+  "label": "proton-transporting V-type ATPase, V1 domain",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/proton_transporting_v_type_atpase_v1_domain.html",
+  "definition": "A protein complex that forms part of a proton-transporting V-type ATPase and catalyzes ATP hydrolysis. The V1 complex consists of: (1) a globular headpiece with three alternating copies of subunits A and B that form a ring, (2) a central rotational stalk composed of single copies of subunits D and F, and (3) a peripheral stalk made of subunits C, E, G and H. Subunits A and B mediate the hydrolysis of ATP at three reaction sites associated with subunit A. The peripheral cytoplasmic ATP-hydrolyzing sector (V1 domain) of the proton-transporting V-type ATPase complex. In yeasts, fungi, and protists, the V1 domain comprises a catalytic A3B3 hexamer (Vma1p and Vma2p), a central rotor stalk (subunits D/Vma8p and F/Vma7p), and three peripheral stator stalks (subunits E/Vma4p, G/Vma10p, C/Vma5p, and H/Vma13p) that convert ATP hydrolysis into mechanical torque on the V0 proteolipid ring.",
+  "synonyms": ""
  },
  {
   "identifier": "cellstructuremech:rc_lh1_pufx_core_complex",
@@ -2440,6 +2860,16 @@
   "synonyms": "vacuolar hydrogen ion-transporting ATPase V1 domain"
  },
  {
+  "identifier": "GO:0016613",
+  "label": "vanadium-iron nitrogenase complex",
+  "category": "ENERGY_COMPLEX",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/energy_complex/vanadium_iron_nitrogenase_complex.html",
+  "definition": "An alternative nitrogenase enzyme complex containing a vanadium-iron active-site cluster (FeV-cofactor) expressed under molybdenum depletion in species such as Azotobacter vinelandii. Although the GO:0016613 ontology definition retains older generic alpha2-beta2 tetramer wording, structural resolution of the A. vinelandii VFe protein (PDB:5N6Y) shows a heterohexameric alpha2beta2delta2 catalytic dinitrogenase component (VnfD2K2G2) partnered with a homodimeric iron-protein nitrogenase reductase (VnfH2).",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0042603",
   "label": "capsule",
   "category": "ENVELOPE",
@@ -2458,6 +2888,16 @@
   "page": "structures/envelope/cell_outer_membrane.html",
   "definition": "The outermost lipid bilayer of a diderm cell envelope. In canonical Gram-negative bacteria it is asymmetric, with phospholipid enriched in the inner leaflet and lipopolysaccharide enriched in the outer leaflet, and contains beta-barrel proteins that mediate transport and assembly.",
   "synonyms": "outer membrane of cell"
+ },
+ {
+  "identifier": "GO:0030428",
+  "label": "cell septum",
+  "category": "ENVELOPE",
+  "kind": "ENVELOPE_LAYER",
+  "status": "PROPOSED",
+  "page": "structures/envelope/cell_septum.html",
+  "definition": "A structure composed of peptidoglycan and often chitin in addition to other materials. It usually forms perpendicular to the long axis of a cell or hypha and grows centripetally from the cell wall to the center of the cell and often functions in the compartmentalization of a cell into two daughter cells. An intercellular cross-wall layer composed of peptidoglycan in dividing bacteria, pseudomurein/S-layer in archaea, or chitin and beta-glucan in yeasts and filamentous fungi that forms perpendicular to the longitudinal cell axis to partition daughter cells or hyphal compartments. Synthesis of the cell septum is directed by the cytokinetic FtsZ divisome in prokaryotes or the actomyosin contractile ring and septin collar in fungi.",
+  "synonyms": "septum cross wall"
  },
  {
   "identifier": "GO:0033101",
@@ -2598,6 +3038,16 @@
   "page": "structures/envelope/plasma_membrane.html",
   "definition": "The lipid membrane surrounding a cell that separates the cytoplasm from the external environment and houses proteins for selective transport, signaling, and envelope biogenesis.",
   "synonyms": "cell membrane cytoplasmic membrane bacterial inner membrane"
+ },
+ {
+  "identifier": "GO:0000934",
+  "label": "porous cell septum",
+  "category": "ENVELOPE",
+  "kind": "ENVELOPE_LAYER",
+  "status": "PROPOSED",
+  "page": "structures/envelope/porous_cell_septum.html",
+  "definition": "A septum or cross wall which does not entirely span the space between two portions of cell wall and may contain a specialized central pore structure. A porous septum allows the movement of organelles and/or cytoplasm between compartments. A cross-wall cell septum in filamentous ascomycete and basidiomycete fungi that is perforated by one or more central septal pores (such as the simple septal pore of Neurospora crassa and Aspergillus nidulans or the barrel-shaped dolipore septum of basidiomycetes). The porous cell septum partitions hyphal compartments structurally while permitting regulated intercellular cytoplasmic streaming, organelle migration, and Woronin-body- or parenthesome-mediated pore gating upon hyphal wounding.",
+  "synonyms": "porous septum"
  },
  {
   "identifier": "GO:0030115",
@@ -2917,6 +3367,16 @@
   "status": "PROPOSED",
   "page": "structures/membrane_organelle/apicoplast_membrane.html",
   "definition": "Any of the lipid bilayers that surround an apicoplast and form the apicoplast envelope.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0097658",
+  "label": "Asi complex",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/asi_complex.html",
+  "definition": "A nuclear ubiquitin ligase multiprotein complex located in the inner nuclear membrane (INM) that recognizes and ubiquitinates misfolded INM proteins and also some proteins involved in sterol biosynthesis, during ER-associated protein degradation (ERAD). In S. cerevisiae, this complex contains the ubiquitin ligases Asi1p and Asi3p.",
   "synonyms": ""
  },
  {
@@ -3508,6 +3968,36 @@
   "page": "structures/membrane_organelle/early_endosome_membrane.html",
   "definition": "The lipid bilayer surrounding an early endosome.",
   "synonyms": "early endosomal membrane"
+ },
+ {
+  "identifier": "GO:0032009",
+  "label": "early phagosome",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/early_phagosome.html",
+  "definition": "A membrane-bounded intracellular vesicle as initially formed upon the ingestion of particulate material by phagocytosis. A newly formed phagocytic vacuole generated immediately after phagocytic cup closure in phagotrophic protists and amoebae such as Dictyostelium discoideum and Entamoeba histolytica. The early phagosome retains plasma membrane lipids and early endosomal Rab5/Rab7 GTPases while initiating V-ATPase recruitment prior to lysosome fusion.",
+  "synonyms": "early phagocytic vesicle"
+ },
+ {
+  "identifier": "GO:0062113",
+  "label": "early phagosome lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/early_phagosome_lumen.html",
+  "definition": "The volume enclosed by the membrane of an early phagosome. In phagotrophic amoebae (Dictyostelium discoideum, Entamoeba histolytica) and ciliates, the early phagosome lumen encloses newly engulfed bacterial or particulate prey at near-neutral pH prior to V-ATPase-mediated acidification and lysosomal hydrolase delivery.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0036186",
+  "label": "early phagosome membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/early_phagosome_membrane.html",
+  "definition": "The lipid bilayer surrounding an early phagosome. In phagotrophic protists, amoebae (Dictyostelium discoideum, Entamoeba histolytica), and ciliates, the early phagosome membrane derives from the invaginated plasma membrane and is transiently enriched in phosphatidylinositol 3-phosphate (PI3P) and active Rab5 GTPase, recruiting early endosomal tethering complexes before maturing into a late phagosome membrane.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0030139",
@@ -4330,6 +4820,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:1990862",
+  "label": "nuclear membrane complex Bqt3-Bqt4",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/nuclear_membrane_complex_bqt3_bqt4.html",
+  "definition": "A protein complex that resides in the inner nuclear membrane and anchors telomeres to the nuclear envelope. In fission yeast, it is composed of Bqt3 and Bqt4.",
+  "synonyms": ""
+ },
+ {
   "identifier": "cellstructuremech:nuclear_net",
   "label": "nuclear net",
   "category": "MEMBRANE_ORGANELLE",
@@ -4558,6 +5058,36 @@
   "page": "structures/membrane_organelle/phagocytic_vesicle_membrane.html",
   "definition": "The lipid bilayer surrounding a phagocytic vesicle.",
   "synonyms": "Phagosome membrane Phagosomal membrane"
+ },
+ {
+  "identifier": "GO:0032010",
+  "label": "phagolysosome",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/phagolysosome.html",
+  "definition": "A membrane-bounded intracellular vesicle formed by maturation of an early phagosome following the ingestion of particulate material by phagocytosis; during maturation, phagosomes acquire markers of late endosomes and lysosomes. A mature digestive organelle formed by the fusion of a phagosome with lysosomes in phagotrophic microbial eukaryotes such as Dictyostelium discoideum, Entamoeba histolytica, and ciliates. The phagolysosome features a strongly acidified lumen maintained by V-type H+-ATPases and an arsenal of acid hydrolases, proteases, and lysozymes that degrade engulfed bacteria and particulate nutrients.",
+  "synonyms": "late phagocytic vesicle late phagosome"
+ },
+ {
+  "identifier": "GO:0061474",
+  "label": "phagolysosome membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/phagolysosome_membrane.html",
+  "definition": "The lipid bilayer surrounding a phagolysosome. In phagotrophic protists and amoebae (Dictyostelium discoideum, Entamoeba histolytica), the phagolysosome membrane is formed by SNARE-mediated fusion of late phagosomes with lysosomes and contains dense V-type H+-ATPase complexes, Nramp divalent metal efflux pumps, and heavily glycosylated LAMP-like membrane proteins that protect the bilayer from luminal hydrolases.",
+  "synonyms": "phagolysosomal membrane"
+ },
+ {
+  "identifier": "GO:0106174",
+  "label": "phagolysosome vesicle lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/phagolysosome_vesicle_lumen.html",
+  "definition": "The volume enclosed by the membrane of a phagolysosome. In phagotrophic amoebae (Dictyostelium discoideum, Entamoeba histolytica) and ciliates, the acidic phagolysosome vesicle lumen concentrates cathepsin-like cysteine and aspartic proteases, lysozymes, phospholipases, and reactive oxygen species that kill and digest engulfed microbial cells.",
+  "synonyms": "phagolysosome lumen"
  },
  {
   "identifier": "GO:0034357",
@@ -4790,6 +5320,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0106126",
+  "label": "reservosome membrane",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/reservosome_membrane.html",
+  "definition": "The lipid bilayer surrounding a reservosome.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0020008",
   "label": "rhoptry",
   "category": "MEMBRANE_ORGANELLE",
@@ -4860,6 +5400,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0031977",
+  "label": "thylakoid lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/thylakoid_lumen.html",
+  "definition": "The volume enclosed by a thylakoid membrane. The continuous aqueous compartment enclosed by the thylakoid membrane in cyanobacteria and plastid-bearing eukaryotic microalgae (such as Chlamydomonas reinhardtii and diatoms). During oxygenic photosynthesis, water oxidation by the lumenal oxygen-evolving complex of Photosystem II and plastoquinol oxidation by cytochrome b6f pump protons into the thylakoid lumen, generating the acidic ΔpH that drives ATP synthase and housing soluble electron carrier plastocyanin (or cytochrome c6).",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0042651",
   "label": "thylakoid membrane",
   "category": "MEMBRANE_ORGANELLE",
@@ -4898,6 +5448,26 @@
   "page": "structures/membrane_organelle/trans_golgi_network_membrane.html",
   "definition": "The lipid bilayer surrounding any of the compartments that make up the trans-Golgi network.",
   "synonyms": "trans Golgi network membrane"
+ },
+ {
+  "identifier": "GO:0030140",
+  "label": "trans-Golgi network transport vesicle",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/trans_golgi_network_transport_vesicle.html",
+  "definition": "A vesicle that mediates transport between the trans-Golgi network and other parts of the cell. A membrane-bounded transport vesicle that buds from the trans-Golgi network (TGN) to sort and deliver biosynthetic secretory and endolysosomal cargo to the plasma membrane, endosomes, or vacuole in yeasts, filamentous fungi, and protists. Vesicle biogenesis is driven by Arf1 GTPase activation, clathrin/adaptor or exomer coat assembly, and phosphatidylinositol-4-phosphate signaling.",
+  "synonyms": "TGN transport vesicle trans-Golgi network constitutive secretory pathway transport vesicle"
+ },
+ {
+  "identifier": "GO:0098564",
+  "label": "trans-Golgi network transport vesicle lumen",
+  "category": "MEMBRANE_ORGANELLE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/membrane_organelle/trans_golgi_network_transport_vesicle_lumen.html",
+  "definition": "The volume enclosed within the membrane of a trans-Golgi network transport vesicle. The enclosed aqueous compartment within a trans-Golgi network (TGN) transport vesicle bounded by the vesicle membrane. In yeasts and other microbial eukaryotes, the TGN vesicle lumen houses soluble secretory glycoproteins, cell-wall remodeling enzymes, and vacuolar hydrolase precursors sorted from the late Golgi.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0012510",
@@ -5170,6 +5740,16 @@
   "synonyms": "AMT1 complex"
  },
  {
+  "identifier": "GO:0031250",
+  "label": "anaerobic ribonucleoside-triphosphate reductase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/anaerobic_ribonucleoside_triphosphate_reductase_complex.html",
+  "definition": "An enzyme complex composed of 4 subunits, 2 copies of the large protein (nrdD in E. coli) and 2 copies of the small protein (nrdG in E. coli). It catalyzes the generation of 2'deoxyribonucleotides under anaerobic growth conditions. The larger subunit is the catalytic unit that is activated by the smaller iron-binding subunit.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0030121",
   "label": "AP-1 adaptor complex",
   "category": "OTHER",
@@ -5237,6 +5817,16 @@
   "status": "PROPOSED",
   "page": "structures/other/apical_complex.html",
   "definition": "A group of cytoskeletal structures and associated membrane-bounded organelles at the anterior end of apicomplexan parasites that supports host-cell attachment, penetration, and parasite proliferation.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0034274",
+  "label": "Atg12-Atg5-Atg16 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/atg12_atg5_atg16_complex.html",
+  "definition": "A protein complex required for the expansion of the autophagosomal membrane. In budding yeast, this complex consists of Atg12p, Atg5p and Atg16p.",
   "synonyms": ""
  },
  {
@@ -5330,6 +5920,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0097610",
+  "label": "cell surface furrow",
+  "category": "OTHER",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/other/cell_surface_furrow.html",
+  "definition": "A furrow that may be found on the cell surface. Examples include the cingulum and sulcus found in some dinoflagellates. A persistent invaginated groove or trench in the cortical cell surface of single-celled microbial eukaryotes—including the equatorial cingulum and ventral sulcus furrows of dinoflagellates, as well as the ventral feeding/flagellar grooves of excavates, cryptophytes, and euglenids. Supported by underlying cortical alveoli, epiplastids, and microtubular ribbons, the cell surface furrow channels flagellar beating waves and directs hydrodynamic flow for propulsion and prey capture.",
+  "synonyms": "furrow groove cell surface groove"
+ },
+ {
   "identifier": "GO:0005933",
   "label": "cellular bud",
   "category": "OTHER",
@@ -5390,6 +5990,16 @@
   "synonyms": "cellulosomal complex multienzyme cellulolytic complex"
  },
  {
+  "identifier": "GO:0016465",
+  "label": "chaperonin ATPase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chaperonin_atpase_complex.html",
+  "definition": "A multimeric ATPase complex involved in protein folding. It has a symmetric ring-shaped structure and consists of multiple identical ~60kDa subunits and, in the bacterial complex, several smaller subunits; a central cavity receives unfolded peptides and promotes their folding into the native conformation.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0005832",
   "label": "chaperonin-containing T-complex",
   "category": "OTHER",
@@ -5418,6 +6028,36 @@
   "page": "structures/other/chrac.html",
   "definition": "An ISWI complex that contains an ATPase subunit of the ISWI family (SNF2H in mammals, Isw2 in S. cerevisiae), an ACF1 homolog, and additional small histone fold subunits (generally two of these, but Xenopus has only one and some additional non-conserved subunits). CHRAC plays roles in the regulation of RNA polymerase II transcription and in DNA replication and repair.",
   "synonyms": "chromatin accessibility complex ISW2 complex"
+ },
+ {
+  "identifier": "GO:0000775",
+  "label": "chromosome, centromeric region",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chromosome_centromeric_region.html",
+  "definition": "The region of a chromosome that includes the centromeric DNA and associated proteins. In mitosis or meiosis II, this region connects the chromosome to spindle microtubules via the kinetochore. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the centromeric region comprises specialized CenH3 (Cse4/Cnp1) centromeric nucleosomes, point- or regional-centromere DNA-binding factors (such as the CBF3 complex), pericentromeric cohesin/heterochromatin, and the assembled inner and outer kinetochore complexes.",
+  "synonyms": "centromere chromosomal centromeric region"
+ },
+ {
+  "identifier": "GO:0099115",
+  "label": "chromosome, subtelomeric region",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chromosome_subtelomeric_region.html",
+  "definition": "The chromosomal region immediately adjacent to a telomere, including subtelomeric DNA elements (such as X and Y' repeats in budding yeast) and associated nucleosomal heterochromatin. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the chromosome, subtelomeric region is packaged into silent chromatin by histone H4 K16 deacetylation and Sir2-Sir3-Sir4 or Swi6/HP1 complexes.",
+  "synonyms": "subtelomere subtelomeric chromatin"
+ },
+ {
+  "identifier": "GO:0000781",
+  "label": "chromosome, telomeric region",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/chromosome_telomeric_region.html",
+  "definition": "The terminal region of a linear chromosome that includes the telomeric DNA repeats and associated proteins, required for replication and stability of the chromosome end. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the chromosome, telomeric region comprises terminal telomeric DNA repeats bound by sequence-specific duplex repeat-binding and telomere-associated proteins (such as Rap1 and Taz1) that form a protective nucleoprotein cap at chromosome ends and mediate telomere organization.",
+  "synonyms": "telomere telomeric chromatin"
  },
  {
   "identifier": "GO:0030118",
@@ -5498,6 +6138,16 @@
   "page": "structures/other/cmg_complex.html",
   "definition": "A protein complex that contains the GINS complex, Cdc45p, and the heterohexameric MCM complex, and that is involved in unwinding DNA during replication.",
   "synonyms": "unwindosome"
+ },
+ {
+  "identifier": "GO:1990191",
+  "label": "cobalamin transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/cobalamin_transport_complex.html",
+  "definition": "Protein complex facilitating ATP-dependent cobalamin (vitamin B12) transport through inner cell membrane (periplasm to cytoplasm) in Gram-negative bacteria. In E. coli the system is composed of a periplasmic cobalamin-binding protein (BtuF), an integral membrane homodimer, BtuC, and a cytoplasmic ATP-binding homodimer BtuD.",
+  "synonyms": "BtuCDF complex cobalamin-transporting BtuCDF complex vitamin B12 transport complex vitamin B12-transporting BtuCDF complex"
  },
  {
   "identifier": "GO:0017119",
@@ -5850,6 +6500,16 @@
   "synonyms": "RFC complex activator 1 complex"
  },
  {
+  "identifier": "GO:0031261",
+  "label": "DNA replication preinitiation complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/dna_replication_preinitiation_complex.html",
+  "definition": "A protein-DNA complex assembled at eukaryotic DNA replication origins immediately prior to the initiation of DNA replication. The preinitiation complex is formed by the assembly of additional proteins onto an existing prereplicative complex. In budding yeast, the additional proteins might include Cdc45p, Sld2p, Sld3p, Dpb11p, DNA polymerases, and others; in fission yeast the GINS complex is present. The transient multiprotein-DNA complex assembled at licensed eukaryotic replication origins at the G1-to-S phase transition when Dbf4-dependent kinase (DDK/Cdc7) and S-phase cyclin-dependent kinase (S-CDK) phosphorylate the loaded Mcm2–7 double hexamer and firing factors Sld2 and Sld3. In Saccharomyces cerevisiae and related fungi, the DNA replication preinitiation complex recruits Dpb11, Cdc45, DNA polymerase epsilon, and the GINS tetramer to convert inactive Mcm2–7 rings into active CMG replicative helicases.",
+  "synonyms": "pre-IC"
+ },
+ {
   "identifier": "GO:0009340",
   "label": "DNA topoisomerase IV complex",
   "category": "OTHER",
@@ -6038,6 +6698,16 @@
   "page": "structures/other/ejectisome.html",
   "definition": "A cryptophyte extrusive organelle that discharges proteinaceous paracrystalline ribbons or filaments built in part from small ejectisin polypeptides.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0000408",
+  "label": "EKC/KEOPS complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ekc_keops_complex.html",
+  "definition": "A protein complex involved in t6A tRNA modification. For example, in Saccharomyces cerevisiae the complex contains Bud32p, Kae1p, Gon7p, Cgi121p, and Pcc1p.",
+  "synonyms": "KEOPS/EKC complex endopeptidase-like kinase chromatin-associated protein complex kinase, putative endopeptidase and other proteins of small size protein complex"
  },
  {
   "identifier": "GO:0031391",
@@ -6320,6 +6990,16 @@
   "synonyms": "actin-myosin glideosome"
  },
  {
+  "identifier": "GO:0031026",
+  "label": "glutamate synthase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/glutamate_synthase_complex.html",
+  "definition": "A complex that possesses glutamate synthase activity. The iron-sulfur flavoprotein glutamine:2-oxoglutarate amidotransferase (GOGAT) enzyme complex that catalyzes the reductive transfer of the amide amino group from L-glutamine to 2-oxoglutarate to yield two molecules of L-glutamate. Operating alongside glutamine synthetase in the high-affinity GS-GOGAT ammonia assimilation pathway across bacteria, archaea, yeasts, and microalgae, the glutamate synthase complex couples an amidotransferase site with FMN and [3Fe-4S]/[4Fe-4S] clusters through an intramolecular ammonia tunnel.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0009342",
   "label": "glutamate synthase complex (NADPH)",
   "category": "OTHER",
@@ -6420,6 +7100,16 @@
   "synonyms": "Caulobacter holdfast holdfast adhesin"
  },
  {
+  "identifier": "GO:0009379",
+  "label": "Holliday junction helicase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/holliday_junction_helicase_complex.html",
+  "definition": "A DNA helicase complex found at Holliday junctions where the helicase activity is involved in the migration of the junction branch point. The best-characterized example is the E. coli RuvAB complex, in which a hexamer of RuvB subunits possesses helicase activity that is modulated by association with RuvA.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0030897",
   "label": "HOPS complex",
   "category": "OTHER",
@@ -6430,6 +7120,16 @@
   "synonyms": "homotypic fusion and vacuole protein sorting complex"
  },
  {
+  "identifier": "GO:0009376",
+  "label": "HslUV protease complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/hsluv_protease_complex.html",
+  "definition": "A protein complex that possesses ATP-dependent protease activity; consists of an ATPase large subunit with homology to other ClpX family ATPases and a peptidase small subunit related to the proteasomal beta-subunits of eukaryotes. In the E. coli complex, a double ring-shaped homohexamer of HslV is capped on each side by a ring-shaped HslU homohexamer.",
+  "synonyms": "ClpYQ protease complex"
+ },
+ {
   "identifier": "cellstructuremech:hsp78_chaperone_complex",
   "label": "Hsp78 chaperone complex",
   "category": "OTHER",
@@ -6437,6 +7137,16 @@
   "status": "PROPOSED",
   "page": "structures/other/hsp78_chaperone_complex.html",
   "definition": "An oligomeric mitochondrial matrix chaperone assembly built from Hsp78-type subunits and involved in ATP-dependent solubilization of aggregated proteins.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0001411",
+  "label": "hyphal tip",
+  "category": "OTHER",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/other/hyphal_tip.html",
+  "definition": "The end, or tip, of a fungal hypha, where polarized growth occurs during hyphal elongation. The dome-shaped, rapidly expanding apical region of a fungal or oomycete hypha where polarized exocytosis, cell wall biosynthesis, and cytoskeletal remodeling are concentrated. In filamentous fungi and dimorphic yeasts such as Candida albicans and Ashbya gossypii, the hyphal tip houses the Spitzenkörper and polarisome complex that nucleate actin cables and focus secretory vesicle fusion.",
   "synonyms": ""
  },
  {
@@ -6468,6 +7178,26 @@
   "page": "structures/other/ino80_complex.html",
   "definition": "A multisubunit protein complex that contains the Ino80p ATPase; exhibits chromatin remodeling activity.",
   "synonyms": "INO80 chromatin remodeling complex INO80-C Ino80.com"
+ },
+ {
+  "identifier": "GO:1990330",
+  "label": "IscS-IscU complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/iscs_iscu_complex.html",
+  "definition": "A heterotetrameric protein complex involved in the sulfur transfer during iron-sulfur cluster assembly and in the modification of tRNA wobble positions. In E. coli it consists of a central IscS dimer with the IscU protomers attached to one of the IscS units each via a disulfide (-SSH) group.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0016587",
+  "label": "Isw1 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/isw1_complex.html",
+  "definition": "A protein complex that contains an Isw1 subunit from the ISWI-family of ATPases and acts to modify chromatin structure. A family of yeast imitation-switch (ISWI) ATP-dependent chromatin remodeling complexes built around the catalytic SNF2-family ATPase subunit Isw1p in Saccharomyces cerevisiae and related fungi. Existing primarily as the dimeric Isw1a complex (Isw1p–Ioc3p) at promoter-proximal regions and the trimeric Isw1b complex (Isw1p–Ioc2p–Ioc4p) over coding regions, the Isw1 complex slides nucleosomes to establish regular nucleosome spacing and suppress cryptic transcription.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0036436",
@@ -6558,6 +7288,16 @@
   "page": "structures/other/macab_tolc_complex.html",
   "definition": "The MacAB-TolC complex is a macrolide transporter complex found in E.coli and related gram-negative bacteria. Its transport activity is specific to macrolide compounds containing 14- and 15-membered lactones. It consists of the dimeric inner membrane ATPase MacB, the hexameric, periplasmic membrane fusion protein MacA and the trimeric outer membrane factor TolC.",
   "synonyms": "macrolide transporter MacAB-TolC complex"
+ },
+ {
+  "identifier": "GO:1990060",
+  "label": "maltose transport complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/maltose_transport_complex.html",
+  "definition": "Protein complex facilitating ATP-dependent maltose transport through inner cell membrane (periplasm to cytoplasm) in Gram-negative bacteria. In E. coli the system is composed of a periplasmic maltose-binding protein (MBP), two integral membrane proteins, MalF and MalG, and two copies of the cytoplasmic ATP-binding cassette MalK.",
+  "synonyms": "maltose ABC transporter complex maltose ATP-binding cassette transporter complex"
  },
  {
   "identifier": "GO:0043332",
@@ -6690,6 +7430,16 @@
   "synonyms": "Fcj1 complex MINOS complex mitochondrial contact site and cristae organizing system MitOS complex"
  },
  {
+  "identifier": "GO:0120155",
+  "label": "MIH complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mih_complex.html",
+  "definition": "A trimeric complex involved in cytokinesis. Proposed to bridge actomyosin ring contraction and septum synthesis in yeast, resulting in the coordination of these processes, and leading to plasma membrane ingression and fusion. In the yeast Saccharomyces cerevisiae this complex consists of Mlc1p, Iqg1p and Hof1p proteins.",
+  "synonyms": "Mlc1p-Iqg1p-Hof1p complex"
+ },
+ {
   "identifier": "GO:0140595",
   "label": "MIM complex",
   "category": "OTHER",
@@ -6788,6 +7538,26 @@
   "page": "structures/other/mode_complex.html",
   "definition": "A dimeric protein complex containing two ModE subunits. Binds directly to DNA to regulate transcription, and is involved in (positively and negatively) regulating various aspects of molybdenum metabolism.",
   "synonyms": "ModE dimer"
+ },
+ {
+  "identifier": "GO:1990140",
+  "label": "molybdopterin synthase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/molybdopterin_synthase_complex.html",
+  "definition": "A heterotetrameric protein complex that catalyses sulfur transfer from the sulfur carrier subunit of molybdopterin synthase to precursor Z to synthesize molybdopterin as part of molybdopterin cofactor (Moco) biosynthesis. In E. coli the subunits are MoaE and MoaD; in human, MOCS2B and MOCS2A. Moco biosynthesis and its constituent molecules are evolutionarily conserved.",
+  "synonyms": "MPT synthase complex molybdopterin converting factor complex molybdopterin cofactor (Moco) biosynthesis sulfurtransferase complex"
+ },
+ {
+  "identifier": "GO:0035658",
+  "label": "Mon1-Ccz1 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/mon1_ccz1_complex.html",
+  "definition": "A protein complex that functions as a guanine nucleotide exchange factor (GEF) and converts Rab-GDP to Rab-GTP. In S. cerevisiae, this complex consists of at least Mon1 and Ccz1, and serves as a GEF for the Rab Ypt7p.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0033551",
@@ -6930,6 +7700,26 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0030689",
+  "label": "Noc complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/noc_complex.html",
+  "definition": "Any of several heterodimers containing one or two Noc proteins, associated with preribosomal complexes; involved in ribosome biogenesis. A family of nucleolar and nucleoplasmic heterodimeric ribosome-biogenesis factor complexes in Saccharomyces cerevisiae and other eukaryotes composed of Noc (nucleolar complex-associated) proteins, specifically the Noc1p–Noc2p complex and the Noc2p–Noc3p complex. Noc complexes associate with nascent 90S and pre-60S ribosomal particles to coordinate rRNA folding and processing with the intranuclear transport of pre-60S subunits from the nucleolus to the nucleoplasm.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0033100",
+  "label": "NuA3 histone acetyltransferase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/nua3_histone_acetyltransferase_complex.html",
+  "definition": "A Gcn5-independent multisubunit complex that catalyzes the acetylation of histone H3. The budding yeast complex includes Sas3p, Taf30p, and Yng1p. The yeast Nucleosomal Acetyltransferase of histone H3 (NuA3) multiprotein complex in Saccharomyces cerevisiae and related fungi that specifically acetylates lysine 14 (and lysine 23) of nucleosomal histone H3 to facilitate RNA polymerase II transcription elongation and DNA replication. The core NuA3 complex comprises the MYST-family catalytic subunit Sas3p, the H3K4me3-binding PHD-finger scaffold Yng1p, the H3K36me3-reading PWWP subunit Pdp3p, Nto1p, Eaf6p, and Taf14p.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:1990467",
   "label": "NuA3a histone acetyltransferase complex",
   "category": "OTHER",
@@ -6968,6 +7758,16 @@
   "page": "structures/other/nuclear_chromosome.html",
   "definition": "A chromosome that encodes the nuclear genome and is found in the nucleus of a eukaryotic cell during the cell cycle phases when the nucleus is intact.",
   "synonyms": "nuclear interphase chromosome"
+ },
+ {
+  "identifier": "GO:0043599",
+  "label": "nuclear DNA replication factor C complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/nuclear_dna_replication_factor_c_complex.html",
+  "definition": "A nuclear complex of five polypeptides that loads the DNA polymerase processivity factor proliferating cell nuclear antigen (PCNA) onto DNA, thereby permitting processive DNA synthesis catalyzed by DNA polymerase delta or epsilon. In Saccharomyces and several other species, the subunits are known as Rfc1p-Rfc5p, although subunit names do not necessarily correspond between different species.",
+  "synonyms": "nuclear RFC complex"
  },
  {
   "identifier": "GO:1990251",
@@ -7060,6 +7860,36 @@
   "synonyms": "Nup84 complex Nup107-160 complex Y complex"
  },
  {
+  "identifier": "GO:0043596",
+  "label": "nuclear replication fork",
+  "category": "OTHER",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/other/nuclear_replication_fork.html",
+  "definition": "The Y-shaped region of a nuclear replicating DNA molecule, resulting from the separation of the DNA strands and in which the synthesis of new strands takes place. Also includes associated protein complexes. In Saccharomyces cerevisiae, Schizosaccharomyces pombe, and other microbial eukaryotes, the nuclear replication fork couples CMG (Cdc45-MCM-GINS) helicase unwinding of chromosomal DNA with leading-strand synthesis by DNA polymerase epsilon, lagging-strand synthesis by DNA polymerase alpha-primase and delta, PCNA clamp loading, and nucleosome reassembly.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0043601",
+  "label": "nuclear replisome",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/nuclear_replisome.html",
+  "definition": "A multi-component enzymatic machine at the nuclear replication fork, which mediates DNA replication. Includes DNA primase, one or more DNA polymerases, DNA helicases, and other proteins. The complete multiprotein DNA replication machinery assembled at eukaryotic nuclear replication forks in yeasts, fungi, and protists. Centered on the replicative CMG helicase (Cdc45–Mcm2-7–GINS), the nuclear replisome integrates leading-strand DNA polymerase epsilon, lagging-strand DNA polymerase alpha-primase and delta tethered via Ctf4, the PCNA sliding clamp and RFC clamp loader, RPA, and the fork protection complex (Mrc1–Tof1–Csm3) to coordinate high-fidelity chromosome duplication.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0030874",
+  "label": "nucleolar chromatin",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/nucleolar_chromatin.html",
+  "definition": "The portion of nuclear chromatin associated with the nucleolus; includes the DNA encoding the ribosomal RNA. The specialized chromosomal chromatin domain located within the nucleolus of yeasts, filamentous fungi, and protists, encompassing the tandemly repeated ribosomal DNA (rDNA) array (such as the ~150 rDNA repeats on chromosome XII of Saccharomyces cerevisiae). Nucleolar chromatin alternates between open, Hmo1-bound, nucleosome-depleted repeats actively transcribed by RNA polymerase I and silent, nucleosome-packed repeats maintained by the RENT (Net1–Cdc14–Sir2) histone deacetylase complex to suppress illegitimate rDNA recombination.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0005730",
   "label": "nucleolus",
   "category": "OTHER",
@@ -7068,6 +7898,16 @@
   "page": "structures/other/nucleolus.html",
   "definition": "A dense, non-membrane-bounded body in the eukaryotic nuclear lumen that concentrates ribosomal DNA transcription, pre-rRNA processing, and early ribosomal subunit assembly.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0000786",
+  "label": "nucleosome",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/nucleosome.html",
+  "definition": "A complex comprised of DNA wound around a multisubunit core and associated proteins, which forms the primary packing unit of DNA into higher order structures. The fundamental repeating nucleoprotein packaging unit of eukaryotic chromatin in yeasts, filamentous fungi, microalgae, and protists, consisting of ~147 base pairs of chromosomal DNA wrapped in 1.65 left-handed superhelical turns around a histone octamer composed of a central (H3–H4)2 tetramer flanked by two H2A–H2B dimers. Nucleosome positioning and post-translational histone modifications govern DNA accessibility for transcription, replication, and repair.",
+  "synonyms": "cytoplasmic nucleosome nuclear nucleosome"
  },
  {
   "identifier": "GO:0000110",
@@ -7110,6 +7950,16 @@
   "synonyms": "NEF4 complex"
  },
  {
+  "identifier": "GO:0016581",
+  "label": "NuRD complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/nurd_complex.html",
+  "definition": "An approximately 2 MDa multi-subunit complex that exhibits ATP-dependent chromatin remodeling activity in addition to histone deacetylase (HDAC) activity, and has been shown to establish transcriptional repression of a number of target genes in vertebrates, invertebrates and fungi. Amongst its subunits, the NuRD complex contains histone deacetylases, histone binding proteins and Mi-2-like proteins. The Nucleosome Remodeling and Deacetylase (NuRD) family of multiprotein chromatin silencing complexes (exemplified in microbial eukaryotes by the fission yeast Schizosaccharomyces pombe SHREC complex) that couples class II histone deacetylase activity (Clr3) with CHD/Mi-2-family ATP-dependent chromatin remodeling (Mit1). Together with scaffold subunits Clr1, Clr2, and the AAA+ ATPase chaperone Cdc20/Ccq1, NuRD/SHREC deacetylates H3K14ac and positions nucleosomes to compact heterochromatin.",
+  "synonyms": "NRD complex nucleosome remodeling and histone deacetylation complex Mi-2 complex"
+ },
+ {
   "identifier": "GO:0031912",
   "label": "oral apparatus",
   "category": "OTHER",
@@ -7118,6 +7968,16 @@
   "page": "structures/other/oral_apparatus.html",
   "definition": "Complex basket- or funnel-like structure used by the cell to collect food and channel it to the cytostome; includes specialized sub-structures made up of closely-spaced cilia and underlying basal bodies and fibrillar systems.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0000808",
+  "label": "origin recognition complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/origin_recognition_complex.html",
+  "definition": "A multisubunit complex that is located at the replication origins of a chromosome. The conserved hexameric AAA+ ATPase protein complex (Orc1–Orc6) that binds specifically to chromosomal replication origins (such as autonomously replicating sequences in Saccharomyces cerevisiae or AT-rich origin tracts in Schizosaccharomyces pombe) throughout the cell cycle. In G1 phase, the origin recognition complex recruits Cdc6 and Cdt1 to load head-to-head double hexamers of the Mcm2–7 replicative helicase onto DNA.",
+  "synonyms": "ORC origin of replication recognition complex"
  },
  {
   "identifier": "GO:0000940",
@@ -7240,6 +8100,36 @@
   "synonyms": "pre-priming complex pre-primosome preprimosome preprimosome complex prereplication complex pre-replication complex"
  },
  {
+  "identifier": "GO:0036387",
+  "label": "pre-replicative complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/pre_replicative_complex.html",
+  "definition": "A protein-DNA complex that forms at the origin of replication during the initial step of DNA replication and allows the origin to become competent, or 'licensed', for replication. A multiprotein-DNA nucleoprotein assembly formed at chromosomal replication origins prior to S-phase initiation in eukaryotes, archaea, or bacteria that licenses the origin for bidirectional DNA synthesis. In eukaryotes (ORC–Cdc6–Cdt1–Mcm2-7) and bacteria (ATP-DnaA filaments recruiting DnaC-bound DnaB helicase hexamers onto oriC), the pre-replicative complex unwinds or poises origin DNA for replicative helicase activation.",
+  "synonyms": "pre-RC pre-replication complex"
+ },
+ {
+  "identifier": "GO:0016272",
+  "label": "prefoldin complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/prefoldin_complex.html",
+  "definition": "A multisubunit chaperone that is capable of delivering unfolded proteins to cytosolic chaperonin, which it acts as a cofactor for. In humans, the complex is a heterohexamer of two PFD-alpha and four PFD-beta type subunits. In Saccharomyces cerevisiae, it also acts in the nucleus to regulate the rate of elongation by RNA polymerase II via a direct effect on histone dynamics.",
+  "synonyms": "GIM complex"
+ },
+ {
+  "identifier": "GO:1990077",
+  "label": "primosome complex",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/primosome_complex.html",
+  "definition": "A protein-DNA complex essential for initiation or restart of DNA replication in bacteria. At a minimum, it contains a DNA helicase and associated protein(s) which unwind the double-stranded DNA (dsDNA) and move along a single strand of DNA in the 5' to 3' direction. Typically, it also contains a primase which synthesizes a RNA primer.",
+  "synonyms": "primosome"
+ },
+ {
   "identifier": "GO:0022624",
   "label": "proteasome accessory complex",
   "category": "OTHER",
@@ -7268,6 +8158,36 @@
   "page": "structures/other/proteasome_core_complex.html",
   "definition": "A barrel-shaped self-compartmentalized protease core of proteasomes, built from stacked alpha- and beta-subunit rings that sequester threonine protease active sites in an internal chamber for protein degradation.",
   "synonyms": "20S proteasome 20S proteasome core particle"
+ },
+ {
+  "identifier": "GO:0005838",
+  "label": "proteasome regulatory particle",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/proteasome_regulatory_particle.html",
+  "definition": "A multisubunit complex, which caps one or both ends of the proteasome core complex. This complex recognizes and unfolds ubiquitinated proteins, and translocates them to the proteasome core complex. Composed of the proximal 19S base subcomplex (Rpt1-Rpt6 AAA+ ATPase ring and Rpn1/Rpn2/Rpn10/Rpn13 ubiquitin-binding scaffolds) and the distal 19S lid subcomplex (Rpn11-Rpn8 deubiquitinase module and PCI-domain scaffold subunits).",
+  "synonyms": "PA700-dependent proteasome activator 19S regulatory particle PA700 proteasome activator modulator complex"
+ },
+ {
+  "identifier": "GO:0008540",
+  "label": "proteasome regulatory particle, base subcomplex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/proteasome_regulatory_particle_base_subcomplex.html",
+  "definition": "The subcomplex of the proteasome regulatory particle that directly associates with the proteasome core complex. In Saccharomyces cerevisiae and other microbial eukaryotes, the 19S base subcomplex consists of the heterohexameric AAA+ ATPase motor ring (Rpt1-Rpt6) together with the large scaffolding subunits Rpn1 and Rpn2 and the ubiquitin receptors Rpn10 and Rpn13, which capture ubiquitinated substrates, mechanically unfold them, and open the alpha-ring gate of the 20S core particle.",
+  "synonyms": "19S proteasome base subcomplex"
+ },
+ {
+  "identifier": "GO:0008541",
+  "label": "proteasome regulatory particle, lid subcomplex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/proteasome_regulatory_particle_lid_subcomplex.html",
+  "definition": "The subcomplex of the proteasome regulatory particle that forms the peripheral lid, which is added on top of the base subcomplex. In Saccharomyces cerevisiae and other microbial eukaryotes, the nine-subunit 19S lid subcomplex comprises the PCI-domain scaffolds Rpn3, Rpn5, Rpn6, Rpn7, Rpn9, and Rpn12, the MPN-domain heterodimer Rpn8-Rpn11, and Sem1, positioning the Zn2+-dependent deubiquitinase Rpn11 directly above the Rpt ATPase pore to cleave ubiquitin chains en bloc during translocation.",
+  "synonyms": "19S proteasome lid subcomplex"
  },
  {
   "identifier": "GO:7770085",
@@ -7340,6 +8260,46 @@
   "synonyms": "regulator of the (H+)-ATPase of the vacuolar and endosomal membranes"
  },
  {
+  "identifier": "GO:0030875",
+  "label": "rDNA protrusion",
+  "category": "OTHER",
+  "kind": "OTHER",
+  "status": "PROPOSED",
+  "page": "structures/other/rdna_protrusion.html",
+  "definition": "Any of the tandem arrays of rDNA localized at the periphery of the nucleus and protruding into the nucleolus, and associated proteins. May be visible as a single or double spot by DAPI staining. In Saccharomyces cerevisiae and Schizosaccharomyces pombe, the rDNA protrusion comprises the tandemly repeated 35S/37S ribosomal DNA array on chromosome XII or III extending from the nuclear chromatin mass into the crescent-shaped nucleolus, bound by Fob1, Sir2/RENT, Net1, Hmo1, and RNA polymerase I.",
+  "synonyms": "nucleolar rDNA loop"
+ },
+ {
+  "identifier": "GO:0030869",
+  "label": "RENT complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/rent_complex.html",
+  "definition": "A protein complex that mediates transcriptional silencing at the rDNA locus (the name derives from regulator of nucleolar silencing and telophase). In Saccharomyces the complex contains Net1p, Sir2p, Cdc14p, and at least one more subunit.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:0005657",
+  "label": "replication fork",
+  "category": "OTHER",
+  "kind": "NUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/replication_fork.html",
+  "definition": "The Y-shaped region of a replicating DNA molecule, resulting from the separation of the DNA strands and in which the synthesis of new strands takes place. Also includes associated protein complexes. The Y-shaped nucleoprotein junction on a replicating chromosome where parental double-stranded DNA is unwound by the replicative DNA helicase into leading and lagging single-stranded templates and copied by the replisome in bacteria, archaea, and microbial eukaryotes. When stalled by DNA lesions or dNTP depletion, the replication fork recruits RPA, the 9-1-1 (Ddc1–Mec3–Rad17) checkpoint clamp, and Mec1/ATR kinases to stabilize the fork and prevent replication catastrophe.",
+  "synonyms": "replication focus"
+ },
+ {
+  "identifier": "GO:0030894",
+  "label": "replisome",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/replisome.html",
+  "definition": "A multi-component enzymatic machine at the replication fork which mediates DNA replication. Includes DNA primase, one or more DNA polymerases, DNA helicases, and other proteins. Across Bacteria, Archaea, and microbial eukaryotes, the replisome couples replicative DNA helicase unwinding (DnaB, MCM, or CMG) with RNA primer synthesis, clamp-loader-mediated sliding clamp assembly (beta clamp or PCNA), and high-processivity leading- and lagging-strand DNA polymerases.",
+  "synonyms": "DNA replisome complex"
+ },
+ {
   "identifier": "GO:0030906",
   "label": "retromer, cargo-selective complex",
   "category": "OTHER",
@@ -7388,6 +8348,26 @@
   "page": "structures/other/ribonuclease_iii_complex.html",
   "definition": "A protein complex which is capable of ribonuclease III activity.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0048492",
+  "label": "ribulose bisphosphate carboxylase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ribulose_bisphosphate_carboxylase_complex.html",
+  "definition": "A complex containing either both large and small subunits or just small subunits which carries out the activity of producing 3-phosphoglycerate from carbon dioxide and ribulose-1,5-bisphosphate. The multi-subunit ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO) enzyme complex that catalyzes the primary carbon-fixation step of the Calvin-Benson-Bassham cycle by carboxylating ribulose-1,5-bisphosphate with CO2 to yield two molecules of 3-phosphoglycerate. In cyanobacteria, purple bacteria, chemoautotrophic bacteria, and microalgae, Form I RuBisCO assembles as a hexadecameric L8S8 complex (eight catalytic RbcL/CbbL large subunits and eight RbcS/CbbS small subunits) often concentrated within bacterial carboxysomes or algal pyrenoids.",
+  "synonyms": "RubisCO complex"
+ },
+ {
+  "identifier": "GO:0005736",
+  "label": "RNA polymerase I complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/rna_polymerase_i_complex.html",
+  "definition": "RNA polymerase I, one of three nuclear DNA-directed RNA polymerases found in all eukaryotes, is a multisubunit complex; typically it produces rRNAs. Two large subunits comprise the most conserved portion including the catalytic site and share similarity with other eukaryotic and bacterial multisubunit RNA polymerases. The remainder of the complex is composed of smaller subunits (generally ten or more), some of which are also found in RNA polymerase III and others of which are also found in RNA polymerases II and III. Although the core is competent to mediate ribonucleic acid synthesis, it requires additional factors to select the appropriate template. The 14-subunit DNA-directed RNA polymerase I holoenzyme localized in the eukaryotic nucleolus of yeasts, fungi, and protists that exclusively transcribes ribosomal DNA (rDNA) repeats into the polycistronic 35S/47S pre-rRNA precursor. In Saccharomyces cerevisiae, the RNA polymerase I complex comprises the Rpa190–Rpa135 catalytic core, five shared Rpb subunits, the Rpa43–Rpa14 stalk, and the TFIIF/TFIIE-like Rpa49–Rpa34 heterodimer.",
+  "synonyms": "DNA-directed RNA polymerase I complex DNA-directed RNA polymerase I activity"
  },
  {
   "identifier": "GO:0033698",
@@ -7600,6 +8580,16 @@
   "synonyms": ""
  },
  {
+  "identifier": "GO:0009337",
+  "label": "sulfite reductase complex (NADPH)",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/sulfite_reductase_complex_nadph.html",
+  "definition": "A multisubunit iron flavoprotein, which in yeast is composed of 2 alpha and 2 beta subunits. Catalyzes the reduction of sulfite to sulfide.",
+  "synonyms": "sulphite reductase complex (NADPH)"
+ },
+ {
   "identifier": "GO:0032798",
   "label": "Swi5-Sfr1 complex",
   "category": "OTHER",
@@ -7650,6 +8640,16 @@
   "synonyms": "2-aminoethanesulfonate dioxygenase complex alpha-ketoglutarate-dependent taurine dioxygenase complex TauD complex"
  },
  {
+  "identifier": "GO:0031500",
+  "label": "Tea1 cell-end complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/tea1_cell_end_complex.html",
+  "definition": "A high molecular weight complex characterized in S. pombe containing the cell-end anchoring protein Tea1. This complex is transported to the cell ends by microtubules and is involved in bipolar growth and the maintennce of normal cell polarity.",
+  "synonyms": ""
+ },
+ {
   "identifier": "GO:0000347",
   "label": "THO complex",
   "category": "OTHER",
@@ -7658,6 +8658,16 @@
   "page": "structures/other/tho_complex.html",
   "definition": "A eukaryotic nuclear protein complex that promotes transcription elongation and can act as part of the transcription export complex to couple RNA polymerase II transcription with mRNA export from the nucleus.",
   "synonyms": ""
+ },
+ {
+  "identifier": "GO:0000445",
+  "label": "THO complex part of transcription export complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/tho_complex_part_of_transcription_export_complex.html",
+  "definition": "The THO complex when it is part of the TREX (TRanscription EXport) complex that is involved in coupling transcription to export of mRNAs to the cytoplasm. In S. cerevisiae, it is composed of four subunits: Hpr1, Tho2, Thp1, and Mft1, while the human complex is composed of 7 subunits. In budding yeast, the tetrameric THO core (Tho2, Hpr1, Mft1, Thp2) travels with elongating RNA polymerase II and recruits the Sub2 RNA helicase and Yra1 adaptor to form the complete TREX complex on nascent pre-mRNAs.",
+  "synonyms": "TREX-associated THO subcomplex"
  },
  {
   "identifier": "GO:0031897",
@@ -7730,6 +8740,16 @@
   "synonyms": "TRAMP4 complex TRAMP5 complex Trf4 complex Trf4p-Air2p-Mtr4p polyadenylation complex Trf4 poly(A) polymerase complex"
  },
  {
+  "identifier": "GO:0000346",
+  "label": "transcription export complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/transcription_export_complex.html",
+  "definition": "The transcription export (TREX) complex couples transcription elongation by RNA polymerase II to mRNA export. The complex associates with the polymerase and travels with it along the length of the transcribed gene. TREX is composed of the THO transcription elongation complex as well as other proteins that couple THO to mRNA export proteins. The TREX complex is known to be found in a wide range of eukaryotes, including S. cerevisiae and metazoans. The conserved eukaryotic transcription-export (TREX) multiprotein complex that couples RNA polymerase II transcription elongation with nascent mRNP packaging and nuclear export. In Saccharomyces cerevisiae and other microbial eukaryotes, the TREX complex is assembled from the pentameric THO core complex (Tho2, Hpr1, Mft1, Thp2, Tex1), the DEAD-box RNA helicase Sub2 (UAP56), and the RNA-binding export adaptor Yra1 (ALYREF), which recruits the Mex67–Mtr2 export receptor.",
+  "synonyms": "TREX complex"
+ },
+ {
   "identifier": "GO:0000439",
   "label": "transcription factor TFIIH core complex",
   "category": "OTHER",
@@ -7758,6 +8778,16 @@
   "page": "structures/other/transcription_factor_tfiik_complex.html",
   "definition": "A transcription factor complex that forms part of the holo TFIIH complex. In Saccharomyces/human, TFIIK contains Ccl1p/Cyclin H, Tfb3p/MAT1 and Kin28p/CDK7.",
   "synonyms": "TFIIK complex cyclin H-CDK7 complex Mcs6/Mcs2/Pmh1 complex"
+ },
+ {
+  "identifier": "GO:0030008",
+  "label": "TRAPP complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/trapp_complex.html",
+  "definition": "A large complex that acts as a tethering factor involved in transporting vesicles from the ER through the Golgi to the plasma membrane. A TRAPP (transport protein particle) complex has a core set of proteins which are joined by specific subunits depending on the cellular component where a given TRAPP complex is active. The conserved eukaryotic Transport Protein Particle (TRAPP) family of multisubunit vesicle-tethering and Rab guanine nucleotide exchange factor (GEF) complexes in yeasts, fungi, and protists. Built around a shared heptameric core (Bet3p dimer, Bet5p, Trs20p, Trs23p, Trs31p, Trs33p) that forms the catalytic GEF site, TRAPP complexes (TRAPPI, TRAPPII, and TRAPPIII) activate Ypt1/Rab1 and Ypt31/32 GTPases to coordinate ER-to-Golgi transport, intra-Golgi trafficking, and autophagy.",
+  "synonyms": "transport protein particle transport protein particle complex TRAPP1 TRAPP2"
  },
  {
   "identifier": "GO:1990070",
@@ -7808,6 +8838,26 @@
   "page": "structures/other/tusk_complex.html",
   "definition": "A protein complex containing Usp7, the divergent Skp1-like protein SkpZ, and Tpr86, experimentally characterized in Trypanosoma brucei. It is distinct from cullin ubiquitin-ligase complexes and is implicated in coordinated regulation of surface-protein abundance.",
   "synonyms": "TUSK TUS complex TUS deubiquitinase complex"
+ },
+ {
+  "identifier": "GO:0031372",
+  "label": "UBC13-MMS2 complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/ubc13_mms2_complex.html",
+  "definition": "A heterodimeric ubiquitin conjugating enzyme complex that catalyzes assembly of K63-linked polyubiquitin chains. In Saccharomyces cerevisiae, the complex comprises Ubc13p and Mms2p; in human it comprises UBE2N and UBE2V1/UBE2V2; and in plants UBC35/UBC36 and UEV1A/UEV1B/UEV1C/UEV1D-4.",
+  "synonyms": "BEN-UEV1A complex UBE2N/UBE2NL complex UBE2V1/UBE2V2 complex Uev1A-ben complex ubc-13-uev-1 complex"
+ },
+ {
+  "identifier": "GO:0043541",
+  "label": "UDP-N-acetylglucosamine transferase complex",
+  "category": "OTHER",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/other/udp_n_acetylglucosamine_transferase_complex.html",
+  "definition": "A multienzyme, heterooligomeric complex involved in dolichyl-linked oligosaccharide synthesis. In yeast the complex is composed of Alg7p, which catalyzes the first step (GlcNAc1-PP-Dol from dolichol-phosphate and UDP-GlcNAc), and Alg13p plus Alg14p, the catalytic and anchoring subunits respectively, which together catalyze the second step (GlcNAc2-PP-dolichol from GlcNAc1-PP-Dol and UDP-GlcNAc) of dolichyl-linked oligosaccharide synthesis.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0034456",
@@ -7878,6 +8928,46 @@
   "page": "structures/ribonucleoprotein/bacterial_degradosome.html",
   "definition": "The degradosome is a protein complex playing a key role in mRNA degradation and RNA processing. It includes a RNA helicase, a 3'-5' phosphate-dependent PNPase and a RNase E bound-enolase.",
   "synonyms": "RNA degradosome Escherichia coli RNA degradosome"
+ },
+ {
+  "identifier": "GO:0031428",
+  "label": "box C/D methylation guide snoRNP complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/box_c_d_methylation_guide_snornp_complex.html",
+  "definition": "A ribonucleoprotein complex containing a box C/D type RNA that is capable of ribose-2'-O-methylation of target RNAs. Box C/D type RNAs are widespread in eukaryotes and in Archaea, suggesting that an RNA-based guide mechanism for directing specific RNA 2'-O-ribose methylations was present in the common ancestor of Archaea and Eukarya. A conserved ribonucleoprotein complex composed of a box C/D guide snoRNA (or archaeal box C/D sRNA) containing kink-turn C/D and C'/D' motifs bound by the kink-turn binding protein Snu13p (L7Ae in Archaea), the scaffold subunits Nop56p and Nop58p (Nop5 in Archaea), and the SAM-dependent 2'-O-ribose methyltransferase Nop1p/fibrillarin. The complex base-pairs with target pre-rRNA to direct site-specific 2'-O-methylation five nucleotides upstream of box D or D'.",
+  "synonyms": "box C/D snoRNP ribose 2'-O methylase complex box C/D sRNP complex box C/D small nucleolar ribonucleoprotein complex box C/D snoRNP complex box C/D snoRNP ribose-2'-O-methyltransferase complex"
+ },
+ {
+  "identifier": "GO:0170049",
+  "label": "box C/D RNP complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/box_c_d_rnp_complex.html",
+  "definition": "A ribonucleoprotein complex containing a small RNA with a C/D box sequence motif that functions in the modification and processing of precursor ribosomal RNAs. Most members of this family direct site-specific 2'-O-methylation of substrate RNAs (box C/D methylation guide snoRNPs and scaRNPs), while others, such as the U3, U8, U14, and U22 snoRNPs, mediate endonucleolytic cleavage and folding of pre-rRNA.",
+  "synonyms": "SNORD ribonucleoprotein complex SNORNP"
+ },
+ {
+  "identifier": "GO:0072588",
+  "label": "box H/ACA RNP complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/box_h_aca_rnp_complex.html",
+  "definition": "A ribonucleoprotein complex containing a small RNA with an H/ACA box sequence motif that catalyzes pseudouridylation of RNA molecules. Most members of this family use guide RNAs to direct the site of pseudouridylation of target RNAs (for example, box H/ACA snoRNPs and box H/ACA scaRNPs) although some members do not modify other RNAs (for example, telomerase RNP).",
+  "synonyms": "sRNP complex box H/ACA snoRNP pseudouridylase complex"
+ },
+ {
+  "identifier": "GO:0031429",
+  "label": "box H/ACA snoRNP complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/box_h_aca_snornp_complex.html",
+  "definition": "A box H/ACA small nucleolar ribonucleoprotein complex located in the nucleolus that catalyzes pseudouridylation of ribosomal RNA residues. The complex is composed of four different core proteins that assemble onto a H/ACA guide RNA scaffold that identifies specific uridines in rRNA for modification during ribosome synthesis. A conserved ribonucleoprotein complex composed of a hairpin-hinge-hairpin-tail box H/ACA small nucleolar RNA (snoRNA in eukaryotes or sRNA in Archaea) bound by four core proteins: the catalytic pseudouridine synthase Cbf5p/dyskerin (aCbf5), Nop10p, Gar1p, and Nhp2p (L7Ae in Archaea). Guided by antisense base-pairing in the pseudouridylation pocket of the H/ACA RNA, the complex catalyzes site-specific isomerization of uridine to pseudouridine in pre-rRNA and snRNAs.",
+  "synonyms": "box H/ACA small nucleolar ribonucleoprotein complex box H/ACA snoRNP pseudouridylase complex"
  },
  {
   "identifier": "GO:0015030",
@@ -8248,6 +9338,16 @@
   "page": "structures/ribonucleoprotein/ribosome.html",
   "definition": "The ribonucleoprotein particle that translates mRNA into protein. The bacterial and archaeal 70S ribosome comprises a small (30S) subunit built on 16S rRNA, which decodes the mRNA, and a large (50S) subunit built on 23S and 5S rRNA, whose 23S rRNA catalyses peptide bond formation. This record details that 70S form and the functional core shared with the larger eukaryotic cytosolic 80S ribosome; it does not enumerate 80S-specific components.",
   "synonyms": "70S ribosome"
+ },
+ {
+  "identifier": "GO:0030958",
+  "label": "RITS complex",
+  "category": "RIBONUCLEOPROTEIN",
+  "kind": "RIBONUCLEOPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/ribonucleoprotein/rits_complex.html",
+  "definition": "A protein complex required for heterochromatin assembly; contains an Argonaute homolog, a chromodomain protein, and at least one additional protein; named for RNA-induced initiation of transcriptional gene silencing.",
+  "synonyms": ""
  },
  {
   "identifier": "GO:0140365",
@@ -8690,6 +9790,16 @@
   "synonyms": "snRNP U7"
  },
  {
+  "identifier": "GO:0031522",
+  "label": "cell envelope Sec protein transport complex",
+  "category": "SECRETION_SYSTEM",
+  "kind": "MULTIPROTEIN_COMPLEX",
+  "status": "PROPOSED",
+  "page": "structures/secretion_system/cell_envelope_sec_protein_transport_complex.html",
+  "definition": "A transmembrane protein complex involved in the translocation of proteins across the cytoplasmic membrane. In Gram-negative bacteria, Sec-translocated proteins are subsequently secreted via the type II, IV, or V secretion systems. Sec complex components include SecA, D, E, F, G, Y and YajC. The bacterial and archaeal cell envelope general secretory (Sec) holotranslocon machinery that mediates co-translational insertion of inner membrane proteins and post-translational translocation of unfolded preproteins across the cytoplasmic membrane. Centered on the heterotrimeric SecYEG protein-conducting channel, the cell envelope Sec protein transport complex associates with the cytoplasmic SecA ATPase motor, the SecDF-YajC proton-motive-force-driven accessory complex, and the YidC membrane insertase.",
+  "synonyms": "Sec complex Sec secretion complex Sec translocation complex plasma membrane Sec complex"
+ },
+ {
   "identifier": "GO:0062155",
   "label": "curli secretion complex",
   "category": "SECRETION_SYSTEM",
@@ -8878,6 +9988,26 @@
   "page": "structures/secretion_system/type_vi_secretion_system_vgrg_paar_spike_complex.html",
   "definition": "A bacterial type VI secretion system tip subassembly in which trimeric VgrG proteins cap the Hcp tube and associate with PAAR-repeat proteins to sharpen the puncturing spike.",
   "synonyms": "T6SS VgrG/PAAR spike complex VgrG/PAAR spike type VI secretion system spike"
+ },
+ {
+  "identifier": "GO:0042764",
+  "label": "ascospore-type prospore",
+  "category": "SPORE",
+  "kind": "SUBCELLULAR_REGION",
+  "status": "PROPOSED",
+  "page": "structures/spore/ascospore_type_prospore.html",
+  "definition": "An immature spore undergoing development. The spore usually consists of nucleic acid, prospore membrane(s) that encase the nucleic acid, and ultimately a cell wall that covers the membrane(s). This type of spore is observed in ascospore-forming fungi. The nascent intracellular spore compartment formed during meiosis II in ascomycete yeasts such as Saccharomyces cerevisiae and Schizosaccharomyces pombe before spore wall maturation. Each ascospore-type prospore is delimited by the double-layered prospore membrane that grows from the spindle pole body to engulf a haploid nucleus and maternal cytoplasm.",
+  "synonyms": ""
+ },
+ {
+  "identifier": "GO:1905754",
+  "label": "ascospore-type prospore nucleus",
+  "category": "SPORE",
+  "kind": "MEMBRANE_BOUNDED_ORGANELLE",
+  "status": "PROPOSED",
+  "page": "structures/spore/ascospore_type_prospore_nucleus.html",
+  "definition": "Any nucleus that is part of a ascospore-type prospore. In sporulating Saccharomyces cerevisiae and Schizosaccharomyces pombe asci, each of the four haploid nuclear lobes generated by meiosis II is engulfed by an expanding prospore membrane nucleated at the meiotic outer plaque of the spindle pole body, partitioning one haploid ascospore-type prospore nucleus into each developing prospore.",
+  "synonyms": "prospore nucleus"
  },
  {
   "identifier": "GO:0005619",

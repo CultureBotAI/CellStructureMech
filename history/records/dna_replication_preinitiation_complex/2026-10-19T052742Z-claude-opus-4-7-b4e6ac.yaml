@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/dna_replication_preinitiation_complex.yaml
+  slug: dna_replication_preinitiation_complex
+session:
+  id: 2026-10-19T052742Z-claude-opus-4-7-b4e6ac
+  timestamp: '2026-10-19T05:27:42Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for DNA replication preinitiation complex (GO:0031261)
+    in other.
+  details: Authored data/structures/other/dna_replication_preinitiation_complex.yaml
+    for DNA replication preinitiation complex (GO:0031261) with verified GO hierarchy,
+    taxonomic distribution, UniProtKB protein examples, functions, literature evidence,
+    and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

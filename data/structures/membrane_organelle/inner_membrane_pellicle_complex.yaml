@@ -33,6 +33,12 @@ curation_history:
   action: EDIT
   changes: added 3 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-30T06:37:11Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 4 Stage 3 protein_examples curation: added 3 verified UniProtKB
+    protein_example(s) for IMC1a, IMC1c, and IMC1g in Plasmodium falciparum 3D7.'
+  llm_assisted: true
 parent_structures:
 - GO:0043231
 synonyms:
@@ -80,6 +86,58 @@ components:
   - IMC1a
   - IMC1c
   - IMC1g
+  protein_examples:
+  - uniprot_id: UniProtKB:O97228
+    protein_label: Inner membrane complex protein 1a, putative
+    gene_symbol: PF3D7_0304000
+    taxon_id: NCBITaxon:36329
+    taxon_label: Plasmodium falciparum 3D7
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-30'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene IMC1a, which
+      UniProt lists under the primary name PF3D7_0304000, in Plasmodium falciparum
+      3D7. Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/O97228
+      notes: UniProtKB unreviewed (TrEMBL) entry O97228 for gene IMC1a (PF3D7_0304000)
+        in Plasmodium falciparum 3D7. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
+  - uniprot_id: UniProtKB:Q8IK01
+    protein_label: Inner membrane complex protein 1c, putative
+    gene_symbol: PF3D7_1003600
+    taxon_id: NCBITaxon:36329
+    taxon_label: Plasmodium falciparum 3D7
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-30'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene IMC1c, which
+      UniProt lists under the primary name PF3D7_1003600, in Plasmodium falciparum
+      3D7. Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8IK01
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8IK01 for gene IMC1c (PF3D7_1003600)
+        in Plasmodium falciparum 3D7. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
+  - uniprot_id: UniProtKB:Q8I3K7
+    protein_label: Inner membrane complex protein 1g, putative
+    gene_symbol: PF3D7_0525800
+    taxon_id: NCBITaxon:36329
+    taxon_label: Plasmodium falciparum 3D7
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-30'
+    role: Representative unreviewed (TrEMBL) UniProtKB entry for gene IMC1g, which
+      UniProt lists under the primary name PF3D7_0525800, in Plasmodium falciparum
+      3D7. Identifier for the component's declared gene symbol; it is not itself evidence
+      that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q8I3K7
+      notes: UniProtKB unreviewed (TrEMBL) entry Q8I3K7 for gene IMC1g (PF3D7_0525800)
+        in Plasmodium falciparum 3D7. Establishes the accession and gene identity
+        only; the component's membership in this structure rests on the record's own
+        sources.
 taxonomic_distribution:
 - taxon_id: NCBITaxon:5794
   taxon_label: Apicomplexa
