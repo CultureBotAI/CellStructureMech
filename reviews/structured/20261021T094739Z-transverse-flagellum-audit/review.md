@@ -1,0 +1,1033 @@
+# Transverse flagellum identity, waveform and graph evidence review
+
+- Review: 20261021T094739Z-transverse-flagellum-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-21T09:07:44Z
+- Finished UTC: 2026-10-21T09:47:39Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The exact GO identity, parent, synonym and variable Dinophyceae scope are supported. Two minor issues concern spatial-graph classification/evidence and definition attribution/scope; primary morphology and contraction are preserved with explicit taxon and evidence-tier limits.
+
+## Scope And Provenance
+
+Full exact target and native GO/taxon identifiers; cited Taylor review metadata and bounded access routes; current GO primary-reference preview; directly read1991/2024 primary claim-bearing bodies; bounded2004/2025 propulsion abstracts.
+
+Selection: Sixth exact target in batch15 fixed repository path order, against expanded-main base9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0097608 | data/structures/appendage/transverse_flagellum.yaml | maintained | transverse flagellum |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused native schema | passed | True | GO:0097608 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0097608 | Focused validator passed. |
+| Protein and expression-source applicability | not_applicable | False | GO:0097608 | No gene, locus, UniProt protein example, family CURIE or expression-module claim is present. Graph nodes are STRUCTURE only; no UniProt/iModulonDB check is required. |
+| Claim-level scientific review | passed | True | GO:0097608 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Target resolver slice with native transport-failure cross-checks | passed | True | GO:0097608 | 6 of 7 exact target identifiers returned OK. Residuals: PMID:7002229 returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently verified by longitudinal-prep-taylor1980-meta The shared command exit zero is not interpreted as successful network resolution for transport failures. |
+| Full corpus QC | passed | True | GO:0097608 | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0097608 | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0097608 | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0097608 | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| Strict identifier resolver command | passed | True | GO:0097608 | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Scientific And Domain Assessments
+
+### Exact structure, name and synonym
+
+identity: supported. Targets: GO:0097608.
+
+The GO identity denotes the intended dinoflagellate transverse motile cilium, and the exact synonym/category/kind are appropriate. The original GO wording is supported; extra causal detail requires its own attribution and scope.
+
+### Is-a parent versus spatial containment
+
+scope: supported. Targets: GO:0097608.
+
+The direct9+2 motile-cilium parent is native is_a, not parthood. Cingulum is a cell-surface furrow and spatial host, not an is-a parent of the flagellum. Both graph node identities are nonlocal GO terms and resolve without relying on neighboring maintained records.
+
+### Dinophyceae variable presence and source species
+
+scope: supported. Targets: GO:0097608.
+
+Taxon2864 and the conditional variable-presence treatment are supported. Direct primary specimens are A.sanguinea NIES-4631 and the specified Ceratium/Oxyrrhis material; they do not establish every dinoflagellate configuration, cell state or swimming behavior. The taxon note correctly assigns Taylor to GO0097611.
+
+### Expanded definition exceeds its stated source
+
+provenance: concern. Targets: GO:0097608.
+
+The appended cingulum clause is unqualified after GO says often, and the striated-strand/waveform explanation is attached to a GO-only definition_source. Primary text supports scoped morphology and contraction, while retaining hypotheses about coiling, force transmission and regulation. This requires attribution/qualification, not a claim that the axoneme or strand is absent.
+
+### Spatial relation mislabeled as assembly mechanism
+
+graph: concern. Targets: GO:0097608.
+
+The only edge states lies within. It has no assembly process or causal chain, despite ASSEMBLY/MECHANISTIC labels. Taylor evidence on this edge expressly says only metadata were available. Native GO and the Akashiwo observations support bounded spatial context; neither the cited metadata nor location alone establishes a mechanistic assembly graph.
+
+### Broad thrust and rotation versus detailed allocation
+
+scope: unknown. Targets: GO:0097608.
+
+GO supports forward-thrust function, and primary studies support transverse motion and rotation in studied taxa. The1991 interpretation differs from the2004 numerical-model and2025 abstract-level thrust/steering assignments. Preserve taxon, mode and source tier; do not infer a universal force partition, direction of rotation, or striated-strand-driven beating cycle from this record.
+
+### Observed contraction versus proposed molecular explanation
+
+evidence: supported. Targets: GO:0097608.
+
+Maruyama2024 distinguishes observed contractions/TEM morphology from proposed calcium switching and unobserved force-transmission/attachment structures. Its non-detergent Mg2+ result includes a membrane-permeability caveat. Cited Peridinium ATP-independent contraction and centrin attribution are prior-study context, not independent experiments performed in Akashiwo; no protein identity is inferred.
+
+### Primary bodies, abstracts, native ontology and failures
+
+provenance: supported. Targets: GO:0097608.
+
+Full2024 HTML and1991 PDF were read at claim-bearing methods/results/discussion and caption locators. Taylor remains a review at metadata/abstract tier; its200 API response lacks body prose. Leadbeater1967 and Miyasaka2004 browser passages are previews/abstracts, not native HTTP successes or recovered full bodies. All original receipts and timestamps are retained.
+
+### Bounded follow-up without forced optional inventories
+
+completeness: supported. Targets: GO:0097608.
+
+The concrete tasks concern existing definition and graph assertions. Empty components/functions/examples/images/properties are not automatic findings. Further taxon-specific composition and molecular-mechanism work can be useful, but no unverified family/protein identifier or replacement structure is proposed. Historical metadata-access notes and PROPOSED status remain intact.
+
+## Findings
+
+### F1: Spatial containment is presented as an assembly mechanism
+
+minor / open / confirmed; issue key: transverse-flagellum-spatial-edge-labeled-mechanistic-assembly.
+
+The graph has one lies-within relation between transverse flagellum and cingulum. It explains neither construction nor a causal mechanism, but is classified ASSEMBLY and MECHANISTIC. Its only edge evidence is Taylor1980 metadata, which the record itself explicitly limits to bibliographic/access information. Preserve supported spatial context with an honest nonmechanistic scope and directly supporting evidence, or replace/remove this graph during authorized curation. Do not infer mechanism from the source title or metadata.
+
+### F2: Appended waveform explanation needs its own source and scope
+
+minor / open / confirmed; issue key: transverse-flagellum-definition-addition-source-scope.
+
+The definition appends an unqualified cingulum placement and striated-strand-to-helical-wave explanation after the narrower GO text, while definition_source remains GO0097608. That native definition says often and does not contain the appended mechanism. The inspected primary studies support constituent morphology and condition-specific contraction but distinguish direct observations from proposed coiling/regulatory explanations. Retain the exact GO definition or explicitly source and qualify the additions, including relevant organism/configuration limits. This does not establish that the transverse strand or general thrust function is biologically false.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+During authorized curation, recast the current graph as nonmechanistic functional/spatial context with qualifying scope and direct location evidence, remove it, or replace it with an independently supported assembly/mechanistic graph. Do not retain ASSEMBLY solely because a flagellum lies in a groove.
+
+- Read every resulting edge against its actual source passage; metadata-only Taylor cannot establish a mechanism.
+- Check graph_kind and scope_status against what the graph actually explains; keep cingulum occupancy conditional where required.
+- Run focused schema/strict plus native CURIE/history checks after an authorized validated-writer change.
+
+### A2
+
+Separate the exact GO definition from any literature-derived elaboration. Retain often/typical-configuration qualifiers, cite the actual primary passages for morphology or contraction, and identify proposed waveform/regulatory mechanisms as proposals.
+
+- Compare the retained definition to native GO0097608, including its often qualifier.
+- For each added clause, inspect the primary organism, methods, result and stated uncertainty; do not promote prior cited studies or abstract-only models to direct universal mechanism.
+- Preserve PROPOSED status and historical access notes; use the native validated writer, curation event, repository history and focused validators only when curation is separately authorized.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/appendage/transverse_flagellum.yaml; Entire maintained YAML, including full concatenated definition, native parent/synonym, taxon note, every evidence item, both graph nodes and its sole edge, and creation history. | context_only | The exact transverse flagellum record was read in full after resolution. It retains PROPOSED status. The graph contains only two STRUCTURE nodes and a lies-within edge. No protein accession, gene, family, component, physical-property or image claim is present to verify. |
+| policy | docs/CURATION.md; Evidence placement and structure identity; source.inputs also includes the local record-review checklist. | context_only | Evidence must support the narrowest claim and retain organism, experimental context and source tier. Optional empty fields do not alone require findings; historical access annotations are not silently reinterpreted as current universal access claims. |
+| graph-schema | src/cellstructuremech/schema/cellstructuremech.yaml; CausalGraph.graph_kind description and GraphKindEnum.ASSEMBLY/FUNCTION; CausalGraphScopeEnum. | context_only | ASSEMBLY describes how a structure is built. A spatial location is not itself an assembly mechanism. Schema validation accepts the enum but does not establish the scientific interpretation of the edge. |
+| transverse-agent-go-native | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097608,GO:0097729,GO:0097611,GO:0097610; All four results: id/isObsolete/name/definition/xrefs/synonyms/children with exact relation values. GO0097608 current primary reference URL is DOI10.1038/213421a0. | supports | Native GO0097608 exactly identifies transverse flagellum and its exact transverse-cilium synonym. GO0097729 lists it as an is_a child. The definition says the flagellum is often in a cingulum; it does not contain the appended striated-strand causal explanation. GO0097611 defines cingulum containment and cites PMID7002229; GO0097610 lists the cingulum as an is_a child. |
+| transverse-agent-tax-2864-native | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2864; taxId, scientificName, rank, lineage and otherNames. | supports | NCBITaxon2864 is Dinophyceae, class rank, with dinoflagellate/Dinoflagellata synonyms. The record uses variable presence, not presence in every cell or life-cycle stage. |
+| longitudinal-prep-taylor1980-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=EXT_ID%3A7002229%20AND%20SRC%3AMED; resultList.result[0]: identifier, DOI, title, authors, journal, publication types, abstractText and fullTextUrlList. Original sibling-packet access time is retained. | context_only | Native Europe PMC identifies Taylor1980 On dinoflagellate evolution as a review: PMID7002229 and DOI10.1016/0303-2647(80)90006-4. The abstract is a broad evolutionary overview and does not establish the target graph mechanism. This is bibliographic/abstract evidence; historical record notes already acknowledge the body limit. |
+| longitudinal-prep-taylor1980-api | https://api.elsevier.com/content/article/pii/0303264780900064?httpAccept=text/xml; Entire XML full-text-retrieval-response/coredata; no originalText or body sections in these inspected bytes. | context_only | The actual HTTP200 Elsevier response contains only coredata title/DOI/journal and openaccess=false, with no article body. A successful response status is not full-text access. |
+| transverse-agent-maruyama2024-html-native | https://www.jstage.jst.go.jp/article/cytologia/89/4/89_D-24-00042/_html/-char/en; DOI10.1508/cytologia.89.307 full HTML. Abstract/Introduction; Methods Organism, observation chambers, stimulus, non-detergent extraction/reactivation, SEM/TEM; Results transverse movement, detached flagella, TEM and Ca/Mg tests; Discussion Contraction/calcium dependence, Axoneme and striated strand, attachment and final limits; Figure1–10 captions. No supplementary videos or image pixels reanalyzed. | supports | The primary study directly observes A.sanguinea NIES-4631 transverse movement, a 9+2 axoneme and striated strand, and contraction in a non-detergent model exposed to 1mM Ca2+. No antagonism was detected with 0–50mM Mg2+; retained-membrane permeability is an explicit caveat. Strand shortening, calcium switching and force transmission have distinct observational versus proposed status. The Discussion identifies girdle-less Prorocentrum as comparative literature context. |
+| transverse-agent-cachon1991-pdf-native | https://aquaparadox.obs-vlfr.fr/html/PFD/Taxonomic%20Monographs/Cachon%20et%20al%201991.pdf; Cachon et al.1991 Biol Cell71:175–182, complete PDF text. Methods p175; transverse behavior/structure p176; longitudinal comparison pp177–181; Functional significance p181; Discussion p182. Figure captions read; image pixels and raw videos not independently analyzed. | supports | The primary article studies natural Ceratium species and cultured Oxyrrhis marina. It observes transverse helical waves and a striated strand, while distinguishing longitudinal PFR/R-fibre structures. Page182 explicitly proposes calcium-dependent strand coiling. Page181 assigns rotation chiefly to the transverse flagellum and forward swimming chiefly to the longitudinal one in its studied context; this is not a universal partition or a refutation of newer modeling. |
+| transverse-agent-epmc-native | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:15277560%20OR%20EXT_ID:986199%20OR%20DOI:10.1099/00221287-46-2-305&amp;format=json&amp;resultType=core&amp;pageSize=100; Entire returned results: identity/title/authors/DOI and abstractText; no full bodies recovered through this metadata response. | context_only | Exact native metadata/abstracts identify Miyasaka2004 PMID15277560, Leblond/Taylor1976 PMID986199 and Leadbeater/Dodge1967 DOI10.1099/00221287-46-2-305. Miyasaka is a resistive-force numerical model of Prorocentrum minimum; the older 1976 paper theorizes asymmetric-wave propulsion. Abstract summaries do not prove a universal waveform or exact force partition. |
+| transverse-agent-schuech2025-dtu-native | https://orbit.dtu.dk/en/publications/fluid-dynamics-of-dinoflagellate-feeding-and-swimming/; Title/authors/journal/DOI and Abstract only. The native Wiley article request returned403; this institutional HTML is not the full primary body. | context_only | The institutional record identifies Schuech et al.2025 DOI10.1002/lno.12764 and reproduces the primary abstract reporting flow visualization plus computational fluid dynamics, with transverse forward thrust and trailing-flagellum steering. Its body, exact species, conditions and detailed force calculations were not inspected. |
+| transverse-agent-leadbeater1967-nature-browser | https://www.nature.com/articles/213421a0; Publisher Abstract/preview browser lines31–35; title/DOI and issue metadata lines15–20,110–116. Artifact hashes the serialized browser source view. | context_only | Publisher introductory preview for the primary paper directly referenced by GO0097608. It describes ribbon-like transverse motion and attributes helical-wave observations specifically to Ceratium. The remainder is subscription content; the full body was not read. Browser serialization is not an HTTP-response attestation. |
+| transverse-agent-leadbeater1967-micro-browser | https://www.microbiologyresearch.org/content/journal/micro/10.1099/00221287-46-2-305; Summary browser lines130–135, bibliographic metadata lines81–91. Native article403 retained separately; browser serialization is not an HTTP-response attestation. | context_only | Publisher Summary of the primary1967 electron-microscope study reports normal9+2 axonemes, a shorter striated strand, expanded sheath and helical ribbon-like transverse form in the examined dinoflagellates. It does not directly demonstrate a universal contractile propulsion mechanism. Full body remained loading. |
+| transverse-agent-miyasaka2004-browser | https://journals.biologists.com/jeb/article-pdf/207/17/3055/1556865/3055.pdf; SUMMARY browser lines279–281 and access-limit lines290 onward. Artifact hashes serialized browser extraction; native PDF request separately returned403. | context_only | The requested PDF redirects in the browser to the publisher abstract. Its numerical Prorocentrum minimum model assigns transverse thrust and longitudinal lateral/rudder force; this is model evidence at abstract tier, not a full-body experimental review. |
+| transverse-agent-miyasaka2004-pdf-native | https://journals.biologists.com/jeb/article-pdf/207/17/3055/1556865/3055.pdf; Exact raw response and corresponding native HTTP metadata; access evidence only. | context_only | Actual native PDF route returned HTTP403 HTML, not article PDF. |
+| transverse-agent-leadbeater1967-html-native | https://www.microbiologyresearch.org/content/journal/micro/10.1099/00221287-46-2-305; Exact raw response and corresponding native HTTP metadata; access evidence only. | context_only | Actual native Microbiology article route returned HTTP403 HTML; browser Summary is separately hashed. |
+| transverse-agent-schuech2025-html-native | https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lno.12764; Exact raw response and corresponding native HTTP metadata; access evidence only. | context_only | Actual native Wiley article route returned HTTP403 HTML; DTU metadata/abstract is separately hashed. |
+| longitudinal-prep-taylor1980-publisher | https://www.sciencedirect.com/science/article/pii/0303264780900064; Exact raw response and corresponding native HTTP metadata; access evidence only. | context_only | Actual native ScienceDirect Taylor1980 route returned HTTP403 HTML; Elsevier200 metadata-only response is separately assessed. |
+| schema-result | just validate data/structures/appendage/transverse_flagellum.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/appendage/transverse_flagellum.yaml |
+| strict-result | just validate-strict data/structures/appendage/transverse_flagellum.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/transverse_flagellum-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/appendage/transverse_flagellum.yaml --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/transverse_flagellum-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch15-20261021-ohdkgt21/transverse_flagellum-strict.tsv |
+| target-curies-result | just check-curies-strict; data/structures/appendage/transverse_flagellum.yaml; exact native collect() target slice of original fresh-base TSV | supports | 6 of 7 exact target identifiers returned OK. Residuals: PMID:7002229 returned UNREACHABLE (eutils HTTP414); exact native PMID metadata independently verified by longitudinal-prep-taylor1980-meta The shared command exit zero is not interpreted as successful network resolution for transport failures. |
+| global-qc-result | just qc; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82 | supports | Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0 | supports | Exit 0. All 1828 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26 | supports | Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad | supports | Exit 0. Ten links checked against the 1130-entry trait index; zero missing or mislabelled links. |
+| global-curies-result | just check-curies-strict; Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256 below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d | supports | Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE. Transport failures and skipped prefixes are not evidence of resolution. Exact target identifiers are assessed separately in this review. |
+
+## Limits And Additional Notes
+
+- The exact target resolver slice is derived from the completed fresh-base run. Any PMID transport failures were checked against the separately cited native literature metadata; these identity checks do not establish full-body scientific support.
+- Taylor1980 full body was not recovered: native publisher403 and Elsevier200 coredata-only responses are retained. Its review metadata/abstract is not primary mechanistic evidence. Existing historical access annotations are not themselves findings.
+- Maruyama2024 directly studies Akashiwo sanguinea NIES-4631, including chamber-constrained observations and non-detergent extraction models. Calcium/Mg2+ conclusions retain preparation and permeability caveats. Earlier Peridinium contractility/centrin and girdle-less Prorocentrum discussion remain cited comparative context.
+- Cachon1991 uses natural Ceratium species and cultured Oxyrrhis marina. Coiling/associated-fibre functional assignments include explicit proposals, and older propulsion allocations are not silently made universal or chosen over newer model reports.
+- Leadbeater1967 Nature preview and Microbiology Summary, Miyasaka2004 publisher abstract, and Schuech2025 institutional abstract were read only at those tiers. Native403 responses and browser extraction status are distinguished. No exact force partition, rotation direction or detailed2004/2025 method claim is established.
+- Primary text and main figure captions were read at listed locators. Image pixels, original movies, raw measurements and supplementary tables/videos were not independently reanalyzed. The target has no image or measured-property assertion requiring an asset audit.
+- All12 inspected repository inputs retain their new-base hashes. The review relies on native GO nodes rather than neighboring local structure records. No optional-empty or exhaustive protein-family-absence finding is made.
+- Shared corpus gates have bounded coverage: 617 label checks had no adapter; the identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific biological findings or proof that all corpus identifiers resolve.
+- Root authorized an unsaved draft on the new base; finalization/save remains root-owned after fresh global gates.
+- No maintained scientific record, generated page, Git state or shared review index was modified.
+- Only the review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T094739Z-transverse-flagellum-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Transverse flagellum identity, waveform and graph evidence review
+started_at: '2026-10-21T09:07:44Z'
+finished_at: '2026-10-21T09:47:39Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The exact GO identity, parent, synonym and variable Dinophyceae scope are
+  supported. Two minor issues concern spatial-graph classification/evidence and definition
+  attribution/scope; primary morphology and contraction are preserved with explicit
+  taxon and evidence-tier limits.
+source:
+  git_revision: 9c0446c4c0dd4b458787c43a499e4ceab5e179a6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/appendage/transverse_flagellum.yaml
+    sha256: 890d535141482292884c4b8bdedf6355ef8f6330aabba9d0cba890c5bf4df79c
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0097608
+  path: data/structures/appendage/transverse_flagellum.yaml
+  label: transverse flagellum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/transverse_flagellum.yaml
+    role: maintained scientific record
+scope:
+  description: Full exact target and native GO/taxon identifiers; cited Taylor review
+    metadata and bounded access routes; current GO primary-reference preview; directly
+    read1991/2024 primary claim-bearing bodies; bounded2004/2025 propulsion abstracts.
+  selection: Sixth exact target in batch15 fixed repository path order, against expanded-main
+    base9c0446c4c0dd4b458787c43a499e4ceab5e179a6.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0097608
+checks:
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097608
+  command: just validate data/structures/appendage/transverse_flagellum.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097608
+  command: just validate-strict data/structures/appendage/transverse_flagellum.yaml
+    --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/transverse_flagellum-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: protein-applicability
+  name: Protein and expression-source applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0097608
+  summary: No gene, locus, UniProt protein example, family CURIE or expression-module
+    claim is present. Graph nodes are STRUCTURE only; no UniProt/iModulonDB check
+    is required.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097608
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - graph-schema
+  - transverse-agent-go-native
+  - transverse-agent-tax-2864-native
+  - longitudinal-prep-taylor1980-meta
+  - longitudinal-prep-taylor1980-api
+  - transverse-agent-maruyama2024-html-native
+  - transverse-agent-cachon1991-pdf-native
+  - transverse-agent-epmc-native
+  - transverse-agent-schuech2025-dtu-native
+  - transverse-agent-leadbeater1967-nature-browser
+  - transverse-agent-leadbeater1967-micro-browser
+  - transverse-agent-miyasaka2004-browser
+- check_id: target-curies
+  name: Target resolver slice with native transport-failure cross-checks
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097608
+  summary: '6 of 7 exact target identifiers returned OK. Residuals: PMID:7002229 returned
+    UNREACHABLE (eutils HTTP414); exact native PMID metadata independently verified
+    by longitudinal-prep-taylor1980-meta The shared command exit zero is not interpreted
+    as successful network resolution for transport failures.'
+  evidence_ids:
+  - target-curies-result
+  - longitudinal-prep-taylor1980-meta
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097608
+  command: just qc
+  exit_code: 0
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:12:21Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097608
+  command: just validate-history
+  exit_code: 0
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:53Z to
+    2026-10-21T09:05:00Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097608
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:46Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097608
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:05:06Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0097608
+  command: just check-curies-strict
+  exit_code: 0
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  scope_note: Full-corpus-only documented recipe, executed 2026-10-21T09:04:57Z to
+    2026-10-21T09:45:43Z at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6. Executed in
+    the fresh batch15 isolated checkout; any reuse is restricted to this identical
+    base commit and unchanged maintained scientific inputs. This does not scientifically
+    review non-target records.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/appendage/transverse_flagellum.yaml
+  locator: Entire maintained YAML, including full concatenated definition, native
+    parent/synonym, taxon note, every evidence item, both graph nodes and its sole
+    edge, and creation history.
+  accessed_at: '2026-10-21T09:14:27Z'
+  support: context_only
+  summary: The exact transverse flagellum record was read in full after resolution.
+    It retains PROPOSED status. The graph contains only two STRUCTURE nodes and a
+    lies-within edge. No protein accession, gene, family, component, physical-property
+    or image claim is present to verify.
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Evidence placement and structure identity; source.inputs also includes
+    the local record-review checklist.
+  accessed_at: '2026-10-21T09:14:27Z'
+  support: context_only
+  summary: Evidence must support the narrowest claim and retain organism, experimental
+    context and source tier. Optional empty fields do not alone require findings;
+    historical access annotations are not silently reinterpreted as current universal
+    access claims.
+- evidence_id: graph-schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: CausalGraph.graph_kind description and GraphKindEnum.ASSEMBLY/FUNCTION;
+    CausalGraphScopeEnum.
+  accessed_at: '2026-10-21T09:14:27Z'
+  support: context_only
+  summary: ASSEMBLY describes how a structure is built. A spatial location is not
+    itself an assembly mechanism. Schema validation accepts the enum but does not
+    establish the scientific interpretation of the edge.
+- evidence_id: transverse-agent-go-native
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0097608,GO:0097729,GO:0097611,GO:0097610
+  locator: 'All four results: id/isObsolete/name/definition/xrefs/synonyms/children
+    with exact relation values. GO0097608 current primary reference URL is DOI10.1038/213421a0.'
+  accessed_at: '2026-10-21T09:08:38.072575Z'
+  support: supports
+  summary: Native GO0097608 exactly identifies transverse flagellum and its exact
+    transverse-cilium synonym. GO0097729 lists it as an is_a child. The definition
+    says the flagellum is often in a cingulum; it does not contain the appended striated-strand
+    causal explanation. GO0097611 defines cingulum containment and cites PMID7002229;
+    GO0097610 lists the cingulum as an is_a child.
+  snapshot_sha256: cf32d1f50262b3e2624ecf87cf911a31f3d6fade1a5d2d535728088938560ac7
+- evidence_id: transverse-agent-tax-2864-native
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2864
+  locator: taxId, scientificName, rank, lineage and otherNames.
+  accessed_at: '2026-10-21T09:08:38.074024Z'
+  support: supports
+  summary: NCBITaxon2864 is Dinophyceae, class rank, with dinoflagellate/Dinoflagellata
+    synonyms. The record uses variable presence, not presence in every cell or life-cycle
+    stage.
+  snapshot_sha256: 9054e3d0f5c26df06f9c5ed034d064c96b9ba37ed54473ad6669f9dcb699026b
+- evidence_id: longitudinal-prep-taylor1980-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A7002229%20AND%20SRC%3AMED
+  locator: 'resultList.result[0]: identifier, DOI, title, authors, journal, publication
+    types, abstractText and fullTextUrlList. Original sibling-packet access time is
+    retained.'
+  accessed_at: '2026-10-21T09:08:00.385105Z'
+  support: context_only
+  summary: 'Native Europe PMC identifies Taylor1980 On dinoflagellate evolution as
+    a review: PMID7002229 and DOI10.1016/0303-2647(80)90006-4. The abstract is a broad
+    evolutionary overview and does not establish the target graph mechanism. This
+    is bibliographic/abstract evidence; historical record notes already acknowledge
+    the body limit.'
+  snapshot_sha256: 03033d3a50fcdf442fafea318713584e25d28b09b50aaf93b2a7f9674b79d1c7
+- evidence_id: longitudinal-prep-taylor1980-api
+  kind: database
+  reference: https://api.elsevier.com/content/article/pii/0303264780900064?httpAccept=text/xml
+  locator: Entire XML full-text-retrieval-response/coredata; no originalText or body
+    sections in these inspected bytes.
+  accessed_at: '2026-10-21T09:08:56.409707Z'
+  support: context_only
+  summary: The actual HTTP200 Elsevier response contains only coredata title/DOI/journal
+    and openaccess=false, with no article body. A successful response status is not
+    full-text access.
+  snapshot_sha256: c4412fc99d85956bb46c41524b17fae0d57261ec0302293d8d856dc905528dd5
+- evidence_id: transverse-agent-maruyama2024-html-native
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/cytologia/89/4/89_D-24-00042/_html/-char/en
+  locator: DOI10.1508/cytologia.89.307 full HTML. Abstract/Introduction; Methods Organism,
+    observation chambers, stimulus, non-detergent extraction/reactivation, SEM/TEM;
+    Results transverse movement, detached flagella, TEM and Ca/Mg tests; Discussion
+    Contraction/calcium dependence, Axoneme and striated strand, attachment and final
+    limits; Figure1–10 captions. No supplementary videos or image pixels reanalyzed.
+  accessed_at: '2026-10-21T09:08:38.074257Z'
+  support: supports
+  summary: The primary study directly observes A.sanguinea NIES-4631 transverse movement,
+    a 9+2 axoneme and striated strand, and contraction in a non-detergent model exposed
+    to 1mM Ca2+. No antagonism was detected with 0–50mM Mg2+; retained-membrane permeability
+    is an explicit caveat. Strand shortening, calcium switching and force transmission
+    have distinct observational versus proposed status. The Discussion identifies
+    girdle-less Prorocentrum as comparative literature context.
+  snapshot_sha256: 16acafc328db87fb056c0e2061d2fd5351da6d848f5e803d57aac7c0a1f75f97
+- evidence_id: transverse-agent-cachon1991-pdf-native
+  kind: primary_source
+  reference: https://aquaparadox.obs-vlfr.fr/html/PFD/Taxonomic%20Monographs/Cachon%20et%20al%201991.pdf
+  locator: Cachon et al.1991 Biol Cell71:175–182, complete PDF text. Methods p175;
+    transverse behavior/structure p176; longitudinal comparison pp177–181; Functional
+    significance p181; Discussion p182. Figure captions read; image pixels and raw
+    videos not independently analyzed.
+  accessed_at: '2026-10-21T09:08:38.276857Z'
+  support: supports
+  summary: The primary article studies natural Ceratium species and cultured Oxyrrhis
+    marina. It observes transverse helical waves and a striated strand, while distinguishing
+    longitudinal PFR/R-fibre structures. Page182 explicitly proposes calcium-dependent
+    strand coiling. Page181 assigns rotation chiefly to the transverse flagellum and
+    forward swimming chiefly to the longitudinal one in its studied context; this
+    is not a universal partition or a refutation of newer modeling.
+  snapshot_sha256: 11d999ea4cf4db794f5b71ff498b5d70f7801ee9a00b56189f8b3d937d2ccf2e
+- evidence_id: transverse-agent-epmc-native
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:15277560%20OR%20EXT_ID:986199%20OR%20DOI:10.1099/00221287-46-2-305&format=json&resultType=core&pageSize=100
+  locator: 'Entire returned results: identity/title/authors/DOI and abstractText;
+    no full bodies recovered through this metadata response.'
+  accessed_at: '2026-10-21T09:08:38.706839Z'
+  support: context_only
+  summary: Exact native metadata/abstracts identify Miyasaka2004 PMID15277560, Leblond/Taylor1976
+    PMID986199 and Leadbeater/Dodge1967 DOI10.1099/00221287-46-2-305. Miyasaka is
+    a resistive-force numerical model of Prorocentrum minimum; the older 1976 paper
+    theorizes asymmetric-wave propulsion. Abstract summaries do not prove a universal
+    waveform or exact force partition.
+  snapshot_sha256: def0b3d475c3435b938c3612c4b1e8488d338d3593b9fc512f34941dd3992bf9
+- evidence_id: transverse-agent-schuech2025-dtu-native
+  kind: database
+  reference: https://orbit.dtu.dk/en/publications/fluid-dynamics-of-dinoflagellate-feeding-and-swimming/
+  locator: Title/authors/journal/DOI and Abstract only. The native Wiley article request
+    returned403; this institutional HTML is not the full primary body.
+  accessed_at: '2026-10-21T09:08:38.224486Z'
+  support: context_only
+  summary: The institutional record identifies Schuech et al.2025 DOI10.1002/lno.12764
+    and reproduces the primary abstract reporting flow visualization plus computational
+    fluid dynamics, with transverse forward thrust and trailing-flagellum steering.
+    Its body, exact species, conditions and detailed force calculations were not inspected.
+  snapshot_sha256: 8af24297fe81f60a2b05b2369a353b8d176ffa2125c9c79649878e4d8c1074cc
+- evidence_id: transverse-agent-leadbeater1967-nature-browser
+  kind: primary_source
+  reference: https://www.nature.com/articles/213421a0
+  locator: Publisher Abstract/preview browser lines31–35; title/DOI and issue metadata
+    lines15–20,110–116. Artifact hashes the serialized browser source view.
+  accessed_at: '2026-10-21T09:09:57Z'
+  support: context_only
+  summary: Publisher introductory preview for the primary paper directly referenced
+    by GO0097608. It describes ribbon-like transverse motion and attributes helical-wave
+    observations specifically to Ceratium. The remainder is subscription content;
+    the full body was not read. Browser serialization is not an HTTP-response attestation.
+  snapshot_sha256: ce79ca8056a7386d6067d4d7ddd08fa34b3636862d1ef5932520471114ca1a4a
+- evidence_id: transverse-agent-leadbeater1967-micro-browser
+  kind: primary_source
+  reference: https://www.microbiologyresearch.org/content/journal/micro/10.1099/00221287-46-2-305
+  locator: Summary browser lines130–135, bibliographic metadata lines81–91. Native
+    article403 retained separately; browser serialization is not an HTTP-response
+    attestation.
+  accessed_at: '2026-10-21T09:09:57Z'
+  support: context_only
+  summary: Publisher Summary of the primary1967 electron-microscope study reports
+    normal9+2 axonemes, a shorter striated strand, expanded sheath and helical ribbon-like
+    transverse form in the examined dinoflagellates. It does not directly demonstrate
+    a universal contractile propulsion mechanism. Full body remained loading.
+  snapshot_sha256: 9102a86bb6bd0292ec4a1c1c52162f6d86a1eef610e131d6a0dc8b7e5bdfae41
+- evidence_id: transverse-agent-miyasaka2004-browser
+  kind: primary_source
+  reference: https://journals.biologists.com/jeb/article-pdf/207/17/3055/1556865/3055.pdf
+  locator: SUMMARY browser lines279–281 and access-limit lines290 onward. Artifact
+    hashes serialized browser extraction; native PDF request separately returned403.
+  accessed_at: '2026-10-21T09:08:48Z'
+  support: context_only
+  summary: The requested PDF redirects in the browser to the publisher abstract. Its
+    numerical Prorocentrum minimum model assigns transverse thrust and longitudinal
+    lateral/rudder force; this is model evidence at abstract tier, not a full-body
+    experimental review.
+  snapshot_sha256: 63b994c27700aa24ce21d15186bb28bd2450bc12d0e6a3bb68d74a2aea64e1c9
+- evidence_id: transverse-agent-miyasaka2004-pdf-native
+  kind: validation
+  reference: https://journals.biologists.com/jeb/article-pdf/207/17/3055/1556865/3055.pdf
+  locator: Exact raw response and corresponding native HTTP metadata; access evidence
+    only.
+  accessed_at: '2026-10-21T09:08:38.073939Z'
+  support: context_only
+  summary: Actual native PDF route returned HTTP403 HTML, not article PDF.
+  snapshot_sha256: c85b868895b56321a128bf0f92006b1717c72dd61d9a0634ebc48fb73ae95d72
+- evidence_id: transverse-agent-leadbeater1967-html-native
+  kind: validation
+  reference: https://www.microbiologyresearch.org/content/journal/micro/10.1099/00221287-46-2-305
+  locator: Exact raw response and corresponding native HTTP metadata; access evidence
+    only.
+  accessed_at: '2026-10-21T09:08:38.074953Z'
+  support: context_only
+  summary: Actual native Microbiology article route returned HTTP403 HTML; browser
+    Summary is separately hashed.
+  snapshot_sha256: dd6fee9e69c09eb767315f1d8e14e76050527ce167fbbf9a666c96a7956d58ca
+- evidence_id: transverse-agent-schuech2025-html-native
+  kind: validation
+  reference: https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lno.12764
+  locator: Exact raw response and corresponding native HTTP metadata; access evidence
+    only.
+  accessed_at: '2026-10-21T09:08:38.160954Z'
+  support: context_only
+  summary: Actual native Wiley article route returned HTTP403 HTML; DTU metadata/abstract
+    is separately hashed.
+  snapshot_sha256: e85f66a89cff758f086399982cca6ed8cf57bf08e3599dd7acf8110fd83af546
+- evidence_id: longitudinal-prep-taylor1980-publisher
+  kind: validation
+  reference: https://www.sciencedirect.com/science/article/pii/0303264780900064
+  locator: Exact raw response and corresponding native HTTP metadata; access evidence
+    only.
+  accessed_at: '2026-10-21T09:08:56.074246Z'
+  support: context_only
+  summary: Actual native ScienceDirect Taylor1980 route returned HTTP403 HTML; Elsevier200
+    metadata-only response is separately assessed.
+  snapshot_sha256: 14dd40deb21794994e8cbc95036a781eb7e7b41de1fbcc216c4af476bd5948f7
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/appendage/transverse_flagellum.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:07:53Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/appendage/transverse_flagellum.yaml'
+  snapshot_sha256: 89c6b69296f8d87bd2604a49115d8d9f5e7cd328032394b2f166e852a0295a14
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/appendage/transverse_flagellum.yaml
+    --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/transverse_flagellum-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-21T09:08:01Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/appendage/transverse_flagellum.yaml\
+    \ --out /private/tmp/cellstructure-batch15-20261021-ohdkgt21/transverse_flagellum-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch15-20261021-ohdkgt21/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch15-20261021-ohdkgt21/transverse_flagellum-strict.tsv"
+  snapshot_sha256: 5fa43076a4790261424364e3ba5090685f9e09df4eddef6d92d7440e8c473f29
+- evidence_id: target-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/appendage/transverse_flagellum.yaml; exact native collect()
+    target slice of original fresh-base TSV
+  accessed_at: '2026-10-21T09:47:06.566920Z'
+  support: supports
+  summary: '6 of 7 exact target identifiers returned OK. Residuals: PMID:7002229 returned
+    UNREACHABLE (eutils HTTP414); exact native PMID metadata independently verified
+    by longitudinal-prep-taylor1980-meta The shared command exit zero is not interpreted
+    as successful network resolution for transport failures.'
+  snapshot_sha256: d428d95fd13ac608f3786bcf74a032c768ac80e494b9673013e1e4d27de9ad66
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 446dedbdf9d57d9a70b17a09a657b6aba2019ac5dd329007cfeb48bcb7d0bc82
+  accessed_at: '2026-10-21T09:12:21Z'
+  support: supports
+  summary: 'Exit 0. Native QC passed: 1025 tests passed and 3 skipped, history, strict
+    schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 2cf77f0998cf42f98e103ee00a0f23cd610d5fcfd4814d7438d3e76bc9ef3d6d
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0
+  accessed_at: '2026-10-21T09:05:00Z'
+  support: supports
+  summary: Exit 0. All 1828 history records validated; URI precheck reported zero
+    invalid references.
+  snapshot_sha256: 793664cc55dee807ad6725ace8cbdeb817e07c968f017af7ab0b5183a67b3df0
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26
+  accessed_at: '2026-10-21T09:05:46Z'
+  support: supports
+  summary: 'Exit 0. Label results: 3952 canonical, 50 synonym, 6 exception and 617
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: dd07915effbb88aa88c56f6c102542b3cea4d9c70f381d943a664796a79c6917
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad
+  accessed_at: '2026-10-21T09:05:06Z'
+  support: supports
+  summary: Exit 0. Ten links checked against the 1130-entry trait index; zero missing
+    or mislabelled links.
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Full-corpus run at 9c0446c4c0dd4b458787c43a499e4ceab5e179a6; stdout SHA-256
+    below, stderr SHA-256 896496da9422a4ccb4c14c2d29e2ed257c78edf6a3177f5c0fda61f1ff9b9f4d
+  accessed_at: '2026-10-21T09:45:43Z'
+  support: supports
+  summary: Exit 0. Resolver controls passed; 4849 OK, 252 SKIPPED, 821 UNREACHABLE.
+    Transport failures and skipped prefixes are not evidence of resolution. Exact
+    target identifiers are assessed separately in this review.
+  snapshot_sha256: 4b17ccc07b33ceab3eeb8631b1cf075f5f750c5a6f4820455b1930e3aa165286
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure, name and synonym
+  outcome: supported
+  target_ids:
+  - GO:0097608
+  summary: The GO identity denotes the intended dinoflagellate transverse motile cilium,
+    and the exact synonym/category/kind are appropriate. The original GO wording is
+    supported; extra causal detail requires its own attribution and scope.
+  evidence_ids:
+  - transverse-agent-go-native
+  - transverse-agent-leadbeater1967-nature-browser
+  - record
+- assessment_id: hierarchy
+  area: scope
+  topic: Is-a parent versus spatial containment
+  outcome: supported
+  target_ids:
+  - GO:0097608
+  summary: The direct9+2 motile-cilium parent is native is_a, not parthood. Cingulum
+    is a cell-surface furrow and spatial host, not an is-a parent of the flagellum.
+    Both graph node identities are nonlocal GO terms and resolve without relying on
+    neighboring maintained records.
+  evidence_ids:
+  - transverse-agent-go-native
+  - record
+- assessment_id: taxa
+  area: scope
+  topic: Dinophyceae variable presence and source species
+  outcome: supported
+  target_ids:
+  - GO:0097608
+  summary: Taxon2864 and the conditional variable-presence treatment are supported.
+    Direct primary specimens are A.sanguinea NIES-4631 and the specified Ceratium/Oxyrrhis
+    material; they do not establish every dinoflagellate configuration, cell state
+    or swimming behavior. The taxon note correctly assigns Taylor to GO0097611.
+  evidence_ids:
+  - transverse-agent-go-native
+  - transverse-agent-tax-2864-native
+  - transverse-agent-maruyama2024-html-native
+  - transverse-agent-cachon1991-pdf-native
+  - record
+- assessment_id: definition
+  area: provenance
+  topic: Expanded definition exceeds its stated source
+  outcome: concern
+  target_ids:
+  - GO:0097608
+  summary: The appended cingulum clause is unqualified after GO says often, and the
+    striated-strand/waveform explanation is attached to a GO-only definition_source.
+    Primary text supports scoped morphology and contraction, while retaining hypotheses
+    about coiling, force transmission and regulation. This requires attribution/qualification,
+    not a claim that the axoneme or strand is absent.
+  evidence_ids:
+  - transverse-agent-go-native
+  - transverse-agent-maruyama2024-html-native
+  - transverse-agent-cachon1991-pdf-native
+  - transverse-agent-leadbeater1967-nature-browser
+  - transverse-agent-leadbeater1967-micro-browser
+  - record
+- assessment_id: graph
+  area: graph
+  topic: Spatial relation mislabeled as assembly mechanism
+  outcome: concern
+  target_ids:
+  - GO:0097608
+  summary: The only edge states lies within. It has no assembly process or causal
+    chain, despite ASSEMBLY/MECHANISTIC labels. Taylor evidence on this edge expressly
+    says only metadata were available. Native GO and the Akashiwo observations support
+    bounded spatial context; neither the cited metadata nor location alone establishes
+    a mechanistic assembly graph.
+  evidence_ids:
+  - transverse-agent-go-native
+  - longitudinal-prep-taylor1980-meta
+  - longitudinal-prep-taylor1980-api
+  - transverse-agent-maruyama2024-html-native
+  - record
+  - graph-schema
+- assessment_id: direction
+  area: scope
+  topic: Broad thrust and rotation versus detailed allocation
+  outcome: unknown
+  target_ids:
+  - GO:0097608
+  summary: GO supports forward-thrust function, and primary studies support transverse
+    motion and rotation in studied taxa. The1991 interpretation differs from the2004
+    numerical-model and2025 abstract-level thrust/steering assignments. Preserve taxon,
+    mode and source tier; do not infer a universal force partition, direction of rotation,
+    or striated-strand-driven beating cycle from this record.
+  evidence_ids:
+  - transverse-agent-go-native
+  - transverse-agent-cachon1991-pdf-native
+  - transverse-agent-miyasaka2004-browser
+  - transverse-agent-schuech2025-dtu-native
+  - transverse-agent-maruyama2024-html-native
+  - record
+- assessment_id: mechanism
+  area: evidence
+  topic: Observed contraction versus proposed molecular explanation
+  outcome: supported
+  target_ids:
+  - GO:0097608
+  summary: Maruyama2024 distinguishes observed contractions/TEM morphology from proposed
+    calcium switching and unobserved force-transmission/attachment structures. Its
+    non-detergent Mg2+ result includes a membrane-permeability caveat. Cited Peridinium
+    ATP-independent contraction and centrin attribution are prior-study context, not
+    independent experiments performed in Akashiwo; no protein identity is inferred.
+  evidence_ids:
+  - transverse-agent-maruyama2024-html-native
+  - transverse-agent-cachon1991-pdf-native
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Primary bodies, abstracts, native ontology and failures
+  outcome: supported
+  target_ids:
+  - GO:0097608
+  summary: Full2024 HTML and1991 PDF were read at claim-bearing methods/results/discussion
+    and caption locators. Taylor remains a review at metadata/abstract tier; its200
+    API response lacks body prose. Leadbeater1967 and Miyasaka2004 browser passages
+    are previews/abstracts, not native HTTP successes or recovered full bodies. All
+    original receipts and timestamps are retained.
+  evidence_ids:
+  - transverse-agent-go-native
+  - longitudinal-prep-taylor1980-meta
+  - longitudinal-prep-taylor1980-api
+  - transverse-agent-maruyama2024-html-native
+  - transverse-agent-cachon1991-pdf-native
+  - transverse-agent-epmc-native
+  - transverse-agent-schuech2025-dtu-native
+  - transverse-agent-leadbeater1967-nature-browser
+  - transverse-agent-leadbeater1967-micro-browser
+  - transverse-agent-miyasaka2004-browser
+  - transverse-agent-miyasaka2004-pdf-native
+  - transverse-agent-leadbeater1967-html-native
+  - transverse-agent-schuech2025-html-native
+  - longitudinal-prep-taylor1980-publisher
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded follow-up without forced optional inventories
+  outcome: supported
+  target_ids:
+  - GO:0097608
+  summary: The concrete tasks concern existing definition and graph assertions. Empty
+    components/functions/examples/images/properties are not automatic findings. Further
+    taxon-specific composition and molecular-mechanism work can be useful, but no
+    unverified family/protein identifier or replacement structure is proposed. Historical
+    metadata-access notes and PROPOSED status remain intact.
+  evidence_ids:
+  - transverse-agent-maruyama2024-html-native
+  - transverse-agent-cachon1991-pdf-native
+  - record
+  - policy
+findings:
+- finding_id: F1
+  issue_key: transverse-flagellum-spatial-edge-labeled-mechanistic-assembly
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Spatial containment is presented as an assembly mechanism
+  description: The graph has one lies-within relation between transverse flagellum
+    and cingulum. It explains neither construction nor a causal mechanism, but is
+    classified ASSEMBLY and MECHANISTIC. Its only edge evidence is Taylor1980 metadata,
+    which the record itself explicitly limits to bibliographic/access information.
+    Preserve supported spatial context with an honest nonmechanistic scope and directly
+    supporting evidence, or replace/remove this graph during authorized curation.
+    Do not infer mechanism from the source title or metadata.
+  target_ids:
+  - GO:0097608
+  field_paths:
+  - causal_graphs[graph_id=transverse_flagellum_mechanism].graph_kind
+  - causal_graphs[graph_id=transverse_flagellum_mechanism].scope_status
+  - causal_graphs[graph_id=transverse_flagellum_mechanism].edges
+  evidence_ids:
+  - transverse-agent-go-native
+  - longitudinal-prep-taylor1980-meta
+  - longitudinal-prep-taylor1980-api
+  - transverse-agent-maruyama2024-html-native
+  - record
+  - graph-schema
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/transverse_flagellum.yaml
+    role: maintained scientific record
+  rule_id: src/cellstructuremech/schema/cellstructuremech.yaml:GraphKindEnum; review-checklist:Causal
+    graph
+  native_severity: minor
+  normalization_reason: The biological spatial relation is supported in bounded configurations.
+    The defect concerns graph classification and direct evidence attribution, with
+    no additional unsupported causal proposition represented; it is a bounded minor
+    issue consistent with the analogous longitudinal graph.
+- finding_id: F2
+  issue_key: transverse-flagellum-definition-addition-source-scope
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Appended waveform explanation needs its own source and scope
+  description: The definition appends an unqualified cingulum placement and striated-strand-to-helical-wave
+    explanation after the narrower GO text, while definition_source remains GO0097608.
+    That native definition says often and does not contain the appended mechanism.
+    The inspected primary studies support constituent morphology and condition-specific
+    contraction but distinguish direct observations from proposed coiling/regulatory
+    explanations. Retain the exact GO definition or explicitly source and qualify
+    the additions, including relevant organism/configuration limits. This does not
+    establish that the transverse strand or general thrust function is biologically
+    false.
+  target_ids:
+  - GO:0097608
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - transverse-agent-go-native
+  - transverse-agent-maruyama2024-html-native
+  - transverse-agent-cachon1991-pdf-native
+  - transverse-agent-leadbeater1967-nature-browser
+  - transverse-agent-leadbeater1967-micro-browser
+  - record
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/transverse_flagellum.yaml
+    role: maintained scientific record
+  rule_id: review-checklist:Identity and Evidence standard; docs/CURATION.md:Evidence
+  native_severity: minor
+  normalization_reason: The exact structure remains identified correctly and scoped
+    primary support exists for much of the extra morphology; the bounded defect is
+    source attribution and over-broad wording, normalized as minor.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0097608
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/transverse_flagellum.yaml
+    role: maintained scientific record
+  description: During authorized curation, recast the current graph as nonmechanistic
+    functional/spatial context with qualifying scope and direct location evidence,
+    remove it, or replace it with an independently supported assembly/mechanistic
+    graph. Do not retain ASSEMBLY solely because a flagellum lies in a groove.
+  acceptance_checks:
+  - Read every resulting edge against its actual source passage; metadata-only Taylor
+    cannot establish a mechanism.
+  - Check graph_kind and scope_status against what the graph actually explains; keep
+    cingulum occupancy conditional where required.
+  - Run focused schema/strict plus native CURIE/history checks after an authorized
+    validated-writer change.
+  generator: Maintained YAML via the guarded writer; derived pages only after authorized
+    curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0097608
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/appendage/transverse_flagellum.yaml
+    role: maintained scientific record
+  description: Separate the exact GO definition from any literature-derived elaboration.
+    Retain often/typical-configuration qualifiers, cite the actual primary passages
+    for morphology or contraction, and identify proposed waveform/regulatory mechanisms
+    as proposals.
+  acceptance_checks:
+  - Compare the retained definition to native GO0097608, including its often qualifier.
+  - For each added clause, inspect the primary organism, methods, result and stated
+    uncertainty; do not promote prior cited studies or abstract-only models to direct
+    universal mechanism.
+  - Preserve PROPOSED status and historical access notes; use the native validated
+    writer, curation event, repository history and focused validators only when curation
+    is separately authorized.
+  generator: Maintained structure YAML; no scientific edits in this review.
+limitations:
+- The exact target resolver slice is derived from the completed fresh-base run. Any
+  PMID transport failures were checked against the separately cited native literature
+  metadata; these identity checks do not establish full-body scientific support.
+- 'Taylor1980 full body was not recovered: native publisher403 and Elsevier200 coredata-only
+  responses are retained. Its review metadata/abstract is not primary mechanistic
+  evidence. Existing historical access annotations are not themselves findings.'
+- Maruyama2024 directly studies Akashiwo sanguinea NIES-4631, including chamber-constrained
+  observations and non-detergent extraction models. Calcium/Mg2+ conclusions retain
+  preparation and permeability caveats. Earlier Peridinium contractility/centrin and
+  girdle-less Prorocentrum discussion remain cited comparative context.
+- Cachon1991 uses natural Ceratium species and cultured Oxyrrhis marina. Coiling/associated-fibre
+  functional assignments include explicit proposals, and older propulsion allocations
+  are not silently made universal or chosen over newer model reports.
+- Leadbeater1967 Nature preview and Microbiology Summary, Miyasaka2004 publisher abstract,
+  and Schuech2025 institutional abstract were read only at those tiers. Native403
+  responses and browser extraction status are distinguished. No exact force partition,
+  rotation direction or detailed2004/2025 method claim is established.
+- Primary text and main figure captions were read at listed locators. Image pixels,
+  original movies, raw measurements and supplementary tables/videos were not independently
+  reanalyzed. The target has no image or measured-property assertion requiring an
+  asset audit.
+- All12 inspected repository inputs retain their new-base hashes. The review relies
+  on native GO nodes rather than neighboring local structure records. No optional-empty
+  or exhaustive protein-family-absence finding is made.
+- 'Shared corpus gates have bounded coverage: 617 label checks had no adapter; the
+  identifier command reported 252 SKIPPED, 821 UNREACHABLE. These totals are not target-specific
+  biological findings or proof that all corpus identifiers resolve.'
+notes:
+- Root authorized an unsaved draft on the new base; finalization/save remains root-owned
+  after fresh global gates.
+- No maintained scientific record, generated page, Git state or shared review index
+  was modified.
+- Only the review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+```

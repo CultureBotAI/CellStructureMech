@@ -1,0 +1,45 @@
+schema_version: 1.0.0
+repository_key: cellstructuremech
+github_repository: CultureBotAI/CellStructureMech
+run_id: mech-goal-sequence-20261019
+cycle: 2
+stage: 6
+revision: 1
+outcome: completed
+summary: 'Froze INFRA_TASKS.md at 2026-10-24T01:33:57Z (sha256 ad2c3350ee2e7036ee1774b2f1ba620acab11a9b336898fefae3bbb71bba7d52),
+  mapped the bounded Cycle 2 infrastructure task (cellstructuremech-infra-0005) to
+  real GitHub issue #2417, implemented GO/complex CausalNode node_type and component
+  gene_symbols vs protein_examples consistency checks in src/cellstructuremech/validation/validator.py
+  in commit 4dc371f8d737847bc9a00a34f7a6ace428abb27a, updated INFRA_TASKS.md and reviews/workflow/latest.yaml,
+  and passed all 10 quality gates in scripts/run_qc.py (1,070 passed tests, 1,991
+  history records validated, 985 structure records validated with 0 errors and 0 deferred
+  tasks).'
+source_revision: 4dc371f8d737847bc9a00a34f7a6ace428abb27a
+scope_frozen_at: '2026-10-24T01:33:57Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/infra_snapshot.md
+  sha256: ad2c3350ee2e7036ee1774b2f1ba620acab11a9b336898fefae3bbb71bba7d52
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/implementation_plan.md
+  sha256: dad3d156115f29c6ad954e3c9e11ad2e1b32f363ed65dc9a94d35ad936a3aee7
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/validation.md
+  sha256: ab1c9d885117b64fdf605a6d6dd3ca2ed592cb3148dc5fcef7af3af7d4705f76
+  kind: validation
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: cellstructuremech-infra-0005
+  issue_url: https://github.com/CultureBotAI/CellStructureMech/issues/2417
+  status: resolved
+  summary: Extend src/cellstructuremech/validation/validator.py to check GO/complex
+    CausalNode node_type and component gene_symbols vs protein_examples consistency
+  disposition: 'Extended validate_causal_graphs() and added validate_component_protein_examples()
+    in src/cellstructuremech/validation/validator.py (wired into validate_record_semantics,
+    write_validated_structure, and scripts/validate_strict.py); verified 0 errors
+    across all 985 structure records and added unit and corpus-integrity tests in
+    tests/test_validator.py and tests/test_corpus_integrity.py (commit 4dc371f8d737847bc9a00a34f7a6ace428abb27a).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/validation.md

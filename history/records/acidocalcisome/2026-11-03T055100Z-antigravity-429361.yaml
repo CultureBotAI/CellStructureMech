@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/membrane_organelle/acidocalcisome.yaml
+  slug: acidocalcisome
+session:
+  id: 2026-11-03T055100Z-antigravity-429361
+  timestamp: '2026-11-03T05:51:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3.1-pro
+    agent_tool: curate-causal-graphs
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked cation_transporters component into acidic_polyphosphate_cation_store causal
+    graph.
+  details: 'Cycle 7 Stage 2 (causal_graphs): updated causal graph ''acidic_polyphosphate_cation_store''
+    in data/structures/membrane_organelle/acidocalcisome.yaml. Added node(s) [cation_transporters]
+    and source-backed edge(s) [cation_transporters transport cations into acidocalcisome].
+    Validated with write_validated_structure.'

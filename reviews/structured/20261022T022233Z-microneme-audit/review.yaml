@@ -1,0 +1,1111 @@
+schema_version: 1.0.0
+review_id: 20261022T022233Z-microneme-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Microneme molecular grounding, cargo topology and source placement review
+started_at: '2026-10-22T02:02:57Z'
+finished_at: '2026-10-22T02:22:33Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The microneme organelle identity, adhesin membership and regulated invasion-related
+  secretion are supported. One major finding separates lipid molecular identity from
+  the complete membrane; two minor findings qualify cargo topology and canonical source
+  placement.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-causal-graphs/SKILL.md
+    sha256: af43ca37f5ea03de1f0de815161ccee918b4b4b87d0b55f6a30a808884a7856b
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/microneme.yaml
+    sha256: 12358b0b6b393cc14973846c2d86f59e3716f1b9d3513ff2914c3e6b28193cc9
+    role: target
+  - path: data/structures/membrane_organelle/microneme_lumen.yaml
+    sha256: c40d221eea42af12fcb06a6a5dbcc7d3592f289ad31f52a275acad4d6666af38
+    role: context
+  - path: data/structures/membrane_organelle/microneme_membrane.yaml
+    sha256: f3c40aeb98a8d3eec6950ea6a3875db63372a5e72c66a75130e4ec821f0dc4ad
+    role: context
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0020009
+  path: data/structures/membrane_organelle/microneme.yaml
+  label: microneme
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme.yaml
+    role: maintained scientific record
+scope:
+  description: Full target and both frozen boundary neighbors; native GO/taxon/protein
+    identities, exact citation metadata and enumerated primary/review main-body sections.
+  selection: Batch32 target3; native initial inspection/schema/strict0 preceded full
+    assessment at immutable f97b1abe.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0020009
+checks:
+- check_id: verify
+  name: Native verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  command: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/microneme.yaml
+    --verify
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - microneme-agent-verify
+- check_id: causal-graphs
+  name: Native causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  command: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/microneme.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Read-only check passed; diagnostic coverage is assessed separately.
+  evidence_ids:
+  - microneme-agent-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  command: just validate data/structures/membrane_organelle/microneme.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  command: just validate-strict data/structures/membrane_organelle/microneme.yaml
+    --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/microneme-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0020009
+  summary: No computational expression-module assertion is made; experimental gene
+    interventions do not require expression-module evidence.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - schema
+  - lumen-neighbor
+  - membrane-neighbor
+  - microneme-agent-go
+  - microneme-agent-tax2759
+  - microneme-agent-tax5794
+  - microneme-agent-tax5811
+  - microneme-agent-tax432359
+  - microneme-agent-tax508771
+  - microneme-agent-carruthers2008-meta
+  - microneme-agent-dubois2019-meta
+  - microneme-agent-huynh2003-meta
+  - microneme-agent-huynh2006-meta
+  - microneme-agent-brown2016-meta
+  - microneme-agent-pmid-meta
+  - microneme-agent-carruthers1997-pmc
+  - microneme-agent-carruthers2008-pmc
+  - microneme-agent-dubois2019-unige-pdf
+  - microneme-agent-huynh2003-pmc
+  - microneme-agent-huynh2006-pmc
+  - microneme-agent-brown2016-pmc
+  - microneme-agent-O00834
+  - microneme-agent-B6KAM0
+  - microneme-agent-S8F9G8
+  - microneme-agent-gene-MIC1
+  - microneme-agent-gene-AMA1
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  summary: '18 of 25 collected target identifiers returned OK. PMID:11083833: UNREACHABLE;
+    The bulk transport returned414; the independently retrieved exact MED identity
+    confirms PMID11083833, DOI10.1128/iai.68.12.7078-7086.2000 and Toxoplasma gondii
+    homologue of plasmodium apical membrane antigen 1 is involved in invasion of host
+    cells. Scientific scope remains limited to the separately documented inspections.;
+    PMID:11087913: UNREACHABLE; The bulk transport returned414; the independently
+    retrieved exact MED identity confirms PMID11087913, DOI10.1016/s0166-6851(00)00289-9
+    and The Toxoplasma homolog of Plasmodium apical membrane antigen-1 (AMA-1) is
+    a microneme protein secreted in response to elevated intracellular calcium levels.
+    Scientific scope remains limited to the separately documented inspections.; PMID:11157983:
+    UNREACHABLE; The bulk transport returned414; the independently retrieved exact
+    MED identity confirms PMID11157983, DOI10.1083/jcb.152.3.563 and Identification
+    and characterization of an escorter for two secretory adhesins in Toxoplasma gondii.
+    Scientific scope remains limited to the separately documented inspections.; PMID:15684324:
+    UNREACHABLE; The bulk transport returned414; the independently retrieved exact
+    MED identity confirms PMID15684324, DOI10.1084/jem.20041672 and Synergistic role
+    of micronemal proteins in Toxoplasma gondii virulence. Scientific scope remains
+    limited to the separately documented inspections.; PMID:16102004: UNREACHABLE;
+    The bulk transport returned414; the independently retrieved exact MED identity
+    confirms PMID16102004, DOI10.1111/j.1365-2958.2005.04772.x and Distinct mechanisms
+    govern proteolytic shedding of a key invasion protein in apicomplexan pathogens.
+    Scientific scope remains limited to the separately documented inspections.; PMID:18818666:
+    UNREACHABLE; The bulk transport returned414; the independently retrieved exact
+    MED identity confirms PMID18818666, DOI10.1038/embor.2008.179 and Structural insights
+    into microneme protein assembly reveal a new mode of EGF domain recognition. Scientific
+    scope remains limited to the separately documented inspections.; PMID:9208224:
+    UNREACHABLE; The bulk transport returned414; the independently retrieved exact
+    MED identity confirms PMID9208224 (no DOI returned in this native MED row) and
+    Sequential protein secretion from three distinct organelles of Toxoplasma gondii
+    accompanies invasion of human fibroblasts. Scientific scope remains limited to
+    the separately documented inspections. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  evidence_ids:
+  - target-curies
+  - microneme-agent-pmid-meta
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0020009
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch32 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/microneme.yaml
+  locator: Entire maintained target, every component/example/function/graph edge/discussion
+  accessed_at: '2026-10-22T02:15:24Z'
+  support: context_only
+  summary: Whole source record read without edits.
+- evidence_id: schema
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent definition/grounding/essentiality; graph node/component_ref;
+    ProteinExample
+  accessed_at: '2026-10-22T02:15:24Z'
+  support: context_only
+  summary: A molecular LIPID component is distinct from a complete cellular membrane;
+    the grounding contract specifies chemical identity for lipids. Formation necessity
+    is separate from function.
+- evidence_id: lumen-neighbor
+  kind: record_content
+  reference: data/structures/membrane_organelle/microneme_lumen.yaml
+  locator: Entire frozen maintained neighbor
+  accessed_at: '2026-10-22T02:15:24Z'
+  support: context_only
+  summary: Boundary neighbor distinguishes internal volume from bounding bilayer;
+    it is context, not independent experimental evidence.
+- evidence_id: membrane-neighbor
+  kind: record_content
+  reference: data/structures/membrane_organelle/microneme_membrane.yaml
+  locator: Entire frozen maintained neighbor
+  accessed_at: '2026-10-22T02:15:24Z'
+  support: context_only
+  summary: Boundary neighbor distinguishes internal volume from bounding bilayer;
+    it is context, not independent experimental evidence.
+- evidence_id: microneme-agent-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0020009,GO:0020007,GO:0033163,GO:0034494,GO:0043231,GO:0043233,GO:0031090
+  locator: All seven complete labels/definitions/active flags, synonyms and returned
+    relations
+  accessed_at: '2026-10-22T02:07:36.263194Z'
+  support: supports
+  summary: Seven active native terms distinguish the microneme, its membrane, its
+    lumen, apical complex and broader organelle classes. GO0020009 returns both membrane/lumen
+    part_of children; GO0020007 returns microneme part_of; GO0043231 returns microneme
+    is_a. Broader lumen/membrane parents are supported by definitions without asserting
+    absent direct edges.
+  snapshot_sha256: 41bb647bbd29aa18675f16c8daab603b6517136475cef262993198eaf53b58bb
+- evidence_id: microneme-agent-tax2759
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/2759
+  locator: Exact taxId/scientificName/rank and lineage
+  accessed_at: '2026-10-22T02:07:36.265539Z'
+  support: supports
+  summary: ENA confirms Eukaryota for taxon2759 with its native rank. The receipt
+    establishes this identity, not organelle prevalence or experimental strain equivalence.
+  snapshot_sha256: 47d02c524bbdc511eb1fc377bdedc484b5cb6d3504611b0cbc6c280a65f140b4
+- evidence_id: microneme-agent-tax5794
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5794
+  locator: Exact taxId/scientificName/rank and lineage
+  accessed_at: '2026-10-22T02:07:37.806555Z'
+  support: supports
+  summary: ENA confirms Apicomplexa for taxon5794 with its native rank. The receipt
+    establishes this identity, not organelle prevalence or experimental strain equivalence.
+  snapshot_sha256: 71f50f7adf0b7ad8670573c6c6ac0e6df37a9cf467fdec2ab20d612db477bc53
+- evidence_id: microneme-agent-tax5811
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5811
+  locator: Exact taxId/scientificName/rank and lineage
+  accessed_at: '2026-10-22T02:07:36.265008Z'
+  support: supports
+  summary: ENA confirms Toxoplasma gondii for taxon5811 with its native rank. The
+    receipt establishes this identity, not organelle prevalence or experimental strain
+    equivalence.
+  snapshot_sha256: 11679825fa4d00b18d5848862450ab6b3770aaa47ad6676d1196d9df61124b16
+- evidence_id: microneme-agent-tax432359
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/432359
+  locator: Exact taxId/scientificName/rank and lineage
+  accessed_at: '2026-10-22T02:07:37.809842Z'
+  support: supports
+  summary: ENA confirms Toxoplasma gondii VEG for taxon432359 with its native rank.
+    The receipt establishes this identity, not organelle prevalence or experimental
+    strain equivalence.
+  snapshot_sha256: 271b1bd0b2388bb3491607c0c289745032e1a14c13ffd2615c7b2be2d0f17799
+- evidence_id: microneme-agent-tax508771
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/508771
+  locator: Exact taxId/scientificName/rank and lineage
+  accessed_at: '2026-10-22T02:07:37.811994Z'
+  support: supports
+  summary: ENA confirms Toxoplasma gondii ME49 for taxon508771 with its native rank.
+    The receipt establishes this identity, not organelle prevalence or experimental
+    strain equivalence.
+  snapshot_sha256: d1622dee69e1fe2abfea4351893585852f4200cfff6eac3b42e5a014283cd0b0
+- evidence_id: microneme-agent-carruthers2008-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1007%2F978-0-387-78267-6_2%22&format=json&resultType=core&pageSize=100
+  locator: Exact MED DOI/title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T02:07:41.322031Z'
+  support: supports
+  summary: Exact native bibliographic identity and complete abstract read for carruthers2008.
+    Literature-review tier.
+  snapshot_sha256: ab6fafa3d16039e85cba04114d282d8fd731080a98c01f6ad689923b03097773
+- evidence_id: microneme-agent-dubois2019-meta
+  kind: authority
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1111%2Fcmi.13018%22&format=json&resultType=core&pageSize=100
+  locator: Exact MED DOI/title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T02:07:41.322440Z'
+  support: supports
+  summary: Exact native bibliographic identity and complete abstract read for dubois2019.
+    Literature-review tier.
+  snapshot_sha256: 1c775eb76c36272e9dd1bdd9d87ba8031e85698b78fa8a59ebc2ef240555a9be
+- evidence_id: microneme-agent-huynh2003-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Femboj%2Fcdg217%22&format=json&resultType=core&pageSize=100
+  locator: Exact MED DOI/title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T02:07:41.322616Z'
+  support: supports
+  summary: Exact native bibliographic identity and complete abstract read for huynh2003.
+    Primary experimental study.
+  snapshot_sha256: e6727287c0e25909290f02e08cebe87541568a16fe2d8c0cf3258daf2d44531d
+- evidence_id: microneme-agent-huynh2006-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1371%2Fjournal.ppat.0020084%22&format=json&resultType=core&pageSize=100
+  locator: Exact MED DOI/title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T02:07:42.367774Z'
+  support: supports
+  summary: Exact native bibliographic identity and complete abstract read for huynh2006.
+    Primary experimental study.
+  snapshot_sha256: ad243ccf23434a2403b8ebb0bfcda54ed08a36a6d73f89545bddf333033bab86
+- evidence_id: microneme-agent-brown2016-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1074%2Fjbc.m115.700518%22&format=json&resultType=core&pageSize=100
+  locator: Exact MED DOI/title/authors/year/PMID and complete abstract
+  accessed_at: '2026-10-22T02:07:42.893662Z'
+  support: supports
+  summary: Exact native bibliographic identity and complete abstract read for brown2016.
+    Primary experimental study.
+  snapshot_sha256: d986060d5da4adfc48165317514de0f134c358d475d1a6b62529e2e103a73cde
+- evidence_id: microneme-agent-pmid-meta
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A%289208224+OR+11157983+OR+15684324+OR+18818666+OR+11083833+OR+11087913+OR+16102004%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Exact requested MED result(s), identity and complete abstracts
+  accessed_at: '2026-10-22T02:07:42.893923Z'
+  support: supports
+  summary: Exact MED PMID9208224 identifies Carruthers and Sibley1997 and its complete
+    abstract. The six additional maintained localization citations11157983,15684324,18818666,11083833,11087913
+    and16102004 have matching exact titles/authors/years and complete abstracts; their
+    entire bodies were not recovered or certified.
+  snapshot_sha256: a718ae89432c8ce95186c3ec73eef8a97596738f94f2f1ecad65fa11385fd463
+- evidence_id: microneme-agent-carruthers1997-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC13475723/
+  locator: Complete Introduction S1, Methods S2/S3–11, Results S12/S13–18 and Discussion
+    S19, including Figures1–8 captions. No figure pixels or original kinetic data
+    reanalysis.
+  accessed_at: '2026-10-22T02:08:17.008565Z'
+  support: supports
+  summary: The recovered author manuscript reports RH/2F tachyzoites invading human
+    fibroblasts. MIC2 secretion accompanies initial contact, before rhoptry and dense-granule
+    release. It establishes the sequential-secretion model, not MIC2–M2AP perturbation
+    or PKG signaling experiments.
+  snapshot_sha256: 534e8dec49982ff6fc5f100019b7a67e32ce32ea3c0748d3172faa8fdda784b6
+- evidence_id: microneme-agent-carruthers2008-pmc
+  kind: authority
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2847500/
+  locator: Complete Introduction S1, Oligomerization of MIC proteins S9 and Organization
+    of MIC ligands within micronemes S10, including embedded Figure1 caption; no full
+    review-body or pixel claim.
+  accessed_at: '2026-10-22T02:08:17.005581Z'
+  support: supports
+  summary: The review describes stage/species variation, including Theileria zoites
+    without micronemes; qualitative common occurrence is not universality. S9 distinguishes
+    soluble M2AP from transmembrane MIC2 and its cytoplasmic targeting tail; S10 describes
+    poorly resolved lumen organization and condensed contents.
+  snapshot_sha256: f0962cd32d71c94fb036a77db99fd2a6a9343490b30c6f61fa2ffa43be841bdf
+- evidence_id: microneme-agent-dubois2019-unige-pdf
+  kind: authority
+  reference: https://access.archive-ouverte.unige.ch/access/metadata/8d9f50fe-0548-4e4f-bc29-4b05a43e7ddc/download
+  locator: 'Accepted author manuscript: Abstract, Introduction, Microneme diversity/structure,
+    Contents/conservation, Biogenesis/maturation/trafficking, Signaling cascade, Preparing
+    for secretion, Fusion, Insights from other organisms and Concluding remarks. Table1
+    and figure pixels not comprehensively inspected.'
+  accessed_at: '2026-10-22T02:09:12.638985Z'
+  support: supports
+  summary: The accepted review manuscript supports varied microneme architecture,
+    adhesin complexes, protein sorting and regulated exocytosis. It separates signaling
+    evidence from speculative docking/fusion models and the unrelated exoneme/mononeme
+    classes. It does not establish a universal lipid recipe or a complete fusion machinery.
+  snapshot_sha256: 32ce8f7b82f399bc5d27f4355f92b71e3a06f10487ce667af70f2d0810317e0c
+- evidence_id: microneme-agent-huynh2003-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC156089/
+  locator: Complete Introduction sec1; Results sec4–6/Figures2–4 captions; complete
+    Discussion sec7; Methods Parasites/transfection sec10, secretion sec13 and attachment
+    sec14. No comprehensive remaining Methods, Figure1 pixels or raw quantitative
+    reanalysis.
+  accessed_at: '2026-10-22T02:08:20.050675Z'
+  support: supports
+  summary: RH-derived M2AP disruption impairs MIC2 trafficking/secretion, attachment
+    and rapid invasion; complementation partially restores these effects. The mutant
+    remains viable and invasion is delayed rather than abolished. Intro/Discussion
+    distinguish membrane-anchored adhesins and explain indirect versus direct perturbation
+    effects.
+  snapshot_sha256: 01b46f0ccad911dba175f4e09a92e4dd1f7eaf4629077398f9df5fe25a9324d6
+- evidence_id: microneme-agent-huynh2006-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1550269/
+  locator: Complete Introduction s1 and Results/discussion s2a–c including Figures1–7
+    captions; Methods parasites s3b, secretion s3e and invasion/attachment s3g. Table1
+    numerical contents, supplementary figures/videos and figure pixels not independently
+    analyzed.
+  accessed_at: '2026-10-22T02:08:21.274731Z'
+  support: supports
+  summary: RH-derived conditional MIC2 depletion compromises attachment, rapid invasion,
+    helical gliding and murine lethal infection under the specified system. Residual
+    invasion/circular gliding persist and egress/replication were not detectably impaired.
+    Introduction explicitly identifies a transmembrane adhesin with a short cytosolic
+    domain; other microneme markers remain after depletion.
+  snapshot_sha256: 4be116a3997a6978b0d42a126c8cbd0a123f575aed0115e23e71fadb878f7f90
+- evidence_id: microneme-agent-brown2016-pmc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4850294/
+  locator: Complete Introduction sec1, all Results sec26–29/Figures1–4 captions, complete
+    Discussion sec30; selected Methods sec5,11,16,18,21,22 for strains, PKG reporters,
+    secretion, calcium and cGMP. No supplementary data or figure pixels.
+  accessed_at: '2026-10-22T02:08:18.507664Z'
+  support: supports
+  summary: Primary RH-derived reporter and chemical-genetic experiments support extracellular
+    albumin/cGMP/PKG-dependent secretion. Albumin does not elevate cytosolic calcium,
+    though basal calcium is required; elevated calcium can enhance secretion. MIC2
+    and soluble MIC10 reporters distinguish secretion from simple surface shedding.
+    Terminal docking/fusion assignments remain hypotheses.
+  snapshot_sha256: 75991e54e49348b602c20f34f564a961f185a6d13e1be135cc8d39154fc80d3f
+- evidence_id: microneme-agent-O00834
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/O00834.json
+  locator: Exact accession/status/protein and gene names/organism; relevant native
+    location evidence, topology features and family cross-references
+  accessed_at: '2026-10-22T02:07:39.225358Z'
+  support: supports
+  summary: Reviewed MIC1, T. gondii5811; the three maintained PMID-linked microneme
+    localization annotations and source evidence codes are present. Family/domain
+    links include MIC1-specific IPR008117 and domains, not a family encompassing MIC1/MIC2/AMA1.
+  snapshot_sha256: 91ae758e987cebd33da8283f87593cdc075411958721e4ad11ea3ccd42facd5f
+- evidence_id: microneme-agent-B6KAM0
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/B6KAM0.json
+  locator: Exact accession/status/protein and gene names/organism; relevant native
+    location evidence, topology features and family cross-references
+  accessed_at: '2026-10-22T02:07:39.229933Z'
+  support: supports
+  summary: Reviewed AMA1, VEG432359; the three maintained secreted-location PMID annotations
+    are present. Native topology explicitly gives an extracellular domain, single
+    transmembrane segment and cytoplasmic tail. This is not an entirely soluble luminal
+    protein.
+  snapshot_sha256: 4d2e1f02042185bd0e48ba219785074ea81b40138c898375d94186ed8a09b901
+- evidence_id: microneme-agent-S8F9G8
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/S8F9G8.json
+  locator: Exact accession/status/protein and gene names/organism; relevant native
+    location evidence, topology features and family cross-references
+  accessed_at: '2026-10-22T02:07:39.230243Z'
+  support: supports
+  summary: Unreviewed MIC2, ME49508771, TGME49_201780. It is a representative identity,
+    not evidence that ME49 was the RH experimental strain or that one accession denotes
+    the entire MIC2–M2AP complex.
+  snapshot_sha256: a47669f628985ff8181df86bdd27deff69317dc93082a48dd78b9e82827394f1
+- evidence_id: microneme-agent-gene-MIC1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC1%29+AND+%28taxonomy_id%3A5811%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete exact reviewed-gene query result
+  accessed_at: '2026-10-22T02:07:44.504916Z'
+  support: supports
+  summary: Exact current reviewed query returns one matching entry, consistent with
+    the maintained single-reviewed-entry statement for gene-MIC1.
+  snapshot_sha256: 53e2eb2ddfa3ca14039163ebd77d1ed03cb6972f168411567ddb31e3b35c6f26
+  search_scope: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AMIC1%29+AND+%28taxonomy_id%3A5811%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    bounded exact live query
+- evidence_id: microneme-agent-gene-AMA1
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAMA1%29+AND+%28taxonomy_id%3A432359%29+AND+%28reviewed%3Atrue%29&format=json&size=100
+  locator: Complete exact reviewed-gene query result
+  accessed_at: '2026-10-22T02:07:44.992628Z'
+  support: supports
+  summary: Exact current reviewed query returns one matching entry, consistent with
+    the maintained single-reviewed-entry statement for gene-AMA1.
+  snapshot_sha256: cf7a69f7fa39099a8f5449e7d474a9e80b78b14e4aeaf0ba4463c6f035810da6
+  search_scope: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAMA1%29+AND+%28taxonomy_id%3A432359%29+AND+%28reviewed%3Atrue%29&format=json&size=100;
+    bounded exact live query
+- evidence_id: microneme-agent-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/microneme.yaml
+    --verify
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T02:12:31.835653Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: microneme-agent-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/microneme.yaml
+    --causal-graphs
+  locator: Complete native read-only log
+  accessed_at: '2026-10-22T02:12:32.293150Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/microneme.yaml  (GO:0020009)\n  microneme_exocytosis_host_invasion\t\
+    microneme_adhesins\tCOVERED\t->microneme_adhesins (UniProtKB:O00834, UniProtKB:B6KAM0,\
+    \ UniProtKB:S8F9G8)\n  microneme_exocytosis_host_invasion\tmic2_m2ap_complex\t\
+    PARTIAL_EXAMPLES\t->mic2_m2ap_complex (have: UniProtKB:S8F9G8; missing: M2AP)\n\
+    \ncausal_graphs GENE_OR_PROTEIN node summary:\n     1  COVERED               \
+    \    component_ref target holds protein_examples covering all declared symbols\n\
+    \     1  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     2\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: a944a1d1a9de701143c4fa94a12e5253f5d652f3feef1bbbf3e3b9a1817b80a2
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/microneme.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:02:59Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/microneme.yaml'
+  snapshot_sha256: 4f5c01eeddad02494debaaec84656da93dc97a915db6892246bd43b06582a146
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/microneme.yaml
+    --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/microneme-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:03:00Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/microneme.yaml\
+    \ --out /private/tmp/cellstructure-batch32-20261022-k96_2wx1/microneme-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch32-20261022-k96_2wx1/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch32-20261022-k96_2wx1/microneme-strict.tsv"
+  snapshot_sha256: 45f7e76da38a8072474c328931f29f137e1e103109e5ea48e2696e254033b9c5
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/microneme.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: '18 of 25 collected target identifiers returned OK. PMID:11083833: UNREACHABLE;
+    The bulk transport returned414; the independently retrieved exact MED identity
+    confirms PMID11083833, DOI10.1128/iai.68.12.7078-7086.2000 and Toxoplasma gondii
+    homologue of plasmodium apical membrane antigen 1 is involved in invasion of host
+    cells. Scientific scope remains limited to the separately documented inspections.;
+    PMID:11087913: UNREACHABLE; The bulk transport returned414; the independently
+    retrieved exact MED identity confirms PMID11087913, DOI10.1016/s0166-6851(00)00289-9
+    and The Toxoplasma homolog of Plasmodium apical membrane antigen-1 (AMA-1) is
+    a microneme protein secreted in response to elevated intracellular calcium levels.
+    Scientific scope remains limited to the separately documented inspections.; PMID:11157983:
+    UNREACHABLE; The bulk transport returned414; the independently retrieved exact
+    MED identity confirms PMID11157983, DOI10.1083/jcb.152.3.563 and Identification
+    and characterization of an escorter for two secretory adhesins in Toxoplasma gondii.
+    Scientific scope remains limited to the separately documented inspections.; PMID:15684324:
+    UNREACHABLE; The bulk transport returned414; the independently retrieved exact
+    MED identity confirms PMID15684324, DOI10.1084/jem.20041672 and Synergistic role
+    of micronemal proteins in Toxoplasma gondii virulence. Scientific scope remains
+    limited to the separately documented inspections.; PMID:16102004: UNREACHABLE;
+    The bulk transport returned414; the independently retrieved exact MED identity
+    confirms PMID16102004, DOI10.1111/j.1365-2958.2005.04772.x and Distinct mechanisms
+    govern proteolytic shedding of a key invasion protein in apicomplexan pathogens.
+    Scientific scope remains limited to the separately documented inspections.; PMID:18818666:
+    UNREACHABLE; The bulk transport returned414; the independently retrieved exact
+    MED identity confirms PMID18818666, DOI10.1038/embor.2008.179 and Structural insights
+    into microneme protein assembly reveal a new mode of EGF domain recognition. Scientific
+    scope remains limited to the separately documented inspections.; PMID:9208224:
+    UNREACHABLE; The bulk transport returned414; the independently retrieved exact
+    MED identity confirms PMID9208224 (no DOI returned in this native MED row) and
+    Sequential protein secretion from three distinct organelles of Toxoplasma gondii
+    accompanies invasion of human fibroblasts. Scientific scope remains limited to
+    the separately documented inspections. Native source checks are separately scoped;
+    skipped or unreachable identifiers are not silently counted as resolved.'
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact apical secretory organelle
+  outcome: supported
+  target_ids:
+  - GO:0020009
+  summary: The maintained definition matches active GO0020009, sarconeme has RELATED
+    scope, and native parent/apical-complex/part relations support the stated whole-organelle
+    identity.
+  evidence_ids:
+  - record
+  - microneme-agent-go
+- assessment_id: lipid
+  area: grounding
+  topic: Molecular material versus complete membrane
+  outcome: concern
+  target_ids:
+  - GO:0020009
+  summary: The LIPID component is grounded to GO0033163, which denotes the complete
+    microneme membrane rather than its chemical material. Its graph component_ref
+    repeats that equivalence. Correct has_part and whole-membrane node grounding can
+    be retained independently.
+  evidence_ids:
+  - record
+  - schema
+  - microneme-agent-go
+  - microneme-agent-dubois2019-unige-pdf
+  - membrane-neighbor
+- assessment_id: protein-components
+  area: grounding
+  topic: Diverse adhesins and MIC2–M2AP membership
+  outcome: supported
+  target_ids:
+  - GO:0020009
+  summary: MIC1/MIC2/AMA1 form an intentionally heterogeneous adhesin cohort; a MIC1-specific
+    family or shared adhesive domain is not an exact mapping of that whole cohort.
+    The MIC2–M2AP complex and efficient-invasion role are supported. Partial representative
+    references do not equate MIC2 alone to the complete complex.
+  evidence_ids:
+  - record
+  - schema
+  - microneme-agent-carruthers2008-pmc
+  - microneme-agent-huynh2003-pmc
+  - microneme-agent-huynh2006-pmc
+  - microneme-agent-O00834
+  - microneme-agent-B6KAM0
+  - microneme-agent-S8F9G8
+  - microneme-agent-gene-MIC1
+  - microneme-agent-gene-AMA1
+- assessment_id: necessity
+  area: evidence
+  topic: Constitution, functional dependence and formation
+  outcome: unknown
+  target_ids:
+  - GO:0020009
+  summary: The bilayer is constitutive of a membrane-bounded organelle but individual
+    lipid formation requirements were not measured. Adhesin/complex essentiality remains
+    UNKNOWN; invasion and trafficking phenotypes do not establish microneme assembly
+    necessity, and other microneme markers persist under MIC2 depletion.
+  evidence_ids:
+  - record
+  - schema
+  - microneme-agent-huynh2003-pmc
+  - microneme-agent-huynh2006-pmc
+  - microneme-agent-dubois2019-unige-pdf
+- assessment_id: scope
+  area: scope
+  topic: Species, stage and representative strain scope
+  outcome: supported
+  target_ids:
+  - GO:0020009
+  summary: RARE in Eukaryota and COMMON in Apicomplexa are qualitative lineage descriptions,
+    not all-species or all-stage universality. Theileria and species/stage variation
+    are explicit review limits. RH-derived experiments remain distinct from native
+    VEG/ME49 protein identities; the latter are representative Toxoplasma protein
+    links, not claimed experimental constructs.
+  evidence_ids:
+  - record
+  - microneme-agent-carruthers2008-pmc
+  - microneme-agent-dubois2019-unige-pdf
+  - microneme-agent-huynh2003-pmc
+  - microneme-agent-huynh2006-pmc
+  - microneme-agent-brown2016-pmc
+  - microneme-agent-tax2759
+  - microneme-agent-tax5794
+  - microneme-agent-tax5811
+  - microneme-agent-tax432359
+  - microneme-agent-tax508771
+  - microneme-agent-O00834
+  - microneme-agent-B6KAM0
+  - microneme-agent-S8F9G8
+- assessment_id: canonical
+  area: evidence
+  topic: Canonical note exceeds its sole paper
+  outcome: concern
+  target_ids:
+  - GO:0020009
+  summary: The1997 paper supports sequential microneme secretion in Toxoplasma. Its
+    canonical note additionally names MIC2–M2AP and PKG experiments, supported by
+    separately listed2003/2006/2016 sources but not this sole claim-level citation.
+  evidence_ids:
+  - record
+  - microneme-agent-carruthers1997-pmc
+  - microneme-agent-huynh2003-pmc
+  - microneme-agent-huynh2006-pmc
+  - microneme-agent-brown2016-pmc
+- assessment_id: functions
+  area: evidence
+  topic: Regulated secretion and host attachment/invasion
+  outcome: supported
+  target_ids:
+  - GO:0020009
+  summary: Both functions are supported within the cited RH-derived studies and broader
+    review context. PKG signaling is experimentally linked to secretion; the graph
+    does not prescribe an unsupported calcium-only signal. Efficient/rapid invasion
+    does not mean absolute inability to invade after M2AP or MIC2 perturbation.
+  evidence_ids:
+  - record
+  - microneme-agent-carruthers1997-pmc
+  - microneme-agent-huynh2003-pmc
+  - microneme-agent-huynh2006-pmc
+  - microneme-agent-brown2016-pmc
+  - microneme-agent-carruthers2008-pmc
+- assessment_id: cargo-topology
+  area: graph
+  topic: Luminal contents versus complete transmembrane complexes
+  outcome: concern
+  target_ids:
+  - GO:0020009
+  summary: The two resides-in-lumen edges apply to the whole heterogeneous adhesin
+    cohort and whole MIC2–M2AP complex. MIC2 has a transmembrane segment/cytosolic
+    tail and AMA1 is also a transmembrane protein. Luminal extracellular domains and
+    soluble M2AP differ from wholly lumen-contained proteins. The descriptions already
+    say stored in micronemes, making a bounded endpoint/qualification correction sufficient.
+  evidence_ids:
+  - record
+  - lumen-neighbor
+  - microneme-agent-go
+  - microneme-agent-carruthers2008-pmc
+  - microneme-agent-huynh2003-pmc
+  - microneme-agent-huynh2006-pmc
+  - microneme-agent-O00834
+  - microneme-agent-B6KAM0
+  - microneme-agent-S8F9G8
+- assessment_id: causal-chain
+  area: graph
+  topic: Experimental signaling and secretion-to-invasion chain
+  outcome: supported
+  target_ids:
+  - GO:0020009
+  summary: Apart from material grounding and the two over-specific cargo locations,
+    the eight-edge graph has source-supported boundary, signaling, release and invasion
+    relationships. MECHANISTIC is defensible because it contains an intervention-supported
+    signaling transition, not only parthood. Precise docking/fusion actors, proteolytic
+    steps and complete molecular kinetics remain unresolved.
+  evidence_ids:
+  - record
+  - microneme-agent-dubois2019-unige-pdf
+  - microneme-agent-carruthers1997-pmc
+  - microneme-agent-huynh2003-pmc
+  - microneme-agent-brown2016-pmc
+  - microneme-agent-carruthers2008-pmc
+- assessment_id: completeness
+  area: completeness
+  topic: Open family and complex identifier follow-up
+  outcome: unknown
+  target_ids:
+  - GO:0020009
+  summary: No exact class-wide adhesin family or universal complete complex identifier
+    is established by the inspected sources. MIC1 family/domain matches are narrower
+    than the cohort. Optional subunits, stoichiometry and additional machinery are
+    not mandatory findings.
+  evidence_ids:
+  - record
+  - microneme-agent-carruthers2008-pmc
+  - microneme-agent-dubois2019-unige-pdf
+  - microneme-agent-O00834
+  - microneme-agent-B6KAM0
+  - microneme-agent-S8F9G8
+findings:
+- finding_id: F1
+  issue_key: microneme-lipid-whole-membrane-grounding
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate the lipid constituent from the complete membrane identity
+  description: The microneme_membrane LIPID component uses GO0033163, the entire microneme
+    membrane, as molecular grounding; the graph membrane node also links to that component.
+    The frozen schema distinguishes molecular lipid identity from a whole cellular
+    structure.
+  target_ids:
+  - GO:0020009
+  field_paths:
+  - components[component_id=microneme_membrane].grounding
+  - components[component_id=microneme_membrane].component_type
+  - causal_graphs[graph_id=microneme_exocytosis_host_invasion].nodes[node_id=microneme_membrane].component_ref
+  evidence_ids:
+  - record
+  - schema
+  - microneme-agent-go
+  - membrane-neighbor
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:identity and source scope
+  native_severity: major
+  normalization_reason: This materially misidentifies the structured molecular constituent,
+    despite correct organelle identity and has_part topology. It requires a scientific
+    representation correction, not just a citation-format change.
+- finding_id: F2
+  issue_key: microneme-transmembrane-cargo-lumen-qualification
+  category: graph
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify lumen localization of transmembrane adhesin complexes
+  description: The whole MIC2–M2AP complex and MIC1/MIC2/AMA1 cohort are linked as
+    residing in the lumen. MIC2 and AMA1 span membranes and have cytosolic domains;
+    the whole complex is not identical to its luminal adhesive domains or soluble
+    M2AP.
+  target_ids:
+  - GO:0020009
+  field_paths:
+  - causal_graphs[graph_id=microneme_exocytosis_host_invasion].edges[subject=microneme_adhesins,object=microneme_lumen]
+  - causal_graphs[graph_id=microneme_exocytosis_host_invasion].edges[subject=mic2_m2ap_complex,object=microneme_lumen]
+  evidence_ids:
+  - record
+  - microneme-agent-carruthers2008-pmc
+  - microneme-agent-huynh2006-pmc
+  - microneme-agent-O00834
+  - microneme-agent-B6KAM0
+  - microneme-agent-S8F9G8
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:identity and source scope
+  native_severity: minor
+  normalization_reason: The underlying microneme localization, membership and causal
+    function are correct, and edge descriptions already state whole-organelle storage.
+    The error is the local over-specific lumen endpoint, correctable without replacing
+    the organelle or mechanism.
+- finding_id: F3
+  issue_key: microneme-canonical-multiple-study-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Match the canonical example clauses to their supporting studies
+  description: The sole canonical PMID9208224 supports sequential secretion, but its
+    note also names MIC2–M2AP and PKG-regulated exocytosis experiments supplied by
+    other papers already present in the record.
+  target_ids:
+  - GO:0020009
+  field_paths:
+  - canonical_examples[0].note
+  - canonical_examples[0].reference
+  evidence_ids:
+  - record
+  - microneme-agent-carruthers1997-pmc
+  - microneme-agent-huynh2003-pmc
+  - microneme-agent-brown2016-pmc
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:identity and source scope
+  native_severity: minor
+  normalization_reason: All biological claims are supported elsewhere in the record;
+    the defect is bounded claim-level citation placement.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0020009
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, represent collective lipid material
+    with justified chemical grounding or reviewed label-only status, and retain the
+    complete membrane as a structural part without an invalid molecular equivalence.
+  acceptance_checks:
+  - Retain GO0033163 for the whole membrane and correct has_part relation.
+  - A LIPID component no longer asserts GO0033163 as its chemical identity; any graph
+    component_ref has a defensible material-to-boundary meaning.
+  - Do not invent microneme-specific lipid species or assembly requirements.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - GO:0020009
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, point the whole cohort/complex localization
+    to the microneme or explicitly distinguish soluble/luminal portions from transmembrane
+    and cytosolic domains.
+  acceptance_checks:
+  - Whole MIC2–M2AP and transmembrane AMA1 are not represented as wholly soluble lumen
+    contents.
+  - Preserve valid luminal M2AP/adhesive-domain context and source-supported microneme
+    localization; do not infer detailed orientation for every cohort member.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - GO:0020009
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/microneme.yaml
+    role: maintained scientific record
+  description: In separately authorized curation, narrow the canonical note to the1997
+    experiment or attach the separately verified complex and PKG studies to their
+    respective clauses.
+  acceptance_checks:
+  - The1997 citation is not the sole evidentiary support for later MIC2–M2AP or PKG
+    experiments.
+  - Preserve correct Toxoplasma identity and actual RH-derived contexts.
+limitations:
+- Carruthers2008 and Dubois2019 are literature reviews, not new experimental proof.
+  Dubois was read as an accepted author manuscript; the direct publisher route403
+  remains preserved. No copyright license is inferred or image reused.
+- 'Primary source read scopes are exact in evidence: no complete2003 Methods or raw
+  perturbation reanalysis, no2006 supplementary videos/Table1 numerical reanalysis,
+  and only selected2016 Methods. No figure pixels were inspected.'
+- The1997 primary body is a recovered author manuscript; its complete scientific main
+  text and Methods were read. The six additional localization papers were checked
+  at exact native metadata/abstract and UniProt evidence-link level, not as fully
+  read papers.
+- Native VEG/ME49 examples are distinct from RH experimental lines. Identity verification
+  does not establish strain-specific experimental equivalence; current exact reviewed
+  query counts are bounded.
+- Membership, secretion, adhesion, virulence and organelle formation necessity are
+  separate. No universal apicomplexan stage distribution, complete molecular inventory,
+  chemical lipid recipe or resolved fusion machinery is asserted.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- Original URL/UTC/SHA receipts retained; no maintained content edited. Parent owns
+  finalization.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.

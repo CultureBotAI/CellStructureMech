@@ -27,6 +27,12 @@ curation_history:
   changes: 'Resolved #1748 by preserving the GO uncertainty qualifier on the cytokinesis-factor
     compartment interpretation in the split-ring function and topology graph descriptions.'
   llm_assisted: true
+- timestamp: '2026-11-03T05:55:10Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Linked septin_proteins component into bud_neck_split_septin_rings_topology
+    causal graph.
+  llm_assisted: true
 parent_structures:
 - GO:0032176
 - GO:0032161
@@ -104,6 +110,10 @@ causal_graphs:
     label: cellular bud neck
     node_type: STRUCTURE
     grounding: GO:0005935
+  - node_id: septin_proteins
+    label: septin proteins
+    node_type: GENE_OR_PROTEIN
+    component_ref: septin_proteins
   edges:
   - subject: cellular_bud_neck_septin_collar
     predicate: splits into
@@ -133,6 +143,18 @@ causal_graphs:
       notes: GO:0032177 identifies the bud-neck-localized split septin rings.
     - reference: GO:0005935
       notes: GO:0005935 identifies the cellular bud neck.
+  - subject: septin_proteins
+    predicate: assemble into
+    object: cellular_bud_neck_split_septin_rings
+    description: Septin GTPase subunits form the two cytokinetic rings produced when
+      the bud-neck septin collar splits.
+    evidence:
+    - reference: GO:0032177
+      notes: GO:0032177 defines the cellular bud neck split septin rings as two septin
+        rings formed from the bud-neck septin collar.
+    - reference: GO:0032161
+      notes: GO:0032161 defines cleavage-apparatus septin structures as septin- and
+        septin-associated-protein structures localized to the cleavage plane.
 discussions:
 - discussion_id: bud_neck_split_septin_rings_boundary
   prompt: Keep the cellular bud neck split septin rings distinct from the initial

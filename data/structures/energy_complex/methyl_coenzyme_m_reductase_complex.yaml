@@ -42,6 +42,14 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-25T12:15:00Z'
+  curator: antigravity
+  action: ADDRESS_SAVED_REVIEW
+  changes: 'Addressed #2432 (finding energy-complex-mcr-causal-node-component-ref-grounding):
+    propagated verified component grounding to causal_graphs component_ref node(s):
+    mcr_alpha_subunit (InterPro:IPR016212), mcr_beta_subunit (InterPro:IPR003179),
+    mcr_gamma_subunit (InterPro:IPR003178).'
+  llm_assisted: true
 parent_structures:
 - GO:1990234
 components:
@@ -227,14 +235,17 @@ causal_graphs:
     label: Methyl coenzyme M reductase, alpha subunit
     node_type: GENE_OR_PROTEIN
     component_ref: mcr_alpha_subunit
+    grounding: InterPro:IPR016212
   - node_id: mcr_beta_subunit
     label: Methyl-coenzyme M reductase, beta subunit
     node_type: GENE_OR_PROTEIN
     component_ref: mcr_beta_subunit
+    grounding: InterPro:IPR003179
   - node_id: mcr_gamma_subunit
     label: Methyl-coenzyme M reductase, gamma subunit
     node_type: GENE_OR_PROTEIN
     component_ref: mcr_gamma_subunit
+    grounding: InterPro:IPR003178
   - node_id: coenzyme_b
     label: coenzyme B
     node_type: CHEMICAL

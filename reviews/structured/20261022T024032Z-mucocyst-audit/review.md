@@ -1,0 +1,1104 @@
+# Mucocyst identity and source review
+
+- Review: 20261022T024032Z-mucocyst-audit
+- Repository: CultureBotAI/CellStructureMech
+- Started UTC: 2026-10-22T02:27:35Z
+- Finished UTC: 2026-10-22T02:40:32Z
+- Reviewer: Codex (unknown)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Mucocyst identity and bounded cargo/secretion biology are supported. One major finding corrects the MDL1 protein example; the conditional historical inventory boundary remains a documented limitation.
+
+## Scope And Provenance
+
+Entire single record: identity, hierarchy, components, protein examples, taxonomy, functions, every graph edge and discussions.
+
+Selection: Target 6 of batch34 in strict uncovered path order from fresh origin/main f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| GO:0036000 | data/structures/membrane_organelle/mucocyst.yaml | maintained | mucocyst |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native protein verify | passed | True | GO:0036000 | Focused native check passed; literature-to-gene identity independently reviewed. |
+| Native protein causal-graphs | passed | True | GO:0036000 | Focused native check passed; literature-to-gene identity independently reviewed. |
+| Focused native schema | passed | True | GO:0036000 | Focused validator passed. |
+| Focused native strict | passed | True | GO:0036000 | Focused validator passed. |
+| Expression-module applicability | not_applicable | False | GO:0036000 | No claimed iModulon membership or expression module used as mechanism evidence; primary localization and perturbation evidence inspected. |
+| Claim-level scientific review | passed | True | GO:0036000 | All required claim-level inspections completed; findings and scope limitations are recorded separately. |
+| Exact target resolver slice with scoped native residual resolution | passed | True | GO:0036000 | 14 of 14 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| Full corpus QC | passed | True | GO:0036000 | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| Repository history validation | passed | True | GO:0036000 | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| Controlled vocabulary label validation | passed | True | GO:0036000 | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| Trait reference validation | passed | True | GO:0036000 | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| Strict identifier resolver command | passed | True | GO:0036000 | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Scientific And Domain Assessments
+
+### Exact secretory organelle
+
+identity: supported. Targets: GO:0036000.
+
+GO supports mucocyst identity and secretory-granule ancestry. The cited Tetrahymena studies support a membrane-bounded mature cargo compartment, distinct from cargo proteins and upstream maturation intermediates.
+
+### Cargo cohorts and membrane machinery
+
+grounding: supported. Targets: GO:0036000.
+
+Grl lattice cargo, Grt tip cargo and the MDD abstraction are supported with study-specific limitations. The lipid row is label-only and does not equate a whole-structure CURIE with a chemical class. Broad domain matches do not automatically supply exact cohort or whole-complex groundings.
+
+### MDL1 protein example
+
+grounding: concern. Targets: GO:0036000.
+
+Five Grl/Grt accession/name/taxon examples agree with native entries. The sixth example falsely maps MDL1 to a different locus and proteasome-family protein; the primary paper and exact native locus search establish a concrete wrong-instance error.
+
+### Model-organism and strain scope
+
+scope: supported. Targets: GO:0036000.
+
+The cited studies directly examine Tetrahymena thermophila; native species and SB210 strain taxonomy agree. Source genetic backgrounds such as CU428 and experimental mutant lines are not conflated with the genome-reference strain used for protein identity.
+
+### Seven topology, cargo and secretion edges
+
+graph: supported. Targets: GO:0036000.
+
+Topology and Grl lattice storage are supported. Grt independence retains the paper experimental limits. MDD tip placement is an abstraction anchored most directly by Mdl1, while co-localization/interaction evidence supports the complex; no molecular fusion sequence is claimed by the NONMECHANISTIC graph.
+
+### Formation versus docking and function
+
+grounding: unknown. Targets: GO:0036000.
+
+Collective membrane material is constitutional, but its ESSENTIAL label is not an experiment testing formation without lipid. Protein rows retain UNKNOWN; Mdl1 knockout affects docking, not demonstrated formation failure. GRT1/GRT2 dispensability in the tested system does not establish universal family dispensability.
+
+### Resolved upstream-factor exclusion
+
+evidence: unknown. Targets: GO:0036000.
+
+The resolved discussion records a historical selection policy: mature localization is necessary for inclusion, without asserting that localization is absent or sufficient. Kaur observes induced Stx7l1p-GFP in mature docked mucocysts as well as immature compartments. This supports optional clarification of the inventory boundary, not a confirmed contradiction or mandatory inventory addition. Mma1 and AP-3 have distinct localization limits; mature syntaxin localization does not establish an exocytic fusion role.
+
+### Whole bounded record
+
+completeness: supported. Targets: GO:0036000.
+
+All current fields, seven graph edges, component examples and discussions were assessed. Exact missing family groundings and additional cargo inventory remain bounded opportunities rather than automatic defects. The single reported finding is a concrete paper-to-protein identity contradiction.
+
+## Findings
+
+### F1: Correct the MDL1 protein example
+
+major / open / confirmed; issue key: mucocyst-1.
+
+The MDD component names MDL1 but its protein example I7M6L0 carries TTHERM_00471830. Kuppannan explicitly names MDL1 as TTHERM_00658810,346aa; native UniProt resolves that locus to I7MM25. I7M6L0 is392aa and matches the S5A/Rpn10 proteasome family. Its role and evidence notes incorrectly assert a literature-gene equivalence despite passing native field correspondence.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Replace or remove the wrong protein example and its MDL1 attribution. If using the exact-locus I7MM25 candidate, retain its verified UNREVIEWED status, SB210 taxon, native protein name and locus; cite the primary paper for the MDL1 mapping and membership. Do not replace the complete MDD complex identity with one subunit.
+
+- Verify exact paper locus, native identity and claim-specific source scope.
+- After separately authorized curation, run focused schema/strict and native protein verification; native success alone does not validate literature-symbol attribution.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/structures/membrane_organelle/mucocyst.yaml; Entire maintained target, every graph edge, component, discussion and historical event | context_only | Complete scientific target read; no scientific edits or status promotion. |
+| policy | src/cellstructuremech/schema/cellstructuremech.yaml; StructuralComponent, protein_examples, essentiality and graph actor semantics | context_only | Protein examples identify concrete gene products; functional necessity and organelle-formation necessity are distinct. Optional inventory slots do not automatically create defects. |
+| root34-sources-go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070074,GO:0043231,GO:0020007,GO:0020025,GO:0020009,GO:0020008,GO:0020026,GO:0036000,GO:0030141; Complete nine entries, including all typed relations and synonym scopes | supports | All nine native entries are active and exact identities, definitions, comments and typed children agree. Mononeme is a part of the apical complex and an intracellular membrane-bounded organelle; mucocyst is a secretory-granule subtype. Adjacent apical organelle identities are distinct. |
+| root34-sources-GO0036000-isa | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0036000/ancestors?relations=is_a; Complete ancestor list queried with relations=is_a | supports | Native is_a-only ancestry supports the declared parent without conflating parthood. |
+| root34-sources-tax5911 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5911; Complete taxId, scientificName, rank, lineage and otherNames | supports | Exact scientific name, taxon ID, rank and lineage verified. Species/strain identity is distinct from measured prevalence. |
+| root34-sources-tax312017 | https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/312017; Complete taxId, scientificName, rank, lineage and otherNames | supports | Exact scientific name, taxon ID, rank and lineage verified. Species/strain identity is distinct from measured prevalence. |
+| root34-sources-kontur2016-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1534/g3.116.028878%22; Complete MED identity and abstractText | supports | Exact title, authors, DOI 10.1534/g3.116.028878, PMID 27317773, year and complete abstract checked. Native abstract reading is separate from the explicitly scoped full text. |
+| root34-sources-rahaman2009-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1128/EC.00151-09%22; Complete MED identity and abstractText | supports | Exact title, authors, DOI 10.1128/ec.00151-09, PMID 19684282, year and complete abstract checked. Native abstract reading is separate from the explicitly scoped full text. |
+| root34-sources-kuppannan2022-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1371/journal.pgen.1010194%22; Complete MED identity and abstractText | supports | Exact title, authors, DOI 10.1371/journal.pgen.1010194, PMID 35587496, year and complete abstract checked. Native abstract reading is separate from the explicitly scoped full text. |
+| root34-sources-kaur2017-meta | https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&amp;resultType=core&amp;query=DOI%3A%2210.1091/mbc.e17-01-0018%22; Complete MED identity and abstractText | supports | Exact title, authors, DOI 10.1091/mbc.e17-01-0018, PMID 28381425, year and complete abstract checked. Native abstract reading is separate from the explicitly scoped full text. |
+| root34-sources-P90618 | https://rest.uniprot.org/uniprotkb/P90618.json; primaryAccession, entryType, proteinDescription, genes, organism, complete comments and sequence length | supports | Exact primary accession, UNREVIEWED status, gene/locus tokens, protein name, taxonomy and comments inspected. Automated comments are not independent experimental localization evidence. |
+| root34-sources-O76218 | https://rest.uniprot.org/uniprotkb/O76218.json; primaryAccession, entryType, proteinDescription, genes, organism, complete comments and sequence length | supports | Exact primary accession, UNREVIEWED status, gene/locus tokens, protein name, taxonomy and comments inspected. Automated comments are not independent experimental localization evidence. |
+| root34-sources-ipr-O76218 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O76218/?page_size=200; All returned metadata, types, member signatures and protein-matching locations; no sequence alignment or structure prediction performed | supports | Complete returned integrated matches and next=null inspected. Domains and broad families are not substituted for exact local cargo-cohort or complex identity. |
+| root34-sources-O76219 | https://rest.uniprot.org/uniprotkb/O76219.json; primaryAccession, entryType, proteinDescription, genes, organism, complete comments and sequence length | supports | Exact primary accession, UNREVIEWED status, gene/locus tokens, protein name, taxonomy and comments inspected. Automated comments are not independent experimental localization evidence. |
+| root34-sources-ipr-O76219 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O76219/?page_size=200; All returned metadata, types, member signatures and protein-matching locations; no sequence alignment or structure prediction performed | supports | Complete returned integrated matches and next=null inspected. Domains and broad families are not substituted for exact local cargo-cohort or complex identity. |
+| root34-sources-Q3S4V5 | https://rest.uniprot.org/uniprotkb/Q3S4V5.json; primaryAccession, entryType, proteinDescription, genes, organism, complete comments and sequence length | supports | Exact primary accession, UNREVIEWED status, gene/locus tokens, protein name, taxonomy and comments inspected. Automated comments are not independent experimental localization evidence. |
+| root34-sources-ipr-Q3S4V5 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q3S4V5/?page_size=200; All returned metadata, types, member signatures and protein-matching locations; no sequence alignment or structure prediction performed | supports | Complete returned integrated matches and next=null inspected. Domains and broad families are not substituted for exact local cargo-cohort or complex identity. |
+| root34-sources-Q2I2L7 | https://rest.uniprot.org/uniprotkb/Q2I2L7.json; primaryAccession, entryType, proteinDescription, genes, organism, complete comments and sequence length | supports | Exact primary accession, UNREVIEWED status, gene/locus tokens, protein name, taxonomy and comments inspected. Automated comments are not independent experimental localization evidence. |
+| root34-sources-ipr-Q2I2L7 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q2I2L7/?page_size=200; All returned metadata, types, member signatures and protein-matching locations; no sequence alignment or structure prediction performed | supports | Complete returned integrated matches and next=null inspected. Domains and broad families are not substituted for exact local cargo-cohort or complex identity. |
+| root34-sources-I7M6L0 | https://rest.uniprot.org/uniprotkb/I7M6L0.json; primaryAccession, entryType, proteinDescription, genes, organism, complete comments and sequence length | supports | Exact primary accession, UNREVIEWED status, gene/locus tokens, protein name, taxonomy and comments inspected. Automated comments are not independent experimental localization evidence. The MDL1 literature-to-locus attribution is evaluated separately. |
+| root34-sources-ipr-I7M6L0 | https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/I7M6L0/?page_size=200; All returned metadata, types, member signatures and protein-matching locations; no sequence alignment or structure prediction performed | supports | Complete returned integrated matches and next=null inspected. Domains and broad families are not substituted for exact local cargo-cohort or complex identity. I7M6L0 matches a proteasome regulatory-subunit family rather than the cited Mdl1 LamG protein. |
+| root34-sources-kontur2016-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4978903/fullTextXML; Complete s2 including Table1, s13,s15,s30,s31,s32,s33 with embedded captions; other sections/supplements not certified read | supports | UC620 mutant analysis, MMA1 knockout and rescue support maturation defects; Grl precursor processing and mature docked mucocysts distinguish biogenesis from secretion. Induced Mma1p-CFP is predominantly soluble, partly pelletable and not significantly colocalized with docked mucocysts. |
+| root34-sources-rahaman2009-pmc-exact | https://pmc.ncbi.nlm.nih.gov/articles/PMC2756869/; Complete sec2,3,6,8,9,13,14,15,17,18,19 and embedded captions; sec16 and unlisted Methods/supplements/pixels not certified read | supports | Exact DOI/title verified. CU428.1 and SB281 experiments distinguish Grl lattice cargo from Grt proteins. Detergent gel filtration and affinity assays show distinct complexes under the tested conditions; double GRT1/GRT2 disruption preserves cargo, lattice and stimulated secretion. Independent trafficking is supported but wild-type/TGN condition-dependent interactions are explicitly not excluded. |
+| root34-sources-kuppannan2022-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9159632/fullTextXML; Complete sec004-009 including embedded main captions; sec011,025,026,027,029 Methods. No supplementary tables, image pixels or raw proteomics reanalysis | supports | The paper explicitly identifies MDL1 as TTHERM_00658810, encoding346aa with a LamG domain. Mdl1 localizes to mucocyst tips before docking; gene deletion impairs docking and secretion while maturation persists. Physical interactions, sedimentation and negative-stain particle analysis support a putative MDD complex. Localization of other members and assembly dependencies are less resolved than the Mdl1 experiments. |
+| root34-sources-kaur2017-xml | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5449153/fullTextXML; Complete sec6,7,8,12,14,16,22,23 including Fig3-6 captions; unlisted Results/Methods and supplements/pixels not certified read | supports | Kaur distinguishes AP-3-dependent maturation from syntaxin-dependent organelle formation. Induced Stx7l1p-GFP colocalizes with Grl3p in both mature docked mucocysts and arrested immature compartments. AP-3 localization could not be resolved because tagged protein aggregated. Mature localization does not establish a syntaxin role in exocytic fusion. |
+| root34-sources-mdl1-native-search | https://rest.uniprot.org/uniprotkb/search?format=json&amp;size=25&amp;query=%28gene%3ATTHERM_00658810%29%20AND%20%28taxonomy_id%3A5911%29; Complete single search result, native primary accession, gene tokens, taxonomy, name, sequence length and domain/features; query visible in source URL | supports | The returned entry I7MM25 has the exact paper locus TTHERM_00658810,346aa, taxon312017, UNREVIEWED status and Concanavalin A-like lectin/glucanase name. This contrasts with target I7M6L0/TTHERM_00471830,392aa. Candidate identity is established by the exact locus, not by assuming similarly named genes equivalent. |
+| root34-sources-IPR027040 | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027040/; Native metadata, family hierarchy and complete description; literature list inspected as metadata only | supports | The issuing authority describes PSMD4/Rpn10/S5A as a26S proteasome regulatory subunit that binds ubiquitin conjugates. I7M6L0 native protein match corroborates the categorical mismatch, but automated family assignment is not an experimental localization claim. |
+| native-verify | /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/mucocyst.yaml --verify; Entire captured focused native log | supports | all UniProtKB protein_examples and causal_graphs xrefs verified ok |
+| native-causal-graphs | /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python scripts/uniprot_genes.py --record data/structures/membrane_organelle/mucocyst.yaml --causal-graphs; Entire captured focused native log | supports | data/structures/membrane_organelle/mucocyst.yaml  (GO:0036000)<br>  mucocyst_docking_and_exocytosis	granule_lattice_proteins	COVERED	-&gt;granule_lattice_proteins (UniProtKB:P90618, UniProtKB:O76218, UniProtKB:O76219)<br>  mucocyst_docking_and_exocytosis	granule_tip_proteins	COVERED	-&gt;granule_tip_proteins (UniProtKB:Q3S4V5, UniProtKB:Q2I2L7)<br>  mucocyst_docking_and_exocytosis	mucocyst_docking_discharge_complex	COVERED	-&gt;mucocyst_docking_discharge_complex (UniProtKB:I7M6L0)<br><br>causal_graphs GENE_OR_PROTEIN node summary:<br>     3  COVERED                   component_ref target holds protein_examples covering all declared symbols<br>     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples but has unrepresented symbols<br>     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref target declares gene_symbols but holds no protein_examples<br>     0  NO_GENE_SYMBOLS           component_ref target declares no gene_symbols and holds no protein_examples<br>     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does not exist on the record<br>     0  UNANCHORED_WITH_UNIPROT   no component_ref, but node carries a UniProtKB grounding or xref<br>     0  UNANCHORED_NO_UNIPROT     no component_ref and no UniProtKB grounding or xref on the node<br>     3  total GENE_OR_PROTEIN causal nodes |
+| schema-result | just validate data/structures/membrane_organelle/mucocyst.yaml; Captured focused validator log | supports | No issues found<br>uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml --target-class CellStructureRecord data/structures/membrane_organelle/mucocyst.yaml |
+| strict-result | just validate-strict data/structures/membrane_organelle/mucocyst.yaml --out /private/tmp/cellstructure-batch34-20261022-36gi391b/mucocyst-strict.tsv; Captured focused validator log | supports | uv run python scripts/validate_strict.py data/structures/membrane_organelle/mucocyst.yaml --out /private/tmp/cellstructure-batch34-20261022-36gi391b/mucocyst-strict.tsv<br>Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch34-20261022-36gi391b/repo/src/cellstructuremech/schema/cellstructuremech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                /private/tmp/cellstructure-batch34-20261022-36gi391b/mucocyst-strict.tsv |
+| target-curies | just check-curies-strict; data/structures/membrane_organelle/mucocyst.yaml; native collect() exact identifier slice; SHA identifies full original TSV | supports | 14 of 14 collected target identifiers returned OK. No residuals. Native source checks are separately scoped; skipped or unreachable identifiers are not silently counted as resolved. |
+| global-qc-result | just qc; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history, strict schema, generated-site consistency and corpus-report stages. |
+| global-history-result | just validate-history; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. All 1888 history records validated; URI precheck reported zero invalid references. |
+| global-products-result | just validate-products; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659 SKIPPED_NO_ADAPTER. Skips are not successful authority verification. |
+| global-traits-result | just check-trait-links --check; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled. |
+| global-curies-result | just check-curies-strict; Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc; stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2; input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02 | supports | Exit0. Native resolver control: every resolver accepts a known id and rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE. Transport failures and skipped prefixes are not proof of identifier resolution; exact target residuals are assessed separately. |
+
+## Limits And Additional Notes
+
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated here; every manifested source input is identical at the shared base.
+- Scientific reading is limited to the explicit source sections below. No source figure pixels, supplementary datasets or raw experiments were reanalyzed. Taxonomic COMMON is qualitative, not a measured prevalence.
+- Failed HTTP406 XML attempts are retained. An initially wrong Rahaman PMC response was identified by title and DOI and excluded; the correct PMC2756869 article was independently verified and read.
+- Current protein instances are all unreviewed entries; their presence is an identity claim, not proof of structural membership. Domains and broad family matches do not establish an exact whole-cohort grounding.
+- P90618 integrated InterPro request returned204 with an empty body; no family absence outside this endpoint is inferred. Other returned family/domain matches are broader than exact cargo cohorts.
+- The native protein validator passed because accession/name/taxon fields correspond; it does not establish the MDL1-to-locus literature mapping. The source-level finding remains major.
+- MDD complex tip localization is chiefly anchored by Mdl1; other subunits were localized to mucocysts with stated imaging limitations. Complex assembly and individual-subunit mechanisms remain unresolved.
+- No source establishes universal organelle-formation necessity for a fixed membrane lipid composition. Kaur syntaxin localization used an induced GFP construct and is not proof of a role in mature exocytic fusion.
+- Kaur sec8 and Fig6 report mature docked Stx7l1p-GFP localization under induced-expression conditions. The historical discussion states a conditional selection policy and does not explicitly deny this observation; optional clarification is not treated as a confirmed record error or a requirement to expand the component inventory.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological findings. Exact target residuals were resolved only through the separately reviewed evidence mapping.
+- The user explicitly authorizes one bundle for every uncovered record, including honest zero-finding observations.
+- Only this review bundle is intended for persistence. Maintained scientific content, native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver evidence. Earlier draft-stage statements that these checks were pending are superseded by the completed checks here; scientific access and assay limitations remain in force.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T024032Z-mucocyst-audit
+kind: record
+repository: CultureBotAI/CellStructureMech
+title: Mucocyst identity and source review
+started_at: '2026-10-22T02:27:35Z'
+finished_at: '2026-10-22T02:40:32Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: unknown
+  independence_basis: Current source review does not establish independent historical
+    authorship.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Mucocyst identity and bounded cargo/secretion biology are supported. One
+  major finding corrects the MDL1 protein example; the conditional historical inventory
+  boundary remains a documented limitation.
+source:
+  git_revision: f97b1abe2d78971b6f66b9083087d7a94cf3c0cc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: e6b9e4b16a58c54402bed7bbee2c8b94a91d37562e8b0ee8b94ff0c829184a70
+    role: context
+  - path: .claude/skills/literature-evidence/SKILL.md
+    sha256: f7c3c594b5fb2cd7d4d700844fce3b97c91cc382d4fdca8b2e2a96cf16abd41b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: 0d7a6cb0c6d72c42fc24335c8b587a15c12d5764ff27270112a814e2e0e3d550
+    role: context
+  - path: .claude/skills/uniprot-protein-examples/SKILL.md
+    sha256: 6462894c8257823bae2b175c34693cd42f11ff9269a3829c15b9286ba6d7c876
+    role: context
+  - path: CLAUDE.md
+    sha256: c587a437d59a8babb39169ebc7250982c73d5a23a88d6f5bb15104624ddf33f6
+    role: context
+  - path: data/structures/membrane_organelle/mucocyst.yaml
+    sha256: 5be0c727236d287685859cb323b9e0b109da3c26398bfe2d9adbe00f81f4b5bc
+    role: target
+  - path: docs/CURATION.md
+    sha256: 097a600e001c28cb1749faa2f1cc5e75b678a459df9b348aa3ef599a6405cbe4
+    role: context
+  - path: docs/SCHEMA.md
+    sha256: 07b8f936a553a45cc6e8dba924c21e6af48c81b3866725efeb00c8183f0c75a2
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 6a49c8d35f0a94082a9ad0b8bd8c6a929d85de8339141955f3779bd7ab0eb7e4
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 634d060fd0c11a6ce8a3441a36341d03ac7c29bdeb50fb560ad9c4f77b190f4f
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/uniprot_genes.py
+    sha256: feb9042b212bc639bc2603c186c6e328fa142c2641e93fc1418ad5a14e1d5faf
+    role: context
+  - path: src/cellstructuremech/schema/cellstructuremech.yaml
+    sha256: adbf5dfc7dc2eb87cfbc8c827b0a5a9f4346e9b7724fea93f7b294569e759944
+    role: context
+targets:
+- target_id: GO:0036000
+  path: data/structures/membrane_organelle/mucocyst.yaml
+  label: mucocyst
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mucocyst.yaml
+    role: maintained scientific record
+scope:
+  description: 'Entire single record: identity, hierarchy, components, protein examples,
+    taxonomy, functions, every graph edge and discussions.'
+  selection: Target 6 of batch34 in strict uncovered path order from fresh origin/main
+    f97b1abe2d78971b6f66b9083087d7a94cf3c0cc.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - GO:0036000
+checks:
+- check_id: native-verify
+  name: Native protein verify
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  command: /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/mucocyst.yaml
+    --verify
+  exit_code: 0
+  summary: Focused native check passed; literature-to-gene identity independently
+    reviewed.
+  evidence_ids:
+  - native-verify
+- check_id: native-causal-graphs
+  name: Native protein causal-graphs
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  command: /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/mucocyst.yaml
+    --causal-graphs
+  exit_code: 0
+  summary: Focused native check passed; literature-to-gene identity independently
+    reviewed.
+  evidence_ids:
+  - native-causal-graphs
+- check_id: schema
+  name: Focused native schema
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  command: just validate data/structures/membrane_organelle/mucocyst.yaml
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - schema-result
+- check_id: strict
+  name: Focused native strict
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  command: just validate-strict data/structures/membrane_organelle/mucocyst.yaml --out
+    /private/tmp/cellstructure-batch34-20261022-36gi391b/mucocyst-strict.tsv
+  exit_code: 0
+  summary: Focused validator passed.
+  evidence_ids:
+  - strict-result
+- check_id: imodulondb
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - GO:0036000
+  summary: No claimed iModulon membership or expression module used as mechanism evidence;
+    primary localization and perturbation evidence inspected.
+- check_id: scientific-review
+  name: Claim-level scientific review
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  summary: All required claim-level inspections completed; findings and scope limitations
+    are recorded separately.
+  evidence_ids:
+  - record
+  - policy
+  - root34-sources-go
+  - root34-sources-GO0036000-isa
+  - root34-sources-tax5911
+  - root34-sources-tax312017
+  - root34-sources-kontur2016-meta
+  - root34-sources-rahaman2009-meta
+  - root34-sources-kuppannan2022-meta
+  - root34-sources-kaur2017-meta
+  - root34-sources-P90618
+  - root34-sources-O76218
+  - root34-sources-ipr-O76218
+  - root34-sources-O76219
+  - root34-sources-ipr-O76219
+  - root34-sources-Q3S4V5
+  - root34-sources-ipr-Q3S4V5
+  - root34-sources-Q2I2L7
+  - root34-sources-ipr-Q2I2L7
+  - root34-sources-I7M6L0
+  - root34-sources-ipr-I7M6L0
+  - root34-sources-kontur2016-xml
+  - root34-sources-rahaman2009-pmc-exact
+  - root34-sources-kuppannan2022-xml
+  - root34-sources-kaur2017-xml
+  - root34-sources-mdl1-native-search
+  - root34-sources-IPR027040
+- check_id: target-curies
+  name: Exact target resolver slice with scoped native residual resolution
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  summary: 14 of 14 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  evidence_ids:
+  - target-curies
+- check_id: global-qc
+  name: Full corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  command: just qc
+  exit_code: 0
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T01:05:35Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-qc-result
+- check_id: global-history
+  name: Repository history validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  command: just validate-history
+  exit_code: 0
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:37Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-history-result
+- check_id: global-products
+  name: Controlled vocabulary label validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  command: just validate-products
+  exit_code: 0
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:33Z to
+    2026-10-22T00:59:14Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-products-result
+- check_id: global-traits
+  name: Trait reference validation
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  command: just check-trait-links --check
+  exit_code: 0
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:32Z to
+    2026-10-22T00:58:40Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-traits-result
+- check_id: global-curies
+  name: Strict identifier resolver command
+  status: passed
+  required: true
+  target_ids:
+  - GO:0036000
+  command: just check-curies-strict
+  exit_code: 0
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  scope_note: Full-corpus-only documented recipe executed 2026-10-22T00:58:34Z to
+    2026-10-22T01:34:04Z in the original fresh batch26 checkout at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02.
+    Same-base guards rechecked every manifested input in both the original batch26
+    and current batch34 checkouts. It is not a scientific review of other targets.
+  evidence_ids:
+  - global-curies-result
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/structures/membrane_organelle/mucocyst.yaml
+  locator: Entire maintained target, every graph edge, component, discussion and historical
+    event
+  accessed_at: '2026-10-22T02:32:02Z'
+  support: context_only
+  summary: Complete scientific target read; no scientific edits or status promotion.
+- evidence_id: policy
+  kind: record_content
+  reference: src/cellstructuremech/schema/cellstructuremech.yaml
+  locator: StructuralComponent, protein_examples, essentiality and graph actor semantics
+  accessed_at: '2026-10-22T02:32:02Z'
+  support: context_only
+  summary: Protein examples identify concrete gene products; functional necessity
+    and organelle-formation necessity are distinct. Optional inventory slots do not
+    automatically create defects.
+- evidence_id: root34-sources-go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0070074,GO:0043231,GO:0020007,GO:0020025,GO:0020009,GO:0020008,GO:0020026,GO:0036000,GO:0030141
+  locator: Complete nine entries, including all typed relations and synonym scopes
+  accessed_at: '2026-10-22T02:28:03.002434Z'
+  support: supports
+  summary: All nine native entries are active and exact identities, definitions, comments
+    and typed children agree. Mononeme is a part of the apical complex and an intracellular
+    membrane-bounded organelle; mucocyst is a secretory-granule subtype. Adjacent
+    apical organelle identities are distinct.
+  snapshot_sha256: a470c7c64f9e59ad7d74d5739486e255b66108c208cca0d3ee20bd009a48ddf7
+- evidence_id: root34-sources-GO0036000-isa
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO:0036000/ancestors?relations=is_a
+  locator: Complete ancestor list queried with relations=is_a
+  accessed_at: '2026-10-22T02:28:03.003062Z'
+  support: supports
+  summary: Native is_a-only ancestry supports the declared parent without conflating
+    parthood.
+  snapshot_sha256: 75c25e5fee44723072eefe65f20dbb0dbfe49316d796ae841aa40e79d342f6f8
+- evidence_id: root34-sources-tax5911
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/5911
+  locator: Complete taxId, scientificName, rank, lineage and otherNames
+  accessed_at: '2026-10-22T02:28:03.003228Z'
+  support: supports
+  summary: Exact scientific name, taxon ID, rank and lineage verified. Species/strain
+    identity is distinct from measured prevalence.
+  snapshot_sha256: 42cc1d612d8aa31ffc6e484dfb7b846348bea7e26ca272eb4b5f4e7739df4ce6
+- evidence_id: root34-sources-tax312017
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/312017
+  locator: Complete taxId, scientificName, rank, lineage and otherNames
+  accessed_at: '2026-10-22T02:28:03.850390Z'
+  support: supports
+  summary: Exact scientific name, taxon ID, rank and lineage verified. Species/strain
+    identity is distinct from measured prevalence.
+  snapshot_sha256: a8ac4ae3d8648260b642cf92df67703bb2ce7139b41cab8a25eac34c084c9124
+- evidence_id: root34-sources-kontur2016-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1534/g3.116.028878%22
+  locator: Complete MED identity and abstractText
+  accessed_at: '2026-10-22T02:28:03.857735Z'
+  support: supports
+  summary: Exact title, authors, DOI 10.1534/g3.116.028878, PMID 27317773, year and
+    complete abstract checked. Native abstract reading is separate from the explicitly
+    scoped full text.
+  snapshot_sha256: 5d42f840c061ec587bc963518ea453a83e4550fc24263ca633046019c6b9390a
+- evidence_id: root34-sources-rahaman2009-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1128/EC.00151-09%22
+  locator: Complete MED identity and abstractText
+  accessed_at: '2026-10-22T02:28:03.861859Z'
+  support: supports
+  summary: Exact title, authors, DOI 10.1128/ec.00151-09, PMID 19684282, year and
+    complete abstract checked. Native abstract reading is separate from the explicitly
+    scoped full text.
+  snapshot_sha256: 9c9f6964355a708ffe17981b76fcc56ba3a89be6190dfc2d0981fb4819977ed5
+- evidence_id: root34-sources-kuppannan2022-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1371/journal.pgen.1010194%22
+  locator: Complete MED identity and abstractText
+  accessed_at: '2026-10-22T02:28:03.868102Z'
+  support: supports
+  summary: Exact title, authors, DOI 10.1371/journal.pgen.1010194, PMID 35587496,
+    year and complete abstract checked. Native abstract reading is separate from the
+    explicitly scoped full text.
+  snapshot_sha256: 09eaf9a6d82538e6e898938c3d660ab232ca6df2647554b15a7b2953458fb9da
+- evidence_id: root34-sources-kaur2017-meta
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A%2210.1091/mbc.e17-01-0018%22
+  locator: Complete MED identity and abstractText
+  accessed_at: '2026-10-22T02:28:04.614648Z'
+  support: supports
+  summary: Exact title, authors, DOI 10.1091/mbc.e17-01-0018, PMID 28381425, year
+    and complete abstract checked. Native abstract reading is separate from the explicitly
+    scoped full text.
+  snapshot_sha256: 481de5607c74fdfb2e83103b40bcd078c739569e97035bd23d7a7a38d55c4041
+- evidence_id: root34-sources-P90618
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P90618.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism, complete
+    comments and sequence length
+  accessed_at: '2026-10-22T02:28:04.720562Z'
+  support: supports
+  summary: Exact primary accession, UNREVIEWED status, gene/locus tokens, protein
+    name, taxonomy and comments inspected. Automated comments are not independent
+    experimental localization evidence.
+  snapshot_sha256: a9b33c5cd31d0c1f7d192c8023d6fb857d8a0505ab029652cd111ebf917da77e
+- evidence_id: root34-sources-O76218
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O76218.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism, complete
+    comments and sequence length
+  accessed_at: '2026-10-22T02:28:05.795682Z'
+  support: supports
+  summary: Exact primary accession, UNREVIEWED status, gene/locus tokens, protein
+    name, taxonomy and comments inspected. Automated comments are not independent
+    experimental localization evidence.
+  snapshot_sha256: d03b9f99065aa26eea69cfc6acce67d052c343d9bce4046cbb550467f17e9283
+- evidence_id: root34-sources-ipr-O76218
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O76218/?page_size=200
+  locator: All returned metadata, types, member signatures and protein-matching locations;
+    no sequence alignment or structure prediction performed
+  accessed_at: '2026-10-22T02:28:05.798055Z'
+  support: supports
+  summary: Complete returned integrated matches and next=null inspected. Domains and
+    broad families are not substituted for exact local cargo-cohort or complex identity.
+  snapshot_sha256: 855db98ba4eb1656d3be53b8d50234d819d9c3c9c68db416f1c493a4c244d4c1
+- evidence_id: root34-sources-O76219
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/O76219.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism, complete
+    comments and sequence length
+  accessed_at: '2026-10-22T02:28:05.798218Z'
+  support: supports
+  summary: Exact primary accession, UNREVIEWED status, gene/locus tokens, protein
+    name, taxonomy and comments inspected. Automated comments are not independent
+    experimental localization evidence.
+  snapshot_sha256: db84c4bc8e9c3ae3a28ab3bafce2727007084e4c951038faaff08ca77c14e5b6
+- evidence_id: root34-sources-ipr-O76219
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/O76219/?page_size=200
+  locator: All returned metadata, types, member signatures and protein-matching locations;
+    no sequence alignment or structure prediction performed
+  accessed_at: '2026-10-22T02:28:06.012012Z'
+  support: supports
+  summary: Complete returned integrated matches and next=null inspected. Domains and
+    broad families are not substituted for exact local cargo-cohort or complex identity.
+  snapshot_sha256: 9649ec3c6bdcaa4c142e16b6a631ca5683b1cda3750b975640ceb90f2862cee4
+- evidence_id: root34-sources-Q3S4V5
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q3S4V5.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism, complete
+    comments and sequence length
+  accessed_at: '2026-10-22T02:28:06.393265Z'
+  support: supports
+  summary: Exact primary accession, UNREVIEWED status, gene/locus tokens, protein
+    name, taxonomy and comments inspected. Automated comments are not independent
+    experimental localization evidence.
+  snapshot_sha256: b52c55cede92e392659e01447354fd3eba66efbeb946b0fb1bb943889b32feeb
+- evidence_id: root34-sources-ipr-Q3S4V5
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q3S4V5/?page_size=200
+  locator: All returned metadata, types, member signatures and protein-matching locations;
+    no sequence alignment or structure prediction performed
+  accessed_at: '2026-10-22T02:28:06.460145Z'
+  support: supports
+  summary: Complete returned integrated matches and next=null inspected. Domains and
+    broad families are not substituted for exact local cargo-cohort or complex identity.
+  snapshot_sha256: 34070432c38f0256f3976d465a23f045d7d05a9f7bcfa8f33546a1294d4ef287
+- evidence_id: root34-sources-Q2I2L7
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q2I2L7.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism, complete
+    comments and sequence length
+  accessed_at: '2026-10-22T02:28:06.711380Z'
+  support: supports
+  summary: Exact primary accession, UNREVIEWED status, gene/locus tokens, protein
+    name, taxonomy and comments inspected. Automated comments are not independent
+    experimental localization evidence.
+  snapshot_sha256: c23d156270aae950e0a742a0236af0294ff288058df74758de26d3f468949e54
+- evidence_id: root34-sources-ipr-Q2I2L7
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/Q2I2L7/?page_size=200
+  locator: All returned metadata, types, member signatures and protein-matching locations;
+    no sequence alignment or structure prediction performed
+  accessed_at: '2026-10-22T02:28:06.792025Z'
+  support: supports
+  summary: Complete returned integrated matches and next=null inspected. Domains and
+    broad families are not substituted for exact local cargo-cohort or complex identity.
+  snapshot_sha256: 4dbe1cb8b5c15d077379a3188ea8d74b3ec5af33cf43c3ef1bb13b597465f9a5
+- evidence_id: root34-sources-I7M6L0
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/I7M6L0.json
+  locator: primaryAccession, entryType, proteinDescription, genes, organism, complete
+    comments and sequence length
+  accessed_at: '2026-10-22T02:28:07.077753Z'
+  support: supports
+  summary: Exact primary accession, UNREVIEWED status, gene/locus tokens, protein
+    name, taxonomy and comments inspected. Automated comments are not independent
+    experimental localization evidence. The MDL1 literature-to-locus attribution is
+    evaluated separately.
+  snapshot_sha256: d99aff9eb1b70657ca5b9c20051187374f0dc9ef9d1c35bb283ea35aa390cbc2
+- evidence_id: root34-sources-ipr-I7M6L0
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/I7M6L0/?page_size=200
+  locator: All returned metadata, types, member signatures and protein-matching locations;
+    no sequence alignment or structure prediction performed
+  accessed_at: '2026-10-22T02:28:07.077934Z'
+  support: supports
+  summary: Complete returned integrated matches and next=null inspected. Domains and
+    broad families are not substituted for exact local cargo-cohort or complex identity.
+    I7M6L0 matches a proteasome regulatory-subunit family rather than the cited Mdl1
+    LamG protein.
+  snapshot_sha256: 6e8aaefcd2b84d69dba8b2d955ca989382aa620dbf47f3ea28873886a0461f67
+- evidence_id: root34-sources-kontur2016-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4978903/fullTextXML
+  locator: Complete s2 including Table1, s13,s15,s30,s31,s32,s33 with embedded captions;
+    other sections/supplements not certified read
+  accessed_at: '2026-10-22T02:28:57.156226Z'
+  support: supports
+  summary: UC620 mutant analysis, MMA1 knockout and rescue support maturation defects;
+    Grl precursor processing and mature docked mucocysts distinguish biogenesis from
+    secretion. Induced Mma1p-CFP is predominantly soluble, partly pelletable and not
+    significantly colocalized with docked mucocysts.
+  snapshot_sha256: ce3e97cf6fd1f650649c3ffa3aa59010bc3bfa374c5e1fd8835432cf0f010e0d
+- evidence_id: root34-sources-rahaman2009-pmc-exact
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2756869/
+  locator: Complete sec2,3,6,8,9,13,14,15,17,18,19 and embedded captions; sec16 and
+    unlisted Methods/supplements/pixels not certified read
+  accessed_at: '2026-10-22T02:28:57.156564Z'
+  support: supports
+  summary: Exact DOI/title verified. CU428.1 and SB281 experiments distinguish Grl
+    lattice cargo from Grt proteins. Detergent gel filtration and affinity assays
+    show distinct complexes under the tested conditions; double GRT1/GRT2 disruption
+    preserves cargo, lattice and stimulated secretion. Independent trafficking is
+    supported but wild-type/TGN condition-dependent interactions are explicitly not
+    excluded.
+  snapshot_sha256: 16bef643e1ea9b2d931c500cb29e2a20716b8cbea654f8da7baf2471892c4981
+- evidence_id: root34-sources-kuppannan2022-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9159632/fullTextXML
+  locator: Complete sec004-009 including embedded main captions; sec011,025,026,027,029
+    Methods. No supplementary tables, image pixels or raw proteomics reanalysis
+  accessed_at: '2026-10-22T02:28:57.156380Z'
+  support: supports
+  summary: The paper explicitly identifies MDL1 as TTHERM_00658810, encoding346aa
+    with a LamG domain. Mdl1 localizes to mucocyst tips before docking; gene deletion
+    impairs docking and secretion while maturation persists. Physical interactions,
+    sedimentation and negative-stain particle analysis support a putative MDD complex.
+    Localization of other members and assembly dependencies are less resolved than
+    the Mdl1 experiments.
+  snapshot_sha256: 1ad3d7b31aaa3ecf8db541f5b0a1a1a889a0ecb3a66ffcbc68850185ffc6963b
+- evidence_id: root34-sources-kaur2017-xml
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5449153/fullTextXML
+  locator: Complete sec6,7,8,12,14,16,22,23 including Fig3-6 captions; unlisted Results/Methods
+    and supplements/pixels not certified read
+  accessed_at: '2026-10-22T02:28:57.156474Z'
+  support: supports
+  summary: Kaur distinguishes AP-3-dependent maturation from syntaxin-dependent organelle
+    formation. Induced Stx7l1p-GFP colocalizes with Grl3p in both mature docked mucocysts
+    and arrested immature compartments. AP-3 localization could not be resolved because
+    tagged protein aggregated. Mature localization does not establish a syntaxin role
+    in exocytic fusion.
+  snapshot_sha256: 2c6942309cfe59ade8584e9ffc713ef9f5868b344b4ec89f16699a198eafcfc9
+- evidence_id: root34-sources-mdl1-native-search
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/search?format=json&size=25&query=%28gene%3ATTHERM_00658810%29%20AND%20%28taxonomy_id%3A5911%29
+  locator: Complete single search result, native primary accession, gene tokens, taxonomy,
+    name, sequence length and domain/features; query visible in source URL
+  accessed_at: '2026-10-22T02:30:17.126317Z'
+  support: supports
+  summary: The returned entry I7MM25 has the exact paper locus TTHERM_00658810,346aa,
+    taxon312017, UNREVIEWED status and Concanavalin A-like lectin/glucanase name.
+    This contrasts with target I7M6L0/TTHERM_00471830,392aa. Candidate identity is
+    established by the exact locus, not by assuming similarly named genes equivalent.
+  snapshot_sha256: 4f31d5f7c6bb27e5bb2e2b04b64d1d97b5614db40f300cdeeff71fbc7e5a56d6
+- evidence_id: root34-sources-IPR027040
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR027040/
+  locator: Native metadata, family hierarchy and complete description; literature
+    list inspected as metadata only
+  accessed_at: '2026-10-22T02:30:17.126591Z'
+  support: supports
+  summary: The issuing authority describes PSMD4/Rpn10/S5A as a26S proteasome regulatory
+    subunit that binds ubiquitin conjugates. I7M6L0 native protein match corroborates
+    the categorical mismatch, but automated family assignment is not an experimental
+    localization claim.
+  snapshot_sha256: 6cb491ff1bb4926fd77f4421038e6354560908630bd8327129cfb3063f937133
+- evidence_id: native-verify
+  kind: validation
+  reference: /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/mucocyst.yaml
+    --verify
+  locator: Entire captured focused native log
+  accessed_at: '2026-10-22T02:28:26.188841Z'
+  support: supports
+  summary: all UniProtKB protein_examples and causal_graphs xrefs verified ok
+  snapshot_sha256: 3cc17ed57cc5a954a982905916d4f0f66d781e2f4b51f2f7c77ada16c835d289
+- evidence_id: native-causal-graphs
+  kind: validation
+  reference: /private/tmp/cellstructure-batch34-20261022-36gi391b/repo/.venv/bin/python
+    scripts/uniprot_genes.py --record data/structures/membrane_organelle/mucocyst.yaml
+    --causal-graphs
+  locator: Entire captured focused native log
+  accessed_at: '2026-10-22T02:28:26.701965Z'
+  support: supports
+  summary: "data/structures/membrane_organelle/mucocyst.yaml  (GO:0036000)\n  mucocyst_docking_and_exocytosis\t\
+    granule_lattice_proteins\tCOVERED\t->granule_lattice_proteins (UniProtKB:P90618,\
+    \ UniProtKB:O76218, UniProtKB:O76219)\n  mucocyst_docking_and_exocytosis\tgranule_tip_proteins\t\
+    COVERED\t->granule_tip_proteins (UniProtKB:Q3S4V5, UniProtKB:Q2I2L7)\n  mucocyst_docking_and_exocytosis\t\
+    mucocyst_docking_discharge_complex\tCOVERED\t->mucocyst_docking_discharge_complex\
+    \ (UniProtKB:I7M6L0)\n\ncausal_graphs GENE_OR_PROTEIN node summary:\n     3  COVERED\
+    \                   component_ref target holds protein_examples covering all declared\
+    \ symbols\n     0  PARTIAL_EXAMPLES          component_ref target holds protein_examples\
+    \ but has unrepresented symbols\n     0  HAS_SYMBOLS_NO_EXAMPLES   component_ref\
+    \ target declares gene_symbols but holds no protein_examples\n     0  NO_GENE_SYMBOLS\
+    \           component_ref target declares no gene_symbols and holds no protein_examples\n\
+    \     0  DANGLING_COMPONENT_REF    component_ref names a component_id that does\
+    \ not exist on the record\n     0  UNANCHORED_WITH_UNIPROT   no component_ref,\
+    \ but node carries a UniProtKB grounding or xref\n     0  UNANCHORED_NO_UNIPROT\
+    \     no component_ref and no UniProtKB grounding or xref on the node\n     3\
+    \  total GENE_OR_PROTEIN causal nodes"
+  snapshot_sha256: 0db45fdd11cde066b43f98876b7c74196880805dda60dc3b7b92d3944b636a3e
+- evidence_id: schema-result
+  kind: validation
+  reference: just validate data/structures/membrane_organelle/mucocyst.yaml
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:27:36Z'
+  support: supports
+  summary: 'No issues found
+
+    uv run linkml-validate -s src/cellstructuremech/schema/cellstructuremech.yaml
+    --target-class CellStructureRecord data/structures/membrane_organelle/mucocyst.yaml'
+  snapshot_sha256: bdf3f458c92479c0b9adab4b640c34d8cc09228a71be3f26d616edbff954c516
+- evidence_id: strict-result
+  kind: validation
+  reference: just validate-strict data/structures/membrane_organelle/mucocyst.yaml
+    --out /private/tmp/cellstructure-batch34-20261022-36gi391b/mucocyst-strict.tsv
+  locator: Captured focused validator log
+  accessed_at: '2026-10-22T02:27:38Z'
+  support: supports
+  summary: "uv run python scripts/validate_strict.py data/structures/membrane_organelle/mucocyst.yaml\
+    \ --out /private/tmp/cellstructure-batch34-20261022-36gi391b/mucocyst-strict.tsv\n\
+    Validating 1 files with 17 workers; schema=/private/tmp/cellstructure-batch34-20261022-36gi391b/repo/src/cellstructuremech/schema/cellstructuremech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                /private/tmp/cellstructure-batch34-20261022-36gi391b/mucocyst-strict.tsv"
+  snapshot_sha256: e12f835d2670211003179e86f24c66591edd897e516384056ac5decadf54f518
+- evidence_id: target-curies
+  kind: validation
+  reference: just check-curies-strict
+  locator: data/structures/membrane_organelle/mucocyst.yaml; native collect() exact
+    identifier slice; SHA identifies full original TSV
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 14 of 14 collected target identifiers returned OK. No residuals. Native
+    source checks are separately scoped; skipped or unreachable identifiers are not
+    silently counted as resolved.
+  snapshot_sha256: 173c367ec1621e2a96027e149b5cad9f4db0a86f0a3c916455ce192a9aa5f428
+- evidence_id: global-qc-result
+  kind: validation
+  reference: just qc
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 f685f7bf909553282506f9f3c5a09594dcc8a5244d60910af9329e0d7b5514ae;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:05:35Z'
+  support: supports
+  summary: 'Exit0. Native QC passed: 1025 tests passed and 3 skipped, plus history,
+    strict schema, generated-site consistency and corpus-report stages.'
+  snapshot_sha256: 8696c0d603149cee93ac200eaa3ed26c84320204285cd22cca542eb1ae7ba572
+- evidence_id: global-history-result
+  kind: validation
+  reference: just validate-history
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 180c448609bee8b99e646da79e8b6c9e1300575374fe2ad823131d7624bf42d0;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:37Z'
+  support: supports
+  summary: Exit0. All 1888 history records validated; URI precheck reported zero invalid
+    references.
+  snapshot_sha256: 98a7952c42add0416633f4dee73ff64331e5c6c4c4c8d707e98a152f04fc5b6d
+- evidence_id: global-products-result
+  kind: validation
+  reference: just validate-products
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 ce990392d0edb5c173c58d7b9cf421a4ae36c746dfd2f7f1c0a31c07307b5c26;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:59:14Z'
+  support: supports
+  summary: 'Exit0. Label results: 3982 canonical, 50 synonym, 6 exception and 659
+    SKIPPED_NO_ADAPTER. Skips are not successful authority verification.'
+  snapshot_sha256: b5cc67214f5627a654e75cfc335d77d42113d057091884a12094aa1a71447a5e
+- evidence_id: global-traits-result
+  kind: validation
+  reference: just check-trait-links --check
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 3551f69e0996e3a672a3da0defda6e3f541068fdc4d7af7440cd934a36e143ad;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T00:58:40Z'
+  support: supports
+  summary: 'Exit0. 10 trait links checked: 10 matching labels, 0 missing and 0 mislabelled.'
+  snapshot_sha256: 6eab64b59433928ec8e0df9b0046dbccf479c84bb0911c315feebc344d536007
+- evidence_id: global-curies-result
+  kind: validation
+  reference: just check-curies-strict
+  locator: Fresh batch26 full-corpus run at f97b1abe2d78971b6f66b9083087d7a94cf3c0cc;
+    stdout hash below; stderr SHA256 68f69df12edee099457ef6e297b4fb63dc7514d16360a264452e73a6eff388a2;
+    input manifest SHA256 a03d9f8e9f1ce967255422d8aaa6600a77e2460876c0a53aa335439f4e467c02
+  accessed_at: '2026-10-22T01:34:04Z'
+  support: supports
+  summary: 'Exit0. Native resolver control: every resolver accepts a known id and
+    rejects a fabricated one. Identifier results: 4848 OK, 252 SKIPPED, 822 UNREACHABLE.
+    Transport failures and skipped prefixes are not proof of identifier resolution;
+    exact target residuals are assessed separately.'
+  snapshot_sha256: 00cc5664a9143235d28fb9885fc5c43a8a78c9a9c9f47603b1232e1eddddeac1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact secretory organelle
+  outcome: supported
+  target_ids:
+  - GO:0036000
+  summary: GO supports mucocyst identity and secretory-granule ancestry. The cited
+    Tetrahymena studies support a membrane-bounded mature cargo compartment, distinct
+    from cargo proteins and upstream maturation intermediates.
+  evidence_ids:
+  - record
+  - root34-sources-go
+  - root34-sources-GO0036000-isa
+  - root34-sources-kontur2016-xml
+  - root34-sources-kuppannan2022-xml
+- assessment_id: components
+  area: grounding
+  topic: Cargo cohorts and membrane machinery
+  outcome: supported
+  target_ids:
+  - GO:0036000
+  summary: Grl lattice cargo, Grt tip cargo and the MDD abstraction are supported
+    with study-specific limitations. The lipid row is label-only and does not equate
+    a whole-structure CURIE with a chemical class. Broad domain matches do not automatically
+    supply exact cohort or whole-complex groundings.
+  evidence_ids:
+  - record
+  - policy
+  - root34-sources-rahaman2009-pmc-exact
+  - root34-sources-kuppannan2022-xml
+  - root34-sources-ipr-O76218
+  - root34-sources-ipr-O76219
+  - root34-sources-ipr-Q3S4V5
+  - root34-sources-ipr-Q2I2L7
+  - root34-sources-ipr-I7M6L0
+- assessment_id: protein
+  area: grounding
+  topic: MDL1 protein example
+  outcome: concern
+  target_ids:
+  - GO:0036000
+  summary: Five Grl/Grt accession/name/taxon examples agree with native entries. The
+    sixth example falsely maps MDL1 to a different locus and proteasome-family protein;
+    the primary paper and exact native locus search establish a concrete wrong-instance
+    error.
+  evidence_ids:
+  - record
+  - root34-sources-P90618
+  - root34-sources-O76218
+  - root34-sources-O76219
+  - root34-sources-Q3S4V5
+  - root34-sources-Q2I2L7
+  - root34-sources-I7M6L0
+  - root34-sources-kuppannan2022-xml
+  - root34-sources-mdl1-native-search
+  - root34-sources-IPR027040
+- assessment_id: scope
+  area: scope
+  topic: Model-organism and strain scope
+  outcome: supported
+  target_ids:
+  - GO:0036000
+  summary: The cited studies directly examine Tetrahymena thermophila; native species
+    and SB210 strain taxonomy agree. Source genetic backgrounds such as CU428 and
+    experimental mutant lines are not conflated with the genome-reference strain used
+    for protein identity.
+  evidence_ids:
+  - record
+  - root34-sources-tax5911
+  - root34-sources-tax312017
+  - root34-sources-kontur2016-xml
+  - root34-sources-rahaman2009-pmc-exact
+  - root34-sources-kuppannan2022-xml
+  - root34-sources-kaur2017-xml
+- assessment_id: graph
+  area: graph
+  topic: Seven topology, cargo and secretion edges
+  outcome: supported
+  target_ids:
+  - GO:0036000
+  summary: Topology and Grl lattice storage are supported. Grt independence retains
+    the paper experimental limits. MDD tip placement is an abstraction anchored most
+    directly by Mdl1, while co-localization/interaction evidence supports the complex;
+    no molecular fusion sequence is claimed by the NONMECHANISTIC graph.
+  evidence_ids:
+  - record
+  - root34-sources-go
+  - root34-sources-rahaman2009-pmc-exact
+  - root34-sources-kuppannan2022-xml
+- assessment_id: formation
+  area: grounding
+  topic: Formation versus docking and function
+  outcome: unknown
+  target_ids:
+  - GO:0036000
+  summary: Collective membrane material is constitutional, but its ESSENTIAL label
+    is not an experiment testing formation without lipid. Protein rows retain UNKNOWN;
+    Mdl1 knockout affects docking, not demonstrated formation failure. GRT1/GRT2 dispensability
+    in the tested system does not establish universal family dispensability.
+  evidence_ids:
+  - record
+  - policy
+  - root34-sources-rahaman2009-pmc-exact
+  - root34-sources-kuppannan2022-xml
+- assessment_id: boundary
+  area: evidence
+  topic: Resolved upstream-factor exclusion
+  outcome: unknown
+  target_ids:
+  - GO:0036000
+  summary: 'The resolved discussion records a historical selection policy: mature
+    localization is necessary for inclusion, without asserting that localization is
+    absent or sufficient. Kaur observes induced Stx7l1p-GFP in mature docked mucocysts
+    as well as immature compartments. This supports optional clarification of the
+    inventory boundary, not a confirmed contradiction or mandatory inventory addition.
+    Mma1 and AP-3 have distinct localization limits; mature syntaxin localization
+    does not establish an exocytic fusion role.'
+  evidence_ids:
+  - record
+  - root34-sources-kontur2016-xml
+  - root34-sources-kaur2017-xml
+- assessment_id: coverage
+  area: completeness
+  topic: Whole bounded record
+  outcome: supported
+  target_ids:
+  - GO:0036000
+  summary: All current fields, seven graph edges, component examples and discussions
+    were assessed. Exact missing family groundings and additional cargo inventory
+    remain bounded opportunities rather than automatic defects. The single reported
+    finding is a concrete paper-to-protein identity contradiction.
+  evidence_ids:
+  - record
+  - root34-sources-go
+  - root34-sources-kontur2016-xml
+  - root34-sources-rahaman2009-pmc-exact
+  - root34-sources-kuppannan2022-xml
+  - root34-sources-kaur2017-xml
+findings:
+- finding_id: F1
+  issue_key: mucocyst-1
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct the MDL1 protein example
+  description: The MDD component names MDL1 but its protein example I7M6L0 carries
+    TTHERM_00471830. Kuppannan explicitly names MDL1 as TTHERM_00658810,346aa; native
+    UniProt resolves that locus to I7MM25. I7M6L0 is392aa and matches the S5A/Rpn10
+    proteasome family. Its role and evidence notes incorrectly assert a literature-gene
+    equivalence despite passing native field correspondence.
+  target_ids:
+  - GO:0036000
+  field_paths:
+  - components[3].protein_examples[0]
+  evidence_ids:
+  - record
+  - root34-sources-I7M6L0
+  - root34-sources-kuppannan2022-xml
+  - root34-sources-mdl1-native-search
+  - root34-sources-IPR027040
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mucocyst.yaml
+    role: maintained scientific record
+  rule_id: .claude/skills/review-yaml-record/SKILL.md:exact identity and claim-level
+    support
+  native_severity: major
+  normalization_reason: Major wrong concrete protein identity.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - GO:0036000
+  owner_paths:
+  - repository: CultureBotAI/CellStructureMech
+    path: data/structures/membrane_organelle/mucocyst.yaml
+    role: maintained scientific record
+  description: Replace or remove the wrong protein example and its MDL1 attribution.
+    If using the exact-locus I7MM25 candidate, retain its verified UNREVIEWED status,
+    SB210 taxon, native protein name and locus; cite the primary paper for the MDL1
+    mapping and membership. Do not replace the complete MDD complex identity with
+    one subunit.
+  acceptance_checks:
+  - Verify exact paper locus, native identity and claim-specific source scope.
+  - After separately authorized curation, run focused schema/strict and native protein
+    verification; native success alone does not validate literature-symbol attribution.
+limitations:
+- All five fresh-base batch26 corpus gates and exact target resolver rows are integrated
+  here; every manifested source input is identical at the shared base.
+- Scientific reading is limited to the explicit source sections below. No source figure
+  pixels, supplementary datasets or raw experiments were reanalyzed. Taxonomic COMMON
+  is qualitative, not a measured prevalence.
+- Failed HTTP406 XML attempts are retained. An initially wrong Rahaman PMC response
+  was identified by title and DOI and excluded; the correct PMC2756869 article was
+  independently verified and read.
+- Current protein instances are all unreviewed entries; their presence is an identity
+  claim, not proof of structural membership. Domains and broad family matches do not
+  establish an exact whole-cohort grounding.
+- P90618 integrated InterPro request returned204 with an empty body; no family absence
+  outside this endpoint is inferred. Other returned family/domain matches are broader
+  than exact cargo cohorts.
+- The native protein validator passed because accession/name/taxon fields correspond;
+  it does not establish the MDL1-to-locus literature mapping. The source-level finding
+  remains major.
+- MDD complex tip localization is chiefly anchored by Mdl1; other subunits were localized
+  to mucocysts with stated imaging limitations. Complex assembly and individual-subunit
+  mechanisms remain unresolved.
+- No source establishes universal organelle-formation necessity for a fixed membrane
+  lipid composition. Kaur syntaxin localization used an induced GFP construct and
+  is not proof of a role in mature exocytic fusion.
+- Kaur sec8 and Fig6 report mature docked Stx7l1p-GFP localization under induced-expression
+  conditions. The historical discussion states a conditional selection policy and
+  does not explicitly deny this observation; optional clarification is not treated
+  as a confirmed record error or a requirement to expand the component inventory.
+- Fresh corpus checks have bounded coverage:659 label checks had no adapter; resolver
+  totals 252 SKIPPED, 822 UNREACHABLE. These totals are not target-specific biological
+  findings. Exact target residuals were resolved only through the separately reviewed
+  evidence mapping.
+notes:
+- The user explicitly authorizes one bundle for every uncovered record, including
+  honest zero-finding observations.
+- Only this review bundle is intended for persistence. Maintained scientific content,
+  native status, history and generated pages remain unchanged.
+- Fresh26 finalization integrated all five actual corpus gates and exact target resolver
+  evidence. Earlier draft-stage statements that these checks were pending are superseded
+  by the completed checks here; scientific access and assay limitations remain in
+  force.
+```
