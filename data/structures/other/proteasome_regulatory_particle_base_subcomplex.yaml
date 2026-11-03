@@ -1,0 +1,380 @@
+identifier: GO:0008540
+label: proteasome regulatory particle, base subcomplex
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: The subcomplex of the proteasome regulatory particle that directly associates
+  with the proteasome core complex. In Saccharomyces cerevisiae and other microbial
+  eukaryotes, the 19S base subcomplex consists of the heterohexameric AAA+ ATPase
+  motor ring (Rpt1-Rpt6) together with the large scaffolding subunits Rpn1 and Rpn2
+  and the ubiquitin receptors Rpn10 and Rpn13, which capture ubiquitinated substrates,
+  mechanically unfold them, and open the alpha-ring gate of the 20S core particle.
+definition_source: GO:0008540
+mapping_status: PROPOSED
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0005838
+synonyms:
+- synonym_text: 19S proteasome base subcomplex
+  synonym_type: EXACT_SYNONYM
+  source: GO:0008540
+components:
+- component_id: rpt_atpase_ring
+  label: 19S base AAA+ ATPase heterohexameric ring (Rpt1-Rpt6)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RPT1
+  - RPT2
+  - RPT3
+  - RPT4
+  - RPT5
+  - RPT6
+  essentiality: ESSENTIAL
+  role: Heterohexameric AAA+ ATPase motor ring (Rpt1-Rpt6) whose C-terminal HbYX tails
+    dock into pockets of the 20S alpha ring to open the proteolytic gate while aromatic
+    pore loops mechanically unfold and translocate substrates.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-060410-150257
+    notes: Tomko and Hochstrasser 2013 describe the ordered Rpt1-Rpt6 AAA+ heterohexamer
+      at the core of the 19S base subcomplex.
+  protein_examples:
+  - uniprot_id: UniProtKB:P33299
+    protein_label: 26S proteasome regulatory subunit 7 homolog
+    gene_symbol: RPT1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Nucleus' localisation of P33299.
+  - uniprot_id: UniProtKB:P40327
+    protein_label: 26S proteasome regulatory subunit 4 homolog
+    gene_symbol: RPT2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P40327
+      notes: UniProtKB reviewed (Swiss-Prot) entry P40327, the single reviewed entry
+        for gene RPT2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P33298
+    protein_label: 26S proteasome regulatory subunit 6B homolog
+    gene_symbol: RPT3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P33298
+      notes: UniProtKB reviewed (Swiss-Prot) entry P33298, the single reviewed entry
+        for gene RPT3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P53549
+    protein_label: 26S proteasome subunit RPT4
+    gene_symbol: RPT4
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT4 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P53549
+      notes: UniProtKB reviewed (Swiss-Prot) entry P53549, the single reviewed entry
+        for gene RPT4 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P33297
+    protein_label: 26S proteasome regulatory subunit 6A
+    gene_symbol: RPT5
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT5 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P33297
+      notes: UniProtKB reviewed (Swiss-Prot) entry P33297, the single reviewed entry
+        for gene RPT5 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:Q01939
+    protein_label: 26S proteasome regulatory subunit 8 homolog
+    gene_symbol: RPT6
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPT6 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/Q01939
+      notes: UniProtKB reviewed (Swiss-Prot) entry Q01939, the single reviewed entry
+        for gene RPT6 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+- component_id: rpn1_rpn2_receptor_scaffold
+  label: 19S base non-ATPase scaffold and ubiquitin receptor module (Rpn1, Rpn2, Rpn10,
+    Rpn13)
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  gene_symbols:
+  - RPN1
+  - RPN2
+  - RPN10
+  - RPN13
+  essentiality: ESSENTIAL
+  role: Toroidal PC-repeat scaffold subunits (Rpn1, Rpn2) and intrinsic ubiquitin
+    receptors (Rpn10, Rpn13) that capture polyubiquitinated proteins and recruit shuttle
+    factors and Ubp6 to the base.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-060410-150257
+    notes: Tomko and Hochstrasser 2013 review the non-ATPase Rpn1/Rpn2 scaffolds and
+      Rpn10/Rpn13 ubiquitin receptors of the 19S base.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38764
+    protein_label: 26S proteasome regulatory subunit RPN1
+    gene_symbol: RPN1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38764
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38764, the single reviewed entry
+        for gene RPN1 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P32565
+    protein_label: 26S proteasome regulatory subunit RPN2
+    gene_symbol: RPN2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P32565
+      notes: UniProtKB reviewed (Swiss-Prot) entry P32565, the single reviewed entry
+        for gene RPN2 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:P38886
+    protein_label: 26S proteasome regulatory subunit RPN10
+    gene_symbol: RPN10
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN10 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: https://www.uniprot.org/uniprotkb/P38886
+      notes: UniProtKB reviewed (Swiss-Prot) entry P38886, the single reviewed entry
+        for gene RPN10 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+  - uniprot_id: UniProtKB:O13563
+    protein_label: 26S proteasome regulatory subunit RPN13
+    gene_symbol: RPN13
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-23'
+    role: The single reviewed UniProtKB entry for gene RPN13 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:14562095
+      notes: Huh WK et al. 2003, ‘Global analysis of protein localization in budding
+        yeast.’, Nature. ECO:0000269 experimental evidence cited by UniProt for the
+        'Cytoplasm' localisation of O13563.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Conserved ATPase-containing base subcomplex of the eukaryotic 19S proteasome
+    regulatory particle.
+  reference: DOI:10.1146/annurev-biochem-060410-150257
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Primary model system for chaperone-assisted 19S base assembly (Nas2, Nas6,
+    Hsm3, Rpn14) and Rpt1-Rpt6 AAA+ motor mechanics.
+  reference: DOI:10.1146/annurev-biochem-060410-150257
+functions:
+- function_id: proteasomal_protein_catabolism
+  label: proteasomal protein catabolic process
+  grounding: GO:0010498
+  description: Proteasome complexes couple regulated substrate access through accessory
+    complexes to proteolysis in the 20S core.
+  evidence:
+  - reference: GO:0000502
+    notes: The GO graph asserts GO:0010498 has_participant GO:0000502, connecting
+      the proteasome complex to proteasomal protein catabolism.
+  - reference: DOI:10.1042/ETLS20180025
+    notes: Maupin-Furlow 2018 reviews archaeal targeted proteolysis by proteasomes
+      associated with AAA-ATPase networks.
+  - reference: DOI:10.3389/fmolb.2019.00023
+    notes: Muller and Weber-Ban 2019 review bacterial proteasomal degradation routes
+      that combine the 20S core with alternative regulator complexes.
+evidence:
+- reference: GO:0008540
+  notes: 'Gene Ontology cellular-component term for proteasome regulatory particle,
+    base subcomplex: The subcomplex of the proteasome regulatory particle that directly
+    associates with the proteasome core complex.'
+- reference: GO:0005838
+  notes: 'Gene Ontology cellular-component term for proteasome regulatory particle:
+    A multisubunit complex, which caps one or both ends of the proteasome core complex.
+    This complex recognizes and unfolds ubiquitinated proteins, and translocates them
+    to the proteasome core complex.'
+- reference: GO:0000502
+  notes: Gene Ontology cellular-component term for the proteasome complex.
+- reference: GO:0140535
+  notes: Gene Ontology cellular-component parent for intracellular protein-containing
+    complexes.
+- reference: GO:1905369
+  notes: Gene Ontology cellular-component parent for endopeptidase complexes.
+- reference: GO:0005839
+  notes: Gene Ontology cellular-component term for the proteasome core complex.
+- reference: GO:0022624
+  notes: Gene Ontology cellular-component term for the proteasome accessory complex.
+- reference: DOI:10.1042/ETLS20180025
+  notes: 'Maupin-Furlow 2018, Proteolytic systems of archaea: slicing, dicing, and
+    mincing in the extreme, Emerging Topics in Life Sciences.'
+- reference: DOI:10.3389/fmolb.2019.00023
+  notes: Muller and Weber-Ban 2019, The bacterial proteasome at the core of diverse
+    degradation pathways, Frontiers in Molecular Biosciences.
+- reference: DOI:10.1146/annurev-biochem-060410-150257
+  notes: Tomko and Hochstrasser 2013, Molecular Architecture and Assembly of the Eukaryotic
+    Proteasome, Annual Review of Biochemistry.
+causal_graphs:
+- graph_id: proteasome_regulatory_particle_base_subcomplex_mechanism
+  title: Proteasome regulatory particle, base subcomplex assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of proteasome regulatory particle, base subcomplex (GO:0008540) to its
+    biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: proteasome_regulatory_particle_base_subcomplex
+    label: proteasome regulatory particle, base subcomplex
+    node_type: STRUCTURE
+    grounding: GO:0008540
+    description: The subcomplex of the proteasome regulatory particle that directly
+      associates with the proteasome core complex.
+  - node_id: rpt_atpase_ring
+    label: 19S base AAA+ ATPase heterohexameric ring (Rpt1-Rpt6)
+    node_type: GENE_OR_PROTEIN
+    component_ref: rpt_atpase_ring
+    description: Heterohexameric AAA+ ATPase motor ring (Rpt1-Rpt6) whose C-terminal
+      HbYX tails dock into pockets of the 20S alpha ring to open the proteolytic gate
+      while aromatic pore loops mechanically unfold and translocate substrates.
+  - node_id: rpn1_rpn2_receptor_scaffold
+    label: 19S base non-ATPase scaffold and ubiquitin receptor module (Rpn1, Rpn2,
+      Rpn10, Rpn13)
+    node_type: GENE_OR_PROTEIN
+    component_ref: rpn1_rpn2_receptor_scaffold
+    description: Toroidal PC-repeat scaffold subunits (Rpn1, Rpn2) and intrinsic ubiquitin
+      receptors (Rpn10, Rpn13) that capture polyubiquitinated proteins and recruit
+      shuttle factors and Ubp6 to the base.
+  - node_id: proteasome_regulatory_particle
+    label: proteasome regulatory particle
+    node_type: STRUCTURE
+    grounding: GO:0005838
+    description: Enclosing or holo-structural assembly (proteasome regulatory particle,
+      GO:0005838) containing proteasome regulatory particle, base subcomplex.
+  - node_id: proteasomal_protein_catabolism
+    label: proteasomal protein catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0010498
+    description: Proteasome complexes couple regulated substrate access through accessory
+      complexes to proteolysis in the 20S core.
+  edges:
+  - subject: rpt_atpase_ring
+    predicate: is part of
+    object: proteasome_regulatory_particle_base_subcomplex
+    description: Heterohexameric AAA+ ATPase motor ring (Rpt1-Rpt6) whose C-terminal
+      HbYX tails dock into pockets of the 20S alpha ring to open the proteolytic gate
+      while aromatic pore loops mechanically unfold and translocate substrates.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-060410-150257
+      notes: Tomko and Hochstrasser 2013 describe the ordered Rpt1-Rpt6 AAA+ heterohexamer
+        at the core of the 19S base subcomplex.
+  - subject: rpn1_rpn2_receptor_scaffold
+    predicate: is part of
+    object: proteasome_regulatory_particle_base_subcomplex
+    description: Toroidal PC-repeat scaffold subunits (Rpn1, Rpn2) and intrinsic ubiquitin
+      receptors (Rpn10, Rpn13) that capture polyubiquitinated proteins and recruit
+      shuttle factors and Ubp6 to the base.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-060410-150257
+      notes: Tomko and Hochstrasser 2013 review the non-ATPase Rpn1/Rpn2 scaffolds
+        and Rpn10/Rpn13 ubiquitin receptors of the 19S base.
+  - subject: proteasome_regulatory_particle_base_subcomplex
+    predicate: is part of
+    object: proteasome_regulatory_particle
+    description: Proteasome regulatory particle, base subcomplex forms an integral
+      structural compartment or subassembly of proteasome regulatory particle.
+    evidence:
+    - reference: DOI:10.1042/ETLS20180025
+      notes: 'Maupin-Furlow 2018, Proteolytic systems of archaea: slicing, dicing,
+        and mincing in the extreme, Emerging Topics in Life Sciences.'
+  - subject: proteasome_regulatory_particle_base_subcomplex
+    predicate: mediates
+    object: proteasomal_protein_catabolism
+    description: Proteasome complexes couple regulated substrate access through accessory
+      complexes to proteolysis in the 20S core.
+    evidence:
+    - reference: GO:0000502
+      notes: The GO graph asserts GO:0010498 has_participant GO:0000502, connecting
+        the proteasome complex to proteasomal protein catabolism.
+curation_history:
+- timestamp: '2026-10-19T05:56:22Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of proteasome regulatory particle, base subcomplex (GO:0008540)
+    in category OTHER with verified GO hierarchy, compartmental context, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true
+- timestamp: '2026-10-23T07:13:59Z'
+  curator: uniprot_genes
+  action: SEED_PROTEIN_EXAMPLES
+  changes: '#183: added 10 protein example(s) by resolving each of the component''s
+    declared gene symbols to the single reviewed UniProtKB entry for that symbol in
+    a taxon this record names, deduplicated by accession. Symbols resolving to more
+    than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-23T07:27:49Z'
+  curator: uniprot-protein-examples-skill
+  action: CURATED_GENE_SYMBOLS_AND_PROTEIN_EXAMPLES
+  changes: Added source-backed subunit gene_symbols (RPT1-6 on rpt_atpase_ring; RPN1,
+    RPN2, RPN10, RPN13 on rpn1_rpn2_receptor_scaffold) prior to seeding 10 reviewed
+    Saccharomyces cerevisiae S288C protein_examples.
+  llm_assisted: true

@@ -22,6 +22,12 @@ curation_history:
     to InterPro, added alkanesulfonate monooxygenase function and E. coli example
     evidence, and recorded grounding and stoichiometry boundary decisions.
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Added source-backed FUNCTION causal graph 'ssud_ssue_coupled_monooxygenation'
+    with 3 nodes and 2 edges.
+  llm_assisted: true
 synonyms:
 - synonym_text: two-component alkanesulfonate monooxygenase system
   synonym_type: RELATED_SYNONYM
@@ -196,3 +202,55 @@ discussions:
       monomeric association for the interaction.
   posed_by: codex
   posed_date: '2026-10-01'
+causal_graphs:
+- graph_id: ssud_ssue_coupled_monooxygenation
+  title: SsuD-SsuE Two-Component Flavin Transfer and Alkanesulfonate Monooxygenation
+  description: Direct flavin transfer from the NADPH-dependent FMN reductase SsuE
+    to the alkanesulfonate monooxygenase SsuD for sulfite release.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ssue_fmn_reductase
+    label: NADPH-dependent FMN reductase SsuE
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR020048
+    component_ref: ssue_fmn_reductase
+  - node_id: ssud_alkanesulfonate_monooxygenase
+    label: SsuD alkanesulfonate monooxygenase
+    node_type: GENE_OR_PROTEIN
+    component_ref: ssud_alkanesulfonate_monooxygenase
+  - node_id: alkanesulfonate_monooxygenase_activity
+    label: alkanesulfonate monooxygenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008726
+  edges:
+  - subject: ssue_fmn_reductase
+    predicate: supplies reduced FMN to
+    object: ssud_alkanesulfonate_monooxygenase
+    description: The FMN reductase SsuE physically complexes with SsuD and transfers
+      reduced FMNH2 to the monooxygenase.
+    evidence:
+    - reference: GO:1990200
+      notes: GO:1990200 defines the SsuD-SsuE complex as a two-component alkanesulfonate
+        monooxygenase and flavin oxidoreductase complex.
+    - reference: DOI:10.1074/jbc.274.38.26639
+      notes: Eichhorn et al. 1999 demonstrated that SsuE reduces FMN to supply FMNH2
+        to SsuD.
+    - reference: DOI:10.1128/JB.00966-06
+      notes: Gao and Ellis 2006 detected direct protein-protein interactions between
+        E. coli SsuE and SsuD.
+  - subject: ssud_alkanesulfonate_monooxygenase
+    predicate: catalyzes
+    object: alkanesulfonate_monooxygenase_activity
+    description: Using FMNH2 supplied by SsuE and molecular oxygen, SsuD catalyzes
+      oxygenolytic cleavage of alkanesulfonates into sulfite and aldehydes.
+    evidence:
+    - reference: GO:1990200
+      notes: GO:1990200 defines the complex by conversion of alkanesulfonates to aldehydes
+        and sulfite.
+    - reference: GO:0008726
+      notes: GO:0008726 is the molecular-function term for alkanesulfonate monooxygenase
+        activity.
+    - reference: DOI:10.1074/jbc.274.38.26639
+      notes: Eichhorn et al. 1999 characterized the two-component SsuD-SsuE alkanesulfonate
+        monooxygenase reaction.

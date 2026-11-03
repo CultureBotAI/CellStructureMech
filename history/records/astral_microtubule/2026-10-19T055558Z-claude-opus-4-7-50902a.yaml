@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/cytoskeleton/astral_microtubule.yaml
+  slug: astral_microtubule
+session:
+  id: 2026-10-19T055558Z-claude-opus-4-7-50902a
+  timestamp: '2026-10-19T05:55:58Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for astral microtubule (GO:0000235) in cytoskeleton.
+  details: Authored data/structures/cytoskeleton/astral_microtubule.yaml for astral
+    microtubule (GO:0000235) with verified GO hierarchy, taxonomic distribution, UniProtKB
+    protein examples, functions, literature evidence, and causal graph.
+  sections:
+  - identity
+  - composition
+  - taxonomy
+  - functions
+  - causal_graphs
+  - evidence

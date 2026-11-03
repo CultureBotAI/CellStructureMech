@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/stressosome.yaml
+  slug: stressosome
+session:
+  id: 2026-10-24T060000Z-claude-code-30cb05
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added ASSEMBLY causal graph including Prli42 membrane tethering of RsbR.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added ASSEMBLY causal graph stressosome_core_and_partner_assembly
+    linking rsbr, rsbs, rsbt, and prli42 (component_ref: prli42, InterPro:IPR049722).'

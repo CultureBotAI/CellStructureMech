@@ -31,6 +31,11 @@ curation_history:
   action: EDIT
   changes: added 2 verified UniProtKB protein_example(s).
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Grounded self-referential causal node 'condensate' to cellstructuremech:tmar_condensate.
+  llm_assisted: true
 synonyms:
 - synonym_text: TmaR-EI polar condensate
   synonym_type: RELATED_SYNONYM
@@ -198,6 +203,7 @@ causal_graphs:
   - node_id: condensate
     label: TmaR condensate
     node_type: STRUCTURE
+    grounding: cellstructuremech:tmar_condensate
   - node_id: ei
     label: Phosphotransferase system, enzyme I
     node_type: GENE_OR_PROTEIN

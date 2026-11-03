@@ -1,0 +1,235 @@
+identifier: GO:0051233
+label: spindle midzone
+structure_category: CYTOSKELETON
+structure_kind: OTHER
+definition: The area in the center of the spindle where the spindle microtubules from
+  opposite poles overlap. In yeasts, fungi, and microbial eukaryotes, the spindle
+  midzone is organized by antiparallel microtubule crosslinkers (Ase1/PRC1), kinesin-5
+  motors (Cin8, Kip1), and the chromosomal passenger complex (Ipl1/Aurora B, Sli15/INCENP,
+  Bir1), driving anaphase B spindle elongation and stabilizing the central spindle.
+definition_source: GO:0051233
+mapping_status: PROPOSED
+parent_structures:
+- GO:0110165
+part_of:
+- GO:0005819
+has_part:
+- GO:0005876
+components:
+- component_id: alpha_beta_tubulins
+  label: alpha- and beta-tubulins
+  component_type: PROTEIN
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Eukaryotic tubulin subunits that polymerize into the spindle microtubules
+    of the mitotic spindle. Functions within the bipolar chromosome-segregating spindle
+    in spindle. Functions within the antiparallel microtubule overlap zone of the
+    spindle midzone.
+  evidence:
+  - reference: GO:0005876
+    notes: Gene Ontology defines spindle microtubules as microtubules that are part
+      of a mitotic or meiotic spindle.
+  - reference: GO:0005874
+    notes: Gene Ontology defines microtubules as eukaryotic hollow tubes made from
+      polymeric tubulin protofilaments.
+  - reference: DOI:10.1126/science.277.5325.574
+    notes: Straight et al. 1997 imaged GFP-Tub1-labeled spindle microtubules in living
+      Saccharomyces cerevisiae cells.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: The mitotic spindle uses alpha- and beta-tubulin subunits that
+    are shared with other eukaryotic microtubule arrays; no exact source-neutral CURIE
+    was assigned for only the mitotic-spindle tubulin constituents.
+  gene_symbols:
+  - TUB1
+  - TUB2
+  - TUB3
+  protein_examples:
+  - uniprot_id: UniProtKB:P09733
+    protein_label: Tubulin alpha-1 chain
+    gene_symbol: TUB1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TUB1 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:11739794
+      notes: Anders KR et al. 2001, ‘Dominant-lethal alpha-tubulin mutants defective
+        in microtubule depolymerization in yeast.’, Mol Biol Cell. ECO:0000269 experimental
+        evidence cited by UniProt for the 'Cytoplasm, cytoskeleton' localisation of
+        P09733.
+  - uniprot_id: UniProtKB:P02557
+    protein_label: Tubulin beta chain
+    gene_symbol: TUB2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TUB2 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: PMID:23001566
+      notes: Cederquist GY et al. 2012, ‘An inherited TUBB2B mutation alters a kinesin-binding
+        site and causes polymicrogyria, CFEOM and axon dysinnervation.’, Hum Mol Genet.
+        ECO:0000269 experimental evidence cited by UniProt for the 'Cytoplasm, cytoskeleton'
+        localisation of P02557.
+  - uniprot_id: UniProtKB:P09734
+    protein_label: Tubulin alpha-3 chain
+    gene_symbol: TUB3
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae S288C
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: The single reviewed UniProtKB entry for gene TUB3 in Saccharomyces cerevisiae
+      S288C, a taxon this record names. Identifier for the component's declared gene
+      symbol; it is not itself evidence that the protein is part of this structure.
+    evidence:
+    - reference: UniProtKB:P09734
+      notes: UniProtKB reviewed (Swiss-Prot) entry P09734, the single reviewed entry
+        for gene TUB3 in Saccharomyces cerevisiae S288C. Establishes the accession
+        and gene identity only; the component's membership in this structure rests
+        on the record's own sources.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Budding yeast has a nuclear mitotic spindle whose microtubule organization
+    has been reconstructed by serial-section electron microscopy.
+  reference: DOI:10.1083/jcb.129.6.1601
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Reference microbial eukaryote in which mitotic spindle microtubules were reconstructed
+    by serial-section electron microscopy.
+  reference: DOI:10.1083/jcb.129.6.1601
+functions:
+- function_id: chromosome_segregation
+  label: chromosome segregation
+  grounding: GO:0007059
+  description: Mitotic spindles move duplicated chromosomes apart by coupling kinetochores
+    to spindle microtubules that extend from opposing spindle poles.
+  evidence:
+  - reference: GO:0005819
+    notes: Gene Ontology defines the spindle as an array of microtubules and associated
+      molecules that serves to move duplicated chromosomes apart.
+  - reference: DOI:10.1126/science.277.5325.574
+    notes: Straight et al. 1997 visualized chromosome movements and spindle dynamics
+      in living budding-yeast cells.
+evidence:
+- reference: GO:0051233
+  notes: 'Gene Ontology cellular-component term for spindle midzone: The area in the
+    center of the spindle where the spindle microtubules from opposite poles overlap.'
+- reference: GO:0005819
+  notes: 'Gene Ontology cellular-component term for spindle: The array of microtubules
+    and associated molecules that forms between opposite poles of a eukaryotic cell
+    during mitosis or meiosis and serves to move the duplicated chromosomes apart.'
+- reference: GO:0072686
+  notes: Gene Ontology cellular-component term for the mitotic spindle.
+- reference: GO:0005876
+  notes: Gene Ontology cellular-component term for the spindle microtubule.
+- reference: GO:0005874
+  notes: Gene Ontology cellular-component term for the microtubule.
+- reference: GO:0007059
+  notes: Gene Ontology biological-process term for chromosome segregation.
+- reference: DOI:10.1083/jcb.129.6.1601
+  notes: Winey et al. 1995, Three-dimensional ultrastructural analysis of the Saccharomyces
+    cerevisiae mitotic spindle, Journal of Cell Biology.
+- reference: DOI:10.1126/science.277.5325.574
+  notes: 'Straight et al. 1997, Mitosis in Living Budding Yeast: Anaphase A But No
+    Metaphase Plate, Science.'
+- reference: DOI:10.1146/annurev.cellbio.20.022003.114106
+  notes: Jaspersen and Winey 2004 reviewed spindle pole body structure, duplication,
+    and mitotic-spindle assembly in budding yeast.
+causal_graphs:
+- graph_id: spindle_midzone_mechanism
+  title: Spindle midzone assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of spindle midzone (GO:0051233) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: spindle_midzone
+    label: spindle midzone
+    node_type: STRUCTURE
+    grounding: GO:0051233
+    description: The area in the center of the spindle where the spindle microtubules
+      from opposite poles overlap.
+  - node_id: alpha_beta_tubulins
+    label: alpha- and beta-tubulins
+    node_type: GENE_OR_PROTEIN
+    component_ref: alpha_beta_tubulins
+    description: Eukaryotic tubulin subunits that polymerize into the spindle microtubules
+      of the mitotic spindle. Functions within the bipolar chromosome-segregating
+      spindle in spindle. Functions within the antiparallel microtubule overlap zone
+      of the spindle midzone.
+  - node_id: spindle
+    label: spindle
+    node_type: STRUCTURE
+    grounding: GO:0005819
+    description: Enclosing or holo-structural assembly (spindle, GO:0005819) containing
+      spindle midzone.
+  - node_id: spindle_microtubule
+    label: spindle microtubule
+    node_type: STRUCTURE
+    grounding: GO:0005876
+    description: Constituent structural subassembly (spindle microtubule, GO:0005876)
+      within spindle midzone.
+  - node_id: chromosome_segregation
+    label: chromosome segregation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007059
+    description: Mitotic spindles move duplicated chromosomes apart by coupling kinetochores
+      to spindle microtubules that extend from opposing spindle poles.
+  edges:
+  - subject: alpha_beta_tubulins
+    predicate: is part of
+    object: spindle_midzone
+    description: Eukaryotic tubulin subunits that polymerize into the spindle microtubules
+      of the mitotic spindle. Functions within the bipolar chromosome-segregating
+      spindle in spindle. Functions within the antiparallel microtubule overlap zone
+      of the spindle midzone.
+    evidence:
+    - reference: GO:0005876
+      notes: Gene Ontology defines spindle microtubules as microtubules that are part
+        of a mitotic or meiotic spindle.
+  - subject: spindle_midzone
+    predicate: is part of
+    object: spindle
+    description: Spindle midzone forms an integral structural compartment or subassembly
+      of spindle.
+    evidence:
+    - reference: DOI:10.1083/jcb.129.6.1601
+      notes: Winey et al. 1995, Three-dimensional ultrastructural analysis of the
+        Saccharomyces cerevisiae mitotic spindle, Journal of Cell Biology.
+  - subject: spindle_microtubule
+    predicate: is part of
+    object: spindle_midzone
+    description: Spindle microtubule is a structural part of spindle midzone.
+    evidence:
+    - reference: DOI:10.1083/jcb.129.6.1601
+      notes: Winey et al. 1995, Three-dimensional ultrastructural analysis of the
+        Saccharomyces cerevisiae mitotic spindle, Journal of Cell Biology.
+  - subject: spindle_midzone
+    predicate: mediates
+    object: chromosome_segregation
+    description: Mitotic spindles move duplicated chromosomes apart by coupling kinetochores
+      to spindle microtubules that extend from opposing spindle poles.
+    evidence:
+    - reference: GO:0005819
+      notes: Gene Ontology defines the spindle as an array of microtubules and associated
+        molecules that serves to move duplicated chromosomes apart.
+curation_history:
+- timestamp: '2026-10-19T05:56:21Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of spindle midzone (GO:0051233) in category CYTOSKELETON
+    with verified GO hierarchy, components, UniProtKB protein examples, causal mechanism
+    graph, and literature evidence.
+  llm_assisted: true
+synonyms:
+- synonym_text: central spindle overlap zone
+  synonym_type: EXACT_SYNONYM
+  source: GO:0051233

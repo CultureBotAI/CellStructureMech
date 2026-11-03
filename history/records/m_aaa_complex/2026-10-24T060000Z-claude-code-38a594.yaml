@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/m_aaa_complex.yaml
+  slug: m_aaa_complex
+session:
+  id: 2026-10-24T060000Z-claude-code-38a594
+  timestamp: '2026-10-24T06:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Linked Yta10, Yta12, and zinc(2+) components into the m-AAA complex causal graph.
+  details: 'Cycle 3 Stage 2 causal-graph curation: added yta10 (component_ref: yta10), yta12
+    (component_ref: yta12), and zinc (component_ref: zinc, grounding: CHEBI:29105) nodes and
+    edges into maaa.'

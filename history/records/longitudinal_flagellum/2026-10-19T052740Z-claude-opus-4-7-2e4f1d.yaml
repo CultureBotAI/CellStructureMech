@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/appendage/longitudinal_flagellum.yaml
+  slug: longitudinal_flagellum
+session:
+  id: 2026-10-19T052740Z-claude-opus-4-7-2e4f1d
+  timestamp: '2026-10-19T05:27:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-7
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  summary: Created structure record for longitudinal flagellum (GO:0097609) in appendage.
+  details: Authored data/structures/appendage/longitudinal_flagellum.yaml for longitudinal
+    flagellum (GO:0097609) with verified GO hierarchy, taxonomic distribution, functions,
+    literature evidence, and causal graph.
+  sections:
+  - identity
+  - taxonomy
+  - causal_graphs
+  - evidence

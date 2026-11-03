@@ -1,0 +1,158 @@
+identifier: GO:0030140
+label: trans-Golgi network transport vesicle
+structure_category: MEMBRANE_ORGANELLE
+structure_kind: MEMBRANE_BOUNDED_ORGANELLE
+definition: A vesicle that mediates transport between the trans-Golgi network and
+  other parts of the cell. A membrane-bounded transport vesicle that buds from the
+  trans-Golgi network (TGN) to sort and deliver biosynthetic secretory and endolysosomal
+  cargo to the plasma membrane, endosomes, or vacuole in yeasts, filamentous fungi,
+  and protists. Vesicle biogenesis is driven by Arf1 GTPase activation, clathrin/adaptor
+  or exomer coat assembly, and phosphatidylinositol-4-phosphate signaling.
+definition_source: GO:0030140
+mapping_status: PROPOSED
+parent_structures:
+- GO:0005798
+- GO:0030133
+- GO:0030136
+has_part:
+- GO:0012510
+- GO:0034044
+- GO:0098564
+synonyms:
+- synonym_text: TGN transport vesicle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030140
+- synonym_text: trans-Golgi network constitutive secretory pathway transport vesicle
+  synonym_type: EXACT_SYNONYM
+  source: GO:0030140
+components:
+- component_id: trans_golgi_network_transport_vesicle_membrane_lipid_bilayer
+  label: trans-Golgi network transport vesicle membrane lipid bilayer
+  component_type: LIPID
+  component_role: CONSTITUENT
+  essentiality: ESSENTIAL
+  role: Lipid-bilayer constituent of the trans-Golgi network transport vesicle membrane
+    that surrounds a TGN transport vesicle.
+  evidence:
+  - reference: GO:0012510
+    notes: GO:0012510 defines the trans-Golgi network transport vesicle membrane as
+      the lipid bilayer surrounding a vesicle moving material between the TGN and
+      other compartments.
+  grounding_status: REVIEWED_LABEL_ONLY
+  grounding_notes: GO:0012510 identifies the whole trans-Golgi network transport vesicle
+    membrane, but no separate source-neutral CURIE was curated for the generic lipid
+    constituent of that membrane.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  presence: COMMON
+  note: Holthuis et al. characterized Tlg1p and Tlg2p as Saccharomyces syntaxins in
+    the TGN/endosomal system.
+  reference: DOI:10.1093/emboj/17.1.113
+canonical_examples:
+- taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  note: Budding-yeast model in which Ent3p and Ent5p adaptor functions in protein
+    trafficking between the trans-Golgi network and endosomes were dissected.
+  reference: DOI:10.1091/MBC.E06-11-1000
+evidence:
+- reference: GO:0030140
+  notes: 'Gene Ontology cellular-component term for trans-Golgi network transport
+    vesicle: A vesicle that mediates transport between the trans-Golgi network and
+    other parts of the cell.'
+- reference: GO:0012510
+  notes: Gene Ontology cellular-component term for trans-Golgi network transport vesicle
+    membranes.
+- reference: GO:0030658
+  notes: Gene Ontology cellular-component direct parent term for transport vesicle
+    membranes.
+- reference: GO:0030660
+  notes: Gene Ontology cellular-component direct parent term for Golgi-associated
+    vesicle membranes.
+- reference: GO:0030665
+  notes: Gene Ontology cellular-component direct parent term for clathrin-coated vesicle
+    membranes.
+- reference: GO:0030130
+  notes: Gene Ontology cellular-component term for the clathrin coat of a trans-Golgi
+    network vesicle that is part of the TGN transport vesicle membrane.
+- reference: GO:0005802
+  notes: Gene Ontology cellular-component term for the trans-Golgi network.
+- reference: GO:0005768
+  notes: Gene Ontology cellular-component term for endosomes.
+- reference: DOI:10.1093/emboj/17.1.113
+  notes: Holthuis et al. 1998, 'Two syntaxin homologues in the TGN/endosomal system
+    of yeast', EMBO Journal.
+- reference: DOI:10.1091/MBC.E06-11-1000
+  notes: Copic et al. 2007, 'Ent3p and Ent5p exhibit cargo-specific functions in trafficking
+    proteins between the trans-Golgi network and the endosomes in yeast', Molecular
+    Biology of the Cell.
+causal_graphs:
+- graph_id: trans_golgi_network_transport_vesicle_mechanism
+  title: Trans-golgi network transport vesicle assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of trans-Golgi network transport vesicle (GO:0030140) to its biological
+    functions.
+  graph_kind: ASSEMBLY
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: trans_golgi_network_transport_vesicle
+    label: trans-Golgi network transport vesicle
+    node_type: STRUCTURE
+    grounding: GO:0030140
+    description: A vesicle that mediates transport between the trans-Golgi network
+      and other parts of the cell.
+  - node_id: trans_golgi_network_transport_vesicle_membrane_lipid_bilayer
+    label: trans-Golgi network transport vesicle membrane lipid bilayer
+    node_type: CHEMICAL
+    component_ref: trans_golgi_network_transport_vesicle_membrane_lipid_bilayer
+    description: Lipid-bilayer constituent of the trans-Golgi network transport vesicle
+      membrane that surrounds a TGN transport vesicle.
+  - node_id: trans_golgi_network_transport_vesicle_membrane
+    label: trans-Golgi network transport vesicle membrane
+    node_type: STRUCTURE
+    grounding: GO:0012510
+    description: Constituent structural subassembly (trans-Golgi network transport
+      vesicle membrane, GO:0012510) within trans-Golgi network transport vesicle.
+  - node_id: exomer_complex
+    label: exomer complex
+    node_type: STRUCTURE
+    grounding: GO:0034044
+    description: Constituent structural subassembly (exomer complex, GO:0034044) within
+      trans-Golgi network transport vesicle.
+  edges:
+  - subject: trans_golgi_network_transport_vesicle_membrane_lipid_bilayer
+    predicate: is part of
+    object: trans_golgi_network_transport_vesicle
+    description: Lipid-bilayer constituent of the trans-Golgi network transport vesicle
+      membrane that surrounds a TGN transport vesicle.
+    evidence:
+    - reference: GO:0012510
+      notes: GO:0012510 defines the trans-Golgi network transport vesicle membrane
+        as the lipid bilayer surrounding a vesicle moving material between the TGN
+        and other compartments.
+  - subject: trans_golgi_network_transport_vesicle_membrane
+    predicate: is part of
+    object: trans_golgi_network_transport_vesicle
+    description: Trans-golgi network transport vesicle membrane is a structural part
+      of trans-Golgi network transport vesicle.
+    evidence:
+    - reference: DOI:10.1093/emboj/17.1.113
+      notes: Holthuis et al. 1998, 'Two syntaxin homologues in the TGN/endosomal system
+        of yeast', EMBO Journal.
+  - subject: exomer_complex
+    predicate: is part of
+    object: trans_golgi_network_transport_vesicle
+    description: Exomer complex is a structural part of trans-Golgi network transport
+      vesicle.
+    evidence:
+    - reference: DOI:10.1093/emboj/17.1.113
+      notes: Holthuis et al. 1998, 'Two syntaxin homologues in the TGN/endosomal system
+        of yeast', EMBO Journal.
+curation_history:
+- timestamp: '2026-10-19T05:27:39Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of trans-Golgi network transport vesicle (GO:0030140)
+    in category MEMBRANE_ORGANELLE with verified GO hierarchy, compartmental context,
+    causal mechanism graph, and literature evidence.
+  llm_assisted: true
