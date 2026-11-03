@@ -29,6 +29,13 @@ curation_history:
     declared gene symbols to the single reviewed UniProtKB entry for that symbol in
     a taxon this record names, deduplicated by accession. Symbols resolving to more
     than one reviewed entry were skipped rather than chosen between.'
+- timestamp: '2026-10-30T04:54:32Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added component_ref causal nodes and source-backed constituent edges for
+    the 15 remaining RSC subunits (Sfh1, Rsc6/8/9, Arp7/9, Rtt102, Npl6, Htl1, Ldb7,
+    Rsc1/2, Rsc3/30, Rsc4, Rsc58) to rsc_type_complex.
+  llm_assisted: true
 synonyms:
 - synonym_text: PBAF complex
   synonym_type: EXACT_SYNONYM
@@ -673,6 +680,66 @@ causal_graphs:
     label: chromatin remodeling
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006338
+  - node_id: sfh1_rsc_core_subunit
+    label: Sfh1 RSC core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: sfh1_rsc_core_subunit
+  - node_id: rsc6_rsc_core_subunit
+    label: Rsc6 RSC core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsc6_rsc_core_subunit
+  - node_id: rsc8_rsc_core_subunit
+    label: Rsc8 RSC core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsc8_rsc_core_subunit
+  - node_id: rsc9_rsc_core_subunit
+    label: Rsc9 RSC core subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsc9_rsc_core_subunit
+  - node_id: arp7_rsc_arp_module_subunit
+    label: Arp7 RSC Arp module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: arp7_rsc_arp_module_subunit
+  - node_id: arp9_rsc_arp_module_subunit
+    label: Arp9 RSC Arp module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: arp9_rsc_arp_module_subunit
+  - node_id: rtt102_rsc_arp_module_subunit
+    label: Rtt102 RSC Arp module subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rtt102_rsc_arp_module_subunit
+  - node_id: npl6_rsc_arm_lobe_subunit
+    label: Npl6 RSC arm lobe subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: npl6_rsc_arm_lobe_subunit
+  - node_id: htl1_rsc_subunit
+    label: Htl1 RSC subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: htl1_rsc_subunit
+  - node_id: ldb7_rsc_subunit
+    label: Ldb7 RSC subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: ldb7_rsc_subunit
+  - node_id: rsc1_rsc2_rsc_isoform_subunit
+    label: Rsc1/Rsc2 RSC isoform subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsc1_rsc2_rsc_isoform_subunit
+  - node_id: rsc3_rsc_tail_subunit
+    label: Rsc3 RSC tail subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsc3_rsc_tail_subunit
+  - node_id: rsc30_rsc_tail_subunit
+    label: Rsc30 RSC tail subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsc30_rsc_tail_subunit
+  - node_id: rsc4_rsc_head_subunit
+    label: Rsc4 RSC head subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsc4_rsc_head_subunit
+  - node_id: rsc58_rsc_head_body_subunit
+    label: Rsc58 RSC head/body subunit
+    node_type: GENE_OR_PROTEIN
+    component_ref: rsc58_rsc_head_body_subunit
   edges:
   - subject: sth1_rsc_atpase_subunit
     predicate: contributes to
@@ -690,6 +757,160 @@ causal_graphs:
     - reference: GO:0006338
       notes: GO:0006338 lists GO:0016586 as a cellular component capable of chromatin
         remodeling.
+  - subject: sfh1_rsc_core_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Evolutionarily conserved RSC core constituent that contributes to
+      nucleosome engagement.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: rsc6_rsc_core_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Evolutionarily conserved core constituent of the body lobe.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: rsc8_rsc_core_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Dimeric backbone constituent that scaffolds the RSC head, body and
+      arm lobes.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: rsc9_rsc_core_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Core body-lobe constituent of the budding-yeast RSC complex.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: arp7_rsc_arp_module_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Actin-related-protein constituent of the RSC Arp module.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: arp9_rsc_arp_module_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Actin-related-protein constituent of the RSC Arp module.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: rtt102_rsc_arp_module_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Constituent of the RSC Arp module with Arp7 and Arp9.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: npl6_rsc_arm_lobe_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Yeast-conserved constituent that completes the RSC arm lobe.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: htl1_rsc_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: RSC-specific scaffold constituent of the body-lobe helical bundle.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: ldb7_rsc_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: RSC-specific scaffold constituent assigned in the cryo-EM core.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: rsc1_rsc2_rsc_isoform_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Bromodomain- and BAH-domain-containing RSC-specific paralog slot
+      supplied by either Rsc1 or Rsc2.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: rsc3_rsc_tail_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: RSC-specific tail-module constituent paired with Rsc30.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: rsc30_rsc_tail_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: RSC-specific tail-module constituent paired with Rsc3.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: rsc4_rsc_head_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Bromodomain-containing RSC-specific constituent of the head lobe.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
+  - subject: rsc58_rsc_head_body_subunit
+    predicate: contributes to
+    object: rsc_type_complex
+    description: Bromodomain-containing RSC-specific constituent that spans the head
+      and body lobes.
+    evidence:
+    - reference: DOI:10.7554/eLife.54449
+      notes: Patel et al. 2019 purified Saccharomyces cerevisiae RSC through tagged
+        Sth1, described RSC as 17 proteins with two Rsc8 copies and either Rsc1 or
+        Rsc2, and used cryo-EM and crosslinking mass spectrometry to assign RSC subunit
+        architecture.
 discussions:
 - discussion_id: resolve_rsc_subunit_groundings
   prompt: Resolve exact source-neutral family groundings for the curated budding-yeast

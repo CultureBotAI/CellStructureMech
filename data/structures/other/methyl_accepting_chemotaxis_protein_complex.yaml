@@ -261,6 +261,14 @@ curation_history:
   action: EDIT
   changes: added 1 verified UniProtKB xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-23T11:03:00Z'
+  curator: claude-code
+  action: ADDRESS_REVIEW
+  changes: '#2403, #2405: synchronized chemoreceptor_array_signalling graph description
+    and array-to-phospho_chey edge notes with the curated CheA-to-CheY phosphotransfer
+    edge (DOI:10.1021/bi962261k), and added structured evidence links (DOI:10.1021/bi962261k,
+    issue #161) to the resolved phosphotransfer_step_unquotable discussion thread.'
+  llm_assisted: true
 causal_graphs:
 - graph_id: chea_chew_hexagonal_array_assembly
   title: CheA and CheW network receptor trimers into a hexagonal array
@@ -364,10 +372,9 @@ causal_graphs:
 - graph_id: chemoreceptor_array_signalling
   title: Chemoeffector binding is amplified by the array and read out as phospho-CheY
   description: 'The array''s function is gain: binding at one receptor reaches ~35
-    kinases, and the cluster''s output is a phospho-CheY signal the flagellar motor
-    reads. The edges stop where the cited source stops -- the CheA-to-CheY phosphotransfer
-    step itself is not stated quotably here, and motor switching is a trait rather
-    than part of this structure.'
+    kinases, autophosphorylated CheA transfers its phosphoryl group to CheY, and the
+    cluster''s output is a phospho-CheY signal the flagellar motor reads. Motor switching
+    is included as the downstream readout rather than part of this structure.'
   graph_kind: FUNCTION
   scope_status: MECHANISTIC
   nodes:
@@ -461,8 +468,9 @@ causal_graphs:
         signals in a pulsatile manner, consistent with essentially all-ON or all-OFF
         array behavior.
       notes: Verbatim. Stated as an implication of the observations, not a direct
-        measurement, and the edge is no stronger than that. The CheA-to-CheY phosphotransfer
-        step is not stated quotably in this source, so it is not drawn as an edge.
+        measurement, and the edge is no stronger than that; the direct CheA-to-CheY
+        phosphotransfer step is cited separately on the chea-to-phospho_chey edge
+        via Stewart 1997 (DOI:10.1021/bi962261k).
   - subject: chea
     predicate: transfers phosphoryl group to
     object: phospho_chey
@@ -498,6 +506,14 @@ discussions:
   - causal_graphs#chemoreceptor_array_signalling
   rationale: 'The graph deliberately stops where the source stops. Drawing the step
     from background knowledge would be the defect #161 records.'
+  evidence:
+  - reference: DOI:10.1021/bi962261k
+    notes: Stewart 1997 kinetically characterized CheA-to-CheY phosphotransfer as
+      reversible CheY binding to phospho-CheA followed by rapid reversible phosphoryl
+      transfer.
+  - reference: https://github.com/CultureBotAI/CellStructureMech/issues/161
+    notes: 'Issue #161 established the policy against drawing causal-graph edges from
+      background knowledge without a direct source citation.'
   resolution_note: Added an evidence-backed CheA-to-phospho-CheY edge from the Stewart
     1997 kinetic characterization of CheA-to-CheY phosphotransfer.
   posed_by: claude

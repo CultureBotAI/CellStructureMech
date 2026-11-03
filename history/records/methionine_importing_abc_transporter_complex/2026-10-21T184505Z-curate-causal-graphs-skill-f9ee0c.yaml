@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/methionine_importing_abc_transporter_complex.yaml
+  slug: methionine_importing_abc_transporter_complex
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-f9ee0c
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed FUNCTION causal graph 'metniq_methionine_import' with 5 nodes
+    and 4 edges.
+  details: 'Stage 2 causal-graph curation pass for GO:1990197 (methionine-importing ABC transporter
+    complex): Added source-backed FUNCTION causal graph ''metniq_methionine_import'' with
+    5 nodes and 4 edges. Validated via write_validated_structure.'

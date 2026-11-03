@@ -189,6 +189,36 @@
       "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0099513",
       "retrieved": "2026-10-11",
       "sha256": "89187d136f3c3754e51f50d21064fa345ba71105af505853d6484be1a553165f"
+    },
+    {
+      "file": "go-0005654.json",
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0005654",
+      "retrieved": "2026-10-18",
+      "sha256": "f42064401fd8877312d624615d074f20e98d5503204cb216456f30ae81eb89bb"
+    },
+    {
+      "file": "go-0005694.json",
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0005694",
+      "retrieved": "2026-10-18",
+      "sha256": "3f0f584b5503494c2b5bf15466732b5193c2307ae3fd170c9584969da97d4973"
+    },
+    {
+      "file": "go-0005815.json",
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0005815",
+      "retrieved": "2026-10-18",
+      "sha256": "d8008a883d9fa1539be138ad161fa69c3d4c46fe74eb1999873a3ba93fdd602c"
+    },
+    {
+      "file": "go-0009986.json",
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0009986",
+      "retrieved": "2026-10-18",
+      "sha256": "ef55ef244a8600587596305876cfc73ebebc179031a4b22abe037709a4916f95"
+    },
+    {
+      "file": "go-0034992.json",
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/go/terms?obo_id=GO:0034992",
+      "retrieved": "2026-10-18",
+      "sha256": "c35913c772087a4072c49a7254abd06ca1082441e3c4a571e8dfcc94585c1ff2"
     }
   ],
   "uniprot_release": "2026_03 of 02-Sep-2026",
@@ -6316,6 +6346,31 @@
       "label": "GPI-like-anchor",
       "url": "https://www.uniprot.org/locations/SL-9920",
       "source": "subcell.txt"
+    },
+    "GO:0005654": {
+      "label": "nucleoplasm",
+      "url": "http://purl.obolibrary.org/obo/GO_0005654",
+      "source": "go-0005654.json"
+    },
+    "GO:0005694": {
+      "label": "chromosome",
+      "url": "http://purl.obolibrary.org/obo/GO_0005694",
+      "source": "go-0005694.json"
+    },
+    "GO:0005815": {
+      "label": "microtubule organizing center",
+      "url": "http://purl.obolibrary.org/obo/GO_0005815",
+      "source": "go-0005815.json"
+    },
+    "GO:0009986": {
+      "label": "cell surface",
+      "url": "http://purl.obolibrary.org/obo/GO_0009986",
+      "source": "go-0009986.json"
+    },
+    "GO:0034992": {
+      "label": "microtubule organizing center attachment site",
+      "url": "http://purl.obolibrary.org/obo/GO_0034992",
+      "source": "go-0034992.json"
     }
   }
 }

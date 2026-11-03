@@ -40,6 +40,12 @@ curation_history:
   changes: added 2 verified UniProtKB protein_example(s); added 1 verified UniProtKB
     xref(s) to GENE_OR_PROTEIN causal_graphs node(s).
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:54Z'
+  curator: antigravity
+  action: EDIT
+  changes: 'Cycle 2 Stage 3 protein_examples curation: disclosed 1 same-gene synonym/locus-tag
+    mapping(s) on existing protein_examples.'
+  llm_assisted: true
 synonyms:
 - synonym_text: archaellum filament
   synonym_type: EXACT_SYNONYM
@@ -83,7 +89,7 @@ components:
     role: Representative unreviewed (TrEMBL) UniProtKB entry for gene flaB, which
       UniProt lists without a gene symbol, in Methanocaldococcus villosus. Identifier
       for the component's declared gene symbol; it is not itself evidence that the
-      protein is part of this structure.
+      protein is part of this structure (also declared as synonym arlB).
     evidence:
     - reference: https://www.uniprot.org/uniprotkb/A0A8X6EH07
       notes: UniProtKB unreviewed (TrEMBL) entry A0A8X6EH07 for gene flaB in Methanocaldococcus

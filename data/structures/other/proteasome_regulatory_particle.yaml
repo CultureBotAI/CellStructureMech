@@ -1,0 +1,207 @@
+identifier: GO:0005838
+label: proteasome regulatory particle
+structure_category: OTHER
+structure_kind: MULTIPROTEIN_COMPLEX
+definition: A multisubunit complex, which caps one or both ends of the proteasome
+  core complex. This complex recognizes and unfolds ubiquitinated proteins, and translocates
+  them to the proteasome core complex. Composed of the proximal 19S base subcomplex
+  (Rpt1-Rpt6 AAA+ ATPase ring and Rpn1/Rpn2/Rpn10/Rpn13 ubiquitin-binding scaffolds)
+  and the distal 19S lid subcomplex (Rpn11-Rpn8 deubiquitinase module and PCI-domain
+  scaffold subunits).
+definition_source: GO:0005838
+mapping_status: PROPOSED
+parent_structures:
+- GO:0032991
+part_of:
+- GO:0022624
+has_part:
+- GO:0008540
+- GO:0008541
+synonyms:
+- synonym_text: PA700-dependent proteasome activator
+  synonym_type: EXACT_SYNONYM
+  source: GO:0005838
+- synonym_text: 19S regulatory particle
+  synonym_type: NARROW_SYNONYM
+  source: GO:0005838
+- synonym_text: PA700 proteasome activator
+  synonym_type: NARROW_SYNONYM
+  source: GO:0005838
+- synonym_text: modulator complex
+  synonym_type: RELATED_SYNONYM
+  source: GO:0005838
+components:
+- component_id: base_subcomplex
+  label: proteasome regulatory particle, base subcomplex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0008540
+  essentiality: ESSENTIAL
+  role: Proximal 19S subcomplex comprising the heterohexameric AAA+ ATPase ring (Rpt1-Rpt6)
+    and non-ATPase scaffold/ubiquitin-receptor subunits (Rpn1, Rpn2, Rpn10, Rpn13)
+    that docks onto the 20S alpha ring, opens the axial gate, and unfolds polypeptide
+    substrates.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-060410-150257
+    notes: Tomko and Hochstrasser 2013 review the composition and mechanical role
+      of the 19S base subcomplex within the proteasome regulatory particle.
+- component_id: lid_subcomplex
+  label: proteasome regulatory particle, lid subcomplex
+  component_type: PROTEIN_COMPLEX
+  component_role: CONSTITUENT
+  grounding: GO:0008541
+  essentiality: ESSENTIAL
+  role: Distal 19S subcomplex comprising the Rpn11-Rpn8 MPN-domain heterodimer and
+    six PCI-domain scaffold subunits (Rpn3, Rpn5, Rpn6, Rpn7, Rpn9, Rpn12) plus Sem1
+    that catalyzes en bloc deubiquitination of captured substrates.
+  evidence:
+  - reference: DOI:10.1146/annurev-biochem-060410-150257
+    notes: Tomko and Hochstrasser 2013 review the 9-subunit 19S lid subcomplex and
+      its Rpn11 metalloprotease deubiquitination activity.
+taxonomic_distribution:
+- taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  presence: COMMON
+  note: Conserved 19S regulatory particle (PA700) capping one or both ends of the
+    eukaryotic 20S proteasome core complex.
+  reference: DOI:10.1146/annurev-biochem-060410-150257
+canonical_examples:
+- taxon_id: NCBITaxon:559292
+  taxon_label: Saccharomyces cerevisiae S288C
+  note: Primary genetic and structural model for eukaryotic 19S regulatory particle
+    base and lid assembly, ubiquitin recognition, deubiquitination, and ATP-dependent
+    unfolding.
+  reference: DOI:10.1146/annurev-biochem-060410-150257
+functions:
+- function_id: proteasomal_protein_catabolism
+  label: proteasomal protein catabolic process
+  grounding: GO:0010498
+  description: Proteasome complexes couple regulated substrate access through accessory
+    complexes to proteolysis in the 20S core.
+  evidence:
+  - reference: GO:0000502
+    notes: The GO graph asserts GO:0010498 has_participant GO:0000502, connecting
+      the proteasome complex to proteasomal protein catabolism.
+  - reference: DOI:10.1042/ETLS20180025
+    notes: Maupin-Furlow 2018 reviews archaeal targeted proteolysis by proteasomes
+      associated with AAA-ATPase networks.
+  - reference: DOI:10.3389/fmolb.2019.00023
+    notes: Muller and Weber-Ban 2019 review bacterial proteasomal degradation routes
+      that combine the 20S core with alternative regulator complexes.
+evidence:
+- reference: GO:0005838
+  notes: 'Gene Ontology cellular-component term for proteasome regulatory particle:
+    A multisubunit complex, which caps one or both ends of the proteasome core complex.
+    This complex recognizes and unfolds ubiquitinated proteins, and translocates them
+    to the proteasome core complex.'
+- reference: GO:0000502
+  notes: Gene Ontology cellular-component term for the proteasome complex.
+- reference: GO:0140535
+  notes: Gene Ontology cellular-component parent for intracellular protein-containing
+    complexes.
+- reference: GO:1905369
+  notes: Gene Ontology cellular-component parent for endopeptidase complexes.
+- reference: GO:0005839
+  notes: Gene Ontology cellular-component term for the proteasome core complex.
+- reference: GO:0022624
+  notes: Gene Ontology cellular-component term for the proteasome accessory complex.
+- reference: DOI:10.1042/ETLS20180025
+  notes: 'Maupin-Furlow 2018, Proteolytic systems of archaea: slicing, dicing, and
+    mincing in the extreme, Emerging Topics in Life Sciences.'
+- reference: DOI:10.3389/fmolb.2019.00023
+  notes: Muller and Weber-Ban 2019, The bacterial proteasome at the core of diverse
+    degradation pathways, Frontiers in Molecular Biosciences.
+- reference: DOI:10.1146/annurev-biochem-060410-150257
+  notes: Tomko and Hochstrasser 2013, Molecular Architecture and Assembly of the Eukaryotic
+    Proteasome, Annual Review of Biochemistry.
+causal_graphs:
+- graph_id: proteasome_regulatory_particle_mechanism
+  title: Proteasome regulatory particle assembly and functional mechanism
+  description: Directed causal graph linking constituent components and compartmental
+    context of proteasome regulatory particle (GO:0005838) to its biological functions.
+  graph_kind: FUNCTION
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: proteasome_regulatory_particle
+    label: proteasome regulatory particle
+    node_type: STRUCTURE
+    grounding: GO:0005838
+    description: A multisubunit complex, which caps one or both ends of the proteasome
+      core complex.
+  - node_id: base_subcomplex
+    label: proteasome regulatory particle, base subcomplex
+    node_type: STRUCTURE
+    grounding: GO:0008540
+    component_ref: base_subcomplex
+    description: Proximal 19S subcomplex comprising the heterohexameric AAA+ ATPase
+      ring (Rpt1-Rpt6) and non-ATPase scaffold/ubiquitin-receptor subunits (Rpn1,
+      Rpn2, Rpn10, Rpn13) that docks onto the 20S alpha ring, opens the axial gate,
+      and unfolds polypeptide substrates.
+  - node_id: lid_subcomplex
+    label: proteasome regulatory particle, lid subcomplex
+    node_type: STRUCTURE
+    grounding: GO:0008541
+    component_ref: lid_subcomplex
+    description: Distal 19S subcomplex comprising the Rpn11-Rpn8 MPN-domain heterodimer
+      and six PCI-domain scaffold subunits (Rpn3, Rpn5, Rpn6, Rpn7, Rpn9, Rpn12) plus
+      Sem1 that catalyzes en bloc deubiquitination of captured substrates.
+  - node_id: proteasome_accessory_complex
+    label: proteasome accessory complex
+    node_type: STRUCTURE
+    grounding: GO:0022624
+    description: Enclosing or holo-structural assembly (proteasome accessory complex,
+      GO:0022624) containing proteasome regulatory particle.
+  - node_id: proteasomal_protein_catabolism
+    label: proteasomal protein catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0010498
+    description: Proteasome complexes couple regulated substrate access through accessory
+      complexes to proteolysis in the 20S core.
+  edges:
+  - subject: base_subcomplex
+    predicate: is part of
+    object: proteasome_regulatory_particle
+    description: Proximal 19S subcomplex comprising the heterohexameric AAA+ ATPase
+      ring (Rpt1-Rpt6) and non-ATPase scaffold/ubiquitin-receptor subunits (Rpn1,
+      Rpn2, Rpn10, Rpn13) that docks onto the 20S alpha ring, opens the axial gate,
+      and unfolds polypeptide substrates.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-060410-150257
+      notes: Tomko and Hochstrasser 2013 review the composition and mechanical role
+        of the 19S base subcomplex within the proteasome regulatory particle.
+  - subject: lid_subcomplex
+    predicate: is part of
+    object: proteasome_regulatory_particle
+    description: Distal 19S subcomplex comprising the Rpn11-Rpn8 MPN-domain heterodimer
+      and six PCI-domain scaffold subunits (Rpn3, Rpn5, Rpn6, Rpn7, Rpn9, Rpn12) plus
+      Sem1 that catalyzes en bloc deubiquitination of captured substrates.
+    evidence:
+    - reference: DOI:10.1146/annurev-biochem-060410-150257
+      notes: Tomko and Hochstrasser 2013 review the 9-subunit 19S lid subcomplex and
+        its Rpn11 metalloprotease deubiquitination activity.
+  - subject: proteasome_regulatory_particle
+    predicate: is part of
+    object: proteasome_accessory_complex
+    description: Proteasome regulatory particle forms an integral structural compartment
+      or subassembly of proteasome accessory complex.
+    evidence:
+    - reference: DOI:10.1042/ETLS20180025
+      notes: 'Maupin-Furlow 2018, Proteolytic systems of archaea: slicing, dicing,
+        and mincing in the extreme, Emerging Topics in Life Sciences.'
+  - subject: proteasome_regulatory_particle
+    predicate: mediates
+    object: proteasomal_protein_catabolism
+    description: Proteasome complexes couple regulated substrate access through accessory
+      complexes to proteolysis in the 20S core.
+    evidence:
+    - reference: GO:0000502
+      notes: The GO graph asserts GO:0010498 has_participant GO:0000502, connecting
+        the proteasome complex to proteasomal protein catabolism.
+curation_history:
+- timestamp: '2026-10-19T05:27:40Z'
+  curator: claude-opus-4-7
+  action: CREATED
+  changes: Initial curation of proteasome regulatory particle (GO:0005838) in category
+    OTHER with verified GO hierarchy, compartmental context, causal mechanism graph,
+    and literature evidence.
+  llm_assisted: true

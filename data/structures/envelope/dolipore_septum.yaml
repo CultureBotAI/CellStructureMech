@@ -28,6 +28,11 @@ curation_history:
     distribution to VARIABLE, renaming the parenthesome component to paired septal
     pore caps, and softening the pore-plugging graph edge to septal pore closure.'
   llm_assisted: true
+- timestamp: '2026-10-21T18:45:05Z'
+  curator: curate-causal-graphs-skill
+  action: UPDATED_CAUSAL_GRAPHS
+  changes: Connected isolated causal node(s) with 1 source-backed edge(s).
+  llm_assisted: true
 synonyms:
 - synonym_text: dolipore-parenthesome septum
   synonym_type: EXACT_SYNONYM
@@ -179,6 +184,15 @@ causal_graphs:
     - reference: DOI:10.1111/j.1462-2920.2009.02122.x
       notes: Van Peer et al. 2010 showed that Schizophyllum commune septal pore cap
         loss prevents septal closure.
+  - subject: barrel_shaped_septal_swelling
+    predicate: is part of
+    object: dolipore_septum
+    description: The barrel-shaped septal wall swelling around the central pore is
+      a structural part of the basidiomycete dolipore septum.
+    evidence:
+    - reference: GO:0000937
+      notes: GO:0000937 defines the dolipore septum by its barrel-shaped swelling
+        around the central pore and paired septal pore caps.
 discussions:
 - discussion_id: ground_septal_pore_cap_proteins
   prompt: Resolve source-neutral groundings for septal pore cap proteins before adding

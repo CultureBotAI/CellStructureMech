@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/structures/other/glutamate_synthase_complex_nadph.yaml
+  slug: glutamate_synthase_complex_nadph
+session:
+  id: 2026-10-21T184505Z-curate-causal-graphs-skill-9a9b81
+  timestamp: '2026-10-21T18:45:05Z'
+  actors:
+  - type: ai_agent
+    name: curate-causal-graphs-skill
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Added source-backed FUNCTION causal graph 'gltbd_glutamate_synthase_function' with
+    3 nodes and 2 edges.
+  details: 'Stage 2 causal-graph curation pass for GO:0009342 (glutamate synthase complex
+    (NADPH)): Added source-backed FUNCTION causal graph ''gltbd_glutamate_synthase_function''
+    with 3 nodes and 2 edges. Validated via write_validated_structure.'
